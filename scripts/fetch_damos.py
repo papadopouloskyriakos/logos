@@ -105,8 +105,15 @@ def harvest(out_dir: str, max_id: int, delay: float, timeout: int = 30) -> None:
                  f"- Use: personal academic research (non-commercial). GITIGNORED; not redistributed.\n"
                  f"- Harvester: scripts/fetch_damos.py (delay {delay}s, max_id {max_id}).\n")
     col = collections(out_dir)
-    total = sum(int(v) for v in (col.get("collections") or {}).values()) if isinstance(col, dict) else 0
-    print(f"DĀMOS reports ~{total} documents across {len(col.get('collections', {}))} collections.")
+    # ajaxgetfilter returns collections as a LIST of {id,value,count}; ajaxfilter as a {id:count} dict.
+    cols = col.get("collections") if isinstance(col, dict) else None
+    if isinstance(cols, list):
+        total, n_col = sum(int(c.get("count", 0)) for c in cols), len(cols)
+    elif isinstance(cols, dict):
+        total, n_col = sum(int(v) for v in cols.values()), len(cols)
+    else:
+        total, n_col = 0, 0
+    print(f"DĀMOS reports ~{total} documents across {n_col} collections.")
 
     items_path = os.path.join(out_dir, "items.jsonl")
     seen = _seen_ids(items_path)
