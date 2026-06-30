@@ -103,6 +103,29 @@ Klein 2011), neural variant (Luo 2019) is the upgrade:
 platform) + the cross-script A↔B JEPA joint-embedding formulation. Not "Linear B as key" or
 "Linear A embeddings," which exist.
 
+## Philological & statistical prior art (added 2026-06-30 expert audit — LOAD-BEARING)
+
+Missing from the first pass; two external red-teams flagged these as non-optional (the Libation
+Formula is our held-out set):
+
+- **Duhoux** — standard analyses of the Linear A **Libation Formula**.
+- **Brent Davis** — *Minoan Stone Vessels with Linear A Inscriptions* (2014) + structural /
+  word-order analysis of Linear A (the most serious modern structural analyst).
+- **Packard (1974)**, *Minoan Linear A* — constructed 9 **fictitious decipherments** as a null
+  (Ventris-value transfer beat them only ~2:1). The ancestor of our permutation-null discipline.
+- **Barber (1974)**, *Archaeological Decipherment* — the identifiability-without-a-known-target
+  threshold our unicity argument must (and currently fails to) engage.
+- **Godart & Olivier, GORILA** (1976–85) — the corpus + sign-inventory authority.
+- **John G. Younger**, *Linear A Texts* (online) — formula segmentation.
+- **CREWS project (P. Steele, Cambridge)** — Aegean writing systems.
+- **Robinson**, *Lost Languages* — cautionary framing.
+- A **systematic review of computational Aegean & Cypriot scripts** (more targeted than the broad
+  ML survey); **Luo et al. 2021** (central — undersegmented scripts, phonetic conversion,
+  related-language comparison).
+- Cross-lingual embedding alignment (for the §5 reframing): **Mikolov et al. 2013**, **Conneau
+  et al. MUSE 2017**, orthogonal Procrustes; **Bouchard-Côté et al. 2013** sound-drift (needs
+  candidate cognates first — cannot create them from unlabelled signs).
+
 ## Where logos sits
 
 Empty cell = opportunity *and* warning. Opportunity: no one has wrapped a decipherment

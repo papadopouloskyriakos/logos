@@ -6,6 +6,33 @@ signal, sparse data, an adversarial null, and a field drowning in self-deceiving
 "positives."** This doc is the architecture; the operating rules are in
 [CLAUDE.md](CLAUDE.md); the mission framing is in [README.md](README.md).
 
+## ⚠ Expert-audit corrections (2026-06-30) — supersedes overclaims below
+
+Two independent external red-teams found that several claims in this doc (and in the
+information-floor finding) were **overclaimed** — a quieter version of the self-deception
+logos exists to prevent. The authoritative correction record is
+[docs/findings/2026-06-30-expert-redteam-synthesis.md](docs/findings/2026-06-30-expert-redteam-synthesis.md).
+Until revised inline, treat these as **withdrawn/corrected**:
+
+- The unicity-distance result is a **toy-model precondition diagnostic**, NOT proof the corpus
+  can pin a decipherment (it assumes a known plaintext-language oracle; lossy underspelling may
+  mean no unicity distance at all).
+- The decipher engine is a **simplified heuristic baseline**, NOT a faithful Berg-Kirkpatrick &
+  Klein 2011 reproduction (B-K&K uses word-level bipartite matching + many-to-many alphabet +
+  restarts). The credibility milestone is **Linear B → Greek known-answer recovery**.
+- The cross-script A↔B idea yields **phonetic values (a readout)**, not a cognate language; the
+  honest ceiling is **Etruscan-grade**. Run simpler alignment baselines (Procrustes/MUSE/OT/graph)
+  before JEPA.
+- The multiple-testing engine is **pre-registration + held-out + pipeline-level permutation null
+  (Packard 1974) + MDL** — DSR is demoted to one weak instance.
+- The sign inventory must be **inherited from GORILA/SigLA** (layered ontology), not learned;
+  clean to ~90 syllabograms BEFORE computing the floor; logograms/numerals are separate channels.
+- Realistic ceiling: **<1–3% full decipherment**; the durable product is the open, null-calibrated
+  benchmark/framework.
+
+**Reframed mission:** *"a falsifiable, statistically-calibrated inference framework for
+determining which structural/phonetic/linguistic claims Linear A can support."*
+
 ## The isomorphism (why agora's patterns transfer)
 
 | agora (trading) | logos (decipherment) |

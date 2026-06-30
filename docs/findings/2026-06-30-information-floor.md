@@ -1,5 +1,15 @@
 # Finding 2026-06-30 — Linear A's information floor: unicity is MET
 
+> ⚠ **CORRECTION 2026-06-30 (expert red-team) — WITHDRAWN as a refutation / sufficiency claim.**
+> The conclusion below is overclaimed. Shannon unicity distance assumes a *known
+> plaintext-language oracle*; by measuring the redundancy D from the ciphertext, that oracle
+> becomes Linear A up to relabelling — so this demonstrates *measurable recurrent structure*,
+> **not** that a decipherment is identifiable. If Linear A underspells (like Linear B), the
+> channel is lossy/non-injective and may have **no unicity distance at all**. Retain this only
+> as a **toy-model precondition diagnostic**. Full correction + the proper information-sufficiency
+> test (pseudo-decipherment learning curves): [2026-06-30-expert-redteam-synthesis.md](2026-06-30-expert-redteam-synthesis.md).
+> The original (overclaimed) text is retained below for provenance.
+
 **Headline: by Shannon's unicity-distance criterion, the Linear A corpus is more than large
 enough to uniquely pin a decipherment. U ≈ 204–415 signs ≪ N ≈ 5,792. The "too little text"
 excuse is false — and this corrects our own earlier prior and the common HN/forum claim.**
