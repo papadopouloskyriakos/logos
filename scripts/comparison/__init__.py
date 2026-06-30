@@ -10,6 +10,19 @@ Modules:
                  (§A.2, the WEAK surface statistic; reported beneath S_lex).
   morphostat.py — S_morph: deflated recurring-morphology score, the STRONG/Kober test with the F.1
                  no-power escape (§A.2 — gold-standard WHEN the corpus can power it).
+  morphology.py — Direction A: unsupervised Linear A morphology / segmentation induction. Ensemble
+                 segmenters (Morfessor + a Goldwater DP unigram) externally validated by leave-one-
+                 site-out word-boundary recovery vs the scribe's divisions, plus the FROZEN
+                 pre-registered Davis/Thomas/Duhoux affix panel scored against the within-word
+                 permutation null + §B.3 multiplicity bar, falsified on sign-shuffle + L_fake floors.
+                 STRUCTURAL only — NO phonetic-value claim. (docs/prereg-morphology-2026-06-30.md.)
+  metrology.py — Direction D: constraint-optimization over the Linear A ACCOUNTING tablets (HT, LM I).
+                 Parses tablets into balance units (line items + KU-RO total, per-commodity sub-totals),
+                 treats each fraction SIGN as an unknown rational, and SOLVES the values that balance the
+                 most accounts (RANSAC over exact rational solves). HONEST HEADLINE = HELD-OUT balance
+                 (leave-a-fold-of-documents-out) vs a fraction-sign->value PERMUTATION NULL — the
+                 overfitting guard. Solved values are COMPARED to the cited Corazza et al. 2021 system,
+                 not assumed. NUMERICAL/METROLOGICAL only — NO phonetic-value claim.
   searchlog.py — N_eff instrumentation: COUNT the distinct candidates scored, don't estimate them
                  (§B.2; the instrumented trial count fed to the §B.3 deflated bar).
   litindex.py  — literature index + L_known/L_virgin partition + virgin_support (§C.1/§C.2; the
