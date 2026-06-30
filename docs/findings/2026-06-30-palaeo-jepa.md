@@ -48,6 +48,20 @@ hand-crafted descriptors dominate a from-scratch SSL encoder on ~90 images.
   shared signs; it does **not** read Minoan. The positive result confirms a palaeographic fact
   (borrowed signs look alike) + that it transfers non-circularly to held-out anchors.
 
+## Calibration — a published cross-script image HARD NEGATIVE (Ferrara, Montecchi & Valério, audited 2026-07-01)
+
+The "Archanes Formula" paper supplies an expert gold-standard demonstration that a **plausible
+cross-script visual match is wrong**: `CH 095` looks like `AB 60`/*ra* but is not its phonetic
+counterpart (the better visual neighbour, `AB 10`/*u*, carries no phonetic-identity warrant either).
+Use `CH095 ~ AB60` as a **hard-negative / calibration case** for this image-alignment leg: a successful
+shape match must still clear the **truth-layer cap (invariant 5)** — visual similarity is a ≤0.75
+signal, **never** a reading. Two corollaries the paper hands us: (1) it independently confirms that
+sign shapes derive from iconography *within* a script (water-bird/fish/vessel motifs) — supporting
+intra-script image modelling; (2) it **refutes** the Cretan-Hieroglyphic ancestry of the libation word
+`a-sa-sa-ra-me`, so logos must not premise any `a-sa-sa-ra-me` hypothesis on cross-script CH continuity
+(the structural reading stays Linear-A-internal). Confirms `A`-only signs like `*301` have no
+cross-script (`AB`) anchor.
+
 ## Significance
 
 A real leg for the cross-script bet — **via images, not sequences.** Combined with Track B's
