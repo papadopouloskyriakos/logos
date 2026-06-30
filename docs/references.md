@@ -126,6 +126,59 @@ Formula is our held-out set):
   et al. MUSE 2017**, orthogonal Procrustes; **Bouchard-Côté et al. 2013** sound-drift (needs
   candidate cognates first — cannot create them from unlabelled signs).
 
+## Linear-A literature audit (added 2026-06-30; full digests in `docs/related/`)
+
+The flagship survey + the 2025 Salgarella synthesis are **P-BLOCK** related-work prerequisites
+(drafting waits on both). Acquisition status in `docs/related/_acquisition.md`.
+
+**Survey spine + competitor review.**
+- **Braović, Krstinić, Štula & Ivanda (2024)**, "A Systematic Review of Computational Approaches to
+  Deciphering Bronze Age Aegean and Cypriot Scripts," *Computational Linguistics* 50(2):725–779,
+  [DOI 10.1162/coli_a_00514](https://doi.org/10.1162/coli_a_00514) ·
+  [PDF](https://aclanthology.org/2024.cl-2.7.pdf). The field's flagship review; its 15-challenge
+  taxonomy **omits** the false-positive/multiplicity/contamination axis — logos's "16th challenge."
+  Digest: `docs/related/braovic-2024.md`.
+- **Ferrara & Tamburini (2022)**, "Advanced techniques for the decipherment of ancient scripts,"
+  *Lingue e Linguaggio* 2/2022:239–259 — the **only** comparable prior review (cite or be desk-rejected).
+
+**Salgarella corpus + synthesis (and the stratification result).**
+- **Salgarella (2025)**, *Writing in Bronze Age Crete: "Minoan" Linear A*, Cambridge Elements,
+  [DOI 10.1017/9781009520041](https://doi.org/10.1017/9781009520041). Most current authoritative
+  overview; §7 (reading) + §8 (language) are paywalled and BLOCKING. Digest: `docs/related/salgarella-2025.md`.
+- **Salgarella (2020)**, *Aegean Linear Script(s): Redefining the Relationship between Linear A and
+  Linear B* (CUP) — the A/B authority underpinning the cross-script JEPA novelty claim.
+- **Salgarella & Judson (2024)**, "Signs of the times? Testing the chronological significance of
+  Linear A and B palaeography," KO-RO-NO-WE-SA (Ariadne Suppl. 5), pp. 359–379 — palaeographic
+  variation does **not** track chronology; drives `prereg-morphology-stratification-addendum-2026-06-30.md`.
+- **Salgarella (2019)** "Drawing lines," *Kadmos* 58:61–92; **Salgarella (2022)** "Mix and match,"
+  *TALANTA* 54:31–52; **Judson (2020)** *The Undeciphered Signs of Linear B* (CUP).
+
+**Cross-script visual prior art (logos's image result is NOT novel — reframe to the asymmetry).**
+- **Daggumati & Revesz (2019, DASFAA/DEXA; 2023, *Information* 14(4):227)** — CNN+SVM cross-script
+  visual similarity (LB↔Cretan hieroglyphic). **Corazza et al. (2022) "Sign2Vec"** (already listed).
+
+**The undisciplined dictionary-fishing baselines (logos's deflation polices exactly these).**
+- **Min Eu, Xu & Cacciafoco (2019)**; **Colin & Cacciafoco (2020)**, "A new approach to the
+  decipherment of Linear A, stage 2," *Grapholinguistics in the 21st Century* vol. 5.
+- **Karajgikar, Al-Khulaidy & Berea (2021)** — n-gram entropy on Linear A, "inconclusive" on languagehood.
+
+**Language-affiliation + the `*301` rebuttal sourcing.**
+- **Schoep (2002)**, *The administration of neopalatial Crete*, Minos suppl. 17 — ranks Semitic +
+  Lycian as the two best-founded hypotheses (warrant for quarantine-not-dismiss).
+- **Davis (2013)** "Syntax in Linear A," *Kadmos* 52 — the i-`*301`="give"/V-S-O source (with Davis
+  2014). **NOTE:** do not re-attribute this to Steele 2024 — the Steele-2024 item in hand is a
+  Dickinson book review with no `*301` content.
+- **Steele & Meissner (2017)**, "From Linear B to Linear A: the problem of the backward projection of
+  sound values" — needed to defend the LB-value transfer symmetrically.
+
+**Loanword / composite-sign worked example (now quarantined in the litindex).**
+- **Salgarella, Bellinato & Ferrara (2025)**, "On Aegean spices," *Kadmos* 64(1/2):29–44,
+  [DOI 10.1515/kadmos-2025-0002](https://doi.org/10.1515/kadmos-2025-0002); **Sacconi (1972)**,
+  "The monogram KAPO," *Kadmos* 11(1):22–26 — A646/A341="root", KA+PO/*127="spice" (speculative;
+  indexed as L_known so they cannot leak into the L_virgin test).
+- **Fuls (2015)**, "Classifying undeciphered writing systems," *Hist. Sprachforschung* 128(1):42–58
+  — the **3.3-sign average word length** the Direction-A premise must reconcile against.
+
 ## Where logos sits
 
 Empty cell = opportunity *and* warning. Opportunity: no one has wrapped a decipherment

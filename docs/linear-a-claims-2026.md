@@ -35,6 +35,15 @@ reference for the README's "deliberate opposite" framing.
 2. **The anchor is contradicted by prior scholarship.** Brent Davis (cited on HN) argues the
    recurring root is **`i-*301` = "give"** (cf. *ta-na-i-301-u-ti-nu*), not N-W-Y "to dwell" —
    and "give" vs "dwell" are semantically far apart. If Davis is right, the lynchpin fails.
+   - **Attribution discipline (audit 2026-06-30).** The counter-reading is **Brent Davis's**
+     (*Kadmos* 52, 2013; *Minoan Stone Vessels*, Aegaeum 36, 2014). **Do NOT re-attribute it to
+     Steele 2024** — the Steele-2024 item in hand is **O. Dickinson's book review** (JGA), which
+     carries **no `*301` gloss** (its p. 474 "prayers or dedications" line is neutral on the
+     dwell-vs-give crux; quoting it as support for "give" would be exactly the evidence-inflation
+     logos refuses). The current expert benchmark, **Salgarella 2025 §8**, is paywalled — checking
+     `*301` against it is an **open item**, not resolved. logos's charter: get the crux-sign gloss
+     right or it is a referee magnet. Still needed: the primary Davis text with the
+     `ta-na-i-*301-u-ti-nu` parallel quoted with page numbers.
 3. **The match is partial.** A-TA-I-`*301`-WA-JA → keeping only W-J and *guessing* `*301`
    starts with N yields N-W-Y: roughly **1/5 of one word matched to 2/3 of a root**, with
    A-TA-I unexplained (and possibly the root should be N-W-H / נוה).
@@ -59,8 +68,21 @@ reference for the README's "deliberate opposite" framing.
   multiple testing, no claim of "cracked" without held-out verification.
 - The Semitic/Gordon reading enters as **one capped hypothesis family** (≤0.75) among
   several (Anatolian, Tyrrenian, IE, isolate), graded head-to-head — never as ground truth.
+  **Quarantine, not dismiss:** per **Schoep 2002** (via Braović et al. 2024, p. 734) Semitic and
+  Lycian are the *two best-founded* language hypotheses, so the Di Mino/Gordon reading is indexed
+  to catch regurgitation and graded as a capped family — never labelled "crank."
 - The Libation Formula's recurrence across **5 sites is a natural 5-fold held-out CV**: a
   hypothesis derived on N sites must mechanically read the held-out site(s). The claim's own
-  structure invites this test; it has not publicly passed it.
+  structure invites this test; it has not publicly passed it. **Caveat (Salgarella & Judson 2024):
+  site-level CV is necessary but NOT sufficient** — within-site scribal-hand correlation (the Hand
+  103/115 idiolect artifact) must also be controlled before a held-out read counts as independent
+  (see `prereg-morphology-stratification-addendum-2026-06-30.md`).
+- **The 2025 loanword worked example as Di Mino's methodological counter-model.** Salgarella,
+  Bellinato & Ferrara (2025, *Kadmos* 64) read spice signs by graphic + contextual + comparative
+  triangulation *with explicit competing-option hedging* (three KA+PO values; a single hapax flagged
+  as such) — the opposite of a single forced match. Caveat: their A646/pi step is itself
+  LB-value backward-projection, so the distinction logos draws is **grounding-quality, not "they
+  never backward-project"** (engage Steele & Meissner 2017 on the symmetry). These readings are now
+  indexed L_known in `litindex.py` so a model cannot regurgitate them as discovery.
 - logos will **reproduce the Luo 2019 null** (a neural decipherer fails on Linear A without a
   known cognate) as a baseline milestone — the empirical confirmation of point 6.

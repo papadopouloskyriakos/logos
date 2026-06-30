@@ -64,6 +64,34 @@ def test_verified_semitic_proposals_present_and_unverified_omitted():
     assert any(c.sign == "KI-RO" and c.claim_type == "lexical_reading" for c in index)  # accounting term stays
 
 
+def test_spice_logographic_readings_quarantine_l_virgin_leak():
+    """Audit 2026-06-30: the PUBLIC 2025 Salgarella/Bellinato/Ferrara spice readings must be indexed so
+    a model cannot regurgitate them as an L_virgin 'discovery' — they go to L_known, flagged speculative."""
+    index = litindex.load_index()
+    logo = {c.sign: c for c in index if c.claim_type == "logographic_reading"}
+    assert {"A646", "A341", "*127", "*157"} <= set(logo)
+    assert logo["A646"].proposed_value == "root" and logo["*127"].proposed_value == "spice"
+    assert all(c.year == 2025 and ("Salgarella" in c.source or "Kadmos" in c.source) for c in logo.values())
+    # the hedging the paper itself carries must be recorded (so logos never presents them as confirmed)
+    assert "hapax" in logo["A646"].note.lower() and "speculative" in logo["A646"].note.lower()
+    # the whole point: these signs are now L_known, never L_virgin
+    known = litindex.known_signs(index)
+    assert {"A646", "A341", "*127", "*157"} <= known
+    part = litindex.partition_signs(["A646", "*127", "*999"], index)
+    assert "A646" in part["L_known"] and "*127" in part["L_known"]
+    assert "*999" in part["L_virgin"]
+
+
+def test_dimino_attribution_keeps_davis_not_steele():
+    """Audit 2026-06-30: the i-*301='give/dedicate' counter is DAVIS's; the Steele-2024 item in hand is a
+    Dickinson review with no *301 gloss, so it must NOT be cited for it. Salgarella 2025 §8 is a pending
+    (paywalled) check, not a resolution. Lock the attribution discipline into the quarantine citation."""
+    cit = litindex.CITATION_DIMINO
+    assert "Davis" in cit
+    assert "do NOT re-attribute it to Steele" in cit
+    assert "PAYWALLED" in cit and "Salgarella 2025" in cit
+
+
 def test_partition_is_exact_disjoint_cover():
     index = litindex.load_index()
     signs = ["A", "DA", "KU", "RO", "*118", "*301", "*531", "ZQ_not_a_sign"]

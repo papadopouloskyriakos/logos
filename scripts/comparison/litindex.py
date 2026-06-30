@@ -84,9 +84,23 @@ CITATION_DIMINO = (
     "recorded in docs/linear-a-claims-2026.md). Reads the libation word A-TA-I-*301-WA-JA via a "
     "/na/-initial value for *301 as Semitic N-W-Y 'to dwell' (nawaya). DISPUTED + NOT independently "
     "verified: contradicted by B. Davis (i-*301 = the verb 'give/dedicate'; structural V-S-O analysis, "
-    "Kadmos 52, 2013), and the match is partial (~1/5 of one word to 2/3 of a root). Indexed to "
-    "QUARANTINE the single highest-profile Linear A reading so any model regurgitating it is caught — "
-    "NEVER as an accepted reading."
+    "Kadmos 52, 2013, and Minoan Stone Vessels with Linear A Inscriptions, Aegaeum 36, 2014), and the "
+    "match is partial (~1/5 of one word to 2/3 of a root). ATTRIBUTION NOTE (audit 2026-06-30): the "
+    "i-*301='give/dedicate' counter is BRENT DAVIS's — do NOT re-attribute it to Steele 2024; the "
+    "Steele-2024 item in hand is O. Dickinson's book review (JGA), which contains NO *301 gloss (its "
+    "p.474 'prayers or dedications' line is neutral on the dwell-vs-give crux). The current "
+    "expert-review benchmark, Salgarella 2025 §8 'Which Language Does Linear A Encode?', is PAYWALLED "
+    "(only the section title is in hand) — checking *301 against it is an OPEN item, not resolved. "
+    "Indexed to QUARANTINE the single highest-profile Linear A reading so any model regurgitating it "
+    "is caught — NEVER as an accepted reading."
+)
+CITATION_SPICES = (
+    "E. Salgarella, F. Bellinato & S. Ferrara, 'On Aegean spices: decipherment prospects on Linear A "
+    "and B spice-related signs', Kadmos 64(1/2):29-44 (2025), doi:10.1515/kadmos-2025-0002. The "
+    "KA+PO monogram = karphos 'cinnamon' reading originates with A. Sacconi, Kadmos 11 (1972):22-26; "
+    "the fenugreek alternative with B. Foster (1974, Duke diss.). DISPUTED/SPECULATIVE by the authors' "
+    "own hedging — indexed for DECONTAMINATION (these are now PUBLIC 2025 readings a model could "
+    "regurgitate as 'discovery' in the L_virgin test), NEVER as accepted readings."
 )
 
 # A loud, machine-readable flag so no downstream consumer mistakes the seed for the full index.
@@ -96,11 +110,14 @@ SEED_NOTE = (
     "genuinely-public, citable proposals: the GORILA Linear-B-value transfers, the KU-RO/KI-RO "
     "accounting readings, and (added 2026-06-30, each independently verified) six published "
     "WEST-SEMITIC proposals — Gordon's su-pu/ka-ro-pa/su-pa-ra/ku-ro/ya-ne (Evidence for the Minoan "
-    "Language, 1966) and Best's a-sa-sa-ra-me='oh Asherah!' (Talanta 1981). Unverifiable candidates "
-    "(qa-pa=kappu, a Semitic ki-ro) were OMITTED. These Semitic readings are DISPUTED and rejected by "
-    "mainstream scholarship; they are indexed to CATCH regurgitation of them, never as accepted "
-    "readings. A sign absent here is treated as L_virgin (the dangerous direction); EXPAND toward "
-    "completeness, never pad with uncertain attributions."
+    "Language, 1966) and Best's a-sa-sa-ra-me='oh Asherah!' (Talanta 1981). Added 2026-06-30 (audit): "
+    "four PUBLIC 2025 logographic/composite readings from Salgarella/Bellinato/Ferrara, Kadmos 64 "
+    "('On Aegean spices') — A646/A341='root', *127(KA+PO)='spice', LB *157='root' — SPECULATIVE by the "
+    "authors' own hedging, indexed so they cannot leak into the L_virgin test as 'discovery'. "
+    "Unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. All disputed readings are "
+    "indexed to CATCH regurgitation of them, never as accepted readings. A sign absent here is treated "
+    "as L_virgin (the dangerous direction); EXPAND toward completeness, never pad with uncertain "
+    "attributions."
 )
 
 
@@ -192,6 +209,31 @@ _SEMITIC_PROPOSALS = (
      "indexed to QUARANTINE the single highest-profile Linear A reading, NEVER as accepted."),
 )
 
+# Published 2025 LOGOGRAPHIC / composite-sign readings (Salgarella, Bellinato & Ferrara, Kadmos 64,
+# 2025, 'On Aegean spices'). Indexed because they are now PUBLIC and a model could regurgitate them as
+# "discovery" in the L_virgin generalization test — exactly the §C.2 leak this partition exists to
+# close (audit 2026-06-30 flagged the gap). They are SPECULATIVE by the authors' OWN hedging: the
+# KA+PO spice reading has THREE competing values (cinnamon / fenugreek / Greek karpos 'fruit'), and the
+# A646 'root' reading rests on a SINGLE hapax on the damaged HT 33 — which FAILS logos's own unicity
+# standard. They also use LB-value backward-projection (AB39=/pi/ acrophony) — the same move logos
+# quarantines Di Mino for; indexed to QUARANTINE, never as accepted. (sign, value, source, year, note)
+_LOGOGRAPHIC_READINGS = (
+    ("A646", "root", CITATION_SPICES, 2025,
+     "Salgarella/Bellinato/Ferrara 2025: A646 lower element = RAD(ix) 'root', with AB39=/pi/ "
+     "acrophonic for a Minoan 'root' word. SPECULATIVE (authors' hedge); a SINGLE hapax on the damaged "
+     "HT 33 — fails logos's unicity standard; uses LB-value backward-projection. Quarantine, not accepted."),
+    ("A341", "root", CITATION_SPICES, 2025,
+     "Salgarella et al. 2025: A341 shares the lower 'root' (RADix) element with A646 (graphic "
+     "decomposition only). SPECULATIVE; indexed so it cannot masquerade as an L_virgin discovery."),
+    ("*127", "spice", CITATION_SPICES, 2025,
+     "The KA+PO monogram (*127) read as a spice logogram: Sacconi 1972 'cinnamon' vs Foster 1974 "
+     "'fenugreek' — THREE competing options (cf. Linear B ka-po = Greek karpos 'fruit'). DISPUTED + "
+     "multiple-option; indexed to quarantine."),
+    ("*157", "root", CITATION_SPICES, 2025,
+     "Linear B *157 read as RAD(ix)+/wi/ 'root' (Salgarella et al. 2025) — the LB comparandum for the "
+     "A646/A341 'root' reading. SPECULATIVE; indexed to quarantine."),
+)
+
 
 def _build_seed() -> List[LitClaim]:
     """Assemble the embedded seed deterministically from the cited constants."""
@@ -216,6 +258,11 @@ def _build_seed() -> List[LitClaim]:
         claims.append(
             LitClaim(sign=sign, proposed_value=value, source=source, year=year,
                      claim_type="semitic_proposal", note=note)
+        )
+    for sign, value, source, year, note in _LOGOGRAPHIC_READINGS:
+        claims.append(
+            LitClaim(sign=sign, proposed_value=value, source=source, year=year,
+                     claim_type="logographic_reading", note=note)
         )
     # deterministic order: sort by (claim_type, sign) so the seed is byte-stable regardless of
     # construction order — a control must be reproducible.
