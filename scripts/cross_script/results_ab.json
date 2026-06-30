@@ -1,0 +1,213 @@
+{
+  "seed": 20260630,
+  "n_splits": 200,
+  "held_frac": 0.2,
+  "best_d": 24,
+  "data": {
+    "a_signstrings": 539,
+    "a_tokens": 4245,
+    "b_signstrings": 918,
+    "b_tokens": 3450,
+    "n_anchors": 55,
+    "n_a_only": 26,
+    "anchors": [
+      "A",
+      "AU",
+      "DA",
+      "DE",
+      "DI",
+      "DU",
+      "E",
+      "I",
+      "JA",
+      "JE",
+      "KA",
+      "KE",
+      "KI",
+      "KO",
+      "KU",
+      "MA",
+      "ME",
+      "MI",
+      "MU",
+      "NA",
+      "NE",
+      "NI",
+      "NU",
+      "NWA",
+      "O",
+      "PA",
+      "PI",
+      "PO",
+      "PU",
+      "PU2",
+      "QA",
+      "QE",
+      "QI",
+      "RA",
+      "RA2",
+      "RE",
+      "RI",
+      "RO",
+      "RU",
+      "SA",
+      "SE",
+      "SI",
+      "SU",
+      "TA",
+      "TA2",
+      "TE",
+      "TI",
+      "TO",
+      "TU",
+      "U",
+      "WA",
+      "WI",
+      "ZA",
+      "ZE",
+      "ZO"
+    ],
+    "a_not_anchored": [
+      "JU",
+      "PA3",
+      "TWE",
+      "ZU"
+    ]
+  },
+  "dsweep_procrustes": {
+    "16": {
+      "method": "procrustes",
+      "mean": 0.018181818181818177,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "24": {
+      "method": "procrustes",
+      "mean": 0.020454545454545454,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "32": {
+      "method": "procrustes",
+      "mean": 0.01,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    }
+  },
+  "recovery": {
+    "freq_position": {
+      "method": "freq_position",
+      "mean": 0.01863636363636364,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "graph_isorank": {
+      "method": "graph_isorank",
+      "mean": 0.003181818181818182,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "cca": {
+      "method": "cca",
+      "mean": 0.009545454545454546,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "procrustes": {
+      "method": "procrustes",
+      "mean": 0.020454545454545454,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "sinkhorn_ot": {
+      "method": "sinkhorn_ot",
+      "mean": 0.018181818181818184,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    },
+    "random_chance": {
+      "method": "random_chance",
+      "mean": 0.014545454545454545,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091,
+      "n_splits": 200,
+      "n_hold_per_split": 11,
+      "n_anchors": 55,
+      "nB": 69,
+      "chance_analytic": 0.014492753623188406
+    }
+  },
+  "controls": {
+    "positive_control_procrustes": {
+      "mean": 0.989090909090909,
+      "ci_lo": 0.9090909090909091,
+      "ci_hi": 1.0
+    },
+    "negative_control_shuffled_join": {
+      "mean": 0.006363636363636364,
+      "ci_lo": 0.0,
+      "ci_hi": 0.09090909090909091
+    },
+    "loo": {
+      "procrustes": {
+        "accuracy": 0.0,
+        "hits": 0,
+        "n": 55
+      },
+      "freq_position": {
+        "accuracy": 0.01818181818181818,
+        "hits": 1,
+        "n": 55
+      },
+      "sinkhorn_ot": {
+        "accuracy": 0.0,
+        "hits": 0,
+        "n": 55
+      }
+    }
+  },
+  "best_method": "procrustes",
+  "clearly_above_chance": false,
+  "imputed_aonly": [],
+  "ceiling": "Etruscan-grade phonetic readout; NOT a decipherment of Minoan."
+}
