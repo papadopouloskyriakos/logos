@@ -29,8 +29,10 @@ import argparse
 import datetime
 import hashlib
 import json
+import math
 import os
 import sys
+from statistics import NormalDist
 
 _REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _REPO not in sys.path:
@@ -38,11 +40,16 @@ if _REPO not in sys.path:
 
 from scripts import logos_db, logos_stats  # noqa: E402
 from scripts.comparison import lexstat, lfake, run_canary  # noqa: E402
+# Additive comparison-layer diagnostics + §E gate inputs (design §A.2/§B.2/§B.3/§C.2). All pure,
+# arithmetic, deterministic — never on the verdict's decision: S_phono/S_morph are REPORTED, the
+# searchlog supplies the instrumented N_eff, litindex supplies the L_virgin generalization share.
+from scripts.comparison import phonostat, morphostat, searchlog, litindex  # noqa: E402
 
 METRIC_VERSION = "verdict-v1"          # bump when grade semantics / gate clauses change
 DSR_GATE = 0.95                        # §E DSR threshold
 N_FAKE_DEFAULT = 16                    # L_fake canary instances for the headline null distribution
 EPS_DEFAULT = 0.25                     # normalized-edit-distance epsilon for S_lex
+_NORM = NormalDist()                   # Φ for the §B.3 order-stat DSR (reported/secondary per F.1)
 
 
 def code_sha():
@@ -91,15 +98,41 @@ def lfake_distribution(heldout_forms, candidate_lexicon, n_fake=N_FAKE_DEFAULT, 
 # --------------------------------------------------------------------------- #
 def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
           lit_index_hit, virgin_sign_support, u_floor, n_eff,
-          null_recalls=None, fake_recalls=None, eps=EPS_DEFAULT, n_fake=N_FAKE_DEFAULT, seed=0):
+          null_recalls=None, fake_recalls=None, eps=EPS_DEFAULT, n_fake=N_FAKE_DEFAULT, seed=0,
+          heldout_by_inscription=None, search_log=None, per_sign_support=None, sign_partition=None,
+          phono_order=3):
     """Mechanically grade one hypothesis against its held-out implication.
 
     Returns a dict with: result (match|partial|deviation), accuracy (S*), brier, dsr, the L_fake
     bar + diagnostics, n_eff, the per-clause §E gate, and the gate_verdict
     (GRADUATE | REJECT | NULL_PUBLISHED). Pure: no DB, no network, no LLM.
+
+    PRIMARY/HEADLINE are unchanged (refinement F.1): deflated S_lex is the pragmatic primary and the
+    L_fake corrected-margin canary is the headline falsifier. The parameters below are ADDITIVE — they
+    feed REPORTED diagnostics and the already-wired §E clauses, never weaken an existing clause:
+
+      heldout_by_inscription : held-out forms grouped per INDEPENDENT inscription (list of lists) so
+          S_morph (the STRONG/Kober test, §A.2) can test cross-inscription recurrence. When None, the
+          flat ``heldout_forms`` is used, which forces S_morph's F.1 no-power escape (single group).
+      search_log             : a :class:`searchlog.SearchLog` (or any object exposing ``.n_eff``); when
+          given, its COUNTED N_eff (design §B.2, invariant 12) overrides the hand-passed ``n_eff``.
+      per_sign_support, sign_partition : a per-sign held-out support map + an {L_known, L_virgin}
+          partition; when both given, the §E ``generalizes_to_virgin`` clause uses
+          ``litindex.virgin_support`` over them instead of the pre-passed ``virgin_sign_support`` float.
+      phono_order            : n-gram order for the REPORTED S_phono surface-plausibility diagnostic.
     """
     heldout_forms = list(heldout_forms or [])
     candidate_lexicon = list(candidate_lexicon or [])
+
+    # Instrumented N_eff (design §B.2, invariant 12 — counts are GENERATED, not hand-written): a
+    # SearchLog's COUNTED distinct-candidate total is authoritative over the hand-passed int when the
+    # retrieval was instrumented. Duck-typed so tests/fakes exposing `.n_eff` also work; falls back
+    # cleanly to the passed n_eff otherwise (a missing instrument never crashes the grade).
+    n_eff_source = "passed"
+    if isinstance(search_log, searchlog.SearchLog) or (search_log is not None and hasattr(search_log, "n_eff")):
+        n_eff = int(search_log.n_eff)
+        n_eff_source = "searchlog"
+
     per_form = lexstat.s_lex_per_form(heldout_forms, candidate_lexicon, eps)
     observed = (sum(per_form) / len(per_form)) if per_form else 0.0      # S* — raw held-out recall
 
@@ -134,9 +167,47 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
     dsr = logos_stats.deflated_sharpe(sr, len(per_form), skew, kurt, n_trials, sr_variance) \
         if sr is not None else None
 
+    # §B.3 order-statistic bar (ADDITIVE / SECONDARY per F.1; the L_fake corrected bar stays HEADLINE).
+    # The deflated threshold is E[max over N_eff draws from the null] (μ0 + σ0·z-multiplier); then
+    # DSR_order = Φ((S* − bar) / σ̂(S*)), with σ̂ = the standard error of the held-out recall S* so a
+    # THIN held-out set T widens σ̂ and pulls DSR_order toward 0.5 (design §B.3: penalize thin T).
+    # A missing/degenerate n_eff or σ falls back cleanly (expected_max_order_stat → μ0; DSR_order None).
+    sigma0 = math.sqrt(sr_variance)
+    order_stat_bar = logos_stats.expected_max_order_stat(mu0, sigma0, n_trials)
+    T = len(per_form)
+    sigma_hat = None
+    dsr_order = None
+    if T >= 2:
+        var_h = sum((float(h) - observed) ** 2 for h in per_form) / (T - 1)   # sample var of per-form hits
+        se = math.sqrt(var_h / T)                                             # σ̂(S*) = SE of the mean
+        if se > 1e-12:
+            sigma_hat = se
+            dsr_order = _NORM.cdf((observed - order_stat_bar) / se)
+
+    # S_phono (phonostat §A.2) — the WEAK surface-plausibility diagnostic, REPORTED beneath S_lex (F.1).
+    # NaN (degenerate: empty held-out OR empty lexicon) is surfaced as None + the explicit flag, never a
+    # misleading finite 0 (honesty: a no-power read is visibly distinct from a real likelihood).
+    phono_rep = phonostat.s_phono_report(heldout_forms, candidate_lexicon, order=phono_order)
+    _sp = phono_rep["s_phono"]
+    s_phono_val = round(float(_sp), 4) if isinstance(_sp, float) and _sp == _sp else None
+    s_phono_degenerate = bool(phono_rep["is_degenerate"])
+
+    # S_morph (morphostat §A.2) — the STRONG/Kober gold-standard test, used WHEN POWERED (F.1). Grouped
+    # held-out (heldout_by_inscription) lets it test cross-inscription recurrence; a flat list forces the
+    # no-power escape. A no-power result is REPORTED but neutral to the gate (it must not block/fake-pass).
+    morph_input = heldout_by_inscription if heldout_by_inscription is not None else heldout_forms
+    s_morph_res = morphostat.s_morph(morph_input, candidate_lexicon, seed=seed)
+    morph_powered = bool(s_morph_res.get("is_powered", False))
+
     k = int(free_params)
     u_floor = float(u_floor)
-    virgin = float(virgin_sign_support) if virgin_sign_support is not None else 0.0
+    # §E generalizes_to_virgin: prefer litindex.virgin_support over a per-sign support map + the
+    # {L_known, L_virgin} partition WHEN both are supplied (the instrumented §C.2 path); otherwise fall
+    # back to the pre-passed float (existing behaviour — callers without the partition are unchanged).
+    if per_sign_support is not None and sign_partition is not None:
+        virgin = float(litindex.virgin_support(per_sign_support, sign_partition))
+    else:
+        virgin = float(virgin_sign_support) if virgin_sign_support is not None else 0.0
     # §E gate — ALL must hold for the hypothesis to count as evidence / graduate.
     clauses = {
         "registered_before_test": True,                       # by construction (it's in the DB)
@@ -146,6 +217,19 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         "beats_lfake_margin": (observed > bar),               # the headline L_fake falsifier
         "generalizes_to_virgin": (virgin > 0.0),              # discovery rests only on L_virgin signs
         "not_llm_lit_contamination": not (provenance == "llm_proposed" and bool(lit_index_hit)),
+        # S_morph is the gold-standard test WHEN THE CORPUS CAN SUPPORT IT (F.1). The clause keys off
+        # has_power (the corpus has enough independent inscriptions/affixes/null-variance to test
+        # morphology) vs is_significant (given power, the affixes productively recur above the null):
+        #   has_power & significant     -> True   (corroborated)
+        #   has_power & NOT significant -> False  (the strong test was AVAILABLE and the candidate
+        #                                          FAILED it -> blocks graduation; a REAL clause)
+        #   NOT has_power               -> True   (neutral: a short/formulaic corpus's honest no-power
+        #                                          must never block or fake-pass the gate)
+        # This is NOT the old tautology (is_powered already implied deflated>0): a powered-but-
+        # insignificant S_morph can now make this clause False. AND-ing it is still monotone — it only
+        # makes the gate STRICTER, so no existing §E clause is weakened.
+        "morph_gold_standard_when_powered": (bool(s_morph_res.get("is_significant", False))
+                                             if s_morph_res.get("has_power") else True),
     }
     all_hold = all(clauses.values())
 
@@ -178,7 +262,18 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         "lfake_bar_diag": bar_diag,
         "brier": round(brier, 4),
         "dsr": None if dsr is None else round(dsr, 4),
+        # §B.3 order-stat bar + DSR (reported/secondary per F.1 — NOT a gate input; the gate's DSR
+        # clause stays bound to the primary `dsr` above).
+        "order_stat_bar": round(float(order_stat_bar), 4),
+        "dsr_order": None if dsr_order is None else round(float(dsr_order), 4),
+        "sigma_hat": None if sigma_hat is None else round(float(sigma_hat), 6),
         "n_eff": n_trials,
+        "n_eff_source": n_eff_source,
+        # additive comparison-layer diagnostics (REPORTED, never on the verdict's decision path).
+        "s_phono": s_phono_val,                  # None when degenerate (NaN) — honest no-power, not a 0
+        "s_phono_degenerate": s_phono_degenerate,
+        "s_morph": s_morph_res,                  # full no-power-aware result (is_powered + reason + z…)
+        "s_morph_powered": morph_powered,
         "free_params": k,
         "u_floor": u_floor,
         "gate_verdict": gate_verdict,
@@ -191,9 +286,11 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
 def _notes(g):
     """Compact (<=255 char) audit string for verdicts.notes."""
     dsr = "NA" if g["dsr"] is None else f"{g['dsr']:.3f}"
-    s = (f"gate={g['gate_verdict']} result={g['result']} dsr={dsr} k={g['free_params']}/"
+    dsro = "NA" if g.get("dsr_order") is None else f"{g['dsr_order']:.3f}"
+    mph = "Y" if g.get("s_morph_powered") else "np"   # np = no power (the F.1 escape), distinct from a fail
+    s = (f"gate={g['gate_verdict']} result={g['result']} dsr={dsr} dsrO={dsro} k={g['free_params']}/"
          f"U{g['u_floor']:.0f} S*={g['accuracy']:.3f} lfake_bar={g['lfake_bar']:.3f} "
-         f"virgin={'Y' if g['clauses']['generalizes_to_virgin'] else 'N'} "
+         f"virgin={'Y' if g['clauses']['generalizes_to_virgin'] else 'N'} morph={mph} "
          f"fail={','.join(g['failing_clauses']) or 'none'} code={code_sha()} v={METRIC_VERSION}")
     return s[:255]
 
@@ -227,6 +324,15 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
     # backstop, so an un-instrumented search is still falsified, just not DSR-deflated).
     n_eff = int(pred.get("n_eff", 1))
     free_params = int(body.get("free_params", 0) or 0)
+    # Additive §A.2/§C.2 inputs, consumed only WHEN the prediction carries them (else None ⇒ the
+    # pre-existing flat/float fallbacks): per-inscription grouping powers S_morph's cross-inscription
+    # test; a per-sign support map + {L_known,L_virgin} partition lets the gate use litindex.virgin_support.
+    heldout_by_inscription = pred.get("heldout_by_inscription")
+    per_sign_support = pred.get("per_sign_support")
+    sp = pred.get("sign_partition")
+    sign_partition = None
+    if isinstance(sp, dict):                                # JSON arrays -> sets for litindex.virgin_support
+        sign_partition = {key: set(sp.get(key, []) or []) for key in ("L_known", "L_virgin")}
     return grade(
         heldout_forms=heldout_forms, candidate_lexicon=candidate_lexicon,
         confidence=confidence, free_params=free_params,
@@ -237,7 +343,9 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
         # corpus can pin fails k<=U_floor by default; the predictor must commit a real budget.
         u_floor=float(pred.get("u_floor", free_params)),
         n_eff=n_eff, null_recalls=pred.get("null_recalls"),
-        eps=eps, n_fake=n_fake, seed=seed)
+        eps=eps, n_fake=n_fake, seed=seed,
+        heldout_by_inscription=heldout_by_inscription,
+        per_sign_support=per_sign_support, sign_partition=sign_partition)
 
 
 def write_verdict(cur, plan_hash, family, g):

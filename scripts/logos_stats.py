@@ -45,15 +45,38 @@ def psr(sr, n, skew, kurt, sr_benchmark=0.0):
     return _N.cdf(z)
 
 
-def expected_max_sharpe(n_trials, sr_variance):
-    """Expected maximum Sharpe under the null across n_trials independent strategies
-    (Bailey–López de Prado). sr_variance = variance of the trials' Sharpe estimates."""
-    if n_trials < 2 or sr_variance <= 0:
-        return 0.0
-    sd = math.sqrt(sr_variance)
+def _emax_unit_z(n_trials):
+    """Gumbel/order-statistic z-multiplier for the expected maximum of ``n_trials`` i.i.d. draws from a
+    STANDARD normal (Bailey–López de Prado 2014): (1−γ)·Φ⁻¹(1 − 1/n) + γ·Φ⁻¹(1 − 1/(n·e)), γ = EULER_GAMMA.
+    The single place the Φ⁻¹ work lives. Requires n_trials > 1 (n_trials <= 1 sends Φ⁻¹(0) → −∞); the
+    public callers (:func:`expected_max_sharpe`, :func:`expected_max_order_stat`) guard that."""
     z1 = _N.inv_cdf(1.0 - 1.0 / n_trials)
     z2 = _N.inv_cdf(1.0 - 1.0 / (n_trials * math.e))
-    return sd * ((1.0 - EULER_GAMMA) * z1 + EULER_GAMMA * z2)
+    return (1.0 - EULER_GAMMA) * z1 + EULER_GAMMA * z2
+
+
+def expected_max_order_stat(mu0, sigma0, n_trials):
+    """Expected maximum of ``n_trials`` i.i.d. draws from a null with mean ``mu0`` and std ``sigma0``
+    (logos design §B.3 deflated bar):
+
+        E[max] ≈ mu0 + sigma0 · [ (1−γ)·Φ⁻¹(1 − 1/n) + γ·Φ⁻¹(1 − 1/(n·e)) ],   γ = EULER_GAMMA.
+
+    :func:`expected_max_sharpe` is the ``mu0 = 0`` special case — both route through :func:`_emax_unit_z`
+    so the Φ⁻¹ work is written once. Degenerates gracefully: ``n_trials <= 1`` (no multiplicity — a
+    single draw's expected maximum is its own mean) or ``sigma0 <= 0`` (no spread) returns ``mu0``
+    unscaled, never an inv_cdf(0) = −∞."""
+    if n_trials <= 1 or sigma0 <= 0:
+        return float(mu0)
+    return float(mu0) + float(sigma0) * _emax_unit_z(n_trials)
+
+
+def expected_max_sharpe(n_trials, sr_variance):
+    """Expected maximum Sharpe under the null across n_trials independent strategies
+    (Bailey–López de Prado). sr_variance = variance of the trials' Sharpe estimates. The ``mu0 = 0``
+    special case of :func:`expected_max_order_stat` (σ0 = √sr_variance)."""
+    if n_trials < 2 or sr_variance <= 0:
+        return 0.0
+    return expected_max_order_stat(0.0, math.sqrt(sr_variance), n_trials)
 
 
 def deflated_sharpe(sr, n, skew, kurt, n_trials, sr_variance):

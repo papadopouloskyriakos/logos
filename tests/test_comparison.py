@@ -21,6 +21,8 @@ if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
 from scripts.comparison import lfake, lexstat, nulls, run_canary  # noqa: E402
+from scripts.comparison import phonostat, morphostat, searchlog, litindex  # noqa: E402,F401
+from scripts import verdict, logos_stats  # noqa: E402
 
 
 # --------------------------------------------------------------------------- #
@@ -295,3 +297,137 @@ def test_root_template_divergence_is_reported_not_hidden():
     assert rep["root_template_TV"] > 0.0
     # the report carries the explicit "not ground truth" honesty note
     assert "NOT ground truth" in rep["note"]
+
+
+# --------------------------------------------------------------------------- #
+# 6. VERDICT INTEGRATION — the additive stats are REPORTED and the §B.3 order-stat bar is wired,
+#    WITHOUT moving the gate (deflated S_lex primary + L_fake headline stay; no-power S_morph is
+#    neutral). These lock the integration-stage contract (design §A.2/§B.2/§B.3/§C.2, F.1).
+# --------------------------------------------------------------------------- #
+# realistic NW-Semitic-style consonantal skeletons (mirrors the scaffold fixtures)
+_VCAND = ["nwy", "brq", "mlk", "ywm", "dn", "qtl", "zkr", "bnh", "hlk", "yqr"]
+_VHELD = ["nwy", "brq", "mlk", "ywm", "dn", "qtl"]
+_VBASE = dict(confidence=0.6, free_params=3, provenance="embedding_nn",
+              lit_index_hit=False, virgin_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
+
+
+def test_expected_max_order_stat_is_the_b3_bar_and_degrades_gracefully():
+    """logos_stats.expected_max_order_stat is the §B.3 deflated bar E[max over N_eff null draws]:
+    mu0=0 reduces it EXACTLY to expected_max_sharpe; n_trials<=1 (no multiplicity) and sigma0<=0 (no
+    spread) return mu0 with no inv_cdf(0) = -inf; and it is monotone increasing in N_eff."""
+    import math
+    # mu0 = 0 special case is byte-identical to the Sharpe order statistic
+    for n in (2, 5, 12, 100):
+        a = logos_stats.expected_max_order_stat(0.0, math.sqrt(0.25), n)
+        b = logos_stats.expected_max_sharpe(n, 0.25)
+        assert a == b, (n, a, b)
+    # mu0 shifts the bar by exactly mu0; sigma0 scales the multiplier
+    assert logos_stats.expected_max_order_stat(0.3, 0.5, 12) == \
+        0.3 + 0.5 * logos_stats._emax_unit_z(12)
+    # graceful degeneracies (the design requires n_trials<=1 to NOT blow up)
+    assert logos_stats.expected_max_order_stat(0.4, 1.0, 1) == 0.4
+    assert logos_stats.expected_max_order_stat(0.4, 1.0, 0) == 0.4
+    assert logos_stats.expected_max_order_stat(0.4, 0.0, 50) == 0.4
+    # more trials -> higher expected maximum (the selection-bias bar tightens)
+    assert logos_stats.expected_max_order_stat(0.0, 1.0, 5) < \
+        logos_stats.expected_max_order_stat(0.0, 1.0, 500)
+
+
+def test_grade_reports_s_phono_s_morph_and_order_stat_bar():
+    """verdict.grade now REPORTS S_phono (phonostat §A.2), S_morph (morphostat §A.2) and the §B.3
+    order-statistic bar — all additive diagnostics beneath the deflated-S_lex primary (F.1)."""
+    g = verdict.grade(_VHELD, _VCAND, **_VBASE)
+    # S_phono: a finite per-symbol log-likelihood here (negative), with the honest degenerate flag
+    assert "s_phono" in g and g["s_phono_degenerate"] is False
+    assert isinstance(g["s_phono"], float) and g["s_phono"] < 0.0
+    # S_morph: a FULL no-power-aware dict (never a bare float that hides the no-power escape)
+    assert isinstance(g["s_morph"], dict)
+    assert {"is_powered", "reason", "z", "deflated"} <= set(g["s_morph"])
+    assert g["s_morph_powered"] is False        # flat held-out -> single group -> no power
+    # the §B.3 order-stat bar + DSR are reported alongside (NOT replacing) the primary dsr
+    assert "order_stat_bar" in g and "dsr_order" in g and "sigma_hat" in g
+    assert "dsr" in g                            # the primary deflated_sharpe DSR is untouched
+
+
+def test_no_power_s_morph_does_not_change_the_gate_verdict():
+    """A no-power S_morph is REPORTED but NEUTRAL to the gate: the morph clause is True, never in
+    failing_clauses, and the gate verdict is identical whether the held-out is flat (single group)
+    or grouped into too-few inscriptions — i.e. the gold-standard-when-powered wiring did not move
+    any previously-decided verdict (F.1: no-power != pass and != fail)."""
+    g_flat = verdict.grade(_VHELD, _VCAND, **_VBASE)
+    # 2 inscriptions < min_inscriptions(3) -> guaranteed no power, regardless of affix inventory
+    grouped = [["nwy", "brq", "mlk"], ["ywm", "dn", "qtl"]]
+    g_grouped = verdict.grade(_VHELD, _VCAND, heldout_by_inscription=grouped, **_VBASE)
+    assert g_flat["s_morph_powered"] is False and g_grouped["s_morph_powered"] is False
+    # the morph clause is neutral-True in both and never blocks
+    for g in (g_flat, g_grouped):
+        assert g["clauses"]["morph_gold_standard_when_powered"] is True
+        assert "morph_gold_standard_when_powered" not in g["failing_clauses"]
+        # removing the always-True no-power clause cannot change the AND over clauses (proves neutral)
+        others = {k: v for k, v in g["clauses"].items() if k != "morph_gold_standard_when_powered"}
+        assert all(g["clauses"].values()) == all(others.values())
+    # and the two runs reach the SAME gate verdict (the morph machinery moved nothing)
+    assert g_flat["gate_verdict"] == g_grouped["gate_verdict"]
+
+
+def test_powered_but_insignificant_s_morph_can_fail_the_gate_clause():
+    """Verifier-found regression: the morph gate clause must NOT be a tautology. When the corpus CAN
+    test morphology (has_power=True) but the candidate's affixes do NOT productively recur above the
+    null (is_significant=False), the clause is FALSE and appears in failing_clauses — the strong test
+    was available and the candidate failed it. (Previously the clause keyed off is_powered, which
+    already implied deflated>0, so it could never be False — the gate enforced nothing here.)"""
+    # a candidate with a clear ma-/-Vu morphology, and a grouped held-out (within-form shuffled real
+    # data, frozen) that is testable but whose recurrence sits at the null -> powered-but-insignificant.
+    cand_rich = ["matabu", "makalu", "maradu", "masidu", "manaru", "kabtu", "rabtu", "sidtu",
+                 "naqtu", "baltu", "tabu", "radu", "sidu", "naru"]
+    grouped = [["aulmku", "tbzau", "rguim"], ["urmzaa", "patuh", "kunun"], ["iubram", "ltiu", "gdala"],
+               ["uzaurm", "putis", "lwkaa"], ["idmaul", "tnhua", "akrup"]]
+    flat = [f for insc in grouped for f in insc]
+    g = verdict.grade(flat, cand_rich, heldout_by_inscription=grouped, **_VBASE)
+    # the morph sub-result is genuinely POWERED but NOT significant (the case the tautology hid)
+    assert g["s_morph"]["has_power"] is True
+    assert g["s_morph"]["is_significant"] is False
+    assert g["s_morph_powered"] is False
+    # therefore the gate clause is FALSE (it can now block) and is reported as failing
+    assert g["clauses"]["morph_gold_standard_when_powered"] is False
+    assert "morph_gold_standard_when_powered" in g["failing_clauses"]
+    assert g["gate_verdict"] != "GRADUATE"
+
+
+def test_searchlog_neff_overrides_passed_count_in_grade():
+    """The instrumented N_eff (searchlog §B.2, invariant 12) is consumed: a SearchLog's COUNTED
+    distinct-candidate total overrides the hand-passed n_eff and is recorded as such."""
+    log = searchlog.SearchLog()
+    for i in range(7):
+        log.log_candidate({"*301": "na"}, f"lex{i}", ["na"])
+    log.log_candidate({"*301": "na"}, "lex0", ["na"])     # exact replay -> dedup, n_eff stays 7
+    assert log.n_eff == 7
+    base = dict(_VBASE); base["n_eff"] = 1                  # hand-passed (would be the fallback)
+    g = verdict.grade(_VHELD, _VCAND, search_log=log, **base)
+    assert g["n_eff"] == 7 and g["n_eff_source"] == "searchlog"
+    # without the log, the passed count is used (clean fallback, no crash)
+    g0 = verdict.grade(_VHELD, _VCAND, **base)
+    assert g0["n_eff"] == 1 and g0["n_eff_source"] == "passed"
+
+
+def test_litindex_virgin_support_feeds_the_e_gate_via_grade_row():
+    """When the prediction carries a per-sign support map + an {L_known, L_virgin} partition, the §E
+    generalizes_to_virgin clause is computed by litindex.virgin_support (§C.2), not the pre-passed
+    float. Support entirely on a virgin sign -> clause holds; support entirely on a known sign ->
+    clause fails (memorization, not discovery)."""
+    import json
+    body = json.dumps({"free_params": 3, "provenance": "embedding_nn"})
+    part = {"L_known": ["DA"], "L_virgin": ["*301"]}
+    # all support on the L_virgin sign -> virgin_support == 1.0 -> clause True
+    pred_v = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
+                         "u_floor": 8, "per_sign_support": {"*301": 1.0, "DA": 0.0},
+                         "sign_partition": part})
+    gv = verdict.grade_row("ph", "fam", body, pred_v, 0.6, n_fake=6, seed=2)
+    assert gv["clauses"]["generalizes_to_virgin"] is True
+    # all support on the literature-KNOWN sign -> virgin_support == 0.0 -> clause fails
+    pred_k = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
+                         "u_floor": 8, "per_sign_support": {"*301": 0.0, "DA": 1.0},
+                         "sign_partition": part})
+    gk = verdict.grade_row("ph", "fam", body, pred_k, 0.6, n_fake=6, seed=2)
+    assert gk["clauses"]["generalizes_to_virgin"] is False
+    assert "generalizes_to_virgin" in gk["failing_clauses"]
