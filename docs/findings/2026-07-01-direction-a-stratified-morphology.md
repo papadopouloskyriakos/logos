@@ -1,78 +1,97 @@
-# Finding 2026-07-01 — Direction-A STRATIFIED morphology re-run (#20): the pooled null HOLDS under stratification, and sharpens
+# Finding 2026-07-01 — Direction-A STRATIFIED morphology re-run (#20): NULL at the pre-registered bar, a disclosed near-miss
 
 Executes the two dated pre-registration addenda (`prereg-morphology-stratification-addendum-2026-06-30`
 + `prereg-morphology-salgarella-addendum-2026-06-30`) over the full corpus
-(`scripts/comparison/morphology_stratified.py`). Induces the FROZEN pre-registered affix panel **per
-genre stratum**, tests **cross-stratum stability** above a **per-affix L_fake bigram floor**, with the
-**abbreviation channel excluded** and **within-site** non-independence controlled (hands are
-unavailable for Linear A — TASK #19). Graded from the persisted artifact
-(`runtime/morphology-stratified.json`). CPU/laptop. NO phonetic claim; imports no `verdict.py`.
+(`scripts/comparison/morphology_stratified.py`): induce the FROZEN pre-registered affix panel **per
+genre stratum**, test **cross-stratum stability** above a **per-affix L_fake bigram floor**, with the
+**abbreviation channel excluded** and within-SITE non-independence controlled. Graded from the
+persisted artifact (`runtime/morphology-stratified.json`). **This finding was rewritten after an
+independent adversarial review** flagged that the first draft overclaimed robustness — the disclosures
+below are the result. CPU/laptop. NO phonetic claim; imports no `verdict.py`.
 
-## Headline — NULL: no validated cross-stratum morphology
+## Headline — NULL at the pre-registered α=0.01 (and the honest caveats)
 
-| stratum (genre, from GORILA `support`) | inscriptions | words | sites | real-confirm | passes L_fake floor |
-|---|---|---|---|---|---|
-| **admin** (tablets, bars) | 290 | 1,486 | 14 | `a-`, `-ti` | **`-ti`** |
-| **libation** (stone vessels) | 124 | 413 | 28 | `i-*301`, `a-`, `ja-` | **`ja-`** |
-| **other** (clay/metal/graffiti…) | 104 | 144 | 34 | `a-`, `-te/-ti` | **`-te/-ti`** |
+| stratum (genre, from GORILA `support`) | inscriptions | words | sites |
+|---|---|---|---|
+| **admin** (tablets, bars) | 290 | 1,486 | 14 |
+| **libation** (stone vessels only) | 99 | 370 | 15 |
+| **other** (clay/metal/stone-object/inked/graffiti…) | 129 | 187 | 40 |
 
-Abbreviation channel **excluded**: 740 seal inscriptions (Nodule/Roundel/Sealing/Label, 771 words) +
-333 admin list-headers. Chronological CV **declined** (corpus is 988/1341 ≈ 74% single-horizon LM IB).
+Abbreviation channel: 740 seal inscriptions (Nodule/Roundel/Sealing/Label) are **always** excluded
+(they are ~1-sign seal markings, not candidate word morphology) + 333 admin list-headers (votive
+first-words kept). Chronological CV **declined** (988/1341 ≈ 74% single-horizon LM IB).
 
-- **Cross-stratum-stable affixes: none.** No pre-registered affix passes the bigram floor in ≥2 genre
-  strata, so none is site-robust across strata either → **`has_validated_morphology = False`.**
-- The affixes that do pass the floor (`-ti`, `ja-`, `-te/-ti`) each survive in **exactly one** stratum
-  → they are **register features**, not validated language morphology.
+- **`has_validated_morphology = False`.** No pre-registered affix is cross-stratum stable above the
+  bigram floor at the pre-registered **α=0.01**.
 
-## What stratification ADDED over the pooled null (two sharper facts)
+## Threshold + bucketing sensitivity — DISCLOSED (the negative is a near-miss, not a comfortable null)
 
-1. **Even `i-*301` (Davis's verb stem) is bigram-reproducible in the libation register.** In the
-   libation stratum the fabricated (markov, sign-bigram) L_fake corpus *also* confirms `i-*301`, `a-`,
-   `ja-` — the libation formula is so repetitive that a 1st-order sign-transition model manufactures
-   the apparent verb morphology. Davis's structural reading is not refuted (the formula's slot grammar
-   is real); what the test shows is that on this corpus it is **not statistically separable from sign
-   bigrams** — the same limit the pooled run found, now localized to the formulaic register.
-2. **The would-be signals are register-specific.** `-ti` survives only in admin, `ja-` only in
-   libation, `-te/-ti` only in other. An affix confined to one genre is a register/sandhi feature, not
-   pan-corpus morphology — exactly the confound the within-permutation null (which preserves pooling)
-   cannot catch, and the reason the stratification addendum was registered.
+The independent review correctly flagged that the null is a *threshold call*. The full 2×2:
 
-## The discipline caught a grading confound mid-build (recorded, not hidden)
+| | **α=0.01** (pre-registered) | **α=0.05** (conventional) |
+|---|---|---|
+| **defensible** bucketing (libation = stone vessels only) | NULL | NULL |
+| **loose** bucketing (libation incl. stone objects + inked) | NULL | `i-`, `-te/-ti` **validate** |
 
-The first implementation graded cross-stratum stability on **panel-CONFIRM** (an affix that beats its
-own within-word permutation null + the DSR multiplicity bar). Scrutinizing the artifact showed the
-prefix `a-` (the commonest word-initial sign) "confirming" in all three strata while `real == L_fake`
-in admin — a bigram-trivial free-rider. Fixed by adding a **per-affix L_fake bigram floor**: an affix
-counts as morphology only if it confirms on the real corpus **and NOT** on the fabricated corpus
-(`morphology_affixes = real_confirmed − L_fake_confirmed`, union over 3 L_fake draws). `a-` is excluded
-from **every** stratum by this floor (a regression test locks it). This is the same "beat the bigram
-floor" lesson as the pooled finding, now enforced per-affix — and a sixth confound the
-grade-from-artifacts rule caught.
+Reading it honestly:
+- **The pre-registered α=0.01 null is robust to the genre-bucketing choice** (NULL under both
+  bucketings) — so the bucketing fix below is *not* cherry-picking the null.
+- A positive appears **only in the doubly-relaxed corner** (α=0.05 *and* the loose bucketing): there,
+  `i-` (locative "to/at") and `-te/-ti` (ablative "from/of") — the **Duhoux/Valério H3 nominal
+  affixes, which Salgarella 2025 §8 independently endorses** — validate cross-stratum + site-robust.
+- So the would-be positive is **fragile to both the α threshold and a defensible genre choice**. We
+  report the null, and flag the **H3 nominal affixes as the borderline candidates** — the closest thing
+  to recoverable morphology in the corpus, but not clearing the pre-registered bar. (The bucketing fix
+  itself is independently justified: the module defines libation as "stone vessels bearing the
+  formula," so stone objects + inked inscriptions belong in `other`, not libation — the review flagged
+  the original inclusion as inconsistent.)
+
+## What stratification ADDED over the pooled null
+
+- **Even `i-*301` (Davis's verb stem) is bigram-reproducible in the libation register.** In the
+  libation stratum the fabricated (markov sign-bigram) L_fake corpus *also* confirms `i-*301`, `a-`,
+  `ja-` — the formula is so repetitive a bigram model manufactures the apparent verb morphology. Davis
+  is not refuted (the slot grammar is real); the formula is simply **not statistically separable from
+  sign bigrams** on this corpus. (Verified across seeds.)
+- The residual signals are **register / single-stratum**, exactly the confound the within-permutation
+  null — which preserves pooling — cannot catch.
+
+## Discipline — two confounds caught (one by me, one by the reviewer)
+
+1. **Panel-CONFIRM vs the bigram floor (caught mid-build).** The first cut graded on panel-CONFIRM,
+   letting the bigram-trivial prefix `a-` free-ride (`real == L_fake` in admin). Fixed with the
+   per-affix L_fake floor (`morphology = real_confirmed − L_fake_confirmed`); `a-` is excluded from
+   every stratum (regression test).
+2. **Overclaimed robustness + a mislabeled control (caught by the independent reviewer).** The original
+   finding said "the null HOLDS and sharpens" without disclosing the α=0.05 flip, and the docstring
+   claimed "deflate effective-n for within-site" when the code actually applies a **≥2-distinct-sites
+   presence gate** (a conservative proxy — full effective-n deflation of the z-test is *not* applied; it
+   would only **strengthen** the null; recorded as a known limitation in `within_site_control`). Both
+   are now corrected here and in the code/docstrings.
 
 ## Method / discipline notes
 
-- **Genre strata** from the `support` field (Salgarella 2025 §6): seal supports = the abbreviation
-  channel (excluded); stone vessels = libation; tablets/bars = admin; rest = other.
-- **Within-site control (#19):** Linear A hands are not individuated (Salgarella 2019), so the
-  independence unit is the SITE; a candidate must be **site-robust** (borne across ≥2 distinct sites)
-  in addition to cross-stratum stable. No affix reached even the cross-stratum bar, so site-robustness
-  was not the binding constraint here.
-- **Abbreviation channel** excluded before induction and **reported** (no silent truncation): seal
-  inscriptions wholesale + admin-tablet ≤3-sign list-headers (votive first-words are dedicatory text,
-  kept).
+- **Genre strata** from the `support` field (Salgarella 2025 §6); seal supports excluded structurally.
+- **Within-site control (#19):** Linear A hands are not individuated (Salgarella 2019), so SITE is the
+  independence unit; a candidate must be borne across **≥2 distinct sites**. This is a presence gate,
+  **not** effective-n deflation (see above).
+- **Survivor lists are n_null/L_fake-seed-specific** (the 3-draw union floor is noisy in thin strata);
+  **only the grade bucket (validated vs null) is robust**. The descriptive per-stratum survivor lists
+  are reported as run-specific, not as findings.
 - **No phonetic claim.** A passing affix is a structural/paradigmatic object; no sign value is imputed.
 
-## Verified (independently re-run)
+## Verified
 
-Full suite green (+5 stratified tests; partitioning is deterministic — 740 seal / 290 admin / 124
-libation / 104 other). Raw result `runtime/morphology-stratified.json` (gitignored).
+Full suite green (+6 stratified tests; partitioning deterministic — 740 seal / 290 admin / 99 libation
+/ 129 other; the pre-reg α=0.01 null reproduces across seeds and both bucketings). Raw artifact
+`runtime/morphology-stratified.json` (gitignored), including the recorded α-sensitivity.
 
 ## Implication for the draft
 
-Direction A's negative is now **two-layer**: (1) the pooled pre-registered null on the Davis/Thomas
-affixes (bigram-reproducible), and (2) the stratified null showing the residual signals are
-**register-specific and still bigram-reproducible**, with hands unavailable to push further. A
-rigorous, pre-registered, *stratified* negative on a specific set of field claims — with the grading
-confound caught and reported — is a stronger referee artifact than the pooled null alone. Track-1
-morphology is complete; the remaining substantive surface is Direction-D (data-limited) and the
-Track-2 items.
+Direction A's negative is now precise and honestly bounded: **at the pre-registered α=0.01 there is no
+validated cross-stratum morphology, robust to the genre bucketing; the closest candidates are the
+Duhoux/Valério H3 nominal affixes (`i-`, `-te/-ti`), which surface only under a doubly-relaxed
+(α=0.05 + loose-bucketing) setting and which the current synthesis (Salgarella §8) independently lists.**
+That is a stronger, more credible referee artifact than a flat null — it names what is borderline, the
+threshold, and the sensitivity — with two confounds caught and disclosed. Track-1 morphology is
+complete; full effective-n deflation is the one recorded, deferred limitation.

@@ -48,8 +48,8 @@ def test_partitioning_is_deterministic():
     strata, stats = MS.build_strata(recs, exclude_abbrev=True)
     assert stats["seal_inscriptions_excluded"] == 740      # all Nodule/Roundel/Sealing/Label
     assert len(strata["admin"]) == 290
-    assert len(strata["libation"]) == 124
-    assert len(strata["other"]) == 104
+    assert len(strata["libation"]) == 99                   # Stone vessel only (the libation formula)
+    assert len(strata["other"]) == 129
     # the LM IB single-horizon skew that justifies declining chronological CV
     assert stats["period_distribution"].get("LMIB", 0) > 0.6 * len(recs)
 
@@ -66,6 +66,19 @@ def test_stratified_run_is_the_null(seed):
     # sign) from EVERY stratum's morphology set — it confirms in L_fake too, so it is not morphology.
     for name in MS.INDUCTION_STRATA:
         assert "a-" not in (res["per_stratum"][name].get("morphology_affixes") or []), name
+
+
+def test_alpha_sensitivity_is_recorded_and_prereg_null_is_robust():
+    """Disclosure (per adversarial review): the headline NULL must hold at the pre-registered alpha=0.01,
+    and the artifact must RECORD the conventional-alpha=0.05 sensitivity. Under the defensible genre
+    bucketing the null also holds at 0.05 — the would-be positive needs BOTH a relaxed alpha and a
+    looser bucketing, which is disclosed in the note."""
+    res = MS.run_with_alpha_sensitivity(n_null=60, seed=0)
+    assert res["has_validated_morphology"] is False               # pre-reg alpha=0.01 -> NULL
+    sa = res["alpha_sensitivity"]
+    assert sa["prereg_alpha"] == 0.01 and sa["conventional_alpha"] == 0.05
+    assert "validated_at_conventional_alpha" in sa                 # the 0.05 pass is recorded
+    assert "BUCKETING" in sa["note"] and "report the null" in sa["note"]
 
 
 def test_imports_no_verdict():
