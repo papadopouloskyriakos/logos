@@ -83,3 +83,16 @@ Done + on GitLab: corpus + DB + inventory (V=92) + logos_stats + datasets + simp
 Track B null + L_fake canary (self-validation holds). Running: sign-image I-JEPA. See
 `docs/findings/` for every result. Positioning: logos = the decontamination + discipline layer
 for the LLM-in-the-loop era (Tamburini owns the baseline; the decipherment is data-gated).
+
+
+## Usage-cap reality (2026-06-30) — adjusts the cadence
+
+The 5-hour API usage cap is BINDING (task #20 hit a 429 after ~77 min / 231k tokens). Implications
+for autonomous operation:
+- Heavy workflows (~200k tokens each) must be SPACED ~1 per 5h window, NOT every 15 min.
+- When a 429 / usage-limit is active: do LIGHT work only (salvage logs, record findings, commit,
+  amend docs) — do NOT launch a workflow (it will 429). Wait for the reset.
+- The every-15-min cron is fine for light cycles + monitoring, but cannot enable continuous heavy
+  work. Effective throughput: ~1 heavy workflow per 5h x the available windows.
+- This still completes the ~6-task queue over 2 weeks, just paced. NEVER burn tokens retrying
+  into a 429.
