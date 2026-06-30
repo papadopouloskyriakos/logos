@@ -79,6 +79,15 @@ CITATION_BEST = (
     "(Sundwall; A. Evans) was refuted by M. Pope, 'The Minoan Goddess Asasara - An Obituary', BICS 8 "
     "(1961) 29-31. DISPUTED — indexed for decontamination, not as an accepted reading."
 )
+CITATION_DIMINO = (
+    "T. Di Mino (2026), 'Ya Diktu: Grammar of the Minoan Peak Sanctuary Libation Formula' (draft; "
+    "recorded in docs/linear-a-claims-2026.md). Reads the libation word A-TA-I-*301-WA-JA via a "
+    "/na/-initial value for *301 as Semitic N-W-Y 'to dwell' (nawaya). DISPUTED + NOT independently "
+    "verified: contradicted by B. Davis (i-*301 = the verb 'give/dedicate'; structural V-S-O analysis, "
+    "Kadmos 52, 2013), and the match is partial (~1/5 of one word to 2/3 of a root). Indexed to "
+    "QUARANTINE the single highest-profile Linear A reading so any model regurgitating it is caught — "
+    "NEVER as an accepted reading."
+)
 
 # A loud, machine-readable flag so no downstream consumer mistakes the seed for the full index.
 SEED_NONEXHAUSTIVE = True
@@ -175,6 +184,12 @@ _SEMITIC_PROPOSALS = (
     ("A-SA-SA-RA-ME", "asherah", CITATION_BEST, 1981,
      "Best (1981): (j)a-sa-sa-ra-me = vocative 'oh Asherah!' (NW Semitic divine name; Ugaritic "
      "Athirat/atrt). The Linear A libation-formula word; ATTRIBUTION is to Best, NOT Gordon. DISPUTED."),
+    # Di Mino's highest-profile anchor — DISPUTED + UNVERIFIED, indexed ONLY to quarantine it (so a model
+    # reproducing *301=/na/ is caught) and to mark *301 L_known (excluding it from any L_virgin discovery set).
+    ("*301", "na", CITATION_DIMINO, 2026,
+     "Di Mino (2026) reads *301 with a /na/-initial value in A-TA-I-*301-WA-JA -> Semitic N-W-Y 'to "
+     "dwell' (nawaya). DISPUTED + NOT independently verified (Davis: i-*301 = verb 'give/dedicate'); "
+     "indexed to QUARANTINE the single highest-profile Linear A reading, NEVER as accepted."),
 )
 
 
@@ -254,7 +269,7 @@ def dump_index(claims: Sequence[LitClaim], path: str) -> None:
         "_seed_nonexhaustive": SEED_NONEXHAUSTIVE,
         "_seed_note": SEED_NOTE,
         "_citations": [CITATION_DESIGN, CITATION_GORILA, CITATION_VENTRIS, CITATION_ACCOUNTING,
-                       CITATION_GORDON, CITATION_BEST],
+                       CITATION_GORDON, CITATION_BEST, CITATION_DIMINO],
         "n_claims": len(claims),
         "claims": [asdict(c) for c in claims],
     }

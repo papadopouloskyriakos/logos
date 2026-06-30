@@ -41,8 +41,9 @@ def test_verified_semitic_proposals_present_and_unverified_omitted():
     attribution in a DECONTAMINATION index is worse than a gap."""
     index = litindex.load_index()
     sem = {c.sign: c for c in index if c.claim_type == "semitic_proposal"}
-    # the six confirmed claims, with their verified consonantal-cognate values
-    assert {s for s in sem} == {"SU-PU", "KA-RO-PA", "SU-PA-RA", "KU-RO", "JA-NE", "A-SA-SA-RA-ME"}
+    # the six independently-verified Gordon/Best claims, with their verified consonantal-cognate values
+    verified = {"SU-PU", "KA-RO-PA", "SU-PA-RA", "KU-RO", "JA-NE", "A-SA-SA-RA-ME"}
+    assert verified <= set(sem)
     assert sem["SU-PU"].proposed_value == "sp"
     assert sem["KA-RO-PA"].proposed_value == "krpn"     # Ugaritic krpn, NOT "Akkadian karpu" (corrected)
     assert sem["SU-PA-RA"].proposed_value == "spl"
@@ -51,8 +52,12 @@ def test_verified_semitic_proposals_present_and_unverified_omitted():
     assert sem["A-SA-SA-RA-ME"].proposed_value == "asherah"
     # a-sa-sa-ra-me is Best (1981), NOT Gordon — the verification caught the attribution drift
     assert "Best" in sem["A-SA-SA-RA-ME"].source and sem["A-SA-SA-RA-ME"].year == 1981
+    # *301 = Di Mino's DISPUTED/unverified quarantine anchor (NOT one of the 6 verified) — present + flagged,
+    # and quarantining it makes *301 L_known so it can never sit in an L_virgin discovery set.
+    assert sem["*301"].proposed_value == "na" and "Di Mino" in sem["*301"].source and sem["*301"].year == 2026
+    assert "*301" in litindex.known_signs(index)
     assert all(c.year == 1966 and "Gordon" in c.source
-               for k, c in sem.items() if k != "A-SA-SA-RA-ME")
+               for k, c in sem.items() if k not in {"A-SA-SA-RA-ME", "*301"})
     # OMITTED (unverifiable) — no semitic_proposal for qa-pa, and ki-ro has only its accounting reading
     assert "QA-PA" not in sem
     assert not any(c.sign == "KI-RO" and c.claim_type == "semitic_proposal" for c in index)
@@ -66,8 +71,10 @@ def test_partition_is_exact_disjoint_cover():
     known, virgin = part["L_known"], part["L_virgin"]
     assert known.isdisjoint(virgin)
     assert known | virgin == set(signs)
-    # the *-series + a nonsense token are all literature-virgin under the seed
-    assert {"*118", "*301", "*531", "ZQ_not_a_sign"} <= virgin
+    # *301 now carries Di Mino's DISPUTED published reading -> it is QUARANTINED (L_known), never virgin
+    assert "*301" in known
+    # the remaining *-series + a nonsense token have no published proposal -> literature-virgin
+    assert {"*118", "*531", "ZQ_not_a_sign"} <= virgin
 
 
 def test_sequence_reading_marks_component_signs_known():
