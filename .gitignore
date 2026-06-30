@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Corpus bronze = raw vendor / licensed dumps (invariant 10: bulk data never committed)
+corpus/bronze/*
+!corpus/bronze/.gitkeep
+
+# Generated analytical stores (single-writer; rebuild from silver)
+corpus/gold/*.duckdb
+corpus/gold/*.parquet
+*.duckdb
+*.duckdb.wal
+data/
+
+# Runtime / reports / editor cruft
+runtime/
+reports/
+.DS_Store
+*.swp
+.idea/
+.vscode/

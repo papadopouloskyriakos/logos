@@ -1,0 +1,149 @@
+# DESIGN.md — logos architecture & rationale
+
+logos is [finops-agora](../finops-agora)'s epistemic-discipline core, retargeted from
+*financial edge* to *linguistic decipherment*. The problem shapes are isomorphic: **rare
+signal, sparse data, an adversarial null, and a field drowning in self-deceiving
+"positives."** This doc is the architecture; the operating rules are in
+[CLAUDE.md](CLAUDE.md); the mission framing is in [README.md](README.md).
+
+## The isomorphism (why agora's patterns transfer)
+
+| agora (trading) | logos (decipherment) |
+|---|---|
+| a price series | a sign sequence / inscription |
+| a strategy family (momentum, value…) | a language-family hypothesis (Semitic, Anatolian, Tyrrenian, IE, isolate) |
+| a prediction (direction, horizon, catalyst) | a hypothesis (sign→phone map, lexeme, grammar rule, falsifiable held-out implication) |
+| the index benchmark (VWRD) | the **information floor** (unicity-distance / entropy budget) |
+| the mechanical `verdict` (match/partial/deviation vs prices) | the mechanical `verdict` (held-out-site / held-out-inscription accuracy) |
+| multiple-testing across strategies tried | multiple-testing across signs × roots × families tried |
+| a fake edge that costs capital | a fake decipherment that misleads the field |
+| G3 = real-money deploy | acceptance = reads held-out text + survives peer review |
+
+The single biggest transfer: **agora's "Deflated-Sharpe over effective-n" is exactly the
+cure for the decipherment field's "I matched 408 words" disease.** Matching words across a
+thesaurus of Proto-Semitic roots on a 7,500-character corpus is a multiple-testing problem;
+without deflation it proves nothing (cf. the "English is a Semitic language" demo). logos
+turns that intuition into a number.
+
+## Methodological foundation — build on Luo 2019, don't reinvent
+
+The decipherment *method* is not invented here. logos's core engine is a reimplementation of
+**Luo, Cao & Barzilay (2019)** — neural seq2seq + minimum-cost flow over cognate
+correspondences — which auto-deciphered Ugaritic→Hebrew and 67.3% of Linear-B cognates, and
+*by construction fails on Linear A* (no known cognate language to map to). That null is the
+empirical confirmation of the information floor in §4. Full method summary + what we port vs
+extend: [docs/methods/luo-2019.md](docs/methods/luo-2019.md). The broader prior-art map:
+[docs/references.md](docs/references.md). **logos's defensible claim is "Luo 2019 + agora
+honesty layer + agentic generation + cross-script JEPA transfer" — an extension of a
+peer-reviewed method, not a from-scratch decipherment.**
+
+## The layers
+
+```
+   CORPUS / INGESTION          REPRESENTATION (≤0.75)        HYPOTHESIS + RIGOR
+ ┌──────────────────┐        ┌──────────────────────┐     ┌──────────────────────┐
+ │ GORILA + SigLA + │        │ JEPA (LeCun):        │     │ predict (hash-keyed  │
+ │ lineara.xyz →    │───────▶│  • sign-image I-JEPA │────▶│  hypothesis, falsifi- │
+ │ bronze (raw) →   │        │  • sequence TS-JEPA  │     │  able, confidence)    │
+ │ silver (norm) →  │        │  • cross-script A↔B  │     │   ↓                   │
+ │ gold (DuckDB)    │        │   joint embedding    │     │ verdict (held-out,    │
+ └──────────────────┘        └──────────────────────┘     │  MECHANICAL)          │
+        │                              │                   │   ↓                   │
+        └──────────────────────────────┴──────────────────▶│ score (win-rate vs    │
+                                                           │  held-out, Brier,     │
+                                                           │  calibration)         │
+                                                           │   ↓                   │
+                                                           │ graduate (DSR ≥0.95,  │
+                                                           │  params ≤ info floor) │
+                                                           └──────────────────────┘
+```
+
+### 1. Corpus / ingestion (bronze → silver → gold)
+
+- **Bronze:** raw sign drawings/photos + raw GORILA/SigLA exports, gitignored where
+  licensed. Public foundations: [lineara.xyz](https://github.com/mwenge/lineara.xyz)
+  (explorer), GORILA, SigLA, the [NTU programme](https://github.com/L-Colin/Linear-A-decipherment-programme).
+- **Silver:** normalized `corpus/silver/*.json` — one record per inscription:
+  `{id, site, object_type, dating, signs:[...], logograms:[...], numerals, provenance, as_of}`.
+  The schema is defined in `scripts/corpus_io.py` (TODO).
+- **Gold:** a DuckDB/Parquet lake over silver for fast statistical scans (the agora
+  `lake_build.py` pattern, single-writer, capped). Read-only analytical queries only.
+
+### 2. Representation — JEPA (truth ≤ 0.75, never the decipherer)
+
+JEPA's value is *representation learning without labels, in latent space* — it captures
+predictive structure without reconstructing observations and without knowing the language.
+It slots into the exact role `agora-jepa` already fills (produce a latent, emit a capped
+feature). Three applications, in order of novelty:
+
+1. **Sign-image I-JEPA** — palaeographic representations; clusters same-sign / variant /
+   damaged-form with no labels. Closes the portfolio's CV gap.
+2. **Sequence TS-JEPA** (direct repurpose of agora's market encoder) — predict the latent of
+   the next sign-cluster from context → learns word boundaries and distributional grammar
+   with **zero phonetic knowledge** (the Kober/Ventris positional signal, latent & unsupervised).
+3. **Cross-script joint embedding (Linear A ↔ Linear B)** — the novel bet. Two related
+   scripts sharing ~60 signs are JEPA's "two views into one latent space"; the 60 known
+   Linear-B phonetic anchors transfer structure to Linear-A-only signs (`*301` etc.).
+
+**Honest headwind:** Linear A (~7,500 chars) is too small to pretrain a good latent on A
+alone. JEPA likely underperforms plain n-gram/entropy stats on A's text and shines instead on
+the larger Linear B corpus (for transfer) and on sign-image augmentation. Whether JEPA beats
+simpler stats here is itself a publishable research question — we answer it empirically, and a
+null is fine. **Decision: v0 ships JEPA as scaffold-only; light it up after the corpus + the
+symbolic verdict layer + the unicity number exist.** Reuse agora's harness
+(`services/agora-jepa`, `scripts/jepa_*.py`, `docs/jepa-market-encoder.md`).
+
+### 3. Hypothesis → verdict → score → graduate (the agora pipeline, retargeted)
+
+- **predict** (`predict.py`, TODO): canonical JSON body → `plan_hash = sha256(body)`; idempotent.
+  A hypothesis carries the sign(s), the proposed reading, the family, a falsifiable held-out
+  implication, and confidence ≤ 0.75 if model-assisted.
+- **verdict** (`verdict.py`, TODO — the *sole* writer of `verdicts`): mechanical held-out-site
+  / held-out-inscription accuracy; cross-corpus consistency; Brier vs the predicted
+  implication. The proposer never grades itself.
+- **score** (`family_scores.py`, TODO): per-family held-out win-rate, calibration gap, plus
+  the López de Prado corrections reused from `agora_stats.py` (effective-n, n_trials, DSR).
+- **graduate** (`graduation_audit.py`, TODO): a family graduates only if **DSR ≥ 0.95 on the
+  effective sample AND its free parameters ≤ the corpus information floor** (the unicity
+  gate). A family whose readings are underdetermined is capped forever — exactly as an
+  overfit trading strategy is frozen.
+
+### 4. The information floor (the benchmark)
+
+`scripts/corpus_info.py` computes the corpus's entropy budget and a unicity-distance
+estimate: **bits the corpus constrains vs free parameters of a hypothesized phonetic map.**
+If parameters ≫ information, no amount of cleverness can confirm a decipherment — the
+honest, decisive number for any Linear A claim. Every graded hypothesis is shown next to it.
+
+## Roadmap (honest — built on Luo 2019, not next to it)
+
+0. **Corpus ingest + information floor** — GORILA/SigLA → silver schema → DuckDB gold;
+   compute the real unicity-distance number (`scripts/corpus_info.py`) on the true Linear A
+   corpus. *(the decisive first number; reproduces the floor argument)* — `corpus_info.py`
+   is runnable today on `--demo`.
+1. **Reproduce the Luo baseline** ([docs/methods/luo-2019.md](docs/methods/luo-2019.md)) —
+   reimplement seq2seq + min-cost flow; reproduce the **Ugaritic→Hebrew success** (proves the
+   pipeline) and the **Linear-A null** (proves the floor: no cognate ⇒ the method cannot pin
+   a map). *Both publishable; the null is the honest milestone.* This is the non-NIH foundation.
+2. **predict → verdict scaffold (the agora layer)** — hash-keyed hypotheses; the LLM never
+   grades itself; mechanical held-out-site / held-out-inscription verdicts (`verdict.py`,
+   sole writer). Libation Formula × 5 sites = a natural 5-fold CV. Reuse `agora_stats`
+   deflation (DSR / effective-n over signs × roots × families).
+3. **Multi-family head-to-head** — Semitic (Gordon/Di Mino, one capped prior ≤0.75) vs
+   Anatolian vs Tyrrenian vs IE vs isolate, each graded, DSR-deflated for n_families.
+   *(the experiment nobody has run)*
+4. **Agentic generation** — Claude-in-the-loop cognate/sound-law hypothesis generation as
+   ≤0.75 signals (the layer Luo lacks entirely; Luo is pure optimization). `claude -p`, no
+   API key; evidence-audit clamps unevidenced confidence.
+5. **JEPA layer** — sign-image I-JEPA + sequence TS-JEPA + cross-script A↔B joint embedding;
+   test vs n-gram baseline. Gated behind phases 0–1 (too little data to pretrain on A alone).
+6. **Rosetta desk (cockpit)** — later; the agora-ui pattern.
+
+## Open questions for the operator (decide before phase 2)
+
+- **Gold store:** DuckDB lake only (like agora silver), or also a MariaDB project on the
+  Galera cluster? (Decipherment is single-writer/analytical → DuckDB may suffice; no live
+  concurrent writers like agora's trading loop.)
+- **GPU/host:** reuse gpu01 Ollama + a logos-jepa service, or keep v0 on the runner only?
+- **Corpus licensing:** are GORILA/SigLA exports redistributable in-repo, or bronze-only +
+  fetch-script (the agora invariant-12 pattern)?
