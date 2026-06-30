@@ -1,0 +1,21 @@
+{
+  "title": "logos: a falsifiable, decontaminated inference framework for testing undeciphered-script decipherment claims",
+  "description": "A discipline harness for telling a real decipherment of an undeciphered script from a fitted one: pre-registered predictions, multiple-testing deflation, contamination control (a literature index with an L_known/L_virgin partition, LLM-ablation, and an L_fake fabricated-corpus canary), and a held-out graduation gate computed mechanically. Linear A is the worked null — a body of rigorous, pre-registered negative results bounded by the corpus's information floor. The repository contains the source code and the original analysis/documentation; the underlying licensed Linear A corpus (GORILA / SigLA-derived) is gitignored and not redistributed.",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "creators": [
+    { "name": "Papadopoulos, Kyriakos" }
+  ],
+  "keywords": [
+    "Linear A",
+    "Minoan",
+    "Aegean scripts",
+    "decipherment",
+    "undeciphered scripts",
+    "selective inference",
+    "multiple testing",
+    "preregistration",
+    "reproducibility"
+  ]
+}
