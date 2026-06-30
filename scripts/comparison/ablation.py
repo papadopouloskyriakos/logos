@@ -43,6 +43,7 @@ import argparse
 import json
 import os
 import sys
+import unicodedata
 from collections import Counter
 from dataclasses import dataclass
 from typing import Dict, FrozenSet, List, Optional, Sequence, Set, Tuple
@@ -115,6 +116,42 @@ CONTAM_CAVEAT = (
     "regardless of literature coverage."
 )
 
+# --------------------------------------------------------------------------- #
+# GATE 2 (§C.4 cognate-level contamination) — constants
+# --------------------------------------------------------------------------- #
+COGNATE_CONTAM_CAVEAT = (
+    "GATE 2 (§C.4) COGNATE-level reproduction, reconciled to a COMMON consonant-skeleton vocabulary "
+    "(ablation.skeleton) so the LLM's NW-Semitic LEXEMES, the mechanical arm's nearest-Hebrew "
+    "skeletons, and the litindex's PUBLISHED consonantal readings are comparable. *** THE "
+    "cognate_contamination_rate IS CONFOUNDED — DO NOT REPORT IT AS A CONTAMINATION MEASURE. *** "
+    "Gate 2 did NOT cleanly fix the v1 artifact; it SOFTENED it. The model-free mechanical arm is "
+    "anchored to each form's GORILA SYLLABIC consonant skeleton, so it can only reproduce a published "
+    "reading when that skeleton coincidentally equals the Semitic reading — which holds for ONLY ONE "
+    "of the seed words (SU-PU: syllabic 'sp' == Semitic 'sp'). The other readings (kull, yn, spl, "
+    "krpn, asherah, the glosses total/deficit) are REPRESENTATIONALLY UNREACHABLE by a syllabic "
+    "edit-distance baseline for any eps (vowel reinterpretation / j-y / l-r / extra consonant / no "
+    "gloss). So 'LLM reproduces a reading the mechanical arm does not' is TRUE BY CONSTRUCTION for "
+    "6/7 words, and the rate is structurally floored near 1.0 — it measures the BASELINE'S "
+    "REPRESENTATIONAL CEILING (see mechanical_ceiling / rate_confounded), NOT LLM laundering. "
+    "THE HONEST DELIVERABLE IS THE per_word TABLE: which published readings the LLM reproduces (a real "
+    "regurgitation measurement) — read THAT, not the rate. A clean contamination rate needs a "
+    "fundamentally stronger model-free baseline (vowel-fill + correspondence rules, or a Gordon-free "
+    "JEPA latent) — real research, deferred. Honesty flags: cognate_no_power (LLM reproduced nothing) "
+    "and mech_no_power (mechanical reproduced nothing) both surfaced; litindex_partial stays True "
+    "(non-exhaustive seed) so any rate is also a partial lower bound."
+)
+
+PROBE_NOTE = (
+    "Probe forms (the litindex-KNOWN words: the 6 published West-Semitic readings su-pu / ka-ro-pa / "
+    "su-pa-ra / ku-ro / ja-ne / a-sa-sa-ra-me, plus the KU-RO/KI-RO accounting readings) are PREPENDED "
+    "to every seed's held-out sample, so the LLM is ALWAYS asked about the words that HAVE published "
+    "Semitic readings. The cognate-contamination metric is therefore measured ON the litindex-known "
+    "words BY DESIGN: it quantifies regurgitation of the published readings, it does NOT sample the "
+    "rate at which arbitrary held-out words happen to coincide with the literature. Disable with "
+    "--no-probe (n_probe_forms then 0 and the metric loses power unless the random sample happens to "
+    "draw a litindex word)."
+)
+
 
 # --------------------------------------------------------------------------- #
 # Normalization helpers (sign labels <-> canonical keys; phonetic value cleanup)
@@ -159,6 +196,82 @@ def _norm_value(value: object) -> str:
     drop = set("/[]{}()⟨⟩\"'*. -")
     s = value.strip().lower()
     return "".join(ch for ch in s if ch not in drop)
+
+
+# --------------------------------------------------------------------------- #
+# GATE 2 — consonant-skeleton normalization (the cross-source reconciliation vocabulary)
+# --------------------------------------------------------------------------- #
+# skeleton() reduces ANY romanized lexeme / value (LLM NW-Semitic lexeme, litindex consonantal
+# reading, or bhsa gold-convention Hebrew skeleton) to a COMMON consonant skeleton, so the three
+# sources can be compared at the cognate level. The mapping is intentionally SIMPLE + deterministic
+# and documented exactly below; the design goal is that genuinely-equivalent forms collapse together
+# (KU-RO's LLM lexeme "kull", the litindex value "kull", and a Hebrew "kl" all -> "kl") while
+# distinct consonants stay distinct (l and r are NOT merged — the su-pa-ra=spl l/r ambiguity is
+# carried by the litindex VALUE "spl", never by skeleton()).
+_SKEL_VOWELS = frozenset("aeiou")
+# Glottals / aleph / ayin: inconsistently written across English ("asherah"), gold ("<", "&") and
+# IPA-ish ("ʔ", "ʕ") conventions -> DROPPED so they never block an otherwise-real agreement.
+_SKEL_DROP = frozenset("<>&" "ʔʕʿʾʼʻˀˁ" "'`" "‘’ʼ")
+# Single non-decomposing symbols -> a plain ASCII consonant CLASS. (Accented letters like ā/š/ṣ
+# decompose under NFKD to base-letter + combining mark, and the combining mark is dropped, so they
+# need no entry here; only the non-decomposing gold-convention glyphs do.)
+_SKEL_SYMBOL = {"$": "s"}                         # gold shin -> s (so "sh" / "š" / "$" all reconcile)
+# Adjacent-letter digraphs -> single consonant class. Applied to the still-VOWEL-BEARING letter
+# string (BEFORE vowel deletion) so a vowel-SEPARATED s…h (samekh+he, e.g. "sahar") is never fused
+# into a shin, while a true digraph ("asherah"'s "sh") is.
+_SKEL_DIGRAPHS = (
+    ("sh", "s"), ("ch", "h"), ("kh", "k"), ("th", "t"),
+    ("ph", "p"), ("gh", "g"), ("dh", "d"), ("ts", "s"), ("tz", "s"),
+)
+
+
+def skeleton(s: object) -> str:
+    """Consonant skeleton of a romanized lexeme/value — the GATE-2 reconciliation vocabulary.
+
+    DETERMINISTIC pipeline (documented for audit):
+      1. NFKD-normalize + lowercase; drop combining marks; drop aleph/ayin glottals (``_SKEL_DROP``);
+         map the gold shin glyph ``$`` -> ``s`` (``_SKEL_SYMBOL``); keep every other LETTER (vowels
+         still present at this stage); drop digits / punctuation / spaces.
+      2. collapse adjacent-letter DIGRAPHS (``_SKEL_DIGRAPHS``: ``sh``->``s`` …) on the vowel-bearing
+         string, so only a TRUE digraph is fused (a vowel-separated s…h is left intact).
+      3. delete vowels (``a e i o u`` and, via NFKD step 1, their accented variants ``ā ē ī ō ū`` …).
+      4. collapse RUNS of the same consonant (degemination): ``kll`` -> ``kl``, ``yyn`` -> ``yn``.
+
+    Examples (the cross-source agreements gate 2 needs):
+      ``skeleton("kull") == skeleton("kl") == "kl"``      (LLM "kull" / litindex "kull" / Hebrew "kl")
+      ``skeleton("yayin") == skeleton("yn") == "yn"``     (LLM "yayin" / litindex "yn")
+      ``skeleton("asherah") == skeleton("<$rh") == "srh"``(English / gold reconcile)
+      ``skeleton("ʔšr") == "sr"``
+    l and r are kept DISTINCT (``skeleton("spl") == "spl"``, ``skeleton("spr") == "spr"``).
+    Non-strings -> ``""``.
+    """
+    if not isinstance(s, str):
+        return ""
+    # 1. NFKD + lowercase; map symbols, drop glottals + combining marks; KEEP vowels for step 2.
+    buf: List[str] = []
+    for ch in _nfkd(s).lower():
+        if unicodedata.combining(ch):
+            continue
+        if ch in _SKEL_DROP:
+            continue
+        mapped = _SKEL_SYMBOL.get(ch)
+        if mapped is not None:
+            buf.append(mapped)
+        elif ch.isalpha():
+            buf.append(ch)
+        # else (digits, punctuation, whitespace) -> dropped
+    letters = "".join(buf)
+    # 2. collapse true (adjacent-letter) digraphs BEFORE vowel deletion.
+    for dg, repl in _SKEL_DIGRAPHS:
+        letters = letters.replace(dg, repl)
+    # 3. delete vowels.
+    cons = "".join(ch for ch in letters if ch not in _SKEL_VOWELS)
+    # 4. degeminate (collapse consecutive duplicate consonants).
+    out: List[str] = []
+    for ch in cons:
+        if not out or out[-1] != ch:
+            out.append(ch)
+    return "".join(out)
 
 
 # --------------------------------------------------------------------------- #
@@ -305,18 +418,72 @@ def parse_proposal(text: object, valid_signs: Set[str]) -> Set[Tuple[str, str]]:
     return out
 
 
-def llm_propose(forms: Sequence[Form], model: str, seed: int, *, family: str = DEFAULT_FAMILY,
-                host: Optional[str] = None, timeout: int = 180,
-                log_path: Optional[str] = None) -> Set[Tuple[str, str]]:
-    """ARM (a): ask the local LLM (gemma3 via Ollama) for a partial_map and parse it to a corr. set.
+def _canon_seq(form_str: object) -> str:
+    """Canonicalize a surface form string to a '-'-joined canonical-sign-KEY sequence.
 
-    Sampling is enabled (temperature 0.8, options seed=``seed``) so distinct seeds explore distinct
-    proposals — the seed-variance is exactly what the ablation measures. The call is logged
-    (privacy-preserving sha, never the prompt text) and a dead/garbled call contributes an EMPTY
-    proposal without crashing the batch (invariant: signals fail closed).
+    ``"ku-ro"`` and ``"KU-RO"`` and ``"Ku-Ro"`` all map to ``"KU-RO"`` (each token is run through
+    :func:`sign_key`, which uppercases + NFKD-folds subscripts), so the LLM's surface spelling of a
+    form is reconciled to the SAME identity a held-out :class:`Form` exposes via ``'-'.join(f.keys)``.
+    """
+    toks = [sign_key(t) for t in str(form_str).split("-")]
+    return "-".join(t for t in toks if t)
+
+
+def parse_cognates(text: object, forms: Sequence[Form]) -> Set[Tuple[str, str, str]]:
+    """Parse an LLM reply's ``cognates:[{form,lexeme,gloss}]`` into a set of cognate claims.
+
+    Returns a set of ``(form_sign_sequence, lexeme_skeleton, gloss)`` where
+      * ``form_sign_sequence`` = the '-'-joined canonical sign KEYS of the held-out :class:`Form`
+        whose surface the cognate's ``form`` string names (mapped back via :func:`_canon_seq`); a
+        cognate whose ``form`` is NOT one of the shown forms is DROPPED (the proposer cannot invent
+        words), exactly as :func:`parse_proposal` drops invented signs;
+      * ``lexeme_skeleton`` = :func:`skeleton` of the proposed lexeme (the common-vocab consonant
+        skeleton); a cognate whose lexeme skeletonizes to ``""`` is dropped (no power);
+      * ``gloss`` = the cognate's gloss, lowercased + stripped (used by the litindex gloss-match path).
+
+    ROBUST: missing / non-list ``cognates`` / garbled entries / non-string fields -> the offending
+    entry (or the whole set) is silently skipped; never raises.
+    """
+    obj = ollama_client.extract_json(text)
+    if not isinstance(obj, dict):
+        return set()
+    cogs = obj.get("cognates")
+    if not isinstance(cogs, list):
+        return set()
+    shown = {"-".join(f.keys) for f in forms}                 # canonical identities actually shown
+    out: Set[Tuple[str, str, str]] = set()
+    for entry in cogs:
+        if not isinstance(entry, dict):
+            continue
+        raw_form = entry.get("form")
+        if not isinstance(raw_form, str):
+            continue
+        seq = _canon_seq(raw_form)
+        if seq not in shown:
+            continue                                           # not a form shown to the model -> drop
+        lex = entry.get("lexeme")
+        skel = skeleton(lex) if isinstance(lex, str) else ""
+        if not skel:
+            continue
+        gloss = entry.get("gloss")
+        g = gloss.strip().lower() if isinstance(gloss, str) else ""
+        out.add((seq, skel, g))
+    return out
+
+
+def llm_propose_full(forms: Sequence[Form], model: str, seed: int, *, family: str = DEFAULT_FAMILY,
+                     host: Optional[str] = None, timeout: int = 180,
+                     log_path: Optional[str] = None) -> Tuple[Set[Tuple[str, str]],
+                                                              Set[Tuple[str, str, str]]]:
+    """ARM (a), FULL: ONE Ollama call -> BOTH the (sign,value) correspondence set AND the cognate set.
+
+    Both outputs are parsed from the SAME response, so gate 2 adds NO extra LLM call. Sampling is
+    enabled (temperature 0.8, options seed=``seed``) — the seed-variance is what the ablation
+    measures. The call is logged (privacy-preserving sha, never the prompt text). A dead / garbled
+    call yields ``(set(), set())`` without crashing the batch (signals fail closed).
     """
     if not forms:
-        return set()
+        return set(), set()
     prompt = build_prompt(forms, family)
     res = ollama_client.generate(model, prompt, options={"temperature": 0.8, "seed": int(seed)},
                                  timeout=timeout, host=host)
@@ -324,8 +491,23 @@ def llm_propose(forms: Sequence[Form], model: str, seed: int, *, family: str = D
         ollama_client.log_call(res, model=model, prompt=prompt, log_path=log_path)
     except Exception:
         pass  # observability is best-effort; never let logging crash a proposal
+    text = res.get("response", "")
     valid = {sk for f in forms for sk in f.keys}
-    return parse_proposal(res.get("response", ""), valid)
+    return parse_proposal(text, valid), parse_cognates(text, forms)
+
+
+def llm_propose(forms: Sequence[Form], model: str, seed: int, *, family: str = DEFAULT_FAMILY,
+                host: Optional[str] = None, timeout: int = 180,
+                log_path: Optional[str] = None) -> Set[Tuple[str, str]]:
+    """ARM (a): ask the local LLM (gemma3 via Ollama) for a partial_map and parse it to a corr. set.
+
+    Thin wrapper over :func:`llm_propose_full` returning ONLY the (sign,value) correspondences
+    (unchanged behaviour: one generate call, the same options + logging). A dead/garbled call
+    contributes an EMPTY proposal without crashing the batch (invariant: signals fail closed).
+    """
+    corr, _ = llm_propose_full(forms, model, seed, family=family, host=host,
+                               timeout=timeout, log_path=log_path)
+    return corr
 
 
 # --------------------------------------------------------------------------- #
@@ -354,22 +536,21 @@ def _nearest_lexeme(skel: str, heb_by_len: Dict[int, List[str]], eps: float) -> 
     return best
 
 
-def mechanical_propose(forms: Sequence[Form], hebrew_lexicon: FrozenSet[str], seed: int, *,
-                       eps: float = 0.34,
-                       min_recurrence: int = MIN_RECURRENCE) -> Set[Tuple[str, str]]:
-    """ARM (b): cognate-aware correspondence induction WITHOUT a model. See MECHANICAL_INDUCTION.
+def _form_nearest_matches(forms: Sequence[Form], hebrew_lexicon: FrozenSet[str],
+                          eps: float) -> List[Tuple[Form, str, Tuple[str, ...], str]]:
+    """Shared nearest-Hebrew-lexeme work for both mechanical outputs (deterministic).
 
-    Deterministic given ``forms`` (and ``eps``); ``seed`` is accepted for interface symmetry with
-    llm_propose and is not consumed. Empty ``hebrew_lexicon`` -> empty set (no power).
+    Returns ``(form, skeleton_string, owner_sign_keys, best_hebrew_lexeme)`` for each form whose
+    consonant skeleton (length >= 2) matched a Hebrew lexeme within ``eps``. Empty lexicon -> []. Both
+    :func:`mechanical_propose` (positional (sign,value) correspondences, recurrence-gated) and
+    :func:`mechanical_cognates` (per-form cognate surface) consume this so the two NEVER drift.
     """
     if not hebrew_lexicon:
-        return set()
+        return []
     heb_by_len: Dict[int, List[str]] = {}
     for w in hebrew_lexicon:
         heb_by_len.setdefault(len(w), []).append(w)
-
-    # correspondence -> set of DISTINCT form ids that emitted it (the recurrence ledger)
-    ledger: Dict[Tuple[str, str], Set[str]] = {}
+    matches: List[Tuple[Form, str, Tuple[str, ...], str]] = []
     for f in forms:
         skel, owners = f.consonant_skeleton()
         if len(skel) < 2:
@@ -377,6 +558,25 @@ def mechanical_propose(forms: Sequence[Form], hebrew_lexicon: FrozenSet[str], se
         best = _nearest_lexeme(skel, heb_by_len, eps)
         if best is None:
             continue
+        matches.append((f, skel, owners, best))
+    return matches
+
+
+def mechanical_propose(forms: Sequence[Form], hebrew_lexicon: FrozenSet[str], seed: int, *,
+                       eps: float = 0.34,
+                       min_recurrence: int = MIN_RECURRENCE) -> Set[Tuple[str, str]]:
+    """ARM (b): cognate-aware correspondence induction WITHOUT a model. See MECHANICAL_INDUCTION.
+
+    Deterministic given ``forms`` (and ``eps``); ``seed`` is accepted for interface symmetry with
+    llm_propose and is not consumed. Empty ``hebrew_lexicon`` -> empty set (no power). Output (the
+    (sign,value) correspondence set, recurrence-gated) is UNCHANGED — gate 2 only refactored the
+    nearest-lexeme step out into :func:`_form_nearest_matches`.
+    """
+    if not hebrew_lexicon:
+        return set()
+    # correspondence -> set of DISTINCT form ids that emitted it (the recurrence ledger)
+    ledger: Dict[Tuple[str, str], Set[str]] = {}
+    for f, skel, owners, best in _form_nearest_matches(forms, hebrew_lexicon, eps):
         for i in range(min(len(skel), len(best))):
             corr = (owners[i], _norm_value(best[i]))
             if not corr[1]:
@@ -384,6 +584,23 @@ def mechanical_propose(forms: Sequence[Form], hebrew_lexicon: FrozenSet[str], se
             ledger.setdefault(corr, set()).add(f.fid)
 
     return {corr for corr, fids in ledger.items() if len(fids) >= min_recurrence}
+
+
+def mechanical_cognates(forms: Sequence[Form], hebrew_lexicon: FrozenSet[str],
+                        eps: float = 0.34) -> Set[Tuple[str, str]]:
+    """ARM (b) COGNATE surface (gate 2): the model-free cognate each form induces.
+
+    For every form that matched a Hebrew lexeme within ``eps`` (the SAME nearest-lexeme work as
+    :func:`mechanical_propose`, via :func:`_form_nearest_matches`), emit
+    ``(form_sign_sequence, hebrew_skeleton)`` where ``form_sign_sequence`` = ``'-'.join(f.keys)`` and
+    ``hebrew_skeleton`` = :func:`skeleton` of the matched Hebrew lexeme (reconciled to the common
+    cognate vocabulary). No recurrence gate (a cognate is a per-word claim, not a per-sign
+    correspondence). Deterministic; empty lexicon -> empty set (no power).
+    """
+    out: Set[Tuple[str, str]] = set()
+    for f, _skel, _owners, best in _form_nearest_matches(forms, hebrew_lexicon, eps):
+        out.add(("-".join(f.keys), skeleton(best)))
+    return out
 
 
 # --------------------------------------------------------------------------- #
@@ -466,6 +683,183 @@ def contamination(a_set: Set[Tuple[str, str]], b_set: Set[Tuple[str, str]],
 
 
 # --------------------------------------------------------------------------- #
+# GATE 2 — COGNATE-level contamination (a COMMON consonant-skeleton vocabulary)
+# --------------------------------------------------------------------------- #
+def _claim_atoms(claim: "litindex.LitClaim") -> Tuple[str, ...]:
+    """The claim's atomic signs as canonical KEYS (ordered) — ``"KU-RO"`` -> ``("KU","RO")``."""
+    return tuple(sign_key(a) for a in litindex._atomic_signs(claim.sign))
+
+
+def _claim_key(claim: "litindex.LitClaim") -> Tuple[str, str, str]:
+    """A claim's identity for reproduction bookkeeping: (sign-sequence, published value, type).
+
+    Keys per (word, READING): KU-RO's lexical ``total`` and its Semitic ``kull`` are DISTINCT keys, so
+    'reproducing the same litindex word+reading' is tracked at the reading level (the §C.4 unit).
+    """
+    return ("-".join(_claim_atoms(claim)), claim.proposed_value, claim.claim_type)
+
+
+def litindex_cognate_words(index: Sequence["litindex.LitClaim"]) -> Dict[str, List["litindex.LitClaim"]]:
+    """The COGNATE-level litindex words: claims whose sign is a SEQUENCE (>= 2 atomic signs).
+
+    Returns ``{sign_sequence -> [claims for that word]}`` (single-sign lb_value_transfer claims are
+    excluded — they are sign-value, not cognate-level). For the project seed this is the 7 distinct
+    words: SU-PU, KA-RO-PA, SU-PA-RA, KU-RO (kull + total), JA-NE, A-SA-SA-RA-ME, KI-RO.
+    """
+    words: Dict[str, List["litindex.LitClaim"]] = {}
+    for c in index:
+        atoms = _claim_atoms(c)
+        if len(atoms) < 2:
+            continue
+        words.setdefault("-".join(atoms), []).append(c)
+    return words
+
+
+def litindex_cognate_hit(form_sign_sequence: str, value_skeleton: str, gloss: str,
+                         index: Sequence["litindex.LitClaim"]) -> List["litindex.LitClaim"]:
+    """Litindex claims a cognate for ``form_sign_sequence`` reproduces (the §C.4 cognate quarantine).
+
+    MATCHING RULE (documented for audit). A claim is reproduced iff BOTH:
+      (1) SAME WORD — the claim's atomic signs equal the form's atomic signs as an ORDERED sequence
+          (``KU-RO`` reproduces the KU-RO claim, NOT every claim merely mentioning KU or RO; ``RO-KU``
+          would NOT, different word). Both sides are compared as canonical sign KEYS; AND
+      (2) SAME READING — EITHER the consonant skeletons agree
+          (``skeleton(claim.proposed_value) == value_skeleton``, the value path: e.g. LLM "kull" ->
+          ``kl`` == ``skeleton("kull")``), OR the gloss matches the claim's published value/note (the
+          gloss path: gloss ``"total"`` reproduces KU-RO's lexical ``"total"`` reading). The gloss
+          path needs a non-empty gloss and either an exact value match or a length->=4 substring
+          (so 2-char consonant values like ``sp``/``yn`` only ever match via the skeleton path).
+
+    Returns the (possibly several) matching claims — truthy iff a reproduction occurred. The
+    mechanical arm passes ``gloss=""`` (it has no gloss), so it can only reproduce via the skeleton.
+    """
+    form_atoms = tuple(sign_key(t) for t in form_sign_sequence.split("-") if t)
+    g = (gloss or "").strip().lower()
+    vs = value_skeleton or ""
+    hits: List["litindex.LitClaim"] = []
+    for claim in index:
+        if _claim_atoms(claim) != form_atoms:
+            continue
+        cval = claim.proposed_value.strip().lower()
+        skel_match = bool(vs) and skeleton(claim.proposed_value) == vs
+        # gloss path: the LLM's gloss reproduces the claim's published VALUE (e.g. gloss "total"
+        # reproduces KU-RO's lexical "total"). Matched against the claim VALUE only — NOT the free-text
+        # provenance note (a note-substring test false-positives on arbitrary words like "account").
+        gloss_match = bool(g) and (g == cval or (len(cval) >= 4 and cval in g))
+        if skel_match or gloss_match:
+            hits.append(claim)
+    return hits
+
+
+def cognate_contamination(llm_cognates: Set[Tuple[str, str, str]],
+                          mech_cognates: Set[Tuple[str, str]],
+                          index: Sequence["litindex.LitClaim"]) -> Dict[str, object]:
+    """The GATE-2 §C.4 headline: cognate-level contamination in a COMMON skeleton vocabulary.
+
+    ``llm_cognates``  : set of ``(form_sign_sequence, lexeme_skeleton, gloss)`` from :func:`parse_cognates`.
+    ``mech_cognates`` : set of ``(form_sign_sequence, hebrew_skeleton)`` from :func:`mechanical_cognates`.
+
+    Each arm's cognates are intersected with the litindex via :func:`litindex_cognate_hit`, giving the
+    set of PUBLISHED readings (claim keys, per word+reading) each arm reproduces. Then::
+
+        cognate_contamination_rate = |llm reproductions the MECHANICAL arm does NOT reproduce|
+                                     / |llm reproductions|
+
+    i.e. the share of published Semitic/accounting readings the LLM regurgitates that a model-free
+    metric does not independently support (the §C.4 regurgitation signal, now in a common vocabulary).
+
+    HONESTY (do NOT repeat the v1 artifact): when the LLM reproduces NO litindex reading
+    (``n_llm_lit_cog_hits == 0``) the rate is ``None`` + ``cognate_no_power=True`` — NEVER 0. The
+    per-word reproduction table (``per_word``) makes every hit auditable so the rate is never an opaque
+    1.0. ``litindex_partial`` stays True while the seed is non-exhaustive.
+    """
+    llm_hits: Dict[Tuple[str, str, str], "litindex.LitClaim"] = {}
+    for (seq, lex_skel, gloss) in llm_cognates:
+        for claim in litindex_cognate_hit(seq, lex_skel, gloss, index):
+            llm_hits[_claim_key(claim)] = claim
+    mech_hits: Dict[Tuple[str, str, str], "litindex.LitClaim"] = {}
+    for (seq, heb_skel) in mech_cognates:
+        for claim in litindex_cognate_hit(seq, heb_skel, "", index):
+            mech_hits[_claim_key(claim)] = claim
+
+    llm_keys = set(llm_hits)
+    mech_keys = set(mech_hits)
+    shared = llm_keys & mech_keys
+    llm_only = llm_keys - mech_keys                       # LLM reproduces, mechanical does NOT
+    n_llm_lit = len(llm_keys)
+
+    if n_llm_lit == 0:
+        rate: Optional[float] = None                     # UNDEFINED, not a misleading 0 (HONESTY)
+    else:
+        rate = len(llm_only) / n_llm_lit
+    cognate_no_power = (n_llm_lit == 0)
+    mech_no_power = (len(mech_keys) == 0)                 # symmetric guard: mechanical reproduced nothing
+    litindex_partial = bool(litindex.SEED_NONEXHAUSTIVE) or cognate_no_power
+    # THE RATE IS CONFOUNDED (verifier-confirmed, structural; see COGNATE_CONTAM_CAVEAT). The model-free
+    # SYLLABIC baseline can reproduce a published reading only when the form's syllabic consonant
+    # skeleton equals it (≈ SU-PU only); the other 6/7 readings are representationally unreachable, so
+    # `llm_only` (the rate's numerator) is dominated by the baseline's ceiling, not by LLM laundering.
+    # Flagged True so no consumer reads the rate as a clean contamination measure — use per_word instead.
+    rate_confounded = True
+    mechanical_ceiling = {
+        "n_words_mechanical_reproduced": len({k[0] for k in mech_keys}),
+        "words_mechanical_reproduced": sorted({k[0] for k in mech_keys}),
+        "note": ("the model-free syllabic edit-distance baseline can express only readings whose syllabic "
+                 "consonant skeleton equals the published reading (empirically ~SU-PU only); the other "
+                 "litindex readings are unreachable for ANY eps, so llm_only is structurally near-total"),
+    }
+
+    # per-word reproduction table over ALL cognate-level litindex words (auditable; not a black box)
+    words = litindex_cognate_words(index)
+    per_word: Dict[str, object] = {}
+    for seq in sorted(words):
+        wkeys = {_claim_key(c) for c in words[seq]}
+        per_word[seq] = {
+            "readings": sorted({c.proposed_value for c in words[seq]}),
+            "claim_types": sorted({c.claim_type for c in words[seq]}),
+            "llm_reproduced": bool(wkeys & llm_keys),
+            "mech_reproduced": bool(wkeys & mech_keys),
+        }
+
+    return {
+        "n_llm_cog": len(set(llm_cognates)),
+        "n_mech_cog": len(set(mech_cognates)),
+        "n_llm_lit_cog_hits": n_llm_lit,
+        "n_mech_lit_cog_hits": len(mech_keys),
+        "n_shared_lit_cog": len(shared),
+        "cognate_contamination_rate": rate,
+        "rate_confounded": rate_confounded,              # *** the rate is NOT a clean contamination measure
+        "mechanical_ceiling": mechanical_ceiling,        # the baseline's representational ceiling (≈SU-PU)
+        "cognate_no_power": cognate_no_power,
+        "mech_no_power": mech_no_power,
+        "litindex_partial": litindex_partial,
+        "seed_nonexhaustive": bool(litindex.SEED_NONEXHAUSTIVE),
+        "llm_lit_cog_hits": [list(k) for k in sorted(llm_keys)],
+        "mech_lit_cog_hits": [list(k) for k in sorted(mech_keys)],
+        "shared_lit_cog": [list(k) for k in sorted(shared)],
+        "llm_only_lit_cog": [list(k) for k in sorted(llm_only)],
+        "per_word": per_word,
+        "cognate_caveat": COGNATE_CONTAM_CAVEAT,
+    }
+
+
+def litindex_probe_forms(index: Sequence["litindex.LitClaim"]) -> List[Form]:
+    """Probe :class:`Form`s built DIRECTLY from the litindex cognate-level sign-sequences.
+
+    For each distinct cognate-level word (:func:`litindex_cognate_words`) build
+    ``build_form("PROBE:<seq>", [atomic signs])`` — e.g. KU-RO -> ``build_form("PROBE:KU-RO",
+    ["KU","RO"])``. Prepended to each seed's held-out sample (see :func:`run_ablation`) so the LLM is
+    ALWAYS asked about the words that HAVE published Semitic readings, giving the cognate metric power
+    (see PROBE_NOTE — the contamination is measured ON the litindex-known words BY DESIGN). Returned
+    in deterministic (sorted-by-sequence) order.
+    """
+    forms: List[Form] = []
+    for seq in sorted(litindex_cognate_words(index)):
+        forms.append(build_form(f"PROBE:{seq}", seq.split("-")))
+    return forms
+
+
+# --------------------------------------------------------------------------- #
 # run_ablation — aggregate over seeds
 # --------------------------------------------------------------------------- #
 def _dist(vals: Sequence[float]) -> Dict[str, object]:
@@ -492,38 +886,56 @@ def _survival(counter: Counter) -> List[dict]:
 def run_ablation(model: str, n_seeds: int, n_forms: int, seed0: int, *, with_llm: bool = True,
                  family: str = DEFAULT_FAMILY, eps: float = 0.34, window: int = 6,
                  host: Optional[str] = None, timeout: int = 180,
-                 log_path: Optional[str] = None) -> Dict[str, object]:
+                 log_path: Optional[str] = None, no_probe: bool = False) -> Dict[str, object]:
     """Run the §C.4 ablation over ``n_seeds`` seeds (``seed0 .. seed0+n_seeds-1``) and aggregate.
 
-    For each seed: sample the SAME held-out forms for both arms; run ARM (b) [mechanical,
-    deterministic] and, when ``with_llm``, ARM (a) [LLM, seed-varied]; score :func:`contamination`.
-    Aggregates the jaccard / delta_only / contamination_rate distributions across seeds, and the
-    per-correspondence SURVIVAL (how many seeds each (sign,value) appears in) for each arm separately.
+    For each seed: sample the SAME held-out forms for both arms (with the litindex PROBE forms
+    PREPENDED unless ``no_probe`` — so gate 2's cognate metric is always exercised on the words that
+    HAVE published Semitic readings; see PROBE_NOTE); run ARM (b) [mechanical, deterministic] and,
+    when ``with_llm``, ARM (a) [LLM, seed-varied] via a SINGLE call yielding BOTH the (sign,value)
+    correspondences AND the cognates. Scores the existing correspondence-level :func:`contamination`
+    (INTACT) AND the new cognate-level :func:`cognate_contamination`. Aggregates both across seeds,
+    plus per-correspondence SURVIVAL and the per-litindex-word reproduction table.
     """
     heb, heb_src = hebrew_lexicon()
     index = litindex.load_index()
+    probe_forms = [] if no_probe else litindex_probe_forms(index)
 
     per_seed: List[dict] = []
+    cog_per_seed: List[dict] = []
     a_surv: Counter = Counter()
     b_surv: Counter = Counter()
 
+    # per-word reproduction tally across seeds (auditable headline table)
+    words = litindex_cognate_words(index)
+    word_agg: Dict[str, dict] = {
+        seq: {"readings": sorted({c.proposed_value for c in claims}),
+              "claim_types": sorted({c.claim_type for c in claims}),
+              "llm_reproduced_seeds": 0, "mech_reproduced_seeds": 0}
+        for seq, claims in words.items()
+    }
+
     for s in range(seed0, seed0 + n_seeds):
-        forms = heldout_forms(n_forms, s, window=window)
+        forms = list(probe_forms) + heldout_forms(n_forms, s, window=window)
         b_set = mechanical_propose(forms, heb, s, eps=eps)
+        mech_cog = mechanical_cognates(forms, heb, eps=eps)
         # ARM (a) per-seed exception isolation: a single bad call (even one that violates generate()'s
         # documented no-raise contract) must NOT abort the whole batch or lose accumulated survival.
         a_set: Set[Tuple[str, str]] = set()
+        llm_cog: Set[Tuple[str, str, str]] = set()
         llm_error: Optional[str] = None
         if with_llm:
             try:
-                a_set = llm_propose(forms, model, s, family=family, host=host,
-                                    timeout=timeout, log_path=log_path)
+                a_set, llm_cog = llm_propose_full(forms, model, s, family=family, host=host,
+                                                  timeout=timeout, log_path=log_path)
             except Exception as exc:                       # noqa: BLE001 — isolate the seed, keep going
                 llm_error = str(exc)[:200]
         con = contamination(a_set, b_set, index)
+        cog = cognate_contamination(llm_cog, mech_cog, index)
         per_seed.append({
             "seed": s,
             "n_forms": len(forms),
+            "n_probe_forms": len(probe_forms),
             "n_a": con["n_a"], "n_b": con["n_b"], "n_shared": con["n_shared"],
             "jaccard": con["jaccard"], "delta_only": con["delta_only"],
             "a_lit_hits": con["a_lit_hits"], "delta_lit_hits": con["delta_lit_hits"],
@@ -532,7 +944,20 @@ def run_ablation(model: str, n_seeds: int, n_forms: int, seed0: int, *, with_llm
             "seed_nonexhaustive": con["seed_nonexhaustive"],
             "llm_error": llm_error,
             "sign_level": con["sign_level"],
+            # gate-2 cognate summary (full detail in cognate_per_seed)
+            "cognate_contamination_rate": cog["cognate_contamination_rate"],
+            "cognate_no_power": cog["cognate_no_power"],
+            "n_llm_cog": cog["n_llm_cog"], "n_mech_cog": cog["n_mech_cog"],
+            "n_llm_lit_cog_hits": cog["n_llm_lit_cog_hits"],
+            "n_mech_lit_cog_hits": cog["n_mech_lit_cog_hits"],
+            "n_shared_lit_cog": cog["n_shared_lit_cog"],
         })
+        cog_per_seed.append({"seed": s, **cog})
+        for seq, info in cog["per_word"].items():
+            if info["llm_reproduced"]:
+                word_agg[seq]["llm_reproduced_seeds"] += 1
+            if info["mech_reproduced"]:
+                word_agg[seq]["mech_reproduced_seeds"] += 1
         for c in a_set:
             a_surv[c] += 1
         for c in b_set:
@@ -551,13 +976,31 @@ def run_ablation(model: str, n_seeds: int, n_forms: int, seed0: int, *, with_llm
         "jaccard_signs": _dist([p["sign_level"]["jaccard_signs"] for p in per_seed]),
     }
 
+    cog_crates = [c["cognate_contamination_rate"] for c in cog_per_seed
+                  if c["cognate_contamination_rate"] is not None]
+    cognate_aggregate = {
+        "cognate_contamination_rate": _dist(cog_crates),
+        "n_seeds_with_defined_cognate_contamination_rate": len(cog_crates),
+        "all_seeds_no_power": (all(c["cognate_no_power"] for c in cog_per_seed)
+                               if cog_per_seed else True),
+        "n_llm_cog": _dist([c["n_llm_cog"] for c in cog_per_seed]),
+        "n_mech_cog": _dist([c["n_mech_cog"] for c in cog_per_seed]),
+        "n_llm_lit_cog_hits": _dist([c["n_llm_lit_cog_hits"] for c in cog_per_seed]),
+        "n_mech_lit_cog_hits": _dist([c["n_mech_lit_cog_hits"] for c in cog_per_seed]),
+        "n_shared_lit_cog": _dist([c["n_shared_lit_cog"] for c in cog_per_seed]),
+        "n_words": len(words),
+        "word_table": word_agg,
+        "litindex_partial": bool(litindex.SEED_NONEXHAUSTIVE) or len(cog_crates) == 0,
+        "cognate_caveat": COGNATE_CONTAM_CAVEAT,
+    }
+
     return {
         "citation": CITATION_DESIGN,
         "model": model,
         "family": family,
         "with_llm": bool(with_llm),
         "params": {"n_seeds": n_seeds, "n_forms": n_forms, "seed0": seed0, "eps": eps,
-                   "window": window, "min_recurrence": MIN_RECURRENCE},
+                   "window": window, "min_recurrence": MIN_RECURRENCE, "no_probe": bool(no_probe)},
         "hebrew_lexicon_source": heb_src,
         "n_hebrew_skeletons": len(heb),
         "mechanical_power": bool(heb),
@@ -565,10 +1008,16 @@ def run_ablation(model: str, n_seeds: int, n_forms: int, seed0: int, *, with_llm
         "litindex_caveat": CONTAM_CAVEAT,
         "seed_nonexhaustive": bool(litindex.SEED_NONEXHAUSTIVE),
         "n_literature_claims": len(index),
+        "n_probe_forms": len(probe_forms),
+        "probe_included": bool(probe_forms),
+        "probe_note": PROBE_NOTE,
         "aggregate": aggregate,
+        "cognate_aggregate": cognate_aggregate,
+        "cognate_word_table": word_agg,
         "survival_arm_a_llm": _survival(a_surv),
         "survival_arm_b_mechanical": _survival(b_surv),
         "per_seed": per_seed,
+        "cognate_per_seed": cog_per_seed,
     }
 
 
@@ -608,6 +1057,24 @@ def _summary(report: Dict[str, object]) -> str:
         f"survival: arm_a (LLM) {len(report['survival_arm_a_llm'])} distinct corr; "
         f"arm_b (mech) {len(report['survival_arm_b_mechanical'])} distinct corr",
     ]
+
+    cagg = report.get("cognate_aggregate")
+    if cagg is not None:
+        lines.append("-" * 78)
+        lines.append("GATE 2 — COGNATE-LEVEL CONTAMINATION (common consonant-skeleton vocabulary)")
+        lines.append(
+            f"cognate_contamination_rate mean={_m(cagg['cognate_contamination_rate'])}  over "
+            f"{cagg['n_seeds_with_defined_cognate_contamination_rate']}/{report['params']['n_seeds']} "
+            f"seeds with LLM lit-hits>0  (probes={report.get('n_probe_forms', 0)}, "
+            f"all_seeds_no_power={cagg['all_seeds_no_power']})")
+        lines.append("per-litindex-word reproduction (LLM seeds / mech seeds, out of "
+                     f"{report['params']['n_seeds']}):")
+        for seq in sorted(cagg["word_table"]):
+            row = cagg["word_table"][seq]
+            lines.append(f"   {seq:<14} readings={row['readings']}  "
+                         f"LLM={row['llm_reproduced_seeds']}  mech={row['mech_reproduced_seeds']}")
+        lines.append("PROBE NOTE: " + report.get("probe_note", ""))
+        lines.append("COGNATE CAVEAT: " + cagg["cognate_caveat"])
     return "\n".join(lines)
 
 
@@ -622,6 +1089,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--window", type=int, default=6, help="max signs per windowed form")
     p.add_argument("--no-llm", action="store_true",
                    help="mechanical-only (no GPU; tests/CI) — ARM (a) is empty")
+    p.add_argument("--no-probe", action="store_true",
+                   help="do NOT prepend the litindex probe forms (gate-2 cognate metric loses power "
+                        "unless the random sample happens to draw a litindex word)")
     p.add_argument("--host", default=None, help="Ollama host (default $OLLAMA_URL or the gpu host)")
     p.add_argument("--timeout", type=int, default=180)
     p.add_argument("--out", default=None, help="output JSON (default runtime/ablation/<model>-<family>.json)")
@@ -631,7 +1101,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     report = run_ablation(
         args.model, args.seeds, args.n_forms, args.seed0,
         with_llm=not args.no_llm, family=args.family, eps=args.eps, window=args.window,
-        host=args.host, timeout=args.timeout,
+        host=args.host, timeout=args.timeout, no_probe=args.no_probe,
     )
 
     out = args.out or _default_out(args.model, args.family)
