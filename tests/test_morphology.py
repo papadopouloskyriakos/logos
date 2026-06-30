@@ -67,6 +67,24 @@ _PREFIX = M.Affix("qq-", "prefix", (("QQ",),), "QQ", "synthetic-plant")
 # --------------------------------------------------------------------------- #
 # (a) planted productive suffix -> CONFIRM; shuffle / L_fake -> NOT confirmed (the floor)
 # --------------------------------------------------------------------------- #
+def test_word_length_distribution_reconciles_fuls_2015():
+    """The Direction-A 'short, mostly 1-2-sign words' premise vs Fuls 2015's reported 3.3-sign average:
+    BOTH hold on the real corpus, counting different denominators. On the word-tokens the morphology
+    test consumes, words are short (median/mode 1, ~76% <=2 signs) — exactly why morphology is not
+    separable from bigram order. Fuls's 3.3 is recovered only on DISTINCT MULTI-sign words (~3.07,
+    after dropping the ~56% single-sign admin/abbreviation tokens). Generated, not hand-written."""
+    d = M.word_length_distribution(M.load_corpus())
+    # premise holds for the test's denominator (token-level, scribe divisions)
+    assert d["token_median"] == 1 and d["token_mode"] == 1
+    assert d["token_mean"] < 2.0
+    assert 0.70 < d["pct_len_le2"] < 0.82           # ~76% are <=2 signs
+    # Fuls 2015's 3.3 is bracketed by the distinct-multi-sign cut (denominator difference, not conflict)
+    assert 2.9 <= d["distinct_mean_ge2"] <= 3.4
+    assert d["fuls_2015_reported"] == 3.3
+    # the cuts are ordered as expected: all-tokens < distinct < distinct-multi-sign ~ Fuls
+    assert d["token_mean"] < d["distinct_mean"] < d["distinct_mean_ge2"]
+
+
 def test_planted_suffix_confirms_and_floors_do_not():
     corpus = _planted_suffix_corpus()
     codec = M.SignCodec.from_corpus(corpus)

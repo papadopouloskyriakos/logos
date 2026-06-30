@@ -129,6 +129,41 @@ def load_corpus(path: str = DEFAULT_SILVER) -> List[Inscription]:
     return out
 
 
+def word_length_distribution(corpus: Sequence[Inscription]) -> Dict[str, object]:
+    """Signs-per-word distribution + the Fuls (2015) reconciliation (generated, not hand-written;
+    invariant 12). Reconciles the Direction-A finding's 'short, mostly 1-2-sign words' premise against
+    Fuls 2015's reported 3.3-sign average — BOTH hold; they count different denominators. On the
+    word-tokens the morphology test consumes, words are short (median/mode 1, ~76% are <=2 signs), which
+    is exactly why morphology is not separable from bigram order. Fuls's 3.3 is recovered (~3.07) only on
+    DISTINCT MULTI-sign words, i.e. after excluding the ~56% single-sign administrative/abbreviation
+    tokens (cf. the abbreviation channel, prereg-morphology-salgarella-addendum) and de-duplicating."""
+    import statistics
+    from collections import Counter
+    tok = [len(w) for ins in corpus for w in ins.words]
+    distinct = {"-".join(w) for ins in corpus for w in ins.words}
+    dl = [len(w.split("-")) for w in distinct]
+    n = len(tok)
+
+    def _mean(xs: List[int]) -> float:
+        return (sum(xs) / len(xs)) if xs else 0.0
+
+    return {
+        "n_tokens": n,
+        "n_distinct": len(distinct),
+        "token_mean": _mean(tok),
+        "token_median": int(statistics.median(tok)),
+        "token_mode": Counter(tok).most_common(1)[0][0],
+        "pct_len1": (sum(1 for x in tok if x == 1) / n) if n else 0.0,
+        "pct_len_le2": (sum(1 for x in tok if x <= 2) / n) if n else 0.0,
+        "pct_len_le3": (sum(1 for x in tok if x <= 3) / n) if n else 0.0,
+        "token_mean_ge2": _mean([x for x in tok if x >= 2]),
+        "distinct_mean": _mean(dl),
+        "distinct_mean_ge2": _mean([x for x in dl if x >= 2]),
+        "fuls_2015_reported": 3.3,
+        "histogram": dict(sorted(Counter(tok).items())),
+    }
+
+
 # --------------------------------------------------------------------------- #
 # Sign <-> private-use-char codec.  Each distinct GORILA sign becomes ONE character so that
 # (a) Morfessor and the DP segmenter treat a sign as an atom, and (b) the Nair within_form_permutation

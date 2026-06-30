@@ -31,6 +31,27 @@ forced-1.0, the baseline-ceiling, and the L_virgin coverage confound) — and th
 > data (short words), not of their analysis. A rigorous, pre-registered negative on a specific set of
 > field claims is itself the referee artifact the field lacks.
 
+## Word-length premise — measured, and reconciled with Fuls 2015 (added 2026-07-01)
+
+The "short words" premise is load-bearing, and Braović et al. (2024, p. 733) cite **Fuls 2015** for a
+Linear A **average word length of 3.3 signs** — superficially in tension with "1–2-sign words." Both
+are correct; they count **different denominators** (`morphology.word_length_distribution()`, generated
+per invariant 12):
+
+| measure (signs/word) | value |
+|---|---|
+| word-tokens, all (the denominator the morphology test consumes) | **mean 1.84, median 1, mode 1** |
+| % of word-tokens that are ≤2 signs | **76.1%** (56.5% are single-sign) |
+| word-tokens, length ≥2 only | 2.93 |
+| **distinct** words, length ≥2 only | **3.07 → recovers Fuls 2015's 3.3** |
+
+So **Fuls's 3.3 is recovered (3.07) on distinct multi-sign words** — i.e. after de-duplicating and
+excluding the ~56% **single-sign administrative/abbreviation tokens** (cf. the abbreviation channel in
+`prereg-morphology-salgarella-addendum-2026-06-30.md`). On the tokens the test actually operates on,
+words are short (median/mode **1**), which is *precisely why* morphology is not statistically separable
+from bigram order. The premise stands; cite Fuls 2015 + report the distribution, never a single bare
+"average." (Test: `test_word_length_distribution_reconciles_fuls_2015`.)
+
 ## The modest POSITIVE — word-boundary recovery beats chance
 
 Leave-one-site-out (not k-fold — formulaic dependence), 52 sites: the DP-unigram (Goldwater-style)
