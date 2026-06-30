@@ -98,17 +98,18 @@ def test_lfake_all_forms_unique():
 
 
 def test_lfake_residual_real_root_collision_is_nonzero_and_bounded():
-    """HONEST BOUNDARY (discovered in verification): the rejection sampler only filters forms in
-    the calibration set, so real Hebrew roots from OUTSIDE that set can slip into L_fake (the
-    independent-consonant root sampler hits them by chance). This test locks that reality in so
-    the docstring's 'zero real lexical content' can never be silently re-asserted as a property of
-    the whole Hebrew language.
+    """HONEST BOUNDARY (discovered in verification, preserved): WITHOUT an external full-Hebrew
+    reject set, the rejection sampler only filters forms in the calibration set, so real Hebrew
+    roots from OUTSIDE that set can slip into L_fake. This is demonstrated on the INDEPENDENT-
+    consonant root sampler (empirical_roots=False), which draws each root consonant from the
+    marginal distribution and therefore hits out-of-set Biblical-Hebrew roots by chance.
 
-    Across 8 fixed seeds, at least one curated Biblical-Hebrew root absent from the calibration
-    sample MUST appear in at least one L_fake instance, and the collision count must stay small
-    (a few % of the known-root list) — the leak is real but sparse.
-    """
-    cfg = lfake.calibrate_to(_HEB_SAMPLE, mode="semitic")
+    This locks the calibration-set-only limitation in so the docstring's 'no real lexical content'
+    wording can never be silently re-asserted as a property of the whole Hebrew language. The
+    default empirical-root sampler is now structural enough to avoid this tiny-sample leak, and the
+    FULL bhsa lexicon is required to bound the residual at corpus scale (see
+    test_full_hebrew_lexicon_closes_residual_collision)."""
+    cfg = lfake.calibrate_to(_HEB_SAMPLE, mode="semitic", empirical_roots=False)
     assert not any(r in set(_HEB_SAMPLE) for r in _KNOWN_HEBREW_ROOTS)  # roots are out-of-set
     colliding: set = set()
     for s in range(8):
@@ -118,6 +119,36 @@ def test_lfake_residual_real_root_collision_is_nonzero_and_bounded():
     assert len(colliding) >= 1, "expected non-zero residual collision; docstring overclaim undetected"
     # and sparse: well under half of the curated root list collides on a 20-form calibration sample
     assert len(colliding) < len(_KNOWN_HEBREW_ROOTS) // 2
+
+
+def test_full_hebrew_lexicon_closes_residual_collision():
+    """F.2 MEDIUM caveat 2 fix: with the ETCBC/bhsa full-Hebrew reject set supplied, the residual
+    real-Hebrew collision rate of the emitted L_fake lexicon drops to ~0 (rejection sampled against
+    the whole language). Skipped when the bhsa clone is absent (the canary then degrades to
+    calibration-set-only rejection and says so)."""
+    reject, _src = run_canary.load_hebrew_reject_set()
+    if not reject:
+        import pytest
+        pytest.skip("ETCBC/bhsa lexicon not cloned (corpus/bronze/hebrew/bhsa); skip residual test")
+    uga, heb, _ = run_canary.load_gold()
+    heb_u = sorted(set(heb))
+    cfg = lfake.calibrate_to(heb_u, mode="semitic", root_len=3,
+                             external_reject=reject, external_reject_source="bhsa_test")
+    assert cfg.external_reject                          # wired through
+    rates = []
+    for s in range(6):
+        g = lfake.LFakeGenerator(cfg, seed=s)
+        g.generate_lexicon()
+        rep = lfake.divergence_report(g.generated, heb_u, cfg)
+        rates.append(rep["residual_real_collision_rate"])
+    import numpy as np
+    mean_rate = float(np.mean(rates))
+    # the regurgitation boundary is closed: residual is effectively zero
+    assert mean_rate < 0.01, mean_rate
+    # and the calibration-set guarantee still holds (no emitted form is a calibration-set form)
+    g0 = lfake.LFakeGenerator(cfg, seed=0)
+    g0.generate_lexicon()
+    assert lfake.divergence_report(g0.generated, heb_u, cfg)["lexical_overlap_rate"] == 0.0
 
 
 # --------------------------------------------------------------------------- #
@@ -243,18 +274,24 @@ def test_calibration_matches_frequency_length_size():
 
 
 def test_root_template_divergence_is_reported_not_hidden():
-    """F.2 names root-template as a calibration axis. The independent-consonant sampler does NOT
-    reproduce the candidate's root co-occurrence structure (root_template_TV is large on the real
-    corpus). The Nair contract is that this divergence is PUBLISHED in the report, not silently
-    treated as zero — assert the field exists and is honestly non-trivial."""
+    """F.2 names root-template as a calibration axis. The generator now samples whole root TRIPLES
+    from the candidate's attested trilateral-root frequency distribution (not independent
+    marginals), seated at the deterministic template slots — so root_template_TV is PUBLISHED AND
+    substantially reduced (from ~0.84 under the old independent-consonant sampler to well below
+    0.5 here). The Nair contract is that the residual divergence is reported, never silently
+    minimized to zero; assert the field exists, dropped well below the old level, and the report
+    still carries the explicit "not ground truth" honesty note."""
     uga, heb, _ = run_canary.load_gold()
     heb_u = sorted(set(heb))
     cfg = lfake.calibrate_to(heb_u, mode="semitic", root_len=3)
+    assert cfg.empirical_roots is True and len(cfg.root_triples) > 0
     g = lfake.LFakeGenerator(cfg, seed=0)
     g.generate_lexicon()
     rep = lfake.divergence_report(g.generated, heb_u, cfg)
     assert "root_template_TV" in rep and "bigram_KL" in rep
-    # the divergence is real (the sampler matches marginal freq, not root co-occurrence)
-    assert rep["root_template_TV"] > 0.30
-    # and the report carries the explicit "not ground truth" honesty note
+    # the empirical-root sampler closes the F.2 gap: TV dropped from ~0.84 to well under 0.5
+    assert rep["root_template_TV"] < 0.50, rep["root_template_TV"]
+    # it is NOT silently zero (finite-sample noise on the attested set leaves a real residual)
+    assert rep["root_template_TV"] > 0.0
+    # the report carries the explicit "not ground truth" honesty note
     assert "NOT ground truth" in rep["note"]
