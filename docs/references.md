@@ -158,8 +158,11 @@ The flagship survey + the 2025 Salgarella synthesis are **P-BLOCK** related-work
   visual similarity (LB↔Cretan hieroglyphic). **Corazza et al. (2022) "Sign2Vec"** (already listed).
 
 **The undisciplined dictionary-fishing baselines (logos's deflation polices exactly these).**
-- **Min Eu, Xu & Cacciafoco (2019)**; **Colin & Cacciafoco (2020)**, "A new approach to the
-  decipherment of Linear A, stage 2," *Grapholinguistics in the 21st Century* vol. 5.
+- **Min Eu, Xu & Cacciafoco (2019)**; **Loh & Perono Cacciafoco (2020)**, "A new approach to the
+  decipherment of Linear A, stage 2 … a 'brute force attack'," *Grapholinguistics in the 21st Century
+  2020* (Fluxus), pp. 927–943 — [OA PDF](https://www.fluxus-editions.fr/gla5-cacc.pdf). (Braović
+  mis-cites this as "Colin & Cacciafoco" — *Colin* is the author's first name; correct form is Loh &
+  Perono Cacciafoco.)
 - **Karajgikar, Al-Khulaidy & Berea (2021)** — n-gram entropy on Linear A, "inconclusive" on languagehood.
 
 **Language-affiliation + the `*301` rebuttal sourcing.**

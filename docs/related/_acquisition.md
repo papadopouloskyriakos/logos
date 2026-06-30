@@ -11,13 +11,30 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 - **Salgarella, Bellinato & Ferrara 2025** "On Aegean spices," *Kadmos* 64(1/2):29–44 — folded into `litindex.py` (quarantined L_known) + `linear-a-claims-2026.md`.
 - **Dickinson review of Steele 2024** (JGA) — pp. 473–474. **No `*301` content** (it is a book review; neutral on the dwell-vs-give crux). Need the **JGA volume/issue/year** before any citation.
 
-## Open-access — pull directly (confirm URL, then file under docs/related/)
-- **Daggumati & Revesz 2023**, *Information* 14(4):227 (MDPI, open) — cross-script CNN visual prior art. <https://www.mdpi.com/2078-2489/14/4/227> *(confirm)*.
-- **Salgarella 2022** "Mix and match: a combinatory (re-)classification of Linear A signs," *TALANTA* 54:31–52 (TALANTA is OA) *(confirm URL)*.
-- **Colin & Cacciafoco 2020** "A new approach to the decipherment of Linear A, stage 2," *Grapholinguistics in the 21st Century* vol. 5 (Fluxus / proceedings, likely OA) *(confirm)*.
+## Open-access — pull directly (URLs verified 2026-06-30 unless marked *confirm*)
+- **Salgarella 2022** "Mix and match: a combinatory (re-)classification of Linear A signs," *TALANTA*
+  54:31–52 — **OA accepted version, CC BY-NC-ND**, Cambridge repository:
+  PDF <https://www.repository.cam.ac.uk/bitstreams/70a9babb-6286-4a27-a52f-44f2f04bd389/download> ·
+  record <https://www.repository.cam.ac.uk/items/d1c8c2dd-ee5b-4e61-9524-2c0eb5280eff>. ✅ verified.
+- **Loh & Perono Cacciafoco 2020** "A new approach to the decipherment of Linear A, stage 2 … a 'brute
+  force attack'," *Grapholinguistics in the 21st Century 2020* (Fluxus), pp. 927–943, DOI
+  10.36824/2020-graf-cacc — **OA PDF** <https://www.fluxus-editions.fr/gla5-cacc.pdf>. ✅ verified.
+  **Citation note:** Braović cites this as "Colin & Cacciafoco 2020" — that mis-reads the first name
+  *Colin* (Colin Jia Sheng Loh) as a surname. Correct form: **Loh, C. J. S. & Perono Cacciafoco, F.**
+  Use the correct form in the draft and flag the survey's slip.
+- **Daggumati & Revesz 2023**, *Information* (MDPI, OA) — cross-script CNN visual prior art. The audit's
+  "14(4):227" may be one of two Revesz papers; cf. "Convolutional Neural Networks … Three Possible
+  Sources of Bronze Age Writings between Greece and India" (ResearchGate 369916621). MDPI is OA:
+  <https://www.mdpi.com/2078-2489/14/4/227> *(confirm exact article)*.
+- **Steele & Meissner 2017** "From Linear B to Linear A: the problem of the backward projection of
+  sound values" (in *Understanding Relations Between Scripts*, pp. 93–110) — Cambridge repository record
+  <https://www.repository.cam.ac.uk/items/1b8155ae-1461-45bd-8f91-bd4de4828754> is **all-rights-reserved
+  (NOT OA)**. Companion OA chapter: **Meißner & Steele, "Linear A and Linear B: Structural and Contextual
+  Concerns"** — OA bitstream
+  <https://api.repository.cam.ac.uk/server/api/core/bitstreams/7e3a97dd-5ae9-46e3-bab5-fdd644e45bec/content>.
 - **Min Eu, Xu & Cacciafoco 2019** — Linear A vs lexical lists *(confirm venue + OA)*.
-- **Steele & Meissner 2017** "From Linear B to Linear A: the problem of the backward projection of sound values" (in Steele ed., *Understanding Relations Between Scripts*) — needed for the backward-projection symmetry defense; CREWS project may host an OA copy *(confirm)*.
-- **KO-RO-NO-WE-SA proceedings** (Ariadne Suppl. 5) — University of Crete repository may host OA volume *(confirm)*.
+- **KO-RO-NO-WE-SA proceedings** (Ariadne Suppl. 5) — University of Crete repository may host the OA
+  volume *(confirm; the Salgarella & Judson chapter is already in hand)*.
 
 ## Paywalled / print — operator supplies
 - **Salgarella 2025 body** (esp. §7 reading p.35–45, §8 language p.46–53; §4 palaeography p.17–21) + the online appendix (<https://www.cambridge.org/salgarella>). **BLOCKING for any 2nd morphology run.**
