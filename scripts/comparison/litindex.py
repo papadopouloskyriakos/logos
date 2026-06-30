@@ -92,8 +92,12 @@ CITATION_DIMINO = (
     "leap. (3) MORPHOLOGY CONTRADICTS THE ASSIGNED FAMILY (strongest) — his own table draws a "
     "concatenative, prefix-stacking, AGGLUTINATIVE verb [prefix A 'I' / stem-morpheme TA / stem-vowel "
     "I / root *301], which is the OPPOSITE of Semitic non-concatenative root-and-pattern morphology; "
-    "the claim is internally incoherent from his own figure, and Salgarella 2025 §8 (verified) "
-    "independently concludes Minoan is AGGLUTINATIVE (Duhoux 1978) and a language ISOLATE — so his own "
+    "the claim is internally incoherent from his own figure. PRIMARY SOURCE: Davis 2013 (Kadmos 52) "
+    "describes i-*301 as 'verbal morphology in which the root is inflected at both ends' (double-ended "
+    "prefix+suffix inflection, cf. Nahuatl/Chinook/Hattic, pp.38-39) and states explicitly 'this type "
+    "of morphology is neither IE nor Afroasiatic' (p.38 n.13) -- and Semitic IS Afroasiatic, so the "
+    "primary source itself rules out Semitic on typological grounds. Salgarella 2025 §8 (verified) "
+    "independently concludes Minoan is AGGLUTINATIVE (Duhoux 1978) and a language ISOLATE. So his own "
     "segmentation corroborates the isolate typology and refutes his Semitic label. QUARANTINE RECEIPT: "
     "in his own table *301's AB-number is '-' and Linear B '(none)' — no cross-script anchor; the value "
     "was assigned to fit the desired root, the textbook free-parameter case the MDL gate (k<=U_floor) "
@@ -260,13 +264,18 @@ CITATION_SALGARELLA2025 = (
 # them as 'discovery' in the L_virgin / morphology tests; quarantined L_known, never accepted readings.
 # (form, function, source, year, note)
 _STRUCTURAL_READINGS = (
-    ("I-*301", "verb:gives/dedicates", "B. Davis, Kadmos 52 (2013); " + CITATION_SALGARELLA2025, 2013,
-     "The libation-formula main verb root, variably affixed (a-ta-i-*301-..., ta-na-i-*301-...). A "
-     "STRUCTURAL/positional reading — *301 keeps NO phonetic value. Endorsed by Salgarella 2025 §7.2; "
-     "contradicts Di Mino's *301=/na/ 'dwell'. Indexed so a model cannot regurgitate 'i-*301=give'."),
-    ("A-JA-SA-SA-RA-ME", "object:dedication/offering", "B. Davis (2013); " + CITATION_SALGARELLA2025, 2013,
-     "Slot-4 invariant direct object of the libation formula (A- ~ JA- word-initial alternation). A "
-     "STRUCTURAL reading (cf. the separate Best 1981 'oh Asherah!' semitic_proposal on the same word)."),
+    ("I-*301", "verb:gives/dedicates", "Duhoux 1992; B. Davis, Kadmos 52 (2013); " + CITATION_SALGARELLA2025, 2013,
+     "The libation-formula main verb root, variably affixed (a-ta-i-*301-wa-ja, ta-na-i-*301-u-ti-nu, "
+     "a-ta-i-*301-de-ka). The 'give/gift' gloss is DUHOUX's (1992, 80), adopted by Davis 2013 as his "
+     "working gloss; a STRUCTURAL/positional reading -- *301 keeps NO phonetic value. The bare i-*301 "
+     "ligature also occurs on the hanging nodule HT Wa 1022 hung from a list of 'gifts' (Davis p.38 "
+     "n.16) -- admin corroboration. Endorsed by Salgarella 2025 §7.2; contradicts Di Mino's *301='dwell'."),
+    ("A-JA-SA-SA-RA-ME", "object:dedication/offering", "B. Davis (2013:40, 2014:270); " + CITATION_SALGARELLA2025, 2013,
+     "Davis 2013 (p.40) reinterprets (j)a-sa-sa-ra-me from Evans's divine-name to 'a generic term for "
+     "the offering itself: offering / sacred / dedication' (gloss grounded Davis 2014:270 per Ferrara "
+     "et al.); slot-3 object in Davis 2013, slot-4 in Salgarella 2025; A- ~ JA- word-initial alternation "
+     "(JA- is the majority form). A STRUCTURAL reading; logos cross-refs the separate Best 1981 'oh "
+     "Asherah!' semitic_proposal on the same word -- Davis himself never mentions Best/Asherah."),
     ("-TE", "suffix:from", "M. Valerio (2007); " + CITATION_SALGARELLA2025, 2007,
      "Ablative-like suffix 'from' (e.g. A-TU-RI-SI-TI 'from Tylissos'); marks formula slot 6. Salgarella 2025 §8."),
     ("-TI", "suffix:of/from", "M. Valerio (2007); " + CITATION_SALGARELLA2025, 2007,

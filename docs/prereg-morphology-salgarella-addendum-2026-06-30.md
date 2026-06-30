@@ -14,13 +14,21 @@ cannot be tuned to them after the fact (invariant 8).
 
 ## H4 — Davis six-position Libation-Formula positional grammar (Salgarella 2025 §7.2 / Davis 2013)
 
-The libation formula has a fixed six-slot template: (1) main verb `i-*301` "(s/he) gives/dedicates"
-variably affixed · (2) place-name · (3) dedicant's name · (4) `A/JA-SA-SA-RA-ME` object
-"dedication/offering" · (5) subordinate verb · (6) `-TE` "from" prepositional phrase.
+**Primary source now in hand (Davis 2013, Kadmos 52:35–52) — and the two templates differ; register
+both.** The "give/gift" gloss is **Duhoux's (1992, 80)**, adopted by Davis 2013 as his working gloss;
+`*301` keeps **no phonetic value**. The slot assignments are NOT identical across the two sources:
+- **Davis 2013 (p.41):** seq1 = V "gives" · seq2 = **S, the dedicant's name** · seq3 = **O,
+  `ja-sa-sa-ra-me` "offering"** · seq4 "requesting" · seq5 "(a) favour" · seq6 "divine". Sequences 1–3
+  form a clause that can stand alone; 4–6 a dependent clause that "never occurs on its own."
+- **Salgarella 2025 §7.2:** seq1 verb · seq2 **place-name** · seq3 **dedicant** · seq4 `A/JA-SA-SA-RA-ME`
+  object · seq5 subordinate verb · seq6 `-TE` "from" phrase (a refined/expanded template).
 - *Test:* on held-out libation inscriptions, recover the **positional slot assignment** (sequence →
-  slot) above a permutation null that shuffles slot labels. This is a *positional-grammar* prediction
-  the frozen pre-reg (affixes only) does not encode. **No phonetic value** is assigned to `*301` — it
-  is read by slot, by its GORILA number.
+  slot) above a permutation null that shuffles slot labels, and report **which template the data
+  supports** (the seq2/seq3 dedicant-vs-place-name divergence is the discriminating cell). This is a
+  *positional-grammar* prediction the frozen pre-reg (affixes only) does not encode. **No phonetic
+  value** is assigned to `*301`. (Frozen-pre-reg correction: H1a's "OSV <1% of languages" framing is
+  imprecise — Davis 2013 argues SVO is "unattested in the ancient eastern Mediterranean," so SOV/VSO
+  are likeliest, and of 7 ancient VSO languages **none allow OSV** (p.36, p.48–49 n.64); use that.)
 
 ## H5 — Davis whole-unit vs Thomas morpheme segmentation, HEAD-TO-HEAD (do not assume Thomas)
 
@@ -39,6 +47,10 @@ Each must recur on ≥2 distinct stems across distinct hands/deposits (per the s
 above the within-form permutation null + the DSR-deflated bar:
 - `-TE / -TI` = "from" / "of" (Valério 2007) — **confirms registered H3 `-te/-ti`**.
 - `I- / J-` = "to" / "at" (Duhoux 1997) — the locative/allative prefix (registered H3 `i-`).
+  **Triple convergence:** Davis 2013 (p.50, Greenberg Universal 3) independently *predicts* Minoan
+  should have "prepositions or adpositional **prefixes**" (VSO ⇒ prepositional, 52/57 of Dryer's VSO
+  languages), so a prepositional `I-/J-` prefix is exactly what his typology predicts — Duhoux 1997 +
+  Salgarella §8 + Davis 2013 all agree.
 - `-JA` = adjective-forming suffix (Younger 2024, *Linear A Texts: Introduction* §13) — relates to
   registered Thomas `-ja`.
 - `-RU / -RE` = likely the Minoan counterpart of Greek masculine `-os` (Steele & Meissner 2017, via

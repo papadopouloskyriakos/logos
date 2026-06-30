@@ -10,6 +10,10 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 - **Salgarella & Judson 2024** "Signs of the times?" (KO-RO-NO-WE-SA pp. 359–379) — drove `prereg-morphology-stratification-addendum-2026-06-30.md`.
 - **Salgarella, Bellinato & Ferrara 2025** "On Aegean spices," *Kadmos* 64(1/2):29–44 — folded into `litindex.py` (quarantined L_known) + `linear-a-claims-2026.md`.
 - **Dickinson review of Steele 2024** (JGA) — pp. 473–474. **No `*301` content** (it is a book review; neutral on the dwell-vs-give crux). Need the **JGA volume/issue/year** before any citation.
+- **Davis 2013** (*Kadmos* 52:35–52) — the `*301`="give" / VSO PRIMARY source (audited 2026-07-01); resolves the "still needed: primary Davis text with the `ta-na-i-*301-u-ti-nu` parallel + pages." The "give" gloss is Duhoux's (1992).
+- **Salgarella 2019** (*Kadmos* 58:61–92) — palaeography; resolves the hand-stratum question (#19). This IS the site/deposit material the list had pending under "Salgarella 2020 forthcoming."
+- **Corazza et al. 2021** (*JAS* 125:105214) + **Schrijver 2014** (*Kadmos* 53:1–44) — the two independent Direction-D fraction systems (audited 2026-07-01).
+- **Ferrara, Montecchi & Valério**, "Archanes Formula" — cross-script / `a-sa-sa-ra-me` continuity (refuted).
 
 ## Open-access — pull directly (URLs verified 2026-06-30 unless marked *confirm*)
 - **Salgarella 2022** "Mix and match: a combinatory (re-)classification of Linear A signs," *TALANTA*

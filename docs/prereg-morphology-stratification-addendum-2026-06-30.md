@@ -37,12 +37,19 @@ times?", KO-RO-NO-WE-SA pp. 359–379), the field's own statement on the stratif
    formula** vs **other sites/genres**. Induce morphology *per stratum*, then test **cross-stratum
    stability** of every candidate affix/paradigm. An affix that appears in only one stratum is a
    **register feature**, reported as such — not asserted as language morphology.
-3. **ADD a scribal-hand / find-spot robustness control.** No affix or segmentation signal may be
-   reducible to a dominant scribe's idiolect (the Hand 103/115 lesson). Where SigLA palaeographic
-   grouping or GORILA find-spot data permit a hand/deposit grouping, require any candidate affix to
-   recur across **distinct hands / deposits**, not just distinct inscriptions. Where hand-attribution
-   is unavailable (see data caveat), fall back to **find-spot/deposit** as the stratum and flag
-   inscription-independence as an **unverified assumption**.
+3. **Find-spot / deposit robustness control (the hand branch is UNREACHABLE for Linear A — TASK #19
+   RESOLVED 2026-07-01).** No affix or segmentation signal may be reducible to a dominant scribe's
+   idiolect (the Hand 103/115 lesson). **Salgarella 2019** ("Drawing lines," Kadmos 58:61–92) settles
+   the feasibility: **Linear A scribal hands are NOT individuated** — hand-level attribution (Hand
+   103/115/124) exists *only* for Linear B; for Linear A, SigLA supports site/variant grouping, not
+   hand individuation. So requirement #3 collapses to its declared fallback: **find-spot / deposit /
+   SITE is the only available stratum granularity**, and inscription-independence is flagged as an
+   **unverified assumption** (deflated, #4). Usable axes Salgarella 2019 supplies: the 8-site partition
+   with per-site **tablet** counts (HT ~147, Khania 94, Zakros 31, Phaistos 26, single-digits
+   elsewhere — several strata too thin for independent affix recurrence) + a NE-coastal vs
+   central-south geographic bipartition. Orthogonality guard: Salgarella 2019 is on **administrative
+   documents only** (p.65) and never treats morphology/the libation formula/*301 — never cite it for
+   or against i-*301.
 4. **DEFLATE effective-n for within-hand and within-site non-independence.** The original H2 gate
    ("each affix must recur on ≥2 distinct stems across **independent inscriptions**") counts
    hand-correlated inscriptions as independent samples — empirically violated here, which inflates
@@ -62,13 +69,13 @@ times?", KO-RO-NO-WE-SA pp. 359–379), the field's own statement on the stratif
 
 ## Data caveat (records what is and is not available)
 
-Linear A hand-attribution is **far less developed** than Linear B (where Hand 103/115 etc. are
-catalogued). logos must first determine whether SigLA palaeographic data or GORILA find-place data
-can support a hand/deposit stratum **at all**, or whether **find-spot/deposit must serve as the only
-available proxy**. If neither supports a usable hand grouping, requirement #3 degrades to find-spot
-stratification + an explicit "inscription-independence unverified, deflated" flag — reported as a
-limitation, never silently dropped. The relevant source (Salgarella 2020, site/deposit-specific
-palaeographic preferences) is in the acquisition list.
+**RESOLVED 2026-07-01 (TASK #19):** the feasibility question is settled. **Salgarella 2019** (the
+publication of the site/deposit-specific palaeographic material, now in hand at SITE granularity;
+the 2020 monograph it cites as "forthcoming" = Salgarella, *Aegean Linear Script(s)*, CUP 2020)
+confirms Linear A hand-attribution **does not exist** — hands are individuated only for Linear B. So
+requirement #3 degrades (not conditionally, but **definitively**) to **find-spot/deposit/site
+stratification** + the explicit "inscription-independence unverified, deflated" flag — reported as a
+limitation, never silently dropped. No hand stratum is available for Linear A.
 
 ## Acceptance / outcomes
 

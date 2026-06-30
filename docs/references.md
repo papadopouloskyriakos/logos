@@ -188,6 +188,34 @@ The flagship survey + the 2025 Salgarella synthesis are **P-BLOCK** related-work
 - **Fuls (2015)**, "Classifying undeciphered writing systems," *Hist. Sprachforschung* 128(1):42–58
   — the **3.3-sign average word length** the Direction-A premise must reconcile against.
 
+## Primary sources now in hand (audited 2026-07-01)
+
+- **Davis (2013)**, "Syntax in Linear A: The Word-Order of the 'Libation Formula'," *Kadmos* 52(1):35–52,
+  [DOI 10.1515/kadmos-2013-0003](https://doi.org/10.1515/kadmos-2013-0003). The PRIMARY source for the
+  `*301` rebuttal + pre-reg H1/H4. Key quotables: the `i-*301` verb has "morphology … inflected at both
+  ends," "neither IE nor Afroasiatic" (p.38 n.13); the "give/gift" gloss is **Duhoux's** (1992, 80),
+  adopted by Davis; `ja-sa-sa-ra-me` = "the offering itself" (p.40); VSO is "a substantial chance" (p.49,
+  heavily hedged). **Duhoux (1992)**, *Le linéaire A à l'époque proto-/néopalatiale* — the gloss source.
+- **Salgarella (2019)**, "Drawing lines: The palaeography of Linear A and Linear B," *Kadmos* 58(1/2):61–92
+  — resolves the hand-stratum question: Linear A hands are **not** individuated (only Linear B), so
+  site/deposit is the only stratum granularity (admin docs only, p.65; orthogonal to `*301`). The
+  publication of the site/deposit palaeographic material; cites **Salgarella 2020** (*Aegean Linear
+  Script(s)*, CUP) as "forthcoming."
+- **Corazza, Ferrara, Montecchi, Tamburini & Valério (2021)**, "The mathematical values of fraction signs
+  in the Linear A script…," *J. Archaeol. Sci.* 125:105214,
+  [DOI 10.1016/j.jas.2020.105214](https://doi.org/10.1016/j.jas.2020.105214). Direction-D primary: their
+  method is **constraint programming** (MiniZinc/Gecode) over ordinal/typological premises + goodness
+  measures — NOT balance-to-totals; they state (p.2) values cannot be reliably deduced from numeral-phrase
+  totals (the deeper reason for logos's parse-coverage null). `J=1/2` is **Bennett 1950**'s value, not theirs.
+- **Schrijver (2014)**, "Fractions and food rations in Linear A," *Kadmos* 53(1-2):1–44 — an EARLIER,
+  independent (philological) full fraction system; a second baseline for Direction-D cross-validation
+  (`J=1/2` corroborated by ≥4 documents across both). Validates the solver's additivity assumption except
+  `D` (non-compositional). Also a phonetic proposal: `RO₂`=/rjo/ (p.10 n.9).
+- **Ferrara, Montecchi & Valério**, "What is the 'Archanes Formula'?" — **refutes** the Cretan-Hieroglyphic
+  ancestry of `a-sa-sa-ra-me` (the libation formula is Linear-A-internal); supplies a cross-script image
+  HARD NEGATIVE (CH 095 ~ AB 60/ra is a wrong visual match — calibration for the JEPA work, invariant 5);
+  grounds the `ja-sa-sa-ra-me`="offering" gloss in Davis 2014:270.
+
 ## Where logos sits
 
 Empty cell = opportunity *and* warning. Opportunity: no one has wrapped a decipherment
