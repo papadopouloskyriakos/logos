@@ -141,3 +141,36 @@ Sources (operator-provided): `20260630_claude_opus_logos_audit_response.md`,
 8. **Search-budget accounting** (log every family/lexicon/root/map/segmentation/seed/rerun) +
    **report instability** as a primary result.
 9. **Benchmark lockbox** (an untouched held-out set, evaluated sparingly).
+
+---
+
+## 6. Maintainer assessment (2026-06-30) — independent reasoning, not deference
+
+Recorded so the audit trail shows the critiques were *reasoned about*, not rubber-stamped.
+Blind deference to two authoritative red-teams would be its own failure mode. Position:
+**agree on the substance of every correction; three measured refinements; one bet kept.**
+
+- **Unicity §3 — the computation has narrow diagnostic value, not zero.** As a *precondition
+  diagnostic* it does real work: under the substitution model it RULES OUT the "too little text"
+  excuse (corpus length is not the binding constraint; identifiability is). The sin was
+  presenting that negative result as a positive identifiability proof. "15% defensible"
+  conflates "the claim as stated is indefensible" (true) with "the number is useless" (false).
+  Opus's "lossy channel → no unicity distance" is technically correct but means the ceiling
+  drops to the **orthographic** layer, not that all recoverable information vanishes — the
+  pseudo-decipherment curriculum measures that; we don't assert it a priori.
+- **Faithful B-K&K is credibility polish, not a blocker.** A clearly-labeled simplified
+  heuristic + the known-answer recovery milestone is sufficient standing for logos's purpose;
+  faithful B-K&K (word-level bipartite + many-to-many + restarts) is a credibility upgrade,
+  pursued next, but it does not gate the framework.
+- **JEPA / the A↔B bet — method critique accepted in full; the underlying experiment KEPT.**
+  "Manufactures a cognate target" was a category error (A↔B is script borrowing; B's language is
+  Greek, A's is not); JEPA-the-architecture is over-engineered for 5.8k signs; the right tools
+  are anchored alignment (Procrustes/MUSE/OT/graph); Etruscan-grade is the honest ceiling. BUT
+  the A↔B phonetic-imputation experiment STAYS, because (i) it is the **only offensive lever** —
+  every other path concedes the missing-target problem entirely; (ii) the red-teams' **own**
+  rating (cross-script representation learning 60% plausible as an experiment) supports keeping
+  it; (iii) the circularity they flagged is also the validation (hold out shared signs, recover
+  their known B-side values). JEPA is demoted to an ablation; the experiment is not dropped.
+- **Meta:** the discipline machinery did its job (the red-teams caught real overclaims). The
+  test of whether it is working is precisely that we can disagree where the evidence supports it
+  while conceding where it doesn't.
