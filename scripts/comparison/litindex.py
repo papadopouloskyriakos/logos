@@ -19,15 +19,20 @@ untouched ``L_virgin`` signs memorized rather than discovered. :func:`virgin_sup
 share of held-out support attributable to ``L_virgin`` signs — the §E gate clause "support
 generalizes to L_virgin signs".
 
-SCOPE + HONESTY (read before extending): this is the MECHANISM plus a small, genuinely-public SEED
-— it is NOT the exhaustive literature index (a separate, deferred Phase-0 task; see design §D step 2).
-The seed contains only well-known, citable published proposals: the standard GORILA Linear-B-value
-transfers (the homomorphic Linear A syllabograms transcribed with their Linear B values, after
-Ventris 1953) and the two universally-published Linear A accounting readings (KU-RO "total", KI-RO
-"deficit"). Each carries a source + year. The seed is deliberately CONSERVATIVE: a sign wrongly
-left out of the index is wrongly granted ``L_virgin`` status, which is the *dangerous* direction
-(it could let a regurgitated value masquerade as a discovery), so a seed must be expanded toward
-completeness — never padded with uncertain attributions. When in doubt a claim is OMITTED.
+SCOPE + HONESTY (read before extending): this is the MECHANISM plus a still-growing SEED — it is NOT
+yet the exhaustive literature index (a separate, deferred Phase-0 task; see design §D step 2). The
+seed contains genuinely-public, citable published proposals: the standard GORILA Linear-B-value
+transfers (homomorphic Linear A syllabograms transcribed with their Linear B values, after Ventris
+1953); the two universally-published accounting readings (KU-RO "total", KI-RO "deficit"); and six
+published WEST-SEMITIC lexical proposals (added 2026-06-30) — C. H. Gordon's su-pu / ka-ro-pa /
+su-pa-ra / ku-ro / ya-ne (Evidence for the Minoan Language, 1966) and J. Best's a-sa-sa-ra-me =
+"oh Asherah!" (Talanta, 1981). Every Semitic claim was independently verified (chiefly Rendsburg
+1996) before inclusion; unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. The
+Semitic readings are DISPUTED — indexed so a model regurgitating them is caught, NEVER as accepted
+readings. Each carries a source + year. The seed is deliberately CONSERVATIVE: a sign wrongly left
+out is wrongly granted ``L_virgin`` status, the *dangerous* direction (it could let a regurgitated
+value masquerade as discovery), so expand toward completeness — never pad with uncertain
+attributions. When in doubt a claim is OMITTED.
 
 Pure stdlib + (optional) json for the on-disk artifact. Deterministic: :func:`load_index` with the
 default (embedded) seed is a pure function of the module source.
@@ -59,13 +64,34 @@ CITATION_ACCOUNTING = (
     "corpus literature (GORILA; J. G. Younger, 'Linear A Texts in phonetic transcription', the "
     "public online edition)."
 )
+CITATION_GORDON = (
+    "C. H. Gordon, 'Evidence for the Minoan Language' (Ventnor Publishers, 1966), synthesizing his "
+    "1957- articles ('Notes on Minoan Linear A', Antiquity 31, 1957) — the West-Semitic reading of "
+    "Linear A. Independently described by G. A. Rendsburg, \"'Someone Will Succeed in Deciphering "
+    "Minoan': Cyrus H. Gordon and Minoan Linear A\", Biblical Archaeologist 59:1 (1996) 36-43 "
+    "(JSTOR 3210534). A DISPUTED hypothesis, rejected by mainstream scholarship — indexed for "
+    "DECONTAMINATION (recording what was PUBLISHED so a model regurgitating it is caught), NEVER as "
+    "an accepted reading."
+)
+CITATION_BEST = (
+    "J. G. P. Best, 'YASSARAM!', Talanta 13 (1981) 17-21 — reading (j)a-sa-sa-ra-me as the vocative "
+    "'oh Asherah!'. Builds on Gordon's Semitic-Minoan thesis; an older Asasara-as-goddess reading "
+    "(Sundwall; A. Evans) was refuted by M. Pope, 'The Minoan Goddess Asasara - An Obituary', BICS 8 "
+    "(1961) 29-31. DISPUTED — indexed for decontamination, not as an accepted reading."
+)
 
 # A loud, machine-readable flag so no downstream consumer mistakes the seed for the full index.
 SEED_NONEXHAUSTIVE = True
 SEED_NOTE = (
-    "NON-EXHAUSTIVE SEED — placeholder for the full §C.1 literature index (deferred). Contains only "
-    "genuinely-public, well-known, citable proposals. A sign absent here is treated as L_virgin, "
-    "which is the dangerous direction; EXPAND toward completeness, never pad with uncertain claims."
+    "NON-EXHAUSTIVE SEED — still a placeholder for the full §C.1 literature index (deferred). Contains "
+    "genuinely-public, citable proposals: the GORILA Linear-B-value transfers, the KU-RO/KI-RO "
+    "accounting readings, and (added 2026-06-30, each independently verified) six published "
+    "WEST-SEMITIC proposals — Gordon's su-pu/ka-ro-pa/su-pa-ra/ku-ro/ya-ne (Evidence for the Minoan "
+    "Language, 1966) and Best's a-sa-sa-ra-me='oh Asherah!' (Talanta 1981). Unverifiable candidates "
+    "(qa-pa=kappu, a Semitic ki-ro) were OMITTED. These Semitic readings are DISPUTED and rejected by "
+    "mainstream scholarship; they are indexed to CATCH regurgitation of them, never as accepted "
+    "readings. A sign absent here is treated as L_virgin (the dangerous direction); EXPAND toward "
+    "completeness, never pad with uncertain attributions."
 )
 
 
@@ -121,6 +147,36 @@ _LEXICAL_READINGS = (
      "The complementary 'owed/deficit' accounting term."),
 )
 
+# Published West-Semitic LEXICAL proposals for specific Linear A words (the 'Semitic hypothesis').
+# VERIFIED 2026-06-30 against sources INDEPENDENT of the BAS Library sidebar — chiefly G. A.
+# Rendsburg, Biblical Archaeologist 59:1 (1996), which enumerates Gordon's THREE vessel equations
+# (su-pu, ka-ro-pa, su-pa-ra). Two candidates FAILED independent corroboration and were OMITTED, not
+# padded in: (a) qa-pa = Akkadian kappu — only the BAS page attributes it to Gordon; Rendsburg's
+# list of three omits it; (b) a Semitic etymology for KI-RO — none attributable (the published
+# Semitic kull etymology belongs to KU-RO, a different word). proposed_value is the consonantal
+# Semitic cognate/name (so a later cognate-matcher can hit it); the gloss + caveat live in the note.
+# (sign, value, source, year, note)
+_SEMITIC_PROPOSALS = (
+    ("SU-PU", "sp", CITATION_GORDON, 1966,
+     "Gordon: su-pu/su-po = Ugaritic sp / Hebrew sap 'basin, bowl' (the LA word is followed by a "
+     "pot pictogram). First proposed Antiquity 31 (1957). DISPUTED, not an accepted reading."),
+    ("KA-RO-PA", "krpn", CITATION_GORDON, 1966,
+     "Gordon: ka-ro-pa = Ugaritic krpn 'goblet/large drinking-cup'. (The 'Akkadian karpu / carafe' "
+     "gloss is a popularization, NOT in Rendsburg's primary account.) First proposed Antiquity 31 (1957)."),
+    ("SU-PA-RA", "spl", CITATION_GORDON, 1966,
+     "Gordon: su-pa-ra = Ugaritic spl / Hebrew sepel 'bowl' (l/r undistinguished in the script). DISPUTED."),
+    ("KU-RO", "kull", CITATION_GORDON, 1966,
+     "Gordon's SEMITIC ETYMOLOGY of the accounting term ku-ro 'total' = Semitic kull / Hebrew kol "
+     "'all, whole'. (The accounting reading 'total' is near-universal — see the lexical_reading entry.)"),
+    ("JA-NE", "yn", CITATION_GORDON, 1966,
+     "Gordon (transcribing it 'ya-ne'): = West Semitic 'wine', Hebrew yayin / Ugaritic yn; on a wine "
+     "pithos from Knossos (Evidence for the Minoan Language 1966, Plate X). Sign keyed JA per GORILA/"
+     "corpus convention (the corpus has no 'YA'). DISPUTED."),
+    ("A-SA-SA-RA-ME", "asherah", CITATION_BEST, 1981,
+     "Best (1981): (j)a-sa-sa-ra-me = vocative 'oh Asherah!' (NW Semitic divine name; Ugaritic "
+     "Athirat/atrt). The Linear A libation-formula word; ATTRIBUTION is to Best, NOT Gordon. DISPUTED."),
+)
+
 
 def _build_seed() -> List[LitClaim]:
     """Assemble the embedded seed deterministically from the cited constants."""
@@ -140,6 +196,11 @@ def _build_seed() -> List[LitClaim]:
         claims.append(
             LitClaim(sign=sign, proposed_value=value, source=source, year=year,
                      claim_type="lexical_reading", note=note)
+        )
+    for sign, value, source, year, note in _SEMITIC_PROPOSALS:
+        claims.append(
+            LitClaim(sign=sign, proposed_value=value, source=source, year=year,
+                     claim_type="semitic_proposal", note=note)
         )
     # deterministic order: sort by (claim_type, sign) so the seed is byte-stable regardless of
     # construction order — a control must be reproducible.
@@ -192,7 +253,8 @@ def dump_index(claims: Sequence[LitClaim], path: str) -> None:
     payload = {
         "_seed_nonexhaustive": SEED_NONEXHAUSTIVE,
         "_seed_note": SEED_NOTE,
-        "_citations": [CITATION_DESIGN, CITATION_GORILA, CITATION_VENTRIS, CITATION_ACCOUNTING],
+        "_citations": [CITATION_DESIGN, CITATION_GORILA, CITATION_VENTRIS, CITATION_ACCOUNTING,
+                       CITATION_GORDON, CITATION_BEST],
         "n_claims": len(claims),
         "claims": [asdict(c) for c in claims],
     }

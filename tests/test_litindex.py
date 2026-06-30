@@ -35,6 +35,30 @@ def test_seeded_sign_is_known_unlisted_sign_is_virgin():
     assert "DA" not in part["L_virgin"]
 
 
+def test_verified_semitic_proposals_present_and_unverified_omitted():
+    """Locks the 2026-06-30 integrity decisions: the SIX independently-verified West-Semitic proposals
+    are indexed; the two that FAILED corroboration (qa-pa=kappu, a Semitic ki-ro) are NOT — a wrong
+    attribution in a DECONTAMINATION index is worse than a gap."""
+    index = litindex.load_index()
+    sem = {c.sign: c for c in index if c.claim_type == "semitic_proposal"}
+    # the six confirmed claims, with their verified consonantal-cognate values
+    assert {s for s in sem} == {"SU-PU", "KA-RO-PA", "SU-PA-RA", "KU-RO", "JA-NE", "A-SA-SA-RA-ME"}
+    assert sem["SU-PU"].proposed_value == "sp"
+    assert sem["KA-RO-PA"].proposed_value == "krpn"     # Ugaritic krpn, NOT "Akkadian karpu" (corrected)
+    assert sem["SU-PA-RA"].proposed_value == "spl"
+    assert sem["KU-RO"].proposed_value == "kull"
+    assert sem["JA-NE"].proposed_value == "yn"          # keyed JA (corpus convention), Gordon's "ya-ne"
+    assert sem["A-SA-SA-RA-ME"].proposed_value == "asherah"
+    # a-sa-sa-ra-me is Best (1981), NOT Gordon — the verification caught the attribution drift
+    assert "Best" in sem["A-SA-SA-RA-ME"].source and sem["A-SA-SA-RA-ME"].year == 1981
+    assert all(c.year == 1966 and "Gordon" in c.source
+               for k, c in sem.items() if k != "A-SA-SA-RA-ME")
+    # OMITTED (unverifiable) — no semitic_proposal for qa-pa, and ki-ro has only its accounting reading
+    assert "QA-PA" not in sem
+    assert not any(c.sign == "KI-RO" and c.claim_type == "semitic_proposal" for c in index)
+    assert any(c.sign == "KI-RO" and c.claim_type == "lexical_reading" for c in index)  # accounting term stays
+
+
 def test_partition_is_exact_disjoint_cover():
     index = litindex.load_index()
     signs = ["A", "DA", "KU", "RO", "*118", "*301", "*531", "ZQ_not_a_sign"]
