@@ -25,17 +25,43 @@ thesaurus of Proto-Semitic roots on a 7,500-character corpus is a multiple-testi
 without deflation it proves nothing (cf. the "English is a Semitic language" demo). logos
 turns that intuition into a number.
 
-## Methodological foundation — build on Luo 2019, don't reinvent
+## Methodological foundation — the decipherment lineage (don't reinvent)
 
-The decipherment *method* is not invented here. logos's core engine is a reimplementation of
-**Luo, Cao & Barzilay (2019)** — neural seq2seq + minimum-cost flow over cognate
-correspondences — which auto-deciphered Ugaritic→Hebrew and 67.3% of Linear-B cognates, and
-*by construction fails on Linear A* (no known cognate language to map to). That null is the
-empirical confirmation of the information floor in §4. Full method summary + what we port vs
-extend: [docs/methods/luo-2019.md](docs/methods/luo-2019.md). The broader prior-art map:
-[docs/references.md](docs/references.md). **logos's defensible claim is "Luo 2019 + agora
-honesty layer + agentic generation + cross-script JEPA transfer" — an extension of a
-peer-reviewed method, not a from-scratch decipherment.**
+The decipherment *method* is not invented here; it sits in a well-mapped lineage (per the
+Sommerschield et al. 2023 survey §8.1 — `coli_a_00481.pdf`). logos implements the
+**combinatorial core** and treats the neural variant as a documented upgrade:
+
+- **Rao et al. 2009/2010** — sign-sequence conditional entropy / Markov ("is it language?") —
+  the same statistic `corpus_info.py` computes. **Contested by Sproat 2010/2014** (see §4 caveat).
+- **Snyder, Barzilay & Knight 2010** — non-parametric Bayesian cognate decipherment
+  (Ugaritic→Hebrew). The cognate-decipherment root.
+- **Berg-Kirkpatrick & Klein 2011** — cognate decipherment as **combinatorial optimization**
+  (minimize edit-distance between cognate word pairs under a character mapping). **This is
+  logos's numpy/scipy core**: the character mapping is a min-cost bipartite assignment
+  (`scipy.optimize.linear_sum_assignment` = the bipartite min-cost flow), iterated EM-style
+  with weighted edit-distance alignment. Runs on the runner — no torch.
+- **Luo, Cao & Barzilay 2019 ("NeuroCipher")** — neuralized the alignment scorer with a
+  seq2seq + min-cost-flow objective (Ugaritic→Hebrew, Linear B→Greek 67.3% cognates). **The
+  documented torch upgrade path** once GPU training is wired (phase 5).
+
+**Why this fails on Linear A (the null):** every method above needs a *known cognate
+language* to map onto. Linear A's language is unknown → the optimization has no target → the
+map can't be pinned. That null confirms §4's information floor empirically. The cross-script
+A↔B JEPA is the one bet that tries to *manufacture* a cognate-like target.
+
+**Sharpened novelty (post-audit):** "use Linear B as a key" (Papavassiliou, Owens &
+Kosmopoulos 2020) and "embeddings for Linear A glyphs" (Karajgikar et al. 2021; Sign2Vec /
+Corazza et al. 2022 for Cypro-Minoan) are **prior art, not ours**. logos's defensible
+contributions: (a) the **agora discipline layer** (Deflated-Sharpe over signs×roots×families +
+mechanical held-out verdicts + open platform) — absent from all prior work; (b) the specific
+**cross-script A↔B joint-embedding (JEPA)** formulation of the transfer; (c) using the
+Papavassileiou et al. 2023 Linear B generative LM as the known-side representation.
+
+**Scope (operator-approved 2026-06-30):** Linear A is the **primary target** (the only Aegean
+script whose corpus meets unicity, §4). The rest of the Aegean undeciphered family — Cretan
+Hieroglyphic, Cypro-Minoan, the Phaistos Disc — enter **only as cross-script probes / extra
+embedding context** for the A↔B transfer, never as decipherment targets (the Phaistos Disc is
+a single ~241-token document; unicity is hopeless there).
 
 ## The layers
 
@@ -114,6 +140,12 @@ symbolic verdict layer + the unicity number exist.** Reuse agora's harness
 estimate: **bits the corpus constrains vs free parameters of a hypothesized phonetic map.**
 If parameters ≫ information, no amount of cleverness can confirm a decipherment — the
 honest, decisive number for any Linear A claim. Every graded hypothesis is shown next to it.
+
+**Caveat (the Rao↔Sproat debate):** entropy / conditional-entropy statistics show the sign
+sequences carry structure — they do **not** prove the script encodes language. Sproat
+(2010, 2014) used exactly this gap to argue the Indus symbols are non-linguistic.
+`corpus_info.py` reports structure and an information budget; it renders no verdict on
+languagehood.
 
 ## Roadmap (honest — built on Luo 2019, not next to it)
 

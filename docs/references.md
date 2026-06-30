@@ -69,6 +69,40 @@ them as engineering references for sparse-text transformer pipelines and data di
   print/academic corpus; digitized forms circulate.
 - **SigLA** (Signs of Linear A) — the sign-level database; the palaeographic inventory.
 
+## Update 2026-06-30 — audit findings (prior art, from the survey §8.1)
+
+Mined from Sommerschield et al. 2023 ("Machine Learning for Ancient Languages: A Survey,"
+*Computational Linguistics* 49(3), [DOI 10.1162/coli_a_00481](https://doi.org/10.1162/coli_a_00481)).
+The decipherment method lineage — logos implements the combinatorial core (Berg-Kirkpatrick &
+Klein 2011), neural variant (Luo 2019) is the upgrade:
+
+- **Rao et al. 2009/2010** — Indus script conditional entropy / Markov; "is it language?"
+  Contested by **Sproat 2010/2014** (repetition turn-out → non-linguistic). *Entropy shows
+  structure, not languagehood — the caution behind `corpus_info.py`.*
+- **Snyder, Barzilay & Knight 2010** — non-parametric Bayesian cognate decipherment
+  (Ugaritic→Hebrew). [paper]
+- **Berg-Kirkpatrick & Klein 2011** — cognate decipherment as **combinatorial optimization**
+  (min edit-distance under char mapping). *logos's numpy/scipy core.*
+- **Bouchard-Côté et al. 2013** — probabilistic sound-change / proto-language reconstruction.
+- **Luo, Cao & Barzilay 2019 ("NeuroCipher")** — seq2seq + min-cost flow; Ugaritic→Hebrew,
+  Linear B→Greek. *the torch upgrade.*
+- **Luo et al. 2021** — undersegmented scripts via phonetic conversion; Gothic/Ugaritic/Iberian.
+
+**Cross-script & embedding prior art — MUST cite (NOT our novelty):**
+- **Papavassiliou, Owens & Kosmopoulos 2020** — "include related writing systems (Linear B) as
+  the key to decipherment." *(the cross-script idea predates us)*
+- **Karajgikar, Al-Khulaidy & Berea 2021** — word2vec embeddings for Linear A glyphs + symbol grouping.
+- **Corazza et al. 2022 ("Sign2Vec")** — unsupervised sign clustering (ResNet50+k-means) for
+  Cypro-Minoan, 2/3 signs correct. *direct prior art for the representation layer.*
+- **Daggumati & Revesz 2018** — CNN+SVM script-family trees ("Linear B close to Cretan Hieroglyphic").
+- **Papavassileiou, Kosmopoulos & Owens 2023** — Linear B generative LM (BiRNN) for tablet
+  infilling, [DOI 10.1145/3593431](https://doi.org/10.1145/3593431). *the known-side asset for
+  cross-script transfer.*
+
+**logos's actual novelty:** the agora discipline layer (deflation + held-out verdicts + open
+platform) + the cross-script A↔B JEPA joint-embedding formulation. Not "Linear B as key" or
+"Linear A embeddings," which exist.
+
 ## Where logos sits
 
 Empty cell = opportunity *and* warning. Opportunity: no one has wrapped a decipherment
