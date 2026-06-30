@@ -144,7 +144,13 @@ The flagship survey + the 2025 Salgarella synthesis are **P-BLOCK** related-work
 **Salgarella corpus + synthesis (and the stratification result).**
 - **Salgarella (2025)**, *Writing in Bronze Age Crete: "Minoan" Linear A*, Cambridge Elements,
   [DOI 10.1017/9781009520041](https://doi.org/10.1017/9781009520041). Most current authoritative
-  overview; §7 (reading) + §8 (language) are paywalled and BLOCKING. Digest: `docs/related/salgarella-2025.md`.
+  overview. **Body acquired + analyzed 2026-07-01** (§7/§8 claims adversarially verified): §7 confirms
+  the Davis 2013 inventory (frozen pre-reg not stale); **§8 concludes Minoan is a language ISOLATE**
+  (agglutinative, provisional VSO) and rejects the etymological/Semitic method category-wide. Digest:
+  `docs/related/salgarella-2025.md`. Affix sources it attributes (add as their own entries):
+  **Valério (2007)** `-TE/-TI`="from/of"; **Duhoux (1997)** `I-/J-`="to/at"; **Younger (2024)**,
+  *Linear A Texts: Introduction* §13 "Grammar", `-JA` adjectival + transaction terms; **Davis (2014)**,
+  *Minoan Stone Vessels with Linear A Inscriptions* (Aegaeum 36), the i-`*301`="give"/VSO source.
 - **Salgarella (2020)**, *Aegean Linear Script(s): Redefining the Relationship between Linear A and
   Linear B* (CUP) — the A/B authority underpinning the cross-script JEPA novelty claim.
 - **Salgarella & Judson (2024)**, "Signs of the times? Testing the chronological significance of

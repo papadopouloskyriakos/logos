@@ -82,14 +82,42 @@ def test_spice_logographic_readings_quarantine_l_virgin_leak():
     assert "*999" in part["L_virgin"]
 
 
-def test_dimino_attribution_keeps_davis_not_steele():
-    """Audit 2026-06-30: the i-*301='give/dedicate' counter is DAVIS's; the Steele-2024 item in hand is a
-    Dickinson review with no *301 gloss, so it must NOT be cited for it. Salgarella 2025 §8 is a pending
-    (paywalled) check, not a resolution. Lock the attribution discipline into the quarantine citation."""
+def test_structural_readings_indexed_as_l_known():
+    """2026-07-01: Davis/Salgarella STRUCTURAL readings (no phonetic value) are indexed so a model
+    cannot regurgitate the morphology as discovery — i-*301='gives/dedicates' + the §8 affix set."""
+    index = litindex.load_index()
+    st = {c.sign: c for c in index if c.claim_type == "structural_reading"}
+    assert {"I-*301", "-TE", "-TI", "I-", "J-", "-JA", "-RU", "-RE", "-A"} <= set(st)
+    assert "gives/dedicates" in st["I-*301"].proposed_value
+    assert "Davis" in st["I-*301"].source and "Salgarella" in st["I-*301"].source
+    assert "Salgarella 2025 §7.2" in st["I-*301"].note
+    # the §8 affix attributions are preserved (so logos cites the primary source, not just Salgarella)
+    assert "Valerio" in st["-TE"].source and "Duhoux" in st["I-"].source
+    assert "Younger" in st["-JA"].source and "Steele" in st["-RU"].source and "Meissner" in st["-RU"].source
+    # these are STRUCTURAL (no phonetic value) — the value names a function, never a sound
+    assert st["I-*301"].proposed_value.startswith(("verb", "object", "suffix", "prefix"))
+
+
+def test_dimino_star301_three_part_refutation():
+    """2026-07-01 field intel: the *301 quarantine carries the three-part self-refutation, incl. the
+    strongest point — his own agglutinative segmentation contradicts the Semitic family he assigns."""
     cit = litindex.CITATION_DIMINO
-    assert "Davis" in cit
-    assert "do NOT re-attribute it to Steele" in cit
-    assert "PAYWALLED" in cit and "Salgarella 2025" in cit
+    assert "SEGMENTATION NOT NOVEL" in cit and "ta-na-i-*301-u-ti-nu" in cit
+    assert "GLOSS CONTESTED" in cit and "give/dedicate" in cit
+    assert "MORPHOLOGY CONTRADICTS" in cit and "AGGLUTINATIVE" in cit and "OPPOSITE of Semitic" in cit
+    assert "ISOLATE" in cit and "Salgarella 2025" in cit
+    assert "no cross-script anchor" in cit and "free-parameter" in cit
+    assert "do NOT re-attribute to Steele 2024" in cit
+
+
+def test_dimino_attribution_keeps_davis_not_steele():
+    """The i-*301='give/dedicate' counter is DAVIS's (Kadmos 52, 2013), endorsed by Salgarella 2025 §7.2.
+    The Steele-2024 item in hand is a Dickinson review with no *301 gloss, so it must NOT be cited for it;
+    Salgarella 2025 §8 does not mention *301 but concludes ISOLATE + rejects the Semitic-etymology method."""
+    cit = litindex.CITATION_DIMINO
+    assert "Davis" in cit and "Salgarella 2025 §7.2" in cit
+    assert "do NOT re-attribute to Steele 2024" in cit
+    assert "Semitic-ETYMOLOGY method" in cit
 
 
 def test_partition_is_exact_disjoint_cover():

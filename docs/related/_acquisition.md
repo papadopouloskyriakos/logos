@@ -6,7 +6,7 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 
 ## In hand (audited 2026-06-30)
 - **Braović, Krstinić, Štula & Ivanda 2024**, *Comput. Linguistics* 50(2):725–779 — `docs/related/braovic-2024.md`. Open: <https://aclanthology.org/2024.cl-2.7.pdf>.
-- **Salgarella 2025** *Writing in Bronze Age Crete* — **frontmatter only**; body BLOCKING. `docs/related/salgarella-2025.md`.
+- **Salgarella 2025** *Writing in Bronze Age Crete* — **BODY ACQUIRED + ANALYZED 2026-07-01** (operator supplied the purchased EPUB; §7/§8 verified). No longer blocking. `docs/related/salgarella-2025.md`.
 - **Salgarella & Judson 2024** "Signs of the times?" (KO-RO-NO-WE-SA pp. 359–379) — drove `prereg-morphology-stratification-addendum-2026-06-30.md`.
 - **Salgarella, Bellinato & Ferrara 2025** "On Aegean spices," *Kadmos* 64(1/2):29–44 — folded into `litindex.py` (quarantined L_known) + `linear-a-claims-2026.md`.
 - **Dickinson review of Steele 2024** (JGA) — pp. 473–474. **No `*301` content** (it is a book review; neutral on the dwell-vs-give crux). Need the **JGA volume/issue/year** before any citation.

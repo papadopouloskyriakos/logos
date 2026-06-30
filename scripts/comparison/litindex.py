@@ -81,18 +81,26 @@ CITATION_BEST = (
 )
 CITATION_DIMINO = (
     "T. Di Mino (2026), 'Ya Diktu: Grammar of the Minoan Peak Sanctuary Libation Formula' (draft; "
-    "recorded in docs/linear-a-claims-2026.md). Reads the libation word A-TA-I-*301-WA-JA via a "
-    "/na/-initial value for *301 as Semitic N-W-Y 'to dwell' (nawaya). DISPUTED + NOT independently "
-    "verified: contradicted by B. Davis (i-*301 = the verb 'give/dedicate'; structural V-S-O analysis, "
-    "Kadmos 52, 2013, and Minoan Stone Vessels with Linear A Inscriptions, Aegaeum 36, 2014), and the "
-    "match is partial (~1/5 of one word to 2/3 of a root). ATTRIBUTION NOTE (audit 2026-06-30): the "
-    "i-*301='give/dedicate' counter is BRENT DAVIS's — do NOT re-attribute it to Steele 2024; the "
-    "Steele-2024 item in hand is O. Dickinson's book review (JGA), which contains NO *301 gloss (its "
-    "p.474 'prayers or dedications' line is neutral on the dwell-vs-give crux). The current "
-    "expert-review benchmark, Salgarella 2025 §8 'Which Language Does Linear A Encode?', is PAYWALLED "
-    "(only the section title is in hand) — checking *301 against it is an OPEN item, not resolved. "
-    "Indexed to QUARANTINE the single highest-profile Linear A reading so any model regurgitating it "
-    "is caught — NEVER as an accepted reading."
+    "recorded in docs/linear-a-claims-2026.md). Reads A-TA-I-*301-WA-JA via a /na/-initial value for "
+    "*301 as Semitic N-W-Y 'to dwell' (nawaya). DISPUTED + NOT independently verified. THREE-PART "
+    "REFUTATION (from his own published table, 2026-06-30 field intel): (1) SEGMENTATION NOT NOVEL — "
+    "root i-*301 + affixation is the mainstream Davis 2013 / Thomas 2020 reading; multi-attestation "
+    "forms ta-na-i-*301-u-ti-nu (IO Za 6) and a-ta-i-*301-de-ka (ZA Zb 3) prove the affix-stacking. "
+    "(2) GLOSS CONTESTED — the mainstream value is 'give/dedicate' (B. Davis, Kadmos 52, 2013 + Minoan "
+    "Stone Vessels, Aegaeum 36, 2014; ENDORSED by the current synthesis Salgarella 2025 §7.2 as a "
+    "structural reading that assigns *301 NO phonetic value); 'dwell' (N-W-Y) is a semantically distant "
+    "leap. (3) MORPHOLOGY CONTRADICTS THE ASSIGNED FAMILY (strongest) — his own table draws a "
+    "concatenative, prefix-stacking, AGGLUTINATIVE verb [prefix A 'I' / stem-morpheme TA / stem-vowel "
+    "I / root *301], which is the OPPOSITE of Semitic non-concatenative root-and-pattern morphology; "
+    "the claim is internally incoherent from his own figure, and Salgarella 2025 §8 (verified) "
+    "independently concludes Minoan is AGGLUTINATIVE (Duhoux 1978) and a language ISOLATE — so his own "
+    "segmentation corroborates the isolate typology and refutes his Semitic label. QUARANTINE RECEIPT: "
+    "in his own table *301's AB-number is '-' and Linear B '(none)' — no cross-script anchor; the value "
+    "was assigned to fit the desired root, the textbook free-parameter case the MDL gate (k<=U_floor) "
+    "refuses. ATTRIBUTION NOTE: the 'give' counter is DAVIS's — do NOT re-attribute to Steele 2024 (the "
+    "Steele-2024 item in hand is O. Dickinson's book review, no *301 content). Salgarella 2025 §8 does "
+    "NOT mention *301 or cite Di Mino; it rejects the Semitic-ETYMOLOGY method category-wide (vocabulary "
+    "'not probative'; loanwords confound). Indexed to QUARANTINE, NEVER as an accepted reading."
 )
 CITATION_SPICES = (
     "E. Salgarella, F. Bellinato & S. Ferrara, 'On Aegean spices: decipherment prospects on Linear A "
@@ -114,6 +122,10 @@ SEED_NOTE = (
     "four PUBLIC 2025 logographic/composite readings from Salgarella/Bellinato/Ferrara, Kadmos 64 "
     "('On Aegean spices') — A646/A341='root', *127(KA+PO)='spice', LB *157='root' — SPECULATIVE by the "
     "authors' own hedging, indexed so they cannot leak into the L_virgin test as 'discovery'. "
+    "Added 2026-07-01: the published STRUCTURAL readings (no phonetic value) — Davis 2013's "
+    "i-*301='gives/dedicates' (endorsed Salgarella 2025 §7.2) + the Salgarella 2025 §8 affix inventory "
+    "(-TE/-TI 'from/of' Valerio; I-/J- 'to/at' Duhoux; -JA adjectival Younger; -RU/-RE ~ Greek -os "
+    "Steele&Meissner; -A feminine), indexed so a model cannot regurgitate them as morphology discovery. "
     "Unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. All disputed readings are "
     "indexed to CATCH regurgitation of them, never as accepted readings. A sign absent here is treated "
     "as L_virgin (the dangerous direction); EXPAND toward completeness, never pad with uncertain "
@@ -234,6 +246,47 @@ _LOGOGRAPHIC_READINGS = (
      "A646/A341 'root' reading. SPECULATIVE; indexed to quarantine."),
 )
 
+CITATION_SALGARELLA2025 = (
+    "E. Salgarella, 'Writing in Bronze Age Crete: \"Minoan\" Linear A' (Cambridge Elements, 2025), "
+    "doi:10.1017/9781009520041 — the current authoritative synthesis. §7 endorses the Davis 2013 "
+    "libation-formula reading; §8 catalogues affixes (with primary attributions) and concludes Minoan "
+    "is a language ISOLATE (agglutinative, provisional VSO), rejecting the etymological/Semitic method "
+    "category-wide. Digest: docs/related/salgarella-2025.md."
+)
+
+# Published STRUCTURAL / morphological readings (positional-grammar + affix functions). These assign NO
+# phonetic value — they are slot/morpheme functions read combinatorially. Indexed because they are now
+# PUBLIC (Davis 2013, endorsed Salgarella 2025; the §8 affix inventory) and a model could regurgitate
+# them as 'discovery' in the L_virgin / morphology tests; quarantined L_known, never accepted readings.
+# (form, function, source, year, note)
+_STRUCTURAL_READINGS = (
+    ("I-*301", "verb:gives/dedicates", "B. Davis, Kadmos 52 (2013); " + CITATION_SALGARELLA2025, 2013,
+     "The libation-formula main verb root, variably affixed (a-ta-i-*301-..., ta-na-i-*301-...). A "
+     "STRUCTURAL/positional reading — *301 keeps NO phonetic value. Endorsed by Salgarella 2025 §7.2; "
+     "contradicts Di Mino's *301=/na/ 'dwell'. Indexed so a model cannot regurgitate 'i-*301=give'."),
+    ("A-JA-SA-SA-RA-ME", "object:dedication/offering", "B. Davis (2013); " + CITATION_SALGARELLA2025, 2013,
+     "Slot-4 invariant direct object of the libation formula (A- ~ JA- word-initial alternation). A "
+     "STRUCTURAL reading (cf. the separate Best 1981 'oh Asherah!' semitic_proposal on the same word)."),
+    ("-TE", "suffix:from", "M. Valerio (2007); " + CITATION_SALGARELLA2025, 2007,
+     "Ablative-like suffix 'from' (e.g. A-TU-RI-SI-TI 'from Tylissos'); marks formula slot 6. Salgarella 2025 §8."),
+    ("-TI", "suffix:of/from", "M. Valerio (2007); " + CITATION_SALGARELLA2025, 2007,
+     "Genitive/ablative-like suffix 'of'/'from'. Salgarella 2025 §8."),
+    ("I-", "prefix:to/at", "Y. Duhoux (1997); " + CITATION_SALGARELLA2025, 1997,
+     "Locative/allative prefix 'to'/'at' (e.g. I-PA-SA-JA). Registered H3 in the morphology pre-reg. Salgarella 2025 §8."),
+    ("J-", "prefix:to/at", "Y. Duhoux (1997); " + CITATION_SALGARELLA2025, 1997,
+     "Allomorph of the I- locative/allative prefix. Salgarella 2025 §8."),
+    ("-JA", "suffix:adjectival", "J. Younger, Linear A Texts (2024); " + CITATION_SALGARELLA2025, 2024,
+     "Adjective-forming suffix (e.g. SU-KI-RI-TE-I-JA from place-name SU-KI-RI-TA; cf. LB -jo/-ja ethnic). Salgarella 2025 §8."),
+    ("-RU", "ending:~Greek -os (masc)", "P. Steele & T. Meissner (2017); " + CITATION_SALGARELLA2025, 2017,
+     "Word-ending argued to be the Minoan counterpart of Greek masculine -os, via cross-script personal "
+     "names (DI-DE-RU ~ di-de-ro). Salgarella 2025 §8 ('likely'). The candidate case-marker, now sourced."),
+    ("-RE", "ending:~Greek -os (masc)", "P. Steele & T. Meissner (2017); " + CITATION_SALGARELLA2025, 2017,
+     "Variant of -RU, ~ Greek masculine -os (PA-JA-RE ~ pa-ja-ro). Salgarella 2025 §8 ('likely')."),
+    ("-A", "ending:feminine (personal names)", "L. Godart (1984); Schoep 2002; " + CITATION_SALGARELLA2025, 1984,
+     "Arguably a feminine ending on women's names (JA-QIf, A-RU-DA-RA, ...). A NOMINAL morphology claim on "
+     "administrative words. Salgarella 2025 §7.1 ('arguably')."),
+)
+
 
 def _build_seed() -> List[LitClaim]:
     """Assemble the embedded seed deterministically from the cited constants."""
@@ -263,6 +316,11 @@ def _build_seed() -> List[LitClaim]:
         claims.append(
             LitClaim(sign=sign, proposed_value=value, source=source, year=year,
                      claim_type="logographic_reading", note=note)
+        )
+    for sign, value, source, year, note in _STRUCTURAL_READINGS:
+        claims.append(
+            LitClaim(sign=sign, proposed_value=value, source=source, year=year,
+                     claim_type="structural_reading", note=note)
         )
     # deterministic order: sort by (claim_type, sign) so the seed is byte-stable regardless of
     # construction order — a control must be reproducible.

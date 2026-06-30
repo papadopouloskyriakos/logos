@@ -709,11 +709,19 @@ def litindex_cognate_words(index: Sequence["litindex.LitClaim"]) -> Dict[str, Li
     """The COGNATE-level litindex words: claims whose sign is a SEQUENCE (>= 2 atomic signs).
 
     Returns ``{sign_sequence -> [claims for that word]}`` (single-sign lb_value_transfer claims are
-    excluded — they are sign-value, not cognate-level). For the project seed this is the 7 distinct
-    words: SU-PU, KA-RO-PA, SU-PA-RA, KU-RO (kull + total), JA-NE, A-SA-SA-RA-ME, KI-RO.
+    excluded — they are sign-value, not cognate-level). Only the COGNATE-LEVEL lexical reading types
+    (``lexical_reading``, ``semitic_proposal``) qualify: the §C.4 probe matches consonant skeletons of
+    cognate readings, so the structural/morphological readings (``structural_reading`` — i-*301='gives',
+    the affix functions) and logographic readings (``logographic_reading`` — the spice signs) are
+    EXCLUDED here (they carry functional values with no consonant skeleton to match; they remain
+    quarantined via the §C.1 partition / L_known). For the project seed this is the 7 distinct words:
+    SU-PU, KA-RO-PA, SU-PA-RA, KU-RO (kull + total), JA-NE, A-SA-SA-RA-ME, KI-RO.
     """
+    COGNATE_TYPES = ("lexical_reading", "semitic_proposal")
     words: Dict[str, List["litindex.LitClaim"]] = {}
     for c in index:
+        if c.claim_type not in COGNATE_TYPES:
+            continue
         atoms = _claim_atoms(c)
         if len(atoms) < 2:
             continue
