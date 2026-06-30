@@ -139,11 +139,17 @@ honest, decisive number for any Linear A claim. Every graded hypothesis is shown
    test vs n-gram baseline. Gated behind phases 0–1 (too little data to pretrain on A alone).
 6. **Rosetta desk (cockpit)** — later; the agora-ui pattern.
 
-## Open questions for the operator (decide before phase 2)
+## Resolved decisions — FULL SCALE (operator, 2026-06-30)
 
-- **Gold store:** DuckDB lake only (like agora silver), or also a MariaDB project on the
-  Galera cluster? (Decipherment is single-writer/analytical → DuckDB may suffice; no live
-  concurrent writers like agora's trading loop.)
-- **GPU/host:** reuse gpu01 Ollama + a logos-jepa service, or keep v0 on the runner only?
-- **Corpus licensing:** are GORILA/SigLA exports redistributable in-repo, or bronze-only +
-  fetch-script (the agora invariant-12 pattern)?
+The operator authorized full-scale resource use. Resolved:
+
+- **Gold store: BOTH.** A `logos` MariaDB database on the Galera cluster via ProxySQL :6033
+  (concurrent reads, the cockpit, portfolio conventions — every table has a PK) AND a
+  DuckDB/Parquet analytical lake over silver for fast scans. Mirror agora's 3-tier.
+- **GPU/host: full.** A `logos-jepa` service on nllei01gpu01 (docker, reusing the agora-jepa
+  harness + Ollama) for the representation layer; the runner hosts cron + the predict/verdict
+  pipeline. (The GPU also hosts Kronos/Chronos-style forecasters if a sequence model is wanted.)
+- **Corpus: open-data ingest + licensed-fetcher.** Open corpus data (lineara.xyz) is ingested
+  into silver and committed where its license permits; GORILA/SigLA raw academic exports are
+  bronze-only + a `scripts/fetch-*.sh` (invariants 10/12 — bulk licensed data never enters
+  git). Each source's license is verified before any commit.

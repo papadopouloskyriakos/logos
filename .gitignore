@@ -10,6 +10,11 @@ venv/
 corpus/bronze/*
 !corpus/bronze/.gitkeep
 
+# Silver = normalized corpus DERIVED from GORILA (lineara.xyz has no open license) -> gitignored
+corpus/silver/*.json
+corpus/silver/*.jsonl
+!corpus/silver/.gitkeep
+
 # Generated analytical stores (single-writer; rebuild from silver)
 corpus/gold/*.duckdb
 corpus/gold/*.parquet

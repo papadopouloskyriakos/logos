@@ -43,10 +43,15 @@ reference for the README's "deliberate opposite" framing.
    "408 words" has **no published table** to audit. This is the multiple-testing disease.
 5. **Typological oddness.** Semitic languages use consonantal roots (abjad); why would
    Linear A be a consonant+vowel **syllabary that writes vowels**?
-6. **The information floor.** Corpus ≈ **7,500 chars / ~1,500 inscriptions, avg 5 chars**,
-   mostly inventory lists. Unknown script + unknown language + **no bilingual text** ⇒
-   Shannon's **unicity distance is not met** (see `scripts/corpus_info.py`). Infinitely many
-   "translations" fit; internal consistency is not evidence.
+6. **The information floor — measured, and it refutes the "too little text" argument.** On
+   the real corpus (1,341 inscriptions, 5,792 syllable-signs, V=259), `scripts/corpus_info.py`
+   gives **unicity distance U ≈ 204–415 ≪ N = 5,792** across the whole plausible (V, P) space.
+   By Shannon's criterion there IS enough text to uniquely pin a decipherment — so corpus
+   size is **not** the blocker (this corrects a claim made below this very thread and our own
+   earlier prior). The real obstacles are the **absence of a known cognate language** to map
+   to (Luo's limit), the **multiple-testing / search trap** (point 4), and a **mixed
+   inventory**. Internal consistency is still not evidence. Full analysis + sensitivity:
+   [docs/findings/2026-06-30-information-floor.md](findings/2026-06-30-information-floor.md).
 
 ## The logos stance
 
