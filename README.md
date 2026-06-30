@@ -1,8 +1,6 @@
 # logos — an agentic decipherment-research platform
 
-<!-- DOI badge: after you enable this repo on Zenodo and cut the first GitHub Release, replace the line
-     below with the badge markdown Zenodo gives you (https://zenodo.org/account/settings/github/). -->
-[![DOI](https://img.shields.io/badge/DOI-pending%20Zenodo%20release-blue)](https://github.com/papadopouloskyriakos/logos)
+[![DOI](https://zenodo.org/badge/1285556812.svg)](https://zenodo.org/badge/latestdoi/1285556812)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > *logos* (λόγος): word, reason, account, meaning.
@@ -88,3 +86,14 @@ the corpus can and cannot support* — is the insurance policy. Architecture & r
 > **Reproducibility note.** The licensed Linear A corpus (GORILA / SigLA-derived) is **not**
 > redistributed here (it is gitignored — see invariant 10). The code, the discipline harness, the
 > pre-registrations, and all analysis/findings are open.
+
+## Citation
+
+Archived on Zenodo. To cite the software in general, use the **concept DOI** (always resolves to the
+latest version):
+
+> Papadopoulos, Kyriakos. *logos: a falsifiable, decontaminated inference framework for testing
+> undeciphered-script decipherment claims.* Zenodo. https://doi.org/10.5281/zenodo.21087572
+
+To cite a specific snapshot, use that version's DOI (v0.1.0 → `10.5281/zenodo.21087573`). Machine-readable
+metadata is in [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository") and [`.zenodo.json`](.zenodo.json).

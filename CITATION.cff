@@ -15,6 +15,7 @@ authors:
     # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add your ORCID before the Zenodo release
 repository-code: "https://github.com/papadopouloskyriakos/logos"
 url: "https://github.com/papadopouloskyriakos/logos"
+doi: "10.5281/zenodo.21087572"
 license: MIT
 version: "0.1.0"
 date-released: "2026-07-01"
