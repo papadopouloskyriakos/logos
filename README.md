@@ -1,99 +1,96 @@
-# logos — an agentic decipherment-research platform
+# logos — a falsification-first platform for undeciphered-script research
 
 [![DOI](https://zenodo.org/badge/1285556812.svg)](https://zenodo.org/badge/latestdoi/1285556812)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> *logos* (λόγος): word, reason, account, meaning.
+> *logos* (λόγος): word, reason, account.
 
-**logos's job is to find, test, and honestly validate linguistic hypotheses about
-undeciphered scripts — starting with Linear A — and to NEVER publish a self-deceiving
-decipherment.** It is an *offensive* research system: it hunts a real decipherment, but
-the discipline machinery below (predict-before-claim, mechanical held-out verdicts, the
-LLM never grading its own hypothesis, multiple-testing deflation, the unicity-distance
-gate) is **the weapon that separates a real decipherment from a fitted one.** A positive
-decipherment is guilty until proven innocent.
+**logos tests linguistic hypotheses about undeciphered scripts — starting with Linear A —
+under a discipline designed to tell a real signal apart from a fitted one, and to report an
+honest null when nothing survives.**
 
-The history of failed decipherments is ~95% self-deception: a tiny corpus, an unknown
-language, and a thesaurus of candidate roots let you "translate" almost anything (see the
-"English is a Semitic language" demo). logos is the **difference-detector**: when a
-hypothesis here claims an edge, the machinery has *earned* the right to believe it. When
-nothing survives, the rigorous null — *exactly what the corpus can and cannot support* — is
-the honest, publishable deliverable. The aim is the decipherment; the null result is the
-insurance policy.
+The history of failed decipherments is, in large part, a history of self-deception: a tiny
+corpus, an unknown language, and a large space of candidate readings let a determined analyst
+"translate" almost anything. (The classic intuition: with a permissive enough target you can
+"prove" that *English is a Semitic language* — see [docs/english-is-semitic-demo.md](docs/english-is-semitic-demo.md).) logos is
+built as a difference-detector. A proposed reading only counts as evidence once it survives
+pre-registered, held-out, multiple-comparison-corrected validation. When nothing survives, the
+calibrated null — *what the corpus can and cannot support* — is itself the deliverable.
 
-## Lineage
+This is a methodological contribution first. If a Linear A decipherment is attainable on the
+present evidence, this framework is built to recognize it. The working conclusion, on current
+data, is that the binding constraint is **identifiability** (no known related language, a small
+and partly lossy corpus), not effort — and the rigorous demonstration of *that* is the result
+the field can use.
 
-logos inherits its discipline DNA from two private sibling research repos:
+## Why now
 
-- **claude-gateway** — the agent-control patterns: predict-before-act gates, mechanical
-  verification (grader ≠ proposer), human-as-circuit-breaker, fail-closed kill-switches,
-  survive-abandonment→safe decay.
-- **finops-agora** — the rare-signal-under-noise core: hash-keyed predictions, a mechanical
-  `verdict` writer, the López de Prado honesty layer (Deflated-Sharpe, PBO/CPCV, effective-n),
-  truth-layer caps, the PIT/survivorship data discipline, and the **TS-JEPA encoder**
-  (repurposed here as a sign-sequence / cross-script representation layer).
-
-The trigger for this repo was the June 2026 "Linear A cracked" claim (Tom Di Mino /
-Claude Code): a capable conjecture, but **not public, not peer-reviewed, not reproducible**,
-with a live contradiction at its anchor and no held-out verification. logos is built to be
-its exact opposite: **open by default, mechanically verdicted, deflated for multiple
-testing.** See [docs/linear-a-claims-2026.md](docs/linear-a-claims-2026.md).
+A high-profile AI-assisted Linear A claim circulated in June 2026 — a capable conjecture, but
+not public, not peer-reviewed, and not reproducible, with no held-out verification. logos is
+built to be its methodological opposite: open by default, mechanically graded, and corrected for
+multiple testing. The claim is treated as a *worked example* of the failure modes the framework
+is designed to catch ([docs/linear-a-claims-2026.md](docs/linear-a-claims-2026.md)) — analysed on its public evidence, as a
+claim, not a person.
 
 ## The non-negotiables
 
-1. **No claim without a committed, falsifiable prediction.** A phonetic/lexical/grammatical
-   hypothesis is hash-keyed and registered *before* it is tested. No prediction → no verdict.
-2. **The proposer never grades itself.** LLM-assigned phonetics, JEPA embeddings, and any
-   model output enter as **truth ≤ 0.75** signals; the verdict is mechanical, computed
-   against held-out corpus. (The Di Mino anchor that grades its own root-match is the
-   anti-pattern.)
-3. **A decipherment is guilty until proven innocent.** Nothing is "cracked" without
-   held-out verification (the Linear-B-new-tablet standard, operationalized as held-out-site
-   / held-out-inscription verdicts). Internal consistency on the training set is **not**
-   evidence — it is curve-fitting by another name.
-4. **The information floor is always on screen.** Every claim is shown next to its
-   deflated significance **and** the corpus's unicity-distance / entropy budget. A
-   decipherment whose free parameters exceed the bits the corpus constrains is
-   underdetermined by construction.
-5. **Open by default.** The corpus tooling, the verdict methodology, and any lexicon table
-   are PUBLIC. (Licensed raw data is the only exception.) The deliberate contrast to
-   non-publication claims.
+1. **No claim without a committed, falsifiable prediction.** A phonetic, lexical, or grammatical
+   hypothesis is registered (hash-keyed, timestamped) *before* it is tested. No prediction → no
+   verdict.
+2. **The proposer never grades itself.** Model-assigned phonetic values and learned embeddings
+   enter only as *candidate signals* with capped weight; the verdict is computed mechanically
+   against held-out material. A hypothesis that grades its own match is the anti-pattern.
+3. **A reading is guilty until proven innocent.** Nothing counts as deciphered without held-out
+   verification (operationalized as held-out-site / held-out-inscription tests, in the spirit of
+   the new-tablet check that confirmed Linear B). Internal consistency on the training set is
+   curve-fitting, not evidence.
+4. **The information floor is always on screen.** Every claim is shown beside its
+   multiple-comparison-corrected significance and the corpus's entropy / identifiability budget.
+   A reading whose free parameters exceed what the corpus can constrain is underdetermined by
+   construction.
+5. **Open by default.** The corpus tooling, the validation methodology, and any results table are
+   public. Licensed raw data is the only exception.
 
-Full operating rules: [CLAUDE.md](CLAUDE.md). Architecture & rationale: [DESIGN.md](DESIGN.md).
+Operating rules: [CLAUDE.md](CLAUDE.md). Architecture & rationale: [DESIGN.md](DESIGN.md).
 
-## Status (2026-07): the discipline harness + a body of pre-registered nulls
+## Status (2026-07): the harness + a body of pre-registered nulls
 
-The harness is built and exercised; a preprint is in preparation. What exists:
+The discipline harness is built and exercised; a preprint is in preparation. What exists:
 
-- **The decontamination / falsification harness** — a literature index with an
-  `L_known`/`L_virgin` partition + an `L_fake` fabricated-corpus canary, LLM-ablation,
-  multiple-testing deflation, and pre-registration, all graded mechanically from persisted
-  artifacts (`scripts/comparison/`).
-- **A worked failure case** — a three-part, primary-sourced refutation of the June-2026
-  "Linear A cracked" (`*301`) claim, including that its own morphological table contradicts the
-  Semitic family it assigns (`docs/linear-a-claims-2026.md`, `scripts/comparison/litindex.py`).
-- **A body of rigorous, pre-registered nulls**, each with its borderline cases named: Direction-A
-  morphology (pooled + genre-stratified), Direction-D metrology (parse-coverage), a
-  distributional-phonology pilot with a power analysis, the cross-script *image-vs-sequence*
-  asymmetry, and an LLM regurgitation / `L_virgin` probe (`docs/findings/`).
+- **A decontamination / falsification harness** — a literature index with a known-reading vs.
+  literature-unseen partition, a fabricated-language control corpus, model-ablation contamination
+  checks, multiple-comparison correction, and pre-registration — all graded mechanically from
+  persisted artifacts (`scripts/comparison/`).
+- **A worked failure case** — a three-part, primary-sourced refutation of the June-2026 `*301`
+  claim, including that its own morphological segmentation (a prefixing, agglutinative verb)
+  contradicts the non-concatenative Semitic morphology it assigns
+  ([docs/linear-a-claims-2026.md](docs/linear-a-claims-2026.md)).
+- **A body of pre-registered nulls**, each with its borderline cases named: morphology induction
+  (pooled and genre-stratified), metrological/accounting analysis, a distributional-phonology
+  pilot with a power analysis, a cross-script image-vs-sequence asymmetry, and a model-
+  regurgitation probe on literature-unseen signs (`docs/findings/`).
 - **Literature engaged at the primary-source level** — Braović 2024, Salgarella 2025, Davis 2013,
-  Corazza 2021, Schrijver 2014, et al. (`docs/related/`, `docs/references.md`).
+  Thomas 2020, Corazza 2021, Schrijver 2014, and others (`docs/related/`, `docs/references.md`).
 
-The honest framing is unchanged: the aim is a real decipherment; the rigorous null — *exactly what
-the corpus can and cannot support* — is the insurance policy. Architecture & rationale:
-[DESIGN.md](DESIGN.md); operating rules: [CLAUDE.md](CLAUDE.md).
+## Reproducibility & data
 
-> **Reproducibility note.** The licensed Linear A corpus (GORILA / SigLA-derived) is **not**
-> redistributed here (it is gitignored — see invariant 10). The code, the discipline harness, the
-> pre-registrations, and all analysis/findings are open.
+The licensed Linear A corpus (GORILA- and SigLA-derived) and the DĀMOS Linear B data are **not**
+redistributed here — they carry CC BY-NC-SA / all-rights-reserved terms and are git-ignored. The
+code, the discipline harness, the pre-registrations, and all analysis and findings are open under
+the MIT license. Each source's license and how to obtain it is documented in
+[docs/data-provenance.md](docs/data-provenance.md).
+
+This work is independent and not affiliated with or endorsed by any of the cited projects or
+their authors.
 
 ## Citation
 
-Archived on Zenodo. To cite the software in general, use the **concept DOI** (always resolves to the
-latest version):
+Archived on Zenodo. To cite the software in general, use the **concept DOI** (always resolves to
+the latest version):
 
 > Papadopoulos, Kyriakos. *logos: a falsifiable, decontaminated inference framework for testing
 > undeciphered-script decipherment claims.* Zenodo. https://doi.org/10.5281/zenodo.21087572
 
-To cite a specific snapshot, use that version's DOI (v0.1.0 → `10.5281/zenodo.21087573`). Machine-readable
-metadata is in [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository") and [`.zenodo.json`](.zenodo.json).
+To cite a specific snapshot, use that version's DOI (v0.1.0 → `10.5281/zenodo.21087573`).
+Machine-readable metadata is in [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository")
+and [`.zenodo.json`](.zenodo.json).
