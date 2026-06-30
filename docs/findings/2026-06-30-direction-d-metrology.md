@@ -33,6 +33,40 @@ at parse, reducing constraint coverage further. Fixing it would add a few constr
 (the deeper limiter is multi-block tablets + restorations + illegible glyphs). Per the scope freeze (draft
 after Stage-1), recorded as a known parse limitation rather than chased.
 
+## Primary sources now in hand (Corazza et al. 2021 + Schrijver 2014, audited 2026-07-01)
+
+Both fraction papers were acquired and audited (values adversarially verified against source). They
+**vindicate and sharpen** this null — with four corrections recorded:
+
+- **The null is DEEPER than "sparse parse," and the field agrees.** Corazza et al. (2021, p.2) state that
+  fraction values **cannot reliably be deduced from numeral-phrase totals** because "no Linear A
+  inscription containing totals of numeral phrases is without reading or calculation problems" — so they
+  *abandoned* the balance-to-totals method that logos's `metrology.py` rests on, in favour of constraint
+  programming. logos's parse-coverage null is therefore **consistent with the published experts**, not a
+  logos-unique failure. (Cite p.2 as the primary reason, not only automated under-coverage.)
+- **METHOD MISMATCH (correction).** Corazza did **not** balance line items against totals; they used
+  **constraint programming** (MiniZinc/Gecode) over ordinal/typological premises, scored by goodness
+  measures. logos and Corazza solve *different problems* — logos cannot "reproduce their coverage" by
+  adding balance constraints; matching them would mean adopting a premise-based constraint solver.
+- **ATTRIBUTION (correction): `½`=1/2 is Bennett 1950's value**, the long-standing consensus (adopted by
+  Schrijver 2014 and Corazza 2021), not "Corazza's." And **"only `J` determinable" is method-specific** —
+  epigraphy alone fixes `J`=1/2; balance-to-totals is simply a weak lever. Phrase as "*our balance method*
+  determines only `J`," not "only `J` is determinable."
+- **A SECOND independent system + a stronger corroboration.** Schrijver (2014) is an earlier, independent
+  (philological) full fraction system. `½`=1/2 is now corroborated by **both** — but honestly: Schrijver
+  derives it leading with **HT 104**, the same tablet logos's solver used, so they partly share evidence;
+  the genuinely independent support is Schrijver's **three further `J`=1/2 tablets (HT Zd 156, PE 1,
+  HT 123a)**, lifting `½`=1/2 to ≥4 documents. Schrijver also **validates the solver's additivity
+  assumption** (combinations are sum-of-parts) **except `D`**, which never combines additively → treat `D`
+  as a non-compositional special case. The determining tablets he names (HT 104, HT Zd 156, HT 123a/b,
+  PE 1, …) are exactly the GORILA-epigraphic constraints the automated stream drops — a concrete
+  hand-curated top-up path. (Fraction usage is itself **site-stratified** — `H`=1/3 only at HT/Phaistos,
+  Khania uses `K`=1/16 — corroborating the site stratum.)
+
+Recorded, not chased (scope freeze: draft after Stage-1). Specific per-sign value tables are NOT
+transcribed here — the adversarial pass flagged value/quote errors in the auto-extracted tables, so a
+full Corazza/Schrijver agree-disagree matrix is a deferred careful-transcription task, not hand-entered.
+
 ## Method / discipline notes
 - **Held-out:** grouped k-fold by document (no tablet straddles train/test); fractions solved on TRAIN only.
 - **Permutation null:** shuffle the sign→value map per fold (500–1000 draws); the real system must beat it.
