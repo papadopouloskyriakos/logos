@@ -215,7 +215,7 @@ If a Linear A decipherment is attainable on present evidence, this framework is 
 - Davis, B. (2014). *Minoan Stone Vessels with Linear A Inscriptions.* Aegaeum 36. Leuven: Peeters.
 - Di Mino, D. (2026). "Linear A cracked": A-TA-I-\*301-WA-JA as West-Semitic N-W-Y (the June-2026 announcement analysed in §5). Online announcement — no formal venue; analysed here as a public claim, with the timestamped reference copy of the claim and its table carried as the archived record in the logos artifact (v0.1.0).
 - Duhoux, Y. (1978). On the (agglutinative) typology of the Minoan language (secondary citation, as characterised in Salgarella 2025 §8).
-- Duhoux, Y. (1992). Gloss of the Linear A libation-formula verb i-\*301 as "give/dedicate" (secondary citation, as adopted by Davis 2013).
+- Duhoux, Y. (1992). Variations morphosyntaxiques dans les textes votifs linéaires A. *Cretan Studies* 3:65–88. (Source of the i-\*301 = "give/dedicate" structural gloss, adopted by Davis 2013 and endorsed by Salgarella 2025 §7.2.)
 - Duhoux, Y. (1997). The Linear A locative/allative prefix i-/j- "to/at" (secondary citation, as cited in Salgarella 2025 §8).
 - Ferrara, S., & Tamburini, F. (2022). Advanced techniques for the decipherment of ancient scripts. *Lingue e Linguaggio* 21(2):239–259. DOI [10.1418/105964](https://doi.org/10.1418/105964).
 - Ferrara, S., Montecchi, B., & Valério, M. (2021). What is the 'Archanes Formula'? Deconstructing and reconstructing the earliest attestation of writing in the Aegean. *Annual of the British School at Athens* 116:43–62. DOI [10.1017/S0068245420000155](https://doi.org/10.1017/S0068245420000155).
@@ -240,7 +240,8 @@ If a Linear A decipherment is attainable on present evidence, this framework is 
 - Sommerschield, T., Assael, Y., Pavlopoulos, J., et al. (2023). Machine Learning for Ancient Languages: A Survey. *Computational Linguistics* 49(3):703–747.
 - Steele, P. M., & Meissner, T. (2017). From Linear B to Linear A: the problem of the backward projection of sound values. In P. M. Steele (ed.), *Understanding Relations Between Scripts: The Aegean Writing Systems*, 93–110. Oxford: Oxbow.
 - Tamburini, F. (2025). On automatic decipherment of lost ancient scripts relying on combinatorial optimisation and coupled simulated annealing (CSA_OptMatcher), evaluated by the Luo et al. (2019) accuracy metric. *Frontiers in Artificial Intelligence* 8:1581129. DOI [10.3389/frai.2025.1581129](https://doi.org/10.3389/frai.2025.1581129). Code: github.com/ftamburin/CSA_OptMatcher.
-- Thomas, R. (2020). Some reflections on morphology in the language of the Linear A libation formula. *Kadmos* 59(1–2):1–23. DOI [10.1515/kadmos-2020-0001](https://doi.org/10.1515/kadmos-2020-0001).- Valério, M. (2007). Analysis of Linear A suffixation (secondary citation, as cited in Salgarella 2025 §8).
+- Thomas, R. (2020). Some reflections on morphology in the language of the Linear A libation formula. *Kadmos* 59(1–2):1–23. DOI [10.1515/kadmos-2020-0001](https://doi.org/10.1515/kadmos-2020-0001).
+- Valério, M. (2007). Analysis of Linear A suffixation (secondary citation, as cited in Salgarella 2025 §8).
 - Ventris, M., & Chadwick, J. (1953). Evidence for Greek Dialect in the Mycenaean Archives. *Journal of Hellenic Studies* 73:84–103.
 
 ---
