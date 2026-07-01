@@ -94,21 +94,26 @@ def _dist_matrix(prob, queries, max_pairs: int = 0) -> np.ndarray:
     out = np.empty((M, N), dtype=np.float32)               # match his editdistance1N pred dtype exactly
     if M == 0:
         return out
-    X = torch.tensor(queries, dtype=torch.long).to(prob.device)     # [M, maxLl]
-    Y = prob.y                                                       # [N, maxLk] on device
-    if max_pairs <= 0:
-        cell_bytes = (int(X.shape[1]) + 1) * (int(Y.shape[1]) + 1) * 4   # his workingM per pair
-        budget = 8 * 1024**3 if prob.device != "cpu" else 64 * 1024**2   # ~8 GB GPU / 64 MB CPU
-        max_pairs = max(N, budget // max(cell_bytes, 1))
-    rows = max(1, max_pairs // max(N, 1))
-    for c in range(0, M, rows):
-        Xc = X[c:c + rows]
-        mc = int(Xc.shape[0])
-        src = Xc.repeat_interleave(N, dim=0)                         # [mc*N, maxLl]
-        trg = Y.repeat(mc, 1)                                        # [mc*N, maxLk]
-        d = editdistance(src, trg, 0, prob.ED[0], prob.ED[1])[:, 1].reshape(mc, N)
-        out[c:c + mc] = d.to("cpu").numpy()
-        del src, trg, d
+    # torch.no_grad() is essential: without it the edit-distance ops build an autograd graph that
+    # is never freed, so GPU memory grows every annealing step until the process is OOM-killed
+    # (~step 100-300). Freeing every intermediate + the query tensor keeps per-step memory flat.
+    with torch.no_grad():
+        X = torch.tensor(queries, dtype=torch.long).to(prob.device)  # [M, maxLl]
+        Y = prob.y                                                   # [N, maxLk] on device
+        if max_pairs <= 0:
+            cell_bytes = (int(X.shape[1]) + 1) * (int(Y.shape[1]) + 1) * 4   # his workingM per pair
+            budget = 8 * 1024**3 if prob.device != "cpu" else 64 * 1024**2   # ~8 GB GPU / 64 MB CPU
+            max_pairs = max(N, budget // max(cell_bytes, 1))
+        rows = max(1, max_pairs // max(N, 1))
+        for c in range(0, M, rows):
+            Xc = X[c:c + rows]
+            mc = int(Xc.shape[0])
+            src = Xc.repeat_interleave(N, dim=0)                     # [mc*N, maxLl]
+            trg = Y.repeat(mc, 1)                                    # [mc*N, maxLk]
+            d = editdistance(src, trg, 0, prob.ED[0], prob.ED[1])[:, 1].reshape(mc, N)
+            out[c:c + mc] = d.to("cpu").numpy()
+            del src, trg, d
+        del X
     return out
 
 
