@@ -990,10 +990,11 @@ any reading at all. This section reports the decontamination and
 information-sufficiency probes that target them. Both are run as method
 demonstrations. The LLM-ablation and \texttt{L\_virgin} probes return
 completed (if deliberately bounded) findings; the
-information-sufficiency sweep is presented as \textbf{protocol and
-bounding logic, not a result} --- its compute cores are deferred (§8.3).
-Throughout, where a clean number was not yet obtainable we report the
-partial-null and the confound rather than a headline.
+information-sufficiency sweep now returns a \textbf{measured
+accuracy-vs-size curve} on a corrected matcher, reported here with its
+larger-size points still completing (§8.3, marked \emph{under
+revision}). Throughout, where a clean number was not yet obtainable we
+report the partial-null and the confound rather than a headline.
 
 \hypertarget{llm-ablation-does-a-frontier-model-regurgitate-the-literature}{%
 \subsubsection{8.1 LLM-ablation: does a frontier model regurgitate the
@@ -1058,22 +1059,32 @@ is not correctness}: with no ground truth on the virgin signs, this
 bounds how the model behaves, never whether it is right (logos v0.1.0).
 The full arc cost ≈ \$2.80 in ephemeral GPU rental.
 
-\hypertarget{information-sufficiency-upper-bound-protocol-and-bounding-logic-sweep-pending}{%
-\subsubsection{8.3 Information-sufficiency upper bound: protocol and
-bounding logic (sweep
-pending)}\label{information-sufficiency-upper-bound-protocol-and-bounding-logic-sweep-pending}}
+\hypertarget{information-sufficiency-upper-bound-the-csa-learning-curve-measured-8.3-under-revision}{%
+\subsubsection{8.3 Information-sufficiency upper bound: the CSA learning
+curve (measured) --- §8.3 UNDER
+REVISION}\label{information-sufficiency-upper-bound-the-csa-learning-curve-measured-8.3-under-revision}}
+
+\begin{quote}
+\textbf{Editorial note (2026-07-01).} This subsection is under active
+revision. A correctness bug in the cognate-ID matcher's serial path was
+found and fixed (see below); the earlier ``at chance floor'' lower
+bounds are \textbf{retracted}, and the corrected accuracy-vs-size curve
+is being finalized --- its larger (Linear-A-scale) syllabic points are
+still computing. The numbers quoted below are the validated partial
+curve as of this draft; the converged full-range curve will replace
+them.
+\end{quote}
 
 The learning-curve harness reframes the withdrawn unicity-distance
 diagnostic --- a toy-model precondition, never a sufficiency or
 refutation claim --- as a sharper, answerable question: \emph{is a
 Linear-A-scale corpus (539 distinct word-forms; V = 259 sign-types at N
 ≈ 5,792 parsed syllable-signs) large enough to recover a decipherment IF
-a known cognate existed?} We report the design, its reading rules, a
-validated implementation, and a reduced-budget end-to-end run here ---
-but not yet the \emph{converged} curve: the matcher is built and
-exercised, and the sweep is compute-bound (see below), so we provide the
-runnable harness and the measured lower bounds rather than assert a
-converged outcome.
+a known cognate existed?} We report the design, its reading rules, and
+the corrected measured curve here; the larger-size cells for the
+syllabic benchmarks --- the analogues most relevant to Linear A --- are
+still landing, so the Linear-A-scale verdict is deferred to the
+finalized curve.
 
 The protocol downsamples known-answer benchmarks --- Linear B /
 Mycenaean Greek as the primary syllabic analog, sourced through DĀMOS,
@@ -1089,37 +1100,57 @@ identifiability --- cognate-absence and unpaid multiplicity over a mixed
 sign inventory --- not corpus size. Neither branch is ever a
 decipherability claim, and neither asserts ``there is enough text.''
 
-One thing is deferred, deliberately: the full CSA learning-curve sweep.
-The cognate-matcher itself is implemented and validated --- a
-batched-parallel CUDA energy that evaluates all sixteen coupled
-annealers in one edit-distance kernel per step, verified
-\textbf{bit-identical} to the serial reference on CPU (matching final
-energies and states) and memory-stable under long runs. What remains
-compute-bound is the sweep \emph{breadth}: hundreds of anneals
-(benchmarks × corpus sizes × seeds), each thousands of steps of an
-orchestration-heavy search. We therefore ship the runnable harness
-(driver, batched energy, and its validation) and the per-size chance
-floor and Linear-A locator, so the accuracy-vs-size curve can be
-\textbf{reproduced and audited rather than asserted}. We did run it
-end-to-end at a \emph{reduced} budget (300--500 steps, single seed;
-\texttt{results/csa/curve\_lowerbounds.json}): all six measured points
---- luvian-Hittite at sizes 20--59 and Linear B/Greek at sizes 100--200
---- sit at or within noise of the analytic chance floor. But those are
-\textbf{under-converged lower bounds} (the CSA reproduction reaches its
-published accuracy only near \textasciitilde4,000 steps), and the
-per-step cost grows roughly quadratically in lexicon size (linb size-100
-≈ 4 min, size-200 ≈ 17 min), so a \emph{converged} sweep across the
-primary benchmark's full size range is hours-to-days of compute. The
-honest state is therefore \textbf{implemented, validated, and exercised
---- but not converged}: at this budget the curve is uninformative about
-sufficiency (it cannot separate under-convergence from
-information-insufficiency), and the converged curve is the deferred
-future work. The phonological / sound path, by contrast, is no longer
-data-deferred: the DĀMOS Mycenaean holdings are now harvested and
-ingested, and §7.3 reports that even the full corpus leaves the
-cross-script distributional alignment at chance --- so that bound is a
-property of the signal, not a promissory note against data yet to
-arrive. We publish the harness and its bounding logic (concept DOI
+\textbf{A retracted result and its correction.} In preparing the full
+sweep we found and fixed a correctness bug in the matcher, and we
+retract the reduced-budget numbers reported in an earlier draft.
+Tamburini's \emph{serial} annealing update (\texttt{processes=1}, the
+\texttt{\_\_update\_state\_no\_par} path) mutates one shared annealer
+state in place with no per-worker isolation, collapsing held-out
+accuracy to near chance; only the \emph{parallel} path
+(\texttt{processes\ \textgreater{}\ 1}, forked worker processes with
+isolated state) is correct. A known-answer check pins this down:
+Luvian-Hittite at its full size (59 pairs) reproduces Tamburini's
+published Table-3 accuracy of 0.475 \textbf{only} on the parallel path
+(0.462 at 2,000 steps, mean of four seeds; per-seed energy ≈ 37,
+matching the published reproduction), while the serial path returns
+0.0--0.017 (energy ≈ 48--54). Our earlier batched-CUDA energy had been
+validated ``bit-identical to the serial reference''; because that
+reference was the broken path, \textbf{we retract that validation and
+the six reduced-budget ``lower bounds''} (formerly
+\texttt{results/csa/curve\_lowerbounds.json}), which reported every
+point ``at or within noise of the analytic chance floor.'' That at-floor
+characterization was a serial-path artifact --- not under-convergence,
+and not information-insufficiency.
+
+\textbf{The corrected curve splits informatively by benchmark type.}
+Re-run on the parallel path (\texttt{processes\ =\ 4}, CPU, 2,000 steps,
+four seeds each; analytic chance floors 0.013--0.05), the
+\emph{non-syllabic} benchmarks recover far above floor even at small
+downsample sizes --- phoenician-Ugaritic 0.66--0.74 across sizes 21--79,
+Luvian-Hittite rising 0.28 → 0.43 → 0.46 across sizes 30--59 (its
+full-size 0.46 matching the published 0.475). The \emph{syllabic}
+benchmarks --- Linear-B/Greek and Cypriot/Greek, the closest analogues
+to syllabic Linear A --- by contrast remain \textbf{at floor at these
+small downsample sizes} (Linear-B/Greek ≈ 0.01 at size 92; Cypriot/Greek
+≈ 0.08 at size 69). On the syllabic case cognate-ID recovery evidently
+needs a larger corpus, and those larger cells (up toward Linear-A scale,
+≈ 540 word-forms) are still computing. \textbf{The Linear-A-relevant
+sufficiency verdict therefore awaits the larger syllabic sizes, and this
+subsection is marked under revision pending them.} What is already
+established and does not depend on the remaining cells: the matcher is
+\emph{correct} (it reproduces the published known-answer accuracy on the
+parallel path), the earlier ``uninformative, at-floor'' state is
+\emph{withdrawn}, and the two-branch reading of the curve above is the
+frame in which the finalized result will be reported. Per-step cost
+grows roughly quadratically in lexicon size, which is why the syllabic
+Linear-A-scale points are the slow, still-completing tail. The
+phonological / sound path, by contrast, is no longer data-deferred: the
+DĀMOS Mycenaean holdings are now harvested and ingested, and §7.3
+reports that even the full corpus leaves the cross-script distributional
+alignment at chance --- so that bound is a property of the signal, not a
+promissory note against data yet to arrive. We publish the corrected
+harness, per-size chance floor, and the (regenerating) curve so it is
+\textbf{reproduced and audited rather than asserted} (concept DOI
 10.5281/zenodo.21087572).
 
 \hypertarget{discussion-limitations-and-conclusion}{%
@@ -1240,22 +1271,26 @@ the study, the unit of multiplicity is the \textbf{per-probe
 pre-registration}: the \textbf{five executed probes} (morphology,
 metrology, phonology, cross-script image alignment, and contamination)
 each carry their own pre-committed α, and every probe is reported
-regardless of outcome. (A sixth, the sufficiency sweep of §8.3, is
-specified and its harness validated but was \textbf{not executed to
-convergence}, so it is reported as protocol-only, not as a result.)
-There is no selective reporting: the one probe that returns an
-above-chance number --- the cross-script image leg (§7.3) --- is
-reported as a circular \emph{engineering demonstration}, not a positive.
-On the battery-level correction the paper's own rule demands: four of
-the five executed probes are nulls sitting far from any threshold
-(metrology p = 1.0; phonology p = 0.40 / 0.86; morphology at no power;
-contamination an artifact by construction), so a family-wise/FDR
-correction over the probe-level tests is arithmetically trivial and only
-makes each \emph{more} null --- and the fifth probe surfaces \textbf{no
-positive for such a correction to protect} (the image leg is capped at ≤
-0.75 and relabeled circular). Battery-level multiplicity is therefore
-not load-bearing here: there is no surviving positive that a correction
-could threaten. Nothing in the battery is read as a decipherment.
+regardless of outcome. (The sufficiency sweep of §8.3 is a known-answer
+\emph{upper-bound} diagnostic on benchmarks handed a real cognate signal
+--- not a Linear A probe --- so it is not among these five; on the
+corrected matcher it now returns a measured accuracy-vs-size curve, §8.3
+under revision, and its above-chance recovery on known-answer benchmarks
+is true by construction, never a Linear A positive requiring
+multiplicity protection.) There is no selective reporting: the one probe
+that returns an above-chance number --- the cross-script image leg
+(§7.3) --- is reported as a circular \emph{engineering demonstration},
+not a positive. On the battery-level correction the paper's own rule
+demands: four of the five executed probes are nulls sitting far from any
+threshold (metrology p = 1.0; phonology p = 0.40 / 0.86; morphology at
+no power; contamination an artifact by construction), so a
+family-wise/FDR correction over the probe-level tests is arithmetically
+trivial and only makes each \emph{more} null --- and the fifth probe
+surfaces \textbf{no positive for such a correction to protect} (the
+image leg is capped at ≤ 0.75 and relabeled circular). Battery-level
+multiplicity is therefore not load-bearing here: there is no surviving
+positive that a correction could threaten. Nothing in the battery is
+read as a decipherment.
 
 \hypertarget{limitations}{%
 \subsubsection{9.6 Limitations}\label{limitations}}
