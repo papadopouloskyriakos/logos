@@ -404,30 +404,56 @@ def test_searchlog_neff_overrides_passed_count_in_grade():
     assert log.n_eff == 7
     base = dict(_VBASE); base["n_eff"] = 1                  # hand-passed (would be the fallback)
     g = verdict.grade(_VHELD, _VCAND, search_log=log, **base)
-    assert g["n_eff"] == 7 and g["n_eff_source"] == "searchlog"
+    assert g["n_trials"] == 7 and g["n_trials_source"] == "searchlog"   # P0.3: trials, not independent tests
     # without the log, the passed count is used (clean fallback, no crash)
     g0 = verdict.grade(_VHELD, _VCAND, **base)
-    assert g0["n_eff"] == 1 and g0["n_eff_source"] == "passed"
+    assert g0["n_trials"] == 1 and g0["n_trials_source"] == "passed"
 
 
 def test_litindex_virgin_support_feeds_the_e_gate_via_grade_row():
-    """When the prediction carries a per-sign support map + an {L_known, L_virgin} partition, the §E
-    generalizes_to_virgin clause is computed by litindex.virgin_support (§C.2), not the pre-passed
-    float. Support entirely on a virgin sign -> clause holds; support entirely on a known sign ->
-    clause fails (memorization, not discovery)."""
+    """P0.2: generalizes_to_virgin uses litindex.virgin_support (§C.2) AND requires a PRE-REGISTERED
+    threshold + >= virgin_min_signs DISTINCT virgin signs — never a single hit, and FAIL CLOSED when
+    the prereg commits no threshold."""
     import json
     body = json.dumps({"free_params": 3, "provenance": "embedding_nn"})
-    part = {"L_known": ["DA"], "L_virgin": ["*301"]}
-    # all support on the L_virgin sign -> virgin_support == 1.0 -> clause True
-    pred_v = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
-                         "u_floor": 8, "per_sign_support": {"*301": 1.0, "DA": 0.0},
-                         "sign_partition": part})
-    gv = verdict.grade_row("ph", "fam", body, pred_v, 0.6, n_fake=6, seed=2)
-    assert gv["clauses"]["generalizes_to_virgin"] is True
-    # all support on the literature-KNOWN sign -> virgin_support == 0.0 -> clause fails
+    part2 = {"L_known": ["DA"], "L_virgin": ["*301", "*302"]}
+    # PASS: committed threshold + TWO distinct virgin signs carry support
+    pred_ok = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
+                          "virgin_threshold": 0.5, "virgin_min_signs": 2,
+                          "per_sign_support": {"*301": 1.0, "*302": 1.0, "DA": 0.0},
+                          "sign_partition": part2})
+    assert verdict.grade_row("ph", "fam", body, pred_ok, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_virgin"] is True
+    # FAIL CLOSED: a SINGLE virgin sign (even at full support) is not discovery
+    part1 = {"L_known": ["DA"], "L_virgin": ["*301"]}
+    pred_one = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
+                           "virgin_threshold": 0.5, "virgin_min_signs": 2,
+                           "per_sign_support": {"*301": 1.0, "DA": 0.0}, "sign_partition": part1})
+    assert verdict.grade_row("ph", "fam", body, pred_one, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_virgin"] is False
+    # FAIL CLOSED: NO committed threshold -> clause cannot pass even with two supported virgin signs
+    pred_noth = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
+                            "per_sign_support": {"*301": 1.0, "*302": 1.0, "DA": 0.0}, "sign_partition": part2})
+    assert verdict.grade_row("ph", "fam", body, pred_noth, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_virgin"] is False
+    # FAIL: support entirely on a literature-KNOWN sign -> memorization, not discovery
     pred_k = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
-                         "u_floor": 8, "per_sign_support": {"*301": 0.0, "DA": 1.0},
-                         "sign_partition": part})
+                         "virgin_threshold": 0.5, "per_sign_support": {"*301": 0.0, "*302": 0.0, "DA": 1.0},
+                         "sign_partition": part2})
     gk = verdict.grade_row("ph", "fam", body, pred_k, 0.6, n_fake=6, seed=2)
     assert gk["clauses"]["generalizes_to_virgin"] is False
     assert "generalizes_to_virgin" in gk["failing_clauses"]
+
+
+def test_gate_clauses_fail_closed_on_degenerate_input():
+    """P0 regression: (1) the removed k<=u_floor clause is GONE and cannot silently pass; (2) the
+    operative order-stat clause fails closed on a degenerate (zero-variance) null; (3) DSR is
+    reported-only, not a gate clause."""
+    base = dict(_VBASE)
+    g = verdict.grade(_VHELD, _VCAND, **base)
+    # (1) the incoherent MDL clause is deleted; u_floor is reported-only
+    assert "k_le_u_floor" not in g["clauses"]
+    assert "dsr_ge_0_95" not in g["clauses"]              # finance-DSR demoted off the decision path
+    assert "beats_order_stat_bar" in g["clauses"]         # order-stat bar is the operative deflation clause
+    assert "dsr" in g and "order_stat_bar" in g           # both still REPORTED
+    # (2) a constant null (no variance) -> order-stat bar is meaningless -> clause FAILS CLOSED
+    g_deg = verdict.grade(_VHELD, _VCAND, null_recalls=[0.5, 0.5, 0.5, 0.5], **base)
+    assert g_deg["clauses"]["beats_order_stat_bar"] is False
+    assert g_deg["gate_verdict"] != "GRADUATE"

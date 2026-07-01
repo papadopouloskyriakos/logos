@@ -170,12 +170,14 @@ def test_gate_llm_plus_lit_index_never_graduates():
     assert "not_llm_lit_contamination" in g["failing_clauses"]
 
 
-def test_gate_k_above_u_floor_rejects():
-    """free_params k > U_floor (MDL/§3 budget exceeded) -> never GRADUATE."""
+def test_mdl_clause_removed_u_floor_reported_only():
+    """P0.1: the k<=u_floor MDL clause was dimensionally incoherent and passed by construction (u_floor
+    defaulted to free_params); it is REMOVED from the §E gate. u_floor is reported-only, and an omitted
+    u_floor is reported as NaN (never silently satisfied). Real bit-level MDL is future work."""
     g = verdict.grade(HELD_FORMS, CAND_LEX, confidence=0.6, free_params=12, provenance="embedding_nn",
-                      lit_index_hit=False, virgin_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
-    assert g["gate_verdict"] != "GRADUATE"
-    assert "k_le_u_floor" in g["failing_clauses"]
+                      lit_index_hit=False, virgin_sign_support=0.9, u_floor=None, n_eff=5, n_fake=6, seed=2)
+    assert "k_le_u_floor" not in g["clauses"] and "k_le_u_floor" not in g["failing_clauses"]
+    assert g["u_floor"] != g["u_floor"]                    # NaN (omitted u_floor is not silently passed)
 
 
 def test_gate_no_virgin_support_rejects():

@@ -100,7 +100,7 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
           lit_index_hit, virgin_sign_support, u_floor, n_eff,
           null_recalls=None, fake_recalls=None, eps=EPS_DEFAULT, n_fake=N_FAKE_DEFAULT, seed=0,
           heldout_by_inscription=None, search_log=None, per_sign_support=None, sign_partition=None,
-          phono_order=3):
+          phono_order=3, virgin_threshold=None, virgin_min_signs=2):
     """Mechanically grade one hypothesis against its held-out implication.
 
     Returns a dict with: result (match|partial|deviation), accuracy (S*), brier, dsr, the L_fake
@@ -200,7 +200,13 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
     morph_powered = bool(s_morph_res.get("is_powered", False))
 
     k = int(free_params)
-    u_floor = float(u_floor)
+    # P0.1: u_floor is now REPORTED-ONLY. The k<=u_floor MDL clause was dimensionally incoherent (a
+    # free-parameter COUNT compared against a sign-occurrence unicity figure) and, worse, u_floor
+    # defaulted to free_params, so k<=u_floor passed by construction. The clause is deleted from the §E
+    # gate; unicity survives only as the withdrawn toy-model precondition diagnostic. Real bit-level MDL
+    # is stated future work. No free_params fallback: if a prereg omits u_floor it is reported as NaN,
+    # never silently satisfied.
+    u_floor = float(u_floor) if u_floor is not None else float("nan")
     # §E generalizes_to_virgin: prefer litindex.virgin_support over a per-sign support map + the
     # {L_known, L_virgin} partition WHEN both are supplied (the instrumented §C.2 path); otherwise fall
     # back to the pre-passed float (existing behaviour — callers without the partition are unchanged).
@@ -208,14 +214,28 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         virgin = float(litindex.virgin_support(per_sign_support, sign_partition))
     else:
         virgin = float(virgin_sign_support) if virgin_sign_support is not None else 0.0
+    # P0.2: discovery must clear a PRE-REGISTERED L_virgin threshold, never a single hit. Fail closed —
+    # absent a committed virgin_threshold the clause does NOT pass. When the per-sign partition is
+    # available, ALSO require >= virgin_min_signs DISTINCT L_virgin signs to carry held-out support.
+    n_virgin_supported = None
+    if per_sign_support is not None and sign_partition is not None:
+        _lv = set(sign_partition.get("L_virgin", []))
+        n_virgin_supported = sum(1 for s in _lv if float(per_sign_support.get(s, 0.0)) > 0.0)
+    virgin_ok = (virgin_threshold is not None) and (virgin >= float(virgin_threshold))
+    if n_virgin_supported is not None:
+        virgin_ok = virgin_ok and (n_virgin_supported >= int(virgin_min_signs))
+    # P0.3: the operative deflation clause is the §B.3 order-statistic bar (E[max over n_trials draws
+    # from the null]); S* must EXCEED it. Fail closed on a degenerate null (no variance, or <1 trial —
+    # the bar collapses to mu0 and is meaningless, so the clause must not pass). Finance-DSR is DEMOTED
+    # to reported-only (kept in the output, off the decision path).
+    beats_order_stat = (sigma0 > 1e-12) and (n_trials >= 1) and (observed > float(order_stat_bar))
     # §E gate — ALL must hold for the hypothesis to count as evidence / graduate.
     clauses = {
         "registered_before_test": True,                       # by construction (it's in the DB)
         "lfake_null_present": has_lfake,                      # the headline falsifier must exist
-        "dsr_ge_0_95": (dsr is not None and dsr >= DSR_GATE),
-        "k_le_u_floor": (k <= u_floor),
+        "beats_order_stat_bar": beats_order_stat,             # P0.3: E[max over n_trials] deflation (operative)
         "beats_lfake_margin": (observed > bar),               # the headline L_fake falsifier
-        "generalizes_to_virgin": (virgin > 0.0),              # discovery rests only on L_virgin signs
+        "generalizes_to_virgin": virgin_ok,                   # P0.2: pre-registered L_virgin threshold
         "not_llm_lit_contamination": not (provenance == "llm_proposed" and bool(lit_index_hit)),
         # S_morph is the gold-standard test WHEN THE CORPUS CAN SUPPORT IT (F.1). The clause keys off
         # has_power (the corpus has enough independent inscriptions/affixes/null-variance to test
@@ -267,8 +287,9 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         "order_stat_bar": round(float(order_stat_bar), 4),
         "dsr_order": None if dsr_order is None else round(float(dsr_order), 4),
         "sigma_hat": None if sigma_hat is None else round(float(sigma_hat), 6),
-        "n_eff": n_trials,
-        "n_eff_source": n_eff_source,
+        "n_trials": n_trials,                    # P0.3: distinct candidates tried (SearchLog), NOT independent tests
+        "n_trials_source": n_eff_source,
+        "n_virgin_supported": n_virgin_supported,   # distinct L_virgin signs with held-out support (None if unpartitioned)
         # additive comparison-layer diagnostics (REPORTED, never on the verdict's decision path).
         "s_phono": s_phono_val,                  # None when degenerate (NaN) — honest no-power, not a 0
         "s_phono_degenerate": s_phono_degenerate,
@@ -288,8 +309,9 @@ def _notes(g):
     dsr = "NA" if g["dsr"] is None else f"{g['dsr']:.3f}"
     dsro = "NA" if g.get("dsr_order") is None else f"{g['dsr_order']:.3f}"
     mph = "Y" if g.get("s_morph_powered") else "np"   # np = no power (the F.1 escape), distinct from a fail
+    uf = "NA" if g["u_floor"] != g["u_floor"] else f"{g['u_floor']:.0f}"   # NaN-safe (u_floor reported-only)
     s = (f"gate={g['gate_verdict']} result={g['result']} dsr={dsr} dsrO={dsro} k={g['free_params']}/"
-         f"U{g['u_floor']:.0f} S*={g['accuracy']:.3f} lfake_bar={g['lfake_bar']:.3f} "
+         f"U{uf} osbar={g['order_stat_bar']:.3f} S*={g['accuracy']:.3f} lfake_bar={g['lfake_bar']:.3f} "
          f"virgin={'Y' if g['clauses']['generalizes_to_virgin'] else 'N'} morph={mph} "
          f"fail={','.join(g['failing_clauses']) or 'none'} code={code_sha()} v={METRIC_VERSION}")
     return s[:255]
@@ -339,13 +361,17 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
         provenance=body.get("provenance", "human"),
         lit_index_hit=bool(pred.get("lit_index_hit", False)),
         virgin_sign_support=pred.get("virgin_sign_support"),
-        # U_floor default = k (no MDL slack): a hypothesis that asserts more free params than the
-        # corpus can pin fails k<=U_floor by default; the predictor must commit a real budget.
-        u_floor=float(pred.get("u_floor", free_params)),
+        # P0.1: u_floor is REPORTED-ONLY (the k<=u_floor clause is removed). No free_params fallback —
+        # an omitted u_floor is reported as NaN, never silently satisfied. Real bit-level MDL is future work.
+        u_floor=pred.get("u_floor"),
         n_eff=n_eff, null_recalls=pred.get("null_recalls"),
         eps=eps, n_fake=n_fake, seed=seed,
         heldout_by_inscription=heldout_by_inscription,
-        per_sign_support=per_sign_support, sign_partition=sign_partition)
+        per_sign_support=per_sign_support, sign_partition=sign_partition,
+        # P0.2: the pre-registered L_virgin discovery threshold + min distinct virgin signs (fail closed
+        # if the prereg commits no threshold).
+        virgin_threshold=pred.get("virgin_threshold"),
+        virgin_min_signs=int(pred.get("virgin_min_signs", 2)))
 
 
 def write_verdict(cur, plan_hash, family, g):
