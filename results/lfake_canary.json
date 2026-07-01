@@ -1,0 +1,289 @@
+{
+  "citation": [
+    "Nair 2026, arXiv:2604.17828 \u2014 parameterized synthetic generators calibrated to the empirical range of a real comparator, swept across it, with honest reporting of generator-output divergence from calibration targets (the synthetic baseline is never treated as ground truth).",
+    "logos comparison-layer \u00a7C.3 (fabricated-language canary) + refinement F.2 (L_fake must be frequency / root-template / lexicon-size matched to each real candidate).",
+    "Packard 1974 \u2014 frequency-banded sign-value permutation null: shuffle sign->value assignments within frequency bands so the permuted map carries the same sign/value marginal frequencies but no genuine sign-value correspondence.",
+    "Nair 2026, arXiv:2604.17828 \u2014 within-inscription fixed-seed permutation: a deterministic same-forms control that preserves each form's character multiset and length, destroying only sequence/phonotactic structure.",
+    "logos comparison-layer \u00a7A.2 (S_lex = deflated lexeme recall, the Gordon failure-mode metric) and refinement F.1 (deflated S_lex is the pragmatic primary; S_morph is gold-standard-if-the-corpus-cooperates)."
+  ],
+  "gold_file": "uga-heb.gold.cog",
+  "calibration": {
+    "candidate": "Hebrew (from uga-heb.gold.cog)",
+    "mode": "semitic",
+    "phoneme_inventory_size": 23,
+    "lexicon_size_target": 2767,
+    "root_len": 3,
+    "n_ugaritic_forms": 2182,
+    "n_hebrew_forms": 2767,
+    "empirical_roots": true,
+    "n_attested_roots": 1204,
+    "external_reject_size": 7682,
+    "external_reject_source": "ETCBC/bhsa tf/2021 lex_utf8 (romanized; 6042 unique lexemes -> 7682 reject skeletons [lexemes + attested trilaterals])"
+  },
+  "calibration_divergence": {
+    "n_generated": {
+      "mean": 2767.0,
+      "std": 0.0,
+      "min": 2767.0,
+      "max": 2767.0
+    },
+    "n_candidate": {
+      "mean": 2767.0,
+      "std": 0.0,
+      "min": 2767.0,
+      "max": 2767.0
+    },
+    "lexicon_size_ratio": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "phoneme_freq_TV": {
+      "mean": 0.07529464360636651,
+      "std": 0.003942290403736703,
+      "min": 0.06593554723985126,
+      "max": 0.08603009863428183
+    },
+    "phoneme_freq_KL": {
+      "mean": 0.015982540624269466,
+      "std": 0.0014502016812947991,
+      "min": 0.01245878467115679,
+      "max": 0.02037966329296463
+    },
+    "length_TV": {
+      "mean": 0.03897361763642933,
+      "std": 0.0035179570571596363,
+      "min": 0.03541741958800141,
+      "max": 0.05312612938200215
+    },
+    "length_KS": {
+      "mean": 0.03668714612697265,
+      "std": 0.002673965223825147,
+      "min": 0.035417419588001445,
+      "max": 0.04915070473436935
+    },
+    "bigram_KL": {
+      "mean": 0.8889430282455595,
+      "std": 0.03190418442209585,
+      "min": 0.7874094408514952,
+      "max": 0.9737498582933187
+    },
+    "root_template_TV": {
+      "mean": 0.330358044589557,
+      "std": 0.006759646697894275,
+      "min": 0.3074758538212598,
+      "max": 0.34688196797805937
+    },
+    "lexical_overlap_rate": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "residual_real_collision_rate": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "external_reject_size": {
+      "mean": 7682.0,
+      "std": 0.0,
+      "min": 7682.0,
+      "max": 7682.0
+    },
+    "unique_rate": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "calibration_rejections": {
+      "mean": 282.55333333333334,
+      "std": 20.630894847830092,
+      "min": 221.0,
+      "max": 347.0
+    },
+    "external_lexicon_rejections": {
+      "mean": 1275.9066666666668,
+      "std": 79.08622692282701,
+      "min": 1071.0,
+      "max": 1518.0
+    }
+  },
+  "heldout_note": "held-out Ugaritic set subsampled to 800 of 2182 deterministically (seed=0); S_lex is a proportion so the recall estimate is unbiased, stderr ~0.012.",
+  "regurgitation_boundary": "L_fake rejection-sampled against the FULL Hebrew lexicon (ETCBC/bhsa tf/2021 lex_utf8 (romanized; 6042 unique lexemes -> 7682 reject skeletons [lexemes + attested trilaterals])); residual real-Hebrew collision rate mean=0.00000 (target ~0).",
+  "ceiling_statement": "Even a 'pass' of a real candidate against this canary is an Etruscan-grade result: sound-value imputations with quantified uncertainty, NOT a meaning decipherment. L_fake is a false-positive FLOOR, never ground truth.",
+  "epsilon_grid": [
+    {
+      "eps": 0.15,
+      "positive_s_lex_real_cognates": 0.4775,
+      "heldout_split_s_lex": 0.10948905109489052,
+      "lfake_distribution": {
+        "mean": 0.014316666666666667,
+        "std": 0.0036914503322617734,
+        "p5": 0.00875,
+        "p50": 0.01375,
+        "p95": 0.020062500000000014,
+        "p99": 0.0225,
+        "min": 0.00375,
+        "max": 0.02375,
+        "n_instances": 300
+      },
+      "margin_over_lfake_mean": 0.46318333333333334,
+      "power_ratio_positive_over_lfake": 33.35273573923166,
+      "clears_lfake_p95": true,
+      "clears_corrected_margin": true,
+      "corrected_margin_bar": 0.022609591226781064,
+      "corrected_margin_gate": {
+        "raw_p95": 0.020062500000000014,
+        "n": 300,
+        "n_comparisons": 4,
+        "skew": 0.13043683347702642,
+        "excess_kurtosis": -0.42725901714055015,
+        "cf_z": 2.242774719095509,
+        "mean": 0.014316666666666667,
+        "std": 0.0036976181733753702,
+        "bonferroni_alpha": 0.0125,
+        "method": "cornish_fisher_dsr"
+      },
+      "deflated_margin_over_corrected_bar": 0.4548904087732189,
+      "verdict": "CANARY_HOLDS_REAL_CLEARS_FLOOR"
+    },
+    {
+      "eps": 0.2,
+      "positive_s_lex_real_cognates": 0.55,
+      "heldout_split_s_lex": 0.20194647201946472,
+      "lfake_distribution": {
+        "mean": 0.06092916666666667,
+        "std": 0.007205046215828337,
+        "p5": 0.05,
+        "p50": 0.06125,
+        "p95": 0.07375,
+        "p99": 0.08001249999999999,
+        "min": 0.04375,
+        "max": 0.08375,
+        "n_instances": 300
+      },
+      "margin_over_lfake_mean": 0.48907083333333334,
+      "power_ratio_positive_over_lfake": 9.026875470149763,
+      "clears_lfake_p95": true,
+      "clears_corrected_margin": true,
+      "corrected_margin_bar": 0.07872882743976463,
+      "corrected_margin_gate": {
+        "raw_p95": 0.07375,
+        "n": 300,
+        "n_comparisons": 4,
+        "skew": 0.3718064304670518,
+        "excess_kurtosis": 0.10060127054115986,
+        "cf_z": 2.4663228210433457,
+        "mean": 0.06092916666666667,
+        "std": 0.007217084730849646,
+        "bonferroni_alpha": 0.0125,
+        "method": "cornish_fisher_dsr"
+      },
+      "deflated_margin_over_corrected_bar": 0.47127117256023543,
+      "verdict": "CANARY_HOLDS_REAL_CLEARS_FLOOR"
+    },
+    {
+      "eps": 0.25,
+      "positive_s_lex_real_cognates": 0.75875,
+      "heldout_split_s_lex": 0.4768856447688564,
+      "lfake_distribution": {
+        "mean": 0.3649625,
+        "std": 0.010882116924109942,
+        "p5": 0.34875,
+        "p50": 0.36375,
+        "p95": 0.38375,
+        "p99": 0.39,
+        "min": 0.335,
+        "max": 0.395,
+        "n_instances": 300
+      },
+      "margin_over_lfake_mean": 0.3937875,
+      "power_ratio_positive_over_lfake": 2.078980717196972,
+      "independent_chance_baseline": 0.058124999999999996,
+      "null_mean_positive": 0.42335,
+      "null_breakdown": {
+        "packard": {
+          "mean": 0.2634375,
+          "std": 0.031230181215452464
+        },
+        "random_lexeme": {
+          "mean": 0.6320375,
+          "std": 0.010064875496000932
+        },
+        "within_form": {
+          "mean": 0.37457499999999994,
+          "std": 0.013584481035357957
+        }
+      },
+      "deflated_positive_s_lex": 0.33540000000000003,
+      "clears_lfake_p95": true,
+      "clears_corrected_margin": true,
+      "corrected_margin_bar": 0.38943353225021526,
+      "corrected_margin_gate": {
+        "raw_p95": 0.38375,
+        "n": 300,
+        "n_comparisons": 4,
+        "skew": 0.11108125945394655,
+        "excess_kurtosis": -0.3546503730108985,
+        "cf_z": 2.2449871952790166,
+        "mean": 0.3649625,
+        "std": 0.010900299254122864,
+        "bonferroni_alpha": 0.0125,
+        "method": "cornish_fisher_dsr"
+      },
+      "deflated_margin_over_corrected_bar": 0.36931646774978477,
+      "verdict": "CANARY_HOLDS_REAL_CLEARS_FLOOR"
+    },
+    {
+      "eps": 0.3,
+      "positive_s_lex_real_cognates": 0.76125,
+      "heldout_split_s_lex": 0.4793187347931874,
+      "lfake_distribution": {
+        "mean": 0.3651875,
+        "std": 0.010930712179451072,
+        "p5": 0.34875,
+        "p50": 0.365,
+        "p95": 0.38375,
+        "p99": 0.39,
+        "min": 0.335,
+        "max": 0.395,
+        "n_instances": 300
+      },
+      "margin_over_lfake_mean": 0.3960625,
+      "power_ratio_positive_over_lfake": 2.0845456101317814,
+      "clears_lfake_p95": true,
+      "clears_corrected_margin": true,
+      "corrected_margin_bar": 0.3897790367223757,
+      "corrected_margin_gate": {
+        "raw_p95": 0.38375,
+        "n": 300,
+        "n_comparisons": 4,
+        "skew": 0.11580544389857757,
+        "excess_kurtosis": -0.3642055046657,
+        "cf_z": 2.246012539058134,
+        "mean": 0.3651875,
+        "std": 0.010948975704600551,
+        "bonferroni_alpha": 0.0125,
+        "method": "cornish_fisher_dsr"
+      },
+      "deflated_margin_over_corrected_bar": 0.3714709632776243,
+      "verdict": "CANARY_HOLDS_REAL_CLEARS_FLOOR"
+    }
+  ],
+  "primary_eps": 0.25,
+  "headline": {
+    "eps": 0.25,
+    "real_cognate_s_lex": 0.75875,
+    "lfake_floor_mean": 0.3649625,
+    "lfake_floor_p95": 0.38375,
+    "corrected_margin_bar": 0.38943353225021526,
+    "root_template_TV": 0.330358044589557,
+    "residual_real_collision_rate": 0.0,
+    "verdict": "CANARY_HOLDS_REAL_CLEARS_FLOOR",
+    "interpretation": "L_fake (fabricated, no real Ugaritic correspondence, rejection-sampled against the full Hebrew lexicon) sits at the false-positive floor; real Ugaritic<->Hebrew cognates clear it by the corrected margin. The canary catches spurious matches."
+  }
+}

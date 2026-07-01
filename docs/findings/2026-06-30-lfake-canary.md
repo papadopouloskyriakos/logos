@@ -6,16 +6,25 @@ run_canary.py). Independently re-confirmed (deterministic re-run reproduces; 21/
 ## Self-validation: the canary works
 
 L_fake calibrated to Hebrew (semitic trilateral-root mode); positive control = real
-Ugaritic↔Hebrew `S_lex`; canary = `S_lex(Ugaritic, L_fake)` over 16 instances.
+Ugaritic↔Hebrew `S_lex`; canary = `S_lex(Ugaritic, L_fake)`.
 
-| eps | REAL cognates | L_fake floor p95 | power | clears? |
-|---|---|---|---|---|
-| 0.15 | 0.477 | 0.012 | 57× | **yes** |
-| 0.20 | 0.550 | 0.031 | 23.8× | **yes** |
-| 0.25 | 0.759 | 0.279 | 2.88× | **yes** |
-| 0.30 | 0.761 | 0.279 | 2.89× | **yes** |
+> **UPDATE 2026-07-01 (P1.4/P4):** re-run at **n_fake=300** (was 16), so the L_fake floor is
+> estimated from enough instances to resolve its tail, and the operative bar is the
+> corrected-margin (Cornish–Fisher skew/kurtosis + Bonferroni-over-ε) value, not the raw p95. The
+> positive control is `n_fake`-independent and unchanged; the thicker floor is higher than the
+> 16-instance p95 (which understated the tail), and real still clears the **corrected** bar at
+> every ε. `root_template_TV=0.33`, `residual_real_collision_rate=0.0`. Artifact:
+> `results/lfake_canary.json`. Runtime: `run_canary` now scores `s_lex` through a process pool
+> (`_parallel_slex`, verified bit-identical), ~45 min → ~5.5 min.
 
-Real cognates clear the L_fake floor at every ε; fabricated L_fake sits at the floor. Even the
+| ε | REAL cognates | L_fake p95 (n=16) | L_fake p95 (n=300) | corrected-margin bar (n=300) | verdict |
+|---|---|---|---|---|---|
+| 0.15 | 0.477 | 0.012 | 0.020 | 0.023 | CANARY_HOLDS |
+| 0.20 | 0.550 | 0.031 | 0.074 | 0.079 | CANARY_HOLDS |
+| 0.25 | 0.759 | 0.279 | 0.384 | 0.389 | CANARY_HOLDS |
+| 0.30 | 0.761 | 0.279 | 0.384 | 0.390 | CANARY_HOLDS |
+
+Real cognates clear the corrected-margin L_fake floor at every ε; fabricated L_fake sits at the floor. Even the
 **leakage-controlled held-out split** (Hebrew lexicon built on one half, scored on held-out
 Ugaritic whose cognate is absent) clears. → the canary catches spurious Gordon/Di Mino-style
 matches. Calibration (Nair-style, divergence published): phoneme_freq_TV=0.035, length_TV=0.040,

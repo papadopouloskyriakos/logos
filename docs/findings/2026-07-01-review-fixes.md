@@ -89,7 +89,9 @@ CPU, and the bottleneck is single-threaded string-matching a GPU cannot accelera
 | cross-script IMAGE (`results_palaeo.json`): classical direct-NN / Procrustes | 0.410 / 0.185 | 0.4095 / 0.1845 | **reproduced exactly** |
 | font-swap control (`font_control.json`): NEW — Aegean → Noto cross-font direct-NN | (did not exist) | 0.367 → 0.416 (font confound REFUTED) | **new artifact** |
 | gate clause set (`verdict.py`): operative clauses | k_le_u_floor, dsr_ge_0_95, … | beats_order_stat_bar, generalizes_to_virgin, … | **structural change; verified by 359-test suite** |
-| L_fake canary bar (`results/lfake_canary.json`): n_fake / per-ε bar | 16 instances (p95 floor) | 300 instances (corrected-margin bar) | see § canary below |
+| L_fake canary (`results/lfake_canary.json`): real `S_lex` per ε | 0.477/0.550/0.759/0.761 | 0.477/0.550/0.759/0.761 | **reproduced** (n_fake-independent) |
+| L_fake floor p95 per ε | 0.012/0.031/0.279/0.279 (n=16) | 0.020/0.074/0.384/0.384 (n=300) | thicker, better-resolved tail (§ canary) |
+| L_fake canary verdict | CANARY_HOLDS | CANARY_HOLDS (vs corrected bar) | **conclusion holds** |
 
 **Interpretation of the diff.** The re-run *validates* the published numbers: every probe reproduces
 exactly (morphology headline, palaeo 0.410, cross-script sequence null, phono, metrology). The code
@@ -104,18 +106,33 @@ the n_fake=300 canary bar. The morfessor drift is now eliminated.
 `pytest -q`: **359 passed, 4 xfailed** (80s), including the P0 fail-closed gate tests, the P1 exact-rank
 tests, and the new `tests/test_font_control.py`. Warnings are the already-guarded skimage Hu-moment NaN.
 
-## L_fake canary — n_fake=300 re-run
+## L_fake canary — n_fake=300 re-run (regenerated, `results/lfake_canary.json`)
 
-**Status: re-running from scratch (background).** At n_fake=300 with the full ETCBC/bhsa reject set
-the canary is a ~25–35 min single-threaded job (Python-bound rejection sampling + per-instance
-divergence, not BLAS — the cost is inherent to the P1.4 n_fake≥300 requirement, not a regression;
-a smaller-n run validated the output structure). The **positive control** (real Ugaritic↔Hebrew
-`S_lex`) is independent of `n_fake` and reproduces the prior run's per-ε recalls (0.477 / 0.550 /
-0.759 / 0.761 at ε = 0.15/0.20/0.25/0.30); only the **L_fake bar** is re-estimated at n=300 as the
-corrected-margin (Cornish–Fisher) bar. Numbers filled in on completion; canary conclusion
-("real clears the L_fake floor at every ε") is not expected to change. *(Future work: the
-per-instance loop is independently seeded and embarrassingly parallel — a process pool would cut
-this to ~2 min without altering results.)*
+Re-run from scratch at n_fake=300 with the full ETCBC/bhsa reject set. `root_template_TV = 0.33`
+and `residual_real_collision_rate = 0.0` (both match the preprint's calibration claims). The
+positive control (real Ugaritic↔Hebrew `S_lex`) is `n_fake`-independent and reproduces the prior
+run exactly; the L_fake floor is now estimated from 300 instances, so the tail (p95) is higher and
+better-resolved than the 16-instance run, and the operative bar is the corrected-margin
+(Cornish–Fisher skew/kurtosis + Bonferroni-over-ε) value:
+
+| ε | REAL cognate `S_lex` | L_fake p95 (n=16, old) | L_fake p95 (n=300) | corrected-margin bar (n=300) | verdict |
+|---|---|---|---|---|---|
+| 0.15 | 0.477 | 0.012 | 0.020 | 0.023 | CANARY_HOLDS |
+| 0.20 | 0.550 | 0.031 | 0.074 | 0.079 | CANARY_HOLDS |
+| 0.25 | 0.759 | 0.279 | 0.384 | 0.389 | CANARY_HOLDS |
+| 0.30 | 0.761 | 0.279 | 0.384 | 0.390 | CANARY_HOLDS |
+
+**Conclusion unchanged and now on a properly-estimated floor:** real cognates clear the
+corrected-margin bar at every ε (margins 0.45 / 0.47 / 0.37 / 0.37); `CANARY_HOLDS_REAL_CLEARS_FLOOR`
+throughout. The thicker floor is the point of P1.4 — the 16-instance p95 understated the L_fake tail.
+
+**Runtime engineering (surfaced here).** At n_fake=300 the canary is dominated by `s_lex`
+(Ugaritic↔Hebrew edit-distance cognate scoring): ~1,500 scorings × ~1.9 s ≈ 45 min serial. This is
+a CPU string-matching workload — **not** a GPU one (branchy edit distance, not dense linear
+algebra), so an H100 gives no speedup; the fix is CPU process-level fan-out. `run_canary` now scores
+the fake-lexicon and null passes through a `ProcessPoolExecutor` (`_parallel_slex`), verified
+**bit-identical** to the serial path (fake-recalls and all three null generators), cutting the
+n_fake=300 run to **~5.5 min** on the 20-core box.
 
 ## P5 — pre-registration
 

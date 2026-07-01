@@ -44,6 +44,53 @@ if _ROOT not in sys.path:
 
 from scripts.comparison import lfake, nulls, lexstat  # noqa: E402
 
+import concurrent.futures as _futures  # noqa: E402
+
+
+# --------------------------------------------------------------------------- #
+# Parallel s_lex scoring (process pool).
+# s_lex is a PURE edit-distance / cognate-recall function of (forms, lexicon, eps), so mapping it
+# across independent lexicons is bit-identical to the serial list comprehension — only the wall
+# clock changes. This is the ONLY parallelism in the canary and it is where the n_fake>=300 cost
+# lives: 1200 fake-lexicon scorings + 300 null scorings, each ~1.9 s. It is a CPU string-matching
+# workload (branchy, not dense linear algebra), so a GPU cannot accelerate it; the speedup is pure
+# CPU process-level fan-out across cores (~45 min -> ~2 min on a 20-core box). Order-preserving and
+# seed-independent, so the persisted numbers are unchanged.
+# --------------------------------------------------------------------------- #
+_POOL_FORMS: Optional[Sequence[str]] = None
+
+
+def _pool_init(forms: Sequence[str]) -> None:
+    global _POOL_FORMS
+    _POOL_FORMS = list(forms)
+
+
+def _score_one(task):
+    lexicon, eps = task
+    return lexstat.s_lex(_POOL_FORMS, lexicon, eps)
+
+
+def _parallel_slex(forms: Sequence[str], lexicons: Sequence[Sequence[str]], eps: float,
+                   workers: Optional[int] = None) -> List[float]:
+    """``[s_lex(forms, L, eps) for L in lexicons]`` across a process pool (identical order + values).
+
+    Falls back to the serial comprehension for tiny inputs or when a pool cannot be built, so the
+    result is always exactly the serial one.
+    """
+    lexicons = list(lexicons)
+    if workers is None:
+        workers = max(1, min(20, (os.cpu_count() or 2) - 1))
+    if len(lexicons) < 8 or workers <= 1:
+        return [lexstat.s_lex(forms, L, eps) for L in lexicons]
+    try:
+        with _futures.ProcessPoolExecutor(max_workers=workers, initializer=_pool_init,
+                                          initargs=(list(forms),)) as ex:
+            chunk = max(1, len(lexicons) // (workers * 4) or 1)
+            return list(ex.map(_score_one, [(L, eps) for L in lexicons], chunksize=chunk))
+    except Exception:                                    # any pool failure -> exact serial fallback
+        return [lexstat.s_lex(forms, L, eps) for L in lexicons]
+
+
 GOLD_COG = os.path.abspath(os.path.join(
     _HERE, "..", "..", "corpus", "bronze", "ugaritic", "uga-heb.gold.cog"))
 
@@ -307,8 +354,8 @@ def run(n_fake: int = 300, eps_grid: Sequence[float] = (0.15, 0.20, 0.25, 0.30),
         # POSITIVE: real cognates (Ugaritic held-out inscription set vs the Hebrew lexicon)
         pos_recall = lexstat.s_lex(uga_eval, heb_unique, eps)
 
-        # NEGATIVE / CANARY: same Ugaritic forms vs each L_fake instance
-        fake_recalls = np.array([lexstat.s_lex(uga_eval, fk, eps) for fk in fake_lexicons])
+        # NEGATIVE / CANARY: same Ugaritic forms vs each L_fake instance (parallel; identical values)
+        fake_recalls = np.array(_parallel_slex(uga_eval, fake_lexicons, eps))
 
         heldout_recall = (lexstat.s_lex(heldout_uga, derive_heb, eps)
                           if heldout_uga and derive_heb else None)
@@ -337,11 +384,22 @@ def run(n_fake: int = 300, eps_grid: Sequence[float] = (0.15, 0.20, 0.25, 0.30),
             chance = lexstat.expected_chance_recall(
                 uga_eval, cfg.inventory, eps=eps, n_mc=30, seed=base_seed, length_dist=len_dist)
 
-            def _stat(h, L, _e=eps):
-                return lexstat.s_lex(h, L, _e)
-            null_scores = nulls.null_distribution(
-                _stat, uga_eval, heb_unique, seed=base_seed,
-                n_packard=100, n_random=100, n_within=100)   # P1.5: 300-draw chance baseline (was 24, too thin)
+            # 300-draw chance baseline (P1.5). Mirrors nulls.null_distribution EXACTLY (same three
+            # generators, same seed offsets) but scores the permuted lexicons through the process
+            # pool — the closure stat_fn cannot be pickled, so we build the nulls here and reuse the
+            # parallel scorer. Values are identical to the serial nulls.null_distribution call.
+            _NN = 100
+            _null_lex = {
+                "packard": [nulls.packard_banded_permutation(heb_unique, seed=base_seed + i)
+                            for i in range(_NN)],
+                "random_lexeme": [nulls.random_lexeme_null(heb_unique, n=len(heb_unique),
+                                                           seed=base_seed + 1000 + i)
+                                  for i in range(_NN)],
+                "within_form": [nulls.within_form_permutation(heb_unique, seed=base_seed + 2000 + i)
+                                for i in range(_NN)],
+            }
+            null_scores = {k: _parallel_slex(uga_eval, lexs, eps)
+                           for k, lexs in _null_lex.items()}
             null_all = np.concatenate([null_scores["packard"], null_scores["random_lexeme"],
                                        null_scores["within_form"]])
             row.update({
