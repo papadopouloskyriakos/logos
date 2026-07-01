@@ -117,11 +117,10 @@ falsification-first, decontaminated inference framework for testing
 undeciphered-script decipherment claims \citep{braovic2024}. The harness
 applies fail-closed validation to every positive and enforces four
 concrete defences: a fabricated-language canary that supplies a
-\textbf{generator-conditional negative-control distribution} (a
-false-positive floor conditional on the fabricated-language generator ---
-here a first-order sign-bigram Markov model; a broader control ensemble
-spanning unigram, root-template, and real-language generators is
-disclosed as future work, not built here); multiple-comparison deflation
+\textbf{generator-conditional negative-control distribution} (\S3.3;
+a broader control ensemble spanning unigram, root-template, and
+real-language generators is disclosed as future work, not built here);
+multiple-comparison deflation
 for the number of signs, roots, and families a search was free to try; a
 literature index that partitions published (\texttt{L\_indexed}) from
 literature-unseen (\texttt{L\_not\_indexed}) signs so that reproducing a
@@ -746,10 +745,9 @@ stable above the bigram floor, robust to the genre-bucketing choice
 names its threshold, its sensitivity, and its
 near-miss is a stronger referee object than a flat negative.
 
-The axis this harness targets is the \textbf{false-positive / multiplicity
-axis} --- the mechanism by which a determined analyst ``translates'' almost
-anything on a small corpus --- a property of inference methodology, not of
-the object or its data (\S1--2).
+The axis targeted is the \textbf{false-positive / multiplicity axis} ---
+a property of inference methodology, not of the object or its data
+(\S1--2).
 
 \subsection{Two named failure modes for the methods literature}
 
@@ -772,8 +770,7 @@ unicity \emph{diagnostic} (\texttt{k $\le$ U\_floor}) is built to flag
 exactly this (it is reported next to every claim rather than enforced as a
 graduation clause; \S4): the single sign the whole
 reading pivots on is the textbook free-parameter case (\S5), its value
-assigned to fit the desired root; the refutation rests on the claim's own
-published table, archived in \artobj.
+assigned to fit the desired root; the refutation rests on the claim's own published table (\S5).
 
 \subsection{The post-hoc evaluation sequence}
 
@@ -820,10 +817,8 @@ trial-count correction of the morphology z-test is deferred; the deferral
 would only strengthen the null (Appendix~A.1). No held-out
 \emph{decipherment} has
 been achieved, and the study reports \textbf{no positive decipherment
-claim} --- the deliverable is calibrated absence, not a reading. Nothing
-here claims a rejected reading is \emph{false} (\S3.4): every REJECT /
-NULL in this study bounds \emph{evidential support}
-on held-out data, not truth. The one probe that recovers an above-chance
+claim} --- the deliverable is calibrated absence, not a reading. Every REJECT / NULL bounds \emph{evidential support} on held-out
+data, not truth (\S3.4). The one probe that recovers an above-chance
 number, cross-script sign-image alignment, is a font-robust but circular
 \emph{engineering demonstration} (a font-swap control refutes the
 typeface-artifact worry; \S7.3, Appendix~B.3), truth-capped at
@@ -854,11 +849,10 @@ The code, pre-registrations, and all findings are open under the MIT
 licence and archived on Zenodo (concept DOI 10.5281/zenodo.21087572;
 repository \url{https://github.com/papadopouloskyriakos/logos}).
 \fi
-The licensed epigraphic corpora are not redistributed; each source's
-licence and retrieval path is documented (data-provenance; Software \&
-data note), so the harness is reproducible against a
-locally obtained corpus. This work is independent and not affiliated with,
-or endorsed by, any of the cited projects or their authors.
+The licensed corpora are not redistributed (Software \& data note);
+the harness is reproducible against a locally obtained corpus. This work
+is independent and not affiliated with, or endorsed by, any of the cited
+projects or their authors.
 
 \bibliographystyle{acl_natbib}
 \nocite{*}

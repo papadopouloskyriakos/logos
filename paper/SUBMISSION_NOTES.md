@@ -79,11 +79,21 @@ state* of the registrations, **not temporal priority**.
   (complementary tables and figures explicitly referred to from the main paper). "No free
   text will be allowed in the appendices unless it specifically adds more details of
   Category #1." Exceeding the limits → rejected/returned.
-- **Main content (strict measure — the page on which §9.7 ends): page 10** on BOTH
-  targets (final combined pass 2026-07-02: Target A right column 90% down p.10;
-  Target B 88%). **≤10.0 ✓** and full — no undershoot.
+- **Main content (strict measure — the page on which §9.7's LAST line, "…cited
+  projects or their authors.", renders): page 10** on BOTH targets, re-measured after
+  the 2026-07-02 p.10-restoration micro-pass (method: `pdftotext -layout` page split,
+  locating the literal last-line string; corroborated by Ghostscript ink-bbox — p.10
+  is inked to the same bottom edge as a full page). Target A: last text row of p.10
+  (100% — zero spare rows); Target B: row 77/79 (~97%). **≤10.0 ✓** and completely
+  full — the earlier "90%/88%" figures were measured against a mid-§9.7 string, and
+  the combined pass had in fact spilled ~2–6 lines onto p.11 on both targets; the
+  micro-pass restored p.10 via five sanctioned duplicate-compression edits.
+  **Caveat: zero cushion** — any future body addition of even one line will spill;
+  re-verify the page boundary on the exact final compiled upload.
 - **Category 1 (Appendices A–D + Software & data note, replication prose):**
-  **≈4.97 pp ≤ 5.00 ✓** (both targets; spans mid-p.13 after References to mid-p.18).
+  **≈4.9 pp ≤ 5.00 ✓** (both targets; spans mid-p.13 after References to p.18 at ~44%;
+  re-measured after the micro-pass — unchanged, as all micro-pass edits were in the
+  body pp.1–10; Cat-2 re-measured ≈1.5 pp ≤ 3 ✓, App E p.18@44% → p.19, ~88%-full).
   *Note: the tighter internal target of 4.7–4.8 pp was NOT reached — the remaining
   Cat-1 prose is genuine replication detail (procedures, parameters, derivations,
   the new C.1 generation-settings block) whose removal would harm exact replication;
