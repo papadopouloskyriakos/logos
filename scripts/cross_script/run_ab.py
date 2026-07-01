@@ -62,6 +62,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--splits", type=int, default=N_SPLITS)
     ap.add_argument("--out", default=os.path.join(HERE, "results_ab.json"))
+    ap.add_argument("--b-source", choices=("cog", "damos"), default="cog",
+                    help="Linear-B corpus: 'cog' = 918-wordform Linear-B/Greek cognate file (default, "
+                         "backwards-compatible); 'damos' = the full harvested DĀMOS Mycenaean set "
+                         "(~13.5k wordforms) — the large corpus the sequence path was said to need.")
     args = ap.parse_args()
 
     print("=" * 72)
@@ -71,7 +75,8 @@ def main():
 
     # ---- 1. data + bridge ----
     a_inv, a_seqs, a_freq = D.load_a()
-    b_seqs, b_freq, v2g = D.load_b()
+    b_seqs, b_freq, v2g = D.load_b_damos() if args.b_source == "damos" else D.load_b()
+    print(f"[data] B-source = {args.b_source}")
     anchor_ab, a_only = D.build_anchor_set(a_freq, b_freq)
     anchors = [(t, t) for t in anchor_ab]  # A-token == B-value (the bridge)
     print(f"\n[data] A: {len(a_seqs)} signstrings, {sum(a_freq.values())} tokens, "
@@ -244,6 +249,7 @@ def main():
     # ---- persist ----
     out = {
         "seed": SEED,
+        "b_source": args.b_source,
         "n_splits": args.splits,
         "held_frac": HELD_FRAC,
         "best_d": best_d,

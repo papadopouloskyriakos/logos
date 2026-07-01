@@ -5,6 +5,18 @@ sign recovery** (inherited Linear-B values cannot be both anchor and proof). **R
 NOT supported on current data. No phonetic values are imputed.** This is a publishable null, not a
 failure. Independently re-verified (deterministic re-run reproduces the numbers).
 
+> **UPDATE 2026-07-01 — the DĀMOS "data-block" is now tested, not assumed.** The original null ran
+> against a 919-wordform Linear-B/Greek cognate file and recommended "repeat with the full DĀMOS
+> corpus." That corpus was already harvested (`corpus/bronze/linearb/damos/`, 5,840 tablets); it was
+> just not ingested. It now is (`data.load_b_damos()`, `run_ab.py --b-source damos`): **13,562
+> Linear-B wordforms (≈15× the cog), 89 sign-values, 56 anchors.** The result is **still at chance** —
+> best of five methods (CCA) 0.025 vs chance 0.011, `clearly_above_chance = False`, against a
+> **positive control that recovers 0.947** (so the harness works; the null is a real null). Ingesting
+> the full Linear-B corpus therefore **refutes the "data-blocked until DĀMOS" framing**: the block is
+> not corpus volume but an *absent distributional signal* — cross-script sign co-occurrence does not
+> carry the A↔B phonetic map, even at full Mycenaean scale. Artifact:
+> `scripts/cross_script/results_ab_damos.json` (the original cog run stays at `results_ab.json`).
+
 ## Setup (scripts/cross_script/)
 
 - **Bridge:** Linear-A signs (Latin tokens; the token IS the inherited value, e.g. QE, RA2) ↔

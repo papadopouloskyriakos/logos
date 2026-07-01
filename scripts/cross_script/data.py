@@ -62,6 +62,12 @@ SILVER = os.path.join(ROOT, "corpus", "silver")
 A_INVENTORY = os.path.join(SILVER, "inventory_syllabograms_conservative.json")
 A_INSCRIPTIONS = os.path.join(SILVER, "inscriptions.json")
 B_COG = os.path.join(ROOT, "corpus", "bronze", "linearb", "linear_b-greek.cog")
+DAMOS_ITEMS = os.path.join(ROOT, "corpus", "bronze", "linearb", "damos", "items.jsonl")
+
+# a DĀMOS transliteration syllabogram: a Ventris-Chadwick value (a/e/…, CV, or special
+# dwe/pte/ra2/a3…, ≤3 letters + optional variant digit) or a numbered *NN sign. NOT an
+# uppercase logogram / single-letter metrogram / numeral (those are filtered upstream).
+_DAMOS_SYLL = re.compile(r"^(?:\*[0-9]+|[a-z]{1,3}[0-9]?)$")
 
 # Unicode subscript digits -> ASCII (RA₂ -> RA2).  Source: inscriptions.json uses
 # U+2080..U+2089 subscripts; the conservative inventory uses ASCII digits.
@@ -147,6 +153,66 @@ def load_b() -> Tuple[List[List[str]], Counter, Dict[str, str]]:
             if len(vals) >= 2:
                 seqs.append(vals)
                 freq.update(vals)
+    return seqs, freq, value2glyph
+
+
+def _damos_wordforms(content: str) -> List[List[str]]:
+    """Extract syllabic wordforms (lists of uppercase VALUES) from one DĀMOS transliteration.
+
+    DĀMOS ``content`` is the standard Ventris–Chadwick transliteration: lowercase hyphenated
+    syllabograms (``qe-sa-ma-qa``), UPPERCASE logograms (``OLE``, ``TUN+KI``), single-letter
+    metrograms + numerals (``T 1``, ``V 2``), and editorial marks (``]``, ``[``, ``'…'``,
+    subscript dots for uncertain readings). We keep ONLY the syllabic wordforms: strip combining
+    diacritics, drop editorial punctuation, tokenise on whitespace / ``/`` / ``,``, and accept a
+    token iff every hyphen-part is a syllabogram value or a numbered ``*NN`` sign — so logograms,
+    metrograms, and numerals never enter. Values are uppercased into the SAME token space the
+    A-side uses (``QE`` == B value ``QE``), matching the load-bearing bridge in this module's header.
+    """
+    out: List[List[str]] = []
+    txt = "".join(c for c in unicodedata.normalize("NFKD", content)
+                  if not unicodedata.combining(c))          # drop uncertain-reading subscript dots
+    for raw in re.split(r"[\s/,]+", txt):
+        tok = re.sub(r"[\[\]\(\)⟦⟧<>⟦⟧'\"?!.:;]", "", raw).strip("-")
+        if not tok or not re.search(r"[a-z]", tok):          # must carry a lowercase syllable
+            continue
+        vals: List[str] = []
+        ok = True
+        for p in tok.split("-"):
+            if not p:
+                continue
+            if _DAMOS_SYLL.match(p):
+                vals.append(p if p.startswith("*") else p.upper())
+            else:                                            # logogram / metrogram / junk -> reject word
+                ok = False
+                break
+        if ok and len(vals) >= 2:
+            out.append(vals)
+    return out
+
+
+def load_b_damos() -> Tuple[List[List[str]], Counter, Dict[str, str]]:
+    """Same shape as :func:`load_b`, but the B corpus is the FULL harvested DĀMOS Mycenaean set
+    (~5,840 tablets) parsed into syllabic wordforms — the large Linear B corpus the sequence /
+    cognate path was said to need. ``value2glyph`` maps standard syllabogram VALUES back to their
+    Linear B Unicode glyph (for reporting); ``*NN`` / non-standard values get no glyph.
+    """
+    seqs: List[List[str]] = []
+    freq: Counter = Counter()
+    with open(DAMOS_ITEMS, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            content = (rec.get("item", {}) or {}).get("content", "") or ""
+            for w in _damos_wordforms(content):
+                seqs.append(w)
+                freq.update(w)
+    value2glyph: Dict[str, str] = {}
+    for cp in range(0x10000, 0x10080):
+        v = _b_value_from_codepoint(chr(cp))
+        if v:
+            value2glyph.setdefault(v, chr(cp))
     return seqs, freq, value2glyph
 
 

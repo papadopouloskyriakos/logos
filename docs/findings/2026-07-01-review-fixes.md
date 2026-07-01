@@ -148,3 +148,29 @@ the post-hoc result commits it caps:
 
 Verify with `git tag -v review-fixes-2026-07-01`. The signature over the anchored tree is the prereg
 receipt: the gate/canary/null methodology cannot be silently altered after the fact without breaking it.
+
+## Addendum 2026-07-01 — DĀMOS ingested + two acquired papers folded in
+
+**DĀMOS was harvested but not ingested** — a stale "data-blocked until DĀMOS" claim in the preprint.
+Fixed: `data.load_b_damos()` parses the harvested `items.jsonl` (5,840 tablets) into **13,562
+Linear-B wordforms** (≈15× the 918-wordform cognate file; 89 sign-values; 56 anchors), filtering
+logograms/metrograms/numerals to keep only syllabic wordforms. `run_ab.py --b-source damos` re-runs
+the cross-script alignment on it. **Result: still at chance** (CCA 0.025 vs chance 0.011,
+`clearly_above_chance = False`; positive control 0.947) → the block is an *absent distributional
+signal*, not corpus volume. This **refutes** "data-blocked until DĀMOS," so §7.2/§7.3/§8 of the
+preprint and the AB-alignment finding were corrected from a promissory note to a tested null.
+Artifact: `scripts/cross_script/results_ab_damos.json`. Cross-script tests: 70 passed.
+
+**Two blocking papers acquired (operator) and audited against the primary sources:**
+- **Ferrara & Tamburini 2022** (*Lingue e Linguaggio* XXI.2:239–259) — verified. Its §3.5 reviews the
+  exact cognate-matching lineage logos uses (Snyder 2010 Ugaritic↔Hebrew — the same benchmark the
+  canary calibrates against; Berg-Kirkpatrick 2011; Luo 2019/2021) and classes Linear A as Gelb-Whiting
+  Type III ("validation altogether impossible"), **yet never treats false-positive / multiplicity
+  control** — so logos's "sixteenth challenge" gap holds against *both* field surveys, not just
+  Braović. §2 strengthened accordingly.
+- **Fuls 2015** (*Historische Sprachforschung* 128(1):42–58) — verified §6.5 (p.57): the 3.3-sign
+  figure is the mean over "554 complete sign sequences, duplicates reduced to one" (GORILA/Godart &
+  Olivier 1985; Timm 2008) — distinct word *types*, confirming the preprint's token-vs-type "different
+  denominator" reconciliation. Added: Fuls infers Minoan is *polysynthetic* from word length; logos's
+  morphology null (affixation bigram-reproducible, no power) does **not** corroborate that — flagged as
+  an honest tension. §6 tightened to cite the primary + the typology tension.
