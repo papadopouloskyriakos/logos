@@ -1032,8 +1032,10 @@ diagnostic --- a toy-model precondition, never a sufficiency or
 refutation claim --- as a sharper, answerable question: \emph{is a
 Linear-A-scale corpus (539 distinct word-forms; V = 259 sign-types at N
 ≈ 5,792 parsed syllable-signs) large enough to recover a decipherment IF
-a known cognate existed?} We report the design and its reading rules
-here, not an outcome: the sweep is not yet run.
+a known cognate existed?} We report the design, its reading rules, and a
+validated implementation here --- not yet the curve itself: the matcher
+is built and the sweep is compute-bound (see below), so we provide the
+runnable harness rather than assert an outcome.
 
 The protocol downsamples known-answer benchmarks --- Linear B /
 Mycenaean Greek as the primary syllabic analog, sourced through DĀMOS,
@@ -1049,17 +1051,25 @@ identifiability --- cognate-absence and unpaid multiplicity over a mixed
 sign inventory --- not corpus size. Neither branch is ever a
 decipherability claim, and neither asserts ``there is enough text.''
 
-One thing is deferred, deliberately: the full CSA sweep is CUDA-grade
-and \textbf{deferred to the H100}; the locator currently returns
-\texttt{PENDING\_CSA\_SWEEP}, and these cores are not part of this
-release. The phonological / sound path, by contrast, is no longer
-data-deferred: the DĀMOS Mycenaean holdings are now harvested and
-ingested, and §7.3 reports that even the full corpus leaves the
-cross-script distributional alignment at chance --- so the bound is a
-property of the signal, not a promissory note against data yet to
-arrive. We publish the harness and its bounding logic (concept DOI
-10.5281/zenodo.21087572) so the CSA result, when the H100 cores run, can
-be reproduced rather than asserted.
+One thing is deferred, deliberately: the full CSA learning-curve sweep.
+The cognate-matcher itself is implemented and validated --- a
+batched-parallel CUDA energy that evaluates all sixteen coupled
+annealers in one edit-distance kernel per step, verified
+\textbf{bit-identical} to the serial reference on CPU (matching final
+energies and states) and memory-stable under long runs. What remains
+compute-bound is the sweep \emph{breadth}: hundreds of anneals
+(benchmarks × corpus sizes × seeds), each thousands of steps of an
+orchestration-heavy search. We therefore ship the runnable harness
+(driver, batched energy, and its validation) and the per-size chance
+floor and Linear-A locator, so the accuracy-vs-size curve can be
+\textbf{reproduced and audited rather than asserted} --- the honest
+state is \emph{implemented-and-validated, not-yet-swept}. The
+phonological / sound path, by contrast, is no longer data-deferred: the
+DĀMOS Mycenaean holdings are now harvested and ingested, and §7.3
+reports that even the full corpus leaves the cross-script distributional
+alignment at chance --- so that bound is a property of the signal, not a
+promissory note against data yet to arrive. We publish the harness and
+its bounding logic (concept DOI 10.5281/zenodo.21087572).
 
 \hypertarget{discussion-limitations-and-conclusion}{%
 \subsection{9. Discussion, limitations, and
