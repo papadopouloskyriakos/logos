@@ -79,10 +79,11 @@ anything, with internal consistency standing in for confirmation. The
 canonical absurdity --- ``proving'' English is Semitic by cherry-picking
 root matches --- recurs whenever the many comparisons a reading was
 selected from go uncounted. The field's flagship survey enumerates
-fifteen challenges, all properties of the object and its data; none
-concern overfitting, multiple testing, false-positive control, or
-contamination. We frame that methodological axis, modestly, as a
-candidate sixteenth challenge and build machinery for it: a
+fifteen challenges --- primarily script, corpus, language, resource, and
+comparison-data constraints; none address the orthogonal
+inference-control layer of overfitting, multiple testing, false-positive
+control, or contamination. We frame that methodological axis, modestly,
+as a candidate sixteenth challenge and build machinery for it: a
 falsification-first, decontaminated inference framework that treats
 every positive as guilty until proven innocent. Four defences are
 enforced --- a fabricated-language canary supplying a false-positive
@@ -124,40 +125,45 @@ computational-decipherment survey --- Braović et al.'s (2024) systematic
 review of Bronze Age Aegean and Cypriot scripts --- enumerates fifteen
 ``major challenges,'' from unknown writing system and unknown language
 to small dataset, incomplete vocabulary, allographs, and unavailable
-parallel data (Braović et al.~2024). Those fifteen are, by construction,
-properties of the \emph{object and its data} --- of the script, the
-language, and the surviving corpus. What governs whether a \emph{claimed
-reading} is believable is a different kind of thing: a property of the
-inference methodology and its epistemics --- overfitting, multiple
-testing, false-positive control, and contamination. We therefore frame
-this axis, once and modestly, as a candidate \textbf{sixteenth
-challenge} --- a deliberate rhetorical foil to the survey's fifteen, not
-a claim to a new taxonomic slot or to sole discovery. It is
-\emph{under-instrumented} rather than unrecognised: Packard's (1974)
-nine deliberately fabricated decipherments already exercised exactly
-this false-positive logic as a control, and the selective-inference
-machinery we import (Bailey \& López de Prado 2014) is mature elsewhere
---- our contribution is to \emph{consolidate and operationalize} that
-axis for decipherment, not to invent it. It is the methodological axis
-the object-level taxonomy was never meant to cover, and it is distinct
-from the survey's own acknowledged gap --- that on scoring results ``in
-many cases there is nothing to compare them against, and their
-evaluation remains an open problem'' (Braović et al.~2024, Sec. 6.3,
-p.~746). That is an \emph{evaluation-target} problem (what to measure
-against); the false-positive / multiplicity problem (whether a fitted
-reading is being mistaken for a real one) is separable from it, and it
-is the latter this paper instruments.
+parallel data (Braović et al.~2024). Those fifteen are primarily
+properties of the \emph{object and its data} --- the script, the
+language, the surviving corpus, and the resource/comparison-data
+conditions (the list includes resource and hardware items too). What
+governs whether a \emph{claimed reading} is believable is a different
+kind of thing: a property of the inference methodology and its
+epistemics --- overfitting, multiple testing, false-positive control,
+and contamination. We therefore frame this axis, once and modestly, as a
+candidate \textbf{sixteenth challenge} --- a deliberate rhetorical foil
+to the survey's fifteen, not a claim to a new taxonomic slot or to sole
+discovery. It is \emph{under-instrumented} rather than unrecognised:
+Packard's (1974) nine deliberately fabricated decipherments already
+exercised exactly this false-positive logic as a control, and the
+selective-inference machinery we import (Bailey \& López de Prado 2014)
+is mature elsewhere --- our contribution is to \emph{consolidate and
+operationalize} that axis for decipherment, not to invent it. It is the
+methodological axis the object-level taxonomy was never meant to cover,
+and it is distinct from the survey's own acknowledged gap --- that on
+scoring results ``in many cases there is nothing to compare them
+against, and their evaluation remains an open problem'' (Braović et
+al.~2024, Sec. 6.3, p.~746). That is an \emph{evaluation-target} problem
+(what to measure against); the false-positive / multiplicity problem
+(whether a fitted reading is being mistaken for a real one) is separable
+from it, and it is the latter this paper instruments.
 
 \textbf{Contribution.} We build the machinery for that axis: a
 falsification-first, decontaminated inference framework for testing
 undeciphered-script decipherment claims (Braović et al.~2024). The
 harness treats every positive as guilty until proven innocent and
 enforces four concrete defences: a fabricated-language canary that
-supplies a hard false-positive floor; multiple-comparison deflation for
-the number of signs, roots, and families a search was free to try; a
-literature index that partitions published (\texttt{L\_known}) from
-literature-unseen (\texttt{L\_virgin}) signs so that reproducing a known
-value cannot masquerade as discovery; and pre-registration with a
+supplies a \textbf{generator-conditional negative-control distribution}
+(a false-positive floor conditional on the fabricated-language generator
+--- here a first-order sign-bigram Markov model; a broader control
+ensemble spanning unigram, root-template, and real-language generators
+is disclosed as future work, not built here); multiple-comparison
+deflation for the number of signs, roots, and families a search was free
+to try; a literature index that partitions published (\texttt{L\_known})
+from literature-unseen (\texttt{L\_virgin}) signs so that reproducing a
+known value cannot masquerade as discovery; and pre-registration with a
 held-out gate whose verdict is computed mechanically, never by the model
 that proposed the reading. The evaluation gap gets a concrete, if
 power-limited, answer: the recurring libation \emph{formula} --- roughly
@@ -583,9 +589,9 @@ without bound on a fixed occurrence budget --- free parameters exceeding
 the floor --- the reading is underdetermined, and the framework must say
 so.
 
-\hypertarget{a-worked-failure-case-the-301-claim}{%
-\subsection{5. A worked failure case: the *301
-claim}\label{a-worked-failure-case-the-301-claim}}
+\hypertarget{a-qualitative-audit-of-the-301-claim}{%
+\subsection{5. A qualitative audit of the *301
+claim}\label{a-qualitative-audit-of-the-301-claim}}
 
 The framework of Section 3 is abstract until it meets a concrete claim.
 In June 2026 a widely circulated ``Linear A cracked'' announcement (Di
@@ -746,12 +752,16 @@ the operative \texttt{L\_fake} bigram floor. Under the bigram floor the
 whole set fails: the fabricated Markov corpus confirms the same affixes
 at rate 0.375 (Wilson 95\% CI {[}0.18, 0.61{]}), above the real 0.250.
 On this corpus the apparent affixation ---
-\texttt{i-\textbackslash{}*301} included --- is fully reproducible by a
-sign-transition model, so \texttt{has\_morphology\_power} is False and
-the module reports the null. This is a limit of the \emph{data}, not of
-the field's analysis: Linear A words are short --- mean 1.84 signs over
-all word-\emph{tokens}, median and mode 1, with 76.1\% of word-tokens at
-≤2 signs (56.5\% single-sign) --- and on such words ``morphology'' and
+\texttt{i-\textbackslash{}*301} included --- \textbf{did not exceed}
+this first-order bigram control; and because the bigram procedure has
+\textbf{not yet been validated on a known morphologically-structured
+syllabic corpus} (the Linear-B positive control below), we classify the
+outcome as \textbf{NO POWER}, not as evidence against morphology.
+\texttt{has\_morphology\_power} is therefore False and the module
+reports the null. This is a limit of the \emph{data}, not of the field's
+analysis: Linear A words are short --- mean 1.84 signs over all
+word-\emph{tokens}, median and mode 1, with 76.1\% of word-tokens at ≤2
+signs (56.5\% single-sign) --- and on such words ``morphology'' and
 ``bigram order'' are statistically indistinguishable. The premise
 reconciles with Fuls's 3.3-sign figure once the denominator is matched:
 Fuls (2015:57, §6.5) computes the mean over a word \emph{list} of ``554
@@ -1064,21 +1074,23 @@ vs.~reasoning}\label{l_virgin-memorisation-vs.-reasoning}}
 
 The §C.2 \texttt{L\_virgin} probe shows a sign in real context and asks
 whether the model's behaviour on \emph{published} signs generalises to
-signs with no published value (which it cannot have memorised) (logos
-v0.1.0). Across 40 seeds, \texttt{qwen2.5:72b} assigned a value to the
-20 known AB signs in \textasciitilde20/40 seeds but to the 11 virgin
-*-series signs in only \textasciitilde1/40 --- it \textbf{abstains
-\textasciitilde97\% of the time} on the untouched signs while
-confidently valuing the memorisable ones. The apparent known−virgin
-consistency gap (0.601, permutation p = 0.0005) is coverage-confounded
-and was flagged, not asserted: the matched-\emph{n} robustness check
-returned \texttt{no\_power} (0 of 11 virgin signs reached n ≥ 10), so
-the rigorous comparison could not run. The interpretable signal is the
-abstention asymmetry itself, consistent with regurgitation-dominated
-behaviour --- and, per the module's standing rule, \textbf{consistency
-is not correctness}: with no ground truth on the virgin signs, this
-bounds how the model behaves, never whether it is right (logos v0.1.0).
-The full arc cost ≈ \$2.80 in ephemeral GPU rental.
+signs \textbf{unseen in the indexed literature} --- absent from the
+indexed sources, hence not memorisable from them (never ``impossible to
+have seen'' in any absolute sense) (logos v0.1.0). Across 40 seeds,
+\texttt{qwen2.5:72b} assigned a value to the 20 known AB signs in
+\textasciitilde20/40 seeds but to the 11 virgin *-series signs in only
+\textasciitilde1/40 --- it \textbf{abstains \textasciitilde97\% of the
+time} on the untouched signs while confidently valuing the memorisable
+ones. The apparent known−virgin consistency gap (0.601, permutation p =
+0.0005) is coverage-confounded and was flagged, not asserted: the
+matched-\emph{n} robustness check returned \texttt{no\_power} (0 of 11
+virgin signs reached n ≥ 10), so the rigorous comparison could not run.
+The interpretable signal is the abstention asymmetry itself, consistent
+with regurgitation-dominated behaviour --- and, per the module's
+standing rule, \textbf{consistency is not correctness}: with no ground
+truth on the virgin signs, this bounds how the model behaves, never
+whether it is right (logos v0.1.0). The full arc cost ≈ \$2.80 in
+ephemeral GPU rental.
 
 \hypertarget{information-sufficiency-upper-bound-the-csa-known-answer-learning-curve-curve-in-progress}{%
 \subsubsection{8.3 Information-sufficiency upper bound: the CSA
@@ -1102,12 +1114,21 @@ recovery against a permutation chance floor, using a published
 cognate-ID matcher (Tamburini 2025) that reports the Luo et al.~2019
 accuracy metric (logos v0.1.0; github.com/papadopouloskyriakos/logos).
 Because every benchmark is handed a real cognate signal Linear A lacks,
-any recovery curve is a \textbf{strict upper bound}, readable only two
-ways: at-floor at Linear-A scale ⇒ definitively
-information-insufficient; above-chance ⇒ the binding constraint is
+any recovery curve is an \textbf{optimistic benchmark, conditional on a
+known cognate relationship} --- a best case Linear A does not enjoy ---
+readable two ways: at-floor at Linear-A scale ⇒ information-insufficient
+even given a cognate; above-chance ⇒ the binding constraint is
 identifiability --- cognate-absence and uncorrected multiplicity over a
 mixed sign inventory --- not corpus size. Neither branch is ever a
 decipherability claim, and neither asserts ``there is enough text.''
+Using a data-size recovery curve to bound decipherability is not itself
+new --- decipherment learning curves over cipher length (Ravi and Knight
+2008; Berg-Kirkpatrick and Klein 2013), the sample-size dependence of
+automatic cognate detection (List 2014), and analytic corpus-sufficiency
+thresholds (Barber 1974; Zhang and Gong 2016) are the ancestors; our
+contribution is the specific repurposing to a cross-language cognate-ID
+sufficiency locator for an undeciphered target, not the learning-curve
+idea.
 
 The matcher is run on its validated coupled-annealing path, which
 reproduces the published known-answer accuracy (at a reduced 2,000-step
@@ -1326,12 +1347,19 @@ are marked ``secondary citation'' at the point of use.}
   Ratio: Correcting for Selection Bias, Backtest Overfitting, and
   Non-Normality. \emph{Journal of Portfolio Management} 40(5):94--107.
 \item
+  Barber, E. W. (1974). \emph{Archaeological Decipherment: A Handbook.}
+  Princeton: Princeton University Press. (Cited in §8.3 as an analytic
+  corpus-sufficiency-threshold precedent.)
+\item
   Bennett, E. L., Jr.~(1950). Fractional Quantities in Minoan
   Bookkeeping. \emph{American Journal of Archaeology} 54(3):204--222.
 \item
   Berg-Kirkpatrick, T., \& Klein, D. (2011). Simple Effective
   Decipherment via Combinatorial Optimization. \emph{Proc. EMNLP 2011},
   313--321.
+\item
+  Berg-Kirkpatrick, T., \& Klein, D. (2013). Decipherment with a Million
+  Random Restarts. \emph{Proc. EMNLP 2013}.
 \item
   Best, J. G. P. (1981). YASSARAM! \emph{Talanta} 13:17--21.
 \item
@@ -1352,8 +1380,11 @@ are marked ``secondary citation'' at the point of use.}
 \item
   Daggumati, S., \& Revesz, P. Z. (2019). Data mining ancient scripts to
   investigate their relationships. \emph{Proceedings of the 23rd
-  International Database Applications \& Engineering Symposium
-  (IDEAS/DEXA)}. And (2023), \emph{Information} 14(4):227.
+  International Database Applications \& Engineering Symposium (IDEAS)}.
+\item
+  Daggumati, S., \& Revesz, P. Z. (2023). A method of identifying
+  allographs in undeciphered scripts and its application to the Indus
+  Valley Script. \emph{Information} 14(4):227. doi:10.3390/info14040227.
 \item
   Davis, B. (2013). Syntax in Linear A: The Word-Order of the `Libation
   Formula'. \emph{Kadmos} 52(1):35--52. doi:10.1515/kadmos-2013-0003.
@@ -1361,11 +1392,15 @@ are marked ``secondary citation'' at the point of use.}
   Davis, B. (2014). \emph{Minoan Stone Vessels with Linear A
   Inscriptions.} Aegaeum 36. Leuven: Peeters.
 \item
-  Di Mino, D. (2026). ``Linear A cracked'': A-TA-I-*301-WA-JA as
-  West-Semitic N-W-Y (the June-2026 announcement analysed in §5). Online
-  announcement --- no formal venue; analysed here as a public claim,
-  with the timestamped reference copy of the claim and its table carried
-  as the archived record in the logos artifact (v0.1.0).
+  Di Mino, D. (June 2026). ``Linear A cracked'': A-TA-I-*301-WA-JA as
+  West-Semitic N-W-Y (the announcement analysed in §5). Online
+  announcement --- no formal venue. Analysed here as a public claim from
+  an immutable archived copy: \texttt{docs/linear-a-claims-2026.md} in
+  the logos artifact (v0.1.0), SHA-256
+  \texttt{ffc8994224e0288e0d86881a3e98c49b2ffd5aeab5771eb30d30fba0f5608c0e},
+  which carries the claim's own segmentation table (the AB-number
+  ``---'' / Linear-B ``(none)'' row for *301 that §5's free-parameter
+  argument rests on).
 \item
   Duhoux, Y. (1978). On the (agglutinative) typology of the Minoan
   language (secondary citation, as characterised in Salgarella 2025 §8).
@@ -1412,6 +1447,11 @@ are marked ``secondary citation'' at the point of use.}
   an Undeciphered Writing System. \emph{Grapholinguistics in the 21st
   Century 2020}, 927--943. doi:10.36824/2020-graf-cacc.
 \item
+  List, J.-M. (2014). Investigating the impact of sample size on cognate
+  detection. \emph{Journal of Language Relationship} 11(1):91--102.
+  (Cited in §8.3: automatic cognate-detection accuracy rises with sample
+  size.)
+\item
   Luo, J., Cao, Y., \& Barzilay, R. (2019). Neural Decipherment via
   Minimum-Cost Flow: From Ugaritic to Linear B. \emph{Proc. ACL 2019},
   3146--3155.
@@ -1430,6 +1470,11 @@ are marked ``secondary citation'' at the point of use.}
   fabricated control decipherments; the genuine Ventris-value transfer
   beats their average by \textasciitilde2:1, improving to
   \textasciitilde3:1 when context-adjusted.)
+\item
+  Ravi, S., \& Knight, K. (2008). Attacking Decipherment Problems
+  Optimally with Low-Order N-gram Models. \emph{Proc. EMNLP 2008},
+  812--819. (Cited in §8.3: decipherment accuracy vs.~ciphertext length
+  --- a data-size recovery curve.)
 \item
   Rendsburg, G. A. (1996). ``Someone Will Succeed in Deciphering
   Minoan'': Cyrus H. Gordon and Minoan Linear A. \emph{Biblical
@@ -1485,6 +1530,11 @@ are marked ``secondary citation'' at the point of use.}
 \item
   Ventris, M., \& Chadwick, J. (1953). Evidence for Greek Dialect in the
   Mycenaean Archives. \emph{Journal of Hellenic Studies} 73:84--103.
+\item
+  Zhang, M., \& Gong, T. (2016). How Many Is Enough? --- Statistical
+  Principles for Lexicostatistics. \emph{Frontiers in Psychology}
+  7:1916. doi:10.3389/fpsyg.2016.01916. (Cited in §8.3: a minimum-data
+  threshold for the lexicostatistic sub-task.)
 \end{itemize}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
