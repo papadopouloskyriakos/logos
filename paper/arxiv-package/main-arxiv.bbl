@@ -1,0 +1,302 @@
+\begin{thebibliography}{48}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Bailey and {L\'{o}pez de Prado}(2014)}]{bailey2014}
+David~H. Bailey and Marcos {L\'{o}pez de Prado}. 2014.
+\newblock The deflated {Sharpe} ratio: Correcting for selection bias, backtest
+  overfitting, and non-normality.
+\newblock \emph{Journal of Portfolio Management}, 40(5):94--107.
+
+\bibitem[{Barber(1974)}]{barber1974}
+E.~W. Barber. 1974.
+\newblock \emph{Archaeological Decipherment: A Handbook}.
+\newblock Princeton University Press, Princeton.
+
+\bibitem[{Bennett(1950)}]{bennett1950}
+Emmett~L. Bennett. 1950.
+\newblock Fractional quantities in {Minoan} bookkeeping.
+\newblock \emph{American Journal of Archaeology}, 54(3):204--222.
+
+\bibitem[{Berg-Kirkpatrick and Klein(2011)}]{bergkirkpatrick2011}
+Taylor Berg-Kirkpatrick and Dan Klein. 2011.
+\newblock Simple effective decipherment via combinatorial optimization.
+\newblock In \emph{Proceedings of the 2011 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 313--321.
+
+\bibitem[{Berg-Kirkpatrick and Klein(2013)}]{bergkirkpatrick2013}
+Taylor Berg-Kirkpatrick and Dan Klein. 2013.
+\newblock Decipherment with a million random restarts.
+\newblock In \emph{Proceedings of the 2013 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}.
+
+\bibitem[{Best(1981)}]{best1981}
+Jan G.~P. Best. 1981.
+\newblock {YASSARAM!}
+\newblock \emph{Talanta}, 13:17--21.
+
+\bibitem[{Braovi\'{c} et~al.(2024)Braovi\'{c}, Krstini\'{c}, \v{S}tula, and
+  Ivanda}]{braovic2024}
+Marina Braovi\'{c}, Damir Krstini\'{c}, Maja \v{S}tula, and Antonia Ivanda.
+  2024.
+\newblock \href {https://doi.org/10.1162/coli_a_00514} {A systematic review of
+  computational approaches to deciphering {Bronze Age Aegean} and {Cypriot}
+  scripts}.
+\newblock \emph{Computational Linguistics}, 50(2):725--779.
+
+\bibitem[{Corazza et~al.(2021)Corazza, Ferrara, Montecchi, Tamburini, and
+  Val\'{e}rio}]{corazza2021}
+Michele Corazza, Silvia Ferrara, Barbara Montecchi, Fabio Tamburini, and Miguel
+  Val\'{e}rio. 2021.
+\newblock \href {https://doi.org/10.1016/j.jas.2020.105214} {The mathematical
+  values of fraction signs in the {Linear A} script}.
+\newblock \emph{Journal of Archaeological Science}, 125:105214.
+
+\bibitem[{Corazza et~al.(2022)Corazza, Ferrara, Montecchi, Tamburini, and
+  Val\'{e}rio}]{corazza2022}
+Michele Corazza, Silvia Ferrara, Barbara Montecchi, Fabio Tamburini, and Miguel
+  Val\'{e}rio. 2022.
+\newblock \href {https://doi.org/10.1371/journal.pone.0269544} {Unsupervised
+  deep learning supports reclassification of the {Bronze Age Cypriot} writing
+  system}.
+\newblock \emph{PLoS ONE}, 17(7):e0269544.
+
+\bibitem[{Daggumati and Revesz(2019)}]{daggumati2019}
+Shruti Daggumati and Peter~Z. Revesz. 2019.
+\newblock Data mining ancient scripts to investigate their relationships.
+\newblock In \emph{Proceedings of the 23rd International Database Applications
+  and Engineering Symposium (IDEAS)}.
+
+\bibitem[{Daggumati and Revesz(2023)}]{daggumati2023}
+Shruti Daggumati and Peter~Z. Revesz. 2023.
+\newblock \href {https://doi.org/10.3390/info14040227} {A method of identifying
+  allographs in undeciphered scripts and its application to the {Indus Valley
+  Script}}.
+\newblock \emph{Information}, 14(4):227.
+
+\bibitem[{David and Nagaraja(2003)}]{david2003}
+Herbert~A. David and H.~N. Nagaraja. 2003.
+\newblock \emph{Order Statistics}, 3rd edition.
+\newblock Wiley, Hoboken, NJ.
+
+\bibitem[{Davis(2013)}]{davis2013}
+Brent Davis. 2013.
+\newblock \href {https://doi.org/10.1515/kadmos-2013-0003} {Syntax in {Linear
+  A}: The word-order of the {`Libation Formula'}}.
+\newblock \emph{Kadmos}, 52(1):35--52.
+
+\bibitem[{Davis(2014)}]{davis2014}
+Brent Davis. 2014.
+\newblock \emph{Minoan Stone Vessels with {Linear A} Inscriptions}.
+\newblock Aegaeum 36. Peeters, Leuven.
+
+\bibitem[{{Di Mino}(2026)}]{dimino2026}
+Tom {Di Mino}. 2026.
+\newblock ``{Linear A} cracked'': {A-TA-I-*301-WA-JA} as {West-Semitic N-W-Y}.
+\newblock Online announcement, \url{https://aiclambake.com/clamtakes/linear-a/}
+  (2026-06-16).
+\newblock No formal venue. Analysed as a public claim from an immutable
+  archived copy (SHA-256
+  ffc89942\allowbreak{}24e0288e\allowbreak{}0d86881a\allowbreak{}3e98c49b\allowbreak{}2ffd5aea\allowbreak{}b5771eb3\allowbreak{}0d30fba0\allowbreak{}f5608c0e).
+
+\bibitem[{Duhoux(1978)}]{duhoux1978}
+Yves Duhoux. 1978.
+\newblock On the (agglutinative) typology of the {Minoan} language.
+\newblock Secondary citation, as characterised in Salgarella 2025 \S8.
+
+\bibitem[{Duhoux(1992)}]{duhoux1992}
+Yves Duhoux. 1992.
+\newblock Variations morphosyntaxiques dans les textes votifs lin\'{e}aires
+  {A}.
+\newblock \emph{Cretan Studies}, 3:65--88.
+
+\bibitem[{Duhoux(1997)}]{duhoux1997}
+Yves Duhoux. 1997.
+\newblock The {Linear A} locative/allative prefix i-/j- ``to/at''.
+\newblock Secondary citation, as cited in Salgarella 2025 \S8.
+
+\bibitem[{Eu et~al.(2019)Eu, Xu, and {Perono Cacciafoco}}]{eu2019}
+Nguyen Eu, Duo Xu, and Francesco {Perono Cacciafoco}. 2019.
+\newblock Coding to decipher {Linear A}: consonantal comparison against
+  time-compatible lexical lists.
+\newblock In \emph{Proceedings of the 2019 Pacific Neighbourhood Consortium
+  (PNC) Annual Conference and Joint Meetings}, Singapore.
+
+\bibitem[{Ferrara et~al.(2021)Ferrara, Montecchi, and
+  Val\'{e}rio}]{ferrara2021}
+Silvia Ferrara, Barbara Montecchi, and Miguel Val\'{e}rio. 2021.
+\newblock \href {https://doi.org/10.1017/S0068245420000155} {What is the
+  {`Archanes Formula'}? deconstructing and reconstructing the earliest
+  attestation of writing in the {Aegean}}.
+\newblock \emph{Annual of the British School at Athens}, 116:43--62.
+
+\bibitem[{Ferrara and Tamburini(2022)}]{ferrara2022}
+Silvia Ferrara and Fabio Tamburini. 2022.
+\newblock \href {https://doi.org/10.1418/105964} {Advanced techniques for the
+  decipherment of ancient scripts}.
+\newblock \emph{Lingue e Linguaggio}, 21(2):239--259.
+
+\bibitem[{Fuls(2015)}]{fuls2015}
+Andreas Fuls. 2015.
+\newblock \href {https://doi.org/10.13109/hisp.2015.128.1.42} {Classifying
+  undeciphered writing systems}.
+\newblock \emph{Historische Sprachforschung}, 128(1):42--58.
+
+\bibitem[{Gelb and Whiting(1975)}]{gelb1975}
+I.~J. Gelb and R.~M. Whiting. 1975.
+\newblock Methods of decipherment.
+\newblock Secondary citation, as characterised in Ferrara and Tamburini (2022,
+  \S3.5).
+
+\bibitem[{Godart and Olivier(1976--1985)}]{godart1985}
+Louis Godart and Jean-Pierre Olivier. 1976--1985.
+\newblock \emph{Recueil des inscriptions en {Lin\'{e}aire A} (GORILA)}.
+\newblock \'{E}tudes cr\'{e}toises 21. Geuthner, Paris.
+
+\bibitem[{Gordon(1957)}]{gordon1957}
+Cyrus~H. Gordon. 1957.
+\newblock Notes on {Minoan Linear A}.
+\newblock \emph{Antiquity}, 31(124):237--240.
+
+\bibitem[{Gordon(1966)}]{gordon1966}
+Cyrus~H. Gordon. 1966.
+\newblock \emph{Evidence for the {Minoan} Language}.
+\newblock Ventnor Publishers, Ventnor, NJ.
+
+\bibitem[{List(2014)}]{list2014}
+Johann-Mattis List. 2014.
+\newblock Investigating the impact of sample size on cognate detection.
+\newblock \emph{Journal of Language Relationship}, 11(1):91--102.
+
+\bibitem[{Loh and {Perono Cacciafoco}(2020)}]{loh2020}
+Christian J.~S. Loh and Francesco {Perono Cacciafoco}. 2020.
+\newblock \href {https://doi.org/10.36824/2020-graf-cacc} {A new approach to
+  the decipherment of {Linear A}, stage 2: A {`Brute Force Attack'} on an
+  undeciphered writing system}.
+\newblock In \emph{Grapholinguistics in the 21st Century 2020}, pages 927--943.
+
+\bibitem[{Luo et~al.(2019)Luo, Cao, and Barzilay}]{luo2019}
+Jiaming Luo, Yuan Cao, and Regina Barzilay. 2019.
+\newblock Neural decipherment via minimum-cost flow: From {Ugaritic} to {Linear
+  B}.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 3146--3155.
+
+\bibitem[{Luo et~al.(2021)Luo, Hartmann, Santus, Barzilay, and Cao}]{luo2021}
+Jiaming Luo, Frederik Hartmann, Enrico Santus, Regina Barzilay, and Yuan Cao.
+  2021.
+\newblock Deciphering undersegmented ancient scripts using phonetic prior.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  9:69--81.
+
+\bibitem[{Packard(1974)}]{packard1974}
+David~W. Packard. 1974.
+\newblock \emph{Minoan Linear A}.
+\newblock University of California Press, Berkeley and Los Angeles.
+
+\bibitem[{Ravi and Knight(2008)}]{ravi2008}
+Sujith Ravi and Kevin Knight. 2008.
+\newblock Attacking decipherment problems optimally with low-order n-gram
+  models.
+\newblock In \emph{Proceedings of the 2008 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 812--819.
+
+\bibitem[{Rendsburg(1996)}]{rendsburg1996}
+Gary~A. Rendsburg. 1996.
+\newblock ``someone will succeed in deciphering {Minoan}'': {Cyrus H. Gordon}
+  and {Minoan Linear A}.
+\newblock \emph{Biblical Archaeologist}, 59(1):36--43.
+
+\bibitem[{Salgarella(2019)}]{salgarella2019}
+Ester Salgarella. 2019.
+\newblock Drawing lines: The palaeography of {Linear A} and {Linear B}.
+\newblock \emph{Kadmos}, 58(1/2):61--92.
+
+\bibitem[{Salgarella(2020)}]{salgarella2020}
+Ester Salgarella. 2020.
+\newblock \emph{Aegean Linear Script(s): Redefining the Relationship between
+  {Linear A} and {Linear B}}.
+\newblock Cambridge University Press, Cambridge.
+
+\bibitem[{Salgarella(2025)}]{salgarella2025}
+Ester Salgarella. 2025.
+\newblock \href {https://doi.org/10.1017/9781009520041} {\emph{Writing in
+  {Bronze Age Crete}: ``{Minoan}'' {Linear A}}}.
+\newblock Cambridge Elements in Writing in the Ancient World. Cambridge
+  University Press, Cambridge.
+
+\bibitem[{Salgarella and Judson(2024)}]{salgarellajudson2024}
+Ester Salgarella and Anna~P. Judson. 2024.
+\newblock Signs of the times? testing the chronological significance of {Linear
+  A} and {B} palaeography.
+\newblock In \emph{KO-RO-NO-WE-SA (Ariadne Supplement 5)}, pages 359--379.
+
+\bibitem[{Schoep(2002)}]{schoep2002}
+Ilse Schoep. 2002.
+\newblock \emph{The administration of neopalatial {Crete}: a critical
+  assessment of the {Linear A} tablets}.
+\newblock Minos Supplement 17.
+
+\bibitem[{Schrijver(2014)}]{schrijver2014}
+Peter Schrijver. 2014.
+\newblock \href {https://doi.org/10.1515/kadmos-2014-0001} {Fractions and food
+  rations in {Linear A}}.
+\newblock \emph{Kadmos}, 53(1-2):1--44.
+
+\bibitem[{Slepian(1962)}]{slepian1962}
+David Slepian. 1962.
+\newblock The one-sided barrier problem for {Gaussian} noise.
+\newblock \emph{Bell System Technical Journal}, 41(2):463--501.
+
+\bibitem[{Snyder et~al.(2010)Snyder, Barzilay, and Knight}]{snyder2010}
+Benjamin Snyder, Regina Barzilay, and Kevin Knight. 2010.
+\newblock A statistical model for lost language decipherment.
+\newblock In \emph{Proceedings of the 48th Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 1048--1057.
+
+\bibitem[{Sommerschield et~al.(2023)Sommerschield, Assael, Pavlopoulos,
+  Stefanak, Senior, Dyer, Bodel, Prag, Androutsopoulos, and
+  de~Freitas}]{sommerschield2023}
+Thea Sommerschield, Yannis Assael, John Pavlopoulos, Vaughn Stefanak, Andrew
+  Senior, Chris Dyer, John Bodel, Jonathan Prag, Ion Androutsopoulos, and Nando
+  de~Freitas. 2023.
+\newblock Machine learning for ancient languages: A survey.
+\newblock \emph{Computational Linguistics}, 49(3):703--747.
+
+\bibitem[{Steele and Meissner(2017)}]{steele2017}
+Philippa~M. Steele and Torsten Meissner. 2017.
+\newblock From {Linear B} to {Linear A}: the problem of the backward projection
+  of sound values.
+\newblock In Philippa~M. Steele, editor, \emph{Understanding Relations Between
+  Scripts: The Aegean Writing Systems}, pages 93--110. Oxbow, Oxford.
+
+\bibitem[{Tamburini(2025)}]{tamburini2025}
+Fabio Tamburini. 2025.
+\newblock \href {https://doi.org/10.3389/frai.2025.1581129} {On automatic
+  decipherment of lost ancient scripts relying on combinatorial optimisation
+  and coupled simulated annealing}.
+\newblock \emph{Frontiers in Artificial Intelligence}, 8:1581129.
+\newblock Code: github.com/ftamburin/CSA\_OptMatcher.
+
+\bibitem[{Thomas(2020)}]{thomas2020}
+R.~Thomas. 2020.
+\newblock \href {https://doi.org/10.1515/kadmos-2020-0001} {Some reflections on
+  morphology in the language of the {Linear A} libation formula}.
+\newblock \emph{Kadmos}, 59(1--2):1--23.
+
+\bibitem[{Val\'{e}rio(2007)}]{valerio2007}
+Miguel Val\'{e}rio. 2007.
+\newblock Analysis of {Linear A} suffixation.
+\newblock Secondary citation, as cited in Salgarella 2025 \S8.
+
+\bibitem[{Ventris and Chadwick(1953)}]{ventris1953}
+Michael Ventris and John Chadwick. 1953.
+\newblock Evidence for {Greek} dialect in the {Mycenaean} archives.
+\newblock \emph{Journal of Hellenic Studies}, 73:84--103.
+
+\bibitem[{Zhang and Gong(2016)}]{zhang2016}
+Menghan Zhang and Tao Gong. 2016.
+\newblock \href {https://doi.org/10.3389/fpsyg.2016.01916} {How many is enough?
+  --- statistical principles for lexicostatistics}.
+\newblock \emph{Frontiers in Psychology}, 7:1916.
+
+\end{thebibliography}

@@ -14,24 +14,42 @@ Build both: `bash paper/tacl/build.sh` (pdfLaTeX + bibtex + 3 more pdfLaTeX pass
 
 ---
 
-## (a) TACL "Comments to the Editor" — preprint declaration (ready to paste)
+## (a) TACL "Comments to the Editor" — ONE ready-to-paste block (authors + preprints + keywords)
 
-> A non-anonymous preprint of this work is available: Zenodo, "Falsification-First
-> Decipherment: A Decontaminated Inference Framework for Testing Undeciphered-Script
-> Claims, with Linear A as a Worked Null", https://doi.org/10.5281/zenodo.21087572,
-> deposited __________ (fill in deposit date); and arXiv ____________ (fill in arXiv id),
-> ____________ (fill in date once posted). The submitted manuscript does not reference
-> these versions, per TACL policy.
+> **Author:** Kyriakos Papadopoulos. **Affiliation:** Independent Researcher.
+> **Country:** Netherlands. **ORCID:** 0009-0003-0995-2518.
+> **Contact email:** ____________ (fill in — see the durability note below).
+>
+> **Preprint declaration.** A non-anonymous preprint of this work is available:
+> Zenodo, "Falsification-First Decipherment: A Decontaminated Inference Framework
+> for Testing Undeciphered-Script Claims, with Linear A as a Worked Null",
+> DOI ____________ (fill in), deposited ____________ (fill in deposit date); and
+> arXiv, same title, arXiv:____________ (fill in id), posted ____________ (fill in
+> date). The submitted manuscript does not cite these versions, per TACL policy.
+>
+> **Keywords:** decipherment; Linear A; undeciphered scripts; multiple-testing
+> correction; pre-registration; negative controls; contamination; held-out
+> evaluation; low-resource historical languages; falsification.
+
+- Email note: the address entered must be **durable and monitored** through a
+  multi-month review cycle, and should ideally **match the arXiv account** used for
+  the preprint. The address currently on file (rfpsqzau@nuclearlighters.net) — CONFIRM
+  it meets both criteria before submitting.
 
 ---
 
-## (b) TACL portal — author metadata
+## (b) Pre-specification chronology (verified from repo artifacts, 2026-07-02)
 
-- Name: **Kyriakos Papadopoulos**
-- Affiliation: **Independent Researcher**
-- Country: **Netherlands**
-- ORCID: **0009-0003-0995-2518**
-- Email: **rfpsqzau@nuclearlighters.net**  *(CONFIRM BEFORE SUBMIT)*
+| Item | In-repo commit (freeze) | External timestamp | First execution |
+|---|---|---|---|
+| prereg-morphology | 2026-06-30 20:27 +0200 | Zenodo `date-released` 2026-07-01 | 2026-06-30 onward |
+| stratification addendum | 2026-06-30 22:55 | Zenodo `date-released` 2026-07-01 | 2026-06-30 onward |
+| salgarella addendum | 2026-07-01 00:07 | Zenodo `date-released` 2026-07-01 | 2026-07-01 onward |
+
+The external deposit **postdates** first execution: the paper therefore states
+(§3.1 + Appendix A.1) that pre-specifications were frozen **in-repository before each
+run** (commit history), and that the external immutable deposit certifies the *current
+state* of the registrations, **not temporal priority**.
 
 ---
 
@@ -48,12 +66,16 @@ Build both: `bash paper/tacl/build.sh` (pdfLaTeX + bibtex + 3 more pdfLaTeX pass
   text will be allowed in the appendices unless it specifically adds more details of
   Category #1." Exceeding the limits → rejected/returned.
 - **Main content (strict measure — the page on which §9.7 ends): page 10** on BOTH
-  targets (Target A: right column, 88% down p.10; Target B: same). **≤10.0 ✓** and full
-  (≈9.9 pp) — no undershoot.
+  targets (final combined pass 2026-07-02: Target A right column 90% down p.10;
+  Target B 88%). **≤10.0 ✓** and full — no undershoot.
 - **Category 1 (Appendices A–D + Software & data note, replication prose):**
-  **≈4.99 pp ≤ 5 ✓** (both targets; spans mid-p.13 after References to mid-p.18).
+  **≈4.97 pp ≤ 5.00 ✓** (both targets; spans mid-p.13 after References to mid-p.18).
+  *Note: the tighter internal target of 4.7–4.8 pp was NOT reached — the remaining
+  Cat-1 prose is genuine replication detail (procedures, parameters, derivations,
+  the new C.1 generation-settings block) whose removal would harm exact replication;
+  per the fallback rule this residual-margin shortfall is reported, not silently cut.*
 - **Category 2 (Appendix E, "Complementary tables", 11 tables):**
-  **≈1.6–1.8 pp ≤ 3 ✓** (Tables 2–12: morphology strata; sensitivity 2×2;
+  **≈1.55–1.74 pp ≤ 3 ✓** (Tables 2–12: morphology strata; sensitivity 2×2;
   morphology-induction quantities; metrology quantities; phonology per-test; cross-script
   alignment + controls; LLM per-item reproduction; abstention asymmetry; corpus
   denominators/unicity; detector+gate calibration; index/canary/ablation quantities).
@@ -149,18 +171,25 @@ For contrast, Target A `logos-arxiv.pdf` carries `Title: Falsification-First Dec
 
 Automated leak scan on the anon PDF text (all counts 0): `Kyriakos`, `Papadopoulos`,
 `papadopouloskyriakos`, `zenodo`/`Zenodo`, `21087572`, `0009-0003`, `ORCID`, `logos v0.1.0`.
-Line-number rulers present on all 20 pages of Target B (absent on Target A); confidentiality
-header on all 20 Target-B pages.
+Line-number rulers present on all 19 pages of Target B (absent on Target A); confidentiality
+header on all 19 Target-B pages. "Tom Di Mino" appears in Target B only as the cited
+claimant of the analysed public claim — not author-identifying.
 
 ---
 
 ## (e) Submission-order reminder
 
-1. **Post the named arXiv preprint FIRST** (`logos-arxiv.pdf`), category **cs.CL** — this
-   needs a **cs.CL endorsement** if the author is not yet endorsed. Record the arXiv id + date.
+1. **Upload the named TeX SOURCE package FIRST** (`paper/arxiv-package/`, tarball
+   `paper/arxiv-package.tar.gz`: named wrapper + shared body + `.bbl` + `refs.bib` +
+   `tacl2021v1.sty` + `acl_natbib.bst`; arXiv declines TeX-generated PDF-only uploads),
+   category **cs.CL** — this needs a **cs.CL endorsement** if the author is not yet
+   endorsed. Record the arXiv id + date. The wrapper renders the author block with NO
+   acceptance trade dress and a first-page "Preprint — under review; not peer reviewed."
+   note (verified on rendered p.1).
 2. **Then submit the anonymized PDF** (`logos-tacl-anon.pdf`) to TACL and paste the
-   declaration from (a), filling in the Zenodo deposit date and the arXiv id/date.
-3. **Re-check the current transacl.org anonymity + preprint policy at submit time** (policies
-   change); confirm the author metadata in (b). Length conformance is complete per (c):
-   main content ends on p.10, Cat-1 ≈4.99 pp ≤5, Cat-2 ≈1.6–1.8 pp ≤3 (March-2024
-   appendices policy).
+   combined block from (a), filling in the Zenodo DOI/date and the arXiv id/date.
+   **Check the TACL portal's upload-filename instructions at submission time.**
+3. **Re-check the current transacl.org anonymity + preprint policy at submit time**
+   (policies change); confirm the author metadata in (a). Length is **provisionally
+   conformant — re-verify on the exact final compiled upload**: main content ends on
+   p.10, Cat-1 ≈4.97 pp ≤5, Cat-2 ≈1.55–1.74 pp ≤3 (March-2024 appendices policy).
