@@ -87,8 +87,12 @@ hand-crafted descriptors dominate a from-scratch SSL encoder on ~90 images.
 - **I-JEPA partially dimensionally collapses** on the tiny corpus (effective rank ~3–4 of D=128;
   same-seed runs ~uncorrelated) — a known JEPA-on-tiny-data failure (verify-flagged MEDIUM). Does
   not affect the classical headline.
-- **Self-report discrepancy (recorded from the persisted JSON, not the impl's prose):** the impl
-  stated "3 seeds / 60 epochs"; the actual run was **2 seeds / 8 epochs**. Conclusion unaffected.
+- **Self-report discrepancy + seed refresh (graded from the persisted JSON, not the impl's prose):**
+  the impl prose said "3 seeds / 60 epochs"; the *original* run was **2 seeds / 8 epochs** (the
+  0.322 ± 0.018 in the table above). The **2026-07-01 re-run regenerated `results_palaeo.json` at 3
+  seeds** — I-JEPA cross-script direct-NN **0.324 ± 0.025** — and that 3-seed artifact value is what
+  the preprint (§7.3) grades from. The table above is the superseded 2-seed run. Conclusion
+  unaffected (I-JEPA remains weaker than classical and is excluded from the claims).
 - Classical is the cleaner cross-script probe (no training → fully non-circular zero-shot); I-JEPA
   trained on both scripts' pixels (unsupervised, no value labels — still non-circular, but not
   zero-shot).

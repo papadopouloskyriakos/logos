@@ -130,16 +130,22 @@ reading} is believable is a different kind of thing: a property of the
 inference methodology and its epistemics --- overfitting, multiple
 testing, false-positive control, and contamination. We therefore frame
 this axis, once and modestly, as a candidate \textbf{sixteenth
-challenge}: not a sixteenth property of the data, but the methodological
-axis the object-level taxonomy was never meant to cover. It is
-named-but-unfilled rather than simply absent, and it is distinct from
-the survey's own acknowledged gap --- that on scoring results ``in many
-cases there is nothing to compare them against, and their evaluation
-remains an open problem'' (Braović et al.~2024, Sec. 6.3, p.~746). That
-is an \emph{evaluation-target} problem (what to measure against); the
-false-positive / multiplicity problem (whether a fitted reading is being
-mistaken for a real one) is separable from it, and it is the latter this
-paper instruments.
+challenge} --- a deliberate rhetorical foil to the survey's fifteen, not
+a claim to a new taxonomic slot or to sole discovery. It is
+\emph{under-instrumented} rather than unrecognised: Packard's (1974)
+nine deliberately fabricated decipherments already exercised exactly
+this false-positive logic as a control, and the selective-inference
+machinery we import (Bailey \& López de Prado 2014) is mature elsewhere
+--- our contribution is to \emph{consolidate and operationalize} that
+axis for decipherment, not to invent it. It is the methodological axis
+the object-level taxonomy was never meant to cover, and it is distinct
+from the survey's own acknowledged gap --- that on scoring results ``in
+many cases there is nothing to compare them against, and their
+evaluation remains an open problem'' (Braović et al.~2024, Sec. 6.3,
+p.~746). That is an \emph{evaluation-target} problem (what to measure
+against); the false-positive / multiplicity problem (whether a fitted
+reading is being mistaken for a real one) is separable from it, and it
+is the latter this paper instruments.
 
 \textbf{Contribution.} We build the machinery for that axis: a
 falsification-first, decontaminated inference framework for testing
@@ -594,7 +600,18 @@ possible, on the claim's \textbf{own published table} and on primary
 sources. We flag the meta-point explicitly: this refutation is a
 literature-and-primary-source argument, not itself a logos held-out
 result --- it critiques the claim on shared evidentiary ground rather
-than adjudicating it mechanically through our own gate.
+than adjudicating it mechanically through our own gate. That gap is the
+sharpest limitation of the present paper, and we name it: the graduation
+gate and the L\_fake canary are validated as instruments (on unit tests
+and on the known-answer Ugaritic↔Hebrew surrogate) but have not been
+\emph{run on this claim}. The natural demonstration --- scoring Gordon's
+West-Semitic equations and the Di Mino lexicon against the L\_fake
+false-positive floor and the order-statistic bar, so the reading either
+clears the machinery or fails closed against it --- is directly runnable
+with the components of §3 and is the priority of the planned revision
+(docs/findings/2026-07-01-referee-simulation). Until then,
+``falsification-first'' is demonstrated on synthetic positives and
+argued (not yet mechanically adjudicated) on this real one.
 
 \textbf{(a) The segmentation is not novel.} Root i-*301 plus affixation
 is the reading of Davis (2013); an independent segmentation by Thomas
@@ -630,12 +647,15 @@ prefix-stacked agglutinative verb is its opposite, so the claim is
 internally incoherent \emph{from its own figure}, with no
 give-versus-dwell adjudication required. This is corroborated from both
 directions in the primary literature. Davis (2013, p.~38 n.~13)
-describes i-*301 as morphology ``neither IE nor Afroasiatic'' --- and
-Semitic \emph{is} Afroasiatic, so the source ruled out Semitic on
-typological grounds a decade earlier. Independently, Salgarella (2025,
-§8) concludes Minoan is agglutinative (after Duhoux 1978) and a language
-isolate. The claim's own segmentation thus supports the isolate typology
-it contradicts by label.
+characterises i-*301's morphology as ``neither IE nor Afroasiatic'' ---
+and Semitic \emph{is} Afroasiatic, so a decade earlier the primary
+description already found \textbf{no Afroasiatic (hence no Semitic)
+morphological signature} in this very form. (We rest on what the
+footnote states --- the absence of an Afroasiatic signature --- not on a
+stronger ``ruled out'' than a hedged footnote can bear.) Independently,
+Salgarella (2025, §8) concludes Minoan is agglutinative (after Duhoux
+1978) and a language isolate. The claim's own segmentation thus supports
+the isolate typology it contradicts by label.
 
 \textbf{The free-parameter receipt.} The decisive point for
 identifiability is that *301 has no cross-script anchor: in the claim's
@@ -729,7 +749,22 @@ bigram-reproducible with no power, so it does \textbf{not} corroborate a
 rich-morphology reading --- the word-length typology and the direct null
 point opposite ways, and we report the null. This bigram free-rider is
 one of the would-be confounds the machinery has caught and reported as a
-null rather than a finding.
+null rather than a finding. One validation this null still lacks --- and
+the first item of the planned revision --- is a \textbf{positive
+control}: metrology and phonology (§7.1--7.2) each demonstrate their
+detector fires on a planted signal, but the morphology bigram-floor test
+has not yet been shown to recover \emph{known} affixation, so ``no power
+on Linear A'' cannot yet be cleanly separated from ``the floor is too
+strong.'' The direct control is the identical bigram-floor test on
+\textbf{Mycenaean Greek (Linear B)}, whose longer words carry
+uncontested inflectional morphology; the DĀMOS Linear-B corpus ingested
+for §7.3 (13,562 wordforms) now makes it runnable. Our short-word
+argument makes a falsifiable prediction there --- the test \emph{should}
+regain power on Linear B --- which, if borne out, would establish the
+Linear A result as a short-word / low-power situation rather than a
+claim that Minoan lacks morphology; until that control is run we report
+the Linear A outcome strictly as \emph{no power}, not as evidence
+against affixation.
 
 \textbf{A modest segmentation positive.} The word-boundary segmenter is
 a genuine, held-out positive. Under leave-one-site-out cross-validation
@@ -1202,21 +1237,25 @@ Multiplicity discipline operates at two levels, and we are explicit
 about both. Within a single probe, matches are deflated for the signs ×
 roots × hypotheses searched (the effective-n machinery of §3--4). Across
 the study, the unit of multiplicity is the \textbf{per-probe
-pre-registration}: the six pre-registered probes reported here
-(morphology, metrology, phonology, cross-script image alignment,
-contamination, sufficiency) each carry their own pre-committed α, and
---- critically --- every probe is reported regardless of outcome. There
-is no selective reporting across the battery: every probe is reported
-regardless of outcome, and the one probe that returns an above-chance
-number --- the cross-script image leg (§7.3) --- is reported as a
-circular \emph{engineering demonstration}, not a positive. What we have
-\emph{not} yet done is deflate across the battery itself: a formal
-family-wise or false-discovery correction over the six probe-level tests
-is flagged here as future work rather than claimed as already paid. The
-direction of that omission is bounded and entirely conservative: all six
-probes are reported as nulls or as a capped-and-circular demonstration,
-so a battery-level correction can only make each \emph{more} null.
-Nothing in the battery is read as a decipherment.
+pre-registration}: the \textbf{five executed probes} (morphology,
+metrology, phonology, cross-script image alignment, and contamination)
+each carry their own pre-committed α, and every probe is reported
+regardless of outcome. (A sixth, the sufficiency sweep of §8.3, is
+specified and its harness validated but was \textbf{not executed to
+convergence}, so it is reported as protocol-only, not as a result.)
+There is no selective reporting: the one probe that returns an
+above-chance number --- the cross-script image leg (§7.3) --- is
+reported as a circular \emph{engineering demonstration}, not a positive.
+On the battery-level correction the paper's own rule demands: four of
+the five executed probes are nulls sitting far from any threshold
+(metrology p = 1.0; phonology p = 0.40 / 0.86; morphology at no power;
+contamination an artifact by construction), so a family-wise/FDR
+correction over the probe-level tests is arithmetically trivial and only
+makes each \emph{more} null --- and the fifth probe surfaces \textbf{no
+positive for such a correction to protect} (the image leg is capped at ≤
+0.75 and relabeled circular). Battery-level multiplicity is therefore
+not load-bearing here: there is no surviving positive that a correction
+could threaten. Nothing in the battery is read as a decipherment.
 
 \hypertarget{limitations}{%
 \subsubsection{9.6 Limitations}\label{limitations}}
