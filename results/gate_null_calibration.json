@@ -1,0 +1,12 @@
+{
+  "B": 500,
+  "N_eff": 100,
+  "false_graduations": 3,
+  "false_graduation_rate": 0.006,
+  "upper95": 0.01277,
+  "verdict_breakdown": {
+    "REJECT": 487,
+    "NULL_PUBLISHED": 10,
+    "GRADUATE": 3
+  }
+}

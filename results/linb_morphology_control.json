@@ -1,0 +1,28 @@
+{
+  "corpus": {
+    "docs": 3856,
+    "word_tokens": 13562,
+    "wordforms": 4946,
+    "mean_signs_per_word": 3.235,
+    "distinct_syllabograms": 89
+  },
+  "panel_size": 16,
+  "real_confirm_rate": 0.5625,
+  "real_confirmed_affixes": [
+    "-jo",
+    "-o-jo",
+    "-de",
+    "-qe",
+    "-o-i",
+    "-we",
+    "-ro",
+    "-wo",
+    "-ta"
+  ],
+  "shuffle_confirm_rate": 0.0,
+  "lfake_confirm_rate": 0.3125,
+  "floor": 0.3125,
+  "has_morphology_power": true,
+  "beats_shuffle": true,
+  "beats_lfake": true
+}
