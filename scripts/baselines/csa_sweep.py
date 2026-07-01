@@ -123,6 +123,10 @@ def cell_plan(benchmarks: Sequence[str], seeds: Sequence[int]) -> List[dict]:
             for seed in seeds:
                 cells.append(dict(benchmark=key, size=int(size), seed=int(seed),
                                   n_gold=bench.n_gold, N=cfg["N"], M=cfg["M"], penf=cfg["penf"]))
+    # small sizes first: the learning curve's crux is the small/mid range (where Linear-A scale
+    # falls), and small cells are fast — so the important points + the fast wins land first, and the
+    # expensive full-size big-benchmark cells run last (harvestable even if the window ends early).
+    cells.sort(key=lambda c: (c["size"], c["benchmark"], c["seed"]))
     return cells
 
 

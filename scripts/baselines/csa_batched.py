@@ -46,6 +46,10 @@ def _expand_words(prob, state):
     151-188 with the per-word editdistance call removed.
     """
     P = prob.State2Assignment(state)
+    idx = getattr(prob, "_lC_idx", None)
+    if idx is None:
+        idx = {c: i for i, c in enumerate(prob.lC)}         # O(1) sign→index (his .index() is O(n))
+        prob._lC_idx = idx
 
     def expand(w, i, l):
         if i == len(w):
@@ -55,7 +59,7 @@ def _expand_words(prob, state):
                 for j in range(len(w[i])):
                     yield from expand(w, i + 1, l + [ord(x) for x in prob.fix[w[i]][j]])
             else:
-                ci = prob.lC.index(w[i])
+                ci = idx[w[i]]
                 if P[ci] != -1:
                     for j in range(len(P[ci])):
                         yield from expand(w, i + 1, l + [ord(x) for x in prob.kC[P[ci][j]]])
