@@ -30,23 +30,37 @@ the checking command, not the PDF).
 
 > **Author:** Kyriakos Papadopoulos. **Affiliation:** Independent Researcher.
 > **Country:** Netherlands. **ORCID:** 0009-0003-0995-2518.
-> **Contact email:** ____________ (fill in — see the durability note below).
+> **Contact email:** kyriakos@papadopoulos.tech
 >
-> **Preprint declaration.** A non-anonymous preprint of this work is available:
-> Zenodo, "Falsification-First Decipherment: A Decontaminated Inference Framework
-> for Testing Undeciphered-Script Claims, with Linear A as a Worked Null",
-> DOI ____________ (fill in), deposited ____________ (fill in deposit date); and
-> arXiv, same title, arXiv:____________ (fill in id), posted ____________ (fill in
-> date). The submitted manuscript does not cite these versions, per TACL policy.
+> **Preprint declaration — PRIMARY (Variant A-only; verified 2026-07-02: the Zenodo
+> v0.1.0 record, concept DOI 10.5281/zenodo.21087572, contains exactly one file —
+> `papadopouloskyriakos/logos-v0.1.0.zip`, the GitHub release snapshot of code and
+> pre-registrations — NOT the named paper PDF, so Zenodo is not a preprint of the
+> paper):**
+>
+> A non-anonymous preprint of this work is available on arXiv: same title,
+> arXiv:____________ (fill in id), posted ____________ (fill in date). The submitted
+> manuscript does not cite this version, per TACL policy. (The paper's
+> code-and-pre-registration artifact is separately archived on Zenodo, concept DOI
+> 10.5281/zenodo.21087572.)
+>
+> **Alternate (Variant Z+A — use ONLY if a later Zenodo version is created that
+> contains the named paper PDF; fill the date of THAT version):**
+>
+> A non-anonymous preprint of this work is available: Zenodo, "Falsification-First
+> Decipherment: A Decontaminated Inference Framework for Testing Undeciphered-Script
+> Claims, with Linear A as a Worked Null", DOI 10.5281/zenodo.21087572 (deposited
+> YYYY-MM-DD); and arXiv, same title, arXiv:____________ (fill in id), posted
+> ____________ (fill in date). The submitted manuscript does not cite these
+> versions, per TACL policy.
 >
 > **Keywords:** decipherment; Linear A; undeciphered scripts; multiple-testing
 > correction; pre-registration; negative controls; contamination; held-out
 > evaluation; low-resource historical languages; falsification.
 
-- Email note: the address entered must be **durable and monitored** through a
-  multi-month review cycle, and should ideally **match the arXiv account** used for
-  the preprint. The address currently on file (rfpsqzau@nuclearlighters.net) — CONFIRM
-  it meets both criteria before submitting.
+- Email note: `kyriakos@papadopoulos.tech` matches the arXiv account and is the
+  durable, monitored address for the review cycle (Redrick gives final confirmation
+  at the portal).
 
 ---
 
@@ -99,7 +113,7 @@ state* of the registrations, **not temporal priority**.
   the new C.1 generation-settings block) whose removal would harm exact replication;
   per the fallback rule this residual-margin shortfall is reported, not silently cut.*
 - **Category 2 (Appendix E, "Complementary tables", 11 tables):**
-  **≈1.55–1.74 pp ≤ 3 ✓** (Tables 2–12: morphology strata; sensitivity 2×2;
+  **≈1.5 pp ≤ 3 ✓** (Tables 2–12: morphology strata; sensitivity 2×2;
   morphology-induction quantities; metrology quantities; phonology per-test; cross-script
   alignment + controls; LLM per-item reproduction; abstention asymmetry; corpus
   denominators/unicity; detector+gate calibration; index/canary/ablation quantities).
@@ -217,4 +231,18 @@ claimant of the analysed public claim — not author-identifying.
 3. **Re-check the current transacl.org anonymity + preprint policy at submit time**
    (policies change); confirm the author metadata in (a). Length is **provisionally
    conformant — re-verify on the exact final compiled upload**: main content ends on
-   p.10, Cat-1 ≈4.97 pp ≤5, Cat-2 ≈1.55–1.74 pp ≤3 (March-2024 appendices policy).
+   p.10 (last text row on Target A — zero cushion), Cat-1 ≈4.9 pp ≤5, Cat-2 ≈1.5 pp ≤3
+   (March-2024 appendices policy).
+
+---
+
+## (f) Final artifact checksums (build 2026-07-02, commit 61a3341)
+
+These exact bytes are what get uploaded — the tarball to arXiv, the anon PDF to TACL.
+Re-verify with `sha256sum` before each upload.
+
+| File | SHA-256 |
+|---|---|
+| `paper/build/logos-arxiv.pdf` | `a2ab89fa313e5b308a020853f8962594dfc1c1445bf87c064f7e7305881ea145` |
+| `paper/build/logos-tacl-anon.pdf` | `4e4973ecfd96c72d3fa051e412ea2a23d5233a2df75c09721282fabcdf4b23bc` |
+| `paper/arxiv-package.tar.gz` | `ae2ee2c111fb0daee6e9c13941ec875036a0cbcd214b541b3935a9996c21faf2` |
