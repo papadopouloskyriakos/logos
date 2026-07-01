@@ -707,22 +707,27 @@ abstention asymmetry consistent with differential public exposure (the
 \textbf{consistency is not correctness}: it bounds how the model behaves,
 never whether it is right.
 
-\section*{Registered extension: a known-answer sufficiency protocol
-(asserts no result)}
+\section*{Registered extension: a known-answer sufficiency curve}
 \addcontentsline{toc}{section}{Registered extension: a known-answer
-sufficiency protocol}
+sufficiency curve}
 
 Is a Linear-A-scale corpus large enough to recover a decipherment if a
 known cognate existed? Because every benchmark is handed a real cognate
-signal Linear A lacks, any recovery curve is an \textbf{optimistic
-benchmark, conditional on a known cognate relationship}, readable two
-ways: at-floor at Linear-A scale $\Rightarrow$ information-insufficient
-even given a cognate; above-chance $\Rightarrow$ identifiability
-(cognate-absence, uncorrected multiplicity) rather than corpus size would
-be implicated. Neither branch is ever a decipherability claim. The
-accuracy-vs-size curve is deposited in the repository as a known-answer
-upper-bound \textbf{protocol} (Appendix~C.3); this paper asserts no
-interim result from it.
+signal Linear A lacks, any recovery is an \textbf{optimistic benchmark,
+conditional on a known cognate relationship}: at-floor at Linear-A scale
+$\Rightarrow$ information-insufficient even given a cognate; above-chance
+$\Rightarrow$ identifiability (cognate-absence, uncorrected multiplicity)
+rather than corpus size would be implicated; neither branch is a
+decipherability claim. The completed 2{,}000-step curve (near-converged:
+Luvian$\to$Hittite 0.462 vs.\ published 0.475, Phoenician$\to$Ugaritic
+0.760 vs.\ 0.805; every recovery a \emph{lower bound}) splits the
+branches at the sweep's Linear-A-scale locator (600--700 distinct
+word-forms, syllabic normalization): Linear~B$\to$Greek, the primary
+analog, stays at its chance floor ($0.044\pm0.023$, $n{=}276$; floor
+$\approx0.004$), while Cypriot$\to$Greek sits marginally above
+($0.066$, $n{=}346$). Under-convergence keeps the at-floor branch
+non-definitive; full per-size and per-cell artifacts are deposited
+(Appendix~C.3).
 
 \section{Discussion, limitations, and conclusion}
 
@@ -1132,14 +1137,16 @@ rigorous comparison could not run (Table~\ref{tab:abstain}).
 The interpretable signal is the abstention asymmetry itself, read under
 the standing rule of \S8.2 (\artref).
 
-\paragraph{C.3 Information-sufficiency CSA protocol (design; asserts no
-result).} The protocol downsamples known-answer benchmarks --- Linear B /
+\paragraph{C.3 Information-sufficiency CSA sweep (design and deposit).}
+The sweep downsamples known-answer benchmarks --- Linear B /
 Mycenaean Greek as the primary syllabic analog, sourced through D\=AMOS,
 and further syllabic corpora --- and measures held-out cognate-ID
 recovery against per-size permutation floors, using the published
 cognate-ID matcher of \S2.3 \citep{tamburini2025}, validated in the
 artifact against its published Table-3 values (\artref). The reading
-rules and the no-result stance are in the body (Registered extension).
+rules and the reported curve are in the body (Registered extension); the
+full per-size report and per-cell artifacts are deposited in the
+repository (\texttt{results/csa/}).
 The phonological / sound path is no longer data-deferred: even the full
 ingested D\=AMOS corpus leaves the cross-script distributional alignment
 at chance (\S7.3, \S B.3).

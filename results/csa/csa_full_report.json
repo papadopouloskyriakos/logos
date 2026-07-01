@@ -1,0 +1,596 @@
+{
+  "kind": "pseudo_decipherment_learning_curves",
+  "driver": "scripts/baselines/csa_sweep.py",
+  "citation": "Pseudo-decipherment learning curves (information-sufficiency capstone). Recovery: Tamburini 2025, CSA_OptMatcher (Frontiers in AI 8:1581129). Chance floor: Packard 1974 permutation null (see nulls.py). Replaces the withdrawn unicity-distance finding (docs/findings/2026-06-30-information-floor.md).",
+  "honest_framing": "UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made.",
+  "no_phonetic_claim": true,
+  "linear_a_scale": {
+    "n_sign_tokens": 5792,
+    "V_syllabic": 92,
+    "distinct_words_lo": 600,
+    "distinct_words_hi": 700,
+    "distinct_words": 650,
+    "mean_signs_per_word": 2.3
+  },
+  "recovery_method": "csa",
+  "recovery_steps_budget": 2000,
+  "benchmarks": {
+    "linearb-greek": {
+      "syllabic_analog": true,
+      "is_primary_linear_a_analog": true,
+      "full_n_gold": 919,
+      "sizes_swept": [
+        92,
+        100,
+        184,
+        200,
+        276,
+        400,
+        460,
+        600,
+        650,
+        689,
+        919
+      ],
+      "curve": [
+        {
+          "size": 92,
+          "recovery_mean": 0.010869565217391304,
+          "recovery_std": 0.013312444254256402,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.010869565217391304,
+          "mean_signs_per_word": 3.782608695652174,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 100,
+          "recovery_mean": 0.0575,
+          "recovery_std": 0.03491060010942235,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.01,
+          "mean_signs_per_word": 3.7625,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 184,
+          "recovery_mean": 0.014945652173913044,
+          "recovery_std": 0.014054457109767122,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.005434782608695652,
+          "mean_signs_per_word": 3.7527173913043477,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 200,
+          "recovery_mean": 0.02,
+          "recovery_std": 0.017677669529663688,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.005,
+          "mean_signs_per_word": 3.745,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 276,
+          "recovery_mean": 0.04438405797101449,
+          "recovery_std": 0.022825368058612593,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.0036231884057971015,
+          "mean_signs_per_word": 3.7481884057971016,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 400,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 460,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 600,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 650,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 689,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 919,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        }
+      ],
+      "linear_a_locator": {
+        "la_distinct_words": 650,
+        "la_scale_in_swept_range": true,
+        "interp_recovery_acc": 0.04438405797101449,
+        "interp_chance_empirical": 0.0,
+        "interp_chance_analytic": 0.0,
+        "above_chance": false,
+        "recovery_is_lower_bound": true,
+        "verdict": "AT_FLOOR_LOWER_BOUND",
+        "reading": "At floor, but the recovery is a LOWER BOUND (under-converged CSA) \u2014 NOT a definitive sufficiency verdict; re-run at full annealing budget before reading it. UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made."
+      }
+    },
+    "cypriot-greek": {
+      "syllabic_analog": true,
+      "is_primary_linear_a_analog": false,
+      "full_n_gold": 693,
+      "sizes_swept": [
+        69,
+        100,
+        139,
+        200,
+        208,
+        346,
+        400,
+        520,
+        600,
+        650,
+        693
+      ],
+      "curve": [
+        {
+          "size": 69,
+          "recovery_mean": 0.07971014492753624,
+          "recovery_std": 0.04639945099589021,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.014492753623188406,
+          "mean_signs_per_word": 4.6268115942028984,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 100,
+          "recovery_mean": 0.0675,
+          "recovery_std": 0.03897114317029974,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.01,
+          "mean_signs_per_word": 4.532500000000001,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 139,
+          "recovery_mean": 0.09712230215827337,
+          "recovery_std": 0.03615063173065068,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.007194244604316547,
+          "mean_signs_per_word": 4.51978417266187,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 200,
+          "recovery_mean": 0.0675,
+          "recovery_std": 0.03491060010942235,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.005006281407035176,
+          "mean_signs_per_word": 4.5175,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 208,
+          "recovery_mean": 0.04567307692307693,
+          "recovery_std": 0.007211538461538463,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.004813498699368265,
+          "mean_signs_per_word": 4.525240384615385,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 346,
+          "recovery_mean": 0.06647398843930635,
+          "recovery_std": 0.030926206010162858,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.002894362067521153,
+          "mean_signs_per_word": 4.583092485549133,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 400,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 520,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 600,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 650,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 693,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        }
+      ],
+      "linear_a_locator": {
+        "la_distinct_words": 650,
+        "la_scale_in_swept_range": true,
+        "interp_recovery_acc": 0.06647398843930635,
+        "interp_chance_empirical": 0.0,
+        "interp_chance_analytic": 0.0,
+        "above_chance": true,
+        "recovery_is_lower_bound": true,
+        "verdict": "ABOVE_CHANCE",
+        "reading": "UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made."
+      }
+    },
+    "ugaritic-noiseless": {
+      "syllabic_analog": false,
+      "is_primary_linear_a_analog": false,
+      "full_n_gold": 2214,
+      "sizes_swept": [
+        100,
+        200,
+        221,
+        400,
+        443,
+        600,
+        650,
+        664,
+        1107,
+        1660,
+        2214
+      ],
+      "curve": [
+        {
+          "size": 100,
+          "recovery_mean": 0.39,
+          "recovery_std": 0.26570660511172844,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.010025252525252526,
+          "mean_signs_per_word": 3.885,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 200,
+          "recovery_mean": 0.78375,
+          "recovery_std": 0.28327051999811065,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.005031533932287701,
+          "mean_signs_per_word": 3.8225,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 221,
+          "recovery_mean": 0.8608597285067874,
+          "recovery_std": 0.027407333573723366,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.0045300287947346776,
+          "mean_signs_per_word": 3.8472850678733033,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 400,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 443,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 600,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 650,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 664,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 1107,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 1660,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 2214,
+          "recovery_mean": null,
+          "recovery_std": null,
+          "n_seeds_done": 0,
+          "chance_floor_analytic": null,
+          "mean_signs_per_word": null,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        }
+      ],
+      "linear_a_locator": {
+        "la_distinct_words": 650,
+        "la_scale_in_swept_range": true,
+        "interp_recovery_acc": 0.8608597285067874,
+        "interp_chance_empirical": 0.0,
+        "interp_chance_analytic": 0.0,
+        "above_chance": true,
+        "recovery_is_lower_bound": true,
+        "verdict": "ABOVE_CHANCE",
+        "reading": "UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made."
+      }
+    },
+    "phoenician-ugaritic": {
+      "syllabic_analog": false,
+      "is_primary_linear_a_analog": false,
+      "full_n_gold": 105,
+      "sizes_swept": [
+        21,
+        32,
+        52,
+        79,
+        100,
+        105
+      ],
+      "curve": [
+        {
+          "size": 21,
+          "recovery_mean": 0.7142857142857143,
+          "recovery_std": 0.0,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.04821428571428571,
+          "mean_signs_per_word": 2.908704721204721,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 32,
+          "recovery_mean": 0.65625,
+          "recovery_std": 0.18619336387207788,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.03150201612903226,
+          "mean_signs_per_word": 2.776203612987504,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 52,
+          "recovery_mean": 0.7355769230769231,
+          "recovery_std": 0.036928585326291376,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.01932503770739065,
+          "mean_signs_per_word": 2.8658811557187325,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 79,
+          "recovery_mean": 0.680379746835443,
+          "recovery_std": 0.059624821776635355,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.012658227848101266,
+          "mean_signs_per_word": 2.875309347039787,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 100,
+          "recovery_mean": 0.7475,
+          "recovery_std": 0.060981554588252315,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.010101010101010102,
+          "mean_signs_per_word": 2.8579669331395348,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 105,
+          "recovery_mean": 0.7595238095238095,
+          "recovery_std": 0.028071014577503786,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.009615384615384616,
+          "mean_signs_per_word": 2.859259259259259,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        }
+      ],
+      "linear_a_locator": {
+        "la_distinct_words": 650,
+        "la_scale_in_swept_range": false,
+        "interp_recovery_acc": 0.7595238095238095,
+        "interp_chance_empirical": 0.0,
+        "interp_chance_analytic": 0.0,
+        "above_chance": true,
+        "recovery_is_lower_bound": true,
+        "verdict": "ABOVE_CHANCE",
+        "reading": "UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made."
+      }
+    },
+    "luvian-hittite": {
+      "syllabic_analog": false,
+      "is_primary_linear_a_analog": false,
+      "full_n_gold": 59,
+      "sizes_swept": [
+        30,
+        44,
+        59
+      ],
+      "curve": [
+        {
+          "size": 30,
+          "recovery_mean": 0.275,
+          "recovery_std": 0.1516117116555021,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.0339080459770115,
+          "mean_signs_per_word": 6.170082010958515,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 44,
+          "recovery_mean": 0.4318181818181818,
+          "recovery_std": 0.016070608663330613,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.02312367864693446,
+          "mean_signs_per_word": 6.244452172760996,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        },
+        {
+          "size": 59,
+          "recovery_mean": 0.461864406779661,
+          "recovery_std": 0.014053494874387297,
+          "n_seeds_done": 4,
+          "chance_floor_analytic": 0.017241379310344827,
+          "mean_signs_per_word": 6.144329896907217,
+          "all_converged": false,
+          "recovery_is_lower_bound": true
+        }
+      ],
+      "linear_a_locator": {
+        "la_distinct_words": 650,
+        "la_scale_in_swept_range": false,
+        "interp_recovery_acc": 0.461864406779661,
+        "interp_chance_empirical": 0.0,
+        "interp_chance_analytic": 0.0,
+        "above_chance": true,
+        "recovery_is_lower_bound": true,
+        "verdict": "ABOVE_CHANCE",
+        "reading": "UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made."
+      }
+    }
+  },
+  "headline": {
+    "primary_benchmark": "linearb-greek",
+    "linear_a_locator": {
+      "la_distinct_words": 650,
+      "la_scale_in_swept_range": true,
+      "interp_recovery_acc": 0.04438405797101449,
+      "interp_chance_empirical": 0.0,
+      "interp_chance_analytic": 0.0,
+      "above_chance": false,
+      "recovery_is_lower_bound": true,
+      "verdict": "AT_FLOOR_LOWER_BOUND",
+      "reading": "At floor, but the recovery is a LOWER BOUND (under-converged CSA) \u2014 NOT a definitive sufficiency verdict; re-run at full annealing budget before reading it. UPPER BOUND. Every benchmark here is a KNOWN cognate-language pair; the recovery algorithm is handed a real cognate signal. Linear A has NO known cognate language, so its real recoverability at any corpus size is STRICTLY WORSE than these curves. Read only two ways: (1) if the curve is AT the chance floor at Linear-A scale, Linear A is DEFINITIVELY below the information-sufficiency threshold (even a perfect cognate would not save it); (2) if the curve is ABOVE chance at Linear-A scale, size is not the blocker \u2014 cognate-absence is \u2014 and this is NOT a decipherability claim. Site/genre fragmentation is NOT matched, making the bound even more generous. No phonetic claim is made."
+    },
+    "note": "Known-answer UPPER BOUND: the syllabic analog (Linear B \u2192 Greek) is the closest structural match to Linear A but WITH a real cognate signal Linear A lacks. At-floor at Linear-A scale \u21d2 information-insufficient; above-chance \u21d2 the binding constraint is identifiability, not corpus size. Never a decipherability claim."
+  }
+}
