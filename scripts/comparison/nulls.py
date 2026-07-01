@@ -146,8 +146,8 @@ def within_form_permutation(forms: Sequence[str], seed: int = 0) -> List[str]:
 # Convenience: build the full null distribution of a held-out statistic
 # --------------------------------------------------------------------------- #
 def null_distribution(stat_fn, forms: Sequence[str], candidate: Sequence[str],
-                      seed: int = 0, n_packard: int = 32, n_random: int = 32,
-                      n_within: int = 32) -> Dict[str, List[float]]:
+                      seed: int = 0, n_packard: int = 100, n_random: int = 100,
+                      n_within: int = 100) -> Dict[str, List[float]]:
     """Compute the null distribution of a held-out statistic under all three null generators.
 
     ``stat_fn(heldout_forms, candidate_lexicon) -> float`` (see lexstat.s_lex). Returns a dict of

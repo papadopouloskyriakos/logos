@@ -47,7 +47,8 @@ from scripts.comparison import phonostat, morphostat, searchlog, litindex  # noq
 
 METRIC_VERSION = "verdict-v1"          # bump when grade semantics / gate clauses change
 DSR_GATE = 0.95                        # §E DSR threshold
-N_FAKE_DEFAULT = 16                    # L_fake canary instances for the headline null distribution
+N_FAKE_DEFAULT = 300                   # P1.4: L_fake canary instances for the headline null distribution
+                                       # (the corrected-margin/Cornish-Fisher bar is estimated from these)
 EPS_DEFAULT = 0.25                     # normalized-edit-distance epsilon for S_lex
 _NORM = NormalDist()                   # Φ for the §B.3 order-stat DSR (reported/secondary per F.1)
 

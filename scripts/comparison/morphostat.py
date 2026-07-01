@@ -38,9 +38,11 @@ Pure numpy/stdlib, deterministic (seeded). The LLM never grades; this is arithme
 """
 from __future__ import annotations
 
+import math
 import os
 import sys
 from collections import Counter
+from statistics import NormalDist
 from typing import Dict, List, Optional, Sequence, Tuple, Union
 
 import numpy as np
@@ -236,7 +238,7 @@ def s_morph(heldout_by_inscription: HeldOut,
             min_inscriptions: int = 3,
             min_affixes: int = 2,
             min_stems: int = 2,
-            n_null: int = 64,
+            n_null: int = 1000,
             seed: int = 0,
             z_threshold: float = 2.0) -> Dict[str, object]:
     """S_morph — deflated recurring-morphology score with the F.1 no-power escape.
@@ -290,11 +292,25 @@ def s_morph(heldout_by_inscription: HeldOut,
         null_mean = float(np.mean(null_scores))
         null_std = float(np.std(null_scores, ddof=1)) if len(null_scores) > 1 else 0.0
     else:
+        null_scores = []
         null_mean = 0.0
         null_std = 0.0
 
     z = (score - null_mean) / null_std if null_std > 1e-12 else 0.0
     deflated = max(0.0, score - null_mean)
+    # P1.5: EXACT Monte-Carlo rank p-value (Phipson & Smyth 2010 add-one) is the significance DECISION,
+    # replacing the normal-approximation z-test. z is retained as a REPORTED diagnostic. p_rank_se is
+    # the Monte-Carlo uncertainty of the rank estimate, sqrt(p(1-p)/B), over B = n_null draws. The
+    # threshold alpha is calibrated to the one-sided z_threshold (z=2.0 -> alpha ~= 0.02275) so the
+    # decision point is preserved but computed WITHOUT any normal-approximation.
+    B = len(null_scores)
+    if B > 0:
+        p_rank = (sum(1 for s in null_scores if s >= score) + 1) / (B + 1)
+        p_rank_se = math.sqrt(max(p_rank * (1.0 - p_rank), 0.0) / B)
+    else:
+        p_rank = 1.0
+        p_rank_se = 0.0
+    alpha = 1.0 - NormalDist().cdf(z_threshold)
 
     result: Dict[str, object] = {
         "score": float(score),
@@ -302,6 +318,10 @@ def s_morph(heldout_by_inscription: HeldOut,
         "null_std": null_std,
         "deflated": float(deflated),
         "z": float(z),
+        "p_rank": float(p_rank),
+        "p_rank_se": float(p_rank_se),
+        "alpha": float(alpha),
+        "n_null": int(B),
         "n_inscriptions": m,
         "n_affixes": n_affixes,
         "n_heldout_forms": n_forms,
@@ -335,18 +355,20 @@ def s_morph(heldout_by_inscription: HeldOut,
     # The corpus CAN support the test -> has_power=True regardless of the candidate's outcome.
     result["has_power"] = True
 
-    if z < z_threshold:
+    if p_rank > alpha:
         # tested and NEGATIVE: the candidate's affixes do not productively recur above chance here.
         # This is a REAL low score (has_power is True), NOT the no-power escape — distinct on purpose.
-        result["reason"] = (f"observed recurrence indistinguishable from null (z={z:.2f} < "
-                            f"{z_threshold:.2f}): the candidate's affixes do not productively recur "
-                            f"above chance — a real negative (has_power=True, is_significant=False).")
+        result["reason"] = (f"observed recurrence indistinguishable from null (exact rank p={p_rank:.4f} "
+                            f"± {p_rank_se:.4f} > alpha={alpha:.4f}, z={z:.2f}): the candidate's affixes "
+                            f"do not productively recur above chance — a real negative "
+                            f"(has_power=True, is_significant=False).")
         return result
 
     result["is_significant"] = True
     result["is_powered"] = True
     result["reason"] = (f"powered: L affix inventory recurs productively across {m} independent "
-                        f"inscriptions at z={z:.2f} ≥ {z_threshold:.2f} above the within-form null.")
+                        f"inscriptions at exact rank p={p_rank:.4f} ± {p_rank_se:.4f} ≤ alpha={alpha:.4f} "
+                        f"(z={z:.2f}) above the within-form null.")
     return result
 
 

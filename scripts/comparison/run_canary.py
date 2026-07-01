@@ -195,7 +195,7 @@ def load_gold(path: str = GOLD_COG) -> Tuple[List[str], List[str], List[Tuple[st
 # --------------------------------------------------------------------------- #
 # The self-validation
 # --------------------------------------------------------------------------- #
-def run(n_fake: int = 16, eps_grid: Sequence[float] = (0.15, 0.20, 0.25, 0.30),
+def run(n_fake: int = 300, eps_grid: Sequence[float] = (0.15, 0.20, 0.25, 0.30),
         base_seed: int = 0, gold_path: str = GOLD_COG,
         heldout_frac: float = 0.5, max_heldout: int = 800,
         hebrew_lexicon_path: Optional[str] = BHSA_LEX_UTF8) -> dict:
@@ -341,7 +341,7 @@ def run(n_fake: int = 16, eps_grid: Sequence[float] = (0.15, 0.20, 0.25, 0.30),
                 return lexstat.s_lex(h, L, _e)
             null_scores = nulls.null_distribution(
                 _stat, uga_eval, heb_unique, seed=base_seed,
-                n_packard=8, n_random=8, n_within=8)
+                n_packard=100, n_random=100, n_within=100)   # P1.5: 300-draw chance baseline (was 24, too thin)
             null_all = np.concatenate([null_scores["packard"], null_scores["random_lexeme"],
                                        null_scores["within_form"]])
             row.update({
@@ -477,7 +477,7 @@ def _fmt(report: dict) -> str:
 def main(argv: Optional[Sequence[str]] = None) -> int:
     import argparse
     p = argparse.ArgumentParser(description="L_fake canary self-validation")
-    p.add_argument("--n-fake", type=int, default=16, help="number of L_fake instances")
+    p.add_argument("--n-fake", type=int, default=300, help="number of L_fake instances (>=300: the corrected-margin bar is the headline number)")
     p.add_argument("--eps", nargs="+", type=float, default=[0.15, 0.20, 0.25, 0.30])
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--gold", default=GOLD_COG)
