@@ -53,18 +53,17 @@ def run(B=500, N_EFF=100, seed=0):
         verdicts[g["gate_verdict"]] += 1
         grads += (g["gate_verdict"] == "GRADUATE")
     rate = grads / B
-    # rule-of-three style 95% upper bound when zero events
-    import math
-    if grads == 0:
-        hi = 1 - 0.05 ** (1 / B)
-    else:
-        p = rate; hi = p + 1.96 * math.sqrt(p * (1 - p) / B)
+    # one-sided exact Clopper-Pearson 95% upper bound (Beta-quantile inversion of the binomial)
+    from scipy.stats import beta
+    hi = float(beta.ppf(0.95, grads + 1, B - grads)) if grads < B else 1.0
     out = {"B": B, "N_eff": N_EFF, "false_graduations": grads,
-           "false_graduation_rate": round(rate, 5), "upper95": round(hi, 5),
+           "false_graduation_rate": round(rate, 5),
+           "clopper_pearson_onesided_95_upper": round(hi, 5),
            "verdict_breakdown": dict(verdicts)}
     print(f"B={B} trials, each cherry-picking best-of-{N_EFF} random null candidates; N_eff instrumented={N_EFF}")
     print(f"gate_verdict breakdown: {dict(verdicts)}")
-    print(f"REALIZED FALSE-GRADUATION RATE = {grads}/{B} = {rate:.4f}  (95% upper bound {hi:.4f})")
+    print(f"REALIZED FALSE-GRADUATION RATE = {grads}/{B} = {rate:.4f}  "
+          f"(one-sided exact Clopper-Pearson 95% upper = {hi:.5f} = {hi*100:.3f}%)")
     Path("results").mkdir(exist_ok=True)
     json.dump(out, open("results/gate_null_calibration.json", "w"), indent=2)
     print(" -> results/gate_null_calibration.json")
