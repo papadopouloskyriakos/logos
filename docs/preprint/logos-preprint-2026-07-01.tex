@@ -77,23 +77,24 @@ instrument for measuring it: a small corpus, an unknown language, and a
 vast space of candidate readings let an analyst ``translate'' almost
 anything, with internal consistency standing in for confirmation. The
 canonical absurdity --- ``proving'' English is Semitic by cherry-picking
-root matches --- recurs, unpaid, whenever multiplicity goes unaccounted.
-The field's flagship survey enumerates fifteen challenges, all
-properties of the object and its data; none concern overfitting,
-multiple testing, false-positive control, or contamination. We frame
-that methodological axis, modestly, as a candidate sixteenth challenge
-and build machinery for it: a falsification-first, decontaminated
-inference framework that treats every positive as guilty until proven
-innocent. Four defences are enforced --- a fabricated-language canary
-supplying a false-positive floor, multiple-comparison deflation over
-signs, roots, and families tried, a literature index separating
-published from literature-unseen signs, and pre-registration with a
-held-out gate graded mechanically rather than by the proposing model.
-This is a methods paper; we assert no decipherment. Linear A is worked
-as the honest null: the binding constraint is identifiability, not
-corpus size or effort. We report a body of pre-registered nulls with
-their borderline cases named, and analyse the June-2026 *301 ``cracked''
-claim as a worked failure case. The artifact is open and archived
+root matches --- recurs whenever the many comparisons a reading was
+selected from go uncounted. The field's flagship survey enumerates
+fifteen challenges, all properties of the object and its data; none
+concern overfitting, multiple testing, false-positive control, or
+contamination. We frame that methodological axis, modestly, as a
+candidate sixteenth challenge and build machinery for it: a
+falsification-first, decontaminated inference framework that treats
+every positive as guilty until proven innocent. Four defences are
+enforced --- a fabricated-language canary supplying a false-positive
+floor, multiple-comparison deflation over signs, roots, and families
+tried, a literature index separating published from literature-unseen
+signs, and pre-registration with a held-out gate graded mechanically
+rather than by the proposing model. This is a methods paper; we assert
+no decipherment. Linear A is worked as the honest null: the binding
+constraint is identifiability, not corpus size or effort. We report a
+body of pre-registered nulls with their borderline cases named, and
+analyse the June-2026 *301 ``cracked'' claim as a worked failure case.
+The artifact is open and archived
 (github.com/papadopouloskyriakos/logos; Zenodo concept DOI
 10.5281/zenodo.21087572).
 
@@ -174,17 +175,17 @@ calibrated null --- what the corpus can and cannot support --- is itself
 the deliverable. The working conclusion on current data is that the
 binding constraint on Linear A is \textbf{identifiability}, not corpus
 size or effort: there is no known related language to map onto, the
-multiplicity of candidate readings is unpaid, and the sign inventory is
-mixed and partly lossy. A lossy, non-injective sign-to-sound channel
-need not admit a decipherment at any corpus size, so we make no claim
-that ``there is enough text to pin a reading''; the rigorous
-demonstration of \emph{that} constraint is the result the field can use.
-The June-2026 AI-assisted ``Linear A cracked'' claim --- reading the
-\texttt{\textbackslash{}*301}-anchored libation verb as an extinct
-Semitic form --- serves throughout as a worked example of exactly these
-failure modes, analysed from its public, archived presentation as a
-claim, not a person, and neither reproducible nor held-out validated.
-The artifact is open and archived
+multiple-testing burden of candidate readings goes uncorrected, and the
+sign inventory is mixed and partly lossy. A lossy, non-injective
+sign-to-sound channel need not admit a decipherment at any corpus size,
+so we make no claim that ``there is enough text to pin a reading''; the
+rigorous demonstration of \emph{that} constraint is the result the field
+can use. The June-2026 AI-assisted ``Linear A cracked'' claim ---
+reading the \texttt{\textbackslash{}*301}-anchored libation verb as an
+extinct Semitic form --- serves throughout as a worked example of
+exactly these failure modes, analysed from its public, archived
+presentation as a claim, not a person, and neither reproducible nor
+held-out validated. The artifact is open and archived
 (github.com/papadopouloskyriakos/logos; Zenodo concept DOI
 10.5281/zenodo.21087572).
 
@@ -203,9 +204,9 @@ limitations, and conclusion.
 \hypertarget{related-work}{%
 \subsection{2. Related work}\label{related-work}}
 
-\hypertarget{the-survey-spine-and-its-named-but-unfilled-cell}{%
-\subsubsection{2.1 The survey spine and its named-but-unfilled
-cell}\label{the-survey-spine-and-its-named-but-unfilled-cell}}
+\hypertarget{position-relative-to-the-survey-taxonomy}{%
+\subsubsection{2.1 Position relative to the survey
+taxonomy}\label{position-relative-to-the-survey-taxonomy}}
 
 The reference frame for computational work on the Bronze Age Aegean
 scripts is the systematic review of Braović, Krstinić, Štula and Ivanda
@@ -230,8 +231,8 @@ with Gelb and Whiting's typology, as a Type III script (unknown script
 \emph{and} unknown language) whose ``necessary validation'' is
 ``altogether impossible,'' yet nowhere treats how a proposed match is to
 be \emph{deflated} for the multiplicity it was selected from or
-separated from a false positive. Two field surveys, the same
-named-but-unfilled axis. We do not score this against either as an
+separated from a false positive. Two field surveys, the same unfilled
+methodological axis. We do not score this against either as an
 oversight: their challenges are properties of the object and its data
 --- an unknown language, a small dataset, allographic variation, missing
 parallel text --- whereas the axis logos foregrounds is a property of
@@ -384,7 +385,13 @@ formula word copied across inscriptions scores zero. After that fix, its
 measured false-positive rate on within-form-shuffled corpora was
 \textbf{3.0\% (6/200; Wilson 95\% CI {[}1.4, 6.4{]}\%)}, consistent with
 the nominal one-sided \emph{z} ≥ 2 rate (≈ 2.3\%) within sampling error.
-Power was \textbf{100\% (50/50)} at a single strong planted-affix
+We flag this explicitly as an \textbf{indicative calibration check, not
+the operative gate}: a 6/200 estimate is too coarse to certify an α =
+0.01 threshold on its own, and it is reported only to show the detector
+is not grossly mis-calibrated at the nominal level. The graduation gate
+does not rest on it --- it applies the order-statistic bar over the far
+larger permutation and candidate counts the deflation machinery tracks
+(§3). Power was \textbf{100\% (50/50)} at a single strong planted-affix
 strength --- a saturated point, not a full sensitivity curve (contrast
 the phonology power curve, §7).
 
@@ -638,24 +645,27 @@ right, but that a \emph{structural} reading needing no sound-value for
 *301 already accounts for the data the phonetic claim is invoked to
 explain.
 
-\textbf{(c) Strongest: the morphology contradicts the assigned family.}
-The claim's own table draws the verb as concatenative and
-prefix-stacking --- {[}prefix A ``I''{]} {[}stem-morpheme TA{]}
-{[}stem-vowel I{]} {[}root *301{]} --- i.e.~an \textbf{agglutinative}
-form. Semitic morphology is non-concatenative (root-and-pattern); a
-prefix-stacked agglutinative verb is its opposite, so the claim is
-internally incoherent \emph{from its own figure}, with no
-give-versus-dwell adjudication required. This is corroborated from both
-directions in the primary literature. Davis (2013, p.~38 n.~13)
-characterises i-*301's morphology as ``neither IE nor Afroasiatic'' ---
-and Semitic \emph{is} Afroasiatic, so a decade earlier the primary
-description already found \textbf{no Afroasiatic (hence no Semitic)
+\textbf{(c) The primary descriptions of this form's morphology do not
+support the Semitic label.} The claim's own table segments the verb as
+prefix-stacking and agglutinative --- {[}prefix A ``I''{]}
+{[}stem-morpheme TA{]} {[}stem-vowel I{]} {[}root *301{]}. We
+deliberately do \textbf{not} rest on an \emph{a-priori} typological
+contradiction here, and we retract the earlier draft's claim that a
+prefix-stacked verb is ``internally incoherent'' with a Semitic reading:
+Semitic verbal morphology includes productive prefix conjugations, so a
+prefix on the verb is not by itself un-Semitic. The point is empirical,
+not typological, and it comes from the primary literature. Davis (2013,
+p.~38 n.~13) characterises i-*301's morphology as ``neither IE nor
+Afroasiatic'' --- and Semitic \emph{is} Afroasiatic, so a decade earlier
+the primary description already found \textbf{no Afroasiatic
 morphological signature} in this very form. (We rest on what the
 footnote states --- the absence of an Afroasiatic signature --- not on a
 stronger ``ruled out'' than a hedged footnote can bear.) Independently,
 Salgarella (2025, §8) concludes Minoan is agglutinative (after Duhoux
-1978) and a language isolate. The claim's own segmentation thus supports
-the isolate typology it contradicts by label.
+1978) and a language isolate. The claim's own segmentation is thus
+consistent with the isolate typology, while the specific Semitic
+assignment finds no morphological support in the primary descriptions of
+the form.
 
 \textbf{The free-parameter receipt.} The decisive point for
 identifiability is that *301 has no cross-script anchor: in the claim's
@@ -676,8 +686,8 @@ reported next to every claim, and the operative graduation clause ---
 the order-statistic bar over exactly that multiplicity --- is one a
 hand-fitted value cannot clear). The binding obstacle is not corpus size
 but identifiability --- no known cognate language to constrain the
-assignment, unpaid multiplicity, and a sign whose value is chosen rather
-than anchored.
+assignment, uncorrected multiplicity, and a sign whose value is chosen
+rather than anchored.
 
 Read against Section 3, the claim instantiates two distinct failure
 modes at once. It is \textbf{narrative capture} --- the table's
@@ -737,34 +747,33 @@ all word-\emph{tokens}, median and mode 1, with 76.1\% of word-tokens at
 ``bigram order'' are statistically indistinguishable. The premise
 reconciles with Fuls's 3.3-sign figure once the denominator is matched:
 Fuls (2015:57, §6.5) computes the mean over a word \emph{list} of ``554
-complete sign sequences, where duplicates are reduced to one'' (GORILA /
-Godart and Olivier 1985; Timm 2008) --- i.e.~over distinct word
-\emph{types}, not tokens. Restricting our corpus to distinct multi-sign
-types likewise recovers 3.07; the token vs.~type denominator is the
-whole discrepancy. We note one tension worth flagging rather than
-burying: Fuls reads the 3.3-sign length, via his exponent-to-word-length
-regression, as evidence that Minoan is \emph{polysynthetic} (rich
-affixation); our direct morphology test finds the apparent affixation
-bigram-reproducible with no power, so it does \textbf{not} corroborate a
-rich-morphology reading --- the word-length typology and the direct null
-point opposite ways, and we report the null. This bigram free-rider is
-one of the would-be confounds the machinery has caught and reported as a
-null rather than a finding. One validation this null still lacks --- and
-the first item of the planned revision --- is a \textbf{positive
-control}: metrology and phonology (§7.1--7.2) each demonstrate their
-detector fires on a planted signal, but the morphology bigram-floor test
-has not yet been shown to recover \emph{known} affixation, so ``no power
-on Linear A'' cannot yet be cleanly separated from ``the floor is too
-strong.'' The direct control is the identical bigram-floor test on
-\textbf{Mycenaean Greek (Linear B)}, whose longer words carry
-uncontested inflectional morphology; the DĀMOS Linear-B corpus ingested
-for §7.3 (13,562 wordforms) now makes it runnable. Our short-word
-argument makes a falsifiable prediction there --- the test \emph{should}
-regain power on Linear B --- which, if borne out, would establish the
-Linear A result as a short-word / low-power situation rather than a
-claim that Minoan lacks morphology; until that control is run we report
-the Linear A outcome strictly as \emph{no power}, not as evidence
-against affixation.
+complete sign sequences, where duplicates are reduced to one'' (GORILA;
+Godart and Olivier 1985) --- i.e.~over distinct word \emph{types}, not
+tokens. Restricting our corpus to distinct multi-sign types likewise
+recovers 3.07; the token vs.~type denominator is the whole discrepancy.
+We note one tension worth flagging rather than burying: Fuls reads the
+3.3-sign length, via his exponent-to-word-length regression, as evidence
+that Minoan is \emph{polysynthetic} (rich affixation); our direct
+morphology test finds the apparent affixation bigram-reproducible with
+no power, so it does \textbf{not} corroborate a rich-morphology reading
+--- the word-length typology and the direct null point opposite ways,
+and we report the null. This bigram free-rider is one of the would-be
+confounds the machinery has caught and reported as a null rather than a
+finding. One validation this null still lacks --- and the first item of
+the planned revision --- is a \textbf{positive control}: metrology and
+phonology (§7.1--7.2) each demonstrate their detector fires on a planted
+signal, but the morphology bigram-floor test has not yet been shown to
+recover \emph{known} affixation, so ``no power on Linear A'' cannot yet
+be cleanly separated from ``the floor is too strong.'' The direct
+control is the identical bigram-floor test on \textbf{Mycenaean Greek
+(Linear B)}, whose longer words carry uncontested inflectional
+morphology; the DĀMOS Linear-B corpus ingested for §7.3 (13,562
+wordforms) now makes it runnable. Our short-word argument makes a
+falsifiable prediction there --- the test \emph{should} regain power on
+Linear B --- which, if borne out, would establish the Linear A result as
+a short-word / low-power situation rather than a claim that Minoan lacks
+morphology; until that control is run we report the Linear A outcome
+strictly as \emph{no power}, not as evidence against affixation.
 
 \textbf{A modest segmentation positive.} The word-boundary segmenter is
 a genuine, held-out positive. Under leave-one-site-out cross-validation
@@ -1096,8 +1105,8 @@ Because every benchmark is handed a real cognate signal Linear A lacks,
 any recovery curve is a \textbf{strict upper bound}, readable only two
 ways: at-floor at Linear-A scale ⇒ definitively
 information-insufficient; above-chance ⇒ the binding constraint is
-identifiability --- cognate-absence and unpaid multiplicity over a mixed
-sign inventory --- not corpus size. Neither branch is ever a
+identifiability --- cognate-absence and uncorrected multiplicity over a
+mixed sign inventory --- not corpus size. Neither branch is ever a
 decipherability claim, and neither asserts ``there is enough text.''
 
 \textbf{A retracted result and its correction.} In preparing the full
@@ -1183,26 +1192,24 @@ Introduction, this is a property of inference methodology and
 epistemics, not of the object or its data; it is complementary to, not a
 member of, the fifteen data-and-object obstacles enumerated by Braović
 et al.~(2024), and distinct from the evaluation problem their §6.3
-gestures at. We do not claim that axis is simply absent from the prior
-taxonomy; we claim it is named-but-unfilled, and logos supplies
-mechanical machinery for it.
+gestures at.
 
 \hypertarget{two-named-failure-modes-for-the-methods-literature}{%
 \subsubsection{9.2 Two named failure modes for the methods
 literature}\label{two-named-failure-modes-for-the-methods-literature}}
 
 \textbf{(i) Narrative capture.} Structure says X; the label says the
-desired Y; the label wins. In the June-2026 *301 claim the claim's own
-published table draws a concatenative, prefix-stacking --- hence
-agglutinative --- verb, yet the assigned language family is Semitic,
-whose morphology is non-concatenative (root-and-pattern). The desired
-output (``prayers to a Goddess in a matriarchal society'') operates as a
-fixed prior, so the conclusion conforms to the prior rather than
-emerging from constrained readings. This is distinct from statistical
-overfitting and must be named separately. Notably, the current synthesis
-independently concludes Minoan is agglutinative and a language isolate
-(Salgarella 2025 §8), so the segmentation corroborates the isolate
-typology while contradicting the Semitic label.
+desired Y; the label wins. In the June-2026 *301 claim the published
+table segments an agglutinative, prefix-stacking verb, yet the assigned
+language family is Semitic and the desired output (``prayers to a
+Goddess in a matriarchal society'') operates as a fixed prior, so the
+conclusion conforms to the prior rather than emerging from constrained
+readings. This is distinct from statistical overfitting and must be
+named separately. Notably, the current synthesis independently concludes
+Minoan is agglutinative and a language isolate (Salgarella 2025 §8),
+which the segmentation matches while the Semitic label does not --- the
+mismatch is empirical, between the label and the primary descriptions of
+the form, not an a-priori typological impossibility.
 
 \textbf{(ii) Free parameters exceeding the information floor.} A lexicon
 reported as ``408 terms and counting'' on a fixed corpus has more
@@ -1251,7 +1258,7 @@ unicity distance at all, so ``\(U \ll N\)'' does \textbf{not} license
 the statement that there is enough text to pin a decipherment (this is
 the stance of §4, and §9 now aligns with it). The binding constraint is
 \emph{identifiability}: the absence of a known cognate language to map
-to, an unpaid multiple-testing search burden, and a mixed sign
+to, an uncorrected multiple-testing search burden, and a mixed sign
 inventory. (Note that the \textasciitilde7,400 sign-occurrence figure
 sometimes quoted --- Schoep 2002; Salgarella 2025 §1--3 --- counts a
 different channel than the 5,792 parsed syllable-signs used for U here.)
@@ -1335,8 +1342,8 @@ endorsed by, any of the cited projects or their authors. \#\# References
 \emph{Bibliographic details below are the works cited above; the full,
 continuously-maintained bibliography (including works consulted) lives
 in the repository at \texttt{docs/references.md}. Per-source digests are
-in \texttt{docs/related/}. A small number of entries (marked †) await a
-final page/venue verification.}
+in \texttt{docs/related/}. Works cited only through a secondary source
+are marked ``secondary citation'' at the point of use.}
 
 \begin{itemize}
 \tightlist
@@ -1364,13 +1371,15 @@ final page/venue verification.}
   script. \emph{Journal of Archaeological Science} 125:105214.
   doi:10.1016/j.jas.2020.105214.
 \item
-  Corazza, M., et al.~(2022). \emph{Sign2Vec}: unsupervised
-  deep-learning clustering of the Cypro-Minoan sign repertoire. †
-  \emph{Venue pending verification.}
+  Corazza, M., et al.~(2022). Unsupervised deep learning supports
+  reclassification of the Bronze Age Cypriot writing system
+  (\emph{Sign2Vec\_d}). \emph{PLoS ONE} 17(7):e0269544. DOI
+  \href{https://doi.org/10.1371/journal.pone.0269544}{10.1371/journal.pone.0269544}.
 \item
   Daggumati, S., \& Revesz, P. Z. (2019). Data mining ancient scripts to
-  investigate their relationships (DEXA). † And (2023),
-  \emph{Information} 14(4):227.
+  investigate their relationships. \emph{Proceedings of the 23rd
+  International Database Applications \& Engineering Symposium
+  (IDEAS/DEXA)}. And (2023), \emph{Information} 14(4):227.
 \item
   Davis, B. (2013). Syntax in Linear A: The Word-Order of the `Libation
   Formula'. \emph{Kadmos} 52(1):35--52. doi:10.1515/kadmos-2013-0003.
@@ -1379,35 +1388,38 @@ final page/venue verification.}
   Inscriptions.} Aegaeum 36. Leuven: Peeters.
 \item
   Di Mino, D. (2026). ``Linear A cracked'': A-TA-I-*301-WA-JA as
-  West-Semitic N-W-Y (the June-2026 announcement analysed in §5). †
-  \emph{Widely circulated online; venue/date pending verification. The
-  reference copy of the claim and its table is the archived record
-  carried in the logos artifact (v0.1.0).}
+  West-Semitic N-W-Y (the June-2026 announcement analysed in §5). Online
+  announcement --- no formal venue; analysed here as a public claim,
+  with the timestamped reference copy of the claim and its table carried
+  as the archived record in the logos artifact (v0.1.0).
 \item
   Duhoux, Y. (1978). On the (agglutinative) typology of the Minoan
-  language (as characterised via Salgarella 2025 §8). †
+  language (secondary citation, as characterised in Salgarella 2025 §8).
 \item
   Duhoux, Y. (1992). Gloss of the Linear A libation-formula verb i-*301
-  as ``give/dedicate'' (as adopted by Davis 2013). †
+  as ``give/dedicate'' (secondary citation, as adopted by Davis 2013).
 \item
   Duhoux, Y. (1997). The Linear A locative/allative prefix i-/j-
-  ``to/at'' (as cited in Salgarella 2025 §8). †
+  ``to/at'' (secondary citation, as cited in Salgarella 2025 §8).
 \item
   Ferrara, S., \& Tamburini, F. (2022). Advanced techniques for the
   decipherment of ancient scripts. \emph{Lingue e Linguaggio}
-  2/2022:239--259.
+  21(2):239--259. DOI
+  \href{https://doi.org/10.1418/105964}{10.1418/105964}.
 \item
-  Ferrara, S., Montecchi, B., \& Valério, M. (n.d.). What Is the
-  `Archanes Formula'? Deconstructing and Reconstructing the Earliest
-  Attestation of Writing in the Aegean. † \emph{Year/venue pending
-  verification.}
+  Ferrara, S., Montecchi, B., \& Valério, M. (2021). What is the
+  `Archanes Formula'? Deconstructing and reconstructing the earliest
+  attestation of writing in the Aegean. \emph{Annual of the British
+  School at Athens} 116:43--62. DOI
+  \href{https://doi.org/10.1017/S0068245420000155}{10.1017/S0068245420000155}.
 \item
   Fuls, A. (2015). Classifying undeciphered writing systems.
   \emph{Historische Sprachforschung} 128(1):42--58.
 \item
-  Gelb, I. J., \& Whiting, R. M. (1975). Methods of Decipherment. †
-  \emph{Venue pending verification; the Type 0--III typology is used
-  here via Ferrara and Tamburini (2022).}
+  Gelb, I. J., \& Whiting, R. M. (1975). Methods of decipherment.
+  Secondary citation: the Type 0--III script typology is used here only
+  as characterised in Ferrara and Tamburini (2022, §3.5), not from the
+  original, which we do not cite firsthand.
 \item
   Godart, L., \& Olivier, J.-P. (1976--1985). \emph{Recueil des
   inscriptions en Linéaire A} (GORILA). Études crétoises 21. Paris:
@@ -1432,13 +1444,16 @@ final page/venue verification.}
   Deciphering Undersegmented Ancient Scripts Using Phonetic Prior.
   \emph{Transactions of the ACL} 9:69--81.
 \item
-  Min Eu, G., Xu, R., \& Perono Cacciafoco, F. (2019). Linear A
-  comparison against time-compatible lexical lists. † \emph{Venue
-  pending verification.}
+  Eu, N., Xu, D., \& Perono Cacciafoco, F. (2019). Coding to decipher
+  Linear A: consonantal comparison against time-compatible lexical
+  lists. \emph{Proceedings of the 2019 Pacific Neighbourhood Consortium
+  (PNC) Annual Conference and Joint Meetings}, Singapore.
 \item
-  Packard, D. W. (1974). \emph{Minoan Linear A.} Berkeley: University of
-  California Press. †(page cite for the nine fabricated decipherments
-  pending)
+  Packard, D. W. (1974). \emph{Minoan Linear A.} Berkeley/Los Angeles:
+  University of California Press. (Constructs nine deliberately
+  fabricated control decipherments; the genuine Ventris-value transfer
+  beats their average by \textasciitilde2:1, improving to
+  \textasciitilde3:1 when context-adjusted.)
 \item
   Rendsburg, G. A. (1996). ``Someone Will Succeed in Deciphering
   Minoan'': Cyrus H. Gordon and Minoan Linear A. \emph{Biblical
@@ -1477,20 +1492,19 @@ final page/venue verification.}
   (ed.), \emph{Understanding Relations Between Scripts: The Aegean
   Writing Systems}, 93--110. Oxford: Oxbow.
 \item
-  Tamburini, F. (2025). Coupled simulated annealing for cognate
-  identification in undeciphered scripts (CSA\_OptMatcher), evaluated by
-  the Luo et al.~(2019) accuracy metric. † \emph{Venue/DOI pending; the
-  method is described in §2.3--2.4 and reproduced in the logos artifact,
-  so the baseline is specified independently of this citation.}
+  Tamburini, F. (2025). On automatic decipherment of lost ancient
+  scripts relying on combinatorial optimisation and coupled simulated
+  annealing (CSA\_OptMatcher), evaluated by the Luo et al.~(2019)
+  accuracy metric. \emph{Frontiers in Artificial Intelligence}
+  8:1581129. DOI
+  \href{https://doi.org/10.3389/frai.2025.1581129}{10.3389/frai.2025.1581129}.
+  Code: github.com/ftamburin/CSA\_OptMatcher.
 \item
   Thomas, R. (2020). Some reflections on morphology in the language of
-  the Linear A libation formula. \emph{Kadmos.} †
-\item
-  Timm, T. (2008). Linear A word-list statistics (as cited in Fuls
-  2015:134, 227). † \emph{Full venue pending verification.}
-\item
-  Valério, M. (2007). Analysis of Linear A suffixation (as cited in
-  Salgarella 2025 §8). †
+  the Linear A libation formula. \emph{Kadmos} 59(1--2):1--23. DOI
+  \href{https://doi.org/10.1515/kadmos-2020-0001}{10.1515/kadmos-2020-0001}.-
+  Valério, M. (2007). Analysis of Linear A suffixation (secondary
+  citation, as cited in Salgarella 2025 §8).
 \item
   Ventris, M., \& Chadwick, J. (1953). Evidence for Greek Dialect in the
   Mycenaean Archives. \emph{Journal of Hellenic Studies} 73:84--103.
