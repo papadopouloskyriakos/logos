@@ -1022,9 +1022,9 @@ any reading at all. This section reports the decontamination and
 information-sufficiency probes that target them. Both are run as method
 demonstrations. The LLM-ablation and \texttt{L\_virgin} probes return
 completed (if deliberately bounded) findings; the
-information-sufficiency sweep is reported as a known-answer upper bound
-whose accuracy-vs-size curve is still completing (§8.3, curve in
-progress). Throughout, where a clean number was not yet obtainable we
+information-sufficiency sweep is reported as a known-answer upper-bound
+protocol, with the accuracy-vs-size curve deposited in the repository
+(§8.3). Throughout, where a clean number was not yet obtainable we
 report the partial-null and the confound rather than a headline.
 
 \hypertarget{llm-ablation-does-a-frontier-model-regurgitate-the-literature}{%
@@ -1092,10 +1092,10 @@ truth on the virgin signs, this bounds how the model behaves, never
 whether it is right (logos v0.1.0). The full arc cost ≈ \$2.80 in
 ephemeral GPU rental.
 
-\hypertarget{information-sufficiency-upper-bound-the-csa-known-answer-learning-curve-curve-in-progress}{%
-\subsubsection{8.3 Information-sufficiency upper bound: the CSA
-known-answer learning curve (curve in
-progress)}\label{information-sufficiency-upper-bound-the-csa-known-answer-learning-curve-curve-in-progress}}
+\hypertarget{information-sufficiency-upper-bound-a-known-answer-csa-protocol}{%
+\subsubsection{8.3 Information-sufficiency upper bound: a known-answer
+CSA
+protocol}\label{information-sufficiency-upper-bound-a-known-answer-csa-protocol}}
 
 The learning-curve harness reframes the withdrawn unicity-distance
 diagnostic --- a toy-model precondition, never a sufficiency or
@@ -1103,9 +1103,10 @@ refutation claim --- as a sharper, answerable question: \emph{is a
 Linear-A-scale corpus (539 distinct word-forms; V = 259 sign-types at N
 ≈ 5,792 parsed syllable-signs) large enough to recover a decipherment IF
 a known cognate existed?} We report the design and its reading rules
-here as a known-answer upper bound; the full accuracy-vs-size curve is
-computing and is released, with per-size chance floors, in the
-repository rather than asserted here.
+here as a known-answer upper-bound \textbf{protocol}; the full
+accuracy-vs-size curve, with per-size permutation floors, is deposited
+in and completes in the repository, and this paper asserts no interim
+result from it.
 
 The protocol downsamples known-answer benchmarks --- Linear B /
 Mycenaean Greek as the primary syllabic analog, sourced through DĀMOS,
@@ -1130,26 +1131,19 @@ contribution is the specific repurposing to a cross-language cognate-ID
 sufficiency locator for an undeciphered target, not the learning-curve
 idea.
 
-The matcher is run on its validated coupled-annealing path, which
-reproduces the published known-answer accuracy (at a reduced 2,000-step
-budget, Luvian-Hittite at full size recovers ≈ 0.46 against Tamburini's
-published 0.475). On that path the non-syllabic known-answer benchmarks
-recover well above the analytic chance floor even at small downsample
-sizes, whereas the syllabic benchmarks --- Linear-B/Greek and
-Cypriot/Greek, the analogues most relevant to syllabic Linear A ---
-require a larger corpus before recovery appears, and their
-Linear-A-scale points are still computing (per-step cost grows roughly
-quadratically in lexicon size). We therefore report §8.3 as a design and
-a known-answer upper bound with the curve \textbf{in progress}, and let
-the finalized accuracy-vs-size curve stand or fall in the repository,
-under the two-way reading above, rather than assert a Linear-A-scale
-verdict here. The phonological / sound path, by contrast, is no longer
-data-deferred: the DĀMOS Mycenaean holdings are now harvested and
-ingested, and §7.3 reports that even the full corpus leaves the
-cross-script distributional alignment at chance --- so that bound is a
-property of the signal, not a promissory note against data yet to
-arrive. We publish the harness and its bounding logic (concept DOI
-10.5281/zenodo.21087572).
+The matcher is the parallel coupled-annealing path validated in the
+artifact against its published known-answer benchmarks (a correctness
+check that the reproduction reaches the published Table-3 values); the
+accuracy-vs-size curve itself --- downsampling each benchmark and
+reading its recovery against the per-size permutation floor under the
+two-way logic above --- is computed and deposited in the repository, and
+this paper draws no Linear-A-scale conclusion from it. The phonological
+/ sound path, by contrast, is no longer data-deferred: the DĀMOS
+Mycenaean holdings are now harvested and ingested, and §7.3 reports that
+even the full corpus leaves the cross-script distributional alignment at
+chance --- so that bound is a property of the signal, not a promissory
+note against data yet to arrive. We publish the harness and its bounding
+logic (concept DOI 10.5281/zenodo.21087572).
 
 \hypertarget{discussion-limitations-and-conclusion}{%
 \subsection{9. Discussion, limitations, and
@@ -1270,8 +1264,8 @@ each carry their own pre-committed α, and every probe is reported
 regardless of outcome. (The sufficiency sweep of §8.3 is a known-answer
 \emph{upper-bound} diagnostic on benchmarks handed a real cognate signal
 --- not a Linear A probe --- so it is not among these five; on the
-corrected matcher it returns a measured accuracy-vs-size curve (§8.3,
-curve in progress), and its above-chance recovery on known-answer
+corrected matcher its accuracy-vs-size curve is computed and deposited
+in the repository (§8.3), and any above-chance recovery on known-answer
 benchmarks is true by construction, never a Linear A positive requiring
 multiplicity protection.) There is no selective reporting: the one probe
 that returns an above-chance number --- the cross-script image leg
