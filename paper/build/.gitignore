@@ -1,0 +1,5 @@
+# Ignore LaTeX build intermediates; keep only the two deliverable PDFs.
+*
+!.gitignore
+!logos-arxiv.pdf
+!logos-tacl-anon.pdf
