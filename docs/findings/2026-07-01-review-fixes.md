@@ -134,7 +134,17 @@ the fake-lexicon and null passes through a `ProcessPoolExecutor` (`_parallel_sle
 **bit-identical** to the serial path (fake-recalls and all three null generators), cutting the
 n_fake=300 run to **~5.5 min** on the 20-core box.
 
-## P5 — pre-registration
+## P5 — pre-registration anchor
 
-A signed git tag records the pre-registered code state distinct from any post-hoc result; the tag hash
-is the prereg anchor. <!-- TAG_ROW -->
+A **signed** git tag anchors the reviewed methodology + code state, tamper-evidently, distinct from
+the post-hoc result commits it caps:
+
+- Tag: `review-fixes-2026-07-01` (SSH-signed, ED25519; verifies **Good signature** for
+  `svc-claude@nuclearlighters.net`).
+- Tag object: `859245c5633d7604069fa4311d82ae662e17d146`
+- Anchored commit: `b05f1e5925cf24687d4deb6496288b4fe314d438`
+- Post-hoc result commits capped by the tag: `fa51f4c` (code + docs) and `b05f1e5` (regenerated
+  n_fake=300 canary artifact + diff table).
+
+Verify with `git tag -v review-fixes-2026-07-01`. The signature over the anchored tree is the prereg
+receipt: the gate/canary/null methodology cannot be silently altered after the fact without breaking it.
