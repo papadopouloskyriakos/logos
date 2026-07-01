@@ -301,7 +301,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--dry-run", action="store_true", help="print the cell plan + cost band; compute nothing")
     args = p.parse_args(argv)
     if args.device == "cuda":
-        _install_cuda_mp_compat()                            # CUDA needs spawn; set once for the whole run
+        _install_cuda_mp_compat()                            # his __init__ still set_start_method's; keep it a no-op
+        # His parallel path (__update_state) creates a fresh mp.Pool EVERY step and passes CUDA
+        # tensors across it — which forks a CUDA context and dies ("Cannot re-initialize CUDA in
+        # forked subprocess"). With processes<=1 his annealer takes the SERIAL __update_state_no_par
+        # path (no Pool at all); the GPU already parallelizes each EditDistanceWild energy eval over
+        # the whole lexicon, so serial-over-16-annealers is both correct and fast on the H100.
+        if args.processes > 1:
+            print(f"[cuda] forcing --processes 1 (his parallel Pool forks CUDA tensors; the GPU "
+                  f"parallelizes each energy eval, so serial annealing is the correct CUDA mode)")
+            args.processes = 1
 
     cells = cell_plan(args.benchmarks, args.seeds)
     errors, warnings = preflight(args.device, args.benchmarks)
