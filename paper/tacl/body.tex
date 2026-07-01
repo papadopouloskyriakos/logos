@@ -86,12 +86,11 @@ That the discipline lacks a shared standard here is not our editorializing
 but the field's own assessment. The flagship computational-decipherment
 survey --- \citeauthor{braovic2024}'s \citeyearpar{braovic2024}
 systematic review of Bronze Age Aegean and Cypriot scripts ---
-enumerates fifteen ``major challenges,'' from unknown writing system and
-unknown language to small dataset, incomplete vocabulary, allographs, and
-unavailable parallel data \citep{braovic2024}. Those fifteen are
+enumerates fifteen ``major challenges'' of script, language, and data
+(\S2.1) \citep{braovic2024}. Those fifteen are
 primarily properties of the \emph{object and its data} --- the script,
 the language, the surviving corpus, and the resource/comparison-data
-conditions (the list includes resource and hardware items too). What
+conditions. What
 governs whether a \emph{claimed reading} is believable is a different
 kind of thing: a property of the inference methodology and its
 epistemics --- overfitting, multiple testing, false-positive control,
@@ -106,13 +105,10 @@ logic as a control, and the selective-inference machinery we import
 \emph{consolidate and operationalize} that axis for decipherment, not to
 invent it. It is the methodological axis the object-level taxonomy was
 never meant to cover, and it is distinct from the survey's own
-acknowledged gap --- that on scoring results ``in many cases there is
-nothing to compare them against, and their evaluation remains an open
-problem'' \citep[Sec.~6.3, p.~746]{braovic2024}. That is an
-\emph{evaluation-target} problem (what to measure against); the
-false-positive / multiplicity problem (whether a fitted reading is being
-mistaken for a real one) is separable from it, and it is the latter this
-paper instruments.
+acknowledged evaluation gap (\S2.1) --- an \emph{evaluation-target}
+problem (what to measure against), separable from the false-positive /
+multiplicity problem (whether a fitted reading is being mistaken for a
+real one); it is the latter this paper instruments.
 
 \textbf{Contribution.} We build the machinery for that axis: a
 falsification-first, decontaminated inference framework for testing
@@ -133,9 +129,9 @@ that proposed the reading. The evaluation gap gets a concrete, if
 power-limited, answer: the recurring libation \emph{formula} --- roughly
 50 inscribed objects spread across peak sanctuaries and caves at more
 than five findspots --- supports a natural leave-one-site-out
-cross-validation graded from held-out data. We are explicit that with so
-few formula sites this cross-validation has low statistical power, and we
-report it as such rather than as a decisive test \citep{braovic2024}.
+cross-validation graded from held-out data --- explicitly a
+low-statistical-power test, reported as such rather than as decisive
+(\S2.1; Appendix~A.3) \citep{braovic2024}.
 
 \textbf{This is a methods paper, and Linear A is its worked null.} We do
 not claim a decipherment. The framework is designed to withhold
@@ -158,14 +154,8 @@ the *301-anchored libation verb as an extinct Semitic form --- serves
 throughout as a qualitative illustration of the failure modes the gate is
 designed to detect, analysed from its public, archived presentation as a
 claim, not a person, and neither reproducible nor held-out validated.
-\ifanon
-The artifact is open and archived as an anonymized artifact (code and
-pre-registrations released on acceptance).
-\else
-The artifact is open and archived
-(\url{https://github.com/papadopouloskyriakos/logos}; Zenodo concept DOI
-10.5281/zenodo.21087572).
-\fi
+The artifact is open and archived (\S9.7; Software \& data note,
+following Appendix~D).
 
 \textbf{Roadmap.} Section~2 situates logos against the Braovi\'{c} et al.
 taxonomy and the computational-decipherment lineage, including the
@@ -221,9 +211,8 @@ from overfitting and multiplicity control, and logos addresses it
 separately. Its held-out design is a concrete response --- the libation
 formula recurs across a small set of peak-sanctuary and cave findspots,
 permitting a leave-one-site-out cross-validation adjudicated mechanically
-by \texttt{verdict.py} --- though we flag at the outset that so few
-formula findspots give this particular test low statistical power
-(quantified in Section~8). We locate our components in the survey's own
+by \texttt{verdict.py} --- with the low-power caveat flagged at the
+outset (\S1). We locate our components in the survey's own
 method taxonomy (Sec.~7.1) and, where prior art exists, defer to it
 rather than claim novelty.
 
@@ -287,15 +276,8 @@ Section~3. logos's empty cell is the intersection none of these occupy: a
 falsification-first, decontaminated inference framework that couples a
 published cognate-ID matcher \citep[reporting the Luo 2019
 metric]{tamburini2025} with preregistration, multiplicity deflation and
-mechanical held-out verdicts, released openly
-\ifanon
-(as an anonymized artifact; code and pre-registrations released on
-acceptance),
-\else
-(\url{https://github.com/papadopouloskyriakos/logos}; Zenodo concept DOI
-10.5281/zenodo.21087572),
-\fi
-with Linear A worked as the honest null rather than a claimed crack.
+mechanical held-out verdicts, released openly (\S9.7), with Linear A
+worked as the honest null rather than a claimed crack.
 
 \section{Methods: the discipline harness}
 
@@ -307,30 +289,16 @@ from persisted artifacts rather than from any model's narration of its own
 success. Model-derived signals --- LLM theses, learned embeddings,
 cognate-matcher assignments --- enter capped at confidence $\le 0.75$,
 structurally unable to \emph{decide} a verdict; only
-mechanically-verified held-out reads rank higher. The design targets the
-false-positive / multiplicity / contamination axis that
-\citet{braovic2024}'s fifteen-challenge taxonomy names but leaves
-unfilled (\S1--2).
+mechanically-verified held-out reads rank higher (\S1--2).
 
 \subsection{Pre-registration}
 
 Before any model is built or run, the predictions are frozen. The
 morphology pre-registration fixes, for each hypothesis, the claimed affix,
-its source, the falsifiable test, and the acceptance threshold --- with
-the file's git commit ---
-\ifanon
-externally anchored by the immutable artifact deposit ([artifact DOI
-withheld for review])
-\else
-externally anchored by the immutable Zenodo deposit (concept DOI
-10.5281/zenodo.21087572)
-\fi
---- serving as the pre-specification timestamp, so the model cannot be
-tuned to them after the fact. Each pre-registered affix (drawn from
-\citet{thomas2020} and Duhoux/Val\'{e}rio) must recur on $\ge$2 distinct
-stems across independent inscriptions, above a within-form permutation
-null, and survive multiplicity correction at a target of \emph{p} $<
-0.01$ corrected. Outcomes are enumerated in advance --- CONFIRM, EXTEND,
+its source, the falsifiable test, and the acceptance threshold, externally
+anchored so the model cannot be tuned to them after the fact (the anchoring
+mechanics and the per-affix acceptance criteria are given in
+Appendix~A.1). Outcomes are enumerated in advance --- CONFIRM, EXTEND,
 REFUTE/NULL, or NO POWER --- so that a negative is a publishable result,
 not a failed experiment. Any change is a new dated pre-registration,
 never an edit.
@@ -341,18 +309,13 @@ Internal fit on the derivation set is treated as no evidence. Every match
 rate is deflated for everything tried: \texttt{n\_hypotheses} $\times$
 \texttt{n\_signs} $\times$ \texttt{n\_roots}. The nulls are pipeline-level
 --- a frequency-banded permutation null (after \citealp{packard1974}) and
-an Euler-$\gamma$ order statistic (\texttt{expected\_max\_order\_stat}($\mu_0,
-\sigma_0, N$)) that gives the bar a normal-approximation to the maximum
-over $N$ candidates tried that the best should clear by chance.
-Multiplicity is instrumented, not hand-passed: a deduplicating
-\texttt{SearchLog} reports the exact distinct-candidate count
-\texttt{n\_trials} (the deduplicated count of candidate readings attempted)
-a scanner produces (invariant 12). The strong structural statistic,
+the order-statistic bar of \S3.4 (implementation detail in Appendix~D).
+Multiplicity is instrumented, not hand-passed, by a deduplicating
+\texttt{SearchLog} (invariant 12; Appendix~D). The strong structural statistic,
 \texttt{S\_morph}, earns credit only through a productivity gate --- an
 affix must attach to $\ge$2 distinct residual stems, so a single formula
-word copied across inscriptions scores zero. (Its within-form-shuffle
-false-positive calibration and its saturated-power point are reported in
-Appendix~A.2.)
+word copied across inscriptions scores zero (calibration in
+Appendix~A.2, Table~\ref{tab:calib}).
 
 \subsection{Decontamination}
 
@@ -369,11 +332,12 @@ never count as discovery. The index partitions the sign inventory into
 \texttt{L\_not\_indexed} (untouched). Discovery claims may rest only on
 \texttt{L\_not\_indexed} held-out success, since regurgitation can only
 return what is in the literature. (The conservative seed, the adversarial
-population, and the current census count are given in Appendix~C.5.)
+population, and the census are given in Appendix~C.5,
+Table~\ref{tab:canary}.)
 
 \textbf{The \texttt{L\_fake} canary} is a phonotactically-plausible
-invented lexicon, calibrated to a real candidate language's phoneme
-frequencies, root-template structure, and lexicon size, but never
+invented lexicon, calibrated to a real candidate language
+(Appendix~C.5), but never
 published and never in any training corpus. Running the full pipeline
 against it yields a \textbf{generator-conditional} false-positive floor:
 any signal it produces is definitionally spurious, and memorisation cannot
@@ -386,9 +350,7 @@ process. (Its divergence from the calibration targets and the root-template
 total-variation-distance mechanics are reported in Appendix~C.5.)
 
 \textbf{LLM-ablation} compares the pipeline with and without the model's
-proposals to isolate contamination --- the remaining gate on the
-contamination number, matching a model's cognate glosses against the
-indexed lexical claims.
+proposals to isolate contamination (procedure in Appendix~C.1).
 
 \subsection{The held-out graduation gate}
 
@@ -403,11 +365,9 @@ approximation} in which \textbf{$n =$ \texttt{n\_trials} is the \emph{count of
 candidates the search tried}, not an estimated number of independent
 hypotheses}. The explicit formula and its Gaussian/independence assumptions
 are given in Appendix~D; the error-control claim is carried not by the formula
-but by the direct empirical calibration below, and holds conditional on the
-tested null-generating process, not as a universal guarantee. This is a direct
+but by the direct empirical calibration below. This is a direct
 correction for selection across the hypothesis
-space, and it fails closed on a degenerate null ($\sigma_0 \le 0
-\Rightarrow E[\max] = \mu_0 \Rightarrow$ no graduation). The gate emits one
+space, and it fails closed on a degenerate null (Appendix~D). The gate emits one
 of four mechanical verdicts: \textbf{GRADUATE} (every clause holds and the
 search multiplicity was instrumented), \textbf{REJECT} (a clause failed, or
 the statistic sits below the corrected bar), \textbf{NULL\_PUBLISHED} (the
@@ -424,30 +384,26 @@ substantive clauses but on an un-instrumented search $\rightarrow$
 \textbf{INCOMPLETE} (fail-closed); else an observed statistic not exceeding
 the null mean (indistinguishable from the \texttt{L\_fake} control)
 $\rightarrow$ \textbf{NULL\_PUBLISHED}; else $\rightarrow$ \textbf{REJECT}.
-In the calibration below, the instrumented best-of-100 nulls partition as
-3 GRADUATE / 10 NULL\_PUBLISHED / 487 REJECT (no INCOMPLETE, the search
-being instrumented). We calibrate the refusal rule directly: under the
+We calibrate the refusal rule directly: under the
 tested best-of-100 random-map null --- an analyst trying 100 random
 candidate maps and submitting the best --- 3 of 500 replicates graduated,
 an observed false-graduation rate of 0.6\% (one-sided exact
 Clopper--Pearson 95\% upper bound $\approx 1.54\%$), with 487/500 rejected
-outright and 10 published as calibrated nulls
-(\texttt{scripts/\allowbreak gate\_null\_calibration.py}); this is an empirical
+outright and 10 published as calibrated nulls (Appendix~D); this is an
+empirical
 error-control result conditional on that null-generating process, not a
 universal guarantee. A second
 pre-registered clause, \textbf{\texttt{generalizes\_to\_not\_indexed}},
 requires the reading to recover literature-unseen (\texttt{L\_not\_indexed})
-signs above a pre-committed threshold and on a minimum number of distinct
-such signs --- so reproducing already-published values cannot by itself
-graduate a claim, and the clause fails closed when no threshold or no
-supported not-indexed sign is present. The candidate must separate from
-the \texttt{L\_fake} negative-control distribution, its corrected margin
-must be cleared, and the observed statistic must beat the order-statistic
-bar over the Packard/random-lexeme multiplicity null. These are
+signs --- so reproducing already-published values cannot by itself
+graduate a claim; the clause fails closed (its pre-committed thresholds
+are in Appendix~D). The remaining pre-registered clauses ---
+\texttt{L\_fake} separation, the corrected margin, and the
+order-statistic bar over the multiplicity null --- are conjoined as
+specified in Appendix~D. These are
 \emph{gate parameters} --- pre-registered
 choices for this corpus, not universal constants. Validation is
-leave-one-site-out, not ordinary \emph{k}-fold, because the libation
-formula induces formulaic dependence across inscriptions. The gate is
+leave-one-site-out, not ordinary \emph{k}-fold (Appendix~A.1). The gate is
 AND-monotone --- clauses can only make it stricter --- so hardening never
 lets a previously-failing reading graduate.
 
@@ -456,8 +412,7 @@ lets a previously-failing reading graduate.
 The invariant across every gate: verdicts are computed from persisted
 rows, never from a model's account of its own outcome. The verdict writer
 is grep-clean of any model call and is the sole writer of the verdicts
-table. (A self-audit log of confounds this discipline caught inside logos's
-own builds is in Appendix~D.)
+table.
 
 \begin{table*}[t]
 \centering
@@ -501,10 +456,9 @@ corpus makes a reading identifiable.
 
 \textbf{The corpus.} The current authoritative synthesis
 \citep{salgarella2025} gives an envelope of roughly 2,500 total Linear A
-finds, of which about 1,400 are readable inscriptions, drawn from 56
-findplaces spanning ca. 1800--1450 BCE (Middle Minoan II--Late Minoan IB)
-but overwhelmingly concentrated in the single LM IB destruction horizon
-\citep[\S1--3, \S6]{salgarella2025}. That near-single horizon is why a
+finds, of which about 1,400 are readable inscriptions, overwhelmingly
+concentrated in the single LM IB destruction horizon (findplace and
+dating detail in Appendix~C.4). That near-single horizon is why a
 site-held-out split, not a chronological one, is the only realistic
 partition. No bilingual text has ever been found
 \citep[\S8]{salgarella2025}.
@@ -512,18 +466,16 @@ partition. No bilingual text has ever been found
 \textbf{Corpus sizing and the unicity computation (numeric detail in
 Appendix~C.4).} The recurring sign-count confusion resolves into several
 distinct sign-count denominators and two occurrence channels that must be
-kept distinct (enumerated in Appendix~C.4). On the narrower parsed
+kept distinct (Table~\ref{tab:denoms}; Appendix~C.4). On the narrower parsed
 syllable-sign budget ($N \approx 5{,}792$;
 \citealp[\S1--3]{salgarella2025}) Shannon's unicity distance
 gives $U \approx 204$--$415$ signs, everywhere far below $N$; we retain
 this only as a toy-model \emph{precondition} diagnostic and explicitly
 withdraw it as any sufficiency or refutation claim (the full denominator
 bookkeeping and its derivation are in Appendix~C.4). Qualitatively, the
-figure cannot settle identifiability either way: unicity distance
-presupposes a known plaintext-language oracle we do not have, and a lossy,
-non-injective sign$\rightarrow$sound channel --- if Linear A underspells
-like Linear B --- may possess no unicity distance at all. Corpus size, in
-short, cannot decide the question.
+figure cannot settle identifiability either way (Appendix~C.4): unicity
+distance presupposes a known plaintext-language oracle we do not have.
+Corpus size, in short, cannot decide the question.
 
 \textbf{What actually binds.} The results are consistent with
 \emph{identifiability} being the more fundamental present constraint rather
@@ -658,16 +610,15 @@ reflect genuine morphology. The apparent affixation does not clear the
 operative \texttt{L\_fake} bigram floor, so the verdict is NO POWER and
 \texttt{has\_validated\_morphology} = False. The identical test
 \textbf{validates on Mycenaean Greek (Linear B)}, whose longer words carry
-uncontested inflection: on the 13,562-wordform D\=AMOS corpus (mean 3.23
-signs/word) it confirms affixation at rate 0.562 --- above the same bigram
-floor ($\sim$0.30) --- with \texttt{has\_morphology\_power} = True, so the
-control rules out a universally insensitive detector and supports the
-reading that Linear A's shorter forms (mean 1.84) contribute materially to
-its lack of power (Appendix~A). One held-out positive stands and survives
+uncontested inflection: it confirms affixation at rate 0.562 --- above the
+same bigram floor ($\sim$0.30) --- with \texttt{has\_morphology\_power} =
+True, so the control rules out a universally insensitive detector and
+supports the reading that Linear A's shorter forms contribute materially to
+its lack of power (Table~\ref{tab:morphrates}; Appendix~A.1). One held-out positive stands and survives
 its own uncertainty: a DP-unigram segmenter recovers the scribe's own word
 divisions at micro-F1 0.436 versus a random-boundary baseline of 0.389, a
 gap whose site-clustered 95\% bootstrap CI [0.021, 0.099] excludes zero
-(P(gap $>$ 0) = 0.998; the paired-gap detail is in Appendix~A). This
+(P(gap $>$ 0) = 0.998; Appendix~A.1). This
 separates real recoverable structure from fitted morphology --- the paper's
 core discipline.
 
@@ -681,9 +632,10 @@ than effort being the more fundamental present constraint.
 
 \subsection{Metrology: a parse-coverage null that agrees with the field}
 
-Direction D poses the accounting tablets as a constraint-optimisation: can
-the fraction-sign values be solved so line items balance the preserved
-KU-RO totals? Held-out fraction balance does not beat the shuffle null
+Direction D poses the accounting tablets as a constraint-optimisation
+over the fraction-sign values (Appendix~B.1; Table~\ref{tab:metro}).
+Held-out fraction balance
+does not beat the shuffle null
 ($p = 1.0$), so the verdict is NULL; the only value the method determines,
 the fraction sign J = 1/2, is the long-standing field consensus
 \citep{bennett1950}, not a logos discovery. This is a null the field itself
@@ -698,8 +650,7 @@ information about its phonetic value? Tested on the known AB signs, neither
 the consonant class nor the vowel class clears chance (permutation
 $p = 0.40$ / $0.86$). The verdict is a data-limited NULL: the sound path is
 not recoverable from Linear A alone, and no sound value is imputed for any
-sign. It replaces the ``just use ML to recover the sounds'' objection with
-a quantified detectability floor.
+sign (Table~\ref{tab:phon}; Appendix~B.2).
 
 \subsection{The cross-script asymmetry: image alignment recovers shared
 anchors, but the recovery is circular by construction}
@@ -712,8 +663,8 @@ at chance. But the recovery is circular by construction: the
 A$\leftrightarrow$B anchor values were themselves assigned by
 twentieth-century epigraphers on sign-shape similarity, so this is a
 shape-genealogy engineering demonstration, truth-layer-capped $\le$
-\textbf{0.75}, not a positive decipherment claim. The study reports no
-positive decipherment claim.
+\textbf{0.75}, not a positive decipherment claim (\S9.6;
+Table~\ref{tab:xscript}).
 
 \section{Results III: contamination probes}
 
@@ -728,11 +679,11 @@ partial-null and the confound rather than a headline.
 \subsection{LLM-ablation: does a large open-weight model regurgitate the
 literature?}
 
-Does a large open-weight model regurgitate the literature rather than
-decipher it? In the LLM-ablation, \texttt{qwen2.5:72b} reproduces famous
+In the LLM-ablation, \texttt{qwen2.5:72b} reproduces famous
 published readings --- Gordon's JA-NE = ``wine'' in 14/40 seeds --- that
 the model-free edit-distance baseline never reaches (0/40), yet never
-reproduces obscure vessel equations (0/40). Verdict: a reproduction
+reproduces obscure vessel equations (0/40; Table~\ref{tab:repro}).
+Verdict: a reproduction
 gradient consistent with differential public exposure --- though the
 experiment does not isolate memorisation from correlated item-level
 differences --- the memorisation confound the discipline layer must gate
@@ -744,10 +695,10 @@ abstention}
 Does the model's behaviour on \emph{published} signs generalise to signs
 unseen in the indexed literature? \texttt{qwen2.5:72b} valued the
 memorisable known signs in $\sim$20/40 seeds but abstained $\sim$97\% of
-the time on the literature-unseen *-series signs ($\sim$1/40) --- an
+the time on the literature-unseen *-series signs ($\sim$1/40;
+Table~\ref{tab:abstain}) --- an
 abstention asymmetry consistent with differential public exposure (the
-experiment does not isolate memorisation from correlated item-level
-differences). With no ground truth on the not-indexed signs,
+\S8.1 caveat applies). With no ground truth on the not-indexed signs,
 \textbf{consistency is not correctness}: it bounds how the model behaves,
 never whether it is right.
 
@@ -759,11 +710,9 @@ sufficiency protocol}
 Is a Linear-A-scale corpus large enough to recover a decipherment if a
 known cognate existed? Because every benchmark is handed a real cognate
 signal Linear A lacks, any recovery curve is an \textbf{optimistic
-benchmark, conditional on a known cognate relationship}, readable two ways:
-at-floor at Linear-A scale $\Rightarrow$ information-insufficient even
-given a cognate; above-chance $\Rightarrow$ identifiability
-(cognate-absence, uncorrected multiplicity) rather than corpus size would
-be implicated. The accuracy-vs-size curve is deposited in the repository as
+benchmark, conditional on a known cognate relationship} (its two-way
+reading rules are specified in Appendix~C.3; neither branch is ever a
+decipherability claim). The accuracy-vs-size curve is deposited in the repository as
 a known-answer upper-bound \textbf{protocol}; this paper asserts no interim
 result from it.
 
@@ -779,16 +728,15 @@ pre-registration, all graded mechanically from persisted artifacts ---
 together with a body of pre-registered, calibrated nulls, each with its
 borderline case named. The stratified morphology re-run is the template: at
 the pre-registered $\alpha = 0.01$, no pre-registered affix is cross-stratum
-stable above the bigram floor, robust to the genre-bucketing choice (the H3
-nominal near-miss surfacing only in the doubly-relaxed corner is detailed in
-Appendix~A.1). A null that names its threshold, its sensitivity, and its
+stable above the bigram floor, robust to the genre-bucketing choice
+(Tables~\ref{tab:strata}--\ref{tab:sens}; Appendix~A.1). A null that
+names its threshold, its sensitivity, and its
 near-miss is a stronger referee object than a flat negative.
 
 The axis this harness targets is the \textbf{false-positive / multiplicity
 axis} --- the mechanism by which a determined analyst ``translates'' almost
 anything on a small corpus --- a property of inference methodology, not of
-the object or its data (\S1--2; see Appendix~D for its relation to the
-survey's fifteen challenges and to the evaluation problem).
+the object or its data (\S1--2).
 
 \subsection{Two named failure modes for the methods literature}
 
@@ -799,11 +747,9 @@ family is Semitic and the desired output (``prayers to a Goddess in a
 matriarchal society'') operates as a fixed prior, so the conclusion
 conforms to the prior rather than emerging from constrained readings. This
 is distinct from statistical overfitting and must be named separately.
-Notably, the current synthesis independently concludes Minoan is
-agglutinative and a language isolate \citep[\S8]{salgarella2025}, which the
-segmentation matches while the Semitic label does not --- the mismatch is
-empirical, between the label and the primary descriptions of the form, not
-an a-priori typological impossibility.
+Notably, the mismatch is empirical --- between the label and the primary
+descriptions of the form (\S5) --- not an a-priori typological
+impossibility.
 
 \textbf{(ii) Free parameters exceeding the information floor.} A lexicon
 reported as ``408 terms and counting'' on a fixed corpus has more degrees
@@ -811,35 +757,27 @@ of freedom than the data can identify; a decipherment whose lexicon grows
 weekly is underdetermined by construction. The minimum-description-length /
 unicity \emph{diagnostic} (\texttt{k $\le$ U\_floor}) is built to flag
 exactly this (it is reported next to every claim rather than enforced as a
-graduation clause; \S3, Appendix~D): the single sign the whole
-reading pivots on carries no cross-script anchor (its AB-number and Linear
-B columns are empty), so its value was assigned to fit the desired root ---
-the textbook free-parameter case the machinery flags as underdetermined.
-The refutation rests on the claim's own published table, archived in
-\artobj.
+graduation clause; \S4): the single sign the whole
+reading pivots on is the textbook free-parameter case (\S5), its value
+assigned to fit the desired root; the refutation rests on the claim's own
+published table, archived in \artobj.
 
 \subsection{The post-hoc evaluation sequence}
 
 These failure modes trace to sequencing. The *301 claim publicly commits to
 a post-hoc evaluation sequence: declare ``officially deciphered,'' then vet
 later. logos's documented inverse is \textbf{pre-register $\rightarrow$
-held-out $\rightarrow$ locked artifact}: a hypothesis is hash-keyed and
-timestamped before it is tested, graded mechanically against held-out
-material, and the artifact is fixed before any claim. (The held-out
-libation-formula corpus and its low-power caveat are detailed in
-Appendix~A.3.)
+held-out $\rightarrow$ locked artifact} (\S3.1, \S3.4; the held-out
+libation-formula corpus and its low-power caveat are in Appendix~A.3).
 
 \subsection{Identifiability appears the more fundamental present constraint}
 
 We take care not to write a defeatist framing, and equally not to
-over-claim from corpus size. On the real corpus (1,341 inscriptions;
-$N \approx 5{,}792$ parsed syllable-signs, $V = 259$) the toy-model unicity
-distance is $U \approx 204$--$415$ signs --- a \emph{precondition}
-diagnostic only. We explicitly withdraw any reading of this figure as a
-sufficiency or refutation claim: a lossy, non-injective sign$\rightarrow$sound
-channel may have no unicity distance at all, so ``$U \ll N$'' does
-\textbf{not} license the statement that there is enough text to pin a
-decipherment (the stance of \S4). The
+over-claim from corpus size: the toy-model unicity distance
+($U \approx 204$--$415$ signs; \S4) is a \emph{precondition} diagnostic
+only, explicitly withdrawn as any sufficiency or refutation claim ---
+``$U \ll N$'' does \textbf{not} license the statement that there is enough
+text to pin a decipherment (\S4; Appendix~C.4). The
 results are consistent with \emph{identifiability} being the more
 fundamental present constraint --- the absence of a known cognate language
 to map to, an uncorrected multiple-testing search burden, and a mixed sign
@@ -847,58 +785,49 @@ inventory --- rather than a demonstrated corpus-size threshold; a null can
 arise from identifiability, low power, or size alike, and we do not
 establish that more data would be irrelevant.
 \citet[\S8]{salgarella2025}
-reaches the field-level version of this by a different route (\S2.2):
-the etymological method is ``fraught with problems'' and vocabulary
-comparison ``not probative.''
+reaches the field-level version of this by a different route (\S2.2).
 
 \subsection{Study-wide error budget}
 
 Multiplicity discipline operates at two levels, and we are explicit about
-both. Within a single probe, matches are deflated for the signs $\times$
-roots $\times$ hypotheses searched (the attempted-candidate-count
-correction of \S3--4). Across the study, the unit of multiplicity is the
+both. Within a single probe, matches are deflated for everything
+searched (\S3.2--3.4). Across the study, the unit of multiplicity is the
 \textbf{per-probe pre-registration}: the \textbf{five executed probes}
 (morphology, metrology, phonology, cross-script image alignment, and
 contamination) each carry their own pre-committed $\alpha$, and every probe
 is reported regardless of outcome. \textbf{Error control is defined within
 each pre-registered probe; we claim no global family-wise guarantee across
-probes.} Nothing in the battery is read as a decipherment. (The
-sufficiency-sweep exclusion, the no-selective-reporting note, and the
-per-probe reporting-status detail are given in Appendix~D.)
+probes.} Nothing in the battery is read as a decipherment.
 
 \subsection{Limitations}
 
 The nulls are honestly bounded, not decisive. A dependence-adjusted
-trial-count correction of the morphology z-test is deferred; the current
-control is a conservative $\ge 2$-distinct-sites presence gate, which would
-only strengthen the null (\artref). No held-out \emph{decipherment} has
+trial-count correction of the morphology z-test is deferred; the deferral
+would only strengthen the null (Appendix~A.1). No held-out
+\emph{decipherment} has
 been achieved, and the study reports \textbf{no positive decipherment
 claim} --- the deliverable is calibrated absence, not a reading. Nothing
-here claims a rejected reading is \emph{false}: with no Linear A ground
-truth, every REJECT / NULL in this study bounds \emph{evidential support}
+here claims a rejected reading is \emph{false} (\S3.4): every REJECT /
+NULL in this study bounds \emph{evidential support}
 on held-out data, not truth. The one probe that recovers an above-chance
-number, cross-script sign-image alignment (direct-NN 0.410 [0.18, 0.64];
-Procrustes 0.185 [0.00, 0.36]), is a font-robust but circular
-\emph{engineering demonstration} (\S7.3): a font-swap control refutes the
-typeface-artifact worry, but the A$\leftrightarrow$B anchor values were
-themselves assigned by sign shape, so the recovery re-derives a
-shape-defined mapping and is truth-capped at $\le 0.75$, never a reading. No
+number, cross-script sign-image alignment, is a font-robust but circular
+\emph{engineering demonstration} (a font-swap control refutes the
+typeface-artifact worry; \S7.3, Appendix~B.3), truth-capped at
+$\le 0.75$, never a reading. No
 phonetic claim is made. The philological points in \S5 rest on the
-published literature \citep{davis2013, duhoux1992, thomas2020,
-salgarella2025, steele2017} rather than on independent Aegean-epigraphic
+published literature cited there rather than on independent
+Aegean-epigraphic
 review, which we disclose as a limitation; because those points are cited
 rather than original, the argument does not depend on any new sign reading
-of our own. Chronological cross-validation is largely foreclosed because
-roughly 74\% of the corpus sits in the single LM IB horizon, leaving
-site-held-out splits as the only realistic partition. And the corpus itself
+of our own. Chronological cross-validation is largely foreclosed by the
+single-horizon corpus (\S4; Appendix~A.1). And the corpus itself
 --- small, partly lossy, with no bilingual yet found
 \citep[\S8]{salgarella2025} --- sets the ceiling.
 
 \subsection{Conclusion and reproducibility}
 
-The framework is designed to withhold validation when a proposed reading
-does not clear pre-registered negative controls, multiplicity adjustment,
-contamination checks, and held-out evaluation; the contribution is the
+The framework withholds validation when a proposed reading does not clear
+the pre-registered gates (\S1, \S3); the contribution is the
 framework and the calibrated null itself --- the instrument and the honest
 limits of what the corpus can support --- not a reading, and the calibrated
 null is a safeguard against unsupported claims.
@@ -911,10 +840,9 @@ The code, pre-registrations, and all findings are open under the MIT
 licence and archived on Zenodo (concept DOI 10.5281/zenodo.21087572;
 repository \url{https://github.com/papadopouloskyriakos/logos}).
 \fi
-The licensed epigraphic corpora --- GORILA-, SigLA-, lineara.xyz-, and
-D\=AMOS-derived --- are not redistributed, per their CC BY-NC-SA /
-all-rights-reserved terms; each source's licence and retrieval path is
-documented (data-provenance), so the harness is reproducible against a
+The licensed epigraphic corpora are not redistributed; each source's
+licence and retrieval path is documented (data-provenance; Software \&
+data note), so the harness is reproducible against a
 locally obtained corpus. This work is independent and not affiliated with,
 or endorsed by, any of the cited projects or their authors.
 
@@ -926,98 +854,91 @@ or endorsed by, any of the cited projects or their authors.
 
 \section{Morphology (replication detail)}
 
-\emph{Replication detail for \S6--\S8. Nothing in these appendices is
-load-bearing for the paper's argument, which stands on the body's headline
-nulls; a reader who accepts those may skip them.}
-
 \paragraph{A.1 Morphology: rates, floors, word-length, stratification,
 sensitivity.} The probe is pre-registered, unsupervised morphology and
-segmentation induction over the full Linear A corpus (1,341 inscriptions
-across 52 sites --- the 52 that survive logos normalization of Salgarella's
-56-findplace envelope). Target claims are the recurring affixes and
+segmentation induction over the full Linear A corpus
+(Table~\ref{tab:denoms}). Target claims are the recurring affixes and
 positional grammar of the Davis/Thomas/Duhoux--Val\'{e}rio tradition:
 prefixes and suffixes (\texttt{i-}, \texttt{a-}, \texttt{-te/-ti}, and
-Davis's \texttt{i-*301} verb stem). Every candidate was graded against two
+Davis's \texttt{i-*301} verb stem). Pre-registration anchoring (\S3.1):
+the pre-registration file's git commit is
+\ifanon
+externally anchored by the immutable artifact deposit ([artifact DOI
+withheld for review]),
+\else
+externally anchored by the immutable Zenodo deposit (concept DOI
+10.5281/zenodo.21087572),
+\fi
+serving as the pre-specification timestamp. Each pre-registered affix
+(drawn from \citet{thomas2020} and Duhoux/Val\'{e}rio) must recur on
+$\ge$2 distinct stems across independent inscriptions, above a
+within-form permutation null, and survive multiplicity correction at a
+target of \emph{p} $< 0.01$ corrected. Every candidate was graded against two
 null floors: a within-word sign-order permutation (shuffle) floor, and an
 \texttt{L\_fake} floor built from a first-order sign-bigram (Markov) corpus
 with zero lexical overlap with the real inscriptions.
 
 \emph{Pooled run.} Of the 16 pre-registered affixes, 4 beat the within-form
 permutation null and the deflated multiplicity bar (\texttt{i-*301},
-\texttt{a-}, \texttt{i-}, \texttt{-te/-ti}), a real confirm rate of 0.250
-(Wilson 95\% CI [0.10, 0.50]) --- clearing the shuffle floor decisively.
+\texttt{a-}, \texttt{i-}, \texttt{-te/-ti}), clearing the shuffle floor
+decisively (rates and Wilson intervals in Table~\ref{tab:morphrates}).
 The apparent standout \texttt{i-*301} sits far above the permutation null
-(six distinct affix environments, $z \approx 8.0$ against the within-form
-permutation null) --- but that figure is computed against the weaker
-within-form permutation null only, and it does not survive the operative
-\texttt{L\_fake} bigram floor. Under the bigram floor the whole set fails:
-the fabricated Markov corpus confirms the same affixes at rate 0.375
-(Wilson 95\% CI [0.18, 0.61]), above the real 0.250. The outcome is
-classified NO POWER, not evidence against morphology;
-\texttt{has\_morphology\_power} is False and the module reports the null
-(the Linear-B positive control that validates the detector is reported
-below).
+--- but that figure is computed against the weaker within-form permutation
+null only, and it does not survive the operative \texttt{L\_fake} bigram
+floor, under which the whole set fails: the fabricated Markov corpus
+confirms the same affixes at a \emph{higher} rate than the real corpus
+(Table~\ref{tab:morphrates}). The outcome is classified NO POWER, not
+evidence against morphology; \texttt{has\_morphology\_power} is False and
+the module reports the null (the Linear-B positive control that validates
+the detector is reported below).
 
-\emph{Word-length distribution.} Linear A words are short --- mean 1.84
-signs over all word-\emph{tokens}, median and mode 1, with 76.1\% of
-word-tokens at $\le$2 signs (56.5\% single-sign) --- and on such words
-``morphology'' and ``bigram order'' are statistically indistinguishable.
-This reconciles with Fuls's 3.3-sign figure once the denominator is
-matched: \citet[57, \S6.5]{fuls2015} computes the mean over a word
-\emph{list} of ``554 complete sign sequences, where duplicates are reduced
-to one'' (GORILA; \citealp{godart1985}) --- i.e. over distinct word
-\emph{types}, not tokens. Restricting our corpus to distinct multi-sign
-types likewise recovers 3.07; the token vs. type denominator is the whole
-discrepancy. Fuls reads the 3.3-sign length, via his exponent-to-word-length
-regression, as evidence that Minoan is \emph{polysynthetic}; our direct
-morphology test finds the apparent affixation bigram-reproducible with no
-power, so the word-length typology and the direct null point opposite ways,
-and we report the null. The direct positive control --- the identical
-bigram-floor test on Mycenaean Greek (Linear B), whose longer words carry
-uncontested inflectional morphology --- was RUN on the D\=AMOS Linear-B
-corpus (13,562 wordforms, mean 3.23 signs/word, parsed by the same
+\emph{Word-length distribution.} Linear A words are short
+(Table~\ref{tab:morphrates}), and on such words ``morphology'' and
+``bigram order'' are statistically indistinguishable. This reconciles
+with Fuls's 3.3-sign figure once the denominator is matched:
+\citet[57, \S6.5]{fuls2015} computes the mean over a word \emph{list} of
+``554 complete sign sequences, where duplicates are reduced to one''
+(GORILA; \citealp{godart1985}) --- distinct word \emph{types}, not
+tokens; restricting our corpus to distinct multi-sign types likewise
+recovers 3.07. Fuls reads the 3.3-sign length as evidence that Minoan is
+\emph{polysynthetic}; our direct test finds the apparent affixation
+bigram-reproducible with no power, and we report the null. The direct
+positive control --- the identical bigram-floor test on Mycenaean Greek
+(Linear B), whose longer words carry uncontested inflectional morphology
+--- was RUN on the D\=AMOS corpus (parsed by the same
 \texttt{\_damos\_wordforms} extractor as \S7.3) against a pre-registered
-16-affix Mycenaean panel \citep{ventris1953}. It fires: REAL confirm rate
-0.562 (9/16) --- carried by the securely-grammatical suffixes -jo, -o-jo
-(gen sg -oio), -de (allative), -qe (enclitic ``and''), -o-i (dat pl) ---
-against a within-word-shuffle floor $\sim$0.03 and an \texttt{L\_fake}
-bigram floor $\sim$0.30 (stable over five draws), so
-\texttt{has\_morphology\_power = True}. The identical test that returns NO
-POWER on Linear A's short words recovers Mycenaean morphology on longer
-ones (a sensitivity check: an ad-hoc parser yielding mean 2.19 signs/word
-did \emph{not} fire --- power tracks word length exactly as the short-word
-argument predicts), which rules out a universally insensitive detector and
-supports the interpretation that Linear A's shorter forms contribute
-materially to its lack of power
+16-affix Mycenaean panel \citep{ventris1953}. It fires
+(Table~\ref{tab:morphrates}), carried by the securely-grammatical
+suffixes -jo, -o-jo (gen sg -oio), -de (allative), -qe (enclitic
+``and''), -o-i (dat pl), so \texttt{has\_morphology\_power = True}. The
+identical test that returns NO POWER on Linear A's short words recovers
+Mycenaean morphology on longer ones (a sensitivity check: an ad-hoc
+parser yielding mean 2.19 signs/word did \emph{not} fire --- power tracks
+word length exactly as the short-word argument predicts), which rules out
+a universally insensitive detector and supports the interpretation that
+Linear A's shorter forms contribute materially to its lack of power
 (\texttt{scripts/\allowbreak comparison/\allowbreak linb\_morphology\_control.py}).
 
 \emph{Segmentation positive.} Under leave-one-site-out cross-validation (52
 sites; not k-fold, given formulaic dependence), a DP-unigram
-(Goldwater-style) segmenter recovers the scribe's own word divisions at
-micro-F1 0.436 versus a random-boundary baseline of 0.389 (boundary base
-rate 0.406). A site-clustered bootstrap (resample the 52 sites with
-replacement, 4,000 draws) puts the real-minus-random gap at a 95\% CI of
-[0.021, 0.099], excluding zero (P(gap $>$ 0) = 0.998); the paired gap, not
-the wide marginal per-segmenter CIs, is the operative test. Morfessor
-over-segments the short syllabic corpus (micro-F1 0.156) and is reported as
-not usable rather than hidden.
+(Goldwater-style) segmenter recovers the scribe's own word divisions above
+a random-boundary baseline; a site-clustered bootstrap (resample the 52
+sites with replacement, 4,000 draws) puts the real-minus-random gap above
+zero, and the paired gap, not the wide marginal per-segmenter CIs, is the
+operative test (Table~\ref{tab:morphrates}). Morfessor over-segments the
+short syllabic corpus and is reported as not usable rather than hidden
+(Table~\ref{tab:morphrates}).
 
-\emph{Stratified re-run.} The strata reconcile exactly to the corpus total:
-290 admin + 99 libation + 129 other + 740 seal (structurally excluded as an
-abbreviation channel) + 83 emptied by abbreviation-strip = 1,341
-inscriptions. Induction ran on admin (290 inscriptions, 1,486 words, 14
-sites), libation (99, 370, 15), and other (129, 187, 40). The
-99-inscription ``libation'' \emph{genre} stratum --- stone-vessel
-inscriptions over 15 sites --- is not the same object as the
-libation-\emph{formula} corpus ($\sim$50 inscribed objects drawn from peak
-sanctuaries \emph{and} caves, across more than five findspots). Following
+\emph{Stratified re-run.} The strata reconcile exactly to the
+1,341-inscription corpus total (Table~\ref{tab:strata}). The
+99-inscription ``libation'' \emph{genre} stratum is not the same object
+as the libation-\emph{formula} corpus (\S A.3). Following
 \citet{salgarellajudson2024}, chronological cross-validation was explicitly
 declined (988/1,341 $\approx$ 74\% single-horizon LM IB), and site --- not
 scribal hand, which is not individuated for Linear A
 \citep{salgarella2019} --- is the independence unit, gated by presence at
 $\ge$2 distinct sites. The result is \texttt{has\_validated\_morphology} =
-False: no pre-registered affix is cross-stratum stable above the bigram
-floor at the pre-registered $\alpha = 0.01$. Stratification also showed
+False (\S9.1). Stratification also showed
 that even \texttt{i-*301} is bigram-reproducible in the repetitive libation
 register, where the Markov corpus manufactures the apparent verb
 morphology; Davis's slot grammar is not refuted, merely not separable from
@@ -1025,41 +946,31 @@ sign bigrams here. Where formula-bearing sites drive a signal, power is
 intrinsically low: a leave-one-site-out CV over so few formula findspots
 (an effective $\sim$5-fold site partition) cannot resolve a modest effect.
 
-\emph{Sensitivity, disclosed.} The honest 2$\times$2 is: under both
-$\alpha$ thresholds at the defensible bucketing (libation = stone vessels
-only), NULL; under loose bucketing (libation including stone objects and
-inked), NULL at $\alpha = 0.01$ but at $\alpha = 0.05$ the affixes
-\texttt{i-} (locative) and \texttt{-te/-ti} (ablative) validate. These are
+\emph{Sensitivity, disclosed.} The honest 2$\times$2 over genre bucketing
+$\times$ $\alpha$ threshold is Table~\ref{tab:sens}; the doubly-relaxed
+corner's \texttt{i-} (locative) and \texttt{-te/-ti} (ablative) are
 precisely the Duhoux/Val\'{e}rio H3 nominal affixes that
 \citet{salgarella2025} \S8 independently endorses --- the named borderline
 candidates, fragile to \emph{both} the $\alpha$ threshold and a defensible
-genre choice. The pre-registered $\alpha = 0.01$ null is itself robust to
-the bucketing, so the bucketing fix is not cherry-picking the null. logos's
-own self-review caught the bigram free-rider \texttt{a-} and excluded it
-via the per-affix floor; the adversarial reviewer also corrected a docstring
-that mislabelled the $\ge$2-site presence gate as attempted-candidate-count
-deflation. The present analytical approximation uses attempted-candidate
+genre choice (the $\alpha = 0.01$ null is itself robust to the bucketing).
+The present analytical approximation uses attempted-candidate
 count rather than a dependence-adjusted effective trial count --- a
 recorded, deferred limitation whose correction would only strengthen the
 null.
 
-\paragraph{A.2 \texttt{S\_morph} detector calibration (relocated from
-\S3.2).} After the productivity-gate fix (\S3.2 --- an affix must attach to
+\paragraph{A.2 \texttt{S\_morph} detector calibration (\S3.2).} After the productivity-gate fix (\S3.2 --- an affix must attach to
 $\ge$2 distinct residual stems), \texttt{S\_morph}'s measured false-positive
-rate on within-form-shuffled corpora was \textbf{3.0\% (6/200; Wilson 95\% CI
-[1.4, 6.4]\%)}, consistent with the nominal one-sided $z \ge 2$ rate
-($\approx 2.3\%$) within sampling error. We flag this explicitly as an
-\textbf{indicative calibration check, not the operative gate}: a 6/200
-estimate is too coarse to certify an $\alpha = 0.01$ threshold on its own, and
-it is reported only to show the detector is not grossly mis-calibrated at the
-nominal level. The graduation gate does not rest on it --- it applies the
-order-statistic bar over the far larger permutation and candidate counts the
-deflation machinery tracks (\S3.4). Power was \textbf{100\% (50/50)} at a
-single strong planted-affix strength --- a saturated point, not a full
-sensitivity curve (contrast the phonology power curve, \S7).
+rate on within-form-shuffled corpora is consistent with the nominal
+one-sided $z \ge 2$ rate within sampling error, and its planted-affix
+power is a saturated point, not a full sensitivity curve
+(Table~\ref{tab:calib}; contrast the phonology power curve, \S7). We flag
+this explicitly as an \textbf{indicative calibration check, not the
+operative gate}: a 6/200 estimate is too coarse to certify an $\alpha =
+0.01$ threshold on its own, and the graduation gate does not rest on it
+--- it applies the order-statistic bar over the far larger permutation
+and candidate counts the deflation machinery tracks (\S3.4).
 
-\paragraph{A.3 Held-out design: the libation-formula corpus (relocated from
-\S9.3).} The libation-formula corpus ($\sim$50 inscribed objects over $>$5
+\paragraph{A.3 Held-out design: the libation-formula corpus (\S9.3).} The libation-formula corpus ($\sim$50 inscribed objects over $>$5
 findspots, spanning peak sanctuaries and caves) offers a natural held-out
 cross-validation, but a leave-one-site-out split over so few formula sites has
 low statistical power --- and site-level CV is in any case necessary, not
@@ -1076,21 +987,17 @@ signs]} and solves the fraction-sign values by RANSAC over exact-\texttt{Fractio
 Gaussian elimination (robust to the unbalanced-tablet outliers that defeat
 least-squares), requiring line items to balance the preserved KU-RO totals;
 validation is grouped k-fold by document (no tablet straddles train and
-test) against a permutation null. On the real corpus (32 documents / 35
-balance units), integer-level balance holds for 7/28 (25\%); of $\sim$7
-fraction-bearing constraints only one is satisfied by the solved system,
-and the sole determinable value is J = 1/2 (forced by HT104's
-\texttt{2$\cdot$J == 1}). Held-out fraction balance is 0.0 against a
-permutation-null mean of 0.113 (max 0.143), $p = 1.0$ --- not separated. A
-synthetic positive control confirms this is not a machinery bug: with
-planted values the solver recovers all of them and reaches held-out balance
-0.9 vs null 0.22 ($p = 0.003$, separated). The null traces to sparse
+test) against a permutation null. Results are in Table~\ref{tab:metro}: of
+$\sim$7 fraction-bearing constraints only one is satisfied by the solved
+system, the sole determinable value is J = 1/2, held-out fraction balance
+is not separated from the permutation null, and the synthetic positive
+control (planted values, all recovered) separates. The null traces to sparse
 automated parse coverage (multi-commodity blocks, illegible number glyphs,
 KI-RO deficit sub-lists, editorial restorations); \citet[p.~2]{corazza2021}
 abandoned the balance-to-totals method for the same reason. The surviving J
-= 1/2 is the long-standing consensus \citep{bennett1950}, with Schrijver's
+= 1/2 (\S7.1) gains Schrijver's
 \citeyearpar{schrijver2014} three further tablets (HT Zd 156, PE 1, HT
-123a) lifting it to at least four corroborating documents.
+123a): at least four corroborating documents.
 
 \paragraph{B.2 Distributional phonology.} Track 2 asks whether a sign's
 distributional context --- which signs sit beside it --- carries
@@ -1102,36 +1009,26 @@ never see the labels. The test is leave-one-out 1-NN against a
 label-permutation null, \v{S}id\'{a}k-deflated over the two tests; 50 of
 $\sim$55 AB signs met the $\ge$3-occurrence threshold.
 
-Per-test results: consonant class (13 classes) at 0.080 accuracy (null
-0.065, permutation $p = 0.40$) and vowel class (5 classes) at 0.140 (null
-0.201, permutation $p = 0.86$). The honest verdict is \emph{data-limited},
+Per-test results are in Table~\ref{tab:phon}. The honest verdict is
+\emph{data-limited},
 not \emph{no bridge exists}, because the positive control disciplines the
-reading. A first draft's flat positive control failed to fire at planted
-strength 1.0; replacing it with a power curve over planted strengths shows
-the test firing ($p < .05$) at strength $\ge$ 2 but not at 1. The test
+reading: the positive-control power curve over planted strengths shows
+the test firing at strength $\ge$ 2 but not at 1. The test
 works but is not infinitely sensitive at n = 50 / 13 classes, so we cannot
 distinguish ``no distribution$\rightarrow$phonetics bridge'' from ``too few
-signs to detect a weak one.'' Both point the same way: the sound path is
-not recoverable from Linear A alone. The obvious next move --- impute sound
+signs to detect a weak one'' (\S7.2). The obvious next move --- impute sound
 values cross-script from a larger Linear B corpus --- is now \emph{tested
-rather than deferred}: \S7.3 reports that ingesting the full D\=AMOS
-Mycenaean corpus leaves the cross-script distributional alignment at
-chance, so more Linear B data is necessary but not sufficient; the block is
-an absent distributional signal, not corpus volume alone. No sound value is
-imputed for any sign. This pre-empts the predictable ``couldn't you just
-use ML to recover the sounds?'' objection with a quantified detectability
-floor rather than hand-waving.
+rather than deferred} (\S B.3): more Linear B data is necessary but not
+sufficient.
 
 \paragraph{B.3 Cross-script image alignment.} The palaeographic probe
 renders 88 Linear-A and 74 Linear-B glyphs and tests held-out recovery of
 shared A$\leftrightarrow$B anchors. Classical descriptors (HOG + Hu moments
-+ shape-context) reach direct-NN accuracy 0.410 [0.18, 0.64] and Procrustes
-0.185 [0.00, 0.36], far above image chance (0.0135); a from-scratch I-JEPA
-reaches only $0.324 \pm 0.025$ (3 seeds) and is excluded from the claims as
-over-parameterized for $\sim$90 glyphs. Image embeddings recover held-out
-anchors where sequence co-occurrence sat at chance. Two controls decide how
-to read that asymmetry, and together they \emph{downgrade} it from a
-positive to a demonstration.
++ shape-context) sit far above image chance, and a from-scratch I-JEPA is
+excluded from the claims as over-parameterized for $\sim$90 glyphs
+(results and controls in Table~\ref{tab:xscript}). Two controls decide how
+to read the image-vs-sequence asymmetry (\S7.3), and together they
+\emph{downgrade} it from a positive to a demonstration.
 
 \emph{First, a font-swap control.} Rendering both scripts in one typeface
 (Aegean, George Douros) risks making the alignment a single-designer
@@ -1140,8 +1037,7 @@ A in Noto Sans Linear A and Linear B in Noto Sans Linear B --- two
 independent type designers, each font covering only its own Unicode block
 (Noto-A carries zero Linear B glyphs and vice-versa), so no single hand
 draws both scripts. The recovery survives and is if anything stronger
-(direct-NN 0.367$\rightarrow$0.416, Procrustes 0.156$\rightarrow$0.195 on
-the control's matched anchor set; both $\gg$ chance): the font-artifact
+(Table~\ref{tab:xscript}; both legs $\gg$ chance): the font-artifact
 hypothesis is \emph{refuted}, and ``distances reflect shape, not font'' is
 now demonstrated rather than asserted
 (\texttt{scripts/\allowbreak palaeo/\allowbreak font\_control.py}).
@@ -1150,14 +1046,10 @@ now demonstrated rather than asserted
 remove.} Linear B was historically adapted from Linear A, and the
 A$\leftrightarrow$B transcription \emph{values} that define the anchor set
 were assigned by twentieth-century epigraphers largely on the basis of
-sign-shape similarity. An image encoder that ``recovers the A$\rightarrow$B
-value map'' therefore re-derives a correspondence that was \emph{defined} by
-shape --- the result is close to tautological and is not independent
-evidence for any phonetic reading. We accordingly relabel this leg a
-\textbf{shape-genealogy engineering demonstration, not a positive
-decipherment claim}: it confirms a known palaeographic fact (borrowed signs
-look alike) and validates a font-robust descriptor pipeline, but it reads no
-Minoan. It remains truth-layer-capped in any case --- the
+sign-shape similarity, so the recovery re-derives a shape-defined
+correspondence (\S7.3): it confirms a known palaeographic fact (borrowed
+signs look alike) and validates a font-robust descriptor pipeline, but it
+reads no Minoan. It remains truth-layer-capped in any case --- the
 \citet{ferrara2021} ``Archanes Formula'' hard negative (\texttt{CH 095}
 resembles \texttt{AB 60}/\emph{ra} but is not its phonetic counterpart)
 shows a plausible shape match can be phonetically wrong, so a shape match is
@@ -1165,171 +1057,121 @@ a $\le 0.75$ signal (invariant 5), never a reading. The honest asymmetry is
 thus: the image path re-derives a shape-defined mapping (expected, circular,
 capped), while the sequence and cognate paths \textbf{remain at chance even
 after ingesting the full D\=AMOS Mycenaean corpus} --- 13,562 wordforms,
-$\approx$15$\times$ the earlier cognate file, 56 anchors: the best of five
-alignment methods reaches 0.025 against a 0.011 chance floor
-(\texttt{clearly\_above\_chance = False}), while the \emph{positive control
-recovers 0.947}, so the harness works and the null is a real null. Ingesting
-all of D\=AMOS therefore reframes the obstacle from \emph{data volume} to
-\emph{absent distributional signal}: the A$\leftrightarrow$B phonetic
-correspondence is simply not carried by cross-script sign co-occurrence,
-even at full Linear-B scale. And the A-only signs on which
+$\approx$15$\times$ the earlier cognate file, 56 anchors
+(Table~\ref{tab:xscript}) --- while the \emph{positive control
+recovers}, so the harness works and the null is a real null: the
+A$\leftrightarrow$B phonetic correspondence is simply not carried by
+cross-script sign co-occurrence, even at full Linear-B scale
+(\S B.2). And the A-only signs on which
 positive-decipherment claims would pivot (e.g. *301) have no cross-script
 anchor at all, so images cannot impute them even in principle.
 
 \section{Contamination and sufficiency (detail)}
 
-\paragraph{C.1 LLM-ablation reproduction gradient.} We ran the \S C.4
-ablation against \texttt{qwen2.5:72b} --- a large open-weight model, a far
-stronger memoriser than a local 12B --- on a rented H100 (40 seeds $\times$
-40 held-out Linear A forms; NW-Semitic candidate; a Hebrew lexicon of 7,682
-skeletons for the model-free arm; 0 LLM errors across 40/40 seeds)
-(\artref). The first-pass contamination rate came out at \texttt{1.000} in
-all 33 seeds where it was defined --- but this is an \textbf{artifact,
-reported as such}: the mechanical arm never shares a literature-matching
-correspondence with the LLM (their value vocabularies overlap in only 10 of
-134 values), so the rate is forced to 1.0 by construction. Publishing it as
-a contamination result would itself be the overfitting failure the
-discipline layer exists to prevent (\artref).
+\paragraph{C.1 LLM-ablation reproduction gradient.} The ablation
+(\S3.3) is the remaining gate on the contamination number, matching a
+model's cognate glosses against the indexed lexical claims. We ran it
+against \texttt{qwen2.5:72b} --- a large open-weight model, a far
+stronger memoriser than a local 12B --- on a rented H100, with an
+NW-Semitic candidate and a Hebrew skeleton lexicon for the model-free arm
+(scale and quantities in Table~\ref{tab:canary}) (\artref). The
+first-pass contamination rate is an \textbf{artifact, reported as such}:
+the mechanical arm never shares a literature-matching correspondence with
+the LLM (their value vocabularies barely overlap), so the rate is forced
+to 1.0 by construction and is not reported as a contamination result
+(Table~\ref{tab:canary}; \artref).
 
 The gate-2 rerun, reconciled to a common consonant-skeleton vocabulary,
-yields the honest deliverable: a per-word reproduction table over 40 seeds.
-\texttt{qwen2.5:72b} reproduces Gordon's \texttt{JA-NE} = \emph{yn} /
-``wine'' in 14/40 seeds and Best 1981's \texttt{A-SA-SA-RA-ME} = ``oh
-Asherah!'' in 2/40 --- published readings the model-free edit-distance
-baseline never independently reaches (0/40) --- while never reproducing the
-obscurer vessel equations \texttt{KA-RO-PA} and \texttt{SU-PA-RA} (0/40)
-(\artref). Three of the four tested lexical items --- \texttt{JA-NE},
-\texttt{KA-RO-PA}, \texttt{SU-PA-RA} --- are among Gordon's five
-West-Semitic equations (as is the separately-treated \texttt{KU-RO} below);
-the fourth, \texttt{A-SA-SA-RA-ME}, is Best's, not Gordon's. An external
-red-team correction split \texttt{KU-RO}: of its 14/40 hits, 8/40 route
-through the Semitic root \emph{kull} and 7/40 are reachable via the
-general-knowledge meaning ``total'' (confirmed by tablet arithmetic; the
-two categories overlap on one seed), so \texttt{KU-RO} = ``total'' is
-\textbf{excluded} as a witness and \texttt{KU-RO} = \emph{kull} is
-downweighted (\artref). The surviving gradient --- famous readings
-reproduced, obscure ones not --- is what C.4 detects: \textbf{a reproduction
-gradient consistent with differential public exposure}, not isolating
-memorisation from correlated item-level differences. The gate-2 rate itself
-(mean 0.646) remains confounded by the baseline's representational ceiling
-and is not reported as a contamination measure.
+yields the honest deliverable: the per-item reproduction gradient over 40
+seeds (Table~\ref{tab:repro}; \artref). An
+external red-team correction split \texttt{KU-RO} between the
+Semitic-root route (\emph{kull}) and the general-knowledge meaning
+``total'' (confirmed by tablet arithmetic), so \texttt{KU-RO} = ``total''
+is \textbf{excluded} as a witness and \texttt{KU-RO} = \emph{kull} is
+downweighted (Table~\ref{tab:repro}; \artref). The surviving gradient ---
+famous readings reproduced, obscure ones not --- is what the ablation
+detects (\S8.1). The gate-2 rate itself remains confounded by the baseline's
+representational ceiling and is not reported as a contamination measure
+(Table~\ref{tab:canary}).
 
 \paragraph{C.2 \texttt{L\_not\_indexed} abstention asymmetry.} The
-\texttt{L\_not\_indexed} probe shows a sign in real context and asks whether
-the model's behaviour on \emph{published} signs generalises to signs
-\textbf{unseen in the indexed literature} --- absent from the indexed
+\texttt{L\_not\_indexed} probe shows a sign in real context (\S8.2); the
+not-indexed signs are absent from the indexed
 sources, hence not memorisable from them (never ``impossible to have seen''
 in any absolute sense) (\artref). Across 40 seeds, \texttt{qwen2.5:72b}
-assigned a value to the 20 known AB signs in $\sim$20/40 seeds but to the 11
-not-indexed *-series signs in only $\sim$1/40 --- it abstains $\sim$97\% of
+abstains $\sim$97\% of
 the time on the untouched signs while confidently valuing the memorisable
-ones. The apparent known$-$not-indexed consistency gap (0.601, permutation
-$p = 0.0005$) is coverage-confounded and was flagged, not asserted: the
-matched-\emph{n} robustness check returned \texttt{no\_power} (0 of 11
-not-indexed signs reached n $\ge$ 10), so the rigorous comparison could not
-run. The interpretable signal is the abstention asymmetry itself, consistent
-with differential public exposure (the experiment does not isolate
-memorisation from correlated item-level differences) --- and, per the
-module's standing rule, \textbf{consistency is not correctness}: with no
-ground truth on the not-indexed signs, this bounds how the model behaves,
-never whether it is right (\artref). The full arc cost $\approx$ \$2.80 in
-ephemeral GPU rental.
+ones (Table~\ref{tab:abstain}). The apparent known$-$not-indexed
+consistency gap is coverage-confounded and was flagged, not asserted: the
+matched-\emph{n} robustness check returned \texttt{no\_power}, so the
+rigorous comparison could not run (Table~\ref{tab:abstain}).
+The interpretable signal is the abstention asymmetry itself, read under
+the standing rule of \S8.2 (\artref).
 
 \paragraph{C.3 Information-sufficiency CSA protocol.} The learning-curve
-harness reframes the withdrawn unicity-distance diagnostic --- a toy-model
-precondition, never a sufficiency or refutation claim --- as a sharper,
-answerable question: \emph{is a Linear-A-scale corpus (539 distinct
-word-forms; $V = 259$ sign-types at $N \approx 5{,}792$ parsed
-syllable-signs) large enough to recover a decipherment IF a known cognate
-existed?} We report the design and its reading rules here as a known-answer
+harness reframes the withdrawn unicity-distance diagnostic (\S C.4) as a
+sharper, answerable question: \emph{is a Linear-A-scale corpus
+(Table~\ref{tab:denoms}) large enough to recover a decipherment IF a
+known cognate existed?} We report the design and its reading rules here as a known-answer
 upper-bound protocol; the full accuracy-vs-size curve, with per-size
-permutation floors, is deposited in and completes in the repository, and
-this paper asserts no interim result from it.
+permutation floors, completes in the repository (this paper asserts no
+interim result from it).
 
 The protocol downsamples known-answer benchmarks --- Linear B / Mycenaean
 Greek as the primary syllabic analog, sourced through D\=AMOS, and further
 syllabic corpora --- and measures held-out cognate-ID recovery against a
 permutation chance floor, using a published cognate-ID matcher
 \citep{tamburini2025} that reports the \citet{luo2019} accuracy metric
-\ifanon
 (\artref).
-\else
-(\artref; \url{https://github.com/papadopouloskyriakos/logos}).
-\fi
 Because every benchmark is handed a real cognate signal Linear A lacks, any
 recovery curve is an \textbf{optimistic benchmark, conditional on a known
-cognate relationship} --- a best case Linear A does not enjoy --- readable
+cognate relationship}, readable
 two ways: at-floor at Linear-A scale $\Rightarrow$ information-insufficient
 even given a cognate; above-chance $\Rightarrow$ identifiability ---
 cognate-absence and uncorrected multiplicity over a mixed sign inventory ---
 rather than corpus size would be implicated. Neither branch is ever a
-decipherability claim, and neither asserts ``there is enough text.'' Using a
-data-size recovery curve to bound decipherability is not itself new ---
-decipherment learning curves over cipher length \citep{ravi2008,
-bergkirkpatrick2013}, the sample-size dependence of automatic cognate
-detection \citep{list2014}, and analytic corpus-sufficiency thresholds
-\citep{barber1974, zhang2016} are the ancestors; our contribution is the
-specific repurposing to a cross-language cognate-ID sufficiency locator for
-an undeciphered target, not the learning-curve idea.
+decipherability claim, and neither asserts ``there is enough text.''
 
 The matcher is the parallel coupled-annealing path validated in the artifact
 against its published known-answer benchmarks (a correctness check that the
-reproduction reaches the published Table-3 values); the accuracy-vs-size
-curve itself --- downsampling each benchmark and reading its recovery against
-the per-size permutation floor under the two-way logic above --- is computed
-and deposited in the repository, and this paper draws no Linear-A-scale
-conclusion from it. The phonological / sound path, by contrast, is no longer
-data-deferred: the D\=AMOS Mycenaean holdings are now harvested and
-ingested, and \S7.3 reports that even the full corpus leaves the
-cross-script distributional alignment at chance --- so that bound is a
+reproduction reaches the published Table-3 values). The phonological /
+sound path, by contrast, is no longer data-deferred: the D\=AMOS Mycenaean
+holdings are now harvested and ingested, and even the full corpus leaves
+the cross-script distributional alignment at chance (\S7.3, \S B.3) --- a
 property of the signal, not a promissory note against data yet to arrive. We
-publish the harness and its bounding logic
-\ifanon
-as an anonymized artifact (released on acceptance).
-\else
-(concept DOI 10.5281/zenodo.21087572).
-\fi
+publish the harness and its bounding logic (Software \& data note,
+following Appendix~D).
 
 \paragraph{C.4 Information floor: corpus denominators and the unicity
-computation (relocated from \S4).} The recurring sign-count confusion
-resolves into four distinct denominators, each of which must be labelled
-where it is used \citep[\S1--3]{salgarella2025}: \textbf{97} (Braovi\'{c}/Tan
-token-frequent syllabograms), \textbf{$\sim$150} (full syllabary estimate),
-\textbf{259} (the logos working repertoire, conflating syllabograms,
-subscripts, and logograms), and \textbf{$\sim$350} (total including
-ideograms; GORILA catalogues 390 signs). The channel through which
-structure is observed is a \emph{sign-occurrence} count, not a document
-count or a sign inventory (invariant 7), and two occurrence counts must be
-kept distinct. The broader \textbf{$\sim$7,400 sign occurrences} across the
-whole corpus \citep[Schoep 2002;][\S1--3]{salgarella2025} counts every
-sign type --- syllabograms, logograms, and numerals alike. The narrower
-\textbf{$N \approx 5{,}792$ parsed syllable-signs} is the subset that the
-unicity computation below actually consumes, after logograms and numerals
-are stripped. The two are different channel sizes and are used in
-different places; the $\sim$7,400 figure never enters the unicity
-arithmetic. Two further properties tighten the budget: Linear A words are
-short and formulaic (the six-position libation-formula template;
+computation (\S4).} The corpus envelope, the four
+sign-count denominators, the two occurrence channels, and the measured
+unicity range are tabulated in Table~\ref{tab:denoms}
+\citep[Schoep 2002;][\S1--3, \S6]{salgarella2025}; the envelope spans ca.
+1800--1450 BCE (Middle Minoan II--Late Minoan IB; \S4). Each denominator
+must be labelled where it is used: the working repertoire $V = 259$
+conflates syllabograms, subscripts, and logograms. The channel through
+which structure is observed is a \emph{sign-occurrence} count, not a
+document count or a sign inventory (invariant 7): the broader $\sim$7,400
+occurrences count every sign type, while the narrower
+$N \approx 5{,}792$ parsed syllable-signs --- after logograms and
+numerals are stripped --- is what the unicity computation consumes. Two
+further properties tighten the budget: Linear A words are short and
+formulaic (the six-position libation-formula template;
 \citealp[\S7]{salgarella2025}), and a single language/horizon dominates.
 
-On the logos-normalized corpus (1,341 inscriptions, $N \approx 5{,}792$
-parsed syllable-signs, $V = 259$), Shannon's unicity-distance criterion
-yields a measured range of \textbf{$U \approx 204$--$415$ signs} across the
-whole plausible $(V, P)$ parameter space, everywhere far below $N$.
-\textbf{We retain this result only as a toy-model precondition diagnostic,
-and explicitly withdraw it as any sufficiency or refutation claim.} It does
-\emph{not} show there is enough text to pin a decipherment, and we do not
-argue that. Unicity distance presupposes a \emph{known plaintext-language
-oracle}; because we estimate the redundancy $D$ from the ciphertext itself,
-that oracle collapses into Linear A up to relabelling, so the computation
+On the logos-normalized corpus, Shannon's unicity-distance criterion
+yields $U \approx 204$--$415$ signs across the whole plausible $(V, P)$
+parameter space, everywhere far below $N$ (Table~\ref{tab:denoms}) ---
+retained only as a toy-model precondition diagnostic (\S4). Unicity
+distance presupposes a \emph{known plaintext-language oracle}; because we
+estimate the redundancy $D$ from the ciphertext itself, that oracle
+collapses into Linear A up to relabelling, so the computation
 demonstrates only measurable recurrent structure, not that any reading is
-identifiable. The precondition it checks is necessary, not sufficient. And
-it can fail to exist entirely: if Linear A underspells like Linear B, the
+identifiable; and if Linear A underspells like Linear B, the
 sign$\rightarrow$sound channel is lossy and non-injective, and such a
-channel may possess no unicity distance at all. Corpus size, in short,
-cannot settle the question either way.
+channel may possess no unicity distance at all.
 
-\paragraph{C.5 Literature index and \texttt{L\_fake} canary (construction
-detail, relocated from \S3.3).} \emph{Index seed and adversarial population.}
+\paragraph{C.5 Literature index and \texttt{L\_fake} canary (\S3.3).} \emph{Index seed and adversarial population.}
 The seed is deliberately conservative --- a sign wrongly omitted is wrongly
 granted \texttt{L\_not\_indexed} status, the dangerous direction --- and
 every disputed entry is indexed to \emph{catch} regurgitation, never as an
@@ -1338,14 +1180,15 @@ lexical proposals, five are Gordon's equations and a-sa-sa-ra-me = ``oh
 Asherah!'' is \citet{best1981}, not Gordon; candidates failing independent
 corroboration against \citet{rendsburg1996} (\texttt{qa-pa} = kappu, a
 Semitic \texttt{ki-ro}) were rejected rather than indexed. Generated from the
-seed (invariant 12), the index currently holds \textbf{63 published claims
-across 62 indexed entries (55 single signs)} --- a deliberately conservative,
-non-exhaustive seed, not yet the full \S C.1 literature census.
-\emph{\texttt{L\_fake} calibration.} Its own divergence from the calibration
+seed (invariant 12), the current census (Table~\ref{tab:canary}) is a
+deliberately conservative, non-exhaustive seed, not yet the full \S C.1
+literature census.
+\emph{\texttt{L\_fake} calibration.} The canary is calibrated to a real
+candidate language's phoneme frequencies, root-template structure, and
+lexicon size (\S3.3). Its own divergence from the calibration
 targets is reported, never minimised; with a Semitic root-template sampler
 and an external Hebrew (ETCBC/bhsa) reject set, the root-template
-total-variation distance fell from $\sim$0.84 to $\sim$0.33 end-to-end
-($\sim$0.23 standalone) on the Ugaritic$\leftrightarrow$Hebrew gold, and any
+total-variation distance fell markedly (Table~\ref{tab:canary}), and any
 residual real-lexicon collision is measured and published rather than
 asserted to be zero.
 
@@ -1363,8 +1206,21 @@ $\sigma_0$ and $n$ attempted candidates,
 \]
 with $\gamma = 0.5772\ldots$ the Euler--Mascheroni constant --- the standard
 blended approximation to the mean of the largest of $n$ draws
-\citep[\emph{Order Statistics}, 3rd ed.]{david2003}; a candidate clears this
-clause only if its observed held-out statistic exceeds the bar.
+\citep[\emph{Order Statistics}, 3rd ed.]{david2003}. The
+pipeline exposes the bar as
+\texttt{expected\_max\_order\_stat}($\mu_0, \sigma_0, N$); the
+deduplicating \texttt{SearchLog}
+(\S3.2, invariant 12) reports the exact distinct-candidate count
+\texttt{n\_trials} a scanner produces. The bar fails closed on a degenerate null
+($\sigma_0 \le 0 \Rightarrow E[\max] = \mu_0 \Rightarrow$ no graduation).
+The \texttt{generalizes\_to\_not\_indexed} clause (\S3.4) requires recovery
+above a pre-committed threshold and on a minimum number of distinct
+not-indexed signs, and fails closed when no threshold or no supported
+not-indexed sign is present. The full clause conjunction: the candidate
+must separate from the \texttt{L\_fake} negative-control distribution,
+its corrected margin must be cleared, and the observed statistic must
+beat the order-statistic bar over the Packard/random-lexeme multiplicity
+null.
 
 \textbf{Assumptions and the direction of their error.} The approximation is
 exact only under (i) an approximately Gaussian null and (ii) independence
@@ -1386,57 +1242,20 @@ the nulls.
 assumptions that do not hold exactly, the error-control claim is carried not
 by the formula but by the direct empirical calibration (\S3.4): a
 Monte-Carlo of the full gate on a best-of-100 random-map null-generating
-process. The interval on that calibration is the \textbf{one-sided exact
+process (\texttt{scripts/\allowbreak gate\_null\_calibration.py}). The
+interval on that calibration is the \textbf{one-sided exact
 Clopper--Pearson} bound (the Beta-quantile inversion of the binomial), which
 needs no normal approximation to the calibration count --- for 3 graduations
-in 500 replicates, a 95\% upper bound of $\approx 1.54\%$.
+in 500 replicates, a 95\% upper bound of $\approx 1.54\%$; the verdict
+partition of the 500 replicates is in Table~\ref{tab:calib} (no
+INCOMPLETE, the search being instrumented).
 \citet{bailey2014} enter only as selective-inference lineage (\S2.4), not as
 the authority for this bar.
 
-\textbf{What the gate no longer includes (historical).} The
-minimum-description-length check ($k \le$ \texttt{U\_floor}, \S4) was, after
-the same review, \textbf{removed from the gate and is now reported as a
-diagnostic rather than enforced as a graduation clause}: clearing it does not
-certify identifiability (it is a necessary-precondition / toy-model
-diagnostic, \S4, \S9), and as a hard clause it could only be evaluated against
-a free-parameter default that risked passing degenerate inputs.
-\texttt{U\_floor} is still displayed next to every claim, and ``parameters
-$>$ information $\Rightarrow$ underdetermined'' is still stated (invariant 7)
---- it simply no longer sits inside the AND.
-
-\textbf{Study-wide error budget: elaboration (relocated from \S9.5).} The
-sufficiency sweep of the registered sufficiency extension is a known-answer
-\emph{upper-bound} diagnostic on benchmarks handed a real cognate signal ---
-not a Linear A probe --- so it is not among the five executed probes; on the
-corrected matcher its accuracy-vs-size curve is computed and deposited in the
-repository (the registered sufficiency extension), and any above-chance
-recovery on known-answer benchmarks is true by construction, never a Linear A
-positive requiring multiplicity protection. There is no selective reporting:
-the one probe that returns an above-chance number --- the cross-script image
-leg (\S7.3) --- is reported as a circular \emph{engineering demonstration},
-not a positive. Accordingly the segmentation result (\S6) is reported as a
-\emph{probe-level} positive, and the cross-script image leg (\S7.3, capped at
-$\le 0.75$ and relabeled circular) as a capped demonstration --- neither is
-asserted as a battery-level-protected positive.
-
-\textbf{Baseline and self-audit provenance (relocated from \S3.4--3.5).} The
-match-rate the deflation is applied to is supplied by a cognate-ID baseline
-that reports the \citet{luo2019} accuracy metric; the instance we run is
-\citeauthor{tamburini2025}'s CSA\_OptMatcher (coupled simulated annealing,
-\S2.3--2.4, reproduced in the artifact), so the gate does not depend on any
-single citation. The persisted-artifact discipline caught confounds inside
-logos's own builds --- a \texttt{S\_morph} statistic that conflated repetition
-with morphology, a verdict clause that was a tautology and could never fire
-False, and a search-log tripwire that flagged honest multi-sign logs. Each was
-fixed and locked by regression tests before commit, illustrating the harness
-turned on itself.
-
-\textbf{The axis, relative to the survey (relocated from \S9.1).} As set out
-in the Introduction, the false-positive / multiplicity axis is a property of
-inference methodology and epistemics, not of the object or its data; it is
-complementary to, not a member of, the fifteen data-and-object obstacles
-enumerated by \citet{braovic2024}, and distinct from the evaluation problem
-their \S6.3 gestures at.
+\textbf{Cognate-ID baseline (\S3.4).} The match-rate the deflation is
+applied to is supplied by the published cognate-ID matcher identified in
+\S2.3 (reproduced in the artifact), so the gate does not depend on any
+single citation.
 
 \begin{center}\rule{0.5\columnwidth}{0.4pt}\end{center}
 
@@ -1452,5 +1271,264 @@ logos (v0.1.0). Zenodo. Concept DOI 10.5281/zenodo.21087572; repository
 (GORILA-, SigLA-, lineara.xyz-, D\=AMOS-derived) are not redistributed; see
 \texttt{docs/data-provenance.md}.
 \fi
+
+\section{Complementary tables}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+\textbf{Stratum} & \textbf{Inscr.} & \textbf{Words} & \textbf{Sites} &
+\textbf{Role} \\
+\midrule
+admin & 290 & 1,486 & 14 & induction \\
+libation (stone vessels) & 99 & 370 & 15 & induction \\
+other & 129 & 187 & 40 & induction \\
+seal & 740 & --- & --- & excluded \\
+emptied by abbrev.-strip & 83 & --- & --- & excluded \\
+\midrule
+total & 1,341 & & & \\
+\bottomrule
+\end{tabular}}
+\caption{Morphology corpus strata (Appendix~A.1). Seals are structurally
+excluded as an abbreviation channel; the strata reconcile exactly to the
+1,341-inscription corpus total.}
+\label{tab:strata}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Bucketing} & $\alpha=0.01$ & $\alpha=0.05$ \\
+\midrule
+strict (stone vessels only) & NULL & NULL \\
+loose (stone objects + inked) & NULL & \texttt{i-}, \texttt{-te/-ti}
+validate \\
+\bottomrule
+\end{tabular}}
+\caption{Morphology sensitivity $2\times2$ (Appendix~A.1): genre bucketing
+$\times$ significance threshold. Only the doubly-relaxed corner validates
+the H3 nominal affixes \texttt{i-} (locative) and \texttt{-te/-ti}
+(ablative).}
+\label{tab:sens}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+Linear A confirm rate (16 affixes) & 0.250 (4/16; [0.10, 0.50]) \\
+\texttt{L\_fake} bigram-floor rate & 0.375 (6/16; [0.18, 0.61]) \\
+\texttt{i-*301} vs.\ within-form null & $z \approx 8.0$ (6 environments) \\
+\midrule
+Linear B (D\=AMOS) confirm rate & 0.562 (9/16) \\
+Linear B within-word-shuffle floor & $\sim$0.03 \\
+Linear B \texttt{L\_fake} bigram floor & $\sim$0.30 (5 draws) \\
+\midrule
+word-token mean length & 1.84 signs (median/mode 1) \\
+word tokens $\le$2 signs / 1 sign & 76.1\% / 56.5\% \\
+multi-sign \emph{type} mean length & 3.07 (Fuls 3.3, 554-type list) \\
+Linear B mean length & 3.23 (13,562 wordforms) \\
+\midrule
+DP-unigram segmenter micro-F1 & 0.436 \\
+random-boundary baseline & 0.389 (base rate 0.406) \\
+real$-$random gap, 95\% CI & [0.021, 0.099]; P(gap${>}$0) = 0.998 \\
+Morfessor & 0.156 (over-segments; not usable) \\
+\bottomrule
+\end{tabular}}
+\caption{Morphology-induction replication quantities (Appendix~A.1):
+confirm rates with Wilson 95\% intervals, word-length denominators, and
+the segmentation positive with its site-clustered bootstrap gap (4,000
+draws over 52 sites).}
+\label{tab:morphrates}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+documents / balance units & 32 / 35 \\
+integer-level balance & 7/28 (25\%) \\
+determinable fraction value & J = 1/2 (HT104: $2 \cdot J = 1$) \\
+held-out fraction balance (real) & 0.0 \\
+permutation null & mean 0.113 (max 0.143); $p = 1.0$ \\
+planted positive control & 0.9 vs.\ null 0.22; $p = 0.003$ \\
+\bottomrule
+\end{tabular}}
+\caption{Metrology (Direction D) replication quantities (Appendix~B.1).
+The real corpus is not separated from the permutation null; the planted
+control separates, so the null is not a machinery bug.}
+\label{tab:metro}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Test} & \textbf{Classes} & \textbf{Acc.} & \textbf{Null} & $p$ \\
+\midrule
+consonant class & 13 & 0.080 & 0.065 & 0.40 \\
+vowel class & 5 & 0.140 & 0.201 & 0.86 \\
+\bottomrule
+\end{tabular}}
+\caption{Distributional-phonology per-test results (Appendix~B.2):
+leave-one-out 1-NN vs.\ a label-permutation null, \v{S}id\'{a}k-deflated
+over the two tests. The positive-control power curve fires ($p<.05$) at
+planted strength $\ge 2$ but not at 1.}
+\label{tab:phon}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Leg} & \textbf{Accuracy} & \textbf{Floor} \\
+\midrule
+classical, direct-NN & 0.410 [0.18, 0.64] & 0.0135 \\
+classical, Procrustes & 0.185 [0.00, 0.36] & 0.0135 \\
+I-JEPA (3 seeds; excluded) & $0.324 \pm 0.025$ & 0.0135 \\
+font-swap, direct-NN & $0.367 \rightarrow 0.416$ & $\gg$ chance \\
+font-swap, Procrustes & $0.156 \rightarrow 0.195$ & $\gg$ chance \\
+sequence/cognate (D\=AMOS) & 0.025 & 0.011 \\
+\quad positive control & 0.947 & --- \\
+\bottomrule
+\end{tabular}}
+\caption{Cross-script sign-image alignment and controls (Appendix~B.3).
+Font-swap rows give same-font $\rightarrow$ independent-fonts accuracy on
+the control's matched anchor set; the sequence/cognate row is the best of
+five alignment methods over 56 anchors
+(\texttt{clearly\_above\_chance} = False).}
+\label{tab:xscript}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}llrr@{}}
+\toprule
+\textbf{Item} & \textbf{Source} & \textbf{LLM} & \textbf{Baseline} \\
+\midrule
+\texttt{JA-NE} = \emph{yn} ``wine'' & Gordon & 14/40 & 0/40 \\
+\texttt{A-SA-SA-RA-ME} & \citet{best1981} & 2/40 & 0/40 \\
+\texttt{KA-RO-PA} & Gordon & 0/40 & 0/40 \\
+\texttt{SU-PA-RA} & Gordon & 0/40 & 0/40 \\
+\texttt{KU-RO} = \emph{kull} (downwt.) & Gordon & 8/40 & --- \\
+\texttt{KU-RO} = ``total'' (excl.) & gen.\ knowledge & 7/40 & --- \\
+\bottomrule
+\end{tabular}}
+\caption{LLM-ablation per-item reproduction over 40 seeds,
+\texttt{qwen2.5:72b} vs.\ the model-free edit-distance baseline
+(Appendix~C.1). The two \texttt{KU-RO} routes overlap on one seed; three
+single-word items are among Gordon's five West-Semitic equations, while
+\texttt{A-SA-SA-RA-ME} is Best's.}
+\label{tab:repro}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Sign set} & \textbf{Signs} & \textbf{Valued (of 40)} \\
+\midrule
+known AB (indexed) & 20 & $\sim$20 \\
+not-indexed *-series & 11 & $\sim$1 ($\sim$97\% abstention) \\
+\bottomrule
+\end{tabular}}
+\caption{\texttt{L\_not\_indexed} abstention asymmetry (Appendix~C.2).
+The apparent consistency gap 0.601 (permutation $p = 0.0005$) is
+coverage-confounded; the matched-$n$ check returned \texttt{no\_power}
+(0 of 11 not-indexed signs reached $n \ge 10$).}
+\label{tab:abstain}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Denominator / channel} & \textbf{Value} \\
+\midrule
+token-frequent syllabograms & 97 \\
+full syllabary estimate & $\sim$150 \\
+logos working repertoire ($V$) & 259 \\
+incl.\ ideograms (GORILA: 390) & $\sim$350 \\
+\midrule
+sign occurrences, all types & $\sim$7,400 \\
+parsed syllable-signs (unicity input) & $N \approx 5{,}792$ \\
+\midrule
+corpus envelope & $\sim$2,500 finds; $\sim$1,400 readable \\
+findplaces (logos-normalized) & 56 ($\rightarrow$ 52 sites) \\
+readable inscriptions & 1,341 \\
+distinct word-forms & 539 \\
+\midrule
+unicity distance over $(V,P)$ space & $U \approx 204$--$415$ signs \\
+\bottomrule
+\end{tabular}}
+\caption{Corpus denominators, occurrence channels, and the unicity range
+(Appendix~C.4). The $\sim$7,400 all-type occurrence channel never enters
+the unicity arithmetic, which consumes only the parsed syllable-signs.}
+\label{tab:denoms}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Calibration quantity} & \textbf{Value} \\
+\midrule
+\texttt{S\_morph} FPR (within-form shuffle) & 3.0\% (6/200; [1.4, 6.4]\%) \\
+nominal one-sided $z \ge 2$ rate & $\approx$2.3\% \\
+\texttt{S\_morph} power (planted affix) & 100\% (50/50; saturated) \\
+\midrule
+gate false-graduation (best-of-100 null) & 0.6\% (3/500; CP $\le$ 1.54\%) \\
+gate verdict partition (500 replicates) & 3 GRAD / 10 NULL / 487 REJ \\
+\bottomrule
+\end{tabular}}
+\caption{Detector and gate calibration quantities (Appendices~A.2
+and~D): Wilson interval for the \texttt{S\_morph} false-positive rate;
+one-sided exact Clopper--Pearson 95\% upper bound for the gate's
+false-graduation rate under the tested best-of-100 random-map null.}
+\label{tab:calib}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+literature-index census & 63 claims / 62 entries (55 single) \\
+root-template TV distance & $\sim$0.84 $\rightarrow$ $\sim$0.33
+  ($\sim$0.23 standalone) \\
+\midrule
+ablation scale & 40 seeds $\times$ 40 held-out forms \\
+model-free lexicon & 7,682 Hebrew skeletons \\
+LLM errors & 0 (40/40 seeds) \\
+value-vocabulary overlap & 10 of 134 \\
+first-pass contamination rate & 1.000 (33/33 defined; artifact) \\
+gate-2 rate & mean 0.646 (confounded; not reported) \\
+\bottomrule
+\end{tabular}}
+\caption{Literature-index, \texttt{L\_fake}-canary, and LLM-ablation
+quantities (Appendices~C.1 and~C.5). The TV distance is measured
+end-to-end on the Ugaritic$\leftrightarrow$Hebrew gold; the first-pass
+contamination rate is forced to 1.0 by construction and reported as an
+artifact.}
+\label{tab:canary}
+\end{table}
 
 \end{document}

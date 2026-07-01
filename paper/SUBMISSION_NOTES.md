@@ -35,24 +35,52 @@ Build both: `bash paper/tacl/build.sh` (pdfLaTeX + bibtex + 3 more pdfLaTeX pass
 
 ---
 
-## (c) Page count + relocation to appendices (main content trimmed 12 → 10 pp)
+## (c) Page count + appendix policy conformance (final)
 
-- **Measure (this packaging pass):** main content = everything through §9 Discussion
-  (the "Registered extension" section counts; Appendices A–D do **not**), **excluding
-  References + Appendices**. Measured on **Target A** as (page on which the References
-  section begins) − 1.
-- **Final main-content page count: 10 pp** — identical on both targets.
-  - Target A `logos-arxiv.pdf`: References begins on **p.11** (≈85% down) → **10 pp**.
-  - Target B `logos-tacl-anon.pdf`: References begins on **p.11** (≈74% down) → **10 pp**.
-  - No overshoot: main content fills ≈9.8 pp (aim was 9.5–10).
-- **Total document length:** 20 pp each (main content + References + Appendices A–D).
-- **⚠️ Appendix-counting caveat.** This pass trimmed **main content** to ≤10 pp by
-  relocating derivations/mechanics/history to appendices, per the "content ≤10 pp,
-  appendices excluded" reading. **If TACL counts appendices toward the 10-page cap**
-  (re-confirm current transacl.org policy at submit time), the ~10 pp of appendices must be
-  reconsidered separately. arXiv (Target A) has no length limit.
+- **Governing policy:** the 2021 formatting-instructions statement that appendices count
+  toward the page limit is **superseded** by TACL's **"New TACL Appendices Policy"**
+  (transacl.org/index.php/tacl/announcement/view/105, **effective March 1, 2024**):
+  main content **10 pages** (references exempt), **plus** appendices after the references,
+  unreviewed, in two categories — **Category 1 up to 5 pages** (replication detail:
+  preprocessing decisions, model parameters, lengthy proofs/derivations, pseudocode, sample
+  inputs/outputs, annotator guidelines, URLs) and **Category 2 up to 3 pages**
+  (complementary tables and figures explicitly referred to from the main paper). "No free
+  text will be allowed in the appendices unless it specifically adds more details of
+  Category #1." Exceeding the limits → rejected/returned.
+- **Main content (strict measure — the page on which §9.7 ends): page 10** on BOTH
+  targets (Target A: right column, 88% down p.10; Target B: same). **≤10.0 ✓** and full
+  (≈9.9 pp) — no undershoot.
+- **Category 1 (Appendices A–D + Software & data note, replication prose):**
+  **≈4.99 pp ≤ 5 ✓** (both targets; spans mid-p.13 after References to mid-p.18).
+- **Category 2 (Appendix E, "Complementary tables", 11 tables):**
+  **≈1.6–1.8 pp ≤ 3 ✓** (Tables 2–12: morphology strata; sensitivity 2×2;
+  morphology-induction quantities; metrology quantities; phonology per-test; cross-script
+  alignment + controls; LLM per-item reproduction; abstention asymmetry; corpus
+  denominators/unicity; detector+gate calibration; index/canary/ablation quantities).
+  **Every Appendix E table is explicitly referenced from the main paper** (§3.2, §3.3, §4,
+  §6, §7.1–7.3, §8.1–8.2, §9.1 — verified by grep, 1+ body \ref per table).
+- **Total document length:** 19 pp each (10 main + ~2.5 references + ~6.6 appendices).
+- **Deleted from appendices (non-Cat-1 free text, per policy):** the MDL/DSR-history
+  "removed-from-the-gate" aside; the §9.1 axis-vs-survey recap; the §3.5 self-audit
+  anecdote ("caught confounds in our own builds" narration); the §9.5 study-wide-budget
+  elaboration; the C.3 learning-curve lineage/ancestors positioning; the A.1
+  self-review/docstring-correction narration; the B.2 "first draft failed" narration; the
+  "$2.80 GPU rental" trivia; the A-appendix "nothing here is load-bearing" preamble; all
+  "(relocated from §X)" meta-tags. Nothing load-bearing was deleted — every deleted
+  statement either was narration or remains stated in the reviewed body.
+- **Main-content conformance note:** reaching the strict ≤10.0 (the earlier
+  References-page−1 measure had hidden a ~0.9-pp spill of §9.6–9.7 onto p.11) required,
+  beyond the sanctioned §3.1–§3.4 mechanics relocations, replacing **verbatim within-body
+  duplicate sentences with cross-references** to their canonical body location (e.g. the
+  §1/§2.1 fifteen-challenges enumeration and Sec-6.3 evaluation-gap quote, each stated
+  twice; §9 restatements of §3.4/§4/§5/§7.3 sentences; triple-stated archival URLs now
+  canonical in §9.7 + Software & data note). Every claim/number/verdict remains stated and
+  defended in the body; no number, result, or verdict changed; §5 and Table 1 untouched;
+  the 0.6% / Clopper–Pearson ≈1.54% headlines remain in §3.4; abstract byte-identical
+  (185 words).
 
-### Relocation log (measured on Target A; every headline/claim/number/verdict kept in the body)
+### Relocation log — FIRST trim pass, 2026-07-01 (historical; uses the earlier
+### References-page−1 measure; superseded by the strict measure above)
 
 All moves are pure relocation — only derivations, mechanics, historical lineage, and
 appendix-duplicated restatements moved; nothing load-bearing left the reviewed body.
@@ -133,5 +161,6 @@ header on all 20 Target-B pages.
 2. **Then submit the anonymized PDF** (`logos-tacl-anon.pdf`) to TACL and paste the
    declaration from (a), filling in the Zenodo deposit date and the arXiv id/date.
 3. **Re-check the current transacl.org anonymity + preprint policy at submit time** (policies
-   change); confirm the author metadata in (b); and **resolve the length overage in (c)**
-   before uploading to TACL.
+   change); confirm the author metadata in (b). Length conformance is complete per (c):
+   main content ends on p.10, Cat-1 ≈4.99 pp ≤5, Cat-2 ≈1.6–1.8 pp ≤3 (March-2024
+   appendices policy).
