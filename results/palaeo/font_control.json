@@ -1,0 +1,80 @@
+{
+  "probe": "cross_script_font_swap_control",
+  "label": "shape-genealogy engineering demonstration \u2014 NOT an archaeological positive (font confound TESTED and REFUTED; residual graphic-genealogy circularity remains)",
+  "fonts": {
+    "baseline": "Aegean (Douros) \u2014 draws A and B",
+    "control_A": "Noto Sans Linear A",
+    "control_B": "Noto Sans Linear B"
+  },
+  "conditions": {
+    "aegean_baseline": {
+      "direct_nn": {
+        "mean": 0.3668181818181818,
+        "ci95": [
+          0.3475639629033218,
+          0.38607240073304183
+        ]
+      },
+      "procrustes": {
+        "mean": 0.15590909090909089,
+        "ci95": [
+          0.14121299042963956,
+          0.17060519138854222
+        ]
+      },
+      "n_pool": 74,
+      "n_anchor": 55,
+      "n_hold": 11,
+      "description": "both scripts in ONE face (Douros Aegean) \u2014 the confounded baseline",
+      "chance_floor": 0.013513513513513514
+    },
+    "noto_crossfont": {
+      "direct_nn": {
+        "mean": 0.41590909090909084,
+        "ci95": [
+          0.39715605409163807,
+          0.4346621277265436
+        ]
+      },
+      "procrustes": {
+        "mean": 0.19954545454545453,
+        "ci95": [
+          0.18516095787009185,
+          0.2139299512208172
+        ]
+      },
+      "n_pool": 74,
+      "n_anchor": 55,
+      "n_hold": 11,
+      "description": "A in Noto Sans Linear A, B in Noto Sans Linear B \u2014 two independent designers",
+      "chance_floor": 0.013513513513513514
+    }
+  },
+  "delta": {
+    "direct_nn": {
+      "aegean": 0.3668181818181818,
+      "noto_crossfont": 0.41590909090909084,
+      "abs_drop": -0.04909090909090902,
+      "frac_retained": 1.1338289962825276,
+      "chance_floor": 0.013513513513513514,
+      "control_beats_chance": true
+    },
+    "procrustes": {
+      "aegean": 0.15590909090909089,
+      "noto_crossfont": 0.19954545454545453,
+      "abs_drop": -0.04363636363636364,
+      "frac_retained": 1.2798833819241984,
+      "chance_floor": 0.013513513513513514,
+      "control_beats_chance": true
+    }
+  },
+  "font_confound_verdict": "FONT CONFOUND REFUTED: the alignment is font-robust \u2014 cross-font recovery retains 113% of the Aegean number (here it is if anything stronger), so the reviewer's typeface-artifact hypothesis does not hold.",
+  "residual_confound": "GRAPHIC-GENEALOGY CIRCULARITY (uncontrolled, and the reason this stays an engineering demo): the anchor A<->B value correspondences were assigned by modern epigraphers on the basis of sign-shape similarity, and Linear B descends graphically from Linear A. So 'a shape encoder recovers the A->B value map' largely re-derives a mapping that was DEFINED by shape. Digital reference glyphs also inherit modern editorial normalization. The font-swap control removes the typeface-style artifact but NOT this circularity.",
+  "interpretation": "FONT CONFOUND REFUTED: the alignment is font-robust \u2014 cross-font recovery retains 113% of the Aegean number (here it is if anything stronger), so the reviewer's typeface-artifact hypothesis does not hold. GRAPHIC-GENEALOGY CIRCULARITY (uncontrolled, and the reason this stays an engineering demo): the anchor A<->B value correspondences were assigned by modern epigraphers on the basis of sign-shape similarity, and Linear B descends graphically from Linear A. So 'a shape encoder recovers the A->B value map' largely re-derives a mapping that was DEFINED by shape. Digital reference glyphs also inherit modern editorial normalization. The font-swap control removes the typeface-style artifact but NOT this circularity.",
+  "params": {
+    "n_splits": 200,
+    "held_frac": 0.2,
+    "seed": 20260630
+  },
+  "note": "Both scripts share ONE face in the baseline; the control draws each script with an independent designer (NotoA has 0 Linear B glyphs, NotoB has 0 Linear A glyphs). This isolates typeface house-style from genuine glyph shape. Reported as a control, never a verdict; the LLM does not grade it (invariants 2/4). Kept OUT of the main decipherment claims; the I-JEPA-on-~162-glyphs encoder is likewise excluded (over-parameterized for the information available) \u2014 only classical shape features + this control are reported."
+}

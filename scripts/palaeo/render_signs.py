@@ -44,21 +44,27 @@ CANVAS = 256
 MARGIN_FRAC = 0.10       # of the cropped glyph dimension
 
 
-def _font() -> ImageFont.FreeTypeFont:
-    if not os.path.exists(FONT_PATH):
+def _font(font_path: str = FONT_PATH) -> ImageFont.FreeTypeFont:
+    if not os.path.exists(font_path):
         raise FileNotFoundError(
-            f"Aegean.ttf missing at {FONT_PATH}. Fetch from "
+            f"font missing at {font_path}. The default Aegean.ttf is fetchable from "
             "https://raw.githubusercontent.com/deepin-community/ttf-ancient-fonts/master/Aegean.ttf")
-    return ImageFont.truetype(FONT_PATH, RENDER_AT)
+    return ImageFont.truetype(font_path, RENDER_AT)
 
 
-def render_glyph(codepoint: int) -> np.ndarray:
+def render_glyph(codepoint: int, font_path: str = FONT_PATH) -> np.ndarray:
     """Render one Unicode sign to a normalized IMG_SIZE x IMG_SIZE float64 [0,1] array.
 
     ink = high values (background = 0).  Glyph is ink-bbox-cropped, centered with a
     margin, and resized LANCZOS so stroke anti-aliasing carries shape information.
+
+    ``font_path`` selects the typeface.  It defaults to the comprehensive Aegean face
+    (which draws BOTH Linear A and Linear B); pass an alternate face to run the
+    font-swap confound control (scripts/palaeo/font_control.py) — e.g. Noto Sans
+    Linear A for A glyphs and Noto Sans Linear B for B glyphs, two independent type
+    designers, so a surviving cross-script alignment cannot be one designer's style.
     """
-    f = _font()
+    f = _font(font_path)
     img = Image.new("L", (CANVAS, CANVAS), 0)            # black bg
     d = ImageDraw.Draw(img)
     ch = chr(codepoint)

@@ -718,8 +718,14 @@ class MorfessorSegmenter:
         data = [(c, w) for w, c in Counter(utts).items()]
         model = morfessor.BaselineModel()
         model.load_data(data)
-        # deterministic batch training; silence the progress bar (dots) + logging
+        # deterministic batch training; silence the progress bar (dots) + logging.
+        # Morfessor's train_batch shuffles compounds via the stdlib `random` module, so its
+        # segmentation is NOT reproducible unless we seed that module here (the wrapper's `seed`
+        # was previously stored but never applied — the source of ±0.01-0.02 drift in the
+        # descriptive boundary-recovery / morpheme-inventory numbers across identical re-runs).
         import logging
+        import random as _random
+        _random.seed(self.seed)
         logging.getLogger("morfessor").setLevel(logging.ERROR)
         morfessor.utils.show_progress_bar = False
         try:
