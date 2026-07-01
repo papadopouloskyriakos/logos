@@ -191,7 +191,7 @@ def _build_annealer(module, prob, steps, processes, device="cpu"):
 
 
 def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print, device="cpu",
-            on_checkpoint=None):
+            on_checkpoint=None, batched=False):
     """Run CSA on one benchmark/seed. Uses ONLY his Problem / CoupledAnnealer /
     energy / move / lsa_2g / EvalModel.
 
@@ -220,9 +220,17 @@ def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print,
                           cfg["penf"], device)
     t0 = time.perf_counter()
 
+    def _maybe_batch(ann):
+        # Batched-parallel CUDA energy (bit-identical to serial; validated on CPU). Requires the
+        # serial no_par path (processes<=1), which anneal() takes when processes<=1.
+        if batched:
+            from scripts.baselines import csa_batched
+            csa_batched.install_batched(ann)
+
     if checkpoint > 0:
         # Chunked run: continuous schedule, harvest after each chunk.
         annealer, _ = _build_annealer(module, prob, checkpoint, processes, device)
+        _maybe_batch(annealer)
         last = None
         done = 0
         while done < steps:
@@ -245,6 +253,7 @@ def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print,
 
     # Single run.
     annealer, _ = _build_annealer(module, prob, steps, processes, device)
+    _maybe_batch(annealer)
     with contextlib.redirect_stdout(io.StringIO()):
         annealer.anneal()
     e, st = annealer.get_best()

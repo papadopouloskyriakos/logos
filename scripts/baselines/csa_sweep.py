@@ -155,7 +155,7 @@ def _plateau_stopper(eps: float, patience: int):
 # --------------------------------------------------------------------------- #
 def run_cell(module, cell: dict, *, steps: int, chunk: int, device: str,
              processes: int, plateau_eps: float, plateau_patience: int,
-             tmp_dir: str, log) -> dict:
+             tmp_dir: str, log, batched: bool = False) -> dict:
     """Downsample → write_cog → CSA (chunked, CUDA, plateau-early-stop) → Luo accuracy for one cell."""
     key = lc.KNOWN_ANSWER_BENCHMARKS[cell["benchmark"]]
     bench = lc.parse_cog(os.path.join(lc._DATA_DIR, key["cog"]))
@@ -172,7 +172,7 @@ def run_cell(module, cell: dict, *, steps: int, chunk: int, device: str,
             module, reg, cell["seed"], steps, processes,
             checkpoint=max(1, chunk), device=device,
             on_checkpoint=_plateau_stopper(plateau_eps, plateau_patience),
-            sink=lambda line: trace.append(line))
+            sink=lambda line: trace.append(line), batched=batched)
     finally:
         rt.BENCHMARKS.pop(reg, None)
         try:
@@ -292,6 +292,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--chunk", type=int, default=1000, help="checkpoint chunk (steps per harvest)")
     p.add_argument("--processes", type=int, default=16, help="annealer processes (<= 16)")
     p.add_argument("--device", default="cuda", choices=["cuda", "cpu"])
+    p.add_argument("--no-batched", action="store_true",
+                   help="disable the batched-parallel CUDA energy (default: ON for cuda — one "
+                        "edit-distance kernel per step over all 16 annealers, bit-identical to serial)")
     p.add_argument("--plateau-eps", type=float, default=0.05,
                    help="stop a cell when best energy improves by < this for --plateau-patience chunks")
     p.add_argument("--plateau-patience", type=int, default=3)
@@ -354,12 +357,17 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     done0 = len(cells) - len(pending)
     print(f"\n[sweep] {len(cells)} cells total; {done0} already checkpointed; {len(pending)} to run.")
 
+    batched = (args.device == "cuda") and not args.no_batched
+    if batched:
+        print("[cuda] batched-parallel energy ON (one kernel/step over all 16 annealers; "
+              "bit-identical to serial, validated)")
     t_start = time.time()
     for i, c in enumerate(pending, 1):
         t0 = time.time()
         res = run_cell(module, c, steps=args.steps, chunk=args.chunk, device=args.device,
                        processes=args.processes, plateau_eps=args.plateau_eps,
-                       plateau_patience=args.plateau_patience, tmp_dir=tmp_dir, log=print)
+                       plateau_patience=args.plateau_patience, tmp_dir=tmp_dir, log=print,
+                       batched=batched)
         with open(os.path.join(cells_dir, _cell_id(c) + ".json"), "w", encoding="utf-8") as fh:
             json.dump(res, fh, indent=2)
         elapsed = time.time() - t_start
