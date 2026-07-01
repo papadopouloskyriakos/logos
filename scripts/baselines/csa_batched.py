@@ -76,11 +76,14 @@ def _expand_words(prob, state):
     return queries, np.array(lGroupsW), P
 
 
-def _dist_matrix(prob, queries, max_pairs: int = 1_000_000) -> np.ndarray:
+def _dist_matrix(prob, queries, max_pairs: int = 0) -> np.ndarray:
     """Edit-distance matrix [M × N] of ``queries`` vs prob.y, via tiled pairwise ``editdistance``.
 
-    Chunked over query rows so a chunk's M_c × N pairs stay under ``max_pairs`` (bounds the kernel's
-    O(M_c·N·maxLl²) scratch on the GPU). One kernel launch per chunk — vs his one per query word.
+    Chunked over query rows to bound the kernel's per-call scratch (his kernel ``cudaMalloc``s an
+    O(pairs · (srcLen+1)(trgLen+1)) working buffer AND cudaFrees it every call, so FEWER, BIGGER
+    chunks are much faster on a large GPU). ``max_pairs`` defaults to a memory-adaptive value that
+    targets ~8 GB of scratch from the actual (maxLl, maxLk) so the H100 does the whole matrix in a
+    handful of launches instead of dozens. One kernel launch per chunk — vs his one per query word.
     """
     N = int(prob.y.shape[0])
     M = len(queries)
@@ -89,6 +92,10 @@ def _dist_matrix(prob, queries, max_pairs: int = 1_000_000) -> np.ndarray:
         return out
     X = torch.tensor(queries, dtype=torch.long).to(prob.device)     # [M, maxLl]
     Y = prob.y                                                       # [N, maxLk] on device
+    if max_pairs <= 0:
+        cell_bytes = (int(X.shape[1]) + 1) * (int(Y.shape[1]) + 1) * 4   # his workingM per pair
+        budget = 8 * 1024**3 if prob.device != "cpu" else 64 * 1024**2   # ~8 GB GPU / 64 MB CPU
+        max_pairs = max(N, budget // max(cell_bytes, 1))
     rows = max(1, max_pairs // max(N, 1))
     for c in range(0, M, rows):
         Xc = X[c:c + rows]
@@ -97,10 +104,11 @@ def _dist_matrix(prob, queries, max_pairs: int = 1_000_000) -> np.ndarray:
         trg = Y.repeat(mc, 1)                                        # [mc*N, maxLk]
         d = editdistance(src, trg, 0, prob.ED[0], prob.ED[1])[:, 1].reshape(mc, N)
         out[c:c + mc] = d.to("cpu").numpy()
+        del src, trg, d
     return out
 
 
-def batch_energy(prob, states: Sequence, max_pairs: int = 1_000_000) -> List[float]:
+def batch_energy(prob, states: Sequence, max_pairs: int = 0) -> List[float]:
     """Energies for a list of states, batching all edit-distance work into one kernel per chunk.
 
     Bit-identical to ``[prob.energy(s) for s in states]`` — reuses his expandWord/lsa_2g/penalties;
@@ -129,7 +137,7 @@ def batch_energy(prob, states: Sequence, max_pairs: int = 1_000_000) -> List[flo
     return energies
 
 
-def install_batched(annealer, max_pairs: int = 1_000_000) -> None:
+def install_batched(annealer, max_pairs: int = 0) -> None:
     """Monkeypatch the annealer's serial ``no_par`` update to batch the 16 probes' energies.
 
     anneal() dispatches to ``__update_state_no_par`` when ``processes <= 1``; we replace that bound
