@@ -39,7 +39,8 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default=os.path.join(os.path.dirname(__file__), "..", "..", "runtime", "csa_curve"))
     ap.add_argument("--steps", type=int, default=1500)
     ap.add_argument("--chunk", type=int, default=250)
-    ap.add_argument("--processes", type=int, default=16)
+    ap.add_argument("--processes", type=int, default=1)     # batched serial: one tiled edit-distance
+    ap.add_argument("--no-batched", action="store_true")     #   call/step, no per-step pool overhead
     ap.add_argument("--seeds", type=int, nargs="*", default=[0])
     ap.add_argument("--plateau-eps", type=float, default=0.02)
     ap.add_argument("--plateau-patience", type=int, default=3)
@@ -74,7 +75,7 @@ def main(argv=None) -> int:
                     r = S.run_cell(module, cell, steps=args.steps, chunk=args.chunk, device="cpu",
                                    processes=args.processes, plateau_eps=args.plateau_eps,
                                    plateau_patience=args.plateau_patience, tmp_dir=tmp,
-                                   log=lambda *a: None, batched=False)
+                                   log=lambda *a: None, batched=(not args.no_batched))
                     json.dump(r, open(cp, "w"))
                     print(f"DONE {cid} acc={round(r.get('acc') or 0, 3)} "
                           f"steps={r.get('steps_run')} wall={r.get('wall_s')} "

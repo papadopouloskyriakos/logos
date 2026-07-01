@@ -406,7 +406,9 @@ Gordon's equations and a-sa-sa-ra-me = ``oh Asherah!'' is Best (1981),
 not Gordon; candidates failing independent corroboration against
 Rendsburg (1996) (\texttt{qa-pa} = kappu, a Semitic \texttt{ki-ro}) were
 rejected rather than indexed. Generated from the seed (invariant 12),
-the index stands at \textbf{78 published claims across 61 signs}.
+the index currently holds \textbf{63 published claims across 62 indexed
+entries (55 single signs)} --- a deliberately conservative,
+non-exhaustive seed, not yet the full §C.1 literature census.
 
 \textbf{The L\_fake canary} is a phonotactically-plausible invented
 lexicon, calibrated to a real candidate language's phoneme frequencies,
@@ -458,23 +460,26 @@ recover literature-unseen (\texttt{L\_virgin}) signs above a
 pre-committed threshold and on a minimum number of distinct such signs
 --- so reproducing already-published values cannot by itself graduate a
 claim, and the clause fails closed when no threshold or no supported
-virgin sign is present. Two null models must \emph{fail}
-(within-inscription sign-order shuffle and the L\_fake corpus) and the
-L\_fake corrected margin must be cleared. The minimum-description-length
-check (k ≤ U\_floor, §4) was, after the same review, \textbf{removed
-from the gate and is now reported as a diagnostic rather than enforced
-as a graduation clause}: clearing it does not certify identifiability
-(it is a necessary-precondition / toy-model diagnostic, §4, §9), and as
-a hard clause it could only be evaluated against a free-parameter
-default that risked passing degenerate inputs. U\_floor is still
-displayed next to every claim, and ``parameters \textgreater{}
-information ⇒ underdetermined'' is still stated (invariant 7) --- it
-simply no longer sits inside the AND. These are \emph{gate parameters}
---- pre-registered choices for this corpus, not universal constants.
-Validation is leave-one-site-out, not ordinary \emph{k}-fold, because
-the libation formula induces formulaic dependence across inscriptions.
-The gate is AND-monotone --- clauses can only make it stricter --- so
-hardening never lets a previously-failing reading graduate.
+virgin sign is present. The L\_fake corpus must \emph{fail} as a null,
+its corrected margin must be cleared, and the observed statistic must
+beat the order-statistic bar over the Packard/random-lexeme multiplicity
+null (the within-inscription sign-order shuffle is a null in the
+morphology module, §6, not a gate clause). The
+minimum-description-length check (k ≤ U\_floor, §4) was, after the same
+review, \textbf{removed from the gate and is now reported as a
+diagnostic rather than enforced as a graduation clause}: clearing it
+does not certify identifiability (it is a necessary-precondition /
+toy-model diagnostic, §4, §9), and as a hard clause it could only be
+evaluated against a free-parameter default that risked passing
+degenerate inputs. U\_floor is still displayed next to every claim, and
+``parameters \textgreater{} information ⇒ underdetermined'' is still
+stated (invariant 7) --- it simply no longer sits inside the AND. These
+are \emph{gate parameters} --- pre-registered choices for this corpus,
+not universal constants. Validation is leave-one-site-out, not ordinary
+\emph{k}-fold, because the libation formula induces formulaic dependence
+across inscriptions. The gate is AND-monotone --- clauses can only make
+it stricter --- so hardening never lets a previously-failing reading
+graduate.
 
 \hypertarget{grade-from-persisted-artifacts}{%
 \subsection{3.5 Grade from persisted
@@ -886,12 +891,12 @@ The palaeographic probe renders 88 Linear-A and 74 Linear-B glyphs and
 tests held-out recovery of shared A↔B anchors. Classical descriptors
 (HOG + Hu moments + shape-context) reach direct-NN accuracy 0.410
 {[}0.18, 0.64{]} and Procrustes 0.185 {[}0.00, 0.36{]}, far above image
-chance (0.0135); a from-scratch I-JEPA reaches only 0.322 ± 0.018 and is
-excluded from the claims as over-parameterized for \textasciitilde90
-glyphs. Image embeddings recover held-out anchors where sequence
-co-occurrence sat at chance. Two controls decide how to read that
-asymmetry, and together they \emph{downgrade} it from a positive to a
-demonstration.
+chance (0.0135); a from-scratch I-JEPA reaches only 0.324 ± 0.025 (3
+seeds) and is excluded from the claims as over-parameterized for
+\textasciitilde90 glyphs. Image embeddings recover held-out anchors
+where sequence co-occurrence sat at chance. Two controls decide how to
+read that asymmetry, and together they \emph{downgrade} it from a
+positive to a demonstration.
 
 \emph{First, a font-swap control.} Rendering both scripts in one
 typeface (Aegean, George Douros) risks making the alignment a
@@ -929,7 +934,7 @@ DĀMOS Mycenaean corpus} --- 13,562 wordforms, ≈15× the earlier cognate
 file, 56 anchors: the best of five alignment methods reaches 0.025
 against a 0.011 chance floor
 (\texttt{clearly\_above\_chance\ =\ False}), while the \emph{positive
-control recovers 0.95}, so the harness works and the null is a real
+control recovers 0.947}, so the harness works and the null is a real
 null. Ingesting all of DĀMOS therefore reframes the obstacle from
 \emph{data volume} to \emph{absent distributional signal}: the A↔B
 phonetic correspondence is simply not carried by cross-script sign
@@ -964,7 +969,7 @@ frontier-scale open model, a far stronger memoriser than a local 12B ---
 on a rented H100 (40 seeds × 40 held-out Linear A forms; NW-Semitic
 candidate; a Hebrew lexicon of 7,682 skeletons for the model-free arm; 0
 LLM errors across 40/40 seeds) (logos v0.1.0). The first-pass
-contamination rate came out at \texttt{1.000} in all 32 seeds where it
+contamination rate came out at \texttt{1.000} in all 33 seeds where it
 was defined --- but this is an \textbf{artifact, reported as such}: the
 mechanical arm never shares a literature-matching correspondence with
 the LLM (their value vocabularies overlap in only 10 of 134 values), so
@@ -984,16 +989,16 @@ the four tested lexical items (\texttt{JA-NE}, \texttt{KA-RO-PA},
 \texttt{SU-PA-RA}, alongside the \texttt{KU-RO} item below) are among
 Gordon's five West-Semitic equations; \texttt{A-SA-SA-RA-ME} is Best's,
 not Gordon's. An external red-team correction split \texttt{KU-RO}: of
-its 14/40 hits, only 8/40 route through the Semitic root \emph{kull},
-with 7/40 reachable via the general-knowledge meaning ``total''
-(confirmed by tablet arithmetic), so \texttt{KU-RO} = ``total'' is
-\textbf{excluded} as a witness and \texttt{KU-RO} = \emph{kull} is
-downweighted (logos v0.1.0). The surviving gradient --- famous readings
-reproduced, obscure ones not --- is what C.4 detects:
-\textbf{reproduction of published readings weighted by web-prevalence},
-not verified correctness. The gate-2 rate itself (mean 0.646) remains
-confounded by the baseline's representational ceiling and is not
-reported as a contamination measure.
+its 14/40 hits, 8/40 route through the Semitic root \emph{kull} and 7/40
+are reachable via the general-knowledge meaning ``total'' (confirmed by
+tablet arithmetic; the two categories overlap on one seed), so
+\texttt{KU-RO} = ``total'' is \textbf{excluded} as a witness and
+\texttt{KU-RO} = \emph{kull} is downweighted (logos v0.1.0). The
+surviving gradient --- famous readings reproduced, obscure ones not ---
+is what C.4 detects: \textbf{reproduction of published readings weighted
+by web-prevalence}, not verified correctness. The gate-2 rate itself
+(mean 0.646) remains confounded by the baseline's representational
+ceiling and is not reported as a contamination measure.
 
 \hypertarget{l_virgin-memorisation-vs.-reasoning}{%
 \subsubsection{8.2 L\_virgin: memorisation
@@ -1025,10 +1030,10 @@ pending)}\label{information-sufficiency-upper-bound-protocol-and-bounding-logic-
 The learning-curve harness reframes the withdrawn unicity-distance
 diagnostic --- a toy-model precondition, never a sufficiency or
 refutation claim --- as a sharper, answerable question: \emph{is a
-Linear-A-scale corpus (\textasciitilde650 distinct word-forms; V = 259
-sign-types at N ≈ 5,792 parsed syllable-signs) large enough to recover a
-decipherment IF a known cognate existed?} We report the design and its
-reading rules here, not an outcome: the sweep is not yet run.
+Linear-A-scale corpus (539 distinct word-forms; V = 259 sign-types at N
+≈ 5,792 parsed syllable-signs) large enough to recover a decipherment IF
+a known cognate existed?} We report the design and its reading rules
+here, not an outcome: the sweep is not yet run.
 
 The protocol downsamples known-answer benchmarks --- Linear B /
 Mycenaean Greek as the primary syllabic analog, sourced through DĀMOS,
@@ -1243,6 +1248,10 @@ final page/venue verification.}
   Bennett, E. L., Jr.~(1950). Fractional Quantities in Minoan
   Bookkeeping. \emph{American Journal of Archaeology} 54(3):204--222.
 \item
+  Berg-Kirkpatrick, T., \& Klein, D. (2011). Simple Effective
+  Decipherment via Combinatorial Optimization. \emph{Proc. EMNLP 2011},
+  313--321.
+\item
   Best, J. G. P. (1981). YASSARAM! \emph{Talanta} 13:17--21.
 \item
   Braović, M., Krstinić, D., Štula, M., \& Ivanda, A. (2024). A
@@ -1286,6 +1295,10 @@ final page/venue verification.}
   Fuls, A. (2015). Classifying undeciphered writing systems.
   \emph{Historische Sprachforschung} 128(1):42--58.
 \item
+  Gelb, I. J., \& Whiting, R. M. (1975). Methods of Decipherment. †
+  \emph{Venue pending verification; the Type 0--III typology is used
+  here via Ferrara and Tamburini (2022).}
+\item
   Godart, L., \& Olivier, J.-P. (1976--1985). \emph{Recueil des
   inscriptions en Linéaire A} (GORILA). Études crétoises 21. Paris:
   Geuthner.
@@ -1304,6 +1317,10 @@ final page/venue verification.}
   Luo, J., Cao, Y., \& Barzilay, R. (2019). Neural Decipherment via
   Minimum-Cost Flow: From Ugaritic to Linear B. \emph{Proc. ACL 2019},
   3146--3155.
+\item
+  Luo, J., Hartmann, F., Santus, E., Barzilay, R., \& Cao, Y. (2021).
+  Deciphering Undersegmented Ancient Scripts Using Phonetic Prior.
+  \emph{Transactions of the ACL} 9:69--81.
 \item
   Min Eu, G., Xu, R., \& Perono Cacciafoco, F. (2019). Linear A
   comparison against time-compatible lexical lists. † \emph{Venue
@@ -1338,6 +1355,9 @@ final page/venue verification.}
   Schrijver, P. (2014). Fractions and food rations in Linear A.
   \emph{Kadmos} 53(1-2):1--44. doi:10.1515/kadmos-2014-0001.
 \item
+  Snyder, B., Barzilay, R., \& Knight, K. (2010). A Statistical Model
+  for Lost Language Decipherment. \emph{Proc. ACL 2010}, 1048--1057.
+\item
   Sommerschield, T., Assael, Y., Pavlopoulos, J., et al.~(2023). Machine
   Learning for Ancient Languages: A Survey. \emph{Computational
   Linguistics} 49(3):703--747.
@@ -1355,6 +1375,9 @@ final page/venue verification.}
 \item
   Thomas, R. (2020). Some reflections on morphology in the language of
   the Linear A libation formula. \emph{Kadmos.} †
+\item
+  Timm, T. (2008). Linear A word-list statistics (as cited in Fuls
+  2015:134, 227). † \emph{Full venue pending verification.}
 \item
   Valério, M. (2007). Analysis of Linear A suffixation (as cited in
   Salgarella 2025 §8). †
