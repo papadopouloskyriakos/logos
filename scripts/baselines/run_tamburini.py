@@ -171,9 +171,11 @@ def _eval_best(module, prob, cog_path, energy_best):
     return None, None, None
 
 
-def _build_annealer(module, prob, steps, processes):
+def _build_annealer(module, prob, steps, processes, device="cpu"):
     """Construct his CoupledAnnealer with his exact default hyperparameters
-    (only steps/processes are exposed)."""
+    (only steps/processes/device are exposed). ``device='cuda'`` is the H100 path — his
+    energy (EditDistanceWild) is CUDA-capable; ``'cpu'`` is the default and preserves the
+    validated CPU reproduction."""
     n_annealers = 16  # his constant
     stepsatsameT = max(math.ceil(len(prob.init_state) / n_annealers), 5)
     return module.CoupledAnnealer(
@@ -185,10 +187,11 @@ def _build_annealer(module, prob, steps, processes):
         n_annealers=n_annealers,
         tacc_initial=200.0, tacc_schedule=0.95,
         tgen_initial=1.0, tgen_schedule=0.999,
-        qa=0.1, verbose=0, device="cpu"), n_annealers
+        qa=0.1, verbose=0, device=device), n_annealers
 
 
-def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print):
+def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print, device="cpu",
+            on_checkpoint=None):
     """Run CSA on one benchmark/seed. Uses ONLY his Problem / CoupledAnnealer /
     energy / move / lsa_2g / EvalModel.
 
@@ -196,6 +199,10 @@ def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print)
     mutates instance temps/state, so the temperature schedule is CONTINUOUS across
     chunks) and evaluate+emit get_best() accuracy after each chunk. This yields a
     convergence trace and lets a long run be harvested even if it must stop early.
+
+    ``device='cuda'`` runs his energy on the GPU (the H100 sweep path); default 'cpu'.
+    ``on_checkpoint(last_dict) -> bool`` (checkpoint mode only): called after each chunk; return
+    True to STOP early (e.g. energy plateau) — never alters the temperature schedule, only ends it.
     """
     cfg = BENCHMARKS[bench_key]
     cog_path = os.path.join(DATA_DIR, cfg["cog"])
@@ -210,12 +217,12 @@ def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print)
         pass
 
     prob = module.Problem(cog_path, FIXNULL, "", cfg["N"], cfg["M"],
-                          cfg["penf"], "cpu")
+                          cfg["penf"], device)
     t0 = time.perf_counter()
 
     if checkpoint > 0:
         # Chunked run: continuous schedule, harvest after each chunk.
-        annealer, _ = _build_annealer(module, prob, checkpoint, processes)
+        annealer, _ = _build_annealer(module, prob, checkpoint, processes, device)
         last = None
         done = 0
         while done < steps:
@@ -231,10 +238,13 @@ def run_one(module, bench_key, seed, steps, processes, checkpoint=0, sink=print)
             sink("TAMBURINI_CHECKPOINT benchmark={benchmark} seed={seed} "
                  "steps={steps} acc={acc} found={found} total={total} "
                  "energy={energy:.4f} wall_s={wall_s}".format(**last))
+            if on_checkpoint is not None and on_checkpoint(last):
+                last["early_stopped"] = True
+                break
         return last
 
     # Single run.
-    annealer, _ = _build_annealer(module, prob, steps, processes)
+    annealer, _ = _build_annealer(module, prob, steps, processes, device)
     with contextlib.redirect_stdout(io.StringIO()):
         annealer.anneal()
     e, st = annealer.get_best()
@@ -258,6 +268,9 @@ def main():
                          "for large lexica). default 1000")
     ap.add_argument("--processes", type=int, default=8,
                     help="parallel annealer processes (<= n_annealers=16). default 8")
+    ap.add_argument("--device", default="cpu",
+                    help="cpu (default, validated reproduction) | cuda (H100 sweep — his energy "
+                         "EditDistanceWild is CUDA-capable)")
     ap.add_argument("--checkpoint-steps", type=int, default=0,
                     help="if >0, run his anneal() in chunks of this many steps and "
                          "emit a TAMBURINI_CHECKPOINT accuracy line after each (continuous "
@@ -284,7 +297,7 @@ def main():
     results = []
     for s in args.seeds:
         r = run_one(module, args.benchmark, s, args.steps, args.processes,
-                    checkpoint=args.checkpoint_steps)
+                    checkpoint=args.checkpoint_steps, device=args.device)
         results.append(r)
         if not args.json:
             print("TAMBURINI_RESULT benchmark={benchmark} seed={seed} "
