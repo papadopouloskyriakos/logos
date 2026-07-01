@@ -32,11 +32,37 @@ from __future__ import annotations
 
 import argparse
 import json
+import multiprocessing as _mp
 import os
 import sys
 import tempfile
 import time
 from typing import Dict, List, Optional, Sequence, Tuple
+
+
+def _install_cuda_mp_compat() -> None:
+    """Make his CUDA multiprocessing path survive a many-cell driver process.
+
+    His ``pycsa.CoupledAnnealer`` runs ``mp.set_start_method('spawn')`` (unforced) whenever
+    ``device=='cuda'`` — CUDA REQUIRES spawn (a forked CUDA context is invalid), but that call may
+    run at most once per process, and this driver builds a fresh annealer per (benchmark,size,seed)
+    cell in ONE process, so the 2nd cell would raise ``RuntimeError: context has already been set``.
+    We set spawn once up front (force) and make his subsequent identical calls no-ops, so his
+    UNMODIFIED code runs many CUDA cells back-to-back. Called only for ``--device cuda``; the CPU
+    path (and the tests) never touch this."""
+    try:
+        _mp.set_start_method("spawn", force=True)
+    except RuntimeError:
+        pass
+    _orig = _mp.set_start_method
+
+    def _tolerant(method="spawn", force=False):
+        try:
+            _orig(method, force=force)
+        except RuntimeError:
+            pass                                             # already spawn — his per-annealer call
+
+    _mp.set_start_method = _tolerant
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _ROOT = os.path.dirname(os.path.dirname(_HERE))
@@ -274,6 +300,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--force", action="store_true", help="run even if preflight reports errors")
     p.add_argument("--dry-run", action="store_true", help="print the cell plan + cost band; compute nothing")
     args = p.parse_args(argv)
+    if args.device == "cuda":
+        _install_cuda_mp_compat()                            # CUDA needs spawn; set once for the whole run
 
     cells = cell_plan(args.benchmarks, args.seeds)
     errors, warnings = preflight(args.device, args.benchmarks)
