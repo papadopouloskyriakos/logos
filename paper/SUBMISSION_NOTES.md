@@ -7,10 +7,22 @@ Two PDFs are built from one shared body (`paper/tacl/body.tex`) via two thin wra
 
 | Target | Wrapper | Options | Output |
 |---|---|---|---|
-| **A — arXiv (named)** | `paper/tacl/main-arxiv.tex` | `\anonfalse`, `[acceptedWithA]` | `paper/build/logos-arxiv.pdf` |
+| **A — arXiv (named)** | `paper/tacl/main-arxiv.tex` | `\anonfalse`, `[acceptedWithA]` **(retained deliberately)** | `paper/build/logos-arxiv.pdf` |
 | **B — TACL (anonymous)** | `paper/tacl/main-tacl.tex` | `\anontrue`, no `acceptedWithA` | `paper/build/logos-tacl-anon.pdf` |
 
 Build both: `bash paper/tacl/build.sh` (pdfLaTeX + bibtex + 3 more pdfLaTeX passes).
+
+**Why `[acceptedWithA]` is retained on the arXiv wrapper (verified against `tacl2021v1.sty`):** the
+style offers exactly two modes — `submission` (anonymous: confidentiality banner, line-number rulers,
+"Anonymous TACL submission") and `acceptedWithA` (`\taclpubformattrue`), which *only* (a) shows the
+author block instead of the anonymous slot and (b) removes the submission banner/rulers. It emits **no**
+masthead, journal name, acceptance line, or Action-Editor text — there is no third "neutral" mode to
+switch to, and removing the option would render the arXiv PDF as a confidential anonymous submission.
+Trade-dress scan of the rendered Target A: the only "Transactions of the Association" string in the PDF
+is the Luo et al. (2021) bibliography entry (a cited venue, not trade dress); p.1 carries the
+"Preprint — under review; not peer reviewed." note. The PDF metadata title is the **full** paper title
+and `pdfauthor` is Kyriakos Papadopoulos (an earlier "truncated title" report was a display artifact of
+the checking command, not the PDF).
 
 ---
 
@@ -42,11 +54,13 @@ Build both: `bash paper/tacl/build.sh` (pdfLaTeX + bibtex + 3 more pdfLaTeX pass
 
 | Item | In-repo commit (freeze) | External timestamp | First execution |
 |---|---|---|---|
-| prereg-morphology | 2026-06-30 20:27 +0200 | Zenodo `date-released` 2026-07-01 | 2026-06-30 onward |
-| stratification addendum | 2026-06-30 22:55 | Zenodo `date-released` 2026-07-01 | 2026-06-30 onward |
-| salgarella addendum | 2026-07-01 00:07 | Zenodo `date-released` 2026-07-01 | 2026-07-01 onward |
+| prereg-morphology | 2026-06-30 20:27 +0200 | Zenodo `date-released` 2026-07-01 | 2026-06-30 21:15 +0200 (pooled-run findings commit) |
+| stratification addendum | 2026-06-30 22:55 | Zenodo `date-released` 2026-07-01 | 2026-07-01 00:52 +0200 (stratified-run findings commit) |
+| salgarella addendum | 2026-07-01 00:07 | Zenodo `date-released` 2026-07-01 | 2026-07-01 00:52 +0200 (same stratified-run findings commit) |
 
-The external deposit **postdates** first execution: the paper therefore states
+First-execution timestamps are the first commits of the corresponding findings documents (commit
+granularity; the freeze-precedes-run ordering is visible above at timestamp granularity for all three
+rows). The external deposit **postdates** first execution: the paper therefore states
 (§3.1 + Appendix A.1) that pre-specifications were frozen **in-repository before each
 run** (commit history), and that the external immutable deposit certifies the *current
 state* of the registrations, **not temporal priority**.
@@ -129,8 +143,9 @@ every headline kept) until Target A crossed to 10 pp, then **stopped at first-un
 - **Body stands alone:** every Table 1 row and every probe headline (NO POWER; segmentation
   supported; metrology & phonology nulls; capped circular image demo; contamination
   gradient) is still defended in the reviewed body. The gate's **0.6% false-graduation rate**
-  and **Clopper–Pearson ≈1.54%** upper bound remain in §3.4; **U ≈ 204–415, N ≈ 5,792,
-  V = 259** remain in §4/§9.4; abstract unchanged at **185 words**.
+  and **Clopper–Pearson ≈1.54%** upper bound remain in §3.4; **U ≈ 204–415** remains in §9.4 (and Table 10); **N ≈ 5,792** and **V = 259** now live in Table 10,
+  referenced from §4 and Appendix C.4 (Cat-2 tables are body-referenced, per policy); abstract
+  unchanged at **185 words**.
 - Frozen-content re-verification (compiled body): Clopper–Pearson ≈1.54% present; **no**
   "1.3%"; **no** "effective-n"/"n_eff"; **no** "trivially satisfied"; **no** "frontier
   model"/"virgin"; **no** operative DSR clause (bailey2014 kept only as selective-inference
