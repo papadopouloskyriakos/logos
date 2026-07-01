@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""litindex.py — literature index + L_known/L_virgin partition (logos comparison-layer §C.1, §C.2).
+"""litindex.py — literature index + L_known/L_not_indexed partition (logos comparison-layer §C.1, §C.2).
 
 This module is the *decontamination* mechanism the design calls the necessary-but-not-sufficient
 first line against regurgitation (§C.1): a frontier model has read Gordon, Best, Di Mino, so a
@@ -11,13 +11,13 @@ quarantined (it may be tested, but can never count as discovery).
 §C.2 is the decisive generalization test: partition signs into
 
   - ``L_known``  — at least one published proposal references the sign, and
-  - ``L_virgin`` — no published proposal references it.
+  - ``L_not_indexed`` — no published proposal references it.
 
-"Discovery claims may rest only on ``L_virgin`` held-out success" — regurgitation can only return
+"Discovery claims may rest only on ``L_not_indexed`` held-out success" — regurgitation can only return
 what is in the literature, so a system that is right about literature-known signs but useless on the
-untouched ``L_virgin`` signs memorized rather than discovered. :func:`virgin_support` isolates the
-share of held-out support attributable to ``L_virgin`` signs — the §E gate clause "support
-generalizes to L_virgin signs".
+untouched ``L_not_indexed`` signs memorized rather than discovered. :func:`not_indexed_support` isolates the
+share of held-out support attributable to ``L_not_indexed`` signs — the §E gate clause "support
+generalizes to L_not_indexed signs".
 
 SCOPE + HONESTY (read before extending): this is the MECHANISM plus a still-growing SEED — it is NOT
 yet the exhaustive literature index (a separate, deferred Phase-0 task; see design §D step 2). The
@@ -30,7 +30,7 @@ su-pa-ra / ku-ro / ya-ne (Evidence for the Minoan Language, 1966) and J. Best's 
 1996) before inclusion; unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. The
 Semitic readings are DISPUTED — indexed so a model regurgitating them is caught, NEVER as accepted
 readings. Each carries a source + year. The seed is deliberately CONSERVATIVE: a sign wrongly left
-out is wrongly granted ``L_virgin`` status, the *dangerous* direction (it could let a regurgitated
+out is wrongly granted ``L_not_indexed`` status, the *dangerous* direction (it could let a regurgitated
 value masquerade as discovery), so expand toward completeness — never pad with uncertain
 attributions. When in doubt a claim is OMITTED.
 
@@ -47,7 +47,7 @@ from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Set
 CITATION_DESIGN = (
     "logos comparison-layer §C.1 (literature index + quarantine: a proposed correspondence matching "
     "a published claim is tagged literature_match and can never count as discovery) and §C.2 "
-    "(L_known / L_virgin partition: discovery claims may rest only on L_virgin held-out success)."
+    "(L_known / L_not_indexed partition: discovery claims may rest only on L_not_indexed held-out success)."
 )
 CITATION_GORILA = (
     "GORILA = L. Godart & J.-P. Olivier, 'Recueil des inscriptions en Linéaire A' (Études "
@@ -112,7 +112,7 @@ CITATION_SPICES = (
     "KA+PO monogram = karphos 'cinnamon' reading originates with A. Sacconi, Kadmos 11 (1972):22-26; "
     "the fenugreek alternative with B. Foster (1974, Duke diss.). DISPUTED/SPECULATIVE by the authors' "
     "own hedging — indexed for DECONTAMINATION (these are now PUBLIC 2025 readings a model could "
-    "regurgitate as 'discovery' in the L_virgin test), NEVER as accepted readings."
+    "regurgitate as 'discovery' in the L_not_indexed test), NEVER as accepted readings."
 )
 
 # A loud, machine-readable flag so no downstream consumer mistakes the seed for the full index.
@@ -125,14 +125,14 @@ SEED_NOTE = (
     "Language, 1966) and Best's a-sa-sa-ra-me='oh Asherah!' (Talanta 1981). Added 2026-06-30 (audit): "
     "four PUBLIC 2025 logographic/composite readings from Salgarella/Bellinato/Ferrara, Kadmos 64 "
     "('On Aegean spices') — A646/A341='root', *127(KA+PO)='spice', LB *157='root' — SPECULATIVE by the "
-    "authors' own hedging, indexed so they cannot leak into the L_virgin test as 'discovery'. "
+    "authors' own hedging, indexed so they cannot leak into the L_not_indexed test as 'discovery'. "
     "Added 2026-07-01: the published STRUCTURAL readings (no phonetic value) — Davis 2013's "
     "i-*301='gives/dedicates' (endorsed Salgarella 2025 §7.2) + the Salgarella 2025 §8 affix inventory "
     "(-TE/-TI 'from/of' Valerio; I-/J- 'to/at' Duhoux; -JA adjectival Younger; -RU/-RE ~ Greek -os "
     "Steele&Meissner; -A feminine), indexed so a model cannot regurgitate them as morphology discovery. "
     "Unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. All disputed readings are "
     "indexed to CATCH regurgitation of them, never as accepted readings. A sign absent here is treated "
-    "as L_virgin (the dangerous direction); EXPAND toward completeness, never pad with uncertain "
+    "as L_not_indexed (the dangerous direction); EXPAND toward completeness, never pad with uncertain "
     "attributions."
 )
 
@@ -218,7 +218,7 @@ _SEMITIC_PROPOSALS = (
      "Best (1981): (j)a-sa-sa-ra-me = vocative 'oh Asherah!' (NW Semitic divine name; Ugaritic "
      "Athirat/atrt). The Linear A libation-formula word; ATTRIBUTION is to Best, NOT Gordon. DISPUTED."),
     # Di Mino's highest-profile anchor — DISPUTED + UNVERIFIED, indexed ONLY to quarantine it (so a model
-    # reproducing *301=/na/ is caught) and to mark *301 L_known (excluding it from any L_virgin discovery set).
+    # reproducing *301=/na/ is caught) and to mark *301 L_known (excluding it from any L_not_indexed discovery set).
     ("*301", "na", CITATION_DIMINO, 2026,
      "Di Mino (2026) reads *301 with a /na/-initial value in A-TA-I-*301-WA-JA -> Semitic N-W-Y 'to "
      "dwell' (nawaya). DISPUTED + NOT independently verified (Davis: i-*301 = verb 'give/dedicate'); "
@@ -227,7 +227,7 @@ _SEMITIC_PROPOSALS = (
 
 # Published 2025 LOGOGRAPHIC / composite-sign readings (Salgarella, Bellinato & Ferrara, Kadmos 64,
 # 2025, 'On Aegean spices'). Indexed because they are now PUBLIC and a model could regurgitate them as
-# "discovery" in the L_virgin generalization test — exactly the §C.2 leak this partition exists to
+# "discovery" in the L_not_indexed generalization test — exactly the §C.2 leak this partition exists to
 # close (audit 2026-06-30 flagged the gap). They are SPECULATIVE by the authors' OWN hedging: the
 # KA+PO spice reading has THREE competing values (cinnamon / fenugreek / Greek karpos 'fruit'), and the
 # A646 'root' reading rests on a SINGLE hapax on the damaged HT 33 — which FAILS logos's own unicity
@@ -240,7 +240,7 @@ _LOGOGRAPHIC_READINGS = (
      "HT 33 — fails logos's unicity standard; uses LB-value backward-projection. Quarantine, not accepted."),
     ("A341", "root", CITATION_SPICES, 2025,
      "Salgarella et al. 2025: A341 shares the lower 'root' (RADix) element with A646 (graphic "
-     "decomposition only). SPECULATIVE; indexed so it cannot masquerade as an L_virgin discovery."),
+     "decomposition only). SPECULATIVE; indexed so it cannot masquerade as an L_not_indexed discovery."),
     ("*127", "spice", CITATION_SPICES, 2025,
      "The KA+PO monogram (*127) read as a spice logogram: Sacconi 1972 'cinnamon' vs Foster 1974 "
      "'fenugreek' — THREE competing options (cf. Linear B ka-po = Greek karpos 'fruit'). DISPUTED + "
@@ -261,7 +261,7 @@ CITATION_SALGARELLA2025 = (
 # Published STRUCTURAL / morphological readings (positional-grammar + affix functions). These assign NO
 # phonetic value — they are slot/morpheme functions read combinatorially. Indexed because they are now
 # PUBLIC (Davis 2013, endorsed Salgarella 2025; the §8 affix inventory) and a model could regurgitate
-# them as 'discovery' in the L_virgin / morphology tests; quarantined L_known, never accepted readings.
+# them as 'discovery' in the L_not_indexed / morphology tests; quarantined L_known, never accepted readings.
 # (form, function, source, year, note)
 _STRUCTURAL_READINGS = (
     ("I-*301", "verb:gives/dedicates", "Duhoux 1992; B. Davis, Kadmos 52 (2013); " + CITATION_SALGARELLA2025, 2013,
@@ -399,7 +399,7 @@ def _atomic_signs(sign_field: str) -> List[str]:
     """Expand a claim's ``sign`` into the atomic signs it references.
 
     A sequence reading like "KU-RO" is a *published proposal touching* both KU and RO, so each
-    component sign is no longer literature-virgin. Single signs ("*301", "DA") expand to themselves.
+    component sign is no longer literature-not_indexed. Single signs ("*301", "DA") expand to themselves.
     """
     return [tok for tok in (t.strip() for t in sign_field.split("-")) if tok]
 
@@ -414,10 +414,10 @@ def known_signs(index: Iterable[LitClaim]) -> Set[str]:
 
 def partition_signs(all_signs: Iterable[str],
                     index: Iterable[LitClaim]) -> Dict[str, Set[str]]:
-    """Partition ``all_signs`` into ``L_known`` / ``L_virgin`` against the literature ``index`` (§C.2).
+    """Partition ``all_signs`` into ``L_known`` / ``L_not_indexed`` against the literature ``index`` (§C.2).
 
     A sign is ``L_known`` iff at least one indexed claim references it (directly or as a component of
-    a sequence reading); otherwise ``L_virgin``. Returns ``{'L_known': set, 'L_virgin': set}``; the
+    a sequence reading); otherwise ``L_not_indexed``. Returns ``{'L_known': set, 'L_not_indexed': set}``; the
     two sets partition ``set(all_signs)`` exactly (disjoint, union == input). Signs referenced by the
     index but absent from ``all_signs`` are ignored (the partition is of the corpus inventory, not of
     the index).
@@ -425,8 +425,8 @@ def partition_signs(all_signs: Iterable[str],
     signs = set(all_signs)
     lit = known_signs(index)
     l_known = {s for s in signs if s in lit}
-    l_virgin = signs - l_known
-    return {"L_known": l_known, "L_virgin": l_virgin}
+    l_not_indexed = signs - l_known
+    return {"L_known": l_known, "L_not_indexed": l_not_indexed}
 
 
 # --------------------------------------------------------------------------- #
@@ -458,37 +458,37 @@ def literature_match(sign: str, index: Iterable[LitClaim],
 
 
 # --------------------------------------------------------------------------- #
-# §E gate clause: support generalizes to L_virgin signs
+# §E gate clause: support generalizes to L_not_indexed signs
 # --------------------------------------------------------------------------- #
-def virgin_support(per_sign_support: Mapping[str, float],
+def not_indexed_support(per_sign_support: Mapping[str, float],
                    partition: Mapping[str, Set[str]]) -> float:
-    """Share of held-out support attributable to ``L_virgin`` signs (the §E generalization clause).
+    """Share of held-out support attributable to ``L_not_indexed`` signs (the §E generalization clause).
 
     DEFINITION. ``per_sign_support`` maps a sign to a non-negative support score (e.g. that sign's
     contribution to held-out S_lex). We return the FRACTION of total support mass that falls on
-    ``L_virgin`` signs::
+    ``L_not_indexed`` signs::
 
-        virgin_support = sum(support[s] for s in L_virgin) / sum(support[s] for s in known∪virgin)
+        not_indexed_support = sum(support[s] for s in L_not_indexed) / sum(support[s] for s in known∪not_indexed)
 
-    Only signs that the partition classifies (``L_known`` ∪ ``L_virgin``) enter either sum;
+    Only signs that the partition classifies (``L_known`` ∪ ``L_not_indexed``) enter either sum;
     unclassified signs in the mapping are ignored. The result is in [0, 1]: 1.0 means *all* the
-    held-out support is on literature-virgin signs (the strongest anti-regurgitation evidence —
+    held-out support is on literature-not_indexed signs (the strongest anti-regurgitation evidence —
     nothing in the literature could have supplied it); a low value means the support is concentrated
     on signs whose values are already published (consistent with memorization).
 
     DEGENERATE / NO-POWER PATH (reported honestly, never a misleading real-looking 0):
     if there is no support mass at all — an empty mapping, all-zero (or non-positive) scores, or no
-    classified signs — the function returns **0.0**, which here means "no virgin-attributable support
+    classified signs — the function returns **0.0**, which here means "no not_indexed-attributable support
     exists / the test has no power", and MUST NOT be read as evidence that support fails to generalize.
     A caller gating on this value must first confirm total support is positive (the statistic has
     power) before interpreting a low fraction as a generalization failure.
     """
     l_known = set(partition.get("L_known", set()))
-    l_virgin = set(partition.get("L_virgin", set()))
-    classified = l_known | l_virgin
+    l_not_indexed = set(partition.get("L_not_indexed", set()))
+    classified = l_known | l_not_indexed
 
     total = 0.0
-    virgin = 0.0
+    not_indexed = 0.0
     for sign, score in per_sign_support.items():
         if sign not in classified:
             continue
@@ -496,11 +496,11 @@ def virgin_support(per_sign_support: Mapping[str, float],
         if s <= 0.0:                       # support scores are non-negative; ignore non-positive noise
             continue
         total += s
-        if sign in l_virgin:
-            virgin += s
+        if sign in l_not_indexed:
+            not_indexed += s
     if total <= 0.0:                       # degenerate / no-power: honest 0.0, not a real null
         return 0.0
-    return virgin / total
+    return not_indexed / total
 
 
 # --------------------------------------------------------------------------- #
@@ -509,7 +509,7 @@ def virgin_support(per_sign_support: Mapping[str, float],
 def main(argv: Optional[Sequence[str]] = None) -> int:
     import argparse
 
-    p = argparse.ArgumentParser(description="Literature index + L_known/L_virgin partition (§C.1/§C.2)")
+    p = argparse.ArgumentParser(description="Literature index + L_known/L_not_indexed partition (§C.1/§C.2)")
     p.add_argument("--index", default=None,
                    help="path to a JSON index; default = embedded seed")
     p.add_argument("--emit", default=None,
@@ -517,7 +517,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--emit-default", action="store_true",
                    help="write the embedded seed to corpus/silver/literature_index.json")
     p.add_argument("--signs", nargs="*", default=None,
-                   help="signs to partition into L_known / L_virgin")
+                   help="signs to partition into L_known / L_not_indexed")
     args = p.parse_args(argv)
 
     index = load_index(args.index)
@@ -540,7 +540,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     if args.signs:
         part = partition_signs(args.signs, index)
         out["L_known"] = sorted(part["L_known"])
-        out["L_virgin"] = sorted(part["L_virgin"])
+        out["L_not_indexed"] = sorted(part["L_not_indexed"])
     print(json.dumps(out, indent=2, ensure_ascii=False))
     return 0
 

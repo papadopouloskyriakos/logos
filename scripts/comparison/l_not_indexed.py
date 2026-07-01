@@ -1,32 +1,32 @@
 #!/usr/bin/env python3
-"""lvirgin.py — the §C.2 L_VIRGIN GENERALIZATION TEST (logos comparison-layer §C.2).
+"""l_not_indexed.py — the §C.2 L_VIRGIN GENERALIZATION TEST (logos comparison-layer §C.2).
 
 Design §C.2 (verbatim intent): "Partition signs into L_known (any published proposal exists) and
-L_virgin (none). A real correspondence *system* forces values on L_virgin signs too. **Discovery
-claims may rest only on L_virgin held-out success.** Regurgitation can only return what's in the
+L_not_indexed (none). A real correspondence *system* forces values on L_not_indexed signs too. **Discovery
+claims may rest only on L_not_indexed held-out success.** Regurgitation can only return what's in the
 training corpus; it cannot predict the untouched signs."
 
 THE COMPLEMENT TO THE CONTAMINATION TABLE. The §C.4 per-word contamination table already showed that
 qwen MEMORIZES the famous published Linear A readings (KU-RO/kull, A-SA-SA-RA-ME/asherah, ...).
-L_virgin asks the *opposite* question: does qwen impute a CONSISTENT (non-random) phonetic value for
+L_not_indexed asks the *opposite* question: does qwen impute a CONSISTENT (non-random) phonetic value for
 the GORILA *-series syllabograms — signs that have NO established published value, so qwen could not
-have memorized one? Cross-seed CONSISTENCY on a virgin sign is evidence of SOMETHING beyond pure
+have memorized one? Cross-seed CONSISTENCY on a not_indexed sign is evidence of SOMETHING beyond pure
 table-lookup (reasoning OR a stable hallucination); cross-seed RANDOMNESS is the signature of pure
 memorization (nothing to recall ⇒ a fresh guess each seed).
 
 *** CRITICAL HONESTY (this is the whole point of the file — read it before touching anything) ***
 CONSISTENCY IS NON-RANDOM IMPUTATION, **NOT VERIFIED CORRECTNESS.** There is NO ground truth for an
-L_virgin sign value — by definition no published reading exists — so this test can NEVER show that
-qwen is RIGHT about a virgin sign, only that it is SELF-CONSISTENT across independent seeds beyond
-what a random draw from its own output distribution would give. A near-zero known-minus-virgin
-consistency gap means qwen imputes virgin signs as non-randomly as it recites known ones (structure /
+L_not_indexed sign value — by definition no published reading exists — so this test can NEVER show that
+qwen is RIGHT about a not_indexed sign, only that it is SELF-CONSISTENT across independent seeds beyond
+what a random draw from its own output distribution would give. A near-zero known-minus-not_indexed
+consistency gap means qwen imputes not_indexed signs as non-randomly as it recites known ones (structure /
 reasoning present — correctness UNKNOWN); a large positive gap means qwen is consistent ONLY where the
 value is published (regurgitation-dominated). Either way the number carries NO verdict weight: the LLM
 is a SIGNAL (CLAUDE.md invariants #2/#5, confidence ≤ 0.75), never on the verdict path. This module
 imports NO scripts.verdict and grades nothing.
 
-WHY A PURPOSE-BUILT RUN (not a re-read of the ablation output). The genuine *-series virgin
-syllabograms are RARE (median corpus frequency ~4), so in a normal §C.4 ablation each virgin sign
+WHY A PURPOSE-BUILT RUN (not a re-read of the ablation output). The genuine *-series not_indexed
+syllabograms are RARE (median corpus frequency ~4), so in a normal §C.4 ablation each not_indexed sign
 lands in ~1 sampled seed (n=1) and no cross-seed consistency is estimable. The fix here: PROBE every
 target sign in EVERY seed, each in a FIXED real-inscription context window, so each sign accrues
 ~n_seeds independent value-proposals and a modal-share consistency becomes measurable. The fixed
@@ -35,7 +35,7 @@ per-sign window isolates qwen's value-consistency for that sign from context var
 PARTITION (from corpus/silver/signs_ontology.json, by sign CLASS — independent of the litindex):
   * L_known  = class 'syllabogram-AB'     (homomorphic AB signs that carry a conventional GORILA /
                Linear-B value qwen can have memorized) — the memorization-positive control.
-  * L_virgin = class 'syllabogram-Aonly'  (the GORILA *-series, "undeciphered … no established
+  * L_not_indexed = class 'syllabogram-Aonly'  (the GORILA *-series, "undeciphered … no established
                value") — the untouched signs.
   * EXCLUDED ENTIRELY: logogram / fraction / numeral / uncertain — non-phonetic signs qwen must not
     be scored on. Counts of what was excluded are reported.
@@ -49,11 +49,11 @@ CONSISTENCY METRIC (the sample-size control is the load-bearing part). Per targe
 The `expected` term is essential: a sign seen in only n=1 seed has modal_share == 1.0 mechanically,
 so raw modal_share rewards low coverage. `excess` measures concentration BEYOND a random draw of the
 same size, so an n=1 sign gets excess ≈ 0, not a spurious 1.0. Aggregated as mean excess per class;
-the HEADLINE is the known−virgin excess gap plus a label-shuffle PERMUTATION p-value, with a matched-n
+the HEADLINE is the known−not_indexed excess gap plus a label-shuffle PERMUTATION p-value, with a matched-n
 robustness check (signs with n ≥ n_min only) so the comparison is not driven by coverage differences.
 
-    python3 scripts/comparison/lvirgin.py --model qwen2.5:72b --seeds 40
-    python3 -m pytest tests/test_lvirgin.py -q
+    python3 scripts/comparison/l_not_indexed.py --model qwen2.5:72b --seeds 40
+    python3 -m pytest tests/test_l_not_indexed.py -q
 """
 from __future__ import annotations
 
@@ -75,14 +75,14 @@ if _ROOT not in sys.path:
 
 from scripts.comparison import ablation  # noqa: E402  (build_form, llm_propose, sign_key, Form, ...)
 
-# NOTE (invariant #2): scripts.verdict is deliberately NOT imported. L_virgin MEASURES a proposer
-# signal; it never grades. tests/test_lvirgin.py asserts this absence by grep.
+# NOTE (invariant #2): scripts.verdict is deliberately NOT imported. L_not_indexed MEASURES a proposer
+# signal; it never grades. tests/test_l_not_indexed.py asserts this absence by grep.
 
 CITATION_DESIGN = (
-    "logos comparison-layer §C.2 (L_known/L_virgin partition: 'Discovery claims may rest only on "
-    "L_virgin held-out success — regurgitation can only return what is in the literature, it cannot "
+    "logos comparison-layer §C.2 (L_known/L_not_indexed partition: 'Discovery claims may rest only on "
+    "L_not_indexed held-out success — regurgitation can only return what is in the literature, it cannot "
     "predict the untouched signs'). This test measures cross-seed CONSISTENCY of the LLM proposer's "
-    "imputed values on virgin signs as NON-RANDOM IMPUTATION, never as verified correctness."
+    "imputed values on not_indexed signs as NON-RANDOM IMPUTATION, never as verified correctness."
 )
 
 DEFAULT_MODEL = "qwen2.5:72b"
@@ -92,18 +92,18 @@ INSCRIPTIONS_JSON = os.path.abspath(os.path.join(_ROOT, "corpus", "silver", "ins
 
 # §C.2 partition by ontology CLASS.
 KNOWN_CLASS = "syllabogram-AB"        # conventional GORILA / Linear-B value (memorizable) -> L_known
-VIRGIN_CLASS = "syllabogram-Aonly"    # the *-series, "no established value"               -> L_virgin
+VIRGIN_CLASS = "syllabogram-Aonly"    # the *-series, "no established value"               -> L_not_indexed
 # Everything else is non-phonetic and must NOT be scored (qwen has no syllabic value to impute).
 EXCLUDED_CLASSES = ("logogram", "fraction", "numeral", "uncertain")
 
 HONESTY = (
     "CONSISTENCY IS NON-RANDOM IMPUTATION, NOT VERIFIED CORRECTNESS. There is NO ground truth for an "
-    "L_virgin (GORILA *-series) sign value, so this test can NEVER show qwen is RIGHT about a virgin "
+    "L_not_indexed (GORILA *-series) sign value, so this test can NEVER show qwen is RIGHT about a not_indexed "
     "sign — only whether qwen imputes the SAME value across independent seeds MORE than a random draw "
-    "from its own global value distribution would. Cross-seed consistency on virgin signs is evidence "
+    "from its own global value distribution would. Cross-seed consistency on not_indexed signs is evidence "
     "of something BEYOND pure lookup (reasoning OR a stable hallucination); it is NOT evidence of a "
     "correct reading and carries NO verdict weight (CLAUDE.md #2/#5: the LLM is a signal ≤0.75, never "
-    "on the verdict path). gap≈0 / p>0.05 ⇒ virgin imputed as non-randomly as known (structure / "
+    "on the verdict path). gap≈0 / p>0.05 ⇒ not_indexed imputed as non-randomly as known (structure / "
     "reasoning present, correctness UNKNOWN); gap≫0 ⇒ qwen is consistent ONLY where the value is "
     "memorizable (regurgitation-dominated). NEVER report this as a decipherment of any sign."
 )
@@ -112,7 +112,7 @@ CONSISTENCY_METRIC = (
     "Per sign: modal_share = max value-count / n (n = seeds that returned a value), with the "
     "sample-size control excess = modal_share − E[modal_share], where E is the Monte-Carlo expected "
     "modal share of n i.i.d. draws from qwen's pooled GLOBAL value distribution (so an n=1 sign gets "
-    "excess ≈ 0, not a spurious 1.0). Aggregated as mean excess per class; headline = known−virgin "
+    "excess ≈ 0, not a spurious 1.0). Aggregated as mean excess per class; headline = known−not_indexed "
     "excess gap + a label-shuffle permutation p-value (≥2000 perms) + a matched-n (n ≥ n_min) "
     "robustness check + mean-n coverage per class."
 )
@@ -136,13 +136,13 @@ def load_inscriptions(path: str = INSCRIPTIONS_JSON) -> List[dict]:
 # §C.2 partition (by ontology CLASS)
 # --------------------------------------------------------------------------- #
 def partition_by_class(ontology: Mapping[str, dict], index=None) -> Dict[str, object]:
-    """Partition the ontology into L_known / L_virgin by sign CLASS; report exclusions (§C.2).
+    """Partition the ontology into L_known / L_not_indexed by sign CLASS; report exclusions (§C.2).
 
     L_known  = signs of class ``syllabogram-AB`` (conventional GORILA value — memorizable).
-    L_virgin = signs of class ``syllabogram-Aonly`` (the *-series; "no established value") **MINUS any
+    L_not_indexed = signs of class ``syllabogram-Aonly`` (the *-series; "no established value") **MINUS any
     sign that carries a published litindex proposal** (e.g. Di Mino's quarantined ``*301``=/na/): such a
-    sign COULD have been memorized, so by §C.2's definition ("L_virgin = no published proposal exists")
-    it is NOT literature-virgin and is quarantined out of the clean comparison (reported under
+    sign COULD have been memorized, so by §C.2's definition ("L_not_indexed = no published proposal exists")
+    it is NOT literature-not_indexed and is quarantined out of the clean comparison (reported under
     ``lit_quarantined``). EXCLUDED = logogram / fraction / numeral / uncertain (non-phonetic — never
     scored). Sign labels are canonicalized with :func:`ablation.sign_key` so they compare on the same
     token the proposer keys its partial_map by. Returns sets + ``excluded``/``lit_quarantined`` for audit.
@@ -153,7 +153,7 @@ def partition_by_class(ontology: Mapping[str, dict], index=None) -> Dict[str, ob
     lit_known = {ablation.sign_key(s) for s in litindex.known_signs(index)}
 
     known: Set[str] = set()
-    virgin: Set[str] = set()
+    not_indexed: Set[str] = set()
     excluded: Counter = Counter()
     excluded_signs: Dict[str, List[str]] = {}
     for label, meta in ontology.items():
@@ -162,22 +162,22 @@ def partition_by_class(ontology: Mapping[str, dict], index=None) -> Dict[str, ob
         if cls == KNOWN_CLASS:
             known.add(key)
         elif cls == VIRGIN_CLASS:
-            virgin.add(key)
+            not_indexed.add(key)
         else:
             excluded[str(cls)] += 1
             excluded_signs.setdefault(str(cls), []).append(label)
     # §C.2 integrity: an A-only sign that the litindex already records a published proposal for is NOT
-    # virgin (it could be memorized) — quarantine it out of L_virgin so it can never count as 'reasoning'.
-    lit_quarantined = sorted(s for s in virgin if s in lit_known)
-    virgin -= set(lit_quarantined)
+    # not_indexed (it could be memorized) — quarantine it out of L_not_indexed so it can never count as 'reasoning'.
+    lit_quarantined = sorted(s for s in not_indexed if s in lit_known)
+    not_indexed -= set(lit_quarantined)
     return {
         "L_known": known,
-        "L_virgin": virgin,
+        "L_not_indexed": not_indexed,
         "excluded": dict(excluded),
         "excluded_signs": {k: sorted(v) for k, v in excluded_signs.items()},
         "lit_quarantined": lit_quarantined,
         "known_class": KNOWN_CLASS,
-        "virgin_class": VIRGIN_CLASS,
+        "not_indexed_class": VIRGIN_CLASS,
     }
 
 
@@ -238,15 +238,15 @@ def _window_for_sign(target_key: str, inscriptions: Sequence[dict],
 
 
 def target_probe_forms(ontology: Mapping[str, dict], inscriptions: Sequence[dict], *,
-                       n_known: int, n_virgin: int, n_context: int = 6,
+                       n_known: int, n_not_indexed: int, n_context: int = 6,
                        seed: int = 0) -> List[Tuple[str, ablation.Form]]:
     """Build ``(target_sign_key, Form)`` probes: a fixed real-context window per target sign (§C.2).
 
-    Targets are the L_virgin *-series syllabograms PLUS a comparison set of L_known AB syllabograms
+    Targets are the L_not_indexed *-series syllabograms PLUS a comparison set of L_known AB syllabograms
     (the memorization control). Candidates are taken in deterministic (sorted) order; a candidate with
     no real bare context (:func:`_window_for_sign` is None) is SKIPPED (reported by
-    :func:`coverage_report`); selection stops at ``n_known`` known and ``n_virgin`` virgin covered
-    signs to keep the single prompt reasonable. Returns the known probes first, then the virgin ones.
+    :func:`coverage_report`); selection stops at ``n_known`` known and ``n_not_indexed`` not_indexed covered
+    signs to keep the single prompt reasonable. Returns the known probes first, then the not_indexed ones.
     """
     part = partition_by_class(ontology)
     occ_index = _build_occurrence_index(inscriptions)
@@ -262,8 +262,8 @@ def target_probe_forms(ontology: Mapping[str, dict], inscriptions: Sequence[dict
         return out
 
     known_pairs = _select(part["L_known"], n_known)
-    virgin_pairs = _select(part["L_virgin"], n_virgin)
-    return known_pairs + virgin_pairs
+    not_indexed_pairs = _select(part["L_not_indexed"], n_not_indexed)
+    return known_pairs + not_indexed_pairs
 
 
 def coverage_report(ontology: Mapping[str, dict], inscriptions: Sequence[dict], *,
@@ -288,16 +288,16 @@ def coverage_report(ontology: Mapping[str, dict], inscriptions: Sequence[dict], 
         return {"n_candidates": len(keys), "n_covered": len(covered),
                 "n_skipped_no_context": len(skipped), "covered": covered, "skipped": skipped}
 
-    return {"L_known": _cov(part["L_known"]), "L_virgin": _cov(part["L_virgin"])}
+    return {"L_known": _cov(part["L_known"]), "L_not_indexed": _cov(part["L_not_indexed"])}
 
 
 # --------------------------------------------------------------------------- #
 # Proposer loop — probe EVERY target EVERY seed (signal; fail-closed)
 # --------------------------------------------------------------------------- #
-def run_lvirgin(model: str, n_seeds: int, host: Optional[str] = None, *,
+def run_l_not_indexed(model: str, n_seeds: int, host: Optional[str] = None, *,
                 probe_pairs: Optional[List[Tuple[str, ablation.Form]]] = None,
                 ontology_path: str = ONTOLOGY_JSON, inscriptions_path: str = INSCRIPTIONS_JSON,
-                n_known: int = 20, n_virgin: int = 25, n_context: int = 6, probe_seed: int = 0,
+                n_known: int = 20, n_not_indexed: int = 25, n_context: int = 6, probe_seed: int = 0,
                 family: str = ablation.DEFAULT_FAMILY, timeout: int = 180,
                 log_path: Optional[str] = None) -> Dict[str, object]:
     """Run the proposer over ALL probe forms for each seed; accumulate per-sign value Counters.
@@ -315,12 +315,12 @@ def run_lvirgin(model: str, n_seeds: int, host: Optional[str] = None, *,
     if probe_pairs is None:
         ontology = load_ontology(ontology_path)
         inscriptions = load_inscriptions(inscriptions_path)
-        probe_pairs = target_probe_forms(ontology, inscriptions, n_known=n_known, n_virgin=n_virgin,
+        probe_pairs = target_probe_forms(ontology, inscriptions, n_known=n_known, n_not_indexed=n_not_indexed,
                                           n_context=n_context, seed=probe_seed)
         partition = partition_by_class(ontology)
         coverage = coverage_report(ontology, inscriptions, n_context=n_context, seed=probe_seed)
     else:
-        partition = {"L_known": set(), "L_virgin": set()}  # caller-supplied; filled below if absent
+        partition = {"L_known": set(), "L_not_indexed": set()}  # caller-supplied; filled below if absent
         coverage = {}
 
     forms = [form for (_sk, form) in probe_pairs]
@@ -360,20 +360,20 @@ def run_lvirgin(model: str, n_seeds: int, host: Optional[str] = None, *,
         "model": model,
         "n_seeds": n_seeds,
         "family": family,
-        "params": {"n_known": n_known, "n_virgin": n_virgin, "n_context": n_context,
+        "params": {"n_known": n_known, "n_not_indexed": n_not_indexed, "n_context": n_context,
                    "probe_seed": probe_seed, "timeout": timeout},
         "partition": {
             "L_known": sorted(partition.get("L_known", set())),
-            "L_virgin": sorted(partition.get("L_virgin", set())),
+            "L_not_indexed": sorted(partition.get("L_not_indexed", set())),
             "excluded": partition.get("excluded", {}),
             "excluded_signs": partition.get("excluded_signs", {}),
             "n_known": len(partition.get("L_known", set())),
-            "n_virgin": len(partition.get("L_virgin", set())),
+            "n_not_indexed": len(partition.get("L_not_indexed", set())),
         },
         "coverage": coverage,
         "probe_signs": {
             "known": [sk for (sk, _f) in probe_pairs if sk in partition.get("L_known", set())],
-            "virgin": [sk for (sk, _f) in probe_pairs if sk in partition.get("L_virgin", set())],
+            "not_indexed": [sk for (sk, _f) in probe_pairs if sk in partition.get("L_not_indexed", set())],
             "all": target_keys,
         },
         "per_sign_values": {sk: dict(c) for sk, c in per_sign.items()},
@@ -417,11 +417,11 @@ def _expected_modal_shares(ns: Set[int], probs: np.ndarray, *, n_trials: int,
 
 def _permutation_gap_p(excesses: np.ndarray, is_known: np.ndarray, obs_gap: float, *,
                        n_perm: int, rng: np.random.Generator) -> Optional[float]:
-    """Two-sided label-shuffle p for the known−virgin excess gap. None when a class is empty.
+    """Two-sided label-shuffle p for the known−not_indexed excess gap. None when a class is empty.
 
     Shuffles the class labels across signs ``n_perm`` times; p = (1 + #{|perm gap| >= |obs gap|}) /
     (n_perm + 1) (add-one smoothing). The null is 'class is unrelated to consistency-excess', so a
-    small p says the known/virgin difference is unlikely to be a coincidence of which signs landed in
+    small p says the known/not_indexed difference is unlikely to be a coincidence of which signs landed in
     which class.
     """
     if is_known.sum() == 0 or (~is_known).sum() == 0:
@@ -446,16 +446,16 @@ def analyze(per_sign_values: Mapping[str, Mapping[str, int]],
     See :data:`CONSISTENCY_METRIC`. Each sign that got >= 1 value gets ``modal_share`` and the
     sample-size-corrected ``excess = modal_share - E[modal_share | n]``, where E is Monte-Carlo over
     qwen's pooled global value distribution. Aggregated to a mean excess per class; the headline is
-    the known−virgin excess gap + a label-shuffle permutation p-value. A matched-n re-run (signs with
+    the known−not_indexed excess gap + a label-shuffle permutation p-value. A matched-n re-run (signs with
     n >= ``n_min`` only) guards against the gap being an artifact of coverage differences, and mean-n
     coverage is reported per class.
 
     HONESTY: a positive excess means a sign is imputed MORE consistently than a random draw of the
     same size — it is NON-RANDOM IMPUTATION, never a verified-correct value (there is no ground truth
-    on virgin signs). Interpretation strings never claim correctness.
+    on not_indexed signs). Interpretation strings never claim correctness.
     """
     l_known = set(partition.get("L_known", set()))
-    l_virgin = set(partition.get("L_virgin", set()))
+    l_not_indexed = set(partition.get("L_not_indexed", set()))
 
     rng = np.random.default_rng(seed)
 
@@ -479,8 +479,8 @@ def analyze(per_sign_values: Mapping[str, Mapping[str, int]],
             continue
         if sign in l_known:
             cls = "L_known"
-        elif sign in l_virgin:
-            cls = "L_virgin"
+        elif sign in l_not_indexed:
+            cls = "L_not_indexed"
         else:
             continue                     # unclassified target (should not happen) -> not scored
         classified.append((sign, c, cls))
@@ -521,20 +521,20 @@ def analyze(per_sign_values: Mapping[str, Mapping[str, int]],
 
     def _headline(rows: Sequence[dict], rng_local: np.random.Generator) -> Dict[str, object]:
         kex = np.array([r["excess"] for r in rows if r["class"] == "L_known"], dtype=float)
-        vex = np.array([r["excess"] for r in rows if r["class"] == "L_virgin"], dtype=float)
+        vex = np.array([r["excess"] for r in rows if r["class"] == "L_not_indexed"], dtype=float)
         if kex.size == 0 or vex.size == 0:
             return {"excess_gap": None, "permutation_p": None, "n_perm": n_perm,
                     "mean_excess_known": (float(kex.mean()) if kex.size else None),
-                    "mean_excess_virgin": (float(vex.mean()) if vex.size else None),
-                    "n_known": int(kex.size), "n_virgin": int(vex.size),
+                    "mean_excess_not_indexed": (float(vex.mean()) if vex.size else None),
+                    "n_known": int(kex.size), "n_not_indexed": int(vex.size),
                     "no_power": True}
         gap = float(kex.mean() - vex.mean())
         excesses = np.concatenate([kex, vex])
         is_known = np.concatenate([np.ones(kex.size, bool), np.zeros(vex.size, bool)])
         p = _permutation_gap_p(excesses, is_known, gap, n_perm=n_perm, rng=rng_local)
         return {"excess_gap": gap, "permutation_p": p, "n_perm": n_perm,
-                "mean_excess_known": float(kex.mean()), "mean_excess_virgin": float(vex.mean()),
-                "n_known": int(kex.size), "n_virgin": int(vex.size), "no_power": False}
+                "mean_excess_known": float(kex.mean()), "mean_excess_not_indexed": float(vex.mean()),
+                "n_known": int(kex.size), "n_not_indexed": int(vex.size), "no_power": False}
 
     headline = _headline(per_sign_rows, rng)
 
@@ -552,7 +552,7 @@ def analyze(per_sign_values: Mapping[str, Mapping[str, int]],
         "global_distribution": {"n_distinct_values": len(values), "n_value_tokens": total,
                                 "top": glob.most_common(10)},
         "class_stats": {"L_known": _class_stats(per_sign_rows, "L_known"),
-                        "L_virgin": _class_stats(per_sign_rows, "L_virgin")},
+                        "L_not_indexed": _class_stats(per_sign_rows, "L_not_indexed")},
         "headline": headline,
         "matched_n": matched,
         "interpretation": interpretation,
@@ -561,7 +561,7 @@ def analyze(per_sign_values: Mapping[str, Mapping[str, int]],
 
 
 def _interpret(headline: Mapping[str, object]) -> str:
-    """A non-numeric reading of the headline — ALWAYS anti-correctness (no ground truth on virgin)."""
+    """A non-numeric reading of the headline — ALWAYS anti-correctness (no ground truth on not_indexed)."""
     if headline.get("no_power") or headline.get("excess_gap") is None:
         return ("NO POWER: a class has no signs with values — the consistency gap is not estimable. "
                 "Nothing claimed.")
@@ -569,16 +569,16 @@ def _interpret(headline: Mapping[str, object]) -> str:
     p = headline.get("permutation_p")
     p_big = (p is None) or (p > 0.05)
     if p_big or abs(gap) < 0.05:
-        return ("Virgin signs are imputed about as NON-RANDOMLY as known signs (known−virgin excess "
+        return ("Virgin signs are imputed about as NON-RANDOMLY as known signs (known−not_indexed excess "
                 "gap ≈ 0, permutation p not significant): qwen shows cross-seed structure on the "
                 "untouched *-series, consistent with reasoning OR a stable hallucination. This is "
-                "NOT proven correctness — there is no ground truth on virgin signs; carries no "
+                "NOT proven correctness — there is no ground truth on not_indexed signs; carries no "
                 "verdict weight.")
     if gap > 0:
-        return ("Known signs are imputed MORE consistently than virgin signs (positive known−virgin "
+        return ("Known signs are imputed MORE consistently than not_indexed signs (positive known−not_indexed "
                 "excess gap, permutation-significant): qwen is self-consistent chiefly where the "
                 "value is memorizable — regurgitation-dominated, weak generalization to untouched "
-                "signs. (Still says nothing about correctness on virgin signs.)")
+                "signs. (Still says nothing about correctness on not_indexed signs.)")
     return ("Virgin signs are imputed MORE consistently than known signs (negative gap) — unusual; "
             "inspect the per-sign table and global distribution before reading anything into it. "
             "Consistency is not correctness.")
@@ -589,7 +589,7 @@ def _interpret(headline: Mapping[str, object]) -> str:
 # --------------------------------------------------------------------------- #
 def _default_out(model: str) -> str:
     safe = "".join(c if c.isalnum() or c in "-._" else "_" for c in model)
-    return os.path.join(_ROOT, "runtime", "lvirgin", f"{safe}.json")
+    return os.path.join(_ROOT, "runtime", "l_not_indexed", f"{safe}.json")
 
 
 def _summary(report: Dict[str, object]) -> str:
@@ -599,7 +599,7 @@ def _summary(report: Dict[str, object]) -> str:
     hl = a["headline"]
     mn = a["matched_n"]
     ks = a["class_stats"]["L_known"]
-    vs = a["class_stats"]["L_virgin"]
+    vs = a["class_stats"]["L_not_indexed"]
 
     def _f(x):
         return "n/a" if x is None else f"{x:+.3f}"
@@ -614,25 +614,25 @@ def _summary(report: Dict[str, object]) -> str:
         f"model={report['run']['model']}  seeds={report['run']['n_seeds']}  "
         f"family={report['run']['family']}",
         f"partition (by ontology class): L_known={part['n_known']} (syllabogram-AB)  "
-        f"L_virgin={part['n_virgin']} (syllabogram-Aonly)",
+        f"L_not_indexed={part['n_not_indexed']} (syllabogram-Aonly)",
         f"EXCLUDED (non-phonetic, never scored): {part['excluded']}",
     ]
     if cov:
-        ck, cv = cov.get("L_known", {}), cov.get("L_virgin", {})
+        ck, cv = cov.get("L_known", {}), cov.get("L_not_indexed", {})
         lines.append(f"context coverage: known {ck.get('n_covered','?')}/{ck.get('n_candidates','?')}"
-                     f"  virgin {cv.get('n_covered','?')}/{cv.get('n_candidates','?')}"
-                     f"  (skipped-no-context virgin: {cv.get('n_skipped_no_context','?')})")
+                     f"  not_indexed {cv.get('n_covered','?')}/{cv.get('n_candidates','?')}"
+                     f"  (skipped-no-context not_indexed: {cv.get('n_skipped_no_context','?')})")
     lines += [
         f"probed: known={len(report['run']['probe_signs']['known'])}  "
-        f"virgin={len(report['run']['probe_signs']['virgin'])}  "
+        f"not_indexed={len(report['run']['probe_signs']['not_indexed'])}  "
         f"(seeds with no values: {report['run']['n_seeds_no_values']})",
         "-" * 80,
         f"mean excess-over-random consistency:  L_known={_f(ks['mean_excess'])} (mean n={ks['mean_n']})"
-        f"   L_virgin={_f(vs['mean_excess'])} (mean n={vs['mean_n']})",
-        f"HEADLINE known−virgin excess gap = {_f(hl['excess_gap'])}   permutation p = {_p(hl['permutation_p'])}"
-        f"  ({hl['n_known']} vs {hl['n_virgin']} signs, {hl['n_perm']} perms)",
+        f"   L_not_indexed={_f(vs['mean_excess'])} (mean n={vs['mean_n']})",
+        f"HEADLINE known−not_indexed excess gap = {_f(hl['excess_gap'])}   permutation p = {_p(hl['permutation_p'])}"
+        f"  ({hl['n_known']} vs {hl['n_not_indexed']} signs, {hl['n_perm']} perms)",
         f"matched-n (n>={mn['n_min']}) gap = {_f(mn['excess_gap'])}   permutation p = {_p(mn['permutation_p'])}"
-        f"  ({mn['n_known']} vs {mn['n_virgin']} signs)",
+        f"  ({mn['n_known']} vs {mn['n_not_indexed']} signs)",
         "-" * 80,
         "INTERPRETATION: " + a["interpretation"],
         "HONESTY: " + HONESTY,
@@ -641,11 +641,11 @@ def _summary(report: Dict[str, object]) -> str:
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
-    p = argparse.ArgumentParser(description="§C.2 L_virgin generalization test (logos comparison-layer)")
+    p = argparse.ArgumentParser(description="§C.2 L_not_indexed generalization test (logos comparison-layer)")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--seeds", type=int, default=40, help="proposer seeds 0..seeds-1 (each probes ALL signs)")
     p.add_argument("--n-known", type=int, default=20, help="L_known (AB) comparison signs to probe")
-    p.add_argument("--n-virgin", type=int, default=25, help="L_virgin (*-series) signs to probe")
+    p.add_argument("--n-not_indexed", type=int, default=25, help="L_not_indexed (*-series) signs to probe")
     p.add_argument("--n-context", type=int, default=6, help="signs per fixed context window")
     p.add_argument("--probe-seed", type=int, default=0, help="seed for fixed per-sign window selection")
     p.add_argument("--n-min", type=int, default=10, help="min n for the matched-n robustness check")
@@ -655,12 +655,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--family", default=ablation.DEFAULT_FAMILY)
     p.add_argument("--host", default=None, help="Ollama host (default $OLLAMA_URL or the gpu host)")
     p.add_argument("--timeout", type=int, default=180)
-    p.add_argument("--out", default=None, help="output JSON (default runtime/lvirgin/<model>.json)")
+    p.add_argument("--out", default=None, help="output JSON (default runtime/l_not_indexed/<model>.json)")
     p.add_argument("--print-json", action="store_true", help="print the full JSON report to stdout")
     args = p.parse_args(argv)
 
-    run = run_lvirgin(args.model, args.seeds, host=args.host, n_known=args.n_known,
-                      n_virgin=args.n_virgin, n_context=args.n_context, probe_seed=args.probe_seed,
+    run = run_l_not_indexed(args.model, args.seeds, host=args.host, n_known=args.n_known,
+                      n_not_indexed=args.n_not_indexed, n_context=args.n_context, probe_seed=args.probe_seed,
                       family=args.family, timeout=args.timeout)
     analysis = analyze(run["per_sign_values"], run["_partition_sets"], seed=args.analysis_seed,
                        n_min=args.n_min, n_trials=args.mc_trials, n_perm=args.perm)

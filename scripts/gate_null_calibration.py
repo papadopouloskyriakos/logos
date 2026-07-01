@@ -37,8 +37,8 @@ def _rand_form(rng):
 def run(B=500, N_EFF=100, seed=0):
     rng = random.Random(seed)
     base = dict(confidence=0.6, free_params=3, provenance="embedding_nn", lit_index_hit=False,
-                virgin_sign_support=0.9, u_floor=8, n_eff=N_EFF, n_fake=12, seed=1,
-                virgin_threshold=0.5)       # every NON-deflation clause satisfiable -> isolates deflation
+                not_indexed_sign_support=0.9, u_floor=8, n_eff=N_EFF, n_fake=12, seed=1,
+                not_indexed_threshold=0.5)       # every NON-deflation clause satisfiable -> isolates deflation
     verdicts = Counter()
     grads = 0
     for _ in range(B):

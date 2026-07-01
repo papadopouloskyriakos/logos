@@ -308,7 +308,7 @@ def test_root_template_divergence_is_reported_not_hidden():
 _VCAND = ["nwy", "brq", "mlk", "ywm", "dn", "qtl", "zkr", "bnh", "hlk", "yqr"]
 _VHELD = ["nwy", "brq", "mlk", "ywm", "dn", "qtl"]
 _VBASE = dict(confidence=0.6, free_params=3, provenance="embedding_nn",
-              lit_index_hit=False, virgin_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
+              lit_index_hit=False, not_indexed_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
 
 
 def test_expected_max_order_stat_is_the_b3_bar_and_degrades_gracefully():
@@ -410,36 +410,36 @@ def test_searchlog_neff_overrides_passed_count_in_grade():
     assert g0["n_trials"] == 1 and g0["n_trials_source"] == "passed"
 
 
-def test_litindex_virgin_support_feeds_the_e_gate_via_grade_row():
-    """P0.2: generalizes_to_virgin uses litindex.virgin_support (§C.2) AND requires a PRE-REGISTERED
-    threshold + >= virgin_min_signs DISTINCT virgin signs — never a single hit, and FAIL CLOSED when
+def test_litindex_not_indexed_support_feeds_the_e_gate_via_grade_row():
+    """P0.2: generalizes_to_not_indexed uses litindex.not_indexed_support (§C.2) AND requires a PRE-REGISTERED
+    threshold + >= not_indexed_min_signs DISTINCT not_indexed signs — never a single hit, and FAIL CLOSED when
     the prereg commits no threshold."""
     import json
     body = json.dumps({"free_params": 3, "provenance": "embedding_nn"})
-    part2 = {"L_known": ["DA"], "L_virgin": ["*301", "*302"]}
-    # PASS: committed threshold + TWO distinct virgin signs carry support
+    part2 = {"L_known": ["DA"], "L_not_indexed": ["*301", "*302"]}
+    # PASS: committed threshold + TWO distinct not_indexed signs carry support
     pred_ok = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
-                          "virgin_threshold": 0.5, "virgin_min_signs": 2,
+                          "not_indexed_threshold": 0.5, "not_indexed_min_signs": 2,
                           "per_sign_support": {"*301": 1.0, "*302": 1.0, "DA": 0.0},
                           "sign_partition": part2})
-    assert verdict.grade_row("ph", "fam", body, pred_ok, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_virgin"] is True
-    # FAIL CLOSED: a SINGLE virgin sign (even at full support) is not discovery
-    part1 = {"L_known": ["DA"], "L_virgin": ["*301"]}
+    assert verdict.grade_row("ph", "fam", body, pred_ok, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_not_indexed"] is True
+    # FAIL CLOSED: a SINGLE not_indexed sign (even at full support) is not discovery
+    part1 = {"L_known": ["DA"], "L_not_indexed": ["*301"]}
     pred_one = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
-                           "virgin_threshold": 0.5, "virgin_min_signs": 2,
+                           "not_indexed_threshold": 0.5, "not_indexed_min_signs": 2,
                            "per_sign_support": {"*301": 1.0, "DA": 0.0}, "sign_partition": part1})
-    assert verdict.grade_row("ph", "fam", body, pred_one, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_virgin"] is False
-    # FAIL CLOSED: NO committed threshold -> clause cannot pass even with two supported virgin signs
+    assert verdict.grade_row("ph", "fam", body, pred_one, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_not_indexed"] is False
+    # FAIL CLOSED: NO committed threshold -> clause cannot pass even with two supported not_indexed signs
     pred_noth = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
                             "per_sign_support": {"*301": 1.0, "*302": 1.0, "DA": 0.0}, "sign_partition": part2})
-    assert verdict.grade_row("ph", "fam", body, pred_noth, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_virgin"] is False
+    assert verdict.grade_row("ph", "fam", body, pred_noth, 0.6, n_fake=6, seed=2)["clauses"]["generalizes_to_not_indexed"] is False
     # FAIL: support entirely on a literature-KNOWN sign -> memorization, not discovery
     pred_k = json.dumps({"heldout_forms": _VHELD, "candidate_lexicon": _VCAND, "n_eff": 5,
-                         "virgin_threshold": 0.5, "per_sign_support": {"*301": 0.0, "*302": 0.0, "DA": 1.0},
+                         "not_indexed_threshold": 0.5, "per_sign_support": {"*301": 0.0, "*302": 0.0, "DA": 1.0},
                          "sign_partition": part2})
     gk = verdict.grade_row("ph", "fam", body, pred_k, 0.6, n_fake=6, seed=2)
-    assert gk["clauses"]["generalizes_to_virgin"] is False
-    assert "generalizes_to_virgin" in gk["failing_clauses"]
+    assert gk["clauses"]["generalizes_to_not_indexed"] is False
+    assert "generalizes_to_not_indexed" in gk["failing_clauses"]
 
 
 def test_gate_clauses_fail_closed_on_degenerate_input():

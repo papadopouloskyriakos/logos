@@ -25,14 +25,14 @@ Modules:
                  not assumed. NUMERICAL/METROLOGICAL only — NO phonetic-value claim.
   searchlog.py — N_eff instrumentation: COUNT the distinct candidates scored, don't estimate them
                  (§B.2; the instrumented trial count fed to the §B.3 deflated bar).
-  litindex.py  — literature index + L_known/L_virgin partition + virgin_support (§C.1/§C.2; the
+  litindex.py  — literature index + L_known/L_not_indexed partition + not_indexed_support (§C.1/§C.2; the
                  decontamination / generalization machinery feeding the §E gate).
   run_canary.py — the canary self-validation (real cognates clear the bar; L_fake does not).
 
 The verdict pipeline (scripts/verdict.py) integrates these ADDITIVELY: deflated S_lex stays the
 pragmatic primary and the L_fake corrected-margin bar stays the headline falsifier (F.1); S_phono /
 S_morph are reported diagnostics, searchlog supplies the §B.2 N_eff for the §B.3 order-stat bar, and
-litindex.virgin_support feeds the §E generalizes-to-L_virgin clause. The LLM is NOWHERE on that path.
+litindex.not_indexed_support feeds the §E generalizes-to-L_not_indexed clause. The LLM is NOWHERE on that path.
 
 Everything here is pure numpy/scipy/sklearn/stdlib and deterministic (seeded). L_fake is never
 ground truth — it is an empirical false-positive floor (a Gordon/Di Mino-style match must clear

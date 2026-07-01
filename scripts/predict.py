@@ -116,7 +116,7 @@ def commit(family, claim_type, partial_map, correspondence, heldout_set, derivat
 
     `prediction` is the falsifiable held-out implication (the concrete evaluation set registered
     BEFORE the verdict — held-out forms, the candidate lexicon, instrumented N_eff, lit_index_hit,
-    virgin_sign_support, u_floor). Stored in the `prediction` JSON column; not in the plan_hash
+    not_indexed_sign_support, u_floor). Stored in the `prediction` JSON column; not in the plan_hash
     (the hash commits the structural claim — partial_map/correspondence/heldout_set IDS — per §A).
     """
     conf = gate(confidence, provenance)   # fail CLOSED — raises, commits nothing on violation

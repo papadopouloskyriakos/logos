@@ -1,9 +1,9 @@
-"""Tests for the §C.1 literature index + §C.2 L_known/L_virgin partition (scripts/comparison/litindex).
+"""Tests for the §C.1 literature index + §C.2 L_known/L_not_indexed partition (scripts/comparison/litindex).
 
 These lock in the four properties the decontamination mechanism depends on:
-  (a) partition correctness — a seeded sign lands in L_known, an unlisted *-series sign in L_virgin,
+  (a) partition correctness — a seeded sign lands in L_known, an unlisted *-series sign in L_not_indexed,
       and the two sets partition the input exactly;
-  (b) virgin_support isolates the L_virgin contribution (and its honest no-power 0.0);
+  (b) not_indexed_support isolates the L_not_indexed contribution (and its honest no-power 0.0);
   (c) loader determinism (default seed is a pure function; JSON round-trips byte-stably);
   (d) seed integrity — every seed claim carries a non-empty source + a positive year.
 
@@ -25,14 +25,14 @@ from scripts.comparison import litindex  # noqa: E402
 # --------------------------------------------------------------------------- #
 # (a) PARTITION CORRECTNESS — §C.2
 # --------------------------------------------------------------------------- #
-def test_seeded_sign_is_known_unlisted_sign_is_virgin():
+def test_seeded_sign_is_known_unlisted_sign_is_not_indexed():
     index = litindex.load_index()
     # "DA" is a seeded Linear-B-value transfer; "*118" is a *-series sign with no published value.
     part = litindex.partition_signs(["DA", "*118"], index)
     assert "DA" in part["L_known"]
-    assert "*118" in part["L_virgin"]
+    assert "*118" in part["L_not_indexed"]
     assert "*118" not in part["L_known"]
-    assert "DA" not in part["L_virgin"]
+    assert "DA" not in part["L_not_indexed"]
 
 
 def test_verified_semitic_proposals_present_and_unverified_omitted():
@@ -53,7 +53,7 @@ def test_verified_semitic_proposals_present_and_unverified_omitted():
     # a-sa-sa-ra-me is Best (1981), NOT Gordon — the verification caught the attribution drift
     assert "Best" in sem["A-SA-SA-RA-ME"].source and sem["A-SA-SA-RA-ME"].year == 1981
     # *301 = Di Mino's DISPUTED/unverified quarantine anchor (NOT one of the 6 verified) — present + flagged,
-    # and quarantining it makes *301 L_known so it can never sit in an L_virgin discovery set.
+    # and quarantining it makes *301 L_known so it can never sit in an L_not_indexed discovery set.
     assert sem["*301"].proposed_value == "na" and "Di Mino" in sem["*301"].source and sem["*301"].year == 2026
     assert "*301" in litindex.known_signs(index)
     assert all(c.year == 1966 and "Gordon" in c.source
@@ -64,9 +64,9 @@ def test_verified_semitic_proposals_present_and_unverified_omitted():
     assert any(c.sign == "KI-RO" and c.claim_type == "lexical_reading" for c in index)  # accounting term stays
 
 
-def test_spice_logographic_readings_quarantine_l_virgin_leak():
+def test_spice_logographic_readings_quarantine_l_not_indexed_leak():
     """Audit 2026-06-30: the PUBLIC 2025 Salgarella/Bellinato/Ferrara spice readings must be indexed so
-    a model cannot regurgitate them as an L_virgin 'discovery' — they go to L_known, flagged speculative."""
+    a model cannot regurgitate them as an L_not_indexed 'discovery' — they go to L_known, flagged speculative."""
     index = litindex.load_index()
     logo = {c.sign: c for c in index if c.claim_type == "logographic_reading"}
     assert {"A646", "A341", "*127", "*157"} <= set(logo)
@@ -74,12 +74,12 @@ def test_spice_logographic_readings_quarantine_l_virgin_leak():
     assert all(c.year == 2025 and ("Salgarella" in c.source or "Kadmos" in c.source) for c in logo.values())
     # the hedging the paper itself carries must be recorded (so logos never presents them as confirmed)
     assert "hapax" in logo["A646"].note.lower() and "speculative" in logo["A646"].note.lower()
-    # the whole point: these signs are now L_known, never L_virgin
+    # the whole point: these signs are now L_known, never L_not_indexed
     known = litindex.known_signs(index)
     assert {"A646", "A341", "*127", "*157"} <= known
     part = litindex.partition_signs(["A646", "*127", "*999"], index)
     assert "A646" in part["L_known"] and "*127" in part["L_known"]
-    assert "*999" in part["L_virgin"]
+    assert "*999" in part["L_not_indexed"]
 
 
 def test_structural_readings_indexed_as_l_known():
@@ -124,13 +124,13 @@ def test_partition_is_exact_disjoint_cover():
     index = litindex.load_index()
     signs = ["A", "DA", "KU", "RO", "*118", "*301", "*531", "ZQ_not_a_sign"]
     part = litindex.partition_signs(signs, index)
-    known, virgin = part["L_known"], part["L_virgin"]
-    assert known.isdisjoint(virgin)
-    assert known | virgin == set(signs)
-    # *301 now carries Di Mino's DISPUTED published reading -> it is QUARANTINED (L_known), never virgin
+    known, not_indexed = part["L_known"], part["L_not_indexed"]
+    assert known.isdisjoint(not_indexed)
+    assert known | not_indexed == set(signs)
+    # *301 now carries Di Mino's DISPUTED published reading -> it is QUARANTINED (L_known), never not_indexed
     assert "*301" in known
-    # the remaining *-series + a nonsense token have no published proposal -> literature-virgin
-    assert {"*118", "*531", "ZQ_not_a_sign"} <= virgin
+    # the remaining *-series + a nonsense token have no published proposal -> literature-not_indexed
+    assert {"*118", "*531", "ZQ_not_a_sign"} <= not_indexed
 
 
 def test_sequence_reading_marks_component_signs_known():
@@ -145,7 +145,7 @@ def test_index_signs_absent_from_inventory_are_ignored():
     index = litindex.load_index()
     part = litindex.partition_signs(["*118"], index)
     assert part["L_known"] == set()
-    assert part["L_virgin"] == {"*118"}
+    assert part["L_not_indexed"] == {"*118"}
 
 
 def test_literature_match_quarantine_helper():
@@ -153,7 +153,7 @@ def test_literature_match_quarantine_helper():
     assert litindex.literature_match("DA", index) is True
     assert litindex.literature_match("DA", index, proposed_value="da") is True
     assert litindex.literature_match("DA", index, proposed_value="xy") is False   # wrong value
-    assert litindex.literature_match("*118", index) is False                      # virgin sign
+    assert litindex.literature_match("*118", index) is False                      # not_indexed sign
     # a candidate that proposes the published KU-RO sequence reading is a literature_match
     assert litindex.literature_match("KU-RO", index, proposed_value="total") is True
 
@@ -161,33 +161,33 @@ def test_literature_match_quarantine_helper():
 # --------------------------------------------------------------------------- #
 # (b) VIRGIN_SUPPORT — §E generalization clause
 # --------------------------------------------------------------------------- #
-def test_virgin_support_isolates_virgin_contribution():
-    part = {"L_known": {"DA", "KU"}, "L_virgin": {"*118", "*301"}}
-    # 3 units of support on known signs, 1 on a virgin sign -> 1/4 of the mass is virgin
+def test_not_indexed_support_isolates_not_indexed_contribution():
+    part = {"L_known": {"DA", "KU"}, "L_not_indexed": {"*118", "*301"}}
+    # 3 units of support on known signs, 1 on a not_indexed sign -> 1/4 of the mass is not_indexed
     support = {"DA": 2.0, "KU": 1.0, "*118": 1.0}
-    assert litindex.virgin_support(support, part) == pytest.approx(0.25)
-    # all support on virgin signs -> fraction 1.0
-    assert litindex.virgin_support({"*118": 3.0, "*301": 1.0}, part) == pytest.approx(1.0)
+    assert litindex.not_indexed_support(support, part) == pytest.approx(0.25)
+    # all support on not_indexed signs -> fraction 1.0
+    assert litindex.not_indexed_support({"*118": 3.0, "*301": 1.0}, part) == pytest.approx(1.0)
     # all support on known signs -> fraction 0.0 (concentrated on already-published values)
-    assert litindex.virgin_support({"DA": 5.0}, part) == pytest.approx(0.0)
+    assert litindex.not_indexed_support({"DA": 5.0}, part) == pytest.approx(0.0)
 
 
-def test_virgin_support_ignores_unclassified_signs():
-    part = {"L_known": {"DA"}, "L_virgin": {"*118"}}
+def test_not_indexed_support_ignores_unclassified_signs():
+    part = {"L_known": {"DA"}, "L_not_indexed": {"*118"}}
     # "ZZ" is in neither set; it must not enter numerator OR denominator
     support = {"*118": 1.0, "DA": 1.0, "ZZ": 100.0}
-    assert litindex.virgin_support(support, part) == pytest.approx(0.5)
+    assert litindex.not_indexed_support(support, part) == pytest.approx(0.5)
 
 
-def test_virgin_support_degenerate_returns_honest_zero():
-    part = {"L_known": {"DA"}, "L_virgin": {"*118"}}
+def test_not_indexed_support_degenerate_returns_honest_zero():
+    part = {"L_known": {"DA"}, "L_not_indexed": {"*118"}}
     # empty mapping -> no power -> 0.0
-    assert litindex.virgin_support({}, part) == 0.0
+    assert litindex.not_indexed_support({}, part) == 0.0
     # all-zero / non-positive support -> no power -> 0.0 (NOT a real generalization-failure null)
-    assert litindex.virgin_support({"*118": 0.0, "DA": 0.0}, part) == 0.0
-    assert litindex.virgin_support({"*118": -3.0}, part) == 0.0
+    assert litindex.not_indexed_support({"*118": 0.0, "DA": 0.0}, part) == 0.0
+    assert litindex.not_indexed_support({"*118": -3.0}, part) == 0.0
     # support only on unclassified signs -> no classified mass -> 0.0
-    assert litindex.virgin_support({"ZZ": 9.0}, part) == 0.0
+    assert litindex.not_indexed_support({"ZZ": 9.0}, part) == 0.0
 
 
 # --------------------------------------------------------------------------- #

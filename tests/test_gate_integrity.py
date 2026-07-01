@@ -21,7 +21,7 @@ from scripts import family_scores, verdict  # noqa: E402
 _VCAND = ["nwy", "brq", "mlk", "ywm", "dn", "qtl", "zkr", "bnh", "hlk", "yqr"]
 _VHELD = ["nwy", "brq", "mlk", "ywm", "dn", "qtl"]
 _VBASE = dict(confidence=0.6, free_params=3, provenance="embedding_nn",
-              lit_index_hit=False, virgin_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
+              lit_index_hit=False, not_indexed_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
 
 
 def _rows(*specs):
@@ -59,7 +59,7 @@ def test_dsr_is_not_a_graduation_clause():
 
 def test_verdict_fails_closed_without_instrumented_search():
     """No SearchLog -> gate can never be GRADUATE; the instrumentation clause flips with a log (P0.3)."""
-    base = dict(_VBASE, virgin_threshold=0.5)   # let every substantive clause be satisfiable
+    base = dict(_VBASE, not_indexed_threshold=0.5)   # let every substantive clause be satisfiable
     g_open = verdict.grade(_VHELD, _VCAND, **base)                       # un-instrumented
     assert g_open["clauses"]["search_multiplicity_instrumented"] is False
     assert g_open["gate_verdict"] != "GRADUATE"                          # fail closed

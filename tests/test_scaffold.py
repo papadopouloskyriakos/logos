@@ -79,7 +79,7 @@ def test_hash_idempotent_same_body_same_hash_no_dup(conn):
         heldout_set=["I-Cr-1", "I-HT-88"], derivation_set=["I-Pk-1"],
         free_params=3, provenance="embedding_nn", confidence=0.6,
         prediction={"heldout_forms": HELD_FORMS, "candidate_lexicon": CAND_LEX, "n_eff": 12,
-                    "u_floor": 8, "virgin_sign_support": 0.5, "lit_index_hit": False},
+                    "u_floor": 8, "not_indexed_sign_support": 0.5, "lit_index_hit": False},
         thesis_text="*301 = /na/ forces a Semitic N-W-Y root across the held-out sites.",
         search_log_ref="run-test-001")
     ph1 = predict.commit(_conn=conn, **kwargs)
@@ -165,7 +165,7 @@ def test_verdict_py_is_the_sole_writer_of_verdicts():
 def test_gate_llm_plus_lit_index_never_graduates():
     """llm_proposed AND lit_index_hit = regurgitation by construction -> never GRADUATE."""
     g = verdict.grade(HELD_FORMS, CAND_LEX, confidence=0.6, free_params=3, provenance="llm_proposed",
-                      lit_index_hit=True, virgin_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
+                      lit_index_hit=True, not_indexed_sign_support=0.9, u_floor=8, n_eff=5, n_fake=6, seed=2)
     assert g["gate_verdict"] != "GRADUATE"
     assert "not_llm_lit_contamination" in g["failing_clauses"]
 
@@ -175,23 +175,23 @@ def test_mdl_clause_removed_u_floor_reported_only():
     defaulted to free_params); it is REMOVED from the §E gate. u_floor is reported-only, and an omitted
     u_floor is reported as NaN (never silently satisfied). Real bit-level MDL is future work."""
     g = verdict.grade(HELD_FORMS, CAND_LEX, confidence=0.6, free_params=12, provenance="embedding_nn",
-                      lit_index_hit=False, virgin_sign_support=0.9, u_floor=None, n_eff=5, n_fake=6, seed=2)
+                      lit_index_hit=False, not_indexed_sign_support=0.9, u_floor=None, n_eff=5, n_fake=6, seed=2)
     assert "k_le_u_floor" not in g["clauses"] and "k_le_u_floor" not in g["failing_clauses"]
     assert g["u_floor"] != g["u_floor"]                    # NaN (omitted u_floor is not silently passed)
 
 
-def test_gate_no_virgin_support_rejects():
-    """A reading that only works on literature-known signs (no L_virgin support) -> never GRADUATE."""
+def test_gate_no_not_indexed_support_rejects():
+    """A reading that only works on literature-known signs (no L_not_indexed support) -> never GRADUATE."""
     g = verdict.grade(HELD_FORMS, CAND_LEX, confidence=0.6, free_params=3, provenance="embedding_nn",
-                      lit_index_hit=False, virgin_sign_support=0.0, u_floor=8, n_eff=5, n_fake=6, seed=2)
+                      lit_index_hit=False, not_indexed_sign_support=0.0, u_floor=8, n_eff=5, n_fake=6, seed=2)
     assert g["gate_verdict"] != "GRADUATE"
-    assert "generalizes_to_virgin" in g["failing_clauses"]
+    assert "generalizes_to_not_indexed" in g["failing_clauses"]
 
 
 def test_gate_weak_heldout_is_null_published():
     """Held-out that does not beat the L_fake floor -> deviation / NULL_PUBLISHED, never GRADUATE."""
     g = verdict.grade(["zzz", "qqq", "xxx", "ppp"], CAND_LEX, confidence=0.6, free_params=3,
-                      provenance="embedding_nn", lit_index_hit=False, virgin_sign_support=0.9,
+                      provenance="embedding_nn", lit_index_hit=False, not_indexed_sign_support=0.9,
                       u_floor=8, n_eff=5, n_fake=6, seed=2)
     assert g["result"] == "deviation"
     assert g["gate_verdict"] in ("NULL_PUBLISHED", "REJECT")
@@ -214,7 +214,7 @@ def test_round_trip_predict_verdict_family_scores(conn):
         heldout_set=["I-Cr-1"], derivation_set=["I-Pk-1"], free_params=3,
         provenance="embedding_nn", confidence=0.6,
         prediction={"heldout_forms": HELD_FORMS, "candidate_lexicon": CAND_LEX, "n_eff": 12,
-                    "u_floor": 8, "virgin_sign_support": 0.5, "lit_index_hit": False},
+                    "u_floor": 8, "not_indexed_sign_support": 0.5, "lit_index_hit": False},
         thesis_text="*301=/na/ forces NW-Semitic morphology across held-out sites.",
         search_log_ref="run-rt-001", _conn=conn)
     assert len(ph) == 64

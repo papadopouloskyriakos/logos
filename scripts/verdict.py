@@ -19,7 +19,7 @@ Grading (docs/design/comparison-layer.md §A/§B/§E):
 §E acceptance gate — a hypothesis is EVIDENCE only if ALL hold:
   registered before test; search multiplicity INSTRUMENTED (N_eff COUNTED — else fail closed to
   INCOMPLETE, never n_trials=1); L_fake null present; beats the ORDER-STATISTIC E[max] bar over
-  N_eff (the operative deflation); beats the L_fake corrected margin; generalizes to L_virgin signs
+  N_eff (the operative deflation); beats the L_fake corrected margin; generalizes to L_not_indexed signs
   above a pre-registered threshold; not (llm_proposed AND lit_index_hit); S_morph gold-standard when
   the corpus has power. DSR and the MDL check (k<=U_floor) are REPORTED diagnostics, REMOVED from the
   gate after review. Fail any -> gate verdict REJECT / NULL_PUBLISHED / INCOMPLETE. Never GRADUATE on
@@ -46,7 +46,7 @@ from scripts import logos_db, logos_stats  # noqa: E402
 from scripts.comparison import lexstat, lfake, run_canary  # noqa: E402
 # Additive comparison-layer diagnostics + §E gate inputs (design §A.2/§B.2/§B.3/§C.2). All pure,
 # arithmetic, deterministic — never on the verdict's decision: S_phono/S_morph are REPORTED, the
-# searchlog supplies the instrumented N_eff, litindex supplies the L_virgin generalization share.
+# searchlog supplies the instrumented N_eff, litindex supplies the L_not_indexed generalization share.
 from scripts.comparison import phonostat, morphostat, searchlog, litindex  # noqa: E402
 
 METRIC_VERSION = "verdict-v2"          # bump when grade semantics / gate clauses change (P0.3-0.5: fail-
@@ -104,10 +104,10 @@ def lfake_distribution(heldout_forms, candidate_lexicon, n_fake=N_FAKE_DEFAULT, 
 # The pure grade (no DB, no LLM) — unit-testable
 # --------------------------------------------------------------------------- #
 def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
-          lit_index_hit, virgin_sign_support, u_floor, n_eff,
+          lit_index_hit, not_indexed_sign_support, u_floor, n_eff,
           null_recalls=None, fake_recalls=None, eps=EPS_DEFAULT, n_fake=N_FAKE_DEFAULT, seed=0,
           heldout_by_inscription=None, search_log=None, per_sign_support=None, sign_partition=None,
-          phono_order=3, virgin_threshold=None, virgin_min_signs=2, eps_grid=None):
+          phono_order=3, not_indexed_threshold=None, not_indexed_min_signs=2, eps_grid=None):
     """Mechanically grade one hypothesis against its held-out implication.
 
     Returns a dict with: result (match|partial|deviation), accuracy (S*), brier, dsr, the L_fake
@@ -123,9 +123,9 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
           flat ``heldout_forms`` is used, which forces S_morph's F.1 no-power escape (single group).
       search_log             : a :class:`searchlog.SearchLog` (or any object exposing ``.n_eff``); when
           given, its COUNTED N_eff (design §B.2, invariant 12) overrides the hand-passed ``n_eff``.
-      per_sign_support, sign_partition : a per-sign held-out support map + an {L_known, L_virgin}
-          partition; when both given, the §E ``generalizes_to_virgin`` clause uses
-          ``litindex.virgin_support`` over them instead of the pre-passed ``virgin_sign_support`` float.
+      per_sign_support, sign_partition : a per-sign held-out support map + an {L_known, L_not_indexed}
+          partition; when both given, the §E ``generalizes_to_not_indexed`` clause uses
+          ``litindex.not_indexed_support`` over them instead of the pre-passed ``not_indexed_sign_support`` float.
       phono_order            : n-gram order for the REPORTED S_phono surface-plausibility diagnostic.
     """
     heldout_forms = list(heldout_forms or [])
@@ -221,23 +221,23 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
     # is stated future work. No free_params fallback: if a prereg omits u_floor it is reported as NaN,
     # never silently satisfied.
     u_floor = float(u_floor) if u_floor is not None else float("nan")
-    # §E generalizes_to_virgin: prefer litindex.virgin_support over a per-sign support map + the
-    # {L_known, L_virgin} partition WHEN both are supplied (the instrumented §C.2 path); otherwise fall
+    # §E generalizes_to_not_indexed: prefer litindex.not_indexed_support over a per-sign support map + the
+    # {L_known, L_not_indexed} partition WHEN both are supplied (the instrumented §C.2 path); otherwise fall
     # back to the pre-passed float (existing behaviour — callers without the partition are unchanged).
     if per_sign_support is not None and sign_partition is not None:
-        virgin = float(litindex.virgin_support(per_sign_support, sign_partition))
+        not_indexed = float(litindex.not_indexed_support(per_sign_support, sign_partition))
     else:
-        virgin = float(virgin_sign_support) if virgin_sign_support is not None else 0.0
-    # P0.2: discovery must clear a PRE-REGISTERED L_virgin threshold, never a single hit. Fail closed —
-    # absent a committed virgin_threshold the clause does NOT pass. When the per-sign partition is
-    # available, ALSO require >= virgin_min_signs DISTINCT L_virgin signs to carry held-out support.
-    n_virgin_supported = None
+        not_indexed = float(not_indexed_sign_support) if not_indexed_sign_support is not None else 0.0
+    # P0.2: discovery must clear a PRE-REGISTERED L_not_indexed threshold, never a single hit. Fail closed —
+    # absent a committed not_indexed_threshold the clause does NOT pass. When the per-sign partition is
+    # available, ALSO require >= not_indexed_min_signs DISTINCT L_not_indexed signs to carry held-out support.
+    n_not_indexed_supported = None
     if per_sign_support is not None and sign_partition is not None:
-        _lv = set(sign_partition.get("L_virgin", []))
-        n_virgin_supported = sum(1 for s in _lv if float(per_sign_support.get(s, 0.0)) > 0.0)
-    virgin_ok = (virgin_threshold is not None) and (virgin >= float(virgin_threshold))
-    if n_virgin_supported is not None:
-        virgin_ok = virgin_ok and (n_virgin_supported >= int(virgin_min_signs))
+        _lv = set(sign_partition.get("L_not_indexed", []))
+        n_not_indexed_supported = sum(1 for s in _lv if float(per_sign_support.get(s, 0.0)) > 0.0)
+    not_indexed_ok = (not_indexed_threshold is not None) and (not_indexed >= float(not_indexed_threshold))
+    if n_not_indexed_supported is not None:
+        not_indexed_ok = not_indexed_ok and (n_not_indexed_supported >= int(not_indexed_min_signs))
     # P0.3: the operative deflation clause is the §B.3 order-statistic bar (E[max over n_trials draws
     # from the null]); S* must EXCEED it. Fail closed on a degenerate null (no variance, or <1 trial —
     # the bar collapses to mu0 and is meaningless, so the clause must not pass). Finance-DSR is DEMOTED
@@ -251,7 +251,7 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         "lfake_null_present": has_lfake,                      # the headline falsifier must exist
         "beats_order_stat_bar": beats_order_stat,             # P0.3: E[max over n_trials] deflation (operative)
         "beats_lfake_margin": (observed > bar),               # the headline L_fake falsifier
-        "generalizes_to_virgin": virgin_ok,                   # P0.2: pre-registered L_virgin threshold
+        "generalizes_to_not_indexed": not_indexed_ok,                   # P0.2: pre-registered L_not_indexed threshold
         "not_llm_lit_contamination": not (provenance == "llm_proposed" and bool(lit_index_hit)),
         # S_morph is the gold-standard test WHEN THE CORPUS CAN SUPPORT IT (F.1). The clause keys off
         # has_power (the corpus has enough independent inscriptions/affixes/null-variance to test
@@ -311,7 +311,7 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         "sigma_hat": None if sigma_hat is None else round(float(sigma_hat), 6),
         "n_trials": n_trials,                    # P0.3: distinct candidates tried (SearchLog), NOT independent tests
         "n_trials_source": n_eff_source,
-        "n_virgin_supported": n_virgin_supported,   # distinct L_virgin signs with held-out support (None if unpartitioned)
+        "n_not_indexed_supported": n_not_indexed_supported,   # distinct L_not_indexed signs with held-out support (None if unpartitioned)
         # additive comparison-layer diagnostics (REPORTED, never on the verdict's decision path).
         "s_phono": s_phono_val,                  # None when degenerate (NaN) — honest no-power, not a 0
         "s_phono_degenerate": s_phono_degenerate,
@@ -335,7 +335,7 @@ def _notes(g):
     uf = "NA" if g["u_floor"] != g["u_floor"] else f"{g['u_floor']:.0f}"   # NaN-safe (u_floor reported-only)
     s = (f"gate={g['gate_verdict']} result={g['result']} dsr={dsr} dsrO={dsro} k={g['free_params']}/"
          f"U{uf} osbar={g['order_stat_bar']:.3f} S*={g['accuracy']:.3f} lfake_bar={g['lfake_bar']:.3f} "
-         f"virgin={'Y' if g['clauses']['generalizes_to_virgin'] else 'N'} morph={mph} "
+         f"not_indexed={'Y' if g['clauses']['generalizes_to_not_indexed'] else 'N'} morph={mph} "
          f"fail={','.join(g['failing_clauses']) or 'none'} code={code_sha()} v={METRIC_VERSION}")
     return s[:255]
 
@@ -371,19 +371,19 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
     free_params = int(body.get("free_params", 0) or 0)
     # Additive §A.2/§C.2 inputs, consumed only WHEN the prediction carries them (else None ⇒ the
     # pre-existing flat/float fallbacks): per-inscription grouping powers S_morph's cross-inscription
-    # test; a per-sign support map + {L_known,L_virgin} partition lets the gate use litindex.virgin_support.
+    # test; a per-sign support map + {L_known,L_not_indexed} partition lets the gate use litindex.not_indexed_support.
     heldout_by_inscription = pred.get("heldout_by_inscription")
     per_sign_support = pred.get("per_sign_support")
     sp = pred.get("sign_partition")
     sign_partition = None
-    if isinstance(sp, dict):                                # JSON arrays -> sets for litindex.virgin_support
-        sign_partition = {key: set(sp.get(key, []) or []) for key in ("L_known", "L_virgin")}
+    if isinstance(sp, dict):                                # JSON arrays -> sets for litindex.not_indexed_support
+        sign_partition = {key: set(sp.get(key, []) or []) for key in ("L_known", "L_not_indexed")}
     return grade(
         heldout_forms=heldout_forms, candidate_lexicon=candidate_lexicon,
         confidence=confidence, free_params=free_params,
         provenance=body.get("provenance", "human"),
         lit_index_hit=bool(pred.get("lit_index_hit", False)),
-        virgin_sign_support=pred.get("virgin_sign_support"),
+        not_indexed_sign_support=pred.get("not_indexed_sign_support"),
         # P0.1: u_floor is REPORTED-ONLY (the k<=u_floor clause is removed). No free_params fallback —
         # an omitted u_floor is reported as NaN, never silently satisfied. Real bit-level MDL is future work.
         u_floor=pred.get("u_floor"),
@@ -391,10 +391,10 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
         eps=eps, n_fake=n_fake, seed=seed,
         heldout_by_inscription=heldout_by_inscription,
         per_sign_support=per_sign_support, sign_partition=sign_partition,
-        # P0.2: the pre-registered L_virgin discovery threshold + min distinct virgin signs (fail closed
+        # P0.2: the pre-registered L_not_indexed discovery threshold + min distinct not_indexed signs (fail closed
         # if the prereg commits no threshold).
-        virgin_threshold=pred.get("virgin_threshold"),
-        virgin_min_signs=int(pred.get("virgin_min_signs", 2)))
+        not_indexed_threshold=pred.get("not_indexed_threshold"),
+        not_indexed_min_signs=int(pred.get("not_indexed_min_signs", 2)))
 
 
 def write_verdict(cur, plan_hash, family, g):
