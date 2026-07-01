@@ -61,10 +61,11 @@ The discipline harness is built and exercised; a preprint is in preparation. Wha
   literature-unseen partition, a fabricated-language control corpus, model-ablation contamination
   checks, multiple-comparison correction, and pre-registration — all graded mechanically from
   persisted artifacts (`scripts/comparison/`).
-- **A worked failure case** — a three-part, primary-sourced refutation of the June-2026 `*301`
-  claim, including that its own morphological segmentation (a prefixing, agglutinative verb)
-  contradicts the non-concatenative Semitic morphology it assigns
-  ([docs/linear-a-claims-2026.md](docs/linear-a-claims-2026.md)).
+- **A qualitative audit** — a three-part, primary-sourced refutation of the June-2026 `*301`
+  claim, including that its own morphological segmentation (a prefixing, agglutinative verb) finds
+  no support in the primary descriptions of the form (Davis 2013: no Afroasiatic signature;
+  Salgarella 2025: agglutinative isolate) — resting on those descriptions, not on any a-priori
+  typological contradiction ([docs/linear-a-claims-2026.md](docs/linear-a-claims-2026.md)).
 - **A body of pre-registered nulls**, each with its borderline cases named: morphology induction
   (pooled and genre-stratified), metrological/accounting analysis, a distributional-phonology
   pilot with a power analysis, a cross-script image-vs-sequence asymmetry, and a model-

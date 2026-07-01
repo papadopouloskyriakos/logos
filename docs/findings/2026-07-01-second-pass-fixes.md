@@ -60,9 +60,29 @@ length), **List 2014** (cognate-detection accuracy vs sample size), **Barber 197
 2016** (analytic corpus-sufficiency thresholds). Honest framing: *first application of a known idea
 (data-size recovery curves) to a sufficiency diagnostic* — a synthesis, not a discovery.
 
-## Status
-- **DONE:** P0.1–P0.5 (code + schema + migration + 3 regression tests, suite green); item 8 (bootstrap,
-  §7 updated); item 7 partial (§8.3 already trimmed to "curve in progress" in a prior pass).
-- **PENDING (this doc tracks):** P1 prose items 6, 9, 10, 11 + §8.3 prior-art citations; P2 packaging
-  (pyproject/.env.example/lazy-DB-init/pytest markers/Makefile + the 2 genuine test failures);
-  P3 bibliography; P2.13 finance-lineage docstrings (`logos_stats.py`, `verdict.py`, README/DESIGN drift).
+## Status — ALL ITEMS COMPLETE
+- **P0.1–P0.5:** code + schema + migration + 3 regression tests; full suite **365 passed, 4 xfailed**.
+- **P1 (prose):** 6 (§5 → "A qualitative audit"), 7 (§8.3 "strict upper bound" → "optimistic benchmark
+  conditional on a known cognate relationship" + prior-art ancestors), 8-prose (morphology overclaim
+  softened; Linear-B positive control retained as future work), 9 ("hard false-positive floor" →
+  "generator-conditional negative-control distribution" + ensemble disclosed as future work), 10
+  (Braović taxonomy softened — survey has resource/hardware items), 11 (absolutes → indexed-scope).
+- **Item 8 (re-run [NUM]):** site-clustered bootstrap; gap CI [0.021, 0.099] excludes 0; positive
+  survives; §7 reports the CI. **No number moved.**
+- **Item 3 (re-run [NUM]):** confirmed no reported number moves; fix only fails-closed un-instrumented
+  would-be-wins.
+- **P2 (packaging):** the 2 flagged "genuine failures" are **STALE** (pass here — env/data, not code);
+  lazy DB/pymysql init (bare checkout now imports + collects without .env/driver); `pyproject.toml`
+  (+ deps/extras + pytest markers), `.env.example`, `Makefile` (`test-unit` DB/data-free / `test-full`).
+- **P2.13 (docstrings):** `logos_stats.py` finance lineage rewritten in decipherment terms (candidate
+  readings, not strategies; DSR flagged diagnostic-only); `verdict.py` §E gate docstring corrected;
+  README (retracted typology claim) + DESIGN (old DSR≥0.95 / MDL graduation rule) synced to gate-e2.
+- **P3 (bibliography):** 5 prior-art refs added; Daggumati 2019/2023 split; Di Mino made an IMMUTABLE
+  citation (archived path + SHA-256 + date + the specific *301 table row). Zero pending/provisional
+  entries remain.
+
+## Deferred (explicitly, per the scope guard — NOT built)
+- The full L_fake control ensemble (unigram/root-template/real-language) — disclosed as future work.
+- The Linear-B morphology positive control — stated as the first item of the planned revision.
+- Exact Packard page for the nine fabricated decipherments — kept as an honest book-level cite (page
+  not independently verified; not fabricated).

@@ -1,9 +1,14 @@
-"""Pure research-integrity statistics (AGORA-21): Sharpe, the Probabilistic Sharpe Ratio, and
-the Deflated Sharpe Ratio (Bailey & López de Prado 2014) — the multiple-testing guard.
+"""Pure multiple-testing / selection-bias statistics for decipherment: Sharpe, the Probabilistic
+Sharpe Ratio, and the Deflated Sharpe Ratio (Bailey & López de Prado 2014).
 
-The DSR answers the one question agora's mission demands: with N strategies tried, what is the
-probability that THIS one's Sharpe reflects real skill rather than the luckiest draw of N? No DB,
-no network — unit-tested in tests/test_agora.py.
+We import the order-statistic multiple-comparison math from that finance/backtest lineage — it is the
+honest published source of the E[max over N trials] deflation — and apply it to DECIPHERMENT: with N
+candidate readings tried over signs/roots/families, what is the probability that THIS one's held-out
+recall reflects a real reading rather than the luckiest draw of N? The "return series" everywhere
+below is a candidate's per-form held-out hit series; a "trial" is a candidate reading, never a
+trading strategy. In logos the DSR is REPORTED as a diagnostic only — the OPERATIVE deflation bar is
+the order-statistic E[max] (verdict.py / §B.3), and DSR sits on no graduation gate. No DB, no
+network; pure and unit-tested.
 """
 import math
 import random
@@ -71,7 +76,7 @@ def expected_max_order_stat(mu0, sigma0, n_trials):
 
 
 def expected_max_sharpe(n_trials, sr_variance):
-    """Expected maximum Sharpe under the null across n_trials independent strategies
+    """Expected maximum Sharpe under the null across n_trials independent candidate readings
     (Bailey–López de Prado). sr_variance = variance of the trials' Sharpe estimates. The ``mu0 = 0``
     special case of :func:`expected_max_order_stat` (σ0 = √sr_variance)."""
     if n_trials < 2 or sr_variance <= 0:
@@ -80,15 +85,17 @@ def expected_max_sharpe(n_trials, sr_variance):
 
 
 def deflated_sharpe(sr, n, skew, kurt, n_trials, sr_variance):
-    """Deflated Sharpe Ratio: probability the observed Sharpe reflects skill, *deflated* for the
-    selection bias of having tried n_trials strategies. The G2 gate's honesty test."""
+    """Deflated Sharpe Ratio: probability the observed held-out recall reflects a real reading,
+    *deflated* for the selection bias of having tried n_trials candidate readings. REPORTED as a
+    diagnostic only — it sits on no graduation gate (the operative bar is the order-statistic
+    E[max]; see the module header and verdict.py / §B.3)."""
     sr0 = expected_max_sharpe(n_trials, sr_variance)
     return psr(sr, n, skew, kurt, sr_benchmark=sr0)
 
 
 def dsr_trial_count(n_scored, n_declared):
-    """Selection-bias multiplicity fed to the Deflated Sharpe Ratio — the number of strategies
-    'tried'. Deflate by EVERY declared family (not only those that produced a Sharpe yet) and never
+    """Selection-bias multiplicity fed to the Deflated Sharpe Ratio — the number of candidate
+    readings 'tried'. Deflate by EVERY declared family (not only those that produced a Sharpe yet) and never
     below 1, so the DSR can never be silently un-deflated to a single-trial (decorative) value. This
     extracts the most load-bearing attestation in the honesty stack into one tested place: a
     regression that set the count to 1 fails its unit test (audit V6)."""
@@ -180,8 +187,8 @@ def softmax(values, temp=1.0):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# AGORA-30 — López de Prado compliance layer (see docs/lopez-de-prado-audit.md).
-# All pure, all unit-tested. These close the gaps the audit found in agora's honesty stack.
+# Selection-inference layer (López de Prado lineage). All pure, all unit-tested. Imported for the
+# multiple-comparison / order-statistic math; applied to candidate readings, not trading strategies.
 # ─────────────────────────────────────────────────────────────────────────────
 
 def average_uniqueness(spans):
@@ -189,7 +196,7 @@ def average_uniqueness(spans):
     integer day-indices, t1 inclusive. Two labels are *concurrent* when their intervals overlap —
     they share a return, so they are NOT IID. Each label's uniqueness is the mean of 1/concurrency
     over its lifespan; returns one ū_i ∈ (0, 1] per span (1 = no overlap, →0 = heavily overlapped).
-    The fix for agora's #1 integrity bug: PSR/DSR must scale by the SUM of these, not the raw count."""
+    The multiplicity must scale by the SUM of these declared candidate counts, not the raw count."""
     if not spans:
         return []
     lo = min(s[0] for s in spans)

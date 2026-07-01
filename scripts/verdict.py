@@ -17,9 +17,13 @@ Grading (docs/design/comparison-layer.md §A/§B/§E):
     canary is the N_eff-INDEPENDENT backstop for the human/LLM mental search (garden of forking paths).
 
 §E acceptance gate — a hypothesis is EVIDENCE only if ALL hold:
-  registered before test; DSR>=0.95; free_params k<=U_floor; beats L_fake margin;
-  generalizes to L_virgin signs; not (llm_proposed AND lit_index_hit); survives LLM ablation.
-  Fail any -> result != match, gate verdict REJECT / NULL_PUBLISHED. Never GRADUATE on internal fit.
+  registered before test; search multiplicity INSTRUMENTED (N_eff COUNTED — else fail closed to
+  INCOMPLETE, never n_trials=1); L_fake null present; beats the ORDER-STATISTIC E[max] bar over
+  N_eff (the operative deflation); beats the L_fake corrected margin; generalizes to L_virgin signs
+  above a pre-registered threshold; not (llm_proposed AND lit_index_hit); S_morph gold-standard when
+  the corpus has power. DSR and the MDL check (k<=U_floor) are REPORTED diagnostics, REMOVED from the
+  gate after review. Fail any -> gate verdict REJECT / NULL_PUBLISHED / INCOMPLETE. Never GRADUATE on
+  internal fit.
 
 CLI:
   python3 scripts/verdict.py                 # grade all due hypotheses

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logos"
+version = "0.1.0"
+description = "A falsifiable, decontaminated inference framework for testing undeciphered-script decipherment claims (Linear A)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kyriakos Papadopoulos" }]
+
+# Core runtime: everything the DB-free comparison layer + unit suite needs.
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+# The MySQL comparison-layer store (predict -> verdict -> family_scores). Needed only for the
+# integration tests / the live gate; DB-free unit tests run without it.
+db = ["pymysql>=1.1"]
+# Morphology segmentation baseline (Morfessor) — the morphology probe degrades gracefully without it.
+morph = ["morfessor>=2.0"]
+# Neural baselines / palaeography (Tamburini CSA CUDA, I-JEPA). Heavy; not needed for the unit suite.
+neural = ["torch>=2.1"]
+# Everything, for a full local reproduction.
+full = ["pymysql>=1.1", "morfessor>=2.0", "torch>=2.1", "pytest>=7.0"]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: pure/deterministic, no DB, no licensed data, no network, no GPU (the default CI lane)",
+    "integration: requires the live MySQL comparison-layer store (LOGOS_DB_* / .env)",
+    "licensed_data: requires the gitignored licensed corpora (GORILA/SigLA/lineara.xyz/DĀMOS/bhsa)",
+    "gpu: requires a CUDA device / heavy neural deps (torch)",
+    "external_asset: requires an external font/model asset not shipped in the repo",
+]

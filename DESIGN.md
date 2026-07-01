@@ -106,8 +106,8 @@ a single ~241-token document; unicity is hopeless there).
                                                            │  held-out, Brier,     │
                                                            │  calibration)         │
                                                            │   ↓                   │
-                                                           │ graduate (DSR ≥0.95,  │
-                                                           │  params ≤ info floor) │
+                                                           │ graduate (win-rate +  │
+                                                           │  order-stat E[max])   │
                                                            └──────────────────────┘
 ```
 
@@ -154,12 +154,16 @@ symbolic verdict layer + the unicity number exist.** Reuse agora's harness
 - **verdict** (`verdict.py`, TODO — the *sole* writer of `verdicts`): mechanical held-out-site
   / held-out-inscription accuracy; cross-corpus consistency; Brier vs the predicted
   implication. The proposer never grades itself.
-- **score** (`family_scores.py`, TODO): per-family held-out win-rate, calibration gap, plus
-  the López de Prado corrections reused from `agora_stats.py` (effective-n, n_trials, DSR).
-- **graduate** (`graduation_audit.py`, TODO): a family graduates only if **DSR ≥ 0.95 on the
-  effective sample AND its free parameters ≤ the corpus information floor** (the unicity
-  gate). A family whose readings are underdetermined is capped forever — exactly as an
-  overfit trading strategy is frozen.
+- **score** (`family_scores.py`): per-family held-out **GRADUATE win-rate** (a win is a §E-gate
+  `GRADUATE`, never the intermediate `result=='match'`), calibration gap, and the reported DSR
+  diagnostic (effective-n, n_trials) — DSR is computed but is **not** a gate input.
+- **graduate** (`family_scores.py` graduation gate): a family graduates only if it has a real
+  held-out **GRADUATE win-rate AND enough verdicts** (`MIN_VERDICTS`), with the per-hypothesis §E
+  gate requiring the held-out statistic to clear the **order-statistic E[max] bar** over the counted
+  multiplicity and to fail closed on un-instrumented search. **DSR and the MDL / information-floor
+  check are REPORTED diagnostics, removed from the operative gate after review** (§B.3); a family
+  whose readings are underdetermined does not graduate, but that is enforced by the order-statistic
+  bar, not by an MDL hard clause.
 
 ### 4. The information floor (the benchmark)
 
