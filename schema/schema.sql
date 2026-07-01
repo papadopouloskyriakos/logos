@@ -47,6 +47,12 @@ CREATE TABLE IF NOT EXISTS verdicts (
   id            BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   plan_hash     CHAR(64) NOT NULL,
   result        ENUM('match','partial','deviation','pending') NOT NULL DEFAULT 'pending',
+  -- P0.1: the §E gate outcome, persisted STRUCTURED (not only inside `notes`). A family win is
+  -- gate_verdict='GRADUATE'; result='match' means only the local L_fake bar was cleared.
+  gate_verdict      ENUM('GRADUATE','REJECT','NULL_PUBLISHED','INCOMPLETE') NULL,
+  gate_version      VARCHAR(16) NOT NULL DEFAULT '',   -- §E gate semantics version
+  gate_clauses_json JSON NULL,                         -- per-clause §E gate booleans
+  search_log_id     BIGINT UNSIGNED NULL,              -- the instrumented SearchLog behind N_eff
   held_out_site VARCHAR(128) NOT NULL DEFAULT '',
   accuracy      DECIMAL(6,3) NULL,                  -- held-out read accuracy
   brier         DECIMAL(6,3) NULL,
@@ -56,7 +62,8 @@ CREATE TABLE IF NOT EXISTS verdicts (
   created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   UNIQUE KEY uq_verdicts_plan (plan_hash),
-  KEY ix_verdicts_result (result)
+  KEY ix_verdicts_result (result),
+  KEY ix_verdicts_gate (gate_verdict)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- capped signals (JEPA / LLM / cognate-matchers) feeding the hypothesis layer (invariant 5)

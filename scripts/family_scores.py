@@ -6,11 +6,13 @@ dsr, n_trials) via logos_stats, and updates `graduation_state` from the §E gate
 sole writer of verdicts; THIS is the sole writer of family_scores + graduation_state. Separation
 matches agora: the grader writes outcomes, the scorecard rolls them up.
 
-DSR at the family level (§B.3 via logos_stats.deflated_sharpe): the "return" series is the family's
-per-verdict held-out accuracy; n_trials = the number of hypotheses tried ACROSS ALL families (the
-multiple-testing pool — the "English is a Semitic language" failure mode is the enemy, invariant 8);
-sr_variance = the cross-family Sharpe variance. A family graduates only if its family-level DSR
-clears 0.95 AND it has real held-out win-rate AND enough verdicts to be worth deflating.
+A family graduates (§E) only on the honest primitives: a real held-out GRADUATE win-rate (invariant:
+a win is a §E-gate GRADUATE, not the intermediate result=="match") AND enough verdicts to be worth
+scoring (MIN_VERDICTS). DSR (§B.3 via logos_stats.deflated_sharpe) is computed and REPORTED as a
+diagnostic column but is NOT a graduation clause: deflating held-out accuracies as if they were
+financial returns is the invalid domain transfer the manuscript removed from every operative gate
+(P0.2). The multiple-testing pool it reports over is every hypothesis tried across all families (the
+"English is a Semitic language" failure mode is the enemy, invariant 8).
 
 CLI:
   python3 scripts/family_scores.py            # re-score every family
@@ -33,8 +35,13 @@ OUTCOME = {"match": 1.0, "partial": 0.5, "deviation": 0.0}
 
 
 def _load_family_rows(cur, family=None):
-    """Per-family (verdict result, accuracy, confidence). Mirrors agora's verdict aggregation."""
-    sql = ("SELECT h.family, v.result, v.accuracy, h.confidence "
+    """Per-family (result, gate_verdict, accuracy, confidence). Mirrors agora's verdict aggregation.
+
+    P0.1: gate_verdict is loaded EXPLICITLY so a family win is defined by the §E gate outcome
+    (``gate_verdict == 'GRADUATE'``), never by the intermediate ``result == 'match'`` signal — which
+    only means "cleared the local L_fake bar," NOT a validated, gate-passing win. A REJECT/INCOMPLETE
+    row therefore contributes 0 to win_rate even when its ``result`` is 'match'."""
+    sql = ("SELECT h.family, v.result, v.gate_verdict, v.accuracy, h.confidence "
            "FROM verdicts v JOIN hypotheses h ON h.plan_hash = v.plan_hash "
            "WHERE v.result IN ('match','partial','deviation')")
     args = ()
@@ -44,8 +51,8 @@ def _load_family_rows(cur, family=None):
     cur.execute(sql, args)
     rows = cur.fetchall()
     by = {}
-    for fam, result, acc, conf in rows:
-        by.setdefault(fam, []).append((result, float(acc or 0.0), float(conf or 0.0)))
+    for fam, result, gate_verdict, acc, conf in rows:
+        by.setdefault(fam, []).append((result, gate_verdict, float(acc or 0.0), float(conf or 0.0)))
     return by
 
 
@@ -55,16 +62,22 @@ def scorecard(family, rows, n_trials_pool, sr_variance):
     if n == 0:
         return None
     results = [r[0] for r in rows]
-    accuracies = [r[1] for r in rows]
-    confs = [r[2] for r in rows]
+    gate_verdicts = [r[1] for r in rows]
+    accuracies = [r[2] for r in rows]
+    confs = [r[3] for r in rows]
     outcomes = [OUTCOME.get(r, 0.0) for r in results]
 
-    wins = sum(1 for r in results if r == "match")
+    # P0.1: a family WIN is a §E-gate GRADUATE, never the intermediate result=="match" (which only
+    # means the local L_fake bar was cleared). A REJECT/INCOMPLETE with result=="match" contributes 0.
+    wins = sum(1 for gv in gate_verdicts if gv == "GRADUATE")
     win_rate = wins / n
     held_out_acc = sum(accuracies) / n
     cal_gap = logos_stats.calibration_in_the_large(confs, outcomes) or 0.0
 
-    # family-level DSR (§B.3): held-out accuracy is the "return"; deflate across the whole pool.
+    # DSR is a REPORTED diagnostic only (P0.2) — computed and stored, but NOT a graduation clause.
+    # Applying the Deflated-Sharpe Ratio to held-out accuracies treats them as financial returns, the
+    # invalid domain transfer the manuscript removed; the operative family gate is the honest
+    # primitives below (GRADUATE win-rate + minimum verdict count).
     sr = logos_stats.sharpe(accuracies)
     dsr = None
     if sr is not None and len(accuracies) >= 2:
@@ -72,9 +85,8 @@ def scorecard(family, rows, n_trials_pool, sr_variance):
         dsr = logos_stats.deflated_sharpe(sr, len(accuracies), skew, kurt,
                                           n_trials=max(1, n_trials_pool), sr_variance=sr_variance)
 
-    # §E family graduation gate.
+    # §E family graduation gate — honest primitives only (DSR excluded per P0.2).
     clauses = {
-        "dsr_ge_0_95": (dsr is not None and dsr >= DSR_GATE),
         "win_rate_gt_0_5": (win_rate > WIN_RATE_GATE),
         "n_verdicts_ge_min": (n >= MIN_VERDICTS),
     }

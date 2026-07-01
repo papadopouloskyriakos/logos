@@ -45,8 +45,10 @@ from scripts.comparison import lexstat, lfake, run_canary  # noqa: E402
 # searchlog supplies the instrumented N_eff, litindex supplies the L_virgin generalization share.
 from scripts.comparison import phonostat, morphostat, searchlog, litindex  # noqa: E402
 
-METRIC_VERSION = "verdict-v1"          # bump when grade semantics / gate clauses change
-DSR_GATE = 0.95                        # §E DSR threshold
+METRIC_VERSION = "verdict-v2"          # bump when grade semantics / gate clauses change (P0.3-0.5: fail-
+                                       # closed on un-instrumented multiplicity; eps-grid comparison count)
+GATE_VERSION = "gate-e2"               # §E gate semantics version (persisted per verdict)
+DSR_GATE = 0.95                        # §E DSR threshold — REPORTED/diagnostic only, off every gate
 N_FAKE_DEFAULT = 300                   # P1.4: L_fake canary instances for the headline null distribution
                                        # (the corrected-margin/Cornish-Fisher bar is estimated from these)
 EPS_DEFAULT = 0.25                     # normalized-edit-distance epsilon for S_lex
@@ -101,7 +103,7 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
           lit_index_hit, virgin_sign_support, u_floor, n_eff,
           null_recalls=None, fake_recalls=None, eps=EPS_DEFAULT, n_fake=N_FAKE_DEFAULT, seed=0,
           heldout_by_inscription=None, search_log=None, per_sign_support=None, sign_partition=None,
-          phono_order=3, virgin_threshold=None, virgin_min_signs=2):
+          phono_order=3, virgin_threshold=None, virgin_min_signs=2, eps_grid=None):
     """Mechanically grade one hypothesis against its held-out implication.
 
     Returns a dict with: result (match|partial|deviation), accuracy (S*), brier, dsr, the L_fake
@@ -149,7 +151,14 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
     # the corrected L_fake margin bar (Cornish-Fisher + Bonferroni/DSR, run_canary.corrected_margin_bar)
     has_lfake = bool(fake_recalls)
     if has_lfake:
-        n_cmp = max(1, len({eps}))   # one epsilon in the scaffold; ablation grid would widen this
+        # P0.4: the L_fake margin's multiplicity count must be the FULL searched epsilon grid, taken
+        # from the persisted search log (or passed explicitly), NEVER inferred from the single
+        # SELECTED eps (which is always 1 and silently undercounts the comparisons made).
+        _grid = None
+        if search_log is not None and getattr(search_log, "eps_grid", None):
+            _grid = list(search_log.eps_grid)
+        _grid = _grid or list(eps_grid or []) or [eps]
+        n_cmp = max(1, len(set(_grid)))
         bar, bar_diag = run_canary.corrected_margin_bar(fake_recalls, n_comparisons=n_cmp)
     else:
         # no L_fake canary -> the headline falsifier is absent. Refuse to graduate; the bar is set
@@ -233,6 +242,8 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
     # §E gate — ALL must hold for the hypothesis to count as evidence / graduate.
     clauses = {
         "registered_before_test": True,                       # by construction (it's in the DB)
+        "search_multiplicity_instrumented": (n_eff_source == "searchlog"),  # P0.3: fail closed unless
+                                                              # N_eff was COUNTED (never the fail-open n=1 default)
         "lfake_null_present": has_lfake,                      # the headline falsifier must exist
         "beats_order_stat_bar": beats_order_stat,             # P0.3: E[max over n_trials] deflation (operative)
         "beats_lfake_margin": (observed > bar),               # the headline L_fake falsifier
@@ -263,8 +274,14 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         result = "deviation"    # no signal above chance (the layer has no power for this candidate)
 
     # §E graduation verdict.
+    _substantive_hold = all(v for k, v in clauses.items()
+                            if k != "search_multiplicity_instrumented")
     if all_hold and result == "match":
         gate_verdict = "GRADUATE"
+    elif result == "match" and _substantive_hold and n_eff_source != "searchlog":
+        # P0.3: clears every substantive clause but the multiplicity N_eff was NOT counted (fail-open
+        # n_trials=1 default) — fail closed. Never a silent win on an un-instrumented search.
+        gate_verdict = "INCOMPLETE"
     elif observed <= mu0:
         gate_verdict = "NULL_PUBLISHED"   # S* ~= L_fake -> calibrated null, the publishable non-result
     else:
@@ -299,6 +316,7 @@ def grade(heldout_forms, candidate_lexicon, confidence, free_params, provenance,
         "free_params": k,
         "u_floor": u_floor,
         "gate_verdict": gate_verdict,
+        "gate_version": GATE_VERSION,
         "clauses": clauses,
         "failing_clauses": failing,
         "version": METRIC_VERSION,
@@ -376,15 +394,24 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
 
 
 def write_verdict(cur, plan_hash, family, g):
-    """INSERT the verdict (idempotent via UNIQUE uq_verdicts_plan)."""
+    """INSERT the verdict (idempotent via UNIQUE uq_verdicts_plan).
+
+    P0.1/P0.5: gate_verdict, gate_version and the per-clause gate_clauses_json are persisted as
+    STRUCTURED columns (not left to survive only inside the free-text `notes`), so downstream
+    roll-ups (family_scores) read the §E outcome directly and a win is provably a GRADUATE."""
     heldout_site = ""
     g2 = dict(g)
+    clauses_json = json.dumps(g.get("clauses", {}), sort_keys=True)
     cur.execute(
-        """INSERT INTO verdicts (plan_hash, result, held_out_site, accuracy, brier, notes, provenance)
-           VALUES (%s,%s,%s,%s,%s,%s,%s)
-           ON DUPLICATE KEY UPDATE result=VALUES(result), accuracy=VALUES(accuracy),
-              brier=VALUES(brier), notes=VALUES(notes), provenance=VALUES(provenance)""",
-        (plan_hash, g["result"], heldout_site, g["accuracy"], g["brier"], _notes(g), code_sha()))
+        """INSERT INTO verdicts (plan_hash, result, gate_verdict, gate_version, gate_clauses_json,
+                                 held_out_site, accuracy, brier, notes, provenance)
+           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+           ON DUPLICATE KEY UPDATE result=VALUES(result), gate_verdict=VALUES(gate_verdict),
+              gate_version=VALUES(gate_version), gate_clauses_json=VALUES(gate_clauses_json),
+              accuracy=VALUES(accuracy), brier=VALUES(brier), notes=VALUES(notes),
+              provenance=VALUES(provenance)""",
+        (plan_hash, g["result"], g.get("gate_verdict"), g.get("gate_version", GATE_VERSION),
+         clauses_json, heldout_site, g["accuracy"], g["brier"], _notes(g), code_sha()))
     return g2
 
 

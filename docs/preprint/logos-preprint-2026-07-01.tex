@@ -788,10 +788,15 @@ a genuine, held-out positive. Under leave-one-site-out cross-validation
 (52 sites; not k-fold, given formulaic dependence), a DP-unigram
 (Goldwater-style) segmenter recovers the scribe's own word divisions at
 micro-F1 0.436 versus a random-boundary baseline of 0.389 (boundary base
-rate 0.406). Morfessor over-segments the short syllabic corpus (micro-F1
-0.156) and is reported as not usable rather than hidden. The
-\emph{method} works above chance even where the \emph{morphology claim}
-does not survive the bigram floor.
+rate 0.406). The gap survives site-level uncertainty: a site-clustered
+bootstrap (resample the 52 sites with replacement, 4,000 draws) puts the
+real-minus-random gap at a 95\% CI of {[}0.021, 0.099{]}, excluding zero
+(P(gap \textgreater{} 0) = 0.998); the paired gap, not the wide marginal
+per-segmenter CIs, is the operative test because both segmenters are
+scored on the same resampled sites. Morfessor over-segments the short
+syllabic corpus (micro-F1 0.156) and is reported as not usable rather
+than hidden. The \emph{method} works above chance even where the
+\emph{morphology claim} does not survive the bigram floor.
 
 \textbf{Stratified re-run.} Because pooling the corpus risks inducing
 ``morphology'' that is really a mix of genres --- a confound the
