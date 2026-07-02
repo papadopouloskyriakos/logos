@@ -72,8 +72,9 @@ UI copy.
 
 ## Current status
 
-**NOW (2026-07-02) — paper FROZEN and packaged; submission = buttons only.**
-The harness is built, exercised, calibrated, and written up:
+**NOW (2026-07-03) — SUBMITTED: Zenodo preprint published + TACL under way; paper stays
+byte-frozen through review.**
+The harness is built, exercised, calibrated, written up, and out the door:
 
 - **Corpus ingested** (silver: 1,341 inscriptions / 52 sites; DĀMOS Linear B 13,562
   wordforms via `scripts/cross_script/data.py`). Licensed raw data gitignored, never
@@ -100,8 +101,14 @@ The harness is built, exercised, calibrated, and written up:
   per TACL's March-2024 appendices policy. Byte-frozen; sha256s in
   `paper/SUBMISSION_NOTES.md` §(f). **Do not rebuild without re-verifying the p.10
   boundary and re-freezing.**
-- **Next (human buttons)**: arXiv cs.CL endorsement → upload the tar.gz → fill the
-  arXiv id/date into SUBMISSION_NOTES §(a) (Variant A-only is the PRIMARY declaration —
-  the Zenodo deposit is code+preregs, not the paper) → TACL portal with the anon PDF.
-  The markdown preprint (`docs/preprint/…-condensed-v6.md`) is the historical record,
-  kept in sync; the LaTeX is authoritative.
+- **Submitted (2026-07-02, recorded in SUBMISSION_NOTES §(0))**: preprint PUBLISHED on
+  Zenodo — DOI 10.5281/zenodo.21119213 (v1.0, CC-BY-4.0; concept DOI 21119212), file =
+  the frozen `logos-arxiv.pdf`, md5-verified byte-identical to the local build; TACL
+  manuscript **#11385** submitted (authorDashboard/submission/11385). **arXiv was NOT
+  used** — the old "Variant A-only" declaration is OBSOLETE; the corrected
+  Comments-to-Editor block lives in SUBMISSION_NOTES §(0).
+- **Next (human)**: complete TACL's "Important Final Step" at the portal — Contributors
+  + Comments-to-Editors (use the §(0) block; the paper will not proceed without it).
+  Then: wait for the editorial decision. The markdown preprint
+  (`docs/preprint/…-condensed-v6.md`) is the historical record, kept in sync; the LaTeX
+  is authoritative.

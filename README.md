@@ -53,11 +53,12 @@ claim, not a person.
 
 Operating rules: [CLAUDE.md](CLAUDE.md). Architecture & rationale: [DESIGN.md](DESIGN.md).
 
-## Status (2026-07): the harness, a body of pre-registered nulls, and a frozen preprint
+## Status (2026-07): the harness, a body of pre-registered nulls, and a published preprint
 
-The discipline harness is built, exercised, and calibrated; the preprint is **complete and
-packaged for submission** (arXiv cs.CL + TACL) — LaTeX single source under `paper/tacl/`,
-built PDFs under `paper/build/`, submission checklist in `paper/SUBMISSION_NOTES.md`.
+The discipline harness is built, exercised, and calibrated; the preprint is **published on
+Zenodo** ([DOI 10.5281/zenodo.21119213](https://doi.org/10.5281/zenodo.21119213), 2026-07-02)
+and **under review at TACL** (submitted 2026-07-02) — LaTeX single source under `paper/tacl/`,
+built PDFs under `paper/build/`, submission record in `paper/SUBMISSION_NOTES.md`.
 Headline calibrations: the graduation gate's realized false-graduation rate under a
 best-of-100 cherry-picked null is **0.6% (3/500; Clopper–Pearson 95% upper ≈ 1.54%)**, and
 the identical morphology test that returns no-power on Linear A **recovers Mycenaean
@@ -96,8 +97,14 @@ their authors.
 
 ## Citation
 
-Archived on Zenodo. To cite the software in general, use the **concept DOI** (always resolves to
-the latest version):
+To cite the **paper** (Zenodo preprint; under review at TACL):
+
+> Papadopoulos, K. (2026). *Falsification-First Decipherment: A Decontaminated Inference
+> Framework for Testing Undeciphered-Script Claims, with Linear A as a Worked Null* (1.0).
+> Zenodo. https://doi.org/10.5281/zenodo.21119213
+
+The software is archived on Zenodo separately. To cite the software in general, use the
+**concept DOI** (always resolves to the latest version):
 
 > Papadopoulos, Kyriakos. *logos: a falsifiable, decontaminated inference framework for testing
 > undeciphered-script decipherment claims.* Zenodo. https://doi.org/10.5281/zenodo.21087572

@@ -26,7 +26,68 @@ the checking command, not the PDF).
 
 ---
 
+## (0) SUBMITTED — actual events (2026-07-02; recorded 2026-07-03)
+
+The plan in §(e) was **not** followed as written: the preprint route was **Zenodo, not arXiv**.
+What actually happened, verified:
+
+1. **Preprint PUBLISHED on Zenodo, 2026-07-02** — a **new record**, distinct from the
+   code+preregs deposit:
+   - Version DOI **10.5281/zenodo.21119213** (Version 1.0); concept/all-versions DOI
+     **10.5281/zenodo.21119212**. Resource type: Preprint. License: CC-BY-4.0.
+   - File: `logos-arxiv.pdf` (Target A, named), md5 `f83a0815896ea6a1e1a6e6bdbb2806a9` —
+     **verified 2026-07-03 byte-identical** to the frozen local
+     `paper/build/logos-arxiv.pdf` (whose sha256 still matches §(f)).
+   - Related works: "Is supplemented by" → software concept DOI 10.5281/zenodo.21087572.
+2. **TACL SUBMITTED, 2026-07-02** — manuscript **#11385**, dashboard
+   `https://transacl.org/index.php/tacl/authorDashboard/submission/11385`, username
+   `kyriakospapadopoulos`, contact kyriakos@papadopoulos.tech. Confirmation email received
+   from TACL Administration (Reichart, Celikyilmaz, Hakkani-Tur, Chen, Eden).
+3. **arXiv: NOT posted** (as of 2026-07-03). `paper/arxiv-package.tar.gz` remains frozen
+   and ready (sha256 in §(f)) if an arXiv posting is ever wanted; if one is made later,
+   the TACL editors should be notified so the preprint declaration stays complete.
+
+### OUTSTANDING — TACL "Important Final Step" (paper will NOT proceed without it)
+
+TACL's confirmation email requires, at the portal: (i) all authors + country + affiliation
+under **Contributors** AND repeated under **Pre-review Discussions / Comments to the
+Editors**; (ii) keywords (optional); (iii) whether this is a C-decision resubmission;
+(iv) whether the work is submitted elsewhere.
+
+**Both prepared variants in §(a) are OBSOLETE** — the PRIMARY (Variant A-only) declares an
+arXiv preprint that does not exist, and the Alternate (Variant Z+A) points the paper
+preprint at the *software* DOI 21087572 and also presumes an arXiv id. **Use this
+corrected block (Variant Z-only):**
+
+> **Author:** Kyriakos Papadopoulos. **Affiliation:** Independent Researcher.
+> **Country:** Netherlands. **ORCID:** 0009-0003-0995-2518.
+> **Contact email:** kyriakos@papadopoulos.tech
+>
+> **Preprint declaration:** A non-anonymous preprint of this work is available on
+> Zenodo: same title, DOI 10.5281/zenodo.21119213 (Version 1.0, published
+> 2026-07-02). The submitted manuscript does not cite this version, per TACL policy.
+> No arXiv version has been posted. (The paper's code-and-pre-registration artifact
+> is separately archived on Zenodo under concept DOI 10.5281/zenodo.21087572; the
+> preprint record links it as "is supplemented by".)
+>
+> **Keywords:** decipherment; Linear A; undeciphered scripts; multiple-testing
+> correction; pre-registration; negative controls; contamination; held-out
+> evaluation; low-resource historical languages; falsification.
+>
+> This is not a C-decision resubmission. This work is not under submission at any
+> other journal or conference (the Zenodo preprint is a non-peer-reviewed archive
+> deposit, not a submission).
+
+If a variant of §(a) was already pasted at submission time, **verify at the dashboard
+that the declaration matches the block above** (in particular: preprint DOI 21119213,
+no phantom arXiv id) and correct it if not.
+
+---
+
 ## (a) TACL "Comments to the Editor" — ONE ready-to-paste block (authors + preprints + keywords)
+
+**SUPERSEDED 2026-07-03 by the corrected block in §(0)** — both variants below assumed an
+arXiv posting that never happened; kept for the historical record.
 
 > **Author:** Kyriakos Papadopoulos. **Affiliation:** Independent Researcher.
 > **Country:** Netherlands. **ORCID:** 0009-0003-0995-2518.
@@ -217,6 +278,9 @@ claimant of the analysed public claim — not author-identifying.
 ---
 
 ## (e) Submission-order reminder
+
+**SUPERSEDED by §(0)** — the actual route (2026-07-02) was Zenodo preprint + TACL;
+step 1 (arXiv) was not executed. Kept for the historical record.
 
 1. **Upload the named TeX SOURCE package FIRST** (`paper/arxiv-package/`, tarball
    `paper/arxiv-package.tar.gz`: named wrapper + shared body + `.bbl` + `refs.bib` +
