@@ -72,8 +72,36 @@ UI copy.
 
 ## Current status
 
-**NOW (2026-06-30) — v0 scaffold.** No corpus ingested, no JEPA trained, no hypotheses
-graded. Founding docs + directory skeleton + `scripts/corpus_info.py` (corpus stats +
-unicity-distance estimate, runnable via `--demo`). Next: ingest the public GORILA/SigLA
-corpus (see `docs/`), stand up the predict→verdict scaffold, compute the real
-unicity-distance number on the true Linear A corpus.
+**NOW (2026-07-02) — paper FROZEN and packaged; submission = buttons only.**
+The harness is built, exercised, calibrated, and written up:
+
+- **Corpus ingested** (silver: 1,341 inscriptions / 52 sites; DĀMOS Linear B 13,562
+  wordforms via `scripts/cross_script/data.py`). Licensed raw data gitignored, never
+  redistributed.
+- **Probes executed** (all pre-registered, graded from artifacts): morphology NO-POWER
+  null + segmentation positive (micro-F1 0.436 vs 0.389, site-clustered gap CI excludes 0);
+  metrology null (p = 1.0, J = ½ credited to Bennett); phonology data-limited null;
+  cross-script image leg = circular demonstration (capped ≤ 0.75); LLM-ablation
+  public-exposure gradient; L_not_indexed abstention asymmetry (`L_virgin` was renamed
+  `L_not_indexed` repo-wide, module `l_not_indexed.py`).
+- **Gate calibrated**: best-of-100 random-map null → false-graduation 3/500 = 0.6%
+  (one-sided exact Clopper–Pearson 95% upper ≈ 1.54%); Linear B morphology positive
+  control FIRES (0.562 vs bigram floor ~0.30) — Linear A's null is short-word, not a
+  dead detector (`scripts/comparison/linb_morphology_control.py`,
+  `scripts/gate_null_calibration.py`).
+- **CSA sufficiency sweep DONE** (H100 destroyed; `results/csa/`): at Linear-A scale,
+  Linear B→Greek (primary analog) at its chance floor, Cypriot→Greek marginally above;
+  2,000-step = lower bound, at-floor branch non-definitive. Serial CSA path (processes=1)
+  is BROKEN — always run parallel.
+- **Paper**: `paper/tacl/body.tex` is the single source → `paper/build/logos-arxiv.pdf`
+  (named) + `paper/build/logos-tacl-anon.pdf` (anonymized, metadata-clean) +
+  `paper/arxiv-package.tar.gz` (arXiv TeX upload). Main content exactly 10.0 pp
+  (**zero cushion** — one added body line spills to p.11), Cat-1 ≈4.9/5, Cat-2 ≈1.5/3
+  per TACL's March-2024 appendices policy. Byte-frozen; sha256s in
+  `paper/SUBMISSION_NOTES.md` §(f). **Do not rebuild without re-verifying the p.10
+  boundary and re-freezing.**
+- **Next (human buttons)**: arXiv cs.CL endorsement → upload the tar.gz → fill the
+  arXiv id/date into SUBMISSION_NOTES §(a) (Variant A-only is the PRIMARY declaration —
+  the Zenodo deposit is code+preregs, not the paper) → TACL portal with the anon PDF.
+  The markdown preprint (`docs/preprint/…-condensed-v6.md`) is the historical record,
+  kept in sync; the LaTeX is authoritative.

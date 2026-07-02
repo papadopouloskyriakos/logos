@@ -53,9 +53,19 @@ claim, not a person.
 
 Operating rules: [CLAUDE.md](CLAUDE.md). Architecture & rationale: [DESIGN.md](DESIGN.md).
 
-## Status (2026-07): the harness + a body of pre-registered nulls
+## Status (2026-07): the harness, a body of pre-registered nulls, and a frozen preprint
 
-The discipline harness is built and exercised; a preprint is in preparation. What exists:
+The discipline harness is built, exercised, and calibrated; the preprint is **complete and
+packaged for submission** (arXiv cs.CL + TACL) — LaTeX single source under `paper/tacl/`,
+built PDFs under `paper/build/`, submission checklist in `paper/SUBMISSION_NOTES.md`.
+Headline calibrations: the graduation gate's realized false-graduation rate under a
+best-of-100 cherry-picked null is **0.6% (3/500; Clopper–Pearson 95% upper ≈ 1.54%)**, and
+the identical morphology test that returns no-power on Linear A **recovers Mycenaean
+(Linear B) inflection** (9/16 affixes above the bigram floor) — the null is a property of
+Linear A's short forms, not a dead detector. A known-answer CSA sufficiency sweep
+(`results/csa/`) finds the primary syllabic analog (Linear B→Greek) at its chance floor at
+Linear-A scale even when handed a real cognate signal (2,000-step lower bound; Cypriot→Greek
+marginally above). What exists:
 
 - **A decontamination / falsification harness** — a literature index with a known-reading vs.
   literature-unseen partition, a fabricated-language control corpus, model-ablation contamination
