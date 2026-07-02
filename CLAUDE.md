@@ -107,8 +107,9 @@ The harness is built, exercised, calibrated, written up, and out the door:
   manuscript **#11385** submitted (authorDashboard/submission/11385). **arXiv was NOT
   used** — the old "Variant A-only" declaration is OBSOLETE; the corrected
   Comments-to-Editor block lives in SUBMISSION_NOTES §(0).
-- **Next (human)**: complete TACL's "Important Final Step" at the portal — Contributors
-  + Comments-to-Editors (use the §(0) block; the paper will not proceed without it).
-  Then: wait for the editorial decision. The markdown preprint
+- **Portal metadata DONE (2026-07-03)** — Contributors + Comments-to-Editors completed;
+  the submission is fully lodged. **Next: wait for TACL's editorial decision** (track at
+  the dashboard). A reviewer-requested revision restarts the freeze discipline (rebuild →
+  re-measure p.10 → re-freeze §(f) hashes). The markdown preprint
   (`docs/preprint/…-condensed-v6.md`) is the historical record, kept in sync; the LaTeX
   is authoritative.

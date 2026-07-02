@@ -47,9 +47,9 @@ What actually happened, verified:
    and ready (sha256 in §(f)) if an arXiv posting is ever wanted; if one is made later,
    the TACL editors should be notified so the preprint declaration stays complete.
 
-### OUTSTANDING — TACL "Important Final Step" (paper will NOT proceed without it)
+### TACL "Important Final Step" — ✅ COMPLETED (confirmed by the author, 2026-07-03)
 
-TACL's confirmation email requires, at the portal: (i) all authors + country + affiliation
+TACL's confirmation email required, at the portal: (i) all authors + country + affiliation
 under **Contributors** AND repeated under **Pre-review Discussions / Comments to the
 Editors**; (ii) keywords (optional); (iii) whether this is a C-decision resubmission;
 (iv) whether the work is submitted elsewhere.
@@ -78,9 +78,10 @@ corrected block (Variant Z-only):**
 > other journal or conference (the Zenodo preprint is a non-peer-reviewed archive
 > deposit, not a submission).
 
-If a variant of §(a) was already pasted at submission time, **verify at the dashboard
-that the declaration matches the block above** (in particular: preprint DOI 21119213,
-no phantom arXiv id) and correct it if not.
+The portal metadata (Contributors + Comments-to-Editors) was completed 2026-07-03.
+The submission is now fully lodged; the next event is TACL's editorial process
+(track at the dashboard URL above). If reviewers request a revision, the freeze
+discipline restarts: rebuild → re-measure the p.10 boundary → re-freeze §(f) hashes.
 
 ---
 
