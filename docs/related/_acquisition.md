@@ -31,11 +31,17 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
   Sources of Bronze Age Writings between Greece and India" (ResearchGate 369916621). MDPI is OA:
   <https://www.mdpi.com/2078-2489/14/4/227> *(confirm exact article)*.
 - **Steele & Meissner 2017** "From Linear B to Linear A: the problem of the backward projection of
-  sound values" (in *Understanding Relations Between Scripts*, pp. 93–110) — Cambridge repository record
-  <https://www.repository.cam.ac.uk/items/1b8155ae-1461-45bd-8f91-bd4de4828754> is **all-rights-reserved
-  (NOT OA)**. Companion OA chapter: **Meißner & Steele, "Linear A and Linear B: Structural and Contextual
-  Concerns"** — OA bitstream
-  <https://api.repository.cam.ac.uk/server/api/core/bitstreams/7e3a97dd-5ae9-46e3-bab5-fdd644e45bec/content>.
+  sound values" (in *Understanding Relations Between Scripts*, pp. 93–110) — ✅ **ACQUIRED 2026-07-03**:
+  authors' own CREWS self-archive (Oxbow offprint licence permits web posting after the 3-year embargo,
+  July 2020 — stated on the offprint's own licence page):
+  <https://crewsproject.wordpress.com/wp-content/uploads/2020/07/chapter-6.pdf> →
+  `corpus/bronze/steele_meissner_2017/chapter-6.pdf` (gitignored, not redistributed; 978,536 bytes,
+  SHA-256 `a80810e419eae8492e63ed7971e9e65d9f78d3506770a750b9e467f126d34553`; PROVENANCE.md alongside).
+  Settles: Table 6.2 Cypriot-stable eleven (p. 98), si "good contender" (p. 98), Table 6.4 place-name
+  equations (p. 102), §5 internal-variation series (p. 103), tier grids Tables 6.5/6.6/6.11
+  (pp. 102/104/108). Consumed by `experiments/crossscript_gate/steele_meissner_2017.py`.
+  (The earlier note — Cambridge repository record all-rights-reserved; companion OA chapter Meißner &
+  Steele "Structural and Contextual Concerns" — remains true but is superseded for acquisition purposes.)
 - **Min Eu, Xu & Cacciafoco 2019** — Linear A vs lexical lists *(confirm venue + OA)*.
 - **KO-RO-NO-WE-SA proceedings** (Ariadne Suppl. 5) — University of Crete repository may host the OA
   volume *(confirm; the Salgarella & Judson chapter is already in hand)*.
