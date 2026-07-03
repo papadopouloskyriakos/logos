@@ -1,0 +1,1342 @@
+doc_id,site,site_sigla,series,n_signs_parsed,source_layer
+HT1,Haghia Triada,HT,,18,corpus/silver/inscriptions_structured.json
+HT2,Haghia Triada,HT,,12,corpus/silver/inscriptions_structured.json
+HT3,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT4,Haghia Triada,HT,,14,corpus/silver/inscriptions_structured.json
+HT5,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT6a,Haghia Triada,HT,,27,corpus/silver/inscriptions_structured.json
+HT6b,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT7a,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT7b,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT8a,Haghia Triada,HT,,20,corpus/silver/inscriptions_structured.json
+HT8b,Haghia Triada,HT,,13,corpus/silver/inscriptions_structured.json
+HT9a,Haghia Triada,HT,,23,corpus/silver/inscriptions_structured.json
+HT9b,Haghia Triada,HT,,25,corpus/silver/inscriptions_structured.json
+HT10a,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT10b,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT11a,Haghia Triada,HT,,16,corpus/silver/inscriptions_structured.json
+HT11b,Haghia Triada,HT,,18,corpus/silver/inscriptions_structured.json
+HT12,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT13,Haghia Triada,HT,,24,corpus/silver/inscriptions_structured.json
+HT14,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT15,Haghia Triada,HT,,10,corpus/silver/inscriptions_structured.json
+HT16,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT17,Haghia Triada,HT,,10,corpus/silver/inscriptions_structured.json
+HT18,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT19,Haghia Triada,HT,,10,corpus/silver/inscriptions_structured.json
+HT20,Haghia Triada,HT,,16,corpus/silver/inscriptions_structured.json
+HT21,Haghia Triada,HT,,9,corpus/silver/inscriptions_structured.json
+HT22,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT23a,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT23b,Haghia Triada,HT,,9,corpus/silver/inscriptions_structured.json
+HT24a,Haghia Triada,HT,,23,corpus/silver/inscriptions_structured.json
+HT24b,Haghia Triada,HT,,3,corpus/silver/inscriptions_structured.json
+HT25a,Haghia Triada,HT,,28,corpus/silver/inscriptions_structured.json
+HT25b,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT26a,Haghia Triada,HT,,13,corpus/silver/inscriptions_structured.json
+HT26b,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT27a,Haghia Triada,HT,,25,corpus/silver/inscriptions_structured.json
+HT27b,Haghia Triada,HT,,19,corpus/silver/inscriptions_structured.json
+HT28a,Haghia Triada,HT,,28,corpus/silver/inscriptions_structured.json
+HT28b,Haghia Triada,HT,,25,corpus/silver/inscriptions_structured.json
+HT29,Haghia Triada,HT,,22,corpus/silver/inscriptions_structured.json
+HT30,Haghia Triada,HT,,19,corpus/silver/inscriptions_structured.json
+HT31,Haghia Triada,HT,,34,corpus/silver/inscriptions_structured.json
+HT32,Haghia Triada,HT,,12,corpus/silver/inscriptions_structured.json
+HT33,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT34,Haghia Triada,HT,,20,corpus/silver/inscriptions_structured.json
+HT35,Haghia Triada,HT,,13,corpus/silver/inscriptions_structured.json
+HT36,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT37,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT38,Haghia Triada,HT,,9,corpus/silver/inscriptions_structured.json
+HT39,Haghia Triada,HT,,17,corpus/silver/inscriptions_structured.json
+HT40,Haghia Triada,HT,,12,corpus/silver/inscriptions_structured.json
+HT41a,Haghia Triada,HT,,9,corpus/silver/inscriptions_structured.json
+HT42+59,Haghia Triada,HT,,18,corpus/silver/inscriptions_structured.json
+HT43,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT44a,Haghia Triada,HT,,10,corpus/silver/inscriptions_structured.json
+HT44b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT45a,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT45b,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT46a,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT47a,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT47b,Haghia Triada,HT,,3,corpus/silver/inscriptions_structured.json
+HT49a,Haghia Triada,HT,,24,corpus/silver/inscriptions_structured.json
+HT49b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT50a,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT50b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT51a,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT51b,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT52a,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT52b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT53a,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT53b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT54a,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT54b,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT55a,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT55b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT56a,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT56b,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT57a,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT58,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT60,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT61,Haghia Triada,HT,,3,corpus/silver/inscriptions_structured.json
+HT62+73,Haghia Triada,HT,,22,corpus/silver/inscriptions_structured.json
+HT63,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT64,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT65,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT66,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT67,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT68,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT69,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT70,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT72,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT74,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT75,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT78,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT79+83,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT80,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT81,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT82,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT84,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT85a,Haghia Triada,HT,,23,corpus/silver/inscriptions_structured.json
+HT85b,Haghia Triada,HT,,28,corpus/silver/inscriptions_structured.json
+HT86a,Haghia Triada,HT,,23,corpus/silver/inscriptions_structured.json
+HT86b,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT87,Haghia Triada,HT,,27,corpus/silver/inscriptions_structured.json
+HT88,Haghia Triada,HT,,30,corpus/silver/inscriptions_structured.json
+HT89,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT90,Haghia Triada,HT,,17,corpus/silver/inscriptions_structured.json
+HT91,Haghia Triada,HT,,14,corpus/silver/inscriptions_structured.json
+HT92,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT93a,Haghia Triada,HT,,44,corpus/silver/inscriptions_structured.json
+HT93b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT94a,Haghia Triada,HT,,17,corpus/silver/inscriptions_structured.json
+HT94b,Haghia Triada,HT,,22,corpus/silver/inscriptions_structured.json
+HT95a,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT95b,Haghia Triada,HT,,18,corpus/silver/inscriptions_structured.json
+HT96a,Haghia Triada,HT,,27,corpus/silver/inscriptions_structured.json
+HT96b,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT97a,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT97b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT98a,Haghia Triada,HT,,17,corpus/silver/inscriptions_structured.json
+HT98b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT99a,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT99b,Haghia Triada,HT,,10,corpus/silver/inscriptions_structured.json
+HT100,Haghia Triada,HT,,16,corpus/silver/inscriptions_structured.json
+HT101,Haghia Triada,HT,,18,corpus/silver/inscriptions_structured.json
+HT102,Haghia Triada,HT,,20,corpus/silver/inscriptions_structured.json
+HT103,Haghia Triada,HT,,17,corpus/silver/inscriptions_structured.json
+HT104,Haghia Triada,HT,,17,corpus/silver/inscriptions_structured.json
+HT105,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT106,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT107,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT108,Haghia Triada,HT,,15,corpus/silver/inscriptions_structured.json
+HT109,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT110a,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT110b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT111a,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT111b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT112a,Haghia Triada,HT,,3,corpus/silver/inscriptions_structured.json
+HT112b,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT113,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT113ter,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT114a,Haghia Triada,HT,,10,corpus/silver/inscriptions_structured.json
+HT114b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT115a,Haghia Triada,HT,,35,corpus/silver/inscriptions_structured.json
+HT115b,Haghia Triada,HT,,25,corpus/silver/inscriptions_structured.json
+HT116a,Haghia Triada,HT,,32,corpus/silver/inscriptions_structured.json
+HT116b,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT117a,Haghia Triada,HT,,61,corpus/silver/inscriptions_structured.json
+HT117b,Haghia Triada,HT,,9,corpus/silver/inscriptions_structured.json
+HT118,Haghia Triada,HT,,18,corpus/silver/inscriptions_structured.json
+HT119,Haghia Triada,HT,,19,corpus/silver/inscriptions_structured.json
+HT120,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT121,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT122a,Haghia Triada,HT,,46,corpus/silver/inscriptions_structured.json
+HT122b,Haghia Triada,HT,,24,corpus/silver/inscriptions_structured.json
+HT123+124a,Haghia Triada,HT,,28,corpus/silver/inscriptions_structured.json
+HT123+124b,Haghia Triada,HT,,23,corpus/silver/inscriptions_structured.json
+HT125a,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT125b,Haghia Triada,HT,,5,corpus/silver/inscriptions_structured.json
+HT126a,Haghia Triada,HT,,12,corpus/silver/inscriptions_structured.json
+HT126b,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT127a,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT127b,Haghia Triada,HT,,9,corpus/silver/inscriptions_structured.json
+HT128a,Haghia Triada,HT,,21,corpus/silver/inscriptions_structured.json
+HT128b,Haghia Triada,HT,,6,corpus/silver/inscriptions_structured.json
+HT129,Haghia Triada,HT,,13,corpus/silver/inscriptions_structured.json
+HT130,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT131a,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT131b,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT132,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT133,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT135a,Haghia Triada,HT,,11,corpus/silver/inscriptions_structured.json
+HT135b,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT136a,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT137,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT139,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT140,Haghia Triada,HT,,27,corpus/silver/inscriptions_structured.json
+HT141,Haghia Triada,HT,,4,corpus/silver/inscriptions_structured.json
+HT144,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT146,Haghia Triada,HT,,7,corpus/silver/inscriptions_structured.json
+HT147,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT154.,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT154a,Haghia Triada,HT,,8,corpus/silver/inscriptions_structured.json
+HT154b,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT154c,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT154e,Haghia Triada,HT,,1,corpus/silver/inscriptions_structured.json
+HT154ja,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HT154n,Haghia Triada,HT,,2,corpus/silver/inscriptions_structured.json
+HTW231a,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTW231d-f,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1001,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1002,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1003,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1004,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1005,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1006,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1007,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1008,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1009,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1010,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1011,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1012,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1013,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1014,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1015,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1016,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1017,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1018,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1019,Haghia Triada,HTW,,5,corpus/silver/inscriptions_structured.json
+HTWa1020,Haghia Triada,HTW,,6,corpus/silver/inscriptions_structured.json
+HTWa1021,Haghia Triada,HTW,,4,corpus/silver/inscriptions_structured.json
+HTWa1021bis,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1022,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1026,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1027,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1028,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWa1031,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1032,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1033,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1034,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1035,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1036,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1037,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1038,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1039,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1040,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1041,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1042,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1043,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1044,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1045,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1046,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1047,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1048,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1049,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1050,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1051,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1052,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1053,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1054,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1055,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1056,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1057,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1058,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1059,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1060,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1061,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1062,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1063,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1064,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1065,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1066,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1067,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1068,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1069,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1070,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1073,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1074,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1075,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1076,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1077,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1078,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1079,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1080,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1081,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1082,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1083,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1084,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1085,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1086,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1087,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1088,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1089,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1090,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1091,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1092,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1093,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1094,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1095,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1096,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1097,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1098,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1099,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1100,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1101,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1102,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1103,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1104,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1105,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1106,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1107,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1108,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1109,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1110,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1111,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1112,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1113,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1114,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1115,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1116,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1117,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1118,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1119,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1120,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1121,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1122,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1123,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1124,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1125,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1126,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1127,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1128,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1129,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1130,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1131,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1132,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1133,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1134,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1135,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1136,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1137,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1138,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1139,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1140,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1141,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1142,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1143,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1144,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1145,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1146,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1147,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1148,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1149,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1150,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1151,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1152,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1153,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1154,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1155,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1156,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1157,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1158,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1159,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1160,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1161,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1162,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1163,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1164,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1165,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1166,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1167,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1168,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1169,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1170,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1171,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1172,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1173,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1174,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1175,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1176,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1177,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1178,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1179,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1180,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1181,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1182,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1183,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1184,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1185,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1186,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1187,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1188,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1189,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1190,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1191,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1192,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1193,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1194,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1195,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1196,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1197,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1198,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1199,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1200,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1201,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1202,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1203,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1204,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1205,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1206,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1207,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1208,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1209,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1210,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1211,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1212,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1213,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1214,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1215,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1216,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1217,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1218,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1219,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1220,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1221,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1222,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1223,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1224,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1225,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1226,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1227,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1228,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1229,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1230,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1231,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1232,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1233,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1234,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1235,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1236,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1237,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1238,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1239,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1240,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1241,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1242,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1243,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1244,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1245,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1246,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1247,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1248,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1249,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1250,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1251,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1252,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1253,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1254,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1255,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1256,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1257,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1258,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1259,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1260,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1261,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1262,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1263,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1264,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1265,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1266,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1267,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1268,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1269,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1270,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1271,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1272,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1273,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1274,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1275,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1276,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1277,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1278,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1279,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1280,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1281,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1282,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1283,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1284,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1285,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1286,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1287,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1288,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1289,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1290,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1291,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1292,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1293,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1294,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1295,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1296,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1297,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1298,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1299,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1300,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1301,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1302,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1303,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1304,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1305,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1306,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1307,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1308,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1309,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1310,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1311,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1312,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1313,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1314,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1315,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1316,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1317,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1318,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1319,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1320,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1321,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1322,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1323,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1324,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1325,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1326,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1327,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1328,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1329,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1330,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1331,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1332,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1333,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1334,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1335,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1336,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1337,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1338,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1339,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1340,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1341,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1342,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1343,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1344,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1345,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1346,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1347,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1348,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1349,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1350,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1351,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1352,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1353,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1354,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1355,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1356,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1357,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1358,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1359,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1360,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1361,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1362,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1363,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1364,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1365,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1366,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1367,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1368,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1369,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1370,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1371,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1372,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1373,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1374,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1375,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1376,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1377,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1378,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1379,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1380,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1381,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1382,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1383,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1384,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1385,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1386,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1387,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1388,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1389,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1390,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1391,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1392,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1393,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1394,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1395,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1396,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1397,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1398,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1399,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1400,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1401,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1402,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1403,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1404,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1405,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1406,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1407,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1408,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1409,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1410,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1411,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1412,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1413,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1414,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1415,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1416,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1417,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1418,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1419,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1420,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1421,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1422,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1423,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1424,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1425,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1426,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1427,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1428,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1429,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1430,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1431,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1432,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1433,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1434,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1435,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1436,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1437,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1438,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1439,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1440,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1441,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1442,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1443,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1444,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1445,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1446,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1447,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1448,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1449,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1450,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1451,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1452,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1453,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1454,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1455,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1456,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1457,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1458,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1459,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1460,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1461,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1462,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1463,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1464,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1465,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1466,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1467,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1468,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1469,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1470,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1471,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1472,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1473,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1474,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1475,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1476,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1477,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1478,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1479,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1480,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1481,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1482,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1483,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1484,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1485,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1486,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1487,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1488,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1489,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1490,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1491,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1492,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1493,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1494,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1495,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1496,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1497,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1498,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1499,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1500,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1501,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1502,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1503,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1504,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1505,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1506,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1507,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1508,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1509,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1510,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1511,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1512,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1513,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1514,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1515,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1516,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1517,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1518,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1519,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1520,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1521,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1522,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1523,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1524,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1525,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1526,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1527,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1528,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1529,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1530,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1531,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1532,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1533,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1534,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1535,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1536,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1537,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1538,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1539,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1540,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1541,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1542,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1543,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1544,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1545,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1546,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1547,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1548,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1549,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1550,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1551,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1552,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1553,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1554,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1555,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1556,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1557,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1558,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1559,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1560,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1561,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1562,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1563,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1564,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1565,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1566,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1567,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1568,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1569,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1570,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1571,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1572,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1573,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1574,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1575,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1576,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1577,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1578,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1579,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1580,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1581,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1582,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1583,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1584,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1585,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1586,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1587,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1588,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1589,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1590,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1591,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1592,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1593,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1594,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1595,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1596,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1597,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1598,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1599,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1600,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1601,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1602,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1603,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1604,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1605,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1606,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1607,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1608,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1609,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1610,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1611,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1612,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1613,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1614,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1615,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1616,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1618,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1619,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1620,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1621,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWa1622,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWb229,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWb2001,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWb2002,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWc3001,Haghia Triada,HTW,,3,corpus/silver/inscriptions_structured.json
+HTWc3002,Haghia Triada,HTW,,3,corpus/silver/inscriptions_structured.json
+HTWc3003,Haghia Triada,HTW,,3,corpus/silver/inscriptions_structured.json
+HTWc3004,Haghia Triada,HTW,,4,corpus/silver/inscriptions_structured.json
+HTWc3005,Haghia Triada,HTW,,4,corpus/silver/inscriptions_structured.json
+HTWc3006,Haghia Triada,HTW,,6,corpus/silver/inscriptions_structured.json
+HTWc3007,Haghia Triada,HTW,,3,corpus/silver/inscriptions_structured.json
+HTWc3008,Haghia Triada,HTW,,7,corpus/silver/inscriptions_structured.json
+HTWc3009,Haghia Triada,HTW,,4,corpus/silver/inscriptions_structured.json
+HTWc3010,Haghia Triada,HTW,,5,corpus/silver/inscriptions_structured.json
+HTWc3011,Haghia Triada,HTW,,3,corpus/silver/inscriptions_structured.json
+HTWc3012,Haghia Triada,HTW,,5,corpus/silver/inscriptions_structured.json
+HTWc3014,Haghia Triada,HTW,,5,corpus/silver/inscriptions_structured.json
+HTWc3015,Haghia Triada,HTW,,4,corpus/silver/inscriptions_structured.json
+HTWc3016,Haghia Triada,HTW,,5,corpus/silver/inscriptions_structured.json
+HTWc3017,Haghia Triada,HTW,,7,corpus/silver/inscriptions_structured.json
+HTWc<3018>,Haghia Triada,HTW,,2,corpus/silver/inscriptions_structured.json
+HTWc3019,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWc3022(?),Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWc3024,Haghia Triada,HTW,,5,corpus/silver/inscriptions_structured.json
+HTWd1617,Haghia Triada,HTW,,1,corpus/silver/inscriptions_structured.json
+HTWeWc3020,Haghia Triada,HTW,,4,corpus/silver/inscriptions_structured.json
+HTZb158a,Haghia Triada,HTZ,,4,corpus/silver/inscriptions_structured.json
+HTZb158b,Haghia Triada,HTZ,,6,corpus/silver/inscriptions_structured.json
+HTZb159,Haghia Triada,HTZ,,6,corpus/silver/inscriptions_structured.json
+HTZb160,Haghia Triada,HTZ,,6,corpus/silver/inscriptions_structured.json
+HTZb161,Haghia Triada,HTZ,,2,corpus/silver/inscriptions_structured.json
+HTZb162,Haghia Triada,HTZ,,4,corpus/silver/inscriptions_structured.json
+HTZb162bis,Haghia Triada,HTZ,,1,corpus/silver/inscriptions_structured.json
+HTZd155,Haghia Triada,HTZ,,8,corpus/silver/inscriptions_structured.json
+HTZd157+156,Haghia Triada,HTZ,,8,corpus/silver/inscriptions_structured.json
+HTZf163,Haghia Triada,HTZ,,1,corpus/silver/inscriptions_structured.json
+HTZf164,Haghia Triada,HTZ,,1,corpus/silver/inscriptions_structured.json
+HTZf165,Haghia Triada,HTZ,,1,corpus/silver/inscriptions_structured.json
+HTZf168,Haghia Triada,HTZ,,2,corpus/silver/inscriptions_structured.json
+IOZa<1>,Iouktas,IOZ,,3,corpus/silver/inscriptions_structured.json
+IOZa2,Iouktas,IOZ,,35,corpus/silver/inscriptions_structured.json
+IOZa3,Iouktas,IOZ,,7,corpus/silver/inscriptions_structured.json
+IOZa4,Iouktas,IOZ,,2,corpus/silver/inscriptions_structured.json
+IOZa5,Iouktas,IOZ,,8,corpus/silver/inscriptions_structured.json
+IOZa6,Iouktas,IOZ,,20,corpus/silver/inscriptions_structured.json
+IOZa7,Iouktas,IOZ,,9,corpus/silver/inscriptions_structured.json
+IOZa8,Iouktas,IOZ,,6,corpus/silver/inscriptions_structured.json
+IOZa9,Iouktas,IOZ,,10,corpus/silver/inscriptions_structured.json
+IOZb10,Iouktas,IOZ,,5,corpus/silver/inscriptions_structured.json
+IOZa11,Iouktas,IOZ,,10,corpus/silver/inscriptions_structured.json
+IOZa12,Iouktas,IOZ,,7,corpus/silver/inscriptions_structured.json
+IOZa13,Iouktas,IOZ,,2,corpus/silver/inscriptions_structured.json
+IOZa14,Iouktas,IOZ,,5,corpus/silver/inscriptions_structured.json
+IOZa15,Iouktas,IOZ,,7,corpus/silver/inscriptions_structured.json
+IOZa16,Iouktas,IOZ,,12,corpus/silver/inscriptions_structured.json
+KAZf1,Kardamoutsa,KAZ,,2,corpus/silver/inscriptions_structured.json
+KAMZb1,Kamilari,KAMZ,,2,corpus/silver/inscriptions_structured.json
+KANZa1,Kannia,KANZ,,2,corpus/silver/inscriptions_structured.json
+KE1,Kea,KE,,2,corpus/silver/inscriptions_structured.json
+KEZb3,Kea,KEZ,,1,corpus/silver/inscriptions_structured.json
+KEZb4,Kea,KEZ,,3,corpus/silver/inscriptions_structured.json
+KEZb5,Kea,KEZ,,1,corpus/silver/inscriptions_structured.json
+KEZb6,Kea,KEZ,,1,corpus/silver/inscriptions_structured.json
+KEZb7,Kea,KEZ,,1,corpus/silver/inscriptions_structured.json
+KH1,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH2,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH3,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH4,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH5,Khania,KH,,25,corpus/silver/inscriptions_structured.json
+KH6,Khania,KH,,28,corpus/silver/inscriptions_structured.json
+KH7a,Khania,KH,,28,corpus/silver/inscriptions_structured.json
+KH7b,Khania,KH,,12,corpus/silver/inscriptions_structured.json
+KH8,Khania,KH,,9,corpus/silver/inscriptions_structured.json
+KH9,Khania,KH,,16,corpus/silver/inscriptions_structured.json
+KH10,Khania,KH,,13,corpus/silver/inscriptions_structured.json
+KH11,Khania,KH,,23,corpus/silver/inscriptions_structured.json
+KH12,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH13,Khania,KH,,8,corpus/silver/inscriptions_structured.json
+KH14,Khania,KH,,10,corpus/silver/inscriptions_structured.json
+KH15,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH16,Khania,KH,,7,corpus/silver/inscriptions_structured.json
+KH17,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH18,Khania,KH,,9,corpus/silver/inscriptions_structured.json
+KH19,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH20,Khania,KH,,10,corpus/silver/inscriptions_structured.json
+KH21,Khania,KH,,5,corpus/silver/inscriptions_structured.json
+KH22,Khania,KH,,5,corpus/silver/inscriptions_structured.json
+KH23,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH24,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH25,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH26,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH27,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH28,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH29,Khania,KH,,5,corpus/silver/inscriptions_structured.json
+KH30,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH31,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH32,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH33,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH34,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH35,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH36,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH37,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH38,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH39,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH40,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH41,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH43,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH45,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH46,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH47,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH49,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH50,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH51,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH52,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH53,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH54,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH55,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH57,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH58,Khania,KH,,8,corpus/silver/inscriptions_structured.json
+KH59,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KH60,Khania,KH,,9,corpus/silver/inscriptions_structured.json
+KH61,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH62,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH63,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH64,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH65,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH73,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH74,Khania,KH,,7,corpus/silver/inscriptions_structured.json
+KH75,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH76,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH77,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH79+89,Khania,KH,,9,corpus/silver/inscriptions_structured.json
+KH80,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH81,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH82,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH83,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH84,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH85,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH86,Khania,KH,,7,corpus/silver/inscriptions_structured.json
+KH87,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH88,Khania,KH,,8,corpus/silver/inscriptions_structured.json
+KH90,Khania,KH,,5,corpus/silver/inscriptions_structured.json
+KH91,Khania,KH,,7,corpus/silver/inscriptions_structured.json
+KH92,Khania,KH,,9,corpus/silver/inscriptions_structured.json
+KH94,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH95,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH97a,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH97b,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+KH99,Khania,KH,,8,corpus/silver/inscriptions_structured.json
+KH100,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+KHWa1001,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWa1002,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWa1005,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWa1006,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWa1007,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWa1008,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWa1009,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWa1010,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWa1013,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWa1014,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWa1015,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWa1016,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2001,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2002,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2004,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2005,Khania,KHW,,4,corpus/silver/inscriptions_structured.json
+KHWc2006,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2007,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2008,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2009,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2010,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2011,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2012,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2013,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2014,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2015,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2016,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2017,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2018,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2019,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2020,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2021,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2022,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2023,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2024,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2025,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2028,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2029,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2030,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2031,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2032,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2033,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2034,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2035,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2054,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2055,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2063,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2064,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2069,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2079,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2084,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2099,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2100,Khania,KHW,,3,corpus/silver/inscriptions_structured.json
+KHWc2101,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2102,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2103,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2104,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2105,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2106,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2110,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2114,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2115,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2117,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2118,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHWc2122,Khania,KHW,,2,corpus/silver/inscriptions_structured.json
+KHWc2123,Khania,KHW,,3,corpus/silver/inscriptions_structured.json
+KHWc2124,Khania,KHW,,1,corpus/silver/inscriptions_structured.json
+KHZb98,Khania,KHZ,,1,corpus/silver/inscriptions_structured.json
+KN1a,Knossos,KN,,4,corpus/silver/inscriptions_structured.json
+KN1b,Knossos,KN,,5,corpus/silver/inscriptions_structured.json
+KN2,Knossos,KN,,3,corpus/silver/inscriptions_structured.json
+KN22a,Knossos,KN,,5,corpus/silver/inscriptions_structured.json
+KN22b,Knossos,KN,,3,corpus/silver/inscriptions_structured.json
+KN22c,Knossos,KN,,4,corpus/silver/inscriptions_structured.json
+KN28a,Knossos,KN,,2,corpus/silver/inscriptions_structured.json
+KN28b,Knossos,KN,,2,corpus/silver/inscriptions_structured.json
+KN32a,Knossos,KN,,5,corpus/silver/inscriptions_structured.json
+KN32b,Knossos,KN,,6,corpus/silver/inscriptions_structured.json
+KN54,Knossos,KN,,3,corpus/silver/inscriptions_structured.json
+KN49,Knossos,KN,,1,corpus/silver/inscriptions_structured.json
+KNWb33,Knossos,KNW,,4,corpus/silver/inscriptions_structured.json
+KNWc3,Knossos,KNW,,3,corpus/silver/inscriptions_structured.json
+KNWc23,Knossos,KNW,,1,corpus/silver/inscriptions_structured.json
+KNWc26,Knossos,KNW,,4,corpus/silver/inscriptions_structured.json
+KNWc29,Knossos,KNW,,1,corpus/silver/inscriptions_structured.json
+KNWc30,Knossos,KNW,,2,corpus/silver/inscriptions_structured.json
+KNWc42,Knossos,KNW,,2,corpus/silver/inscriptions_structured.json
+KNWc48,Knossos,KNW,,1,corpus/silver/inscriptions_structured.json
+KNZa10,Knossos,KNZ,,17,corpus/silver/inscriptions_structured.json
+KNZa17,Knossos,KNZ,,2,corpus/silver/inscriptions_structured.json
+KNZa18,Knossos,KNZ,,4,corpus/silver/inscriptions_structured.json
+KNZa19,Knossos,KNZ,,6,corpus/silver/inscriptions_structured.json
+KNZb4,Knossos,KNZ,,4,corpus/silver/inscriptions_structured.json
+KNZb5,Knossos,KNZ,,5,corpus/silver/inscriptions_structured.json
+KNZb20,Knossos,KNZ,,3,corpus/silver/inscriptions_structured.json
+KNZb<27>,Knossos,KNZ,,4,corpus/silver/inscriptions_structured.json
+KNZb34,Knossos,KNZ,,1,corpus/silver/inscriptions_structured.json
+KNZb35,Knossos,KNZ,,5,corpus/silver/inscriptions_structured.json
+KNZb<36>,Knossos,KNZ,,1,corpus/silver/inscriptions_structured.json
+KNZb<37>,Knossos,KNZ,,1,corpus/silver/inscriptions_structured.json
+KNZb<38>,Knossos,KNZ,,1,corpus/silver/inscriptions_structured.json
+KNZb<39>,Knossos,KNZ,,1,corpus/silver/inscriptions_structured.json
+KNZb40,Knossos,KNZ,,6,corpus/silver/inscriptions_structured.json
+KNZb52,Knossos,KNZ,,4,corpus/silver/inscriptions_structured.json
+KNZb56,Knossos,KNZ,,2,corpus/silver/inscriptions_structured.json
+KHZc106,Knossos,KHZ,,4,corpus/silver/inscriptions_structured.json
+KNZc6,Knossos,KNZ,,22,corpus/silver/inscriptions_structured.json
+KNZc7,Knossos,KNZ,,19,corpus/silver/inscriptions_structured.json
+KNZd46,Knossos,KNZ,,1,corpus/silver/inscriptions_structured.json
+KNZe16,Knossos,KNZ,,2,corpus/silver/inscriptions_structured.json
+KNZe44,Knossos,KNZ,,3,corpus/silver/inscriptions_structured.json
+KNZe45,Knossos,KNZ,,4,corpus/silver/inscriptions_structured.json
+KNZe49,Knossos,KNZ,,3,corpus/silver/inscriptions_structured.json
+KNZe56,Knossos,KNZ,,2,corpus/silver/inscriptions_structured.json
+KNZf13,Knossos,KNZ,,19,corpus/silver/inscriptions_structured.json
+KNZf31,Knossos,KNZ,,40,corpus/silver/inscriptions_structured.json
+KNZg55,Knossos,KNZ,,3,corpus/silver/inscriptions_structured.json
+KOZa1,Kophinas,KOZ,,27,corpus/silver/inscriptions_structured.json
+KO(?)Zf2,Kophinas,KO,,16,corpus/silver/inscriptions_structured.json
+KYZa2,Kythera,KYZ,,3,corpus/silver/inscriptions_structured.json
+KYZg1,Kythera,KYZ,,1,corpus/silver/inscriptions_structured.json
+LAZb1(bis),Larani,LAZ,,4,corpus/silver/inscriptions_structured.json
+MA1a,Malia,MA,,8,corpus/silver/inscriptions_structured.json
+MA1b,Malia,MA,,6,corpus/silver/inscriptions_structured.json
+MA1c,Malia,MA,,1,corpus/silver/inscriptions_structured.json
+MA2a,Malia,MA,,2,corpus/silver/inscriptions_structured.json
+MA2b,Malia,MA,,6,corpus/silver/inscriptions_structured.json
+MA2c,Malia,MA,,7,corpus/silver/inscriptions_structured.json
+MA4a,Malia,MA,,5,corpus/silver/inscriptions_structured.json
+MA4b,Malia,MA,,3,corpus/silver/inscriptions_structured.json
+MA6a,Malia,MA,,2,corpus/silver/inscriptions_structured.json
+MA6b,Malia,MA,,1,corpus/silver/inscriptions_structured.json
+MA6c,Malia,MA,,3,corpus/silver/inscriptions_structured.json
+MA6d,Malia,MA,,1,corpus/silver/inscriptions_structured.json
+MA10a,Malia,MA,,3,corpus/silver/inscriptions_structured.json
+MA10b,Malia,MA,,7,corpus/silver/inscriptions_structured.json
+MA10c,Malia,MA,,3,corpus/silver/inscriptions_structured.json
+MA10d,Malia,MA,,1,corpus/silver/inscriptions_structured.json
+MAWc<5>,Malia,MAW,,5,corpus/silver/inscriptions_structured.json
+MAWc7,Malia,MAW,,1,corpus/silver/inscriptions_structured.json
+MAZb15,Malia,MAZ,,3,corpus/silver/inscriptions_structured.json
+MAZb8,Malia,MAZ,,2,corpus/silver/inscriptions_structured.json
+MAZe11,Malia,MAZ,,3,corpus/silver/inscriptions_structured.json
+MARGWa1-26,Margiana,MARGW,,1,corpus/silver/inscriptions_structured.json
+MI2,Milos,MI,,5,corpus/silver/inscriptions_structured.json
+MIZb1,Milos,MIZ,,2,corpus/silver/inscriptions_structured.json
+MIZb3,Milos,MIZ,,2,corpus/silver/inscriptions_structured.json
+MILZb1,Miletos,MILZ,,3,corpus/silver/inscriptions_structured.json
+MOZf1,Mokhilos,MOZ,,3,corpus/silver/inscriptions_structured.json
+MYZf1,Mycenae,MYZ,,1,corpus/silver/inscriptions_structured.json
+MYZg1,Mycenae,MYZ,,1,corpus/silver/inscriptions_structured.json
+NEZa1,Nerokurou,NEZ,,2,corpus/silver/inscriptions_structured.json
+PA1,Papourou,PA,,5,corpus/silver/inscriptions_structured.json
+PE1,Petras,PE,,16,corpus/silver/inscriptions_structured.json
+PE2,Petras,PE,,18,corpus/silver/inscriptions_structured.json
+PEWs,Petras,PEW,,3,corpus/silver/inscriptions_structured.json
+PEWy5,Petras,PEW,,2,corpus/silver/inscriptions_structured.json
+PEZb,Petras,PEZ,,2,corpus/silver/inscriptions_structured.json
+PEZb3,Petras,PEZ,,11,corpus/silver/inscriptions_structured.json
+PEZb7,Petras,PEZ,,4,corpus/silver/inscriptions_structured.json
+PEZb8,Petras,PEZ,,1,corpus/silver/inscriptions_structured.json
+PEZc4,Petras,PEZ,,4,corpus/silver/inscriptions_structured.json
+PEZg5,Petras,PEZ,,1,corpus/silver/inscriptions_structured.json
+PEZg6,Petras,PEZ,,7,corpus/silver/inscriptions_structured.json
+PH1a,Phaistos,PH,,6,corpus/silver/inscriptions_structured.json
+PH1b,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH2,Phaistos,PH,,15,corpus/silver/inscriptions_structured.json
+PH3a,Phaistos,PH,,4,corpus/silver/inscriptions_structured.json
+PH3b,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH6,Phaistos,PH,,18,corpus/silver/inscriptions_structured.json
+PH7a,Phaistos,PH,,15,corpus/silver/inscriptions_structured.json
+PH7b,Phaistos,PH,,6,corpus/silver/inscriptions_structured.json
+PH8a,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH9a,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH9b,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH10,Phaistos,PH,,4,corpus/silver/inscriptions_structured.json
+PH12a,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH12c,Phaistos,PH,,1,corpus/silver/inscriptions_structured.json
+PH13a,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH13c,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH14a,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH14b,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH15a,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH15b,Phaistos,PH,,1,corpus/silver/inscriptions_structured.json
+PH16a,Phaistos,PH,,4,corpus/silver/inscriptions_structured.json
+PH16b,Phaistos,PH,,3,corpus/silver/inscriptions_structured.json
+PH18a,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH19,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH24,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH25,Phaistos,PH,,1,corpus/silver/inscriptions_structured.json
+PH27,Phaistos,PH,,2,corpus/silver/inscriptions_structured.json
+PH28a,Phaistos,PH,,8,corpus/silver/inscriptions_structured.json
+PH30,Phaistos,PH,,6,corpus/silver/inscriptions_structured.json
+PH(?)31a,Phaistos,PH,,22,corpus/silver/inscriptions_structured.json
+PH(?)31b,Phaistos,PH,,25,corpus/silver/inscriptions_structured.json
+PHWa32,Phaistos,PHW,,4,corpus/silver/inscriptions_structured.json
+PHWb36,Phaistos,PHW,,1,corpus/silver/inscriptions_structured.json
+PHWc37,Phaistos,PHW,,3,corpus/silver/inscriptions_structured.json
+PHWc38,Phaistos,PHW,,3,corpus/silver/inscriptions_structured.json
+PHWc39,Phaistos,PHW,,3,corpus/silver/inscriptions_structured.json
+PHWc40,Phaistos,PHW,,4,corpus/silver/inscriptions_structured.json
+PHWc41,Phaistos,PHW,,1,corpus/silver/inscriptions_structured.json
+PHWc43,Phaistos,PHW,,1,corpus/silver/inscriptions_structured.json
+PHWc44,Phaistos,PHW,,1,corpus/silver/inscriptions_structured.json
+PHWc46,Phaistos,PHW,,3,corpus/silver/inscriptions_structured.json
+PHWg45,Phaistos,PHW,,3,corpus/silver/inscriptions_structured.json
+PHWy42,Phaistos,PHW,,1,corpus/silver/inscriptions_structured.json
+PHZb4,Phaistos,PHZ,,5,corpus/silver/inscriptions_structured.json
+PHZb5,Phaistos,PHZ,,5,corpus/silver/inscriptions_structured.json
+PHZb48,Phaistos,PHZ,,2,corpus/silver/inscriptions_structured.json
+PK1,Palaikastro,PK,,44,corpus/silver/inscriptions_structured.json
+PK3,Palaikastro,PK,,6,corpus/silver/inscriptions_structured.json
+PKZa4,Palaikastro,PKZ,,4,corpus/silver/inscriptions_structured.json
+PKZa8,Palaikastro,PKZ,,23,corpus/silver/inscriptions_structured.json
+PKZa9,Palaikastro,PKZ,,7,corpus/silver/inscriptions_structured.json
+PKZa10,Palaikastro,PKZ,,7,corpus/silver/inscriptions_structured.json
+PKZa11,Palaikastro,PKZ,,42,corpus/silver/inscriptions_structured.json
+PKZa12,Palaikastro,PKZ,,29,corpus/silver/inscriptions_structured.json
+PKZa14,Palaikastro,PKZ,,6,corpus/silver/inscriptions_structured.json
+PKZa15,Palaikastro,PKZ,,8,corpus/silver/inscriptions_structured.json
+PKZa16,Palaikastro,PKZ,,5,corpus/silver/inscriptions_structured.json
+PKZa17,Palaikastro,PKZ,,2,corpus/silver/inscriptions_structured.json
+PKZa18,Palaikastro,PKZ,,5,corpus/silver/inscriptions_structured.json
+PKZa20,Palaikastro,PKZ,,3,corpus/silver/inscriptions_structured.json
+PKZb?,Palaikastro,PKZ,,4,corpus/silver/inscriptions_structured.json
+PKZb19,Palaikastro,PKZ,,3,corpus/silver/inscriptions_structured.json
+PKZb21,Palaikastro,PKZ,,4,corpus/silver/inscriptions_structured.json
+PKZb23,Palaikastro,PKZ,,1,corpus/silver/inscriptions_structured.json
+PKZb24,Palaikastro,PKZ,,1,corpus/silver/inscriptions_structured.json
+PKZb25,Palaikastro,PKZ,,3,corpus/silver/inscriptions_structured.json
+PKZc13,Palaikastro,PKZ,,3,corpus/silver/inscriptions_structured.json
+PKZg22,Palaikastro,PKZ,,2,corpus/silver/inscriptions_structured.json
+PLZf1,Platanos,PLZ,,22,corpus/silver/inscriptions_structured.json
+POZc1,Poros Herakleiou,POZ,,8,corpus/silver/inscriptions_structured.json
+PRZa1,Prassa,PRZ,,14,corpus/silver/inscriptions_structured.json
+PSZa2,Psykhro,PSZ,,16,corpus/silver/inscriptions_structured.json
+PSIZa1,Psykhro,PSIZ,,3,corpus/silver/inscriptions_structured.json
+PYR1,Pyrgos,PYR,,7,corpus/silver/inscriptions_structured.json
+PYRWc4,Pyrgos,PYRW,,3,corpus/silver/inscriptions_structured.json
+PYRZb5,Pyrgos,PYRZ,,2,corpus/silver/inscriptions_structured.json
+SAMWa1,Samothrace,SAMW,,5,corpus/silver/inscriptions_structured.json
+SEZf1,Selakanos,SEZ,,2,corpus/silver/inscriptions_structured.json
+SIZg1,Sitia,SIZ,,3,corpus/silver/inscriptions_structured.json
+SKZb1,Skhinia,SKZ,,4,corpus/silver/inscriptions_structured.json
+SKOZc1,Skoteino Cave,SKOZ,,7,corpus/silver/inscriptions_structured.json
+SYZa1,Syme,SYZ,,10,corpus/silver/inscriptions_structured.json
+SYZa2,Syme,SYZ,,19,corpus/silver/inscriptions_structured.json
+SYZa3,Syme,SYZ,,13,corpus/silver/inscriptions_structured.json
+SYZa4,Syme,SYZ,,13,corpus/silver/inscriptions_structured.json
+SYZa5,Syme,SYZ,,5,corpus/silver/inscriptions_structured.json
+SYZa6,Syme,SYZ,,4,corpus/silver/inscriptions_structured.json
+SYZb7,Syme,SYZ,,4,corpus/silver/inscriptions_structured.json
+SYZa8,Syme,SYZ,,8,corpus/silver/inscriptions_structured.json
+SYZa9,Syme,SYZ,,5,corpus/silver/inscriptions_structured.json
+SYZa10,Syme,SYZ,,4,corpus/silver/inscriptions_structured.json
+SYZa11,Syme,SYZ,,2,corpus/silver/inscriptions_structured.json
+SYZa12,Syme,SYZ,,1,corpus/silver/inscriptions_structured.json
+TELZb1,Tel Haror,TELZ,,4,corpus/silver/inscriptions_structured.json
+THEfr.1,Thera,THE,,1,corpus/silver/inscriptions_structured.json
+THEfr.2,Thera,THE,,1,corpus/silver/inscriptions_structured.json
+THEfr.3,Thera,THE,,1,corpus/silver/inscriptions_structured.json
+THEtab.4,Thera,THE,,2,corpus/silver/inscriptions_structured.json
+THEtab.5,Thera,THE,,4,corpus/silver/inscriptions_structured.json
+THEZb1,Thera,THEZ,,2,corpus/silver/inscriptions_structured.json
+THEZb2,Thera,THEZ,,4,corpus/silver/inscriptions_structured.json
+THEZb3,Thera,THEZ,,2,corpus/silver/inscriptions_structured.json
+THEZb4,Thera,THEZ,,2,corpus/silver/inscriptions_structured.json
+THEZg5,Thera,THEZ,,4,corpus/silver/inscriptions_structured.json
+THEZb5,Thera,THEZ,,1,corpus/silver/inscriptions_structured.json
+THEZb7,Thera,THEZ,,2,corpus/silver/inscriptions_structured.json
+THEZb13,Thera,THEZ,,6,corpus/silver/inscriptions_structured.json
+TIZb1,Tiryns,TIZ,,2,corpus/silver/inscriptions_structured.json
+TLZa1,Troullos,TLZ,,26,corpus/silver/inscriptions_structured.json
+TRAZb1,Traostalos,TRAZ,,2,corpus/silver/inscriptions_structured.json
+TROZg1,Troy,TROZ,,5,corpus/silver/inscriptions_structured.json
+TROZg2,Troy,TROZ,,5,corpus/silver/inscriptions_structured.json
+TRYZb1,Trypiti,TRYZ,,4,corpus/silver/inscriptions_structured.json
+TY2,Tylissos,TY,,34,corpus/silver/inscriptions_structured.json
+TY3a,Tylissos,TY,,31,corpus/silver/inscriptions_structured.json
+TY3b,Tylissos,TY,,12,corpus/silver/inscriptions_structured.json
+TYWc5,Tylissos,TYW,,1,corpus/silver/inscriptions_structured.json
+TYZb4,Tylissos,TYZ,,5,corpus/silver/inscriptions_structured.json
+TYZg1,Tylissos,TYZ,,3,corpus/silver/inscriptions_structured.json
+VRYZa1,Vrysinas,VRYZ,,7,corpus/silver/inscriptions_structured.json
+ZA1a,Zakros,ZA,,5,corpus/silver/inscriptions_structured.json
+ZA1b,Zakros,ZA,,4,corpus/silver/inscriptions_structured.json
+ZA4a,Zakros,ZA,,29,corpus/silver/inscriptions_structured.json
+ZA4b,Zakros,ZA,,1,corpus/silver/inscriptions_structured.json
+ZA5a,Zakros,ZA,,16,corpus/silver/inscriptions_structured.json
+ZA5b,Zakros,ZA,,11,corpus/silver/inscriptions_structured.json
+ZA6a,Zakros,ZA,,18,corpus/silver/inscriptions_structured.json
+ZA6b,Zakros,ZA,,15,corpus/silver/inscriptions_structured.json
+ZA7a,Zakros,ZA,,9,corpus/silver/inscriptions_structured.json
+ZA7b,Zakros,ZA,,2,corpus/silver/inscriptions_structured.json
+ZA8,Zakros,ZA,,31,corpus/silver/inscriptions_structured.json
+ZA9,Zakros,ZA,,22,corpus/silver/inscriptions_structured.json
+ZA10a,Zakros,ZA,,29,corpus/silver/inscriptions_structured.json
+ZA10b,Zakros,ZA,,34,corpus/silver/inscriptions_structured.json
+ZA11a,Zakros,ZA,,24,corpus/silver/inscriptions_structured.json
+ZA11b,Zakros,ZA,,15,corpus/silver/inscriptions_structured.json
+ZA12a,Zakros,ZA,,3,corpus/silver/inscriptions_structured.json
+ZA12b,Zakros,ZA,,4,corpus/silver/inscriptions_structured.json
+ZA13,Zakros,ZA,,2,corpus/silver/inscriptions_structured.json
+ZA14,Zakros,ZA,,24,corpus/silver/inscriptions_structured.json
+ZA15a,Zakros,ZA,,36,corpus/silver/inscriptions_structured.json
+ZA15b,Zakros,ZA,,7,corpus/silver/inscriptions_structured.json
+ZA16,Zakros,ZA,,3,corpus/silver/inscriptions_structured.json
+ZA18a,Zakros,ZA,,11,corpus/silver/inscriptions_structured.json
+ZA19,Zakros,ZA,,2,corpus/silver/inscriptions_structured.json
+ZA20,Zakros,ZA,,18,corpus/silver/inscriptions_structured.json
+ZA21a,Zakros,ZA,,14,corpus/silver/inscriptions_structured.json
+ZA21b,Zakros,ZA,,6,corpus/silver/inscriptions_structured.json
+ZA22,Zakros,ZA,,7,corpus/silver/inscriptions_structured.json
+ZA23,Zakros,ZA,,4,corpus/silver/inscriptions_structured.json
+ZA24a,Zakros,ZA,,3,corpus/silver/inscriptions_structured.json
+ZA24b,Zakros,ZA,,1,corpus/silver/inscriptions_structured.json
+ZA26a,Zakros,ZA,,8,corpus/silver/inscriptions_structured.json
+ZA26b,Zakros,ZA,,1,corpus/silver/inscriptions_structured.json
+ZA27,Zakros,ZA,,4,corpus/silver/inscriptions_structured.json
+ZA28,Zakros,ZA,,1,corpus/silver/inscriptions_structured.json
+ZA29,Zakros,ZA,,2,corpus/silver/inscriptions_structured.json
+ZA31,Zakros,ZA,,1,corpus/silver/inscriptions_structured.json
+ZA32,Zakros,ZA,,1,corpus/silver/inscriptions_structured.json
+ZAWa36,Zakros,ZAW,,1,corpus/silver/inscriptions_structured.json
+ZAWb37,Zakros,ZAW,,1,corpus/silver/inscriptions_structured.json
+ZAWc2,Zakros,ZAW,,14,corpus/silver/inscriptions_structured.json
+ZAZb3,Zakros,ZAZ,,25,corpus/silver/inscriptions_structured.json
+ZAZb34,Zakros,ZAZ,,7,corpus/silver/inscriptions_structured.json
+ZAZg34,Zakros,ZAZ,,1,corpus/silver/inscriptions_structured.json
+ZAZg35,Zakros,ZAZ,,8,corpus/silver/inscriptions_structured.json
+ANZb1,,ANZ,,1,corpus/silver/inscriptions_structured.json
+APZa<3>,Apodoulou,APZ,,1,corpus/silver/inscriptions_structured.json
+APZa1,Apodoulou,APZ,,6,corpus/silver/inscriptions_structured.json
+APZa2,Apodoulou,APZ,,23,corpus/silver/inscriptions_structured.json
+ARZf1,Arkhalkhori,ARZ,,4,corpus/silver/inscriptions_structured.json
+ARZf2,Arkhalkhori,ARZ,,4,corpus/silver/inscriptions_structured.json
+ARGZg1,Arkhalkhori,ARGZ,,3,corpus/silver/inscriptions_structured.json
+ARKH1a,Arkhalkhori,ARKH,,17,corpus/silver/inscriptions_structured.json
+ARKH1b,Arkhalkhori,ARKH,,5,corpus/silver/inscriptions_structured.json
+ARKH2,Arkhalkhori,ARKH,,23,corpus/silver/inscriptions_structured.json
+ARKH3a,Arkhalkhori,ARKH,,10,corpus/silver/inscriptions_structured.json
+ARKH3b,Arkhalkhori,ARKH,,9,corpus/silver/inscriptions_structured.json
+ARKH4a,Arkhalkhori,ARKH,,14,corpus/silver/inscriptions_structured.json
+ARKH4b,Arkhalkhori,ARKH,,12,corpus/silver/inscriptions_structured.json
+ARKH5,Arkhalkhori,ARKH,,11,corpus/silver/inscriptions_structured.json
+ARKH6,Arkhalkhori,ARKH,,6,corpus/silver/inscriptions_structured.json
+ARKHZc8,Arkhalkhori,ARKHZ,,3,corpus/silver/inscriptions_structured.json
+ARKHZf9,Arkhalkhori,ARKHZ,,9,corpus/silver/inscriptions_structured.json
+CR(?)Zf1,Crete,CR,,18,corpus/silver/inscriptions_structured.json
+CRZf5,Crete,CRZ,,1,corpus/silver/inscriptions_structured.json
+CRZg3,Crete,CRZ,,3,corpus/silver/inscriptions_structured.json
+CRZg4,Crete,CRZ,,6,corpus/silver/inscriptions_structured.json
+FOZc1,Fourni,FOZ,,3,corpus/silver/inscriptions_structured.json
+GO2r,Gournia,GO,,8,corpus/silver/inscriptions_structured.json
+GO2v,Gournia,GO,,4,corpus/silver/inscriptions_structured.json
+GOWc1a,Gournia,GOW,,6,corpus/silver/inscriptions_structured.json
+GOWc1b,Gournia,GOW,,1,corpus/silver/inscriptions_structured.json
+HSZg1,Haghios Stehanos,HSZ,,2,corpus/silver/inscriptions_structured.json
+MILZb2,Miletos,MILZ,,2,corpus/silver/inscriptions_structured.json
+MILZb3,Miletos,MILZ,,2,corpus/silver/inscriptions_structured.json
+MILZb4,Miletos,MILZ,,2,corpus/silver/inscriptions_structured.json
+KH102,Khania,KH,,2,corpus/silver/inscriptions_structured.json
+PORZf2,Poros Herakleiou,PORZ,,3,corpus/silver/inscriptions_structured.json
+PKZb26,Palaikastro,PKZ,,3,corpus/silver/inscriptions_structured.json
+THEZb15,Thera,THEZ,,2,corpus/silver/inscriptions_structured.json
+KH101,Khania,KH,,1,corpus/silver/inscriptions_structured.json
+KH103,Khania,KH,,8,corpus/silver/inscriptions_structured.json
+KNWa51,Knossos,KNW,,1,corpus/silver/inscriptions_structured.json
+THEZb6,Thera,THEZ,,4,corpus/silver/inscriptions_structured.json
+PHWa52,Phaistos,PHW,,1,corpus/silver/inscriptions_structured.json
+DRAZg1,,DRAZ,,3,corpus/silver/inscriptions_structured.json
+INZb1,,INZ,,2,corpus/silver/inscriptions_structured.json
+PKZa27,Palaikastro,PKZ,,10,corpus/silver/inscriptions_structured.json
+HTZf(HM767),Haghia Triada,HTZ,,2,corpus/silver/inscriptions_structured.json
+ZO1,Zominthos,ZO,,2,corpus/silver/inscriptions_structured.json
+LACHZa1,Larani,LACHZ,,6,corpus/silver/inscriptions_structured.json
+PH54,Phaistos,PH,,4,corpus/silver/inscriptions_structured.json
+PKZa28,Palaikastro,PKZ,,3,corpus/silver/inscriptions_structured.json
+KKHZb1,Kalo Chorafi,KKHZ,,1,corpus/silver/inscriptions_structured.json
+KH104,Khania,KH,,4,corpus/silver/inscriptions_structured.json
+KH105,Khania,KH,,3,corpus/silver/inscriptions_structured.json
+THEZg15,Thera,THEZ,,3,corpus/silver/inscriptions_structured.json
+THEZg16,Thera,THEZ,,5,corpus/silver/inscriptions_structured.json
+VRYZb2,Vrysinas,VRYZ,,2,corpus/silver/inscriptions_structured.json
+VRYZb3,Vrysinas,VRYZ,,2,corpus/silver/inscriptions_structured.json
+KNZg57a,Knossos,KNZ,,5,corpus/silver/inscriptions_structured.json

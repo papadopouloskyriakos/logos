@@ -1,0 +1,6 @@
+{
+ "corpus/silver/inscriptions_structured.json": "aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500",
+ "corpus/silver/inscriptions.json": "4717a7e39157fad6b4a4d24e0d925f1c8a0cd33d6e7111b6822222aa24f1244a",
+ "corpus/silver/inventory_syllabograms_conservative.json": "8a2a8928d9f1c53dd3105265dfcefc8abc91acdd586ae82ccedd2cb2b3df9721",
+ "corpus/silver/signs_ontology.json": "246f63f1608a1238a2b2851b9f0a475817ce265b66d2fa622cc795627b97a80d"
+}
