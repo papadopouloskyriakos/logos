@@ -1,0 +1,175 @@
+{
+  "rule_commit": "fcb0c34",
+  "k": 8,
+  "pool_size": 33,
+  "pin_degenerate_excluded": [],
+  "words": [
+    {
+      "anchor_id": "top_su_ki_ri_ta",
+      "class": "toponym",
+      "sm_trust": "tempting",
+      "source_status": "primary",
+      "members": [
+        "SU",
+        "KI",
+        "RI",
+        "TA"
+      ],
+      "design_idx": [
+        40,
+        12,
+        34,
+        41
+      ]
+    },
+    {
+      "anchor_id": "top_tu_ru_sa",
+      "class": "toponym",
+      "sm_trust": "tempting",
+      "source_status": "primary",
+      "members": [
+        "TU",
+        "RU",
+        "SA"
+      ],
+      "design_idx": [
+        46,
+        36,
+        37
+      ]
+    },
+    {
+      "anchor_id": "top_di_ki_te",
+      "class": "toponym",
+      "sm_trust": "tempting",
+      "source_status": "primary",
+      "members": [
+        "DI",
+        "KI",
+        "TE"
+      ],
+      "design_idx": [
+        4,
+        12,
+        43
+      ]
+    },
+    {
+      "anchor_id": "top_se_to_i_ja",
+      "class": "toponym",
+      "sm_trust": "tempting",
+      "source_status": "primary",
+      "members": [
+        "SE",
+        "TO",
+        "I",
+        "JA"
+      ],
+      "design_idx": [
+        38,
+        45,
+        7,
+        8
+      ]
+    },
+    {
+      "anchor_id": "top_pa_i_to",
+      "class": "toponym",
+      "sm_trust": "tempting",
+      "source_status": "primary",
+      "members": [
+        "PA",
+        "I",
+        "TO"
+      ],
+      "design_idx": [
+        24,
+        7,
+        45
+      ]
+    },
+    {
+      "anchor_id": "top_ku_ta_younger",
+      "class": "toponym",
+      "sm_trust": "n/a",
+      "source_status": "secondary",
+      "members": [
+        "KU",
+        "TA"
+      ],
+      "design_idx": [
+        14,
+        41
+      ]
+    },
+    {
+      "anchor_id": "top_ku_ni_su_younger",
+      "class": "toponym",
+      "sm_trust": "n/a",
+      "source_status": "secondary",
+      "members": [
+        "KU",
+        "NI",
+        "SU"
+      ],
+      "design_idx": [
+        14,
+        21,
+        40
+      ]
+    },
+    {
+      "anchor_id": "top_sa_ra2_younger",
+      "class": "toponym",
+      "sm_trust": "n/a",
+      "source_status": "secondary",
+      "members": [
+        "SA",
+        "RA2"
+      ],
+      "design_idx": [
+        37,
+        32
+      ]
+    }
+  ],
+  "covered_eligible_signs": [
+    "DI",
+    "I",
+    "JA",
+    "KI",
+    "KU",
+    "NI",
+    "PA",
+    "RA2",
+    "RI",
+    "RU",
+    "SA",
+    "SE",
+    "SU",
+    "TA",
+    "TE",
+    "TO",
+    "TU"
+  ],
+  "legs_per_sign": {
+    "DI": 1,
+    "I": 2,
+    "JA": 1,
+    "KI": 2,
+    "KU": 2,
+    "NI": 1,
+    "PA": 1,
+    "RA2": 1,
+    "RI": 1,
+    "RU": 1,
+    "SA": 2,
+    "SE": 1,
+    "SU": 2,
+    "TA": 2,
+    "TE": 1,
+    "TO": 2,
+    "TU": 1
+  },
+  "max_legs": 2
+}
