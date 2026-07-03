@@ -5,6 +5,14 @@ Drafting (Track 1) does **not** start until the two P-BLOCK items are ingested +
 done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likely but not yet verified.
 
 ## In hand (audited 2026-06-30)
+- **Salgarella 2020** *Aegean Linear Script(s): Rethinking the Relationship between Linear A
+  and Linear B* (CUP; DOI 10.1017/9781108783477; ISBN 978-1-108-47938-7 Hardback) — ✅
+  **ACQUIRED 2026-07-03** (operator's Cambridge Core personal download; complete per-chapter
+  PDFs with text layers; zip SHA-256 `256c70c8f16ae09f8a77119e6e0f05f0cf2bfef981e21b081ce3ab9a0dbd9856`)
+  → `corpus/bronze/salgarella_2020/` (gitignored, non-redistributable; PROVENANCE.md +
+  SHA256SUMS alongside). THE standing acquisition item — now closed. Settles: homomorphy
+  grades (anchors.csv), the historiography AUDIT's Salgarella rows, her A↔B taxonomy
+  (docs/related/salgarella-2020-taxonomy.md).
 - **Kanta, Nakassis, Palaima & Perna 2024** "An archaeological and epigraphical overview…
   (Anetaki plot)", *KO-RO-NO-WE-SA* (Ariadne Suppl. 5), 27–43 — ✅ **ACQUIRED 2026-07-03**, OA
   (CC BY-NC-SA 4.0), DOI 10.26248/ariadne.vi.1841 →
@@ -99,7 +107,6 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 
 ## Paywalled / print — operator supplies
 - **Salgarella 2025 body** (esp. §7 reading p.35–45, §8 language p.46–53; §4 palaeography p.17–21) + the online appendix (<https://www.cambridge.org/salgarella>). **BLOCKING for any 2nd morphology run.**
-- **Salgarella 2020** *Aegean Linear Script(s)* (CUP) — A/B-relationship + site/deposit palaeographic groupings (needed for the scribal-hand stratum).
 - **Salgarella 2019** "Drawing lines," *Kadmos* 58:61–92 (de Gruyter) — synchronic variation.
 - **Schoep 2002** *The administration of neopalatial Crete*, Minos suppl. 17 — the Semitic/Lycian best-founded ranking + 7,362–7,396 sign count.
 - **Ferrara & Tamburini 2022** "Advanced techniques…," *Lingue e Linguaggio* 2/2022:239–259 (il Mulino) — the only comparable prior review; cite or be desk-rejected.
