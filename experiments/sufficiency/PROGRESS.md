@@ -71,3 +71,20 @@ benchmark is skipped; production stays on the fenced CPUs (as §4 mandates regar
 path is already source-documented as orchestration-bound ("H100 ~1% utilised"), so the expected
 `<3× → closure` branch is the likely outcome anyway. Say the word to pursue it and I'll set up the
 env in a dedicated (non-20-min) pass.
+
+## 2026-07-03 ~23:30Z — GPU lane CLOSED permanently + SMT fence characterization
+- **GPU benchmark CLOSED permanently (human directive):** benchmark superseded by structural
+  constraints; CSA GPU path documented orchestration-bound at source. Moot for production three
+  ways over: gpu01's daily-reboot ceiling makes the big cells (>24 h at pinned processes=4)
+  impossible; any GPU lane still prices a full 168-cell re-run + re-certification; and the GPU
+  has a day job (ollama + Plex). Do NOT build the gpu01 env. `gpu01_gpu_benchmark.py` stays as a
+  committed record, unused.
+- **SMT topology → SOFT fence.** 6 of the 16 fence CPUs are hyperthread siblings of PROTECTED
+  CPUs: fence 37↔prot 5, 38↔6, 39↔7, 42↔10, 44↔12, 47↔15. On those physical cores the sweep
+  shares execution units / L1-L2 / memory ports with the agentic system despite perfect logical
+  affinity → cache/port contention can leak across the fence. (2 SMT pairs are wholly inside the
+  fence — 17↔49, 21↔53 — harmless.) So we have a **soft (logical-CPU) fence, not a hard
+  physical-core fence.** No action taken (fence-width changes are human-gated, and none was
+  requested): the agentic-baseline tripwire covers this empirically — if baseline responsiveness
+  on 0-13,15,16 degrades, new cell starts pause and I report. A hard fence would require dropping
+  the 6 straddling cores (fence → 10 cores / 3 lanes), a throughput cut available on request only.
