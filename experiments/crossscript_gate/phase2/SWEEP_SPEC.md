@@ -76,9 +76,20 @@ band."
   chance of a wrong-cell call between adjacent cells.
 - Seeds: master **20260712**; replicate seed = master + 100000·cell_index + 1000·strength_index
   + rep (cell_index = position in the §5 ordering). Anchor sets regenerate per replicate.
-- **Escalation rule:** profile ONE cell first; if the projected full-sweep wall-clock exceeds
-  **6 hours** on the available cores, STOP and report the projection before launching. CPU
-  only; no GPU.
+- **Escalation rule (AMENDED by operator, 2026-07-03, BEFORE any cell ran — supersedes the
+  original "CPU only; no GPU" line):**
+  1. Profile first, decide empirically: the §2 single-cell profile also (a) breaks down where
+     the per-config wall-clock goes (embedding load, Procrustes fits, permutation loop) and
+     (b) micro-benchmarks the dominant kernel CPU vs GPU at the TRUE problem sizes (d=24,
+     ≤90 signs, up to 2000 perms) including transfer/launch overhead; both numbers reported.
+  2. Decision rule: GPU path iff the measured end-to-end GPU projection beats CPU-parallel
+     (all cores) by ≥2× — gated on an equivalence check reproducing the Phase-0.5 certified
+     power curve within Monte-Carlo tolerance before any sweep cell counts. Otherwise
+     CPU-parallel across all cores. Either way the projected total wall-clock is printed
+     before launching.
+  3. The 6-hour line is a TRIPWIRE, not a plan: expected wall-clock is minutes-to-low-hours;
+     escalate only if the printed projection exceeds 6 h (options: more cores / reduced
+     replicates per the MC-error budget / the GPU path from rule 2).
 
 ## 7. Step separation (binding)
 
