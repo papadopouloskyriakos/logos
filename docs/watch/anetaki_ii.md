@@ -10,6 +10,11 @@ July 2026 (`experiments/crossscript_gate/phase3/anetaki_extraction.md`).
 ## What to monitor (human, quarterly glance — NO standing agents)
 
 - INSTAP Academic Press catalog / new-titles page.
+  SERIES POINTER (from Henkel & Margaritis 2022, Religions 13:81, OA, vault
+  `corpus/bronze/anetaki_context/`): the Anetaki editions belong to the INSTAP series *The
+  Religious Center of the City of Knossos* — **Vol. 1: The Fetish Shrine** (Kanta ed.,
+  forthcoming) is a sibling volume; the KN Zg 57/58 edition ("Anetaki II" = the Neopalatial
+  Room 1 / Ivory Repository). Watch INSTAP for BOTH volumes of this series.
 - The Ariadne Supplements page (ejournals.lib.uoc.gr) and Kanta's publication listings.
 - SigLA (sigla.phis.me) and lineara.xyz for KN Zg 57/58 ingestion (both empty as of
   2026-07-03).
