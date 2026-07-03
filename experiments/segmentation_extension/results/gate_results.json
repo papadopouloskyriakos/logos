@@ -1,0 +1,71 @@
+{
+  "gate_a": {
+    "published": {
+      "dp_unigram": 0.4361,
+      "random": 0.3888,
+      "morfessor_informative": 0.1556
+    },
+    "reproduced": {
+      "dp_unigram": 0.4361,
+      "random": 0.3888,
+      "morfessor": 0.1556
+    },
+    "criterion": "4-decimal EXACT match on dp_unigram + random",
+    "pass": true,
+    "loso_wall_clock_s": 20.6
+  },
+  "gate_b": {
+    "published_ci": [
+      0.021,
+      0.099
+    ],
+    "tolerance": 0.005,
+    "p_min": 0.99,
+    "seed": 20260703,
+    "B": 4000,
+    "reconstructed": {
+      "gap_ci95": [
+        0.0204,
+        0.0991
+      ],
+      "gap_mean": 0.0518,
+      "p_gap_gt_0": 0.9985,
+      "gap_ci9833": [
+        0.0124,
+        0.1075
+      ]
+    },
+    "stability_seeds": {
+      "20260704": {
+        "gap_ci95": [
+          0.0204,
+          0.0971
+        ],
+        "p_gap_gt_0": 0.99725
+      },
+      "20260705": {
+        "gap_ci95": [
+          0.0214,
+          0.0991
+        ],
+        "p_gap_gt_0": 0.99875
+      },
+      "20260706": {
+        "gap_ci95": [
+          0.0214,
+          0.0966
+        ],
+        "p_gap_gt_0": 0.997
+      },
+      "20260707": {
+        "gap_ci95": [
+          0.0201,
+          0.0974
+        ],
+        "p_gap_gt_0": 0.99775
+      }
+    },
+    "pass": true
+  },
+  "verdict": "GATES PASSED — model classes may run"
+}
