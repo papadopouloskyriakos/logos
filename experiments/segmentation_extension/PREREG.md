@@ -165,6 +165,29 @@ Bonferroni 98.33% CI + P(gap>0), entry−DP-unigram gap + CI, train/test gap (Cl
 (Class 1), selected corpusweights (Class 3), wall-clock, all seeds. Sampler nondeterminism, if
 any, is reported honestly.
 
+## Addendum A (2026-07-03, dated, BEFORE any graded run) — pre-run implementation corrections
+
+An adversarial multi-agent review of the implementation (5 reviewers + independent verification
+of every finding) ran after the equivalence gates but BEFORE any model class executed on the
+real corpus. No graded number existed when these corrections were made. No model class, no
+hyperparameter, no grading rule is added or changed. Three confirmed findings, all Class 2:
+
+1. **Packed recurrence (major).** The BiLSTM evaluated dev streams in one padded batch while the
+   graded decode runs per-stream unpadded; because the backward LSTM evolved state through pad
+   timesteps, the dev-tuned threshold was calibrated on probabilities the graded predictor never
+   produces (verified shifts up to ~0.4, flipping thresholds). Fixed with
+   `pack_padded_sequence`, making padded-batch and per-stream outputs identical everywhere —
+   the frozen "batch = 32 streams (padded)" is unchanged; padding is now semantics-neutral.
+2. **Vocabulary source (minor).** Vocab was built from the non-dev subset; the frozen spec says
+   train-fold signs. Fixed: built from the full train fold.
+3. **Supervised-label quirk exclusion (minor).** The gate-verified fold quirk places the
+   "(unknown)" fold's own inscriptions in its training set; for the SUPERVISED class this put 2
+   labeled held-out streams (DRAZg1, INZb1; both single-word) into training, contradicting
+   §5.2's "trained on the 51 training sites". Fixed: Class 2 (only) excludes the held-out
+   site's inscriptions from its training pool in that one fold (a no-op elsewhere). The
+   unsupervised entries keep the quirk — required for exact pairing with the gate-verified
+   anchor and random counts, which are reused verbatim.
+
 ## 7. Compute
 
 Local CPU only (20 cores); fold- and chain-parallel via multiprocessing. No GPU: the corpus
