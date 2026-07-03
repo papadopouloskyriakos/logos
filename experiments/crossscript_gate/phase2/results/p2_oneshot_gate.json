@@ -1,0 +1,288 @@
+{
+  "prereg": {
+    "freeze_commit": "0aeaee8aa4c5d5c8e2120d38c57c8013def5e067",
+    "sha256": "1fce8401f5efedebe1f71d1e7ddd095f0d14c1998f098461617dfa0b96faeb71",
+    "doi": "10.5281/zenodo.21173639",
+    "published": "2026-07-03T16:48:50Z"
+  },
+  "run_head_commit": "dc6d919868b615fc2b8e23b0de09bb60336d2310",
+  "alpha_corrected": 0.025320565519103666,
+  "n_perm": 2000,
+  "seeds": {
+    "draw": 20260714,
+    "null": 20260715,
+    "embeddings": 0
+  },
+  "held_out": [
+    "DI",
+    "JA",
+    "KI",
+    "MA",
+    "ME",
+    "NE",
+    "O",
+    "PO",
+    "PU",
+    "PU2",
+    "QE",
+    "RA",
+    "RI",
+    "SU",
+    "TA2",
+    "TE",
+    "TI",
+    "TO",
+    "U",
+    "WA"
+  ],
+  "n_pinned": 2,
+  "pinning_anchors": [
+    "top_pa_i_to",
+    "top_ku_ni_su_younger"
+  ],
+  "stats": {
+    "full": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_su_ki_ri_ta": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_tu_ru_sa": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_di_ki_te": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_se_to_i_ja": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_pa_i_to": {
+      "observed_top1": 0.05,
+      "null_mean": 0.012075,
+      "p_raw": 0.21489255372313842,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_ku_ta_younger": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_ku_ni_su_younger": {
+      "observed_top1": 0.05,
+      "null_mean": 0.0115,
+      "p_raw": 0.20739630184907545,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "loto_top_sa_ra2_younger": {
+      "observed_top1": 0.1,
+      "null_mean": 0.011949999999999999,
+      "p_raw": 0.025487256371814093,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "off": {
+      "observed_top1": 0.0,
+      "null_mean": 0.011625,
+      "p_raw": 1.0,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    },
+    "secondary_drop": {
+      "observed_top1": 0.05,
+      "null_mean": 0.0115,
+      "p_raw": 0.20739630184907545,
+      "clears_corrected_bar": false,
+      "null_degenerate": false
+    }
+  },
+  "per_sign": [
+    {
+      "sign_id": "DI",
+      "nn_rank_of_true": 58,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "JA",
+      "nn_rank_of_true": 23,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "KI",
+      "nn_rank_of_true": 31,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "MA",
+      "nn_rank_of_true": 22,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "ME",
+      "nn_rank_of_true": 27,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "NE",
+      "nn_rank_of_true": 20,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "O",
+      "nn_rank_of_true": 54,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "PO",
+      "nn_rank_of_true": 39,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "PU",
+      "nn_rank_of_true": 49,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "PU2",
+      "nn_rank_of_true": 49,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "QE",
+      "nn_rank_of_true": 11,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "RA",
+      "nn_rank_of_true": 15,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "RI",
+      "nn_rank_of_true": 18,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "SU",
+      "nn_rank_of_true": 22,
+      "pinned_by": [
+        "top_ku_ni_su_younger"
+      ],
+      "hit_full": true,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "TA2",
+      "nn_rank_of_true": 33,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "TE",
+      "nn_rank_of_true": 72,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    },
+    {
+      "sign_id": "TI",
+      "nn_rank_of_true": 43,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "TO",
+      "nn_rank_of_true": 12,
+      "pinned_by": [
+        "top_pa_i_to"
+      ],
+      "hit_full": true,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "U",
+      "nn_rank_of_true": 45,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": false
+    },
+    {
+      "sign_id": "WA",
+      "nn_rank_of_true": 68,
+      "pinned_by": [],
+      "hit_full": false,
+      "p1_overlap": true
+    }
+  ],
+  "overlap_row": {
+    "overlap_n": 10,
+    "overlap_acc": 0.0,
+    "fresh_n": 10,
+    "fresh_acc": 0.2
+  },
+  "cypriot_block_descriptive": {
+    "observed_top1": 0.09090909090909091,
+    "p_raw": 0.14592703648175911,
+    "n_pinned": 1,
+    "descriptive_only": true
+  },
+  "searchlog": {
+    "n_eff": 2001,
+    "n_logged": 2001,
+    "n_trials": 1
+  },
+  "banned_modules": [],
+  "gate_verdict": "REFUTE",
+  "wall_clock_s": 1.3
+}
