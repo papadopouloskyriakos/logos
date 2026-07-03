@@ -173,6 +173,40 @@ it is the reason the gate must be pre-registered before anyone runs it.
 
 ---
 
+## Addendum B (2026-07-03, Phase 0.5 — committed BEFORE the power re-run)
+
+Operator decision after the Phase-0 MARGINAL escalation: option (b), unblocked by the legal
+acquisition of Steele & Meißner 2017 (CREWS self-archive, embargo expired 7/2020; SHA-256 in
+`docs/related/_acquisition.md`). This addendum finalizes the DESIGN for a power re-run. **The
+§2 verdict thresholds are UNCHANGED, verbatim, from commit `00fb9ea` — no band, no bound, no
+alpha is edited.** Design changes only:
+
+1. **h = 20 (finalized).** Within the §2 pre-registered sensitivity band {5,15,20}; earned by
+   the Phase-0 sensitivity finding (h=20 power 0.50 at s=3 vs 0.26 at h=10). Train = 31 of 51.
+2. **Toponym-constraint channel added to the simulated design** (allowed features: the
+   provenance-sourced Table 6.4 equations, `toponym_anchors.csv`, queried variant EXCLUDED).
+   Sim model — LB-lexicon word completion: a held-out sign X is **pinned** iff some non-queried
+   toponym LA form contains X and ALL other signs of that form are un-held-out (their values
+   available as train supervision — the labels rule is respected: X's own value never enters
+   X's features). A pinned sign's prediction = the toponym slot's value. Pinning assumes
+   **identification reliability = 1** — a disclosed OPTIMISTIC bound; the final gate prereg
+   must add a toponym-reliability robustness clause (e.g. leave-one-toponym-out).
+3. **Null under the channel:** identical permuted-graph null; the pinning logic runs unchanged
+   in the null pipeline, where its predictions are scored against the permuted assignment (a
+   pin predicting the conventional slot value scores ≈ chance against a permuted "truth") —
+   exactly how the future gate's null treats constraints.
+4. **Two configurations, pre-declared:**
+   - **(a) machinery config** — toponym channel OFF, h=20. The §2 INVALID checks (s=0
+     false-fire ≤ 0.14; s=13 power ≥ 0.90) are evaluated HERE: they validate the permutation
+     machinery in the signal-free world, which config (b) no longer represents (the constraint
+     channel carries real signal by construction even at s=0).
+   - **(b) finalized-design config** — toponym channel ON, h=20. The §2 GO/MARGINAL/NO-GO
+     bands are applied verbatim to THIS curve (it is the ACTUAL design). Detection at low s in
+     (b) is the lexical channel's genuine contribution, reported as such — not a false fire.
+5. Seeds: unchanged scheme (master 20260703, replicate seed = master + 10000·strength_idx +
+   rep); config (b) uses the identical replicate seeds as (a) so the channel's contribution is
+   paired per replicate.
+
 ## 5. Status clause
 
 This document is a **draft**. Binding effect: only §2 (power thresholds, binding on the Phase-0
