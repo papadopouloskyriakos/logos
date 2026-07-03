@@ -72,3 +72,29 @@ pre-observation; fixed and disclosed both times — Phase 1: numpy-bool serializ
 similarity-matrix-vs-rank-order return contract). Fixed at the interface level with regression
 tests covering both crash shapes (see the §4 housekeeping commit); recorded artifacts and
 statistics are untouched.
+
+## The selected anchors under Salgarella 2020 (descriptive; no statistic recomputed; ledger closed)
+
+Provenance metadata about the FROZEN Phase-1/Phase-2 anchor sets, mapped onto the current
+palaeographic authority (Salgarella 2020, Tables 2–3 pp. 35–36; key p. 34: dark blue =
+"homomorphic and also likely homophone", light blue = "homomorphic"):
+
+| anchor (P1 = first five; P2 = all eight) | covered signs | her grade per sign |
+|---|---|---|
+| pa-i-to | PA I TO | all likely-homophone |
+| se-to-i-ja | SE TO I JA | SE TO I likely-homophone; **JA homomorphic-only** |
+| tu-ru-sa | TU RU SA | all likely-homophone |
+| di-ki-te | DI KI TE | all likely-homophone |
+| su-ki-ri-ta | SU KI RI TA | all likely-homophone |
+| ku-ta (P2, Younger) | KU TA | TA likely-homophone; **KU homomorphic-only** |
+| ku-ni-su (P2, Younger) | KU NI SU | NI SU likely-homophone; **KU homomorphic-only** |
+| sa-ra₂ (P2, Younger) | SA RA2 | SA likely-homophone; **RA2 homomorphic-only** |
+
+Ready-to-adapt sentence: *Every sign of every anchor fielded in either attempt is at minimum
+"homomorphic" under Salgarella's (2020) analysis, and 14 of the 17 covered signs carry her
+strongest grade ("homomorphic and also likely homophone"); she separately endorses the five
+S&M place/name equations as "reasonably secure readings" (p. 33) and grades all eleven
+Cypriot-stable signs at the strongest tier — i.e., the gates failed on anchor SUPPLY and
+corpus scale, not on the philological quality of the anchors fielded.* The only recorded
+tension is internal to her treatment (JU: "ju?" in Table 2 vs undeciphered *65 in Table 4),
+and JU was never a selected anchor sign.
