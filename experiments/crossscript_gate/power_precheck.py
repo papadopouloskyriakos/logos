@@ -74,6 +74,26 @@ def load_design():
     return anchors, candidates, U, true_val
 
 
+def nn_report(X, U, assign, train, held):
+    """CANONICAL reporting interface for held-out NN predictions — native-typed, rank-safe.
+
+    Fixes, at the interface level, the two reporting-path crashes disclosed in the Phase-1 and
+    Phase-2 one-shots: (a) `_nn_preds`'s second return is the raw SIMILARITY matrix, which one
+    consumer treated as a rank ORDER (Phase 2: empty `np.where` -> IndexError); (b) numpy
+    scalar types leaking into JSON payloads (Phase 1: `bool_` not serializable). This helper
+    returns plain-Python types and 1-indexed ranks computed correctly from the similarities.
+    `_nn_preds` itself is UNCHANGED (recorded runs depend on it); use THIS for reporting.
+
+    Returns {"preds": list[int], "ranks_of": {held_idx: rank_of(assign[held_idx])},
+             "order": np.ndarray (n_held x n_candidates, int)}.
+    """
+    preds, S = _nn_preds(X, U, assign, train, held)
+    order = np.argsort(-S[held], axis=1)
+    ranks = {int(x): int(np.where(order[j] == int(assign[x]))[0][0]) + 1
+             for j, x in enumerate(held)}
+    return {"preds": [int(p) for p in preds], "ranks_of": ranks, "order": order}
+
+
 def _heldout_acc(X, U, assign, train, held, top_k=1):
     m = Procrustes().fit(X, U, [(i, assign[i]) for i in train])
     S = m.similarity(X, U)
