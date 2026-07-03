@@ -32,3 +32,42 @@
 - Completed-during-window: **0** (still 92 checkpoints; first completions were ~16h out).
 - 5 killed cells (cypriot sz693 ×4 + ugaritic sz2214) re-queue biggest-first on gpu01; stale
   claim files cleared. claude01 is now orchestration/monitoring/rsync/commits ONLY.
+
+## 2026-07-04 ~ (session) — §0–§2 FENCED RELAUNCH on claude01 (16-core cage)
+- §0: no sweep process was alive (evac 2 days prior); **92 checkpoints intact, 0 completed in the
+  gap** (last cell 2026-07-02 00:37); container now presents 32 CPUs. So §2 = fresh relaunch, no
+  live cells to re-pin. gpu01-migration artifacts inert.
+- §1 topology reality: the container's assignable cpuset is **32 NON-CONTIGUOUS host cores**
+  (`0-13,15-18,20-21,37-39,42,44,47,49,51,53-55,57`), NOT 0-31. The human's "16-31 sweep / 0-15
+  agentic" = halving the sorted effective set:
+  - **agentic (protected, low 16): 0-13,15,16**
+  - **sweep fence (high 16): 17,18,20,21,37,38,39,42,44,47,49,51,53,54,55,57**
+- §1 fence PATH: cpuset **not delegated** to uid 1000 (claude-runner) and systemd system-slice
+  creation is Access-denied → **sanctioned FALLBACK**: `taskset -c <high-16>` + `nice -n 19` +
+  `ionice -c3` on the scheduler (affinity inherited by all children). Launcher:
+  `experiments/sufficiency/run_fenced.sh`. Result-neutral (affinity/nice/ionice don't change the
+  integer-DP + seeded-RNG computation) → fenced cells stay byte-identical to the 92.
+- §1 cage PROVEN: throwaway busy procs + all 52 live python sweep tasks show
+  `Cpus_allowed_list = 17-18,20-21,37-39,42,44,47,49,51,53-55,57`; 8× psr sampling → **0 sweep
+  procs on protected cores**. (One transient `bash` from the monitoring harness itself is not
+  sweep compute and is correctly unfenced.)
+- §1 MemoryMax arithmetic: measured per-cell RSS ≈ **1070 MB**; per plan 1070 × 4 cells × 1.5 =
+  **~6.4 GB** would-be cap. Container 32 GB total / 26 GB avail; agentic ~6 GB → ~19 GB headroom.
+  **Enforcement unavailable at uid 1000** (memory controller not delegated) → tracked as a
+  MONITORING threshold (daily high-water), current use ~4.3 GB for 4 cells.
+- §2 relaunched biggest-first, **concurrency 4 = the 16 fenced cores** (4 cells × processes=4).
+  First wave: cypriot sz693 ×4. Scheduler + all children inside the fence.
+- **Makespan (measured fit, 4 lanes): sum ≈ 532 cell-h / 4 ≈ 133 h ≈ 5.5 days** (largest single
+  cell 16.6 h is well under, so lanes stay full). Pessimistic (fence contention from the
+  unfenced agentic system floating onto the high-16 under nice, + p90 tail): ~7–8 days. The fit
+  is from UNFENCED cells, so fenced wall-clock is somewhat longer — 5.5 d is a floor.
+
+## §4 gpu01 benchmark — SKIPPED per the escape clause (reported, not silently dropped)
+gpu01 has **no matching torch/CUDA env** (torch absent; only system python 3.12, no pip/uv/3.11),
+its **GPU is occupied by resident ollama + Plex** (not idle), and it **reboots daily**. Building a
+same-version CUDA torch env + copying corpora exceeds the 20-min window AND cannot yield clean
+idle-GPU timings. Per §4 ("if none exists, report and skip — no cross-version benchmarking") the
+benchmark is skipped; production stays on the fenced CPUs (as §4 mandates regardless). The CSA GPU
+path is already source-documented as orchestration-bound ("H100 ~1% utilised"), so the expected
+`<3× → closure` branch is the likely outcome anyway. Say the word to pursue it and I'll set up the
+env in a dedicated (non-20-min) pass.
