@@ -1,0 +1,12 @@
+{
+  "checklist_rows": 294,
+  "already_in_inventory": 40,
+  "missing_total": 254,
+  "missing_by_class": {
+    "a_ingestible": 8,
+    "c_pending_edition": 26,
+    "b_acquisition_gap": 220
+  },
+  "reverse_diff_inventory_not_in_checklist": 1313,
+  "reverse_note": "expected large: the checklist enumerates POST-GORILA channels, not the whole corpus \u2014 sanity signal only, nothing deleted"
+}
