@@ -1,0 +1,488 @@
+{
+  "source": {
+    "work": "Salgarella, E. 2020. Aegean Linear Script(s): Rethinking the Relationship between Linear A and Linear B. Cambridge: CUP. DOI 10.1017/9781108783477",
+    "local_copy": "corpus/bronze/salgarella_2020/ (per-chapter PDFs with text layers)",
+    "extraction_method": "Category-per-sign read from the cell shading of Tables 2-3 (pp. 35-36); shading extracted programmatically from PDF cell fill colours (dark blue = CMYK 0.495/0.287/0/0, 25 cells; light blue = CMYK 0.172/0.084/0.003/0, 27 cells) and cross-checked against the rendered page images. Category key quoted verbatim from p. 34. AB-number/value correspondences only as printed in her Index of Signs Cited (pp. 412-13)."
+  },
+  "scheme": [
+    {
+      "label": "homomorphic",
+      "definition_quote": "The above results are summarised in Tables 2–4, with LA-LB homomorphic syllabograms highlighted in light blue, while homomorphic and also likely homophone syllabograms in dark blue.",
+      "page": "34 (tables on pp. 35-37)"
+    },
+    {
+      "label": "homomorphic and also likely homophone",
+      "definition_quote": "sign homomorphy is likely to imply homophony, at least in some instances and with an approximation",
+      "page": "32 (category realised as the dark-blue cells of Tables 2-4, key p. 34)"
+    },
+    {
+      "label": "AB (shared 'core')",
+      "definition_quote": "LB = AB (shared ‘core’) + B (subset: a language-specific component) … The former are called ‘AB’ signs since shared with LA and, although in LB these signs were slightly modified, comparable variants are still detectable.",
+      "page": "284 and 283 (Structural Model §4.1.2.1; synoptic Table 24 p. 286)"
+    },
+    {
+      "label": "B (subset: a language-specific component)",
+      "definition_quote": "The latter represent new introductions in LB and appear to be language-bound (Greek only).",
+      "page": "283 (formula p. 284; §4.1.4.1 pp. 291ff.)"
+    },
+    {
+      "label": "A (shared 'core') + x/y/z… (site-specific sign subsets)",
+      "definition_quote": "LAs = A (shared ‘core’) + x/y/z… (site-specific sign subsets)",
+      "page": "284 (§4.1.4.2 pp. 300ff.)"
+    },
+    {
+      "label": "B-subset innovation categories (syllabic subset)",
+      "definition_quote": "New signs introduced in the B-subset belong to the following categories: a) o-series: do, jo, mo, no, qo, so, wo b) e-series: pe c) complex/doublets: a2, ra3, ro2, dwe, dwo, two, pte d) undeciphered: *19, *63, *64, *83, *89",
+      "page": "291"
+    },
+    {
+      "label": "LB undeciphered syllabograms",
+      "definition_quote": "Table 4 LB undeciphered syllabograms",
+      "page": "37 (15 signs listed: *18, *19, *22, *34 (=*35), *47, *49, *56, *63, *64, *65, *79, *82, *83, *86, *89)"
+    },
+    {
+      "label": "Index tripartition: Signs shared between Linear A and B / Linear A-only signs / Linear B-only signs",
+      "definition_quote": "Signs shared between Linear A and B … Linear A-only signs … Linear B-only signs",
+      "page": "412, 413, 415 (Index of Signs Cited section heads)"
+    }
+  ],
+  "counts": {
+    "shared_sign_identity": {
+      "as_printed": "High percentage of shared signs (72% sign identity)",
+      "page": "32",
+      "note": "her n. 90 credits Steele and Meissner 2017 for the figure"
+    },
+    "new_lb_introductions": {
+      "as_printed": "some twenty signs are taken as new introductions in LB",
+      "page": "38"
+    },
+    "core_syllabary_without_la_parallel": {
+      "as_printed": "In the core syllabary seven o-series signs and pe do not seem to have parallel in the LA",
+      "page": "38"
+    },
+    "additional_syllabary_without_la_parallel": {
+      "as_printed": "in the additional syllabary this is the case for three out of the four additional a-vowel sounds (a2 /ha/, a3 /ai/, ra3 /rai/) and some labialised (dwe, dwo, twe, two) and yodised (ro2, pte?) signs",
+      "page": "38"
+    },
+    "cypriot_stable_signs": {
+      "as_printed": "These signs are: a, i, da (corresponding to ta in the Cypriot Syllabary), na, pa, po, ro (corresponding to lo in the Cypriot Syllabary, but the sign represents both ro/lo in LB), sa, se, ti, to.",
+      "page": "34",
+      "derived_count": 11
+    },
+    "gorila_numbering": {
+      "as_printed": "In GORILA V simple signs (‘signes simples’) are numbered AB 01–87, A 100–371, A 400VAS–418VAS … [composite signs] have conventionally been numbered A 501–664 in GORILA (‘signes complexes’) and are unique to LA (with one exception, MA+RU, retained in LB)",
+      "page": "54-55"
+    },
+    "table2_shading_tally_DERIVED_NOT_PRINTED": {
+      "dark_blue_homomorphic_and_likely_homophone": 25,
+      "light_blue_homomorphic": 27,
+      "unshaded_no_la_parallel": 8,
+      "unshaded_list": [
+        "do",
+        "jo",
+        "mo",
+        "no",
+        "pe",
+        "qo",
+        "so",
+        "wo"
+      ],
+      "page": "35 (Table 2)",
+      "note": "tallied by us from cell fills; Salgarella prints no numeric totals for the shading"
+    },
+    "table3_shading_tally_DERIVED_NOT_PRINTED": {
+      "light_blue_homomorphic": 7,
+      "light_list": [
+        "a3",
+        "au",
+        "nwa",
+        "pu2",
+        "ra2",
+        "ta2?",
+        "twe?"
+      ],
+      "unshaded": 7,
+      "unshaded_list": [
+        "a2",
+        "dwe",
+        "dwo",
+        "pte?",
+        "ra3",
+        "ro2",
+        "two"
+      ],
+      "page": "36 (Table 3)",
+      "note": "tallied by us from cell fills; no printed totals"
+    },
+    "lb_undeciphered_syllabograms_DERIVED_NOT_PRINTED": {
+      "count": 15,
+      "page": "37 (Table 4)",
+      "note": "row count of Table 4 as printed"
+    }
+  },
+  "signs": {
+    "A": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "DA": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "DI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "I": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "KI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "MA": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "ME": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "MI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "MU": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "NA": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "NI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "PA": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "PO": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "RI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "RO": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "RU": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "SA": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "SE": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "SI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "SU": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "TA": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "TE": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "TI": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "TO": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "TU": {
+      "grade": "homomorphic and also likely homophone",
+      "page": "35 (Table 2, dark-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "E": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "O": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "U": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "DE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "DU": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "JA": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "JE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "JU": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": "ju?"
+    },
+    "KA": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "KE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "KO": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "KU": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "NE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "NU": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "PI": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "PU": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "QA": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "QE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "QI": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "RA": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "RE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "WA": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "WI": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "ZA": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "ZE": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "ZO": {
+      "grade": "homomorphic",
+      "page": "35 (Table 2, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "AU": {
+      "grade": "homomorphic",
+      "page": "36 (Table 3, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "NWA": {
+      "grade": "homomorphic",
+      "page": "36 (Table 3, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "PU2": {
+      "grade": "homomorphic",
+      "page": "36 (Table 3, light-blue cell; category key p. 34)",
+      "marks": "pu2 (/phu/</bhu/)"
+    },
+    "RA2": {
+      "grade": "homomorphic",
+      "page": "36 (Table 3, light-blue cell; category key p. 34)",
+      "marks": ""
+    },
+    "TA2": {
+      "grade": "homomorphic",
+      "page": "36 (Table 3, light-blue cell; category key p. 34)",
+      "marks": "ta2?"
+    },
+    "TWE": {
+      "grade": "homomorphic",
+      "page": "36 (Table 3, light-blue cell; category key p. 34)",
+      "marks": "twe? (KN)"
+    }
+  },
+  "position_quotes": [
+    {
+      "quote": "sign homomorphy is likely to imply homophony, at least in some instances and with an approximation. A number of arguments have been put forward in support of the validity of this equivalence, which, however, have to be used with due caution.",
+      "page": "32"
+    },
+    {
+      "quote": "as clearly pointed out by Steele and Meissner, in doing so we try to explain an earlier situation (i.e. LA phonology) with a later one (i.e. LB phonology), which is not a methodologically straightforward procedure. Nevertheless, the overall weight of the arguments provided would favour the reliability of applying this method, thus allowing to read LA with at least approximate phonetic values.",
+      "page": "34"
+    },
+    {
+      "quote": "i) phonetic continuity, in view of the legitimacy of the backward projection of LB sound values;",
+      "page": "374"
+    },
+    {
+      "quote": "Although most scholars see this as the most plausible scenario (esp. Steele and Meissner 2017), we cannot be entirely sure this was always the case.",
+      "page": "374 n. 2"
+    }
+  ],
+  "position_classification": {
+    "typology": "assumed / defended / caveated / tested",
+    "verdict": "defended-with-caveat",
+    "rationale": "She argues for the transfer with four explicit arguments (pp. 32-3: context of adaptation, shared sequences/name equations, logogram retention + acrophony, Cretan-Cypriot sign stability) and asserts 'legitimacy of the backward projection' (p. 374), but flags the backward-projection direction as 'not a methodologically straightforward procedure' (p. 34) and concedes 'we cannot be entirely sure this was always the case' (p. 374 n. 2). She defends; she does not test against held-out data."
+  },
+  "lexical_endorsements": [
+    {
+      "item": "pa-i-to 'Phaistos'",
+      "type": "toponym",
+      "quote": "LA and LB share a number of sign sequences, often interpretable as toponyms or anthroponyms (e.g. toponyms pa-i-to ‘Phaistos’, se-to-i-ja, su-ki-ri-ta; anthroponyms da-i-pi-ta, pa-ra-ne)",
+      "page": "33"
+    },
+    {
+      "item": "se-to-i-ja",
+      "type": "toponym",
+      "page": "33"
+    },
+    {
+      "item": "su-ki-ri-ta",
+      "type": "toponym",
+      "page": "33"
+    },
+    {
+      "item": "da-i-pi-ta",
+      "type": "anthroponym",
+      "page": "33"
+    },
+    {
+      "item": "pa-ra-ne",
+      "type": "anthroponym",
+      "page": "33"
+    },
+    {
+      "item": "qa-qa-ru → LB qa-qa-ro; di-de-ru → LB di-de-ro",
+      "type": "anthroponym (morphologically adapted)",
+      "quote": "LA anthroponyms qa-qa-ru and di-de-ru turned into LB qa-qa-ro and di-de-ro … These name equations are a strong piece of evidence providing reasonably secure readings of the homomorphic signs contained in the sequences.",
+      "page": "33"
+    },
+    {
+      "item": "MA+RU = wool (maru/malu)",
+      "type": "lexeme via monogram",
+      "quote": "this sign is a monogram made up with the syllabograms MA and RU and likely to represent the Minoan word for wool (maru/malu), borrowed into Greek as μαλλός ‘wool/fleece’",
+      "page": "33"
+    },
+    {
+      "item": "NI = 'fig' (acrophonic, nikyleon)",
+      "type": "lexeme via acrophony",
+      "quote": "This sign has been shown to be the first syllable of the supposedly Minoan word for ‘fig’ nikyleon … and was therefore read as ‘ni’ by the acrophonic principle.",
+      "page": "33"
+    }
+  ],
+  "not_graded_repo_tokens": {
+    "PA3": "No pa3/AB-number correspondence printed anywhere; her Index lists AB *56 with NO value (p. 412) and Table 4 (p. 37) carries *56 as an LB undeciphered syllabogram. anchors.csv has no ab_number for PA3 either. pending_primary: searched Tables 2-4 (pp. 35-37), §4.1.4.1 (p. 291), Index of Signs Cited (pp. 412-16).",
+    "ZU": "No zu value printed; her Index lists AB *79 with NO value (p. 413) and Table 4 (p. 37) carries *79 as undeciphered. anchors.csv has no ab_number for ZU. pending_primary: same search as PA3."
+  },
+  "notes": {
+    "JU_tension": "Table 2 (p. 35) prints 'ju?' as a light-blue (homomorphic) core-syllabary cell, but Table 4 (p. 37) lists AB *65 among 'LB undeciphered syllabograms' and the Index (p. 412) gives 'AB *65' with no value. Graded here from Table 2 as printed, marks 'ju?'.",
+    "A3_tension": "a3 is shaded light-blue (homomorphic) in Table 3 (p. 36), yet p. 38 counts a3 among the a-vowel signs without LA parallel; her n. 102 (p. 38) notes 'a3 was perhaps already attested by the time of Shaft Grave IV, and therefore an LA source cannot be excluded'. a3/ai is not a repo anchor token.",
+    "WE": "WE is not among the repo's 59 anchor tokens; for the record her Table 2 (p. 35) shades we light blue (homomorphic)."
+  }
+}
