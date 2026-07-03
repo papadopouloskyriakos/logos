@@ -13,6 +13,11 @@ July 2026 (`experiments/crossscript_gate/phase3/anetaki_extraction.md`).
 - The Ariadne Supplements page (ejournals.lib.uoc.gr) and Kanta's publication listings.
 - SigLA (sigla.phis.me) and lineara.xyz for KN Zg 57/58 ingestion (both empty as of
   2026-07-03).
+- Corroboration on file: Kentro 24 (Fall 2021, INSTAP newsletter; vault
+  `corpus/bronze/kentro_newsletters/`, sha 56a6dfe6…) — the Anetaki archaeobotany report states
+  full results appear "as chapters in excavation volumes on Anetaki": the volumes are in
+  preparation as of 2021. Kentro is itself a cheap annual signal: each fall issue may carry
+  Anetaki/publication-status notes.
 
 ## THE TRIGGER — the day KN Zg 57/58 transliterations publish
 
