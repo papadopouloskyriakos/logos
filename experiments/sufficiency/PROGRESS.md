@@ -24,3 +24,11 @@
   claude01's `2.12.1+cpu` on a matching interpreter, the repo, and the gitignored benchmark
   corpora. GPU benchmark (§3) additionally needs a CUDA-enabled torch. **gpu01 lane STOPPED for
   human instruction; claude01 continues uninterrupted.**
+
+## 2026-07-03 ~22:45Z — §0 EVACUATED claude01 (standing policy: ZERO cells on claude01)
+- Scheduler + all 5 cell-subprocesses + their mp children SIGTERM→SIGKILL. Survivors: 0.
+- claude01 load: BEFORE kill load1=31.5 (5 heavy cells); AFTER kill runnable=9/5257 (back to the
+  neo4j+monitoring baseline; load1 average decaying from its tail). Real CPU freed.
+- Completed-during-window: **0** (still 92 checkpoints; first completions were ~16h out).
+- 5 killed cells (cypriot sz693 ×4 + ugaritic sz2214) re-queue biggest-first on gpu01; stale
+  claim files cleared. claude01 is now orchestration/monitoring/rsync/commits ONLY.
