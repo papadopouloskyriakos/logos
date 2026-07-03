@@ -58,6 +58,17 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 - **Salgarella 2019** (*Kadmos* 58:61–92) — palaeography; resolves the hand-stratum question (#19). This IS the site/deposit material the list had pending under "Salgarella 2020 forthcoming."
 - **Corazza et al. 2021** (*JAS* 125:105214) + **Schrijver 2014** (*Kadmos* 53:1–44) — the two independent Direction-D fraction systems (audited 2026-07-01).
 - **Ferrara, Montecchi & Valério**, "Archanes Formula" — cross-script / `a-sa-sa-ra-me` continuity (refuted).
+- **SigLA browse snapshot** (sigla.phis.me, Salgarella & Castellan, dataset+drawings CC
+  BY-NC-SA 4.0) — ✅ **ACQUIRED 2026-07-03** (Channel B of the corpus-completeness audit;
+  landing + about + browse list "802 documents" + site `database.js` + 2 sample document
+  pages only — no bulk per-document scraping) → `corpus/bronze/sigla_browse_2026/`
+  (gitignored; PROVENANCE.md + SHA256SUMS alongside; browse.html SHA-256
+  `c1d25f91dccf334c3cf24b52c1e4a279970cebd3f5c6f377569de076360170cd`). Stated basis: GORILA
+  complete (2021-08-24 changelog) + post-GORILA additions 2026-05-21 (HT Zb 161, KN Za
+  10(a/b)/17/18) and 2026-06-26 (PE 1–2, PK 1, GO 2, KE 6, KH 93, KH 101–105, KN 49/54,
+  PH 54, THE 7–12). Diff vs `corpus_inventory.csv` (1,341): 577 exact-matched, 78
+  side/face-level gaps, 147 wholly absent →
+  `experiments/crossscript_gate/phase3/sweep/fragments/sigla.csv` (225 rows).
 
 ## Open-access — pull directly (URLs verified 2026-06-30 unless marked *confirm*)
 - **Salgarella 2022** "Mix and match: a combinatory (re-)classification of Linear A signs," *TALANTA*
