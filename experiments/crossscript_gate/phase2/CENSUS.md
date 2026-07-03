@@ -172,3 +172,15 @@ transcribe his own wording.
 - **t63 input was null** in the orchestrator's JSON: Table 6.3 and the p.100 criteria
   were extracted directly from the chapter PDF (book pp.100–101 = PDF pp.23–24) for
   this census.
+
+## Addendum (2026-07-03) — Salgarella 2020 ingested; the pending list SETTLED
+
+The monograph (DOI 10.1017/9781108783477; `corpus/bronze/salgarella_2020/`) settles what this
+census listed as pending: homomorphy grades now fill `anchors.csv` (57/59 signs, her Table 2–4
+labels verbatim with pages; PA3 and ZU stay pending — she carries AB *56/*79 as undeciphered,
+Table 4 p.37 / Index pp.412–13). Census enrichment (provenance only, 9 rows): her p.33
+endorsement — toponyms pa-i-to, se-to-i-ja, su-ki-ri-ta; anthroponyms da-i-pi-ta, pa-ra-ne,
+qa-qa-ru→qa-qa-ro, di-de-ru→di-de-ro ("a strong piece of evidence providing reasonably secure
+readings"); MA+RU 'wool'; NI 'fig' (acrophonic) — appended to authority_positions. No NEW
+lexical identifications beyond rows already present (reported honestly). Taxonomy notes:
+docs/related/salgarella-2020-taxonomy.md. The N=2 ledger is untouched; nothing recomputed.

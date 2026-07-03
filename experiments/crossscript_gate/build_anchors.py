@@ -48,6 +48,34 @@ CIT_SALG2020 = ("Salgarella 2020, Aegean Linear Script(s) (CUP) — ABSENT from 
                 "(paywalled, operator-supplies; docs/related/_acquisition.md)")
 
 
+# Authority tensions surfaced by the Salgarella-2020 ingest (recorded, not resolved):
+SALG_TENSIONS = {
+    "JU": ("Salgarella 2020 INTERNAL tension: Table 2 p.35 prints 'ju?' (light-blue, "
+           "homomorphic) while her Table 4 p.37 and Index p.412 carry AB *65 as "
+           "undeciphered/valueless; graded from Table 2 with her '?' preserved."),
+}
+
+
+def _load_salgarella_grades():
+    """Salgarella 2020 per-sign grades (page-cited, verbatim), if the extraction exists.
+    Source: corpus/bronze/salgarella_2020/ via salgarella_2020_grades.json — grades are HER
+    printed category labels; signs she does not grade stay pending_primary."""
+    p = os.path.join(_HERE, "salgarella_2020_grades.json")
+    if not os.path.exists(p):
+        return {}
+    with open(p, encoding="utf-8") as f:
+        return json.load(f).get("signs", {})
+
+
+def _homomorphy(t: str, grades: dict):
+    g = grades.get(t)
+    if not g:
+        return ("pending_primary (searched Salgarella 2020 sign treatment; token not graded "
+                "there)" if grades else "pending_primary")
+    marks = f" {g['marks']}" if g.get("marks") else ""
+    return f"{g['grade']}{marks} (Salgarella 2020, {g['page']})"
+
+
 def _cypriot_status(t: str):
     """(cypriot_stable, citation_detail) for sign token t, from the acquired primary."""
     if t in SM.CYPRIOT_STABLE_11:
@@ -79,6 +107,7 @@ def main() -> int:
     damos_attested_values = sorted(v for v in syll if bd_freq.get(v, 0) >= 1)
 
     covered = set(SM.TOPONYM_COVERED_SIGNS)
+    salg = _load_salgarella_grades()
     rows = []
     for t in a_ab:
         la = a_freq.get(t, 0)
@@ -95,7 +124,7 @@ def main() -> int:
             "cog_attestations": bc_freq.get(t, 0),
             "conventional_value": t.lower(),
             "value_source": "litindex:lb_value_transfer" if in_seed else "data.py bridge convention",
-            "homomorphy_grade": "pending_primary",            # Salgarella 2020 still not on disk
+            "homomorphy_grade": _homomorphy(t, salg),         # Salgarella 2020, page-cited
             "cypriot_stable": cyp,                            # from the ACQUIRED S&M 2017 primary
             "cypriot_detail": cyp_detail,
             "sm2017_tier": SM.SM2017_TIER.get(t, ""),         # first tier entering the S&M grid
@@ -106,7 +135,7 @@ def main() -> int:
             "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
             "citations": (CIT_SEED if in_seed else CIT_BRIDGE) + " || homomorphy: " + CIT_SALG2020
                          + " || cypriot: " + CIT_SM2017,
-            "disagreement_notes": "",                         # none DOCUMENTED in-repo/primary;
+            "disagreement_notes": SALG_TENSIONS.get(t, ""),   # authority tensions recorded,
                                                               # never resolved by convenience
         })
 
@@ -142,8 +171,10 @@ def main() -> int:
         "n_sm2017_tiered": sum(bool(r["sm2017_tier"]) for r in rows),
         "toponym_covered_robust": [r["sign_id"] for r in rows
                                    if r["toponym_covered"] and r["robust_anchor"]],
-        "n_primary_sourced_homomorph": 0,
-        "n_homomorphy_pending_primary": len(rows),
+        "n_primary_sourced_homomorph": sum("pending_primary" not in r["homomorphy_grade"]
+                                           for r in rows),
+        "n_homomorphy_pending_primary": sum("pending_primary" in r["homomorphy_grade"]
+                                            for r in rows),
         "value_space_size": len(syll),
         "value_space_damos_attested": len(damos_attested_values),
         "value_space_unattested_in_damos": sorted(set(syll) - set(damos_attested_values)),
