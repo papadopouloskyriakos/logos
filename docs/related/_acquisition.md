@@ -112,6 +112,22 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
   Dikte, SE-TO-I-JA = Archanes?/Ioukhtas?, KU-*79-NI perhaps ku-do-ni-ja, I-DA = Ida?,
   I-TI-NI-SA = Itanos, DA-U-*49 =? da-wo, KU-NI-SU place not "grain", SA-RA2 = Ayia Triada?,
   WI-NA-DU listed only as a name in a list at KH 5.3, not identified as a toponym).
+  **EXTENDED 2026-07-03** (same vault, corpus-completeness audit, channel `younger-pointer`):
+  four more Wayback `id_` captures of the KU pages —
+  `misctexts.html` (non-HT text list; snapshot 20230805093900, 466,653 B, SHA-256
+  `aa07209ba7ab2a9c00548df44ebb1e1128fa0ceb973dee65b90891e4ae50340d`),
+  `religioustexts.html` (libation-formula table, last update 2013; snapshot 20230609165708,
+  18,838 B, SHA-256 `8fbc9cc744d662512edd8bccbe5abcf856dab7bcd2daeb1921375af3fb743744`),
+  `HTtexts.html` (HT text list; snapshot 20230719090635, 453,959 B, SHA-256
+  `5768f1bddca5b81ee8e8e041bf9fda0af0a5a7be9b5e3ad9a1d3fc8e1b71df92`),
+  `biblio.html` (bibliography, resolves author-year citations; snapshot 20240127144248,
+  72,892 B, SHA-256 `40afd52ebb0e06624168d55765128dd2d46bd6d86d7553d9c368103fec8932b1`).
+  Mined as a SECONDARY pointer to post-GORILA primary editions only (149 flagged items:
+  106 already in `corpus_inventory.csv`, 43 new gap rows →
+  `experiments/crossscript_gate/phase3/sweep/fragments/younger.csv`). Sigla normalizations
+  discovered en route: HAR Zb 1 = inventory TELZb1 (Tel Haror), SA Wa 1 = SAMWa1
+  (Samothrace), POR Zc 1 = POZc1 (orig. PO Zg 1), KY Zc 2 (religioustexts) = KY Za 2,
+  GO 2 = GO2r/GO2v, PE Zc = PEZc4; ZO Za 1 vs inventory ZO1 left AMBIGUOUS in the fragment.
 - **Min Eu, Xu & Cacciafoco 2019** — Linear A vs lexical lists *(confirm venue + OA)*.
 - **KO-RO-NO-WE-SA proceedings** (Ariadne Suppl. 5) — University of Crete repository may host the OA
   volume *(confirm; the Salgarella & Judson chapter is already in hand)*.
