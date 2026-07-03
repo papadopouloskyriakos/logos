@@ -34,6 +34,7 @@ sys.path.insert(0, _ROOT)
 
 from scripts.cross_script import data as D                     # noqa: E402
 from scripts.comparison.litindex import LB_TRANSFER_SIGNS      # noqa: E402
+import steele_meissner_2017 as SM                              # noqa: E402  (page-cited, verified)
 
 MIN_LA_ATTEST = 3           # B.2's min-count for a stable context vector (phono_distributional)
 
@@ -42,11 +43,24 @@ CIT_SEED = ("GORILA (Godart & Olivier 1976-1985); LB values after Ventris 1953 "
 CIT_BRIDGE = ("scripts/cross_script/data.py bridge: GORILA romanization == Unicode LB syllable "
               "value (Unicode chart cross-check); NOT in the litindex seed — needs citation "
               "before graduating to seed status")
-CIT_SM2017 = ("Steele & Meissner 2017, 'Linear A and Linear B: structural and contextual "
-              "concerns', in Understanding Relations Between Scripts (Oxbow), 93-110 — "
-              "ABSENT from repo (all-rights-reserved, not acquired; docs/related/_acquisition.md)")
+CIT_SM2017 = SM.CITATION + " — ACQUIRED 2026-07-03 (docs/related/_acquisition.md)"
 CIT_SALG2020 = ("Salgarella 2020, Aegean Linear Script(s) (CUP) — ABSENT from repo "
                 "(paywalled, operator-supplies; docs/related/_acquisition.md)")
+
+
+def _cypriot_status(t: str):
+    """(cypriot_stable, citation_detail) for sign token t, from the acquired primary."""
+    if t in SM.CYPRIOT_STABLE_11:
+        e = SM.CYPRIOT_STABLE_11[t]
+        det = f"Table 6.2 p.{e['page']} ({e['ab']}; CM {e['cm']}; CS {e['cs_value']})"
+        if "note" in e:
+            det += " — " + e["note"]
+        return "true", det
+    if t in SM.CYPRIOT_CANDIDATES:
+        e = SM.CYPRIOT_CANDIDATES[t]
+        return "candidate", f"§3 p.{e['page']}: \"{e['quote']}\" (candidate, NOT a member)"
+    return "not_listed", ("not in the high-certainty eleven (§3/Table 6.2 pp. 97-99); "
+                          "NOT a sourced claim of instability")
 
 
 def main() -> int:
@@ -64,6 +78,7 @@ def main() -> int:
 
     damos_attested_values = sorted(v for v in syll if bd_freq.get(v, 0) >= 1)
 
+    covered = set(SM.TOPONYM_COVERED_SIGNS)
     rows = []
     for t in a_ab:
         la = a_freq.get(t, 0)
@@ -71,6 +86,7 @@ def main() -> int:
         in_seed = t in LB_TRANSFER_SIGNS
         bridged = damos >= 1
         robust = bridged and la >= MIN_LA_ATTEST
+        cyp, cyp_detail = _cypriot_status(t)
         rows.append({
             "sign_id": t,
             "ab_number": syll.get(t, ""),                     # '' if not an LB Unicode syllable
@@ -79,18 +95,33 @@ def main() -> int:
             "cog_attestations": bc_freq.get(t, 0),
             "conventional_value": t.lower(),
             "value_source": "litindex:lb_value_transfer" if in_seed else "data.py bridge convention",
-            "homomorphy_grade": "pending_primary",            # Salgarella 2020 not on disk
-            "cypriot_stable": "pending_primary",              # Steele & Meissner 2017 not on disk
+            "homomorphy_grade": "pending_primary",            # Salgarella 2020 still not on disk
+            "cypriot_stable": cyp,                            # from the ACQUIRED S&M 2017 primary
+            "cypriot_detail": cyp_detail,
+            "sm2017_tier": SM.SM2017_TIER.get(t, ""),         # first tier entering the S&M grid
+            "toponym_covered": t in covered,                  # in a non-queried Table-6.4 LA form
             "value_space": f"unicode_lb_syllabary_{len(syll)}",
             "maskable": bridged,                              # B-side attested in DĀMOS
             "robust_anchor": robust,                          # maskable AND >= MIN_LA_ATTEST
-            "source_status": "secondary",                     # citation held; primary edition absent
+            "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
             "citations": (CIT_SEED if in_seed else CIT_BRIDGE) + " || homomorphy: " + CIT_SALG2020
                          + " || cypriot: " + CIT_SM2017,
-            "disagreement_notes": "",                         # none DOCUMENTED in-repo; capture
-                                                              # deferred to primary acquisition —
+            "disagreement_notes": "",                         # none DOCUMENTED in-repo/primary;
                                                               # never resolved by convenience
         })
+
+    # toponym seed table (Table 6.4, verified) — provenance-sourced lexical-anchor constraints
+    with open(os.path.join(_HERE, "toponym_anchors.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["lb_form", "la_printed", "la_signs", "la_attestation",
+                                          "lb_attestation", "page", "queried", "note", "citation"])
+        w.writeheader()
+        for tp in SM.TOPONYM_EQUATIONS:
+            w.writerow({"lb_form": tp["lb"], "la_printed": tp["la_printed"],
+                        "la_signs": "-".join(tp["la_signs"]),
+                        "la_attestation": tp["la_attestation"],
+                        "lb_attestation": tp["lb_attestation"], "page": tp["page"],
+                        "queried": tp["queried"], "note": tp.get("note", ""),
+                        "citation": SM.CITATION})
 
     out_csv = os.path.join(_HERE, "anchors.csv")
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
@@ -105,9 +136,14 @@ def main() -> int:
         "min_la_attest": MIN_LA_ATTEST,
         "not_maskable": [r["sign_id"] for r in rows if not r["maskable"]],
         "weak_maskable": [r["sign_id"] for r in rows if r["maskable"] and not r["robust_anchor"]],
-        "n_cypriot_stable_confirmed": 0,
+        "n_cypriot_stable_confirmed": sum(r["cypriot_stable"] == "true" for r in rows),
+        "cypriot_stable_signs": [r["sign_id"] for r in rows if r["cypriot_stable"] == "true"],
+        "cypriot_candidates": [r["sign_id"] for r in rows if r["cypriot_stable"] == "candidate"],
+        "n_sm2017_tiered": sum(bool(r["sm2017_tier"]) for r in rows),
+        "toponym_covered_robust": [r["sign_id"] for r in rows
+                                   if r["toponym_covered"] and r["robust_anchor"]],
         "n_primary_sourced_homomorph": 0,
-        "n_pending_primary": len(rows),
+        "n_homomorphy_pending_primary": len(rows),
         "value_space_size": len(syll),
         "value_space_damos_attested": len(damos_attested_values),
         "value_space_unattested_in_damos": sorted(set(syll) - set(damos_attested_values)),

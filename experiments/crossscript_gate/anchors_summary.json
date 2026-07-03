@@ -15,9 +15,42 @@
     "ZE",
     "ZO"
   ],
-  "n_cypriot_stable_confirmed": 0,
+  "n_cypriot_stable_confirmed": 11,
+  "cypriot_stable_signs": [
+    "A",
+    "DA",
+    "I",
+    "NA",
+    "PA",
+    "PO",
+    "RO",
+    "SA",
+    "SE",
+    "TI",
+    "TO"
+  ],
+  "cypriot_candidates": [
+    "SI"
+  ],
+  "n_sm2017_tiered": 25,
+  "toponym_covered_robust": [
+    "DI",
+    "I",
+    "JA",
+    "KI",
+    "PA",
+    "RI",
+    "RU",
+    "SA",
+    "SE",
+    "SU",
+    "TA",
+    "TE",
+    "TO",
+    "TU"
+  ],
   "n_primary_sourced_homomorph": 0,
-  "n_pending_primary": 59,
+  "n_homomorphy_pending_primary": 59,
   "value_space_size": 74,
   "value_space_damos_attested": 73,
   "value_space_unattested_in_damos": [

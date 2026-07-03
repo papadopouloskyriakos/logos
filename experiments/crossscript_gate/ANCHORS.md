@@ -13,14 +13,21 @@ table in `anchors.csv`, machine summary in `anchors_summary.json`. Nothing under
 - **Robust anchors: 51** — maskable AND ≥3 LA-stream attestations (B.2's `min_count=3` context
   -vector stability floor). Weak (kept in table, excluded from the held-out budget): NWA, QI,
   TWE, ZE, ZO (1–2 LA attestations each).
-- **Cypriot-stable confirmed: 0 — ALL 59 rows `pending_primary`.** Steele & Meißner 2017
-  (*Understanding Relations Between Scripts*, Oxbow, pp. 93–110) is NOT on disk
-  (all-rights-reserved, never acquired — `docs/related/_acquisition.md`). Per the Phase-0 stop
-  rule the Cypriot-stable list is NOT reconstructed from secondary summaries.
+- **Cypriot-stable confirmed: 11** (SETTLED 2026-07-03 from the ACQUIRED primary — S&M 2017
+  Table 6.2 / §3, p. 98; SHA-256-registered PDF, `steele_meissner_2017.py` page-cited):
+  **A, DA, I, NA, PA, PO, RO, SA, SE, TI, TO** — with PO's Cypro-Minoan cell recorded verbatim
+  ("Not attested?") and DA = *ta* / RO = *lo* in the Cypriot Syllabary noted per the chapter.
+  **SI = candidate** ("si, for example, is a good contender", §3 p. 98 — candidate, not
+  member). All other rows `not_listed` (absence from the high-certainty eleven is NOT a
+  sourced claim of instability). **25 rows** carry an S&M tier (Tables 6.2/6.5/6.6/6.11 —
+  Cypriot / place-names / internal-variation / ideographic; the confidence channel).
+- **Toponym anchors (Table 6.4, p. 102, verified):** `toponym_anchors.csv` — five non-queried
+  LA↔LB place-name equations (pa-i-ṭọ, se-to-i-ja, tu-ru-sa, di-ki-te, su-ki-ri-ta; the
+  queried a-tu-ṛị-si-ti variant recorded separately, flagged). **14 robust anchors are
+  toponym-covered**: DI, I, JA, KI, PA, RI, RU, SA, SE, SU, TA, TE, TO, TU.
 - **Primary-sourced homomorphy grades: 0 — ALL 59 rows `pending_primary`.** Salgarella 2020
-  (*Aegean Linear Script(s)*, CUP) is NOT on disk (paywalled, operator-supplies). The repo's
-  Salgarella **2025** digest discusses the A/AB split but is a different work; grades were not
-  invented from it.
+  (*Aegean Linear Script(s)*, CUP) remains NOT on disk (paywalled, operator-supplies); the S&M
+  chapter does not supply a homomorphy grading scheme. Grades were not invented.
 - **Conventional values:** 52 rows carry the litindex `lb_value_transfer` seed (GORILA 1976–85;
   Ventris 1953); 7 rows (AU, PA3, PU2, RA2, TA2, TWE, ZU) carry only the `data.py` bridge
   convention (GORILA romanization == Unicode LB syllable value) and are flagged as needing a
@@ -36,14 +43,14 @@ table in `anchors.csv`, machine summary in `anchors_summary.json`. Nothing under
 
 ## Realistic held-out budget (feeds §3 directly)
 
-With **51 robust anchors** and the Cypriot-stable split axis unavailable until the primary
-source arrives, the realistic design is:
+With **51 robust anchors**:
 
-- **Primary: hold out h = 10 signs (~20% of 51), train on 41** — the same fraction the existing
-  `validate.py` protocol used (80/20 over 55/56 anchors).
-- Sensitivity band for the power analysis: **h ∈ {5, 10, 15, 20}**.
+- **FINALIZED (Phase 0.5, operator decision): h = 20** — earned by the Phase-0 sensitivity
+  finding (h=20 doubled detection power at s=3 vs h=10); train on 31.
 - Candidate space per masked sign: **73** DĀMOS-attested LB syllabary values
   (chance top-1 = 1/73 ≈ 0.0137).
-
-If Steele & Meißner 2017 is acquired, the Cypriot-stable subset would define a *fixed*
-(non-random) held-out axis; its size is unknown until then and is NOT assumed here.
+- **Cypriot-stable axis now enumerable** (primary acquired): the eleven are all robust anchors,
+  so a fixed non-random held-out axis of size 11 exists; whether the final gate uses the fixed
+  axis, random splits, or both is a final-prereg decision.
+- The five non-queried toponym forms define the lexical-constraint channel over the 14 covered
+  robust anchors (see `toponym_anchors.csv`).
