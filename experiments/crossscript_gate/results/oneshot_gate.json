@@ -1,0 +1,466 @@
+{
+  "prereg": {
+    "freeze_commit": "23da20dfba200fc1c623e0ea3ce9ff86b8f8ed9f",
+    "file_sha256": "a74f99e79614128c17615672b664dcacd34c58d407e469557ff41da45daf055f",
+    "zenodo_doi": "10.5281/zenodo.21168887",
+    "zenodo_published": "2026-07-03T14:35:02.478025+00:00"
+  },
+  "run_head_commit": "16f2641ba3f16689416e305f1400a7a21d488222",
+  "config": {
+    "aligner": "procrustes",
+    "d": 24,
+    "window": 2,
+    "cds": 0.75,
+    "emb_seed": 0,
+    "channel": "toponym_pins_addendumB"
+  },
+  "n_trials_per_axis": 1,
+  "seeds": {
+    "selection": 20260710,
+    "null": 20260711,
+    "embeddings": 0
+  },
+  "n_perm": 2000,
+  "alpha": 0.05,
+  "n_axes_confirmatory": 1,
+  "primary": {
+    "held_out": [
+      "DI",
+      "I",
+      "KU",
+      "ME",
+      "NA",
+      "NE",
+      "NI",
+      "NU",
+      "O",
+      "PA",
+      "PO",
+      "QA",
+      "QE",
+      "RA2",
+      "RE",
+      "RI",
+      "TA2",
+      "TE",
+      "WA",
+      "ZA"
+    ],
+    "n_train": 31,
+    "n_pinned": 2,
+    "stats": {
+      "full": {
+        "observed_top1": 0.1,
+        "null_mean": 0.012150000000000001,
+        "null_p95": 0.05,
+        "p_raw": 0.030484757621189407,
+        "corrected_p": 0.030484757621189407,
+        "clears": true,
+        "null_degenerate": false
+      },
+      "loto_pa-i-to": {
+        "observed_top1": 0.1,
+        "null_mean": 0.012150000000000001,
+        "null_p95": 0.05,
+        "p_raw": 0.030484757621189407,
+        "corrected_p": 0.030484757621189407,
+        "clears": true,
+        "null_degenerate": false
+      },
+      "loto_se-to-i-ja": {
+        "observed_top1": 0.05,
+        "null_mean": 0.011600000000000001,
+        "null_p95": 0.05,
+        "p_raw": 0.20439780109945027,
+        "corrected_p": 0.20439780109945027,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "loto_tu-ri-so": {
+        "observed_top1": 0.1,
+        "null_mean": 0.012150000000000001,
+        "null_p95": 0.05,
+        "p_raw": 0.030484757621189407,
+        "corrected_p": 0.030484757621189407,
+        "clears": true,
+        "null_degenerate": false
+      },
+      "loto_di-ka-ta(-jo)": {
+        "observed_top1": 0.1,
+        "null_mean": 0.012150000000000001,
+        "null_p95": 0.05,
+        "p_raw": 0.030484757621189407,
+        "corrected_p": 0.030484757621189407,
+        "clears": true,
+        "null_degenerate": false
+      },
+      "loto_su-ki-ri-ta": {
+        "observed_top1": 0.05,
+        "null_mean": 0.011975,
+        "null_p95": 0.05,
+        "p_raw": 0.20839580209895053,
+        "corrected_p": 0.20839580209895053,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "off": {
+        "observed_top1": 0.0,
+        "null_mean": 0.011425000000000003,
+        "null_p95": 0.05,
+        "p_raw": 1.0,
+        "corrected_p": 1.0,
+        "clears": false,
+        "null_degenerate": false
+      }
+    },
+    "per_sign": [
+      {
+        "sign_id": "DI",
+        "true_value": "DI",
+        "nn_pred": "MU",
+        "nn_rank_of_true": 22,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "I",
+        "true_value": "I",
+        "nn_pred": "E",
+        "nn_rank_of_true": 15,
+        "pinned_by": [
+          "se-to-i-ja"
+        ],
+        "final_hit_full": true
+      },
+      {
+        "sign_id": "KU",
+        "true_value": "KU",
+        "nn_pred": "ME",
+        "nn_rank_of_true": 22,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "ME",
+        "true_value": "ME",
+        "nn_pred": "RA3",
+        "nn_rank_of_true": 30,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "NA",
+        "true_value": "NA",
+        "nn_pred": "RA3",
+        "nn_rank_of_true": 22,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "NE",
+        "true_value": "NE",
+        "nn_pred": "DU",
+        "nn_rank_of_true": 33,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "NI",
+        "true_value": "NI",
+        "nn_pred": "TA2",
+        "nn_rank_of_true": 70,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "NU",
+        "true_value": "NU",
+        "nn_pred": "RU",
+        "nn_rank_of_true": 50,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "O",
+        "true_value": "O",
+        "nn_pred": "QA",
+        "nn_rank_of_true": 21,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "PA",
+        "true_value": "PA",
+        "nn_pred": "O",
+        "nn_rank_of_true": 54,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "PO",
+        "true_value": "PO",
+        "nn_pred": "AU",
+        "nn_rank_of_true": 73,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "QA",
+        "true_value": "QA",
+        "nn_pred": "KI",
+        "nn_rank_of_true": 66,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "QE",
+        "true_value": "QE",
+        "nn_pred": "TA2",
+        "nn_rank_of_true": 20,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "RA2",
+        "true_value": "RA2",
+        "nn_pred": "RO",
+        "nn_rank_of_true": 28,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "RE",
+        "true_value": "RE",
+        "nn_pred": "DI",
+        "nn_rank_of_true": 2,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "RI",
+        "true_value": "RI",
+        "nn_pred": "PA",
+        "nn_rank_of_true": 48,
+        "pinned_by": [
+          "su-ki-ri-ta"
+        ],
+        "final_hit_full": true
+      },
+      {
+        "sign_id": "TA2",
+        "true_value": "TA2",
+        "nn_pred": "QO",
+        "nn_rank_of_true": 29,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "TE",
+        "true_value": "TE",
+        "nn_pred": "PU2",
+        "nn_rank_of_true": 43,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "WA",
+        "true_value": "WA",
+        "nn_pred": "I",
+        "nn_rank_of_true": 37,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "ZA",
+        "true_value": "ZA",
+        "nn_pred": "WE",
+        "nn_rank_of_true": 15,
+        "pinned_by": [],
+        "final_hit_full": false
+      }
+    ],
+    "verdict": "REFUTE_LOTO_FRAGILE"
+  },
+  "secondary_descriptive": {
+    "held_out": [
+      "A",
+      "DA",
+      "I",
+      "NA",
+      "PA",
+      "PO",
+      "RO",
+      "SA",
+      "SE",
+      "TI",
+      "TO"
+    ],
+    "n_train": 40,
+    "n_pinned": 1,
+    "stats": {
+      "full": {
+        "observed_top1": 0.09090909090909091,
+        "null_mean": 0.014272727272727274,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 0.14842578710644677,
+        "corrected_p": 0.14842578710644677,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "loto_pa-i-to": {
+        "observed_top1": 0.09090909090909091,
+        "null_mean": 0.014272727272727274,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 0.14842578710644677,
+        "corrected_p": 0.14842578710644677,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "loto_se-to-i-ja": {
+        "observed_top1": 0.09090909090909091,
+        "null_mean": 0.014272727272727274,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 0.14842578710644677,
+        "corrected_p": 0.14842578710644677,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "loto_tu-ri-so": {
+        "observed_top1": 0.0,
+        "null_mean": 0.013681818181818182,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 1.0,
+        "corrected_p": 1.0,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "loto_di-ka-ta(-jo)": {
+        "observed_top1": 0.09090909090909091,
+        "null_mean": 0.014272727272727274,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 0.14842578710644677,
+        "corrected_p": 0.14842578710644677,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "loto_su-ki-ri-ta": {
+        "observed_top1": 0.09090909090909091,
+        "null_mean": 0.014272727272727274,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 0.14842578710644677,
+        "corrected_p": 0.14842578710644677,
+        "clears": false,
+        "null_degenerate": false
+      },
+      "off": {
+        "observed_top1": 0.0,
+        "null_mean": 0.013681818181818182,
+        "null_p95": 0.09090909090909091,
+        "p_raw": 1.0,
+        "corrected_p": 1.0,
+        "clears": false,
+        "null_degenerate": false
+      }
+    },
+    "per_sign": [
+      {
+        "sign_id": "A",
+        "true_value": "A",
+        "nn_pred": "TWE",
+        "nn_rank_of_true": 36,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "DA",
+        "true_value": "DA",
+        "nn_pred": "TA",
+        "nn_rank_of_true": 40,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "I",
+        "true_value": "I",
+        "nn_pred": "JE",
+        "nn_rank_of_true": 51,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "NA",
+        "true_value": "NA",
+        "nn_pred": "KE",
+        "nn_rank_of_true": 4,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "PA",
+        "true_value": "PA",
+        "nn_pred": "DWE",
+        "nn_rank_of_true": 52,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "PO",
+        "true_value": "PO",
+        "nn_pred": "ME",
+        "nn_rank_of_true": 62,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "RO",
+        "true_value": "RO",
+        "nn_pred": "DE",
+        "nn_rank_of_true": 21,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "SA",
+        "true_value": "SA",
+        "nn_pred": "A3",
+        "nn_rank_of_true": 22,
+        "pinned_by": [
+          "tu-ri-so"
+        ],
+        "final_hit_full": true
+      },
+      {
+        "sign_id": "SE",
+        "true_value": "SE",
+        "nn_pred": "NO",
+        "nn_rank_of_true": 60,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "TI",
+        "true_value": "TI",
+        "nn_pred": "PA",
+        "nn_rank_of_true": 41,
+        "pinned_by": [],
+        "final_hit_full": false
+      },
+      {
+        "sign_id": "TO",
+        "true_value": "TO",
+        "nn_pred": "ME",
+        "nn_rank_of_true": 2,
+        "pinned_by": [],
+        "final_hit_full": false
+      }
+    ],
+    "verdict_descriptive_only": "REFUTE"
+  },
+  "searchlog": {
+    "n_eff": 4012,
+    "n_logged": 4012
+  },
+  "banned_modules_in_process": [],
+  "wall_clock_s": 1.2,
+  "gate_verdict": "REFUTE_LOTO_FRAGILE"
+}
