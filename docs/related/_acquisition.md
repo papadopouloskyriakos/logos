@@ -115,6 +115,21 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 - **Min Eu, Xu & Cacciafoco 2019** — Linear A vs lexical lists *(confirm venue + OA)*.
 - **KO-RO-NO-WE-SA proceedings** (Ariadne Suppl. 5) — University of Crete repository may host the OA
   volume *(confirm; the Salgarella & Judson chapter is already in hand)*.
+- **Del Freo 2024** "Rapport 2016-2021 sur les textes en écriture hiéroglyphique crétoise, en
+  linéaire A et en linéaire B", in Bennet, Karnava & Meißner (eds), *KO-RO-NO-WE-SA* (Ariadne
+  Suppl. 5), Rethymno 2024, pp. 87-124, DOI 10.26248/ariadne.vi.1843 — ✅ **ACQUIRED 2026-07-03**
+  from the journal's own OA platform (CC BY-NC-SA 4.0):
+  <https://ejournals.lib.uoc.gr/Ariadne/article/download/1843/1753> →
+  `corpus/bronze/delfreo_rapport_koronowesa/delfreo_rapport_2016-2021.pdf` (gitignored, not
+  redistributed; 869,596 bytes, SHA-256
+  `404862427dd9faa01855ff6520b6c29da175a236a5dce2878ae7be2ca517deba`; PROVENANCE.md alongside).
+  The backbone find-report for LA finds 2016-2021 (§2, pp. 96-108); feeds
+  `experiments/crossscript_gate/phase3/sweep/fragments/delfreo.csv`. **Predecessor rapports NOT
+  OA** (gap rows in the fragment): Rapport 2011-2015 in *Aegean Scripts* (Incunabula Graeca 105,
+  CNR Edizioni 2017, print 120€; author copy on Academia is login-gated); Rapport 2006-2010 in
+  *Études mycéniennes 2010* (Bibl. di Pasiphae 10, Serra 2012, pp. 3-21, €280); Rapport 2001-2005
+  in *Colloquium Romanum* (Pasiphae 1-2, Serra 2008); Rapport 1991-1995 (Olivier) in *Floreat
+  Studia Mycenaea* (Vienna 1999).
 
 ## Paywalled / print — operator supplies
 - **Salgarella 2025 body** (esp. §7 reading p.35–45, §8 language p.46–53; §4 palaeography p.17–21) + the online appendix (<https://www.cambridge.org/salgarella>). **BLOCKING for any 2nd morphology run.**
