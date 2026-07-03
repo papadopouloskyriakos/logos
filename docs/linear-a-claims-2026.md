@@ -126,3 +126,67 @@ reference for the README's "deliberate opposite" framing.
   sign occurrences**, not the document count (invariant 7, 12).
 - logos will **reproduce the Luo 2019 null** (a neural decipherer fails on Linear A without a
   known cognate) as a baseline milestone — the empirical confirmation of point 6.
+
+## Anetaki sceptre (KN Zg 57/58) claims registry
+
+Two documents about the Anetaki-plot ivory sceptre (KN Zg 57 ring + KN Zg 58 handle, Knossos
+Cult Center — see `corpus/bronze/kanta_etal_2024_anetaki/PROVENANCE.md`). Both are **REGISTRY
+OBJECTS, never evidence about Linear A**: no sign is read from any photograph, and nothing
+below enters the corpus or any signal path except as quarantine rows. Both become
+mechanically gradable the day the official edition (Kanta (ed.), *Anetaki II*, forthcoming)
+publishes its transliteration.
+
+### Rjabchikov 2025 — fringe "decipherment" of KN Zg 57/58 (fringe_flag=true)
+
+- **fringe_flag: true.**
+- **Work (verified 2026-07-03 from the publisher's own open proceedings PDF):** Sergei V.
+  Rjabchikov, "The Decipherment of two Records of Linear A on the Ivory Mirror from Knossos,
+  Crete", in Ivanovskaya & Kuzmina (eds.), *Tendentsii i problemy razvitiya sovremennoy
+  nauki* (IV Int. sci.-pract. conf., Petrozavodsk, 2025-08-18), MTsNP "Novaya Nauka", pp.
+  100–106 (volume ISBN 978-5-00215-841-6). The article names **KN Zg 57 + KN Zg 58**
+  explicitly and cites Kanta et al. 2024 as its only source for the object (his ref. [3]);
+  he reinterprets the sceptre as a priestess's **mirror** and translates both texts as a
+  bull-cult liturgy. Archived: `corpus/bronze/rjabchikov_2025_sceptre/` (gitignored; SHA-256
+  `b4ce36798ad0271c86509a2c8ff54cefe52194131f0a51ee2fd2e06864c40437` + PROVENANCE.md; entry
+  in `docs/related/_acquisition.md`).
+- **(i) The readings predate any official transliteration** — Kanta et al. 2024 prints NO
+  transliterated sequences and *Anetaki II* is unpublished — so every value he printed is a
+  committed, dated claim that is **mechanically gradable against Anetaki II the day it
+  publishes**. logos will grade it as an external hypothesis row (his 15 printed readings,
+  verbatim with page refs, are locked in `litindex.py` `_FRINGE_SCEPTRE_READINGS` +
+  `CITATION_RJABCHIKOV`).
+- **(ii) The readings were produced from PHOTOGRAPHS** — the exact practice this project's
+  extraction rules forbid (`experiments/crossscript_gate/phase3/anetaki_extraction.md`
+  reads no sign from images; GAP_DELTA verdict stays PENDING-FULL-EDITION). His source
+  prints no transliteration, so the sign identifications are necessarily his own readings
+  off published photos — sign identification and value assignment are conflated in a
+  single unaudited step.
+- **Quarantine, not dismissal:** the 15 readings (KN Zg 57: RU, RA, TI, I, KU, WI-RA,
+  KA-DU, RE; KN Zg 58: DI, plus A-KA claimed on both; companion HT 33/HT 29 re-readings:
+  PI, PA, QE, DA-I, A-RE) are indexed as `claim_type="fringe_sceptre_reading"` — DISPUTED/
+  fringe, produced from photographs — **only so no model can return them as discovery**
+  (§C.1/§C.2). They are never accepted readings, and per invariant 3 they are guilty until
+  Anetaki II proves otherwise.
+
+### Chiapello 2024 — pre-publication prediction on the ivory circle (prediction registry, no fringe judgment)
+
+- **Work (verified 2026-07-03 from the archived public page):** Duccio Chiapello,
+  "Deductions on an unknown find surrounded by mystery: the Linear A inscribed ivory circle
+  found at Knossos", self-posted on Academia.edu
+  (<https://www.academia.edu/114586901/>), **posted 2024-02-07** (page `created_at`) —
+  before the Kanta et al. 2024 overview appeared and before the 2025 media wave. Archived:
+  `corpus/bronze/prepub_prediction_2024_ivory_circle/` (Wayback capture 20260703173735 of
+  the public page, SHA-256
+  `e52e31f9be01290d241f837e9acace8ce9048a61322f1bff242f255503cf92b5`; the PDF itself is
+  login-gated on Academia.edu and was NOT acquired — gap recorded in PROVENANCE.md).
+- **The committed, falsifiable prediction (abstract, verbatim):** (1) "This inscription,
+  when published, will show that the similarities between Linear A and Linear B are much
+  greater than hitherto assumed"; (2) "This inscription will lead to a rapid reappraisal of
+  the hypothesis that Linear A encodes a form of Greek."
+- **Status:** a dated pre-publication prediction in exactly the epistemic shape logos
+  rewards — committed before the evidence, **scorable when Anetaki II lands** (prediction 1
+  is directly checkable against the edition's sign inventory/parallels; prediction 2 is a
+  sociological claim about reception, gradable only loosely). This entry records the
+  prediction; it attaches **no fringe judgment** and does not endorse the "Minoan Greek"
+  hypothesis (which remains one capped family among several; the benchmark-favored prior is
+  ISOLATE, per Salgarella 2025 §8).

@@ -14,6 +14,33 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
   (handle, accounting + six-fraction sequence). **Prints NO transliterated sequences** — full
   edition = Kanta (ed.) forthcoming, *Anetaki II* (THE standing supply acquisition for any
   Phase-3). Extraction: `experiments/crossscript_gate/phase3/anetaki_extraction.md`.
+- **Rjabchikov 2025** "The Decipherment of two Records of Linear A on the Ivory Mirror from
+  Knossos, Crete", in *Tendentsii i problemy razvitiya sovremennoy nauki* (IV conf.,
+  Petrozavodsk 2025-08-18), MTsNP "Novaya Nauka", pp. 100–106 — ✅ **ACQUIRED 2026-07-03** as
+  a **REGISTRY OBJECT (fringe), never evidence**: full proceedings volume from the
+  publisher's own open archive
+  <https://sciencen.org/assets/Kontent/Konferencii/Arhiv-konferencij/KOF-1370.pdf> →
+  `corpus/bronze/rjabchikov_2025_sceptre/KOF-1370_novaya_nauka_2025_proceedings.pdf`
+  (gitignored; 2,001,176 B, SHA-256
+  `b4ce36798ad0271c86509a2c8ff54cefe52194131f0a51ee2fd2e06864c40437`; PROVENANCE.md
+  alongside, plus the Wayback copy of his Academia.edu record, SHA-256
+  `f733c2e607ebb416d112ac18e0a8418ef449eaee1aa98a8eb0b4a2ab4930067a`). Fringe
+  "decipherment" of the Anetaki sceptre **KN Zg 57/58 from photographs, before any official
+  transliteration**; all 15 printed readings quarantined in `litindex.py`
+  (`fringe_sceptre_reading`); registry entry in `linear-a-claims-2026.md` (fringe_flag=true).
+- **Chiapello 2024** "Deductions on an unknown find surrounded by mystery: the Linear A
+  inscribed ivory circle found at Knossos", self-posted Academia.edu 2024-02-07
+  (<https://www.academia.edu/114586901/>) — ✅ **PAGE ARCHIVED 2026-07-03** as a **REGISTRY
+  OBJECT (pre-publication prediction)**: the public page (author + date + abstract with the
+  two hypotheses: greater A/B similarity than assumed; reappraisal of a Greek reading of
+  Linear A) via Wayback snapshot 20260703173735 →
+  `corpus/bronze/prepub_prediction_2024_ivory_circle/academia_page_wayback_20260703.html`
+  (gitignored; 199,054 B, SHA-256
+  `e52e31f9be01290d241f837e9acace8ce9048a61322f1bff242f255503cf92b5`; PROVENANCE.md
+  alongside). **GAP: the PDF is Academia.edu login-gated and was NOT acquired** (no mirrors
+  used; operator with an account can supply it). Registry entry in
+  `linear-a-claims-2026.md` (prediction only, no fringe judgment); scorable when
+  *Anetaki II* lands.
 - **Braović, Krstinić, Štula & Ivanda 2024**, *Comput. Linguistics* 50(2):725–779 — `docs/related/braovic-2024.md`. Open: <https://aclanthology.org/2024.cl-2.7.pdf>.
 - **Salgarella 2025** *Writing in Bronze Age Crete* — **BODY ACQUIRED + ANALYZED 2026-07-01** (operator supplied the purchased EPUB; §7/§8 verified). No longer blocking. `docs/related/salgarella-2025.md`.
 - **Salgarella & Judson 2024** "Signs of the times?" (KO-RO-NO-WE-SA pp. 359–379) — drove `prereg-morphology-stratification-addendum-2026-06-30.md`.

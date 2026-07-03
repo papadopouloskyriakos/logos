@@ -106,6 +106,33 @@ CITATION_DIMINO = (
     "NOT mention *301 or cite Di Mino; it rejects the Semitic-ETYMOLOGY method category-wide (vocabulary "
     "'not probative'; loanwords confound). Indexed to QUARANTINE, NEVER as an accepted reading."
 )
+CITATION_RJABCHIKOV = (
+    "S. V. Rjabchikov, 'The Decipherment of two Records of Linear A on the Ivory Mirror from "
+    "Knossos, Crete', in I. I. Ivanovskaya & L. A. Kuzmina (eds.), Tendentsii i problemy razvitiya "
+    "sovremennoy nauki (IV Int. sci.-pract. conf., Petrozavodsk, 18 Aug 2025), Petrozavodsk: MTsNP "
+    "'Novaya Nauka', 2025, pp. 100-106 (ISBN 978-5-00215-841-6). FRINGE + DISPUTED, self-attributed "
+    "'decipherment' of the Anetaki sceptre (KN Zg 57 ivory ring + KN Zg 58 handle, Knossos Cult "
+    "Center) in a general-science conference series with no Aegean-script peer review. The readings "
+    "were produced from PHOTOGRAPHS: his only cited source for the object (his ref. [3]) is Kanta et "
+    "al. 2024 (KO-RO-NO-WE-SA), which prints NO transliterated sequences — the exact practice logos's "
+    "extraction rules forbid. They PREDATE any official transliteration (Kanta (ed.), Anetaki II, "
+    "forthcoming), so they are mechanically gradable against Anetaki II the day it publishes. His "
+    "printed transliterations, verbatim: KN Zg 57 fragment 1 (p.102): 'VESSEL ru VESSEL ra VESSEL Ti "
+    "VESSEL ru VESSEL L2 (damaged segment) FIGS (damaged segment) VESSEL (damaged segment)' -> 'The "
+    "numerous vases, the separate vases, the vases (dedicated to) the god Ti (Di), the numerous "
+    "vases, vase with a certain volume, ..., the figs ... vase...'; KN Zg 57 fragment 2 (p.103): 'I "
+    "Ku wi-ra ka-du (damaged segment) WHEAT WHEAT re (damaged segment)' -> 'The mighty Bull is going "
+    "... the two measures of the wheat.'; KN Zg 58 (p.104): 'Ku Di...' -> '(It was) the Bull of the "
+    "(god) Di (Ti)...'; root a-ka claimed detected on BOTH KN Zg 57 and KN Zg 58 (p.104). Same paper "
+    "also re-reads HT 33 (p.102: '... VESSEL Ti... EGYPT 90 PEACHES pi 100 pa3 qe 100') and HT 29 "
+    "(p.104: 'A-re da-i 2 ka-du' -> '(The goddess) Ara (Ariadne) put the two measures of the "
+    "wheat.'). Method asserted: 'structural and contrastive linguistics' (ad-hoc pan-IE/Anatolian "
+    "comparisons: Hittite, Luwian, Lycian, Lydian, Old Indian, Tocharian, Armenian, Russian, German). "
+    "Archived: corpus/bronze/rjabchikov_2025_sceptre/ (publisher's open proceedings PDF, SHA-256 "
+    "b4ce36798ad0271c86509a2c8ff54cefe52194131f0a51ee2fd2e06864c40437). Indexed ONLY to QUARANTINE — "
+    "a model returning any of these values is regurgitating a published fringe claim, never "
+    "discovering; NEVER an accepted reading."
+)
 CITATION_SPICES = (
     "E. Salgarella, F. Bellinato & S. Ferrara, 'On Aegean spices: decipherment prospects on Linear A "
     "and B spice-related signs', Kadmos 64(1/2):29-44 (2025), doi:10.1515/kadmos-2025-0002. The "
@@ -130,7 +157,11 @@ SEED_NOTE = (
     "i-*301='gives/dedicates' (endorsed Salgarella 2025 §7.2) + the Salgarella 2025 §8 affix inventory "
     "(-TE/-TI 'from/of' Valerio; I-/J- 'to/at' Duhoux; -JA adjectival Younger; -RU/-RE ~ Greek -os "
     "Steele&Meissner; -A feminine), indexed so a model cannot regurgitate them as morphology discovery. "
-    "Unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. All disputed readings are "
+    "Unverifiable candidates (qa-pa=kappu, a Semitic ki-ro) were OMITTED. Added 2026-07-03: fifteen "
+    "FRINGE readings from Rjabchikov 2025 (the Anetaki sceptre KN Zg 57/58 'decipherment' plus the "
+    "same paper's HT 33/HT 29 re-readings; claim_type fringe_sceptre_reading) — produced from "
+    "photographs BEFORE any official transliteration, indexed ONLY to quarantine and mechanically "
+    "gradable against Anetaki II on publication. All disputed readings are "
     "indexed to CATCH regurgitation of them, never as accepted readings. A sign absent here is treated "
     "as L_not_indexed (the dangerous direction); EXPAND toward completeness, never pad with uncertain "
     "attributions."
@@ -297,6 +328,64 @@ _STRUCTURAL_READINGS = (
 )
 
 
+# FRINGE readings of the Anetaki sceptre (KN Zg 57/58) + companion re-readings from the SAME paper
+# (Rjabchikov 2025 — see CITATION_RJABCHIKOV). These are HIS claims, recorded verbatim with page
+# refs, produced from PHOTOGRAPHS before any official transliteration exists; indexed ONLY to
+# quarantine (a model returning them is regurgitating, never discovering) and to make the touched
+# signs L_known. Mechanically gradable against Anetaki II on publication. (sign, value, source, year, note)
+_FRINGE_SCEPTRE_READINGS = (
+    ("RU", "abundance/many", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.102 (KN Zg 57 frag 1): Ru 'abundance; to multiply; to add; many; numerous', cf. "
+     "Hittite lulu- 'abundance'. DISPUTED/fringe; from photographs; quarantine only."),
+    ("RA", "separated/other", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.102 (KN Zg 57 frag 1): Ra 'separated; separately; other', cf. Hittite la- 'to "
+     "detach', Old Indian rah. DISPUTED/fringe; from photographs; quarantine only."),
+    ("TI", "god Ti/Di", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov pp.101-102 (KN Zg 57 frag 1): 'VESSEL Ti' = vases dedicated to the god Ti (Di), an "
+     "incarnation of the bright-heavens god as a Bull, cf. Mycenaean Diw- 'Zeus'. DISPUTED/fringe; "
+     "from photographs; quarantine only."),
+    ("I", "to go/come", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.103 (KN Zg 57 frag 2): I 'to go; to come', cf. Hittite iya-, Luwian i-, Old "
+     "Indian i. DISPUTED/fringe; from photographs; quarantine only."),
+    ("KU", "bull/cow", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.103 (KN Zg 57 frag 2; also KN Zg 58 'Ku Di...'): Ku 'bull; cow', cf. Old Indian "
+     "go, Armenian kov, Avestan gava, Tocharian keu/ko, German Kuh. DISPUTED/fringe; from "
+     "photographs; quarantine only."),
+    ("WI-RA", "hero/warrior/power", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.103 (KN Zg 57 frag 2): wi-ra, root Wir- 'hero; warrior; brave man; power', cf. "
+     "Old Indian vira. DISPUTED/fringe; from photographs; quarantine only."),
+    ("KA-DU", "wheat", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.103 (KN Zg 57 frag 2; also HT 29): ka-du, root Kad- 'wheat', cf. Hittite kant- "
+     "'wheat' and the Minoan name Ku-ka-da-ro. DISPUTED/fringe; from photographs; quarantine only."),
+    ("RE", "pottery/drink", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.104 (KN Zg 57 frag 2): Re (ri) 'pottery' ('drink'), cf. Luwian elhai-, Hittite "
+     "lahu- 'to pour', Greek leibo, Latin libare. DISPUTED/fringe; from photographs; quarantine only."),
+    ("DI", "god Di/Ti", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.104 (KN Zg 58): 'Ku Di...' -> '(It was) the Bull of the (god) Di (Ti)...'. "
+     "DISPUTED/fringe; from photographs; quarantine only."),
+    ("A-KA", "to die/be killed", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.104: root a-ka claimed detected on BOTH KN Zg 57 and KN Zg 58, Aka 'to die; to "
+     "be killed; to be destroyed', cf. Hittite ak-/ek-; tied to the sacrifice of the sacred Bull. "
+     "DISPUTED/fringe; from photographs; quarantine only."),
+    # Companion re-readings printed in the SAME paper on already-published tablets (HT 33, HT 29) —
+    # indexed with the same quarantine so none of the paper's values can pass as discovery.
+    ("PI", "to give", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov pp.102-103 (HT 33): Pi 'to give', cf. Hittite pi-. DISPUTED/fringe; quarantine only."),
+    ("PA", "to protect/guard", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.103 (HT 33, his 'pa3'): Pa 'to protect; to guard; protected; kept', cf. Hittite "
+     "pahsanu-, Old Indian pa. DISPUTED/fringe; quarantine only."),
+    ("QE", "and/also", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.103 (HT 33): Qe 'and; also', cf. Lycian ke, Lydian -k. DISPUTED/fringe; "
+     "quarantine only."),
+    ("DA-I", "to put", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.104 (HT 29): Dai 'to put', cf. Hittite dai-. DISPUTED/fringe; quarantine only."),
+    ("A-RE", "goddess Ara/Ariadne", CITATION_RJABCHIKOV, 2025,
+     "Rjabchikov p.104 (HT 29): 'A-re da-i 2 ka-du' -> '(The goddess) Ara (Ariadne) put the two "
+     "measures of the wheat.' Ara (Jara etc.) = supreme goddess, Greek Ariadne (p.101). "
+     "DISPUTED/fringe; quarantine only."),
+)
+
+
 def _build_seed() -> List[LitClaim]:
     """Assemble the embedded seed deterministically from the cited constants."""
     claims: List[LitClaim] = []
@@ -330,6 +419,11 @@ def _build_seed() -> List[LitClaim]:
         claims.append(
             LitClaim(sign=sign, proposed_value=value, source=source, year=year,
                      claim_type="structural_reading", note=note)
+        )
+    for sign, value, source, year, note in _FRINGE_SCEPTRE_READINGS:
+        claims.append(
+            LitClaim(sign=sign, proposed_value=value, source=source, year=year,
+                     claim_type="fringe_sceptre_reading", note=note)
         )
     # deterministic order: sort by (claim_type, sign) so the seed is byte-stable regardless of
     # construction order — a control must be reproducible.
@@ -383,7 +477,7 @@ def dump_index(claims: Sequence[LitClaim], path: str) -> None:
         "_seed_nonexhaustive": SEED_NONEXHAUSTIVE,
         "_seed_note": SEED_NOTE,
         "_citations": [CITATION_DESIGN, CITATION_GORILA, CITATION_VENTRIS, CITATION_ACCOUNTING,
-                       CITATION_GORDON, CITATION_BEST, CITATION_DIMINO],
+                       CITATION_GORDON, CITATION_BEST, CITATION_DIMINO, CITATION_RJABCHIKOV],
         "n_claims": len(claims),
         "claims": [asdict(c) for c in claims],
     }
