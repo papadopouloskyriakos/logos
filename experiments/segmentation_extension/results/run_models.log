@@ -1,0 +1,187 @@
+[phase 0] PYP sanity checks
+  sanity: {'planted_lexicon_recovered': True, 'd0_fixed_hypers_insample_f1': 0.5684, 'dp_baseline_insample_f1': 0.3559}
+[phase 1] PYP unigram Gibbs: 3 chains x 52 folds
+  PYP done in 338.8s; rhat max=1.494 median=1.161
+[phase 2] tiny BiLSTM: graded + 2 stability seeds x 52 folds
+  neural done in 112.6s
+[phase 3] Morfessor tuned corpusweight x 52 folds
+  morfessor done in 23.9s
+[phase 4] site-clustered bootstrap grading
+{
+  "micro": {
+    "dp_unigram": {
+      "micro_f1": 0.4361,
+      "micro_precision": 0.3724,
+      "micro_recall": 0.526,
+      "tp": 950,
+      "fp": 1601,
+      "fn": 856
+    },
+    "pyp_unigram": {
+      "micro_f1": 0.559,
+      "micro_precision": 0.4083,
+      "micro_recall": 0.8859,
+      "tp": 1600,
+      "fp": 2319,
+      "fn": 206
+    },
+    "neural_bilstm": {
+      "micro_f1": 0.6217,
+      "micro_precision": 0.6637,
+      "micro_recall": 0.5847,
+      "tp": 1056,
+      "fp": 535,
+      "fn": 750
+    },
+    "morfessor_tuned": {
+      "micro_f1": 0.1564,
+      "micro_precision": 0.3563,
+      "micro_recall": 0.1002,
+      "tp": 181,
+      "fp": 327,
+      "fn": 1625
+    },
+    "neural_bilstm_s20260704": {
+      "micro_f1": 0.6608,
+      "micro_precision": 0.5949,
+      "micro_recall": 0.7431,
+      "tp": 1342,
+      "fp": 914,
+      "fn": 464
+    },
+    "neural_bilstm_s20260705": {
+      "micro_f1": 0.6621,
+      "micro_precision": 0.6354,
+      "micro_recall": 0.691,
+      "tp": 1248,
+      "fp": 716,
+      "fn": 558
+    },
+    "random": {
+      "micro_f1": 0.3888,
+      "micro_precision": 0.4052,
+      "micro_recall": 0.3738,
+      "tp": 675,
+      "fp": 991,
+      "fn": 1131
+    }
+  },
+  "bootstrap_vs_random": {
+    "B": 4000,
+    "seed": 20260703,
+    "n_sites": 52,
+    "reference": "random",
+    "entries": {
+      "dp_unigram": {
+        "gap_mean": 0.05183088466287099,
+        "gap_ci95": [
+          0.02036900368921781,
+          0.09905365389420294
+        ],
+        "gap_ci9833": [
+          0.012427525306545267,
+          0.10751137290398988
+        ],
+        "p_gap_gt_0": 0.9985,
+        "f1_ci95": [
+          0.37821883778142684,
+          0.4751792080589706
+        ]
+      },
+      "pyp_unigram": {
+        "gap_mean": 0.16157133467898743,
+        "gap_ci95": [
+          0.09818515278189541,
+          0.18911038016296064
+        ],
+        "gap_ci9833": [
+          0.08233204371622652,
+          0.1930457413899795
+        ],
+        "p_gap_gt_0": 1.0,
+        "f1_ci95": [
+          0.43727013226955297,
+          0.5888064880940962
+        ]
+      },
+      "neural_bilstm": {
+        "gap_mean": 0.23679713811434544,
+        "gap_ci95": [
+          0.1882146842801447,
+          0.32206584355262374
+        ],
+        "gap_ci9833": [
+          0.17159807275111927,
+          0.3361916579202907
+        ],
+        "p_gap_gt_0": 1.0,
+        "f1_ci95": [
+          0.5297862615375498,
+          0.6991410915945213
+        ]
+      },
+      "morfessor_tuned": {
+        "gap_mean": -0.20577261149227286,
+        "gap_ci95": [
+          -0.2907012429869337,
+          -0.07541344438601015
+        ],
+        "gap_ci9833": [
+          -0.2983724945654185,
+          -0.04704361073440887
+        ],
+        "p_gap_gt_0": 0.001,
+        "f1_ci95": [
+          0.10984532962235061,
+          0.266412942033803
+        ]
+      },
+      "neural_bilstm_s20260704": {
+        "gap_mean": 0.27387345857426476,
+        "gap_ci95": [
+          0.23438999693636942,
+          0.32355012453753945
+        ],
+        "gap_ci9833": [
+          0.2175165296583815,
+          0.3386869421418821
+        ],
+        "p_gap_gt_0": 1.0,
+        "f1_ci95": [
+          0.5836588580177108,
+          0.6971588812518371
+        ]
+      },
+      "neural_bilstm_s20260705": {
+        "gap_mean": 0.2649053188416278,
+        "gap_ci95": [
+          0.19195610092989088,
+          0.29639434420318
+        ],
+        "gap_ci9833": [
+          0.17637008902327375,
+          0.30767701864342545
+        ],
+        "p_gap_gt_0": 1.0,
+        "f1_ci95": [
+          0.5363509209927696,
+          0.6901004286263659
+        ]
+      }
+    }
+  },
+  "bootstrap_vs_dp_unigram": {
+    "B": 4000,
+    "seed": 20260703,
+    "n_sites": 52,
+    "reference": "dp_unigram",
+    "entries": {
+      "pyp_unigram": {
+        "gap_mean": 0.10974045001611644,
+        "gap_ci95": [
+          0.05142904777507092,
+          0.14994178553444654
+        ],
+        "gap_ci9833": [
+          0.041077
+wall_clock: {'pyp_s': 338.8, 'neural_s': 112.6, 'morfessor_s': 23.9}

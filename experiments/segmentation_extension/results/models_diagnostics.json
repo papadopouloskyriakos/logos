@@ -1,0 +1,1239 @@
+{
+  "sanity": {
+    "planted_lexicon_recovered": true,
+    "d0_fixed_hypers_insample_f1": 0.5684,
+    "dp_baseline_insample_f1": 0.3559
+  },
+  "pyp": {
+    "(unknown)": {
+      "rhat": 1.1433,
+      "post_mean": {
+        "d": 0.3699,
+        "alpha": 26.4282,
+        "N": 4978.0,
+        "T": 430.0
+      },
+      "chain_seeds": [
+        20261700,
+        20262700,
+        20263700
+      ],
+      "train_f1": 0.5356
+    },
+    "Apodoulou": {
+      "rhat": 1.2526,
+      "post_mean": {
+        "d": 0.4021,
+        "alpha": 20.9248,
+        "N": 4971.46,
+        "T": 433.6067
+      },
+      "chain_seeds": [
+        20261701,
+        20262701,
+        20263701
+      ],
+      "train_f1": 0.5303
+    },
+    "Arkhalkhori": {
+      "rhat": 1.2067,
+      "post_mean": {
+        "d": 0.4055,
+        "alpha": 20.6962,
+        "N": 4877.58,
+        "T": 430.0067
+      },
+      "chain_seeds": [
+        20261702,
+        20262702,
+        20263702
+      ],
+      "train_f1": 0.5472
+    },
+    "Crete": {
+      "rhat": 1.1002,
+      "post_mean": {
+        "d": 0.3916,
+        "alpha": 22.6709,
+        "N": 4960.0933,
+        "T": 432.6733
+      },
+      "chain_seeds": [
+        20261703,
+        20262703,
+        20263703
+      ],
+      "train_f1": 0.5388
+    },
+    "Fourni": {
+      "rhat": 1.1027,
+      "post_mean": {
+        "d": 0.3852,
+        "alpha": 23.7443,
+        "N": 4999.6,
+        "T": 427.78
+      },
+      "chain_seeds": [
+        20261704,
+        20262704,
+        20263704
+      ],
+      "train_f1": 0.5387
+    },
+    "Gournia": {
+      "rhat": 1.0284,
+      "post_mean": {
+        "d": 0.394,
+        "alpha": 21.9234,
+        "N": 4974.8267,
+        "T": 431.5533
+      },
+      "chain_seeds": [
+        20261705,
+        20262705,
+        20263705
+      ],
+      "train_f1": 0.538
+    },
+    "Haghia Triada": {
+      "rhat": 1.2533,
+      "post_mean": {
+        "d": 0.3498,
+        "alpha": 25.9574,
+        "N": 2330.0267,
+        "T": 295.9733
+      },
+      "chain_seeds": [
+        20261706,
+        20262706,
+        20263706
+      ],
+      "train_f1": 0.4557
+    },
+    "Haghios Stehanos": {
+      "rhat": 1.168,
+      "post_mean": {
+        "d": 0.4061,
+        "alpha": 20.2697,
+        "N": 4995.9,
+        "T": 433.7267
+      },
+      "chain_seeds": [
+        20261707,
+        20262707,
+        20263707
+      ],
+      "train_f1": 0.5382
+    },
+    "Iouktas": {
+      "rhat": 1.1509,
+      "post_mean": {
+        "d": 0.4072,
+        "alpha": 19.9942,
+        "N": 4942.2533,
+        "T": 426.4533
+      },
+      "chain_seeds": [
+        20261708,
+        20262708,
+        20263708
+      ],
+      "train_f1": 0.5402
+    },
+    "Kalo Chorafi": {
+      "rhat": 1.1982,
+      "post_mean": {
+        "d": 0.4002,
+        "alpha": 21.1136,
+        "N": 4984.5067,
+        "T": 434.34
+      },
+      "chain_seeds": [
+        20261709,
+        20262709,
+        20263709
+      ],
+      "train_f1": 0.548
+    },
+    "Kamilari": {
+      "rhat": 1.2507,
+      "post_mean": {
+        "d": 0.4096,
+        "alpha": 20.3185,
+        "N": 4980.7733,
+        "T": 438.4267
+      },
+      "chain_seeds": [
+        20261710,
+        20262710,
+        20263710
+      ],
+      "train_f1": 0.5467
+    },
+    "Kannia": {
+      "rhat": 1.202,
+      "post_mean": {
+        "d": 0.4018,
+        "alpha": 20.5612,
+        "N": 4995.5067,
+        "T": 431.7867
+      },
+      "chain_seeds": [
+        20261711,
+        20262711,
+        20263711
+      ],
+      "train_f1": 0.5378
+    },
+    "Kardamoutsa": {
+      "rhat": 1.2455,
+      "post_mean": {
+        "d": 0.4005,
+        "alpha": 21.475,
+        "N": 4990.5667,
+        "T": 430.9667
+      },
+      "chain_seeds": [
+        20261712,
+        20262712,
+        20263712
+      ],
+      "train_f1": 0.5399
+    },
+    "Kea": {
+      "rhat": 1.2405,
+      "post_mean": {
+        "d": 0.4023,
+        "alpha": 20.9073,
+        "N": 4983.6733,
+        "T": 436.5667
+      },
+      "chain_seeds": [
+        20261713,
+        20262713,
+        20263713
+      ],
+      "train_f1": 0.5336
+    },
+    "Khania": {
+      "rhat": 1.1388,
+      "post_mean": {
+        "d": 0.4178,
+        "alpha": 18.4415,
+        "N": 4480.2867,
+        "T": 403.96
+      },
+      "chain_seeds": [
+        20261714,
+        20262714,
+        20263714
+      ],
+      "train_f1": 0.5169
+    },
+    "Knossos": {
+      "rhat": 1.2968,
+      "post_mean": {
+        "d": 0.4182,
+        "alpha": 19.9874,
+        "N": 4712.4067,
+        "T": 436.44
+      },
+      "chain_seeds": [
+        20261715,
+        20262715,
+        20263715
+      ],
+      "train_f1": 0.5492
+    },
+    "Kophinas": {
+      "rhat": 1.4275,
+      "post_mean": {
+        "d": 0.4189,
+        "alpha": 19.0264,
+        "N": 4970.18,
+        "T": 436.06
+      },
+      "chain_seeds": [
+        20261716,
+        20262716,
+        20263716
+      ],
+      "train_f1": 0.5384
+    },
+    "Kythera": {
+      "rhat": 1.2545,
+      "post_mean": {
+        "d": 0.4067,
+        "alpha": 20.3528,
+        "N": 5000.08,
+        "T": 432.0
+      },
+      "chain_seeds": [
+        20261717,
+        20262717,
+        20263717
+      ],
+      "train_f1": 0.5359
+    },
+    "Larani": {
+      "rhat": 1.0261,
+      "post_mean": {
+        "d": 0.3958,
+        "alpha": 22.6956,
+        "N": 4977.66,
+        "T": 437.72
+      },
+      "chain_seeds": [
+        20261718,
+        20262718,
+        20263718
+      ],
+      "train_f1": 0.5301
+    },
+    "Malia": {
+      "rhat": 1.0493,
+      "post_mean": {
+        "d": 0.4,
+        "alpha": 20.954,
+        "N": 4911.5533,
+        "T": 430.0
+      },
+      "chain_seeds": [
+        20261719,
+        20262719,
+        20263719
+      ],
+      "train_f1": 0.5399
+    },
+    "Margiana": {
+      "rhat": 1.1474,
+      "post_mean": {
+        "d": 0.3952,
+        "alpha": 22.0994,
+        "N": 5006.4667,
+        "T": 433.4067
+      },
+      "chain_seeds": [
+        20261720,
+        20262720,
+        20263720
+      ],
+      "train_f1": 0.537
+    },
+    "Miletos": {
+      "rhat": 1.0666,
+      "post_mean": {
+        "d": 0.3941,
+        "alpha": 21.6054,
+        "N": 4994.66,
+        "T": 429.4733
+      },
+      "chain_seeds": [
+        20261721,
+        20262721,
+        20263721
+      ],
+      "train_f1": 0.5375
+    },
+    "Milos": {
+      "rhat": 1.1766,
+      "post_mean": {
+        "d": 0.4036,
+        "alpha": 21.2523,
+        "N": 4980.06,
+        "T": 433.4533
+      },
+      "chain_seeds": [
+        20261722,
+        20262722,
+        20263722
+      ],
+      "train_f1": 0.5409
+    },
+    "Mokhilos": {
+      "rhat": 1.2767,
+      "post_mean": {
+        "d": 0.3968,
+        "alpha": 21.9244,
+        "N": 4977.3533,
+        "T": 434.68
+      },
+      "chain_seeds": [
+        20261723,
+        20262723,
+        20263723
+      ],
+      "train_f1": 0.5423
+    },
+    "Mycenae": {
+      "rhat": 1.0842,
+      "post_mean": {
+        "d": 0.3994,
+        "alpha": 21.022,
+        "N": 5006.8133,
+        "T": 429.76
+      },
+      "chain_seeds": [
+        20261724,
+        20262724,
+        20263724
+      ],
+      "train_f1": 0.5344
+    },
+    "Nerokurou": {
+      "rhat": 1.2073,
+      "post_mean": {
+        "d": 0.4024,
+        "alpha": 21.1477,
+        "N": 5015.1467,
+        "T": 433.8
+      },
+      "chain_seeds": [
+        20261725,
+        20262725,
+        20263725
+      ],
+      "train_f1": 0.5433
+    },
+    "Palaikastro": {
+      "rhat": 1.1639,
+      "post_mean": {
+        "d": 0.4103,
+        "alpha": 19.5848,
+        "N": 4823.6867,
+        "T": 427.3
+      },
+      "chain_seeds": [
+        20261726,
+        20262726,
+        20263726
+      ],
+      "train_f1": 0.5356
+    },
+    "Papourou": {
+      "rhat": 1.1046,
+      "post_mean": {
+        "d": 0.3937,
+        "alpha": 22.6158,
+        "N": 4999.64,
+        "T": 434.5267
+      },
+      "chain_seeds": [
+        20261727,
+        20262727,
+        20263727
+      ],
+      "train_f1": 0.5349
+    },
+    "Petras": {
+      "rhat": 1.1628,
+      "post_mean": {
+        "d": 0.4091,
+        "alpha": 19.8654,
+        "N": 4934.6933,
+        "T": 431.4733
+      },
+      "chain_seeds": [
+        20261728,
+        20262728,
+        20263728
+      ],
+      "train_f1": 0.5455
+    },
+    "Phaistos": {
+      "rhat": 1.1602,
+      "post_mean": {
+        "d": 0.3877,
+        "alpha": 23.637,
+        "N": 4782.86,
+        "T": 424.36
+      },
+      "chain_seeds": [
+        20261729,
+        20262729,
+        20263729
+      ],
+      "train_f1": 0.5469
+    },
+    "Platanos": {
+      "rhat": 1.2515,
+      "post_mean": {
+        "d": 0.3978,
+        "alpha": 23.0409,
+        "N": 4961.7267,
+        "T": 437.68
+      },
+      "chain_seeds": [
+        20261730,
+        20262730,
+        20263730
+      ],
+      "train_f1": 0.54
+    },
+    "Poros Herakleiou": {
+      "rhat": 1.156,
+      "post_mean": {
+        "d": 0.3961,
+        "alpha": 22.0491,
+        "N": 4990.86,
+        "T": 432.62
+      },
+      "chain_seeds": [
+        20261731,
+        20262731,
+        20263731
+      ],
+      "train_f1": 0.5362
+    },
+    "Prassa": {
+      "rhat": 1.125,
+      "post_mean": {
+        "d": 0.3993,
+        "alpha": 21.3418,
+        "N": 4987.3467,
+        "T": 427.8267
+      },
+      "chain_seeds": [
+        20261732,
+        20262732,
+        20263732
+      ],
+      "train_f1": 0.5331
+    },
+    "Psykhro": {
+      "rhat": 1.1596,
+      "post_mean": {
+        "d": 0.3929,
+        "alpha": 22.5477,
+        "N": 4966.7267,
+        "T": 434.3933
+      },
+      "chain_seeds": [
+        20261733,
+        20262733,
+        20263733
+      ],
+      "train_f1": 0.5363
+    },
+    "Pyrgos": {
+      "rhat": 1.1684,
+      "post_mean": {
+        "d": 0.4069,
+        "alpha": 20.2618,
+        "N": 4974.0667,
+        "T": 434.4
+      },
+      "chain_seeds": [
+        20261734,
+        20262734,
+        20263734
+      ],
+      "train_f1": 0.5348
+    },
+    "Samothrace": {
+      "rhat": 1.4939,
+      "post_mean": {
+        "d": 0.4114,
+        "alpha": 18.8815,
+        "N": 5006.3133,
+        "T": 433.2
+      },
+      "chain_seeds": [
+        20261735,
+        20262735,
+        20263735
+      ],
+      "train_f1": 0.543
+    },
+    "Selakanos": {
+      "rhat": 1.1325,
+      "post_mean": {
+        "d": 0.3999,
+        "alpha": 20.9578,
+        "N": 4999.52,
+        "T": 430.3867
+      },
+      "chain_seeds": [
+        20261736,
+        20262736,
+        20263736
+      ],
+      "train_f1": 0.5446
+    },
+    "Sitia": {
+      "rhat": 1.0995,
+      "post_mean": {
+        "d": 0.4081,
+        "alpha": 19.7272,
+        "N": 4996.36,
+        "T": 432.1933
+      },
+      "chain_seeds": [
+        20261737,
+        20262737,
+        20263737
+      ],
+      "train_f1": 0.5411
+    },
+    "Skhinia": {
+      "rhat": 1.0567,
+      "post_mean": {
+        "d": 0.4062,
+        "alpha": 21.6253,
+        "N": 4968.7,
+        "T": 439.3467
+      },
+      "chain_seeds": [
+        20261738,
+        20262738,
+        20263738
+      ],
+      "train_f1": 0.5437
+    },
+    "Skoteino Cave": {
+      "rhat": 1.2479,
+      "post_mean": {
+        "d": 0.4033,
+        "alpha": 20.8061,
+        "N": 5013.3533,
+        "T": 427.3733
+      },
+      "chain_seeds": [
+        20261739,
+        20262739,
+        20263739
+      ],
+      "train_f1": 0.528
+    },
+    "Syme": {
+      "rhat": 1.0874,
+      "post_mean": {
+        "d": 0.3871,
+        "alpha": 22.8185,
+        "N": 4960.6133,
+        "T": 426.1733
+      },
+      "chain_seeds": [
+        20261740,
+        20262740,
+        20263740
+      ],
+      "train_f1": 0.5362
+    },
+    "Tel Haror": {
+      "rhat": 1.2116,
+      "post_mean": {
+        "d": 0.3976,
+        "alpha": 21.6104,
+        "N": 4989.82,
+        "T": 433.8933
+      },
+      "chain_seeds": [
+        20261741,
+        20262741,
+        20263741
+      ],
+      "train_f1": 0.5446
+    },
+    "Thera": {
+      "rhat": 1.114,
+      "post_mean": {
+        "d": 0.4031,
+        "alpha": 20.8107,
+        "N": 4968.94,
+        "T": 429.5733
+      },
+      "chain_seeds": [
+        20261742,
+        20262742,
+        20263742
+      ],
+      "train_f1": 0.5416
+    },
+    "Tiryns": {
+      "rhat": 1.0973,
+      "post_mean": {
+        "d": 0.4011,
+        "alpha": 21.0891,
+        "N": 4999.9933,
+        "T": 429.2533
+      },
+      "chain_seeds": [
+        20261743,
+        20262743,
+        20263743
+      ],
+      "train_f1": 0.5266
+    },
+    "Traostalos": {
+      "rhat": 1.1367,
+      "post_mean": {
+        "d": 0.3843,
+        "alpha": 24.5293,
+        "N": 4963.2,
+        "T": 436.2267
+      },
+      "chain_seeds": [
+        20261744,
+        20262744,
+        20263744
+      ],
+      "train_f1": 0.5431
+    },
+    "Troullos": {
+      "rhat": 1.1961,
+      "post_mean": {
+        "d": 0.3947,
+        "alpha": 22.9103,
+        "N": 4970.2867,
+        "T": 436.42
+      },
+      "chain_seeds": [
+        20261745,
+        20262745,
+        20263745
+      ],
+      "train_f1": 0.5463
+    },
+    "Troy": {
+      "rhat": 1.2062,
+      "post_mean": {
+        "d": 0.3969,
+        "alpha": 21.6929,
+        "N": 4992.9133,
+        "T": 434.0067
+      },
+      "chain_seeds": [
+        20261746,
+        20262746,
+        20263746
+      ],
+      "train_f1": 0.539
+    },
+    "Trypiti": {
+      "rhat": 1.0503,
+      "post_mean": {
+        "d": 0.4043,
+        "alpha": 20.4116,
+        "N": 4983.3867,
+        "T": 430.4933
+      },
+      "chain_seeds": [
+        20261747,
+        20262747,
+        20263747
+      ],
+      "train_f1": 0.5444
+    },
+    "Tylissos": {
+      "rhat": 1.0965,
+      "post_mean": {
+        "d": 0.3856,
+        "alpha": 23.6593,
+        "N": 4905.78,
+        "T": 427.4333
+      },
+      "chain_seeds": [
+        20261748,
+        20262748,
+        20263748
+      ],
+      "train_f1": 0.5358
+    },
+    "Vrysinas": {
+      "rhat": 1.2042,
+      "post_mean": {
+        "d": 0.3968,
+        "alpha": 21.7434,
+        "N": 4996.2067,
+        "T": 433.32
+      },
+      "chain_seeds": [
+        20261749,
+        20262749,
+        20263749
+      ],
+      "train_f1": 0.5375
+    },
+    "Zakros": {
+      "rhat": 1.1838,
+      "post_mean": {
+        "d": 0.4071,
+        "alpha": 21.2141,
+        "N": 4563.7067,
+        "T": 423.7733
+      },
+      "chain_seeds": [
+        20261750,
+        20262750,
+        20263750
+      ],
+      "train_f1": 0.5457
+    },
+    "Zominthos": {
+      "rhat": 1.1445,
+      "post_mean": {
+        "d": 0.404,
+        "alpha": 20.5521,
+        "N": 5014.1667,
+        "T": 428.6733
+      },
+      "chain_seeds": [
+        20261751,
+        20262751,
+        20263751
+      ],
+      "train_f1": 0.536
+    }
+  },
+  "neural": {
+    "neural_bilstm": {
+      "seed": 20260703,
+      "n_params": 8497,
+      "train_micro_f1": 0.8311,
+      "test_micro_f1": 0.6217,
+      "train_test_gap": 0.2094,
+      "memorization_flag": true,
+      "thresholds": {
+        "(unknown)": 0.4,
+        "Apodoulou": 0.35,
+        "Arkhalkhori": 0.3,
+        "Crete": 0.35,
+        "Fourni": 0.35,
+        "Gournia": 0.4,
+        "Haghia Triada": 0.45,
+        "Haghios Stehanos": 0.35,
+        "Iouktas": 0.35,
+        "Kalo Chorafi": 0.35,
+        "Kamilari": 0.45,
+        "Kannia": 0.5,
+        "Kardamoutsa": 0.5,
+        "Kea": 0.4,
+        "Khania": 0.25,
+        "Knossos": 0.3,
+        "Kophinas": 0.4,
+        "Kythera": 0.4,
+        "Larani": 0.4,
+        "Malia": 0.45,
+        "Margiana": 0.35,
+        "Miletos": 0.35,
+        "Milos": 0.35,
+        "Mokhilos": 0.35,
+        "Mycenae": 0.35,
+        "Nerokurou": 0.35,
+        "Palaikastro": 0.45,
+        "Papourou": 0.35,
+        "Petras": 0.35,
+        "Phaistos": 0.25,
+        "Platanos": 0.4,
+        "Poros Herakleiou": 0.4,
+        "Prassa": 0.3,
+        "Psykhro": 0.35,
+        "Pyrgos": 0.5,
+        "Samothrace": 0.35,
+        "Selakanos": 0.4,
+        "Sitia": 0.45,
+        "Skhinia": 0.35,
+        "Skoteino Cave": 0.45,
+        "Syme": 0.55,
+        "Tel Haror": 0.35,
+        "Thera": 0.5,
+        "Tiryns": 0.4,
+        "Traostalos": 0.35,
+        "Troullos": 0.4,
+        "Troy": 0.4,
+        "Trypiti": 0.4,
+        "Tylissos": 0.35,
+        "Vrysinas": 0.35,
+        "Zakros": 0.45,
+        "Zominthos": 0.35
+      }
+    },
+    "neural_bilstm_s20260704": {
+      "seed": 20260704,
+      "n_params": 8497,
+      "train_micro_f1": 0.8242,
+      "test_micro_f1": 0.6608,
+      "train_test_gap": 0.1634,
+      "memorization_flag": false,
+      "thresholds": {
+        "(unknown)": 0.4,
+        "Apodoulou": 0.5,
+        "Arkhalkhori": 0.3,
+        "Crete": 0.4,
+        "Fourni": 0.5,
+        "Gournia": 0.45,
+        "Haghia Triada": 0.2,
+        "Haghios Stehanos": 0.5,
+        "Iouktas": 0.45,
+        "Kalo Chorafi": 0.35,
+        "Kamilari": 0.4,
+        "Kannia": 0.4,
+        "Kardamoutsa": 0.4,
+        "Kea": 0.35,
+        "Khania": 0.35,
+        "Knossos": 0.35,
+        "Kophinas": 0.45,
+        "Kythera": 0.35,
+        "Larani": 0.5,
+        "Malia": 0.35,
+        "Margiana": 0.35,
+        "Miletos": 0.4,
+        "Milos": 0.45,
+        "Mokhilos": 0.5,
+        "Mycenae": 0.35,
+        "Nerokurou": 0.5,
+        "Palaikastro": 0.45,
+        "Papourou": 0.35,
+        "Petras": 0.4,
+        "Phaistos": 0.3,
+        "Platanos": 0.55,
+        "Poros Herakleiou": 0.35,
+        "Prassa": 0.5,
+        "Psykhro": 0.55,
+        "Pyrgos": 0.55,
+        "Samothrace": 0.5,
+        "Selakanos": 0.5,
+        "Sitia": 0.5,
+        "Skhinia": 0.5,
+        "Skoteino Cave": 0.5,
+        "Syme": 0.3,
+        "Tel Haror": 0.4,
+        "Thera": 0.35,
+        "Tiryns": 0.5,
+        "Traostalos": 0.55,
+        "Troullos": 0.55,
+        "Troy": 0.5,
+        "Trypiti": 0.55,
+        "Tylissos": 0.35,
+        "Vrysinas": 0.3,
+        "Zakros": 0.55,
+        "Zominthos": 0.5
+      }
+    },
+    "neural_bilstm_s20260705": {
+      "seed": 20260705,
+      "n_params": 8497,
+      "train_micro_f1": 0.8151,
+      "test_micro_f1": 0.6621,
+      "train_test_gap": 0.153,
+      "memorization_flag": false,
+      "thresholds": {
+        "(unknown)": 0.3,
+        "Apodoulou": 0.35,
+        "Arkhalkhori": 0.5,
+        "Crete": 0.35,
+        "Fourni": 0.35,
+        "Gournia": 0.25,
+        "Haghia Triada": 0.3,
+        "Haghios Stehanos": 0.3,
+        "Iouktas": 0.55,
+        "Kalo Chorafi": 0.25,
+        "Kamilari": 0.35,
+        "Kannia": 0.35,
+        "Kardamoutsa": 0.35,
+        "Kea": 0.2,
+        "Khania": 0.25,
+        "Knossos": 0.65,
+        "Kophinas": 0.5,
+        "Kythera": 0.3,
+        "Larani": 0.25,
+        "Malia": 0.2,
+        "Margiana": 0.25,
+        "Miletos": 0.3,
+        "Milos": 0.2,
+        "Mokhilos": 0.3,
+        "Mycenae": 0.25,
+        "Nerokurou": 0.3,
+        "Palaikastro": 0.5,
+        "Papourou": 0.3,
+        "Petras": 0.35,
+        "Phaistos": 0.35,
+        "Platanos": 0.3,
+        "Poros Herakleiou": 0.25,
+        "Prassa": 0.35,
+        "Psykhro": 0.45,
+        "Pyrgos": 0.3,
+        "Samothrace": 0.3,
+        "Selakanos": 0.3,
+        "Sitia": 0.3,
+        "Skhinia": 0.3,
+        "Skoteino Cave": 0.3,
+        "Syme": 0.35,
+        "Tel Haror": 0.25,
+        "Thera": 0.25,
+        "Tiryns": 0.3,
+        "Traostalos": 0.3,
+        "Troullos": 0.3,
+        "Troy": 0.35,
+        "Trypiti": 0.3,
+        "Tylissos": 0.4,
+        "Vrysinas": 0.3,
+        "Zakros": 0.5,
+        "Zominthos": 0.35
+      }
+    }
+  },
+  "morfessor_tuned": {
+    "(unknown)": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4058
+    },
+    "Apodoulou": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0608,
+      "target_rate": 0.4071
+    },
+    "Arkhalkhori": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0618,
+      "target_rate": 0.4053
+    },
+    "Crete": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0603,
+      "target_rate": 0.4064
+    },
+    "Fourni": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4059
+    },
+    "Gournia": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0595,
+      "target_rate": 0.4055
+    },
+    "Haghia Triada": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0192,
+      "target_rate": 0.339
+    },
+    "Haghios Stehanos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0636,
+      "target_rate": 0.4058
+    },
+    "Iouktas": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0597,
+      "target_rate": 0.4128
+    },
+    "Kalo Chorafi": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0631,
+      "target_rate": 0.4058
+    },
+    "Kamilari": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0611,
+      "target_rate": 0.4058
+    },
+    "Kannia": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0627,
+      "target_rate": 0.4056
+    },
+    "Kardamoutsa": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0627,
+      "target_rate": 0.4058
+    },
+    "Kea": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.06,
+      "target_rate": 0.406
+    },
+    "Khania": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0621,
+      "target_rate": 0.3938
+    },
+    "Knossos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0579,
+      "target_rate": 0.4143
+    },
+    "Kophinas": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0605,
+      "target_rate": 0.4082
+    },
+    "Kythera": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0591,
+      "target_rate": 0.4059
+    },
+    "Larani": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0617,
+      "target_rate": 0.406
+    },
+    "Malia": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0571,
+      "target_rate": 0.406
+    },
+    "Margiana": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4058
+    },
+    "Miletos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0596,
+      "target_rate": 0.4062
+    },
+    "Milos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.063,
+      "target_rate": 0.4056
+    },
+    "Mokhilos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4059
+    },
+    "Mycenae": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4058
+    },
+    "Nerokurou": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0596,
+      "target_rate": 0.4058
+    },
+    "Palaikastro": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0607,
+      "target_rate": 0.4129
+    },
+    "Papourou": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4061
+    },
+    "Petras": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0606,
+      "target_rate": 0.4077
+    },
+    "Phaistos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0573,
+      "target_rate": 0.4078
+    },
+    "Platanos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0637,
+      "target_rate": 0.4063
+    },
+    "Poros Herakleiou": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0603,
+      "target_rate": 0.4066
+    },
+    "Prassa": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0635,
+      "target_rate": 0.4065
+    },
+    "Psykhro": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0625,
+      "target_rate": 0.4066
+    },
+    "Pyrgos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0621,
+      "target_rate": 0.4061
+    },
+    "Samothrace": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0618,
+      "target_rate": 0.4057
+    },
+    "Selakanos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0631,
+      "target_rate": 0.4058
+    },
+    "Sitia": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4057
+    },
+    "Skhinia": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.406
+    },
+    "Skoteino Cave": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4061
+    },
+    "Syme": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0622,
+      "target_rate": 0.4103
+    },
+    "Tel Haror": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4056
+    },
+    "Thera": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.059,
+      "target_rate": 0.4071
+    },
+    "Tiryns": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0625,
+      "target_rate": 0.4058
+    },
+    "Traostalos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0627,
+      "target_rate": 0.4058
+    },
+    "Troullos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0637,
+      "target_rate": 0.4069
+    },
+    "Troy": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0628,
+      "target_rate": 0.4065
+    },
+    "Trypiti": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0629,
+      "target_rate": 0.4058
+    },
+    "Tylissos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0604,
+      "target_rate": 0.4047
+    },
+    "Vrysinas": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0603,
+      "target_rate": 0.4063
+    },
+    "Zakros": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0601,
+      "target_rate": 0.4073
+    },
+    "Zominthos": {
+      "corpusweight": 1.0,
+      "train_pred_rate": 0.0634,
+      "target_rate": 0.4058
+    }
+  }
+}
