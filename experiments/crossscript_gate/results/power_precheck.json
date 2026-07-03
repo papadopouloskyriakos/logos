@@ -1,0 +1,234 @@
+{
+  "prereg_thresholds_commit": "00fb9eaec78e6de8ba684263fabc5eed6a76f07f",
+  "run_head_commit": "00fb9eaec78e6de8ba684263fabc5eed6a76f07f",
+  "design": {
+    "n_anchors": 51,
+    "h_primary": 10,
+    "n_candidates": 73,
+    "chance_top1": 0.0136986301369863,
+    "d_emb": 24,
+    "n_rep": 50,
+    "n_perm": 200,
+    "alpha": 0.05,
+    "strengths": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      8.0,
+      13.0
+    ],
+    "master_seed": 20260703
+  },
+  "primary_curve": [
+    {
+      "strength": 0.0,
+      "power": 0.02,
+      "mean_top1": 0.012,
+      "mean_top5": 0.07200000000000001
+    },
+    {
+      "strength": 0.5,
+      "power": 0.0,
+      "mean_top1": 0.014000000000000002,
+      "mean_top5": 0.07
+    },
+    {
+      "strength": 1.0,
+      "power": 0.04,
+      "mean_top1": 0.018000000000000002,
+      "mean_top5": 0.08199999999999999
+    },
+    {
+      "strength": 2.0,
+      "power": 0.06,
+      "mean_top1": 0.036000000000000004,
+      "mean_top5": 0.16
+    },
+    {
+      "strength": 3.0,
+      "power": 0.26,
+      "mean_top1": 0.11199999999999999,
+      "mean_top5": 0.33599999999999997
+    },
+    {
+      "strength": 5.0,
+      "power": 0.98,
+      "mean_top1": 0.496,
+      "mean_top5": 0.8439999999999999
+    },
+    {
+      "strength": 8.0,
+      "power": 1.0,
+      "mean_top1": 0.9540000000000001,
+      "mean_top5": 1.0
+    },
+    {
+      "strength": 13.0,
+      "power": 1.0,
+      "mean_top1": 1.0,
+      "mean_top5": 1.0
+    }
+  ],
+  "validity_checks": {
+    "false_fire_s0": 0.02,
+    "power_s13": 1.0
+  },
+  "verdict": "MARGINAL",
+  "sensitivity": {
+    "h=5": [
+      {
+        "strength": 0.0,
+        "power": 0.0,
+        "mean_top1": 0.004,
+        "mean_top5": 0.08800000000000001
+      },
+      {
+        "strength": 0.5,
+        "power": 0.0,
+        "mean_top1": 0.02,
+        "mean_top5": 0.064
+      },
+      {
+        "strength": 1.0,
+        "power": 0.04,
+        "mean_top1": 0.02,
+        "mean_top5": 0.11200000000000002
+      },
+      {
+        "strength": 2.0,
+        "power": 0.04,
+        "mean_top1": 0.036000000000000004,
+        "mean_top5": 0.16
+      },
+      {
+        "strength": 3.0,
+        "power": 0.2,
+        "mean_top1": 0.10400000000000001,
+        "mean_top5": 0.392
+      },
+      {
+        "strength": 5.0,
+        "power": 0.86,
+        "mean_top1": 0.524,
+        "mean_top5": 0.8839999999999999
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.972,
+        "mean_top5": 1.0
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 1.0,
+        "mean_top5": 1.0
+      }
+    ],
+    "h=15": [
+      {
+        "strength": 0.0,
+        "power": 0.04,
+        "mean_top1": 0.016,
+        "mean_top5": 0.07466666666666667
+      },
+      {
+        "strength": 0.5,
+        "power": 0.06,
+        "mean_top1": 0.010666666666666668,
+        "mean_top5": 0.06666666666666667
+      },
+      {
+        "strength": 1.0,
+        "power": 0.02,
+        "mean_top1": 0.017333333333333333,
+        "mean_top5": 0.08533333333333334
+      },
+      {
+        "strength": 2.0,
+        "power": 0.08,
+        "mean_top1": 0.03333333333333333,
+        "mean_top5": 0.14666666666666667
+      },
+      {
+        "strength": 3.0,
+        "power": 0.36,
+        "mean_top1": 0.084,
+        "mean_top5": 0.312
+      },
+      {
+        "strength": 5.0,
+        "power": 1.0,
+        "mean_top1": 0.44933333333333336,
+        "mean_top5": 0.7759999999999999
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.9199999999999998,
+        "mean_top5": 0.996
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 1.0,
+        "mean_top5": 1.0
+      }
+    ],
+    "h=20": [
+      {
+        "strength": 0.0,
+        "power": 0.04,
+        "mean_top1": 0.01,
+        "mean_top5": 0.066
+      },
+      {
+        "strength": 0.5,
+        "power": 0.08,
+        "mean_top1": 0.017,
+        "mean_top5": 0.066
+      },
+      {
+        "strength": 1.0,
+        "power": 0.04,
+        "mean_top1": 0.021,
+        "mean_top5": 0.07799999999999999
+      },
+      {
+        "strength": 2.0,
+        "power": 0.18,
+        "mean_top1": 0.03,
+        "mean_top5": 0.126
+      },
+      {
+        "strength": 3.0,
+        "power": 0.5,
+        "mean_top1": 0.08100000000000002,
+        "mean_top5": 0.286
+      },
+      {
+        "strength": 5.0,
+        "power": 0.98,
+        "mean_top1": 0.3559999999999999,
+        "mean_top5": 0.6969999999999998
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.8270000000000001,
+        "mean_top5": 0.971
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 0.9969999999999999,
+        "mean_top5": 1.0
+      }
+    ]
+  },
+  "banned_modules_in_process": [],
+  "wall_clock_s": 51.4
+}
