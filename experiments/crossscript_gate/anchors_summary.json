@@ -1,0 +1,39 @@
+{
+  "n_candidates": 59,
+  "n_maskable": 56,
+  "n_robust_anchors": 51,
+  "min_la_attest": 3,
+  "not_maskable": [
+    "JU",
+    "PA3",
+    "ZU"
+  ],
+  "weak_maskable": [
+    "NWA",
+    "QI",
+    "TWE",
+    "ZE",
+    "ZO"
+  ],
+  "n_cypriot_stable_confirmed": 0,
+  "n_primary_sourced_homomorph": 0,
+  "n_pending_primary": 59,
+  "value_space_size": 74,
+  "value_space_damos_attested": 73,
+  "value_space_unattested_in_damos": [
+    "JU"
+  ],
+  "seed_signs_without_la_stream_presence": [
+    "JO",
+    "PE",
+    "WE"
+  ],
+  "la_stream": {
+    "sequences": 539,
+    "tokens": 4245
+  },
+  "damos": {
+    "wordforms": 13562,
+    "tokens": 43868
+  }
+}
