@@ -30,3 +30,16 @@ July 2026 (`experiments/crossscript_gate/phase3/anetaki_extraction.md`).
 4. **Only then** does a Phase-3 discussion become eligible — under a NEW pre-registration and
    a NEW external timestamp. The N=2 ledger is closed; any Phase 3 is a new pre-registered
    family, and its prereg must say so.
+
+## Addendum (2026-07-03): pending-edition items from the corpus-completeness sweep
+
+The sweep (experiments/crossscript_gate/phase3/sweep/) identified **26 class-(c)
+pending-edition items** (enumerated in the del Freo rapport 2016–2021 or channel sources but
+never transliterated) — full rows in `missing_items.csv` filtered `class=c_pending_edition`;
+headline items beyond KN Zg 57/58: the Kommos, Hagia Photini fragments, THE Zg 16's edition,
+the ZA 11 + ZA 13 new joins (pending Petrakis). These join THIS watch: same quarterly glance,
+same trigger mechanics (acquire → GAP_DELTA/SWEEP re-scan → census update). Also on watch:
+the four pre-2016 del Freo rapports (print-only; the human gap list) whose acquisition would
+close the 1985–2015 enumeration coverage holes, and PYR Zb 5's pending removal (reattributed
+to Cretan Hieroglyphic per Ferrara et al. 2016, endorsed by the rapport — flagged for the next
+corpus rebuild, NOT applied to the frozen corpus).
