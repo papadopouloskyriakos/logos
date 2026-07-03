@@ -5,6 +5,15 @@ Drafting (Track 1) does **not** start until the two P-BLOCK items are ingested +
 done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likely but not yet verified.
 
 ## In hand (audited 2026-06-30)
+- **Kanta, Nakassis, Palaima & Perna 2024** "An archaeological and epigraphical overview…
+  (Anetaki plot)", *KO-RO-NO-WE-SA* (Ariadne Suppl. 5), 27–43 — ✅ **ACQUIRED 2026-07-03**, OA
+  (CC BY-NC-SA 4.0), DOI 10.26248/ariadne.vi.1841 →
+  `corpus/bronze/kanta_etal_2024_anetaki/kanta_etal_2024_anetaki.pdf` (gitignored; 3,104,974 B,
+  SHA-256 `87dad27b79ee3ef4539b844d7ed30a0069ac14acdd2ff75eed160f9baadf57d2`; PROVENANCE.md
+  alongside). KN Zg 57 (ivory Ring, ~119 signs, longest known LA inscription) + KN Zg 58
+  (handle, accounting + six-fraction sequence). **Prints NO transliterated sequences** — full
+  edition = Kanta (ed.) forthcoming, *Anetaki II* (THE standing supply acquisition for any
+  Phase-3). Extraction: `experiments/crossscript_gate/phase3/anetaki_extraction.md`.
 - **Braović, Krstinić, Štula & Ivanda 2024**, *Comput. Linguistics* 50(2):725–779 — `docs/related/braovic-2024.md`. Open: <https://aclanthology.org/2024.cl-2.7.pdf>.
 - **Salgarella 2025** *Writing in Bronze Age Crete* — **BODY ACQUIRED + ANALYZED 2026-07-01** (operator supplied the purchased EPUB; §7/§8 verified). No longer blocking. `docs/related/salgarella-2025.md`.
 - **Salgarella & Judson 2024** "Signs of the times?" (KO-RO-NO-WE-SA pp. 359–379) — drove `prereg-morphology-stratification-addendum-2026-06-30.md`.
