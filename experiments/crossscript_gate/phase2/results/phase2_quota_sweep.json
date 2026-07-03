@@ -1,0 +1,1525 @@
+{
+  "spec_commit": "42618ac",
+  "spec_commit_full": "b5370da058fa4cb386abd9c4e013c51caff5d169",
+  "cells": {
+    "5x1": {
+      "n_anchors": 5,
+      "R": 1,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.39,
+          "raw_power": 0.67,
+          "mean_pinned_signs": 2.06,
+          "mean_pinning_words": 2.06,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.39,
+          "raw_power": 0.69,
+          "mean_pinned_signs": 1.97,
+          "mean_pinning_words": 1.97,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.48,
+          "raw_power": 0.73,
+          "mean_pinned_signs": 2.25,
+          "mean_pinning_words": 2.25,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.5,
+          "raw_power": 0.8,
+          "mean_pinned_signs": 2.11,
+          "mean_pinning_words": 2.11,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.78,
+          "raw_power": 0.91,
+          "mean_pinned_signs": 2.22,
+          "mean_pinning_words": 2.22,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.26,
+          "mean_pinning_words": 2.26,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.26,
+          "mean_pinning_words": 2.26,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.08,
+          "mean_pinning_words": 2.08,
+          "regens": 0
+        }
+      ]
+    },
+    "5x2": {
+      "n_anchors": 5,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.35,
+          "raw_power": 0.75,
+          "mean_pinned_signs": 1.96,
+          "mean_pinning_words": 2.02,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.39,
+          "raw_power": 0.76,
+          "mean_pinned_signs": 2.11,
+          "mean_pinning_words": 2.19,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.36,
+          "raw_power": 0.66,
+          "mean_pinned_signs": 1.95,
+          "mean_pinning_words": 2.02,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.53,
+          "raw_power": 0.79,
+          "mean_pinned_signs": 2.1,
+          "mean_pinning_words": 2.16,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.74,
+          "raw_power": 0.91,
+          "mean_pinned_signs": 2.01,
+          "mean_pinning_words": 2.07,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.03,
+          "mean_pinning_words": 2.14,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 1.88,
+          "mean_pinning_words": 1.96,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 1.98,
+          "mean_pinning_words": 2.03,
+          "regens": 0
+        }
+      ]
+    },
+    "5x3": {
+      "n_anchors": 5,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.38,
+          "raw_power": 0.73,
+          "mean_pinned_signs": 1.87,
+          "mean_pinning_words": 2.0,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.41,
+          "raw_power": 0.71,
+          "mean_pinned_signs": 2.09,
+          "mean_pinning_words": 2.14,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.4,
+          "raw_power": 0.82,
+          "mean_pinned_signs": 2.2,
+          "mean_pinning_words": 2.31,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.44,
+          "raw_power": 0.8,
+          "mean_pinned_signs": 1.94,
+          "mean_pinning_words": 2.04,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.65,
+          "raw_power": 0.85,
+          "mean_pinned_signs": 1.88,
+          "mean_pinning_words": 1.96,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.07,
+          "mean_pinning_words": 2.12,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.09,
+          "mean_pinning_words": 2.14,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 2.12,
+          "mean_pinning_words": 2.22,
+          "regens": 0
+        }
+      ]
+    },
+    "8x1": {
+      "n_anchors": 8,
+      "R": 1,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.73,
+          "raw_power": 0.94,
+          "mean_pinned_signs": 3.33,
+          "mean_pinning_words": 3.33,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.78,
+          "raw_power": 0.93,
+          "mean_pinned_signs": 3.41,
+          "mean_pinning_words": 3.41,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.77,
+          "raw_power": 0.91,
+          "mean_pinned_signs": 3.33,
+          "mean_pinning_words": 3.33,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.81,
+          "raw_power": 0.91,
+          "mean_pinned_signs": 3.28,
+          "mean_pinning_words": 3.28,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.93,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 3.22,
+          "mean_pinning_words": 3.22,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.3,
+          "mean_pinning_words": 3.3,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.4,
+          "mean_pinning_words": 3.4,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.46,
+          "mean_pinning_words": 3.46,
+          "regens": 0
+        }
+      ]
+    },
+    "8x2": {
+      "n_anchors": 8,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.68,
+          "raw_power": 0.95,
+          "mean_pinned_signs": 3.16,
+          "mean_pinning_words": 3.37,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.72,
+          "raw_power": 0.91,
+          "mean_pinned_signs": 3.27,
+          "mean_pinning_words": 3.47,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.68,
+          "raw_power": 0.87,
+          "mean_pinned_signs": 3.06,
+          "mean_pinning_words": 3.23,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.74,
+          "raw_power": 0.97,
+          "mean_pinned_signs": 3.09,
+          "mean_pinning_words": 3.27,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.86,
+          "raw_power": 0.93,
+          "mean_pinned_signs": 3.12,
+          "mean_pinning_words": 3.35,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.15,
+          "mean_pinning_words": 3.33,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.19,
+          "mean_pinning_words": 3.41,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.0,
+          "mean_pinning_words": 3.17,
+          "regens": 0
+        }
+      ]
+    },
+    "8x3": {
+      "n_anchors": 8,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.7,
+          "raw_power": 0.9,
+          "mean_pinned_signs": 3.12,
+          "mean_pinning_words": 3.26,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.71,
+          "raw_power": 0.92,
+          "mean_pinned_signs": 3.02,
+          "mean_pinning_words": 3.22,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.73,
+          "raw_power": 0.93,
+          "mean_pinned_signs": 3.07,
+          "mean_pinning_words": 3.33,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.77,
+          "raw_power": 0.94,
+          "mean_pinned_signs": 3.19,
+          "mean_pinning_words": 3.37,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.93,
+          "raw_power": 0.97,
+          "mean_pinned_signs": 3.27,
+          "mean_pinning_words": 3.49,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.17,
+          "mean_pinning_words": 3.46,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.02,
+          "mean_pinning_words": 3.2,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.15,
+          "mean_pinning_words": 3.37,
+          "regens": 0
+        }
+      ]
+    },
+    "10x1": {
+      "n_anchors": 10,
+      "R": 1,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.83,
+          "raw_power": 0.95,
+          "mean_pinned_signs": 4.04,
+          "mean_pinning_words": 4.04,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.89,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 4.3,
+          "mean_pinning_words": 4.3,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.79,
+          "raw_power": 0.94,
+          "mean_pinned_signs": 3.73,
+          "mean_pinning_words": 3.73,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.87,
+          "raw_power": 0.98,
+          "mean_pinned_signs": 4.08,
+          "mean_pinning_words": 4.08,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.94,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 4.08,
+          "mean_pinning_words": 4.08,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 4.23,
+          "mean_pinning_words": 4.23,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 4.17,
+          "mean_pinning_words": 4.17,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 4.32,
+          "mean_pinning_words": 4.32,
+          "regens": 0
+        }
+      ]
+    },
+    "10x2": {
+      "n_anchors": 10,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.85,
+          "raw_power": 0.95,
+          "mean_pinned_signs": 3.88,
+          "mean_pinning_words": 4.1,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.89,
+          "raw_power": 0.98,
+          "mean_pinned_signs": 3.8,
+          "mean_pinning_words": 4.11,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.81,
+          "raw_power": 0.94,
+          "mean_pinned_signs": 3.71,
+          "mean_pinning_words": 3.96,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.92,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 4.12,
+          "mean_pinning_words": 4.41,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.95,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 3.81,
+          "mean_pinning_words": 4.08,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.88,
+          "mean_pinning_words": 4.07,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.92,
+          "mean_pinning_words": 4.22,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 4.0,
+          "mean_pinning_words": 4.32,
+          "regens": 0
+        }
+      ]
+    },
+    "10x3": {
+      "n_anchors": 10,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.78,
+          "raw_power": 0.98,
+          "mean_pinned_signs": 3.7,
+          "mean_pinning_words": 3.95,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.86,
+          "raw_power": 0.94,
+          "mean_pinned_signs": 3.79,
+          "mean_pinning_words": 4.17,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.85,
+          "raw_power": 0.98,
+          "mean_pinned_signs": 4.0,
+          "mean_pinning_words": 4.52,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.93,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.9,
+          "mean_pinning_words": 4.27,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.91,
+          "raw_power": 0.98,
+          "mean_pinned_signs": 3.81,
+          "mean_pinning_words": 4.21,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.67,
+          "mean_pinning_words": 4.08,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 3.68,
+          "mean_pinning_words": 4.14,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 4.08,
+          "mean_pinning_words": 4.5,
+          "regens": 0
+        }
+      ]
+    },
+    "15x1": {
+      "n_anchors": 15,
+      "R": 1,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.98,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 6.09,
+          "mean_pinning_words": 6.09,
+          "regens": 35
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.99,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 6.66,
+          "mean_pinning_words": 6.66,
+          "regens": 37
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.97,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 6.36,
+          "mean_pinning_words": 6.36,
+          "regens": 26
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 6.76,
+          "mean_pinning_words": 6.76,
+          "regens": 26
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.99,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 6.51,
+          "mean_pinning_words": 6.51,
+          "regens": 28
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 6.11,
+          "mean_pinning_words": 6.11,
+          "regens": 29
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 6.57,
+          "mean_pinning_words": 6.57,
+          "regens": 27
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 6.05,
+          "mean_pinning_words": 6.05,
+          "regens": 38
+        }
+      ]
+    },
+    "15x2": {
+      "n_anchors": 15,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.99,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.63,
+          "mean_pinning_words": 6.14,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.97,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.65,
+          "mean_pinning_words": 6.2,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.98,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.36,
+          "mean_pinning_words": 6.04,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.98,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 5.67,
+          "mean_pinning_words": 6.3,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.52,
+          "mean_pinning_words": 6.07,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.56,
+          "mean_pinning_words": 6.16,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.56,
+          "mean_pinning_words": 6.13,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.6,
+          "mean_pinning_words": 6.2,
+          "regens": 0
+        }
+      ]
+    },
+    "15x3": {
+      "n_anchors": 15,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.96,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.42,
+          "mean_pinning_words": 6.29,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 0.95,
+          "raw_power": 0.98,
+          "mean_pinned_signs": 5.26,
+          "mean_pinning_words": 6.13,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.95,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.49,
+          "mean_pinning_words": 6.33,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 0.98,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 5.51,
+          "mean_pinning_words": 6.17,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.98,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 5.22,
+          "mean_pinning_words": 6.07,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.46,
+          "mean_pinning_words": 6.27,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.49,
+          "mean_pinning_words": 6.19,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 5.58,
+          "mean_pinning_words": 6.42,
+          "regens": 0
+        }
+      ]
+    },
+    "20x2": {
+      "n_anchors": 20,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.99,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.57,
+          "mean_pinning_words": 8.67,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.3,
+          "mean_pinning_words": 8.28,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 0.98,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.52,
+          "mean_pinning_words": 8.44,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.37,
+          "mean_pinning_words": 8.35,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.5,
+          "mean_pinning_words": 8.36,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.28,
+          "mean_pinning_words": 8.35,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.32,
+          "mean_pinning_words": 8.29,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.26,
+          "mean_pinning_words": 8.21,
+          "regens": 0
+        }
+      ]
+    },
+    "20x3": {
+      "n_anchors": 20,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.99,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.33,
+          "mean_pinning_words": 8.64,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.25,
+          "mean_pinning_words": 8.62,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.08,
+          "mean_pinning_words": 8.41,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 6.59,
+          "mean_pinning_words": 8.03,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 0.99,
+          "raw_power": 0.99,
+          "mean_pinned_signs": 7.15,
+          "mean_pinning_words": 8.34,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.1,
+          "mean_pinning_words": 8.45,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.19,
+          "mean_pinning_words": 8.61,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 7.18,
+          "mean_pinning_words": 8.61,
+          "regens": 0
+        }
+      ]
+    },
+    "25x2": {
+      "n_anchors": 25,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.83,
+          "mean_pinning_words": 10.2,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.2,
+          "mean_pinning_words": 10.69,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.64,
+          "mean_pinning_words": 10.11,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.87,
+          "mean_pinning_words": 10.14,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.67,
+          "mean_pinning_words": 10.06,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.16,
+          "mean_pinning_words": 10.8,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.92,
+          "mean_pinning_words": 10.58,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.11,
+          "mean_pinning_words": 10.34,
+          "regens": 0
+        }
+      ]
+    },
+    "25x3": {
+      "n_anchors": 25,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 0.99,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.2,
+          "mean_pinning_words": 9.8,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.3,
+          "mean_pinning_words": 10.45,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.21,
+          "mean_pinning_words": 10.16,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.24,
+          "mean_pinning_words": 10.13,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.6,
+          "mean_pinning_words": 10.54,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.57,
+          "mean_pinning_words": 10.42,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.35,
+          "mean_pinning_words": 10.23,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 8.55,
+          "mean_pinning_words": 10.62,
+          "regens": 0
+        }
+      ]
+    },
+    "30x2": {
+      "n_anchors": 30,
+      "R": 2,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.74,
+          "mean_pinning_words": 12.71,
+          "regens": 35
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.74,
+          "mean_pinning_words": 12.72,
+          "regens": 41
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.51,
+          "mean_pinning_words": 12.44,
+          "regens": 39
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.72,
+          "mean_pinning_words": 12.72,
+          "regens": 43
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 11.42,
+          "mean_pinning_words": 13.3,
+          "regens": 30
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.75,
+          "mean_pinning_words": 12.83,
+          "regens": 30
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.16,
+          "mean_pinning_words": 12.09,
+          "regens": 49
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 11.21,
+          "mean_pinning_words": 13.1,
+          "regens": 29
+        }
+      ]
+    },
+    "30x3": {
+      "n_anchors": 30,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.77,
+          "mean_pinning_words": 12.53,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.86,
+          "mean_pinning_words": 12.66,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.95,
+          "mean_pinning_words": 12.55,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.86,
+          "mean_pinning_words": 12.39,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.65,
+          "mean_pinning_words": 12.5,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.36,
+          "mean_pinning_words": 12.94,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 9.79,
+          "mean_pinning_words": 12.41,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 10.08,
+          "mean_pinning_words": 12.71,
+          "regens": 0
+        }
+      ]
+    },
+    "40x3": {
+      "n_anchors": 40,
+      "R": 3,
+      "curve": [
+        {
+          "strength": 0.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.18,
+          "mean_pinning_words": 16.35,
+          "regens": 0
+        },
+        {
+          "strength": 0.5,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.56,
+          "mean_pinning_words": 16.65,
+          "regens": 0
+        },
+        {
+          "strength": 1.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.92,
+          "mean_pinning_words": 17.39,
+          "regens": 0
+        },
+        {
+          "strength": 2.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.5,
+          "mean_pinning_words": 16.63,
+          "regens": 0
+        },
+        {
+          "strength": 3.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.33,
+          "mean_pinning_words": 16.56,
+          "regens": 0
+        },
+        {
+          "strength": 5.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.68,
+          "mean_pinning_words": 17.03,
+          "regens": 0
+        },
+        {
+          "strength": 8.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.19,
+          "mean_pinning_words": 16.65,
+          "regens": 0
+        },
+        {
+          "strength": 13.0,
+          "loto_survival_power": 1.0,
+          "raw_power": 1.0,
+          "mean_pinned_signs": 12.56,
+          "mean_pinning_words": 16.66,
+          "regens": 0
+        }
+      ]
+    }
+  },
+  "skipped_cells_infeasible": [
+    [
+      20,
+      1
+    ],
+    [
+      25,
+      1
+    ],
+    [
+      30,
+      1
+    ],
+    [
+      40,
+      1
+    ],
+    [
+      40,
+      2
+    ]
+  ],
+  "machinery": {
+    "curve": [
+      {
+        "strength": 0.0,
+        "loto_survival_power": 0.01,
+        "raw_power": 0.01,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 0.5,
+        "loto_survival_power": 0.02,
+        "raw_power": 0.02,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 1.0,
+        "loto_survival_power": 0.03,
+        "raw_power": 0.03,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 2.0,
+        "loto_survival_power": 0.13,
+        "raw_power": 0.13,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 3.0,
+        "loto_survival_power": 0.49,
+        "raw_power": 0.49,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 5.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 8.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      },
+      {
+        "strength": 13.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0,
+        "mean_pinned_signs": 0.0,
+        "mean_pinning_words": 0.0,
+        "regens": 0
+      }
+    ],
+    "false_fire_s0": 0.01,
+    "power_s13": 1.0,
+    "invalid": false
+  },
+  "quota": {
+    "n_anchors": 8,
+    "R": 1
+  },
+  "n_rep": 100,
+  "n_perm": 200,
+  "h": 20,
+  "master_seed": 20260712,
+  "profile_cell_secs": 32.6,
+  "wall_clock_s": 83.1,
+  "h_sensitivity_descriptive_at_quota": {
+    "h=15": [
+      {
+        "strength": 0.0,
+        "loto_survival_power": 0.81,
+        "raw_power": 0.91
+      },
+      {
+        "strength": 0.5,
+        "loto_survival_power": 0.83,
+        "raw_power": 0.95
+      },
+      {
+        "strength": 1.0,
+        "loto_survival_power": 0.89,
+        "raw_power": 0.98
+      },
+      {
+        "strength": 2.0,
+        "loto_survival_power": 0.84,
+        "raw_power": 0.96
+      },
+      {
+        "strength": 3.0,
+        "loto_survival_power": 0.94,
+        "raw_power": 0.98
+      },
+      {
+        "strength": 5.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0
+      },
+      {
+        "strength": 8.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0
+      },
+      {
+        "strength": 13.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0
+      }
+    ],
+    "h=25": [
+      {
+        "strength": 0.0,
+        "loto_survival_power": 0.53,
+        "raw_power": 0.76
+      },
+      {
+        "strength": 0.5,
+        "loto_survival_power": 0.49,
+        "raw_power": 0.76
+      },
+      {
+        "strength": 1.0,
+        "loto_survival_power": 0.47,
+        "raw_power": 0.8
+      },
+      {
+        "strength": 2.0,
+        "loto_survival_power": 0.58,
+        "raw_power": 0.79
+      },
+      {
+        "strength": 3.0,
+        "loto_survival_power": 0.75,
+        "raw_power": 0.92
+      },
+      {
+        "strength": 5.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0
+      },
+      {
+        "strength": 8.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0
+      },
+      {
+        "strength": 13.0,
+        "loto_survival_power": 1.0,
+        "raw_power": 1.0
+      }
+    ]
+  }
+}
