@@ -1,0 +1,111 @@
+{
+  "quota": {
+    "n_anchors": 8,
+    "R": 1
+  },
+  "n_quota_eligible_anchors": 38,
+  "per_class": {
+    "toponym": 13,
+    "personal_name": 23,
+    "gloss_acrophonic": 2
+  },
+  "per_sm_trust": {
+    "tempting": 7,
+    "neutral": 23,
+    "n/a": 8
+  },
+  "per_source_status": {
+    "primary": 30,
+    "secondary": 8
+  },
+  "excluded": {
+    "source_queried_equation": 2,
+    "sm_debunked": 2,
+    "single_sign_form": 1,
+    "class4_constraint": 4
+  },
+  "distinct_covered_eligible_signs": 35,
+  "legs_per_sign": {
+    "A": 6,
+    "DA": 6,
+    "DE": 1,
+    "DI": 4,
+    "DU": 2,
+    "I": 5,
+    "JA": 3,
+    "KA": 2,
+    "KI": 6,
+    "KU": 6,
+    "MA": 2,
+    "MI": 3,
+    "NA": 5,
+    "NE": 1,
+    "NI": 4,
+    "NU": 2,
+    "PA": 3,
+    "PI": 1,
+    "PU2": 1,
+    "QA": 2,
+    "RA": 4,
+    "RA2": 3,
+    "RE": 5,
+    "RI": 2,
+    "RO": 2,
+    "RU": 7,
+    "SA": 7,
+    "SU": 3,
+    "TA": 6,
+    "TE": 1,
+    "TI": 1,
+    "TO": 1,
+    "TU": 1,
+    "U": 2,
+    "WA": 2
+  },
+  "max_legs": 7,
+  "signs_over_swept_R": [
+    "I",
+    "SA",
+    "RU",
+    "KI",
+    "DI",
+    "TA",
+    "DA",
+    "A",
+    "NA",
+    "RA",
+    "RE",
+    "KU",
+    "NI"
+  ],
+  "greedy_sign_disjoint_subset_R1": [
+    "pn_ku_ru_ku",
+    "pn_ki_ri_ta",
+    "top_i_ti_ni_sa_younger",
+    "pn_du_pu2_re",
+    "pn_qa_ra2_wa",
+    "top_di_na_u_younger",
+    "pn_da_mi_nu",
+    "pn_pa_ra_ne",
+    "pn_a_su_ja"
+  ],
+  "strict_tier": {
+    "n_anchors_after_hedge_exclusions": 31,
+    "r1_subset": [
+      "pn_qa_qa_ru",
+      "pn_a_su_ja",
+      "top_pa_i_to",
+      "top_ku_ta_younger",
+      "pn_si_ki_ra",
+      "pn_sa_ma_ro",
+      "pn_du_pu2_re",
+      "pn_da_mi_nu",
+      "top_di_na_u_younger"
+    ],
+    "meets_quota": true
+  },
+  "greedy_subset_R3_size": 19,
+  "verdict": "SUPPLY MEETS QUOTA",
+  "fix_disclosure": "v2: original script mis-fired PENDING-DOMINATED on a negative deficit and tested the legs cap over the whole pool instead of subset existence; fixed per the prompt's verdict definitions, disclosed.",
+  "quota_cell_reference": "8 anchors; all R regimes 1-3 band-passing at n=8 (0.86-0.93); quota-cell realized coverage ~26 slots"
+}

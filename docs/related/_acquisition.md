@@ -42,6 +42,21 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
   (pp. 102/104/108). Consumed by `experiments/crossscript_gate/steele_meissner_2017.py`.
   (The earlier note — Cambridge repository record all-rights-reserved; companion OA chapter Meißner &
   Steele "Structural and Contextual Concerns" — remains true but is superseded for acquisition purposes.)
+- **Younger, John G. — "Linear A Texts & Inscriptions in phonetic transcription" website** —
+  ✅ **ACQUIRED 2026-07-03** (archive.org; the KU host `people.ku.edu` was decommissioned early
+  2024 and no longer resolves; Younger's successor home is Academia.edu, but there the material
+  is reorganized as login-gated PDFs, so the latest Wayback snapshots of the canonical KU pages
+  were archived instead — raw `id_` captures). Main page (incl. §10c Place Names; Younger's
+  last update 2023-07-03): snapshot 20231222205430 of `people.ku.edu/~jyounger/LinearA/`,
+  SHA-256 `4fc646614a37909fe7d50844fa76d4b0c9dc3eec0792c8fabcc069527715ada4`; Lexicon (last
+  update 2023-08-07): snapshot 20231203062200 of `…/LinearA/lexicon.html`, SHA-256
+  `463778cc7d7262a57adab53c75c33261554af9be69a70a1857bf34079e6c5b94` →
+  `corpus/bronze/younger_lineara/` (gitignored, not redistributed; PROVENANCE.md alongside).
+  Authorship stated on-page (jyounger@ku.edu). Settles: Younger's place-name identifications
+  (PA-I-TO = Phaistos, SU-KI-RI-TA = Sybrita, TU-RI-SA/TU-RU-SA = Tylissos, DI-KI-TE = Mt
+  Dikte, SE-TO-I-JA = Archanes?/Ioukhtas?, KU-*79-NI perhaps ku-do-ni-ja, I-DA = Ida?,
+  I-TI-NI-SA = Itanos, DA-U-*49 =? da-wo, KU-NI-SU place not "grain", SA-RA2 = Ayia Triada?,
+  WI-NA-DU listed only as a name in a list at KH 5.3, not identified as a toponym).
 - **Min Eu, Xu & Cacciafoco 2019** — Linear A vs lexical lists *(confirm venue + OA)*.
 - **KO-RO-NO-WE-SA proceedings** (Ariadne Suppl. 5) — University of Crete repository may host the OA
   volume *(confirm; the Salgarella & Judson chapter is already in hand)*.
