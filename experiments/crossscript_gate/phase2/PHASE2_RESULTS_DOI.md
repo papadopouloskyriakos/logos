@@ -14,3 +14,8 @@
 
 Every promise provably precedes its result; every result cites its promise. No licensed corpus
 content shipped in any record.
+
+**Metadata amendment (2026-07-03T17:32:05Z, in place — same DOI, no new version):** the record
+description was expanded per the housekeeping spec to carry the negative-under-either-bar
+statement, the s≈0 / 0.45 / 0.82 power-bounded diagnosis, the fourth-time 0.0000 distributional
+null, and the full four-DOI chain with timestamps. Files untouched.
