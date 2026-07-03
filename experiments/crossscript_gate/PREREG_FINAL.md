@@ -140,6 +140,23 @@ and the fired test share one decision rule.
    draws per replicate), detection at the final N from §E.1. The frozen GO band must hold.
    **If it does not: STOP and escalate — no silent fallback to uniform.**
 
+### §E outcomes (2026-07-03, appended per §E — no rule changed; artifact
+### `results/phase1_power.json`, rules commit `15c7032`, 28.0 s CPU)
+
+1. **Secondary → DESCRIPTIVE.** Block-axis design curve (toponym channel on, detection at the
+   N=2 bar p_raw < 0.02532): power 0.14 / 0.14 / 0.16 / 0.42 / **0.64** / 1.00 / 1.00 / 1.00
+   at s = 0 / 0.5 / 1 / 2 / 3 / 5 / 8 / 13 — GO band (≥ 0.80 at s ≤ 3) NOT met; machinery
+   config valid (s=0 false-fire 0.02; s=13 power 1.00). Structural cause, worth recording: the
+   eleven cluster inside the toponym forms (pa-i-to and se-to-i-ja are mostly *inside* the
+   block), so only SA is pinnable (mean pins 1.0 of 11) — the block axis loses the constraint
+   channel almost entirely. **The Cypriot-eleven axis is reported descriptively, never
+   gate-deciding. Final N = 1.**
+2. **Primary bridging: GO RE-CERTIFIED** at the operative bar (N=1, p_raw < 0.05), exact
+   stratified design (49-pool, §D table, seeded per-replicate draws): design-curve power
+   **0.82 / 0.84 / 0.80 / 0.84 / 0.98** at s = 0 / 0.5 / 1 / 2 / 3 (1.00 beyond); machinery
+   config valid (s=0 false-fire 0.04; s=13 power 1.00); mean pins 2.1–2.5 of 20 (stratification
+   stabilized the channel as intended). The design that fires is the design certified.
+
 ## §F Toponym-reliability clause (the GO condition — binding)
 
 Any positive verdict on any axis must survive **leave-one-toponym-out (LOTO)**: for each of the

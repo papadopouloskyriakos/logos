@@ -1,0 +1,211 @@
+{
+  "prereg_rules_commit": "15c70320bc9ea84510f289b24e99f5d8809fc589",
+  "thresholds_commit_frozen": "00fb9eaec78e6de8ba684263fabc5eed6a76f07f",
+  "addendum_b_commit": "33a3fecf13b15ba2be7e7bf6c4619d27d5c36072",
+  "secondary": {
+    "curve_a": [
+      {
+        "strength": 0.0,
+        "power": 0.02,
+        "mean_top1": 0.014545454545454545
+      },
+      {
+        "strength": 0.5,
+        "power": 0.0,
+        "mean_top1": 0.012727272727272728
+      },
+      {
+        "strength": 1.0,
+        "power": 0.02,
+        "mean_top1": 0.016363636363636365
+      },
+      {
+        "strength": 2.0,
+        "power": 0.08,
+        "mean_top1": 0.04545454545454545
+      },
+      {
+        "strength": 3.0,
+        "power": 0.34,
+        "mean_top1": 0.11636363636363636
+      },
+      {
+        "strength": 5.0,
+        "power": 0.96,
+        "mean_top1": 0.49999999999999994
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.92
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 1.0
+      }
+    ],
+    "curve_b": [
+      {
+        "strength": 0.0,
+        "power": 0.14,
+        "mean_top1": 0.10363636363636365,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 0.5,
+        "power": 0.14,
+        "mean_top1": 0.10363636363636365,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 1.0,
+        "power": 0.16,
+        "mean_top1": 0.10727272727272728,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 2.0,
+        "power": 0.42,
+        "mean_top1": 0.13636363636363635,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 3.0,
+        "power": 0.64,
+        "mean_top1": 0.1963636363636364,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 5.0,
+        "power": 1.0,
+        "mean_top1": 0.5327272727272727,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.9272727272727272,
+        "mean_pinned": 1.0
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 1.0,
+        "mean_pinned": 1.0
+      }
+    ],
+    "checks": {
+      "false_fire_s0_a": 0.02,
+      "power_s13_a": 1.0,
+      "machinery_invalid": false,
+      "go_band_met_b": false
+    },
+    "confirmatory": false,
+    "detection_bar_p_raw": 0.025320565519103666
+  },
+  "final_n_axes": 1,
+  "primary_bridging": {
+    "curve_a": [
+      {
+        "strength": 0.0,
+        "power": 0.04,
+        "mean_top1": 0.013000000000000001
+      },
+      {
+        "strength": 0.5,
+        "power": 0.02,
+        "mean_top1": 0.012000000000000002
+      },
+      {
+        "strength": 1.0,
+        "power": 0.14,
+        "mean_top1": 0.028999999999999998
+      },
+      {
+        "strength": 2.0,
+        "power": 0.08,
+        "mean_top1": 0.026000000000000002
+      },
+      {
+        "strength": 3.0,
+        "power": 0.56,
+        "mean_top1": 0.094
+      },
+      {
+        "strength": 5.0,
+        "power": 0.98,
+        "mean_top1": 0.3550000000000001
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.8530000000000001
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 0.9930000000000001
+      }
+    ],
+    "curve_b": [
+      {
+        "strength": 0.0,
+        "power": 0.82,
+        "mean_top1": 0.128,
+        "mean_pinned": 2.34
+      },
+      {
+        "strength": 0.5,
+        "power": 0.84,
+        "mean_top1": 0.127,
+        "mean_pinned": 2.34
+      },
+      {
+        "strength": 1.0,
+        "power": 0.8,
+        "mean_top1": 0.131,
+        "mean_pinned": 2.1
+      },
+      {
+        "strength": 2.0,
+        "power": 0.84,
+        "mean_top1": 0.136,
+        "mean_pinned": 2.28
+      },
+      {
+        "strength": 3.0,
+        "power": 0.98,
+        "mean_top1": 0.19700000000000004,
+        "mean_pinned": 2.2
+      },
+      {
+        "strength": 5.0,
+        "power": 1.0,
+        "mean_top1": 0.425,
+        "mean_pinned": 2.08
+      },
+      {
+        "strength": 8.0,
+        "power": 1.0,
+        "mean_top1": 0.8740000000000001,
+        "mean_pinned": 2.22
+      },
+      {
+        "strength": 13.0,
+        "power": 1.0,
+        "mean_top1": 0.9930000000000001,
+        "mean_pinned": 2.5
+      }
+    ],
+    "checks": {
+      "false_fire_s0_a": 0.04,
+      "power_s13_a": 1.0,
+      "machinery_invalid": false,
+      "go_band_met_b": true
+    },
+    "go_recertified": true,
+    "detection_bar_p_raw": 0.050000000000000044
+  },
+  "wall_clock_s": 28.0
+}
