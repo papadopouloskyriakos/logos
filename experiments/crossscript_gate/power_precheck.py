@@ -42,8 +42,7 @@ MASTER_SEED = 20260703
 STRENGTHS = (0.0, 0.5, 1.0, 2.0, 3.0, 5.0, 8.0, 13.0)
 N_REP = 50
 N_PERM = 200
-H_PRIMARY = 10
-H_SENSITIVITY = (5, 15, 20)
+H_FINAL = 20               # Addendum B: finalized by the operator (Phase-0 sensitivity finding)
 D_EMB = 24
 ALPHA = 0.05
 
@@ -85,8 +84,25 @@ def _heldout_acc(X, U, assign, train, held, top_k=1):
     return float(np.mean([assign[h] in ranks[j] for j, h in enumerate(held)]))
 
 
-def replicate(U, true_val, n, h, s, seed):
-    """One planted-signal replicate at strength s: returns (obs_top1, obs_top5, perm_p, detect)."""
+def _pinned(held_set, x, forms_idx):
+    """Addendum B toponym channel: x pinned iff some non-queried toponym form contains x with
+    ALL its other member anchors un-held-out (LB-lexicon word completion, reliability=1)."""
+    for form in forms_idx:
+        if x in form and all((y == x) or (y not in held_set) for y in form):
+            return True
+    return False
+
+
+def _nn_preds(X, U, assign, train, held):
+    m = Procrustes().fit(X, U, [(i, assign[i]) for i in train])
+    S = m.similarity(X, U)
+    return np.argmax(S[held], axis=1), S
+
+
+def replicate(U, true_val, n, h, s, seed, forms_idx):
+    """One planted-signal replicate at strength s. Returns per-config observables and
+    detections — config (a) machinery (no toponym channel) and config (b) finalized design —
+    computed from the SAME X, split, and null permutation draws (paired, Addendum B §5)."""
     rng = np.random.default_rng(seed)
     d = U.shape[1]
     Q, _ = np.linalg.qr(rng.normal(size=(d, d)))                 # fixed random orthogonal map
@@ -95,30 +111,48 @@ def replicate(U, true_val, n, h, s, seed):
 
     perm = rng.permutation(n)
     held, train = perm[:h], perm[h:]
+    held_set = set(held.tolist())
+    pins = np.array([_pinned(held_set, int(x), forms_idx) for x in held])
 
-    obs = _heldout_acc(X, U, true_val, train, held)
-    obs5 = _heldout_acc(X, U, true_val, train, held, top_k=5)
+    def _acc_both(assign):
+        preds, S = _nn_preds(X, U, assign, train, held)
+        hits = preds == assign[held]
+        acc_a = float(np.mean(hits))
+        # config (b): pinned prediction = the conventional slot value (true_val), overriding NN
+        hits_b = np.where(pins, true_val[held] == assign[held], hits)
+        acc_b = float(np.mean(hits_b))
+        top5 = np.argsort(-S[held], axis=1)[:, :5]
+        acc5 = float(np.mean([assign[held[j]] in top5[j] for j in range(len(held))]))
+        return acc_a, acc_b, acc5
 
-    null = np.empty(N_PERM)
+    obs_a, obs_b, obs5 = _acc_both(true_val)
+    null_a = np.empty(N_PERM)
+    null_b = np.empty(N_PERM)
     for k in range(N_PERM):
         pi = true_val[rng.permutation(n)]                        # permuted anchor↔value graph
-        null[k] = _heldout_acc(X, U, pi, train, held)
-    p = float((1 + np.sum(null >= obs - 1e-12)) / (N_PERM + 1))
-    return obs, obs5, p, p < ALPHA
+        null_a[k], null_b[k], _ = _acc_both(pi)
+    p_a = float((1 + np.sum(null_a >= obs_a - 1e-12)) / (N_PERM + 1))
+    p_b = float((1 + np.sum(null_b >= obs_b - 1e-12)) / (N_PERM + 1))
+    return {"obs_a": obs_a, "obs_b": obs_b, "obs5": obs5, "p_a": p_a, "p_b": p_b,
+            "det_a": p_a < ALPHA, "det_b": p_b < ALPHA, "n_pinned": int(pins.sum())}
 
 
-def power_curve(U, true_val, n, h, *, label, log=print):
-    curve = []
+def power_curves_ab(U, true_val, n, h, forms_idx, *, log=print):
+    """Both Addendum-B configurations over the strength grid, paired seeds."""
+    curve_a, curve_b = [], []
     for si, s in enumerate(STRENGTHS):
-        det, o1, o5 = [], [], []
-        for r in range(N_REP):
-            obs, obs5, p, d_ = replicate(U, true_val, n, h, s,
-                                         MASTER_SEED + 10000 * si + r)
-            det.append(d_); o1.append(obs); o5.append(obs5)
-        curve.append({"strength": s, "power": float(np.mean(det)),
-                      "mean_top1": float(np.mean(o1)), "mean_top5": float(np.mean(o5))})
-        log(f"  [{label}] s={s:>4}: power={np.mean(det):.2f} top1={np.mean(o1):.3f}", flush=True)
-    return curve
+        rows = [replicate(U, true_val, n, h, s, MASTER_SEED + 10000 * si + r, forms_idx)
+                for r in range(N_REP)]
+        curve_a.append({"strength": s, "power": float(np.mean([r["det_a"] for r in rows])),
+                        "mean_top1": float(np.mean([r["obs_a"] for r in rows])),
+                        "mean_top5": float(np.mean([r["obs5"] for r in rows]))})
+        curve_b.append({"strength": s, "power": float(np.mean([r["det_b"] for r in rows])),
+                        "mean_top1": float(np.mean([r["obs_b"] for r in rows])),
+                        "mean_pinned": float(np.mean([r["n_pinned"] for r in rows]))})
+        log(f"  s={s:>4}: machinery(a) power={curve_a[-1]['power']:.2f} "
+            f"top1={curve_a[-1]['mean_top1']:.3f} | design(b) power={curve_b[-1]['power']:.2f} "
+            f"top1={curve_b[-1]['mean_top1']:.3f} pins={curve_b[-1]['mean_pinned']:.1f}", flush=True)
+    return curve_a, curve_b
 
 
 def verdict_from(curve):
@@ -138,38 +172,47 @@ def main() -> int:
     n = len(anchors)
     assert n == 51 and len(candidates) == 73, (n, len(candidates))
 
+    # Addendum B: the toponym-constraint channel (non-queried Table 6.4 forms only), as
+    # anchor-index tuples. Every covered sign is a robust anchor (verified in the summary).
+    import steele_meissner_2017 as SM
+    aidx = {s: i for i, s in enumerate(anchors)}
+    forms_idx = [tuple(aidx[s] for s in t["la_signs"])
+                 for t in SM.TOPONYM_EQUATIONS if not t["queried"]]
+    assert all(all(s in aidx for s in t["la_signs"])
+               for t in SM.TOPONYM_EQUATIONS if not t["queried"])
+
     results = {
-        "prereg_thresholds_commit": _git("log", "-1", "--format=%H", "--",
-                                         "experiments/crossscript_gate/PREREG_DRAFT.md"),
+        "prereg_thresholds_commit_frozen": "00fb9eaec78e6de8ba684263fabc5eed6a76f07f",
+        "addendum_b_commit": _git("log", "-1", "--format=%H", "--",
+                                  "experiments/crossscript_gate/PREREG_DRAFT.md"),
         "run_head_commit": _git("rev-parse", "HEAD"),
-        "design": {"n_anchors": n, "h_primary": H_PRIMARY, "n_candidates": len(candidates),
+        "design": {"n_anchors": n, "h": H_FINAL, "n_candidates": len(candidates),
                    "chance_top1": 1.0 / len(candidates), "d_emb": D_EMB,
                    "n_rep": N_REP, "n_perm": N_PERM, "alpha": ALPHA,
-                   "strengths": list(STRENGTHS), "master_seed": MASTER_SEED},
+                   "strengths": list(STRENGTHS), "master_seed": MASTER_SEED,
+                   "toponym_forms": [t["lb"] for t in SM.TOPONYM_EQUATIONS if not t["queried"]],
+                   "toponym_reliability_assumption": 1.0},
     }
 
-    print(f"[power] primary design: n={n} h={H_PRIMARY} |V|={len(candidates)}", flush=True)
-    primary = power_curve(U, true_val, n, H_PRIMARY, label=f"h={H_PRIMARY}")
-    verdict, checks = verdict_from(primary)
-    results["primary_curve"] = primary
-    results["validity_checks"] = checks
+    print(f"[power 0.5] finalized design: n={n} h={H_FINAL} |V|={len(candidates)} "
+          f"toponym forms={len(forms_idx)}", flush=True)
+    curve_a, curve_b = power_curves_ab(U, true_val, n, H_FINAL, forms_idx)
+
+    # INVALID checks on config (a) — the machinery, signal-free world (Addendum B §4a);
+    # verdict bands verbatim from the frozen §2, applied to config (b) — the actual design.
+    _, checks = verdict_from(curve_a)
+    machinery_invalid = (checks["false_fire_s0"] > 0.14 or checks["power_s13"] < 0.90)
+    if machinery_invalid:
+        verdict = "INVALID"
+    else:
+        go = any(c["power"] >= 0.80 for c in curve_b if c["strength"] <= 3.0)
+        marginal = any(c["power"] >= 0.80 for c in curve_b if c["strength"] <= 8.0)
+        verdict = "GO" if go else ("MARGINAL" if marginal else "NO-GO")
+
+    results["machinery_curve_a"] = curve_a
+    results["design_curve_b"] = curve_b
+    results["validity_checks_on_a"] = checks
     results["verdict"] = verdict
-
-    results["sensitivity"] = {}
-    for h in H_SENSITIVITY:
-        results["sensitivity"][f"h={h}"] = power_curve(U, true_val, n, h, label=f"h={h}")
-
-    if verdict == "NO-GO":                       # pre-committed follow-up: smallest n with power
-        rng = np.random.default_rng(MASTER_SEED + 999)
-        sweep = {}
-        for n_syn in (51, 100, 150, 200, 300):
-            tv = (true_val if n_syn == n
-                  else rng.integers(0, len(candidates), size=n_syn))   # non-injective for n>|V|
-            c = power_curve(U, tv, n_syn, max(1, int(round(0.2 * n_syn))), label=f"n={n_syn}")
-            sweep[f"n={n_syn}"] = {"curve": c,
-                                   "go_would_hold": any(x["power"] >= 0.80 for x in c
-                                                        if x["strength"] <= 3.0)}
-        results["nogo_followup_n_sweep"] = sweep
 
     # feature-contract self-check: the power analysis itself must be grep/import-clean
     dirty = [m for m in sys.modules if any(m == b or m.startswith(b + ".") for b in BANNED_MODULES)]
@@ -179,7 +222,7 @@ def main() -> int:
     results["wall_clock_s"] = round(time.time() - t0, 1)
     out = os.path.join(_HERE, "results")
     os.makedirs(out, exist_ok=True)
-    with open(os.path.join(out, "power_precheck.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(out, "power_precheck_phase05.json"), "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"\nVERDICT: {verdict}  (checks: {checks})  wall={results['wall_clock_s']}s", flush=True)
     return 0

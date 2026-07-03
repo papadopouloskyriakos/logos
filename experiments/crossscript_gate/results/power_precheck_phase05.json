@@ -1,0 +1,141 @@
+{
+  "prereg_thresholds_commit_frozen": "00fb9eaec78e6de8ba684263fabc5eed6a76f07f",
+  "addendum_b_commit": "33a3fecf13b15ba2be7e7bf6c4619d27d5c36072",
+  "run_head_commit": "33a3fecf13b15ba2be7e7bf6c4619d27d5c36072",
+  "design": {
+    "n_anchors": 51,
+    "h": 20,
+    "n_candidates": 73,
+    "chance_top1": 0.0136986301369863,
+    "d_emb": 24,
+    "n_rep": 50,
+    "n_perm": 200,
+    "alpha": 0.05,
+    "strengths": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      8.0,
+      13.0
+    ],
+    "master_seed": 20260703,
+    "toponym_forms": [
+      "pa-i-to",
+      "se-to-i-ja",
+      "tu-ri-so",
+      "di-ka-ta(-jo)",
+      "su-ki-ri-ta"
+    ],
+    "toponym_reliability_assumption": 1.0
+  },
+  "machinery_curve_a": [
+    {
+      "strength": 0.0,
+      "power": 0.04,
+      "mean_top1": 0.01,
+      "mean_top5": 0.066
+    },
+    {
+      "strength": 0.5,
+      "power": 0.08,
+      "mean_top1": 0.017,
+      "mean_top5": 0.066
+    },
+    {
+      "strength": 1.0,
+      "power": 0.04,
+      "mean_top1": 0.021,
+      "mean_top5": 0.07799999999999999
+    },
+    {
+      "strength": 2.0,
+      "power": 0.18,
+      "mean_top1": 0.03,
+      "mean_top5": 0.126
+    },
+    {
+      "strength": 3.0,
+      "power": 0.5,
+      "mean_top1": 0.08100000000000002,
+      "mean_top5": 0.286
+    },
+    {
+      "strength": 5.0,
+      "power": 0.98,
+      "mean_top1": 0.3559999999999999,
+      "mean_top5": 0.6969999999999998
+    },
+    {
+      "strength": 8.0,
+      "power": 1.0,
+      "mean_top1": 0.8270000000000001,
+      "mean_top5": 0.971
+    },
+    {
+      "strength": 13.0,
+      "power": 1.0,
+      "mean_top1": 0.9969999999999999,
+      "mean_top5": 1.0
+    }
+  ],
+  "design_curve_b": [
+    {
+      "strength": 0.0,
+      "power": 0.62,
+      "mean_top1": 0.098,
+      "mean_pinned": 1.76
+    },
+    {
+      "strength": 0.5,
+      "power": 0.74,
+      "mean_top1": 0.10800000000000001,
+      "mean_pinned": 1.82
+    },
+    {
+      "strength": 1.0,
+      "power": 0.8,
+      "mean_top1": 0.11600000000000002,
+      "mean_pinned": 1.94
+    },
+    {
+      "strength": 2.0,
+      "power": 0.68,
+      "mean_top1": 0.11900000000000001,
+      "mean_pinned": 1.78
+    },
+    {
+      "strength": 3.0,
+      "power": 0.92,
+      "mean_top1": 0.15900000000000003,
+      "mean_pinned": 1.74
+    },
+    {
+      "strength": 5.0,
+      "power": 1.0,
+      "mean_top1": 0.4229999999999999,
+      "mean_pinned": 2.02
+    },
+    {
+      "strength": 8.0,
+      "power": 1.0,
+      "mean_top1": 0.847,
+      "mean_pinned": 1.98
+    },
+    {
+      "strength": 13.0,
+      "power": 1.0,
+      "mean_top1": 0.998,
+      "mean_pinned": 2.02
+    }
+  ],
+  "validity_checks_on_a": {
+    "false_fire_s0": 0.04,
+    "power_s13": 1.0
+  },
+  "verdict": "GO",
+  "banned_modules_in_process": [],
+  "wall_clock_s": 18.9
+}
