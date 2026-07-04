@@ -1,0 +1,266 @@
+{
+  "ts": "2026-07-04T23:21:37.060261+00:00",
+  "prev_ts": null,
+  "progress": {
+    "done": 96,
+    "inflight": 4,
+    "pending": 68,
+    "total": 168,
+    "pct": 57.1
+  },
+  "elapsed_h_since_fenced_relaunch": 24.38,
+  "fenced_relaunch_utc": "2026-07-03T22:58:41+00:00",
+  "scheduler": {
+    "alive": true,
+    "pid": 836963,
+    "liveness_method": "argv-exact /proc scan (python+resume_sweep.py+--run); self-match-immune (excludes bash watcher)"
+  },
+  "load_bearing": {
+    "points": [
+      {
+        "benchmark": "linearb-greek",
+        "size": 600,
+        "done": 0,
+        "inflight": 0,
+        "acc_by_seed": {}
+      },
+      {
+        "benchmark": "linearb-greek",
+        "size": 650,
+        "done": 0,
+        "inflight": 0,
+        "acc_by_seed": {}
+      },
+      {
+        "benchmark": "linearb-greek",
+        "size": 689,
+        "done": 0,
+        "inflight": 0,
+        "acc_by_seed": {}
+      },
+      {
+        "benchmark": "cypriot-greek",
+        "size": 600,
+        "done": 0,
+        "inflight": 0,
+        "acc_by_seed": {}
+      },
+      {
+        "benchmark": "cypriot-greek",
+        "size": 650,
+        "done": 0,
+        "inflight": 0,
+        "acc_by_seed": {}
+      },
+      {
+        "benchmark": "cypriot-greek",
+        "size": 693,
+        "done": 4,
+        "inflight": 0,
+        "acc_by_seed": {
+          "0": 0.10967,
+          "1": 0.09668,
+          "2": 0.24098,
+          "3": 0.19913
+        }
+      }
+    ],
+    "all_six_done": false,
+    "phase_b_gate": "CLOSED"
+  },
+  "in_flight": [
+    {
+      "cell": [
+        "ugaritic-noiseless",
+        2214,
+        0
+      ],
+      "cum_cpu_s": 31656.3,
+      "cum_cpu_h": 8.79,
+      "cpu_delta_s_since_prev": null,
+      "r_in_subtree": 4,
+      "affinity": "17-18,20-21,37-39,42,44,47,49,51,53-55,57"
+    },
+    {
+      "cell": [
+        "ugaritic-noiseless",
+        2214,
+        1
+      ],
+      "cum_cpu_s": 32363.3,
+      "cum_cpu_h": 8.99,
+      "cpu_delta_s_since_prev": null,
+      "r_in_subtree": 4,
+      "affinity": "17-18,20-21,37-39,42,44,47,49,51,53-55,57"
+    },
+    {
+      "cell": [
+        "ugaritic-noiseless",
+        2214,
+        2
+      ],
+      "cum_cpu_s": 24078.4,
+      "cum_cpu_h": 6.69,
+      "cpu_delta_s_since_prev": null,
+      "r_in_subtree": 1,
+      "affinity": "17-18,20-21,37-39,42,44,47,49,51,53-55,57"
+    },
+    {
+      "cell": [
+        "ugaritic-noiseless",
+        2214,
+        3
+      ],
+      "cum_cpu_s": 22944.2,
+      "cum_cpu_h": 6.37,
+      "cpu_delta_s_since_prev": null,
+      "r_in_subtree": 4,
+      "affinity": "17-18,20-21,37-39,42,44,47,49,51,53-55,57"
+    }
+  ],
+  "fence": {
+    "expected": [
+      17,
+      18,
+      20,
+      21,
+      37,
+      38,
+      39,
+      42,
+      44,
+      47,
+      49,
+      51,
+      53,
+      54,
+      55,
+      57
+    ],
+    "worker_affinity": "17-18,20-21,37-39,42,44,47,49,51,53-55,57",
+    "intact": true,
+    "cpu_stall_some_avg60": 0.23,
+    "cpu_pressure": {
+      "avg10": 0.04,
+      "avg60": 0.23,
+      "avg300": 0.32
+    },
+    "protected_runq": 0,
+    "protected_runq_cap": 16,
+    "swap_used_mb": 0,
+    "tripwire": "green",
+    "memorymax": "N/A (taskset fallback fence; cgroup undelegated \u2014 no systemd MemoryMax)"
+  },
+  "eta": {
+    "fits": {
+      "linearb-greek": {
+        "src": "obs-fit",
+        "a": 0.2183,
+        "b": 1.763
+      },
+      "cypriot-greek": {
+        "src": "obs-fit",
+        "a": 0.2209,
+        "b": 1.939
+      },
+      "ugaritic-noiseless": {
+        "src": "obs-fit",
+        "a": 0.4975,
+        "b": 1.5
+      },
+      "phoenician-ugaritic": {
+        "src": "obs-fit",
+        "a": 5.7496,
+        "b": 0.981
+      },
+      "luvian-hittite": {
+        "src": "obs-fit",
+        "a": 5.7616,
+        "b": 1.146
+      }
+    },
+    "hours_to_load_bearing_done": 106.0,
+    "hours_to_full_168": 120.4,
+    "days_to_full_168": 5.02
+  },
+  "recent_completions": [
+    {
+      "cell": [
+        "cypriot-greek",
+        693,
+        1
+      ],
+      "ended_utc": "2026-07-04T21:36:00.635820+00:00",
+      "acc": 0.09668
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        693,
+        3
+      ],
+      "ended_utc": "2026-07-04T21:31:04.050771+00:00",
+      "acc": 0.19913
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        693,
+        2
+      ],
+      "ended_utc": "2026-07-04T20:52:25.609485+00:00",
+      "acc": 0.24098
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        693,
+        0
+      ],
+      "ended_utc": "2026-07-04T20:50:47.280032+00:00",
+      "acc": 0.10967
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        346,
+        2
+      ],
+      "ended_utc": null,
+      "acc": 0.10116
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        346,
+        3
+      ],
+      "ended_utc": null,
+      "acc": 0.08671
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        346,
+        1
+      ],
+      "ended_utc": null,
+      "acc": 0.02023
+    },
+    {
+      "cell": [
+        "cypriot-greek",
+        346,
+        0
+      ],
+      "ended_utc": null,
+      "acc": 0.0578
+    }
+  ],
+  "state_sources": {
+    "plan": "results/csa/csa_full_report.json (planned sizes)",
+    "done": "runtime/csa_sweep/cells/*.json",
+    "inflight": "cells/*.json.claim",
+    "health": "/proc (read-only)"
+  }
+}
