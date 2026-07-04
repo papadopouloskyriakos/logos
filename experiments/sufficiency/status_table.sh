@@ -26,6 +26,7 @@ for pid in subprocess.check_output(['pgrep','-f','resume_sweep.py --cell']).spli
 print(' '.join(sorted(out)) or 'none')
 PP
 )
+RUN=$(for pid in $(pgrep -f "resume_sweep.py --cell"); do awk '{print $3}' /proc/$pid/stat 2>/dev/null; done | grep -c R); TOT=$(pgrep -cf "resume_sweep.py --cell")
 PCT=$(( DONE*100/168 )); L1=$(awk '{print $1}' /proc/loadavg)
 PSI=$(awk -F'[= ]' '/some/{print $5}' /proc/pressure/cpu 2>/dev/null)   # cpu stall avg60 %
 SWAP=$(free -m | awk '/Swap/{print $3}')
@@ -43,7 +44,7 @@ PP
 echo    "┌─ CSA sufficiency sweep — $(date -u '+%Y-%m-%d %H:%M') UTC ──────────"
 echo    "│ progress  : ${DONE}/168 cells (${PCT}%)   remaining ${REM}"
 echo    "│ in-flight : ${INFLIGHT} cells (biggest-first, concurrency 4 = 16 fenced cores)"
-echo    "│ scheduler : ${SCHED}      fence: ${FENCE}"
+echo    "│ scheduler : ${SCHED}      fence: ${FENCE}      running: ${RUN}/${TOT} tasks in R (executing)"
 printf  "│ elapsed   : %dh%02dm since fenced relaunch\n" $((ELAP/3600)) $(((ELAP%3600)/60))
 echo    "│ ETA (fit) : ~${DTEN:0:-1}.${DTEN: -1} days left  (nominal ~5.5d, pess ~7-8d)"
 echo    "│ agentic   : cpu-stall(avg60) ${PSI}%  protected-runq ${RQP}/16  swap ${SWAP}MB  [tripwire=stall↑/runq>>16/swap>0]"
