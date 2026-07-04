@@ -15,6 +15,6 @@ printf '│ progress   : %d/168 cells (%d%%)   remaining %d\n' "$DONE" "$PCT" "$
 printf '│ in-flight  : %d cells (biggest-first, concurrency 4)\n' "$INFLIGHT"
 printf '│ scheduler  : %s        fence: %s\n' "$SCHED" "$FENCE"
 printf '│ elapsed    : %dh%02dm since fenced relaunch\n' $((ELAP/3600)) $(((ELAP%3600)/60))
-printf '│ ETA (fit)  : ~%.1f days left  (nominal ~5.5d, pess ~7-8d)\n' "$(echo "scale=1;$LEFT/86400"|bc)"
+DLEFT=$(awk "BEGIN{printf "%.1f", $LEFT/86400}"); printf '│ ETA (fit)  : ~%s days left  (nominal ~5.5d, pess ~7-8d)\n' "$DLEFT"
 printf '│ load1      : %s (agentic low-16 + sweep high-16)\n' "$L1"
 printf '└──────────────────────────────────────────────\n'
