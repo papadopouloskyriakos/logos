@@ -9,7 +9,7 @@ BREACH=$(python3 experiments/sufficiency/fence_check.py 2>/dev/null); FENCE=$([ 
 ELAP=$(( NOW-RELAUNCH )); LEFT=$(( MK-ELAP )); [ $LEFT -lt 0 ] && LEFT=0
 DTEN=$(( LEFT*10/86400 ))                    # days*10 for one decimal, integer math
 PCT=$(( DONE*100/168 )); L1=$(awk '{print $1}' /proc/loadavg)
-PSI=$(awk -F'[= ]' '/some/{print $6}' /proc/pressure/cpu 2>/dev/null)   # cpu stall avg60 %
+PSI=$(awk -F'[= ]' '/some/{print $5}' /proc/pressure/cpu 2>/dev/null)   # cpu stall avg60 %
 SWAP=$(free -m | awk '/Swap/{print $3}')
 RQP=$(python3 - <<'PP'
 import subprocess
