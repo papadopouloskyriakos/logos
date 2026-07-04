@@ -88,3 +88,18 @@ env in a dedicated (non-20-min) pass.
   requested): the agentic-baseline tripwire covers this empirically — if baseline responsiveness
   on 0-13,15,16 degrades, new cell starts pause and I report. A hard fence would require dropping
   the 6 straddling cores (fence → 10 cores / 3 lanes), a throughput cut available on request only.
+
+## 2026-07-03 ~23:55Z — SMT remedy PRE-DESIGNED + VERIFIED (tripwire response, not applied)
+Designated response if the agentic baseline degrades (replaces "drop 6 → 10 cores"): re-split
+along complete HT sibling pairs. Verified against /sys thread_siblings_list:
+- 8 full sibling-pairs inside the container: (5,37)(6,38)(7,39)(10,42)(12,44)(15,47)(17,49)(21,53).
+- **Remedy FENCE (hard, 16 logical / 8 physical): 5,6,7,10,12,15,17,21,37,38,39,42,44,47,49,53**
+- **Remedy PROTECTED (16 singletons, siblings outside container): 0,1,2,3,4,8,9,11,13,16,18,20,51,54,55,57**
+- **Straddle after re-split = NONE** (confirmed hard physical-core fence; zero sweep↔agentic
+  silicon sharing). Cost: sweep self-contends on SMT (~20-25% slower). Result-neutral (affinity
+  only) → cells stay byte-identical.
+- Ready to execute LIVE (re-pin all sweep tasks + rewrite launcher fence, NO kills):
+  `experiments/sufficiency/smt_remedy.sh`. **Do NOT run unless the tripwire fires.**
+Current state UNCHANGED: soft fence (17,18,20,21,37-39,42,44,47,49,51,53-55,57) still in force;
+6 straddle pairs (37↔5,38↔6,39↔7,42↔10,44↔12,47↔15) covered empirically by the agentic-baseline
+tripwire.
