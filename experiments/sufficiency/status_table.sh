@@ -8,6 +8,24 @@ pgrep -f "resume_sweep.py --run" >/dev/null && SCHED=ALIVE || SCHED=DOWN
 BREACH=$(python3 experiments/sufficiency/fence_check.py 2>/dev/null); FENCE=$([ -z "$BREACH" ] && echo HOLDING || echo "BREACH:$BREACH")
 ELAP=$(( NOW-RELAUNCH )); LEFT=$(( MK-ELAP )); [ $LEFT -lt 0 ] && LEFT=0
 DTEN=$(( LEFT*10/86400 ))                    # days*10 for one decimal, integer math
+CELLS=$(python3 - <<'PP'
+import os,subprocess
+sched=subprocess.check_output(['pgrep','-f','resume_sweep.py --run']).split()[:1]
+sched=sched[0].decode() if sched else ''
+out=[]
+for pid in subprocess.check_output(['pgrep','-f','resume_sweep.py --cell']).split():
+    pid=pid.decode()
+    try:
+        st=open(f'/proc/{pid}/stat').read().split()
+        if st[3]!=sched: continue                      # parents only (PPID=scheduler)
+        cpuh=(int(st[13])+int(st[14])+int(st[15])+int(st[16]))/100/3600
+        cl=open(f'/proc/{pid}/cmdline','rb').read().split(b'\x00')
+        cell=[c.decode() for c in cl if b':' in c and b'-' in c][:1]
+        out.append(f"{cell[0].split(':')[0][:3]}{cell[0].split(':')[1]}s{cell[0].split(':')[2]}={cpuh:.1f}h")
+    except Exception: pass
+print(' '.join(sorted(out)) or 'none')
+PP
+)
 PCT=$(( DONE*100/168 )); L1=$(awk '{print $1}' /proc/loadavg)
 PSI=$(awk -F'[= ]' '/some/{print $5}' /proc/pressure/cpu 2>/dev/null)   # cpu stall avg60 %
 SWAP=$(free -m | awk '/Swap/{print $3}')
@@ -30,4 +48,5 @@ printf  "│ elapsed   : %dh%02dm since fenced relaunch\n" $((ELAP/3600)) $(((EL
 echo    "│ ETA (fit) : ~${DTEN:0:-1}.${DTEN: -1} days left  (nominal ~5.5d, pess ~7-8d)"
 echo    "│ agentic   : cpu-stall(avg60) ${PSI}%  protected-runq ${RQP}/16  swap ${SWAP}MB  [tripwire=stall↑/runq>>16/swap>0]"
 echo    "│ load1     : ${L1}  (raw; inflated by sweep launch-bound tasks — not the tripwire metric)"
+echo    "│ liveness  : per-cell cumCPU ${CELLS} (must RISE each tick; flat=hang)"
 echo    "└──────────────────────────────────────────────"
