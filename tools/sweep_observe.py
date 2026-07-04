@@ -452,9 +452,29 @@ def render(snap):
     return "\n".join(L)
 
 
+def render_digest(snap):
+    """Compact load-bearing + ETA block for the Monitor cadence (one grouped notification)."""
+    p, lb, e, f = snap["progress"], snap["load_bearing"], snap["eta"], snap["fence"]
+    L = ["── observe %s | %d/%d (%.1f%%) | Phase-B gate %s | elapsed %sh"
+         % (snap["ts"][:19], p["done"], p["total"], p["pct"], lb["phase_b_gate"],
+            snap["elapsed_h_since_fenced_relaunch"]),
+         "   ETA: load-bearing done ~%.1fh | full 168/168 ~%.2fd | fence %s | tripwire %s | sched %s"
+         % (e["hours_to_load_bearing_done"], e["days_to_full_168"],
+            "INTACT" if f["intact"] else ("?" if f["intact"] is None else "BREACH"),
+            f["tripwire"].upper(), "ALIVE" if snap["scheduler"]["alive"] else "DOWN")]
+    for r in lb["points"]:
+        accs = " ".join(f"s{s}={a}" for s, a in r["acc_by_seed"].items()) or "pending"
+        L.append("   %-15s sz%-4d %d/4 done %din-flight  %s"
+                 % (r["benchmark"], r["size"], r["done"], r["inflight"], accs))
+    if lb["all_six_done"]:
+        L.append("   *** ALL SIX LOAD-BEARING CELLS DONE — Phase-B gate condition met ***")
+    return "\n".join(L)
+
+
 def main():
     ap = argparse.ArgumentParser(description="Read-only CSA sweep observer.")
     ap.add_argument("--json", action="store_true", help="print the full JSON snapshot to stdout")
+    ap.add_argument("--digest", action="store_true", help="compact load-bearing+ETA block (for Monitor)")
     ap.add_argument("--debug", action="store_true", help="dump raw mtimes, queue order, ETA inputs")
     a = ap.parse_args()
 
@@ -469,6 +489,8 @@ def main():
 
     if a.json:
         print(json.dumps(snap, indent=2))
+    elif a.digest:
+        print(render_digest(snap))
     else:
         print(render(snap))
         print("\n[snapshot written] %s" % os.path.relpath(outp, ROOT))
