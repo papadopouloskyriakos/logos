@@ -1,0 +1,546 @@
+{
+  "STATUS": "EXPLORATORY / DESCRIPTIVE — consistency evidence, NOT gate-validated. A claimable result needs a pre-registered post-correction run; fraction tablets need a fraction re-ingest.",
+  "phase1": {
+    "kuro_tablets": 34,
+    "integer_only": 24,
+    "fraction_bearing_excluded": 10,
+    "fraction_bearing_ids": [
+      "HT9a",
+      "HT13",
+      "HT27a",
+      "HT46a",
+      "HT89",
+      "HT94a",
+      "HT100",
+      "HT104",
+      "HT123+124a",
+      "HT123+124b"
+    ],
+    "lb_positive_control": "DEFERRED — DĀMOS items.jsonl exists (177 to-so/to-sa tablets) but in RAW-TEXT content (not tokenized like LA) and metrogram-graded (S/V/Z, non-integer); parsing = out-of-scope re-ingest. TEST+NULL only."
+  },
+  "entry_adjacency": {
+    "num_tokens": 1276,
+    "num_with_word_immediately_before": 1053,
+    "num_with_logogram_immediately_before": 359,
+    "word_before_rate": 0.825,
+    "logogram_before_rate": 0.281
+  },
+  "reconciliation_TEST": {
+    "n_sections": 24,
+    "exact_match": 7,
+    "exact_rate": 0.292,
+    "within_1_rate": 0.292,
+    "within_2_rate": 0.333,
+    "delta_distribution": [
+      [
+        0,
+        7
+      ],
+      [
+        -4,
+        1
+      ],
+      [
+        -16,
+        1
+      ],
+      [
+        -72,
+        1
+      ],
+      [
+        -402,
+        1
+      ],
+      [
+        -20,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        -121,
+        1
+      ],
+      [
+        -79,
+        1
+      ],
+      [
+        -100,
+        1
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -9,
+        1
+      ],
+      [
+        -50,
+        1
+      ],
+      [
+        -143,
+        1
+      ],
+      [
+        -155,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        -75,
+        1
+      ]
+    ],
+    "per_section": [
+      {
+        "section_sum": 10,
+        "n_entries": 10,
+        "total": 10,
+        "id": "HT117a",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 180,
+        "n_entries": 5,
+        "total": 180,
+        "id": "HT11b",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 52,
+        "n_entries": 2,
+        "total": 52,
+        "id": "HT25b",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 66,
+        "n_entries": 7,
+        "total": 66,
+        "id": "HT85a",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 6,
+        "n_entries": 6,
+        "total": 6,
+        "id": "HT88",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 5,
+        "n_entries": 5,
+        "total": 5,
+        "id": "HT94b",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 24,
+        "n_entries": 7,
+        "total": 24,
+        "id": "HT9b",
+        "delta": 0,
+        "match": true
+      },
+      {
+        "section_sum": 1070,
+        "n_entries": 7,
+        "total": 1060,
+        "id": "HT102",
+        "delta": 10,
+        "match": false
+      },
+      {
+        "section_sum": 8,
+        "n_entries": 2,
+        "total": 129,
+        "id": "HT109",
+        "delta": -121,
+        "match": false
+      },
+      {
+        "section_sum": 21,
+        "n_entries": 2,
+        "total": 100,
+        "id": "HT110a",
+        "delta": -79,
+        "match": false
+      },
+      {
+        "section_sum": 0,
+        "n_entries": 0,
+        "total": 100,
+        "id": "HT116b",
+        "delta": -100,
+        "match": false
+      },
+      {
+        "section_sum": 50,
+        "n_entries": 7,
+        "total": 30,
+        "id": "HT118",
+        "delta": 20,
+        "match": false
+      },
+      {
+        "section_sum": 158,
+        "n_entries": 9,
+        "total": 160,
+        "id": "HT119",
+        "delta": -2,
+        "match": false
+      },
+      {
+        "section_sum": 6,
+        "n_entries": 3,
+        "total": 10,
+        "id": "HT11a",
+        "delta": -4,
+        "match": false
+      },
+      {
+        "section_sum": 22,
+        "n_entries": 16,
+        "total": 31,
+        "id": "HT122a",
+        "delta": -9,
+        "match": false
+      },
+      {
+        "section_sum": 15,
+        "n_entries": 5,
+        "total": 65,
+        "id": "HT122b",
+        "delta": -50,
+        "match": false
+      },
+      {
+        "section_sum": 13,
+        "n_entries": 1,
+        "total": 156,
+        "id": "HT127b",
+        "delta": -143,
+        "match": false
+      },
+      {
+        "section_sum": 136,
+        "n_entries": 5,
+        "total": 291,
+        "id": "HT127b",
+        "delta": -155,
+        "match": false
+      },
+      {
+        "section_sum": 0,
+        "n_entries": 0,
+        "total": 16,
+        "id": "HT25b",
+        "delta": -16,
+        "match": false
+      },
+      {
+        "section_sum": 28,
+        "n_entries": 3,
+        "total": 100,
+        "id": "HT39",
+        "delta": -72,
+        "match": false
+      },
+      {
+        "section_sum": 0,
+        "n_entries": 0,
+        "total": 402,
+        "id": "HT67",
+        "delta": -402,
+        "match": false
+      },
+      {
+        "section_sum": 0,
+        "n_entries": 0,
+        "total": 20,
+        "id": "HT74",
+        "delta": -20,
+        "match": false
+      },
+      {
+        "section_sum": 5,
+        "n_entries": 5,
+        "total": 1,
+        "id": "PH(?)31a",
+        "delta": 4,
+        "match": false
+      },
+      {
+        "section_sum": 3,
+        "n_entries": 1,
+        "total": 78,
+        "id": "ZA15b",
+        "delta": -75,
+        "match": false
+      }
+    ]
+  },
+  "reconciliation_NULL": {
+    "method": "permute totals across sections (break entries<->total pairing), N=2000",
+    "mean_match_rate": 0.0054,
+    "max_match_rate": 0.0417,
+    "note": "within-tablet entry shuffle is sum-invariant (invalid); totals-permutation used."
+  },
+  "descriptive_commodities": {
+    "LOGO:OLE": {
+      "n": 88,
+      "sum": 723,
+      "max": 100,
+      "median": 4
+    },
+    "LOGO:GRA": {
+      "n": 85,
+      "sum": 5051,
+      "max": 976,
+      "median": 20
+    },
+    "LOGO:VIR": {
+      "n": 34,
+      "sum": 1521,
+      "max": 235,
+      "median": 20
+    },
+    "LOGO:VIN": {
+      "n": 28,
+      "sum": 507,
+      "max": 104,
+      "median": 6
+    },
+    "LOGO:CYP": {
+      "n": 27,
+      "sum": 128,
+      "max": 23,
+      "median": 3
+    },
+    "LOGO:OLIV": {
+      "n": 20,
+      "sum": 324,
+      "max": 93,
+      "median": 13
+    },
+    "LOGO:*22F": {
+      "n": 11,
+      "sum": 189,
+      "max": 100,
+      "median": 5
+    },
+    "LOGO:HIDE": {
+      "n": 11,
+      "sum": 2446,
+      "max": 941,
+      "median": 120
+    },
+    "LOGO:*23M": {
+      "n": 6,
+      "sum": 14,
+      "max": 5,
+      "median": 3
+    },
+    "LOGO:*21F": {
+      "n": 5,
+      "sum": 7,
+      "max": 3,
+      "median": 1
+    },
+    "TA": {
+      "n": 4,
+      "sum": 29,
+      "max": 15,
+      "median": 10
+    },
+    "LOGO:*21M": {
+      "n": 4,
+      "sum": 13,
+      "max": 6,
+      "median": 5
+    },
+    "I": {
+      "n": 4,
+      "sum": 52,
+      "max": 26,
+      "median": 20
+    },
+    "LOGO:CAP": {
+      "n": 3,
+      "sum": 56,
+      "max": 46,
+      "median": 7
+    },
+    "LOGO:*22M": {
+      "n": 3,
+      "sum": 3,
+      "max": 1,
+      "median": 1
+    },
+    "LOGO:TELA": {
+      "n": 2,
+      "sum": 3,
+      "max": 2,
+      "median": 2
+    },
+    "LOGO:CAPm": {
+      "n": 2,
+      "sum": 2,
+      "max": 1,
+      "median": 1
+    },
+    "DU": {
+      "n": 1,
+      "sum": 684,
+      "max": 684,
+      "median": 684
+    },
+    "U": {
+      "n": 1,
+      "sum": 5,
+      "max": 5,
+      "median": 5
+    },
+    "*415": {
+      "n": 1,
+      "sum": 10,
+      "max": 10,
+      "median": 10
+    },
+    "*416": {
+      "n": 1,
+      "sum": 10,
+      "max": 10,
+      "median": 10
+    },
+    "*307": {
+      "n": 1,
+      "sum": 64,
+      "max": 64,
+      "median": 64
+    },
+    "*403": {
+      "n": 1,
+      "sum": 1,
+      "max": 1,
+      "median": 1
+    },
+    "*406": {
+      "n": 1,
+      "sum": 2,
+      "max": 2,
+      "median": 2
+    },
+    "SA": {
+      "n": 1,
+      "sum": 9,
+      "max": 9,
+      "median": 9
+    },
+    "NA": {
+      "n": 1,
+      "sum": 1,
+      "max": 1,
+      "median": 1
+    },
+    "SI": {
+      "n": 1,
+      "sum": 8,
+      "max": 8,
+      "median": 8
+    },
+    "*304": {
+      "n": 1,
+      "sum": 3,
+      "max": 3,
+      "median": 3
+    },
+    "LOGO:VINb": {
+      "n": 1,
+      "sum": 2,
+      "max": 2,
+      "median": 2
+    },
+    "*306": {
+      "n": 1,
+      "sum": 13,
+      "max": 13,
+      "median": 13
+    },
+    "A": {
+      "n": 1,
+      "sum": 1,
+      "max": 1,
+      "median": 1
+    },
+    "*412": {
+      "n": 1,
+      "sum": 1,
+      "max": 1,
+      "median": 1
+    },
+    "NE": {
+      "n": 1,
+      "sum": 1,
+      "max": 1,
+      "median": 1
+    },
+    "*806": {
+      "n": 1,
+      "sum": 90,
+      "max": 90,
+      "median": 90
+    },
+    "JA": {
+      "n": 1,
+      "sum": 1,
+      "max": 1,
+      "median": 1
+    },
+    "QI": {
+      "n": 1,
+      "sum": 120,
+      "max": 120,
+      "median": 120
+    },
+    "TE": {
+      "n": 1,
+      "sum": 12,
+      "max": 12,
+      "median": 12
+    },
+    "ZU": {
+      "n": 1,
+      "sum": 6,
+      "max": 6,
+      "median": 6
+    },
+    "*409": {
+      "n": 1,
+      "sum": 217,
+      "max": 217,
+      "median": 217
+    }
+  },
+  "kiro_deficit_count": 16
+}
