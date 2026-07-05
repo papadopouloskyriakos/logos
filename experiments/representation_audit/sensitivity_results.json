@@ -1,0 +1,189 @@
+{
+  "note": "READ-ONLY transcription-treatment sensitivity of EXISTING LINEAR_A statistics.",
+  "input_manifest": {
+    "ontology": "corpus/silver/signs_ontology.json (166 canonical ids, 259 diplomatic tokens)",
+    "corpus": "corpus/silver/inscriptions_structured.json (1341 inscriptions, scribe word divisions)",
+    "treatments": {
+      "raw": "diplomatic token as-is",
+      "conservative": "ontology canonical_sign_id (PAPER PRIMARY; allographs distinct)",
+      "exploratory": "ontology allograph_family (allographs merged)",
+      "excl_unident": "conservative minus class syllabogram-Aonly (*NNN dropped)"
+    }
+  },
+  "paper_anchors_LINEAR_A": {
+    "n_sign_tokens": 5792,
+    "V_syllabic": 92,
+    "distinct_words": 650,
+    "distinct_words_lo": 600,
+    "distinct_words_hi": 700,
+    "mean_signs_per_word": 2.3
+  },
+  "results_syllabogram_stream": {
+    "raw": {
+      "treatment": "raw",
+      "syllabogram_filter": true,
+      "N_sign_tokens": 5117,
+      "V_distinct_signs": 175,
+      "num_word_tokens": 2595,
+      "distinct_word_forms": 1062,
+      "mean_signs_per_word": 1.9719
+    },
+    "conservative": {
+      "treatment": "conservative",
+      "syllabogram_filter": true,
+      "N_sign_tokens": 5117,
+      "V_distinct_signs": 131,
+      "num_word_tokens": 2595,
+      "distinct_word_forms": 1021,
+      "mean_signs_per_word": 1.9719
+    },
+    "exploratory": {
+      "treatment": "exploratory",
+      "syllabogram_filter": true,
+      "N_sign_tokens": 5117,
+      "V_distinct_signs": 123,
+      "num_word_tokens": 2595,
+      "distinct_word_forms": 1007,
+      "mean_signs_per_word": 1.9719
+    },
+    "excl_unident": {
+      "treatment": "excl_unident",
+      "syllabogram_filter": true,
+      "N_sign_tokens": 4836,
+      "V_distinct_signs": 59,
+      "num_word_tokens": 2497,
+      "distinct_word_forms": 923,
+      "mean_signs_per_word": 1.9367
+    }
+  },
+  "results_allclass_context": {
+    "conservative": {
+      "treatment": "conservative",
+      "syllabogram_filter": false,
+      "N_sign_tokens": 5792,
+      "V_distinct_signs": 166,
+      "num_word_tokens": 3147,
+      "distinct_word_forms": 1078,
+      "mean_signs_per_word": 1.8405
+    },
+    "exploratory": {
+      "treatment": "exploratory",
+      "syllabogram_filter": false,
+      "N_sign_tokens": 5792,
+      "V_distinct_signs": 156,
+      "num_word_tokens": 3147,
+      "distinct_word_forms": 1065,
+      "mean_signs_per_word": 1.8405
+    }
+  },
+  "diff_vs_conservative_baseline": {
+    "raw": {
+      "N_sign_tokens": {
+        "value": 5117,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "V_distinct_signs": {
+        "value": 175,
+        "delta_vs_conservative": 44,
+        "pct": 33.59
+      },
+      "num_word_tokens": {
+        "value": 2595,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "distinct_word_forms": {
+        "value": 1062,
+        "delta_vs_conservative": 41,
+        "pct": 4.02
+      },
+      "mean_signs_per_word": {
+        "value": 1.9719,
+        "delta_vs_conservative": 0.0,
+        "pct": 0.0
+      }
+    },
+    "conservative": {
+      "N_sign_tokens": {
+        "value": 5117,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "V_distinct_signs": {
+        "value": 131,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "num_word_tokens": {
+        "value": 2595,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "distinct_word_forms": {
+        "value": 1021,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "mean_signs_per_word": {
+        "value": 1.9719,
+        "delta_vs_conservative": 0.0,
+        "pct": 0.0
+      }
+    },
+    "exploratory": {
+      "N_sign_tokens": {
+        "value": 5117,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "V_distinct_signs": {
+        "value": 123,
+        "delta_vs_conservative": -8,
+        "pct": -6.11
+      },
+      "num_word_tokens": {
+        "value": 2595,
+        "delta_vs_conservative": 0,
+        "pct": 0.0
+      },
+      "distinct_word_forms": {
+        "value": 1007,
+        "delta_vs_conservative": -14,
+        "pct": -1.37
+      },
+      "mean_signs_per_word": {
+        "value": 1.9719,
+        "delta_vs_conservative": 0.0,
+        "pct": 0.0
+      }
+    },
+    "excl_unident": {
+      "N_sign_tokens": {
+        "value": 4836,
+        "delta_vs_conservative": -281,
+        "pct": -5.49
+      },
+      "V_distinct_signs": {
+        "value": 59,
+        "delta_vs_conservative": -72,
+        "pct": -54.96
+      },
+      "num_word_tokens": {
+        "value": 2497,
+        "delta_vs_conservative": -98,
+        "pct": -3.78
+      },
+      "distinct_word_forms": {
+        "value": 923,
+        "delta_vs_conservative": -98,
+        "pct": -9.6
+      },
+      "mean_signs_per_word": {
+        "value": 1.9367,
+        "delta_vs_conservative": -0.0352,
+        "pct": -1.79
+      }
+    }
+  }
+}
