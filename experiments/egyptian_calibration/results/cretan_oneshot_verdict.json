@@ -1,0 +1,45 @@
+{
+ "K": 3,
+ "M_pool": 981,
+ "r1_M2": 3,
+ "r1_B_id": 1,
+ "r1_B_egy": 1,
+ "p_value": 0.0014,
+ "p_if_r1_is_2": 0.0058,
+ "underpowered": false,
+ "N_perm": 10000,
+ "null_r1_histogram": {
+  "0": 9062,
+  "1": 881,
+  "2": 44,
+  "3": 13
+ },
+ "surprisal_bits": 9.48,
+ "verdict": "CONFIRM_GENERALIZES",
+ "per_anchor": {
+  "Knossos": {
+   "oval": "k-n-\u0161",
+   "true_lb": "k-n-s",
+   "rank_M2": 1,
+   "rank_B_id": 2,
+   "rank_B_egy": 10,
+   "confusable_within_1": 29
+  },
+  "Amnisos": {
+   "oval": "m-n-\u0161",
+   "true_lb": "m-n-s",
+   "rank_M2": 1,
+   "rank_B_id": 2,
+   "rank_B_egy": 13,
+   "confusable_within_1": 22
+  },
+  "Lyktos": {
+   "oval": "r-k-t",
+   "true_lb": "r-k-t",
+   "rank_M2": 1,
+   "rank_B_id": 1,
+   "rank_B_egy": 1,
+   "confusable_within_1": 29
+  }
+ }
+}
