@@ -1,0 +1,6 @@
+source_id,name,role,sha256_16,pages,license,status,notes
+SRC-HOCH,"Hoch 1994 Semitic Words in Egyptian Texts",Egyptian->foreign correspondence corpus,4df9bc092325648c,594,Princeton UP (local scan),UNUSABLE_OCR_CORRUPT,prose clean but group-writing transliteration corrupt; segment alignment not extractable
+SRC-KILANI,"Kilani 2019 Vocalisation in Group Writing",group-writing->sound (VOWEL) layer,4ecff477b371f073,161,CC-BY-4.0,WRONG_LAYER,native-Egyptian vocalization via Coptic; not foreign correspondence
+SRC-KITCHEN,"Kitchen NK Topographical Lists (local)",foreign-toponym discussion,b1a6c8fa7f66446e,8,open,DISCUSSION_ONLY,no extractable data tables
+SRC-MUCHIKI,"Muchiki 1999 Egyptian Proper Names & Loanwords in NW Semitic",foreign-name correspondence (ideal),,,paywalled,NOT_ACQUIRED,requested
+SRC-EDELGORG,"Edel & Gorg 2005 Kom el-Hetan (primary edition)",REQ-01 primary,,,print,NOT_AUDITED,confirmatory-ineligible until collated
