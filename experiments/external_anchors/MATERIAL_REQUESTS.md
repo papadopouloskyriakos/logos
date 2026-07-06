@@ -12,11 +12,22 @@ derived factual records, transliterations, and checksums are stored as legally a
   reproduces the toponym group-writing transliterations (`kA-n-yw-SA`=Knossos, `i-m-n-y-SA`=Amnisos,
   `ry-kA-ti`=Lyktos) + IDs + LB comparanda + Edel/Görg caveats (bronze v2 records written). Full
   Edel & Görg 2005 apparatus still ideal (all variants; Siteia/Phaistos/Kydonia ovals) but no longer gating.
-- **REQ-04 — still open.** `Mari_and_the_Minoans.pdf` OCR'd (tesseract 5.3.0): it is a **single
-  chronology-sidebar page (p. 342)** — "The rise and fall of Mari" (dynastic dates; Hammurabi's 1760
-  BC destruction baking ~20,000 tablets) + "Aegean Bronze Age Historical Framework" (Minoan periods).
-  **Useful background** (confirms Mari-archive ≈ 1760 BC = MM II ⇒ tier-A overlap with early Linear
-  A) but **NOT** the administrative Kaptara evidence. Search further — see refined REQ-04 below.
+- **REQ-04 — SUBSTANTIALLY SATISFIED via OPEN sources (2026-07-06).** The supplied
+  `Mari_and_the_Minoans.pdf` was only a chronology-sidebar page (p. 342), but a web sweep found the
+  content in open, non-Cloudflare sources: **Wiener, *Bronze Age Trade*** (malcolmwiener.net, 28 pp,
+  open) gives the Mari Kaptara commodities with a text ref (Kaptarite inlaid-metal weapon to
+  Zimri-Lim; **ARMT 342:4-12** clothing + leather shoes from Kaptara, Sasson 1985; bronze vessels +
+  pincers from Kaptaru; the Kasos/Karpathos/Rhodes tin route), and Wikipedia/Strange-1980 give the
+  transliterations (`a-na Kap-ta-ra-i-im` tin, `kakku Kap-ta-ru-ú` weapon, `ka-ta-pu-um` object,
+  `kaptaritum` fabric/vessel) + the Caphtorian interpreter at Ugarit. → **5 Mari administrative
+  bronze records written** (`anchors/administrative/mari_kaptara.bronze.jsonl`). This is the E5
+  semantic ontology; phonetic value is nil (Akkadian descriptors).
+  - **Optional (nice-to-have, blocked by Cloudflare):** Foster, "Mari and the Minoans" (full paper,
+    academia.edu/37765095) and **Malamat 1971** (*IEJ* 21:31, the tin inventory) would add the full
+    inventory list; both sit behind academia.edu's Cloudflare **managed challenge** — CapSolver can
+    solve it **only with a proxy** (cf_clearance is IP-bound; confirmed API error "Missing proxy
+    params"), which this host lacks. Fastest path if wanted: download them from your logged-in
+    browser and scp, as with the first batch. **Not on the RQ2 critical path.**
 - Set aside (not sources): 2× "The Map Is Not the Territory" (author's own essay), "Ο ΚΑΘΡΕΠΤΗΣ"
   (Greek, 75 pp).
 
