@@ -2,7 +2,7 @@
 
 _Single source of current state. Phases follow the commit plan (§XVIII)._
 
-## Current phase: **4 → 5** (known-pair audit done; input freezes §VII/§VIII next). STOP after §VIII.
+## Current phase: **INPUT FREEZE COMPLETE (§VI–§VIII done). ⛔ STOPPED — awaiting INPUT_FREEZE_APPROVED.**
 
 | # | Phase | State |
 |---|-------|-------|
@@ -11,8 +11,9 @@ _Single source of current state. Phases follow the commit plan (§XVIII)._
 | 3 | Freeze A↔B sign-equivalence layer (blind to known pairs) | ✅ DONE (77 tier-A, `77de6684`) |
 | 4 | Known-pair source-critical audit (five = DEVELOPMENT_BENCHMARK) | ✅ DONE (4 benchmark, 1 ineligible, 2 speculative) |
 | 5a | Freeze internal-only LA candidate manifest (§VII, packet A) | ✅ DONE (11 PRIMARY, I-DA quarantined, `eb2bb293`) |
-| 5b | Independent LB toponym target manifest (§VIII, packet B) | 🔄 NEXT |
-| — | **STOP — await INPUT_FREEZE_APPROVED before §IX–§XV** | ⛔ |
+| 5b | Independent LB toponym target manifest (§VIII, packet B) | ✅ DONE (33 targets, `29e25d49`) |
+| — | **STOPPED — awaiting INPUT_FREEZE_APPROVED before §IX–§XV** | ⛔ HERE |
+| 6–10 | matching / model / ablations / nulls / positive controls / power / circularity / verdict | ⬜ NOT STARTED (blocked) |
 | 6 | Primary matching model + ablations A1–A5 (no free mapping search) | ⬜ |
 | 7 | Positive controls | ⬜ |
 | 8 | End-to-end null framework (≥10 families) | ⬜ |

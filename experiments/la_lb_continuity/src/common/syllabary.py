@@ -55,11 +55,14 @@ def render(word):
 
 
 def lb_sequence(translit):
-    """LB conventional transliteration 'pa-i-to' -> raw sign sequence ['*03','*28','*05']."""
+    """LB conventional transliteration 'pa-i-to' -> raw sign sequence ['*03','*28','*05'].
+    Undeciphered '*NN' syllables (e.g. da-*22-to) pass through as '*NN'."""
     out = []
-    for syl in translit.split("-"):
-        v = value_norm(syl)
-        out.append("*%02d" % GRID[v] if v is not None else "?" + syl)
+    for s in translit.split("-"):
+        if s.startswith("*") and s[1:].isdigit():
+            out.append("*%02d" % int(s[1:])); continue
+        v = value_norm(s)
+        out.append("*%02d" % GRID[v] if v is not None else "?" + s)
     return out
 
 

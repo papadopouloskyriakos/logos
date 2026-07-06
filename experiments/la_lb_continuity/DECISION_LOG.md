@@ -81,4 +81,19 @@ Append-only. Every freeze records the input hashes.
 - **Tests:** leakage + structure/chronology/site/dup/regeneration; full suite 32/32.
 - Commit hash: _(recorded on commit)_
 
-<!-- D7 LB target freeze §VIII / … append below -->
+## 2026-07-06 — D7: independent LB toponym target manifest (commit chunk 6, §VIII, packet B)
+- **Freeze `lb-targets-v1-2026-07-06`:** `data/gold/lb_toponym_target_manifest.jsonl` sha256
+  `29e25d49535183207f77ab24dec5da9d0b31cbff38c48d81099871f2285c1bba`. Selected from the canonical KN
+  toponym list (Bennet 1985; Chadwick; Del Freo), verified against DĀMOS; LA-independent (tested).
+- **Roles:** 5 DEVELOPMENT (the five known-pair LB forms; di-ka-ta/i-da recorded as attested derived
+  di-ka-ta-de/i-da-i-jo), 16 EVALUATION (independent KN toponyms), 12 NEGATIVE_CONTROL (LB
+  non-toponyms). All 33 DĀMOS-attested. Per-target honest confidence 0.45–0.95.
+- **Firewall:** builder reads no LA candidate/slot/silver; packet B carries no LA, no similarity. Tests
+  full suite 38/38.
+- Commit hash: _(recorded on commit)_
+
+## 2026-07-06 — ⛔ INPUT FREEZE COMPLETE — HARD STOP
+§VI, §VII, §VIII done. LA packet A and LB packet B are frozen SEPARATELY and never exposed side by
+side. Per instruction, **no** matching / similarity / pairing / thresholds / mapping search / nulls /
+ablations / positive controls / power is implemented or run. **Awaiting explicit `INPUT_FREEZE_APPROVED`
+before any of §IX–§XV.**
