@@ -13,11 +13,16 @@
   `MATERIAL_REQUESTS.md` (6 requests; 2 `BLOCKING`); first bronze toponym records
   (Knossos/Amnisos/Lyktos from Kom el-Hetan, spellings pending REQ-01); README.
 
-### Blocked (does not stall non-blocked work)
-- **REQ-01** (Kom el-Hetan primary edition — hieroglyphic spellings/variants) → gates the E3
-  confirmatory toponym target freeze.
-- **REQ-02** (Egyptian foreign-name calibration editions) → gates freezing the Egyptian→foreign
-  correspondence model (Section VII); **pacing item for RQ2/RQ3**.
+### Acquisition (2026-07-06 — 7 PDFs supplied) — **both BLOCKING items cleared**
+- **REQ-02 SATISFIED** — Hoch *Semitic Words in Egyptian Texts* (594 pp) = the Egyptian foreign-name
+  calibration corpus (the RQ2/RQ3 pacing item).
+- **REQ-01 substantially satisfied** — Cline & Stannish 2011 gives the toponym group-writing
+  transliterations (Knossos/Amnisos/Lyktos) + IDs + caveats; bronze v2 records written. Downgraded
+  to USEFUL.
+- **Still open:** REQ-04 (Mari — supplied scan is 1-page image-only, needs OCR / the ARM texts),
+  REQ-03 (EA5647 edition). Neither on the RQ2 critical path.
+- PDFs stored local-only in `data/bronze/pdf_local/` (gitignored; checksums in
+  `data/manifests/acquired_sources.sha256`); never committed/redistributed.
 
 ### Next autonomous actions (Stage 1→2, no sweep contention)
 1. Expand `SOURCE_REGISTER.csv` + per-source notes in `bibliography/source_notes/`.

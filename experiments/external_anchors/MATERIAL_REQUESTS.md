@@ -5,6 +5,18 @@ edition. **Non-blocked work continues** while these are pending. Priority: `BLOC
 `USEFUL` > `OPTIONAL`. Do not redistribute copyrighted full scans where licensing forbids; metadata,
 derived factual records, transliterations, and checksums are stored as legally appropriate.
 
+## RESOLUTION LOG (2026-07-06 — 7 PDFs supplied; see `bibliography/source_notes/2026-07-06_pdf_acquisition_audit.md`)
+- **REQ-02 — SATISFIED.** Hoch, *Semitic Words in Egyptian Texts* (594 pp) → the Egyptian
+  foreign-name/group-writing **calibration corpus**. RQ2/RQ3 pacing item cleared.
+- **REQ-01 — SUBSTANTIALLY SATISFIED → BLOCKING downgraded to USEFUL.** Cline & Stannish 2011 (×2)
+  reproduces the toponym group-writing transliterations (`kA-n-yw-SA`=Knossos, `i-m-n-y-SA`=Amnisos,
+  `ry-kA-ti`=Lyktos) + IDs + LB comparanda + Edel/Görg caveats (bronze v2 records written). Full
+  Edel & Görg 2005 apparatus still ideal (all variants; Siteia/Phaistos/Kydonia ovals) but no longer gating.
+- **REQ-04 — still open (partial).** `Mari_and_the_Minoans.pdf` is a 1-page **image-only** scan
+  (needs OCR; likely a fragment). Still need the actual ARM Kaptara texts.
+- Set aside (not sources): 2× "The Map Is Not the Territory" (author's own essay), "Ο ΚΑΘΡΕΠΤΗΣ"
+  (Greek, 75 pp).
+
 ---
 
 ### REQ-01 — Kom el-Hetan Aegean toponym list (primary edition) — `BLOCKING` (RQ2, E1–E3)
