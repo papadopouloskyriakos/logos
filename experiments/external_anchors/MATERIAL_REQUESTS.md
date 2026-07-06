@@ -12,8 +12,11 @@ derived factual records, transliterations, and checksums are stored as legally a
   reproduces the toponym group-writing transliterations (`kA-n-yw-SA`=Knossos, `i-m-n-y-SA`=Amnisos,
   `ry-kA-ti`=Lyktos) + IDs + LB comparanda + Edel/Görg caveats (bronze v2 records written). Full
   Edel & Görg 2005 apparatus still ideal (all variants; Siteia/Phaistos/Kydonia ovals) but no longer gating.
-- **REQ-04 — still open (partial).** `Mari_and_the_Minoans.pdf` is a 1-page **image-only** scan
-  (needs OCR; likely a fragment). Still need the actual ARM Kaptara texts.
+- **REQ-04 — still open.** `Mari_and_the_Minoans.pdf` OCR'd (tesseract 5.3.0): it is a **single
+  chronology-sidebar page (p. 342)** — "The rise and fall of Mari" (dynastic dates; Hammurabi's 1760
+  BC destruction baking ~20,000 tablets) + "Aegean Bronze Age Historical Framework" (Minoan periods).
+  **Useful background** (confirms Mari-archive ≈ 1760 BC = MM II ⇒ tier-A overlap with early Linear
+  A) but **NOT** the administrative Kaptara evidence. Search further — see refined REQ-04 below.
 - Set aside (not sources): 2× "The Map Is Not the Territory" (author's own essay), "Ο ΚΑΘΡΕΠΤΗΣ"
   (Greek, 75 pp).
 
@@ -56,9 +59,12 @@ derived factual records, transliterations, and checksums are stored as legally a
 - **Acceptable form:** edition pages / transliteration table.
 - **Fallback:** treat as exploratory-only (tier D) until the edition is in hand.
 
-### REQ-04 — Mari (ARM) Kaptara texts — `HIGH` (RQ1/RQ5, E5)
-- **Source:** the specific *Archives royales de Mari* texts attesting Kaptara — the tin-route
-  text(s), the interpreter/targum payment, and Kaptarite-goods records (`SRC-MARI-ARM-KAPTARA`).
+### REQ-04 — Mari (ARM) Kaptara texts — `HIGH` (RQ1/RQ5, E5)  ·  *refined 2026-07-06 after the p.342 scan proved to be chronology-only*
+- **Source (specific targets):** the *Archives royales de Mari* Kaptara dossier — above all the
+  **tin-distribution text** (Dossin's "route de l'étain"; tin issued to * Kaptarû* / a Caphtorite
+  and to a *targumannu* interpreter at Ugarit — often cited as M.7100 / ARM 23-class), plus the
+  **Kaptarite-goods/weapons** records. A scholarly edition reproducing transliteration+translation
+  (e.g. Durand's ARM volumes; Heltzer; the Kaptara-dossier discussions) is ideal.
 - **Need:** exact text IDs (ARM volume/number), transliteration, translation, and the commodity/role
   vocabulary in context.
 - **Why:** builds the administrative trade/commodity ontology (E5), mapped against the LA schema.
