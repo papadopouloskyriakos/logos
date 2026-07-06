@@ -5,7 +5,7 @@ Forked from `research/external-minoan-anchors@6d2e926`. Calibration gate; no rea
 | # | Phase | State |
 |---|-------|-------|
 | 1 | Isolation + source-status audit | ✅ DONE |
-| 2 | Calibration schema + inclusion rules + model prereg spec (design) | 🔄 next |
+| 2 | Calibration schema + inclusion rules + model prereg spec (design) | ✅ DONE (frozen) |
 | 3 | Build non-Cretan calibration corpus | ⛔ BLOCKED — no fittable source (Hoch OCR-corrupt; Kilani wrong-layer; Muchiki absent) |
 | 4–12 | model fit / positive control / nulls / power / verdict | ⛔ cannot execute without the corpus |
 
