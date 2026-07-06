@@ -35,3 +35,7 @@ Append-only. Each entry: date · decision · rationale.
   Greek confound. EA5647 is ingested as a **Greek negative-control / calibration** for E4
   (`minoan_vs_greek_confidence≈0.1`, tier-D, held-out), **not** a Minoan anchor. Reinforces:
   toponyms lead; personal names run last and gated; the Minoan personal-name channel is thin.
+- **2026-07-06 · Milestone commits** — Task A slot classifier: `dcba879`,`db09ca0`,`d6cfe4f`; Task
+  C/D/B + E to follow this entry. design_readiness=READY_FOR_CALIBRATION; naive design leans
+  NO_POWER (in-sample FP≈1.0; held-out FP≈0.25 vs recovery≈0.40). Next: fit the frozen Hoch
+  correspondence model, then re-run the power envelope + matched-scarcity control under it.
