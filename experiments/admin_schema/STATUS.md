@@ -9,9 +9,9 @@ document-schema induction, blinded on Linear B, transfer-feasibility gate for Li
 
 | # | stage | state |
 |---|---|---|
-| 1 | scaffold + programme ledger | **in progress** |
-| 2 | prior-art / novelty audit | next |
-| 3 | source / license audit | pending |
+| 1 | scaffold + programme ledger | ✅ done (cf2f7eb) |
+| 2 | prior-art / novelty audit | ✅ done — `NOVELTY_SUPPORTED` (combinatorial) |
+| 3 | source / license audit | **next** |
 | 4 | canonical document schema | pending |
 | 5 | LB role ontology | pending |
 | 6 | blinding firewall | pending |
