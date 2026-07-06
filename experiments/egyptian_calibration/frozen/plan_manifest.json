@@ -1,0 +1,27 @@
+{
+ "artifact": "plan_manifest",
+ "prereg_id": "cretan-anchor-oneshot-v2",
+ "status": "FROZEN_MINTED",
+ "as_of": "2026-07-06",
+ "plan_hash": "2eab1536cf70c20d0faebafff813b190b9cea573433698b2fdc2d83825cd130a",
+ "plan_hash_algo": "sha256 of canonical prereg JSON (sort_keys, plan_hash='')",
+ "pinned_sha256_16": {
+  "skeletonizer": "feb7e8dc0416c659",
+  "model_py": "e76b2f231be8f0e6",
+  "corpus_holdout_py": "ed02090b0fcb5dcb",
+  "build_pool_py": "3cbb87093bc73277",
+  "verdict_script": "3cc8a8b2eaad5937",
+  "target_set": "b749e2f74faf23c3",
+  "candidate_pool_file": "ff83993cacb5de8b",
+  "corpus_post_holdout": "612ff9e9d4f30703",
+  "design_spec_config": "3c56ed7193bdef67"
+ },
+ "candidate_pool_content_sha256_16": "26eb76278f7a9b65",
+ "M_pool": 981,
+ "no_pilot_attestation": {
+  "statement": "M2 (operative model.py, post-holdout corpus) has NEVER been scored against any Cretan oval or the candidate pool prior to this freeze.",
+  "evidence": "no results/cretan_oneshot_verdict.json exists at mint; run_oneshot is guarded behind --run-oneshot and was never invoked; build_pool/corpus_holdout/freeze_checks perform no M2 scoring against the ovals.",
+  "as_of": "2026-07-06",
+  "recorded_by": "freeze pipeline (verified by workflow wf_80d0808d-b95)"
+ }
+}

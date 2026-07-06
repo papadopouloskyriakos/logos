@@ -1,0 +1,205 @@
+{
+ "artifact": "corpus_skeleton_collision_holdout",
+ "predicate": "drop record iff min_t Lev(f(egy),t)<=1 OR min_t Lev(f(cons),t)<=1; t over all target Edel-oval and LB f()-skeletons",
+ "target_skeletons": [
+  "b-š-t",
+  "k-d-n",
+  "k-n-s",
+  "k-n-š",
+  "k-t-n",
+  "k-t-r",
+  "m-n-s",
+  "m-n-š",
+  "p-t",
+  "r-k-t"
+ ],
+ "n_input": 159,
+ "n_dropped": 36,
+ "n_kept": 123,
+ "dropped_records": [
+  {
+   "id": "HV-ispt",
+   "field": "egy",
+   "skeleton": "s-p-t"
+  },
+  {
+   "id": "HV-0027",
+   "field": "egy",
+   "skeleton": "s-t"
+  },
+  {
+   "id": "HV-0005",
+   "field": "egy",
+   "skeleton": "b-š-t"
+  },
+  {
+   "id": "HV-0006",
+   "field": "egy",
+   "skeleton": "b-t"
+  },
+  {
+   "id": "HV-0007",
+   "field": "egy",
+   "skeleton": "p-t"
+  },
+  {
+   "id": "HV-0008",
+   "field": "egy",
+   "skeleton": "f-t"
+  },
+  {
+   "id": "HV-0026",
+   "field": "egy",
+   "skeleton": "h-t"
+  },
+  {
+   "id": "HV-0036",
+   "field": "egy",
+   "skeleton": "k-n"
+  },
+  {
+   "id": "HV-0038",
+   "field": "egy",
+   "skeleton": "t"
+  },
+  {
+   "id": "HV-0040",
+   "field": "egy",
+   "skeleton": "t-r"
+  },
+  {
+   "id": "HV-0070",
+   "field": "egy",
+   "skeleton": "p-r"
+  },
+  {
+   "id": "HV-0072",
+   "field": "egy",
+   "skeleton": "p-š-t"
+  },
+  {
+   "id": "HV-0086",
+   "field": "egy",
+   "skeleton": "r-t"
+  },
+  {
+   "id": "HV-0096",
+   "field": "egy",
+   "skeleton": "k-b-r"
+  },
+  {
+   "id": "HV-0104",
+   "field": "egy",
+   "skeleton": "d-n"
+  },
+  {
+   "id": "HV-0112",
+   "field": "egy",
+   "skeleton": "b-r-t"
+  },
+  {
+   "id": "HV-0113",
+   "field": "egy",
+   "skeleton": "b-t"
+  },
+  {
+   "id": "HV-0116",
+   "field": "egy",
+   "skeleton": "b-r-t"
+  },
+  {
+   "id": "HV-0120",
+   "field": "egy",
+   "skeleton": "b-n-t"
+  },
+  {
+   "id": "HV-0124",
+   "field": "egy",
+   "skeleton": "b-r-t"
+  },
+  {
+   "id": "HV-0131",
+   "field": "egy",
+   "skeleton": "b-r-k-t"
+  },
+  {
+   "id": "HV-0138",
+   "field": "egy",
+   "skeleton": "b-š"
+  },
+  {
+   "id": "HV-0183",
+   "field": "egy",
+   "skeleton": "m-r-s"
+  },
+  {
+   "id": "HV-0189",
+   "field": "cons",
+   "skeleton": "r-k-b"
+  },
+  {
+   "id": "HV-0222",
+   "field": "cons",
+   "skeleton": "k-m-r"
+  },
+  {
+   "id": "HV-0229",
+   "field": "egy",
+   "skeleton": "m-g-s"
+  },
+  {
+   "id": "HV-0232",
+   "field": "egy",
+   "skeleton": "m-t-r"
+  },
+  {
+   "id": "HV-0235",
+   "field": "cons",
+   "skeleton": "n-t-n"
+  },
+  {
+   "id": "HV-0246",
+   "field": "egy",
+   "skeleton": "n-š"
+  },
+  {
+   "id": "HV-0248",
+   "field": "egy",
+   "skeleton": "n-š"
+  },
+  {
+   "id": "HV-0271",
+   "field": "egy",
+   "skeleton": "r-t"
+  },
+  {
+   "id": "HV-0279",
+   "field": "egy",
+   "skeleton": "r-h-t"
+  },
+  {
+   "id": "HV-0286",
+   "field": "egy",
+   "skeleton": "r-k-s"
+  },
+  {
+   "id": "HV-0287",
+   "field": "egy",
+   "skeleton": "r-q-t"
+  },
+  {
+   "id": "HV-0300",
+   "field": "cons",
+   "skeleton": "s-t-r"
+  },
+  {
+   "id": "HV-0305",
+   "field": "egy",
+   "skeleton": "h-t"
+  }
+ ],
+ "input_corpus_sha256_16": "cc2c20d8efd2f0bd",
+ "heldout_corpus_file": "data/gold/egyptian_calibration_heldout.jsonl (gitignored)",
+ "heldout_corpus_sha256": "612ff9e9d4f30703ddccfcb7a7bbea88628a9b5ee4a5732dd452784f8c38b432",
+ "heldout_corpus_sha256_16": "612ff9e9d4f30703"
+}

@@ -96,7 +96,11 @@ def score_baseline(egy_seq, sem_seq, kind):
 
 
 def recover_rank(model, egy_seq, true_sem, candidates, kind="M2"):
-    """Rank of the true source skeleton among all candidate skeletons for this Egyptian rendering."""
+    """Rank of the true source skeleton among all candidate skeletons for this Egyptian rendering.
+
+    LEGACY calibration helper (validation.py / gate.py) — NOT the Cretan-anchor grader. The one-shot
+    Cretan test uses cretan_test.rank_of, which enforces 'tie at rank 1 => not recovered'; this helper
+    awards rank 1 to the first exact match under sort order and must not be used as that grader."""
     def sc(sem):
         return model.score(egy_seq, sem) if kind == "M2" else score_baseline(egy_seq, sem, kind)
     scored = sorted(candidates, key=sc, reverse=True)

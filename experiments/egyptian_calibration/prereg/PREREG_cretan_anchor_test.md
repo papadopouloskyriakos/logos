@@ -1,11 +1,15 @@
 # PREREGISTRATION — One-shot Cretan-anchor confirmatory test (v2, hardened)
 
-**Status: DRAFT v2 — NOT MINTABLE YET (preconditions pending, §15).** This document commits a
-falsifiable prediction *before* execution (invariant 1, fail-closed). It reports no outcome. The
-plan_hash stays **empty** until every §15 precondition is met; only then is the hash minted and the
-test run. v1 was withdrawn after an adversarial red-team (`wf_3bfac2b3-fdf`, verdict REVISE_THEN_COMMIT)
-found 6 blockers — see `REDTEAM_cretan_prereg_response.md`; v2 closes them.
+**Status: FROZEN_MINTED — plan_hash committed; test NOT YET RUN.** This document commits a falsifiable
+prediction *before* execution (invariant 1, fail-closed). It reports no outcome. The §15 preconditions
+are met and the machinery + freeze were independently verified (`wf_80d0808d-b95`), whose 1 blocker + 5
+majors are all fixed (see `MINT_RECORD.md`). v1 was withdrawn after an earlier red-team
+(`wf_3bfac2b3-fdf`, REVISE_THEN_COMMIT) found 6 blockers; v2 closes them.
 
+- **plan_hash:** `2eab1536cf70c20d0faebafff813b190b9cea573433698b2fdc2d83825cd130a`
+  (sha256 of the canonical `prereg_cretan_anchor_test.json` with `plan_hash=""`; machine record in
+  `frozen/plan_manifest.json`). Running the test is a separate, later `cretan_test.py --run-oneshot`,
+  fail-closed against these pinned hashes.
 - **id:** `cretan-anchor-oneshot-v2` · **as_of:** 2026-07-06 · **channel:** Egyptian external-anchor
 
 ---
@@ -152,9 +156,10 @@ declared underpowered rather than run.
 ## 12. One-shot, no-pilot, deviations
 
 - Runs **once**. A REFUTE / RECOVERED_TRIVIAL is a real, publishable result — never a prompt to retune.
-- **No-pilot attestation** (required at freeze): "M2 (spec `3c56ed71`, post-holdout corpus) has never been
-  scored against these ovals or any candidate pool prior to this freeze." Freeze and run are separate,
-  ordered, timestamped git events.
+- **No-pilot attestation** (recorded at freeze, `frozen/plan_manifest.json`): "M2 (operative `model.py`
+  sha `e76b2f23`, post-holdout corpus) has never been scored against any Cretan oval or the candidate pool
+  prior to this freeze" — evidenced by the absence of any one-shot verdict artifact at mint. Freeze and run
+  are separate, ordered, timestamped git events.
 - Any deviation voids the plan_hash and requires a fresh preregistration.
 
 ## 13. Interpretation (scaled, capped, non-compounding)
@@ -176,17 +181,17 @@ declared underpowered rather than run.
 These Cretan targets are confirmatory targets for the **Egyptian** channel only and must **never** enter
 Linear A hypothesis formation or scoring.
 
-## 15. Preconditions before the plan_hash is minted (all required)
+## 15. Preconditions — ALL MET (minted 2026-07-06)
 
-1. `f()` (`src/calibration/skeleton.py`) written, hash-pinned; the `f(target_LB)==pool_entry` assertion passes.
-2. Identity baseline `B_id` and generic-Egyptian ablation `B_egy` implemented + hash-pinned.
-3. Corpus skeleton-collision hold-out applied; exclusion predicate stated; new corpus sha recorded.
-4. Pool frozen from one committed source with the confusability floor + uniqueness checks; sha recorded.
-5. `src/calibration/cretan_test.py` (joint permutation, `N≥10,000`) written, reviewed, hash-pinned.
-6. Falttafeln 13/14 sourced for sign-level reading independence — **or** the claim explicitly scoped to
-   "recovers Edel's ID-informed readings" with the leak documented per anchor.
-7. No-pilot attestation recorded; freeze committed with a timestamp preceding any run.
-8. plan_hash = sha256 of the canonical hypothesis row **including** all the above hashes; then, and only
-   then, run once.
+1. ✅ `f()` (`skeleton.py` `feb7e8dc`) hash-pinned; reproduces all 12 target skeletons; `f(target_LB)==pool_entry` asserted.
+2. ✅ `B_id` (edit-distance) + `B_egy` (identity/generic-Egyptian ablation) implemented in `cretan_test.py` `3cc8a8b2`.
+3. ✅ Skeleton-collision hold-out applied (`corpus_holdout.py` `ed02090b`): 159→123 records; corpus sha `612ff9e9`; independently re-verified to contain **zero** target-skeleton info within Lev 1.
+4. ✅ Pool frozen (`build_pool.py` `3cbb8709`) from one DĀMOS source: M=981; every target present+unique; confusability floor met; file sha `ff83993c` (content `26eb7627`).
+5. ✅ `cretan_test.py` — true joint **permutation** (bijective `_sem` shuffle), `N=10 000`, `p=(1+#{≥obs})/(1+N)`; §10 endpoint-clearability NO_POWER branch; fail-closed hash assertions.
+6. ✅ **Reading independence: SCOPED** (Falttafeln 13/14 unavailable) — claim limited to "recovers Edel's ID-informed readings," leak documented (§11, `reading_independence_scope`).
+7. ✅ No-pilot attestation recorded (`plan_manifest.json`); this freeze commit precedes any run.
+8. ✅ **plan_hash minted:** `2eab1536…cd130a` over the canonical hypothesis row incl. `model.py` `e76b2f23` (the operative M2), all script + artifact hashes. `configs/egyptian_model_freeze.json` `3c56ed71` is retained as a **design reference only** — `model.py` is the operative, hash-bound estimator.
 
-*Companion machine-readable row: `prereg/prereg_cretan_anchor_test.json` (plan_hash empty until §15 done).*
+**Next (separate step, not done here):** `python3 src/calibration/cretan_test.py --run-oneshot` — runs ONCE, fail-closed against the pinned hashes. A REFUTE / RECOVERED_TRIVIAL / NO_POWER is a real result (invariant 3).
+
+*Machine-readable: `prereg_cretan_anchor_test.json` (plan_hash embedded) + `frozen/plan_manifest.json`.*
