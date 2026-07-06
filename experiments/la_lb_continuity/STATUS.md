@@ -2,7 +2,7 @@
 
 _Single source of current state. Phases follow the commit plan (§XVIII)._
 
-## Current phase: **INPUT FREEZE COMPLETE (§VI–§VIII done). ⛔ STOPPED — awaiting INPUT_FREEZE_APPROVED.**
+## Current phase: **§IX–§XV ANALYSIS (INPUT_FREEZE_APPROVED 2026-07-06). Membership frozen; mechanical verdict pending.**
 
 | # | Phase | State |
 |---|-------|-------|
@@ -13,7 +13,8 @@ _Single source of current state. Phases follow the commit plan (§XVIII)._
 | 5a | Freeze internal-only LA candidate manifest (§VII, packet A) | ✅ DONE (11 PRIMARY, I-DA quarantined, `eb2bb293`) |
 | 5b | Independent LB toponym target manifest (§VIII, packet B) | ✅ DONE (33 targets, `29e25d49`) |
 | — | **STOPPED — awaiting INPUT_FREEZE_APPROVED before §IX–§XV** | ⛔ HERE |
-| 6–10 | matching / model / ablations / nulls / positive controls / power / circularity / verdict | ⬜ NOT STARTED (blocked) |
+| §II | metadata freeze clarifications (partitions/ARKH/unit) | ✅ DONE |
+| §IX–§XV | model+ablations / controls / nulls / heldout / power / circularity / verdict | 🔄 IN PROGRESS |
 | 6 | Primary matching model + ablations A1–A5 (no free mapping search) | ⬜ |
 | 7 | Positive controls | ⬜ |
 | 8 | End-to-end null framework (≥10 families) | ⬜ |

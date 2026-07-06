@@ -97,3 +97,12 @@ Append-only. Every freeze records the input hashes.
 side. Per instruction, **no** matching / similarity / pairing / thresholds / mapping search / nulls /
 ablations / positive controls / power is implemented or run. **Awaiting explicit `INPUT_FREEZE_APPROVED`
 before any of §IX–§XV.**
+
+## 2026-07-06 — D8: INPUT_FREEZE_APPROVED → begin §IX–§XV (commit chunk 1: §II clarifications)
+- Authorization received; frozen memberships unchanged (a defect ⇒ STOP → manifest-v2 → re-review).
+- Interpretive correction adopted: 0/5 known-pair overlap = DOMAIN MISMATCH, not positive-control
+  failure. Channel reframed ADMINISTRATIVE_TOPONYM_CONTINUITY.
+- §II metadata clarifications (`src/continuity/{cfg,partitions}.py`): base partitions PRIMARY_B 11 /
+  SENSITIVITY_C_ADDITIONAL 33 / NEGATIVE_CONTROL 21 / QUARANTINED 1 = 66 (mutually exclusive, tested);
+  PRIMARY_PLUS_SENSITIVITY=44 programmatic; ARKH→AMBIGUOUS_ARKH (3); unit=unique form (66 eff. units,
+  254 raw attestations). Input hashes verified (anti-drift). Commit hash: _(on commit)_
