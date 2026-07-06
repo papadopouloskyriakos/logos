@@ -41,7 +41,11 @@ a materially higher-power, lower-risk channel. **Candidate redirect for the next
   interactive drawings. `https://www.inscribercproject.com/SigLA/` (slide's `…/SigLA/index.htm` is a
   stale path). **A machine-readable, authoritative LA sign+inscription DB with palaeographic variants**
   — directly addresses the transcription-uncertainty gap (Task G) and could augment/replace the
-  ingested corpus. → check for a data export/API. **Highest-value follow-up.**
+  ingested corpus. **✅ ALREADY IN THE MAIN REPO AND NOW DECODED** (2026-07-06): the full DB ships in
+  `corpus/bronze/sigla_browse_2026/database.js` as two OCaml `Marshal` blobs; `scripts/sigla_decode.py`
+  (main repo) parses them → **802 documents / 22 sites / 376 signs (77 AB, 299 A-only)**, per-glyph
+  sign-ids + bounding boxes. Validated vs `corpus/silver` (learned AB#→sound over 309 shared docs
+  reproduces the Linear B syllabary). No export/API needed. See `docs/sigla_decode.md`.
 - **LIFE** (Linear A Inscription Finder) — Salgarella, interactive catalogue, under construction.
 - **GORILA** (Godart & Olivier, print) — the corpus behind logos silver; **NEW: 1st supplement by
   Del Freo & Zurbach (2025)** = new inscriptions (corpus update to ingest).
@@ -61,8 +65,11 @@ re-analysis: a **shared CORE of simple signs** + **site-specific local subsets**
 PERSON_NAME_LIKE recurrence heuristic).
 
 ## Follow-ups for logos
-1. **Acquire SigLA data** (machine-readable LA corpus + palaeographic variants) — augments the corpus,
-   fills the transcription-uncertainty layer (Task G).
+1. ~~**Acquire SigLA data**~~ **✅ DONE — SigLA was already in the repo; decoded 2026-07-06**
+   (`scripts/sigla_decode.py`, `docs/sigla_decode.md`; 802 docs / 376 signs with palaeographic
+   variants + bounding boxes). Remaining: *use* it — reconcile SigLA's 802-doc set against silver's
+   1,341 records, and surface the composite-vs-decomposed segmentation choices as the Task-G
+   transcription-uncertainty layer.
 2. **Add the LA→LB toponym anchor channel** — internal, no Egyptian-distortion model; re-run the power
    envelope on it (likely higher power than the Egyptian channel).
 3. **Ingest the Del Freo & Zurbach 2025 GORILA supplement** (new inscriptions) into the main corpus.
