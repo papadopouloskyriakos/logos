@@ -18,3 +18,12 @@
   unfittable -> power unassessable. Explicitly NOT a disguised NO_POWER (no fittable-but-weak corpus
   exists). Recommendation: resolve REQ-02b (machine-readable Hoch / >=150-entry hand-verified subset /
   Muchiki 1999). No real matching / preregistration / sign-value claim. 8 tests pass.
+
+## 2026-07-06 — E4: extensive online search + owned-Hoch extraction attempt
+- Online: no downloadable open Egyptian->foreign correspondence dataset (TLA/Ramses native; Trismegistos
+  Greco-Roman names; Hoch/Muchiki/Schneider copyrighted print).
+- Derivation from owned Hoch (extract_hoch.py): 101 entries / 76 tier-A candidates; headwords clean but
+  headword<->etymon PAIRING is OCR-noise-limited and un-cleanable without hand-verification or a
+  forbidden (circular) similarity heuristic. Below the >=150 clean-entry threshold.
+- Verdict UNCHANGED: INCOMPLETE / NOT_READY. Sharpened recommendation: clean Hoch/Muchiki OR authorize a
+  hand-verification pass. Derived data gitignored (Hoch copyrighted); extractor code + counts committed.

@@ -16,3 +16,14 @@ corpus). Smallest sufficient unblock — any ONE:
 - Edel & Görg 2005, or Kitchen's full topographical-list edition (the 8-page local copy is discussion only).
 
 Non-blocking for the calibration MODEL only if REQ-02b is met; without it the gate stays INCOMPLETE.
+
+
+## UPDATE 2026-07-06 — extraction attempted (online search + owned-Hoch derivation)
+Online search found NO downloadable open Egyptian->foreign correspondence dataset (TLA/Ramses native;
+Trismegistos Greco-Roman names; Hoch/Muchiki/Schneider copyrighted print). Deriving from the owned Hoch
+scan yields ~76 tier-A candidate pairs but the headword<->etymon PAIRING is OCR-noise-limited and cannot
+be cleaned without hand-verification or a FORBIDDEN similarity heuristic (circular). Still blocked for a
+POWERED calibration. Smallest unblock unchanged (REQ-02b): clean machine-readable Hoch OR Muchiki 1999
+OR an authorized hand-verification pass over the 76 candidates. Legit open datasets located (for record):
+TLA on Hugging Face (thesaurus-linguae-aegyptiae/*, native Egyptian), Trismegistos data services
+(CC-BY-SA, Greco-Roman names) — neither supplies NK foreign-consonant correspondence pairs.
