@@ -1,0 +1,66 @@
+{
+  "prereg_id": "cretan-anchor-oneshot-v2",
+  "status": "DRAFT_V2_PRECONDITIONS_PENDING",
+  "as_of": "2026-07-06",
+  "channel": "egyptian-external-anchor",
+  "plan_hash": "",
+  "supersedes": "cretan-anchor-oneshot-v1 (withdrawn after red-team wf_3bfac2b3-fdf; verdict REVISE_THEN_COMMIT)",
+  "hypothesis": {
+    "H1_generalization": "The frozen M2 (fit only on non-Cretan Semitic data) recovers the Cretan LB toponyms at top-1 above the scramble null AND by a positive margin over BOTH a model-free identity/edit-distance baseline and a generic-Egyptian-sign-value ablation.",
+    "H1prime_recovery_only": "M2 recovers above scramble but NOT above the two model-free baselines -> recovery is skeleton near-identity; NO generalization shown.",
+    "H0": "Recovery is at the empirical-null rate (assumed true until refuted, invariant 3).",
+    "signs_claimed": [
+      {"toponym": "Knossos", "en_row": "li 10", "egyptian_skeleton": "k-n-š", "linear_b": "ko-no-so"},
+      {"toponym": "Amnisos", "en_row": "li 11", "egyptian_skeleton": "m-n-š (leading aleph = vowel-carrier, dropped by f)", "linear_b": "a-mi-ni-so"},
+      {"toponym": "Lyktos", "en_row": "li 12", "egyptian_skeleton": "r-k-t", "linear_b": "ru-ki-to"}
+    ],
+    "language_family": "Aegean / pre-Greek (Linear B Greek)",
+    "confidence_prior": 0.4,
+    "downstream_cap": 0.75,
+    "cap_note": "invariant 5: signal capped at 0.75 downstream and NON-COMPOUNDING; the prior is not the cap."
+  },
+  "anchor_selection_rule": "skeleton-blind + model-blind: every En-list oval that is (a) Cretan, (b) non-palimpsest, (c) surviving (not lost li14/15), (d) not marked fraglich by Edel -> deterministically {Knossos, Amnisos, Lyktos}",
+  "skeletonizer_f": "one deterministic hash-pinned function applied identically to Egyptian ovals, target LB, and pool members; aleph/ayin/glides = vowel-carriers dropped on BOTH sides; š and s kept distinct (any merge must be earned by the model); assert f(target_LB)==pool_entry",
+  "baselines_and_nulls": {
+    "B_id": "model-free identity / edit-distance / consonant-multiset overlap on skeletons",
+    "B_egy": "generic Egyptian sign->consonant table, NO Semitic fitting (ablation isolating the generalization claim)",
+    "scramble_family": ["random_pairing", "permuted_model"],
+    "test": "joint Monte-Carlo permutation, N>=10000: draw scrambled maps, score ALL anchors vs same pool, record r1 per replicate; p=(1+#{r1>=r1_obs})/(1+N)"
+  },
+  "decision_rule": {
+    "NO_POWER": "M<30 OR any target lacks >=3 distractors within edit-distance<=1",
+    "REFUTE": "r1(M2)<=1 OR p>=0.05",
+    "RECOVERED_TRIVIAL": "p<0.05 AND r1(M2)>=2 AND r1(M2)<=max(r1(B_id),r1(B_egy))",
+    "CONFIRM_GENERALIZES": "p<0.05 AND r1(M2)>=2 AND r1(M2)>r1(B_id) AND r1(M2)>r1(B_egy); strong claim only at 3/3"
+  },
+  "inputs": {
+    "target_set": {"file": "frozen/cretan_confirmatory_targets.json", "sha256_16": "6903f5f1"},
+    "model_spec": {"file": "configs/egyptian_model_freeze.json", "sha256_16": "3c56ed71"},
+    "corpus_post_holdout": {"sha256_16": "TBD", "note": "skeleton-collision holdout applied (remove pairs whose egy OR foreign skeleton == any target skeleton within Levenshtein 1); exclusion predicate stated"},
+    "skeletonizer": {"file": "src/calibration/skeleton.py", "sha256_16": "TBD"},
+    "candidate_pool": {"file": "frozen/lb_toponym_pool.json", "sha256_16": "TBD"},
+    "verdict_script": {"file": "src/calibration/cretan_test.py", "sha256_16": "TBD"}
+  },
+  "leakage_controls": {
+    "corpus": "exclusion by SKELETON not label; collision holdout -> zero target-skeleton information",
+    "reading_independence": "Edel read eroded ovals USING the Greek IDs -> Egyptian skeleton not cleanly independent of the answer; precondition: source Falttafeln 13/14 for sign-level ID-blind readings, else scope claim to 'recovers Edel's readings' with leak documented",
+    "pool": "built blind to scores; as_of precedes run (freeze-commit timestamp, fail-closed)"
+  },
+  "multiple_testing": {
+    "anchor_rule_deflation": "reduction 6->3 by the mechanical rule; deflate for what the rule could admit",
+    "secondary": "Phaistos/Kydonia/Kythera + full 6-oval list = SYMMETRIC secondary (a secondary FAIL counts against)",
+    "pinned_before_freeze": ["skeletonizer", "pool source", "B_id", "B_egy", "N", "tie rule"]
+  },
+  "execution": {"grader": "mechanical script; model does not adjudicate (invariant 2)", "one_shot": true, "no_pilot_attestation_required": true, "deviation_policy": "any change voids plan_hash -> fresh prereg"},
+  "firewall": "Cretan targets are Egyptian-channel confirmatory targets ONLY; never enter Linear A hypothesis formation or scoring.",
+  "preconditions_before_mint": [
+    "f() written + hash-pinned; f(target_LB)==pool_entry assertion passes",
+    "B_id and B_egy implemented + hash-pinned",
+    "corpus skeleton-collision holdout applied; predicate stated; new sha recorded",
+    "pool frozen (one source, confusability floor, uniqueness); sha recorded",
+    "cretan_test.py (joint permutation N>=10000) written + hash-pinned",
+    "Falttafeln 13/14 sourced for reading independence OR claim scoped + leak documented per anchor",
+    "no-pilot attestation recorded; freeze committed with timestamp preceding run",
+    "plan_hash minted over canonical row incl. all above hashes; then run once"
+  ]
+}
