@@ -1,0 +1,20 @@
+{
+ "freeze_version": "egyptian-model-prereg-v1-2026-07-06",
+ "status": "SPEC_FROZEN_AWAITING_CORPUS",
+ "model_families": {
+  "M0": "identity-biased baseline", "M1": "weighted edit-distance baseline",
+  "M2": "pooled eligible probabilistic correspondence model", "M3": "names+toponyms only",
+  "M4": "toponyms only (if powered)", "M5": "period-matched", "M6": "genre-matched (if powered)",
+  "M7": "high-confidence-only (tier A)", "M8": "sensitivity incl. tier-C", "M9": "permissive unconstrained (FP stress test only)"
+ },
+ "features": ["consonant_substitution","consonant_merger","consonant_omission","cluster_simplification",
+              "epenthesis","metathesis","semivowel_treatment","position_dependence","group_writing_reliability",
+              "genre_effect","period_effect","item_class_effect","source_family_effect","source_form_uncertainty"],
+ "regularization": "prespecified L2 on correspondence log-weights (lambda grid, cross-validated)",
+ "split_strategy": "grouped k-fold; related spellings of one form share a fold; leave-one-language-family-out; leave-one-genre-out; leave-one-period-out where feasible",
+ "seeds": {"cv_seed": 20260706, "bootstrap_seed": 20260706},
+ "acceptance_thresholds": {"must_beat_baselines_M0_M1_on_heldout": true, "min_heldout_recovery": "prespecified per anchor-count grid", "subgroup_min_n_for_model": 30},
+ "fallback_rules": {"sparse_subgroup": "emit SUBGROUP_NO_POWER instead of forcing a model"},
+ "baseline_definitions": {"M0": "identity", "M1": "uniform edit distance"},
+ "no_change_after_positive_control_visible": true
+}
