@@ -1,6 +1,9 @@
 source_id,name,role,sha256_16,pages,license,status,notes
 SRC-HOCH,"Hoch 1994 Semitic Words in Egyptian Texts",Egyptian->foreign correspondence corpus,4df9bc092325648c,594,Princeton UP (local scan),UNUSABLE_OCR_CORRUPT,prose clean but group-writing transliteration corrupt; segment alignment not extractable
 SRC-KILANI,"Kilani 2019 Vocalisation in Group Writing",group-writing->sound (VOWEL) layer,4ecff477b371f073,161,CC-BY-4.0,WRONG_LAYER,native-Egyptian vocalization via Coptic; not foreign correspondence
-SRC-KITCHEN,"Kitchen NK Topographical Lists (local)",foreign-toponym discussion,b1a6c8fa7f66446e,8,open,DISCUSSION_ONLY,no extractable data tables
+SRC-KITCHEN,"Kitchen 2009 NK Topographical Lists (Causing His Name to Live)",foreign-toponym discussion,b1a6c8fa7f66446e,8,open,DISCUSSION_ONLY,"Memphis mirror re-downloaded 2026-07-06 byte-identical (same sha); 8pp essay, NOT a collation with hieroglyphic tables"
 SRC-MUCHIKI,"Muchiki 1999 Egyptian Proper Names & Loanwords in NW Semitic",foreign-name correspondence (ideal),,,paywalled,NOT_ACQUIRED,requested
-SRC-EDELGORG,"Edel & Gorg 2005 Kom el-Hetan (primary edition)",REQ-01 primary,,,print,NOT_AUDITED,confirmatory-ineligible until collated
+SRC-EDELGORG,"Edel & Gorg 2005 Kom el-Hetan (ADT 50 Harrassowitz, primary edition)",REQ-01 primary,,,"print (copyrighted)",NOT_OBTAINABLE_FREE,"online search 2026-07-06: no free PDF, not on archive.org/Propylaeum; needs purchase or ILL; confirmatory-ineligible until directly collated"
+SRC-EDEL1966,"Edel 1966 Die Ortsnamenlisten aus dem Totentempel Amenophis III (BBB 25)",REQ-01 editio princeps,,101,"print (copyrighted)",NOT_ACQUIRED,"predecessor to Edel&Gorg 2005; no digitization found online; antiquarian only"
+SRC-CLINESTANNISH,"Cline & Stannish 2011 Sailing the Great Green Sea (JAEI 3.2)",REQ-01 secondary re-edition,,11,open,IN_HAND,"prose readings Knossos kA-n-yw-SA / Amnisos i-m-n-y-SA / Lyktos ry-kA-ti + Phaistos/Kydonia reconstruction; secondary, not primary collation"
+SRC-BELOHOUBKOVA,"Belohoubkova 2014 BA thesis (Charles U Prague) Aegean list mapping current knowledge",REQ-01 secondary compilation,91a0035bdfb4a7a4,73,"copyrighted (academia.edu)",INGESTED,"user-delivered via scp 2026-07-06; compiles apparatus + plates (pp53-67) + comparison table (~p70); see REQ01_APPARATUS_DETERMINATION.md"
