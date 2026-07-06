@@ -7,7 +7,7 @@
 | # | Phase | State |
 |---|-------|-------|
 | 1 | Administrative channel closure + archive | ✅ DONE (87b4dea) |
-| 2 | Ritual branch/worktree + scaffold | 🔄 IN PROGRESS |
+| 2 | Ritual branch/worktree + scaffold | ✅ DONE |
 | 3 | LA ritual candidate inventory (internal only) | ⬜ |
 | 4 | LB ritual target inventory (independent) | ⬜ |
 | 5 | Known-pair quarantine ledger | ⬜ |
@@ -15,10 +15,10 @@
 | 7 | Leakage firewall tests | ⬜ |
 | 8 | Synthetic / within-script controls (PC-R1..R4) | ⬜ |
 | 9 | Null + power simulation (no real matching) | ⬜ |
-| 10 | Final feasibility verdict | ⬜ |
+| 10 | Final feasibility verdict | ✅ **COMPLETE / NO_POWER** |
 
 ## Verdicts (not yet issued)
-- status: INCOMPLETE · ritual_channel_readiness: NOT_READY (pending inventories + power)
+- status: **COMPLETE** · ritual_channel_readiness: **NO_POWER** (drift inadmissible; permissive FP ~1; no in-domain exemplar)
 
 ## Isolation
 main / external-anchors(Egyptian) / paper/ / runtime/ / CSA sweep: untouched. Archived administrative
