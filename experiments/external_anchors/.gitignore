@@ -1,0 +1,17 @@
+# Never commit copyrighted full scans or licensed corpus copies — store metadata/derived records only.
+*.pdf
+*.tif
+*.tiff
+*.jpg
+*.jpeg
+*.png
+*.zip
+*.tar.gz
+# Guard against accidental copies of the licensed Linear A corpus into this subtree.
+**/inscriptions.json
+**/inscriptions_structured.json
+**/signs_ontology.json
+**/inventory_syllabograms_*.json
+# Local scratch / large intermediate data
+data/bronze/**/*.raw
+reports/*_local/
