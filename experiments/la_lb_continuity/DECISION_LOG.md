@@ -65,4 +65,20 @@ Append-only. Every freeze records the input hashes.
   confirmatory. Ledger quarantined; §VII/§VIII must not read it (leakage tests). Tests 5/5.
 - Commit hash: _(recorded on commit)_
 
-<!-- D6 LA candidate freeze §VII / D7 LB target freeze §VIII / … append below -->
+## 2026-07-06 — D6: freeze internal-only LA candidate manifest (commit chunk 5, §VII, packet A)
+- **Freeze `la-candidates-v1-2026-07-06`:** `data/gold/la_candidate_packet.jsonl` sha256
+  `eb2bb2933daf40c292e1169a181876463ad1d938d3268a88d8bbed1c7eec0e48`. Built from the inherited,
+  UNMODIFIED slot classifier (internal-only). Raw GORILA IDs (de-leaked); no LB, no similarity.
+- **Sets:** PRIMARY 11 (tier-B TOPONYM_LIKE), SENSITIVITY_1 33, NEGATIVE_CONTROL 21, QUARANTINED 1.
+- **Integrity catch:** the one-directional contamination filter quarantined **I-DA** (known ritual
+  persistence form mis-pooled as a negative control). Generation stays blind (tested); the filter only
+  moves NEGATIVE_CONTROL→QUARANTINED, never PRIMARY/SENSITIVITY.
+- **Resolved/quarantined:** ARKH ambiguity (flagged, silver-internal counts stable), Malia→Mallia,
+  face/join & uncertain-doc flags, composite-sensitive flag (3), single-site non-independence flag,
+  per-candidate chronology.
+- **Recoverability (LA-internal audit):** 1/5 known LA forms in the set (I-DA, quarantined); **0/5 in
+  PRIMARY/SENSITIVITY** → a-priori near-zero benchmark recovery, logged for §XIII (not computed).
+- **Tests:** leakage + structure/chronology/site/dup/regeneration; full suite 32/32.
+- Commit hash: _(recorded on commit)_
+
+<!-- D7 LB target freeze §VIII / … append below -->
