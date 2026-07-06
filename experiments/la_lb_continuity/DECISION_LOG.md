@@ -119,3 +119,11 @@ before any of §IX–§XV.**
   STOP the administrative channel as NO_POWER; the exact sub-question is a clean negative (insurance
   policy). Drift-tolerant redesign or ritual channel = new design + new input-freeze review.
 - Frozen memberships unchanged throughout; main/paper/runtime/Egyptian untouched.
+
+## 2026-07-06 — D10: administrative channel CLOSED + archived (split verdict)
+- Final experiment commit acfd19b. Split verdict: H_exact=NULL_PUBLISHED (powered, observed 0 exact
+  pairs), H_drift=NO_POWER (drift untestable under no-free-mapping). Frozen manifests/results NOT
+  altered; nothing rerun. Archive: data/manifests/administrative_channel_closure.{json,sha256};
+  reports/ADMINISTRATIVE_CHANNEL_{CLOSURE,ARCHIVE_MANIFEST}.md. 76 tests pass.
+- Next: fork research/la-lb-ritual-feasibility (EXPLORATORY_POSTHOC_CHANNEL) — feasibility+power audit
+  only, no real LA↔LB matching.

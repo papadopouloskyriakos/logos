@@ -2,7 +2,7 @@
 
 _Single source of current state. Phases follow the commit plan (§XVIII)._
 
-## Current phase: **COMPLETE — mechanical verdict issued: status=COMPLETE, channel_readiness=NO_POWER, circularity=LOW.**
+## Current phase: **CLOSED + ARCHIVED. Split verdict H_exact=NULL_PUBLISHED / H_drift=NO_POWER. Ritual-feasibility audit forks from here.**
 
 | # | Phase | State |
 |---|-------|-------|

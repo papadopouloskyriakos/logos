@@ -1,3 +1,5 @@
+> **CLOSED (split verdict):** `H_exact = NULL_PUBLISHED` (exact administrative continuity, powered, observed 0) · `H_drift = NO_POWER` (drift-tolerant continuity untestable under no-free-mapping). See ADMINISTRATIVE_CHANNEL_CLOSURE.md.
+
 # FINAL_CHANNEL_VERDICT — §X (ADMINISTRATIVE_TOPONYM_CONTINUITY)
 
 _Mechanically derived by `src/continuity/verdict.py` from the committed result files; the model does
