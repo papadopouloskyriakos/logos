@@ -106,3 +106,16 @@ before any of §IX–§XV.**
   SENSITIVITY_C_ADDITIONAL 33 / NEGATIVE_CONTROL 21 / QUARANTINED 1 = 66 (mutually exclusive, tested);
   PRIMARY_PLUS_SENSITIVITY=44 programmatic; ARKH→AMBIGUOUS_ARKH (3); unit=unique form (66 eff. units,
   254 raw attestations). Input hashes verified (anti-drift). Commit hash: _(on commit)_
+
+## 2026-07-06 — D9: §IX–§XV executed → mechanical channel verdict (commits chunks 1–8)
+- Model A1–A5 (exact identity, no free mapping); PRIMARY×EVALUATION = 0 at every layer; B+C = 0.
+- Positive controls: PC1 exact implant 100%/0FP, PC2 degraded recovered only by A3, PC3 LB-internal
+  11/11 self-persistence 0 cross-FP, PC4 PA-I-TO face-validity (A1-A4 yes, A5 no).
+- Nulls (10 families): freq-matched FP 1.25%, combined best-of-search 3.21%, real-data controls 0.
+- Held-out: 0 above null; known-pair diagnostic 2/5 exact-representable (drift ceiling).
+- Power: FULL for exact continuity (min detectable 1), ZERO for genuine drift; P(NO_POWER)~0.60.
+- Circularity: CIRCULARITY_LOW (all load-bearing components blind/independent).
+- **VERDICT (mechanical): status=COMPLETE, channel_readiness=NO_POWER, circularity=LOW.** Recommendation:
+  STOP the administrative channel as NO_POWER; the exact sub-question is a clean negative (insurance
+  policy). Drift-tolerant redesign or ritual channel = new design + new input-freeze review.
+- Frozen memberships unchanged throughout; main/paper/runtime/Egyptian untouched.
