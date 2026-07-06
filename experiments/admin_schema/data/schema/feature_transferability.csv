@@ -1,0 +1,30 @@
+feature,graph_level,transferability_class,lb_source,la_source,notes
+opaque_sign_id,SIGN/WORD_FORM node,TRANSFERABLE,B_SIGN_NNN (de-phoneticised),A_SIGN_NNN (native),within-script-opaque; NEVER cross-script sound-equated
+within_script_sign_frequency,derived,TRANSFERABLE,from LB graph,from LA graph,normalize within script
+word_form_length,WORD_FORM,TRANSFERABLE,yes,yes,
+token_position_in_word,SIGN.position,TRANSFERABLE,yes,yes,
+token_position_in_entry,node.position,TRANSFERABLE,yes,yes,
+entry_position_in_row,ENTRY.position,TRANSFERABLE,yes,yes,
+row_column_coordinates,ROW/COLUMN_OR_ZONE,AB_SHARED_SENSITIVITY,LiBER partial,SigLA bboxes,LA-rich/LB-partial -> sensitivity
+document_side_face,SIDE_OR_FACE,TRANSFERABLE,yes,yes (nodule faces),
+document_series_or_type,meta.document_series,TRANSFERABLE,yes,partial (support only),LA lacks series -> coarse
+site,meta.site,TRANSFERABLE,yes,yes,
+findspot,meta.findspot,TRANSFERABLE,yes,partial,
+chronological_phase,meta.chronological_phase,TRANSFERABLE,yes,coarse (context),LA coarser
+scribe,meta.scribe,LB_ONLY_DIAGNOSTIC,yes (DAMOS),absent,no systematic LA scribe -> diagnostic only
+support_type,meta.support_type,TRANSFERABLE,yes,yes,
+logogram_identity,LOGOGRAM.opaque_id,TRANSFERABLE,B_LOGO_NNN,"A_LOGO (native, dry-run TBD)",opaque class
+numeral_value_or_type,NUMERAL.value,TRANSFERABLE,yes,yes (LA numerals),
+fraction_structure,FRACTION,TRANSFERABLE,yes,yes (Corazza),
+damage_flag,node.damage_flag,TRANSFERABLE,yes,yes,
+uncertain_boundary_flag,node.uncertain_boundary_flag,TRANSFERABLE,yes,yes,
+n_alternatives,node.n_alternatives,TRANSFERABLE,yes,yes,
+allograph_class,SIGN.allograph_class,AB_SHARED_SENSITIVITY,partial,SigLA palaeography,within-script
+cross_document_recurrence,REPEATS_FORM,TRANSFERABLE,yes,yes,
+cross_site_recurrence,derived,TRANSFERABLE,yes,yes,
+single_site_clustering,derived,TRANSFERABLE,yes,yes,
+formula_cluster_membership,FORMULA_CLUSTER,TRANSFERABLE,yes,yes,
+phonetic_transliteration,-,EXCLUDED,EVAL_ONLY,n/a,never model-visible
+greek_lemma_gloss_translation,-,EXCLUDED,EVAL_ONLY,n/a,never model-visible
+known_role_or_entity,-,EXCLUDED,EVAL_ONLY,n/a,never model-visible
+ab_shared_sign_bridge,-,AB_SHARED_SENSITIVITY,frozen shared repertoire,frozen shared repertoire,separate versioned sensitivity layer; NOT sound-equivalence

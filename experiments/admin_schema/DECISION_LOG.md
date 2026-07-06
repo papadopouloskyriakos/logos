@@ -35,4 +35,21 @@ Chronological record of decisions, commits, and manifest hashes (§XVII). Newest
   `reports/LINEAR_B_SOURCE_AUDIT.md`, `reports/LINEAR_A_FEATURE_COMPATIBILITY.md`,
   `reports/LICENSE_AND_REPRODUCIBILITY.md`. Commit: _(this commit)_.
 
+## 2026-07-07
+
+- **Stage 4 start.** Starting commit `4526c5c` (branch `research/blinded-admin-schema-induction`, clean;
+  `main@f6a5682`, paper/runtime/CSA + completed branches untouched; 6 worktrees).
+- **Stage 4 — canonical transferable document graph.** DĀMOS → de-phoneticised heterogeneous graph:
+  every syllabogram/logogram/metrogram/qualifier → opaque graphic ID (`B_SIGN/B_LOGO/B_MEAS/B_QUAL_NNN`);
+  id↔sound maps EVAL-ONLY. LA (silver) instantiated in the SAME schema (dry-run, separate `A_SIGN` vocab,
+  no semantic output). **Hashes:** schema `628f49fb`, lb_graph `f040720e`, la_graph `d79b3fe4`,
+  feature_transferability `<see manifest>`. Counts: LB 5,799 / LA 1,341 graphs; 89 syll / 155 logo / 17 meas
+  vocab; 1,606 repeated forms + 1,162 joins grouped; 12,751 uncertain nodes. Transferability: 22
+  TRANSFERABLE / 3 AB-shared / 1 LB-only / 3 EXCLUDED. **All 4 acceptance tests pass** (schema, determinism,
+  no-semantic-fields incl. sound-value leak, feature-transferability). **Finding:** DĀMOS `vasewriter`
+  empty in this dump → SCRIBE channel empty; S4 leave-one-scribe-out needs another field or is NO_POWER.
+  Model-visible graphs + eval-only key gitignored (regenerable; eval-only never redistributed). Commit: _(this)_.
+- **Stage 5 — ontology review DRAFT ONLY** generated under `reviews/stage5/` (UNCOMMITTED, NOT FROZEN).
+  Awaiting `STAGE5_ONTOLOGY_APPROVED`.
+
 <!-- append: stage, commit sha, manifest hashes, key decision -->

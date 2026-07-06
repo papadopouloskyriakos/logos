@@ -1,0 +1,44 @@
+{
+ "builder_version": "admin-graph-builder-v1-2026-07-07",
+ "feature_transferability_sha256_16": "bc5a98fe0120965a",
+ "la_graph_sha256_16": "d79b3fe422b24314",
+ "la_graphs": 1341,
+ "lb_edge_counts": {
+  "CONTAINS": 120371,
+  "FOLLOWS_LOGOGRAM": 6164,
+  "FOLLOWS_NUMERAL": 8377,
+  "NEXT_ENTRY": 10243,
+  "NEXT_TOKEN": 31263,
+  "PRECEDES_LOGOGRAM": 6164,
+  "PRECEDES_NUMERAL": 8377,
+  "PREVIOUS_ENTRY": 10243,
+  "PREVIOUS_TOKEN": 31263,
+  "SAME_DOCUMENT": 16042,
+  "SAME_FORMULA_CLUSTER": 9432
+ },
+ "lb_graph_sha256_16": "f040720ea48e7fc1",
+ "lb_graphs": 5799,
+ "lb_node_counts": {
+  "DOCUMENT": 5799,
+  "ENTRY": 16042,
+  "FORMULA_CLUSTER": 9432,
+  "LOGOGRAM": 6738,
+  "MEASURE_MARKER": 2699,
+  "NUMERAL": 8875,
+  "ROW": 14841,
+  "SIGN": 44974,
+  "TOKEN": 10425,
+  "WORD_FORM": 15777
+ },
+ "lb_reference_sha256_16": "a331a03b073c97b2",
+ "lb_uncertain_nodes": 12751,
+ "schema_sha256_16": "628f49fb75c26a8d",
+ "source_damos_sha256_16": "96a2590c175b7d68",
+ "source_silver_la_sha256_16": "4717a7e39157fad6",
+ "transferability_class_counts": {
+  "AB_SHARED_SENSITIVITY": 3,
+  "EXCLUDED": 3,
+  "LB_ONLY_DIAGNOSTIC": 1,
+  "TRANSFERABLE": 22
+ }
+}

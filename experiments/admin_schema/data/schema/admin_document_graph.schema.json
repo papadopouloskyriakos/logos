@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "logos/admin_document_graph",
+  "title": "Canonical transferable administrative document graph",
+  "description": "Script-internal, de-phoneticised heterogeneous graph for Linear B (and Linear-A-compatible instantiation). MODEL-VISIBLE layer only: opaque sign/logogram/measure IDs + structure + non-semantic metadata. NO phonetic transliteration, Greek, lemma, gloss, translation, or role. One JSON object per document.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["graph_id", "script", "meta", "nodes", "edges", "provenance"],
+  "properties": {
+    "graph_id": {"type": "string"},
+    "script": {"type": "string", "enum": ["LINEAR_B", "LINEAR_A"]},
+    "meta": {
+      "type": "object", "additionalProperties": false,
+      "description": "document-level MODEL-VISIBLE, non-semantic attributes",
+      "required": ["source_document_id", "support_type", "damage_flag"],
+      "properties": {
+        "source_document_id": {"type": "string"},
+        "document_series": {"type": ["string", "null"]},
+        "document_subseries": {"type": ["string", "null"]},
+        "document_set": {"type": ["string", "null"]},
+        "support_type": {"type": ["string", "null"]},
+        "site": {"type": ["string", "null"]},
+        "findspot": {"type": ["string", "null"]},
+        "chronological_phase": {"type": ["string", "null"]},
+        "scribe": {"type": ["string", "null"], "description": "opaque scribe id (LB_ONLY_DIAGNOSTIC)"},
+        "n_sides": {"type": "integer"}, "n_rows": {"type": "integer"},
+        "damage_flag": {"type": "boolean"},
+        "joined_fragment_cluster": {"type": ["string", "null"]}
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": true,
+        "required": ["id", "type"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"type": "string", "enum": [
+            "DOCUMENT", "SIDE_OR_FACE", "ROW", "COLUMN_OR_ZONE", "ENTRY", "TOKEN", "WORD_FORM",
+            "SIGN", "LOGOGRAM", "NUMERAL", "FRACTION", "MEASURE_MARKER", "DOCUMENT_SERIES", "SITE",
+            "FINDSPOT", "SCRIBE", "OBJECT_OR_SUPPORT", "CHRONOLOGICAL_PHASE", "JOINED_FRAGMENT_CLUSTER",
+            "FORMULA_CLUSTER"]},
+          "opaque_id": {"type": "string", "description": "e.g. B_SIGN_017 / B_LOGO_004 / B_MEAS_002 — never a sound value"},
+          "position": {"type": ["integer", "null"]},
+          "value": {"type": ["number", "string", "null"], "description": "numeral value / structural type only"},
+          "damage_flag": {"type": "boolean"},
+          "uncertain_flag": {"type": "boolean"},
+          "uncertain_boundary_flag": {"type": "boolean"},
+          "n_alternatives": {"type": "integer"},
+          "allograph_class": {"type": ["string", "null"]},
+          "qualifier": {"type": ["string", "null"], "description": "opaque qualifier class on a logogram"}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["src", "dst", "type"],
+        "properties": {
+          "src": {"type": "string"}, "dst": {"type": "string"},
+          "type": {"type": "string", "enum": [
+            "CONTAINS", "NEXT_TOKEN", "PREVIOUS_TOKEN", "NEXT_ENTRY", "PREVIOUS_ENTRY", "SAME_WORD_FORM",
+            "SAME_FORMULA_CLUSTER", "SAME_ROW", "SAME_COLUMN_OR_ZONE", "SAME_DOCUMENT", "SAME_DOCUMENT_SERIES",
+            "SAME_SITE", "SAME_FINDSPOT", "SAME_SCRIBE", "SAME_PHASE", "SAME_SUPPORT_TYPE", "PRECEDES_NUMERAL",
+            "FOLLOWS_NUMERAL", "PRECEDES_LOGOGRAM", "FOLLOWS_LOGOGRAM", "ALIGNED_WITH", "QUALIFIES", "TOTALS",
+            "SUBTOTALS", "REPEATS_FORM", "VARIANT_OF", "JOINED_WITH", "UNCERTAIN_READING_OF", "COMPOSITE_OF"]}
+        }
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_record_id", "source_version", "source_hash", "builder_version", "build_timestamp"],
+      "properties": {
+        "source_record_id": {"type": ["string", "integer"]},
+        "source_version": {"type": "string"},
+        "source_hash": {"type": "string"},
+        "builder_version": {"type": "string"},
+        "build_timestamp": {"type": "string"},
+        "uncertainty_provenance": {"type": "string"}
+      }
+    }
+  },
+  "$comment": "FORBIDDEN model-visible fields (enforced by tests/test_document_graph_no_semantic_fields.py): transliteration, phonetic, sound, value_phonetic, greek, lemma, dictionary, translation, gloss, role, entity, meaning, etymology, reading."
+}
