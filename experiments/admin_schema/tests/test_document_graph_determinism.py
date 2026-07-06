@@ -12,7 +12,7 @@ def _sha(p):
 
 
 def test_lb_graph_hash_matches_manifest():
-    man = json.load(open(os.path.join(gc.EXP, "data", "manifests", "stage4_1_graph_freeze.json")))
+    man = json.load(open(os.path.join(gc.EXP, "data", "manifests", "stage4_2_graph_freeze.json")))
     assert _sha(os.path.join(gc.MODEL_VISIBLE, "lb_graph.jsonl")) == man["lb_graph_sha256_16"]
     assert _sha(os.path.join(gc.MODEL_VISIBLE, "la_graph.jsonl")) == man["la_graph_sha256_16"]
 
