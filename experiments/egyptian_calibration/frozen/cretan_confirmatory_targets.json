@@ -1,0 +1,118 @@
+{
+  "artifact": "cretan_confirmatory_targets",
+  "schema_version": "1.0",
+  "as_of": "2026-07-06",
+  "purpose": "Frozen EXTERNAL confirmatory target set for the Egyptian external-anchor channel: Egyptian group-writing renderings (Kom el-Hetan Liste EN, Amenophis III) of Cretan toponyms whose Aegean forms are INDEPENDENTLY known from Linear B. Intended ONLY for a future preregistered one-shot Cretan-anchor test (apply the FROZEN Egyptian->foreign correspondence model to each Egyptian oval; check recovery of the known Linear B skeleton). This set is externally fixed by the ancient list, not chosen to fit anything (invariant 8). FIREWALL: it must NEVER be an input to Linear A hypothesis formation or scoring.",
+  "primary_source": {
+    "ref": "Edel, E. (†) & Görg, M. 2005. Die Ortsnamenlisten im nördlichen Säulenhof des Totentempels Amenophis' III. Ägypten und Altes Testament 50. Wiesbaden: Harrassowitz. ISBN 3-447-05219-8.",
+    "list": "Liste EN (the 'Aegean list')",
+    "collation": "DIRECT, from the primary-edition text + apparatus + Edel's own line-drawings (Fig. 1-4; reconstruction table book p.191).",
+    "scan_sha256_16": "2a6f7f191a438076",
+    "scan_pages": 135,
+    "scan_note": "2-up scan; book_page ≈ 2*PDF_page - 34. Gitignored (copyrighted).",
+    "plate_verification_outstanding": "Tafel 12 photo too eroded to read ovals at sign level; the Falttafeln 13/14 hand-copy facsimiles are ABSENT from the scanned PDF. Freeze rests on Edel's edition drawings, not on legible photographic plates. Source the fold-out Falttafeln separately for independent sign-level confirmation."
+  },
+  "req01_status": "CLOSED_PRIMARY_COLLATED",
+  "discipline": "FREEZE ONLY — no Linear A matching, no sign-value claim, no external preregistration performed in producing this artifact (invariants 3, 8). Any model forecast enters downstream capped ≤0.75 (invariant 5).",
+  "targets": [
+    {
+      "toponym": "Knossos",
+      "en_row": "li 10",
+      "book_page": "187",
+      "edel_transliteration": "kā-jn-jw-šā",
+      "egyptian_skeleton": "knš",
+      "linear_b": "ko-no-so",
+      "linear_b_skeleton": "k-n-s",
+      "identification": "Knossos (Crete)",
+      "certainty": "sicher / undisputed (‘Zu Knossos selbst braucht wohl kein Wort verloren zu werden’); ku-nu-š = ‘das Abbild von ko-no-so’",
+      "freeze_status": "FROZEN",
+      "editorial_alternatives": ["none — Kitchen's ko-no-so accepted without reservation (Ventris–Chadwick, Documents 146–147)"]
+    },
+    {
+      "toponym": "Amnisos",
+      "en_row": "li 11 (primary); doubled on the Vorderseite at li 1 (palimpsest over erased Amykla)",
+      "book_page": "187-188",
+      "edel_transliteration": "[j]ʿ-m-n-i-šā",
+      "egyptian_skeleton": "ʼmnš (ʾ-m-n-š)",
+      "linear_b": "a-mi-ni-so",
+      "linear_b_skeleton": "(ʾ)-m-n-s",
+      "identification": "Amnisos, the harbour of inland Knossos (Strabo)",
+      "certainty": "sicher / ‘sehr gut’; the li 10/li 11 pair (Knossos/Amnisos) mutually reinforce; Osing on-block collation (1972/73) confirms ‘amniš’",
+      "freeze_status": "FROZEN",
+      "editorial_alternatives": [
+        "li 1 (Vorderseite) is a genuine palimpsest: Amniša recut over the erased mainland name Amykla (*ʾ-m-k-r/l, older singular of Ἀμύκλαι)",
+        "aleph/ayin printed identically (apostrophe) by Edel — leading a-sign (ʾ vs ʿ) not confidently distinguishable at scan resolution; rendered ʾ by convention"
+      ]
+    },
+    {
+      "toponym": "Lyktos",
+      "en_row": "li 12",
+      "book_page": "188",
+      "edel_transliteration": "rj-kā-tj",
+      "egyptian_skeleton": "rkt",
+      "linear_b": "ru-ki-to",
+      "linear_b_skeleton": "r-k-t",
+      "identification": "Lyktos / Lyttos (Crete); ruins near Xidas",
+      "certainty": "oval reading rkt undisputed; identification per Kitchen (Orientalia 34, 1965, 6 n.1). NB the Greek L is rendered by Egyptian r — the l→r correspondence the calibration model learned.",
+      "freeze_status": "FROZEN",
+      "editorial_alternatives": [
+        "i/e↔u vacillation in the first syllable (reed vs LB u) noted as normal in Greek adoption of pre-Greek words",
+        "Faure/Kirsten dispute only the LOCATION (inland vs coastal), not the reading"
+      ]
+    },
+    {
+      "toponym": "Phaistos",
+      "en_row": "li 2 (Vorderseite/front, palimpsest — the VISIBLE/recut name); original Cretan-side oval li 14 physically lost",
+      "book_page": "169-174, 190",
+      "edel_transliteration": "bā-y-šā-tj",
+      "egyptian_skeleton": "byšt (b-y-š-t)",
+      "linear_b": "pa-i-to",
+      "linear_b_skeleton": "p-t (pa-i-to)",
+      "identification": "Phaistos (Φαιστος, southern Crete) — the VISIBLE/final name",
+      "certainty": "visible name sicher/wahrscheinlich (Edel's own reading, corroborated by LB pa-i-to; confirmed by Osing autopsy 1972/73). Erased UNDERTEXT identity (Pisaia vs Pisatis) explicitly fraglich.",
+      "freeze_status": "FROZEN_WITH_ALTERNATIVES",
+      "editorial_alternatives": [
+        "PALIMPSEST: the visible Phaistos was recut over an erased mainland name — Πισαια (undertext ending -y) OR Πισατις (ending -tj); Edel cannot decide between the two",
+        "original Cretan-side oval li 14 is physically LOST; its [bā-y-šā-tj] is a reconstruction from the palimpsest-source theory",
+        "Faure (Kadmos 7, 1968) & Sergent read Bi-ša-ja = Πισαια (Peloponnese) for the whole oval — Edel rejects (drops the y and the tj)",
+        "Helck expected a place near Rhethymnon (Itinerarhypothese) — Görg rejects Helck, upholds Edel's Phaistos; earlier doubts ‘sans vérification sur le bloc’ overturned by Osing's on-the-block autopsy"
+      ]
+    },
+    {
+      "toponym": "Kydonia",
+      "en_row": "li 3 (Vorderseite/front, palimpsest — the VISIBLE/recut name); original Cretan-side oval li 15 physically lost",
+      "book_page": "175, 183",
+      "edel_transliteration": "Kā-tw-nā-y",
+      "egyptian_skeleton": "ktny (k-t-n)",
+      "linear_b": "ku-do-ni-ja",
+      "linear_b_skeleton": "k-d-n",
+      "identification": "Kydonia (Κυδωνια = modern Chania, NW Crete)",
+      "certainty": "sicher for the visible name (‘entspricht verblüffend genau dem Stadtnamen Kydonia’); vocalization ku-tu-n(i)-ja makes it ‘noch perfekter’",
+      "freeze_status": "FROZEN_WITH_ALTERNATIVES",
+      "editorial_alternatives": [
+        "PALIMPSEST: recut over an erased primary Edel left UNIDENTIFIED (≈5 signs; begins jj/y or ʿa, ends r/l). (MG:) Görg proposes li 3* = a second citation of Amyklai (book p.203), disputing Edel's abstention",
+        "original Cretan-side oval li 15 physically LOST; its [Kā-tw-nā-y] is a reconstruction",
+        "vocalization ku-tu-na-ja (Albright, VESO) vs ku-tu-n(i)-ja (Edel)"
+      ]
+    }
+  ],
+  "secondary_robustness_anchor": {
+    "toponym": "Kythera",
+    "en_row": "li 8",
+    "book_page": "185-186",
+    "edel_transliteration": "kā-tj-i-rʿ",
+    "egyptian_skeleton": "ktr",
+    "linear_b": "ku-te-ra",
+    "identification": "Kythera (the island BETWEEN Crete and the Peloponnese)",
+    "certainty": "sicher — ‘schlechthin perfekte Wiedergabe’",
+    "freeze_status": "FROZEN_SECONDARY",
+    "note": "Fully freezable in its own right, but structurally the bridge island separating the two 7-name blocks — NOT a strictly-Cretan toponym; use only as a robustness anchor."
+  },
+  "excluded": [
+    {"item": "li 9 (Wilios? / Eleia?)", "reason": "phonetic reading firm (w-i-r/l-i-ja) but GEOGRAPHIC identity contested (Ilios/Troy vs Elis vs Elea/NW-Crete vs Helos/Laconia); Görg 'Eleia?' fraglich; no secure LB comparandum"},
+    {"item": "li 13 (Setaia / Siteia?)", "reason": "only traces survive; no continuous transliteration recoverable; Görg '[S]it[eia]?' (restored + fraglich)"},
+    {"item": "li 14 / li 15 (Cretan-side originals of Phaistos/Kydonia)", "reason": "physically lost / bracketed reconstructions; the freezable readings come from the surviving Vorderseite palimpsests li 2 / li 3 — listing these would double-count a conjectural oval"},
+    {"item": "Pisaia / Pisatis (undertext of li 2)", "reason": "mainland Peloponnesian name, only the erased undertext beneath the visible Phaistos — not a Cretan target"},
+    {"item": "Mainland/Peloponnese block + Leitnamen (li 1* Amykla, li 4 Mykene, li 5 Thebais/Tegea?, li 6 Messene, li 7 Nauplia; heading re 1 Keftiu/Kreta, re 2 Tanaja/Danaia)", "reason": "not Cretan toponyms — Peloponnesian/mainland entries + the two list-heading Leitnamen"}
+  ]
+}
