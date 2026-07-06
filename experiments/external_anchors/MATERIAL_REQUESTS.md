@@ -116,3 +116,18 @@ derived factual records, transliterations, and checksums are stored as legally a
 **Nothing here blocks Stages 0–2 scaffolding, the schema-derived slot audit, the Linear-B positive
 control design, or the null framework.** The blockers (REQ-01, REQ-02) gate only the *confirmatory*
 toponym test and its power analysis freeze.
+
+## CALIBRATION-GATE UPDATE (2026-07-06)
+- **REQ-01-primary-edition — OPEN** (corrected). The Kom el-Hetan toponym transliterations are from
+  Cline & Stannish (SECONDARY); the Edel & Görg 2005 primary edition has NOT been directly collated.
+  Toponym records flagged `source_status=PROVISIONAL_SECONDARY`, `primary_edition_verified=false`,
+  `confirmatory_eligible=false` (v3). Usable for pipeline + exploratory power; NOT for confirmatory.
+  Ideal: the Edel & Görg edition (or Kitchen's full collation) — non-blocking for calibration.
+- **REQ-02 — UNBLOCKED for the sign→sound layer.** The Hoch scan's transliteration is OCR-corrupted
+  (not fittable), BUT **Kilani 2019** (CC-BY, open, clean) supplies the group-writing→sound model
+  directly. A first correspondence model can be fit from Kilani now. Also open: TLA Late-Egyptian HF
+  dataset (CC-BY-SA), Kitchen (open).
+- **REQ-02c — Muchiki 1999 (OPTIONAL / USEFUL)** — *Egyptian Proper Names and Loanwords in North-West
+  Semitic* (print/paywalled) — the foreign-consonant-approximation layer for names/toponyms
+  specifically. Would strengthen the foreign-rendering layer beyond Kilani's native-word model. Not
+  required for a first-pass model. If you can source it, `scp` as before.

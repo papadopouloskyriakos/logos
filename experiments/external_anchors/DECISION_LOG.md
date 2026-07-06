@@ -39,3 +39,9 @@ Append-only. Each entry: date · decision · rationale.
   C/D/B + E to follow this entry. design_readiness=READY_FOR_CALIBRATION; naive design leans
   NO_POWER (in-sample FP≈1.0; held-out FP≈0.25 vs recovery≈0.40). Next: fit the frozen Hoch
   correspondence model, then re-run the power envelope + matched-scarcity control under it.
+- **2026-07-06 · Calibration gate — data blocker found then LIFTED.** Hoch PDF OCR corrupts the
+  transliteration (not fittable); extensive research found Kilani 2019 (CC-BY, open, clean
+  group-writing→sound model), TLA HF corpus, Kitchen (open); Muchiki paywalled (optional). REQ-01
+  primary edition kept OPEN (Cline is secondary → toponyms confirmatory-ineligible). Slot-manifest
+  reproducibility PASS. Gate not executed (model not yet fit); design_readiness stays
+  READY_FOR_CALIBRATION but now with a viable open source in hand. Next: fit the model from Kilani.

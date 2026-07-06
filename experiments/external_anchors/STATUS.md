@@ -70,3 +70,20 @@ No **source** blocker remains on the toponym path (REQ-01 Cline forms + REQ-02 H
 The pending work is **fitting the frozen Egyptian→foreign correspondence model from Hoch** (not yet
 done) and **re-running the power envelope + positive control under it** — the next milestone. Until
 then all matching parameters are PROVISIONAL and the power verdict is provisional NO_POWER-leaning.
+
+---
+## CALIBRATION GATE (2026-07-06) — status
+**status = INCOMPLETE · design_readiness = READY_FOR_CALIBRATION (no longer data-blocked).**
+- Task D reproducibility: **PASS** (manifest regenerates to `dc9653a9…1d024551`).
+- Task A source audit: REQ-01-primary **OPEN** (Cline secondary; toponyms confirmatory-ineligible,
+  v3 flags); REQ-02 Hoch scan **not fittable** (OCR-corrupted transliteration).
+- **Calibration blocker LIFTED by open research:** Kilani 2019 (CC-BY, clean) = the group-writing→
+  sound model; TLA HF (CC-BY-SA) machine-readable Egyptian corpus; Kitchen (open). Muchiki (paywalled,
+  optional) for the foreign layer.
+- Tasks C/E/F/H (fit model → positive control → nulls → power rerun) **not executed this pass** — the
+  gate awaits the model fit, which is now possible. No design verdict issued (correctly): the
+  provisional NO_POWER stands only for the *naive synthetic* model; the empirical-model verdict is
+  pending the fit.
+**Next milestone:** extract the group-writing→sound correspondences from Kilani (+TLA), fit & freeze
+the model, then execute the matched-scarcity positive control + calibrated power envelope → real
+design verdict.
