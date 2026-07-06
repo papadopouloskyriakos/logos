@@ -37,6 +37,13 @@ derived factual records, transliterations, and checksums are stored as legally a
     solve it **only with a proxy** (cf_clearance is IP-bound; confirmed API error "Missing proxy
     params"), which this host lacks. Fastest path if wanted: download them from your logged-in
     browser and scp, as with the first batch. **Not on the RQ2 critical path.**
+- **REQ-03 — SATISFIED (2026-07-06), with a decisive finding.** Dautais & Gabolde 2022 (JAEI 47.07,
+  22 pp) supplied. The seven EA5647 "Keftiu" names read as **GREEK** via Linear B onomastics
+  (Exantheus, Asaros, Nasios, Axios, **Eudamos**, **Panaretos**, **Lysis**) — the authors call the
+  board the *earliest written evidence of Greek names*, redated to Amenhotep II. → **7 personal-name
+  bronze records written, tagged `minoan_vs_greek_confidence≈0.1`, tier-D, held-out = a Greek
+  NEGATIVE CONTROL for E4, not a Minoan anchor.** Confirms the identity confound and thins the Minoan
+  personal-name channel. **All critical-path requests (REQ-01/02/04) + REQ-03 now resolved.**
 - Set aside (not sources): 2× "The Map Is Not the Territory" (author's own essay), "Ο ΚΑΘΡΕΠΤΗΣ"
   (Greek, 75 pp).
 

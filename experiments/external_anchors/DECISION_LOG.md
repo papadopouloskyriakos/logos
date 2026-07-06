@@ -28,3 +28,10 @@ Append-only. Each entry: date · decision · rationale.
 - **2026-07-06 · Candidate-language tournament (E8) is LAST**, after anchors + calibration + nulls are
   frozen, with equal budget per candidate and a mandatory "none supported" option — so it cannot
   become thesaurus-fishing (the "English is Semitic" failure mode).
+- **2026-07-06 · EA5647 Keftiu personal names are GREEK, not Minoan (Dautais & Gabolde 2022).** The
+  leading recent edition reads all seven names via Linear B / Greek onomastics (Eudamos, Nasios,
+  Panaretos, Lysis…) and calls the board the *earliest written evidence of Greek names*. → The
+  richest external source of "Cretan" personal names is Mycenaean-Greek, confirming the Minoan-vs-
+  Greek confound. EA5647 is ingested as a **Greek negative-control / calibration** for E4
+  (`minoan_vs_greek_confidence≈0.1`, tier-D, held-out), **not** a Minoan anchor. Reinforces:
+  toponyms lead; personal names run last and gated; the Minoan personal-name channel is thin.
