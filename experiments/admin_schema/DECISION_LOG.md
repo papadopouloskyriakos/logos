@@ -24,4 +24,15 @@ Chronological record of decisions, commits, and manifest hashes (§XVII). Newest
   `data/prior_art/prior_art_register.csv` (20 rows), `data/prior_art/search_receipts/receipts.md`.
   Commit: _(this commit)_.
 
+- **Stage 3 — source / license audit:** DĀMOS (LB, in repo) sufficient as backbone. **Key decision:** the
+  blinding mechanism = de-phoneticise LB at ingest — map each syllabogram to its opaque graphic sign-ID
+  (Unicode B-number, stripping the phonetic value like `QE`); transliteration/lemma/Greek/gloss → EVAL_ONLY.
+  LA (silver + SigLA) is natively opaque (undeciphered). Transfer-critical primary feature set = opaque sign
+  identity + structure/position + logograms + numerals/fractions + support + site + recurrence + damage.
+  **Excluded (LB-only sensitivity):** scribal hand, fine chronology, fine layout. **Flagged top transfer
+  risk:** LA↔LB sign-inventory non-homomorphy → represent signs within-script-opaque + AB-shared bridge only.
+  No licensing/repro blocker (LiBER/PA-I-TO TO_AUDIT but LB-only enrichment). Artifacts:
+  `reports/LINEAR_B_SOURCE_AUDIT.md`, `reports/LINEAR_A_FEATURE_COMPATIBILITY.md`,
+  `reports/LICENSE_AND_REPRODUCIBILITY.md`. Commit: _(this commit)_.
+
 <!-- append: stage, commit sha, manifest hashes, key decision -->
