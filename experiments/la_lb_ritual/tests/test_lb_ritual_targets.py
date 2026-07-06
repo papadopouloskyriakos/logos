@@ -11,9 +11,13 @@ _DAMOS = os.path.exists("/home/claude-runner/gitlab/n8n/logos/corpus/bronze/line
 
 
 def test_independent_of_linear_a():
-    code = "\n".join(l.split("#")[0] for l in inspect.getsource(T).splitlines()).lower()
-    for f in ("la_ritual", "la_candidate", "slot", "slotlib", "inscriptions_structured", "silver"):
+    src = inspect.getsource(T)
+    # strip the module docstring (which legitimately says "reads no slot/silver") and inline comments
+    src = re.sub(r'"""(?:.|\n)*?"""', "", src, count=1)
+    code = "\n".join(l.split("#")[0] for l in src.splitlines()).lower()
+    for f in ("la_ritual", "la_candidate", "slotlib", "inscriptions_structured", "import silver"):
         assert f not in code, f"target builder references {f}"
+    assert "build_la_ritual" not in code and "import slotlib" not in code
 
 
 def test_roles_partition():
