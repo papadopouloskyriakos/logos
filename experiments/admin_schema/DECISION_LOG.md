@@ -71,4 +71,15 @@ Chronological record of decisions, commits, and manifest hashes (§XVII). Newest
   reports/ROLE_ONTOLOGY.md, data/manifests/stage5_ontology_freeze.json. NO gold corpus / splits / models yet.
   Commit: _(this)_.
 
+- **Stage 4.2 — LA notation resolution** (commit fd3e009). 1,056 'other' -> LOGOGRAM 654 / FRACTION 311
+  (opaque, value withheld) / OTHER 52 / DAMAGED 9 / UNRESOLVED 30 (91% resolved); feature sets
+  CORE_TRANSFERABLE vs EXTENDED_STRUCTURAL vs EXCLUDED_FROM_PRIMARY (data/policy/feature_sets.csv). LA
+  re-frozen stage4_2 (la_graph 1b1d56bb). 13/13 tests pass.
+- **Stage 5.1 — annotation feasibility pilot (dev-only)** (wf_4ab5c3e6-b55). 160 items (KN80/nonKN80,
+  hapax80/recurrent80); independent double annotation (2 model annotators, different framings) + adjudication.
+  **VERDICT: NO_POWER** — Krippendorff a=0.614 < 0.667 (raw 0.725); GOLD_A agreed yield 5.6%; non-trivial
+  GOLD_A agreed = 4. Power sims (unseen 39 units, non-KN 140) moot (a gates first). CAVEAT: model-based a =
+  optimistic upper bound. Exclusion: 160 form-families / 342 docs burned from future holdout. Verdict NOT
+  retuned. SITE_TEST_A/B frozen. Report STAGE5_1_PILOT.md. Commit: _(this)_.
+
 <!-- append: stage, commit sha, manifest hashes, key decision -->

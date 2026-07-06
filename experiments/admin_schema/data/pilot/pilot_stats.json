@@ -1,0 +1,39 @@
+{
+ "n_items": 160,
+ "krippendorff_alpha": 0.614,
+ "alpha_caveat": "model-based double annotation -> OPTIMISTIC upper bound",
+ "raw_agreement": 0.725,
+ "gold_a_agreed_yield": 0.056,
+ "class_balance_agreed": {
+  "UNKNOWN": 33,
+  "QUALIFIER": 10,
+  "HUMAN_OR_INSTITUTION": 50,
+  "COMMODITY_OR_COUNTED_CATEGORY": 6,
+  "PLACE": 12,
+  "DOCUMENT_STRUCTURE": 1,
+  "OPERATOR_OR_RELATION": 4
+ },
+ "nontrivial_gold_a_agreed": 4,
+ "nontrivial_gold_a_KN": 0,
+ "nontrivial_gold_a_nonKN": 4,
+ "nontrivial_gold_a_hapax": 1,
+ "corpus_pools": {
+  "distinct_content_forms": 4759,
+  "hapax_content_forms": 3123,
+  "kn_only_forms": 1968,
+  "nonkn_forms": 2791
+ },
+ "min_detectable_K(p=.40,null=.125)": 16,
+ "est_unseen_form_gold_a_units": 39,
+ "unseen_form_powered": true,
+ "est_nonKN_gold_a_units": 140,
+ "nonKN_vs_rest_powered": true,
+ "SITE_TEST_A": "train eligible non-KN -> test KN",
+ "SITE_TEST_B": "train KN -> test eligible non-KN",
+ "sparse_classes": [
+  "DOCUMENT_STRUCTURE",
+  "MEASURE_OR_QUANTITY"
+ ],
+ "verdict": "NO_POWER",
+ "verdict_reason": "alpha 0.61 < 0.667 (not eligible as primary gold)"
+}
