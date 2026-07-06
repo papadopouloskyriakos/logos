@@ -2,14 +2,14 @@
 
 _Single source of current state. Phases follow the commit plan (§XVIII)._
 
-## Current phase: **2 → 3** (SigLA reconciliation done; A↔B equivalence next)
+## Current phase: **3 → 4** (A↔B equivalence frozen; known-pair audit next)
 
 | # | Phase | State |
 |---|-------|-------|
 | 1 | Branch/worktree + project scaffold | ✅ DONE |
 | 2 | SigLA source audit + silver crosswalk + corpus delta | ✅ DONE |
-| 3 | Freeze A↔B sign-equivalence layer (blind to known pairs) | 🔄 NEXT |
-| 4 | Known-pair source-critical audit (five = DEVELOPMENT_BENCHMARK) | ⬜ |
+| 3 | Freeze A↔B sign-equivalence layer (blind to known pairs) | ✅ DONE (77 tier-A, `77de6684`) |
+| 4 | Known-pair source-critical audit (five = DEVELOPMENT_BENCHMARK) | 🔄 NEXT |
 | 5 | Freeze internal-only LA candidate set + independent LB target set | ⬜ |
 | 6 | Primary matching model + ablations A1–A5 (no free mapping search) | ⬜ |
 | 7 | Positive controls | ⬜ |
@@ -34,8 +34,9 @@ genuinely absent** from the other (corpus-composition difference, not normalizat
 Site typos + the `ARKH` (Arkhanes/Arkalochori) ambiguity flagged for §VIII. **Silver stays the LA
 baseline; SigLA supplies sign-identity/palaeography for §V.**
 
-## Next concrete step (phase 3, §V)
-Freeze the palaeographic A↔B sign-equivalence layer **blind to the five known pairs**: LEVEL_1 = shared
-sign-ID identity; LEVEL_2 = the 77 SigLA AB-class signs as conventional A↔B homomorphs (confidence
-tiers A/B/C/X), with `target_pair_used_in_selection=false` and `phonetic_value_used=false`. Checksum
-and freeze before any sequence matching.
+## Next concrete step (phase 4, §VI)
+Source-critical audit of the five known pairs (`pa-i-to · tu-ru-sa · di-ki-ta · i-da · se-to-i-ja`) →
+default class **DEVELOPMENT_BENCHMARK** (already observed ⇒ not confirmatory). Record for each: LA raw
+sign sequence + docs/site/date/context/slot-class, LB form + independent entity identification +
+docs/site/date, selection history, post-hoc risk, same-source dependency, confirmatory eligibility.
+Store `di-de-ru~di-de-ro`, `pa-je-re~pa-je-ro` separately as SPECULATIVE_MORPHOLOGICAL_CONTINUITY.

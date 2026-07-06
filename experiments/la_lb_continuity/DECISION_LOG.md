@@ -38,4 +38,18 @@ Append-only. Every freeze records the input hashes.
   forward to §VII/§VIII. Derived data JSON kept gitignored; checksums + counts + code committed.
 - Commit hash: _(recorded on commit)_
 
-<!-- D4 A↔B equivalence freeze / … append below with input sha256s -->
+## 2026-07-06 — D4: freeze A↔B sign-equivalence layer (commit chunk 3, §V)
+- **Basis (pair-blind, phonetic-blind):** SigLA's AB-vs-A classification = the conventional homomorphy
+  (repertoire property; no toponym/sound input). Builder reads only the SigLA sign catalogue + LA
+  attestation; blindness enforced by tests (source + content level).
+- **Frozen artifact:** `data/gold/ab_sign_equivalence.json` sha256
+  `77de6684a37cd4efa118bbc3e46bdc27fac86822762fa15964e814dc297f6b20` (rule `ab-equiv-v1-2026-07-06`),
+  checksum in `data/manifests/ab_sign_equivalence.sha256`. Deterministic.
+- **Contents:** 77 tier-A AB homomorphs (LEVEL_1 shared GORILA id, la AB## ≡ lb *##; 63 high-attestation
+  ≥10 tokens), 299 tier-X A-only excluded. LEVEL_3 phonetic values firewalled to §IX ablation.
+- **Declared limitation:** per-graph palaeographic B/C sub-tiering deferred to a Salgarella-2020
+  collation (held locally); `high_attestation` used as the interim non-fabricated robustness handle.
+- **Tests:** `tests/test_ab_equivalence_{blindness,structure}.py`; full suite 17 passed.
+- Commit hash: _(recorded on commit)_
+
+<!-- D5 known-pair audit / D6 candidate+target freeze / … append below -->
