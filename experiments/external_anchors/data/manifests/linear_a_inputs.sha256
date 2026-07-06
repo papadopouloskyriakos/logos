@@ -1,0 +1,8 @@
+# READ-ONLY Linear A corpus inputs — referenced in place at /home/claude-runner/gitlab/n8n/logos/corpus/silver (gitignored/licensed; NOT copied into this branch)
+# source_commit: 762f48d9867fb96a1315d13797bb3ca06918a47c   recorded: 2026-07-06T03:30:53Z
+4717a7e39157fad6b4a4d24e0d925f1c8a0cd33d6e7111b6822222aa24f1244a  /home/claude-runner/gitlab/n8n/logos/corpus/silver/inscriptions.json
+aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500  /home/claude-runner/gitlab/n8n/logos/corpus/silver/inscriptions_structured.json
+246f63f1608a1238a2b2851b9f0a475817ce265b66d2fa622cc795627b97a80d  /home/claude-runner/gitlab/n8n/logos/corpus/silver/signs_ontology.json
+8a2a8928d9f1c53dd3105265dfcefc8abc91acdd586ae82ccedd2cb2b3df9721  /home/claude-runner/gitlab/n8n/logos/corpus/silver/inventory_syllabograms_conservative.json
+fbe441ce6e5b76990947d0fd68e392acc7e39eed67e4aad2614606a9aac15264  /home/claude-runner/gitlab/n8n/logos/corpus/silver/inventory_syllabograms_raw.json
+53818f9ac847828fcae91bb86cfd5c26349d1bdd98349059d2fc5273cdac0de3  /home/claude-runner/gitlab/n8n/logos/corpus/silver/inventory_syllabograms_exploratory.json
