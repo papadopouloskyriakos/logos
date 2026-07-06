@@ -1,0 +1,6 @@
+source_id,name,role,access,location,license,notes
+SRC-SILVER,logos silver corpus,LA ritual candidates (internal),read-only from main,/home/claude-runner/gitlab/n8n/logos/corpus/silver/inscriptions_structured.json,lineara.xyz (gitignored),ritual = stone/clay vessel + libation-table supports
+SRC-SLOTCLF,frozen slot classifier RITUAL_FORMULA class,LA ritual candidate generation,read-only inherited,experiments/external_anchors/src/slot_classifier/,repo,internal-only; slot-rules-v1-2026-07-06
+SRC-DAMOS,DĀMOS Linear B corpus,LB ritual target attestation,read-only from main,/home/claude-runner/gitlab/n8n/logos/corpus/bronze/linearb/damos/items.jsonl,DĀMOS (gitignored),independent LB religious vocabulary
+SRC-LBSCHOLARSHIP,LB religion scholarship,LB ritual target identification,literature,n/a,cited,"Chadwick Documents2; Gulizio; Weilhartner; KN Fp/Fs/V/Gg religious series"
+SRC-KNOWNPAIRS,known LA<->LB ritual continuities,quarantined ledger,derived,experiments/la_lb_ritual/data/quarantine/,derived,TU-RU-SA/I-DA/SE-TO-I-JA/DI-KI-TA + PA-I-TO(admin comparison)
