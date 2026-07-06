@@ -27,3 +27,12 @@
   forbidden (circular) similarity heuristic. Below the >=150 clean-entry threshold.
 - Verdict UNCHANGED: INCOMPLETE / NOT_READY. Sharpened recommendation: clean Hoch/Muchiki OR authorize a
   hand-verification pass. Derived data gitignored (Hoch copyrighted); extractor code + counts committed.
+
+## 2026-07-06 — E5: REQ-02 BLOCKER LIFTED — calibration corpus derived by vision-reading owned Hoch
+- Online search found no downloadable dataset; derived the corpus instead by reading Hoch's PAGE IMAGES
+  directly (vision), bypassing the corrupt OCR. Tiering uses Hoch's own [1]-[5] reliability tags.
+- Frozen corpus egyptian_calibration_handverified.jsonl sha256 cc2c20d8…: 159 records, 152 tier-A/B
+  (99 A / 53 B), 156 distinct consonantal roots, item/family/cognate coverage recorded, 0 Cretan leakage.
+- Gate status: INCOMPLETE(no corpus) -> CORPUS DERIVED / READY-TO-FIT. The frozen model spec
+  (3c56ed71) can now be fit -> validation -> matched-scarcity control -> nulls -> power -> verdict.
+- Data gitignored (Hoch copyrighted); extractor code + coverage + checksums committed.
