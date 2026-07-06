@@ -1,0 +1,24 @@
+feature_or_channel,set,present_LB,present_LA,rationale
+opaque_sign_identity,CORE_TRANSFERABLE,yes,yes,within-script-opaque; parsed both
+sequence_position,CORE_TRANSFERABLE,yes,yes,
+entry_row_structure,CORE_TRANSFERABLE,yes,yes,ROW/ENTRY parsed both
+numeral_value,CORE_TRANSFERABLE,yes,yes,LB + LA (silver stream num)
+adjacency_to_numeral_logogram,CORE_TRANSFERABLE,yes,yes,
+cross_document_recurrence,CORE_TRANSFERABLE,yes,yes,REPEATS_FORM
+formula_cluster_membership,CORE_TRANSFERABLE,yes,yes,GROUPING_ONLY
+damage_uncertainty_flags,CORE_TRANSFERABLE,yes,yes,
+support_type,CORE_TRANSFERABLE,yes,yes,
+site,CORE_TRANSFERABLE,yes,yes,canonical (Stage 4.1)
+logogram_identity_opaque,EXTENDED_STRUCTURAL,yes,yes,"LA resolved (654) but opaque; NO cross-script meaning"
+fraction_identity_opaque,EXTENDED_STRUCTURAL,yes,yes,"LA resolved (311) opaque; VALUE withheld (contested)"
+measure_marker,EXTENDED_STRUCTURAL,yes,partial,LA 'other_notation' 52; LB metrograms
+layout_coordinates,EXTENDED_STRUCTURAL,partial,yes,LA-rich (SigLA bboxes) / LB-partial
+allograph_class,EXTENDED_STRUCTURAL,partial,yes,within-script
+document_series,EXTENDED_STRUCTURAL,yes,no,LA genuinely absent -> LB-only diagnostic
+scribe,EXTENDED_STRUCTURAL,yes,no,LB-only diagnostic (293 hands)
+chronological_phase_fine,EXTENDED_STRUCTURAL,yes,coarse,LA coarser
+ab_shared_sign_bridge,EXTENDED_STRUCTURAL,yes,yes,sensitivity only; NOT sound-equivalence
+DAMAGED_OR_UNKNOWN_notation,EXCLUDED_FROM_PRIMARY,-,yes,LA 9; must NOT enter primary model
+UNRESOLVED_notation,EXCLUDED_FROM_PRIMARY,-,yes,LA 30; must NOT enter primary model
+phonetic_transliteration,EXCLUDED_FROM_PRIMARY,-,-,EVAL_ONLY
+greek_lemma_gloss_role,EXCLUDED_FROM_PRIMARY,-,-,EVAL_ONLY

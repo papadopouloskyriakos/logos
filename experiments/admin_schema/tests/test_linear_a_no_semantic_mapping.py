@@ -22,14 +22,16 @@ def test_la_signs_are_separate_vocab():
                 assert not oid.startswith("B_"), f"LB id leaked into LA: {oid}"
 
 
-def test_la_logogram_is_opaque_not_lb_meaning():
-    # 'other' -> A_LOGO_UNRESOLVED (opaque placeholder), never an LB commodity name
-    seen = False
+def test_la_logogram_fraction_are_opaque_not_lb_meaning():
+    # Stage 4.2: LA logograms/fractions are opaque A_LOGO_/A_FRAC_ (never an LB commodity name/value)
+    seen_logo = seen_frac = False
     for line in open(os.path.join(gc.MODEL_VISIBLE, "la_graph.jsonl")):
         for n in json.loads(line)["nodes"]:
             if n["type"] == "LOGOGRAM":
-                assert n["opaque_id"] == "A_LOGO_UNRESOLVED"; seen = True
-    assert seen
+                assert n["opaque_id"].startswith("A_LOGO_"); seen_logo = True
+            if n["type"] == "FRACTION":
+                assert n["opaque_id"].startswith("A_FRAC_"); seen_frac = True
+    assert seen_logo and seen_frac
 
 
 def test_la_vocab_files_are_disjoint():
@@ -40,5 +42,5 @@ def test_la_vocab_files_are_disjoint():
 
 if __name__ == "__main__":
     test_no_forbidden_fields_in_la(); test_la_signs_are_separate_vocab()
-    test_la_logogram_is_opaque_not_lb_meaning(); test_la_vocab_files_are_disjoint()
+    test_la_logogram_fraction_are_opaque_not_lb_meaning(); test_la_vocab_files_are_disjoint()
     print("PASS la-no-semantic-mapping")

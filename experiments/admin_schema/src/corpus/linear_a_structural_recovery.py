@@ -44,6 +44,45 @@ def build_sign_vocab(recs):
     return v.freeze()
 
 
+import re as _re
+
+_FRAC_CHARS = set("¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞⁄")
+_DAMAGE_CHARS = set("[]?…")
+_AEGEAN = lambda ch: 0x10600 <= ord(ch) <= 0x107FF          # Linear A / Aegean numbers+ideograms block
+
+
+def classify_other(raw):
+    """Source-grounded classification of a silver 'other' raw glyph string. NO Linear B meaning imported."""
+    if raw is None or not str(raw).strip():
+        return "DAMAGED_OR_UNKNOWN", ""
+    r = str(raw).strip()
+    if any(c in _FRAC_CHARS for c in r) or _re.search(r"[⁰-₟].*[₀-₟]", r):
+        return "FRACTION", r
+    if _re.fullmatch(r"\*[0-9]+[A-Za-z]*", r) or any(_AEGEAN(c) for c in r):
+        return "LOGOGRAM", r
+    if any(c in _DAMAGE_CHARS for c in r):
+        return "DAMAGED_OR_UNKNOWN", r
+    if r in ("—", "-", "·", "|", ",", "/"):
+        return "OTHER_NOTATION", r
+    return "UNRESOLVED", r
+
+
+def build_notation_vocabs(recs):
+    """Opaque vocabs for LA logograms / fractions / other-notation, keyed by raw glyph (never LB meaning)."""
+    logo, frac, other = gc.OpaqueVocab("A_LOGO"), gc.OpaqueVocab("A_FRAC"), gc.OpaqueVocab("A_NOTE")
+    for r in recs:
+        for tok in r.get("stream") or []:
+            if tok.get("t") == "other":
+                cls, norm = classify_other(tok.get("raw"))
+                if cls == "LOGOGRAM":
+                    logo.add(norm)
+                elif cls == "FRACTION":
+                    frac.add(norm)
+                elif cls == "OTHER_NOTATION":
+                    other.add(norm)
+    return logo.freeze(), frac.freeze(), other.freeze()
+
+
 def stream_tokens(rec):
     """Yield (kind, payload) recovering structure: rows (nl), entries (div), words, numerals, other."""
     for tok in rec.get("stream") or []:
@@ -57,6 +96,6 @@ def stream_tokens(rec):
         elif t == "div":
             yield "entry_break", None
         elif t == "other":
-            yield "other", tok.get("v") if "v" in tok else (tok.get("signs") or None)
+            yield "other", tok.get("raw")
         else:
             yield "unknown", None

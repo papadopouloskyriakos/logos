@@ -19,8 +19,10 @@ import linear_a_structural_recovery as lar
 def run():
     recs = lar.load_structured()
     vocab = lar.build_sign_vocab(recs)
+    logo_v, frac_v, note_v = lar.build_notation_vocabs(recs)          # Stage 4.2: resolve 'other'
     graphs = []
-    channel_counts = {"NUMERAL": 0, "WORD_FORM": 0, "ROW": 0, "ENTRY": 0, "LOGOGRAM_OR_OTHER": 0, "SIGN": 0}
+    channel_counts = {"NUMERAL": 0, "WORD_FORM": 0, "ROW": 0, "ENTRY": 0, "SIGN": 0,
+                      "LOGOGRAM": 0, "FRACTION": 0, "OTHER_NOTATION": 0, "DAMAGED_OR_UNKNOWN": 0, "UNRESOLVED": 0}
     for r in recs:
         gid = f"LA-{r['id']}"
         doc_id = f"{gid}:DOC"
@@ -74,11 +76,24 @@ def run():
                 edges.append({"src": cur_entry, "dst": nid, "type": "CONTAINS"})
                 channel_counts["NUMERAL"] += 1
             elif kind == "other":
-                # PRESENT_BUT_NOT_PARSED: logogram/fraction/measure, subclass unresolved in silver -> opaque
-                nodes.append({"id": nid, "type": "LOGOGRAM", "position": ti, "opaque_id": "A_LOGO_UNRESOLVED",
-                              "qualifier": None, "damage_flag": False, "uncertain_flag": True})
+                cls, norm = lar.classify_other(pl)                    # Stage 4.2: source-grounded, opaque
+                channel_counts[cls] += 1
+                if cls == "LOGOGRAM":
+                    nodes.append({"id": nid, "type": "LOGOGRAM", "position": ti, "opaque_id": logo_v.opaque(norm),
+                                  "qualifier": None, "damage_flag": False, "uncertain_flag": False})
+                elif cls == "FRACTION":
+                    nodes.append({"id": nid, "type": "FRACTION", "position": ti, "opaque_id": frac_v.opaque(norm),
+                                  "damage_flag": False, "uncertain_flag": False})
+                elif cls == "OTHER_NOTATION":
+                    nodes.append({"id": nid, "type": "MEASURE_MARKER", "position": ti, "opaque_id": note_v.opaque(norm),
+                                  "damage_flag": False, "uncertain_flag": False})
+                elif cls == "DAMAGED_OR_UNKNOWN":
+                    nodes.append({"id": nid, "type": "TOKEN", "position": ti, "opaque_id": None, "value": None,
+                                  "damage_flag": True, "uncertain_flag": True})
+                else:  # UNRESOLVED
+                    nodes.append({"id": nid, "type": "TOKEN", "position": ti, "opaque_id": None, "value": None,
+                                  "damage_flag": False, "uncertain_flag": True})
                 edges.append({"src": cur_entry, "dst": nid, "type": "CONTAINS"})
-                channel_counts["LOGOGRAM_OR_OTHER"] += 1
             else:
                 continue
             if prev_tok:
@@ -105,11 +120,13 @@ def run():
     with open(os.path.join(gc.MODEL_VISIBLE, "la_graph.jsonl"), "w", encoding="utf-8") as f:
         for g in graphs:
             f.write(json.dumps(g, ensure_ascii=False, sort_keys=True) + "\n")
-    json.dump({"A_SIGN": vocab.eval_map()}, open(os.path.join(gc.EVAL_ONLY, "la_dephon_vocab.json"), "w", encoding="utf-8"),
+    json.dump({"A_SIGN": vocab.eval_map(), "A_LOGO": logo_v.eval_map(), "A_FRAC": frac_v.eval_map(),
+               "A_NOTE": note_v.eval_map()},
+              open(os.path.join(gc.EVAL_ONLY, "la_dephon_vocab.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1, sort_keys=True)
-    print(f"LA graphs: {len(graphs)}  | A_SIGN vocab: {len(vocab.eval_map())} (separate from LB)")
-    print(f"recovered channels: {channel_counts}")
-    print(f"channel status: {lar.CHANNEL_STATUS}")
+    print(f"LA graphs: {len(graphs)}  | A_SIGN {len(vocab.eval_map())} A_LOGO {len(logo_v.eval_map())} "
+          f"A_FRAC {len(frac_v.eval_map())} A_NOTE {len(note_v.eval_map())} (all separate from LB)")
+    print(f"resolved channels: {channel_counts}")
     return graphs, channel_counts
 
 

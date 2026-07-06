@@ -24,5 +24,15 @@ def test_la_numeral_has_value():
                 return
 
 
+def test_la_notation_resolved():
+    # Stage 4.2: the former 'other' bucket is resolved into typed LOGOGRAM + FRACTION nodes
+    nt = Counter()
+    for line in open(os.path.join(gc.MODEL_VISIBLE, "la_graph.jsonl")):
+        for n in json.loads(line)["nodes"]:
+            nt[n["type"]] += 1
+    assert nt["LOGOGRAM"] > 300 and nt["FRACTION"] > 100, nt
+
+
 if __name__ == "__main__":
-    test_la_recovered_channels(); test_la_numeral_has_value(); print("PASS la-structural-channels")
+    test_la_recovered_channels(); test_la_numeral_has_value(); test_la_notation_resolved()
+    print("PASS la-structural-channels")
