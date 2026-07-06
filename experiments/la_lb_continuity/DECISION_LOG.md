@@ -52,4 +52,17 @@ Append-only. Every freeze records the input hashes.
 - **Tests:** `tests/test_ab_equivalence_{blindness,structure}.py`; full suite 17 passed.
 - Commit hash: _(recorded on commit)_
 
-<!-- D5 known-pair audit / D6 candidate+target freeze / … append below -->
+## 2026-07-06 — D5: known-pair source-critical audit (commit chunk 4, §VI)
+- **Ledger (quarantined):** `data/quarantine/known_persistence_pairs.jsonl` sha256
+  `9e832800386a0ef4db389482de404d09218d0a106a18c7905923c9429dd9bc8c`. Built from pinned silver (LA
+  attestation) + LB scholarship. Common util `src/common/syllabary.py` (public Ventris grid, verified
+  53/54 vs the learned concordance; the 1 diff = a learned-aid artifact AB188→I, grid correct).
+- **Findings (recorded, not scored):** only PA-I-TO is administrative; TU-RU-SA/I-DA/SE-TO-I-JA are
+  ritual-context (stone vessels), DI-KI-TA absent in silver. → 4 DEVELOPMENT_BENCHMARK, 1
+  CONFIRMATORY_INELIGIBLE (di-ki-ta), 2 SPECULATIVE_MORPHOLOGICAL (di-de-ru, pa-je-re). Genre-mismatch
+  (LA-ritual → LB-administrative) is a strong a-priori power concern flagged for §XIII.
+- **Discipline:** all five post-hoc HIGH, `la_candidate_selected_without_lb_reading=false`; never
+  confirmatory. Ledger quarantined; §VII/§VIII must not read it (leakage tests). Tests 5/5.
+- Commit hash: _(recorded on commit)_
+
+<!-- D6 LA candidate freeze §VII / D7 LB target freeze §VIII / … append below -->

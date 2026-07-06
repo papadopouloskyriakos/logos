@@ -2,15 +2,17 @@
 
 _Single source of current state. Phases follow the commit plan (§XVIII)._
 
-## Current phase: **3 → 4** (A↔B equivalence frozen; known-pair audit next)
+## Current phase: **4 → 5** (known-pair audit done; input freezes §VII/§VIII next). STOP after §VIII.
 
 | # | Phase | State |
 |---|-------|-------|
 | 1 | Branch/worktree + project scaffold | ✅ DONE |
 | 2 | SigLA source audit + silver crosswalk + corpus delta | ✅ DONE |
 | 3 | Freeze A↔B sign-equivalence layer (blind to known pairs) | ✅ DONE (77 tier-A, `77de6684`) |
-| 4 | Known-pair source-critical audit (five = DEVELOPMENT_BENCHMARK) | 🔄 NEXT |
-| 5 | Freeze internal-only LA candidate set + independent LB target set | ⬜ |
+| 4 | Known-pair source-critical audit (five = DEVELOPMENT_BENCHMARK) | ✅ DONE (4 benchmark, 1 ineligible, 2 speculative) |
+| 5a | Freeze internal-only LA candidate manifest (§VII, packet A) | 🔄 NEXT |
+| 5b | Independent LB toponym target manifest (§VIII, packet B) | ⬜ |
+| — | **STOP — await INPUT_FREEZE_APPROVED before §IX–§XV** | ⛔ |
 | 6 | Primary matching model + ablations A1–A5 (no free mapping search) | ⬜ |
 | 7 | Positive controls | ⬜ |
 | 8 | End-to-end null framework (≥10 families) | ⬜ |
