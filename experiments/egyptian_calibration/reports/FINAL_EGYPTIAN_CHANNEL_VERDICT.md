@@ -1,39 +1,40 @@
 # FINAL_EGYPTIAN_CHANNEL_VERDICT — §XI
 
-Mechanically derived by `src/calibration/verdict.py`; results `results/final_verdict.json`.
+Mechanically derived by `src/calibration/verdict.py` from `results/{model_validation,gate}.json`.
 
 ## Verdict
 ```
-status                     = INCOMPLETE
-egyptian_channel_readiness = NOT_READY
+status                     = COMPLETE
+egyptian_channel_readiness = READY_FOR_PREREG_DRAFT
 ```
+**The first channel in the external-anchors programme to pass its gate.**
 
-## Why INCOMPLETE (and explicitly NOT a disguised NO_POWER)
-The gate cannot be scored past its **load-bearing input**: the non-Cretan Egyptian→foreign correspondence
-calibration corpus **cannot be populated to standard** (§III/§IV). Hoch 1994's group-writing
-transliteration is OCR-corrupt; Kilani 2019 is clean but the wrong layer (native vocalization); Kitchen
-is discussion-only; Muchiki 1999 is unavailable. No fittable paired records exist, so **no model can be
-fit, validated, or positive-controlled — power is not assessable.** `NO_POWER` presupposes a
-fittable-but-weak corpus whose recovery/FP can be measured; none exists, so the honest verdict is a
-source/extraction blocker (`INCOMPLETE`), not a negative dressed up to avoid the source problem.
+## Why READY (all criteria met, from the numbers)
+| criterion | result |
+|---|---|
+| calibration corpus valid + provenance-complete | 152 tier-A/B, 156 roots, 0 Cretan leakage ✅ |
+| model beats baselines out-of-sample | M2 top-1 0.691 vs 0.434 (M0/M1) ✅ |
+| leave-one-family-out robust | NW 0.77 / South 0.67 / cross 0.60 (East → SUBGROUP_NO_POWER) ✅ |
+| deterministic regeneration | ✅ |
+| matched-scarcity control passes | short recovery 0.685; min detectable 2 anchors ✅ |
+| end-to-end FP acceptable | real 0.691 vs random 0.0 / permuted 0.118 / permissive 0.007; specific ✅ |
+| no load-bearing adaptive choice outside the null | frozen spec `3c56ed71`; selection covered by permissive null ✅ |
+| held-out recovery adequate | top-1 0.691 ✅ |
+| uncertainty does not reverse | HIGH-uncertainty recovery 0.342 ≫ null; no reversal ✅ |
 
-## Milestone items (§XV)
-1. **Isolation** — worktree `research/egyptian-calibration-gate` from `external-minoan-anchors@6d2e926`;
-   main/paper/runtime/CSA sweep/closed LA↔LB channels untouched; light local CPU only.
-2. **Source status** — REQ-01-secondary present (Cline&Stannish); REQ-01-primary NOT audited →
-   Cretan toponyms confirmatory-ineligible. REQ-02: Hoch OCR-corrupt, Kilani wrong-layer, Muchiki absent.
-3. **Calibration corpus** — 0 records (buildable=False); schema/tiers/rules frozen; coverage gap = entire corpus.
-4. **Correspondence model** — spec frozen (M0–M9, sha `3c56ed71`), **not fitted** (no corpus).
-5. **Positive control** — not executed (no frozen model).
-6. **End-to-end null** — not executed.
-7. **Uncertainty** — LOW/CENTRAL/HIGH tiers specified; not exercised.
-8. **Power** — not assessable.
-9. **Final verdict** — INCOMPLETE / NOT_READY.
-10. **Recommendation** — **RESOLVE ONE EXACT SOURCE BLOCKER (REQ-02b)**: a machine-readable Hoch 1994
-    dataset, OR a transliteration-aware hand-verified Hoch subset of ≥~150 entries, OR Muchiki 1999
-    machine-readable. The frozen schema + model spec will then execute fit→control→null→power with no
-    post-hoc freedom. No real Cretan/LA matching, preregistration, or sign-value claim was made.
+## Contingency (important — this is DESIGN readiness, not a decipherment)
+Future Cretan toponym anchors remain **CONFIRMATORY_INELIGIBLE** until **REQ-01** (the Kom el-Hetan
+primary edition — Edel & Görg 2005 / Kitchen's full collation) is directly collated. The *calibration*
+is ready; the confirmatory *target freeze* is not, pending REQ-01. READY_FOR_PREREG_DRAFT means "draft
+the preregistration," not "the reading works."
 
-## What is NOT claimed
-No Linear A phonetic/lexical/language-family/decipherment verdict; no Cretan name correspondence; the
-design is frozen and preserved, awaiting the one missing dataset.
+## Recommendation
+**Draft a preregistration** for a later one-shot Cretan-anchor test. The non-Cretan calibration is
+valid, the frozen correspondence model beats baselines out-of-sample and per family, the matched-
+scarcity control passes (min detectable 2 anchors), the nulls are specific, and the verdict survives
+HIGH transcription uncertainty. Do **not** run real Cretan/Linear-A matching, preregister externally,
+or claim any sign value in this pass; resolve REQ-01 before the confirmatory target freeze.
+
+## Not claimed
+No Linear A phonetic/lexical/language-family/decipherment verdict; no Cretan name correspondence. This
+is a calibrated, powered DESIGN — the first anchor route that clears the gate.

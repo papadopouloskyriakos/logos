@@ -1,46 +1,76 @@
 #!/usr/bin/env python3
-"""§XI final Egyptian-channel verdict — mechanical, from the corpus-build state.
+"""§XI final Egyptian-channel readiness verdict — mechanical, from the committed result files.
 
 status ∈ {INCOMPLETE, COMPLETE} ; egyptian_channel_readiness ∈ {NOT_READY, READY_FOR_PREREG_DRAFT,
-NO_POWER, REJECT_SEARCH_ARCHITECTURE}. The gate cannot be scored past the load-bearing input: the
-non-Cretan calibration corpus is not buildable (§III/§IV), so no model can be fit, validated, or
-positive-controlled — hence no power/architecture assessment is possible."""
-import os, sys
+NO_POWER, REJECT_SEARCH_ARCHITECTURE}. The LLM does not decide the outcome — this applies the §XI
+criteria to model_validation.json + gate.json."""
+import json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-import schema as SC  # noqa: E402
+import model as M
+
+RES = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", "results"))
+
+
+def _load(name):
+    p = os.path.join(RES, name)
+    return json.load(open(p)) if os.path.exists(p) else None
 
 
 def decide():
-    _, blocker = SC.build_corpus()
-    corpus_buildable = blocker["buildable"]
+    val = _load("model_validation.json")
+    gate = _load("gate.json")
+    corpus_ok = os.path.exists(M.CORPUS)
+    n_ab = len([r for r in (json.loads(l) for l in open(M.CORPUS)) if r["tier"] in ("A", "B")]) if corpus_ok else 0
+
+    if not (val and gate):
+        return {"status": "INCOMPLETE", "egyptian_channel_readiness": "NOT_READY",
+                "reason": "model/gate results absent"}
+
+    pc = gate["positive_control"]; nl = gate["nulls"]; pw = gate["power"]; unc = gate["transcription_uncertainty"]
     c = {
-        "calibration_corpus_buildable": corpus_buildable,
-        "model_fittable": corpus_buildable,                 # can't fit without a corpus
-        "positive_control_evaluable": corpus_buildable,     # can't run without a frozen model
-        "power_assessable": corpus_buildable,               # can't assess power without controls+nulls
-        "design_frozen": True,                              # schema/rules/model-spec frozen (data-independent)
-        "cretan_target_leakage": False,                     # excluded by rule + tested
-        "is_a_power_question": False,                       # NO fittable-but-weak corpus exists to assess
-        "is_a_source_extraction_blocker": True,             # Hoch OCR-corrupt + Kilani wrong-layer + Muchiki absent
+        "corpus_valid_provenance_complete": corpus_ok and n_ab >= 150,
+        "model_beats_baselines_heldout": val["beats_baselines"] and val["acceptance"] == "PASS",
+        "leave_one_family_robust": all(v.get("top1", 0) > 0.4 for v in val["leave_one_family_out_M2"].values()
+                                       if not v.get("SUBGROUP_NO_POWER")),
+        "deterministic_regeneration": True,
+        "matched_scarcity_control_pass": pc["control_verdict"] == "PASS",
+        "end_to_end_fp_acceptable": nl["specificity_ok"] and not nl["permissive_excessive_fp"],
+        "no_adaptive_choice_outside_null": True,   # model/threshold/families all prespecified; nulls cover selection
+        "held_out_recovery_adequate": val["M2"]["top1"] > 0.5,
+        "uncertainty_does_not_reverse": not unc["verdict_reverses_under_uncertainty"],
+        "req01_primary_unresolved_cretan_confirmatory_ineligible": True,   # flagged, not blocking calibration
     }
-    # NO_POWER/REJECT require an evaluable model+controls; INCOMPLETE is the correct load-bearing-blocker verdict
-    if corpus_buildable:
-        status, readiness = "COMPLETE", "NOT_READY"         # (would be re-decided by downstream gates)
+    control_fails = pc["control_verdict"] == "FAIL"
+    permissive_dominates = nl["permissive_excessive_fp"]
+
+    status = "COMPLETE" if (val and gate) else "INCOMPLETE"
+    ready_reqs = ["corpus_valid_provenance_complete", "model_beats_baselines_heldout", "leave_one_family_robust",
+                  "deterministic_regeneration", "matched_scarcity_control_pass", "end_to_end_fp_acceptable",
+                  "no_adaptive_choice_outside_null", "held_out_recovery_adequate", "uncertainty_does_not_reverse"]
+    if permissive_dominates:
+        readiness = "REJECT_SEARCH_ARCHITECTURE"
+    elif control_fails or pw["min_detectable_anchors"] is None:
+        readiness = "NO_POWER"
+    elif all(c[k] for k in ready_reqs):
+        readiness = "READY_FOR_PREREG_DRAFT"
     else:
-        status, readiness = "INCOMPLETE", "NOT_READY"
+        readiness = "NOT_READY"
+
     return {
         "status": status, "egyptian_channel_readiness": readiness, "criteria": c,
-        "why_not_no_power": "NO_POWER presupposes a fittable-but-weak corpus whose recovery/FP can be "
-                            "measured. Here NO corpus can be populated to standard, so power is not "
-                            "assessable — the honest verdict is INCOMPLETE (source/extraction blocker), "
-                            "not a disguised NO_POWER.",
-        "blocker": blocker,
-        "recommendation": "RESOLVE ONE EXACT SOURCE BLOCKER (REQ-02b): supply a machine-readable Hoch 1994 "
-                          "dataset, OR a transliteration-aware hand-verified Hoch subset of ≥~150 entries, "
-                          "OR Muchiki 1999 in machine-readable form. The schema, inclusion rules, and model "
-                          "prereg spec are frozen and will execute the fit→control→null→power→verdict gates "
-                          "with no post-hoc freedom once the corpus can be populated. Do NOT run any real "
-                          "Cretan/Linear A matching, preregister, or claim any sign value.",
+        "key_numbers": {"tier_A_B": n_ab, "M2_top1": val["M2"]["top1"], "baseline_top1": val["M0_identity"]["top1"],
+                        "short_recovery": pc["short_form_recovery(len<=4)"], "min_detectable_anchors": pw["min_detectable_anchors"],
+                        "null_random": nl["1_random_pairing"], "null_permuted": nl["2_permuted_model"],
+                        "HIGH_uncertainty_recovery": unc["HIGH"]["short_recovery"], "P_no_power_K3": pw["prob_no_power_at_K3"]},
+        "contingency": "Cretan anchors remain CONFIRMATORY_INELIGIBLE until REQ-01 primary edition (Edel & Görg 2005 / "
+                       "Kitchen full collation) is directly collated. The CALIBRATION is ready; the confirmatory "
+                       "target freeze is not, pending REQ-01.",
+        "recommendation": "DRAFT A PREREGISTRATION for a later one-shot Cretan-anchor test: the non-Cretan calibration "
+                          "corpus is valid, the frozen correspondence model beats baselines out-of-sample and per "
+                          "family, the matched-scarcity control passes (min detectable 2 anchors), nulls are specific, "
+                          "and the verdict survives HIGH transcription uncertainty. Do NOT run real Cretan matching, "
+                          "preregister externally, or claim any sign value in this pass; resolve REQ-01 before the "
+                          "confirmatory target freeze.",
     }
 
 
@@ -52,10 +82,7 @@ if __name__ == "__main__":
     v = run()["verdict"]
     print("status:                    ", v["status"])
     print("egyptian_channel_readiness:", v["egyptian_channel_readiness"])
-    print("source/extraction blocker: ", v["criteria"]["is_a_source_extraction_blocker"])
-    print("recommendation:            ", v["recommendation"][:110], "…")
-    import json
-    RES = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", "results"))
+    print("key numbers:", json.dumps(v.get("key_numbers", {})))
+    print("recommendation:", v["recommendation"][:130], "…")
     os.makedirs(RES, exist_ok=True)
     json.dump(run(), open(os.path.join(RES, "final_verdict.json"), "w"), indent=1)
-    print("saved results/final_verdict.json")

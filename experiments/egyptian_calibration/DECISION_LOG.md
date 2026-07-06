@@ -36,3 +36,14 @@
 - Gate status: INCOMPLETE(no corpus) -> CORPUS DERIVED / READY-TO-FIT. The frozen model spec
   (3c56ed71) can now be fit -> validation -> matched-scarcity control -> nulls -> power -> verdict.
 - Data gitignored (Hoch copyrighted); extractor code + coverage + checksums committed.
+
+## 2026-07-06 — E6: full model-fit-through-verdict pass → READY_FOR_PREREG_DRAFT
+- §VI model fit + validation: M2 correspondence model (learns l->r etc.); LOO top-1 0.691 vs baselines
+  0.434; leave-one-family-out NW 0.77/South 0.67/cross 0.60; PASS.
+- §VII matched-scarcity control: short recovery 0.685, min detectable 2 anchors; CONTROL_PASS.
+- §VIII nulls: real 0.691 vs random 0.0 / permuted 0.118 / permissive 0.007; specific, no excessive FP.
+- §IX uncertainty: LOW 0.685 / CENTRAL 0.577 / HIGH 0.342 (>> null); does not reverse.
+- §X power: min detectable 2 anchors; P(NO_POWER at K=3)=0.031.
+- **§XI VERDICT (mechanical): status=COMPLETE, egyptian_channel_readiness=READY_FOR_PREREG_DRAFT** —
+  first channel to pass. Cretan anchors CONFIRMATORY_INELIGIBLE until REQ-01 primary edition resolved.
+  No real Cretan matching / external prereg / sign-value claim.
