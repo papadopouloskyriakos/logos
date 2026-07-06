@@ -12,6 +12,15 @@ derived factual records, transliterations, and checksums are stored as legally a
   reproduces the toponym group-writing transliterations (`kA-n-yw-SA`=Knossos, `i-m-n-y-SA`=Amnisos,
   `ry-kA-ti`=Lyktos) + IDs + LB comparanda + Edel/Görg caveats (bronze v2 records written). Full
   Edel & Görg 2005 apparatus still ideal (all variants; Siteia/Phaistos/Kydonia ovals) but no longer gating.
+- **REQ-04 — FULLY SATISFIED (2026-07-06, 2nd batch).** You supplied `01.zip` with **Højen Sørensen
+  2009, "Approaching Levantine Shores" (52 pp)** — the comprehensive Mari Kaptara dossier with
+  **exact ARM text numbers** (ARM 23/24/25/31): the tin allocation to the Cretans + `1/3 mina tin` to
+  the **interpreter of the chief trader of the Cretans at Ugarit** (Heltzer 1989), the Cretan mace
+  `giš-tukul kap-ta-ru-ù` gold-mounted + lapis-inlaid (Dossin 1939), Caphtorian gold vases
+  (ARM 31,227 / 25,523 / 24,91), leather shoes "in the Caphtorian style", and `kap-ta-ra-yu`. Plus
+  Pardee's Mari-archives survey (15 pp). → **Mari records upgraded to v2 with precise citations**
+  (9 records total). REQ-04 closed. (The Foster academia download is again just a 1-page abstract —
+  not needed.) *Original note below retained for history.*
 - **REQ-04 — SUBSTANTIALLY SATISFIED via OPEN sources (2026-07-06).** The supplied
   `Mari_and_the_Minoans.pdf` was only a chronology-sidebar page (p. 342), but a web sweep found the
   content in open, non-Cloudflare sources: **Wiener, *Bronze Age Trade*** (malcolmwiener.net, 28 pp,
