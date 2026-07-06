@@ -45,3 +45,11 @@ damage/uncertainty · allography.
 (a) as *within-script-opaque* distributional features and (b) via the **AB-shared bridge** only where a sign
 is attested in both — never assume a global sign alignment. This is the single largest structural threat to
 transfer feasibility and must be an explicit ablation/ null in the gate.
+
+## Stage 4.1 update — LA structural channels RECOVERED
+
+The Stage-3 "LA lacks numerals/logograms" note is **superseded**. Recovered from the silver `stream`
+(`inscriptions_structured.json`): NUMERAL (1,276, with value) · ROW (3,435) · ENTRY (3,738) · WORD_FORM/SIGN
+(3,147/5,792). LOGOGRAM/FRACTION present-but-opaque (`A_LOGO_UNRESOLVED`); MEASURE unknown; DOCUMENT_SERIES
+genuinely absent (LA has no named series). So numerals/entries/rows join the **TRANSFERABLE** set; logograms
+are `PARTIALLY_TRANSFERABLE`. See `LINEAR_A_STRUCTURAL_CHANNEL_AUDIT.md` + `linear_a_structural_classes.csv`.

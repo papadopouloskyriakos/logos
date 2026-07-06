@@ -1,0 +1,105 @@
+{
+ "S4_LEAVE_ONE_SCRIBE_OUT": "AVAILABLE",
+ "before_after": {
+  "la_graph_sha": [
+   "d79b3fe422b24314",
+   "3c4170349d5965bd"
+  ],
+  "la_numerals": [
+   0,
+   1276
+  ],
+  "lb_graph_sha": [
+   "f040720ea48e7fc1",
+   "81a5d6dec619101e"
+  ],
+  "n_sites": [
+   "mis-mapped area_code (~295 findspots)",
+   19
+  ],
+  "scribes": [
+   0,
+   293
+  ]
+ },
+ "builder_version": "admin-graph-builder-v1-2026-07-07",
+ "canonical_sites": [
+  "ARM",
+  "DIM",
+  "EL",
+  "GL",
+  "HV",
+  "IK",
+  "KH",
+  "KN",
+  "KR",
+  "MA",
+  "MAM",
+  "MED",
+  "MI",
+  "MY",
+  "OR",
+  "PY",
+  "TH",
+  "TI",
+  "VOL"
+ ],
+ "correction": "stage4.1",
+ "docs_with_scribe": 3944,
+ "la_channels_recovered": {
+  "ENTRY": 3738,
+  "LOGOGRAM_opaque": 1056,
+  "NUMERAL": 1276,
+  "ROW": 3435
+ },
+ "la_graph_sha256_16": "3c4170349d5965bd",
+ "la_graphs": 1341,
+ "la_node_counts": {
+  "DOCUMENT": 1341,
+  "ENTRY": 3738,
+  "LOGOGRAM": 1056,
+  "NUMERAL": 1276,
+  "ROW": 3435,
+  "SIGN": 5792,
+  "WORD_FORM": 3147
+ },
+ "lb_edge_counts": {
+  "CONTAINS": 120371,
+  "FOLLOWS_LOGOGRAM": 6164,
+  "FOLLOWS_NUMERAL": 8377,
+  "NEXT_ENTRY": 10243,
+  "NEXT_TOKEN": 31263,
+  "PRECEDES_LOGOGRAM": 6164,
+  "PRECEDES_NUMERAL": 8377,
+  "PREVIOUS_ENTRY": 10243,
+  "PREVIOUS_TOKEN": 31263,
+  "SAME_DOCUMENT": 16042,
+  "SAME_FORMULA_CLUSTER": 9432
+ },
+ "lb_graph_sha256_16": "81a5d6dec619101e",
+ "lb_graphs": 5799,
+ "lb_node_counts": {
+  "DOCUMENT": 5799,
+  "ENTRY": 16042,
+  "FORMULA_CLUSTER": 9432,
+  "LOGOGRAM": 6738,
+  "MEASURE_MARKER": 2699,
+  "NUMERAL": 8875,
+  "ROW": 14841,
+  "SIGN": 44974,
+  "TOKEN": 10425,
+  "WORD_FORM": 15777
+ },
+ "lb_reference_sha256_16": "6a52340fea8c370d",
+ "lb_uncertain_nodes": 12751,
+ "n_canonical_sites": 19,
+ "n_scribes": 293,
+ "schema_sha256_16": "da7ef7ff92331457",
+ "site_crosswalk_sha256_16": "099fa3a426925c55",
+ "transferability_class_counts": {
+  "AB_SHARED_SENSITIVITY": 3,
+  "EXCLUDED": 3,
+  "LB_ONLY_DIAGNOSTIC": 1,
+  "TRANSFERABLE": 22
+ }
+}

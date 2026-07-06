@@ -14,7 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import graph_common as gc
 
-OPAQUE_RE = re.compile(r"^(?:[AB]_(?:SIGN|LOGO|MEAS|QUAL)_\d{3}|A_SIGN_UNK|B_SIGN_UNK)(?:\+(?:[AB]_(?:SIGN|LOGO|MEAS)_\d{3}))*$")
+OPAQUE_RE = re.compile(r"^(?:[AB]_(?:SIGN|LOGO|MEAS|QUAL)_\d{3}|A_SIGN_UNK|B_SIGN_UNK|A_LOGO_UNRESOLVED)(?:\+(?:[AB]_(?:SIGN|LOGO|MEAS)_\d{3}))*$")
 FC_RE = re.compile(r"^FC_[0-9a-f]{16}$")
 
 

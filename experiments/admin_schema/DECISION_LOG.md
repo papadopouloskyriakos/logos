@@ -52,4 +52,15 @@ Chronological record of decisions, commits, and manifest hashes (§XVII). Newest
 - **Stage 5 — ontology review DRAFT ONLY** generated under `reviews/stage5/` (UNCOMMITTED, NOT FROZEN).
   Awaiting `STAGE5_ONTOLOGY_APPROVED`.
 
+- **Stage 4.1 correction pass.** Starting commit `d1b5754` (clean; protected areas untouched). Five
+  corrections, re-frozen `stage4_1_graph_freeze.json` (lb `81a5d6de`, la `3c417034`):
+  (1) **site** — canonical `site_code` from heading prefix (19 sites: KN/PY/TH/MY/TI/KH/…), findspot +
+  area_code_raw preserved (`site_mapping.py`, `site_crosswalk.csv`); fixes the Stage-4 area_code mis-map.
+  (2) **scribe** — recovered from `hand_easy` (293 hands, 3,944/5,799 docs) — `vasewriter` was empty;
+  **S4_LEAVE_ONE_SCRIBE_OUT = AVAILABLE**. (3) **LA channels** — NUMERAL(1,276)/ROW/ENTRY/WORD_FORM/SIGN
+  recovered from silver `stream`; logogram opaque (`PRESENT_BUT_NOT_PARSED`), series genuinely absent; no LB
+  meaning imported, A_SIGN⊥B_SIGN. (4) **cardinality** — occurrence semantics documented + invariants tested.
+  (5) **formula clusters** — `formula_clustering.py`, blind-by-construction, `GROUPING_ONLY`. **13/13 tests
+  pass.** Reports: STAGE4_1_CORRECTION_SUMMARY + 5 audits. Commit: _(this)_. Stage 5 revised, UNCOMMITTED.
+
 <!-- append: stage, commit sha, manifest hashes, key decision -->

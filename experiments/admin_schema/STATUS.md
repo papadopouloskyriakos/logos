@@ -12,8 +12,9 @@ document-schema induction, blinded on Linear B, transfer-feasibility gate for Li
 | 1 | scaffold + programme ledger | ✅ done (cf2f7eb) |
 | 2 | prior-art / novelty audit | ✅ done — `NOVELTY_SUPPORTED` (combinatorial) |
 | 3 | source / license audit | ✅ done — no blocker; blinding = de-phoneticise LB to opaque sign-IDs |
-| 4 | canonical document schema | ✅ done — LB graph (5799) + LA dry-run (1341); 4/4 acceptance tests pass |
-| 5 | LB role ontology | **review DRAFT only (uncommitted) — awaiting STAGE5_ONTOLOGY_APPROVED** |
+| 4 | canonical document schema | ✅ done |
+| 4.1 | correction pass | ✅ done — canonical site (19), scribe recovered (293/S4 AVAILABLE), LA channels recovered, cardinality+formula audits; 13/13 tests pass |
+| 5 | LB role ontology | **review DRAFT only (uncommitted, revised) — awaiting STAGE5_ONTOLOGY_APPROVED** |
 | 5 | LB role ontology | pending |
 | 6 | blinding firewall | pending |
 | 7 | frozen splits | pending |

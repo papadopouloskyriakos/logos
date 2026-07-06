@@ -14,6 +14,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import graph_common as gc
+import site_mapping as sm
+import formula_clustering as fclust
 
 DAMOS = os.path.join(gc.MAIN_ROOT, "corpus", "bronze", "linearb", "damos", "items.jsonl")
 LINE_RE = re.compile(r"^\s*\.([0-9]+)([a-z]?)\s*(.*)$")
@@ -187,19 +189,23 @@ def build_doc(rec, syll, logo, meas, qual, formidx):
                     add_edge(a, b, "PRECEDES_LOGOGRAM"); add_edge(b, a, "FOLLOWS_LOGOGRAM")
             # formula cluster = hash of the opaque word-form sequence
             if entry_form_seq:
-                fc = "FC_" + gc.content_hash("|".join(entry_form_seq))
+                fc = fclust.cluster_id(entry_form_seq)
                 nodes.append({"id": f"{entry_id}:FC", "type": "FORMULA_CLUSTER", "opaque_id": fc})
                 add_edge(entry_id, f"{entry_id}:FC", "SAME_FORMULA_CLUSTER")
 
+    sid, sfield = sm.scribe_id(it)
     meta = {
         "source_document_id": heading,
         "document_series": it.get("series"), "document_subseries": it.get("subseries"),
         "document_set": str(it.get("set")) if it.get("set") is not None else None,
-        "support_type": it.get("object"), "site": it.get("area_code"), "findspot": it.get("find_area"),
+        "support_type": it.get("object"),
         "chronological_phase": str(it.get("chronogroup")) if it.get("chronogroup") is not None else None,
-        "scribe": str(it.get("vasewriter")) if it.get("vasewriter") else None,
+        # scribe (Correction 2): from the populated hand field, NOT the empty vasewriter
+        "scribe": sid, "scribe_source": sfield, "scribe_crosswalk_version": sm.SCRIBE_CROSSWALK_VERSION,
+        "scribe_assignment_type": "DAMOS_hand_classification" if sid else None,
         "n_sides": 1, "n_rows": row_index, "damage_flag": doc_dmg, "joined_fragment_cluster": joined,
     }
+    meta.update(sm.site_meta(heading, it.get("area_code")))          # Correction 1: canonical site vs findspot
     prov = {"source_record_id": rec["_id"], "source_version": gc.SOURCE_VERSION_DAMOS,
             "source_hash": gc.content_hash(content), "builder_version": gc.BUILDER_VERSION,
             "build_timestamp": "DETERMINISTIC", "uncertainty_provenance": "DAMOS editorial marks (brackets, underdots, mut/vac)"}
@@ -232,10 +238,10 @@ def run():
     # SAME_SITE/SAME_SERIES/... are represented as shared membership in a reference cluster (efficient,
     # linear) rather than O(n^2) pairwise edges. Joined fragments + repeated forms are grouped here so they
     # are NOT treated as independent by default (Stage 4 acceptance #8).
-    ref = {"SITE": {}, "DOCUMENT_SERIES": {}, "SCRIBE": {}, "OBJECT_OR_SUPPORT": {},
+    ref = {"SITE": {}, "FINDSPOT": {}, "DOCUMENT_SERIES": {}, "SCRIBE": {}, "OBJECT_OR_SUPPORT": {},
            "CHRONOLOGICAL_PHASE": {}, "JOINED_FRAGMENT_CLUSTER": {}, "REPEATS_FORM": {}}
-    key = {"SITE": "site", "DOCUMENT_SERIES": "document_series", "SCRIBE": "scribe",
-           "OBJECT_OR_SUPPORT": "support_type", "CHRONOLOGICAL_PHASE": "chronological_phase",
+    key = {"SITE": "site_code", "FINDSPOT": "findspot_code", "DOCUMENT_SERIES": "document_series",
+           "SCRIBE": "scribe", "OBJECT_OR_SUPPORT": "support_type", "CHRONOLOGICAL_PHASE": "chronological_phase",
            "JOINED_FRAGMENT_CLUSTER": "joined_fragment_cluster"}
     for g in graphs:
         for etype, mkey in key.items():

@@ -1,0 +1,2 @@
+scribe_id,source_field,assignment_type,confidence,notes
+HAND_*,hand_easy,DAMOS_hand_classification,SOURCE_GROUNDED,"opaque hand id = 'HAND_'+DAMOS hand_easy value (Knossos/Pylos hand numbers, e.g. 117/103/1). 3944/5799 docs assigned; 293 distinct hands. NOT inferred from vocabulary/layout/model. '-' = no hand -> scribe null. S4_LEAVE_ONE_SCRIBE_OUT = AVAILABLE."

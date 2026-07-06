@@ -1,0 +1,20 @@
+site_code,site_name,region,confidence,notes
+KN,Knossos,Crete,SECURE,DAMOS heading prefix
+PY,Pylos,Messenia,SECURE,
+TH,Thebes,Boeotia,SECURE,
+MY,Mycenae,Argolid,SECURE,
+TI,Tiryns,Argolid,SECURE,
+KH,Khania,Crete,SECURE,ancient Kydonia
+MI,Midea,Argolid,PROBABLE,few docs
+MA,Malia,Crete,PROBABLE,
+EL,Eleusis,Attica,PROBABLE,single doc
+OR,Orchomenos,Boeotia,PROBABLE,single doc
+KR,Kreusis,Boeotia,DISPUTED,single doc
+GL,Gla,Boeotia,PROBABLE,single doc
+IK,Ikaina,Messenia,DISPUTED,single doc
+VOL,Volos/Iolkos,Thessaly,PROBABLE,
+ARM,Armenoi,Crete,PROBABLE,
+DIM,Dimini,Thessaly,PROBABLE,
+MAM,Mamelouko,Crete,DISPUTED,single doc
+MED,Medeon,Phokis,DISPUTED,single doc
+HV,HAND-VERIFIED/non-site,NA,NON_SITE,"HV = internal id, not an archaeological site — flag EXCLUDE from leave-one-site-out"

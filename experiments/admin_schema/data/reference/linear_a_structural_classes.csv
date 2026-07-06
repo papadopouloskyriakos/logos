@@ -1,0 +1,9 @@
+channel,source,status,recovered_count,transferability,notes
+NUMERAL,silver stream 'num' (value),CHANNEL_PRESENT_AND_PARSED,1276,TRANSFERABLE,"integer value preserved"
+ROW,silver stream 'nl',CHANNEL_PRESENT_AND_PARSED,3435,TRANSFERABLE,"line structure"
+ENTRY,silver stream 'div',CHANNEL_PRESENT_AND_PARSED,3738,TRANSFERABLE,"divider-delimited entries"
+WORD_FORM,silver stream 'word',CHANNEL_PRESENT_AND_PARSED,3147,TRANSFERABLE,"A_SIGN opaque, separate vocab (259 signs)"
+LOGOGRAM,silver stream 'other',CHANNEL_PRESENT_BUT_NOT_PARSED,1056,PARTIALLY_TRANSFERABLE,"subclass unresolved in silver -> opaque A_LOGO_UNRESOLVED; NOT equated with LB logograms"
+FRACTION,silver stream 'other' (subset),CHANNEL_PRESENT_BUT_NOT_PARSED,0,PARTIALLY_TRANSFERABLE,"folded into 'other'; needs SigLA glyph-level pass to separate"
+MEASURE_MARKER,-,CHANNEL_UNKNOWN,0,UNAVAILABLE,"not separately marked in silver stream"
+DOCUMENT_SERIES,-,CHANNEL_GENUINELY_ABSENT,0,LB_ONLY_DIAGNOSTIC,"Linear A has no named administrative series"
