@@ -1,0 +1,30 @@
+{
+  "_DRAFT": "NOT FROZEN / NOT USED FOR MODELING / NOT COMMITTED — Stage 5 review only (revised post-4.1)",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Linear B role annotation (DRAFT v2) — 4 SEPARATE prediction targets",
+  "coarse_roles": ["HUMAN_OR_INSTITUTION", "PLACE", "COMMODITY_OR_COUNTED_CATEGORY", "MEASURE_OR_QUANTITY",
+                   "OPERATOR_OR_RELATION", "QUALIFIER", "DOCUMENT_STRUCTURE", "UNKNOWN"],
+  "fine_roles": ["PERSON", "HUMAN_GROUP", "INSTITUTION", "TITLE_OR_OFFICE", "TOPONYM",
+                 "ETHNIC_OR_TOPONYMIC_ADJECTIVE", "ANIMAL_CATEGORY", "COMMODITY", "OTHER_COUNTED_ENTITY",
+                 "MEASURE_OR_UNIT", "QUANTITY", "TRANSACTION_OR_ALLOCATION_OPERATOR", "QUALIFIER",
+                 "TOTAL_OR_SUBTOTAL", "HEADER_OR_SECTION_LABEL", "FORMULA_OR_BOILERPLATE", "UNKNOWN"],
+  "_removed_class": "ANIMAL_OR_HUMAN_CATEGORY (split into ANIMAL_CATEGORY vs HUMAN_GROUP per §IX-B)",
+  "uncertainty_labels": ["UNKNOWN", "AMBIGUOUS", "MULTILABEL", "EXCLUDED"],
+  "entry_relations": ["DESTINATION", "ORIGIN", "LOCATION", "SOURCE", "RECIPIENT", "OWNER", "QUALIFIES",
+                      "COUNTED_ITEM", "NONE", "UNKNOWN"],
+  "document_schemas": ["ALLOCATION_LIST", "INVENTORY", "DELIVERY_RECORD", "CONTRIBUTION_ASSESSMENT",
+                       "PERSONNEL_LIST", "LIVESTOCK_RECORD", "LAND_RECORD", "MIXED_OR_OTHER", "UNKNOWN"],
+  "transaction_types": ["ALLOCATION", "DELIVERY", "RECEIPT", "CONTRIBUTION", "DEFICIT", "INVENTORY",
+                        "UNKNOWN_TRANSACTION"],
+  "gates": {
+    "load_bearing": ["PRIMARY_COARSE_ROLE", "NONTRIVIAL_UNSEEN_FORM_SCORE"],
+    "secondary_only": ["FINE_ROLE_SCORE", "ENTRY_RELATION_SCORE", "DOCUMENT_SCHEMA_SCORE", "TRANSACTION_TYPE_SCORE"],
+    "rule": "fine-label success may NOT rescue failure of the primary coarse unseen-form gate"
+  },
+  "structural_control_classes": ["NUMERAL", "FRACTION", "UNAMBIGUOUS_LOGOGRAM", "TOTAL_MARKER", "SECTION_DIVIDER"],
+  "annotation_record_fields": ["annotation_id", "document_id", "token_or_form_id", "token_role_coarse",
+    "token_role_fine", "entry_relation", "document_schema", "transaction_type", "gold_tier", "confidence",
+    "source_citation", "annotation_rationale", "dispute_flag", "alternative_labels", "annotator_1",
+    "annotator_2", "adjudicator", "adjudication_status"],
+  "rule": "TOKEN_ROLE (entity class) and ENTRY_RELATION (contextual admin relation, incl. LOCATION) are DIFFERENT tasks, annotated independently; TITLE_OR_OFFICE is fine+secondary only."
+}

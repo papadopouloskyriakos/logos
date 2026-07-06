@@ -14,7 +14,9 @@ document-schema induction, blinded on Linear B, transfer-feasibility gate for Li
 | 3 | source / license audit | ✅ done — no blocker; blinding = de-phoneticise LB to opaque sign-IDs |
 | 4 | canonical document schema | ✅ done |
 | 4.1 | correction pass | ✅ done — canonical site (19), scribe recovered (293/S4 AVAILABLE), LA channels recovered, cardinality+formula audits; 13/13 tests pass |
-| 5 | LB role ontology | **review DRAFT only (uncommitted, revised) — awaiting STAGE5_ONTOLOGY_APPROVED** |
+| 5 | LB role ontology | ✅ FROZEN (ontology hash 781902c0; approved 2026-07-07) |
+| 4.2 | Linear A notation resolution | **next** |
+| 5.1 | annotation feasibility pilot (dev-only) | pending |
 | 5 | LB role ontology | pending |
 | 6 | blinding firewall | pending |
 | 7 | frozen splits | pending |

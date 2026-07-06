@@ -1,0 +1,19 @@
+dimension,unit,lower_bound,central_estimate,upper_bound,basis,imbalance_flag
+COARSE:HUMAN_OR_INSTITUTION,wf_tokens,5000,7000,9000,"~40-55% of 15777 wf tokens (names + groups)",
+COARSE:PLACE,wf_tokens,800,1600,2800,"LB toponyms + ethnic adjs",
+COARSE:COMMODITY_OR_COUNTED_CATEGORY,tokens,6800,7300,8200,"6738 logograms + spelled",largely_trivial
+COARSE:MEASURE_OR_QUANTITY,tokens,11000,11600,12500,"8875 num + 2699 meas + fractions",TRIVIAL_dominant_exclude_from_gate
+COARSE:OPERATOR_OR_RELATION,wf_tokens,150,450,900,"o-/apudosis-type",too_sparse_for_fine
+COARSE:QUALIFIER,wf_tokens,400,1100,2200,"adjectival qualifiers",
+COARSE:DOCUMENT_STRUCTURE,tokens,250,700,1400,"headers/totals/dividers",
+COARSE:UNKNOWN,wf_tokens,3000,4500,6000,"residual + damaged + hapax",large_residual
+LOAD_BEARING:NONTRIVIAL_UNSEEN_FORM_GOLD_A,test_units,150,400,900,"non-structural, unseen, securely labelable",LOAD_BEARING_possibly_underpowered
+LOAD_BEARING:NONTRIVIAL_UNSEEN_FORM_GOLD_A+B,test_units,400,1000,2200,"sensitivity",
+STRATUM:site_KN,docs,4146,4146,4146,"canonical",DOMINATES_71pct
+STRATUM:site_PY,docs,984,984,984,"",
+STRATUM:site_TH,docs,426,426,426,"",
+STRATUM:site_MY/TI/KH,docs,52,73,99,"small cross-site strata",cross_site_power_weak
+STRATUM:sites_ge30docs,count,6,6,6,"viable leave-one-site-out strata",only_6_and_KN_dominates
+STRATUM:series_ge30docs,count,18,18,18,"of 23 — good leave-one-series-out",
+STRATUM:scribes_ge30docs,count,23,23,23,"of 293 hands — S4 viable for top hands",tail_sparse
+STRATUM:support_tablet,docs,5440,5440,5440,"dominant",support_imbalance

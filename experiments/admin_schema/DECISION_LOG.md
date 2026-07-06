@@ -63,4 +63,12 @@ Chronological record of decisions, commits, and manifest hashes (§XVII). Newest
   (5) **formula clusters** — `formula_clustering.py`, blind-by-construction, `GROUPING_ONLY`. **13/13 tests
   pass.** Reports: STAGE4_1_CORRECTION_SUMMARY + 5 audits. Commit: _(this)_. Stage 5 revised, UNCOMMITTED.
 
+- **Stage 5 FROZEN** (STAGE5_ONTOLOGY_APPROVED 2026-07-07). Ontology hash `781902c0`. Frozen: coarse 8-class
+  (HUMAN_OR_INSTITUTION/PLACE/COMMODITY_OR_COUNTED_CATEGORY/MEASURE_OR_QUANTITY/OPERATOR_OR_RELATION/QUALIFIER/
+  DOCUMENT_STRUCTURE/UNKNOWN) + 17 fine (ANIMAL_CATEGORY vs HUMAN_GROUP split); 4 separate targets; gold tiers
+  A/B/C/X; QC gate Krippendorff a>=0.80 primary / 0.67-0.80 provisional; grouping/leakage rules; trivial vs
+  NONTRIVIAL_UNSEEN_FORM load-bearing. Files: data/schema/role_ontology.schema.json, data/policy/*,
+  reports/ROLE_ONTOLOGY.md, data/manifests/stage5_ontology_freeze.json. NO gold corpus / splits / models yet.
+  Commit: _(this)_.
+
 <!-- append: stage, commit sha, manifest hashes, key decision -->

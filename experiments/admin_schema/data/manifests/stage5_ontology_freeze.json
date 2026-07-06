@@ -1,0 +1,17 @@
+{
+ "approved": "2026-07-07 STAGE5_ONTOLOGY_APPROVED",
+ "ontology_hash": "781902c061764b80",
+ "policy_hashes": {
+  "ROLE_ONTOLOGY.md": "9e54318fc1474df6",
+  "annotation_guidelines.md": "ccc67987f3fc9c02",
+  "annotation_qc_thresholds.md": "d0f42d541a689b8c",
+  "gold_tier_rules.md": "7906f22a200d8542",
+  "grouping_and_leakage_rules.md": "afb663cb19441c84",
+  "label_transferability.csv": "489b2cfc8092eb15",
+  "open_decisions_resolved.md": "bbd3e3002c3c027a",
+  "projected_class_counts.csv": "62ae57f9553b4573",
+  "role_ontology.schema.json": "781902c061764b80"
+ },
+ "stage": "5",
+ "status": "FROZEN"
+}
