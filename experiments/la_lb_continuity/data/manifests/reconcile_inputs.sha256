@@ -1,0 +1,4 @@
+218ae55b5dfcb290a1940b6abacdeb85b38f47ff1c7e60d845fe81084bee002e  corpus/bronze/sigla_browse_2026/sigla_documents.json  (968094 bytes, id=sigla_documents)
+e2ebebc0ebd02bbb0cb0df43445726b41af2bd9bfe360d234eb19bb8ab6f0bae  corpus/bronze/sigla_browse_2026/sigla_signs.json  (41366 bytes, id=sigla_signs)
+aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500  corpus/silver/inscriptions_structured.json  (724963 bytes, id=silver_inscriptions_structured)
+246f63f1608a1238a2b2851b9f0a475817ce265b66d2fa622cc795627b97a80d  corpus/silver/signs_ontology.json  (45141 bytes, id=silver_signs_ontology)

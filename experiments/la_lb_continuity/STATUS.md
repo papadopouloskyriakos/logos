@@ -2,13 +2,13 @@
 
 _Single source of current state. Phases follow the commit plan (§XVIII)._
 
-## Current phase: **1 → 2** (scaffold done; SigLA reconciliation in progress)
+## Current phase: **2 → 3** (SigLA reconciliation done; A↔B equivalence next)
 
 | # | Phase | State |
 |---|-------|-------|
 | 1 | Branch/worktree + project scaffold | ✅ DONE |
-| 2 | SigLA source audit + silver crosswalk + corpus delta | 🔄 IN PROGRESS |
-| 3 | Freeze A↔B sign-equivalence layer (blind to known pairs) | ⬜ |
+| 2 | SigLA source audit + silver crosswalk + corpus delta | ✅ DONE |
+| 3 | Freeze A↔B sign-equivalence layer (blind to known pairs) | 🔄 NEXT |
 | 4 | Known-pair source-critical audit (five = DEVELOPMENT_BENCHMARK) | ⬜ |
 | 5 | Freeze internal-only LA candidate set + independent LB target set | ⬜ |
 | 6 | Primary matching model + ablations A1–A5 (no free mapping search) | ⬜ |
@@ -27,6 +27,15 @@ _Single source of current state. Phases follow the commit plan (§XVIII)._
 - `main`, `paper/`, `runtime/csa_sweep/`, live CSA processes: **not touched**.
 - Egyptian channel: **preserved, not fitted, not merged**.
 
-## Next concrete step
-Compute the deterministic SigLA↔silver crosswalk + corpus delta from canonical main-repo inputs
-(read-only), write the three SIGLA_* reports + tests + input checksums, commit as chunk 2.
+## Key finding (phase 2)
+SigLA 802 docs / 376 signs vs silver 1341 records: **575 matched**, but **730 silver + 143 SigLA docs
+genuinely absent** from the other (corpus-composition difference, not normalization). AB signs agree
+(learned map reproduces the LB syllabary); SigLA keeps ~249 A-series composites silver decomposes.
+Site typos + the `ARKH` (Arkhanes/Arkalochori) ambiguity flagged for §VIII. **Silver stays the LA
+baseline; SigLA supplies sign-identity/palaeography for §V.**
+
+## Next concrete step (phase 3, §V)
+Freeze the palaeographic A↔B sign-equivalence layer **blind to the five known pairs**: LEVEL_1 = shared
+sign-ID identity; LEVEL_2 = the 77 SigLA AB-class signs as conventional A↔B homomorphs (confidence
+tiers A/B/C/X), with `target_pair_used_in_selection=false` and `phonetic_value_used=false`. Checksum
+and freeze before any sequence matching.

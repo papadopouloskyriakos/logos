@@ -1,0 +1,22 @@
+{
+ "sigla_documents": {
+  "path": "corpus/bronze/sigla_browse_2026/sigla_documents.json",
+  "sha256": "218ae55b5dfcb290a1940b6abacdeb85b38f47ff1c7e60d845fe81084bee002e",
+  "bytes": 968094
+ },
+ "sigla_signs": {
+  "path": "corpus/bronze/sigla_browse_2026/sigla_signs.json",
+  "sha256": "e2ebebc0ebd02bbb0cb0df43445726b41af2bd9bfe360d234eb19bb8ab6f0bae",
+  "bytes": 41366
+ },
+ "silver_inscriptions_structured": {
+  "path": "corpus/silver/inscriptions_structured.json",
+  "sha256": "aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500",
+  "bytes": 724963
+ },
+ "silver_signs_ontology": {
+  "path": "corpus/silver/signs_ontology.json",
+  "sha256": "246f63f1608a1238a2b2851b9f0a475817ce265b66d2fa622cc795627b97a80d",
+  "bytes": 45141
+ }
+}
