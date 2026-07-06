@@ -1,0 +1,6 @@
+source_id,name,role,identifiers,coverage,license,acquisition,sha256_16,status,notes
+SRC-DAMOS,"DĀMOS — Database of Mycenaean at Oslo",LB annotated corpus (gold-label backbone),"items.jsonl","~5840 tablets / ~13562 wordforms",academic (courtesy-gated),"corpus/bronze/linearb/damos/items.jsonl (main worktree)",,PRESENT,"transliteration+lemma = EVALUATION_ONLY; raw signs+structure = MODEL_VISIBLE"
+SRC-SIGLA,"SigLA — Signs of Linear A (Salgarella & Castellan)",LA sign/document DB (structural compat),"database.js (OCaml Marshal)","802 docs / 376 signs","CC BY-NC-SA","corpus/bronze/sigla_browse_2026/database.js -> scripts/sigla_decode.py",,PRESENT,"LA structural dry-run only; JSON gitignored"
+SRC-SILVER-LA,"logos silver Linear A corpus",LA structural corpus,"corpus/silver/*","1341 inscriptions / 52 sites",open (repo),"corpus/silver/",,PRESENT,"LA compatibility dry-run only"
+SRC-LIBER,"LiBER — Linear B Electronic Resources (layout-preserving edition)",LB layout/spatial,,,to audit,"web",,TO_AUDIT,"§IV Linear B source audit"
+SRC-PAITO,"PA-I-TO — RTI/3D Linear B epigraphy",LB imaging/palaeography,,,to audit,"web",,TO_AUDIT,"§IV"
