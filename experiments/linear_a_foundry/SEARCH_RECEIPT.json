@@ -8,6 +8,13 @@
  },
  "charged_total_configs": 0,
  "null_realizations": {
-  "WP1_position": 2000
+  "WP1_position": 2000,
+  "WP3.1_cv_perm": 200
+ },
+ "WP3.1": {
+  "model_families": 1,
+  "tests": "7fold CV logreg + 5 ablations",
+  "null_realizations": 200,
+  "partition": "validation(LB)+application(LA)"
  }
 }

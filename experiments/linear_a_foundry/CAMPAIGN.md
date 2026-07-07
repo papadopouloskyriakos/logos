@@ -29,7 +29,7 @@ value layer is not provably closed to internal methods.
 |---|---|
 | **1 · formal identifiability & symmetry audit** | ✅ **`PRIOR_THEOREM_OVERSTATED`** — position recovers C/V on LB (AUC 0.744, p=0.035); LA top-initial signs = A/I/U (vowel-corresponding). Internal evidence reduces value equivalence classes. Atlas of 13 channels built. |
 | 2 · corpus reconstruction from sources/images | next |
-| 3 · relative phonology / morphology / scribal | pending (the core symmetry-breaking labor) |
+| 3 · relative phonology / morphology / scribal | 🔄 WP3.1 DONE — C/V recovered on LB (CV AUC 0.835; position-only 0.67 after removing freq prior); LA ranks A/I top. WP3.2/3.4 next |
 | 4 · diachronic & cross-script sign evolution | pending |
 | 5 · external-anchor factory | pending |
 | 6 · candidate-language + agnostic rounds | pending |

@@ -1,0 +1,253 @@
+{
+ "LB_cross_validated": {
+  "n_signs": 74,
+  "n_vowels": 5,
+  "cv_auc_7fold": 0.835,
+  "permutation_p": 0.01,
+  "n_null": 200,
+  "single_feature_auc_WP1": 0.744
+ },
+ "feature_weights": {
+  "initial_rate": 0.669,
+  "final_rate": 0.062,
+  "mean_pos": -0.224,
+  "lone_rate": 0.0,
+  "lnbr_ent": -0.11,
+  "rnbr_ent": 0.635,
+  "log_freq": 1.192
+ },
+ "LA_partition": {
+  "n_signs": 46,
+  "n_vowel_like_prob_ge0.5": 0,
+  "top8_vowel_candidates": [
+   [
+    "A",
+    0.047
+   ],
+   [
+    "I",
+    0.018
+   ],
+   [
+    "JA",
+    0.017
+   ],
+   [
+    "SI",
+    0.016
+   ],
+   [
+    "DA",
+    0.014
+   ],
+   [
+    "KA",
+    0.013
+   ],
+   [
+    "KI",
+    0.012
+   ],
+   [
+    "TA",
+    0.011
+   ]
+  ],
+  "note": "candidate C/V partition from LA-internal distribution only; relative structure, NOT an absolute reading"
+ },
+ "verdict": "CV_PARTITION_RECOVERED",
+ "equivalence_class_reduction": "the ~92-sign value space partitions into vowel-like vs consonant-like classes; external anchors now need to fix representatives per class, not per sign",
+ "LA_full_partition": [
+  [
+   "A",
+   0.047
+  ],
+  [
+   "I",
+   0.018
+  ],
+  [
+   "JA",
+   0.017
+  ],
+  [
+   "SI",
+   0.016
+  ],
+  [
+   "DA",
+   0.014
+  ],
+  [
+   "KA",
+   0.013
+  ],
+  [
+   "KI",
+   0.012
+  ],
+  [
+   "TA",
+   0.011
+  ],
+  [
+   "NA",
+   0.011
+  ],
+  [
+   "TE",
+   0.01
+  ],
+  [
+   "MA",
+   0.01
+  ],
+  [
+   "NI",
+   0.01
+  ],
+  [
+   "TI",
+   0.01
+  ],
+  [
+   "RE",
+   0.009
+  ],
+  [
+   "DI",
+   0.009
+  ],
+  [
+   "RA",
+   0.009
+  ],
+  [
+   "TU",
+   0.009
+  ],
+  [
+   "DU",
+   0.008
+  ],
+  [
+   "PA",
+   0.007
+  ],
+  [
+   "SA",
+   0.007
+  ],
+  [
+   "RO",
+   0.007
+  ],
+  [
+   "KU",
+   0.006
+  ],
+  [
+   "U",
+   0.006
+  ],
+  [
+   "RU",
+   0.006
+  ],
+  [
+   "RI",
+   0.005
+  ],
+  [
+   "NU",
+   0.005
+  ],
+  [
+   "MI",
+   0.005
+  ],
+  [
+   "SE",
+   0.004
+  ],
+  [
+   "QE",
+   0.003
+  ],
+  [
+   "SU",
+   0.003
+  ],
+  [
+   "PI",
+   0.003
+  ],
+  [
+   "NE",
+   0.003
+  ],
+  [
+   "QA",
+   0.003
+  ],
+  [
+   "ZA",
+   0.002
+  ],
+  [
+   "PA3",
+   0.002
+  ],
+  [
+   "ME",
+   0.002
+  ],
+  [
+   "E",
+   0.002
+  ],
+  [
+   "DE",
+   0.002
+  ],
+  [
+   "PU",
+   0.002
+  ],
+  [
+   "WA",
+   0.002
+  ],
+  [
+   "JU",
+   0.002
+  ],
+  [
+   "RA2",
+   0.002
+  ],
+  [
+   "ZU",
+   0.002
+  ],
+  [
+   "*118",
+   0.001
+  ],
+  [
+   "*301",
+   0.001
+  ],
+  [
+   "WI",
+   0.001
+  ]
+ ],
+ "ablation_LB_cv_auc": {
+  "all": 0.835,
+  "log_freq_only": 0.838,
+  "minus_log_freq": 0.783,
+  "position_only": 0.67,
+  "note": "strong signal is a typological frequency prior; genuine corpus-structural (position) symmetry-breaking is AUC 0.67 (modest, above chance)"
+ }
+}
