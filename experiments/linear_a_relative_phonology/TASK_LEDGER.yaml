@@ -295,21 +295,24 @@ tasks:
     work_package: H
     objective: "ROUND_1 relative-class-constrained family models (<=3 serious + 1 neg-control + 1 agnostic); admission requires chrono/geo/class/morphology/anchor/structure compatibility"
     dependencies: [D5_posterior, G3_seedq]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — AT_END_TO_END_NULL (0/3 families; SEM only KU-RO, fails Holm+LOO; controls at null)"
     required_outputs: [reports/H_ROUND_1.md, data/candidates_v2/]
     next_task_on_success: H2_round2
   - task_id: H2_round2
     work_package: H
     objective: "ROUND_2 anchor-constrained family/isolate models"
     dependencies: [H1_round1]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — AT_ANCHOR_CONSTRAINED_NULL (anchors add 0 held-out matches; SEED_A=0 direct)"
     required_outputs: [reports/H_ROUND_2.md]
     next_task_on_success: H3_round3
   - task_id: H3_round3
     work_package: H
     objective: "ROUND_3 morphology-first joint decipherment models; model families Bayesian-joint/MDL/constraint-satisfaction; no semantic rescue (revision needs new plan hash+receipt+seal)"
     dependencies: [H2_round2, E1_morphology]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — AT_JOINT_INFERENCE_NULL (decisive; relabeling-invariant backbone, 0 bits value info)"
     required_outputs: [reports/H_ROUND_3.md, reports/H_MODEL_COMPARISON.md]
     next_task_on_success: I1_agnostic
 
@@ -318,7 +321,8 @@ tasks:
     work_package: I
     objective: "Constraint-reduced agnostic value search (>=2 methods: beam/best-first + Bayesian/MCMC); frozen objective; collapse relabeling/permutation/synonym equivalence"
     dependencies: [D5_posterior, C5_stability]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — UNDERDETERMINED_NO_RECOVERY (detector LIVE on LB; LA null informative; >=10^27 twins)"
     required_outputs: [reports/I_AGNOSTIC_SEARCH_SPEC.md, reports/I_AGNOSTIC_SEARCH_RESULTS.md, reports/I_EQUIVALENCE_CLASSES.md]
     next_task_on_success: J1_exposure
 
@@ -335,7 +339,8 @@ tasks:
     work_package: J
     objective: "Freeze ANETAKI_FINAL_EDITION_DELTA_SEAL (delta-only predictions) + 4 more seals (withheld editions/disputed readings/unseen site/formula/damage/late-ingest/accounting); hashed manifests, one-at-a-time, no failed-seal reuse"
     dependencies: [J1_exposure, D5_posterior]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — 5 hashed seals; L2/L3 structural SUPPORTED (SEAL_2/3/4), SEAL_5 honest neg, Anetaki prospective"
     required_outputs: [seals/, reports/J_SEAL_REGISTER.md]
     next_task_on_success: K1_nulls
 
