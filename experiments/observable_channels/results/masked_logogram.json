@@ -1,0 +1,20 @@
+{
+ "n_examples": 3711,
+ "n_train": 2312,
+ "n_test_unseen_family": 457,
+ "distinct_logograms": 115,
+ "baseline_frequency": 0.175,
+ "baseline_series_shortcut": 0.63,
+ "M_struct_A12": 0.186,
+ "M_sign_A12": 0.182,
+ "null_label_shuffle": 0.144,
+ "min_detectable_over_series(n)": 0.69,
+ "cross_site_KN_to_nonKN": {
+  "n_test_nonKN": 234,
+  "M_sign": 0.073,
+  "baseline": 0.115
+ },
+ "sign_model_beats_series": false,
+ "sign_model_beats_null": true,
+ "interpretation": "under UNSEEN-lexical-family (A12): does word context predict the commodity beyond the frequency+series shortcut and beyond a label-shuffle null?"
+}
