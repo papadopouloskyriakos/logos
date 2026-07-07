@@ -5,6 +5,8 @@
 Programme = source-derived labels + weak supervision + pseudo-script (O2+D8) transfer + self-supervised
 representations, all no-human, to test transferable admin role/schema recovery under a simulated unread script.
 
+**ROUTE CLOSED (NO_POWER_BEFORE_MODELING); pivot -> Observable Administrative Channel Recovery (new branch).**
+
 | # (§XVIII) | stage | state |
 |---|---|---|
 | 1 | human-path closure + scaffold | ✅ done (184eef1) |
