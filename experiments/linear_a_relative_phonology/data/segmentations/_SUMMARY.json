@@ -1,0 +1,80 @@
+{
+ "seed": 20260708,
+ "source": "corpus/silver/inscriptions_structured.json",
+ "n_inscriptions_total": 1341,
+ "n_sites": 52,
+ "representations": [
+  {
+   "representation": "SEG_DIPLOMATIC",
+   "n_units": 1341,
+   "mean_length_signs": 4.3192,
+   "n_signs_total": 5792,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_DIPLOMATIC.json"
+  },
+  {
+   "representation": "SEG_GORILA_WORD",
+   "n_units": 3147,
+   "mean_length_signs": 1.8405,
+   "n_signs_total": 5792,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_GORILA_WORD.json"
+  },
+  {
+   "representation": "SEG_INSCRIPTION_CONTEXT",
+   "n_units": 1341,
+   "mean_length_signs": 4.3192,
+   "n_signs_total": 5792,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_INSCRIPTION_CONTEXT.json"
+  },
+  {
+   "representation": "SEG_ROW",
+   "n_units": 2697,
+   "mean_length_signs": 2.1476,
+   "n_signs_total": 5792,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_ROW.json"
+  },
+  {
+   "representation": "SEG_ENTRY",
+   "n_units": 1068,
+   "mean_length_signs": 2.2491,
+   "n_signs_total": 2402,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_ENTRY.json"
+  },
+  {
+   "representation": "SEG_FORMULA",
+   "n_units": 1642,
+   "mean_length_signs": 2.0646,
+   "n_signs_total": 3390,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_FORMULA.json"
+  },
+  {
+   "representation": "SEG_PROBABILISTIC_BOUNDARY",
+   "n_units": 3526,
+   "mean_length_signs": 1.4376,
+   "n_signs_total": 5069,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_PROBABILISTIC_BOUNDARY.json"
+  },
+  {
+   "representation": "SEG_MULTI_SCALE",
+   "n_units": 1341,
+   "mean_length_signs": 4.3192,
+   "n_signs_total": 5792,
+   "path": "experiments/linear_a_relative_phonology/data/segmentations/SEG_MULTI_SCALE.json"
+  }
+ ],
+ "probabilistic_boundary_grading": {
+  "note": "GORILA word boundaries used ONLY to grade the unsupervised model (never an input).",
+  "boundary_precision": 0.3532,
+  "boundary_recall": 0.5687,
+  "boundary_f1": 0.4357,
+  "tp": 1027,
+  "fp": 1881,
+  "fn": 779
+ },
+ "multi_scale_levels": {
+  "n_inscriptions": 1341,
+  "n_entries": 1068,
+  "n_formula_runs": 1642,
+  "n_words": 3147,
+  "mean_words_per_entry": 1.1873
+ }
+}

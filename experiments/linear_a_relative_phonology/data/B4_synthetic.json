@@ -1,0 +1,3362 @@
+{
+ "task": "B4_synthetic_segmentation_calibration",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "n_tablets_target": 1400,
+ "generator_config": {
+  "n_cons": 16,
+  "n_vowel": 5,
+  "n_roots": 1200,
+  "zipf": 0.9,
+  "n_suffix": 8,
+  "p_suffix": 0.55,
+  "core_frac": 0.25,
+  "n_sites": 8
+ },
+ "models": [
+  "BASELINE_RANDOM",
+  "BASELINE_FIXED",
+  "BASELINE_ALL",
+  "CUE_TP_min",
+  "CUE_BranchEntropy",
+  "BAYESIAN_unigram",
+  "MDL",
+  "FINITE_STATE_bigram",
+  "MULTISCALE_ENSEMBLE"
+ ],
+ "clean_baseline": {
+  "diag": {
+   "n_tablets": 1400,
+   "n_signs": 17094,
+   "n_word_tokens": 7003,
+   "n_word_types": 1724,
+   "word_hapax_frac": 0.493,
+   "boundary_rate": 0.357,
+   "mean_word_len": 2.441,
+   "type_token_ratio": 0.246,
+   "train_boundary_rate": 0.357,
+   "fixed_period": 2,
+   "n_train": 980,
+   "n_test": 420,
+   "test_gold_boundaries": 1681
+  },
+  "models": {
+   "BASELINE_RANDOM": {
+    "P": 0.364,
+    "R": 0.3623,
+    "F1": 0.3631,
+    "n_pred": 1673,
+    "n_gold": 1681,
+    "pred_over_gold": 0.995,
+    "failure_mode": "balanced"
+   },
+   "BASELINE_FIXED": {
+    "P": 0.3718,
+    "R": 0.4961,
+    "F1": 0.4251,
+    "n_pred": 2243,
+    "n_gold": 1681,
+    "pred_over_gold": 1.334,
+    "failure_mode": "OVER"
+   },
+   "BASELINE_ALL": {
+    "P": 0.3579,
+    "R": 1.0,
+    "F1": 0.5271,
+    "n_pred": 4697,
+    "n_gold": 1681,
+    "pred_over_gold": 2.794,
+    "failure_mode": "OVER"
+   },
+   "CUE_TP_min": {
+    "P": 0.67,
+    "R": 0.6859,
+    "F1": 0.6778,
+    "n_pred": 1721,
+    "n_gold": 1681,
+    "pred_over_gold": 1.024,
+    "failure_mode": "balanced",
+    "margin_vs_best_baseline": 0.2527,
+    "margin_vs_all_cut": 0.1507
+   },
+   "CUE_BranchEntropy": {
+    "P": 0.4451,
+    "R": 0.8447,
+    "F1": 0.583,
+    "n_pred": 3190,
+    "n_gold": 1681,
+    "pred_over_gold": 1.898,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.1579,
+    "margin_vs_all_cut": 0.0559
+   },
+   "BAYESIAN_unigram": {
+    "P": 0.5556,
+    "R": 0.9655,
+    "F1": 0.7053,
+    "n_pred": 2921,
+    "n_gold": 1681,
+    "pred_over_gold": 1.738,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2802,
+    "margin_vs_all_cut": 0.1782
+   },
+   "MDL": {
+    "P": 0.5227,
+    "R": 0.9643,
+    "F1": 0.678,
+    "n_pred": 3101,
+    "n_gold": 1681,
+    "pred_over_gold": 1.845,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2529,
+    "margin_vs_all_cut": 0.1509
+   },
+   "FINITE_STATE_bigram": {
+    "P": 0.4768,
+    "R": 0.9482,
+    "F1": 0.6346,
+    "n_pred": 3343,
+    "n_gold": 1681,
+    "pred_over_gold": 1.989,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2095,
+    "margin_vs_all_cut": 0.1075
+   },
+   "MULTISCALE_ENSEMBLE": {
+    "P": 0.4809,
+    "R": 0.9875,
+    "F1": 0.6468,
+    "n_pred": 3452,
+    "n_gold": 1681,
+    "pred_over_gold": 2.054,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2217,
+    "margin_vs_all_cut": 0.1197
+   }
+  },
+  "baselines": {
+   "best_random_or_fixed_F1": 0.4251,
+   "all_cut_F1": 0.5271
+  }
+ },
+ "sweeps": {
+  "formulaic_phi": {
+   "dial": "phi",
+   "levels": [
+    0.0,
+    0.15,
+    0.3,
+    0.5,
+    0.75
+   ],
+   "rows": [
+    {
+     "level": 0.0,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 7003,
+      "n_word_types": 1724,
+      "word_hapax_frac": 0.493,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.441,
+      "type_token_ratio": 0.246,
+      "train_boundary_rate": 0.357,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.364,
+       "R": 0.3623,
+       "F1": 0.3631,
+       "n_pred": 1673,
+       "n_gold": 1681,
+       "pred_over_gold": 0.995,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3718,
+       "R": 0.4961,
+       "F1": 0.4251,
+       "n_pred": 2243,
+       "n_gold": 1681,
+       "pred_over_gold": 1.334,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3579,
+       "R": 1.0,
+       "F1": 0.5271,
+       "n_pred": 4697,
+       "n_gold": 1681,
+       "pred_over_gold": 2.794,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.67,
+       "R": 0.6859,
+       "F1": 0.6778,
+       "n_pred": 1721,
+       "n_gold": 1681,
+       "pred_over_gold": 1.024,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2527,
+       "margin_vs_all_cut": 0.1507
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4451,
+       "R": 0.8447,
+       "F1": 0.583,
+       "n_pred": 3190,
+       "n_gold": 1681,
+       "pred_over_gold": 1.898,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1579,
+       "margin_vs_all_cut": 0.0559
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5556,
+       "R": 0.9655,
+       "F1": 0.7053,
+       "n_pred": 2921,
+       "n_gold": 1681,
+       "pred_over_gold": 1.738,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2802,
+       "margin_vs_all_cut": 0.1782
+      },
+      "MDL": {
+       "P": 0.5227,
+       "R": 0.9643,
+       "F1": 0.678,
+       "n_pred": 3101,
+       "n_gold": 1681,
+       "pred_over_gold": 1.845,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2529,
+       "margin_vs_all_cut": 0.1509
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4768,
+       "R": 0.9482,
+       "F1": 0.6346,
+       "n_pred": 3343,
+       "n_gold": 1681,
+       "pred_over_gold": 1.989,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2095,
+       "margin_vs_all_cut": 0.1075
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4809,
+       "R": 0.9875,
+       "F1": 0.6468,
+       "n_pred": 3452,
+       "n_gold": 1681,
+       "pred_over_gold": 2.054,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2217,
+       "margin_vs_all_cut": 0.1197
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4251,
+      "all_cut_F1": 0.5271
+     }
+    },
+    {
+     "level": 0.15,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 16716,
+      "n_word_tokens": 6895,
+      "n_word_types": 1550,
+      "word_hapax_frac": 0.49,
+      "boundary_rate": 0.359,
+      "mean_word_len": 2.424,
+      "type_token_ratio": 0.225,
+      "train_boundary_rate": 0.359,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1644
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3785,
+       "R": 0.379,
+       "F1": 0.3787,
+       "n_pred": 1646,
+       "n_gold": 1644,
+       "pred_over_gold": 1.001,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3907,
+       "R": 0.5219,
+       "F1": 0.4469,
+       "n_pred": 2196,
+       "n_gold": 1644,
+       "pred_over_gold": 1.336,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.358,
+       "R": 1.0,
+       "F1": 0.5273,
+       "n_pred": 4592,
+       "n_gold": 1644,
+       "pred_over_gold": 2.793,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6578,
+       "R": 0.6594,
+       "F1": 0.6586,
+       "n_pred": 1648,
+       "n_gold": 1644,
+       "pred_over_gold": 1.002,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2117,
+       "margin_vs_all_cut": 0.1313
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.437,
+       "R": 0.7737,
+       "F1": 0.5585,
+       "n_pred": 2911,
+       "n_gold": 1644,
+       "pred_over_gold": 1.771,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1116,
+       "margin_vs_all_cut": 0.0312
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.57,
+       "R": 0.924,
+       "F1": 0.705,
+       "n_pred": 2665,
+       "n_gold": 1644,
+       "pred_over_gold": 1.621,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2581,
+       "margin_vs_all_cut": 0.1777
+      },
+      "MDL": {
+       "P": 0.5423,
+       "R": 0.9349,
+       "F1": 0.6865,
+       "n_pred": 2834,
+       "n_gold": 1644,
+       "pred_over_gold": 1.724,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2396,
+       "margin_vs_all_cut": 0.1592
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.484,
+       "R": 0.9203,
+       "F1": 0.6344,
+       "n_pred": 3126,
+       "n_gold": 1644,
+       "pred_over_gold": 1.901,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1875,
+       "margin_vs_all_cut": 0.1071
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4894,
+       "R": 0.9538,
+       "F1": 0.6469,
+       "n_pred": 3204,
+       "n_gold": 1644,
+       "pred_over_gold": 1.949,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2,
+       "margin_vs_all_cut": 0.1196
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4469,
+      "all_cut_F1": 0.5273
+     }
+    },
+    {
+     "level": 0.3,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 16464,
+      "n_word_tokens": 6925,
+      "n_word_types": 1442,
+      "word_hapax_frac": 0.508,
+      "boundary_rate": 0.367,
+      "mean_word_len": 2.377,
+      "type_token_ratio": 0.208,
+      "train_boundary_rate": 0.367,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1715
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3671,
+       "R": 0.3679,
+       "F1": 0.3675,
+       "n_pred": 1719,
+       "n_gold": 1715,
+       "pred_over_gold": 1.002,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3718,
+       "R": 0.4863,
+       "F1": 0.4214,
+       "n_pred": 2243,
+       "n_gold": 1715,
+       "pred_over_gold": 1.308,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3662,
+       "R": 1.0,
+       "F1": 0.5361,
+       "n_pred": 4683,
+       "n_gold": 1715,
+       "pred_over_gold": 2.731,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6396,
+       "R": 0.6303,
+       "F1": 0.6349,
+       "n_pred": 1690,
+       "n_gold": 1715,
+       "pred_over_gold": 0.985,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2135,
+       "margin_vs_all_cut": 0.0988
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4427,
+       "R": 0.7067,
+       "F1": 0.5444,
+       "n_pred": 2738,
+       "n_gold": 1715,
+       "pred_over_gold": 1.597,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.123,
+       "margin_vs_all_cut": 0.0083
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5587,
+       "R": 0.8636,
+       "F1": 0.6784,
+       "n_pred": 2651,
+       "n_gold": 1715,
+       "pred_over_gold": 1.546,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.257,
+       "margin_vs_all_cut": 0.1423
+      },
+      "MDL": {
+       "P": 0.5348,
+       "R": 0.8566,
+       "F1": 0.6584,
+       "n_pred": 2747,
+       "n_gold": 1715,
+       "pred_over_gold": 1.602,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.237,
+       "margin_vs_all_cut": 0.1223
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4742,
+       "R": 0.8624,
+       "F1": 0.6119,
+       "n_pred": 3119,
+       "n_gold": 1715,
+       "pred_over_gold": 1.819,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1905,
+       "margin_vs_all_cut": 0.0758
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4805,
+       "R": 0.8828,
+       "F1": 0.6223,
+       "n_pred": 3151,
+       "n_gold": 1715,
+       "pred_over_gold": 1.837,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2009,
+       "margin_vs_all_cut": 0.0862
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4214,
+      "all_cut_F1": 0.5361
+     }
+    },
+    {
+     "level": 0.5,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 16179,
+      "n_word_tokens": 6866,
+      "n_word_types": 1239,
+      "word_hapax_frac": 0.553,
+      "boundary_rate": 0.37,
+      "mean_word_len": 2.356,
+      "type_token_ratio": 0.18,
+      "train_boundary_rate": 0.368,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1674
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3752,
+       "R": 0.371,
+       "F1": 0.3731,
+       "n_pred": 1655,
+       "n_gold": 1674,
+       "pred_over_gold": 0.989,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.4116,
+       "R": 0.5269,
+       "F1": 0.4621,
+       "n_pred": 2143,
+       "n_gold": 1674,
+       "pred_over_gold": 1.28,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.373,
+       "R": 1.0,
+       "F1": 0.5433,
+       "n_pred": 4488,
+       "n_gold": 1674,
+       "pred_over_gold": 2.681,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.633,
+       "R": 0.6183,
+       "F1": 0.6256,
+       "n_pred": 1635,
+       "n_gold": 1674,
+       "pred_over_gold": 0.977,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.1635,
+       "margin_vs_all_cut": 0.0823
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4246,
+       "R": 0.5687,
+       "F1": 0.4862,
+       "n_pred": 2242,
+       "n_gold": 1674,
+       "pred_over_gold": 1.339,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.0241,
+       "margin_vs_all_cut": -0.0571
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5308,
+       "R": 0.7766,
+       "F1": 0.6306,
+       "n_pred": 2449,
+       "n_gold": 1674,
+       "pred_over_gold": 1.463,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1685,
+       "margin_vs_all_cut": 0.0873
+      },
+      "MDL": {
+       "P": 0.5151,
+       "R": 0.7348,
+       "F1": 0.6056,
+       "n_pred": 2388,
+       "n_gold": 1674,
+       "pred_over_gold": 1.427,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1435,
+       "margin_vs_all_cut": 0.0623
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.457,
+       "R": 0.7676,
+       "F1": 0.5729,
+       "n_pred": 2812,
+       "n_gold": 1674,
+       "pred_over_gold": 1.68,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1108,
+       "margin_vs_all_cut": 0.0296
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4703,
+       "R": 0.7903,
+       "F1": 0.5897,
+       "n_pred": 2813,
+       "n_gold": 1674,
+       "pred_over_gold": 1.68,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1276,
+       "margin_vs_all_cut": 0.0464
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4621,
+      "all_cut_F1": 0.5433
+     }
+    },
+    {
+     "level": 0.75,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 16099,
+      "n_word_tokens": 6971,
+      "n_word_types": 828,
+      "word_hapax_frac": 0.615,
+      "boundary_rate": 0.379,
+      "mean_word_len": 2.309,
+      "type_token_ratio": 0.119,
+      "train_boundary_rate": 0.379,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1673
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3787,
+       "R": 0.3796,
+       "F1": 0.3791,
+       "n_pred": 1677,
+       "n_gold": 1673,
+       "pred_over_gold": 1.002,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.4001,
+       "R": 0.5027,
+       "F1": 0.4456,
+       "n_pred": 2102,
+       "n_gold": 1673,
+       "pred_over_gold": 1.256,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3801,
+       "R": 1.0,
+       "F1": 0.5509,
+       "n_pred": 4401,
+       "n_gold": 1673,
+       "pred_over_gold": 2.631,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6159,
+       "R": 0.5894,
+       "F1": 0.6023,
+       "n_pred": 1601,
+       "n_gold": 1673,
+       "pred_over_gold": 0.957,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.1567,
+       "margin_vs_all_cut": 0.0514
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4451,
+       "R": 0.3849,
+       "F1": 0.4128,
+       "n_pred": 1447,
+       "n_gold": 1673,
+       "pred_over_gold": 0.865,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": -0.0328,
+       "margin_vs_all_cut": -0.1381
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5296,
+       "R": 0.7047,
+       "F1": 0.6048,
+       "n_pred": 2226,
+       "n_gold": 1673,
+       "pred_over_gold": 1.331,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1592,
+       "margin_vs_all_cut": 0.0539
+      },
+      "MDL": {
+       "P": 0.5306,
+       "R": 0.5858,
+       "F1": 0.5568,
+       "n_pred": 1847,
+       "n_gold": 1673,
+       "pred_over_gold": 1.104,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.1112,
+       "margin_vs_all_cut": 0.0059
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.484,
+       "R": 0.7041,
+       "F1": 0.5737,
+       "n_pred": 2434,
+       "n_gold": 1673,
+       "pred_over_gold": 1.455,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1281,
+       "margin_vs_all_cut": 0.0228
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4843,
+       "R": 0.7101,
+       "F1": 0.5759,
+       "n_pred": 2453,
+       "n_gold": 1673,
+       "pred_over_gold": 1.466,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1303,
+       "margin_vs_all_cut": 0.025
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4456,
+      "all_cut_F1": 0.5509
+     }
+    }
+   ]
+  },
+  "hapax_inject": {
+   "dial": "hap",
+   "levels": [
+    0.0,
+    0.15,
+    0.3,
+    0.5,
+    0.7
+   ],
+   "rows": [
+    {
+     "level": 0.0,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 7003,
+      "n_word_types": 1724,
+      "word_hapax_frac": 0.493,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.441,
+      "type_token_ratio": 0.246,
+      "train_boundary_rate": 0.357,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.364,
+       "R": 0.3623,
+       "F1": 0.3631,
+       "n_pred": 1673,
+       "n_gold": 1681,
+       "pred_over_gold": 0.995,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3718,
+       "R": 0.4961,
+       "F1": 0.4251,
+       "n_pred": 2243,
+       "n_gold": 1681,
+       "pred_over_gold": 1.334,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3579,
+       "R": 1.0,
+       "F1": 0.5271,
+       "n_pred": 4697,
+       "n_gold": 1681,
+       "pred_over_gold": 2.794,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.67,
+       "R": 0.6859,
+       "F1": 0.6778,
+       "n_pred": 1721,
+       "n_gold": 1681,
+       "pred_over_gold": 1.024,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2527,
+       "margin_vs_all_cut": 0.1507
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4451,
+       "R": 0.8447,
+       "F1": 0.583,
+       "n_pred": 3190,
+       "n_gold": 1681,
+       "pred_over_gold": 1.898,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1579,
+       "margin_vs_all_cut": 0.0559
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5556,
+       "R": 0.9655,
+       "F1": 0.7053,
+       "n_pred": 2921,
+       "n_gold": 1681,
+       "pred_over_gold": 1.738,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2802,
+       "margin_vs_all_cut": 0.1782
+      },
+      "MDL": {
+       "P": 0.5227,
+       "R": 0.9643,
+       "F1": 0.678,
+       "n_pred": 3101,
+       "n_gold": 1681,
+       "pred_over_gold": 1.845,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2529,
+       "margin_vs_all_cut": 0.1509
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4768,
+       "R": 0.9482,
+       "F1": 0.6346,
+       "n_pred": 3343,
+       "n_gold": 1681,
+       "pred_over_gold": 1.989,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2095,
+       "margin_vs_all_cut": 0.1075
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4809,
+       "R": 0.9875,
+       "F1": 0.6468,
+       "n_pred": 3452,
+       "n_gold": 1681,
+       "pred_over_gold": 2.054,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2217,
+       "margin_vs_all_cut": 0.1197
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4251,
+      "all_cut_F1": 0.5271
+     }
+    },
+    {
+     "level": 0.15,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 16581,
+      "n_word_tokens": 7025,
+      "n_word_types": 2243,
+      "word_hapax_frac": 0.614,
+      "boundary_rate": 0.371,
+      "mean_word_len": 2.36,
+      "type_token_ratio": 0.319,
+      "train_boundary_rate": 0.372,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1659
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3532,
+       "R": 0.358,
+       "F1": 0.3556,
+       "n_pred": 1682,
+       "n_gold": 1659,
+       "pred_over_gold": 1.014,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3893,
+       "R": 0.5057,
+       "F1": 0.44,
+       "n_pred": 2155,
+       "n_gold": 1659,
+       "pred_over_gold": 1.299,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.367,
+       "R": 1.0,
+       "F1": 0.5369,
+       "n_pred": 4521,
+       "n_gold": 1659,
+       "pred_over_gold": 2.725,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6197,
+       "R": 0.5992,
+       "F1": 0.6093,
+       "n_pred": 1604,
+       "n_gold": 1659,
+       "pred_over_gold": 0.967,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.1693,
+       "margin_vs_all_cut": 0.0724
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4348,
+       "R": 0.8264,
+       "F1": 0.5698,
+       "n_pred": 3153,
+       "n_gold": 1659,
+       "pred_over_gold": 1.901,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1298,
+       "margin_vs_all_cut": 0.0329
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5318,
+       "R": 0.9421,
+       "F1": 0.6799,
+       "n_pred": 2939,
+       "n_gold": 1659,
+       "pred_over_gold": 1.772,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2399,
+       "margin_vs_all_cut": 0.143
+      },
+      "MDL": {
+       "P": 0.5085,
+       "R": 0.9536,
+       "F1": 0.6633,
+       "n_pred": 3111,
+       "n_gold": 1659,
+       "pred_over_gold": 1.875,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2233,
+       "margin_vs_all_cut": 0.1264
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4654,
+       "R": 0.9445,
+       "F1": 0.6236,
+       "n_pred": 3367,
+       "n_gold": 1659,
+       "pred_over_gold": 2.03,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1836,
+       "margin_vs_all_cut": 0.0867
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4716,
+       "R": 0.9849,
+       "F1": 0.6378,
+       "n_pred": 3465,
+       "n_gold": 1659,
+       "pred_over_gold": 2.089,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1978,
+       "margin_vs_all_cut": 0.1009
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.44,
+      "all_cut_F1": 0.5369
+     }
+    },
+    {
+     "level": 0.3,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 16133,
+      "n_word_tokens": 7024,
+      "n_word_types": 2778,
+      "word_hapax_frac": 0.698,
+      "boundary_rate": 0.382,
+      "mean_word_len": 2.297,
+      "type_token_ratio": 0.396,
+      "train_boundary_rate": 0.381,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1696
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3927,
+       "R": 0.3915,
+       "F1": 0.3921,
+       "n_pred": 1691,
+       "n_gold": 1696,
+       "pred_over_gold": 0.997,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3875,
+       "R": 0.4811,
+       "F1": 0.4292,
+       "n_pred": 2106,
+       "n_gold": 1696,
+       "pred_over_gold": 1.242,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3835,
+       "R": 1.0,
+       "F1": 0.5543,
+       "n_pred": 4423,
+       "n_gold": 1696,
+       "pred_over_gold": 2.608,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.606,
+       "R": 0.5442,
+       "F1": 0.5735,
+       "n_pred": 1523,
+       "n_gold": 1696,
+       "pred_over_gold": 0.898,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.1443,
+       "margin_vs_all_cut": 0.0192
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4317,
+       "R": 0.8107,
+       "F1": 0.5634,
+       "n_pred": 3185,
+       "n_gold": 1696,
+       "pred_over_gold": 1.878,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1342,
+       "margin_vs_all_cut": 0.0091
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5258,
+       "R": 0.9446,
+       "F1": 0.6755,
+       "n_pred": 3047,
+       "n_gold": 1696,
+       "pred_over_gold": 1.797,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2463,
+       "margin_vs_all_cut": 0.1212
+      },
+      "MDL": {
+       "P": 0.4986,
+       "R": 0.9746,
+       "F1": 0.6597,
+       "n_pred": 3315,
+       "n_gold": 1696,
+       "pred_over_gold": 1.955,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2305,
+       "margin_vs_all_cut": 0.1054
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4573,
+       "R": 0.9251,
+       "F1": 0.6121,
+       "n_pred": 3431,
+       "n_gold": 1696,
+       "pred_over_gold": 2.023,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1829,
+       "margin_vs_all_cut": 0.0578
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.466,
+       "R": 0.9805,
+       "F1": 0.6317,
+       "n_pred": 3569,
+       "n_gold": 1696,
+       "pred_over_gold": 2.104,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2025,
+       "margin_vs_all_cut": 0.0774
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4292,
+      "all_cut_F1": 0.5543
+     }
+    },
+    {
+     "level": 0.5,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 15097,
+      "n_word_tokens": 6947,
+      "n_word_types": 3422,
+      "word_hapax_frac": 0.782,
+      "boundary_rate": 0.405,
+      "mean_word_len": 2.173,
+      "type_token_ratio": 0.493,
+      "train_boundary_rate": 0.405,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1696
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.4098,
+       "R": 0.411,
+       "F1": 0.4104,
+       "n_pred": 1701,
+       "n_gold": 1696,
+       "pred_over_gold": 1.003,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.4196,
+       "R": 0.4906,
+       "F1": 0.4523,
+       "n_pred": 1983,
+       "n_gold": 1696,
+       "pred_over_gold": 1.169,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.4056,
+       "R": 1.0,
+       "F1": 0.5772,
+       "n_pred": 4181,
+       "n_gold": 1696,
+       "pred_over_gold": 2.465,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.5463,
+       "R": 0.4623,
+       "F1": 0.5008,
+       "n_pred": 1435,
+       "n_gold": 1696,
+       "pred_over_gold": 0.846,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": 0.0485,
+       "margin_vs_all_cut": -0.0764
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4346,
+       "R": 0.7836,
+       "F1": 0.5591,
+       "n_pred": 3058,
+       "n_gold": 1696,
+       "pred_over_gold": 1.803,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1068,
+       "margin_vs_all_cut": -0.0181
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5125,
+       "R": 0.9222,
+       "F1": 0.6588,
+       "n_pred": 3052,
+       "n_gold": 1696,
+       "pred_over_gold": 1.8,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2065,
+       "margin_vs_all_cut": 0.0816
+      },
+      "MDL": {
+       "P": 0.485,
+       "R": 0.9805,
+       "F1": 0.649,
+       "n_pred": 3429,
+       "n_gold": 1696,
+       "pred_over_gold": 2.022,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1967,
+       "margin_vs_all_cut": 0.0718
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4615,
+       "R": 0.9127,
+       "F1": 0.6131,
+       "n_pred": 3354,
+       "n_gold": 1696,
+       "pred_over_gold": 1.978,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1608,
+       "margin_vs_all_cut": 0.0359
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4622,
+       "R": 0.9782,
+       "F1": 0.6278,
+       "n_pred": 3589,
+       "n_gold": 1696,
+       "pred_over_gold": 2.116,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1755,
+       "margin_vs_all_cut": 0.0506
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4523,
+      "all_cut_F1": 0.5772
+     }
+    },
+    {
+     "level": 0.7,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 14560,
+      "n_word_tokens": 7012,
+      "n_word_types": 3923,
+      "word_hapax_frac": 0.822,
+      "boundary_rate": 0.426,
+      "mean_word_len": 2.076,
+      "type_token_ratio": 0.559,
+      "train_boundary_rate": 0.426,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1650
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.414,
+       "R": 0.417,
+       "F1": 0.4155,
+       "n_pred": 1662,
+       "n_gold": 1650,
+       "pred_over_gold": 1.007,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.4478,
+       "R": 0.4964,
+       "F1": 0.4708,
+       "n_pred": 1829,
+       "n_gold": 1650,
+       "pred_over_gold": 1.108,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_ALL": {
+       "P": 0.4279,
+       "R": 1.0,
+       "F1": 0.5993,
+       "n_pred": 3856,
+       "n_gold": 1650,
+       "pred_over_gold": 2.337,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.5018,
+       "R": 0.4115,
+       "F1": 0.4522,
+       "n_pred": 1353,
+       "n_gold": 1650,
+       "pred_over_gold": 0.82,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": -0.0186,
+       "margin_vs_all_cut": -0.1471
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4369,
+       "R": 0.7382,
+       "F1": 0.5489,
+       "n_pred": 2788,
+       "n_gold": 1650,
+       "pred_over_gold": 1.69,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.0781,
+       "margin_vs_all_cut": -0.0504
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.4886,
+       "R": 0.8812,
+       "F1": 0.6286,
+       "n_pred": 2976,
+       "n_gold": 1650,
+       "pred_over_gold": 1.804,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1578,
+       "margin_vs_all_cut": 0.0293
+      },
+      "MDL": {
+       "P": 0.4773,
+       "R": 0.98,
+       "F1": 0.6419,
+       "n_pred": 3388,
+       "n_gold": 1650,
+       "pred_over_gold": 2.053,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1711,
+       "margin_vs_all_cut": 0.0426
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4597,
+       "R": 0.8988,
+       "F1": 0.6083,
+       "n_pred": 3226,
+       "n_gold": 1650,
+       "pred_over_gold": 1.955,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1375,
+       "margin_vs_all_cut": 0.009
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4631,
+       "R": 0.9691,
+       "F1": 0.6267,
+       "n_pred": 3453,
+       "n_gold": 1650,
+       "pred_over_gold": 2.093,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1559,
+       "margin_vs_all_cut": 0.0274
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4708,
+      "all_cut_F1": 0.5993
+     }
+    }
+   ]
+  },
+  "damage_dmg": {
+   "dial": "dmg",
+   "levels": [
+    0.0,
+    0.1,
+    0.2,
+    0.35,
+    0.5
+   ],
+   "rows": [
+    {
+     "level": 0.0,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 7003,
+      "n_word_types": 1724,
+      "word_hapax_frac": 0.493,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.441,
+      "type_token_ratio": 0.246,
+      "train_boundary_rate": 0.357,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.364,
+       "R": 0.3623,
+       "F1": 0.3631,
+       "n_pred": 1673,
+       "n_gold": 1681,
+       "pred_over_gold": 0.995,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3718,
+       "R": 0.4961,
+       "F1": 0.4251,
+       "n_pred": 2243,
+       "n_gold": 1681,
+       "pred_over_gold": 1.334,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3579,
+       "R": 1.0,
+       "F1": 0.5271,
+       "n_pred": 4697,
+       "n_gold": 1681,
+       "pred_over_gold": 2.794,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.67,
+       "R": 0.6859,
+       "F1": 0.6778,
+       "n_pred": 1721,
+       "n_gold": 1681,
+       "pred_over_gold": 1.024,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2527,
+       "margin_vs_all_cut": 0.1507
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4451,
+       "R": 0.8447,
+       "F1": 0.583,
+       "n_pred": 3190,
+       "n_gold": 1681,
+       "pred_over_gold": 1.898,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1579,
+       "margin_vs_all_cut": 0.0559
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5556,
+       "R": 0.9655,
+       "F1": 0.7053,
+       "n_pred": 2921,
+       "n_gold": 1681,
+       "pred_over_gold": 1.738,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2802,
+       "margin_vs_all_cut": 0.1782
+      },
+      "MDL": {
+       "P": 0.5227,
+       "R": 0.9643,
+       "F1": 0.678,
+       "n_pred": 3101,
+       "n_gold": 1681,
+       "pred_over_gold": 1.845,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2529,
+       "margin_vs_all_cut": 0.1509
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4768,
+       "R": 0.9482,
+       "F1": 0.6346,
+       "n_pred": 3343,
+       "n_gold": 1681,
+       "pred_over_gold": 1.989,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2095,
+       "margin_vs_all_cut": 0.1075
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4809,
+       "R": 0.9875,
+       "F1": 0.6468,
+       "n_pred": 3452,
+       "n_gold": 1681,
+       "pred_over_gold": 2.054,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2217,
+       "margin_vs_all_cut": 0.1197
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4251,
+      "all_cut_F1": 0.5271
+     }
+    },
+    {
+     "level": 0.1,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 15411,
+      "n_word_tokens": 6902,
+      "n_word_types": 1872,
+      "word_hapax_frac": 0.536,
+      "boundary_rate": 0.393,
+      "mean_word_len": 2.233,
+      "type_token_ratio": 0.271,
+      "train_boundary_rate": 0.39,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1693
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3797,
+       "R": 0.3721,
+       "F1": 0.3759,
+       "n_pred": 1659,
+       "n_gold": 1693,
+       "pred_over_gold": 0.98,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.4195,
+       "R": 0.5015,
+       "F1": 0.4568,
+       "n_pred": 2024,
+       "n_gold": 1693,
+       "pred_over_gold": 1.196,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3978,
+       "R": 1.0,
+       "F1": 0.5692,
+       "n_pred": 4256,
+       "n_gold": 1693,
+       "pred_over_gold": 2.514,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.7089,
+       "R": 0.6515,
+       "F1": 0.679,
+       "n_pred": 1556,
+       "n_gold": 1693,
+       "pred_over_gold": 0.919,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2222,
+       "margin_vs_all_cut": 0.1098
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4604,
+       "R": 0.8009,
+       "F1": 0.5847,
+       "n_pred": 2945,
+       "n_gold": 1693,
+       "pred_over_gold": 1.74,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1279,
+       "margin_vs_all_cut": 0.0155
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5749,
+       "R": 0.9403,
+       "F1": 0.7136,
+       "n_pred": 2769,
+       "n_gold": 1693,
+       "pred_over_gold": 1.636,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2568,
+       "margin_vs_all_cut": 0.1444
+      },
+      "MDL": {
+       "P": 0.5483,
+       "R": 0.9716,
+       "F1": 0.701,
+       "n_pred": 3000,
+       "n_gold": 1693,
+       "pred_over_gold": 1.772,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2442,
+       "margin_vs_all_cut": 0.1318
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4933,
+       "R": 0.9344,
+       "F1": 0.6457,
+       "n_pred": 3207,
+       "n_gold": 1693,
+       "pred_over_gold": 1.894,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1889,
+       "margin_vs_all_cut": 0.0765
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.5051,
+       "R": 0.9852,
+       "F1": 0.6679,
+       "n_pred": 3302,
+       "n_gold": 1693,
+       "pred_over_gold": 1.95,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2111,
+       "margin_vs_all_cut": 0.0987
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4568,
+      "all_cut_F1": 0.5692
+     }
+    },
+    {
+     "level": 0.2,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 13775,
+      "n_word_tokens": 6730,
+      "n_word_types": 1796,
+      "word_hapax_frac": 0.537,
+      "boundary_rate": 0.431,
+      "mean_word_len": 2.047,
+      "type_token_ratio": 0.267,
+      "train_boundary_rate": 0.428,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1629
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.4343,
+       "R": 0.4303,
+       "F1": 0.4323,
+       "n_pred": 1614,
+       "n_gold": 1629,
+       "pred_over_gold": 0.991,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.4583,
+       "R": 0.4923,
+       "F1": 0.4747,
+       "n_pred": 1750,
+       "n_gold": 1629,
+       "pred_over_gold": 1.074,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_ALL": {
+       "P": 0.4376,
+       "R": 1.0,
+       "F1": 0.6087,
+       "n_pred": 3723,
+       "n_gold": 1629,
+       "pred_over_gold": 2.285,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.7054,
+       "R": 0.5807,
+       "F1": 0.637,
+       "n_pred": 1341,
+       "n_gold": 1629,
+       "pred_over_gold": 0.823,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": 0.1623,
+       "margin_vs_all_cut": 0.0283
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4929,
+       "R": 0.7907,
+       "F1": 0.6073,
+       "n_pred": 2613,
+       "n_gold": 1629,
+       "pred_over_gold": 1.604,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1326,
+       "margin_vs_all_cut": -0.0014
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5952,
+       "R": 0.9134,
+       "F1": 0.7208,
+       "n_pred": 2500,
+       "n_gold": 1629,
+       "pred_over_gold": 1.535,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2461,
+       "margin_vs_all_cut": 0.1121
+      },
+      "MDL": {
+       "P": 0.5627,
+       "R": 0.9472,
+       "F1": 0.706,
+       "n_pred": 2742,
+       "n_gold": 1629,
+       "pred_over_gold": 1.683,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2313,
+       "margin_vs_all_cut": 0.0973
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.5192,
+       "R": 0.9147,
+       "F1": 0.6624,
+       "n_pred": 2870,
+       "n_gold": 1629,
+       "pred_over_gold": 1.762,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1877,
+       "margin_vs_all_cut": 0.0537
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.5247,
+       "R": 0.9699,
+       "F1": 0.681,
+       "n_pred": 3011,
+       "n_gold": 1629,
+       "pred_over_gold": 1.848,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2063,
+       "margin_vs_all_cut": 0.0723
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4747,
+      "all_cut_F1": 0.6087
+     }
+    },
+    {
+     "level": 0.35,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 11442,
+      "n_word_tokens": 6374,
+      "n_word_types": 1500,
+      "word_hapax_frac": 0.522,
+      "boundary_rate": 0.495,
+      "mean_word_len": 1.795,
+      "type_token_ratio": 0.235,
+      "train_boundary_rate": 0.493,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1506
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.5076,
+       "R": 0.5073,
+       "F1": 0.5075,
+       "n_pred": 1505,
+       "n_gold": 1506,
+       "pred_over_gold": 0.999,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.5161,
+       "R": 0.4781,
+       "F1": 0.4964,
+       "n_pred": 1395,
+       "n_gold": 1506,
+       "pred_over_gold": 0.926,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_ALL": {
+       "P": 0.5018,
+       "R": 1.0,
+       "F1": 0.6683,
+       "n_pred": 3001,
+       "n_gold": 1506,
+       "pred_over_gold": 1.993,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.7756,
+       "R": 0.5876,
+       "F1": 0.6687,
+       "n_pred": 1141,
+       "n_gold": 1506,
+       "pred_over_gold": 0.758,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": 0.1612,
+       "margin_vs_all_cut": 0.0004
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.5262,
+       "R": 0.7463,
+       "F1": 0.6172,
+       "n_pred": 2136,
+       "n_gold": 1506,
+       "pred_over_gold": 1.418,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1097,
+       "margin_vs_all_cut": -0.0511
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.6564,
+       "R": 0.9349,
+       "F1": 0.7713,
+       "n_pred": 2145,
+       "n_gold": 1506,
+       "pred_over_gold": 1.424,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2638,
+       "margin_vs_all_cut": 0.103
+      },
+      "MDL": {
+       "P": 0.6103,
+       "R": 0.9721,
+       "F1": 0.7498,
+       "n_pred": 2399,
+       "n_gold": 1506,
+       "pred_over_gold": 1.593,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2423,
+       "margin_vs_all_cut": 0.0815
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.5711,
+       "R": 0.9097,
+       "F1": 0.7017,
+       "n_pred": 2399,
+       "n_gold": 1506,
+       "pred_over_gold": 1.593,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1942,
+       "margin_vs_all_cut": 0.0334
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.5748,
+       "R": 0.9774,
+       "F1": 0.7239,
+       "n_pred": 2561,
+       "n_gold": 1506,
+       "pred_over_gold": 1.701,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2164,
+       "margin_vs_all_cut": 0.0556
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.5075,
+      "all_cut_F1": 0.6683
+     }
+    },
+    {
+     "level": 0.5,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 9196,
+      "n_word_tokens": 5867,
+      "n_word_types": 1181,
+      "word_hapax_frac": 0.532,
+      "boundary_rate": 0.573,
+      "mean_word_len": 1.567,
+      "type_token_ratio": 0.201,
+      "train_boundary_rate": 0.572,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1297
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.568,
+       "R": 0.5667,
+       "F1": 0.5673,
+       "n_pred": 1294,
+       "n_gold": 1297,
+       "pred_over_gold": 0.998,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.5734,
+       "R": 0.4518,
+       "F1": 0.5054,
+       "n_pred": 1022,
+       "n_gold": 1297,
+       "pred_over_gold": 0.788,
+       "failure_mode": "UNDER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.5749,
+       "R": 1.0,
+       "F1": 0.7301,
+       "n_pred": 2256,
+       "n_gold": 1297,
+       "pred_over_gold": 1.739,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.8111,
+       "R": 0.5528,
+       "F1": 0.6575,
+       "n_pred": 884,
+       "n_gold": 1297,
+       "pred_over_gold": 0.682,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": 0.0902,
+       "margin_vs_all_cut": -0.0726
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.59,
+       "R": 0.7433,
+       "F1": 0.6578,
+       "n_pred": 1634,
+       "n_gold": 1297,
+       "pred_over_gold": 1.26,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.0905,
+       "margin_vs_all_cut": -0.0723
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.69,
+       "R": 0.9337,
+       "F1": 0.7936,
+       "n_pred": 1755,
+       "n_gold": 1297,
+       "pred_over_gold": 1.353,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2263,
+       "margin_vs_all_cut": 0.0635
+      },
+      "MDL": {
+       "P": 0.6615,
+       "R": 0.9931,
+       "F1": 0.7941,
+       "n_pred": 1947,
+       "n_gold": 1297,
+       "pred_over_gold": 1.501,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2268,
+       "margin_vs_all_cut": 0.064
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.6211,
+       "R": 0.9036,
+       "F1": 0.7362,
+       "n_pred": 1887,
+       "n_gold": 1297,
+       "pred_over_gold": 1.455,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1689,
+       "margin_vs_all_cut": 0.0061
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.632,
+       "R": 0.9877,
+       "F1": 0.7708,
+       "n_pred": 2027,
+       "n_gold": 1297,
+       "pred_over_gold": 1.563,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2035,
+       "margin_vs_all_cut": 0.0407
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.5673,
+      "all_cut_F1": 0.7301
+     }
+    }
+   ]
+  },
+  "site_imbalance": {
+   "dial": "gam",
+   "levels": [
+    0.0,
+    0.6,
+    1.0,
+    1.6,
+    2.4
+   ],
+   "rows": [
+    {
+     "level": 0.0,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 7003,
+      "n_word_types": 1724,
+      "word_hapax_frac": 0.493,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.441,
+      "type_token_ratio": 0.246,
+      "train_boundary_rate": 0.357,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.364,
+       "R": 0.3623,
+       "F1": 0.3631,
+       "n_pred": 1673,
+       "n_gold": 1681,
+       "pred_over_gold": 0.995,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3718,
+       "R": 0.4961,
+       "F1": 0.4251,
+       "n_pred": 2243,
+       "n_gold": 1681,
+       "pred_over_gold": 1.334,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3579,
+       "R": 1.0,
+       "F1": 0.5271,
+       "n_pred": 4697,
+       "n_gold": 1681,
+       "pred_over_gold": 2.794,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.67,
+       "R": 0.6859,
+       "F1": 0.6778,
+       "n_pred": 1721,
+       "n_gold": 1681,
+       "pred_over_gold": 1.024,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2527,
+       "margin_vs_all_cut": 0.1507
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4451,
+       "R": 0.8447,
+       "F1": 0.583,
+       "n_pred": 3190,
+       "n_gold": 1681,
+       "pred_over_gold": 1.898,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1579,
+       "margin_vs_all_cut": 0.0559
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5556,
+       "R": 0.9655,
+       "F1": 0.7053,
+       "n_pred": 2921,
+       "n_gold": 1681,
+       "pred_over_gold": 1.738,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2802,
+       "margin_vs_all_cut": 0.1782
+      },
+      "MDL": {
+       "P": 0.5227,
+       "R": 0.9643,
+       "F1": 0.678,
+       "n_pred": 3101,
+       "n_gold": 1681,
+       "pred_over_gold": 1.845,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2529,
+       "margin_vs_all_cut": 0.1509
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4768,
+       "R": 0.9482,
+       "F1": 0.6346,
+       "n_pred": 3343,
+       "n_gold": 1681,
+       "pred_over_gold": 1.989,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2095,
+       "margin_vs_all_cut": 0.1075
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4809,
+       "R": 0.9875,
+       "F1": 0.6468,
+       "n_pred": 3452,
+       "n_gold": 1681,
+       "pred_over_gold": 2.054,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2217,
+       "margin_vs_all_cut": 0.1197
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4251,
+      "all_cut_F1": 0.5271
+     }
+    },
+    {
+     "level": 0.6,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17062,
+      "n_word_tokens": 7003,
+      "n_word_types": 1721,
+      "word_hapax_frac": 0.49,
+      "boundary_rate": 0.358,
+      "mean_word_len": 2.436,
+      "type_token_ratio": 0.246,
+      "train_boundary_rate": 0.358,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.354,
+       "R": 0.3534,
+       "F1": 0.3537,
+       "n_pred": 1678,
+       "n_gold": 1681,
+       "pred_over_gold": 0.998,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3703,
+       "R": 0.4943,
+       "F1": 0.4234,
+       "n_pred": 2244,
+       "n_gold": 1681,
+       "pred_over_gold": 1.335,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3577,
+       "R": 1.0,
+       "F1": 0.527,
+       "n_pred": 4699,
+       "n_gold": 1681,
+       "pred_over_gold": 2.795,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6684,
+       "R": 0.6811,
+       "F1": 0.6747,
+       "n_pred": 1713,
+       "n_gold": 1681,
+       "pred_over_gold": 1.019,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2513,
+       "margin_vs_all_cut": 0.1477
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4483,
+       "R": 0.8477,
+       "F1": 0.5864,
+       "n_pred": 3179,
+       "n_gold": 1681,
+       "pred_over_gold": 1.891,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.163,
+       "margin_vs_all_cut": 0.0594
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5622,
+       "R": 0.9601,
+       "F1": 0.7091,
+       "n_pred": 2871,
+       "n_gold": 1681,
+       "pred_over_gold": 1.708,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2857,
+       "margin_vs_all_cut": 0.1821
+      },
+      "MDL": {
+       "P": 0.5284,
+       "R": 0.9691,
+       "F1": 0.6839,
+       "n_pred": 3083,
+       "n_gold": 1681,
+       "pred_over_gold": 1.834,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2605,
+       "margin_vs_all_cut": 0.1569
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.479,
+       "R": 0.9435,
+       "F1": 0.6354,
+       "n_pred": 3311,
+       "n_gold": 1681,
+       "pred_over_gold": 1.97,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.212,
+       "margin_vs_all_cut": 0.1084
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4858,
+       "R": 0.9881,
+       "F1": 0.6514,
+       "n_pred": 3419,
+       "n_gold": 1681,
+       "pred_over_gold": 2.034,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.228,
+       "margin_vs_all_cut": 0.1244
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4234,
+      "all_cut_F1": 0.527
+     }
+    },
+    {
+     "level": 1.0,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17073,
+      "n_word_tokens": 7003,
+      "n_word_types": 1717,
+      "word_hapax_frac": 0.486,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.438,
+      "type_token_ratio": 0.245,
+      "train_boundary_rate": 0.358,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3438,
+       "R": 0.3438,
+       "F1": 0.3438,
+       "n_pred": 1681,
+       "n_gold": 1681,
+       "pred_over_gold": 1.0,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3712,
+       "R": 0.4955,
+       "F1": 0.4245,
+       "n_pred": 2244,
+       "n_gold": 1681,
+       "pred_over_gold": 1.335,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.357,
+       "R": 1.0,
+       "F1": 0.5261,
+       "n_pred": 4709,
+       "n_gold": 1681,
+       "pred_over_gold": 2.801,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6711,
+       "R": 0.6859,
+       "F1": 0.6784,
+       "n_pred": 1718,
+       "n_gold": 1681,
+       "pred_over_gold": 1.022,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2539,
+       "margin_vs_all_cut": 0.1523
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4471,
+       "R": 0.8489,
+       "F1": 0.5857,
+       "n_pred": 3192,
+       "n_gold": 1681,
+       "pred_over_gold": 1.899,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1612,
+       "margin_vs_all_cut": 0.0596
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5588,
+       "R": 0.9673,
+       "F1": 0.7083,
+       "n_pred": 2910,
+       "n_gold": 1681,
+       "pred_over_gold": 1.731,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2838,
+       "margin_vs_all_cut": 0.1822
+      },
+      "MDL": {
+       "P": 0.5247,
+       "R": 0.9726,
+       "F1": 0.6817,
+       "n_pred": 3116,
+       "n_gold": 1681,
+       "pred_over_gold": 1.854,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2572,
+       "margin_vs_all_cut": 0.1556
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4779,
+       "R": 0.9435,
+       "F1": 0.6344,
+       "n_pred": 3319,
+       "n_gold": 1681,
+       "pred_over_gold": 1.974,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2099,
+       "margin_vs_all_cut": 0.1083
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4843,
+       "R": 0.9893,
+       "F1": 0.6502,
+       "n_pred": 3434,
+       "n_gold": 1681,
+       "pred_over_gold": 2.043,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2257,
+       "margin_vs_all_cut": 0.1241
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4245,
+      "all_cut_F1": 0.5261
+     }
+    },
+    {
+     "level": 1.6,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17078,
+      "n_word_tokens": 7003,
+      "n_word_types": 1703,
+      "word_hapax_frac": 0.483,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.439,
+      "type_token_ratio": 0.243,
+      "train_boundary_rate": 0.358,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3518,
+       "R": 0.3516,
+       "F1": 0.3517,
+       "n_pred": 1680,
+       "n_gold": 1681,
+       "pred_over_gold": 0.999,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3722,
+       "R": 0.4973,
+       "F1": 0.4258,
+       "n_pred": 2246,
+       "n_gold": 1681,
+       "pred_over_gold": 1.336,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3571,
+       "R": 1.0,
+       "F1": 0.5262,
+       "n_pred": 4708,
+       "n_gold": 1681,
+       "pred_over_gold": 2.801,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.669,
+       "R": 0.6853,
+       "F1": 0.677,
+       "n_pred": 1722,
+       "n_gold": 1681,
+       "pred_over_gold": 1.024,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2512,
+       "margin_vs_all_cut": 0.1508
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4481,
+       "R": 0.843,
+       "F1": 0.5852,
+       "n_pred": 3162,
+       "n_gold": 1681,
+       "pred_over_gold": 1.881,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1594,
+       "margin_vs_all_cut": 0.059
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5441,
+       "R": 0.9578,
+       "F1": 0.694,
+       "n_pred": 2959,
+       "n_gold": 1681,
+       "pred_over_gold": 1.76,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2682,
+       "margin_vs_all_cut": 0.1678
+      },
+      "MDL": {
+       "P": 0.5233,
+       "R": 0.9768,
+       "F1": 0.6815,
+       "n_pred": 3138,
+       "n_gold": 1681,
+       "pred_over_gold": 1.867,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2557,
+       "margin_vs_all_cut": 0.1553
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4759,
+       "R": 0.9405,
+       "F1": 0.632,
+       "n_pred": 3322,
+       "n_gold": 1681,
+       "pred_over_gold": 1.976,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2062,
+       "margin_vs_all_cut": 0.1058
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4812,
+       "R": 0.9833,
+       "F1": 0.6462,
+       "n_pred": 3435,
+       "n_gold": 1681,
+       "pred_over_gold": 2.043,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2204,
+       "margin_vs_all_cut": 0.12
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4258,
+      "all_cut_F1": 0.5262
+     }
+    },
+    {
+     "level": 2.4,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17078,
+      "n_word_tokens": 7003,
+      "n_word_types": 1701,
+      "word_hapax_frac": 0.477,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.439,
+      "type_token_ratio": 0.243,
+      "train_boundary_rate": 0.358,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3369,
+       "R": 0.3379,
+       "F1": 0.3374,
+       "n_pred": 1686,
+       "n_gold": 1681,
+       "pred_over_gold": 1.003,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3709,
+       "R": 0.4967,
+       "F1": 0.4247,
+       "n_pred": 2251,
+       "n_gold": 1681,
+       "pred_over_gold": 1.339,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3562,
+       "R": 1.0,
+       "F1": 0.5253,
+       "n_pred": 4719,
+       "n_gold": 1681,
+       "pred_over_gold": 2.807,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.6737,
+       "R": 0.6865,
+       "F1": 0.68,
+       "n_pred": 1713,
+       "n_gold": 1681,
+       "pred_over_gold": 1.019,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2553,
+       "margin_vs_all_cut": 0.1547
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4494,
+       "R": 0.8447,
+       "F1": 0.5867,
+       "n_pred": 3160,
+       "n_gold": 1681,
+       "pred_over_gold": 1.88,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.162,
+       "margin_vs_all_cut": 0.0614
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5515,
+       "R": 0.9584,
+       "F1": 0.7001,
+       "n_pred": 2921,
+       "n_gold": 1681,
+       "pred_over_gold": 1.738,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2754,
+       "margin_vs_all_cut": 0.1748
+      },
+      "MDL": {
+       "P": 0.5212,
+       "R": 0.9661,
+       "F1": 0.6771,
+       "n_pred": 3116,
+       "n_gold": 1681,
+       "pred_over_gold": 1.854,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2524,
+       "margin_vs_all_cut": 0.1518
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4771,
+       "R": 0.9477,
+       "F1": 0.6347,
+       "n_pred": 3339,
+       "n_gold": 1681,
+       "pred_over_gold": 1.986,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.21,
+       "margin_vs_all_cut": 0.1094
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4816,
+       "R": 0.9881,
+       "F1": 0.6476,
+       "n_pred": 3449,
+       "n_gold": 1681,
+       "pred_over_gold": 2.052,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2229,
+       "margin_vs_all_cut": 0.1223
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4247,
+      "all_cut_F1": 0.5253
+     }
+    }
+   ]
+  },
+  "mixed_convention": {
+   "dial": "mix",
+   "levels": [
+    0.0,
+    0.15,
+    0.3,
+    0.5,
+    0.75
+   ],
+   "rows": [
+    {
+     "level": 0.0,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 7003,
+      "n_word_types": 1724,
+      "word_hapax_frac": 0.493,
+      "boundary_rate": 0.357,
+      "mean_word_len": 2.441,
+      "type_token_ratio": 0.246,
+      "train_boundary_rate": 0.357,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1681
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.364,
+       "R": 0.3623,
+       "F1": 0.3631,
+       "n_pred": 1673,
+       "n_gold": 1681,
+       "pred_over_gold": 0.995,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.3718,
+       "R": 0.4961,
+       "F1": 0.4251,
+       "n_pred": 2243,
+       "n_gold": 1681,
+       "pred_over_gold": 1.334,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.3579,
+       "R": 1.0,
+       "F1": 0.5271,
+       "n_pred": 4697,
+       "n_gold": 1681,
+       "pred_over_gold": 2.794,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.67,
+       "R": 0.6859,
+       "F1": 0.6778,
+       "n_pred": 1721,
+       "n_gold": 1681,
+       "pred_over_gold": 1.024,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2527,
+       "margin_vs_all_cut": 0.1507
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4451,
+       "R": 0.8447,
+       "F1": 0.583,
+       "n_pred": 3190,
+       "n_gold": 1681,
+       "pred_over_gold": 1.898,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1579,
+       "margin_vs_all_cut": 0.0559
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.5556,
+       "R": 0.9655,
+       "F1": 0.7053,
+       "n_pred": 2921,
+       "n_gold": 1681,
+       "pred_over_gold": 1.738,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2802,
+       "margin_vs_all_cut": 0.1782
+      },
+      "MDL": {
+       "P": 0.5227,
+       "R": 0.9643,
+       "F1": 0.678,
+       "n_pred": 3101,
+       "n_gold": 1681,
+       "pred_over_gold": 1.845,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2529,
+       "margin_vs_all_cut": 0.1509
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.4768,
+       "R": 0.9482,
+       "F1": 0.6346,
+       "n_pred": 3343,
+       "n_gold": 1681,
+       "pred_over_gold": 1.989,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2095,
+       "margin_vs_all_cut": 0.1075
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.4809,
+       "R": 0.9875,
+       "F1": 0.6468,
+       "n_pred": 3452,
+       "n_gold": 1681,
+       "pred_over_gold": 2.054,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2217,
+       "margin_vs_all_cut": 0.1197
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4251,
+      "all_cut_F1": 0.5271
+     }
+    },
+    {
+     "level": 0.15,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 7560,
+      "n_word_types": 1632,
+      "word_hapax_frac": 0.495,
+      "boundary_rate": 0.393,
+      "mean_word_len": 2.261,
+      "type_token_ratio": 0.216,
+      "train_boundary_rate": 0.394,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 1827
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.3911,
+       "R": 0.3952,
+       "F1": 0.3931,
+       "n_pred": 1846,
+       "n_gold": 1827,
+       "pred_over_gold": 1.01,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.403,
+       "R": 0.4948,
+       "F1": 0.4442,
+       "n_pred": 2243,
+       "n_gold": 1827,
+       "pred_over_gold": 1.228,
+       "failure_mode": "OVER"
+      },
+      "BASELINE_ALL": {
+       "P": 0.389,
+       "R": 1.0,
+       "F1": 0.5601,
+       "n_pred": 4697,
+       "n_gold": 1827,
+       "pred_over_gold": 2.571,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.7089,
+       "R": 0.6678,
+       "F1": 0.6877,
+       "n_pred": 1721,
+       "n_gold": 1827,
+       "pred_over_gold": 0.942,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2435,
+       "margin_vs_all_cut": 0.1276
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.4824,
+       "R": 0.8424,
+       "F1": 0.6135,
+       "n_pred": 3190,
+       "n_gold": 1827,
+       "pred_over_gold": 1.746,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1693,
+       "margin_vs_all_cut": 0.0534
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.6018,
+       "R": 0.9622,
+       "F1": 0.7405,
+       "n_pred": 2921,
+       "n_gold": 1827,
+       "pred_over_gold": 1.599,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2963,
+       "margin_vs_all_cut": 0.1804
+      },
+      "MDL": {
+       "P": 0.5672,
+       "R": 0.9628,
+       "F1": 0.7139,
+       "n_pred": 3101,
+       "n_gold": 1827,
+       "pred_over_gold": 1.697,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2697,
+       "margin_vs_all_cut": 0.1538
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.5157,
+       "R": 0.9436,
+       "F1": 0.6669,
+       "n_pred": 3343,
+       "n_gold": 1827,
+       "pred_over_gold": 1.83,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2227,
+       "margin_vs_all_cut": 0.1068
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.5223,
+       "R": 0.9869,
+       "F1": 0.6831,
+       "n_pred": 3452,
+       "n_gold": 1827,
+       "pred_over_gold": 1.889,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2389,
+       "margin_vs_all_cut": 0.123
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4442,
+      "all_cut_F1": 0.5601
+     }
+    },
+    {
+     "level": 0.3,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 8114,
+      "n_word_types": 1511,
+      "word_hapax_frac": 0.5,
+      "boundary_rate": 0.428,
+      "mean_word_len": 2.107,
+      "type_token_ratio": 0.186,
+      "train_boundary_rate": 0.428,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 2007
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.4331,
+       "R": 0.4335,
+       "F1": 0.4333,
+       "n_pred": 2009,
+       "n_gold": 2007,
+       "pred_over_gold": 1.001,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.444,
+       "R": 0.4963,
+       "F1": 0.4687,
+       "n_pred": 2243,
+       "n_gold": 2007,
+       "pred_over_gold": 1.118,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_ALL": {
+       "P": 0.4273,
+       "R": 1.0,
+       "F1": 0.5987,
+       "n_pred": 4697,
+       "n_gold": 2007,
+       "pred_over_gold": 2.34,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.7449,
+       "R": 0.6388,
+       "F1": 0.6878,
+       "n_pred": 1721,
+       "n_gold": 2007,
+       "pred_over_gold": 0.857,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.2191,
+       "margin_vs_all_cut": 0.0891
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.5279,
+       "R": 0.8391,
+       "F1": 0.6481,
+       "n_pred": 3190,
+       "n_gold": 2007,
+       "pred_over_gold": 1.589,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1794,
+       "margin_vs_all_cut": 0.0494
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.6587,
+       "R": 0.9586,
+       "F1": 0.7808,
+       "n_pred": 2921,
+       "n_gold": 2007,
+       "pred_over_gold": 1.455,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.3121,
+       "margin_vs_all_cut": 0.1821
+      },
+      "MDL": {
+       "P": 0.6233,
+       "R": 0.9631,
+       "F1": 0.7569,
+       "n_pred": 3101,
+       "n_gold": 2007,
+       "pred_over_gold": 1.545,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2882,
+       "margin_vs_all_cut": 0.1582
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.5654,
+       "R": 0.9417,
+       "F1": 0.7065,
+       "n_pred": 3343,
+       "n_gold": 2007,
+       "pred_over_gold": 1.666,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2378,
+       "margin_vs_all_cut": 0.1078
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.5724,
+       "R": 0.9846,
+       "F1": 0.7239,
+       "n_pred": 3452,
+       "n_gold": 2007,
+       "pred_over_gold": 1.72,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2552,
+       "margin_vs_all_cut": 0.1252
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.4687,
+      "all_cut_F1": 0.5987
+     }
+    },
+    {
+     "level": 0.5,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 8882,
+      "n_word_types": 1333,
+      "word_hapax_frac": 0.53,
+      "boundary_rate": 0.477,
+      "mean_word_len": 1.925,
+      "type_token_ratio": 0.15,
+      "train_boundary_rate": 0.475,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 2263
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.481,
+       "R": 0.4741,
+       "F1": 0.4775,
+       "n_pred": 2231,
+       "n_gold": 2263,
+       "pred_over_gold": 0.986,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.5025,
+       "R": 0.498,
+       "F1": 0.5002,
+       "n_pred": 2243,
+       "n_gold": 2263,
+       "pred_over_gold": 0.991,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_ALL": {
+       "P": 0.4818,
+       "R": 1.0,
+       "F1": 0.6503,
+       "n_pred": 4697,
+       "n_gold": 2263,
+       "pred_over_gold": 2.076,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.7972,
+       "R": 0.6063,
+       "F1": 0.6888,
+       "n_pred": 1721,
+       "n_gold": 2263,
+       "pred_over_gold": 0.76,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": 0.1886,
+       "margin_vs_all_cut": 0.0385
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.595,
+       "R": 0.8387,
+       "F1": 0.6961,
+       "n_pred": 3190,
+       "n_gold": 2263,
+       "pred_over_gold": 1.41,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.1959,
+       "margin_vs_all_cut": 0.0458
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.7381,
+       "R": 0.9527,
+       "F1": 0.8318,
+       "n_pred": 2921,
+       "n_gold": 2263,
+       "pred_over_gold": 1.291,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.3316,
+       "margin_vs_all_cut": 0.1815
+      },
+      "MDL": {
+       "P": 0.7033,
+       "R": 0.9638,
+       "F1": 0.8132,
+       "n_pred": 3101,
+       "n_gold": 2263,
+       "pred_over_gold": 1.37,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.313,
+       "margin_vs_all_cut": 0.1629
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.6339,
+       "R": 0.9364,
+       "F1": 0.756,
+       "n_pred": 3343,
+       "n_gold": 2263,
+       "pred_over_gold": 1.477,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2558,
+       "margin_vs_all_cut": 0.1057
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.6448,
+       "R": 0.9837,
+       "F1": 0.779,
+       "n_pred": 3452,
+       "n_gold": 2263,
+       "pred_over_gold": 1.525,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2788,
+       "margin_vs_all_cut": 0.1287
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.5002,
+      "all_cut_F1": 0.6503
+     }
+    },
+    {
+     "level": 0.75,
+     "diag": {
+      "n_tablets": 1400,
+      "n_signs": 17094,
+      "n_word_tokens": 9877,
+      "n_word_types": 994,
+      "word_hapax_frac": 0.542,
+      "boundary_rate": 0.54,
+      "mean_word_len": 1.731,
+      "type_token_ratio": 0.101,
+      "train_boundary_rate": 0.535,
+      "fixed_period": 2,
+      "n_train": 980,
+      "n_test": 420,
+      "test_gold_boundaries": 2596
+     },
+     "models": {
+      "BASELINE_RANDOM": {
+       "P": 0.5569,
+       "R": 0.5374,
+       "F1": 0.547,
+       "n_pred": 2505,
+       "n_gold": 2596,
+       "pred_over_gold": 0.965,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_FIXED": {
+       "P": 0.5707,
+       "R": 0.4931,
+       "F1": 0.529,
+       "n_pred": 2243,
+       "n_gold": 2596,
+       "pred_over_gold": 0.864,
+       "failure_mode": "balanced"
+      },
+      "BASELINE_ALL": {
+       "P": 0.5527,
+       "R": 1.0,
+       "F1": 0.7119,
+       "n_pred": 4697,
+       "n_gold": 2596,
+       "pred_over_gold": 1.809,
+       "failure_mode": "OVER"
+      },
+      "CUE_TP_min": {
+       "P": 0.8605,
+       "R": 0.5705,
+       "F1": 0.6861,
+       "n_pred": 1721,
+       "n_gold": 2596,
+       "pred_over_gold": 0.663,
+       "failure_mode": "UNDER",
+       "margin_vs_best_baseline": 0.1391,
+       "margin_vs_all_cut": -0.0258
+      },
+      "CUE_BranchEntropy": {
+       "P": 0.6834,
+       "R": 0.8398,
+       "F1": 0.7535,
+       "n_pred": 3190,
+       "n_gold": 2596,
+       "pred_over_gold": 1.229,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2065,
+       "margin_vs_all_cut": 0.0416
+      },
+      "BAYESIAN_unigram": {
+       "P": 0.8415,
+       "R": 0.9468,
+       "F1": 0.8911,
+       "n_pred": 2921,
+       "n_gold": 2596,
+       "pred_over_gold": 1.125,
+       "failure_mode": "balanced",
+       "margin_vs_best_baseline": 0.3441,
+       "margin_vs_all_cut": 0.1792
+      },
+      "MDL": {
+       "P": 0.8062,
+       "R": 0.963,
+       "F1": 0.8777,
+       "n_pred": 3101,
+       "n_gold": 2596,
+       "pred_over_gold": 1.195,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.3307,
+       "margin_vs_all_cut": 0.1658
+      },
+      "FINITE_STATE_bigram": {
+       "P": 0.7218,
+       "R": 0.9295,
+       "F1": 0.8126,
+       "n_pred": 3343,
+       "n_gold": 2596,
+       "pred_over_gold": 1.288,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2656,
+       "margin_vs_all_cut": 0.1007
+      },
+      "MULTISCALE_ENSEMBLE": {
+       "P": 0.7387,
+       "R": 0.9823,
+       "F1": 0.8433,
+       "n_pred": 3452,
+       "n_gold": 2596,
+       "pred_over_gold": 1.33,
+       "failure_mode": "OVER",
+       "margin_vs_best_baseline": 0.2963,
+       "margin_vs_all_cut": 0.1314
+      }
+     },
+     "baselines": {
+      "best_random_or_fixed_F1": 0.547,
+      "all_cut_F1": 0.7119
+     }
+    }
+   ]
+  }
+ },
+ "LA_like_combined": {
+  "diag": {
+   "n_tablets": 1400,
+   "n_signs": 10818,
+   "n_word_tokens": 6676,
+   "n_word_types": 1939,
+   "word_hapax_frac": 0.794,
+   "boundary_rate": 0.56,
+   "mean_word_len": 1.62,
+   "type_token_ratio": 0.29,
+   "train_boundary_rate": 0.558,
+   "fixed_period": 2,
+   "n_train": 980,
+   "n_test": 420,
+   "test_gold_boundaries": 1580
+  },
+  "models": {
+   "BASELINE_RANDOM": {
+    "P": 0.5541,
+    "R": 0.5481,
+    "F1": 0.5511,
+    "n_pred": 1563,
+    "n_gold": 1580,
+    "pred_over_gold": 0.989,
+    "failure_mode": "balanced"
+   },
+   "BASELINE_FIXED": {
+    "P": 0.5841,
+    "R": 0.4791,
+    "F1": 0.5264,
+    "n_pred": 1296,
+    "n_gold": 1580,
+    "pred_over_gold": 0.82,
+    "failure_mode": "UNDER"
+   },
+   "BASELINE_ALL": {
+    "P": 0.5655,
+    "R": 1.0,
+    "F1": 0.7225,
+    "n_pred": 2794,
+    "n_gold": 1580,
+    "pred_over_gold": 1.768,
+    "failure_mode": "OVER"
+   },
+   "CUE_TP_min": {
+    "P": 0.6517,
+    "R": 0.4051,
+    "F1": 0.4996,
+    "n_pred": 982,
+    "n_gold": 1580,
+    "pred_over_gold": 0.622,
+    "failure_mode": "UNDER",
+    "margin_vs_best_baseline": -0.0515,
+    "margin_vs_all_cut": -0.2229
+   },
+   "CUE_BranchEntropy": {
+    "P": 0.5816,
+    "R": 0.7108,
+    "F1": 0.6397,
+    "n_pred": 1931,
+    "n_gold": 1580,
+    "pred_over_gold": 1.222,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.0886,
+    "margin_vs_all_cut": -0.0828
+   },
+   "BAYESIAN_unigram": {
+    "P": 0.614,
+    "R": 0.8386,
+    "F1": 0.7089,
+    "n_pred": 2158,
+    "n_gold": 1580,
+    "pred_over_gold": 1.366,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.1578,
+    "margin_vs_all_cut": -0.0136
+   },
+   "MDL": {
+    "P": 0.6072,
+    "R": 0.907,
+    "F1": 0.7274,
+    "n_pred": 2360,
+    "n_gold": 1580,
+    "pred_over_gold": 1.494,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.1763,
+    "margin_vs_all_cut": 0.0049
+   },
+   "FINITE_STATE_bigram": {
+    "P": 0.5802,
+    "R": 0.8291,
+    "F1": 0.6826,
+    "n_pred": 2258,
+    "n_gold": 1580,
+    "pred_over_gold": 1.429,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.1315,
+    "margin_vs_all_cut": -0.0399
+   },
+   "MULTISCALE_ENSEMBLE": {
+    "P": 0.5927,
+    "R": 0.9101,
+    "F1": 0.7179,
+    "n_pred": 2426,
+    "n_gold": 1580,
+    "pred_over_gold": 1.535,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.1668,
+    "margin_vs_all_cut": -0.0046
+   }
+  },
+  "baselines": {
+   "best_random_or_fixed_F1": 0.5511,
+   "all_cut_F1": 0.7225
+  }
+ },
+ "LB_like_reference": {
+  "diag": {
+   "n_tablets": 1400,
+   "n_signs": 19007,
+   "n_word_tokens": 7141,
+   "n_word_types": 2000,
+   "word_hapax_frac": 0.474,
+   "boundary_rate": 0.326,
+   "mean_word_len": 2.662,
+   "type_token_ratio": 0.28,
+   "train_boundary_rate": 0.326,
+   "fixed_period": 3,
+   "n_train": 980,
+   "n_test": 420,
+   "test_gold_boundaries": 1692
+  },
+  "models": {
+   "BASELINE_RANDOM": {
+    "P": 0.3274,
+    "R": 0.3268,
+    "F1": 0.3271,
+    "n_pred": 1689,
+    "n_gold": 1692,
+    "pred_over_gold": 0.998,
+    "failure_mode": "balanced"
+   },
+   "BASELINE_FIXED": {
+    "P": 0.3574,
+    "R": 0.3363,
+    "F1": 0.3465,
+    "n_pred": 1592,
+    "n_gold": 1692,
+    "pred_over_gold": 0.941,
+    "failure_mode": "balanced"
+   },
+   "BASELINE_ALL": {
+    "P": 0.3268,
+    "R": 1.0,
+    "F1": 0.4926,
+    "n_pred": 5177,
+    "n_gold": 1692,
+    "pred_over_gold": 3.06,
+    "failure_mode": "OVER"
+   },
+   "CUE_TP_min": {
+    "P": 0.6463,
+    "R": 0.7204,
+    "F1": 0.6814,
+    "n_pred": 1886,
+    "n_gold": 1692,
+    "pred_over_gold": 1.115,
+    "failure_mode": "balanced",
+    "margin_vs_best_baseline": 0.3349,
+    "margin_vs_all_cut": 0.1888
+   },
+   "CUE_BranchEntropy": {
+    "P": 0.4012,
+    "R": 0.8611,
+    "F1": 0.5473,
+    "n_pred": 3632,
+    "n_gold": 1692,
+    "pred_over_gold": 2.147,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2008,
+    "margin_vs_all_cut": 0.0547
+   },
+   "BAYESIAN_unigram": {
+    "P": 0.5203,
+    "R": 0.9391,
+    "F1": 0.6696,
+    "n_pred": 3054,
+    "n_gold": 1692,
+    "pred_over_gold": 1.805,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.3231,
+    "margin_vs_all_cut": 0.177
+   },
+   "MDL": {
+    "P": 0.5128,
+    "R": 0.9462,
+    "F1": 0.6651,
+    "n_pred": 3122,
+    "n_gold": 1692,
+    "pred_over_gold": 1.845,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.3186,
+    "margin_vs_all_cut": 0.1725
+   },
+   "FINITE_STATE_bigram": {
+    "P": 0.4442,
+    "R": 0.9616,
+    "F1": 0.6077,
+    "n_pred": 3663,
+    "n_gold": 1692,
+    "pred_over_gold": 2.165,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2612,
+    "margin_vs_all_cut": 0.1151
+   },
+   "MULTISCALE_ENSEMBLE": {
+    "P": 0.4487,
+    "R": 0.9805,
+    "F1": 0.6157,
+    "n_pred": 3697,
+    "n_gold": 1692,
+    "pred_over_gold": 2.185,
+    "failure_mode": "OVER",
+    "margin_vs_best_baseline": 0.2692,
+    "margin_vs_all_cut": 0.1231
+   }
+  },
+  "baselines": {
+   "best_random_or_fixed_F1": 0.3465,
+   "all_cut_F1": 0.4926
+  }
+ }
+}

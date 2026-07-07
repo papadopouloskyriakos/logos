@@ -1,0 +1,49 @@
+J1 ANETAKI PUBLIC-EXPOSURE AUDIT — web capture, 2026-07-07
+Environment: WebSearch available; WebFetch of greekreporter.com returned HTTP 403 (popular-press
+paywall/bot-block) — snippet-level evidence only for that item. No editio-princeps text was
+retrievable online.
+
+=== WebSearch #1: "Anetaki Knossos Linear A KN Zg 57 Zg 58 ivory ring longest inscription" ===
+Result links:
+- academia.edu/114586901  (Chiapello 2024 pre-publication prediction — already in registry)
+- mnamon.sns.it Linear A page
+- academia.edu/143537543  (Rjabchikov, "Decipherment of two Records ... Ivory Mirror" — already in registry)
+- greekreporter.com/2026/03/30/minoan-ivory-scepter-longest-linear-a-inscription/  (popular press, 2026-03-30)
+- biblicalarchaeology.org (popular press)
+- labrujulaverde.com 2025-03 (popular press)
+- en.wikipedia.org/wiki/Linear_A
+- diggingupthepast.net (popular press)
+- sites.google.com/view/minoan-script (fringe "decipherment")
+Summary returned: 2024 Anetaki (Knossos) ivory scepter = ring + handle, both fully inscribed;
+ring = single elephant-tusk piece, two bored holes; found in "Fetish Shrine"; inscription in
+metopes with logograms (animals, vessels, textiles, hides); one face has 12 quadrupeds in metopes.
+PIs: Kanta, Nakassis, Palaima, Perna. NO transliterated sign sequences reported in any snippet.
+
+=== WebSearch #2: "Kanta Anetaki II Neopalatial Room Ivory Repository Linear A publication 2025 2026" ===
+Result links include:
+- scribd + ejournals.lib.uoc.gr/Ariadne/article/download/1841/1751  (the Kanta et al. overview, Ariadne Suppl. 5)
+- greekreporter.com/2026/03/30/...  (popular press, 2026-03-30)
+- worldhistory.org/image/20265/ (photo)
+- languagehat.com, diggingupthepast, labrujulaverde (popular press)
+- academia.edu/114586901 (Chiapello 2024)
+- classics.uc.edu/nestor Future Lectures/Conferences
+Summary returned: overview published 2025 in Ariadne (Suppl. 5), pp. 27-43. Object from
+Neopalatial building (1700-1450 BCE), Anetaki plot; found in "Ivory Deposit"/Repository
+(semi-subterranean). NEW EVENT: at conference "Reconsidering LM IA Pottery Sequences and
+Chronologies" (June 2025), Kanta & Charitos presented "Knossos Anetaki plot: The Neopalatial
+Room 1 and its Ivory Repository" — a CONFERENCE TALK, not a published transliteration.
+
+=== WebSearch #3: '"Anetaki II" OR "Ivory Repository" Kanta editio princeps Linear A transliteration published INSTAP' ===
+No result indicated that the full edition ("Anetaki II") has been published or that any
+transliteration is public. Only the 2025 Ariadne overview + fringe/popular items surfaced.
+
+=== WebFetch greekreporter.com/2026/03/30/... ===
+HTTP 403 Forbidden — content not retrievable. Classified as popular-press recap of the 2024/2025
+Ariadne overview on the basis of outlet type and search snippet; NO evidence it contains
+transliterations (popular outlets in this cluster reproduce the overview's logogram/metope
+description, not sign-group readings).
+
+CONCLUSION (web leg): No public source — scholarly or popular — carries a transliterated
+sign-group sequence from KN Zg 57 or KN Zg 58. The only primary epigraphic source remains the
+2024/2025 Kanta et al. Ariadne overview (already vaulted, sha 87dad27b…57d2). The full edition
+Anetaki II is confirmed still forthcoming/unpublished as of 2026-07-07.

@@ -1,0 +1,770 @@
+{
+ "experiment": "C3_linear_b_substitution_calibration",
+ "seed": 20260708,
+ "n_null": 300,
+ "non_circular": "generation + graph use sign IDENTITY only; LB (C,V) values used solely to GRADE.",
+ "corpus": {
+  "source": "DĀMOS Mycenaean (items.jsonl)",
+  "wordform_tokens": 13562,
+  "wordform_types": 4946,
+  "types_len_ge2": 4946,
+  "scorable_signs": 73,
+  "sign_pairs_graded": 2628
+ },
+ "analysis_A_signpair_recovery": {
+  "scorable_signs": 73,
+  "scorable_sign_pairs": 2628,
+  "relation_counts": {
+   "spelling_variant": 9,
+   "cross": 1985,
+   "same_vowel": 512,
+   "same_consonant": 122
+  },
+  "auc": {
+   "same_vowel": {
+    "method_substgraph_weight": {
+     "auc": 0.5362,
+     "n_pos": 512,
+     "n_neg": 2116
+    },
+    "baseline_frequency": {
+     "auc": 0.5072,
+     "n_pos": 512,
+     "n_neg": 2116
+    },
+    "baseline_editdistance_exist": {
+     "auc": 0.505,
+     "n_pos": 512,
+     "n_neg": 2116
+    },
+    "baseline_context_cosine": {
+     "auc": 0.5582,
+     "n_pos": 512,
+     "n_neg": 2116
+    },
+    "baseline_formula_longframe": {
+     "auc": 0.5609,
+     "n_pos": 512,
+     "n_neg": 2116
+    }
+   },
+   "same_consonant": {
+    "method_substgraph_weight": {
+     "auc": 0.6327,
+     "n_pos": 122,
+     "n_neg": 2506
+    },
+    "baseline_frequency": {
+     "auc": 0.5683,
+     "n_pos": 122,
+     "n_neg": 2506
+    },
+    "baseline_editdistance_exist": {
+     "auc": 0.5523,
+     "n_pos": 122,
+     "n_neg": 2506
+    },
+    "baseline_context_cosine": {
+     "auc": 0.6586,
+     "n_pos": 122,
+     "n_neg": 2506
+    },
+    "baseline_formula_longframe": {
+     "auc": 0.6719,
+     "n_pos": 122,
+     "n_neg": 2506
+    }
+   },
+   "spelling_variant": {
+    "method_substgraph_weight": {
+     "auc": 0.5259,
+     "n_pos": 9,
+     "n_neg": 2619
+    },
+    "baseline_frequency": {
+     "auc": 0.3273,
+     "n_pos": 9,
+     "n_neg": 2619
+    },
+    "baseline_editdistance_exist": {
+     "auc": 0.5149,
+     "n_pos": 9,
+     "n_neg": 2619
+    },
+    "baseline_context_cosine": {
+     "auc": 0.668,
+     "n_pos": 9,
+     "n_neg": 2619
+    },
+    "baseline_formula_longframe": {
+     "auc": 0.6631,
+     "n_pos": 9,
+     "n_neg": 2619
+    }
+   },
+   "any_phon": {
+    "method_substgraph_weight": {
+     "auc": 0.563,
+     "n_pos": 643,
+     "n_neg": 1985
+    },
+    "baseline_frequency": {
+     "auc": 0.5193,
+     "n_pos": 643,
+     "n_neg": 1985
+    },
+    "baseline_editdistance_exist": {
+     "auc": 0.517,
+     "n_pos": 643,
+     "n_neg": 1985
+    },
+    "baseline_context_cosine": {
+     "auc": 0.5905,
+     "n_pos": 643,
+     "n_neg": 1985
+    },
+    "baseline_formula_longframe": {
+     "auc": 0.5959,
+     "n_pos": 643,
+     "n_neg": 1985
+    }
+   }
+  }
+ },
+ "degree_preserving_null_sweep": [
+  {
+   "top_k_edges": 20,
+   "any_phon": {
+    "obs_rate": 0.75,
+    "null_mean": 0.4858,
+    "null_sd": 0.0806,
+    "lift": 1.544,
+    "z": 3.28,
+    "p": 0.0066,
+    "n_scored": 20
+   },
+   "same_vowel": {
+    "obs_rate": 0.4,
+    "null_mean": 0.3467,
+    "null_sd": 0.0739,
+    "lift": 1.154,
+    "z": 0.72,
+    "p": 0.3289,
+    "n_scored": 20
+   },
+   "same_consonant": {
+    "obs_rate": 0.35,
+    "null_mean": 0.1392,
+    "null_sd": 0.0551,
+    "lift": 2.515,
+    "z": 3.82,
+    "p": 0.0066,
+    "n_scored": 20
+   }
+  },
+  {
+   "top_k_edges": 40,
+   "any_phon": {
+    "obs_rate": 0.625,
+    "null_mean": 0.4461,
+    "null_sd": 0.0501,
+    "lift": 1.401,
+    "z": 3.57,
+    "p": 0.0033,
+    "n_scored": 40
+   },
+   "same_vowel": {
+    "obs_rate": 0.4,
+    "null_mean": 0.3383,
+    "null_sd": 0.0453,
+    "lift": 1.182,
+    "z": 1.36,
+    "p": 0.1262,
+    "n_scored": 40
+   },
+   "same_consonant": {
+    "obs_rate": 0.225,
+    "null_mean": 0.1078,
+    "null_sd": 0.0327,
+    "lift": 2.088,
+    "z": 3.59,
+    "p": 0.0033,
+    "n_scored": 40
+   }
+  },
+  {
+   "top_k_edges": 80,
+   "any_phon": {
+    "obs_rate": 0.5625,
+    "null_mean": 0.4006,
+    "null_sd": 0.0341,
+    "lift": 1.404,
+    "z": 4.74,
+    "p": 0.0033,
+    "n_scored": 80
+   },
+   "same_vowel": {
+    "obs_rate": 0.3625,
+    "null_mean": 0.2975,
+    "null_sd": 0.0292,
+    "lift": 1.218,
+    "z": 2.23,
+    "p": 0.0199,
+    "n_scored": 80
+   },
+   "same_consonant": {
+    "obs_rate": 0.2,
+    "null_mean": 0.1031,
+    "null_sd": 0.02,
+    "lift": 1.94,
+    "z": 4.84,
+    "p": 0.0033,
+    "n_scored": 80
+   }
+  },
+  {
+   "top_k_edges": 160,
+   "any_phon": {
+    "obs_rate": 0.5,
+    "null_mean": 0.367,
+    "null_sd": 0.0207,
+    "lift": 1.362,
+    "z": 6.42,
+    "p": 0.0033,
+    "n_scored": 160
+   },
+   "same_vowel": {
+    "obs_rate": 0.3625,
+    "null_mean": 0.2844,
+    "null_sd": 0.0198,
+    "lift": 1.275,
+    "z": 3.94,
+    "p": 0.0033,
+    "n_scored": 160
+   },
+   "same_consonant": {
+    "obs_rate": 0.1375,
+    "null_mean": 0.0826,
+    "null_sd": 0.011,
+    "lift": 1.665,
+    "z": 4.99,
+    "p": 0.0033,
+    "n_scored": 160
+   }
+  },
+  {
+   "top_k_edges": 320,
+   "any_phon": {
+    "obs_rate": 0.3656,
+    "null_mean": 0.2962,
+    "null_sd": 0.0116,
+    "lift": 1.234,
+    "z": 5.99,
+    "p": 0.0033,
+    "n_scored": 320
+   },
+   "same_vowel": {
+    "obs_rate": 0.2719,
+    "null_mean": 0.2289,
+    "null_sd": 0.0107,
+    "lift": 1.188,
+    "z": 4.03,
+    "p": 0.0033,
+    "n_scored": 320
+   },
+   "same_consonant": {
+    "obs_rate": 0.0938,
+    "null_mean": 0.0673,
+    "null_sd": 0.0064,
+    "lift": 1.393,
+    "z": 4.16,
+    "p": 0.0033,
+    "n_scored": 320
+   }
+  }
+ ],
+ "analysis_B_wordpair_recovery": {
+  "n_word_minimal_pairs": 21308,
+  "n_graded_word_minimal_pairs": 20311,
+  "n_freq_matched_random_negatives": 60933,
+  "class_counts": {
+   "spelling_variant": 62,
+   "same_vowel": 4605,
+   "same_consonant": 1581,
+   "morphophonological_final_sameC": 788,
+   "scribal_error_cross": 14063
+  },
+  "auc_vs_freqmatched_random": {
+   "spelling_variant": {
+    "method_substgraph_weight": {
+     "auc": 1.0,
+     "n_pos": 62
+    },
+    "baseline_editdistance": {
+     "auc": 1.0,
+     "n_pos": 62
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5285,
+     "n_pos": 62
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5285,
+     "n_pos": 62
+    }
+   },
+   "same_vowel": {
+    "method_substgraph_weight": {
+     "auc": 1.0,
+     "n_pos": 4605
+    },
+    "baseline_editdistance": {
+     "auc": 1.0,
+     "n_pos": 4605
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5017,
+     "n_pos": 4605
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5017,
+     "n_pos": 4605
+    }
+   },
+   "same_consonant": {
+    "method_substgraph_weight": {
+     "auc": 1.0,
+     "n_pos": 1581
+    },
+    "baseline_editdistance": {
+     "auc": 1.0,
+     "n_pos": 1581
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5083,
+     "n_pos": 1581
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5083,
+     "n_pos": 1581
+    }
+   },
+   "morphophonological_final_sameC": {
+    "method_substgraph_weight": {
+     "auc": 1.0,
+     "n_pos": 788
+    },
+    "baseline_editdistance": {
+     "auc": 1.0,
+     "n_pos": 788
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5121,
+     "n_pos": 788
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5121,
+     "n_pos": 788
+    }
+   },
+   "scribal_error_cross": {
+    "method_substgraph_weight": {
+     "auc": 1.0,
+     "n_pos": 14063
+    },
+    "baseline_editdistance": {
+     "auc": 1.0,
+     "n_pos": 14063
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5003,
+     "n_pos": 14063
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5003,
+     "n_pos": 14063
+    }
+   }
+  },
+  "auc_class_vs_cross_minimalpairs": {
+   "spelling_variant": {
+    "method_substgraph_weight": {
+     "auc": 0.3626,
+     "n_pos": 62,
+     "n_neg": 14063
+    },
+    "baseline_editdistance": {
+     "auc": 0.5,
+     "n_pos": 62,
+     "n_neg": 14063
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5282,
+     "n_pos": 62,
+     "n_neg": 14063
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5282,
+     "n_pos": 62,
+     "n_neg": 14063
+    }
+   },
+   "same_vowel": {
+    "method_substgraph_weight": {
+     "auc": 0.6119,
+     "n_pos": 4605,
+     "n_neg": 14063
+    },
+    "baseline_editdistance": {
+     "auc": 0.5,
+     "n_pos": 4605,
+     "n_neg": 14063
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5014,
+     "n_pos": 4605,
+     "n_neg": 14063
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5014,
+     "n_pos": 4605,
+     "n_neg": 14063
+    }
+   },
+   "same_consonant": {
+    "method_substgraph_weight": {
+     "auc": 0.7039,
+     "n_pos": 1581,
+     "n_neg": 14063
+    },
+    "baseline_editdistance": {
+     "auc": 0.5,
+     "n_pos": 1581,
+     "n_neg": 14063
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.508,
+     "n_pos": 1581,
+     "n_neg": 14063
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.508,
+     "n_pos": 1581,
+     "n_neg": 14063
+    }
+   },
+   "morphophonological_final_sameC": {
+    "method_substgraph_weight": {
+     "auc": 0.7435,
+     "n_pos": 788,
+     "n_neg": 14063
+    },
+    "baseline_editdistance": {
+     "auc": 0.5,
+     "n_pos": 788,
+     "n_neg": 14063
+    },
+    "baseline_context_jaccard": {
+     "auc": 0.5118,
+     "n_pos": 788,
+     "n_neg": 14063
+    },
+    "baseline_formula_sharedslot": {
+     "auc": 0.5118,
+     "n_pos": 788,
+     "n_neg": 14063
+    }
+   }
+  }
+ },
+ "top_recovered_examples": {
+  "same_vowel": [
+   {
+    "pair": [
+     "KA",
+     "TA"
+    ],
+    "weight": 47
+   },
+   {
+    "pair": [
+     "KO",
+     "TO"
+    ],
+    "weight": 46
+   },
+   {
+    "pair": [
+     "RO",
+     "TO"
+    ],
+    "weight": 45
+   },
+   {
+    "pair": [
+     "TO",
+     "JO"
+    ],
+    "weight": 44
+   },
+   {
+    "pair": [
+     "KA",
+     "RA"
+    ],
+    "weight": 44
+   },
+   {
+    "pair": [
+     "RO",
+     "JO"
+    ],
+    "weight": 42
+   },
+   {
+    "pair": [
+     "WO",
+     "TO"
+    ],
+    "weight": 42
+   },
+   {
+    "pair": [
+     "RA",
+     "TA"
+    ],
+    "weight": 41
+   },
+   {
+    "pair": [
+     "WO",
+     "RO"
+    ],
+    "weight": 38
+   },
+   {
+    "pair": [
+     "NO",
+     "TO"
+    ],
+    "weight": 37
+   }
+  ],
+  "same_consonant": [
+   {
+    "pair": [
+     "JA",
+     "JO"
+    ],
+    "weight": 98
+   },
+   {
+    "pair": [
+     "TO",
+     "TA"
+    ],
+    "weight": 60
+   },
+   {
+    "pair": [
+     "RO",
+     "RA"
+    ],
+    "weight": 49
+   },
+   {
+    "pair": [
+     "KA",
+     "KO"
+    ],
+    "weight": 46
+   },
+   {
+    "pair": [
+     "TE",
+     "TA"
+    ],
+    "weight": 43
+   },
+   {
+    "pair": [
+     "WO",
+     "WE"
+    ],
+    "weight": 42
+   },
+   {
+    "pair": [
+     "TO",
+     "TE"
+    ],
+    "weight": 41
+   },
+   {
+    "pair": [
+     "KE",
+     "KO"
+    ],
+    "weight": 38
+   },
+   {
+    "pair": [
+     "KE",
+     "KA"
+    ],
+    "weight": 34
+   },
+   {
+    "pair": [
+     "WO",
+     "WA"
+    ],
+    "weight": 32
+   }
+  ],
+  "spelling_variant": [
+   {
+    "pair": [
+     "A2",
+     "A"
+    ],
+    "weight": 16
+   },
+   {
+    "pair": [
+     "A3",
+     "A"
+    ],
+    "weight": 13
+   },
+   {
+    "pair": [
+     "TA2",
+     "TA"
+    ],
+    "weight": 8
+   },
+   {
+    "pair": [
+     "RA2",
+     "RA"
+    ],
+    "weight": 7
+   },
+   {
+    "pair": [
+     "RA",
+     "RA3"
+    ],
+    "weight": 5
+   },
+   {
+    "pair": [
+     "RO",
+     "RO2"
+    ],
+    "weight": 5
+   },
+   {
+    "pair": [
+     "A3",
+     "A2"
+    ],
+    "weight": 4
+   },
+   {
+    "pair": [
+     "PU2",
+     "PU"
+    ],
+    "weight": 4
+   },
+   {
+    "pair": [
+     "RA2",
+     "RA3"
+    ],
+    "weight": 0
+   }
+  ],
+  "cross": [
+   {
+    "pair": [
+     "U",
+     "WE"
+    ],
+    "weight": 51
+   },
+   {
+    "pair": [
+     "KO",
+     "TA"
+    ],
+    "weight": 47
+   },
+   {
+    "pair": [
+     "JA",
+     "TO"
+    ],
+    "weight": 41
+   },
+   {
+    "pair": [
+     "KA",
+     "TO"
+    ],
+    "weight": 40
+   },
+   {
+    "pair": [
+     "TO",
+     "RA"
+    ],
+    "weight": 40
+   },
+   {
+    "pair": [
+     "E",
+     "A"
+    ],
+    "weight": 39
+   },
+   {
+    "pair": [
+     "NO",
+     "TA"
+    ],
+    "weight": 39
+   },
+   {
+    "pair": [
+     "WO",
+     "RA"
+    ],
+    "weight": 39
+   },
+   {
+    "pair": [
+     "U",
+     "WO"
+    ],
+    "weight": 39
+   },
+   {
+    "pair": [
+     "RO",
+     "TA"
+    ],
+    "weight": 38
+   }
+  ]
+ },
+ "relation_definitions": {
+  "same_vowel": "differing signs share vowel, differ in consonant",
+  "same_consonant": "differing signs share consonant, differ in vowel",
+  "spelling_variant": "allograph doublet (same value modulo trailing digit)",
+  "morphophonological_final_sameC": "same_consonant substitution in the WORD-FINAL slot",
+  "scribal_error_cross": "minimal pair sharing no feature and not an allograph (slip/unrelated)"
+ }
+}

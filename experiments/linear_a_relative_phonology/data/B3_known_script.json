@@ -1,0 +1,403 @@
+{
+ "task": "B3_known_script_segmentation_calibration",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "corpus": {
+  "source": "DAMOS Linear B (per-tablet reconstruction)",
+  "n_multiword_tablets": 2202,
+  "n_train": 1541,
+  "n_test": 661,
+  "test_signs": 12362,
+  "test_gaps": 11701,
+  "test_gold_boundaries": 3152,
+  "train_boundary_rate": 0.2611,
+  "mean_wordlen_signs": 3.291,
+  "fixed_period": 3
+ },
+ "baseline_f1": {
+  "random": 0.2724,
+  "fixed_rate": 0.3134,
+  "all_boundaries": 0.4244,
+  "best": 0.3134
+ },
+ "results": {
+  "BASELINE_RANDOM": {
+   "family": "baseline",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": 0.277,
+    "recall": 0.2681,
+    "f1": 0.2724,
+    "tp": 845,
+    "fp": 2206,
+    "fn": 2307
+   },
+   "n_pred_boundaries": 3051,
+   "downstream": {
+    "cv_auc_7fold": 0.8071,
+    "subst_samefeat_precision": 0.2597,
+    "subst_n_edges": 1621,
+    "morph_G_typed_bits": 0.079
+   }
+  },
+  "BASELINE_FIXED": {
+   "family": "baseline",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": 0.2909,
+    "recall": 0.3398,
+    "f1": 0.3134,
+    "tp": 1071,
+    "fp": 2611,
+    "fn": 2081
+   },
+   "n_pred_boundaries": 3682,
+   "downstream": {
+    "cv_auc_7fold": 0.7893,
+    "subst_samefeat_precision": 0.2596,
+    "subst_n_edges": 1637,
+    "morph_G_typed_bits": 0.1697
+   }
+  },
+  "BASELINE_ALL": {
+   "family": "baseline",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": 0.2694,
+    "recall": 1.0,
+    "f1": 0.4244,
+    "tp": 3152,
+    "fp": 8549,
+    "fn": 0
+   },
+   "n_pred_boundaries": 11701,
+   "downstream": {
+    "cv_auc_7fold": 0.7321,
+    "subst_samefeat_precision": null,
+    "subst_n_edges": null,
+    "morph_G_typed_bits": null
+   }
+  },
+  "CUE_TP_min": {
+   "family": "boundary_classifier",
+   "transferable_to_LA": true,
+   "boundary": {
+    "precision": 0.4367,
+    "recall": 0.5761,
+    "f1": 0.4969,
+    "tp": 1816,
+    "fp": 2342,
+    "fn": 1336
+   },
+   "n_pred_boundaries": 4158,
+   "downstream": {
+    "cv_auc_7fold": 0.7571,
+    "subst_samefeat_precision": 0.2583,
+    "subst_n_edges": 1932,
+    "morph_G_typed_bits": 0.1175
+   }
+  },
+  "CUE_BranchEntropy": {
+   "family": "boundary_classifier",
+   "transferable_to_LA": true,
+   "boundary": {
+    "precision": 0.356,
+    "recall": 0.8445,
+    "f1": 0.5008,
+    "tp": 2662,
+    "fp": 4816,
+    "fn": 490
+   },
+   "n_pred_boundaries": 7478,
+   "downstream": {
+    "cv_auc_7fold": 0.675,
+    "subst_samefeat_precision": 0.2488,
+    "subst_n_edges": 2062,
+    "morph_G_typed_bits": 0.1967
+   }
+  },
+  "BAYESIAN_unigram": {
+   "family": "bayesian",
+   "transferable_to_LA": true,
+   "boundary": {
+    "precision": 0.4629,
+    "recall": 0.8836,
+    "f1": 0.6075,
+    "tp": 2785,
+    "fp": 3231,
+    "fn": 367
+   },
+   "n_pred_boundaries": 6016,
+   "downstream": {
+    "cv_auc_7fold": 0.7821,
+    "subst_samefeat_precision": 0.2913,
+    "subst_n_edges": 1325,
+    "morph_G_typed_bits": 0.4173
+   }
+  },
+  "MDL": {
+   "family": "mdl",
+   "transferable_to_LA": true,
+   "boundary": {
+    "precision": 0.4236,
+    "recall": 0.8626,
+    "f1": 0.5682,
+    "tp": 2719,
+    "fp": 3700,
+    "fn": 433
+   },
+   "n_pred_boundaries": 6419,
+   "downstream": {
+    "cv_auc_7fold": 0.7429,
+    "subst_samefeat_precision": 0.3345,
+    "subst_n_edges": 828,
+    "morph_G_typed_bits": 0.5585
+   }
+  },
+  "FINITE_STATE_bigram": {
+   "family": "finite_state",
+   "transferable_to_LA": true,
+   "boundary": {
+    "precision": 0.4036,
+    "recall": 0.901,
+    "f1": 0.5575,
+    "tp": 2840,
+    "fp": 4197,
+    "fn": 312
+   },
+   "n_pred_boundaries": 7037,
+   "downstream": {
+    "cv_auc_7fold": 0.7679,
+    "subst_samefeat_precision": 0.264,
+    "subst_n_edges": 1754,
+    "morph_G_typed_bits": 0.3324
+   }
+  },
+  "MULTISCALE_ENSEMBLE": {
+   "family": "ensemble",
+   "transferable_to_LA": true,
+   "boundary": {
+    "precision": 0.3837,
+    "recall": 0.9248,
+    "f1": 0.5424,
+    "tp": 2915,
+    "fp": 4682,
+    "fn": 237
+   },
+   "n_pred_boundaries": 7597,
+   "downstream": {
+    "cv_auc_7fold": 0.7107,
+    "subst_samefeat_precision": 0.2838,
+    "subst_n_edges": 1346,
+    "morph_G_typed_bits": 0.2107
+   }
+  },
+  "SUP_CLF_localcue(0.5)": {
+   "family": "supervised_localcue",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": 0.4475,
+    "recall": 0.0974,
+    "f1": 0.16,
+    "tp": 307,
+    "fp": 379,
+    "fn": 2845
+   },
+   "n_pred_boundaries": 686,
+   "downstream": {
+    "cv_auc_7fold": 0.7179,
+    "subst_samefeat_precision": 0.4108,
+    "subst_n_edges": 241,
+    "morph_G_typed_bits": 0.1602
+   }
+  },
+  "SUP_CLF_localcue(rate)": {
+   "family": "supervised_localcue",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": 0.4318,
+    "recall": 0.4185,
+    "f1": 0.425,
+    "tp": 1319,
+    "fp": 1736,
+    "fn": 1833
+   },
+   "n_pred_boundaries": 3055,
+   "downstream": {
+    "cv_auc_7fold": 0.7571,
+    "subst_samefeat_precision": 0.2726,
+    "subst_n_edges": 1460,
+    "morph_G_typed_bits": 0.0644
+   }
+  },
+  "_REF_GOLD_segmentation": {
+   "family": "reference",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "downstream": {
+    "cv_auc_7fold": 0.7536,
+    "subst_samefeat_precision": 0.2825,
+    "subst_n_edges": 1246,
+    "morph_G_typed_bits": 0.2674
+   }
+  },
+  "_REF_PACKED_wholetablet": {
+   "family": "reference",
+   "transferable_to_LA": false,
+   "boundary": {
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "downstream": {
+    "cv_auc_7fold": 0.7786,
+    "subst_samefeat_precision": 0.0,
+    "subst_n_edges": 1,
+    "morph_G_typed_bits": 0.0986
+   }
+  }
+ },
+ "validation": {
+  "CUE_TP_min": {
+   "f1": 0.4969,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.1878,
+    0.2601
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.145,
+    0.2217
+   ],
+   "transferable_to_LA": true,
+   "VALIDATED_for_LA": true,
+   "note": ""
+  },
+  "CUE_BranchEntropy": {
+   "f1": 0.5008,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.206,
+    0.2497
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.1615,
+    0.2107
+   ],
+   "transferable_to_LA": true,
+   "VALIDATED_for_LA": true,
+   "note": ""
+  },
+  "BAYESIAN_unigram": {
+   "f1": 0.6075,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.3161,
+    0.353
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.2719,
+    0.3158
+   ],
+   "transferable_to_LA": true,
+   "VALIDATED_for_LA": true,
+   "note": ""
+  },
+  "MDL": {
+   "f1": 0.5682,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.2751,
+    0.315
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.231,
+    0.2777
+   ],
+   "transferable_to_LA": true,
+   "VALIDATED_for_LA": true,
+   "note": ""
+  },
+  "FINITE_STATE_bigram": {
+   "f1": 0.5575,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.2632,
+    0.3053
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.2209,
+    0.2655
+   ],
+   "transferable_to_LA": true,
+   "VALIDATED_for_LA": true,
+   "note": ""
+  },
+  "MULTISCALE_ENSEMBLE": {
+   "f1": 0.5424,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.2495,
+    0.2893
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.2054,
+    0.2509
+   ],
+   "transferable_to_LA": true,
+   "VALIDATED_for_LA": true,
+   "note": ""
+  },
+  "SUP_CLF_localcue(0.5)": {
+   "f1": 0.16,
+   "beats_random": false,
+   "beats_fixed": false,
+   "beats_all_boundaries_baseline": false,
+   "f1_gap_vs_random_CI95": [
+    -0.1422,
+    -0.0795
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    -0.1849,
+    -0.1188
+   ],
+   "transferable_to_LA": false,
+   "VALIDATED_for_LA": false,
+   "note": "local-cue SUPERVISED reference (uses gold labels): NOT transferable to LA and, notably, weaker than the unsupervised lexicon models -- segmentation here is driven by global lexicon structure, not local gap cues"
+  },
+  "SUP_CLF_localcue(rate)": {
+   "f1": 0.425,
+   "beats_random": true,
+   "beats_fixed": true,
+   "beats_all_boundaries_baseline": true,
+   "f1_gap_vs_random_CI95": [
+    0.1281,
+    0.1786
+   ],
+   "f1_gap_vs_fixed_CI95": [
+    0.0825,
+    0.1406
+   ],
+   "transferable_to_LA": false,
+   "VALIDATED_for_LA": false,
+   "note": "local-cue SUPERVISED reference (uses gold labels): NOT transferable to LA and, notably, weaker than the unsupervised lexicon models -- segmentation here is driven by global lexicon structure, not local gap cues"
+  }
+ },
+ "non_circularity": "gold boundaries + LB vowel values used ONLY to grade; never a model input. SUP_CLF is a labelled ceiling only, flagged non-transferable to LA."
+}
