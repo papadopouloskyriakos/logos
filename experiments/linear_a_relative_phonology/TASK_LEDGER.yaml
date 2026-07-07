@@ -21,7 +21,8 @@ tasks:
     entry_gate: "Foundry data/wp3_cv_recovery.json + scripts/wp3_cv_recovery.py + wp1_symmetry_break.py present"
     required_outputs: [reports/A_ORIGINAL_RESULT_RECONSTRUCTION.md, data/A1_recompute.json]
     tests: ["recomputed AUC within tolerance of published; seeds/splits documented"]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — REPRODUCED exactly (0.744/0.835/p0.01) + found exp(log(20)) filter bug; 0.835 is freq-dominated"
     next_task_on_success: A2_multiplicity
     next_task_on_failure: A2_multiplicity   # audit continues regardless
 
@@ -29,7 +30,8 @@ tasks:
     work_package: A
     objective: "Was p~0.035 corrected for feature-family/segmentation/model/threshold/seed/site/sign-inventory/post-hoc search? Report unadjusted, FWER, FDR-q, end-to-end search-adjusted."
     dependencies: [A1_reconstruct]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — position survives NO correction (Bonf×13 0.455); only log_freq survives family-wise"
     required_outputs: [reports/A_MULTIPLICITY_AUDIT.md, data/A2_multiplicity.json]
     next_task_on_success: A3_replications
     next_task_on_failure: A3_replications
@@ -38,7 +40,8 @@ tasks:
     work_package: A
     objective: "3+ genuinely distinct implementations (position-distribution / Bayesian latent class / sequence-FSM latent class), not sharing all decisive assumptions"
     dependencies: [A1_reconstruct]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — EXPLORATORY_FREQUENCY_ARTIFACT; 2 unsupervised models FAIL; oriented null p0.146"
     required_outputs: [reports/A_INDEPENDENT_REPLICATIONS.md, data/A3_replications.json]
     next_task_on_success: A4_grouped
     next_task_on_failure: A4_grouped
@@ -47,7 +50,8 @@ tasks:
     work_package: A
     objective: "Grouped eval: leave-one-site-out, leave-one-series-out, leave-one-freq-band-out, chronological holdout"
     dependencies: [A3_replications]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — REFUTE-AS-STATED; collapses under freq-band-disjoint split (position-only 0.481=chance)"
     required_outputs: [reports/A_GROUPED_GENERALIZATION.md, data/A4_grouped.json]
     next_task_on_success: A5_degradation
     next_task_on_failure: A5_degradation
@@ -56,7 +60,8 @@ tasks:
     work_package: A
     objective: "Degrade opaque LB toward LA along SEPARATE axes (size/hapax/site-imbalance/damage/seg-uncertainty/layout/scribe/seq-length/notation) -> full response surface, not just '1.7x below power'"
     dependencies: [A3_replications]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — REFUTE+NO_POWER; flat non-sig surface (undegraded LB p~0.16)"
     required_outputs: [reports/A_DEGRADATION_RESPONSE_SURFACE.md, data/A5_surface.json]
     next_task_on_success: A6_nulls
     next_task_on_failure: A6_nulls
@@ -65,7 +70,8 @@ tasks:
     work_package: A
     objective: "Complete nulls incl. best-of-model/segmentation/seed selection nulls"
     dependencies: [A2_multiplicity, A3_replications]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — CV_ANALOGUE_REFUTED; fails end-to-end null battery; best_of_model p0.129"
     required_outputs: [reports/A_END_TO_END_NULLS.md, data/A6_nulls.json]
     verdict_options: [CV_ANALOGUE_REPLICATED, CV_ANALOGUE_EXPLORATORY_ONLY, CV_ANALOGUE_REFUTED, CV_ANALOGUE_INCOMPLETE]
     next_task_on_success: B1_representations

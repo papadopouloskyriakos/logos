@@ -1,0 +1,250 @@
+{
+ "meta": {
+  "seed": 20260708,
+  "task": "A2_multiplicity_audit",
+  "note": "single implementation shared with A1 (imported primitives); LB labels grade only.",
+  "inventories": {
+   "n_signs_int77": 77,
+   "n_signs_explog74": 74,
+   "n_universe_freq10": 80
+  }
+ },
+ "selection_degrees_of_freedom": {
+  "1_feature_family_search": {
+   "what": "position/initial_rate reported as THE single best symmetry breaker",
+   "alternatives_effectively_tried": {
+    "computed_distributional_features": 7,
+    "atlas_channels_nominal": 13,
+    "atlas_channels_internal_singlefeature_available_now": 2
+   }
+  },
+  "2_freq_threshold": {
+   "what": "freq>=20 inventory cut",
+   "alternatives_effectively_tried": 5,
+   "grid": [
+    10,
+    15,
+    20,
+    25,
+    30
+   ],
+   "note": "continuous DOF; 5-point grid is a conservative discretization"
+  },
+  "3_folds_and_seed": {
+   "what": "7-fold CV + seed 20260708",
+   "alternatives_effectively_tried": {
+    "fold_counts": [
+     5,
+     7,
+     10
+    ],
+    "seeds_sampled": [
+     20260708,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  "4_model_family": {
+   "what": "L2 logistic regression",
+   "alternatives_effectively_tried": ">=3 (LDA / single-threshold / tree)",
+   "note": "the CV perm null re-fits the SAME model under permutation, so it is honest wrt overfitting; model SELECTION remains an uncorrected DOF"
+  },
+  "5_analogue_choice": {
+   "what": "Linear B chosen among readable syllabaries",
+   "alternatives_effectively_tried": ">=2-3 (Cypriot Greek syllabary, etc.)",
+   "note": "no non-LB loader in scope; folded in analytically, not empirically"
+  }
+ },
+ "I_single_feature_position": {
+  "claim": "position (initial_rate) AUC 0.744, unadjusted perm_p 0.035 = 'best symmetry breaker'",
+  "per_feature_family_77signs": [
+   {
+    "feature": "initial_rate",
+    "auc": 0.744,
+    "abs_auc_minus_half": 0.244,
+    "perm_p_one_sided": 0.035,
+    "perm_p_two_sided": 0.072,
+    "holm_adj_p_two_sided": 0.36,
+    "bh_fdr_q_two_sided": 0.168
+   },
+   {
+    "feature": "final_rate",
+    "auc": 0.517,
+    "abs_auc_minus_half": 0.017,
+    "perm_p_one_sided": 0.4443,
+    "perm_p_two_sided": 0.9105,
+    "holm_adj_p_two_sided": 1.0,
+    "bh_fdr_q_two_sided": 1.0
+   },
+   {
+    "feature": "mean_pos",
+    "auc": 0.319,
+    "abs_auc_minus_half": 0.181,
+    "perm_p_one_sided": 0.9115,
+    "perm_p_two_sided": 0.1864,
+    "holm_adj_p_two_sided": 0.7456,
+    "bh_fdr_q_two_sided": 0.3262
+   },
+   {
+    "feature": "lone_rate",
+    "auc": 0.5,
+    "abs_auc_minus_half": 0.0,
+    "perm_p_one_sided": 1.0,
+    "perm_p_two_sided": 1.0,
+    "holm_adj_p_two_sided": 1.0,
+    "bh_fdr_q_two_sided": 1.0
+   },
+   {
+    "feature": "lnbr_ent",
+    "auc": 0.564,
+    "abs_auc_minus_half": 0.064,
+    "perm_p_one_sided": 0.3348,
+    "perm_p_two_sided": 0.6672,
+    "holm_adj_p_two_sided": 1.0,
+    "bh_fdr_q_two_sided": 0.9341
+   },
+   {
+    "feature": "rnbr_ent",
+    "auc": 0.8,
+    "abs_auc_minus_half": 0.3,
+    "perm_p_one_sided": 0.014,
+    "perm_p_two_sided": 0.0275,
+    "holm_adj_p_two_sided": 0.165,
+    "bh_fdr_q_two_sided": 0.0963
+   },
+   {
+    "feature": "log_freq",
+    "auc": 0.878,
+    "abs_auc_minus_half": 0.378,
+    "perm_p_one_sided": 0.0015,
+    "perm_p_two_sided": 0.0025,
+    "holm_adj_p_two_sided": 0.0175,
+    "bh_fdr_q_two_sided": 0.0175
+   }
+  ],
+  "initial_rate_on_74signs": {
+   "auc": 0.759,
+   "perm_p_one_sided": 0.027
+  },
+  "unadjusted_p_one_sided_initial_rate_77": 0.035,
+  "the_actual_best_feature_by_p": "log_freq",
+  "family_wise_correction_over_atlas": {
+   "family_size_used_feature_family": 7,
+   "bonferroni_p_initial_rate_x7": 0.245,
+   "bonferroni_p_initial_rate_x13_atlas_nominal": 0.455,
+   "holm_adj_p_initial_rate_two_sided_over7": 0.36,
+   "bh_fdr_q_initial_rate_two_sided_over7": 0.168
+  },
+  "best_of_K_search_adjusted": {
+   "channel_only_fixed_freq20": {
+    "obs_best_stat_abs_auc_minus_half": 0.3725,
+    "obs_best_config": [
+     "log_freq",
+     20,
+     0.872
+    ],
+    "K": 1000,
+    "p_search_adjusted": 0.023,
+    "null_best_mean": 0.2018,
+    "null_best_p95": 0.3358
+   },
+   "channel_x_threshold": {
+    "obs_best_stat_abs_auc_minus_half": 0.3827,
+    "obs_best_config": [
+     "log_freq",
+     10,
+     0.883
+    ],
+    "K": 1000,
+    "p_search_adjusted": 0.03,
+    "null_best_mean": 0.2313,
+    "null_best_p95": 0.3592
+   },
+   "position_subfamily_x_threshold": {
+    "obs_best_stat_abs_auc_minus_half": 0.2594,
+    "obs_best_config": [
+     "initial_rate",
+     20,
+     0.759
+    ],
+    "K": 1000,
+    "p_search_adjusted": 0.1628,
+    "null_best_mean": 0.1764,
+    "null_best_p95": 0.3231
+   }
+  }
+ },
+ "II_seven_feature_cv": {
+  "claim": "7-fold CV AUC 0.835, perm_p 0.01 (n=200)",
+  "label_perm_through_fit_is_honest_wrt_overfitting": true,
+  "recomputed_perm_p_A1": {
+   "explog74": 0.01,
+   "int77": 0.01
+  },
+  "config_search_not_covered_by_that_p": [
+   "freq threshold",
+   "fold count",
+   "seed",
+   "model family",
+   "analogue"
+  ],
+  "best_of_selection_cv_search_adjusted": {
+   "obs_best_cv_auc_over_config_grid": 0.8485,
+   "obs_best_config": {
+    "threshold": 25,
+    "folds": 5,
+    "seed": 1,
+    "auc": 0.848
+   },
+   "K": 200,
+   "n_configs": 18,
+   "config_grid": {
+    "thresholds": [
+     15,
+     20,
+     25
+    ],
+    "folds": [
+     5,
+     7,
+     10
+    ],
+    "seeds": [
+     20260708,
+     1
+    ]
+   },
+   "p_search_adjusted": 0.0299,
+   "null_best_mean": 0.5502,
+   "null_best_p95": 0.8123
+  },
+  "ablation_reminder_from_A1": {
+   "all": 0.835,
+   "log_freq_only": 0.838,
+   "position_only_74": 0.67,
+   "position_only_77": 0.586,
+   "reading": "the CV AUC is a frequency prior (log_freq_only>=all); the position-only structure is 0.586-0.67"
+  }
+ },
+ "naive_garden_of_forking_paths_product": {
+  "feature_family": 7,
+  "atlas_nominal": 13,
+  "freq_thresholds": 5,
+  "fold_counts": 3,
+  "seeds_effective": "1 used / unbounded available (>=4 sampled)",
+  "model_families": "logreg used / >=3 available (LDA, threshold, tree)",
+  "analogues": "LB used / >=2-3 readable syllabaries available (Cypriot Greek, etc.) -- NOT empirically integrated here",
+  "illustrative_config_count_internal_only": 420
+ },
+ "verdicts": {
+  "single_feature_position_survives_bonferroni_over_7": false,
+  "single_feature_position_survives_bonferroni_over_13_atlas": false,
+  "single_feature_position_survives_best_of_K_channel_x_threshold": true,
+  "position_is_the_best_single_feature": false,
+  "seven_feature_cv_labelperm_p_survives": true,
+  "seven_feature_cv_survives_best_of_selection_config_search": true,
+  "headline": "SINGLE-FEATURE POSITION CLAIM: DOWNGRADED \u2014 does not survive multiplicity; and position is NOT even the best single feature (log_freq is). 7-FEATURE CV: the label-perm p=0.01 is honest wrt overfitting and survives config-search, BUT the AUC is a frequency prior (log_freq_only>=all), so it is not evidence of positional/relative phonological structure."
+ }
+}

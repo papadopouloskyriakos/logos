@@ -1,0 +1,2165 @@
+{
+ "meta": {
+  "seed": 20260708,
+  "damos_wordforms": 13562,
+  "n_signs": 77,
+  "n_vowels": 5,
+  "min_freq": 20,
+  "n_perm": 200,
+  "feats": [
+   "initial_rate",
+   "final_rate",
+   "mean_pos",
+   "lone_rate",
+   "lnbr_ent",
+   "rnbr_ent",
+   "log_freq"
+  ],
+  "note": "known LB vowel values grade benchmarks ONLY, never a model input"
+ },
+ "baselines": {
+  "ungrouped_in_sample_all_feats": 0.897,
+  "sign_grouped_7fold_all_feats": 0.828,
+  "sign_grouped_7fold_position_only": 0.778,
+  "sign_grouped_7fold_logfreq_only": 0.792,
+  "foundry_single_feature_position_auc": 0.744,
+  "foundry_7feat_cv_auc": 0.835,
+  "a3_M1_all_auc": 0.828,
+  "a3_M1_logfreq_only_auc": 0.838
+ },
+ "feature_domain_grouped": {
+  "leave_one_site_out": {
+   "type": "feature_domain_LOGO",
+   "grouping": "site (ishort)",
+   "all_feats": {
+    "per_group": {
+     "PY": {
+      "auc": 0.887,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 6661
+     },
+     "KN": {
+      "auc": 0.884,
+      "n_test_signs": 74,
+      "n_test_vowels": 5,
+      "n_words": 5626
+     },
+     "TH": {
+      "auc": 0.885,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 801
+     },
+     "MY": {
+      "auc": 0.838,
+      "n_test_signs": 57,
+      "n_test_vowels": 5,
+      "n_words": 367
+     }
+    },
+    "n_groups_scored": 4,
+    "mean_group_auc": 0.873,
+    "median_group_auc": 0.885,
+    "pooled_auc": 0.76,
+    "perm_p_pooled": 0.0498,
+    "perm_p_mean": 0.01,
+    "null_pooled_mean": 0.624,
+    "null_pooled_95": 0.756,
+    "null_mean_mean": 0.652,
+    "null_mean_95": 0.803
+   },
+   "position_only": {
+    "per_group": {
+     "PY": {
+      "auc": 0.866,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 6661
+     },
+     "KN": {
+      "auc": 0.838,
+      "n_test_signs": 74,
+      "n_test_vowels": 5,
+      "n_words": 5626
+     },
+     "TH": {
+      "auc": 0.902,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 801
+     },
+     "MY": {
+      "auc": 0.838,
+      "n_test_signs": 57,
+      "n_test_vowels": 5,
+      "n_words": 367
+     }
+    },
+    "n_groups_scored": 4,
+    "mean_group_auc": 0.861,
+    "median_group_auc": 0.852,
+    "pooled_auc": 0.793,
+    "perm_p_pooled": 0.0299,
+    "perm_p_mean": 0.0149,
+    "null_pooled_mean": 0.63,
+    "null_pooled_95": 0.763,
+    "null_mean_mean": 0.652,
+    "null_mean_95": 0.803
+   }
+  },
+  "leave_one_series_out": {
+   "type": "feature_domain_LOGO",
+   "grouping": "series (seriessicura)",
+   "all_feats": {
+    "per_group": {
+     "E": {
+      "auc": 0.903,
+      "n_test_signs": 65,
+      "n_test_vowels": 5,
+      "n_words": 2539
+     },
+     "A": {
+      "auc": 0.868,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 2078
+     },
+     "D": {
+      "auc": 0.839,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 1356
+     },
+     "F": {
+      "auc": 0.886,
+      "n_test_signs": 68,
+      "n_test_vowels": 5,
+      "n_words": 998
+     },
+     "C": {
+      "auc": 0.852,
+      "n_test_signs": 63,
+      "n_test_vowels": 5,
+      "n_words": 861
+     },
+     "X": {
+      "auc": 0.835,
+      "n_test_signs": 68,
+      "n_test_vowels": 5,
+      "n_words": 769
+     },
+     "V": {
+      "auc": 0.861,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 655
+     },
+     "J": {
+      "auc": 0.948,
+      "n_test_signs": 59,
+      "n_test_vowels": 5,
+      "n_words": 600
+     },
+     "S": {
+      "auc": 0.878,
+      "n_test_signs": 59,
+      "n_test_vowels": 5,
+      "n_words": 567
+     },
+     "L": {
+      "auc": 0.815,
+      "n_test_signs": 58,
+      "n_test_vowels": 5,
+      "n_words": 477
+     },
+     "U": {
+      "auc": 0.872,
+      "n_test_signs": 63,
+      "n_test_vowels": 5,
+      "n_words": 465
+     },
+     "G": {
+      "auc": 0.788,
+      "n_test_signs": 56,
+      "n_test_vowels": 5,
+      "n_words": 419
+     },
+     "T": {
+      "auc": 0.868,
+      "n_test_signs": 55,
+      "n_test_vowels": 5,
+      "n_words": 335
+     },
+     "O": {
+      "auc": 0.852,
+      "n_test_signs": 59,
+      "n_test_vowels": 5,
+      "n_words": 309
+     },
+     "N": {
+      "auc": 0.841,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 270
+     },
+     "B": {
+      "auc": 0.79,
+      "n_test_signs": 47,
+      "n_test_vowels": 5,
+      "n_words": 200
+     },
+     "M": {
+      "auc": 0.836,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 195
+     },
+     "W": {
+      "auc": 0.938,
+      "n_test_signs": 48,
+      "n_test_vowels": 4,
+      "n_words": 170
+     },
+     "Z": {
+      "auc": 0.891,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 126
+     },
+     "R": {
+      "auc": 0.9,
+      "n_test_signs": 22,
+      "n_test_vowels": 2,
+      "n_words": 62
+     }
+    },
+    "n_groups_scored": 20,
+    "mean_group_auc": 0.863,
+    "median_group_auc": 0.865,
+    "pooled_auc": 0.817,
+    "perm_p_pooled": 0.005,
+    "perm_p_mean": 0.005,
+    "null_pooled_mean": 0.622,
+    "null_pooled_95": 0.758,
+    "null_mean_mean": 0.632,
+    "null_mean_95": 0.783
+   },
+   "position_only": {
+    "per_group": {
+     "E": {
+      "auc": 0.887,
+      "n_test_signs": 65,
+      "n_test_vowels": 5,
+      "n_words": 2539
+     },
+     "A": {
+      "auc": 0.835,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 2078
+     },
+     "D": {
+      "auc": 0.79,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 1356
+     },
+     "F": {
+      "auc": 0.86,
+      "n_test_signs": 68,
+      "n_test_vowels": 5,
+      "n_words": 998
+     },
+     "C": {
+      "auc": 0.838,
+      "n_test_signs": 63,
+      "n_test_vowels": 5,
+      "n_words": 861
+     },
+     "X": {
+      "auc": 0.835,
+      "n_test_signs": 68,
+      "n_test_vowels": 5,
+      "n_words": 769
+     },
+     "V": {
+      "auc": 0.885,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 655
+     },
+     "J": {
+      "auc": 0.944,
+      "n_test_signs": 59,
+      "n_test_vowels": 5,
+      "n_words": 600
+     },
+     "S": {
+      "auc": 0.815,
+      "n_test_signs": 59,
+      "n_test_vowels": 5,
+      "n_words": 567
+     },
+     "L": {
+      "auc": 0.747,
+      "n_test_signs": 58,
+      "n_test_vowels": 5,
+      "n_words": 477
+     },
+     "U": {
+      "auc": 0.866,
+      "n_test_signs": 63,
+      "n_test_vowels": 5,
+      "n_words": 465
+     },
+     "G": {
+      "auc": 0.812,
+      "n_test_signs": 56,
+      "n_test_vowels": 5,
+      "n_words": 419
+     },
+     "T": {
+      "auc": 0.908,
+      "n_test_signs": 55,
+      "n_test_vowels": 5,
+      "n_words": 335
+     },
+     "O": {
+      "auc": 0.841,
+      "n_test_signs": 59,
+      "n_test_vowels": 5,
+      "n_words": 309
+     },
+     "N": {
+      "auc": 0.739,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 270
+     },
+     "B": {
+      "auc": 0.8,
+      "n_test_signs": 47,
+      "n_test_vowels": 5,
+      "n_words": 200
+     },
+     "M": {
+      "auc": 0.845,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 195
+     },
+     "W": {
+      "auc": 0.92,
+      "n_test_signs": 48,
+      "n_test_vowels": 4,
+      "n_words": 170
+     },
+     "Z": {
+      "auc": 0.88,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 126
+     },
+     "R": {
+      "auc": 0.875,
+      "n_test_signs": 22,
+      "n_test_vowels": 2,
+      "n_words": 62
+     }
+    },
+    "n_groups_scored": 20,
+    "mean_group_auc": 0.846,
+    "median_group_auc": 0.843,
+    "pooled_auc": 0.803,
+    "perm_p_pooled": 0.0149,
+    "perm_p_mean": 0.005,
+    "null_pooled_mean": 0.622,
+    "null_pooled_95": 0.747,
+    "null_mean_mean": 0.63,
+    "null_mean_95": 0.777
+   }
+  },
+  "leave_one_series_formula_out": {
+   "type": "feature_domain_LOGO",
+   "grouping": "document series / formula family (series+subseries)",
+   "all_feats": {
+    "per_group": {
+     "An": {
+      "auc": 0.814,
+      "n_test_signs": 62,
+      "n_test_vowels": 5,
+      "n_words": 692
+     },
+     "Ep": {
+      "auc": 0.84,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 634
+     },
+     "Cn": {
+      "auc": 0.863,
+      "n_test_signs": 56,
+      "n_test_vowels": 5,
+      "n_words": 591
+     },
+     "Jn": {
+      "auc": 0.943,
+      "n_test_signs": 58,
+      "n_test_vowels": 5,
+      "n_words": 556
+     },
+     "Eb": {
+      "auc": 0.86,
+      "n_test_signs": 48,
+      "n_test_vowels": 5,
+      "n_words": 555
+     },
+     "X-": {
+      "auc": 0.756,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 516
+     },
+     "Fq": {
+      "auc": 0.833,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 354
+     },
+     "En": {
+      "auc": 0.789,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 327
+     },
+     "Ea": {
+      "auc": 0.816,
+      "n_test_signs": 42,
+      "n_test_vowels": 5,
+      "n_words": 301
+     },
+     "Eo": {
+      "auc": 0.779,
+      "n_test_signs": 43,
+      "n_test_vowels": 5,
+      "n_words": 282
+     },
+     "Ta": {
+      "auc": 0.824,
+      "n_test_signs": 51,
+      "n_test_vowels": 4,
+      "n_words": 276
+     },
+     "Da": {
+      "auc": 0.819,
+      "n_test_signs": 51,
+      "n_test_vowels": 4,
+      "n_words": 266
+     },
+     "Ak": {
+      "auc": 0.758,
+      "n_test_signs": 25,
+      "n_test_vowels": 3,
+      "n_words": 249
+     },
+     "As": {
+      "auc": 0.856,
+      "n_test_signs": 55,
+      "n_test_vowels": 5,
+      "n_words": 245
+     },
+     "Dv": {
+      "auc": 0.743,
+      "n_test_signs": 47,
+      "n_test_vowels": 5,
+      "n_words": 245
+     },
+     "V-": {
+      "auc": 0.939,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 223
+     },
+     "Es": {
+      "auc": 0.649,
+      "n_test_signs": 42,
+      "n_test_vowels": 5,
+      "n_words": 216
+     },
+     "L-": {
+      "auc": 0.809,
+      "n_test_signs": 48,
+      "n_test_vowels": 5,
+      "n_words": 194
+     },
+     "Vn": {
+      "auc": 0.841,
+      "n_test_signs": 45,
+      "n_test_vowels": 4,
+      "n_words": 191
+     },
+     "Na": {
+      "auc": 0.805,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 176
+     },
+     "Db": {
+      "auc": 0.796,
+      "n_test_signs": 42,
+      "n_test_vowels": 4,
+      "n_words": 171
+     },
+     "Sd": {
+      "auc": 0.884,
+      "n_test_signs": 36,
+      "n_test_vowels": 5,
+      "n_words": 164
+     },
+     "Fh": {
+      "auc": 0.882,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 159
+     },
+     "Un": {
+      "auc": 0.831,
+      "n_test_signs": 50,
+      "n_test_vowels": 5,
+      "n_words": 156
+     },
+     "Ga": {
+      "auc": 0.559,
+      "n_test_signs": 39,
+      "n_test_vowels": 5,
+      "n_words": 145
+     },
+     "Ad": {
+      "auc": 0.8,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 141
+     },
+     "Xd": {
+      "auc": 0.89,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 138
+     },
+     "Aa": {
+      "auc": 0.7,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 129
+     },
+     "Fn": {
+      "auc": 0.889,
+      "n_test_signs": 50,
+      "n_test_vowels": 5,
+      "n_words": 125
+     },
+     "Fr": {
+      "auc": 0.672,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 125
+     },
+     "Z-": {
+      "auc": 0.874,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 124
+     },
+     "C-": {
+      "auc": 0.514,
+      "n_test_signs": 42,
+      "n_test_vowels": 5,
+      "n_words": 119
+     },
+     "Ab": {
+      "auc": 0.708,
+      "n_test_signs": 28,
+      "n_test_vowels": 4,
+      "n_words": 117
+     },
+     "Ap": {
+      "auc": 0.806,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 113
+     },
+     "Ge": {
+      "auc": 0.696,
+      "n_test_signs": 32,
+      "n_test_vowels": 5,
+      "n_words": 112
+     },
+     "Od": {
+      "auc": 0.756,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 110
+     },
+     "Lc": {
+      "auc": 0.67,
+      "n_test_signs": 26,
+      "n_test_vowels": 4,
+      "n_words": 108
+     },
+     "De": {
+      "auc": 0.804,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 106
+     },
+     "Dl": {
+      "auc": 0.661,
+      "n_test_signs": 35,
+      "n_test_vowels": 4,
+      "n_words": 97
+     },
+     "Vc": {
+      "auc": 0.691,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 94
+     },
+     "Bk": {
+      "auc": 0.798,
+      "n_test_signs": 35,
+      "n_test_vowels": 4,
+      "n_words": 93
+     },
+     "Gp": {
+      "auc": 0.7,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 90
+     },
+     "Eq": {
+      "auc": 0.95,
+      "n_test_signs": 23,
+      "n_test_vowels": 3,
+      "n_words": 89
+     },
+     "Ld": {
+      "auc": 0.825,
+      "n_test_signs": 34,
+      "n_test_vowels": 4,
+      "n_words": 88
+     },
+     "Uf": {
+      "auc": 0.621,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 87
+     },
+     "Aq": {
+      "auc": 0.861,
+      "n_test_signs": 38,
+      "n_test_vowels": 5,
+      "n_words": 86
+     },
+     "Sa": {
+      "auc": 0.642,
+      "n_test_signs": 30,
+      "n_test_vowels": 3,
+      "n_words": 86
+     },
+     "Sc": {
+      "auc": 0.88,
+      "n_test_signs": 31,
+      "n_test_vowels": 4,
+      "n_words": 86
+     },
+     "Ai": {
+      "auc": 0.772,
+      "n_test_signs": 22,
+      "n_test_vowels": 3,
+      "n_words": 83
+     },
+     "Ma": {
+      "auc": 0.924,
+      "n_test_signs": 27,
+      "n_test_vowels": 4,
+      "n_words": 83
+     },
+     "So": {
+      "auc": 1.0,
+      "n_test_signs": 25,
+      "n_test_vowels": 3,
+      "n_words": 81
+     },
+     "Dc": {
+      "auc": 0.903,
+      "n_test_signs": 27,
+      "n_test_vowels": 3,
+      "n_words": 78
+     },
+     "Dd": {
+      "auc": 0.829,
+      "n_test_signs": 33,
+      "n_test_vowels": 5,
+      "n_words": 77
+     },
+     "F-": {
+      "auc": 0.733,
+      "n_test_signs": 33,
+      "n_test_vowels": 4,
+      "n_words": 77
+     },
+     "Fp": {
+      "auc": 0.625,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 77
+     },
+     "Ub": {
+      "auc": 0.793,
+      "n_test_signs": 32,
+      "n_test_vowels": 5,
+      "n_words": 68
+     },
+     "Oe": {
+      "auc": 0.697,
+      "n_test_signs": 35,
+      "n_test_vowels": 5,
+      "n_words": 66
+     },
+     "Dk": {
+      "auc": 0.447,
+      "n_test_signs": 21,
+      "n_test_vowels": 2,
+      "n_words": 65
+     },
+     "Vs": {
+      "auc": 0.667,
+      "n_test_signs": 25,
+      "n_test_vowels": 4,
+      "n_words": 64
+     },
+     "B-": {
+      "auc": 0.942,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 63
+     },
+     "E-": {
+      "auc": 0.717,
+      "n_test_signs": 27,
+      "n_test_vowels": 4,
+      "n_words": 61
+     },
+     "Ae": {
+      "auc": 0.844,
+      "n_test_signs": 33,
+      "n_test_vowels": 3,
+      "n_words": 60
+     }
+    },
+    "n_groups_scored": 62,
+    "mean_group_auc": 0.784,
+    "median_group_auc": 0.804,
+    "pooled_auc": 0.753,
+    "perm_p_pooled": 0.0299,
+    "perm_p_mean": 0.0199,
+    "null_pooled_mean": 0.605,
+    "null_pooled_95": 0.725,
+    "null_mean_mean": 0.613,
+    "null_mean_95": 0.757
+   },
+   "position_only": {
+    "per_group": {
+     "An": {
+      "auc": 0.775,
+      "n_test_signs": 62,
+      "n_test_vowels": 5,
+      "n_words": 692
+     },
+     "Ep": {
+      "auc": 0.885,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 634
+     },
+     "Cn": {
+      "auc": 0.824,
+      "n_test_signs": 56,
+      "n_test_vowels": 5,
+      "n_words": 591
+     },
+     "Jn": {
+      "auc": 0.951,
+      "n_test_signs": 58,
+      "n_test_vowels": 5,
+      "n_words": 556
+     },
+     "Eb": {
+      "auc": 0.926,
+      "n_test_signs": 48,
+      "n_test_vowels": 5,
+      "n_words": 555
+     },
+     "X-": {
+      "auc": 0.749,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 516
+     },
+     "Fq": {
+      "auc": 0.8,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 354
+     },
+     "En": {
+      "auc": 0.811,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 327
+     },
+     "Ea": {
+      "auc": 0.838,
+      "n_test_signs": 42,
+      "n_test_vowels": 5,
+      "n_words": 301
+     },
+     "Eo": {
+      "auc": 0.726,
+      "n_test_signs": 43,
+      "n_test_vowels": 5,
+      "n_words": 282
+     },
+     "Ta": {
+      "auc": 0.91,
+      "n_test_signs": 51,
+      "n_test_vowels": 4,
+      "n_words": 276
+     },
+     "Da": {
+      "auc": 0.739,
+      "n_test_signs": 51,
+      "n_test_vowels": 4,
+      "n_words": 266
+     },
+     "Ak": {
+      "auc": 0.606,
+      "n_test_signs": 25,
+      "n_test_vowels": 3,
+      "n_words": 249
+     },
+     "As": {
+      "auc": 0.808,
+      "n_test_signs": 55,
+      "n_test_vowels": 5,
+      "n_words": 245
+     },
+     "Dv": {
+      "auc": 0.724,
+      "n_test_signs": 47,
+      "n_test_vowels": 5,
+      "n_words": 245
+     },
+     "V-": {
+      "auc": 0.922,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 223
+     },
+     "Es": {
+      "auc": 0.605,
+      "n_test_signs": 42,
+      "n_test_vowels": 5,
+      "n_words": 216
+     },
+     "L-": {
+      "auc": 0.819,
+      "n_test_signs": 48,
+      "n_test_vowels": 5,
+      "n_words": 194
+     },
+     "Vn": {
+      "auc": 0.878,
+      "n_test_signs": 45,
+      "n_test_vowels": 4,
+      "n_words": 191
+     },
+     "Na": {
+      "auc": 0.7,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 176
+     },
+     "Db": {
+      "auc": 0.796,
+      "n_test_signs": 42,
+      "n_test_vowels": 4,
+      "n_words": 171
+     },
+     "Sd": {
+      "auc": 0.884,
+      "n_test_signs": 36,
+      "n_test_vowels": 5,
+      "n_words": 164
+     },
+     "Fh": {
+      "auc": 0.873,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 159
+     },
+     "Un": {
+      "auc": 0.844,
+      "n_test_signs": 50,
+      "n_test_vowels": 5,
+      "n_words": 156
+     },
+     "Ga": {
+      "auc": 0.665,
+      "n_test_signs": 39,
+      "n_test_vowels": 5,
+      "n_words": 145
+     },
+     "Ad": {
+      "auc": 0.76,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 141
+     },
+     "Xd": {
+      "auc": 0.89,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 138
+     },
+     "Aa": {
+      "auc": 0.73,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 129
+     },
+     "Fn": {
+      "auc": 0.893,
+      "n_test_signs": 50,
+      "n_test_vowels": 5,
+      "n_words": 125
+     },
+     "Fr": {
+      "auc": 0.683,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 125
+     },
+     "Z-": {
+      "auc": 0.874,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 124
+     },
+     "C-": {
+      "auc": 0.459,
+      "n_test_signs": 42,
+      "n_test_vowels": 5,
+      "n_words": 119
+     },
+     "Ab": {
+      "auc": 0.74,
+      "n_test_signs": 28,
+      "n_test_vowels": 4,
+      "n_words": 117
+     },
+     "Ap": {
+      "auc": 0.817,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 113
+     },
+     "Ge": {
+      "auc": 0.726,
+      "n_test_signs": 32,
+      "n_test_vowels": 5,
+      "n_words": 112
+     },
+     "Od": {
+      "auc": 0.75,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 110
+     },
+     "Lc": {
+      "auc": 0.58,
+      "n_test_signs": 26,
+      "n_test_vowels": 4,
+      "n_words": 108
+     },
+     "De": {
+      "auc": 0.804,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 106
+     },
+     "Dl": {
+      "auc": 0.73,
+      "n_test_signs": 35,
+      "n_test_vowels": 4,
+      "n_words": 97
+     },
+     "Vc": {
+      "auc": 0.68,
+      "n_test_signs": 40,
+      "n_test_vowels": 5,
+      "n_words": 94
+     },
+     "Bk": {
+      "auc": 0.806,
+      "n_test_signs": 35,
+      "n_test_vowels": 4,
+      "n_words": 93
+     },
+     "Gp": {
+      "auc": 0.7,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 90
+     },
+     "Eq": {
+      "auc": 0.95,
+      "n_test_signs": 23,
+      "n_test_vowels": 3,
+      "n_words": 89
+     },
+     "Ld": {
+      "auc": 0.767,
+      "n_test_signs": 34,
+      "n_test_vowels": 4,
+      "n_words": 88
+     },
+     "Uf": {
+      "auc": 0.621,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 87
+     },
+     "Aq": {
+      "auc": 0.836,
+      "n_test_signs": 38,
+      "n_test_vowels": 5,
+      "n_words": 86
+     },
+     "Sa": {
+      "auc": 0.667,
+      "n_test_signs": 30,
+      "n_test_vowels": 3,
+      "n_words": 86
+     },
+     "Sc": {
+      "auc": 0.907,
+      "n_test_signs": 31,
+      "n_test_vowels": 4,
+      "n_words": 86
+     },
+     "Ai": {
+      "auc": 0.754,
+      "n_test_signs": 22,
+      "n_test_vowels": 3,
+      "n_words": 83
+     },
+     "Ma": {
+      "auc": 0.88,
+      "n_test_signs": 27,
+      "n_test_vowels": 4,
+      "n_words": 83
+     },
+     "So": {
+      "auc": 0.985,
+      "n_test_signs": 25,
+      "n_test_vowels": 3,
+      "n_words": 81
+     },
+     "Dc": {
+      "auc": 0.875,
+      "n_test_signs": 27,
+      "n_test_vowels": 3,
+      "n_words": 78
+     },
+     "Dd": {
+      "auc": 0.821,
+      "n_test_signs": 33,
+      "n_test_vowels": 5,
+      "n_words": 77
+     },
+     "F-": {
+      "auc": 0.793,
+      "n_test_signs": 33,
+      "n_test_vowels": 4,
+      "n_words": 77
+     },
+     "Fp": {
+      "auc": 0.429,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 77
+     },
+     "Ub": {
+      "auc": 0.822,
+      "n_test_signs": 32,
+      "n_test_vowels": 5,
+      "n_words": 68
+     },
+     "Oe": {
+      "auc": 0.69,
+      "n_test_signs": 35,
+      "n_test_vowels": 5,
+      "n_words": 66
+     },
+     "Dk": {
+      "auc": 0.474,
+      "n_test_signs": 21,
+      "n_test_vowels": 2,
+      "n_words": 65
+     },
+     "Vs": {
+      "auc": 0.619,
+      "n_test_signs": 25,
+      "n_test_vowels": 4,
+      "n_words": 64
+     },
+     "B-": {
+      "auc": 0.888,
+      "n_test_signs": 32,
+      "n_test_vowels": 4,
+      "n_words": 63
+     },
+     "E-": {
+      "auc": 0.739,
+      "n_test_signs": 27,
+      "n_test_vowels": 4,
+      "n_words": 61
+     },
+     "Ae": {
+      "auc": 0.811,
+      "n_test_signs": 33,
+      "n_test_vowels": 3,
+      "n_words": 60
+     }
+    },
+    "n_groups_scored": 62,
+    "mean_group_auc": 0.774,
+    "median_group_auc": 0.798,
+    "pooled_auc": 0.742,
+    "perm_p_pooled": 0.0348,
+    "perm_p_mean": 0.0249,
+    "null_pooled_mean": 0.603,
+    "null_pooled_95": 0.724,
+    "null_mean_mean": 0.611,
+    "null_mean_95": 0.747
+   }
+  },
+  "leave_one_scribe_out": {
+   "type": "feature_domain_LOGO",
+   "grouping": "scribe (hand_easy, '-' excluded)",
+   "all_feats": {
+    "per_group": {
+     "1": {
+      "auc": 0.869,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 2217
+     },
+     "117": {
+      "auc": 0.84,
+      "n_test_signs": 65,
+      "n_test_vowels": 5,
+      "n_words": 1072
+     },
+     "2": {
+      "auc": 0.921,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 1032
+     },
+     "41": {
+      "auc": 0.886,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 845
+     },
+     "103": {
+      "auc": 0.827,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 667
+     },
+     "21": {
+      "auc": 0.854,
+      "n_test_signs": 53,
+      "n_test_vowels": 5,
+      "n_words": 426
+     },
+     "43": {
+      "auc": 0.814,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 346
+     },
+     "305": {
+      "auc": 0.804,
+      "n_test_signs": 53,
+      "n_test_vowels": 5,
+      "n_words": 322
+     },
+     "128": {
+      "auc": 0.793,
+      "n_test_signs": 35,
+      "n_test_vowels": 5,
+      "n_words": 149
+     },
+     "23": {
+      "auc": 0.8,
+      "n_test_signs": 31,
+      "n_test_vowels": 5,
+      "n_words": 146
+     },
+     "124": {
+      "auc": 0.915,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 134
+     },
+     "141": {
+      "auc": 0.856,
+      "n_test_signs": 39,
+      "n_test_vowels": 5,
+      "n_words": 113
+     },
+     "101": {
+      "auc": 0.77,
+      "n_test_signs": 42,
+      "n_test_vowels": 4,
+      "n_words": 112
+     },
+     "42": {
+      "auc": 0.833,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 103
+     },
+     "3": {
+      "auc": 0.797,
+      "n_test_signs": 39,
+      "n_test_vowels": 5,
+      "n_words": 94
+     },
+     "104": {
+      "auc": 0.798,
+      "n_test_signs": 35,
+      "n_test_vowels": 4,
+      "n_words": 93
+     },
+     "21,1": {
+      "auc": 0.614,
+      "n_test_signs": 26,
+      "n_test_vowels": 4,
+      "n_words": 90
+     },
+     "26": {
+      "auc": 0.643,
+      "n_test_signs": 31,
+      "n_test_vowels": 3,
+      "n_words": 88
+     },
+     "108": {
+      "auc": 0.542,
+      "n_test_signs": 11,
+      "n_test_vowels": 3,
+      "n_words": 84
+     },
+     "115": {
+      "auc": 0.781,
+      "n_test_signs": 36,
+      "n_test_vowels": 5,
+      "n_words": 84
+     },
+     "118": {
+      "auc": 0.885,
+      "n_test_signs": 28,
+      "n_test_vowels": 2,
+      "n_words": 83
+     },
+     "57": {
+      "auc": 0.722,
+      "n_test_signs": 31,
+      "n_test_vowels": 4,
+      "n_words": 83
+     },
+     "102a": {
+      "auc": 0.718,
+      "n_test_signs": 29,
+      "n_test_vowels": 3,
+      "n_words": 82
+     },
+     "124-S": {
+      "auc": 0.765,
+      "n_test_signs": 31,
+      "n_test_vowels": 5,
+      "n_words": 77
+     },
+     "11": {
+      "auc": 0.642,
+      "n_test_signs": 24,
+      "n_test_vowels": 5,
+      "n_words": 74
+     },
+     "22": {
+      "auc": 0.49,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 71
+     },
+     "116": {
+      "auc": 0.8,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 69
+     },
+     "31": {
+      "auc": 0.727,
+      "n_test_signs": 38,
+      "n_test_vowels": 5,
+      "n_words": 69
+     },
+     "138": {
+      "auc": 0.6,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 68
+     },
+     "Ciii": {
+      "auc": 0.664,
+      "n_test_signs": 33,
+      "n_test_vowels": 5,
+      "n_words": 63
+     },
+     "21,1,1?": {
+      "auc": 0.906,
+      "n_test_signs": 28,
+      "n_test_vowels": 4,
+      "n_words": 60
+     }
+    },
+    "n_groups_scored": 31,
+    "mean_group_auc": 0.77,
+    "median_group_auc": 0.798,
+    "pooled_auc": 0.7,
+    "perm_p_pooled": 0.1144,
+    "perm_p_mean": 0.0398,
+    "null_pooled_mean": 0.605,
+    "null_pooled_95": 0.722,
+    "null_mean_mean": 0.615,
+    "null_mean_95": 0.754
+   },
+   "position_only": {
+    "per_group": {
+     "1": {
+      "auc": 0.83,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 2217
+     },
+     "117": {
+      "auc": 0.77,
+      "n_test_signs": 65,
+      "n_test_vowels": 5,
+      "n_words": 1072
+     },
+     "2": {
+      "auc": 0.948,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 1032
+     },
+     "41": {
+      "auc": 0.878,
+      "n_test_signs": 54,
+      "n_test_vowels": 5,
+      "n_words": 845
+     },
+     "103": {
+      "auc": 0.827,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 667
+     },
+     "21": {
+      "auc": 0.871,
+      "n_test_signs": 53,
+      "n_test_vowels": 5,
+      "n_words": 426
+     },
+     "43": {
+      "auc": 0.8,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 346
+     },
+     "305": {
+      "auc": 0.758,
+      "n_test_signs": 53,
+      "n_test_vowels": 5,
+      "n_words": 322
+     },
+     "128": {
+      "auc": 0.753,
+      "n_test_signs": 35,
+      "n_test_vowels": 5,
+      "n_words": 149
+     },
+     "23": {
+      "auc": 0.8,
+      "n_test_signs": 31,
+      "n_test_vowels": 5,
+      "n_words": 146
+     },
+     "124": {
+      "auc": 0.875,
+      "n_test_signs": 45,
+      "n_test_vowels": 5,
+      "n_words": 134
+     },
+     "141": {
+      "auc": 0.856,
+      "n_test_signs": 39,
+      "n_test_vowels": 5,
+      "n_words": 113
+     },
+     "101": {
+      "auc": 0.717,
+      "n_test_signs": 42,
+      "n_test_vowels": 4,
+      "n_words": 112
+     },
+     "42": {
+      "auc": 0.833,
+      "n_test_signs": 41,
+      "n_test_vowels": 5,
+      "n_words": 103
+     },
+     "3": {
+      "auc": 0.815,
+      "n_test_signs": 39,
+      "n_test_vowels": 5,
+      "n_words": 94
+     },
+     "104": {
+      "auc": 0.806,
+      "n_test_signs": 35,
+      "n_test_vowels": 4,
+      "n_words": 93
+     },
+     "21,1": {
+      "auc": 0.659,
+      "n_test_signs": 26,
+      "n_test_vowels": 4,
+      "n_words": 90
+     },
+     "26": {
+      "auc": 0.667,
+      "n_test_signs": 31,
+      "n_test_vowels": 3,
+      "n_words": 88
+     },
+     "108": {
+      "auc": 0.417,
+      "n_test_signs": 11,
+      "n_test_vowels": 3,
+      "n_words": 84
+     },
+     "115": {
+      "auc": 0.774,
+      "n_test_signs": 36,
+      "n_test_vowels": 5,
+      "n_words": 84
+     },
+     "118": {
+      "auc": 0.865,
+      "n_test_signs": 28,
+      "n_test_vowels": 2,
+      "n_words": 83
+     },
+     "57": {
+      "auc": 0.75,
+      "n_test_signs": 31,
+      "n_test_vowels": 4,
+      "n_words": 83
+     },
+     "102a": {
+      "auc": 0.679,
+      "n_test_signs": 29,
+      "n_test_vowels": 3,
+      "n_words": 82
+     },
+     "124-S": {
+      "auc": 0.742,
+      "n_test_signs": 31,
+      "n_test_vowels": 5,
+      "n_words": 77
+     },
+     "11": {
+      "auc": 0.642,
+      "n_test_signs": 24,
+      "n_test_vowels": 5,
+      "n_words": 74
+     },
+     "22": {
+      "auc": 0.43,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 71
+     },
+     "116": {
+      "auc": 0.7,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 69
+     },
+     "31": {
+      "auc": 0.703,
+      "n_test_signs": 38,
+      "n_test_vowels": 5,
+      "n_words": 69
+     },
+     "138": {
+      "auc": 0.44,
+      "n_test_signs": 29,
+      "n_test_vowels": 4,
+      "n_words": 68
+     },
+     "Ciii": {
+      "auc": 0.671,
+      "n_test_signs": 33,
+      "n_test_vowels": 5,
+      "n_words": 63
+     },
+     "21,1,1?": {
+      "auc": 0.896,
+      "n_test_signs": 28,
+      "n_test_vowels": 4,
+      "n_words": 60
+     }
+    },
+    "n_groups_scored": 31,
+    "mean_group_auc": 0.747,
+    "median_group_auc": 0.77,
+    "pooled_auc": 0.702,
+    "perm_p_pooled": 0.1144,
+    "perm_p_mean": 0.0746,
+    "null_pooled_mean": 0.604,
+    "null_pooled_95": 0.723,
+    "null_mean_mean": 0.613,
+    "null_mean_95": 0.755
+   }
+  },
+  "leave_one_chronogroup_out": {
+   "type": "feature_domain_LOGO",
+   "grouping": "chronogroup",
+   "all_feats": {
+    "per_group": {
+     "200": {
+      "auc": 0.887,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 6655
+     },
+     "121": {
+      "auc": 0.858,
+      "n_test_signs": 71,
+      "n_test_vowels": 5,
+      "n_words": 2332
+     },
+     "130": {
+      "auc": 0.837,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1300
+     },
+     "111": {
+      "auc": 0.864,
+      "n_test_signs": 61,
+      "n_test_vowels": 5,
+      "n_words": 676
+     },
+     "300": {
+      "auc": 0.897,
+      "n_test_signs": 63,
+      "n_test_vowels": 5,
+      "n_words": 651
+     },
+     "110": {
+      "auc": 0.831,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 636
+     },
+     "400": {
+      "auc": 0.823,
+      "n_test_signs": 57,
+      "n_test_vowels": 5,
+      "n_words": 310
+     },
+     "100": {
+      "auc": 0.865,
+      "n_test_signs": 48,
+      "n_test_vowels": 5,
+      "n_words": 200
+     },
+     "102": {
+      "auc": 0.86,
+      "n_test_signs": 52,
+      "n_test_vowels": 5,
+      "n_words": 193
+     },
+     "120": {
+      "auc": 0.825,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 182
+     },
+     "101": {
+      "auc": 0.923,
+      "n_test_signs": 44,
+      "n_test_vowels": 5,
+      "n_words": 106
+     },
+     "2000": {
+      "auc": 0.784,
+      "n_test_signs": 26,
+      "n_test_vowels": 4,
+      "n_words": 63
+     }
+    },
+    "n_groups_scored": 12,
+    "mean_group_auc": 0.855,
+    "median_group_auc": 0.859,
+    "pooled_auc": 0.752,
+    "perm_p_pooled": 0.0547,
+    "perm_p_mean": 0.005,
+    "null_pooled_mean": 0.619,
+    "null_pooled_95": 0.751,
+    "null_mean_mean": 0.637,
+    "null_mean_95": 0.784
+   },
+   "position_only": {
+    "per_group": {
+     "200": {
+      "auc": 0.866,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 6655
+     },
+     "121": {
+      "auc": 0.77,
+      "n_test_signs": 71,
+      "n_test_vowels": 5,
+      "n_words": 2332
+     },
+     "130": {
+      "auc": 0.815,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1300
+     },
+     "111": {
+      "auc": 0.846,
+      "n_test_signs": 61,
+      "n_test_vowels": 5,
+      "n_words": 676
+     },
+     "300": {
+      "auc": 0.886,
+      "n_test_signs": 63,
+      "n_test_vowels": 5,
+      "n_words": 651
+     },
+     "110": {
+      "auc": 0.854,
+      "n_test_signs": 64,
+      "n_test_vowels": 5,
+      "n_words": 636
+     },
+     "400": {
+      "auc": 0.823,
+      "n_test_signs": 57,
+      "n_test_vowels": 5,
+      "n_words": 310
+     },
+     "100": {
+      "auc": 0.865,
+      "n_test_signs": 48,
+      "n_test_vowels": 5,
+      "n_words": 200
+     },
+     "102": {
+      "auc": 0.851,
+      "n_test_signs": 52,
+      "n_test_vowels": 5,
+      "n_words": 193
+     },
+     "120": {
+      "auc": 0.861,
+      "n_test_signs": 49,
+      "n_test_vowels": 5,
+      "n_words": 182
+     },
+     "101": {
+      "auc": 0.918,
+      "n_test_signs": 44,
+      "n_test_vowels": 5,
+      "n_words": 106
+     },
+     "2000": {
+      "auc": 0.83,
+      "n_test_signs": 26,
+      "n_test_vowels": 4,
+      "n_words": 63
+     }
+    },
+    "n_groups_scored": 12,
+    "mean_group_auc": 0.849,
+    "median_group_auc": 0.853,
+    "pooled_auc": 0.782,
+    "perm_p_pooled": 0.0199,
+    "perm_p_mean": 0.005,
+    "null_pooled_mean": 0.623,
+    "null_pooled_95": 0.751,
+    "null_mean_mean": 0.635,
+    "null_mean_95": 0.773
+   }
+  },
+  "grouped_kfold_document": {
+   "type": "feature_domain_grouped_Kfold(7)",
+   "grouping": "document id",
+   "all_feats": {
+    "per_group": {
+     "fold0": {
+      "auc": 0.912,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold1": {
+      "auc": 0.906,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold2": {
+      "auc": 0.868,
+      "n_test_signs": 76,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold3": {
+      "auc": 0.893,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold4": {
+      "auc": 0.893,
+      "n_test_signs": 74,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold5": {
+      "auc": 0.915,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold6": {
+      "auc": 0.878,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     }
+    },
+    "n_groups_scored": 7,
+    "mean_group_auc": 0.895,
+    "median_group_auc": 0.893,
+    "pooled_auc": 0.895,
+    "perm_p_pooled": 0.01,
+    "perm_p_mean": 0.01,
+    "null_pooled_mean": 0.719,
+    "null_pooled_95": 0.846,
+    "null_mean_mean": 0.727,
+    "null_mean_95": 0.851
+   },
+   "position_only": {
+    "per_group": {
+     "fold0": {
+      "auc": 0.906,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold1": {
+      "auc": 0.906,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold2": {
+      "auc": 0.854,
+      "n_test_signs": 76,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold3": {
+      "auc": 0.887,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold4": {
+      "auc": 0.829,
+      "n_test_signs": 74,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold5": {
+      "auc": 0.879,
+      "n_test_signs": 73,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold6": {
+      "auc": 0.869,
+      "n_test_signs": 72,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     }
+    },
+    "n_groups_scored": 7,
+    "mean_group_auc": 0.876,
+    "median_group_auc": 0.879,
+    "pooled_auc": 0.878,
+    "perm_p_pooled": 0.0149,
+    "perm_p_mean": 0.0199,
+    "null_pooled_mean": 0.704,
+    "null_pooled_95": 0.838,
+    "null_mean_mean": 0.708,
+    "null_mean_95": 0.842
+   }
+  },
+  "grouped_kfold_word_family": {
+   "type": "feature_domain_grouped_Kfold(7)",
+   "grouping": "word family (2-sign prefix)",
+   "all_feats": {
+    "per_group": {
+     "fold0": {
+      "auc": 0.803,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold1": {
+      "auc": 0.719,
+      "n_test_signs": 69,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold2": {
+      "auc": 0.859,
+      "n_test_signs": 69,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold3": {
+      "auc": 0.936,
+      "n_test_signs": 71,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold4": {
+      "auc": 0.825,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold5": {
+      "auc": 0.803,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold6": {
+      "auc": 0.883,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     }
+    },
+    "n_groups_scored": 7,
+    "mean_group_auc": 0.833,
+    "median_group_auc": 0.825,
+    "pooled_auc": 0.831,
+    "perm_p_pooled": 0.0149,
+    "perm_p_mean": 0.0149,
+    "null_pooled_mean": 0.622,
+    "null_pooled_95": 0.771,
+    "null_mean_mean": 0.635,
+    "null_mean_95": 0.775
+   },
+   "position_only": {
+    "per_group": {
+     "fold0": {
+      "auc": 0.761,
+      "n_test_signs": 66,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold1": {
+      "auc": 0.759,
+      "n_test_signs": 69,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold2": {
+      "auc": 0.866,
+      "n_test_signs": 69,
+      "n_test_vowels": 5,
+      "n_words": 1938
+     },
+     "fold3": {
+      "auc": 0.842,
+      "n_test_signs": 71,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold4": {
+      "auc": 0.766,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold5": {
+      "auc": 0.748,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     },
+     "fold6": {
+      "auc": 0.708,
+      "n_test_signs": 70,
+      "n_test_vowels": 5,
+      "n_words": 1937
+     }
+    },
+    "n_groups_scored": 7,
+    "mean_group_auc": 0.779,
+    "median_group_auc": 0.761,
+    "pooled_auc": 0.778,
+    "perm_p_pooled": 0.0299,
+    "perm_p_mean": 0.0398,
+    "null_pooled_mean": 0.618,
+    "null_pooled_95": 0.752,
+    "null_mean_mean": 0.63,
+    "null_mean_95": 0.759
+   }
+  }
+ },
+ "sign_unit_frequency_band_leaveout": {
+  "all_feats": {
+   "oof_auc": 0.658,
+   "n_bands": 4,
+   "perm_p": 0.125,
+   "null_mean": 0.444,
+   "null_95": 0.724,
+   "bands": [
+    {
+     "n": 20,
+     "n_vowels": 0,
+     "log_freq_range": [
+      3.0,
+      4.65
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 0,
+     "log_freq_range": [
+      4.7,
+      6.1
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 1,
+     "log_freq_range": [
+      6.14,
+      6.75
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 4,
+     "log_freq_range": [
+      6.85,
+      7.58
+     ]
+    }
+   ]
+  },
+  "position_only": {
+   "oof_auc": 0.481,
+   "n_bands": 4,
+   "perm_p": 0.345,
+   "null_mean": 0.42,
+   "null_95": 0.711,
+   "bands": [
+    {
+     "n": 20,
+     "n_vowels": 0,
+     "log_freq_range": [
+      3.0,
+      4.65
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 0,
+     "log_freq_range": [
+      4.7,
+      6.1
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 1,
+     "log_freq_range": [
+      6.14,
+      6.75
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 4,
+     "log_freq_range": [
+      6.85,
+      7.58
+     ]
+    }
+   ]
+  },
+  "logfreq_only": {
+   "oof_auc": 0.558,
+   "n_bands": 4,
+   "perm_p": 0.185,
+   "null_mean": 0.414,
+   "null_95": 0.673,
+   "bands": [
+    {
+     "n": 20,
+     "n_vowels": 0,
+     "log_freq_range": [
+      3.0,
+      4.65
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 0,
+     "log_freq_range": [
+      4.7,
+      6.1
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 1,
+     "log_freq_range": [
+      6.14,
+      6.75
+     ]
+    },
+    {
+     "n": 19,
+     "n_vowels": 4,
+     "log_freq_range": [
+      6.85,
+      7.58
+     ]
+    }
+   ]
+  }
+ },
+ "chronological_holdout": {
+  "all_feats": {
+   "early_chronogroups": [
+    100,
+    101,
+    102,
+    110,
+    111,
+    120,
+    121,
+    130,
+    200
+   ],
+   "n_early_words": 12280,
+   "n_late_words": 1263,
+   "train_early_test_late": {
+    "auc": 0.905,
+    "n_test_signs": 64,
+    "n_test_vowels": 5,
+    "n_train_words": 12280,
+    "n_test_words": 1263,
+    "perm_p": 0.0249,
+    "null_95": 0.851
+   },
+   "train_late_test_early": {
+    "auc": 0.903,
+    "n_test_signs": 73,
+    "n_test_vowels": 5,
+    "n_train_words": 1263,
+    "n_test_words": 12280,
+    "perm_p": 0.01,
+    "null_95": 0.818
+   }
+  },
+  "position_only": {
+   "early_chronogroups": [
+    100,
+    101,
+    102,
+    110,
+    111,
+    120,
+    121,
+    130,
+    200
+   ],
+   "n_early_words": 12280,
+   "n_late_words": 1263,
+   "train_early_test_late": {
+    "auc": 0.888,
+    "n_test_signs": 64,
+    "n_test_vowels": 5,
+    "n_train_words": 12280,
+    "n_test_words": 1263,
+    "perm_p": 0.0249,
+    "null_95": 0.851
+   },
+   "train_late_test_early": {
+    "auc": 0.832,
+    "n_test_signs": 73,
+    "n_test_vowels": 5,
+    "n_train_words": 1263,
+    "n_test_words": 12280,
+    "perm_p": 0.0547,
+    "null_95": 0.81
+   }
+  }
+ }
+}

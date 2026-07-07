@@ -1,0 +1,184 @@
+{
+ "meta": {
+  "seed": 20260708,
+  "task": "A6_complete_nulls_and_WP_A_verdict",
+  "best_surviving_config": "M1 supervised 7-feature sign-grouped 7-fold logistic CV on full DAMOS LB",
+  "obs_grouped_cv_auc_all": 0.828,
+  "obs_grouped_cv_auc_position_only": 0.778,
+  "foundry_reported_cv_auc": 0.835,
+  "foundry_reported_single_feature_auc": 0.744,
+  "n_lb_wordforms": 13562,
+  "n_signs": 77,
+  "n_vowels": 5,
+  "note": "known LB vowel values grade benchmark ONLY, never a model input"
+ },
+ "null_battery": {
+  "random_cv_labels": {
+   "statistic": "grouped-CV directed AUC (all 7 feats)",
+   "obs": 0.828,
+   "n_null": 2000,
+   "null_mean": 0.679,
+   "null_p95": 0.903,
+   "p": 0.1464,
+   "note": "uniform label permutation; oriented null vs directed obs"
+  },
+  "frequency_matched_labels": {
+   "statistic": "grouped-CV directed AUC (all 7 feats)",
+   "obs": 0.828,
+   "n_null": 2000,
+   "null_mean": 0.705,
+   "null_p95": 0.864,
+   "p": 0.1299,
+   "true_vowel_freq_quartiles": {
+    "3": 4,
+    "2": 1
+   },
+   "note": "labels permuted WITHIN log-freq quartiles (freq profile of positives preserved); high p => the AUC is explained by the frequency location of the vowels"
+  },
+  "shuffled_sign_positions": {
+   "statistic": "grouped-CV directed AUC",
+   "n_real": 40,
+   "auc_all_mean": 0.839,
+   "auc_all_sd": 0.027,
+   "auc_pos_mean": 0.771,
+   "auc_pos_sd": 0.03,
+   "obs_all": 0.828,
+   "obs_pos": 0.778,
+   "p_all_ge_obs": 0.6829,
+   "p_pos_ge_obs": 0.439
+  },
+  "shuffled_documents": {
+   "statistic": "grouped-CV directed AUC",
+   "n_real": 40,
+   "auc_all_mean": 0.763,
+   "auc_all_sd": 0.036,
+   "auc_pos_mean": 0.592,
+   "auc_pos_sd": 0.068,
+   "obs_all": 0.828,
+   "obs_pos": 0.778,
+   "p_all_ge_obs": 0.0732,
+   "p_pos_ge_obs": 0.0244
+  },
+  "site_preserving_shuffle": {
+   "statistic": "grouped-CV directed AUC",
+   "n_real": 40,
+   "auc_all_mean": 0.77,
+   "auc_all_sd": 0.027,
+   "auc_pos_mean": 0.58,
+   "auc_pos_sd": 0.052,
+   "obs_all": 0.828,
+   "obs_pos": 0.778,
+   "p_all_ge_obs": 0.0244,
+   "p_pos_ge_obs": 0.0244
+  },
+  "series_preserving_shuffle": {
+   "statistic": "grouped-CV directed AUC",
+   "n_real": 40,
+   "auc_all_mean": 0.766,
+   "auc_all_sd": 0.035,
+   "auc_pos_mean": 0.587,
+   "auc_pos_sd": 0.066,
+   "obs_all": 0.828,
+   "obs_pos": 0.778,
+   "p_all_ge_obs": 0.0488,
+   "p_pos_ge_obs": 0.0488
+  },
+  "best_of_model": {
+   "statistic": "max oriented AUC over {logistic-CV, GMM, best-single-feature}",
+   "obs_best": 0.878,
+   "obs_parts": {
+    "logistic_cv": 0.828,
+    "gmm": 0.7,
+    "single_feat_thr": 0.878
+   },
+   "n_null": 200,
+   "null_best_mean": 0.769,
+   "null_best_p95": 0.908,
+   "p": 0.1294,
+   "note": "each null re-runs the full model selection under a permuted label"
+  },
+  "best_of_segmentation": {
+   "statistic": "max directed grouped-CV AUC over freq-threshold inventories {15,20,25}",
+   "obs_best": 0.847,
+   "obs_parts": {
+    "15": 0.847,
+    "20": 0.828,
+    "25": 0.809
+   },
+   "n_null": 200,
+   "null_best_mean": 0.546,
+   "null_best_p95": 0.776,
+   "p": 0.01,
+   "note": "each null re-runs selection over the inventory/segmentation-resolution grid"
+  },
+  "best_of_seed": {
+   "statistic": "max directed grouped-CV AUC over CV seeds {20260708,1,2,3,4}",
+   "obs_best": 0.828,
+   "obs_parts": {
+    "20260708": 0.828,
+    "1": 0.817,
+    "2": 0.819,
+    "3": 0.825,
+    "4": 0.778
+   },
+   "n_null": 500,
+   "null_best_mean": 0.466,
+   "null_best_p95": 0.758,
+   "p": 0.016,
+   "note": "each null re-runs selection over CV seeds under a permuted label"
+  }
+ },
+ "decision": {
+  "alpha": 0.05,
+  "flags": {
+   "survives_naive_labelperm": false,
+   "survives_frequency_matched_label_null (structure beyond frequency)": false,
+   "position_structure_beyond_order_shuffle": false,
+   "all_feat_AUC_beyond_global_freq_shuffle": false,
+   "survives_best_of_model": false,
+   "survives_best_of_segmentation": true,
+   "survives_best_of_seed": true,
+   "independent_unsupervised_models_replicate (M2 AND M3 > null95)": false,
+   "frequency_band_grouped_CV_survives (A4)": false,
+   "survives_at_measured_LinearA_operating_point (A5)": false
+  },
+  "cross_work_numbers": {
+   "M2_gmm_auc": 0.704,
+   "M2_gmm_null95": 0.762,
+   "M3_hmm_auc": 0.719,
+   "M3_hmm_null95": 0.761,
+   "freqband_grouped_all_auc": 0.658,
+   "freqband_grouped_all_perm_p": 0.125,
+   "freqband_grouped_position_only_auc": 0.481,
+   "LA_operating_point_auc_all": 0.595,
+   "LA_operating_point_null95": 0.917
+  },
+  "decision_rule": "REPLICATED := independent_models_replicate AND frequency_band_grouped_CV_survives AND all best-of-{model,segmentation,seed} adaptive nulls p<0.05 AND frequency_matched_label_null p<0.05 AND position_structure_beyond_order_shuffle. REFUTED := (NOT independent_models_replicate AND NOT frequency_band_grouped_CV_survives) OR NOT survives_at_measured_LinearA_operating_point OR NOT frequency_matched (freq fully explains it). EXPLORATORY_ONLY := survives naive label permutation but not the adaptive/grouped/frequency-confound controls. INCOMPLETE otherwise.",
+  "verdict": "CV_ANALOGUE_REFUTED"
+ },
+ "adjusted_p_values": {
+  "random_cv_labels": 0.1464,
+  "frequency_matched_labels": 0.1299,
+  "shuffled_sign_positions_p_pos_ge_obs": 0.439,
+  "shuffled_sign_positions_p_all_ge_obs": 0.6829,
+  "shuffled_documents_p_all_ge_obs": 0.0732,
+  "site_preserving_p_all_ge_obs": 0.0244,
+  "series_preserving_p_all_ge_obs": 0.0488,
+  "best_of_model": 0.1294,
+  "best_of_segmentation": 0.01,
+  "best_of_seed": 0.016
+ },
+ "per_model_grouped_auc": {
+  "M1_logistic_sign_grouped_7fold_all": 0.828,
+  "M1_logistic_sign_grouped_7fold_position_only": 0.778,
+  "M1_logistic_leave_one_site_out_pooled": 0.76,
+  "M1_logistic_leave_one_series_out_pooled": 0.817,
+  "M1_logistic_frequency_band_grouped_all": 0.658,
+  "M1_logistic_frequency_band_grouped_position_only": 0.481,
+  "M2_gmm_unsupervised_auc": 0.704,
+  "M2_gmm_null95": 0.762,
+  "M3_hmm_unsupervised_auc": 0.719,
+  "M3_hmm_null95": 0.761
+ },
+ "WP_A_VERDICT": "CV_ANALOGUE_REFUTED"
+}

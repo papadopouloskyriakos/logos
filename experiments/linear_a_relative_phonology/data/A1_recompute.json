@@ -1,0 +1,96 @@
+{
+ "meta": {
+  "seed": 20260708,
+  "features": [
+   "initial_rate",
+   "final_rate",
+   "mean_pos",
+   "lone_rate",
+   "lnbr_ent",
+   "rnbr_ent",
+   "log_freq"
+  ],
+  "lb_vowels": [
+   "A",
+   "E",
+   "I",
+   "O",
+   "U"
+  ],
+  "n_lb_wordforms": 13562,
+  "logreg": {
+   "l2": 1.0,
+   "iters": 500,
+   "lr": 0.3
+  },
+  "cv": {
+   "folds": 7,
+   "split": "shuffled index % k",
+   "standardize": "z-score on full sign set"
+  },
+  "perm_null": {
+   "single_feature_n": 2000,
+   "cv_n": 200,
+   "stat": ">= observed",
+   "p": "(hits+1)/(n+1)"
+  },
+  "note": "independent reimplementation; no Foundry import. Known LB values used ONLY as grading labels."
+ },
+ "sign_inventory": {
+  "threshold": "freq>=20",
+  "n_signs_int_freq": 77,
+  "n_signs_explog_freq": 74,
+  "n_true_vowels_present_int": 5,
+  "n_true_vowels_present_explog": 5,
+  "signs_dropped_by_explog_threshold": [
+   {
+    "sign": "*47",
+    "int_freq": 20,
+    "explog": 19.999999999999996
+   },
+   {
+    "sign": "*63",
+    "int_freq": 20,
+    "explog": 19.999999999999996
+   },
+   {
+    "sign": "TA2",
+    "int_freq": 20,
+    "explog": 19.999999999999996
+   }
+  ],
+  "explog_threshold_bug": "Foundry WP3 filters with math.exp(math.log(freq))>=20; floating-point rounding drops signs whose freq is EXACTLY 20, so WP3 grades on 74 signs while WP1 grades on 77. A clean integer freq>=20 keeps all 77."
+ },
+ "WP1_single_feature": {
+  "published_auc": 0.744,
+  "published_perm_p": 0.035,
+  "recomputed_auc_int77": 0.744,
+  "recomputed_perm_p_int77": 0.035,
+  "recomputed_auc_explog74": 0.759,
+  "matches_published_auc_within_0.01": true
+ },
+ "WP3_cv": {
+  "published_cv_auc": 0.835,
+  "published_perm_p": 0.01,
+  "published_n_signs": 74,
+  "recomputed_cv_auc_explog74": 0.835,
+  "recomputed_perm_p_explog74": 0.01,
+  "recomputed_cv_auc_int77": 0.825,
+  "recomputed_perm_p_int77": 0.01,
+  "matches_published_cv_within_0.01": true,
+  "matches_published_p_within_0.02": true
+ },
+ "ablation_explog74": {
+  "all": 0.835,
+  "log_freq_only": 0.838,
+  "minus_log_freq": 0.783,
+  "position_only": 0.67
+ },
+ "ablation_int77": {
+  "all": 0.825,
+  "log_freq_only": 0.794,
+  "minus_log_freq": 0.761,
+  "position_only": 0.586
+ },
+ "verdict_reconstruction": "REPRODUCED"
+}
