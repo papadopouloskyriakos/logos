@@ -51,3 +51,11 @@ reports "calibrated absence."
   - **Verdict:** the ceiling is liftable only from outside the corpus, and the only outside lever (Egyptian)
     is underpowered/source-blocked. → Phase B: run the one executable step (Egyptian power pass); then Phase C
     identifiability synthesis.
+- **T2 — Phase B: Egyptian frozen-regime power pass** (external-anchors `3310e4b`). The unexecuted `frozen=True`
+  milestone: the discipline (no mapping search) drops FP from ~0.25 → **0.04 at La=4**, so the channel is NOT
+  NO_POWER by design — BUT it hinges on ≥4-slot skeletons (La=3 → FP 0.24), REC is an optimistic ceiling, and
+  the REAL confirmatory attempt (egyptian-calibration, Edel&Görg collated) already returned `TRIVIAL_RECOVERY`
+  (one-training-record correspondence). Net: **design-viable but scarcity-limited**; unlock = more independent
+  ≥4-slot anchors. A truth-layer design signal (≤0.75), not a reading.
+- **T3 — completeness critic** (before concluding): adversarial pass to REFUTE "no un-tried powered avenue
+  exists." If it finds one → pursue it; else → Phase C synthesis.
