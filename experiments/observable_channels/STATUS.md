@@ -1,21 +1,20 @@
 # STATUS — Observable Administrative Channel Recovery
 
-**NOW (2026-07-07):** pivoted from the closed source-label route. `status = OPEN`.
+**NOW (2026-07-07):** functional question `REFUTED`; L2 structure `SUPPORTED`. See `reports/GATE_VERDICT.md`.
 
 | experiment | state |
 |---|---|
 | charter + scaffold | ✅ done |
-| 1 masked logogram recovery | ✅ NEGATIVE — word-context does NOT beat the series shortcut / fails cross-site |
-| 2 masked quantity-channel | ✅ NEGATIVE — word-context (M_sign) below baseline/null; only LAYOUT (L2) beats baseline |
-| 3 accounting-closure | pending |
-| 4 document-template completion | pending |
-| 5 cross-site invariance | pending |
-| 6 pseudo-script O2+D8 | pending |
-| ablations A0-A12 + nulls | pending |
-| mechanical gate | pending (2 channels down, both NEGATIVE for word-context) |
+| 1 masked logogram recovery | ✅ NEGATIVE (L3) — word-context does NOT beat the series shortcut / fails cross-site |
+| 2 masked quantity-channel | ✅ NEGATIVE (L3) — word-context below baseline/null; only LAYOUT (L2) beats baseline |
+| 3 accounting-closure | ✅ L2 POSITIVE — closure 0.071 > null 0.049; 100% masked-line reconstruction where present |
+| 4 document-template completion | ✅ L2 POSITIVE — 0.508 > 0.398 held-out (unseen docs); single-direction cross-site |
+| 5 cross-site invariance | not run (only needed for a strictly-L2 STRUCTURAL licence) |
+| 6 pseudo-script O2+D8 | not run (nothing L3 survived to stress-test) |
+| **mechanical gate** | ✅ **OBSERVABLE_CHANNEL_READY = NO** — L3 functional `REFUTED`; L2 structure real but not licence-clearing |
 
-**Signal after 2 channels (commodity + quantity):** well-powered (1,593 A12 units on quantity), but the
-observable administrative signal lives in **document structure — series / layout / position (L2)**, NOT in
-transferable opaque word forms (the L3 functional signal). Both channels are per-channel NEGATIVES for the
-word-context question. `FUNCTIONAL_TRANSFER_LICENSE` = `NOT_YET_EARNED`. Exp 3–4 test the L2 structure
-channel directly — recovering it re-confirms L2, does not earn the L3 licence.
+**Verdict:** the central question — *do opaque word forms predict observable admin channels once shortcuts
+are controlled?* — is **`REFUTED`** (well-powered: 457 + 1,593 A12 units). The observable signal lives in
+**document structure (L2)**: templates (0.508 vs 0.398 held-out) + sparse-exact accounting closure. That's the
+already-known L2 layer, not L3 function. `FUNCTIONAL_TRANSFER_LICENSE` `NOT_EARNED`; `STRUCTURAL` `NOT_YET_EARNED`
+(Exp 5–6 remain if a strictly-L2 structural transfer is the goal). A rigorous negative = a successful result.

@@ -1,0 +1,20 @@
+{
+ "n_docs_ge3_numeric": 350,
+ "closure_rate_exact": 0.071,
+ "null_closure_rate_exact": 0.049,
+ "closure_rate_tol1": 0.214,
+ "null_closure_rate_tol1": 0.143,
+ "cross_site_closure_exact": {
+  "KN": 0.111,
+  "nonKN": 0.052,
+  "n_KN": 117,
+  "n_nonKN": 233
+ },
+ "masked_summand_reconstruction": {
+  "n_closing": 25,
+  "closure_reconstruction_acc": 1.0,
+  "median_baseline_acc": 0.2
+ },
+ "layer": "L2 (document structure) \u2014 numeral arithmetic only; no word forms/logograms",
+ "interpretation": "Is the 'list + total' accounting closure a real, above-null document structure, and does it reconstruct a masked line item beyond a median baseline?"
+}

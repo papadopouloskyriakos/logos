@@ -1,0 +1,38 @@
+{
+ "n_docs_ge3": 1186,
+ "n_train": 911,
+ "n_test_docs": 275,
+ "distinct_entry_types": 7,
+ "type_distribution": {
+  "(True, False, False)": 2029,
+  "(True, True, True)": 1920,
+  "(True, False, True)": 772,
+  "(False, True, True)": 443,
+  "(True, True, False)": 315,
+  "(False, False, True)": 172,
+  "(False, True, False)": 40
+ },
+ "held_out_unseen_documents": {
+  "n_masked": 1324,
+  "baseline_global_majority": 0.338,
+  "baseline_position": 0.398,
+  "M_template_A_unseen_doc": 0.508
+ },
+ "template_beats_baselines": true,
+ "cross_site": {
+  "KN": {
+   "n_masked": 733,
+   "baseline_global_majority": 0.43,
+   "baseline_position": 0.443,
+   "M_template_A_unseen_doc": 0.407
+  },
+  "nonKN": {
+   "n_masked": 591,
+   "baseline_global_majority": 0.225,
+   "baseline_position": 0.342,
+   "M_template_A_unseen_doc": 0.633
+  }
+ },
+ "layer": "L2 (document structure) \u2014 notation-type template only; no word-form identity",
+ "interpretation": "Are LB documents internally templated \u2014 does the rest of a document predict a masked entry's notation type beyond the global/position base rate, on UNSEEN documents?"
+}
