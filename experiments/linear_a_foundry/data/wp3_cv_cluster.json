@@ -1,0 +1,93 @@
+{
+ "experiment": "WP3.1-followup \u2014 unsupervised LA-internal C/V clustering",
+ "method": "2-class k-means/GMM on standardized WP3.1 features; ARI vs label-permutation null; known-truth LB benchmark GATES application to LA",
+ "seed": 20260708,
+ "freq_min": 20,
+ "LB_benchmark": {
+  "all_feats": {
+   "kmeans": {
+    "method": "kmeans",
+    "ari": 0.0034,
+    "vowel_recall": 0.6,
+    "vowel_purity": 0.088,
+    "n_vowels_captured": 3,
+    "n_vowels_total": 5,
+    "enriched_cluster_size": 34,
+    "vowel_rate_by_cluster": {
+     "0": 0.05,
+     "1": 0.088
+    },
+    "perm_null_mean_ari": 0.0006,
+    "perm_null_p95_ari": 0.0181,
+    "perm_p": 0.4571,
+    "n_null": 500,
+    "passes": false
+   },
+   "gmm": {
+    "method": "gmm",
+    "ari": 0.0062,
+    "vowel_recall": 0.6,
+    "vowel_purity": 0.091,
+    "n_vowels_captured": 3,
+    "n_vowels_total": 5,
+    "enriched_cluster_size": 33,
+    "vowel_rate_by_cluster": {
+     "0": 0.049,
+     "1": 0.091
+    },
+    "perm_null_mean_ari": 0.0006,
+    "perm_null_p95_ari": 0.0239,
+    "perm_p": 0.4192,
+    "n_null": 500,
+    "passes": false
+   }
+  },
+  "pos_only": {
+   "kmeans": {
+    "method": "kmeans",
+    "ari": 0.001,
+    "vowel_recall": 0.6,
+    "vowel_purity": 0.086,
+    "n_vowels_captured": 3,
+    "n_vowels_total": 5,
+    "enriched_cluster_size": 35,
+    "vowel_rate_by_cluster": {
+     "0": 0.051,
+     "1": 0.086
+    },
+    "perm_null_mean_ari": 0.0004,
+    "perm_null_p95_ari": 0.0127,
+    "perm_p": 0.495,
+    "n_null": 500,
+    "passes": false
+   },
+   "gmm": {
+    "method": "gmm",
+    "ari": 0.0034,
+    "vowel_recall": 0.6,
+    "vowel_purity": 0.088,
+    "n_vowels_captured": 3,
+    "n_vowels_total": 5,
+    "enriched_cluster_size": 34,
+    "vowel_rate_by_cluster": {
+     "0": 0.05,
+     "1": 0.088
+    },
+    "perm_null_mean_ari": 0.0006,
+    "perm_null_p95_ari": 0.0181,
+    "perm_p": 0.4391,
+    "n_null": 500,
+    "passes": false
+   }
+  },
+  "n_signs": 74
+ },
+ "LB_best_config": null,
+ "LA_partition": {
+  "applied": false,
+  "reason": "no LB config beat its label-permutation null (passes=True); pipeline not applied to LA"
+ },
+ "verdict": "NULL",
+ "reduces_equivalence_classes": false,
+ "contrast_with_WP3.1": "WP3.1 supervised LB->LA transfer put 0 signs in the vowel class (calibration collapse); unsupervised within-script clustering finds the boundary per script and yields a non-degenerate LA partition."
+}

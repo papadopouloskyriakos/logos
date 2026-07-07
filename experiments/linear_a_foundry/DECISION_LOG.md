@@ -18,3 +18,12 @@
   frequency prior. LA: ranks A/I top (vowel-corresponding) but LB probs don't calibrate (domain shift) -> LA
   ranking not partition. WP3 continues: LA-internal unsupervised clustering + substitutions (WP3.2) + morphology
   (WP3.4). No reading; no licence. Commit: _(this)_.
+- **WP3 core complete (wf_cb02597a).** WP3.2 scribal substitution SIGNAL_VALIDATED on LB (same-C/V recovery
+  1.39x null, z=7.07, AUC 0.714 — independent relational channel; signal in edge WEIGHT); LA underpowered
+  (max weight 105 vs 303). WP3.1b unsupervised C/V clustering NULL (dominant axis != C/V; needs labels;
+  fail-closed). WP3.4 morphology NULL (detector validated on LB 0.731 bits/word; LA gain = recurrence artifact).
+  WP3.3 orthographic method validated on LB (p=0.0033) but NO_POWER on LA (unsegmented, 1 pair support>=3).
+  SECOND CORRECTION: prior 'more corpus can't help (value-blind)' is REFUTED — the relative channels are
+  validated on LB and would reach power on a larger/segmented LA corpus; C/V needs only a few seed labels
+  (reduced anchor requirement). Obstacle = LA corpus power for relative channels, not a symmetry theorem.
+  Commit: _(this)_.

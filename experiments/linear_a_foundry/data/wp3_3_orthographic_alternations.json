@@ -1,0 +1,336 @@
+{
+ "experiment": "WP3.3_orthographic_alternations",
+ "seed": 20260707,
+ "min_support": 3,
+ "n_null": 300,
+ "non_circular": "detector uses sign identity+position only; LB (C,V) parsed for grading the opaque benchmark only; LA graded by corpus-shuffle null with NO value parse.",
+ "opaque_LB_benchmark": {
+  "n_wordforms": 13562,
+  "n_recurrent_pairs_support_ge3": 1740,
+  "support_weighted_total": 17780,
+  "sameV_recovery": {
+   "observed_rate": 0.2268,
+   "null_mean": 0.1972,
+   "null_sd": 0.008,
+   "null_max": 0.2196,
+   "enrichment": 1.15,
+   "perm_p": 0.0033,
+   "n_null": 300
+  },
+  "sameC_recovery": {
+   "observed_rate": 0.0778,
+   "null_mean": 0.0536,
+   "null_sd": 0.0051,
+   "null_max": 0.0718,
+   "enrichment": 1.452,
+   "perm_p": 0.0033,
+   "n_null": 300
+  },
+  "top15_alternation_pairs": [
+   {
+    "pair": [
+     "JA",
+     "JO"
+    ],
+    "support": 95,
+    "sameV": false,
+    "sameC": true
+   },
+   {
+    "pair": [
+     "TA",
+     "TO"
+    ],
+    "support": 57,
+    "sameV": false,
+    "sameC": true
+   },
+   {
+    "pair": [
+     "U",
+     "WE"
+    ],
+    "support": 51,
+    "sameV": false,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "JO",
+     "TO"
+    ],
+    "support": 44,
+    "sameV": true,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "RA",
+     "RO"
+    ],
+    "support": 44,
+    "sameV": false,
+    "sameC": true
+   },
+   {
+    "pair": [
+     "KA",
+     "TA"
+    ],
+    "support": 43,
+    "sameV": true,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "RO",
+     "TO"
+    ],
+    "support": 43,
+    "sameV": true,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "KO",
+     "TO"
+    ],
+    "support": 42,
+    "sameV": true,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "TO",
+     "WO"
+    ],
+    "support": 42,
+    "sameV": true,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "JO",
+     "RO"
+    ],
+    "support": 41,
+    "sameV": true,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "WE",
+     "WO"
+    ],
+    "support": 41,
+    "sameV": false,
+    "sameC": true
+   },
+   {
+    "pair": [
+     "KO",
+     "TA"
+    ],
+    "support": 41,
+    "sameV": false,
+    "sameC": false
+   },
+   {
+    "pair": [
+     "TA",
+     "TE"
+    ],
+    "support": 40,
+    "sameV": false,
+    "sameC": true
+   },
+   {
+    "pair": [
+     "KA",
+     "KO"
+    ],
+    "support": 40,
+    "sameV": false,
+    "sameC": true
+   },
+   {
+    "pair": [
+     "JA",
+     "TO"
+    ],
+    "support": 39,
+    "sameV": false,
+    "sameC": false
+   }
+  ],
+  "benchmark_pass": true,
+  "interpretation": "recurrent word-final/initial alternations recover the hidden vowel- and consonant-sharing of the signs (same-slot pairs share V/C above a label-permutation null) \u2014 e.g. JA/JO, TA/TO, RA/RO, WE/WO. Structure recovered from identity+position ALONE."
+ },
+ "LB_recurrence_null": {
+  "statistic": "filler-shuffle structure test; signal in the LOW tail (structured corpus => obs below null)",
+  "obs_max_support": 95,
+  "null_max_support_mean": 253.1,
+  "null_max_support_sd": 8.03,
+  "z_max": -19.69,
+  "low_tail_p_max": 0.0033,
+  "obs_top5_mass": 291,
+  "null_top5_mass_mean": 1196.77,
+  "z_top5": -38.57,
+  "low_tail_p_top5": 0.0033,
+  "n_null": 300
+ },
+ "LA_application": {
+  "n_inscriptions": 539,
+  "note": "LA is UNSEGMENTED (inscription = unit); word-boundary alternation has intrinsically low power. No value parse used (would be circular).",
+  "recurrence_null": {
+   "statistic": "filler-shuffle structure test; signal in the LOW tail (structured corpus => obs below null)",
+   "obs_max_support": 3,
+   "null_max_support_mean": 4.66,
+   "null_max_support_sd": 0.94,
+   "z_max": -1.76,
+   "low_tail_p_max": 0.0831,
+   "obs_top5_mass": 11,
+   "null_top5_mass_mean": 19.18,
+   "z_top5": -3.12,
+   "low_tail_p_top5": 0.0033,
+   "n_null": 300
+  },
+  "n_pairs_support_ge3": 1,
+  "n_pairs_support_ge2": 16,
+  "top_alternation_pairs_support_ge2": [
+   {
+    "pair": [
+     "KA",
+     "SI"
+    ],
+    "support": 3
+   },
+   {
+    "pair": [
+     "NA",
+     "SI"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "RU",
+     "SI"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "RE",
+     "TE"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "NI",
+     "TE"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "NI",
+     "SI"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "KA",
+     "RE"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "DU",
+     "JA"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "DU",
+     "PI"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "I",
+     "NE"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "JA",
+     "RE"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "MA",
+     "NU"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "MI",
+     "RE"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "MI",
+     "TA"
+    ],
+    "support": 2
+   },
+   {
+    "pair": [
+     "JA",
+     "TI"
+    ],
+    "support": 2
+   }
+  ],
+  "alternation_classes_components": [
+   [
+    "DU",
+    "JA",
+    "KA",
+    "MI",
+    "NA",
+    "NI",
+    "PI",
+    "RA",
+    "RE",
+    "RU",
+    "SI",
+    "TA",
+    "TE",
+    "TI"
+   ],
+   [
+    "I",
+    "NE"
+   ],
+   [
+    "MA",
+    "NU"
+   ]
+  ]
+ },
+ "verdict": "NO_POWER",
+ "equivalence_class_reduction": "On LB the detector recovers, from identity+position alone, that alternating final/initial signs share a vowel (0.23 vs 0.20 null, p<0.01) and a consonant (0.08 vs 0.05, p<0.01): distributional alternation is a real handle on the (C,V) grid, so an external anchor on ONE member of an alternation pair constrains its partner. On LA the same handle is present only at inscription granularity (no segmentation), yielding candidate allograph/alternation classes but limited power."
+}

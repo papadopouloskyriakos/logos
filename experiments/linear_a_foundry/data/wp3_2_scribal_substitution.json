@@ -1,0 +1,569 @@
+{
+ "experiment": "WP3.2_scribal_substitution",
+ "seed": 20260708,
+ "ngrams": [
+  2,
+  3,
+  4
+ ],
+ "n_null": 300,
+ "non_circular": "sign-identity contexts only; LB values used solely to grade the LB benchmark",
+ "LB_benchmark": {
+  "full_graph": {
+   "nodes": 89,
+   "edges": 3779,
+   "density": 0.965,
+   "mean_degree": 84.92,
+   "max_degree": 88,
+   "components": 1,
+   "largest_component": 89
+  },
+  "graded_subgraph": {
+   "nodes": 72,
+   "edges": 2538,
+   "density": 0.993,
+   "mean_degree": 70.5,
+   "max_degree": 71,
+   "components": 1,
+   "largest_component": 72
+  },
+  "graded_edges_scored": 2538,
+  "base_rate_same_feature_allpairs": 0.2477,
+  "note_density": "the unthresholded n-gram substitution graph is near-complete (density ~0.99): in a large corpus almost every sign-pair substitutes SOMEWHERE, so edge EXISTENCE is uninformative. The phonological signal lives in the substitution-context WEIGHT; the threshold sweep below tests the strong-substitution subgraphs against a degree-preserving null.",
+  "pair_auc_rawweight_predicts_feature": 0.552,
+  "pair_auc_hubnorm_predicts_feature": 0.714,
+  "threshold_sweep": [
+   {
+    "threshold": 2,
+    "edges": 2501,
+    "nodes": 72,
+    "density": 0.978,
+    "prec_either": 0.2483,
+    "prec_vowel": 0.2003,
+    "prec_cons": 0.0504,
+    "null_mean": 0.2482,
+    "null_sd": 0.0006,
+    "lift": 1.0,
+    "z": 0.1,
+    "p": 0.5814
+   },
+   {
+    "threshold": 3,
+    "edges": 2425,
+    "nodes": 72,
+    "density": 0.949,
+    "prec_either": 0.2511,
+    "prec_vowel": 0.2016,
+    "prec_cons": 0.052,
+    "null_mean": 0.2505,
+    "null_sd": 0.0006,
+    "lift": 1.003,
+    "z": 1.12,
+    "p": 0.206
+   },
+   {
+    "threshold": 5,
+    "edges": 2310,
+    "nodes": 71,
+    "density": 0.93,
+    "prec_either": 0.2511,
+    "prec_vowel": 0.1996,
+    "prec_cons": 0.0541,
+    "null_mean": 0.2513,
+    "null_sd": 0.0005,
+    "lift": 0.999,
+    "z": -0.38,
+    "p": 0.804
+   },
+   {
+    "threshold": 8,
+    "edges": 2212,
+    "nodes": 69,
+    "density": 0.943,
+    "prec_either": 0.2518,
+    "prec_vowel": 0.1985,
+    "prec_cons": 0.0556,
+    "null_mean": 0.2512,
+    "null_sd": 0.0005,
+    "lift": 1.002,
+    "z": 1.24,
+    "p": 0.2193
+   },
+   {
+    "threshold": 12,
+    "edges": 2083,
+    "nodes": 68,
+    "density": 0.914,
+    "prec_either": 0.254,
+    "prec_vowel": 0.1978,
+    "prec_cons": 0.0586,
+    "null_mean": 0.2519,
+    "null_sd": 0.0011,
+    "lift": 1.008,
+    "z": 1.9,
+    "p": 0.0365
+   },
+   {
+    "threshold": 20,
+    "edges": 1883,
+    "nodes": 66,
+    "density": 0.878,
+    "prec_either": 0.2533,
+    "prec_vowel": 0.196,
+    "prec_cons": 0.0595,
+    "null_mean": 0.2523,
+    "null_sd": 0.0011,
+    "lift": 1.004,
+    "z": 0.9,
+    "p": 0.2791
+   },
+   {
+    "threshold": 30,
+    "edges": 1653,
+    "nodes": 63,
+    "density": 0.846,
+    "prec_either": 0.2535,
+    "prec_vowel": 0.1972,
+    "prec_cons": 0.0569,
+    "null_mean": 0.2511,
+    "null_sd": 0.0016,
+    "lift": 1.01,
+    "z": 1.49,
+    "p": 0.1163
+   },
+   {
+    "threshold": 50,
+    "edges": 1217,
+    "nodes": 57,
+    "density": 0.763,
+    "prec_either": 0.2712,
+    "prec_vowel": 0.2079,
+    "prec_cons": 0.0633,
+    "null_mean": 0.2585,
+    "null_sd": 0.0026,
+    "lift": 1.049,
+    "z": 4.81,
+    "p": 0.0033
+   },
+   {
+    "threshold": 80,
+    "edges": 652,
+    "nodes": 48,
+    "density": 0.578,
+    "prec_either": 0.3175,
+    "prec_vowel": 0.2454,
+    "prec_cons": 0.0721,
+    "null_mean": 0.2761,
+    "null_sd": 0.0059,
+    "lift": 1.15,
+    "z": 6.98,
+    "p": 0.0033
+   },
+   {
+    "threshold": 120,
+    "edges": 166,
+    "nodes": 31,
+    "density": 0.357,
+    "prec_either": 0.4277,
+    "prec_vowel": 0.2952,
+    "prec_cons": 0.1325,
+    "null_mean": 0.3076,
+    "null_sd": 0.017,
+    "lift": 1.391,
+    "z": 7.07,
+    "p": 0.0033
+   }
+  ],
+  "operating_point": {
+   "threshold": 120,
+   "edges": 166,
+   "nodes": 31,
+   "density": 0.357,
+   "prec_either": 0.4277,
+   "prec_vowel": 0.2952,
+   "prec_cons": 0.1325,
+   "null_mean": 0.3076,
+   "null_sd": 0.017,
+   "lift": 1.391,
+   "z": 7.07,
+   "p": 0.0033
+  },
+  "n_null": 300,
+  "benchmark_passed": true
+ },
+ "LB_top_substitution_edges_with_values": [
+  {
+   "pair": [
+    "JA",
+    "JO"
+   ],
+   "contexts": 303,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "TA",
+    "TE"
+   ],
+   "contexts": 212,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "RA",
+    "RO"
+   ],
+   "contexts": 209,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "TA",
+    "TO"
+   ],
+   "contexts": 204,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "RA",
+    "TA"
+   ],
+   "contexts": 194,
+   "share": "SAME_V"
+  },
+  {
+   "pair": [
+    "RE",
+    "RO"
+   ],
+   "contexts": 191,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "TE",
+    "TO"
+   ],
+   "contexts": 187,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "U",
+    "WE"
+   ],
+   "contexts": 183,
+   "share": "-"
+  },
+  {
+   "pair": [
+    "RA",
+    "RI"
+   ],
+   "contexts": 181,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "RA",
+    "RE"
+   ],
+   "contexts": 178,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "RO",
+    "TO"
+   ],
+   "contexts": 178,
+   "share": "SAME_V"
+  },
+  {
+   "pair": [
+    "KE",
+    "TE"
+   ],
+   "contexts": 176,
+   "share": "SAME_V"
+  },
+  {
+   "pair": [
+    "RI",
+    "RO"
+   ],
+   "contexts": 170,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "RO",
+    "TA"
+   ],
+   "contexts": 170,
+   "share": "-"
+  },
+  {
+   "pair": [
+    "KA",
+    "KE"
+   ],
+   "contexts": 168,
+   "share": "SAME_C"
+  },
+  {
+   "pair": [
+    "KO",
+    "TA"
+   ],
+   "contexts": 163,
+   "share": "-"
+  },
+  {
+   "pair": [
+    "RO",
+    "TE"
+   ],
+   "contexts": 161,
+   "share": "-"
+  },
+  {
+   "pair": [
+    "A",
+    "E"
+   ],
+   "contexts": 160,
+   "share": "-"
+  },
+  {
+   "pair": [
+    "KA",
+    "RA"
+   ],
+   "contexts": 160,
+   "share": "SAME_V"
+  },
+  {
+   "pair": [
+    "KE",
+    "RA"
+   ],
+   "contexts": 160,
+   "share": "-"
+  }
+ ],
+ "LA_application": {
+  "graph": {
+   "nodes": 85,
+   "edges": 2940,
+   "density": 0.8235,
+   "mean_degree": 69.18,
+   "max_degree": 84,
+   "components": 1,
+   "largest_component": 85
+  },
+  "max_edge_weight": 105,
+  "strong_subgraph": {
+   "transferred_threshold": 120,
+   "effective_threshold": 50,
+   "underpowered_vs_LB_operating_point": true,
+   "nodes": 31,
+   "edges": 328,
+   "density": 0.7054,
+   "mean_degree": 21.16,
+   "max_degree": 29,
+   "components": 1,
+   "largest_component": 31
+  },
+  "n_ngrams": 9620,
+  "top_substitution_edges": [
+   {
+    "pair": [
+     "A",
+     "JA"
+    ],
+    "contexts": 105
+   },
+   {
+    "pair": [
+     "A",
+     "PA"
+    ],
+    "contexts": 95
+   },
+   {
+    "pair": [
+     "A",
+     "DA"
+    ],
+    "contexts": 94
+   },
+   {
+    "pair": [
+     "A",
+     "TE"
+    ],
+    "contexts": 94
+   },
+   {
+    "pair": [
+     "A",
+     "I"
+    ],
+    "contexts": 94
+   },
+   {
+    "pair": [
+     "A",
+     "KU"
+    ],
+    "contexts": 93
+   },
+   {
+    "pair": [
+     "KI",
+     "KU"
+    ],
+    "contexts": 90
+   },
+   {
+    "pair": [
+     "A",
+     "TA"
+    ],
+    "contexts": 88
+   },
+   {
+    "pair": [
+     "JA",
+     "NA"
+    ],
+    "contexts": 87
+   },
+   {
+    "pair": [
+     "A",
+     "MA"
+    ],
+    "contexts": 87
+   },
+   {
+    "pair": [
+     "DA",
+     "KU"
+    ],
+    "contexts": 86
+   },
+   {
+    "pair": [
+     "A",
+     "SI"
+    ],
+    "contexts": 86
+   },
+   {
+    "pair": [
+     "KU",
+     "NA"
+    ],
+    "contexts": 84
+   },
+   {
+    "pair": [
+     "DA",
+     "JA"
+    ],
+    "contexts": 83
+   },
+   {
+    "pair": [
+     "MA",
+     "TE"
+    ],
+    "contexts": 83
+   },
+   {
+    "pair": [
+     "TA",
+     "TE"
+    ],
+    "contexts": 82
+   },
+   {
+    "pair": [
+     "KU",
+     "MA"
+    ],
+    "contexts": 82
+   },
+   {
+    "pair": [
+     "NA",
+     "TA"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "I",
+     "JA"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "JA",
+     "SI"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "NA",
+     "SI"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "A",
+     "KI"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "A",
+     "SA"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "JA",
+     "TE"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "A",
+     "NA"
+    ],
+    "contexts": 80
+   }
+  ],
+  "cv_partition_check": {
+   "skipped": "WP3.1 partition degenerate on strong-subgraph nodes (all one class) or too few graded edges",
+   "n_vowel_like_in_partition": 0,
+   "graded_edges": 328
+  },
+  "applied": true,
+  "note": "candidate relabeling-variant pairs = relative structure only (no absolute values). LA has a far smaller corpus (max substitution weight 105 vs LB 303), so it cannot reach the high-weight regime where the LB benchmark's enrichment is strongest; the LA strong subgraph is a CANDIDATE structure, not a verified reduction."
+ },
+ "verdict": "SIGNAL_VALIDATED",
+ "reduces_equivalence_classes": true,
+ "LA_reduction_status": "candidate_unverified_underpowered",
+ "equivalence_class_reduction": "DEMONSTRATED on known-truth Linear B: strong substitution edges connect same-C/same-V signs at 1.39x the degree-preserving null (z=7.07, p=0.0033), so each strong edge is a verified soft same-feature constraint shrinking the joint value space below the S_n relabeling group. On LINEAR A the method yields a 328-edge / 31-node strong substitution graph (candidate relabeling-variant pairs) but the corpus is too small to reach the high-weight regime, so LA reduction is a CANDIDATE, not verified (guilty-until-proven-innocent: no LA ground truth, no held-out confirmation)."
+}

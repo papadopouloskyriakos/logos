@@ -16,5 +16,19 @@
   "tests": "7fold CV logreg + 5 ablations",
   "null_realizations": 200,
   "partition": "validation(LB)+application(LA)"
+ },
+ "WP3_core": {
+  "experiment_families": 4,
+  "null_realizations": {
+   "WP3.2": 300,
+   "WP3.1b": 500,
+   "WP3.3": 300,
+   "WP3.4": "perm"
+  },
+  "validated_on_opaque_LB": [
+   "WP3.2",
+   "WP3.3",
+   "WP3.4_detector"
+  ]
  }
 }

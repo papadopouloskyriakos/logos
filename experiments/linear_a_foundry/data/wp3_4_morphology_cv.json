@@ -1,0 +1,1199 @@
+{
+ "seed": 20260708,
+ "n_folds": 5,
+ "n_perm": 300,
+ "held_out_by": "lexical family = word[:-1] (stem); paradigm relatives held out together",
+ "typing_meta": {
+  "lb_selfpred_auc": 0.889,
+  "lb_n_modelled": 77,
+  "lb_n_true_vowels": 5,
+  "lb_pred_vowels": [
+   "A",
+   "E",
+   "KO",
+   "O",
+   "PA"
+  ],
+  "la_n_modelled": 44,
+  "la_pred_vowels": [
+   "A",
+   "DA",
+   "I"
+  ],
+  "feature_weights": {
+   "initial_rate": 0.687,
+   "final_rate": 0.071,
+   "mean_pos": -0.246,
+   "lone_rate": 0.0,
+   "lnbr_ent": -0.07,
+   "rnbr_ent": 0.645,
+   "log_freq": 1.193
+  }
+ },
+ "LB_benchmark_oracle_typing": {
+  "n_words": 13562,
+  "n_signs": 89,
+  "held_out_bits_per_word": {
+   "bigram": 20.5374,
+   "untyped": 19.8065,
+   "typed": 19.8294
+  },
+  "G_morph_bigram_minus_untyped": 0.7309,
+  "G_typed_bigram_minus_typed": 0.708,
+  "G_typing_untyped_minus_typed": -0.0229,
+  "tuned_params": [
+   {
+    "fold": 0,
+    "delta": 3.0,
+    "lam_untyped": 0.5,
+    "lam_typed": 0.5,
+    "n_train": 10238,
+    "n_test": 3324
+   },
+   {
+    "fold": 1,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 11246,
+    "n_test": 2316
+   },
+   {
+    "fold": 2,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 10893,
+    "n_test": 2669
+   },
+   {
+    "fold": 3,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 10752,
+    "n_test": 2810
+   },
+   {
+    "fold": 4,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 11119,
+    "n_test": 2443
+   }
+  ],
+  "recovered_paradigms": {
+   "n_stems_with_multi_affix": 704,
+   "top_families": [
+    {
+     "stem": "KO",
+     "finals": {
+      "WO": 226,
+      "WA": 170,
+      "NO": 17,
+      "RO": 10,
+      "RU": 7,
+      "DO": 5,
+      "SO": 3,
+      "TO": 3,
+      "NA": 3,
+      "RI": 2,
+      "TI": 2,
+      "WE": 2,
+      "PI": 1,
+      "A": 1,
+      "KU": 1,
+      "KI": 1,
+      "*18": 1,
+      "KO": 1,
+      "DE": 1,
+      "PU": 1,
+      "JO": 1,
+      "TA": 1,
+      "RA": 1
+     },
+     "n": 461
+    },
+    {
+     "stem": "PA",
+     "finals": {
+      "RO": 272,
+      "DE": 5,
+      "TA": 5,
+      "TE": 4,
+      "RE": 3,
+      "NO": 3,
+      "I": 3,
+      "JA": 2,
+      "ZE": 2,
+      "SA": 2,
+      "TI": 2,
+      "KA": 2,
+      "RA": 2,
+      "NA": 2,
+      "KO": 2,
+      "SI": 2,
+      "KI": 1,
+      "RU": 1,
+      "PU": 1,
+      "WE": 1,
+      "WO": 1,
+      "MO": 1,
+      "TO": 1
+     },
+     "n": 320
+    },
+    {
+     "stem": "E",
+     "finals": {
+      "KE": 159,
+      "RA": 38,
+      "TE": 5,
+      "RI": 4,
+      "RE": 4,
+      "KO": 3,
+      "PI": 3,
+      "PO": 3,
+      "TO": 3,
+      "U": 3,
+      "ME": 3,
+      "QE": 3,
+      "SE": 2,
+      "WA": 2,
+      "O": 2,
+      "KI": 1,
+      "DA": 1,
+      "TA": 1,
+      "*18": 1,
+      "SI": 1,
+      "WO": 1,
+      "SO": 1,
+      "QA": 1,
+      "QO": 1,
+      "DE": 1,
+      "WE": 1,
+      "PE": 1,
+      "NI": 1,
+      "RU": 1
+     },
+     "n": 251
+    },
+    {
+     "stem": "PE",
+     "finals": {
+      "MO": 196,
+      "I": 12,
+      "RE": 10,
+      "MA": 10,
+      "KO": 6,
+      "RO": 2,
+      "DA": 2,
+      "RA": 2,
+      "RA2": 2,
+      "QE": 2,
+      "DO": 1,
+      "RO2": 1,
+      "ME": 1,
+      "ZA": 1,
+      "O": 1,
+      "TA": 1,
+      "KA": 1
+     },
+     "n": 251
+    },
+    {
+     "stem": "TO",
+     "finals": {
+      "SO": 119,
+      "SA": 37,
+      "JO": 14,
+      "NO": 7,
+      "TO": 5,
+      "RA": 4,
+      "KO": 4,
+      "RO": 4,
+      "NI": 2,
+      "QA": 2,
+      "WO": 2,
+      "WA": 2,
+      "KE": 1,
+      "DE": 1,
+      "TE": 1,
+      "MO": 1,
+      "E": 1,
+      "ME": 1,
+      "PA": 1,
+      "O": 1,
+      "SE": 1,
+      "RE": 1,
+      "MA": 1
+     },
+     "n": 213
+    },
+    {
+     "stem": "O-NA",
+     "finals": {
+      "TO": 192,
+      "TA": 7,
+      "JO": 3,
+      "JA": 1
+     },
+     "n": 203
+    },
+    {
+     "stem": "TO-SO",
+     "finals": {
+      "DE": 168,
+      "PA": 4,
+      "JO": 2,
+      "O": 1,
+      "KU": 1,
+      "WO": 1,
+      "NE": 1
+     },
+     "n": 178
+    },
+    {
+     "stem": "DO-E",
+     "finals": {
+      "RO": 101,
+      "RA": 66
+     },
+     "n": 167
+    },
+    {
+     "stem": "KO-TO",
+     "finals": {
+      "NA": 158,
+      "NO": 2
+     },
+     "n": 160
+    },
+    {
+     "stem": "DA",
+     "finals": {
+      "MO": 87,
+      "WO": 46,
+      "NA": 3,
+      "RO": 3,
+      "MA": 3,
+      "MI": 2,
+      "NWA": 2,
+      "JO": 2,
+      "ZO": 2,
+      "RA": 2,
+      "TE": 1,
+      "WI": 1,
+      "SO": 1,
+      "*83": 1,
+      "*22": 1,
+      "I": 1,
+      "PU": 1
+     },
+     "n": 159
+    },
+    {
+     "stem": "O",
+     "finals": {
+      "PI": 38,
+      "PA": 28,
+      "NO": 19,
+      "KA": 15,
+      "PE": 7,
+      "NA": 6,
+      "NU": 5,
+      "TE": 5,
+      "NE": 4,
+      "KU": 3,
+      "DU": 2,
+      "QE": 2,
+      "KO": 2,
+      "DA": 1,
+      "U": 1,
+      "MO": 1,
+      "RA": 1,
+      "RU": 1,
+      "KI": 1,
+      "TU": 1,
+      "ME": 1,
+      "WI": 1,
+      "TO": 1,
+      "QA": 1,
+      "WA": 1,
+      "A2": 1,
+      "MA": 1,
+      "WO": 1
+     },
+     "n": 151
+    },
+    {
+     "stem": "E-KE",
+     "finals": {
+      "QE": 111,
+      "E": 5,
+      "A": 2,
+      "RO": 2,
+      "NE": 2,
+      "SE": 1,
+      "PI": 1,
+      "SI": 1,
+      "JA": 1
+     },
+     "n": 126
+    },
+    {
+     "stem": "KA",
+     "finals": {
+      "KO": 19,
+      "MA": 16,
+      "PA": 12,
+      "RA": 7,
+      "SI": 7,
+      "TA": 5,
+      "MO": 4,
+      "KA": 4,
+      "TI": 3,
+      "NO": 3,
+      "SO": 3,
+      "KE": 3,
+      "SA": 3,
+      "WI": 2,
+      "RO": 2,
+      "PO": 2,
+      "TO": 2,
+      "DE": 2,
+      "PTE": 1,
+      "JO": 1,
+      "ZA": 1,
+      "WO": 1,
+      "TA2": 1,
+      "RE": 1,
+      "TE": 1,
+      "JA": 1,
+      "NI": 1,
+      "NE": 1,
+      "PI": 1
+     },
+     "n": 110
+    },
+    {
+     "stem": "KE-KE-ME",
+     "finals": {
+      "NA": 107,
+      "NO": 3
+     },
+     "n": 110
+    },
+    {
+     "stem": "TE-O",
+     "finals": {
+      "JO": 104,
+      "I": 3,
+      "NE": 1,
+      "NA": 1
+     },
+     "n": 109
+    }
+   ],
+   "top_affixes_after_V": [
+    "JO",
+    "KE",
+    "RA",
+    "RO",
+    "TO",
+    "PI",
+    "KO",
+    "JA",
+    "KA",
+    "WE"
+   ],
+   "top_affixes_after_C": [
+    "JO",
+    "RO",
+    "TO",
+    "JA",
+    "WO",
+    "MO",
+    "TA",
+    "NO",
+    "NA",
+    "WE"
+   ]
+  },
+  "type_permutation_null": {
+   "p": 0.7708,
+   "n_perm": 300,
+   "perm_typed_bpw_mean": 19.8202,
+   "perm_typed_bpw_min": 19.7589,
+   "real_typed_bpw": 19.8294
+  },
+  "verdict": "MORPHOLOGY_BUT_TYPING_NULL"
+ },
+ "LB_benchmark_distributional_typing": {
+  "n_words": 13562,
+  "n_signs": 89,
+  "held_out_bits_per_word": {
+   "bigram": 20.5374,
+   "untyped": 19.8065,
+   "typed": 19.8175
+  },
+  "G_morph_bigram_minus_untyped": 0.7309,
+  "G_typed_bigram_minus_typed": 0.7199,
+  "G_typing_untyped_minus_typed": -0.0109,
+  "tuned_params": [
+   {
+    "fold": 0,
+    "delta": 3.0,
+    "lam_untyped": 0.5,
+    "lam_typed": 0.5,
+    "n_train": 10238,
+    "n_test": 3324
+   },
+   {
+    "fold": 1,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 11246,
+    "n_test": 2316
+   },
+   {
+    "fold": 2,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 10893,
+    "n_test": 2669
+   },
+   {
+    "fold": 3,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 10752,
+    "n_test": 2810
+   },
+   {
+    "fold": 4,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 11119,
+    "n_test": 2443
+   }
+  ],
+  "recovered_paradigms": {
+   "n_stems_with_multi_affix": 704,
+   "top_families": [
+    {
+     "stem": "KO",
+     "finals": {
+      "WO": 226,
+      "WA": 170,
+      "NO": 17,
+      "RO": 10,
+      "RU": 7,
+      "DO": 5,
+      "SO": 3,
+      "TO": 3,
+      "NA": 3,
+      "RI": 2,
+      "TI": 2,
+      "WE": 2,
+      "PI": 1,
+      "A": 1,
+      "KU": 1,
+      "KI": 1,
+      "*18": 1,
+      "KO": 1,
+      "DE": 1,
+      "PU": 1,
+      "JO": 1,
+      "TA": 1,
+      "RA": 1
+     },
+     "n": 461
+    },
+    {
+     "stem": "PA",
+     "finals": {
+      "RO": 272,
+      "DE": 5,
+      "TA": 5,
+      "TE": 4,
+      "RE": 3,
+      "NO": 3,
+      "I": 3,
+      "JA": 2,
+      "ZE": 2,
+      "SA": 2,
+      "TI": 2,
+      "KA": 2,
+      "RA": 2,
+      "NA": 2,
+      "KO": 2,
+      "SI": 2,
+      "KI": 1,
+      "RU": 1,
+      "PU": 1,
+      "WE": 1,
+      "WO": 1,
+      "MO": 1,
+      "TO": 1
+     },
+     "n": 320
+    },
+    {
+     "stem": "E",
+     "finals": {
+      "KE": 159,
+      "RA": 38,
+      "TE": 5,
+      "RI": 4,
+      "RE": 4,
+      "KO": 3,
+      "PI": 3,
+      "PO": 3,
+      "TO": 3,
+      "U": 3,
+      "ME": 3,
+      "QE": 3,
+      "SE": 2,
+      "WA": 2,
+      "O": 2,
+      "KI": 1,
+      "DA": 1,
+      "TA": 1,
+      "*18": 1,
+      "SI": 1,
+      "WO": 1,
+      "SO": 1,
+      "QA": 1,
+      "QO": 1,
+      "DE": 1,
+      "WE": 1,
+      "PE": 1,
+      "NI": 1,
+      "RU": 1
+     },
+     "n": 251
+    },
+    {
+     "stem": "PE",
+     "finals": {
+      "MO": 196,
+      "I": 12,
+      "RE": 10,
+      "MA": 10,
+      "KO": 6,
+      "RO": 2,
+      "DA": 2,
+      "RA": 2,
+      "RA2": 2,
+      "QE": 2,
+      "DO": 1,
+      "RO2": 1,
+      "ME": 1,
+      "ZA": 1,
+      "O": 1,
+      "TA": 1,
+      "KA": 1
+     },
+     "n": 251
+    },
+    {
+     "stem": "TO",
+     "finals": {
+      "SO": 119,
+      "SA": 37,
+      "JO": 14,
+      "NO": 7,
+      "TO": 5,
+      "RA": 4,
+      "KO": 4,
+      "RO": 4,
+      "NI": 2,
+      "QA": 2,
+      "WO": 2,
+      "WA": 2,
+      "KE": 1,
+      "DE": 1,
+      "TE": 1,
+      "MO": 1,
+      "E": 1,
+      "ME": 1,
+      "PA": 1,
+      "O": 1,
+      "SE": 1,
+      "RE": 1,
+      "MA": 1
+     },
+     "n": 213
+    },
+    {
+     "stem": "O-NA",
+     "finals": {
+      "TO": 192,
+      "TA": 7,
+      "JO": 3,
+      "JA": 1
+     },
+     "n": 203
+    },
+    {
+     "stem": "TO-SO",
+     "finals": {
+      "DE": 168,
+      "PA": 4,
+      "JO": 2,
+      "O": 1,
+      "KU": 1,
+      "WO": 1,
+      "NE": 1
+     },
+     "n": 178
+    },
+    {
+     "stem": "DO-E",
+     "finals": {
+      "RO": 101,
+      "RA": 66
+     },
+     "n": 167
+    },
+    {
+     "stem": "KO-TO",
+     "finals": {
+      "NA": 158,
+      "NO": 2
+     },
+     "n": 160
+    },
+    {
+     "stem": "DA",
+     "finals": {
+      "MO": 87,
+      "WO": 46,
+      "NA": 3,
+      "RO": 3,
+      "MA": 3,
+      "MI": 2,
+      "NWA": 2,
+      "JO": 2,
+      "ZO": 2,
+      "RA": 2,
+      "TE": 1,
+      "WI": 1,
+      "SO": 1,
+      "*83": 1,
+      "*22": 1,
+      "I": 1,
+      "PU": 1
+     },
+     "n": 159
+    },
+    {
+     "stem": "O",
+     "finals": {
+      "PI": 38,
+      "PA": 28,
+      "NO": 19,
+      "KA": 15,
+      "PE": 7,
+      "NA": 6,
+      "NU": 5,
+      "TE": 5,
+      "NE": 4,
+      "KU": 3,
+      "DU": 2,
+      "QE": 2,
+      "KO": 2,
+      "DA": 1,
+      "U": 1,
+      "MO": 1,
+      "RA": 1,
+      "RU": 1,
+      "KI": 1,
+      "TU": 1,
+      "ME": 1,
+      "WI": 1,
+      "TO": 1,
+      "QA": 1,
+      "WA": 1,
+      "A2": 1,
+      "MA": 1,
+      "WO": 1
+     },
+     "n": 151
+    },
+    {
+     "stem": "E-KE",
+     "finals": {
+      "QE": 111,
+      "E": 5,
+      "A": 2,
+      "RO": 2,
+      "NE": 2,
+      "SE": 1,
+      "PI": 1,
+      "SI": 1,
+      "JA": 1
+     },
+     "n": 126
+    },
+    {
+     "stem": "KA",
+     "finals": {
+      "KO": 19,
+      "MA": 16,
+      "PA": 12,
+      "RA": 7,
+      "SI": 7,
+      "TA": 5,
+      "MO": 4,
+      "KA": 4,
+      "TI": 3,
+      "NO": 3,
+      "SO": 3,
+      "KE": 3,
+      "SA": 3,
+      "WI": 2,
+      "RO": 2,
+      "PO": 2,
+      "TO": 2,
+      "DE": 2,
+      "PTE": 1,
+      "JO": 1,
+      "ZA": 1,
+      "WO": 1,
+      "TA2": 1,
+      "RE": 1,
+      "TE": 1,
+      "JA": 1,
+      "NI": 1,
+      "NE": 1,
+      "PI": 1
+     },
+     "n": 110
+    },
+    {
+     "stem": "KE-KE-ME",
+     "finals": {
+      "NA": 107,
+      "NO": 3
+     },
+     "n": 110
+    },
+    {
+     "stem": "TE-O",
+     "finals": {
+      "JO": 104,
+      "I": 3,
+      "NE": 1,
+      "NA": 1
+     },
+     "n": 109
+    }
+   ],
+   "top_affixes_after_V": [
+    "RO",
+    "WO",
+    "WA",
+    "KE",
+    "JO",
+    "RA",
+    "WE",
+    "NO",
+    "TE",
+    "SO"
+   ],
+   "top_affixes_after_C": [
+    "JO",
+    "TO",
+    "JA",
+    "RO",
+    "MO",
+    "TA",
+    "NA",
+    "NO",
+    "DE",
+    "WO"
+   ]
+  },
+  "verdict": "MORPHOLOGY_BUT_TYPING_NULL"
+ },
+ "LA_application": {
+  "n_words": 1270,
+  "n_signs": 81,
+  "held_out_bits_per_word": {
+   "bigram": 20.7224,
+   "untyped": 19.3805,
+   "typed": 19.5378
+  },
+  "G_morph_bigram_minus_untyped": 1.3418,
+  "G_typed_bigram_minus_typed": 1.1846,
+  "G_typing_untyped_minus_typed": -0.1572,
+  "tuned_params": [
+   {
+    "fold": 0,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 1037,
+    "n_test": 233
+   },
+   {
+    "fold": 1,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 962,
+    "n_test": 308
+   },
+   {
+    "fold": 2,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 1040,
+    "n_test": 230
+   },
+   {
+    "fold": 3,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.5,
+    "n_train": 1070,
+    "n_test": 200
+   },
+   {
+    "fold": 4,
+    "delta": 3.0,
+    "lam_untyped": 0.3,
+    "lam_typed": 0.3,
+    "n_train": 971,
+    "n_test": 299
+   }
+  ],
+  "recovered_paradigms": {
+   "n_stems_with_multi_affix": 102,
+   "top_families": [
+    {
+     "stem": "KU",
+     "finals": {
+      "RO": 37,
+      "PA": 5,
+      "RE": 2,
+      "RA": 2,
+      "*305": 1,
+      "NI": 1,
+      "PA3": 1,
+      "TA": 1,
+      "DA": 1,
+      "KA": 1,
+      "PI": 1,
+      "*321": 1
+     },
+     "n": 54
+    },
+    {
+     "stem": "A",
+     "finals": {
+      "DU": 10,
+      "SE": 4,
+      "RA": 3,
+      "RI": 3,
+      "MA": 3,
+      "JA": 3,
+      "RU": 2,
+      "TA": 2,
+      "PA": 2,
+      "MI": 2,
+      "NE": 2,
+      "SI": 1,
+      "TU": 1,
+      "TE": 1,
+      "I": 1,
+      "NA": 1,
+      "JU": 1,
+      "ME": 1,
+      "*301": 1,
+      "PI": 1,
+      "NU": 1,
+      "PA3": 1,
+      "RE": 1,
+      "JE": 1,
+      "DA": 1,
+      "DE": 1
+     },
+     "n": 51
+    },
+    {
+     "stem": "SA",
+     "finals": {
+      "RA2": 20,
+      "RU": 6,
+      "MA": 4,
+      "RO": 4,
+      "RA": 2,
+      "PO": 1,
+      "NE": 1,
+      "DI": 1,
+      "TA": 1,
+      "PU": 1,
+      "RI": 1
+     },
+     "n": 42
+    },
+    {
+     "stem": "I",
+     "finals": {
+      "RA2": 8,
+      "DA": 5,
+      "TI": 2,
+      "KA": 2,
+      "SI": 2,
+      "JA": 2,
+      "SE": 2,
+      "KI": 1,
+      "DI": 1,
+      "*331": 1,
+      "ZA": 1,
+      "NA": 1,
+      "PI": 1,
+      "MA": 1,
+      "DE": 1,
+      "*47": 1
+     },
+     "n": 32
+    },
+    {
+     "stem": "DA",
+     "finals": {
+      "RE": 7,
+      "KA": 5,
+      "ME": 4,
+      "I": 2,
+      "KI": 1,
+      "PA3": 1,
+      "TU": 1,
+      "DA": 1,
+      "WA": 1,
+      "RA": 1,
+      "KU": 1,
+      "*118": 1,
+      "JU": 1
+     },
+     "n": 27
+    },
+    {
+     "stem": "KI",
+     "finals": {
+      "RO": 16,
+      "RA": 2,
+      "*118": 1,
+      "DA": 1,
+      "*310": 1,
+      "TA": 1,
+      "RU": 1,
+      "PU": 1,
+      "NU": 1
+     },
+     "n": 25
+    },
+    {
+     "stem": "KA",
+     "finals": {
+      "PA": 6,
+      "NA": 2,
+      "KI": 2,
+      "RU": 2,
+      "DI": 2,
+      "*305": 1,
+      "KU": 1,
+      "TI": 1,
+      "JU": 1,
+      "RA2": 1,
+      "SI": 1,
+      "SA": 1,
+      "JE": 1,
+      "QA": 1,
+      "NE": 1
+     },
+     "n": 24
+    },
+    {
+     "stem": "JA",
+     "finals": {
+      "SA": 4,
+      "SI": 2,
+      "JA": 2,
+      "DU": 1,
+      "SU": 1,
+      "RA": 1,
+      "QE": 1,
+      "WA": 1,
+      "KU": 1,
+      "*304": 1,
+      "DI": 1,
+      "TI": 1,
+      "PA": 1,
+      "WI": 1,
+      "KI": 1,
+      "RE": 1,
+      "PI": 1
+     },
+     "n": 22
+    },
+    {
+     "stem": "SI",
+     "finals": {
+      "KA": 6,
+      "RU": 2,
+      "TU": 2,
+      "TE": 2,
+      "RA": 1,
+      "DU": 1,
+      "PU": 1,
+      "NA": 1,
+      "MI": 1,
+      "MA": 1,
+      "NI": 1
+     },
+     "n": 19
+    },
+    {
+     "stem": "MA",
+     "finals": {
+      "DI": 6,
+      "SI": 1,
+      "*321": 1,
+      "RE": 1,
+      "ZU": 1,
+      "RU": 1,
+      "RI": 1,
+      "I": 1,
+      "JU": 1,
+      "ZA": 1
+     },
+     "n": 15
+    },
+    {
+     "stem": "TE",
+     "finals": {
+      "TU": 3,
+      "RI": 3,
+      "*301": 2,
+      "KI": 2,
+      "KE": 1,
+      "NI": 1,
+      "ZU": 1,
+      "JA": 1,
+      "TE": 1
+     },
+     "n": 15
+    },
+    {
+     "stem": "TA",
+     "finals": {
+      "I": 3,
+      "TI": 2,
+      "MI": 1,
+      "RA": 1,
+      "PA": 1,
+      "NE": 1,
+      "JA": 1,
+      "TA": 1,
+      "U": 1,
+      "KE": 1,
+      "PI": 1
+     },
+     "n": 14
+    },
+    {
+     "stem": "RE",
+     "finals": {
+      "ZA": 3,
+      "TI": 2,
+      "JA": 2,
+      "SU": 1,
+      "TU": 1,
+      "TA2": 1,
+      "RO": 1,
+      "*86": 1,
+      "SA": 1
+     },
+     "n": 13
+    },
+    {
+     "stem": "PA",
+     "finals": {
+      "DE": 3,
+      "SE": 2,
+      "RA": 2,
+      "RE": 1,
+      "JA": 1,
+      "I": 1,
+      "TA": 1,
+      "ZA": 1
+     },
+     "n": 12
+    },
+    {
+     "stem": "A-TA-I-*301-WA",
+     "finals": {
+      "JA": 11,
+      "E": 1
+     },
+     "n": 12
+    }
+   ],
+   "top_affixes_after_V": [
+    "RE",
+    "DU",
+    "DA",
+    "RA",
+    "SE",
+    "KA",
+    "RA2",
+    "JA",
+    "TA",
+    "MA"
+   ],
+   "top_affixes_after_C": [
+    "RO",
+    "JA",
+    "TE",
+    "NA",
+    "TI",
+    "RE",
+    "RA",
+    "RU",
+    "SI",
+    "NE"
+   ]
+  },
+  "type_permutation_null": {
+   "p": 1.0,
+   "n_perm": 300,
+   "perm_typed_bpw_mean": 19.4323,
+   "perm_typed_bpw_min": 19.3749,
+   "real_typed_bpw": 19.5378
+  },
+  "verdict": "MORPHOLOGY_BUT_TYPING_NULL"
+ },
+ "LA_gated": true,
+ "overall_verdict": {
+  "lb": "MORPHOLOGY_BUT_TYPING_NULL",
+  "la": "MORPHOLOGY_BUT_TYPING_NULL"
+ },
+ "interpretation": {
+  "detector_has_power": true,
+  "lb_positive_control": "PASS: the pooled stem+affix (final-slot) model compresses held-out LB by G_morph bits/word on UNSEEN stems, and the recovered families are genuine LB inflection/lexemes (do-e-ro/do-e-ra=doelos/doela, o-na-to, to-so-de, ko-to-na) -- the paradigm detector works.",
+  "cv_typing_hypothesis": "NULL on both LB and LA: typing the affix slot by the C/V class of the stem-final sign gives G_typing<=0 (worse than a type-agnostic pooled affix) and the >=300-realization type-permutation null is not beaten (LB p~0.77, LA p~1.0). Affixes are NOT organized by stem-final C/V class. This is structurally expected in a CV syllabary: the relevant morphological alternation is in the VOWEL of the final syllabogram (o~a gender, do-e-ro~do-e-ra), not the coarse consonant-sign vs vowel-sign axis the WP3.1 partition provides.",
+  "honesty_caveat_on_G_morph": "G_morph is NOT clean proof of productive inflection: the untyped model backs off to the WORD-FINAL marginal while the bigram null backs off to the position-agnostic unigram, so part of G_morph is a word-final POSITIONAL/phonotactic effect (which signs can close a word), not necessarily stem+affix paradigms. The clean WP3.4 contrast is the TYPING test, which is NULL.",
+  "reduces_equivalence_classes": false,
+  "bottom_line": "The WP3.1 C/V partition, used as a feature, does NOT reveal typed stem+affix paradigms beyond a type-agnostic word-final slot -- it does not further reduce sign-value equivalence classes via morphology. The prior morphology NULL stands for the C/V-typed hypothesis."
+ }
+}
