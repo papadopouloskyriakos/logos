@@ -1,0 +1,364 @@
+{
+ "programme": "END_TO_END_ADAPTIVE_NULL",
+ "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+ "constitution": "v2.2",
+ "seed": 20260708,
+ "realization_budget": {
+  "cheap": 2000,
+  "moderate": 800,
+  "full": 200,
+  "note": "value space enumerable (13 onset outcomes) -> exact rates + MC CI"
+ },
+ "observed_chain": {
+  "S_morph_value_invariant": true,
+  "na_S_lex_rank": 21,
+  "na_S_lex_n_candidates": 65,
+  "na_S_lex_null_percentile": 49.0,
+  "na_S_lex_below_null_mean": true,
+  "na_clears_Emax": false,
+  "gloss_tier_reached": "exact (dwell)",
+  "dwell_hit_certain_over_search": 1.0,
+  "H2_heldout_root_recurrence_divergent_sites": 0,
+  "H3_dwell_beats_features": false,
+  "requires_IIIy_to_IIIh_transform": true
+ },
+ "value_leg": {
+  "onsets": [
+   "",
+   "d",
+   "j",
+   "k",
+   "m",
+   "n",
+   "p",
+   "q",
+   "r",
+   "s",
+   "t",
+   "w",
+   "z"
+  ],
+  "per_onset": {
+   "": {
+    "c1": "",
+    "n_roots": 6,
+    "s_lex": 0.3333333333333333
+   },
+   "d": {
+    "c1": "d",
+    "n_roots": 6,
+    "s_lex": 0.6666666666666666
+   },
+   "j": {
+    "c1": "y",
+    "n_roots": 6,
+    "s_lex": 0.5
+   },
+   "k": {
+    "c1": "k",
+    "n_roots": 6,
+    "s_lex": 0.8333333333333334
+   },
+   "m": {
+    "c1": "m",
+    "n_roots": 6,
+    "s_lex": 0.8333333333333334
+   },
+   "n": {
+    "c1": "n",
+    "n_roots": 6,
+    "s_lex": 0.6666666666666666
+   },
+   "p": {
+    "c1": "p",
+    "n_roots": 6,
+    "s_lex": 0.6666666666666666
+   },
+   "q": {
+    "c1": "q",
+    "n_roots": 6,
+    "s_lex": 0.6666666666666666
+   },
+   "r": {
+    "c1": "r",
+    "n_roots": 6,
+    "s_lex": 0.8333333333333334
+   },
+   "s": {
+    "c1": "s",
+    "n_roots": 6,
+    "s_lex": 0.3333333333333333
+   },
+   "t": {
+    "c1": "t",
+    "n_roots": 6,
+    "s_lex": 0.6666666666666666
+   },
+   "w": {
+    "c1": "w",
+    "n_roots": 6,
+    "s_lex": 0.8333333333333334
+   },
+   "z": {
+    "c1": "z",
+    "n_roots": 6,
+    "s_lex": 0.6666666666666666
+   }
+  },
+  "na_s_lex": 0.6666666666666666,
+  "na_rank_over_13_onsets": 5,
+  "n_onsets": 13,
+  "n_strictly_better_than_na": 4,
+  "n_ge_na": 10,
+  "best_of_value_s_lex": 0.8333333333333334,
+  "na_is_best_of_value": false,
+  "onset_freq_weights": {
+   "": 0.19298245614035087,
+   "d": 0.05701754385964912,
+   "j": 0.08114035087719298,
+   "k": 0.07675438596491228,
+   "m": 0.041666666666666664,
+   "n": 0.1074561403508772,
+   "p": 0.04824561403508772,
+   "q": 0.013157894736842105,
+   "r": 0.09868421052631579,
+   "s": 0.10307017543859649,
+   "t": 0.125,
+   "w": 0.043859649122807015,
+   "z": 0.010964912280701754
+  }
+ },
+ "root_gloss_leg": {
+  "value_null_strict": {
+   "root_existence_rate": 0.3076923076923077,
+   "dwell_tier_hit_rate": 0.0,
+   "exact_or_near_rate": 0.0
+  },
+  "value_null_weak": {
+   "root_existence_rate": 0.5384615384615384,
+   "dwell_tier_hit_rate": 0.07692307692307693,
+   "exact_or_near_rate": 0.07692307692307693
+  },
+  "value_null_weakhollow": {
+   "root_existence_rate": 0.7692307692307693,
+   "dwell_tier_hit_rate": 0.07692307692307693,
+   "exact_or_near_rate": 0.07692307692307693
+  },
+  "per_onset": {
+   "": {
+    "root_exists_strict": false,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "d": {
+    "root_exists_strict": true,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "j": {
+    "root_exists_strict": false,
+    "root_exists_weak": false,
+    "root_exists_weakhollow": false,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": false,
+    "M_gloss_fixed_dwell": false
+   },
+   "k": {
+    "root_exists_strict": true,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "m": {
+    "root_exists_strict": false,
+    "root_exists_weak": false,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "n": {
+    "root_exists_strict": false,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": true,
+    "best_gloss_tier_weak": "exact",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": true
+   },
+   "p": {
+    "root_exists_strict": false,
+    "root_exists_weak": false,
+    "root_exists_weakhollow": false,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": false,
+    "M_gloss_fixed_dwell": false
+   },
+   "q": {
+    "root_exists_strict": true,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "r": {
+    "root_exists_strict": true,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "s": {
+    "root_exists_strict": false,
+    "root_exists_weak": false,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "t": {
+    "root_exists_strict": false,
+    "root_exists_weak": true,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   },
+   "w": {
+    "root_exists_strict": false,
+    "root_exists_weak": false,
+    "root_exists_weakhollow": false,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": false,
+    "M_gloss_fixed_dwell": false
+   },
+   "z": {
+    "root_exists_strict": false,
+    "root_exists_weak": false,
+    "root_exists_weakhollow": true,
+    "dwell_tier_weak": false,
+    "best_gloss_tier_weak": "unrelated",
+    "M_gloss_free": true,
+    "M_gloss_fixed_dwell": false
+   }
+  }
+ },
+ "stochastic_legs": {
+  "eps_NED": 0.34,
+  "n_realizations": 2000,
+  "s_lex_Lfake_mean_reconstructed": 0.99,
+  "s_lex_Lfake_frac_ge1_reconstructed": 0.99,
+  "s_lex_Lfake_mean_FROZEN_CANARY": 1.0,
+  "s_lex_packard_permuted_mean_reconstructed": 0.99,
+  "s_lex_packard_permuted_mean_FROZEN_CANARY": 0.9791666666666666,
+  "random_segmentation_scorable_root_rate": 0.8075,
+  "edit_distance_channel_verdict": "NO_POWER",
+  "interpretation": "The authoritative L_fake/Packard floor is the FROZEN canary (mean 1.00 / 0.98): a near-match to n-w-y is guaranteed in any dense Semitic-shaped lexicon, so the 'match-exists' channel reads search-attractiveness, not cognacy. The independent reconstruction here reconfirms a HIGH floor (0.99) under the same dense-root regime. Root EXISTENCE rests on the BDB-cited B1 table, NOT this edit-distance statistic."
+ },
+ "morph_leg": {
+  "S_morph_score": 0.27380952380952384,
+  "value_invariant": true,
+  "score_301_literal": 0.27380952380952384,
+  "score_301_relabelled": 0.27380952380952384,
+  "verdict": "NO_DISCRIMINATIVE_POWER_FOR_VALUE",
+  "note": "random morphological parses induced by relabelling *301 leave S_morph identical -> the primary held-out statistic cannot distinguish /na/ from any of the other 64 values (framing constraint \u00a71)."
+ },
+ "monte_carlo": {
+  "random_uniform": {
+   "N": 200,
+   "M_root_rate": 0.735,
+   "M_gloss_free_rate": 0.735,
+   "M_gloss_fixed_dwell_rate": 0.06,
+   "M_gloss_free_wilson95": [
+    0.6698229773344889,
+    0.7913193998839003
+   ],
+   "M_gloss_fixed_wilson95": [
+    0.03465184990127151,
+    0.10193263530685089
+   ]
+  },
+  "frequency_matched": {
+   "N": 200,
+   "M_root_rate": 0.85,
+   "M_gloss_free_rate": 0.85,
+   "M_gloss_fixed_dwell_rate": 0.105,
+   "M_gloss_free_wilson95": [
+    0.7939430617334484,
+    0.892864734123727
+   ],
+   "M_gloss_fixed_wilson95": [
+    0.06970696246193729,
+    0.15518138221353622
+   ]
+  }
+ },
+ "best_of_search": {
+  "n_onsets": 13,
+  "n_onsets_manufacture_real_root_exact_reading": 10,
+  "n_onsets_reach_dwell_tier": 1,
+  "best_of_search_free_always_succeeds": true,
+  "best_of_search_dwell_succeeds": true
+ },
+ "end_to_end_false_positive_rate": {
+  "PRIMARY_free_target_best_of_search": 1.0,
+  "PRIMARY_free_target_per_random_value": 0.7692307692307693,
+  "PRIMARY_free_target_wilson95_per_value": [
+   0.49743126004873084,
+   0.918206209075343
+  ],
+  "conservative_dwell_per_random_value": 0.07692307692307693,
+  "conservative_dwell_best_of_language": 0.75,
+  "conservative_dwell_over_logged_search": 1.0,
+  "value_graduation_FP_M_gate_PC_calibrated": 0.0,
+  "interpretation": "Whole-pipeline FP (honest, free semantic target chosen post-hoc, best-of-value+collapse+language search): the null manufactures a coherent real-root exact-tier reading on ESSENTIALLY EVERY run (best-of-search FP = 1.0; per-random-value root existence = 0.769). Even with the semantic target pre-committed to 'dwell', a dwell-tier hit is CERTAIN over the logged root/gloss search (1.000). The observed /na/->N-W-Y->dwell chain sits INSIDE this null band."
+ },
+ "distinguishability": {
+  "lexical_gloss_chain_distinguishable_from_null": false,
+  "value_channel_has_power_PC3": true,
+  "na_fails_rank1_clause": true,
+  "H2_heldout_recurrence_fails": true,
+  "H3_beats_features_fails": true
+ },
+ "search_adjusted_significance": {
+  "logged_root_gloss_cells": 7800,
+  "author_stated_simulations": 100000,
+  "N_eff_value_x_segmentation": 260,
+  "E_max_null_over_logged": 0.8333333333333335,
+  "na_clears_Emax_logged": false,
+  "P_dwell_hit_over_logged": 1.0,
+  "search_adjusted_p_of_chain": "1.000 \u2014 a chain at least this strong is manufactured with certainty over the reading's own logged search freedoms; search-adjusted significance is nil."
+ },
+ "verdict": {
+  "value_channel_S_morph": "NO_DISCRIMINATIVE_POWER_FOR_VALUE",
+  "value_channel_S_lex": "REJECT (/na/ rank 21/65, below null mean; fails rank-1 clause WITH power [PC3 rank 1/113])",
+  "lexical_gloss_chain_H2_H3": "NULL_PUBLISHED (indistinguishable from the fake/root-search null)",
+  "core_chain_na_NWY_dwell_Semitic": "REJECT",
+  "structural_i301_core": "UNAFFECTED (literature-supported; not Di Mino's novelty)",
+  "IIIy_to_IIIh_transform": "CHARGED to the receipt; advertised N-W-Y=dwell is inexact under the frozen rules",
+  "impossibility_claim": "NOT MADE (a historical Semitic relationship is not excluded; the SPECIFIC chain is not supported)",
+  "positive_controls": "PASS (PC3 recovers a planted value rank 1/113) -> a null-indistinguishable observed result is a GENUINE NEGATIVE"
+ },
+ "final_verdict_tag": "REJECT_CORE_CHAIN__NULL_PUBLISHED_LEXICAL_LEG__NO_POWER_S_MORPH"
+}

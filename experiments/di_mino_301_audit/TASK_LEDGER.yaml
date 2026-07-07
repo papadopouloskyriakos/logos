@@ -21,5 +21,5 @@ tasks:
   - {task_id: G_lexicon, section: XIV, objective: "408-lexicon gate OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — 408-lexicon not public (H9)"}
   - {task_id: H_corrections, section: XV, objective: "LB + logogram corrections OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — LB(5) + logogram correction lists not public (H10/H11)"}
   - {task_id: PC_controls, section: XVI, objective: "positive controls PC1-PC6 (Uga-Heb, opaque LB, planted *301, fake Semitic, agglutinative, Semitic morph)", status: PASS, result_note: "PASS — pipeline CALIBRATED: PC1/PC2 recover real truth, PC3 recovers planted value rank 1/113, PC4 rejects manufactured fake, PC5/6 distinguish structures"}
-  - {task_id: NULL_e2e, section: XVII, objective: "end-to-end adaptive null programme + false-positive rate", status: QUEUED}
-  - {task_id: VERDICT, section: XVIII, objective: "DI_MINO_CORE_VERDICT + extended verdicts", status: QUEUED}
+  - {task_id: NULL_e2e, section: XVII, objective: "end-to-end adaptive null programme + false-positive rate", status: COMPLETE, result_note: "end-to-end FP=1.0; search-adjusted p~1.0; lexical/gloss legs NULL_PUBLISHED; genuine negative (PC passed)"}
+  - {task_id: VERDICT, section: XVIII, objective: "DI_MINO_CORE_VERDICT + extended verdicts", status: COMPLETE, result_note: "DI_MINO_CORE_VERDICT=REJECT; H1-H6 adjudicated; H7-H12 SOURCE_BLOCKED; highest layer L3 functional"}

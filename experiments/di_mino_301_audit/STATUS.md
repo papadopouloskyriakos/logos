@@ -1,4 +1,4 @@
-# STATUS — Di Mino *301 exact audit
+# STATUS — Di Mino *301 exact audit — CLOSED 2026-07-08: DI_MINO_CORE_VERDICT=REJECT
 
 **As of:** 2026-07-08 · parent main@6fd4f20 · Constitution v2.2.
 
