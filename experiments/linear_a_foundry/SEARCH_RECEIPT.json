@@ -65,5 +65,11 @@
    "wrong-language-LB",
    "random-prior"
   ]
+ },
+ "WP2_segmentation": {
+  "verdict": "SEGMENTATION_LEVER_HELPS",
+  "packed_auc": 0.685,
+  "word_auc": 0.76,
+  "lb_ceiling": 0.835
  }
 }

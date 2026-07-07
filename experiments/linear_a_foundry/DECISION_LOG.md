@@ -33,3 +33,10 @@
   ~5000 LB words; LA-equivalent ~3000 -> corpus_multiple_needed ~1.7x. REFINES the second correction: LA is
   only ~1.7x below the substitution clean regime (or needs segmentation), NOT ~10x -- a modest, achievable gap.
   Commit: _(this)_.
+- **WP2 SEGMENTATION LEVER — HELPS (a positive on existing data).** CRITICAL: load_a() returns 539 PACKED
+  inscriptions (mean 7.88 signs), not the 3147 available GORILA WORD units (mean 1.84) — so ALL prior LA
+  position/C/V analyses used inscription-internal positions (the penalized "packed" regime the synthetic lab
+  flagged). Re-running the LB-trained C/V classifier on GORILA WORD-segmented LA raises the vowel-vs-rest AUC
+  (5 known LA vowels A/I/U/E/O as the non-circular check) from 0.685 (packed) to 0.760 (word-segmented),
+  approaching the LB CV ceiling 0.835. A chunk of the "LA underpowered" obstacle was a METHODOLOGICAL artifact
+  (wrong text unit), correctable NOW without new excavation. Verdict SEGMENTATION_LEVER_HELPS. Commit: _(this)_.

@@ -1,0 +1,33 @@
+{
+ "LB_word_classifier_cv_auc": 0.835,
+ "LA_units": {
+  "packed_inscriptions": 539,
+  "gorila_words": 3147
+ },
+ "PACKED_inscriptions": {
+  "n_signs": 46,
+  "la_vowel_ranks": {
+   "E": 37,
+   "U": 23,
+   "I": 2,
+   "A": 1
+  },
+  "mean_vowel_rank": 15.8,
+  "vowel_vs_rest_AUC": 0.685
+ },
+ "WORD_segmented_gorila": {
+  "n_signs": 60,
+  "la_vowel_ranks": {
+   "E": 36,
+   "U": 15,
+   "I": 5,
+   "A": 1,
+   "O": 24
+  },
+  "mean_vowel_rank": 16.2,
+  "vowel_vs_rest_AUC": 0.76
+ },
+ "segmentation_helps_vowel_recovery": true,
+ "verdict": "SEGMENTATION_LEVER_HELPS",
+ "interpretation": "Comparing the LA pure-vowel signs' recovery under PACKED inscriptions (the regime all prior LA analyses used) vs the AVAILABLE GORILA WORD segmentation. If word units rank the 5 vowels (A,I,U,E,O) higher, the segmentation half of the obstacle is partially addressable NOW, on existing data, without new excavation. Non-circular: vowel identities are the check, not model inputs (features are word-position stats)."
+}

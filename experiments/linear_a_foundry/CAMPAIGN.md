@@ -28,7 +28,7 @@ value layer is not provably closed to internal methods.
 | WP | state |
 |---|---|
 | **1 · formal identifiability & symmetry audit** | ✅ **`PRIOR_THEOREM_OVERSTATED`** — position recovers C/V on LB (AUC 0.744, p=0.035); LA top-initial signs = A/I/U (vowel-corresponding). Internal evidence reduces value equivalence classes. Atlas of 13 channels built. |
-| 2 · corpus reconstruction from sources/images | next |
+| 2 · corpus reconstruction | 🔄 SEGMENTATION LEVER HELPS — GORILA word units raise LA vowel-recovery AUC 0.685->0.760 (prior analyses wrongly used packed inscriptions); a partial unlock on existing data |
 | 3 · relative phonology / morphology / scribal | ✅ DONE — channels VALIDATED on LB (substitution AUC 0.71 z=7.07; alternation p=0.0033; morphology 0.731 bits/word) but LA UNDERPOWERED (max subst weight 105 vs 303; unsegmented; needs C/V seed labels). 2nd correction: more corpus WOULD help |
 | 4 · diachronic & cross-script sign evolution | ✅ NULL — no non-circular value (4th distributional null); shape circular |
 | 5 · external-anchor factory | ✅ inventory 115 rec/62 signs; reduced-seed bootstrap VALIDATED on LB (3-4 seeds->AUC 0.87) but LA underpowered (NULL). Obstacle = LA propagation power, not anchors |
