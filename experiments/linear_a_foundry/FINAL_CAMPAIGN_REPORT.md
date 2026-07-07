@@ -138,7 +138,16 @@ structural readings are value-agnostic. Any future value claim inherits that sin
 | external anchors | 100 (25 audited) | ✅ 115 records / 62 signs |
 | sealed challenges | 5 | ✅ 5 hashed manifests (all `NO_CANDIDATE_TO_SEAL`; SEAL_5 = prospective gold) |
 | sign-evolution + substitution case studies | 10 + 10 | ✅ WP4 evolution channels + WP3.2 substitution subgraph |
-| commits | 24+ | ✅ tracked to ≥24 at close |
+| commits | 24+ | ⚠️ **17 substantive commits** (below the nominal 24 target) — see note |
+
+> **Honesty note on the commit quota (Art. XII / invariant 12 — counts are generated, never gamed).** The
+> campaign produced **17 substantive foundry commits**, below the mandate's nominal 24. This is reported as-is
+> rather than padded: much of the decomposed work ran *inside* parallel workflows (each workflow = several
+> independent agent-experiments landing in one commit), so 17 commits carry **26 experiment scripts + 24 data
+> artifacts + 8 reports + 8 preregistrations + 12 manifests**. Manufacturing 7 trivial commits to hit "24"
+> would itself violate the count-integrity rule. Every *substantive* quota (work packages, experiment
+> families, encodings, model families, candidate rounds, benchmarks, nulls, sources, anchors, seals) is
+> genuinely met; the commit count is the one process-proxy that landed below target, and it is stated plainly.
 
 ## 10. Bottom line
 
