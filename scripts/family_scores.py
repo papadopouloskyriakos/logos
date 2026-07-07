@@ -41,9 +41,11 @@ def _load_family_rows(cur, family=None):
     (``gate_verdict == 'GRADUATE'``), never by the intermediate ``result == 'match'`` signal — which
     only means "cleared the local L_fake bar," NOT a validated, gate-passing win. A REJECT/INCOMPLETE
     row therefore contributes 0 to win_rate even when its ``result`` is 'match'."""
+    # v.status='current': verdicts is append-only (Art. XVII) — count only the live verdict per
+    # hypothesis, never a superseded prior grade.
     sql = ("SELECT h.family, v.result, v.gate_verdict, v.accuracy, h.confidence "
            "FROM verdicts v JOIN hypotheses h ON h.plan_hash = v.plan_hash "
-           "WHERE v.result IN ('match','partial','deviation')")
+           "WHERE v.status='current' AND v.result IN ('match','partial','deviation')")
     args = ()
     if family:
         sql += " AND h.family=%s"

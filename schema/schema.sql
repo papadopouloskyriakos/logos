@@ -42,11 +42,15 @@ CREATE TABLE IF NOT EXISTS hypotheses (
   KEY ix_hypotheses_family (family)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- the SOLE writer is scripts/verdict.py (invariant 2). Mechanical, held-out.
+-- the SOLE writer is scripts/verdict.py (invariant 2). Mechanical, held-out. APPEND-ONLY
+-- (Constitution v2.0 Art. XVII): a re-grade never overwrites/deletes a prior verdict — it appends a
+-- new row and flips the prior to status='superseded'. `current_key` (virtual) enforces at most ONE
+-- status='current' row per plan_hash; verdict_hash gives content-addressed idempotency (invariant 6).
 CREATE TABLE IF NOT EXISTS verdicts (
   id            BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   plan_hash     CHAR(64) NOT NULL,
   result        ENUM('match','partial','deviation','pending') NOT NULL DEFAULT 'pending',
+  status        ENUM('current','superseded') NOT NULL DEFAULT 'current',   -- Art. XVII lifecycle
   -- P0.1: the §E gate outcome, persisted STRUCTURED (not only inside `notes`). A family win is
   -- gate_verdict='GRADUATE'; result='match' means only the local L_fake bar was cleared.
   gate_verdict      ENUM('GRADUATE','REJECT','NULL_PUBLISHED','INCOMPLETE') NULL,
@@ -59,11 +63,41 @@ CREATE TABLE IF NOT EXISTS verdicts (
   bench_return  DECIMAL(8,3) NULL,                  -- not used in v0; reserved
   notes         VARCHAR(255) NOT NULL DEFAULT '',
   provenance    VARCHAR(64) NOT NULL DEFAULT '',    -- code SHA
+  verdict_hash      CHAR(64) NULL,                  -- sha256 of graded content (idempotency; invariant 6)
+  supersedes_id     BIGINT UNSIGNED NULL,           -- the prior verdict this one supersedes
+  superseded_by_id  BIGINT UNSIGNED NULL,           -- set on the prior row when superseded
+  correction_type   ENUM('ERRATUM','SUPERSEDING_ANALYSIS','INVALIDATION_NOTICE',
+                         'DEPENDENCY_DISCOVERY','PROTOCOL_DEVIATION','RETRACTION') NULL,
+  correction_reason VARCHAR(255) NOT NULL DEFAULT '',
+  -- current_key = plan_hash while status='current', NULL once superseded (write_verdict maintains it).
+  -- The UNIQUE index then enforces at most ONE current row per plan_hash (NULLs are distinct).
+  current_key   CHAR(64) NULL,
   created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
-  UNIQUE KEY uq_verdicts_plan (plan_hash),
+  UNIQUE KEY uq_verdicts_current (current_key),
+  UNIQUE KEY uq_verdicts_hash (verdict_hash),
+  KEY ix_verdicts_plan (plan_hash),
   KEY ix_verdicts_result (result),
   KEY ix_verdicts_gate (gate_verdict)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- general append-only correction ledger (Art. XVII): one row per supersession/erratum/invalidation,
+-- across record types (verdict / prereg / assumption / ...). Never updated in place.
+CREATE TABLE IF NOT EXISTS correction_ledger (
+  id            BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  record_type   VARCHAR(32)  NOT NULL,              -- 'verdict' | 'prereg' | 'assumption' | ...
+  record_ref    VARCHAR(128) NOT NULL,             -- plan_hash / assumption_id / ...
+  correction_type ENUM('ERRATUM','SUPERSEDING_ANALYSIS','INVALIDATION_NOTICE',
+                       'DEPENDENCY_DISCOVERY','PROTOCOL_DEVIATION','RETRACTION') NOT NULL,
+  original_status VARCHAR(64)  NOT NULL DEFAULT '',
+  current_status  VARCHAR(64)  NOT NULL DEFAULT '',
+  superseded_by   VARCHAR(128) NOT NULL DEFAULT '', -- new record id / content hash
+  reason        VARCHAR(512) NOT NULL DEFAULT '',
+  artifact_hash CHAR(64)     NOT NULL DEFAULT '',   -- code sha / content hash
+  commit_sha    VARCHAR(64)  NOT NULL DEFAULT '',
+  created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY ix_ledger_ref (record_type, record_ref)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- capped signals (JEPA / LLM / cognate-matchers) feeding the hypothesis layer (invariant 5)

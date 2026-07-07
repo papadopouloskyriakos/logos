@@ -28,7 +28,7 @@ does **not** require these before ratification — they gate *future graduating 
 
 | P | item | article | note |
 |---|---|---|---|
-| **P0** | **Append-only correction ledger** with the Art. XVII vocabulary (`ERRATUM`/`SUPERSEDING_ANALYSIS`/`INVALIDATION_NOTICE`/`DEPENDENCY_DISCOVERY`/`PROTOCOL_DEVIATION`/`RETRACTION`) + per-record `{original_status,current_status,superseded_by,reason,timestamp,commit,artifact_hash}`. | XVII | **Live anti-pattern:** `scripts/verdict.py` `write_verdict` mutates via `ON DUPLICATE KEY UPDATE` and re-grade "deletes prior verdict first"; `verdicts` table has no lifecycle columns. Build a `correction_ledger` + make re-grade **append a superseding row**. |
+| ~~P0~~ **DONE** | ~~Append-only correction ledger~~ **BUILT** (2026-07-07) — `verdicts` is now append-only (`status`/`current_key`/`supersedes_id`/`superseded_by_id`/`correction_type`) + a general `correction_ledger` table; `write_verdict` appends a superseding row (content-idempotent via `verdict_hash`), never overwrites. Migration applied to the live DB; `tests/test_verdict_append_only.py` locks it. | XVII | Fixed the live anti-pattern: `ON DUPLICATE KEY UPDATE` / delete-then-reinsert removed from the sole writer; `family_scores` reads `status='current'`. |
 | **P0** | **Machine-readable source-dependency graph** — per-source {identity, version, underlying edition, upstream lexicon, derived DBs, shared decipherment tradition, disputes, license, access date} → evidentiary lineages. | XI | Turns the A04 SHARED_DECIPHERMENT prose into an enforceable gate; feeds effective_n (VIII) + the info panel (IX). Suggest `governance/source_dependency_graph.json` + lineage-collapse checker. |
 | **P0** | **effective_n over EVIDENCE UNITS** (inscriptions/lexical families/sites/scribal traditions/lineages) reported with `raw_n`, applying the non-independence exclusions. | VIII | Existing `logos_stats.effective_n` is a *finance time-overlap* uniqueness (wrong primitive); searchlog N_eff is a *trial* count. No function groups evidence by family/site/lineage. Graduation is meant to key off this. |
 | **P0** | **Complete information-budget panel** emitting all 13 Art. IX fields, fail-closed when d.o.f. > information. | IX | `corpus_info.py` gives only the unicity component, which the article **forbids** substituting for the whole. ~9 of 13 fields have no producer. Compose corpus_info + effective_n + source graph + a power sim. |
@@ -37,10 +37,10 @@ does **not** require these before ratification — they gate *future graduating 
 | **P2** | **Assumption-register enforcement hook** — a loader that BLOCKS downstream execution when a load-bearing premise is FALSE (A04/A08/A09 already are) or STALE past expiry. | XVIII | Register is currently a static file with no consumer. Add `assumption_gate.py` imported at stage entry. |
 | **P2** | **Transfer-licence enforcement checker** — gate experiments on current licence state; mechanically enforce "a lower licence never implies a higher one" + layer-capping. | XV, V | State file has no consumer. Ties into the Art. XXII forbidden-outputs field. |
 
-## Top 5 to build next
+## Top priorities to build next
 
-1. **Art. XVII correction ledger** — both a missing artifact *and* an active anti-pattern in the sole verdict
-   writer; stop the in-place mutation.
+1. ~~**Art. XVII correction ledger**~~ — **DONE 2026-07-07** (append-only verdicts + `correction_ledger`;
+   live migration applied; in-place mutation removed from the sole writer).
 2. **Art. XI source-dependency graph** — promotes A04 to an enforceable gate; prerequisite for VIII + IX.
 3. **Art. VIII evidence-unit effective_n** — correct grouping-based primitive; graduation keys off it.
 4. **Art. IX information-budget panel** — compose the pieces; unicity alone is constitutionally insufficient.

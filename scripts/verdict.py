@@ -25,9 +25,14 @@ Grading (docs/design/comparison-layer.md §A/§B/§E):
   gate after review. Fail any -> gate verdict REJECT / NULL_PUBLISHED / INCOMPLETE. Never GRADUATE on
   internal fit.
 
+`verdicts` is APPEND-ONLY (Constitution v2.0 Art. XVII): a re-grade never overwrites or deletes the
+prior verdict — it APPENDS a new row and flips the prior to status='superseded' (only the lifecycle
+pointer is touched; the graded content is immutable). Replays are idempotent (content-addressed via
+verdict_hash — invariant 6). Every supersession is recorded in `correction_ledger`.
+
 CLI:
-  python3 scripts/verdict.py                 # grade all due hypotheses
-  python3 scripts/verdict.py <plan_hash>     # grade one (re-grade: deletes prior verdict first)
+  python3 scripts/verdict.py                 # grade all due hypotheses (no current verdict yet)
+  python3 scripts/verdict.py <plan_hash>     # (re-)grade one — appends a superseding verdict; prior kept
 """
 import argparse
 import datetime
@@ -343,16 +348,21 @@ def _notes(g):
 # --------------------------------------------------------------------------- #
 # DB orchestration (the ONLY writer of verdicts)
 # --------------------------------------------------------------------------- #
-def _load_due(cur, plan_hash=None):
-    """Hypotheses with no verdict yet (LEFT JOIN ... IS NULL). Optionally one plan_hash."""
-    sql = ("SELECT h.plan_hash, h.family, h.body, h.prediction, h.confidence "
-           "FROM hypotheses h LEFT JOIN verdicts v ON v.plan_hash = h.plan_hash "
-           "WHERE v.plan_hash IS NULL")
-    args = ()
-    if plan_hash:
-        sql += " AND h.plan_hash=%s"
-        args = (plan_hash,)
-    cur.execute(sql, args)
+def _load_due(cur):
+    """Hypotheses with no CURRENT verdict yet (the batch path). Superseded rows do not count as graded,
+    so a hypothesis whose only verdict was superseded is due again — but a re-grade is normally driven by
+    an explicit plan_hash through _load_one, which appends regardless."""
+    cur.execute("SELECT h.plan_hash, h.family, h.body, h.prediction, h.confidence "
+                "FROM hypotheses h LEFT JOIN verdicts v ON v.plan_hash = h.plan_hash AND v.status='current' "
+                "WHERE v.plan_hash IS NULL")
+    return cur.fetchall()
+
+
+def _load_one(cur, plan_hash):
+    """Load one hypothesis by plan_hash REGARDLESS of verdict state — the explicit (re-)grade path.
+    write_verdict appends a superseding row if the new grade differs, or no-ops if identical (Art. XVII)."""
+    cur.execute("SELECT h.plan_hash, h.family, h.body, h.prediction, h.confidence "
+                "FROM hypotheses h WHERE h.plan_hash=%s", (plan_hash,))
     return cur.fetchall()
 
 
@@ -397,25 +407,65 @@ def grade_row(plan_hash, family, body_json, prediction_json, confidence, n_fake=
         not_indexed_min_signs=int(pred.get("not_indexed_min_signs", 2)))
 
 
-def write_verdict(cur, plan_hash, family, g):
-    """INSERT the verdict (idempotent via UNIQUE uq_verdicts_plan).
+def verdict_content_hash(plan_hash, g):
+    """Content address of a graded outcome (Art. XIX / invariant 6). A replay with identical content
+    hashes the same → idempotent no-op; a genuinely different re-grade (changed result, gate outcome,
+    clauses, held-out score, OR grader code) hashes differently → APPENDS a superseding row (Art. XVII).
+    `provenance` (the grader code SHA) is included so a change in the grading logic itself is recorded."""
+    payload = {"plan_hash": plan_hash, "result": g["result"], "gate_verdict": g.get("gate_verdict"),
+               "gate_version": g.get("gate_version", GATE_VERSION), "clauses": g.get("clauses", {}),
+               "accuracy": None if g.get("accuracy") is None else round(float(g["accuracy"]), 3),
+               "brier": None if g.get("brier") is None else round(float(g["brier"]), 3),
+               "provenance": code_sha()}
+    return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
 
-    P0.1/P0.5: gate_verdict, gate_version and the per-clause gate_clauses_json are persisted as
-    STRUCTURED columns (not left to survive only inside the free-text `notes`), so downstream
-    roll-ups (family_scores) read the §E outcome directly and a win is provably a GRADUATE."""
-    heldout_site = ""
+
+def write_verdict(cur, plan_hash, family, g, correction_type="SUPERSEDING_ANALYSIS", correction_reason=""):
+    """APPEND the verdict (Constitution v2.0 Art. XVII — the record is immutable; corrections are
+    appended, never silent rewrites). `verdicts` is a slowly-changing append-only ledger: at most one
+    status='current' row per plan_hash, prior grades preserved as status='superseded' with a lineage
+    pointer (supersedes_id / superseded_by_id).
+
+    * Replay with identical content → NO-OP (content-addressed via verdict_hash; invariant 6).
+    * Genuinely changed re-grade → INSERT a new current row, flip the prior to superseded (ONLY its
+      lifecycle pointer is set — the graded content is never rewritten), and record the change in
+      correction_ledger.
+
+    P0.1/P0.5 preserved: gate_verdict, gate_version and the per-clause gate_clauses_json remain
+    STRUCTURED columns so family_scores reads the §E outcome directly (filtered to status='current')."""
     g2 = dict(g)
+    vh = verdict_content_hash(plan_hash, g)
+    cur.execute("SELECT id, verdict_hash, status, gate_verdict, result FROM verdicts WHERE plan_hash=%s",
+                (plan_hash,))
+    rows = cur.fetchall()
+    if any(r[1] == vh for r in rows):
+        return g2                                          # idempotent: identical content already recorded
+    current = next((r for r in rows if r[2] == "current"), None)
     clauses_json = json.dumps(g.get("clauses", {}), sort_keys=True)
+    if current is not None:
+        # free the single-current slot BEFORE inserting the successor; sets the lifecycle pointers only
+        # (status + current_key), never the graded content (which stays byte-identical as the record).
+        cur.execute("UPDATE verdicts SET status='superseded', current_key=NULL "
+                    "WHERE id=%s AND status='current'", (current[0],))
     cur.execute(
-        """INSERT INTO verdicts (plan_hash, result, gate_verdict, gate_version, gate_clauses_json,
-                                 held_out_site, accuracy, brier, notes, provenance)
-           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
-           ON DUPLICATE KEY UPDATE result=VALUES(result), gate_verdict=VALUES(gate_verdict),
-              gate_version=VALUES(gate_version), gate_clauses_json=VALUES(gate_clauses_json),
-              accuracy=VALUES(accuracy), brier=VALUES(brier), notes=VALUES(notes),
-              provenance=VALUES(provenance)""",
-        (plan_hash, g["result"], g.get("gate_verdict"), g.get("gate_version", GATE_VERSION),
-         clauses_json, heldout_site, g["accuracy"], g["brier"], _notes(g), code_sha()))
+        """INSERT INTO verdicts (plan_hash, result, status, current_key, gate_verdict, gate_version,
+                                 gate_clauses_json, held_out_site, accuracy, brier, notes, provenance,
+                                 verdict_hash, supersedes_id, correction_type, correction_reason)
+           VALUES (%s,%s,'current',%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+        (plan_hash, g["result"], plan_hash, g.get("gate_verdict"), g.get("gate_version", GATE_VERSION),
+         clauses_json, "", g["accuracy"], g["brier"], _notes(g), code_sha(), vh,
+         (current[0] if current else None), (correction_type if current else None),
+         (correction_reason if current else "")))
+    new_id = cur.lastrowid
+    if current is not None:
+        cur.execute("UPDATE verdicts SET superseded_by_id=%s WHERE id=%s", (new_id, current[0]))
+        cur.execute(
+            """INSERT INTO correction_ledger (record_type, record_ref, correction_type, original_status,
+                                              current_status, superseded_by, reason, artifact_hash)
+               VALUES ('verdict',%s,%s,%s,%s,%s,%s,%s)""",
+            (plan_hash, correction_type, (current[3] or current[4] or ""),
+             (g.get("gate_verdict") or g["result"]), vh,
+             correction_reason or "mechanical re-grade under updated corpus/code", code_sha()))
     return g2
 
 
@@ -426,7 +476,8 @@ def run(plan_hash=None, n_fake=N_FAKE_DEFAULT, eps=EPS_DEFAULT, seed=0, conn=Non
     out = []
     try:
         with conn.cursor() as cur:
-            for ph, family, body, pred, conf in _load_due(cur, plan_hash):
+            due = _load_one(cur, plan_hash) if plan_hash else _load_due(cur)
+            for ph, family, body, pred, conf in due:
                 try:
                     g = grade_row(ph, family, body, pred, float(conf), n_fake=n_fake, eps=eps, seed=seed)
                     write_verdict(cur, ph, family, g)
