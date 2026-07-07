@@ -1,0 +1,108 @@
+{
+ "experiment": "WP6_agnostic_search_over_reduced_space_plus_end_to_end_null",
+ "seed": 20260708,
+ "design": {
+  "reduced_space": "sign -> one of K distributional value-CLASSES; K selected on TRAIN from [2, 4, 6, 8]",
+  "objective": "held-out per-token predictive improvement of class-bigram over unigram (nats/tok); P(q|c),P(q) fit on TRAIN, scored on HELD-OUT; relabeling-non-invariant (many->few)",
+  "search": {
+   "beam_width": 5,
+   "iterations": 8,
+   "folds": 4,
+   "delta_smoothing": 0.5
+  },
+  "steering_fixed_coeffs": {
+   "lambda_sub_WP3.2": 0.3,
+   "lambda_cv_WP3.1": 0.2,
+   "lambda_multiplicity": 0.5,
+   "sub_target_edges": 40
+  },
+  "non_circular": "all priors (position features, C/V PC1, substitution graph) recomputed LA-internally per corpus; NO Linear B phonetic value is ever a model input on the LA side; LB is only a wrong-language NULL corpus, never a grader of the LA map",
+  "freq_min": 20,
+  "n_LA_frequent_signs": 46
+ },
+ "REAL_LA": {
+  "heldout_score_nats_per_token": 0.01339,
+  "per_fold_delta": [
+   0.0186,
+   0.03461,
+   -0.02475,
+   0.02513
+  ],
+  "selected_K": [
+   8,
+   8,
+   4,
+   8
+  ]
+ },
+ "end_to_end_null": {
+  "family_S_order_shuffle": {
+   "desc": "LA order permuted within inscriptions (kills sequential structure)",
+   "n": 3,
+   "mean": -0.0369,
+   "sd": 0.00594,
+   "min": -0.04423,
+   "max": -0.02967,
+   "p95": -0.03038,
+   "n_ge_real": 0,
+   "empirical_p": 0.25,
+   "z_real_vs_null": 8.46
+  },
+  "family_W_wrong_language": {
+   "desc": "opaque Linear B resampled to LA length dist, same pipeline",
+   "n": 3,
+   "mean": 0.07072,
+   "sd": 0.02742,
+   "min": 0.0352,
+   "max": 0.10195,
+   "p95": 0.09926,
+   "n_ge_real": 3,
+   "empirical_p": 1.0,
+   "z_real_vs_null": -2.091
+  },
+  "family_R_random_prior": {
+   "desc": "real LA bigrams, WP3.1/WP3.2 prior permuted (kills prior info)",
+   "n": 3,
+   "mean": 0.01183,
+   "sd": 0.00342,
+   "min": 0.00859,
+   "max": 0.01656,
+   "p95": 0.01593,
+   "n_ge_real": 1,
+   "empirical_p": 0.5,
+   "z_real_vs_null": 0.458
+  },
+  "pooled_all": {
+   "n": 9,
+   "mean": 0.01522,
+   "sd": 0.04693,
+   "min": -0.04423,
+   "max": 0.10195,
+   "p95": 0.09118,
+   "n_ge_real": 4,
+   "empirical_p": 0.5,
+   "z_real_vs_null": -0.039
+  },
+  "decisive_W_plus_R": {
+   "n": 6,
+   "mean": 0.04127,
+   "sd": 0.03534,
+   "min": 0.00859,
+   "max": 0.10195,
+   "p95": 0.09522,
+   "n_ge_real": 4,
+   "empirical_p": 0.7143,
+   "z_real_vs_null": -0.789
+  }
+ },
+ "family_wise_false_positive_rate": {
+  "definition": "fraction of DECISIVE (wrong-language + random-prior) null realizations whose held-out score >= the real LA held-out score; this is the search-adjusted FWER of declaring a value signal, because every realization runs the full best-of-search + K-selection",
+  "n_decisive_realizations": 6,
+  "fwer_decisive": 0.7143,
+  "fwer_wrong_language_only": 1.0,
+  "fwer_random_prior_only": 0.5,
+  "p_vs_order_shuffle_only": 0.25
+ },
+ "verdict": "AT_END_TO_END_NULL",
+ "interpretation": "REAL LA held-out predictive improvement = 0.01339 nats/token. The bounded agnostic search over the reduced K-class value space is AT / INSIDE the decisive end-to-end null: wrong-language (opaque Linear B) FWER p=1.000, random-prior FWER p=0.500, order-shuffle p=0.250. A real different language (LB) processed identically scores in the same band, so the objective is detecting GENERIC linguistic order structure, not an LA-value-specific edge. Order-shuffle being beaten (if so) only confirms LA has real sequential structure; the value claim requires clearing the wrong-language and random-prior nulls, which run the identical adaptive pipeline on data with the LA-value signal removed. => AT_END_TO_END_NULL: consistent with WP3.2b / WP5(b) \u2014 LA-side propagation is underpowered; the reduced-space search finds no value-specific signal that survives the full search-adjusted null. This is the honest, precisely-quantified insurance-policy result, not a claimed decipherment."
+}

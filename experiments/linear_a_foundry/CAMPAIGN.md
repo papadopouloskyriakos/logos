@@ -32,8 +32,8 @@ value layer is not provably closed to internal methods.
 | 3 · relative phonology / morphology / scribal | ✅ DONE — channels VALIDATED on LB (substitution AUC 0.71 z=7.07; alternation p=0.0033; morphology 0.731 bits/word) but LA UNDERPOWERED (max subst weight 105 vs 303; unsegmented; needs C/V seed labels). 2nd correction: more corpus WOULD help |
 | 4 · diachronic & cross-script sign evolution | ✅ NULL — no non-circular value (4th distributional null); shape circular |
 | 5 · external-anchor factory | ✅ inventory 115 rec/62 signs; reduced-seed bootstrap VALIDATED on LB (3-4 seeds->AUC 0.87) but LA underpowered (NULL). Obstacle = LA propagation power, not anchors |
-| 6 · candidate-language + agnostic rounds | pending |
-| lab · known-script + synthetic recovery | pending |
+| 6 · agnostic search | ✅ AT_END_TO_END_NULL (beats order-shuffle z=8.5; wrong-language LB scores higher; FWER 0.71). 3 candidate-language rounds pending |
+| lab · synthetic recovery | ✅ QUANTIFIED 5/5 — methods recover at scale, calibrated NO_POWER at LA-scale, reject wrong-language; LA needs ~1.9x tokens + segmentation |
 | seals · sealed prediction programme | pending |
 | nulls · end-to-end null programme | pending |
 | acq · active evidence acquisition | pending |

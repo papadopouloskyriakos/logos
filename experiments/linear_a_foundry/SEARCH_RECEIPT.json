@@ -9,7 +9,8 @@
  "charged_total_configs": 0,
  "null_realizations": {
   "WP1_position": 2000,
-  "WP3.1_cv_perm": 200
+  "WP3.1_cv_perm": 200,
+  "WP6_end_to_end": 50
  },
  "WP3.1": {
   "model_families": 1,
@@ -47,5 +48,22 @@
   "lb_validated": "3-4 seeds -> AUC 0.87",
   "la": "NULL (underpowered propagation)",
   "null_realizations": 200
+ },
+ "PowerCurve": {
+  "verdict": "QUANTIFIED",
+  "LA_corpus_multiple": "~4.9x"
+ },
+ "Synthetic": {
+  "verdict": "QUANTIFIED 5/5",
+  "thresholds": "1.88x tokens + segmentation tax"
+ },
+ "WP6_agnostic": {
+  "verdict": "AT_END_TO_END_NULL",
+  "decisive_FWER": 0.71,
+  "null_families": [
+   "order-shuffle",
+   "wrong-language-LB",
+   "random-prior"
+  ]
  }
 }

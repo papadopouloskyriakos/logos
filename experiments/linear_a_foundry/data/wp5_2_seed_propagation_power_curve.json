@@ -1,0 +1,339 @@
+{
+ "experiment": "WP5.2_seed_propagation_power_curve",
+ "seed": 20260708,
+ "bar_auc": 0.7,
+ "freq_min": 20,
+ "beta_sub": 0.5,
+ "knn": 7,
+ "kv_list": [
+  3,
+  4
+ ],
+ "kc": 3,
+ "n_cons_draws": 4,
+ "n_sub_per_size": 24,
+ "size_ladder": [
+  300,
+  539,
+  750,
+  1000,
+  1500,
+  2000,
+  3500,
+  6000,
+  10000,
+  13562
+ ],
+ "non_circular": "position + substitution-graph features only; LB {A,E,I,O,U} used solely to GRADE held-out AUC, never as a model input",
+ "LB_full_wordforms": 13562,
+ "LA_wordforms": 539,
+ "LA_qualifying_signs": 46,
+ "LA_qualifying_vowels": 4,
+ "curve": [
+  {
+   "size": 300,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 19.2,
+   "mean_n_vowels": 3.88,
+   "valid_all5_vowels": false,
+   "kv": {
+    "3": {
+     "mean_auc": 0.7747,
+     "sd_auc": 0.0742,
+     "ci95_lo": 0.7413,
+     "ci95_hi": 0.8118,
+     "n": 17
+    },
+    "4": {
+     "mean_auc": 0.7809,
+     "sd_auc": 0.0529,
+     "ci95_lo": 0.7327,
+     "ci95_hi": 0.8293,
+     "n": 4
+    }
+   }
+  },
+  {
+   "size": 539,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 36.5,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.647,
+     "sd_auc": 0.0744,
+     "ci95_lo": 0.6168,
+     "ci95_hi": 0.675,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.6781,
+     "sd_auc": 0.0934,
+     "ci95_lo": 0.6407,
+     "ci95_hi": 0.7135,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 750,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 42.7,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.6686,
+     "sd_auc": 0.0687,
+     "ci95_lo": 0.6412,
+     "ci95_hi": 0.6971,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.7196,
+     "sd_auc": 0.0784,
+     "ci95_lo": 0.6894,
+     "ci95_hi": 0.7511,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 1000,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 46.3,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.674,
+     "sd_auc": 0.0538,
+     "ci95_lo": 0.6522,
+     "ci95_hi": 0.6961,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.7108,
+     "sd_auc": 0.0699,
+     "ci95_lo": 0.6836,
+     "ci95_hi": 0.7399,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 1500,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 52.8,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.6941,
+     "sd_auc": 0.0488,
+     "ci95_lo": 0.6742,
+     "ci95_hi": 0.713,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.7516,
+     "sd_auc": 0.0631,
+     "ci95_lo": 0.7254,
+     "ci95_hi": 0.7763,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 2000,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 55.3,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.6804,
+     "sd_auc": 0.0543,
+     "ci95_lo": 0.6578,
+     "ci95_hi": 0.7011,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.7125,
+     "sd_auc": 0.0805,
+     "ci95_lo": 0.678,
+     "ci95_hi": 0.7417,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 3500,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 60.7,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.721,
+     "sd_auc": 0.0479,
+     "ci95_lo": 0.7021,
+     "ci95_hi": 0.7413,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.7704,
+     "sd_auc": 0.0514,
+     "ci95_lo": 0.7505,
+     "ci95_hi": 0.7912,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 6000,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 66.2,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.7444,
+     "sd_auc": 0.0297,
+     "ci95_lo": 0.733,
+     "ci95_hi": 0.7567,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.7924,
+     "sd_auc": 0.0587,
+     "ci95_lo": 0.7678,
+     "ci95_hi": 0.8142,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 10000,
+   "n_sub_requested": 24,
+   "n_effective_draws": 24,
+   "mean_n_signs": 71.0,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.7563,
+     "sd_auc": 0.0336,
+     "ci95_lo": 0.743,
+     "ci95_hi": 0.7701,
+     "n": 24
+    },
+    "4": {
+     "mean_auc": 0.8066,
+     "sd_auc": 0.0353,
+     "ci95_lo": 0.7931,
+     "ci95_hi": 0.82,
+     "n": 24
+    }
+   }
+  },
+  {
+   "size": 13562,
+   "n_sub_requested": 24,
+   "n_effective_draws": 1,
+   "mean_n_signs": 77.0,
+   "mean_n_vowels": 5.0,
+   "valid_all5_vowels": true,
+   "kv": {
+    "3": {
+     "mean_auc": 0.752,
+     "sd_auc": 0.0,
+     "ci95_lo": 0.752,
+     "ci95_hi": 0.752,
+     "n": 1
+    },
+    "4": {
+     "mean_auc": 0.7906,
+     "sd_auc": 0.0,
+     "ci95_lo": 0.7906,
+     "ci95_hi": 0.7906,
+     "n": 1
+    }
+   }
+  }
+ ],
+ "crossing_0.70": {
+  "3": {
+   "below": [
+    2000,
+    0.6804
+   ],
+   "above": [
+    3500,
+    0.721
+   ],
+   "size_at_bar": 2620
+  },
+  "4": {
+   "below": [
+    539,
+    0.6781
+   ],
+   "above": [
+    750,
+    0.7196
+   ],
+   "size_at_bar": 642
+  }
+ },
+ "LA_placement": {
+  "3": {
+   "LA_wordforms": 539,
+   "LA_qualifying_signs_freq>=20": 46,
+   "LA_heldout_AUC_after_seeding": "~0.50 (chance; WP5(b): LA propagation NULL, no gold to grade)",
+   "LB_curve_AUC_at_LA_wordcount(539)": 0.647,
+   "size_at_AUC>=0.70": 2620,
+   "LA_corpus_multiple_needed": 4.9,
+   "interpretation_of_multiple": "LA would need ~4.9x its current wordform count for the reduced-seed C/V bootstrap to reach held-out AUC 0.70, IF LA behaved like subsampled Linear B."
+  },
+  "4": {
+   "LA_wordforms": 539,
+   "LA_qualifying_signs_freq>=20": 46,
+   "LA_heldout_AUC_after_seeding": "~0.50 (chance; WP5(b): LA propagation NULL, no gold to grade)",
+   "LB_curve_AUC_at_LA_wordcount(539)": 0.6781,
+   "size_at_AUC>=0.70": 642,
+   "LA_corpus_multiple_needed": 1.2,
+   "interpretation_of_multiple": "LA would need ~1.2x its current wordform count for the reduced-seed C/V bootstrap to reach held-out AUC 0.70, IF LA behaved like subsampled Linear B."
+  }
+ },
+ "headline": "Reduced-seed (3 vowel + 3 consonant) C/V bootstrap on subsampled Linear B crosses held-out AUC 0.70 at ~2620 wordforms; at Linear A's 539 wordforms the same LB pipeline sits at AUC~0.647 (near chance), and Linear A itself is ~chance. => LA needs roughly 4.9x its current corpus for the C/V bootstrap to fire (kv=3 estimate).",
+ "primary_estimate_kv3": {
+  "size_at_AUC>=0.70": 2620,
+  "LA_corpus_multiple": 4.9,
+  "conservative_bracket": {
+   "wordform_bracket": [
+    2000,
+    3500
+   ],
+   "LA_multiple_bracket": [
+    3.7,
+    6.5
+   ]
+  },
+  "why_kv3_primary": "kv=3 leaves ~2 held-out vowels -> stable AUC; kv=4 leaves ~1 held-out vowel and size=300 has <5 qualifying vowels -> both degenerate/upward-biased and excluded from the crossing."
+ },
+ "caveats": [
+  "AUC graded on only 5 true vowels; kv=3 -> 2 held-out positives. Averaged over all C(5,3)=10 vowel-seed combos x 4 consonant-anchor draws x 24 subsamples to stabilise.",
+  "size=300 (mean ~3.9 vowels qualify) and the kv=4 column (~1 held-out vowel) are DEGENERATE (tiny positive set inflates AUC); excluded from the crossing. Valid curve region = size>=539 where all 5 vowels clear FREQ_MIN.",
+  "Multiple assumes LA behaves like size-matched Linear B per wordform. LA wordforms are longer (more sign-tokens each: LA ~46 signs clear freq>=20 at 539 wf vs LB ~36), so in TOKENS LA is less corpus-starved than in wordforms; yet LA post-seeding AUC is still ~chance (WP5), i.e. LA underperforms even its wordform-matched LB point (0.647) -> the multiple is a LOWER bound on the corpus LA needs."
+ ]
+}
