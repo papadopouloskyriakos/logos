@@ -7,9 +7,9 @@ meta:
   gitignore_note: "reports/ and data/ ignored -> git add -f; scripts/preregistrations/manifests/seals tracked"
 tasks:
   - {task_id: T00_census, section: III, objective: "prior-test census", status: COMPLETE, result_note: "exact core gate H1-H6 NEVER run; extended H7-H12 withheld->SOURCE_BLOCKED"}
-  - {task_id: T01_archive, section: IV, objective: "immutable public-claim archive (web acquire+hash aiclambake/HN/github/artifacts)", status: QUEUED}
-  - {task_id: T02_claim_graph, section: V, objective: "claim dependency graph + free-parameter (lower-bound search) receipt", status: QUEUED}
-  - {task_id: T03_prereg, section: VI, objective: "freeze H1-H12 preregistration + hash", status: QUEUED}
+  - {task_id: T01_archive, section: IV, objective: "immutable public-claim archive (web acquire+hash aiclambake/HN/github/artifacts)", status: COMPLETE, result_note: "COMPLETE — CLB-01 archived+hashed (Fig.1 651e50d9); H7-H12 SOURCE_BLOCKED (no public artifacts on article/github/minoanmystery)"}
+  - {task_id: T02_claim_graph, section: V, objective: "claim dependency graph + free-parameter (lower-bound search) receipt", status: COMPLETE, result_note: "COMPLETE — single-free-parameter structure; e2-e4 circular; lower-bound receipt + author's stated ~10^5 sims"}
+  - {task_id: T03_prereg, section: VI, objective: "freeze H1-H12 preregistration + hash", status: COMPLETE, result_note: "COMPLETE — H1-H12 frozen+hashed BEFORE testing"}
   - {task_id: T04_corpus, section: VII, objective: "libation-formula exact corpus + provenance + derivation/heldout partition", status: QUEUED}
   - {task_id: T05_segmentation, section: VII, objective: "segmentation comparison (DiMino/Davis/Thomas/diplomatic/none/probabilistic)", status: QUEUED}
   - {task_id: A_301_sweep, section: VIII, objective: "exhaustive *301 value audit (leave-target/site/form-out; rank /na/)", status: QUEUED}
