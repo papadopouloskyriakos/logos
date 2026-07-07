@@ -107,14 +107,16 @@ tasks:
     work_package: B
     objective: "Apply only VALIDATED models to LA; per-boundary prob + cross-model agreement + site/encoding/damage sensitivity (no single deterministic ground-truth)"
     dependencies: [B3_known_script, B4_synthetic]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — probabilistic over-cut set; real signal is layout not distribution (row-break AUC 0.875)"
     required_outputs: [reports/B_LINEAR_A_SEGMENTATION_ENSEMBLE.md, data/segmentations/la_ensemble.json]
     next_task_on_success: B6_downstream
   - task_id: B6_downstream
     work_package: B
     objective: "Causal test: freeze each seg -> rerun class/substitution/morphology -> must improve HELD-OUT known-script recovery, not LA internal fit; charge seg search"
     dependencies: [B5_la_ensemble]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — held-out LB endorses GORILA_WORD; ensemble over-cut annihilates LA morphology"
     required_outputs: [reports/B_DOWNSTREAM_CAUSAL_TEST.md]
     next_task_on_success: C1_candidates
 
@@ -157,35 +159,40 @@ tasks:
     work_package: D
     objective: "Multi-view latent model over audited channels (position/substitution/morphology/formula/site/shape-capped) w/ missing-channel handling"
     dependencies: [C5_stability]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — MULTIVIEW_NO_VALUE_RECOVERY (fused vowel-AUC 0.538, residualized 0.450)"
     required_outputs: [reports/D_MULTIVIEW_RELATIVE_FEATURES.md]
     next_task_on_success: D2_ablations
   - task_id: D2_ablations
     work_package: D
     objective: "View ablations (position/substitution/morphology/shape and combinations); shape-only capped, no phonetic authority"
     dependencies: [D1_multiview]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — LA null after frequency across all views; LB control fires freq-robust"
     required_outputs: [reports/D_VIEW_ABLATIONS.md]
     next_task_on_success: D3_seed_audit
   - task_id: D3_seed_audit
     work_package: D
     objective: "Audit the Foundry '3-4 seeds -> 0.87' claim: which seeds, selection, independence, sensitivity, random/adversarial/leave-one-seed-out, measured on INDEPENDENT signs; forbid post-hoc seed selection"
     dependencies: [D1_multiview]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — SEED_PROPAGATION_FREQUENCY_ARTIFACT (3rd Foundry correction; pure-freq 0.872>seed 0.784)"
     required_outputs: [reports/D_SEED_PROPAGATION_AUDIT.md]
     next_task_on_success: D4_frontier
   - task_id: D4_frontier
     work_package: D
     objective: "Minimal-seed frontier 0..5+ seeds x {random, shared-sign, shape-selected, anchor-derived, incorrect}"
     dependencies: [D3_seed_audit]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — LA below minimal-seed threshold; value-blind selection flat 0.50; SEED_A=0"
     required_outputs: [reports/D_MINIMAL_SEED_FRONTIER.md]
     next_task_on_success: D5_posterior
   - task_id: D5_posterior
     work_package: D
     objective: "LA anonymous posterior classes + uncertainties ONLY (no absolute values)"
     dependencies: [D2_ablations, D4_frontier]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — anonymous K=2 partition (provenance+morphology), aligns vowel/CV only at chance; no value"
     required_outputs: [reports/D_LINEAR_A_RELATIVE_POSTERIOR.md, data/D_la_posterior.json]
     next_task_on_success: E1_morphology
 
@@ -194,35 +201,40 @@ tasks:
     work_package: E
     objective: "3 anonymous morphology families (MDL/Bayesian/FSM-paradigm) -> stems/prefix/suffix/optional/reduplication/slot-alternation"
     dependencies: [B6_downstream]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — A- prefixation robust; corrects wave-2 to A- ONLY (-JA/I- artifacts); libation reduplication surfaced"
     required_outputs: [reports/E_MORPHOLOGY_MODELS.md]
     next_task_on_success: E2_formula
   - task_id: E2_formula
     work_package: E
     objective: "Formula grammar (FSM/prob) by site/support/doc-type/chrono/length"
     dependencies: [E1_morphology]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — 2 formula grammars (ledger KU-RO/KI-RO + libation rigid order p5e-5)"
     required_outputs: [reports/E_FORMULA_GRAMMAR.md]
     next_task_on_success: E3_crosssite
   - task_id: E3_crosssite
     work_package: E
     objective: "Cross-site generalization: train major->other, non-major->major, LOSO, leave-one-formula-family-out"
     dependencies: [E1_morphology]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — only A- generalizes cross-site (non-HT p0.0099); -JA HT-bound; I- underdetermined"
     required_outputs: [reports/E_CROSS_SITE_GENERALIZATION.md]
     next_task_on_success: E4_paramreduce
   - task_id: E4_paramreduce
     work_package: E
     objective: "Parameter reduction: compression AND held-out predictive improvement (compression-only does not advance)"
     dependencies: [E1_morphology]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — compresses training but held-out gain not structural (metric-insensitive; LB control same)"
     required_outputs: [reports/E_PARAMETER_REDUCTION.md]
     next_task_on_success: E5_wrongstruct
   - task_id: E5_wrongstruct
     work_package: E
     objective: "Wrong-structure controls (shuffled suffix/stem, random seg, site-preserving shuffle, freq-matched pseudo-morph, synthetic wrong-language)"
     dependencies: [E1_morphology]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — real A- morphology beats all wrong-structure controls (paired p0.0005); modest"
     required_outputs: [reports/E_WRONG_STRUCTURE_CONTROLS.md]
     next_task_on_success: F1_decompose
 
