@@ -1,0 +1,37 @@
+{
+ "n_examples": 9432,
+ "n_train": 6311,
+ "n_test_unseen_family": 1593,
+ "quantity_presence": {
+  "n_test": 1593,
+  "baseline_majority": 0.68,
+  "baseline_series_shortcut": 0.688,
+  "M_struct_layout_A12": 0.709,
+  "M_sign_wordctx_A12": 0.651,
+  "null_label_shuffle": 0.611,
+  "sign_beats_best_baseline": false,
+  "sign_beats_null": true,
+  "cross_site_KN_to_nonKN": {
+   "n_test_nonKN": 539,
+   "M_sign": 0.579,
+   "baseline": 0.557
+  }
+ },
+ "magnitude_bucket_SML": {
+  "n_test": 510,
+  "baseline_majority": 0.663,
+  "baseline_series_shortcut": 0.702,
+  "M_struct_layout_A12": 0.663,
+  "M_sign_wordctx_A12": 0.637,
+  "null_label_shuffle": 0.665,
+  "sign_beats_best_baseline": false,
+  "sign_beats_null": false,
+  "cross_site_KN_to_nonKN": {
+   "n_test_nonKN": 239,
+   "M_sign": 0.69,
+   "baseline": 0.753
+  }
+ },
+ "note": "numeral value never enters the presence predictor; for magnitude it is the masked target predicted from word context only.",
+ "interpretation": "under A12 unseen-family: does opaque WORD context predict the accounting quantity channel beyond layout, the series shortcut, and a label-shuffle null, and does it transfer cross-site?"
+}

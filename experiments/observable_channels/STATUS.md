@@ -5,15 +5,17 @@
 | experiment | state |
 |---|---|
 | charter + scaffold | ✅ done |
-| 1 masked logogram recovery | ✅ first result — word-context does NOT beat the series shortcut / fails cross-site (weak signal) |
-| 2 masked quantity-channel | pending |
+| 1 masked logogram recovery | ✅ NEGATIVE — word-context does NOT beat the series shortcut / fails cross-site |
+| 2 masked quantity-channel | ✅ NEGATIVE — word-context (M_sign) below baseline/null; only LAYOUT (L2) beats baseline |
 | 3 accounting-closure | pending |
 | 4 document-template completion | pending |
 | 5 cross-site invariance | pending |
 | 6 pseudo-script O2+D8 | pending |
 | ablations A0-A12 + nulls | pending |
-| mechanical gate | pending (Exp1 alone fails ≥2-channel + cross-site + no-series) |
+| mechanical gate | pending (2 channels down, both NEGATIVE for word-context) |
 
-**Early signal:** observable channels are well-powered (457 unseen-family units vs 19 semantic), but the
-commodity channel's predictive power is a document-series SHORTCUT; transferable opaque-word-context signal is
-weak/negative cross-site. To be tested on the quantity / accounting / template channels.
+**Signal after 2 channels (commodity + quantity):** well-powered (1,593 A12 units on quantity), but the
+observable administrative signal lives in **document structure — series / layout / position (L2)**, NOT in
+transferable opaque word forms (the L3 functional signal). Both channels are per-channel NEGATIVES for the
+word-context question. `FUNCTIONAL_TRANSFER_LICENSE` = `NOT_YET_EARNED`. Exp 3–4 test the L2 structure
+channel directly — recovering it re-confirms L2, does not earn the L3 licence.
