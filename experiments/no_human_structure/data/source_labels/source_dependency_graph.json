@@ -1,0 +1,31 @@
+{
+  "_note": "Dependency DAG of Linear B label sources. Two labels are NOT independent consensus if they share an upstream node. Used to gate LF_CROSS_SOURCE_CONCORDANCE (§V) and the dependency-aware label model WS3.",
+  "as_of": "2026-07-07",
+  "nodes": {
+    "PRIMARY_EDITIONS": {"kind": "root", "desc": "ed. pr. of each tablet (KT, PTT, TITHEMY, Thebes eds.) — the physical readings"},
+    "GORILA": {"kind": "root", "desc": "standard sign list / transcription convention"},
+    "DECIPHERMENT_1952": {"kind": "root", "desc": "Ventris 1952 phonetic values — the shared reading basis"},
+    "DAMOS": {"kind": "database", "derives_from": ["PRIMARY_EDITIONS", "GORILA", "DECIPHERMENT_1952"],
+              "provides": ["transliteration", "series/subseries", "hand_easy", "area_code", "chronogroup", "logograms", "numerals"]},
+    "LIBER": {"kind": "database", "derives_from": ["PRIMARY_EDITIONS", "GORILA", "DECIPHERMENT_1952"],
+              "provides": ["layout", "series"], "status": "TO_AUDIT"},
+    "VENTRIS_CHADWICK_DOCS2": {"kind": "lexicon", "derives_from": ["PRIMARY_EDITIONS", "DECIPHERMENT_1952"],
+                               "provides": ["toponym_index", "personal_name_index", "role_glosses"]},
+    "AURA_JORRO_DMIC": {"kind": "lexicon", "derives_from": ["VENTRIS_CHADWICK_DOCS2", "PRIMARY_EDITIONS", "DECIPHERMENT_1952"],
+                        "provides": ["lexical_role_concordance", "toponym_index", "personal_name_index"],
+                        "note": "explicitly builds on and cites Ventris-Chadwick + eds. -> NOT independent of them"},
+    "STRUCTURAL_RULES": {"kind": "derivation", "derives_from": ["DAMOS"],
+                         "desc": "deterministic structure-only rules (numeral->quantity, logogram->commodity, total-position->document-structure) — the ONLY genuinely edition-independent role signal"}
+  },
+  "independence_classes": {
+    "EDITION_INDEPENDENT": ["STRUCTURAL_RULES"],
+    "SHARED_DECIPHERMENT": ["DAMOS", "LIBER", "VENTRIS_CHADWICK_DOCS2", "AURA_JORRO_DMIC"],
+    "SHARED_LEXICON": ["VENTRIS_CHADWICK_DOCS2", "AURA_JORRO_DMIC"]
+  },
+  "rulings": {
+    "cross_source_concordance_independent_only_if": "sources are in different independence_classes; e.g. STRUCTURAL_RULES agreeing with a lexicon IS informative; DMic agreeing with V-C is NOT (shared upstream)",
+    "silver_a_from_structure": "STRUCTURAL_RULES may yield SILVER_A for the TRIVIAL classes (numeral/logogram/total) since they are edition-independent",
+    "silver_a_from_lexicon_requires": "a lexical role (PLACE/HUMAN) reaches SILVER_A only if the underlying reading is uncontested in the ed. pr. AND the index membership is uncontested; otherwise SILVER_B",
+    "no_false_consensus": "never count DAMOS+VC+DMic agreement as 3 independent votes — collapse to 1 SHARED_DECIPHERMENT vote"
+  }
+}

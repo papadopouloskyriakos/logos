@@ -7,8 +7,9 @@ representations, all no-human, to test transferable admin role/schema recovery u
 
 | # (§XVIII) | stage | state |
 |---|---|---|
-| 1 | human-path closure + scaffold | **in progress** |
-| 2 | source-label dependency audit (§IV) | next |
+| 1 | human-path closure + scaffold | ✅ done (184eef1) |
+| 2 | source-label dependency audit (§IV) | ✅ done — only STRUCTURAL_RULES edition-independent; content roles share one decipherment |
+| 3 | deterministic SILVER label corpus | **next** |
 | 3 | deterministic SILVER label corpus | pending |
 | 4 | weak-supervision labeling functions (§V) | pending |
 | 5 | pseudo-script benchmark freeze (§VI) | pending |
