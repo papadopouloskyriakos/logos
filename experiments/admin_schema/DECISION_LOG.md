@@ -82,4 +82,14 @@ Chronological record of decisions, commits, and manifest hashes (§XVII). Newest
   optimistic upper bound. Exclusion: 160 form-families / 342 docs burned from future holdout. Verdict NOT
   retuned. SITE_TEST_A/B frozen. Report STAGE5_1_PILOT.md. Commit: _(this)_.
 
+- **Human-expert annotation PACKAGE prep** (starting commit `51ba8ef`; protected areas untouched, main f6a5682).
+  Automated pilot CLOSED (NO_POWER, α=0.614, not retuned). Drew a DETERMINISTIC human pilot: 160 items from
+  2,454 eligible independent forms (auto-pilot + in-pilot-docs + stem-siblings excluded); balanced 40×4
+  (KN/nonKN × hapax/recurrent). Prepared 2 blinded packets (different order), 2 blank response templates,
+  expert instructions, recruitment brief + invitation (no names invented), and ingestion/validation tooling
+  (validate/compare/adjudicate — all REFUSE without genuine submissions; 9 tests pass). BLOCKER:
+  QUALIFIED_HUMAN_ANNOTATORS_REQUIRED. Reading-bearing packets gitignored (DĀMOS courtesy); templates+manifest+
+  hashes+code+docs committed. NO human annotations fabricated; no agreement computed; no model/LA inference.
+  Committed in 5 separate commits.
+
 <!-- append: stage, commit sha, manifest hashes, key decision -->

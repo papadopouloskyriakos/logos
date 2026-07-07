@@ -16,7 +16,8 @@ document-schema induction, blinded on Linear B, transfer-feasibility gate for Li
 | 4.1 | correction pass | ✅ done — canonical site (19), scribe recovered (293/S4 AVAILABLE), LA channels recovered, cardinality+formula audits; 13/13 tests pass |
 | 5 | LB role ontology | ✅ FROZEN (ontology hash 781902c0; approved 2026-07-07) |
 | 4.2 | Linear A notation resolution | ✅ done — 965/1056 'other' resolved; feature sets defined |
-| 5.1 | annotation feasibility pilot (dev-only) | ✅ done — verdict **NO_POWER** (α 0.614<0.667; GOLD_A yield 5.6%) |
+| 5.1 | annotation feasibility pilot (dev-only) | ✅ done — verdict **NO_POWER** (α 0.614<0.667) |
+| — | human-expert annotation package | ✅ prepared — BLOCKER: QUALIFIED_HUMAN_ANNOTATORS_REQUIRED |
 | 5 | LB role ontology | pending |
 | 6 | blinding firewall | pending |
 | 7 | frozen splits | pending |
