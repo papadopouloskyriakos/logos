@@ -1,0 +1,20 @@
+{
+ "word_token_types": {
+  "PHONETIC": 2328,
+  "LIGATURE": 402,
+  "LOGOGRAM": 298,
+  "MIXED": 119
+ },
+ "phonetic_wordform_types": 944,
+ "phonetic_multisign_types": 878,
+ "logogram_tokens_separated": 417,
+ "effective_denominators": {
+  "raw_records": 1341,
+  "physical_objects": 1242,
+  "records_ge2_signs": 618,
+  "distinct_content_signatures_ge2": 565
+ },
+ "syllabary_parameters_conservative": 92,
+ "value_informative_gain": false,
+ "note": "Answer-neutral representation cleanup only. Separates non-phonetic logograms from the word channel and corrects effective_n. Does NOT inform sign values (Stage A diagnosis holds). Feeds Stage D on clean phonetic material. Subscript normalization applied (fixes the ASCII/Unicode key mismatch that dropped ~133 tokens on naive joins)."
+}

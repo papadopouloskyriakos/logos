@@ -29,3 +29,12 @@
   cross-genre word-initial phonotactics r<=0.93, but value-free). D7 compression CONFIRMS_KNOWN (grammar beats
   6 baselines held-out at 1.42 vs 1.77 bits/tok, but = known admin list format). Value layer empty across every
   internal channel. Commit: _(this)_. Checkpoint 2 written. Verdict hinges on F (anchors) + J (nulls).
+- **Stages E+F (wf_9cfcc3ff).** E `METHOD_VALID_LA_NULL_IS_CORPUS`: recovery methods fire on known-script/
+  planted truth (LB morphology 0.56>0.31; opaque-LB self-persistence 11/11; planted power->1.0 at s=13; gate
+  false-graduation 0.6%) and null on LA -> LA null is a CORPUS property. F `NO_NONCIRCULAR_ANCHOR`: Salgarella
+  2020 (now available) is the shape/homomorphy channel (circular, <=0.75); her anchors are the same toponyms
+  already REFUTEd; no anchor class has >=3 independent held-out non-circular anchors. Frozen preregistered
+  one-shots not re-run. **Consequence:** Stage D2 relabeling-invariance + F no-anchor => Stage H (agnostic
+  internal value search) is a PROVABLE null (a sign-value assignment is a relabeling; internal structure is
+  relabeling-invariant). NOTE: git reports/ + data/ are gitignored — force-added the full A-F record here.
+  Commit: _(this)_.

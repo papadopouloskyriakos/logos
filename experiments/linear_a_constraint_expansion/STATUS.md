@@ -15,4 +15,8 @@
   CONFIRMS_KNOWN (only libation+KU-RO), morphology NULL (confirmed; false-positive erased), accounting
   CONFIRMS_KNOWN (Bennett), invariance + compression = genuine held-out positives but KNOWN structure
   (phonotactics + admin list grammar), value-free. Value layer EMPTY across all internal channels.
-- **Next: Stage E** (known-script lab) + **Stage F** (external anchors — the sole value lever) → then H/J/K/L.
+- **Stages E+F — DONE.** E `METHOD_VALID_LA_NULL_IS_CORPUS` (methods fire on known truth, null on LA). F
+  `NO_NONCIRCULAR_ANCHOR` (Salgarella = shape/circular; no independent held-out anchor set). Value layer
+  DEFINITIVELY empty (internal channels B-D + external anchors F). Stage H provably null (D2 relabeling-invariance).
+- **Next: H+J** (bounded agnostic search + end-to-end null — demonstrate the provable null), **K** (active
+  unlock ranking), **L** (final verdict).

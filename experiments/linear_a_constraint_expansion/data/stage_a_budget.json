@@ -1,0 +1,37 @@
+{
+ "parameter_specifications": {
+  "prior_all_stream_tokens": 259,
+  "raw_inventory_V": 131,
+  "ontology_syllabogram_tokens": 131,
+  "allograph_families": 123,
+  "conservative_inventory_V": 92,
+  "exploratory_inventory_V": 88,
+  "recurrent_freq_ge5": 73,
+  "A_only_truly_undeciphered": 72,
+  "AB_shared_with_LB_hypothesis": 59
+ },
+ "constraint_specifications": {
+  "raw_inscriptions": 1341,
+  "ge4_sign_inscriptions": 388,
+  "ge4_sign_non_dominant_site_STRUCTURAL": 212,
+  "value_informative_heldout_anchors": 2
+ },
+ "prior_claim": "259 parameters > 212 constraints => UNDERDETERMINED",
+ "prior_claim_status": "INVALIDATED (mis-specified)",
+ "why_invalidated": "259 counted ALL diplomatic stream tokens (syllabograms + logograms + fractions + damaged/composite word-internal variants); a phonetic reading's parameters are the SYLLABARY = 88-92 (deduplicated) / 131 (raw) / 123 (allograph families). And '212' counts \u22654-sign non-dominant-site INSCRIPTIONS, which are structural/segmental units, not value-bearing constraints. The two figures are different categories.",
+ "corrected_budget": {
+  "syllabic_parameters_conservative": 92,
+  "structural_constraints_available": 212,
+  "structural_ratio_params_over_constraints": 0.434,
+  "value_informative_constraints": 2,
+  "value_ratio_params_over_informative_constraints": 46.0
+ },
+ "corrected_diagnosis": "At the SYLLABIC parameter level the count is FAVOURABLE (92 params < 212 structural constraints). The underdetermination is NOT a count deficit \u2014 it is that the abundant structural constraints (segmentation, formula grammar, 212 inscriptions) DO NOT INFORM sign VALUES (the distributional value-channel is null 4x; anchors are one-deep). Value-informative constraints (~2) are far below the ~92 syllabic parameters. The ceiling is constraint INFORMATIVENESS at the value layer, not constraint COUNT.",
+ "reopen_target": {
+  "minimum_new_value_informative_constraints_needed": 90,
+  "note": "The campaign target is NOT 'more constraints to beat a count' (the count already favours a reading) but 'constraints that INFORM the ~92 syllabic values' \u2014 i.e. secure external anchors surviving held-out + non-circular, OR an internal channel that transfers to values. Structural/segmental gains (Stages B/D) reduce false parameters and sharpen the space but cannot alone assign values; value anchors (Stage F) are the load-bearing lever.",
+  "max_defensible_parameter_reduction_without_answer_fitting": 8
+ },
+ "verdict": "A_REOPENED",
+ "verdict_reason": "The prior UNDERDETERMINED CONCLUSION stands qualitatively, but its quantitative justification (259>212) is INVALIDATED as a category error. Reframed correctly, the question reopens with a sharp, actionable target: value-informative constraints for ~92 syllabic parameters. Continue to Stages B-F to seek them."
+}
