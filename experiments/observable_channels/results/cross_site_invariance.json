@@ -1,0 +1,28 @@
+{
+ "n_docs": 1186,
+ "n_KN": 794,
+ "n_nonKN": 392,
+ "KN_to_nonKN": {
+  "n": 2711,
+  "global_majority": 0.238,
+  "position": 0.238,
+  "template": 0.616
+ },
+ "nonKN_to_KN": {
+  "n": 2980,
+  "global_majority": 0.241,
+  "position": 0.289,
+  "template": 0.389
+ },
+ "template_beats_target_baseline": {
+  "KN_to_nonKN": true,
+  "nonKN_to_KN": true
+ },
+ "bidirectional_invariant": true,
+ "entry_type_TVD_KN_vs_nonKN": 0.281,
+ "cross_site_gap": 0.227,
+ "site_shuffle_null_p": 0.0,
+ "layer": "L2 (document structure)",
+ "verdict": "SITE_DEPENDENT",
+ "interpretation": "Is the L2 notation-type template grammar the SAME across sites (bidirectional transfer above each target baseline + low type-distribution divergence), or site-dependent?"
+}

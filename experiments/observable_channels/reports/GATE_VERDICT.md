@@ -45,16 +45,20 @@ Mechanical verdict on the Observable Administrative Channel Recovery programme (
    in the paper), and it is exactly the site/series/layout *convenience* the gate requires removing — so it
    does **not** earn a functional licence.
 
-## Licences (Art. XV)
+## Licences (Art. XV) — both resolved (Exp 5–6 now run)
 
 - **FUNCTIONAL_TRANSFER_LICENSE:** `NOT_EARNED` — the L3 word-context question is `REFUTED`.
-- **STRUCTURAL_TRANSFER_LICENSE:** `NOT_YET_EARNED` — genuine held-out L2 evidence exists (Exp 3–4
-  `SUPPORTED`), but the gate is not cleared: cross-site invariance is single-direction (template strong at
-  non-KN, closure strong at KN; neither is bidirectional) and the O2+D8 pseudo-script leg has not been run.
-  A STRUCTURAL licence would require completing Exp 5 (two-directional invariance) + Exp 6 (O2+D8) and
-  clearing both — worthwhile only if an anonymous L2 structural transfer to Linear A is the goal.
+- **STRUCTURAL_TRANSFER_LICENSE:** `NOT_EARNED` — Exp 5–6 ran and the gate does **not** clear:
+  (1) **site-dependent** (Exp 5: type-distribution TVD 0.28, gap null-p 0.0 → `SITE_DEPENDENT`);
+  (2) the second channel (closure) is **D8-fragile** (Exp 6: decays to the null at 35% retention);
+  (3) the one robust signal (template regularity) is **sign-agnostic** (Exp 6: O2-identical 0.497=0.497) —
+  it carries no sign/lexical/functional content and is the already-known L2 document grammar. See
+  `reports/EXPERIMENT5-6_INVARIANCE_PSEUDOSCRIPT.md`.
 
-## Disposition
+## Disposition — programme `COMPLETE`
 
-Programme `COMPLETE` on the functional question (`REFUTED`); `OPEN-if-pursued` for a strictly L2 structural
-licence (Exp 5–6 remain). No Linear A output authorized (SEMANTIC+ `NOT_AUTHORIZED`; STRUCTURAL not earned).
+Both gates resolved as **well-powered negatives**: L3 functional `REFUTED`, L2 structural-transfer
+`NOT_EARNED`. The observable-channel route is closed. No Linear A output authorized (SEMANTIC+
+`NOT_AUTHORIZED`; no licence earned). A complete negative that maps what the corpus supports = a successful
+scientific result (Preamble). The document-structure signal that exists is real but content-free positional
+grammar — the paper's already-established L2 layer.

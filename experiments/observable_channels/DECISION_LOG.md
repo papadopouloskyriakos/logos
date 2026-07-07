@@ -22,3 +22,10 @@
   **per-channel NEGATIVE for word-context** — the only above-baseline gain is document LAYOUT (L2), not
   transferable word forms (L3). Verdict `TRIVIAL_RECOVERY` for the functional question. **Two channels down,
   both NEGATIVE**; the observable signal is L2 document structure, not L3 word-form function. Commit: _(this)_.
+- **Experiments 5–6 (STRUCTURAL gate legs).** Exp 5 cross-site invariance: template transfers both
+  directions above target baseline (KN→nonKN 0.616 vs 0.238; nonKN→KN 0.389 vs 0.289) but type-distribution
+  TVD 0.28, gap site-shuffle null-p 0.0 → `SITE_DEPENDENT`. Exp 6 O2+D8: template O2-identical (0.497=0.497,
+  sign-agnostic → carries NO sign/lexical content) + survives D8; accounting closure decays to null under D8
+  (0.033 < 0.054 at 35% retention). LA≈LB document density (corpus-stat only, no LA model result). FINAL:
+  `STRUCTURAL_TRANSFER_LICENSE = NOT_EARNED`; gate `OBSERVABLE_CHANNEL_READY = NO`; programme COMPLETE — a
+  well-powered negative across BOTH L3 functional and L2 structural-transfer. Commit: _(this)_.

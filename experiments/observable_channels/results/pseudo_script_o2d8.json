@@ -1,0 +1,51 @@
+{
+ "O2_sign_permutation": {
+  "template_base": 0.497,
+  "template_after_sign_permutation": 0.497,
+  "identical": true,
+  "closure_base": 0.071,
+  "note": "O2 leaves L2 signals identical because they never use sign identity \u2014 so they also carry NO sign/lexical information (the honest caveat)."
+ },
+ "D8_degradation_sweep": [
+  {
+   "keep_frac": 1.0,
+   "n_docs_ge3": 1186,
+   "template": 0.497,
+   "template_baseline": 0.408,
+   "closure_rate": 0.071,
+   "null_closure_rate": 0.049
+  },
+  {
+   "keep_frac": 0.75,
+   "n_docs_ge3": 442,
+   "template": 0.591,
+   "template_baseline": 0.426,
+   "closure_rate": 0.049,
+   "null_closure_rate": 0.036
+  },
+  {
+   "keep_frac": 0.5,
+   "n_docs_ge3": 224,
+   "template": 0.602,
+   "template_baseline": 0.461,
+   "closure_rate": 0.047,
+   "null_closure_rate": 0.008
+  },
+  {
+   "keep_frac": 0.35,
+   "n_docs_ge3": 158,
+   "template": 0.589,
+   "template_baseline": 0.48,
+   "closure_rate": 0.033,
+   "null_closure_rate": 0.054
+  }
+ ],
+ "LA_vs_LB_density": {
+  "LB_mean_entries_per_doc": 2.29,
+  "LA_mean_entries_per_doc": 2.73,
+  "both_ge3_frac": 0.28,
+  "note": "corpus-statistic only (NOT an LA model result): LA document density is comparable to LB, so D8 is mild and the L2 structure would be measurable on LA at similar power IF a STRUCTURAL licence were later earned."
+ },
+ "layer": "L2 (document structure)",
+ "interpretation": "Do the L2 structural signals survive O2 (trivially \u2014 they are sign-agnostic) and D8 (LA-like sparsity)? And what does sign-invariance imply about their information content?"
+}
