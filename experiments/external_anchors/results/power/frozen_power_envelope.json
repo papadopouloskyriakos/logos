@@ -1,0 +1,179 @@
+{
+ "regime": "frozen=True (fixed a-priori correspondence; no mapping search)",
+ "interpretation": "OPTIMISTIC design ceiling: recovery assumes Kilani gives the EXACT correspondence; FP is the fixed-map false-positive floor. If even this optimistic case is NO_POWER at n=3-4 real anchors, the Egyptian channel cannot be powered by a better sound model.",
+ "verdict": "POWERED_DESIGN",
+ "any_config_powered": true,
+ "best_config": {
+  "n_anchors": 4,
+  "La": 4,
+  "Lc": 4,
+  "kilani_noise": 0.15,
+  "FP_frozen": 0.043,
+  "REC_frozen_optimistic": 0.91,
+  "gap": 0.868,
+  "powered": true
+ },
+ "envelope": [
+  {
+   "n_anchors": 3,
+   "La": 3,
+   "Lc": 3,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.254,
+   "REC_frozen_optimistic": 0.962,
+   "gap": 0.708,
+   "powered": false
+  },
+  {
+   "n_anchors": 3,
+   "La": 3,
+   "Lc": 3,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.24,
+   "REC_frozen_optimistic": 0.867,
+   "gap": 0.627,
+   "powered": false
+  },
+  {
+   "n_anchors": 3,
+   "La": 3,
+   "Lc": 4,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.415,
+   "REC_frozen_optimistic": 0.975,
+   "gap": 0.56,
+   "powered": false
+  },
+  {
+   "n_anchors": 3,
+   "La": 3,
+   "Lc": 4,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.41,
+   "REC_frozen_optimistic": 0.897,
+   "gap": 0.486,
+   "powered": false
+  },
+  {
+   "n_anchors": 3,
+   "La": 4,
+   "Lc": 4,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.043,
+   "REC_frozen_optimistic": 0.909,
+   "gap": 0.866,
+   "powered": true
+  },
+  {
+   "n_anchors": 3,
+   "La": 4,
+   "Lc": 4,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.039,
+   "REC_frozen_optimistic": 0.711,
+   "gap": 0.672,
+   "powered": true
+  },
+  {
+   "n_anchors": 3,
+   "La": 4,
+   "Lc": 5,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.074,
+   "REC_frozen_optimistic": 0.922,
+   "gap": 0.848,
+   "powered": true
+  },
+  {
+   "n_anchors": 3,
+   "La": 4,
+   "Lc": 5,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.076,
+   "REC_frozen_optimistic": 0.741,
+   "gap": 0.664,
+   "powered": true
+  },
+  {
+   "n_anchors": 4,
+   "La": 3,
+   "Lc": 3,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.257,
+   "REC_frozen_optimistic": 0.965,
+   "gap": 0.708,
+   "powered": false
+  },
+  {
+   "n_anchors": 4,
+   "La": 3,
+   "Lc": 3,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.251,
+   "REC_frozen_optimistic": 0.863,
+   "gap": 0.613,
+   "powered": false
+  },
+  {
+   "n_anchors": 4,
+   "La": 3,
+   "Lc": 4,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.424,
+   "REC_frozen_optimistic": 0.975,
+   "gap": 0.551,
+   "powered": false
+  },
+  {
+   "n_anchors": 4,
+   "La": 3,
+   "Lc": 4,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.417,
+   "REC_frozen_optimistic": 0.893,
+   "gap": 0.476,
+   "powered": false
+  },
+  {
+   "n_anchors": 4,
+   "La": 4,
+   "Lc": 4,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.043,
+   "REC_frozen_optimistic": 0.91,
+   "gap": 0.868,
+   "powered": true
+  },
+  {
+   "n_anchors": 4,
+   "La": 4,
+   "Lc": 4,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.04,
+   "REC_frozen_optimistic": 0.717,
+   "gap": 0.677,
+   "powered": true
+  },
+  {
+   "n_anchors": 4,
+   "La": 4,
+   "Lc": 5,
+   "kilani_noise": 0.15,
+   "FP_frozen": 0.07,
+   "REC_frozen_optimistic": 0.919,
+   "gap": 0.849,
+   "powered": true
+  },
+  {
+   "n_anchors": 4,
+   "La": 4,
+   "Lc": 5,
+   "kilani_noise": 0.3,
+   "FP_frozen": 0.069,
+   "REC_frozen_optimistic": 0.746,
+   "gap": 0.677,
+   "powered": true
+  }
+ ],
+ "note": "Design/power analysis only (Art. VIII). Confirmatory use remains SOURCE_BLOCKED (Edel&Gorg 2005 primary edition not collated; komelhetan transliterations confirmatory_ineligible). Frozen result artifacts untouched."
+}
