@@ -7,9 +7,9 @@
  "note": "Machine-readable transfer-licence state for Linear A. A lower licence never implies a higher one (Art. XV). NOT_YET_EARNED = prerequisites defined but not met; NOT_AUTHORIZED = gated by owner constraint and/or a lower licence not yet earned. No licence is currently held.",
  "licences": {
   "STRUCTURAL_TRANSFER_LICENSE": {
-   "state": "NOT_YET_EARNED",
+   "state": "NOT_EARNED",
    "prerequisite": "readable-script (opaque Linear B) success under unseen-family + cross-site + O2+D8 nulls",
-   "current_evidence": "observable_channels Exp3-4: L2 document structure SUPPORTED held-out (template 0.508 vs 0.398 on unseen docs; accounting closure 0.071 > null 0.049, 100% masked-line reconstruction where present) — but cross-site is single-direction and O2+D8 not run, so the gate is NOT cleared"
+   "current_evidence": "observable_channels gate COMPLETE (Exp1-6, OBSERVABLE_CHANNEL_READY=NO): the STRUCTURAL gate does not clear — Exp5 SITE_DEPENDENT (notation-type TVD 0.28, gap null-p 0.0); Exp6 accounting closure is D8-fragile (decays to null); the one robust signal (template regularity, held-out 0.508) is sign-agnostic (O2-identical) content-free positional grammar = the paper's already-known L2 layer. Well-powered negative."
   },
   "FUNCTIONAL_TRANSFER_LICENSE": {
    "state": "NOT_YET_EARNED",
