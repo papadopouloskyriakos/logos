@@ -1,0 +1,64 @@
+{
+ "builder_version": "source-labels-v1-2026-07-07",
+ "n_word_form_labels": 93,
+ "category_counts": {
+  "REFERENCE_GOLD_A": 66,
+  "WEAK_SILVER_B": 20,
+  "STRUCTURAL_CONTROL_A": 7,
+  "STRUCTURAL_CONTROL_A(notation)": 15613
+ },
+ "REFERENCE_GOLD_A_nontrivial": 66,
+ "REFERENCE_GOLD_A_nontrivial_by_role": {
+  "PLACE": 43,
+  "HUMAN_OR_INSTITUTION": 23
+ },
+ "REFERENCE_GOLD_A_lexical_families": 66,
+ "REFERENCE_GOLD_A_morphological_families": 63,
+ "REFERENCE_GOLD_A_KN": 38,
+ "REFERENCE_GOLD_A_nonKN": 46,
+ "REFERENCE_GOLD_A_by_series": {
+  "A": 37,
+  "C": 24,
+  "E": 17,
+  "J": 18,
+  "M": 17,
+  "F": 14,
+  "G": 5,
+  "L": 13,
+  "N": 10,
+  "O": 9,
+  "V": 18,
+  "Q": 4,
+  "U": 16,
+  "X": 26,
+  "T": 5,
+  "D": 19,
+  "W": 8,
+  "B": 2,
+  "P": 5,
+  "Z": 1,
+  "S": 4
+ },
+ "role_by_category": {
+  "REFERENCE_GOLD_A": {
+   "PLACE": 43,
+   "HUMAN_OR_INSTITUTION": 23
+  },
+  "WEAK_SILVER_B": {
+   "OPERATOR_OR_RELATION": 13,
+   "QUALIFIER": 7
+  },
+  "STRUCTURAL_CONTROL_A": {
+   "DOCUMENT_STRUCTURE": 7
+  },
+  "DISPUTED_OR_EXCLUDED": {}
+ },
+ "structural_control_notation_nodes": {
+  "numerals": 8875,
+  "logograms": 6738
+ },
+ "dependency_clusters": {
+  "SHARED_DECIPHERMENT": 93
+ },
+ "note": "content-role labels all in ONE SHARED_DECIPHERMENT dependency cluster; structural controls are edition-independent but NOT load-bearing (they are excluded from the semantic eval per §II)"
+}
