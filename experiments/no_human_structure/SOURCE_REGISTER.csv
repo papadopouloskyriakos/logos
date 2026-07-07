@@ -1,0 +1,7 @@
+source_id,name,role,identifiers,license,underlying_edition,derived_from,label_fields,status,notes
+SRC-DAMOS,"DĀMOS — Database of Mycenaean at Oslo",LB corpus + hand/series/site metadata,"items.jsonl / damos.hf.uio.no",academic (courtesy),"GORILA / standard LB editions",PRIMARY_EDITIONS,"series,subseries,hand_easy,area_code,chronogroup,content",PRESENT,"source of SILVER structural labels; transliteration=EVAL"
+SRC-ONTOLOGY,"logos frozen role ontology (Stage 5)",label schema,"role_ontology.schema.json 781902c0",repo,"n/a",logos,"coarse/fine roles, tiers",INHERITED,"from parent branch"
+SRC-FEATURESETS,"logos feature sets (Stage 4.2)",CORE_TRANSFERABLE vs EXTENDED,"feature_sets.csv",repo,"n/a",logos,"transferability class",INHERITED,"from parent branch"
+SRC-LIBER,"LiBER — Linear B layout edition",layout/series,,to audit,,,,TO_AUDIT,"§IV dependency audit"
+SRC-VC-DOCS,"Ventris-Chadwick Documents² glossary",toponym/PN indexes,,print (published),"editio",PRIMARY_EDITIONS,"place/personal-name lists",TO_AUDIT,"dependency: shares upstream editions with DĀMOS"
+SRC-DMIC,"Aura Jorro Diccionario Micénico",lexical/role concordance,,print (published),"editio",PRIMARY_EDITIONS,"lexical role glosses",TO_AUDIT,"dependency-heavy; NOT independent of V-C"
