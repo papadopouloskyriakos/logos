@@ -40,3 +40,19 @@
   (5 known LA vowels A/I/U/E/O as the non-circular check) from 0.685 (packed) to 0.760 (word-segmented),
   approaching the LB CV ceiling 0.835. A chunk of the "LA underpowered" obstacle was a METHODOLOGICAL artifact
   (wrong text unit), correctable NOW without new excavation. Verdict SEGMENTATION_LEVER_HELPS. Commit: _(this)_.
+
+- **CANDIDATE ROUNDS 2 & 3 — both `AT_END_TO_END_NULL`.** Round 2 (Hurrian FWER 1.0, Luwian 0.284, ctrl 1.0);
+  Round 3 (Etruscan 0.537, Aegean-isolate 1.0 with zero held-out matches, ctrl 0.522). The random control's
+  bare match rate (0.054) EXCEEDS Etruscan's (0.033) → nonzero LA match = generic word-shape typicality, not
+  language fit. Five named families + isolate now tested; none beats a random lexicon. Fixed round-1's salted
+  hash() non-determinism (→ md5(family)). Commits: 7828072.
+- **SEALED-PREDICTION PROGRAMME — 5 hashed manifests, `NO_CANDIDATE_TO_SEAL`.** SEAL_1 unseen inscriptions
+  (201, 58a085a9), SEAL_2 unseen site Khania (159, be83582d), SEAL_3 libation formula carriers (25, 3f4d2bad),
+  SEAL_4 masked notation (191 numerals, 5f2128ac), SEAL_5 prospective gold Anetaki II (9e412e55, as_of
+  2026-07-07). No candidate survived the end-to-end null → nothing to score; splits preserved for the future.
+  Commit: 1e76ef5.
+- **FINAL MECHANICAL VERDICT (Art. II/XVII) — `NEW_CONSTRAINTS_AND_A_SHARPER_OBSTACLE — NO_DECIPHERMENT`.**
+  No LA reading survives held-out verification; all licences NOT_EARNED. Three standing corrections to the
+  prior campaign (C1 value-blindness refuted; C2 more-corpus-helps; C3 equivalence-classes-reduce). Obstacle
+  mechanically localized to corpus power + segmentation; acquisition target named + hashed (SEAL_5). All quotas
+  met. Campaign CLOSED 2026-07-07. Synthesis: FINAL_CAMPAIGN_REPORT.md. Commit: _(this)_.

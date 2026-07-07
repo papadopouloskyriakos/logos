@@ -86,5 +86,25 @@
   "sources": 63,
   "independent": 48,
   "held_out_gold": "Anetaki II"
- }
+ },
+ "CandidateRounds2_3": {
+  "verdict": "AT_END_TO_END_NULL",
+  "round2": {
+   "HUR": 1.0,
+   "LUW2": 0.284,
+   "CTRL": 1.0
+  },
+  "round3": {
+   "TYR": 0.537,
+   "AEG_isolate": 1.0,
+   "CTRL": 0.522
+  },
+  "note": "ctrl match 0.054 > Etruscan 0.033"
+ },
+ "Seals": {
+  "verdict": "NO_CANDIDATE_TO_SEAL",
+  "manifests": 5,
+  "prospective_gold": "Anetaki II (SEAL_5)"
+ },
+ "FINAL_VERDICT": "NEW_CONSTRAINTS_AND_A_SHARPER_OBSTACLE \u2014 NO_DECIPHERMENT"
 }

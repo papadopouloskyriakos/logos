@@ -32,11 +32,11 @@ value layer is not provably closed to internal methods.
 | 3 · relative phonology / morphology / scribal | ✅ DONE — channels VALIDATED on LB (substitution AUC 0.71 z=7.07; alternation p=0.0033; morphology 0.731 bits/word) but LA UNDERPOWERED (max subst weight 105 vs 303; unsegmented; needs C/V seed labels). 2nd correction: more corpus WOULD help |
 | 4 · diachronic & cross-script sign evolution | ✅ NULL — no non-circular value (4th distributional null); shape circular |
 | 5 · external-anchor factory | ✅ inventory 115 rec/62 signs; reduced-seed bootstrap VALIDATED on LB (3-4 seeds->AUC 0.87) but LA underpowered (NULL). Obstacle = LA propagation power, not anchors |
-| 6 · candidate + agnostic | ✅ agnostic + candidate round 1 both AT_END_TO_END_NULL (rounds 2-3 pending) |
+| 6 · candidate + agnostic | ✅ AT_END_TO_END_NULL — agnostic + 3 candidate rounds (6 families incl. isolate); none beats a random lexicon |
 | lab · synthetic recovery | ✅ QUANTIFIED 5/5 — methods recover at scale, calibrated NO_POWER at LA-scale, reject wrong-language; LA needs ~1.9x tokens + segmentation |
-| seals · sealed prediction programme | pending |
-| nulls · end-to-end null programme | pending |
-| acq · active evidence acquisition | pending |
+| seals · sealed prediction programme | ✅ 5 hashed manifests, NO_CANDIDATE_TO_SEAL (SEAL_5 = Anetaki II prospective gold) |
+| nulls · end-to-end null programme | ✅ multi-family (order-shuffle + wrong-lang LB + random-prior), Holm + 300-draw calibration; wrong-language LB beats every LA hypothesis |
+| acq · active evidence acquisition | ✅ target named + hashed: Anetaki II (SEAL_5, as_of 2026-07-07); 63 sources audited, 48 value-lineage-independent |
 
 ## Mandatory quotas (tracked to final verdict)
 
