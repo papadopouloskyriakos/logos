@@ -1,0 +1,25 @@
+# TASK_LEDGER — Di Mino *301 exact audit · branch research/di-mino-301-exact-audit · parent main@6fd4f20 · v2.2
+# States: QUEUED | RUNNING | BLOCKED | COMPLETE | REJECT | NULL_PUBLISHED | NO_POWER | SOURCE_BLOCKED | INCOMPLETE
+meta:
+  parent_commit: 6fd4f20
+  paper_frozen_sha256_16: a2ab89fa313e5b30
+  test_baseline: "89 passed (comparison/litindex/l_not_indexed/decipher) after corpus symlink"
+  gitignore_note: "reports/ and data/ ignored -> git add -f; scripts/preregistrations/manifests/seals tracked"
+tasks:
+  - {task_id: T00_census, section: III, objective: "prior-test census", status: COMPLETE, result_note: "exact core gate H1-H6 NEVER run; extended H7-H12 withheld->SOURCE_BLOCKED"}
+  - {task_id: T01_archive, section: IV, objective: "immutable public-claim archive (web acquire+hash aiclambake/HN/github/artifacts)", status: QUEUED}
+  - {task_id: T02_claim_graph, section: V, objective: "claim dependency graph + free-parameter (lower-bound search) receipt", status: QUEUED}
+  - {task_id: T03_prereg, section: VI, objective: "freeze H1-H12 preregistration + hash", status: QUEUED}
+  - {task_id: T04_corpus, section: VII, objective: "libation-formula exact corpus + provenance + derivation/heldout partition", status: QUEUED}
+  - {task_id: T05_segmentation, section: VII, objective: "segmentation comparison (DiMino/Davis/Thomas/diplomatic/none/probabilistic)", status: QUEUED}
+  - {task_id: A_301_sweep, section: VIII, objective: "exhaustive *301 value audit (leave-target/site/form-out; rank /na/)", status: QUEUED}
+  - {task_id: B_root_gloss, section: IX, objective: "Semitic root + gloss specificity audit vs L_fake + search nulls", status: QUEUED}
+  - {task_id: C_morphology, section: X, objective: "exact morphology/paradigm audit + known-script controls", status: QUEUED}
+  - {task_id: D_crosssite, section: XI, objective: "leave-one-site-out formula prediction", status: QUEUED}
+  - {task_id: E_formula, section: XII, objective: "full formula interpretation audit", status: QUEUED}
+  - {task_id: F_signmap, section: XIII, objective: "40-sign map gate OR SOURCE_BLOCKED", status: QUEUED}
+  - {task_id: G_lexicon, section: XIV, objective: "408-lexicon gate OR SOURCE_BLOCKED", status: QUEUED}
+  - {task_id: H_corrections, section: XV, objective: "LB + logogram corrections OR SOURCE_BLOCKED", status: QUEUED}
+  - {task_id: PC_controls, section: XVI, objective: "positive controls PC1-PC6 (Uga-Heb, opaque LB, planted *301, fake Semitic, agglutinative, Semitic morph)", status: QUEUED}
+  - {task_id: NULL_e2e, section: XVII, objective: "end-to-end adaptive null programme + false-positive rate", status: QUEUED}
+  - {task_id: VERDICT, section: XVIII, objective: "DI_MINO_CORE_VERDICT + extended verdicts", status: QUEUED}
