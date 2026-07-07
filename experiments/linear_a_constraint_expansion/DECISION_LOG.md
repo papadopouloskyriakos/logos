@@ -21,3 +21,11 @@
   Anetaki = 1 new inscription KO-RO-NO-WE-SA (5 signs), del Freo rapport, Chiapello prepub prediction (3rd-party
   registry). None supplies a non-circular VALUE constraint; corpus near-exhausted for value evidence. Findspot
   (Younger) + support-type (B6) are the usable new invariance axes for Stage D. Commit: _(this)_.
+- **Stage D — no value-informative constraint; mostly CONFIRMS_KNOWN.** 5-agent mining (wf_b5d7fd20) on clean
+  material. D1 formula CONFIRMS_KNOWN (libation+KU-RO only; 0% held-out cross-genre). D2 morphology NULL
+  (paradigm model does not beat smoothed bigram on unseen stems; naive unigram comparison would have been a
+  FALSE POSITIVE — control erased it; has power). D4 accounting CONFIRMS_KNOWN (fraction typing net-zero on
+  closure; Bennett A700 hypothesis inert; re-derives KU-RO=total). D5 invariance CONFIRMS_KNOWN (real held-out
+  cross-genre word-initial phonotactics r<=0.93, but value-free). D7 compression CONFIRMS_KNOWN (grammar beats
+  6 baselines held-out at 1.42 vs 1.77 bits/tok, but = known admin list format). Value layer empty across every
+  internal channel. Commit: _(this)_. Checkpoint 2 written. Verdict hinges on F (anchors) + J (nulls).

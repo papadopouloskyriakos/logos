@@ -9,5 +9,10 @@
   ligatures+damage); effective_n corrected 1341→1242 objects→565 lexical; cleaned phonetic channel (26%
   non-phonetic removed → 944 wordform types); value channel null/circular + AB-class CONTESTED (10 signs flip).
   Recovered testable channels: support-invariance axis, accounting (needs notation typing), findspot-in-bronze.
-- **Next: Stage C** (new sources — Younger/Anetaki/del Freo bronze) + **Stage D** (constraint mining on clean
-  material: formula grammar, morphology, accounting closure, support-invariance, compression).
+- **Stage C · new sources — DONE `C_NEW_INFORMATION_FOUND`** (not value-informative; Salgarella shape/circular,
+  Younger same-lineage+findspot, 1 new inscription, corpus near-exhausted for value evidence).
+- **Stage D · constraint mining — DONE (no value gain; mostly CONFIRMS_KNOWN).** Clean material: formula
+  CONFIRMS_KNOWN (only libation+KU-RO), morphology NULL (confirmed; false-positive erased), accounting
+  CONFIRMS_KNOWN (Bennett), invariance + compression = genuine held-out positives but KNOWN structure
+  (phonotactics + admin list grammar), value-free. Value layer EMPTY across all internal channels.
+- **Next: Stage E** (known-script lab) + **Stage F** (external anchors — the sole value lever) → then H/J/K/L.

@@ -5,5 +5,12 @@
   "thresholds": 0,
   "note": "audit only \u2014 no model search, no multiplicity charged"
  },
- "charged_total_configs": 0
+ "charged_total_configs": 5,
+ "stage_D": {
+  "model_families": 5,
+  "smoothing_grid": "lambda 0.5/0.7/0.9",
+  "holdout": "site/support/series-disjoint + 5fold x 5seed",
+  "partition": "exploratory (no confirmatory decipherment claim)",
+  "note": "all D verdicts CONFIRMS_KNOWN/NULL; charged as exploratory model search"
+ }
 }
