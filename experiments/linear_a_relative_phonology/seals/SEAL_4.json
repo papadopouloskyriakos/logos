@@ -1,0 +1,39 @@
+{
+ "seal_id": "SEAL_4",
+ "name": "unseen_formula_family_libation",
+ "type": "held_out_family_LOO_scored_now",
+ "as_of": "2026-07-07",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3",
+ "phonetic_scoring": "NO_CANDIDATE_TO_SEAL",
+ "split": {
+  "criterion": "libation carriers held out from ledger induction; canonical order predicted per-carrier by leave-one-carrier-out"
+ },
+ "derived_from": "the OTHER libation carriers (LOO) — never the scored carrier",
+ "structural_predictions": {
+  "canonical_template_committed": [
+   "OP",
+   "SSR",
+   "UNK",
+   "IPN",
+   "SIR"
+  ],
+  "held_out_family": "votive/libation carriers (>=2 anchors)",
+  "n_multi_anchor_carriers": 13,
+  "prediction_zero_inversions_LOO": true,
+  "prediction_inversion_rate": 0.0,
+  "probability": 0.9,
+  "ranked_alternatives": [
+   "0 inversions across all LOO folds (rigid template transfers) — PRIMARY",
+   "1-2 inversions (near-rigid)",
+   ">2 inversions (template is a small-n artefact — FAIL)"
+  ],
+  "failure_criterion": "LOO inversion count > 2 (i.e. the induced-from-the-rest order fails to predict held-out carrier order).",
+  "scoring_rule": "PASS if total LOO inversions == 0. Report inversions / total_pairs.",
+  "plan_hash": "d08e9dcbb45f9c1a2964c8dad65fd0a42e9608402f65b0a4b3b4366ef86aab44"
+ },
+ "target_ref": "data/seal_targets/SEAL_4_target.json",
+ "status": "SEALED_AND_SCORED",
+ "verdict": "SUPPORTED"
+}

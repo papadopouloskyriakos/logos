@@ -1,0 +1,7 @@
+{
+ "prereg_sha256": "98b924b73b4bd5857728ce6c2425e140b5e0a5ba00b86287785ed23f0670a173",
+ "script_sha256": "b6c1e4cfb101cb583f7e933fc3d612595fde500cd1cbe241fd4a0c8b6a2da287",
+ "output_sha256": "a0f84ba07a0666faf8c614841354128c307e195ae124aaffcab3dcb9151a3ac1",
+ "seed": 20260708,
+ "verdict": "AT_END_TO_END_NULL"
+}

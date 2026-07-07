@@ -1,0 +1,154 @@
+{
+  "prereg_id": "H_ROUND_1_relative_class_constrained",
+  "campaign": "linear-a-relative-phonology-seals",
+  "task": "H1 — bounded candidate round 1: relative-class-constrained family models",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "as_of": "2026-07-07",
+  "frozen_before_run": true,
+  "highest_claim_layer_allowed": "L2/L3 (a value-bearing candidate is admitted only PROVISIONALLY and counts as L5+ ONLY if it clears the mechanical bar below; honest expectation AT_END_TO_END_NULL)",
+  "held_out_target": {
+    "unit": "GORILA multi-sign syllabic word tokens (t=='word', >=2 signs, all signs in the 59-value AB syllabary)",
+    "source": "corpus/silver/inscriptions_structured.json (main worktree)",
+    "note": "The LA word set is the HELD-OUT scoring target. Family predictions are derived from external candidate-language lexicons + a FIXED correspondence, never fitted to LA. No LA statistic informs any family's phonemes or correspondence."
+  },
+  "non_circularity": [
+    "Known Linear B syllabic values define the A<->B correspondence (script-borrowing), used to EXPAND candidate-language phonemes into predicted LA sign-value strings. They are never read off Linear A.",
+    "The D5 anonymous relative classes are used ONLY as an admission/compatibility check, never as a model input, and never to assign a value (Art. XII, Art. XV).",
+    "LB wordforms appear ONLY as the wrong-language null corpus (W)."
+  ],
+  "relative_class_constraint_D5": {
+    "statement": "Any family that reads LA through the standard AB syllabary inherits the SAME sign->vowel/CV assignment (KU is /u/ for every family), so the D5 K=2 anonymous partition's agreement with the family-implied vowel/CV labelling is family-INDEPENDENT and equals the frozen D5 benchmark: adjMI(K2,vowel)=0.0317 perm_p=0.14, adjMI(K2,CV)=0.0395 perm_p=0.146 — NULL.",
+    "consequence": "The anonymous relative classes are value-blind (D5/F4): they neither admit nor exclude any AB-based candidate family, and cannot break the symmetry between families. This is recorded, computed for the record, and does NOT gate scoring. Admission therefore rests on chronology, geography, the A-prefix morphology (E1/E3), the formula grammars (E2), the anchor evidence (G), and CV-syllabary structural fit.",
+    "frozen_D5_K2_adjMI_vs_vowel": 0.0317,
+    "frozen_D5_K2_perm_p_vs_vowel": 0.1397,
+    "frozen_D5_K2_adjMI_vs_CV": 0.0395,
+    "frozen_D5_K2_perm_p_vs_CV": 0.1457
+  },
+  "scoring_protocol": {
+    "primary_statistic": "token-weighted match rate on the held-out multi-sign syllabic LA word set (a word matches a family iff its value-string is a predicted whole-word form, or ends with a predicted affix string)",
+    "correspondence_expansion": "identical bounded expander for every family (geminate collapse; coda consonant spelled C + epenthetic dead-vowel over all family vowels; EXPAND_CAP=256 forms/lexeme); effective_n reported as total predicted forms",
+    "end_to_end_null_battery": {
+      "S_order_shuffle": "shuffle signs within each LA word (kills within-word form structure) — non-decisive",
+      "W_wrong_language_LB": "opaque DAMOS Linear B multi-sign wordforms, length-matched to LA (a REAL other language scored by the SAME matcher) — decisive",
+      "R_random_prior": "permute the family lexicon (same #entries/kinds, same phoneme lengths, random phonemes from the family inventory; preserves search size, destroys the specific lexemes) — decisive"
+    },
+    "decisive_FWER_family": "max(p_W, p_R)  (must beat BOTH decisive nulls)",
+    "multiplicity": "Holm step-down across the 5 families on the decisive FWER (Art. VIII)",
+    "leave_one_lexeme_out": "worst-case decisive p after dropping each lexeme (Egyptian-channel discipline: is the signal one famous lexeme?)",
+    "random_lexicon_calibration": "N_CAL=300 same-structure random lexicons per serious family; report where the real match rate sits in the random-lexicon band (percentile p) and the raw-bar false-clear rate",
+    "n_nulls_per_family": 200
+  },
+  "admission_verdict_rule": {
+    "GENUINE (family counts)": "Holm-adjusted decisive FWER < 0.05 AND leave-one-lexeme-out worst decisive p < 0.05 AND real match rate above the random-lexicon band (percentile p < 0.05) with controlled false-clear rate (<=0.10) AND the agnostic random CONTROL does NOT clear the raw bar",
+    "AT_END_TO_END_NULL (expected)": "no family is GENUINE",
+    "note": "A GENUINE family would still require held-out READING success and cross-site survival before any L5+ wording (Art. XV); this round can at most PROMOTE a family to Round 2, never declare a decipherment."
+  },
+  "families": {
+    "SEM_westSemitic": {
+      "designation": "SERIOUS_CANDIDATE",
+      "gloss": "West/Common Semitic (Afro-Asiatic); Gordon 1966 / Rendsburg administrative-reading tradition",
+      "admission": {
+        "chronology": "PASS — West Semitic attested in the LBA E. Mediterranean; Levantine trade contact with MM/LM Crete is documented.",
+        "geography": "PARTIAL — no Semitic-speaking community attested on Crete; contact, not substrate.",
+        "relative_class_D5": "NEUTRAL — value-blind (see relative_class_constraint_D5).",
+        "A_prefix_morphology_E1E3": "WEAK — Semitic has no productive a- nominal prefix matching the LA A- affix (definite article proclitic ha-/a- is a partial analogue).",
+        "formula_grammar_E2": "STRONG — kull 'all/total' is the classic reading of KU-RO in the ledger TOTAL slot; this is exactly the E2 administrative anchor.",
+        "anchors_G": "NEUTRAL — some onomastic resemblances (value-blind, SEED_X).",
+        "script_structure": "WEAK — Semitic roots are consonant-heavy with codas/clusters; an open CV syllabary spells them poorly (heavy dead-vowel epenthesis)."
+      },
+      "phoneme_inventory": ["a", "e", "i", "o", "u", "p", "b", "t", "d", "k", "g", "q", "m", "n", "r", "l", "s", "z", "w", "y"],
+      "consonant_to_series": {"p": ["P"], "b": ["P"], "t": ["T"], "d": ["D", "T"], "k": ["K"], "g": ["K"], "q": ["Q", "K"], "m": ["M"], "n": ["N"], "r": ["R"], "l": ["R"], "s": ["S"], "z": ["Z", "S"], "w": ["W", "U"], "y": ["J"]},
+      "vowel_map": {"a": ["a"], "e": ["e"], "i": ["i"], "o": ["o"], "u": ["u"]},
+      "lexicon": [
+        {"form": "kull", "function": "all/total (=KU-RO)", "kind": "word", "phonemes": "k u l"},
+        {"form": "semen", "function": "oil", "kind": "word", "phonemes": "s e m e n"},
+        {"form": "yayin", "function": "wine", "kind": "word", "phonemes": "y a i n"},
+        {"form": "adon", "function": "lord", "kind": "word", "phonemes": "a d o n"},
+        {"form": "-atu", "function": "feminine nominal suffix", "kind": "suffix", "phonemes": "a t u"},
+        {"form": "-anu", "function": "nominal suffix", "kind": "suffix", "phonemes": "a n u"}
+      ]
+    },
+    "ANA_preGreek_Anatolian": {
+      "designation": "SERIOUS_CANDIDATE",
+      "gloss": "pre-Greek Aegean / Anatolian-contact (Luwic, Indo-European); Palmer/Finkelberg -ssa/-nda substrate tradition",
+      "admission": {
+        "chronology": "PASS — Luwic/Anatolian IE present in W. Anatolia in the MBA-LBA, contemporaneous with Linear A.",
+        "geography": "PASS — the Anatolian-Aegean contact zone; -ssos/-nthos Pre-Greek toponymic substrate on Crete.",
+        "relative_class_D5": "NEUTRAL — value-blind.",
+        "A_prefix_morphology_E1E3": "NEUTRAL — Anatolian has no strong a- prefix; the LA A- affix is not obviously Anatolian.",
+        "formula_grammar_E2": "WEAK — no compelling Anatolian reading of KU-RO/KI-RO in the TOTAL/DEFICIT slots.",
+        "anchors_G": "PARTIAL — the -assa toponymic suffix is compatible with Cretan substrate place-names.",
+        "script_structure": "PASS — Anatolian is moderately CV-friendly."
+      },
+      "phoneme_inventory": ["a", "e", "i", "o", "u", "w", "y", "t", "d", "n", "r", "l", "s", "k", "m", "p"],
+      "consonant_to_series": {"p": ["P"], "b": ["P"], "t": ["T"], "d": ["D", "T"], "k": ["K"], "g": ["K"], "q": ["Q", "K"], "m": ["M"], "n": ["N"], "r": ["R"], "l": ["R"], "s": ["S"], "z": ["Z", "S"], "w": ["W", "U"], "y": ["J"]},
+      "vowel_map": {"a": ["a"], "e": ["e"], "i": ["i"], "o": ["o"], "u": ["u"]},
+      "lexicon": [
+        {"form": "wiyana", "function": "wine", "kind": "word", "phonemes": "w i y a n a"},
+        {"form": "tati", "function": "father", "kind": "word", "phonemes": "t a t i"},
+        {"form": "anna", "function": "mother", "kind": "word", "phonemes": "a n a"},
+        {"form": "tarhu", "function": "storm-god", "kind": "word", "phonemes": "t a r u"},
+        {"form": "-assa", "function": "toponymic/relational suffix", "kind": "suffix", "phonemes": "a s a"},
+        {"form": "-iya", "function": "adjectival suffix", "kind": "suffix", "phonemes": "i y a"}
+      ]
+    },
+    "TYR_tyrsenian": {
+      "designation": "SERIOUS_CANDIDATE",
+      "gloss": "Tyrsenian / Etruscan-related (pre-IE isolate family); Facchetti & Negri 2003 Minoan=Tyrrhenian hypothesis",
+      "admission": {
+        "chronology": "PARTIAL — Tyrsenian is a hypothesized pre-IE Aegean family (Lemnian/Etruscan cognates); Bronze-Age Aegean presence is inferred, not attested.",
+        "geography": "PARTIAL — an Aegean pre-Greek isolate is geographically apt; direct Cretan attestation is absent.",
+        "relative_class_D5": "NEUTRAL — value-blind.",
+        "A_prefix_morphology_E1E3": "NEUTRAL — Etruscan is agglutinating/suffixing; the LA A- prefix is not a known Etruscan formant.",
+        "formula_grammar_E2": "WEAK — no established Tyrsenian reading of the TOTAL/DEFICIT slots.",
+        "anchors_G": "NEUTRAL.",
+        "script_structure": "PASS — Etruscan/Lemnian tolerate CV structure reasonably."
+      },
+      "phoneme_inventory": ["a", "e", "i", "o", "u", "t", "r", "s", "k", "n", "m", "l"],
+      "consonant_to_series": {"p": ["P"], "b": ["P"], "t": ["T"], "d": ["D", "T"], "k": ["K"], "g": ["K"], "q": ["Q", "K"], "m": ["M"], "n": ["N"], "r": ["R"], "l": ["R"], "s": ["S"], "z": ["Z", "S"], "w": ["W", "U"], "y": ["J"]},
+      "vowel_map": {"a": ["a"], "e": ["e"], "i": ["i"], "o": ["o"], "u": ["u"]},
+      "lexicon": [
+        {"form": "tur", "function": "give/offer", "kind": "word", "phonemes": "t u r"},
+        {"form": "aisa", "function": "god/fate", "kind": "word", "phonemes": "a i s a"},
+        {"form": "thina", "function": "vessel/jug", "kind": "word", "phonemes": "t i n a"},
+        {"form": "sec", "function": "daughter", "kind": "word", "phonemes": "s e k"},
+        {"form": "-na", "function": "genitival suffix", "kind": "suffix", "phonemes": "n a"},
+        {"form": "-si", "function": "dative suffix", "kind": "suffix", "phonemes": "s i"}
+      ]
+    },
+    "FIN_uralic_negctrl": {
+      "designation": "UNRELATED_NEGATIVE_CONTROL",
+      "gloss": "Finnish / Uralic — a REAL language with a REAL lexicon and correspondence, but chronogeographically IMPOSSIBLE for MBA Crete; tests whether the machinery credits any real language by CV-shape typicality",
+      "admission": {
+        "chronology": "FAIL — Uralic is not present in the 2nd-millennium E. Mediterranean.",
+        "geography": "FAIL — no contact of any kind with Bronze-Age Crete.",
+        "relative_class_D5": "NEUTRAL — value-blind.",
+        "A_prefix_morphology_E1E3": "N/A.",
+        "formula_grammar_E2": "N/A.",
+        "anchors_G": "N/A.",
+        "script_structure": "PASS — Finnish is highly CV/open-syllable (which is exactly why it is a fair worst-case NEGATIVE control: maximal shape-typicality with zero historical plausibility)."
+      },
+      "phoneme_inventory": ["a", "e", "i", "o", "u", "w", "s", "t", "l", "k", "r", "n", "m"],
+      "consonant_to_series": {"p": ["P"], "b": ["P"], "t": ["T"], "d": ["D", "T"], "k": ["K"], "g": ["K"], "q": ["Q", "K"], "m": ["M"], "n": ["N"], "r": ["R"], "l": ["R"], "s": ["S"], "z": ["Z", "S"], "w": ["W", "U"], "y": ["J"]},
+      "vowel_map": {"a": ["a"], "e": ["e"], "i": ["i"], "o": ["o"], "u": ["u"]},
+      "lexicon": [
+        {"form": "vesi", "function": "water", "kind": "word", "phonemes": "w e s i"},
+        {"form": "talo", "function": "house", "kind": "word", "phonemes": "t a l o"},
+        {"form": "kala", "function": "fish", "kind": "word", "phonemes": "k a l a"},
+        {"form": "tuli", "function": "fire", "kind": "word", "phonemes": "t u l i"},
+        {"form": "-inen", "function": "adjectival suffix", "kind": "suffix", "phonemes": "i n e n"},
+        {"form": "-sta", "function": "elative case suffix", "kind": "suffix", "phonemes": "s t a"}
+      ]
+    },
+    "CTRL_agnostic_random": {
+      "designation": "AGNOSTIC_RANDOM_CONTROL",
+      "gloss": "agnostic random-lexicon control: 4 word + 2 suffix, phoneme lengths drawn from the serious families' entries, phonemes drawn CV-alternating from a neutral inventory; materialized deterministically at seed 20260708",
+      "admission": {"note": "not a language; the null-model floor. If this clears the raw bar the bar is non-specific."},
+      "phoneme_inventory": ["a", "e", "i", "o", "u", "t", "k", "s", "n", "r", "m", "p"],
+      "consonant_to_series": {"p": ["P"], "t": ["T"], "d": ["D", "T"], "k": ["K"], "m": ["M"], "n": ["N"], "r": ["R"], "l": ["R"], "s": ["S"], "z": ["Z", "S"], "w": ["W", "U"], "y": ["J"]},
+      "vowel_map": {"a": ["a"], "e": ["e"], "i": ["i"], "o": ["o"], "u": ["u"]},
+      "lexicon": []
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+ "seal_id": "SEAL_2",
+ "name": "unseen_inscriptions_15pct",
+ "type": "held_out_partition_scored_now",
+ "as_of": "2026-07-07",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3",
+ "phonetic_scoring": "NO_CANDIDATE_TO_SEAL",
+ "split": {
+  "criterion": "random 15% of 1341 inscriptions held out (rng seed+2)",
+  "n_train": 1140,
+  "n_holdout": 201
+ },
+ "derived_from": "TRAIN 85% only",
+ "structural_predictions": {
+  "prediction_A_rate_point": 0.05811,
+  "prediction_A_rate_band_2se": [
+   0.03747,
+   0.07875
+  ],
+  "prediction_A_enriched_direction": true,
+  "prediction_ledger_wellformed_rate_point": 0.8917,
+  "prediction_any_KURO_in_holdout_ledgers": true,
+  "probability": 0.85,
+  "ranked_alternatives": [
+   "held-out A-rate within 2se band AND A-enriched (PRIMARY)",
+   "A-rate within band but enrichment not significant (power-limited, still PASS on point)",
+   "A-rate outside band (FAIL)"
+  ],
+  "failure_criterion": "held-out word-initial-A rate outside the 2se band OR held-out A-count <= frequency-null mean (wrong direction) OR ledger CARRIER->NUM well-formed rate drops below 0.70.",
+  "scoring_rule": "PASS if (a) held-out rate_A in band, (b) held-out A obs > null_mean, (c) held-out ledger well-formed >=0.70. Report |rate_A_holdout - point|.",
+  "plan_hash": "f5881ac45fbb9ec9b64edb69d1da488a26e0a66813f6ecd145c7365750f5f078"
+ },
+ "target_ref": "data/seal_targets/SEAL_2_target.json",
+ "status": "SEALED_AND_SCORED",
+ "verdict": "SUPPORTED"
+}

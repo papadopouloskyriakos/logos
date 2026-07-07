@@ -1,0 +1,1242 @@
+{
+ "experiment": "H3_candidate_round3_morphology_first_joint",
+ "seed": 20260708,
+ "n_nulls_per_family": 200,
+ "morphology_first_backbone": {
+  "n_TOTAL_KU_RO_tokens": 44,
+  "n_DEFICIT_KI_RO_tokens": 18,
+  "n_A_prefix_words_tail_attested": 14,
+  "n_derivation_words_excluded": 18
+ },
+ "held_out": {
+  "unit": "GORILA multi-sign syllabic word tokens, derivation-excluded",
+  "n_tokens": 998,
+  "n_types": 745,
+  "n_sites": 42,
+  "n_full_la": 1074,
+  "la_word_length_dist": {
+   "2": 0.4198,
+   "3": 0.3457,
+   "4": 0.1573,
+   "5": 0.0511,
+   "6": 0.015,
+   "7": 0.007,
+   "8": 0.002,
+   "9": 0.001,
+   "16": 0.001
+  }
+ },
+ "wrong_language_null": {
+  "corpus": "DAMOS Linear B multi-sign wordforms, length-matched",
+  "n_lb_multisign_words": 13562
+ },
+ "value_coverable_vs_read": {
+  "backbone_pinned_signs": [
+   "A",
+   "KU"
+  ],
+  "heldout_words_coverable_by_pinned_signs": 0,
+  "heldout_words_actually_read_by_pinned_signs_alone": 0,
+  "note": "pinning the handful of backbone signs covers few/no held-out words and reads 0 lexically: one-lexeme-deep, mirroring SEED_A=0."
+ },
+ "relabeling_invariance": {
+  "base_read_count": 82,
+  "base_rate": 0.08216,
+  "relabel_read_count_mean": 82.0,
+  "relabel_read_count_std": 0.0,
+  "n_relabelings": 200,
+  "invariant": true,
+  "interpretation": "consistent value relabeling is an isomorphism of the reading: read count invariant (std 0) => the backbone recovers 0 bits about which phonetic value any sign carries (value-blind / relabeling-invariant)."
+ },
+ "paradigms": {
+  "BAYES_joint": {
+   "designation": "SERIOUS_PARADIGM",
+   "committed_lexemes": [
+    {
+     "form": "kull",
+     "kind": "word",
+     "role": "total",
+     "phonemes": "k u l"
+    },
+    {
+     "form": "semen",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "s e m e n"
+    },
+    {
+     "form": "yayin",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "y a i n"
+    },
+    {
+     "form": "adon",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "a d o n"
+    },
+    {
+     "form": "-atu",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a t u"
+    },
+    {
+     "form": "-anu",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a n u"
+    },
+    {
+     "form": "wiyana",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "w i y a n a"
+    },
+    {
+     "form": "tati",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t a t i"
+    },
+    {
+     "form": "anna",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "a n a"
+    },
+    {
+     "form": "tarhu",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t a r u"
+    },
+    {
+     "form": "-assa",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a s a"
+    },
+    {
+     "form": "-iya",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "i y a"
+    },
+    {
+     "form": "tur",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t u r"
+    },
+    {
+     "form": "aisa",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "a i s a"
+    },
+    {
+     "form": "thina",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t i n a"
+    },
+    {
+     "form": "sec",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "s e k"
+    },
+    {
+     "form": "-na",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "n a"
+    },
+    {
+     "form": "-si",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "s i"
+    },
+    {
+     "form": "a-_article",
+     "kind": "prefix",
+     "role": "prefix",
+     "phonemes": "a"
+    }
+   ],
+   "identifiability_diagnostic": {
+    "posterior_entropy_bits_valueblind": 3.585,
+    "effective_assignments_valueblind": 12,
+    "posterior_entropy_bits_feasibility_restricted": 0.0,
+    "feasible_total_lexemes": [
+     "kull"
+    ],
+    "MAP_total": "kull",
+    "committed_forms": [
+     "kull",
+     "semen",
+     "yayin",
+     "adon",
+     "-atu",
+     "-anu",
+     "wiyana",
+     "tati",
+     "anna",
+     "tarhu",
+     "-assa",
+     "-iya",
+     "tur",
+     "aisa",
+     "thina",
+     "sec",
+     "-na",
+     "-si",
+     "a-_article"
+    ],
+    "note": "posterior over VALUE assignments is flat (relabeling-invariant backbone): the feasibility concentration onto kull is a dictionary fact about the external spelling, not phonetic information recovered from Linear A."
+   },
+   "effective_n_predicted_forms": 40,
+   "n_word_forms": 33,
+   "n_suffix_forms": 6,
+   "n_prefix_forms": 1,
+   "real_token_match_rate": 0.08216,
+   "real_matched_tokens": 82,
+   "n_heldout_tokens": 998,
+   "matched_LA_word_types": [
+    "A-DU-KU-MI-NA",
+    "A-DU-NI-TA-NA",
+    "A-KU-MI-NA",
+    "A-MA-WA-SI",
+    "A-NA",
+    "A-RE-PI-RE-NA",
+    "A-RE-SA-NA",
+    "A-SI",
+    "A-TA-NA",
+    "DA-KU-NA",
+    "DA-NA-SI",
+    "DI-NA",
+    "DI-RA-DI-NA",
+    "DI-RE-DI-NA",
+    "DI-RI-NA",
+    "DI-SI",
+    "DU-MA-I-NA",
+    "DU-PA3-NA",
+    "E-NA-SI",
+    "I-DU-NE-SI",
+    "I-KU-RI-NA",
+    "I-NA",
+    "I-PI-NA-MI-NA",
+    "I-SI",
+    "JA-SA-U-NA-KA-NA-SI",
+    "JA-SI",
+    "JE-TA-NA",
+    "KA-NA",
+    "KA-RO-NA",
+    "KA-SI",
+    "KI-KI-NA",
+    "KI-RE-TA-NA",
+    "KI-RI-SI",
+    "KU-ZU-NA",
+    "MA-SI",
+    "MI-KI-SE-NA",
+    "MI-NA",
+    "NA-SI",
+    "NE-MI-NA",
+    "O-KA-MI-ZA-SI-I-NA",
+    "PA3-NI-NA",
+    "PI-TA-KE-SI",
+    "RA-KI-TA-NA-SI",
+    "RA-MA-SI",
+    "RI-MI-SI",
+    "RU-NA",
+    "RU-ZU-NA",
+    "SE-KA-NA-SI",
+    "SE-SI",
+    "SE-TO-I-JA",
+    "SI-I-SI",
+    "SI-NA",
+    "SU-KI-RI-TE-I-JA",
+    "TA-NU-NI-KI-NA",
+    "TA-RI-NA",
+    "TA-TI",
+    "TI-NA",
+    "U-KA-RE-A-SE-SI-NA",
+    "U-MI-NA-SI",
+    "U-NA-KA-NA",
+    "U-NA-KA-NA-SI",
+    "U-NA-NA",
+    "U-NA-RU-KA-JA-SI",
+    "U-NA-RU-KA-NA-SI",
+    "U-TA-I-SI",
+    "WI-DI-NA"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.07209,
+    "sd": 0.00645,
+    "p95": 0.08121,
+    "max": 0.09118,
+    "emp_p": 0.0547,
+    "z": 1.56
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.04467,
+    "sd": 0.00626,
+    "p95": 0.05516,
+    "max": 0.06313,
+    "emp_p": 0.005,
+    "z": 5.985
+   },
+   "null_R_random_prior": {
+    "mean": 0.04302,
+    "sd": 0.02417,
+    "p95": 0.08427,
+    "max": 0.12124,
+    "emp_p": 0.0597,
+    "z": 1.619
+   },
+   "p_S": 0.0547,
+   "p_W": 0.005,
+   "p_R": 0.0597,
+   "decisive_FWER_maxWR": 0.0597,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "kull",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0597,
+     "decisive_p": 0.0597
+    },
+    {
+     "dropped": "semen",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0597,
+     "decisive_p": 0.0597
+    },
+    {
+     "dropped": "yayin",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "adon",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0846,
+     "decisive_p": 0.0846
+    },
+    {
+     "dropped": "-atu",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0846,
+     "decisive_p": 0.0846
+    },
+    {
+     "dropped": "-anu",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0995,
+     "decisive_p": 0.0995
+    },
+    {
+     "dropped": "wiyana",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "tati",
+     "sub_real_rate": 0.08016,
+     "p_W": 0.005,
+     "p_R": 0.0796,
+     "decisive_p": 0.0796
+    },
+    {
+     "dropped": "anna",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "tarhu",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    },
+    {
+     "dropped": "-assa",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0697,
+     "decisive_p": 0.0697
+    },
+    {
+     "dropped": "-iya",
+     "sub_real_rate": 0.08016,
+     "p_W": 0.005,
+     "p_R": 0.0896,
+     "decisive_p": 0.0896
+    },
+    {
+     "dropped": "tur",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    },
+    {
+     "dropped": "aisa",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "thina",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0398,
+     "decisive_p": 0.0398
+    },
+    {
+     "dropped": "sec",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0597,
+     "decisive_p": 0.0597
+    },
+    {
+     "dropped": "-na",
+     "sub_real_rate": 0.03707,
+     "p_W": 0.005,
+     "p_R": 0.199,
+     "decisive_p": 0.199
+    },
+    {
+     "dropped": "-si",
+     "sub_real_rate": 0.0511,
+     "p_W": 0.005,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "a-_article",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    }
+   ],
+   "loo_worst_decisive_p": 0.199,
+   "holm_adjusted_decisive_p": 0.1791,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.04236,
+    "random_lexicon_match_rate_p95": 0.08422,
+    "random_lexicon_match_rate_max": 0.12625,
+    "real_percentile_p_vs_random_lexicons": 0.0764,
+    "raw_bar_false_clear_rate": 0.0467
+   },
+   "clears_calibrated": false
+  },
+  "MDL_joint": {
+   "designation": "SERIOUS_PARADIGM",
+   "committed_lexemes": [
+    {
+     "form": "kull",
+     "kind": "word",
+     "role": "total",
+     "phonemes": "k u l"
+    }
+   ],
+   "identifiability_diagnostic": {
+    "committed_forms": [
+     "kull"
+    ],
+    "final_dl": 231.21,
+    "empty_dl": 248.8,
+    "full_pool_dl": 265.34,
+    "random_lexicon_dl_mean": 271.64,
+    "dl_gap_vs_random": 40.43,
+    "greedy_trace": [
+     {
+      "added": "kull",
+      "dl": 231.21
+     }
+    ]
+   },
+   "effective_n_predicted_forms": 5,
+   "n_word_forms": 5,
+   "n_suffix_forms": 0,
+   "n_prefix_forms": 0,
+   "real_token_match_rate": 0.0,
+   "real_matched_tokens": 0,
+   "n_heldout_tokens": 998,
+   "matched_LA_word_types": [],
+   "null_S_order_shuffle": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "p95": 0.0,
+    "max": 0.0,
+    "emp_p": 1.0,
+    "z": 0.0
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00026,
+    "sd": 0.0005,
+    "p95": 0.001,
+    "max": 0.00301,
+    "emp_p": 1.0,
+    "z": -0.518
+   },
+   "null_R_random_prior": {
+    "mean": 0.00071,
+    "sd": 0.00151,
+    "p95": 0.00301,
+    "max": 0.01303,
+    "emp_p": 1.0,
+    "z": -0.468
+   },
+   "p_S": 1.0,
+   "p_W": 1.0,
+   "p_R": 1.0,
+   "decisive_FWER_maxWR": 1.0,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "kull",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "holm_adjusted_decisive_p": 1.0,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.00089,
+    "random_lexicon_match_rate_p95": 0.00406,
+    "random_lexicon_match_rate_max": 0.01303,
+    "real_percentile_p_vs_random_lexicons": 1.0,
+    "raw_bar_false_clear_rate": 0.05
+   },
+   "clears_calibrated": false
+  },
+  "CSP_IP": {
+   "designation": "SERIOUS_PARADIGM",
+   "committed_lexemes": [
+    {
+     "form": "kull",
+     "kind": "word",
+     "role": "total",
+     "phonemes": "k u l"
+    },
+    {
+     "form": "semen",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "s e m e n"
+    },
+    {
+     "form": "yayin",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "y a i n"
+    },
+    {
+     "form": "adon",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "a d o n"
+    },
+    {
+     "form": "-atu",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a t u"
+    },
+    {
+     "form": "-anu",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a n u"
+    },
+    {
+     "form": "wiyana",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "w i y a n a"
+    },
+    {
+     "form": "tati",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t a t i"
+    },
+    {
+     "form": "anna",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "a n a"
+    },
+    {
+     "form": "tarhu",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t a r u"
+    },
+    {
+     "form": "-assa",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a s a"
+    },
+    {
+     "form": "-iya",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "i y a"
+    },
+    {
+     "form": "tur",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t u r"
+    },
+    {
+     "form": "aisa",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "a i s a"
+    },
+    {
+     "form": "thina",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t i n a"
+    },
+    {
+     "form": "sec",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "s e k"
+    },
+    {
+     "form": "-na",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "n a"
+    },
+    {
+     "form": "-si",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "s i"
+    },
+    {
+     "form": "a-_article",
+     "kind": "prefix",
+     "role": "prefix",
+     "phonemes": "a"
+    }
+   ],
+   "identifiability_diagnostic": {
+    "C1_total_feasible": [
+     "kull"
+    ],
+    "C2_prefix_feasible": [
+     "a-_article"
+    ],
+    "constraints_satisfiable": true,
+    "feasible_assignment_count": 1,
+    "uniquely_pinned_signs": [
+     "A",
+     "KU"
+    ],
+    "n_uniquely_pinned_signs": 2
+   },
+   "effective_n_predicted_forms": 40,
+   "n_word_forms": 33,
+   "n_suffix_forms": 6,
+   "n_prefix_forms": 1,
+   "real_token_match_rate": 0.08216,
+   "real_matched_tokens": 82,
+   "n_heldout_tokens": 998,
+   "matched_LA_word_types": [
+    "A-DU-KU-MI-NA",
+    "A-DU-NI-TA-NA",
+    "A-KU-MI-NA",
+    "A-MA-WA-SI",
+    "A-NA",
+    "A-RE-PI-RE-NA",
+    "A-RE-SA-NA",
+    "A-SI",
+    "A-TA-NA",
+    "DA-KU-NA",
+    "DA-NA-SI",
+    "DI-NA",
+    "DI-RA-DI-NA",
+    "DI-RE-DI-NA",
+    "DI-RI-NA",
+    "DI-SI",
+    "DU-MA-I-NA",
+    "DU-PA3-NA",
+    "E-NA-SI",
+    "I-DU-NE-SI",
+    "I-KU-RI-NA",
+    "I-NA",
+    "I-PI-NA-MI-NA",
+    "I-SI",
+    "JA-SA-U-NA-KA-NA-SI",
+    "JA-SI",
+    "JE-TA-NA",
+    "KA-NA",
+    "KA-RO-NA",
+    "KA-SI",
+    "KI-KI-NA",
+    "KI-RE-TA-NA",
+    "KI-RI-SI",
+    "KU-ZU-NA",
+    "MA-SI",
+    "MI-KI-SE-NA",
+    "MI-NA",
+    "NA-SI",
+    "NE-MI-NA",
+    "O-KA-MI-ZA-SI-I-NA",
+    "PA3-NI-NA",
+    "PI-TA-KE-SI",
+    "RA-KI-TA-NA-SI",
+    "RA-MA-SI",
+    "RI-MI-SI",
+    "RU-NA",
+    "RU-ZU-NA",
+    "SE-KA-NA-SI",
+    "SE-SI",
+    "SE-TO-I-JA",
+    "SI-I-SI",
+    "SI-NA",
+    "SU-KI-RI-TE-I-JA",
+    "TA-NU-NI-KI-NA",
+    "TA-RI-NA",
+    "TA-TI",
+    "TI-NA",
+    "U-KA-RE-A-SE-SI-NA",
+    "U-MI-NA-SI",
+    "U-NA-KA-NA",
+    "U-NA-KA-NA-SI",
+    "U-NA-NA",
+    "U-NA-RU-KA-JA-SI",
+    "U-NA-RU-KA-NA-SI",
+    "U-TA-I-SI",
+    "WI-DI-NA"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.07209,
+    "sd": 0.00645,
+    "p95": 0.08121,
+    "max": 0.09118,
+    "emp_p": 0.0547,
+    "z": 1.56
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.04467,
+    "sd": 0.00626,
+    "p95": 0.05516,
+    "max": 0.06313,
+    "emp_p": 0.005,
+    "z": 5.985
+   },
+   "null_R_random_prior": {
+    "mean": 0.04128,
+    "sd": 0.02281,
+    "p95": 0.08617,
+    "max": 0.11022,
+    "emp_p": 0.0697,
+    "z": 1.792
+   },
+   "p_S": 0.0547,
+   "p_W": 0.005,
+   "p_R": 0.0697,
+   "decisive_FWER_maxWR": 0.0697,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "kull",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "semen",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0995,
+     "decisive_p": 0.0995
+    },
+    {
+     "dropped": "yayin",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "adon",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0796,
+     "decisive_p": 0.0796
+    },
+    {
+     "dropped": "-atu",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    },
+    {
+     "dropped": "-anu",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0448,
+     "decisive_p": 0.0448
+    },
+    {
+     "dropped": "wiyana",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "tati",
+     "sub_real_rate": 0.08016,
+     "p_W": 0.005,
+     "p_R": 0.1144,
+     "decisive_p": 0.1144
+    },
+    {
+     "dropped": "anna",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0498,
+     "decisive_p": 0.0498
+    },
+    {
+     "dropped": "tarhu",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0697,
+     "decisive_p": 0.0697
+    },
+    {
+     "dropped": "-assa",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0498,
+     "decisive_p": 0.0498
+    },
+    {
+     "dropped": "-iya",
+     "sub_real_rate": 0.08016,
+     "p_W": 0.005,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "tur",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    },
+    {
+     "dropped": "aisa",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "thina",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    },
+    {
+     "dropped": "sec",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "-na",
+     "sub_real_rate": 0.03707,
+     "p_W": 0.005,
+     "p_R": 0.2289,
+     "decisive_p": 0.2289
+    },
+    {
+     "dropped": "-si",
+     "sub_real_rate": 0.0511,
+     "p_W": 0.005,
+     "p_R": 0.0846,
+     "decisive_p": 0.0846
+    },
+    {
+     "dropped": "a-_article",
+     "sub_real_rate": 0.08216,
+     "p_W": 0.005,
+     "p_R": 0.0547,
+     "decisive_p": 0.0547
+    }
+   ],
+   "loo_worst_decisive_p": 0.2289,
+   "holm_adjusted_decisive_p": 0.1791,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.04421,
+    "random_lexicon_match_rate_p95": 0.08823,
+    "random_lexicon_match_rate_max": 0.11423,
+    "real_percentile_p_vs_random_lexicons": 0.093,
+    "raw_bar_false_clear_rate": 0.0633
+   },
+   "clears_calibrated": false
+  },
+  "CTRL_agnostic_random": {
+   "designation": "AGNOSTIC_RANDOM_CONTROL",
+   "committed_lexemes": [
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "total",
+     "phonemes": "w a r"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "l e m a s"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "n o e n"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "u b e z"
+    },
+    {
+     "form": "rand",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "o r o"
+    },
+    {
+     "form": "rand",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "u m i"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t o d a p o"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t a y o"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "i q i"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "b u z u"
+    },
+    {
+     "form": "rand",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "o t i"
+    },
+    {
+     "form": "rand",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "a n u"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "t u s"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "o e s e"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "q e w i"
+    },
+    {
+     "form": "rand",
+     "kind": "word",
+     "role": "generic",
+     "phonemes": "d i q"
+    },
+    {
+     "form": "rand",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "d o"
+    },
+    {
+     "form": "rand",
+     "kind": "suffix",
+     "role": "suffix",
+     "phonemes": "l o"
+    },
+    {
+     "form": "rand",
+     "kind": "prefix",
+     "role": "prefix",
+     "phonemes": "u"
+    }
+   ],
+   "identifiability_diagnostic": {
+    "note": "random matched-structure control"
+   },
+   "effective_n_predicted_forms": 45,
+   "n_word_forms": 38,
+   "n_suffix_forms": 6,
+   "n_prefix_forms": 1,
+   "real_token_match_rate": 0.02705,
+   "real_matched_tokens": 27,
+   "n_heldout_tokens": 998,
+   "matched_LA_word_types": [
+    "A-DA-RO",
+    "DI-KI",
+    "DI-NA-RO",
+    "DU-WA-TO",
+    "I-KI",
+    "KA-I-RO",
+    "KA-RE-RO",
+    "KI-DA-RO",
+    "KU-MA-RO",
+    "NU-RO",
+    "PA-I-TO",
+    "PO-TO-KU-RO",
+    "QA-RE-TO",
+    "RE-RO",
+    "SA-MA-RO",
+    "SA-RO",
+    "SI-DA-RO",
+    "TU-SU",
+    "U-TA-RO",
+    "WI-TE-RO"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.0218,
+    "sd": 0.00322,
+    "p95": 0.02705,
+    "max": 0.03106,
+    "emp_p": 0.0746,
+    "z": 1.631
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.15613,
+    "sd": 0.01236,
+    "p95": 0.17735,
+    "max": 0.19038,
+    "emp_p": 1.0,
+    "z": -10.443
+   },
+   "null_R_random_prior": {
+    "mean": 0.0415,
+    "sd": 0.02125,
+    "p95": 0.07816,
+    "max": 0.10521,
+    "emp_p": 0.7463,
+    "z": -0.68
+   },
+   "p_S": 0.0746,
+   "p_W": 1.0,
+   "p_R": 0.7463,
+   "decisive_FWER_maxWR": 1.0,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.6915,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7413,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.6965,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7512,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7413,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7463,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7711,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7363,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02605,
+     "p_W": 1.0,
+     "p_R": 0.7711,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7114,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7512,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.6965,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02605,
+     "p_W": 1.0,
+     "p_R": 0.7065,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7264,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7612,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02605,
+     "p_W": 1.0,
+     "p_R": 0.7214,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02305,
+     "p_W": 1.0,
+     "p_R": 0.5622,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.00701,
+     "p_W": 1.0,
+     "p_R": 0.801,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "rand",
+     "sub_real_rate": 0.02705,
+     "p_W": 1.0,
+     "p_R": 0.7114,
+     "decisive_p": 1.0
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "holm_adjusted_decisive_p": null,
+   "clears_raw_bar": false,
+   "clears_calibrated": false
+  }
+ },
+ "paradigms_clearing_calibrated_and_serious": [],
+ "ctrl_agnostic_cleared_raw_bar": false,
+ "verdict": "AT_JOINT_INFERENCE_NULL"
+}

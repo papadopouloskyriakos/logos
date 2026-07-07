@@ -1,0 +1,942 @@
+{
+ "experiment": "H1_candidate_round1_relative_class_constrained",
+ "seed": 20260708,
+ "n_nulls_per_family": 200,
+ "held_out": {
+  "unit": "GORILA multi-sign syllabic word tokens",
+  "n_tokens": 1074,
+  "n_types": 763,
+  "n_sites": 42,
+  "la_word_length_dist": {
+   "2": 0.4451,
+   "3": 0.3315,
+   "4": 0.1508,
+   "5": 0.0484,
+   "6": 0.014,
+   "7": 0.0065,
+   "8": 0.0019,
+   "9": 0.0009,
+   "16": 0.0009
+  }
+ },
+ "wrong_language_null": {
+  "corpus": "DAMOS Linear B wordforms, multi-sign, length-matched",
+  "n_lb_multisign_words": 13562
+ },
+ "relative_class_D5_agreement_for_record": {
+  "n_graded_signs_overlap": 50,
+  "K2_vs_vowel": {
+   "mi_obs": 0.0813,
+   "adj_mi": 0.0384,
+   "perm_p": 0.1199
+  },
+  "K2_vs_CV": {
+   "mi_obs": 0.0336,
+   "adj_mi": 0.0215,
+   "perm_p": 0.1549
+  },
+  "note": "family-INDEPENDENT: every AB-based family shares this sign->vowel/CV labelling, so the anonymous classes cannot discriminate families and are NULL vs vowel/CV."
+ },
+ "families": {
+  "SEM_westSemitic": {
+   "designation": "SERIOUS_CANDIDATE",
+   "gloss": "West/Common Semitic (Afro-Asiatic); Gordon 1966 / Rendsburg administrative-reading tradition",
+   "admission": {
+    "chronology": "PASS \u2014 West Semitic attested in the LBA E. Mediterranean; Levantine trade contact with MM/LM Crete is documented.",
+    "geography": "PARTIAL \u2014 no Semitic-speaking community attested on Crete; contact, not substrate.",
+    "relative_class_D5": "NEUTRAL \u2014 value-blind (see relative_class_constraint_D5).",
+    "A_prefix_morphology_E1E3": "WEAK \u2014 Semitic has no productive a- nominal prefix matching the LA A- affix (definite article proclitic ha-/a- is a partial analogue).",
+    "formula_grammar_E2": "STRONG \u2014 kull 'all/total' is the classic reading of KU-RO in the ledger TOTAL slot; this is exactly the E2 administrative anchor.",
+    "anchors_G": "NEUTRAL \u2014 some onomastic resemblances (value-blind, SEED_X).",
+    "script_structure": "WEAK \u2014 Semitic roots are consonant-heavy with codas/clusters; an open CV syllabary spells them poorly (heavy dead-vowel epenthesis)."
+   },
+   "effective_n_predicted_forms": 19,
+   "n_word_forms": 17,
+   "n_suffix_forms": 2,
+   "per_lexeme": [
+    {
+     "form": "kull",
+     "function": "all/total (=KU-RO)",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "KU-RA",
+      "KU-RE",
+      "KU-RI",
+      "KU-RO",
+      "KU-RU"
+     ]
+    },
+    {
+     "form": "semen",
+     "function": "oil",
+     "kind": "word",
+     "n_predicted": 4,
+     "examples": [
+      "SE-ME-NA",
+      "SE-ME-NE",
+      "SE-ME-NI",
+      "SE-ME-NU"
+     ]
+    },
+    {
+     "form": "yayin",
+     "function": "wine",
+     "kind": "word",
+     "n_predicted": 4,
+     "examples": [
+      "JA-I-NA",
+      "JA-I-NE",
+      "JA-I-NI",
+      "JA-I-NU"
+     ]
+    },
+    {
+     "form": "adon",
+     "function": "lord",
+     "kind": "word",
+     "n_predicted": 4,
+     "examples": [
+      "A-TO-NA",
+      "A-TO-NE",
+      "A-TO-NI",
+      "A-TO-NU"
+     ]
+    },
+    {
+     "form": "-atu",
+     "function": "feminine nominal suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "A-TU"
+     ]
+    },
+    {
+     "form": "-anu",
+     "function": "nominal suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "A-NU"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.03818,
+   "real_matched_tokens": 41,
+   "n_heldout_tokens": 1074,
+   "matched_LA_word_types": [
+    "KU-RA",
+    "KU-RE",
+    "KU-RO"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.01946,
+    "sd": 0.00298,
+    "p95": 0.02421,
+    "max": 0.027,
+    "emp_p": 0.005,
+    "z": 6.272
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00034,
+    "sd": 0.00056,
+    "p95": 0.00186,
+    "max": 0.00279,
+    "emp_p": 0.005,
+    "z": 67.559
+   },
+   "null_R_random_prior": {
+    "mean": 0.00135,
+    "sd": 0.00414,
+    "p95": 0.00372,
+    "max": 0.04004,
+    "emp_p": 0.0149,
+    "z": 8.902
+   },
+   "p_S": 0.005,
+   "p_W": 0.005,
+   "p_R": 0.0149,
+   "decisive_FWER_maxWR": 0.0149,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "kull",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "semen",
+     "sub_real_rate": 0.03818,
+     "p_W": 0.005,
+     "p_R": 0.0149,
+     "decisive_p": 0.0149
+    },
+    {
+     "dropped": "yayin",
+     "sub_real_rate": 0.03818,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "adon",
+     "sub_real_rate": 0.03818,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "-atu",
+     "sub_real_rate": 0.03818,
+     "p_W": 0.005,
+     "p_R": 0.005,
+     "decisive_p": 0.005
+    },
+    {
+     "dropped": "-anu",
+     "sub_real_rate": 0.03818,
+     "p_W": 0.005,
+     "p_R": 0.005,
+     "decisive_p": 0.005
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "holm_adjusted_decisive_p": 0.0745,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.00137,
+    "random_lexicon_match_rate_p95": 0.00372,
+    "random_lexicon_match_rate_max": 0.03911,
+    "real_percentile_p_vs_random_lexicons": 0.0066,
+    "raw_bar_false_clear_rate": 0.0333
+   },
+   "clears_calibrated": false
+  },
+  "ANA_preGreek_Anatolian": {
+   "designation": "SERIOUS_CANDIDATE",
+   "gloss": "pre-Greek Aegean / Anatolian-contact (Luwic, Indo-European); Palmer/Finkelberg -ssa/-nda substrate tradition",
+   "admission": {
+    "chronology": "PASS \u2014 Luwic/Anatolian IE present in W. Anatolia in the MBA-LBA, contemporaneous with Linear A.",
+    "geography": "PASS \u2014 the Anatolian-Aegean contact zone; -ssos/-nthos Pre-Greek toponymic substrate on Crete.",
+    "relative_class_D5": "NEUTRAL \u2014 value-blind.",
+    "A_prefix_morphology_E1E3": "NEUTRAL \u2014 Anatolian has no strong a- prefix; the LA A- affix is not obviously Anatolian.",
+    "formula_grammar_E2": "WEAK \u2014 no compelling Anatolian reading of KU-RO/KI-RO in the TOTAL/DEFICIT slots.",
+    "anchors_G": "PARTIAL \u2014 the -assa toponymic suffix is compatible with Cretan substrate place-names.",
+    "script_structure": "PASS \u2014 Anatolian is moderately CV-friendly."
+   },
+   "effective_n_predicted_forms": 6,
+   "n_word_forms": 4,
+   "n_suffix_forms": 2,
+   "per_lexeme": [
+    {
+     "form": "wiyana",
+     "function": "wine",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "WI-JA-NA"
+     ]
+    },
+    {
+     "form": "tati",
+     "function": "father",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TA-TI"
+     ]
+    },
+    {
+     "form": "anna",
+     "function": "mother",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "A-NA"
+     ]
+    },
+    {
+     "form": "tarhu",
+     "function": "storm-god",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TA-RU"
+     ]
+    },
+    {
+     "form": "-assa",
+     "function": "toponymic/relational suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "A-SA"
+     ]
+    },
+    {
+     "form": "-iya",
+     "function": "adjectival suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "I-JA"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.00466,
+   "real_matched_tokens": 5,
+   "n_heldout_tokens": 1074,
+   "matched_LA_word_types": [
+    "A-NA",
+    "SE-TO-I-JA",
+    "SU-KI-RI-TE-I-JA",
+    "TA-TI"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00355,
+    "sd": 0.00162,
+    "p95": 0.00652,
+    "max": 0.00931,
+    "emp_p": 0.3085,
+    "z": 0.684
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00215,
+    "sd": 0.00146,
+    "p95": 0.00466,
+    "max": 0.00652,
+    "emp_p": 0.0995,
+    "z": 1.714
+   },
+   "null_R_random_prior": {
+    "mean": 0.001,
+    "sd": 0.00275,
+    "p95": 0.00372,
+    "max": 0.03445,
+    "emp_p": 0.0348,
+    "z": 1.331
+   },
+   "p_S": 0.3085,
+   "p_W": 0.0995,
+   "p_R": 0.0348,
+   "decisive_FWER_maxWR": 0.0995,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "wiyana",
+     "sub_real_rate": 0.00466,
+     "p_W": 0.0995,
+     "p_R": 0.0299,
+     "decisive_p": 0.0995
+    },
+    {
+     "dropped": "tati",
+     "sub_real_rate": 0.00279,
+     "p_W": 0.3781,
+     "p_R": 0.0796,
+     "decisive_p": 0.3781
+    },
+    {
+     "dropped": "anna",
+     "sub_real_rate": 0.00372,
+     "p_W": 0.2537,
+     "p_R": 0.0249,
+     "decisive_p": 0.2537
+    },
+    {
+     "dropped": "tarhu",
+     "sub_real_rate": 0.00466,
+     "p_W": 0.0995,
+     "p_R": 0.0199,
+     "decisive_p": 0.0995
+    },
+    {
+     "dropped": "-assa",
+     "sub_real_rate": 0.00466,
+     "p_W": 0.0846,
+     "p_R": 0.0249,
+     "decisive_p": 0.0846
+    },
+    {
+     "dropped": "-iya",
+     "sub_real_rate": 0.00279,
+     "p_W": 0.005,
+     "p_R": 0.0945,
+     "decisive_p": 0.0945
+    }
+   ],
+   "loo_worst_decisive_p": 0.3781,
+   "holm_adjusted_decisive_p": 0.398,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.00096,
+    "random_lexicon_match_rate_p95": 0.00372,
+    "random_lexicon_match_rate_max": 0.01583,
+    "real_percentile_p_vs_random_lexicons": 0.0166,
+    "raw_bar_false_clear_rate": 0.0333
+   },
+   "clears_calibrated": false
+  },
+  "TYR_tyrsenian": {
+   "designation": "SERIOUS_CANDIDATE",
+   "gloss": "Tyrsenian / Etruscan-related (pre-IE isolate family); Facchetti & Negri 2003 Minoan=Tyrrhenian hypothesis",
+   "admission": {
+    "chronology": "PARTIAL \u2014 Tyrsenian is a hypothesized pre-IE Aegean family (Lemnian/Etruscan cognates); Bronze-Age Aegean presence is inferred, not attested.",
+    "geography": "PARTIAL \u2014 an Aegean pre-Greek isolate is geographically apt; direct Cretan attestation is absent.",
+    "relative_class_D5": "NEUTRAL \u2014 value-blind.",
+    "A_prefix_morphology_E1E3": "NEUTRAL \u2014 Etruscan is agglutinating/suffixing; the LA A- prefix is not a known Etruscan formant.",
+    "formula_grammar_E2": "WEAK \u2014 no established Tyrsenian reading of the TOTAL/DEFICIT slots.",
+    "anchors_G": "NEUTRAL.",
+    "script_structure": "PASS \u2014 Etruscan/Lemnian tolerate CV structure reasonably."
+   },
+   "effective_n_predicted_forms": 14,
+   "n_word_forms": 12,
+   "n_suffix_forms": 2,
+   "per_lexeme": [
+    {
+     "form": "tur",
+     "function": "give/offer",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "TU-RA",
+      "TU-RE",
+      "TU-RI",
+      "TU-RO",
+      "TU-RU"
+     ]
+    },
+    {
+     "form": "aisa",
+     "function": "god/fate",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "A-I-SA"
+     ]
+    },
+    {
+     "form": "thina",
+     "function": "vessel/jug",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TI-NA"
+     ]
+    },
+    {
+     "form": "sec",
+     "function": "daughter",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "SE-KA",
+      "SE-KE",
+      "SE-KI",
+      "SE-KO",
+      "SE-KU"
+     ]
+    },
+    {
+     "form": "-na",
+     "function": "genitival suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "NA"
+     ]
+    },
+    {
+     "form": "-si",
+     "function": "dative suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "SI"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.07263,
+   "real_matched_tokens": 78,
+   "n_heldout_tokens": 1074,
+   "matched_LA_word_types": [
+    "A-DU-KU-MI-NA",
+    "A-DU-NI-TA-NA",
+    "A-KU-MI-NA",
+    "A-MA-WA-SI",
+    "A-NA",
+    "A-RE-PI-RE-NA",
+    "A-RE-SA-NA",
+    "A-SI",
+    "A-TA-NA",
+    "DA-KU-NA",
+    "DA-NA-SI",
+    "DI-NA",
+    "DI-RA-DI-NA",
+    "DI-RE-DI-NA",
+    "DI-RI-NA",
+    "DI-SI",
+    "DU-MA-I-NA",
+    "DU-PA3-NA",
+    "E-NA-SI",
+    "I-DU-NE-SI",
+    "I-KU-RI-NA",
+    "I-NA",
+    "I-PI-NA-MI-NA",
+    "I-SI",
+    "JA-SA-U-NA-KA-NA-SI",
+    "JA-SI",
+    "JE-TA-NA",
+    "KA-NA",
+    "KA-RO-NA",
+    "KA-SI",
+    "KI-KI-NA",
+    "KI-RE-TA-NA",
+    "KI-RI-SI",
+    "KU-ZU-NA",
+    "MA-SI",
+    "MI-KI-SE-NA",
+    "MI-NA",
+    "NA-SI",
+    "NE-MI-NA",
+    "O-KA-MI-ZA-SI-I-NA",
+    "PA3-NI-NA",
+    "PI-TA-KE-SI",
+    "RA-KI-TA-NA-SI",
+    "RA-MA-SI",
+    "RI-MI-SI",
+    "RU-NA",
+    "RU-ZU-NA",
+    "SE-KA-NA-SI",
+    "SE-SI",
+    "SI-I-SI",
+    "SI-NA",
+    "TA-NU-NI-KI-NA",
+    "TA-RI-NA",
+    "TI-NA",
+    "U-KA-RE-A-SE-SI-NA",
+    "U-MI-NA-SI",
+    "U-NA-KA-NA",
+    "U-NA-KA-NA-SI",
+    "U-NA-NA",
+    "U-NA-RU-KA-JA-SI",
+    "U-NA-RU-KA-NA-SI",
+    "U-TA-I-SI",
+    "WI-DI-NA"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.0642,
+    "sd": 0.00599,
+    "p95": 0.07449,
+    "max": 0.08101,
+    "emp_p": 0.0846,
+    "z": 1.407
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.04088,
+    "sd": 0.00626,
+    "p95": 0.05028,
+    "max": 0.05959,
+    "emp_p": 0.005,
+    "z": 5.072
+   },
+   "null_R_random_prior": {
+    "mean": 0.04943,
+    "sd": 0.02388,
+    "p95": 0.0905,
+    "max": 0.1108,
+    "emp_p": 0.1592,
+    "z": 0.971
+   },
+   "p_S": 0.0846,
+   "p_W": 0.005,
+   "p_R": 0.1592,
+   "decisive_FWER_maxWR": 0.1592,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "tur",
+     "sub_real_rate": 0.07263,
+     "p_W": 0.005,
+     "p_R": 0.2338,
+     "decisive_p": 0.2338
+    },
+    {
+     "dropped": "aisa",
+     "sub_real_rate": 0.07263,
+     "p_W": 0.005,
+     "p_R": 0.194,
+     "decisive_p": 0.194
+    },
+    {
+     "dropped": "thina",
+     "sub_real_rate": 0.07263,
+     "p_W": 0.005,
+     "p_R": 0.199,
+     "decisive_p": 0.199
+    },
+    {
+     "dropped": "sec",
+     "sub_real_rate": 0.07263,
+     "p_W": 0.005,
+     "p_R": 0.1592,
+     "decisive_p": 0.1592
+    },
+    {
+     "dropped": "-na",
+     "sub_real_rate": 0.0298,
+     "p_W": 0.005,
+     "p_R": 0.4428,
+     "decisive_p": 0.4428
+    },
+    {
+     "dropped": "-si",
+     "sub_real_rate": 0.04376,
+     "p_W": 0.0149,
+     "p_R": 0.194,
+     "decisive_p": 0.194
+    }
+   ],
+   "loo_worst_decisive_p": 0.4428,
+   "holm_adjusted_decisive_p": 0.4776,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.05358,
+    "random_lexicon_match_rate_p95": 0.0987,
+    "random_lexicon_match_rate_max": 0.11546,
+    "real_percentile_p_vs_random_lexicons": 0.2126,
+    "raw_bar_false_clear_rate": 0.0167
+   },
+   "clears_calibrated": false
+  },
+  "FIN_uralic_negctrl": {
+   "designation": "UNRELATED_NEGATIVE_CONTROL",
+   "gloss": "Finnish / Uralic \u2014 a REAL language with a REAL lexicon and correspondence, but chronogeographically IMPOSSIBLE for MBA Crete; tests whether the machinery credits any real language by CV-shape typicality",
+   "admission": {
+    "chronology": "FAIL \u2014 Uralic is not present in the 2nd-millennium E. Mediterranean.",
+    "geography": "FAIL \u2014 no contact of any kind with Bronze-Age Crete.",
+    "relative_class_D5": "NEUTRAL \u2014 value-blind.",
+    "A_prefix_morphology_E1E3": "N/A.",
+    "formula_grammar_E2": "N/A.",
+    "anchors_G": "N/A.",
+    "script_structure": "PASS \u2014 Finnish is highly CV/open-syllable (which is exactly why it is a fair worst-case NEGATIVE control: maximal shape-typicality with zero historical plausibility)."
+   },
+   "effective_n_predicted_forms": 11,
+   "n_word_forms": 3,
+   "n_suffix_forms": 8,
+   "per_lexeme": [
+    {
+     "form": "vesi",
+     "function": "water",
+     "kind": "word",
+     "n_predicted": 0,
+     "examples": []
+    },
+    {
+     "form": "talo",
+     "function": "house",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TA-RO"
+     ]
+    },
+    {
+     "form": "kala",
+     "function": "fish",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "KA-RA"
+     ]
+    },
+    {
+     "form": "tuli",
+     "function": "fire",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TU-RI"
+     ]
+    },
+    {
+     "form": "-inen",
+     "function": "adjectival suffix",
+     "kind": "suffix",
+     "n_predicted": 4,
+     "examples": [
+      "I-NE-NA",
+      "I-NE-NE",
+      "I-NE-NI",
+      "I-NE-NU"
+     ]
+    },
+    {
+     "form": "-sta",
+     "function": "elative case suffix",
+     "kind": "suffix",
+     "n_predicted": 4,
+     "examples": [
+      "SA-TA",
+      "SE-TA",
+      "SI-TA",
+      "SU-TA"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.00093,
+   "real_matched_tokens": 1,
+   "n_heldout_tokens": 1074,
+   "matched_LA_word_types": [
+    "SE-SI-TA"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00146,
+    "sd": 0.00102,
+    "p95": 0.00284,
+    "max": 0.00466,
+    "emp_p": 0.8209,
+    "z": -0.521
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00233,
+    "sd": 0.00148,
+    "p95": 0.0047,
+    "max": 0.00745,
+    "emp_p": 0.9154,
+    "z": -0.945
+   },
+   "null_R_random_prior": {
+    "mean": 0.00457,
+    "sd": 0.00992,
+    "p95": 0.02705,
+    "max": 0.0689,
+    "emp_p": 0.7015,
+    "z": -0.367
+   },
+   "p_S": 0.8209,
+   "p_W": 0.9154,
+   "p_R": 0.7015,
+   "decisive_FWER_maxWR": 0.9154,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "vesi",
+     "sub_real_rate": 0.00093,
+     "p_W": 0.9154,
+     "p_R": 0.6617,
+     "decisive_p": 0.9154
+    },
+    {
+     "dropped": "talo",
+     "sub_real_rate": 0.00093,
+     "p_W": 0.8209,
+     "p_R": 0.7015,
+     "decisive_p": 0.8209
+    },
+    {
+     "dropped": "kala",
+     "sub_real_rate": 0.00093,
+     "p_W": 0.7612,
+     "p_R": 0.6368,
+     "decisive_p": 0.7612
+    },
+    {
+     "dropped": "tuli",
+     "sub_real_rate": 0.00093,
+     "p_W": 0.8856,
+     "p_R": 0.6716,
+     "decisive_p": 0.8856
+    },
+    {
+     "dropped": "-inen",
+     "sub_real_rate": 0.00093,
+     "p_W": 0.9154,
+     "p_R": 0.6816,
+     "decisive_p": 0.9154
+    },
+    {
+     "dropped": "-sta",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "holm_adjusted_decisive_p": 1.0,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.00461,
+    "random_lexicon_match_rate_p95": 0.02896,
+    "random_lexicon_match_rate_max": 0.07076,
+    "real_percentile_p_vs_random_lexicons": 0.6545,
+    "raw_bar_false_clear_rate": 0.0233
+   },
+   "clears_calibrated": false
+  },
+  "CTRL_agnostic_random": {
+   "designation": "AGNOSTIC_RANDOM_CONTROL",
+   "gloss": "agnostic random-lexicon control: 4 word + 2 suffix, phoneme lengths drawn from the serious families' entries, phonemes drawn CV-alternating from a neutral inventory; materialized deterministically at seed 20260708",
+   "admission": {
+    "note": "not a language; the null-model floor. If this clears the raw bar the bar is non-specific."
+   },
+   "effective_n_predicted_forms": 12,
+   "n_word_forms": 4,
+   "n_suffix_forms": 8,
+   "per_lexeme": [
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TO-RE"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "KO-RO"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "NU-TE"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "RO-RU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "suffix",
+     "n_predicted": 4,
+     "examples": [
+      "SA-MA",
+      "SA-ME",
+      "SA-MI",
+      "SA-MU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "suffix",
+     "n_predicted": 4,
+     "examples": [
+      "TA-MA",
+      "TA-ME",
+      "TA-MI",
+      "TA-MU"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.00279,
+   "real_matched_tokens": 3,
+   "n_heldout_tokens": 1074,
+   "matched_LA_word_types": [
+    "JA-SA-MU",
+    "NU-TE",
+    "SA-SA-ME"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00483,
+    "sd": 0.00196,
+    "p95": 0.00838,
+    "max": 0.01117,
+    "emp_p": 0.8905,
+    "z": -1.037
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00258,
+    "sd": 0.00163,
+    "p95": 0.00559,
+    "max": 0.00931,
+    "emp_p": 0.5274,
+    "z": 0.129
+   },
+   "null_R_random_prior": {
+    "mean": 0.00262,
+    "sd": 0.00307,
+    "p95": 0.00843,
+    "max": 0.01676,
+    "emp_p": 0.393,
+    "z": 0.058
+   },
+   "p_S": 0.8905,
+   "p_W": 0.5274,
+   "p_R": 0.393,
+   "decisive_FWER_maxWR": 0.5274,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00279,
+     "p_W": 0.4925,
+     "p_R": 0.4279,
+     "decisive_p": 0.4925
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00279,
+     "p_W": 0.2289,
+     "p_R": 0.403,
+     "decisive_p": 0.403
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00186,
+     "p_W": 0.7512,
+     "p_R": 0.592,
+     "decisive_p": 0.7512
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00279,
+     "p_W": 0.3383,
+     "p_R": 0.4129,
+     "decisive_p": 0.4129
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00093,
+     "p_W": 0.8706,
+     "p_R": 0.6169,
+     "decisive_p": 0.8706
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00279,
+     "p_W": 0.4726,
+     "p_R": 0.3284,
+     "decisive_p": 0.4726
+    }
+   ],
+   "loo_worst_decisive_p": 0.8706,
+   "holm_adjusted_decisive_p": 1.0,
+   "clears_raw_bar": false,
+   "clears_calibrated": false
+  }
+ },
+ "families_clearing_calibrated_and_serious": [],
+ "ctrl_agnostic_cleared_raw_bar": false,
+ "negctrl_FIN_cleared_raw_bar": false,
+ "verdict": "AT_END_TO_END_NULL"
+}

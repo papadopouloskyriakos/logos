@@ -1,0 +1,73 @@
+{
+ "seal_id": "ANETAKI_FINAL_EDITION_DELTA_SEAL",
+ "name": "anetaki_II_structural_delta",
+ "type": "prospective_pre_registration_STRUCTURAL_ONLY",
+ "as_of": "2026-07-07",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3",
+ "carriers": {
+  "KN Zg 57": "ivory Ring (~119 signs, no numerals)",
+  "KN Zg 58": "ivory handle (accounting: numerals+fractions)"
+ },
+ "in_current_corpus": false,
+ "phonetic_scoring": "NO_CANDIDATE_TO_SEAL",
+ "prospective_payload_source": "data/J1_exposure.json (scoreable_prospective_payload)",
+ "structural_predictions": {
+  "predictions": {
+   "P1_faceB_A_prefixation": {
+    "target": "the 6 held-out (currently unpublished) Face-B sign-groups",
+    "claim": "count of Face-B sign-groups beginning with sign A(AB08) is consistent with the LA corpus word-initial-A base rate (NOT elevated to a cult-specific level).",
+    "la_base_rate_A": 0.0572,
+    "expected_count_of_6": 0.343,
+    "predicted_95pct_interval_count": [
+     0,
+     1
+    ],
+    "most_likely_outcome": "0 or 1 of the 6 groups A-initial",
+    "probability": 0.85,
+    "ranked_alternatives": [
+     "0-1 A-initial (PRIMARY)",
+     "2 A-initial",
+     ">=3 A-initial (would signal cult-specific A- enrichment — NOTE, not our prediction)"
+    ],
+    "failure_criterion": "observed A-initial count of the 6 Face-B groups falls OUTSIDE the predicted binomial 95% interval [0, 1].",
+    "scoring_rule": "score observed A-initial count against interval; report count."
+   },
+   "P2_accounting_handle_ledger_grammar": {
+    "target": "the numeral/fraction-bearing handle faces (Face-delta etc.), held-out transliteration",
+    "claim": "numerals on the accounting handle obey the LA CARRIER-VALUE grammar: each numeral is immediately preceded by a value-carrier (logogram/word) at ~corpus rate (0.966); a terminal TOTAL(KU-RO) slot MAY appear.",
+    "corpus_carrier_value_rate": 0.966,
+    "probability_carrier_value_holds": 0.8,
+    "probability_explicit_KURO_total": 0.3,
+    "ranked_alternatives": [
+     "CARRIER-VALUE grammar holds, no explicit KU-RO (PRIMARY)",
+     "CARRIER-VALUE holds + terminal KU-RO/total slot present",
+     "numerals not carrier-preceded (grammar violated — FAIL)"
+    ],
+    "failure_criterion": "on the published handle transliteration, <70% of numerals are immediately preceded by a value-carrier.",
+    "scoring_rule": "compute carrier-before-numeral rate on published handle; PASS if >=0.70."
+   },
+   "P3_ring_libation_order": {
+    "target": "the Ring faces (KN Zg 57), held-out sign-group transliteration",
+    "claim": "IF two or more libation anchors {*301-WA opener, *SA-SA-RA(-ME), U-NA-KA-NA, I-PI-NA-M, SI-RU} co-occur on a Ring face, they appear in canonical order OP<SSR<UNK<IPN<SIR with zero inversions; PRIOR that any libation formula appears on the Ring is LOW (authors report 'few parallels').",
+    "prior_libation_formula_present": 0.25,
+    "conditional_prediction_canonical_order_if_present": true,
+    "probability_conditional": 0.85,
+    "ranked_alternatives": [
+     "no libation formula on the Ring (PRIMARY, prior)",
+     "SSR/OP present, canonical order (would SUPPORT template transfer)",
+     "libation anchors present but ORDER INVERTED (would REFUTE the template)"
+    ],
+    "failure_criterion": "two+ libation anchors co-occur on a Ring face in an order that inverts the canonical template.",
+    "scoring_rule": "if >=2 libation anchors on a face, check subsequence vs OP<SSR<UNK<IPN<SIR; PASS if non-inverting (or vacuously if <2 present)."
+   }
+  },
+  "excluded_public_per_J1": "all counts, layout skeleton, printed signs, directionality, object identity, length, genre split (see data/J1_exposure.json excluded_from_prospective_scoring)",
+  "phonetic_values": "NO_CANDIDATE_TO_SEAL — no value candidate survived the end-to-end multi-family null; only STRUCTURAL L2/L3 predictions are sealed.",
+  "plan_hash": "979e2fd2c9ecaed68b3796fd54e91b2f3f7da8f41d43c36428d6b884fc0085f6"
+ },
+ "status": "SEALED_PROSPECTIVE",
+ "scored_when": "Anetaki II editio princeps publishes the held-out transliteration",
+ "verdict": "SEALED_PROSPECTIVE_NOT_YET_SCORED"
+}

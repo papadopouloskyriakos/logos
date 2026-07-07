@@ -1,0 +1,42 @@
+{
+ "seal_id": "SEAL_3",
+ "name": "unseen_site_Khania",
+ "type": "held_out_partition_scored_now",
+ "as_of": "2026-07-07",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3",
+ "phonetic_scoring": "NO_CANDIDATE_TO_SEAL",
+ "split": {
+  "criterion": "whole non-HT site 'Khania' held out",
+  "n_train": 1182,
+  "n_holdout": 159
+ },
+ "derived_from": "all non-Khania inscriptions",
+ "structural_predictions": {
+  "held_out_site": "Khania",
+  "train_KURO_carriers": 35,
+  "train_KURO_HT_fraction": 0.943,
+  "train_carrier_value_wellformed": 0.8934,
+  "prediction_carrier_value_grammar_transfers": true,
+  "prediction_carrier_value_wellformed_ge": 0.85,
+  "prediction_A_rate_point": 0.05542,
+  "prediction_A_enriched_direction": true,
+  "prediction_significance_reached": false,
+  "prediction_significance_note": "per-site A- is POWER-LIMITED; established E3 shows only HT reaches Holm-sig when held out. We predict correct point rate but do NOT predict significance.",
+  "prediction_KURO_TOTAL_lexeme_present_at_site": false,
+  "prediction_KURO_absent_reason": "TRAIN shows KU-RO/PO-TO-KU-RO TOTAL lexeme is HT-concentrated (train_KURO_HT_fraction above); a well-calibrated non-Khania predictor expects the TOTAL LEXEME to NOT transfer to Khania. Only the ABSTRACT carrier-value entry grammar is predicted to transfer.",
+  "probability": 0.7,
+  "ranked_alternatives": [
+   "abstract CARRIER-VALUE entry grammar transfers (wf>=0.85); KU-RO TOTAL lexeme ABSENT at Khania (PRIMARY — lexeme is HT-specific)",
+   "carrier-value transfers AND a KU-RO total also appears (would be a bonus positive)",
+   "carrier-value grammar collapses at site (FAIL — architecture non-transfer)"
+  ],
+  "failure_criterion": "held-out site CARRIER->NUM well-formed rate <0.85 (the abstract entry grammar fails to transfer). KU-RO absence is EXPECTED, not a failure.",
+  "scoring_rule": "PASS if Khania carrier-value well-formed >=0.85. Separately RECORD whether KU-RO present (predicted absent) and A- point/direction (power-limited).",
+  "plan_hash": "0459ab59de8ed84cc109903ce6239f661c445e42a8b656eada2d4079d8a2670e"
+ },
+ "target_ref": "data/seal_targets/SEAL_3_target.json",
+ "status": "SEALED_AND_SCORED",
+ "verdict": "SUPPORTED"
+}

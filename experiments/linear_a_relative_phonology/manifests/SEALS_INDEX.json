@@ -1,0 +1,96 @@
+{
+ "programme": "J2_SEALED_PREDICTION_PROGRAMME",
+ "as_of": "2026-07-07",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3",
+ "phonetic_scoring_global": "NO_CANDIDATE_TO_SEAL",
+ "global_priors": {
+  "la_word_initial_A_rate": 0.0572,
+  "n_words": 3147,
+  "A_enrichment_full_corpus": {
+   "prefix": "A",
+   "n_recurrent_stems": 280,
+   "obs": 17,
+   "null_mean": 15.98,
+   "p_ge": 0.4333,
+   "enriched_direction": true
+  }
+ },
+ "seals": {
+  "SEAL_2": {
+   "manifest_file": "seals/SEAL_2.json",
+   "manifest_sha256": "2fe8581fbd2dcf11a28bd68601d5577058a4c7947794989b7c42f06187e1bbf0",
+   "plan_hash": "f5881ac45fbb9ec9b64edb69d1da488a26e0a66813f6ecd145c7365750f5f078",
+   "status": "SEALED_AND_SCORED",
+   "scored_now": {
+    "PASS": true,
+    "holdout_rate_A": 0.05253,
+    "band": [
+     0.03747,
+     0.07875
+    ],
+    "point": 0.05811,
+    "enriched": true,
+    "ledger_wf": 0.8571,
+    "KURO_in_holdout": 7,
+    "verdict": "SUPPORTED"
+   }
+  },
+  "SEAL_3": {
+   "manifest_file": "seals/SEAL_3.json",
+   "manifest_sha256": "840001c80614912500631a7dac3118b1f1b9c41551f7b87c5028c68d3005ec37",
+   "plan_hash": "0459ab59de8ed84cc109903ce6239f661c445e42a8b656eada2d4079d8a2670e",
+   "status": "SEALED_AND_SCORED",
+   "scored_now": {
+    "PASS": true,
+    "site": "Khania",
+    "carrier_value_wf": 0.8525,
+    "KURO_present": 0,
+    "KURO_absence_predicted_correct": true,
+    "A_obs": 2,
+    "A_null": 3.19,
+    "A_enriched": false,
+    "verdict": "SUPPORTED"
+   }
+  },
+  "SEAL_4": {
+   "manifest_file": "seals/SEAL_4.json",
+   "manifest_sha256": "ef1abfd424846597a03938c6021d033de7166d444e92ac3ba54482fb074714c8",
+   "plan_hash": "d08e9dcbb45f9c1a2964c8dad65fd0a42e9608402f65b0a4b3b4366ef86aab44",
+   "status": "SEALED_AND_SCORED",
+   "scored_now": {
+    "PASS": true,
+    "n_carriers": 13,
+    "total_pairs": 45,
+    "inversions": 0,
+    "verdict": "SUPPORTED"
+   }
+  },
+  "SEAL_5": {
+   "manifest_file": "seals/SEAL_5.json",
+   "manifest_sha256": "e57388ae94c2e64a53f17802989a919d81f71d39a838d24ddc6f4a3a8957ba88",
+   "plan_hash": "8f1683ee5e55c73f9527ba5495bc7eddb0e90493c6ac99c4a3513d8e76d36c52",
+   "status": "SEALED_AND_SCORED",
+   "scored_now": {
+    "PASS": false,
+    "n_constrained": 6,
+    "arith_exact": 1,
+    "arith_near": 1,
+    "baseline_exact": 2,
+    "arith_exact_rate": 0.1667,
+    "verdict": "UNDERPOWERED_NO_SIGNAL"
+   }
+  },
+  "ANETAKI_FINAL_EDITION_DELTA_SEAL": {
+   "manifest_file": "seals/ANETAKI_FINAL_EDITION_DELTA_SEAL.json",
+   "manifest_sha256": "76c18003a1dda9a04b4667914a3535b789d8f36029ea44add02663405574ebea",
+   "plan_hash": "979e2fd2c9ecaed68b3796fd54e91b2f3f7da8f41d43c36428d6b884fc0085f6",
+   "status": "SEALED_PROSPECTIVE",
+   "scored_now": {
+    "PASS": null,
+    "prospective": true
+   }
+  }
+ }
+}

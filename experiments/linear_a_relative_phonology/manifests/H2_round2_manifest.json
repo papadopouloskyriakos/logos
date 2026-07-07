@@ -1,0 +1,9 @@
+{
+ "prereg_sha256": "99a9253da6d3e64ab3e7d234d5c3fd07dbc271b45182d3a9aa1f8bbf94a97cfa",
+ "script_sha256": "5a658f65bce54fd446d3df130231d51ff3ff726a8be4adf4758cbce3c7a9c931",
+ "h1_prereg_sha256": "98b924b73b4bd5857728ce6c2425e140b5e0a5ba00b86287785ed23f0670a173",
+ "seeds_sha256": "a8d5022f092c1fb11664945d54fbcb2be673134276e107861a9ffb8764d03ef5",
+ "output_sha256": "d9953ce59a06deb3f8023924235f114eebcd4f87c206d66b4eab2739e89eb7bd",
+ "seed": 20260708,
+ "verdict": "AT_ANCHOR_CONSTRAINED_NULL"
+}

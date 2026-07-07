@@ -1,0 +1,87 @@
+{
+  "prereg_id": "H_ROUND_3_morphology_first_joint",
+  "campaign": "linear-a-relative-phonology-seals",
+  "task": "H3 - bounded candidate round 3: MORPHOLOGY-FIRST JOINT decipherment models (joint sign-value + morphology assignment) under three inference paradigms",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "as_of": "2026-07-07",
+  "frozen_before_run": true,
+  "highest_claim_layer_allowed": "L2/L3 (a value-bearing joint assignment is admitted only PROVISIONALLY and counts as L5+ ONLY if it clears the mechanical bar below AND yields held-out reading success; honest expectation AT_JOINT_INFERENCE_NULL)",
+  "relationship_to_H1_H2": "SAME held-out target family (GORILA multi-sign syllabic word tokens), the SAME end-to-end null battery (S order-shuffle, W wrong-language opaque LB, R random-prior) + Holm + leave-one-lexeme-out + random-lexicon calibration, and the SAME audited Foundry scoring machinery (candidate_round1.py). The dimension that changes in H3 is NOT the candidate language but the INFERENCE PARADIGM: instead of a preregistered external language + fixed correspondence (H1) or +anchors (H2), each H3 model is a joint (sign-value, morphology) INFERENCE that uses the value-blind morphology backbone (A- prefixation + the ledger/libation formula grammars) as the joint scaffold and commits a readable lexicon from a shared external candidate pool. The three inference paradigms are the 'families' Holm-corrected across.",
+  "morphology_first_backbone": {
+    "status": "durable positive L2/L3 structure established earlier in the campaign; VALUE-BLIND (D5/F4: relative classes real but value-blind; position->C/V REFUTED; seed-propagation a frequency artifact).",
+    "A_prefixation": {
+      "statement": "A- is a productive word-initial morpheme (E1 Bayesian segmentation: A prefix in 43 word types, top prefix; control-validated cross-site). Derivation subset = LA multi-sign words A-X whose tail X is an attested LA word.",
+      "role": "morpheme-consistency constraint C2: the A- prefix must be read as a prefix morpheme whose predicted form begins with the single sign A (i.e. a pure-vowel /a/ reading pins A)."
+    },
+    "ledger_formula_E2": {
+      "TOTAL_slot": "KU-RO family (44 held-out tokens; terminal, 79% followed-by-number, last-third position) = the administrative TOTAL slot.",
+      "DEFICIT_slot": "KI-RO family (18 tokens) = the DEFICIT slot.",
+      "role": "formula-slot constraint C1: the TOTAL-slot word (KU-RO) must be read as a total/all-role lexeme whose bounded expansion contains the sign string KU-RO; symmetrically the DEFICIT slot (KI-RO) a deficit-role lexeme."
+    },
+    "libation_order_E2": "rigid OP<SSR<UNK<IPN<SIR order (p 5e-5); STRUCTURAL only, carries no value, not used as a value constraint here (recorded)."
+  },
+  "value_blindness_is_the_null_generator": "Every AB-based reading assigns the SAME conventional syllabic value to a given LA sign (KU is /u/ for every assignment). The LA-internal morphology/formula statistics (A-prefix count, KU-RO/KI-RO counts, FSA transition probabilities) are therefore INVARIANT under any consistent relabeling of the phonetic values (the relabeling-invariance finding). Consequence, preregistered: the backbone likelihood is flat over value assignments, so a Bayesian joint posterior over sign-values is MAXIMALLY UNINFORMATIVE (entropy = log|hypothesis space|), the CSP feasible set is pinned only by the CHOICE of committed lexeme (not by Linear A), and the MDL gain from the backbone is bounded by the handful of formula/prefix signs. This is the mechanical reason the honest expectation is AT_JOINT_INFERENCE_NULL, and it is computed for the record in every paradigm.",
+  "held_out_target": {
+    "unit": "GORILA multi-sign syllabic word tokens (t=='word', >=2 signs, all signs in the AB syllabary), MINUS the morphology-first DERIVATION backbone (the words the joint model fits) as leakage",
+    "source": "corpus/silver/inscriptions_structured.json (main worktree)",
+    "derivation_leakage_exclusion": "the DERIVATION backbone = {KU-RO-family TOTAL tokens} U {KI-RO-family DEFICIT tokens} U {A-prefix words whose tail is an attested LA word}. Any held-out token in this set is removed from the graded target and counted separately (a joint model is fitted to it, so scoring on it is circular / Invariant 3 overfitting).",
+    "note": "The derivation-excluded LA word set is the HELD-OUT scoring target. Committed readings derive from an EXTERNAL candidate lexicon pool + the FIXED AB correspondence, selected by each paradigm under the backbone constraints; no LA statistic informs any pooled lexeme's phonemes or the correspondence. The morphology backbone (value-blind) selects WHICH lexemes/roles to commit, never a phonetic value read off LA."
+  },
+  "non_circularity": [
+    "Known Linear B syllabic values define the A<->B correspondence used to EXPAND candidate-language phonemes into predicted LA sign-value strings; never read off Linear A.",
+    "The morphology backbone (A-prefix, formula slots) is VALUE-BLIND L2/L3 structure; it constrains WHICH external lexeme/role is committed to a slot, and its likelihood is invariant to the phonetic values (relabeling-invariance). It never assigns a value read off LA (Art. XII).",
+    "The DERIVATION backbone words the joint model fits are EXCLUDED from the graded held-out set (leakage).",
+    "LB wordforms appear ONLY as the wrong-language null corpus (W).",
+    "No semantic rescue: the pooled lexicon + role tags are frozen in this prereg; a revised system (new lexemes, new roles, relaxed constraints) requires a NEW plan hash + receipt + sealed target, not an edit here."
+  ],
+  "shared_candidate_pool": {
+    "provenance": "the three SERIOUS families' external lexemes from preregistrations/H_round1_prereg.json (SEM West Semitic, ANA pre-Greek Anatolian/Luwic, TYR Tyrsenian), loaded not re-specified, PLUS explicit candidate morphology morphemes required by the morphology-first backbone (added here, external, never read off LA):",
+    "added_morphemes": [
+      {"form": "a-_article", "family": "SEM", "function": "proclitic article/prefix ha-/a- (=A- prefix)", "kind": "prefix", "phonemes": "a", "role": "prefix"},
+      {"form": "kull", "family": "SEM", "function": "all/total (=KU-RO TOTAL slot)", "kind": "word", "phonemes": "k u l", "role": "total"}
+    ],
+    "role_tagging": "role=total iff function mentions all/total; role=prefix iff kind==prefix; role=deficit reserved for a deficit/less lexeme (NONE present in the pool -> the KI-RO DEFICIT slot is UNFILLABLE from the pool, recorded as a bounded gap, not rescued); else role=generic. Anatolian/Tyrsenian provide NO a- prefix and NO all/total lexeme, so under the joint backbone constraints (C1 total + C2 prefix) only the SEM morphemes are admissible for the two backbone slots -- the morphology-first selection, recorded.",
+    "expansion": "identical bounded expander for every paradigm (geminate collapse; coda C + epenthetic dead-vowel over all family vowels; EXPAND_CAP=256 forms/lexeme); effective_n reported per paradigm."
+  },
+  "model_families_inference_paradigms": {
+    "BAYES_joint": {
+      "designation": "SERIOUS_PARADIGM",
+      "objective": "joint posterior over (TOTAL-slot lexeme, A-prefix morpheme, per-lexeme inclusion) given a Dirichlet-multinomial generative model of the backbone counts; MAP assignment committed (posterior inclusion prob > 0.5). Because the backbone likelihood is value-blind (relabeling-invariant), the posterior over the value assignment is FLAT: report posterior entropy over the assignment hypothesis space and the effective number of equally-probable assignments (identifiability diagnostic).",
+      "commit_rule": "commit the role-satisfying MAP lexemes (kull for TOTAL, a-_article for A-) plus every pooled suffix/word with posterior inclusion > 0.5 under the flat likelihood + a mild role-informed prior."
+    },
+    "MDL_joint": {
+      "designation": "SERIOUS_PARADIGM",
+      "objective": "minimum description length: DL(theta) = code(committed lexicon) + code(DERIVATION backbone | committed readings). Greedily commit only lexemes whose bits-saved on the fitted backbone exceed the bits to specify them; report the DL gap vs a same-structure random lexicon (identifiability diagnostic: how many bits the value-blind backbone actually buys).",
+      "commit_rule": "commit the min-DL subset (fit on the DERIVATION backbone only), evaluate its predicted forms on the held-out set."
+    },
+    "CSP_IP": {
+      "designation": "SERIOUS_PARADIGM",
+      "objective": "constraint-satisfaction / integer program: HARD constraints C1 (a total-role lexeme whose bounded expansion contains KU-RO) AND C2 (a prefix-role morpheme whose expansion contains the sign A) AND series-consistency (a sign keeps one value); SOFT objective maximize held-out reading coverage. Report the FEASIBLE-SET size (number of assignments satisfying C1&C2) and the number of LA signs UNIQUELY pinned across the feasible set (identifiability diagnostic).",
+      "commit_rule": "commit the max-coverage feasible assignment: every pooled lexeme consistent with a feasible (C1,C2) solution."
+    },
+    "CTRL_agnostic_random": {
+      "designation": "AGNOSTIC_RANDOM_CONTROL",
+      "objective": "the null floor: a random committed lexicon of matched structure (same #word/#suffix entries, same phoneme lengths, phonemes CV-alternating from a neutral inventory), materialized deterministically at seed 20260708 and scored by the identical machinery. If it clears the raw bar the bar is non-specific."
+    }
+  },
+  "scoring_protocol": {
+    "primary_statistic": "token-weighted match rate on the DERIVATION-excluded held-out multi-sign syllabic LA word set, using each paradigm's committed predicted-form set (a word matches iff its value-string is a committed whole-word form, or ends with a committed affix string).",
+    "identifiability_diagnostics": "per paradigm: BAYES posterior entropy + effective #assignments; MDL DL gap vs random; CSP feasible-set size + #uniquely-pinned signs; plus, shared, the count of held-out words made ONLY of backbone-pinned signs (value-coverable) vs actually READ (expected: value-coverable >> read, echoing SEED_A=0 / one-lexeme-deep).",
+    "end_to_end_null_battery": {
+      "S_order_shuffle": "shuffle signs within each derivation-excluded LA word (kills within-word form structure) - non-decisive",
+      "W_wrong_language_LB": "opaque DAMOS Linear B multi-sign wordforms, length-matched to the derivation-excluded LA set (a REAL other language scored by the SAME committed forms) - decisive",
+      "R_random_prior": "permute each paradigm's committed lexicon (same #entries/kinds, same phoneme lengths, random phonemes from the pool inventory; preserves search size, destroys the specific lexemes) - decisive"
+    },
+    "decisive_FWER_family": "max(p_W, p_R) (must beat BOTH decisive nulls)",
+    "multiplicity": "Holm step-down across the 3 serious inference paradigms on the decisive FWER (Art. VIII)",
+    "leave_one_lexeme_out": "worst-case decisive p after dropping each committed lexeme (Egyptian-channel discipline: is the signal one committed lexeme, e.g. kull->KU-RO?)",
+    "random_lexicon_calibration": "N_CAL=300 same-structure random committed lexicons per serious paradigm + the control; real match-rate percentile in the random-lexicon band (p) and raw-bar false-clear rate",
+    "n_nulls_per_family": 200
+  },
+  "admission_verdict_rule": {
+    "GENUINE (paradigm counts)": "Holm-adjusted decisive FWER < 0.05 AND leave-one-lexeme-out worst decisive p < 0.05 AND real match rate above the random-lexicon band (percentile p < 0.05, false-clear <= 0.10) AND the agnostic CONTROL does NOT clear the raw bar. A GENUINE paradigm would still require held-out READING success + cross-site survival before any L5+ wording (Art. XV).",
+    "AT_JOINT_INFERENCE_NULL (expected)": "no inference paradigm is GENUINE, AND the identifiability diagnostics confirm value-blindness (flat Bayesian posterior / large CSP feasible set / negligible MDL gain): the morphology-first backbone selects WHICH external lexeme fits a slot but recovers NO phonetic value that survives the multi-family end-to-end null on held-out."
+  },
+  "families_source": "shared_candidate_pool loaded from preregistrations/H_round1_prereg.json (SEM/ANA/TYR lexemes) + the two added morphemes above; byte-identical family correspondence maps."
+}

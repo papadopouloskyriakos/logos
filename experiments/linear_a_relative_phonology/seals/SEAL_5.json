@@ -1,0 +1,36 @@
+{
+ "seal_id": "SEAL_5",
+ "name": "masked_notation_15pct",
+ "type": "held_out_masking_scored_now",
+ "as_of": "2026-07-07",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3",
+ "phonetic_scoring": "NO_CANDIDATE_TO_SEAL",
+ "split": {
+  "criterion": "15% of ALL numerals masked (rng seed+5); reconstruct via ledger arithmetic"
+ },
+ "derived_from": "visible (unmasked) ledger structure only",
+ "structural_predictions": {
+  "mask_fraction": 0.15,
+  "n_numerals_total": 1276,
+  "n_masked": 191,
+  "reconstruction_method": "ledger arithmetic sum-consistency (masked TOTAL-following numeral := running sum of visible entry numerals in its segment)",
+  "prediction_arith_beats_frequency_baseline": true,
+  "prediction_arith_exact_rate_on_constrained": 0.226,
+  "prediction_arith_near_rate_on_constrained": 0.387,
+  "frequency_baseline_value": 1,
+  "probability": 0.8,
+  "ranked_alternatives": [
+   "arithmetic exact-rate on constrained masked numerals >> frequency baseline (PRIMARY)",
+   "arithmetic ~= baseline on exact but wins on near (partial)",
+   "arithmetic no better than baseline (FAIL — no real ledger arithmetic)"
+  ],
+  "failure_criterion": "arithmetic exact-count <= frequency-baseline exact-count on the constrained subset.",
+  "scoring_rule": "PASS if arithmetic exact > baseline exact on constrained masked numerals. Report exact/near rates.",
+  "plan_hash": "8f1683ee5e55c73f9527ba5495bc7eddb0e90493c6ac99c4a3513d8e76d36c52"
+ },
+ "target_ref": "data/seal_targets/SEAL_5_target.json",
+ "status": "SEALED_AND_SCORED",
+ "verdict": "UNDERPOWERED_NO_SIGNAL"
+}

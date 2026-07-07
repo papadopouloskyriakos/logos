@@ -1,0 +1,54 @@
+{
+  "prereg_id": "H_ROUND_2_anchor_constrained",
+  "campaign": "linear-a-relative-phonology-seals",
+  "task": "H2 - bounded candidate round 2: ANCHOR-CONSTRAINED family/isolate models using the WP-G audited anchors",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "as_of": "2026-07-07",
+  "frozen_before_run": true,
+  "highest_claim_layer_allowed": "L2/L3 (a value-bearing candidate is admitted only PROVISIONALLY and counts as L5+ ONLY if it clears the mechanical bar below AND yields held-out reading success; honest expectation AT_ANCHOR_CONSTRAINED_NULL)",
+  "relationship_to_H1": "Same 5 models (SEM/ANA/TYR serious, FIN unrelated negative-control, CTRL agnostic random) and the SAME end-to-end null battery + Holm + LOO + random-lexicon calibration as H1. The NEW element in H2 is the ANCHOR CONSTRAINT: the 6 WP-G audited SEED_B toponym anchors (external place-name referents) are used to (a) augment each family's predicted-form set (anchor-augmented reading) and (b) be EXCLUDED from the held-out target as leakage. Per G3 SEED_A=0 and Art. XII, every anchor's pinned sign-value coincides with the GORILA/LB conventional value it was read through, so the anchor-augmented forms are CIRCULAR for grading and contribute ZERO to the honest (strict) held-out score. A permissive score that grants the anchors is reported as a sensitivity bound.",
+  "anchor_inventory": {
+    "source": "data/anchors_v2/seeds.json (WP-G audited); SEED_B value-bearing toponym anchors only",
+    "seed_A_count_cited": 0,
+    "seed_B_records": ["top_pa_i_to", "top_se_to_i_ja", "top_tu_ru_sa", "top_di_ki_te", "top_su_ki_ri_ta", "top_a_tu_ri_si_ti"],
+    "seed_B_referents": {"top_pa_i_to": "Phaistos", "top_se_to_i_ja": "se-to-i-ja(unlocated)", "top_tu_ru_sa": "Tylissos", "top_di_ki_te": "Mt-Dikte", "top_su_ki_ri_ta": "Sybrita", "top_a_tu_ri_si_ti": "Tylissos"},
+    "n_distinct_signs_pinned": 17,
+    "excluded_from_grading_because": "Art. XII: every SEED_B toponym is READ through GORILA/LB conventional sign-values; the pinned value == the GORILA homomorphic value, so a held-out match credited to an anchor value is not independent evidence for any family. Additionally G3 shows all 6 are one-toponym-deep (SEED_B, empirical LOTO recovers only {I,RI}, each one-deep) => 0 held-out-survivable. Marked circular_for_grading=true and excluded from the strict verdict score.",
+    "seed_X_note": "The 97 SEED_X records (57 shape-homomorphy + 11 Cypriot value-inheritance + 25 onomastic personal names + 4 internal-variation) and the 6 relative/structural G2 classes are circular/value-blind and are NOT used as value anchors at all."
+  },
+  "held_out_target": {
+    "unit": "GORILA multi-sign syllabic word tokens (t=='word', >=2 signs, all signs in the AB syllabary), MINUS anchor-source tokens (leakage)",
+    "source": "corpus/silver/inscriptions_structured.json (main worktree)",
+    "leakage_exclusion": "any held-out token whose sign-tuple EQUALS an anchor form, or STARTS-WITH or ENDS-WITH an anchor form (inflected/compounded toponym), is removed from the graded target set and counted separately.",
+    "note": "The anchor-excluded LA word set is the HELD-OUT scoring target. Family predictions derive from external candidate-language lexicons + a FIXED AB correspondence; anchor forms are external toponym strings. No LA statistic informs any family's phonemes, correspondence, or the anchors."
+  },
+  "non_circularity": [
+    "Known Linear B syllabic values define the A<->B correspondence, used to EXPAND candidate-language phonemes into predicted LA sign-value strings; never read off LA.",
+    "The 6 SEED_B toponym anchors are external place-name referents but their pinned sign-VALUES equal the GORILA conventional values => marked circular_for_grading and EXCLUDED from the strict verdict score (Art. XII). Only a permissive sensitivity score grants them.",
+    "The D5 anonymous relative classes and all SEED_X anchors are value-blind and never model inputs.",
+    "LB wordforms appear ONLY as the wrong-language null corpus (W)."
+  ],
+  "anchor_constraint_is_family_independent": "Toponyms are language-independent proper nouns read through the shared AB syllabary; every AB-based family augments with the SAME 6 anchor forms and inherits the SAME 17 pinned sign-values. So the anchor constraint - like the D5 relative classes (F4) - CANNOT break the symmetry between families. Recorded for the record; it does not gate scoring.",
+  "scoring_protocol": {
+    "primary_statistic_strict": "token-weighted match rate on the anchor-EXCLUDED held-out multi-sign syllabic LA word set, using FAMILY-LEXEME forms ONLY (anchor-augmented forms excluded as circular). This is the verdict score.",
+    "secondary_statistic_permissive": "same held-out set but family-lexeme forms UNION the 6 anchor forms (grants anchors as if externally admissible); the difference isolates any anchor reading power beyond the anchor source words.",
+    "anchor_only_reading_power": "count anchor-excluded held-out words fully coverable by the 17 anchor-pinned signs, and count those actually MATCHED by an anchor form; expected ~0 beyond source words (SEED_A=0).",
+    "correspondence_expansion": "identical bounded expander for every family (geminate collapse; coda spelled C + epenthetic dead-vowel over all family vowels; EXPAND_CAP=256 forms/lexeme); effective_n reported.",
+    "end_to_end_null_battery": {
+      "S_order_shuffle": "shuffle signs within each anchor-excluded LA word (kills within-word form structure) - non-decisive",
+      "W_wrong_language_LB": "opaque DAMOS Linear B multi-sign wordforms, length-matched to the anchor-excluded LA set - decisive",
+      "R_random_prior": "permute the family lexicon (same #entries/kinds, same phoneme lengths, random phonemes from the family inventory) - decisive"
+    },
+    "decisive_FWER_family": "max(p_W, p_R) on the STRICT score (must beat BOTH decisive nulls)",
+    "multiplicity": "Holm step-down across the 5 families on the decisive FWER (Art. VIII)",
+    "leave_one_lexeme_out": "worst-case decisive p after dropping each family lexeme (Egyptian-channel discipline) on the strict score",
+    "random_lexicon_calibration": "N_CAL=300 same-structure random lexicons per serious family + the negative control; real strict rate percentile in the random-lexicon band + raw-bar false-clear rate",
+    "n_nulls_per_family": 200
+  },
+  "admission_verdict_rule": {
+    "GENUINE (family counts)": "on the STRICT (anchor-excluded, family-lexeme-only) score: Holm-adjusted decisive FWER < 0.05 AND LOO worst decisive p < 0.05 AND real strict rate above the random-lexicon band (percentile p < 0.05, false-clear <= 0.10) AND the agnostic CONTROL does NOT clear the raw bar. A GENUINE family would still require held-out READING success + cross-site survival before any L5+ wording (Art. XV).",
+    "AT_ANCHOR_CONSTRAINED_NULL (expected)": "no family is GENUINE on the strict score AND anchor augmentation adds no held-out reading power beyond the anchor source words (permissive == strict on non-source held-out)."
+  },
+  "families_source": "identical to preregistrations/H_round1_prereg.json (5 families); loaded, not re-specified, to guarantee byte-identical model definitions."
+}
