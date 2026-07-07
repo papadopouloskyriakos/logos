@@ -1,5 +1,5 @@
 {
- "stage": "B",
+ "stage": "L_FINAL",
  "syllabic_parameters_conservative": 92,
  "raw_syllabary": 131,
  "allograph_families": 123,
@@ -15,5 +15,10 @@
  "clean_phonetic_wordform_types": 944,
  "nonphonetic_word_tokens_removed": 819,
  "allography_param_reduction": 7,
- "AB_class_signs_contested": 10
+ "AB_class_signs_contested": 10,
+ "decipherment_readiness": "NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT",
+ "highest_earned_layer": "L2",
+ "internal_value_channel": "PROVABLE_NULL (relabeling-invariant)",
+ "external_anchor": "NO_NONCIRCULAR_ANCHOR",
+ "methods_validated": true
 }
