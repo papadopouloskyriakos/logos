@@ -5,5 +5,9 @@
 - **Stage A · reopening audit — DONE → `A_REOPENED`.** Prior 259>212 INVALIDATED (category error: diplomatic
   tokens vs inscriptions). Corrected: syllabic params **92** < **212** structural constraints (favourable);
   value-informative constraints ~2 vs 92 params (46× deficit). Target reframed: value-informative constraints.
-- **Next: Stage B** — corpus forensics (sign/allograph audit reduces false params 131→123→92; join/notation/
-  layout recovery seeks lost channels).
+- **Stage B · corpus forensics — DONE (ADVANCES representation; no value gain).** Confirms 92 params (259 was
+  ligatures+damage); effective_n corrected 1341→1242 objects→565 lexical; cleaned phonetic channel (26%
+  non-phonetic removed → 944 wordform types); value channel null/circular + AB-class CONTESTED (10 signs flip).
+  Recovered testable channels: support-invariance axis, accounting (needs notation typing), findspot-in-bronze.
+- **Next: Stage C** (new sources — Younger/Anetaki/del Freo bronze) + **Stage D** (constraint mining on clean
+  material: formula grammar, morphology, accounting closure, support-invariance, compression).

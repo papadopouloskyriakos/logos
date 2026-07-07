@@ -1,5 +1,5 @@
 {
- "stage": "A",
+ "stage": "B",
  "syllabic_parameters_conservative": 92,
  "raw_syllabary": 131,
  "allograph_families": 123,
@@ -9,5 +9,11 @@
  "structural_ratio": 0.43,
  "value_deficit_x": 46,
  "diagnosis": "underdetermined at VALUE layer via constraint informativeness, not count",
- "underdetermined_by_count": false
+ "underdetermined_by_count": false,
+ "effective_physical_objects": 1242,
+ "usable_lexical_signatures": 565,
+ "clean_phonetic_wordform_types": 944,
+ "nonphonetic_word_tokens_removed": 819,
+ "allography_param_reduction": 7,
+ "AB_class_signs_contested": 10
 }
