@@ -76,21 +76,24 @@ tasks:
     work_package: B
     objective: "Build SEG_{DIPLOMATIC,GORILA_WORD,INSCRIPTION_CONTEXT,ROW,ENTRY,FORMULA,PROBABILISTIC_BOUNDARY,MULTI_SCALE}; provenance+reversibility preserved"
     dependencies: []
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — 8 representations, provenance+reversibility verified"
     required_outputs: [reports/B_SEGMENTATION_REPRESENTATIONS.md, data/segmentations/]
     next_task_on_success: B3_known_script
   - task_id: B3_known_script
     work_package: B
     objective: "LB (lexical hidden): boundary F1 + downstream C/V/substitution/morphology recovery per segmentation model family"
     dependencies: [B1_representations]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — SUPPORTED_ON_LB (6 families beat baselines, Bayesian F1 0.608); C/V seg-INVARIANT"
     required_outputs: [reports/B_KNOWN_SCRIPT_BOUNDARY_RECOVERY.md]
     next_task_on_success: B4_synthetic
   - task_id: B4_synthetic
     work_package: B
     objective: "Synthetic syllabic corpora (known morpheme boundaries, formulaic, high hapax, damage, imbalance, mixed conventions) -> calibration+failure"
     dependencies: [B1_representations]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — QUANTIFIED: at LA hapax regime boundary skill over all-cut ~0; over-cut superset"
     required_outputs: [reports/B_SYNTHETIC_SEGMENTATION.md]
     next_task_on_success: B5_la_ensemble
   - task_id: B5_la_ensemble
@@ -113,14 +116,16 @@ tasks:
     work_package: C
     objective: "Find one/few-sign-diff pairs in matched contexts; separate same-doc/formula/site/cross-site/chrono/correction/allograph/damage/edition-disagreement"
     dependencies: []
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — CATALOGUED 3749 pairs + 253 edition-disagreements; 7 Tier-A"
     required_outputs: [reports/C_CANDIDATE_SUBSTITUTIONS.md]
     next_task_on_success: C3_lb_calib
   - task_id: C3_lb_calib
     work_package: C
     objective: "LB benchmark: recover same-V/same-C/spelling-variant/morphophono/error vs freq-matched/edit-distance/context-only/formula-only baselines"
     dependencies: [C1_candidates]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — CALIBRATED: consonant-held axis AUC 0.744; same-vowel weak 0.612; allograph anti"
     required_outputs: [reports/C_LINEAR_B_CALIBRATION.md]
     next_task_on_success: C4_la_graph
   - task_id: C4_la_graph
@@ -295,7 +300,8 @@ tasks:
     work_package: J
     objective: "Anetaki PUBLIC-EXPOSURE AUDIT: list+hash all public preliminary sources, record known signs/layout/interp, define the unseen FINAL-EDITION DELTA only"
     dependencies: []
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — only unpublished transliterated VALUES sealable; 8 exclusion classes"
     required_outputs: [reports/J_PUBLIC_EXPOSURE_AUDIT.md]
     next_task_on_success: J2_seals
   - task_id: J2_seals
@@ -320,7 +326,8 @@ tasks:
     work_package: L
     objective: "Source watch (Anetaki II / KN Zg 57-58 final / new inscriptions / joins / re-editions / museum images / excavation reports / catalogues / onomastica / CH+CM updates); expected-info-gain ranking; ingestion readiness; prospective clock"
     dependencies: []
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — 9 acquisitions ranked; Anetaki II = falsification power not licence lift"
     required_outputs: [reports/L_SOURCE_WATCH.md, reports/L_EXPECTED_INFORMATION_GAIN.md, reports/L_INGESTION_READINESS.md, data/source_watch/]
     next_task_on_success: M1_synthesis
 
