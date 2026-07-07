@@ -32,10 +32,10 @@ does **not** require these before ratification — they gate *future graduating 
 | ~~P0~~ **DONE** | ~~source-dependency graph~~ **BUILT** (2026-07-07) — `governance/source_dependency_graph.json` (13 sources, 6 evidentiary lineages) + `scripts/source_dependency.py` lineage-collapse checker (DAMOS+V-C+DMic → 1 vote; fail-loud on unknown source) + `tests/test_source_dependency.py`. Promotes the A04 SHARED_DECIPHERMENT finding to an enforceable artifact; `effective_sources()` feeds Art. VIII. | XI | Done. Next: wire `effective_sources()` into the Art. VIII evidence-unit effective_n primitive. |
 | ~~P0~~ **DONE** | ~~effective_n over EVIDENCE UNITS~~ **BUILT** (2026-07-07) — `scripts/effective_n.py`: bottleneck (min independent-unit count across required dims) + Art. XI source-lineage fold + `dependency_components` union-find. | VIII | Distinct from the finance time-overlap primitive; graduation keys off it. |
 | ~~P0~~ **DONE** | ~~information-budget panel~~ **BUILT** (2026-07-07) — `scripts/info_budget.py`: all 13 fields (missing → UNKNOWN), `certify()` fails closed on UNKNOWN load-bearing fields or underdetermination (params > evidence), B7-scoped. Validated on the no-human 19-vs-57 case. | IX | Composes effective_n + corpus_info unicity component; unicity alone insufficient. |
-| **P1** | **Program-level search receipt** — candidate languages, feature/MODEL families, alignment methods, thresholds, seeds, restarts, subgroups, exclusions, failed branches + the 4-way preregistered/cross-model/exploratory/confirmatory partition. | VII | `searchlog.py` counts only one scanner's triples; program-level dimensions captured nowhere. Build `governance/search_receipt.json`. |
-| **P1** | **Per-stage constitutional headers** (`articles_consulted/triggered`, gates, assumptions checked, authorized/forbidden outputs) at open + a compliance/deviations/violations block at close. | XXII | Nothing emits these. Template + JSON schema + a linter that blocks a stage without a header. |
-| **P2** | **Assumption-register enforcement hook** — a loader that BLOCKS downstream execution when a load-bearing premise is FALSE (A04/A08/A09 already are) or STALE past expiry. | XVIII | Register is currently a static file with no consumer. Add `assumption_gate.py` imported at stage entry. |
-| **P2** | **Transfer-licence enforcement checker** — gate experiments on current licence state; mechanically enforce "a lower licence never implies a higher one" + layer-capping. | XV, V | State file has no consumer. Ties into the Art. XXII forbidden-outputs field. |
+| ~~P1~~ **DONE** | ~~Program-level search receipt~~ **BUILT** (2026-07-07) — `scripts/search_receipt.py` (`SearchReceipt`: 14 Art. VII dimensions + 4-way partition; `multiplicity_n` feeds logos_stats deflation; confirmatory-needs-prereg check). | VII | `searchlog.py` counts only one scanner's triples; program-level dimensions captured nowhere. Build `governance/search_receipt.json`. |
+| ~~P1~~ **DONE** | ~~Per-stage constitutional headers~~ **BUILT** (2026-07-07) — `scripts/stage_header.py` (open/close blocks, article-ref + Art. XVIII assumption validation, markdown render). | XXII | Nothing emits these. Template + JSON schema + a linter that blocks a stage without a header. |
+| ~~P2~~ **DONE** | ~~Assumption-register enforcement hook~~ **BUILT** (2026-07-07) — `scripts/assumption_gate.py` (`require()` fail-closed on FALSE/STALE load-bearing premise; blocks A04/A09). | XVIII | Register is currently a static file with no consumer. Add `assumption_gate.py` imported at stage entry. |
+| ~~P2~~ **DONE** | ~~Transfer-licence enforcement checker~~ **BUILT** (2026-07-07) — `scripts/licence_gate.py` (`check_claim` enforces Art. XV LA-output block + B6 confidence cap). | XV, V | State file has no consumer. Ties into the Art. XXII forbidden-outputs field. |
 
 ## Top priorities to build next
 
@@ -46,4 +46,6 @@ does **not** require these before ratification — they gate *future graduating 
 3. ~~**Art. VIII evidence-unit effective_n**~~ — **DONE 2026-07-07** (`scripts/effective_n.py`; composes
    `source_dependency.effective_sources`).
 4. ~~**Art. IX information-budget panel**~~ — **DONE 2026-07-07** (`scripts/info_budget.py`; fail-closed).
-5. **Art. VII program-level search receipt** — beyond the single-scanner triple.
+5. ~~**Art. VII program-level search receipt**~~ — **DONE 2026-07-07** (`scripts/search_receipt.py`).
+
+**All P0/P1/P2 backlog items are now built.** Remaining: wiring the primitives into each new experiment's reporting (usage, not new tooling).
