@@ -68,6 +68,16 @@ None is conjurable by any protocol redesign. LOGOS does **not** conclude that Li
 permanently undecipherable (forbidden, Preamble) — only that **it is underdetermined by the present corpus and
 sources**, with the above as the specific unlock conditions.
 
+## The null is a corpus property, not a dead detector
+
+A dead apparatus would return nulls on everything, including real structure. It does not. The **KU-RO
+arithmetic-reconciliation positive control** (`kuro_reconciliation.json`, KU-RO as an opaque token) FIRES:
+observed exact reconciliation **25% vs a 1.47% permutation null = 17×, p=0.0005**. The harness detects a real
+Linear A structural fact — and the Linear B morphology positive control fires too (0.562 vs bigram ~0.30). So
+the pervasive negatives are a property of the **corpus's information content**, not of the gate. Tellingly,
+even this clear positive is **Haghia-Triada-locked** (27 of 28 sections), so its cross-site held-out leg is
+`NO_POWER` — the same single-site / one-deep ceiling, visible even where the signal is strong.
+
 ## Constitutional status
 
 `UNDERDETERMINED` (corpus identifiability ceiling), established under fail-closed held-out gates, quantified,

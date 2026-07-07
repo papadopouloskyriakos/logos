@@ -1,0 +1,24 @@
+{
+ "n_integer_sections": 28,
+ "observed_exact_reconciliation": 0.25,
+ "observed_within_1": 0.357,
+ "null_mean_exact": 0.0147,
+ "separation_x": 17.0,
+ "p_permutation": 0.0005,
+ "n_perm": 2000,
+ "cross_site": {
+  "HaghiaTriada": {
+   "n": 27,
+   "exact": 0.259
+  },
+  "non_HT": {
+   "n": 1,
+   "exact": 0.0
+  }
+ },
+ "harness_fires_on_signal": true,
+ "cross_site_held_out": "NO_POWER",
+ "n_non_dominant_site_sections": 1,
+ "claim_layer": "L3 functional (accounting grammar) \u2014 KU-RO treated as opaque token; no phonetic reading",
+ "interpretation": "POSITIVE CONTROL. The harness FIRES on a real LA structural fact (KU-RO = arithmetic total): observed exact reconciliation 25% vs 1.5% null = 17x, p=0.0005 \u2014 the gate is NOT merely a null-detector; the corpus contains real structure. BUT the signal is Haghia-Triada-locked (27 of 28 sections), so cross-site held-out generalization is NO_POWER \u2014 the SAME single-site / one-deep identifiability ceiling that underdetermines every phonetic avenue constrains even this clear positive. Non-circular; re-derives Bennett; no reading asserted."
+}

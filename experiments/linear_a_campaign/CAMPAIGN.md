@@ -68,5 +68,21 @@ reports "calibrated absence."
   positives (segmentation L2, KU-RO arithmetic L3) re-derive known structure. **Verdict: `UNDERDETERMINED` —
   the present corpus cannot support a non-circular held-out reading; not "uncrackable" but underdetermined,
   with precise unlock conditions (more multi-sign inscriptions / independent ≥4-slot anchors / a bilingual).**
-- **T5 — positive control**: run the KU-RO arithmetic-reconciliation gate — the one powered non-circular LA
-  test — as a positive control proving the harness FIRES on a real LA structural fact (not just nulls).
+- **T5 — positive control DONE** (`kuro_reconciliation.json`). The KU-RO arithmetic-reconciliation gate
+  (KU-RO as opaque token; numerals language-independent): observed exact reconciliation **25% vs 1.47% null =
+  17×, p=0.0005** → **the harness FIRES on a real LA structural fact** (it is not merely a null-detector; the
+  corpus contains real structure). BUT the signal is **Haghia-Triada-locked (27 of 28 sections)** → cross-site
+  held-out = **`NO_POWER`** (1 non-HT section). Even the clear positive hits the same single-site / one-deep
+  ceiling. Non-circular; re-derives Bennett; no reading asserted.
+
+## CONCLUSION — campaign concluded (honest null, well before 12h)
+
+**`UNDERDETERMINED`.** Every LA decipherment avenue, under fail-closed held-out gates + adversarial
+completeness-checking, converges on one quantified corpus-identifiability ceiling (259 sign-value parameters >
+212 independent constraints; median 1 sign/inscription; 63% one site; 84% hapax words). The harness demonstrably
+FIRES on real in-corpus structure (KU-RO 17× over null) and on the Linear B positive control — so the null is a
+property of the CORPUS, not a dead detector. The only held-out positives (segmentation L2, KU-RO L3) re-derive
+known structure and are single-site-locked. **Linear A is not shown uncrackable — it is underdetermined by the
+present corpus + sources**, with precise unlock conditions in `IDENTIFIABILITY_SYNTHESIS.md`. I did not
+manufacture a crack, and I did not pad the remaining hours with re-runs of refuted tests — the honest
+deliverable (the insurance policy) is complete. Any of the three parked branches' frozen negatives stands.
