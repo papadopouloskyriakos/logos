@@ -1,0 +1,9 @@
+{
+ "schema": "campaign.search_receipt/v1",
+ "stage_A": {
+  "model_families": 0,
+  "thresholds": 0,
+  "note": "audit only \u2014 no model search, no multiplicity charged"
+ },
+ "charged_total_configs": 0
+}

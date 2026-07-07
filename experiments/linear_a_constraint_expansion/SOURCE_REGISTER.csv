@@ -1,0 +1,4 @@
+source_id,name,type,lineage,machine_readable,new_information,status,notes
+SRC-SILVER,logos silver corpus (LA),derived,L_LA_CORPUS,yes,baseline,PRESENT,read-only from main
+SRC-SIGNS-ONTOLOGY,signs_ontology.json,derived,L_LA_CORPUS,yes,sign classes+allograph families,PRESENT,Stage A parameter recount
+SRC-INVENTORIES,inventory_syllabograms_{raw,conservative,exploratory},derived,L_LA_CORPUS,yes,V=131/92/88,PRESENT,parameter sensitivity

@@ -1,0 +1,38 @@
+{
+ "schema": "campaign.assumption_register/v1",
+ "append_only": true,
+ "assumptions": [
+  {
+   "id": "CA01",
+   "statement": "A phonetic reading assigns values to the SYLLABARY (~88-92), not to all 259 diplomatic stream tokens",
+   "load_bearing": true,
+   "current_status": "VERIFIED",
+   "source": "signs_ontology.json classes + inventory_syllabograms_{conservative,exploratory}",
+   "revisions": []
+  },
+  {
+   "id": "CA02",
+   "statement": "allograph_family groupings in signs_ontology are answer-neutral (palaeographic, not value-driven)",
+   "load_bearing": true,
+   "current_status": "PARTIAL",
+   "source": "signs_ontology allograph_family field; to re-audit in Stage B2",
+   "revisions": []
+  },
+  {
+   "id": "CA03",
+   "statement": "the 212 >=4-sign non-dominant-site inscriptions constrain STRUCTURE, not sign VALUES",
+   "load_bearing": true,
+   "current_status": "VERIFIED",
+   "source": "cross-script distributional null 4x; toponym pins one-deep",
+   "revisions": []
+  },
+  {
+   "id": "CA04",
+   "statement": "corpus/silver is read-only reference; campaign never mutates it",
+   "load_bearing": true,
+   "current_status": "VERIFIED",
+   "source": "gitignored; referenced by absolute MAIN path",
+   "revisions": []
+  }
+ ]
+}

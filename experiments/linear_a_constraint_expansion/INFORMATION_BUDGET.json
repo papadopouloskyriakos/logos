@@ -1,0 +1,13 @@
+{
+ "stage": "A",
+ "syllabic_parameters_conservative": 92,
+ "raw_syllabary": 131,
+ "allograph_families": 123,
+ "A_only_undeciphered": 72,
+ "structural_constraints": 212,
+ "value_informative_constraints": 2,
+ "structural_ratio": 0.43,
+ "value_deficit_x": 46,
+ "diagnosis": "underdetermined at VALUE layer via constraint informativeness, not count",
+ "underdetermined_by_count": false
+}
