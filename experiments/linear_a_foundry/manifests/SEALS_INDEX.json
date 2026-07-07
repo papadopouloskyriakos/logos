@@ -1,0 +1,51 @@
+{
+  "schema": "foundry.seals_index/v1",
+  "programme": "sealed-challenge prediction programme (WP seals)",
+  "seed": 20260708,
+  "built_as_of": "2026-07-07",
+  "n_inscriptions_total": 1341,
+  "overall_status": "NO_CANDIDATE_TO_SEAL",
+  "overall_note": "5 sealed held-out challenges committed. Per the mandate, NO candidate currently exists to test against them (WP6 + candidate rounds all AT_END_TO_END_NULL). Each manifest is preserved for any future candidate; scoring is deferred until a candidate survives the end-to-end multi-family null.",
+  "seals": [
+    {
+      "seal_id": "SEAL_1",
+      "name": "unseen_inscriptions",
+      "manifest": "manifests/SEAL_1_unseen_inscriptions.json",
+      "commitment_sha256": "58a085a99020a6f99f5cf6ac60c9e367cf3f42167cf91e8ca09bb9ed8fd64228",
+      "n_held_out_inscriptions": 201,
+      "status": "NO_CANDIDATE_TO_SEAL"
+    },
+    {
+      "seal_id": "SEAL_2",
+      "name": "unseen_site",
+      "manifest": "manifests/SEAL_2_unseen_site.json",
+      "commitment_sha256": "be83582d9269147c32b1d99c7e6515d50097f032d7b7d6debf0f5459a24fa06b",
+      "n_held_out_inscriptions": 159,
+      "status": "NO_CANDIDATE_TO_SEAL"
+    },
+    {
+      "seal_id": "SEAL_3",
+      "name": "unseen_formula_family",
+      "manifest": "manifests/SEAL_3_unseen_formula_family.json",
+      "commitment_sha256": "3f4d2badd7a702ce08740f2d2d6359222f1149e3e6eec5bac54f698b35adc69d",
+      "n_held_out_inscriptions": 25,
+      "status": "NO_CANDIDATE_TO_SEAL"
+    },
+    {
+      "seal_id": "SEAL_4",
+      "name": "masked_notation_reconstruction",
+      "manifest": "manifests/SEAL_4_masked_notation_reconstruction.json",
+      "commitment_sha256": "5f2128acc77a9f09156d7e41be5eced89252359ed6f850ee99fc1de2bf2f44be",
+      "n_held_out_inscriptions": null,
+      "status": "NO_CANDIDATE_TO_SEAL"
+    },
+    {
+      "seal_id": "SEAL_5",
+      "name": "prospective_gold_anetaki_II",
+      "manifest": "manifests/SEAL_5_prospective_gold_anetaki_II.json",
+      "commitment_sha256": "9e412e55883e83b42262b9829103e4e84ebf74ae114d4ceb0dc100ff41425885",
+      "n_held_out_inscriptions": null,
+      "status": "NO_CANDIDATE_TO_SEAL"
+    }
+  ]
+}

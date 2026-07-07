@@ -1,0 +1,16 @@
+{
+  "seal_id": "SEAL_1",
+  "name": "unseen_inscriptions",
+  "type": "held_out_inscriptions_random",
+  "split_criterion": "Deterministic random 15% of all 1341 LA inscriptions, held out by id. random.Random(SEED+1) shuffle of the sorted id list; first 201 taken.",
+  "seed": 20260709,
+  "n_held_out_inscriptions": 201,
+  "n_held_out_multisign_words": 212,
+  "held_out_ids_file": "data/seal_1_heldout.json",
+  "commitment_sha256": "58a085a99020a6f99f5cf6ac60c9e367cf3f42167cf91e8ca09bb9ed8fd64228",
+  "candidate_must_predict": "For each held-out inscription's multi-sign syllabic word units, a committed phonetic/lexical reading (value string and, where claimed, gloss). Scored as token-weighted held-out match rate vs the WP6 multi-family null (order-shuffle, wrong-language opaque LB, random-prior). CLEARS only if Holm-adjusted decisive FWER < 0.05 AND leave-one-lexeme-out stays < 0.05.",
+  "status": "NO_CANDIDATE_TO_SEAL",
+  "blocker": "No candidate survived the end-to-end multi-family null. WP6 agnostic search and candidate round 1 were both AT_END_TO_END_NULL under the multi-family null (order-shuffle + wrong-language opaque LB + random-prior). West Semitic 'cleared' at 0.030 but the random-prior control also cleared -> artifact, not signal. There is no surviving candidate to score against this seal. The manifest is committed and preserved so any FUTURE candidate is scored on a partition it could not have seen.",
+  "registered_before_any_candidate": true,
+  "non_circular": "The split is defined by public metadata (id / site / published formula list / numeral positions / a forthcoming publication), never by any candidate's fit. The held-out payload is committed by commitment_sha256 so it cannot be altered post hoc."
+}

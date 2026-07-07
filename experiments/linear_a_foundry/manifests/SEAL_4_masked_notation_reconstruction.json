@@ -1,0 +1,16 @@
+{
+  "seal_id": "SEAL_4",
+  "name": "masked_notation_reconstruction",
+  "type": "held_out_numeral_positions",
+  "split_criterion": "A deterministic random 15% of all 1276 numeral tokens in the corpus (191 tokens across 131 inscriptions) masked at their stream positions. random.Random(SEED+4) shuffle of the sorted (id,stream_index) numeral list.",
+  "seed": 20260712,
+  "n_masked_numerals": 191,
+  "n_inscriptions_touched": 131,
+  "held_out_ids_file": "data/seal_4_heldout.json",
+  "commitment_sha256": "5f2128acc77a9f09156d7e41be5eced89252359ed6f850ee99fc1de2bf2f44be",
+  "candidate_must_predict": "For each masked position, the numeric value (and, where a reading implies it, the commodity logogram / accounting role the number attaches to). A metrological or accounting model of the tablets must reconstruct the masked quantities from the surrounding word context. Scored as exact/within-tolerance value recovery vs a position-and-margin-total baseline; a reading that constrains totals (KU-RO/KI-RO sum semantics) predicts these non-trivially.",
+  "status": "NO_CANDIDATE_TO_SEAL",
+  "blocker": "No candidate survived the end-to-end multi-family null. WP6 agnostic search and candidate round 1 were both AT_END_TO_END_NULL under the multi-family null (order-shuffle + wrong-language opaque LB + random-prior). West Semitic 'cleared' at 0.030 but the random-prior control also cleared -> artifact, not signal. There is no surviving candidate to score against this seal. The manifest is committed and preserved so any FUTURE candidate is scored on a partition it could not have seen.",
+  "registered_before_any_candidate": true,
+  "non_circular": "The split is defined by public metadata (id / site / published formula list / numeral positions / a forthcoming publication), never by any candidate's fit. The held-out payload is committed by commitment_sha256 so it cannot be altered post hoc."
+}

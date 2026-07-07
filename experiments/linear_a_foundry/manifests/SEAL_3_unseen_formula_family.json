@@ -1,0 +1,16 @@
+{
+  "seal_id": "SEAL_3",
+  "name": "unseen_formula_family",
+  "type": "held_out_libation_formula_carriers",
+  "split_criterion": "Every inscription carrying a canonical Linear A libation-formula word (whole word or head match) held out whole. Fixed published formula list (Duhoux/Davis/Consani): JA-SA-SA-RA-ME, JA-SA-SA-RA, A-SA-SA-RA-ME, A-TA-I, JA-DI-KI-TU, U-NA-KA-NA-SI, I-PI-NA-MA, SI-RU-TE, TA-NA-I, I-NA-JA-PA-QA.",
+  "seed": 20260708,
+  "n_held_out_inscriptions": 25,
+  "n_held_out_multisign_words": 94,
+  "held_out_ids_file": "data/seal_3_heldout.json",
+  "commitment_sha256": "3f4d2badd7a702ce08740f2d2d6359222f1149e3e6eec5bac54f698b35adc69d",
+  "candidate_must_predict": "The recurrent libation-formula words (JA-SA-SA-RA-ME, A-TA-I-*301-WA-JA, U-NA-KA-NA-SI, I-PI-NA-MA, SI-RU-TE, ...) form a religious register absent from the Haghia-Triada administrative corpus. A candidate must give a coherent, held-out reading of these formula words as a unit (a plausible libation/dedication semantics), not an admin-fit. This is the hardest genre-transfer seal.",
+  "status": "NO_CANDIDATE_TO_SEAL",
+  "blocker": "No candidate survived the end-to-end multi-family null. WP6 agnostic search and candidate round 1 were both AT_END_TO_END_NULL under the multi-family null (order-shuffle + wrong-language opaque LB + random-prior). West Semitic 'cleared' at 0.030 but the random-prior control also cleared -> artifact, not signal. There is no surviving candidate to score against this seal. The manifest is committed and preserved so any FUTURE candidate is scored on a partition it could not have seen.",
+  "registered_before_any_candidate": true,
+  "non_circular": "The split is defined by public metadata (id / site / published formula list / numeral positions / a forthcoming publication), never by any candidate's fit. The held-out payload is committed by commitment_sha256 so it cannot be altered post hoc."
+}
