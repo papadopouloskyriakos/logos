@@ -1,0 +1,37 @@
+{
+ "n_inscriptions": 1341,
+ "total_sign_tokens": 5792,
+ "distinct_signs": 259,
+ "mean_signs_per_inscription": 4.32,
+ "median_signs_per_inscription": 1,
+ "single_sign_inscriptions": 723,
+ "single_sign_fraction": 0.539,
+ "ge4_sign_inscriptions": 388,
+ "dominant_site": "Haghia Triada",
+ "dominant_site_count": 845,
+ "dominant_site_fraction": 0.63,
+ "n_sites": 52,
+ "distinct_multisign_words": 984,
+ "hapax_multisign_words": 825,
+ "hapax_word_fraction": 0.838,
+ "top5_sites": {
+  "Haghia Triada": 845,
+  "Khania": 159,
+  "Knossos": 51,
+  "Phaistos": 48,
+  "Zakros": 46
+ },
+ "effective_independent_evidence_upper_bound": 212,
+ "reading_parameters": 259,
+ "info_budget_certifies_L6_reading": {
+  "required": true,
+  "certified": false,
+  "underdetermined": true,
+  "reasons": [
+   "UNDERDETERMINED: parameter_count 259 > effective_independent_evidence 212",
+   "UNDERPOWERED: estimated_power 0.0 < floor 0.5"
+  ]
+ },
+ "underdetermined_params_gt_evidence": true,
+ "note": "effective_independent_evidence is a GENEROUS upper bound (>=4-sign, non-dominant-site); the true value is far lower once the 83.8% hapax non-recurrence and single-lineage label circularity are applied. A phonetic reading needs one value per distinct sign; the corpus supplies fewer independent multi-sign non-dominant-site constraints than that."
+}

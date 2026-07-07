@@ -57,5 +57,16 @@ reports "calibrated absence."
   the REAL confirmatory attempt (egyptian-calibration, Edel&Görg collated) already returned `TRIVIAL_RECOVERY`
   (one-training-record correspondence). Net: **design-viable but scarcity-limited**; unlock = more independent
   ≥4-slot anchors. A truth-layer design signal (≤0.75), not a reading.
-- **T3 — completeness critic** (before concluding): adversarial pass to REFUTE "no un-tried powered avenue
-  exists." If it finds one → pursue it; else → Phase C synthesis.
+- **T3 — completeness critic COMPLETE** (`wf_fd653da2`, 3 diverse-lens agents). All converge, no genuine
+  avenue: methods `ALREADY_TESTED` (admin arithmetic powered+non-circular but re-derives Bennett; libation
+  underpowered), data `NO_GENUINE_AVENUE` (every source exploited/redundant; SigLA bbox redundant with
+  editorial gold), assumptions `UNDERPOWERED` (the one non-circular L3 target lacks held-out mass; corpus
+  hapax-dominated, median 1 sign/insc, 63% one site). Ceiling adversarially confirmed.
+- **T4 — Phase C: identifiability synthesis** (`IDENTIFIABILITY_SYNTHESIS.md` + generated
+  `identifiability_metrics.json`). Quantified: **259 sign-value parameters > 212 independent constraints
+  (generous upper bound) ⇒ UNDERDETERMINED**; info-budget gate refuses an L6 reading. The only held-out
+  positives (segmentation L2, KU-RO arithmetic L3) re-derive known structure. **Verdict: `UNDERDETERMINED` —
+  the present corpus cannot support a non-circular held-out reading; not "uncrackable" but underdetermined,
+  with precise unlock conditions (more multi-sign inscriptions / independent ≥4-slot anchors / a bilingual).**
+- **T5 — positive control**: run the KU-RO arithmetic-reconciliation gate — the one powered non-circular LA
+  test — as a positive control proving the harness FIRES on a real LA structural fact (not just nulls).
