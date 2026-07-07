@@ -1,0 +1,73 @@
+{
+ "plan": {
+  "sample_size_target": 160,
+  "sample_size_floor": 120,
+  "random_seed": 20260708,
+  "replacement_policy": "without replacement (distinct form-types)",
+  "site_quota": {
+   "KN": 80,
+   "nonKN": 80
+  },
+  "recurrent_hapax_balance": {
+   "hapax": 80,
+   "recurrent": 80
+  },
+  "series_min_distinct": 8,
+  "support_min_distinct": 3,
+  "confidence_strata": "structural context-type proxy (before_logogram / before_numeral / standalone / other) — coverage device ONLY, never a label",
+  "role_coverage_note": "stratify by context-type so candidate HUMAN/PLACE/COMMODITY/OPERATOR/QUALIFIER forms are all present; roles are NOT assigned here (human task)",
+  "cluster_exclusion_policy": "exclude auto-pilot form-families + all forms occurring in auto-pilot documents + stem-siblings (same first 2 signs) + formula-cluster siblings; also reserve nothing yet for sealed holdout (holdout not chosen)",
+  "shortfall_policy": "if <160 eligible independent items, take the max defensible >=120; if <120 -> human_expert_package = NO_POWER (INSUFFICIENT_INDEPENDENT_SAMPLE)"
+ },
+ "status": "OK",
+ "n_items": 160,
+ "eligible_independent_forms": 2454,
+ "strata": {
+  "KN/hapax": 40,
+  "KN/recurrent": 40,
+  "nonKN/hapax": 40,
+  "nonKN/recurrent": 40
+ },
+ "packet_fields": [
+  "anon_item_id",
+  "document_identifier",
+  "linear_b_reading",
+  "entry_context",
+  "document_series",
+  "site",
+  "findspot",
+  "support_type",
+  "scribe_hand",
+  "source_edition_citation",
+  "image_reference"
+ ],
+ "template_fields": [
+  "anon_item_id",
+  "coarse_role",
+  "fine_role",
+  "entry_relation",
+  "gold_tier",
+  "confidence",
+  "source_citation",
+  "rationale",
+  "alternative_labels",
+  "uncertainty_type",
+  "dispute_flag",
+  "abstain_flag"
+ ],
+ "file_sha256_16": {
+  "pilot_sample.jsonl": "983f182878297199",
+  "pilot_sample.csv": "45be3989baeac8a4",
+  "annotator_A_packet.csv": "9aa6e72731099bdb",
+  "annotator_B_packet.csv": "7e00494ea498784a",
+  "annotator_A_response_template.csv": "1ff6a8bd10ee19e6",
+  "annotator_B_response_template.csv": "ac8d3da7e833bbcc"
+ },
+ "reading_bearing_gitignored": [
+  "pilot_sample.jsonl",
+  "pilot_sample.csv",
+  "annotator_A_packet.csv",
+  "annotator_B_packet.csv",
+  "anon_key.json"
+ ]
+}
