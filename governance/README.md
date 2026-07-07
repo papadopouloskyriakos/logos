@@ -12,6 +12,7 @@ under `governance/`").
 | [`IMPLEMENTATION_BACKLOG.md`](./IMPLEMENTATION_BACKLOG.md) | New machine-readable obligations v2.0 creates (search receipts, information-budget panel, effective_n, …). |
 | [`transfer_licences.json`](./transfer_licences.json) | Machine-readable Linear A transfer-licence state (Art. XV). |
 | [`assumption_register.json`](./assumption_register.json) | Load-bearing premises, verified + pinned (Art. XVIII). |
+| [`source_dependency_graph.json`](./source_dependency_graph.json) | Evidentiary lineages of every source (Art. XI); consumed by `scripts/source_dependency.py` — collapses dependent sources to one vote, feeds effective_n. |
 
 **Precedence:** this directory > `CLAUDE.md`. `CLAUDE.md` carries a condensed pointer for daily work.
 
