@@ -36,3 +36,18 @@ reports "calibrated absence."
 
 - **T0** — campaign opened; ground truth established (branches are largely CLOSED negatives, not Stage-1 as the
   stale STATUS files claimed). Launching Phase A audit.
+- **T1 — Phase A audit COMPLETE** (`wf_dd7be4bb`, 4 agents). Every avenue converges on one corpus-identifiability
+  ceiling:
+  - **Cross-script value recovery:** TWO preregistered/Zenodo-timestamped one-shots, BOTH fail-closed negatives
+    (Phase 1 `REFUTE_LOTO_FRAGILE` DOI 21168887; Phase 2 `REFUTE` DOI 21173639). Distributional channel null
+    4×; toponym pins irreducibly one-identification-deep. Frozen — no rerun.
+  - **Cypriot triangulation** (the lead opening): `REFUTED_ALREADY` — circular (Cypriot labels = LB answer key),
+    2 anchors both from the same {pa-i-to, se-to-i-ja} pair, Cypriot-eleven block already REFUTE (p=0.148).
+  - **Drift continuity:** `NO_POWER` **fundamental** — non-circular sound-change model needs info the LA↔LB
+    corpus lacks; permissive search FP≈99.6%. Ritual: `NO_POWER`, no in-domain exemplar (fundamental).
+  - **External Egyptian anchor:** INCOMPLETE/underpowered (3–4 anchors, held-out FP≈0.25 vs recovery≈0.40) +
+    confirmatory SOURCE_BLOCKED (Edel&Görg not collated). ONE unexecuted step: fit Kilani-2019 sound model,
+    re-run power envelope `frozen=True`. Personal names read as GREEK (self-refuted); admin = Akkadian (nil).
+  - **Verdict:** the ceiling is liftable only from outside the corpus, and the only outside lever (Egyptian)
+    is underpowered/source-blocked. → Phase B: run the one executable step (Egyptian power pass); then Phase C
+    identifiability synthesis.
