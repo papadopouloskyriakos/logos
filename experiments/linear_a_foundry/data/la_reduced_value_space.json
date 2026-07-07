@@ -1,0 +1,375 @@
+{
+ "method": "LB-word-trained C/V classifier (CV AUC 0.835) applied to GORILA-word-segmented LA; NON-CIRCULAR (word-position features; values not inputs)",
+ "note": "RELATIVE structure = candidate reduced value space, NOT an absolute reading. Vowel-like class narrows the sign-value equivalence classes for each sign.",
+ "n_signs": 60,
+ "n_vowel_like": 0,
+ "known_vowels_ranked": {
+  "A": 1,
+  "I": 5,
+  "U": 15,
+  "O": 24,
+  "E": 36
+ },
+ "partition": [
+  {
+   "sign": "A",
+   "vowel_prob": 0.182,
+   "class": "consonant-like",
+   "is_known_vowel": true
+  },
+  {
+   "sign": "KA",
+   "vowel_prob": 0.12,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "KU",
+   "vowel_prob": 0.095,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "SI",
+   "vowel_prob": 0.092,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "I",
+   "vowel_prob": 0.072,
+   "class": "consonant-like",
+   "is_known_vowel": true
+  },
+  {
+   "sign": "DA",
+   "vowel_prob": 0.042,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "RO",
+   "vowel_prob": 0.028,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "JA",
+   "vowel_prob": 0.028,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "TE",
+   "vowel_prob": 0.026,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "KI",
+   "vowel_prob": 0.026,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "NI",
+   "vowel_prob": 0.023,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "PA",
+   "vowel_prob": 0.022,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "SA",
+   "vowel_prob": 0.02,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "MA",
+   "vowel_prob": 0.02,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "U",
+   "vowel_prob": 0.019,
+   "class": "consonant-like",
+   "is_known_vowel": true
+  },
+  {
+   "sign": "TA",
+   "vowel_prob": 0.018,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "DU",
+   "vowel_prob": 0.015,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "QA",
+   "vowel_prob": 0.014,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "DI",
+   "vowel_prob": 0.014,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "TU",
+   "vowel_prob": 0.011,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "TI",
+   "vowel_prob": 0.01,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "RE",
+   "vowel_prob": 0.01,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "NA",
+   "vowel_prob": 0.01,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "O",
+   "vowel_prob": 0.01,
+   "class": "consonant-like",
+   "is_known_vowel": true
+  },
+  {
+   "sign": "QE",
+   "vowel_prob": 0.009,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "VIR+[?]",
+   "vowel_prob": 0.009,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "RU",
+   "vowel_prob": 0.008,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "RA",
+   "vowel_prob": 0.008,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "GRA",
+   "vowel_prob": 0.007,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "PI",
+   "vowel_prob": 0.007,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "SE",
+   "vowel_prob": 0.006,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "RI",
+   "vowel_prob": 0.006,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "MI",
+   "vowel_prob": 0.006,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "VIN",
+   "vowel_prob": 0.005,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "SU",
+   "vowel_prob": 0.004,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "E",
+   "vowel_prob": 0.004,
+   "class": "consonant-like",
+   "is_known_vowel": true
+  },
+  {
+   "sign": "OLE",
+   "vowel_prob": 0.004,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "NU",
+   "vowel_prob": 0.004,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "ZU",
+   "vowel_prob": 0.003,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "PA\u2083",
+   "vowel_prob": 0.003,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "PU",
+   "vowel_prob": 0.003,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "WA",
+   "vowel_prob": 0.003,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "DE",
+   "vowel_prob": 0.003,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "WI",
+   "vowel_prob": 0.002,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "ZE",
+   "vowel_prob": 0.002,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "ME",
+   "vowel_prob": 0.002,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "CYP",
+   "vowel_prob": 0.002,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "NE",
+   "vowel_prob": 0.002,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "*21F",
+   "vowel_prob": 0.002,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "JU",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "OLE+U",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "OLE+KI",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "RA\u2082",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "OLIV",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "CYP+D",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "GRA+PA",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "ZA",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "*301",
+   "vowel_prob": 0.001,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "VS",
+   "vowel_prob": 0.0,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  },
+  {
+   "sign": "*118",
+   "vowel_prob": 0.0,
+   "class": "consonant-like",
+   "is_known_vowel": false
+  }
+ ]
+}
