@@ -1,0 +1,64 @@
+{
+ "non_trivial_REFERENCE_GOLD_A": 66,
+ "by_role": {
+  "PLACE": 43,
+  "HUMAN_OR_INSTITUTION": 23
+ },
+ "load_bearing_present": [
+  "HUMAN_OR_INSTITUTION",
+  "PLACE"
+ ],
+ "load_bearing_absent": [
+  "OPERATOR_OR_RELATION",
+  "QUALIFIER"
+ ],
+ "independent_lexical_families": 66,
+ "independent_morphological_families": 63,
+ "KN": 38,
+ "nonKN": 46,
+ "by_series": {
+  "A": 37,
+  "C": 24,
+  "E": 17,
+  "J": 18,
+  "M": 17,
+  "F": 14,
+  "G": 5,
+  "L": 13,
+  "N": 10,
+  "O": 9,
+  "V": 18,
+  "Q": 4,
+  "U": 16,
+  "X": 26,
+  "T": 5,
+  "D": 19,
+  "W": 8,
+  "B": 2,
+  "P": 5,
+  "Z": 1,
+  "S": 4
+ },
+ "proposed_sealed_eval_size(grouped)": 19,
+ "majority_class_baseline": 0.652,
+ "structural_signal_precision": 0.026,
+ "structural_signal_coverage": 0.576,
+ "est_O2_D8_model_accuracy": 0.291,
+ "min_detectable_accuracy": 0.92,
+ "power_at_est_O2_D8": 0.0,
+ "classes_below_power": [
+  "OPERATOR_OR_RELATION",
+  "QUALIFIER"
+ ],
+ "sites_below_power": [
+  "MY",
+  "TI",
+  "KH"
+ ],
+ "weak_supervision": "coverage 0.71 / conflict 0.044 (index-LF precision on gold is circular: LFs share source with gold)",
+ "verdict": "NO_POWER_BEFORE_MODELING",
+ "verdict_reasons": [
+  "load-bearing classes structurally ABSENT from REFERENCE_GOLD_A: ['OPERATOR_OR_RELATION', 'QUALIFIER']",
+  "O2+D8 cannot achieve useful power (est 0.291 < min detectable 0.92 at n=19; power 0.0)"
+ ]
+}
