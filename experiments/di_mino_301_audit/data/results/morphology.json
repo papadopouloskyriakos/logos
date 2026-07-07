@@ -1,0 +1,581 @@
+{
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "generator": "scripts/C_morphology_audit.py",
+  "n_la_words_total": 3147,
+  "n_301_records": 36,
+  "n_invocation_slot_records": 17,
+  "C1_productivity": {
+    "MORPH_A": {
+      "claim": "A = 1cs person prefix",
+      "prefix_all_LA": {
+        "n_forms": 115,
+        "n_inscriptions": 118,
+        "n_sites": 21,
+        "n_distinct_stems": 115,
+        "n_nontarget_forms": 114,
+        "n_nontarget_stems": 114,
+        "example_stems": [
+          "*301",
+          "*301-KI-TA-A",
+          "*325-ZA",
+          "AROM-TE",
+          "DA",
+          "DA-*21F-RI",
+          "DA-KI-SI-KA",
+          "DA-RA",
+          "DA-RO",
+          "DE",
+          "DI-KI-TE",
+          "DI-KI-TE-TE"
+        ]
+      },
+      "note": "structural productivity of word-initial A- across the whole LA lexicon"
+    },
+    "MORPH_TA": {
+      "claim": "TA = tG reflexive-causative stem morpheme (slot 2 after 1cs A-)",
+      "prefix_A_TA_all_LA": {
+        "n_forms": 9,
+        "n_inscriptions": 19,
+        "n_sites": 9,
+        "n_distinct_stems": 9,
+        "n_nontarget_forms": 8,
+        "n_nontarget_stems": 8,
+        "example_stems": [
+          "*350",
+          "DE",
+          "I-*301-DE-KA",
+          "I-*301-WA-E",
+          "I-*301-WA-JA",
+          "NA",
+          "NA-JE",
+          "NA-TE",
+          "RE"
+        ]
+      },
+      "slot2_after_A_in_invocation": {
+        "TA": 3,
+        "NA": 1
+      }
+    },
+    "MORPH_I": {
+      "claim": "I = invariant stem vowel across 14 attestations",
+      "prefix_A_TA_I_all_LA": {
+        "n_forms": 3,
+        "n_inscriptions": 13,
+        "n_sites": 6,
+        "n_distinct_stems": 3,
+        "n_nontarget_forms": 2,
+        "n_nontarget_stems": 2,
+        "example_stems": [
+          "*301-DE-KA",
+          "*301-WA-E",
+          "*301-WA-JA"
+        ]
+      },
+      "subseq_I_301_all_LA": {
+        "n_forms": 6,
+        "n_inscriptions": 16,
+        "n_sites": 8,
+        "n_nontarget_forms": 5,
+        "nontarget_examples": [
+          "A-TA-I-*301-DE-KA",
+          "A-TA-I-*301-WA-E",
+          "JA-TA-I-*301-U-JA",
+          "TA-NA-I-*301-TI",
+          "TA-NA-I-*301-U-TI-NU"
+        ]
+      },
+      "sign_before_301_distinct_forms": {
+        "I": 6,
+        "TI": 1
+      }
+    },
+    "MORPH_ROOT": {
+      "claim": "*301-WA-JA = triconsonantal root C1C2C3 (n-w-y)",
+      "subseq_301_WA_JA_all_LA": {
+        "n_forms": 2,
+        "n_inscriptions": 12,
+        "n_sites": 5,
+        "n_nontarget_forms": 1,
+        "nontarget_examples": [
+          "A-NA-TI-*301-WA-JA"
+        ]
+      },
+      "subseq_301_WA_all_LA": {
+        "n_forms": 4,
+        "n_inscriptions": 14,
+        "n_sites": 5,
+        "n_nontarget_forms": 3,
+        "nontarget_examples": [
+          "*301-WA",
+          "A-NA-TI-*301-WA-JA",
+          "A-TA-I-*301-WA-E"
+        ]
+      },
+      "sign_after_301_distinct_forms": {
+        "WA": 3,
+        "U": 2,
+        "TI": 1,
+        "DE": 1
+      }
+    },
+    "S_morph_heldout_invocation": {
+      "score": 0.2777777777777778,
+      "null_mean": 0.012666666666666666,
+      "z": 13.098531284183554,
+      "has_power": true,
+      "is_significant": true,
+      "reason": "powered: L affix inventory recurs productively across 6 independent inscriptions at exact rank p=0.0020 ± 0.0020 ≤ alpha=0.0228 (z=13.10) above the within-form null.",
+      "n_inscriptions": 6,
+      "n_affixes": 9
+    }
+  },
+  "C2_paradigm": {
+    "template_derived_from": "A-TA-I-*301-WA-JA (target)",
+    "template": "[1cs A-][tG TA-][stemV I-][root *301-WA-JA]",
+    "n_nontarget_distinct_forms": 6,
+    "heldout_forms": [
+      {
+        "form": "A-TA-I-*301-WA-JA",
+        "is_target": true,
+        "n_signs": 6,
+        "pred_1cs_A_prefix": true,
+        "pred_tG_TA_slot2": true,
+        "pred_stemvowel_I": true,
+        "pred_root_301WAJA": true,
+        "A_TA_I_intact": true
+      },
+      {
+        "form": "TA-NA-I-*301-U-TI-NU",
+        "is_target": false,
+        "n_signs": 7,
+        "pred_1cs_A_prefix": false,
+        "pred_tG_TA_slot2": false,
+        "pred_stemvowel_I": true,
+        "pred_root_301WAJA": false,
+        "A_TA_I_intact": false
+      },
+      {
+        "form": "A-NA-TI-*301-WA-JA",
+        "is_target": false,
+        "n_signs": 6,
+        "pred_1cs_A_prefix": true,
+        "pred_tG_TA_slot2": false,
+        "pred_stemvowel_I": false,
+        "pred_root_301WAJA": true,
+        "A_TA_I_intact": false
+      },
+      {
+        "form": "A-TA-I-*301-WA-E",
+        "is_target": false,
+        "n_signs": 6,
+        "pred_1cs_A_prefix": true,
+        "pred_tG_TA_slot2": true,
+        "pred_stemvowel_I": true,
+        "pred_root_301WAJA": false,
+        "A_TA_I_intact": true
+      },
+      {
+        "form": "TA-NA-I-*301-TI",
+        "is_target": false,
+        "n_signs": 5,
+        "pred_1cs_A_prefix": false,
+        "pred_tG_TA_slot2": false,
+        "pred_stemvowel_I": true,
+        "pred_root_301WAJA": false,
+        "A_TA_I_intact": false
+      },
+      {
+        "form": "A-TA-I-*301-DE-KA",
+        "is_target": false,
+        "n_signs": 6,
+        "pred_1cs_A_prefix": true,
+        "pred_tG_TA_slot2": true,
+        "pred_stemvowel_I": true,
+        "pred_root_301WAJA": false,
+        "A_TA_I_intact": true
+      },
+      {
+        "form": "JA-TA-I-*301-U-JA",
+        "is_target": false,
+        "n_signs": 6,
+        "pred_1cs_A_prefix": false,
+        "pred_tG_TA_slot2": true,
+        "pred_stemvowel_I": true,
+        "pred_root_301WAJA": false,
+        "A_TA_I_intact": false
+      }
+    ],
+    "fraction_nontarget_with": {
+      "1cs_A_prefix": 0.5,
+      "tG_TA_slot2": 0.5,
+      "stemvowel_I": 0.8333333333333334,
+      "root_301WAJA": 0.16666666666666666,
+      "A_TA_I_intact": 0.3333333333333333
+    }
+  },
+  "C3_head_to_head": {
+    "metric_invariant_unit": "fraction of non-target held-out invocation forms containing the model's claimed invariant lexical unit (leave-target-out, sign-level, non-circular)",
+    "models": {
+      "DI_MINO": {
+        "invariant_unit": "*301-WA-JA",
+        "desc": "root C1C2C3 = *301-WA-JA (n-w-y)",
+        "n_nontarget_forms": 6,
+        "n_contain_unit": 1,
+        "heldout_invariance": 0.16666666666666666,
+        "forms_with_unit": [
+          "A-NA-TI-*301-WA-JA"
+        ]
+      },
+      "DAVIS": {
+        "invariant_unit": "I-*301",
+        "desc": "I-*301 recurring stem, inflected both ends",
+        "n_nontarget_forms": 6,
+        "n_contain_unit": 5,
+        "heldout_invariance": 0.8333333333333334,
+        "forms_with_unit": [
+          "A-TA-I-*301-DE-KA",
+          "A-TA-I-*301-WA-E",
+          "JA-TA-I-*301-U-JA",
+          "TA-NA-I-*301-TI",
+          "TA-NA-I-*301-U-TI-NU"
+        ]
+      },
+      "THOMAS": {
+        "invariant_unit": "TA-I-*301",
+        "desc": "stem core, -JA/-E inflectional ending",
+        "n_nontarget_forms": 6,
+        "n_contain_unit": 3,
+        "heldout_invariance": 0.5,
+        "forms_with_unit": [
+          "A-TA-I-*301-DE-KA",
+          "A-TA-I-*301-WA-E",
+          "JA-TA-I-*301-U-JA"
+        ],
+        "ending_JA_or_E_fraction": 0.5,
+        "forms_ending_JA_or_E": [
+          "A-NA-TI-*301-WA-JA",
+          "A-TA-I-*301-WA-E",
+          "JA-TA-I-*301-U-JA"
+        ]
+      },
+      "NEUTRAL_AGGLU": {
+        "invariant_unit": "I-*301",
+        "desc": "medial stem, variable edge affixes",
+        "n_nontarget_forms": 6,
+        "n_contain_unit": 5,
+        "heldout_invariance": 0.8333333333333334,
+        "forms_with_unit": [
+          "A-TA-I-*301-DE-KA",
+          "A-TA-I-*301-WA-E",
+          "JA-TA-I-*301-U-JA",
+          "TA-NA-I-*301-TI",
+          "TA-NA-I-*301-U-TI-NU"
+        ]
+      },
+      "SEMITIC_WEAKROOT": {
+        "invariant_unit": "*301-WA-JA",
+        "desc": "weak-medial triconsonantal root (=Di Mino at sign level)",
+        "n_nontarget_forms": 6,
+        "n_contain_unit": 1,
+        "heldout_invariance": 0.16666666666666666,
+        "forms_with_unit": [
+          "A-NA-TI-*301-WA-JA"
+        ]
+      }
+    },
+    "markov_baselines": {
+      "train_note": "trained on all LA words except invocation-slot forms; tested next-sign top-1 on held-out non-target invocation forms",
+      "n_test_forms": 6,
+      "markov1": {
+        "order": 1,
+        "n_predictions": 36,
+        "top1_accuracy": 0.1111111111111111
+      },
+      "markov2": {
+        "order": 2,
+        "n_predictions": 36,
+        "top1_accuracy": 0.08333333333333333
+      }
+    }
+  },
+  "C4_controls": {
+    "LA_invocation": {
+      "corpus": "LA_invocation",
+      "n_forms": 7,
+      "n_groups": 1,
+      "score": 1.0,
+      "null_mean": 0.08277777777777777,
+      "null_std": 0.10245802299433336,
+      "z": 8.952175685382404,
+      "p_rank": 0.0033222591362126247,
+      "n_affixes": 6,
+      "has_power": false,
+      "is_significant": false,
+      "reason": "too few independent inscriptions (m=1 < 3): cross-inscription consistency cannot be established (corpus too sparse).",
+      "affix_inventory_sample": [
+        "prefix:TA",
+        "prefix:TA-NA",
+        "prefix:A",
+        "prefix:A-TA",
+        "suffix:WA-JA",
+        "suffix:JA"
+      ]
+    },
+    "LA_all_words": {
+      "corpus": "LA_all_words",
+      "n_forms": 3147,
+      "n_groups": 394,
+      "score": 0.20431472081218274,
+      "null_mean": 0.12008742244782854,
+      "null_std": 0.004990543739928868,
+      "z": 16.877379049994005,
+      "p_rank": 0.0033222591362126247,
+      "n_affixes": 6,
+      "has_power": true,
+      "is_significant": true,
+      "reason": "powered: L affix inventory recurs productively across 394 independent inscriptions at exact rank p=0.0033 ± 0.0033 ≤ alpha=0.0228 (z=16.88) above the within-form null.",
+      "affix_inventory_sample": [
+        "prefix:I",
+        "prefix:A",
+        "prefix:JA",
+        "prefix:KU",
+        "suffix:JA",
+        "suffix:RO"
+      ]
+    },
+    "opaque_LinearB": {
+      "corpus": "opaque_LinearB",
+      "n_forms": 2500,
+      "n_groups": 313,
+      "score": 0.2737562756732086,
+      "null_mean": 0.17913616309143468,
+      "null_std": 0.0025911459336638225,
+      "z": 36.51670535128185,
+      "p_rank": 0.0033222591362126247,
+      "n_affixes": 35,
+      "has_power": true,
+      "is_significant": true,
+      "reason": "powered: L affix inventory recurs productively across 313 independent inscriptions at exact rank p=0.0033 ± 0.0033 ≤ alpha=0.0228 (z=36.52) above the within-form null.",
+      "affix_inventory_sample": [
+        "prefix:I",
+        "prefix:A",
+        "prefix:E",
+        "prefix:KA",
+        "prefix:KE",
+        "prefix:KU",
+        "prefix:DA",
+        "prefix:TE",
+        "prefix:PA",
+        "prefix:O",
+        "prefix:O-NA",
+        "prefix:ME",
+        "prefix:PO",
+        "prefix:KO",
+        "prefix:TO",
+        "prefix:PE",
+        "prefix:DO",
+        "suffix:TA",
+        "suffix:NA",
+        "suffix:U",
+        "suffix:WA",
+        "suffix:JA",
+        "suffix:DE",
+        "suffix:QE",
+        "suffix:RO",
+        "suffix:RA",
+        "suffix:TE",
+        "suffix:O",
+        "suffix:TO",
+        "suffix:WO",
+        "suffix:NO",
+        "suffix:MO",
+        "suffix:JO",
+        "suffix:WE",
+        "suffix:SO"
+      ]
+    },
+    "real_Semitic_Ugaritic": {
+      "corpus": "real_Semitic_Ugaritic",
+      "n_forms": 2214,
+      "n_groups": 277,
+      "score": 0.389613996112191,
+      "null_mean": 0.3408173655466074,
+      "null_std": 0.0032038245540150006,
+      "z": 15.230743676157966,
+      "p_rank": 0.0033222591362126247,
+      "n_affixes": 26,
+      "has_power": true,
+      "is_significant": true,
+      "reason": "powered: L affix inventory recurs productively across 277 independent inscriptions at exact rank p=0.0033 ± 0.0033 ≤ alpha=0.0228 (z=15.23) above the within-form null.",
+      "affix_inventory_sample": [
+        "prefix:a",
+        "prefix:b",
+        "prefix:k",
+        "prefix:l",
+        "prefix:w",
+        "prefix:w-y",
+        "prefix:<",
+        "prefix:m",
+        "prefix:n",
+        "prefix:y",
+        "prefix:t",
+        "prefix:g",
+        "prefix:$",
+        "prefix:H",
+        "suffix:b",
+        "suffix:k",
+        "suffix:l",
+        "suffix:r",
+        "suffix:r-m",
+        "suffix:d",
+        "suffix:h",
+        "suffix:m",
+        "suffix:n",
+        "suffix:y",
+        "suffix:t",
+        "suffix:$"
+      ]
+    },
+    "synthetic_agglutinative": {
+      "corpus": "synthetic_agglutinative",
+      "n_forms": 240,
+      "n_groups": 30,
+      "score": 0.6666666666666667,
+      "null_mean": 0.38861111111111113,
+      "null_std": 0.025037906354448764,
+      "z": 11.10538363788354,
+      "p_rank": 0.0033222591362126247,
+      "n_affixes": 8,
+      "has_power": true,
+      "is_significant": true,
+      "reason": "powered: L affix inventory recurs productively across 30 independent inscriptions at exact rank p=0.0033 ± 0.0033 ≤ alpha=0.0228 (z=11.11) above the within-form null.",
+      "affix_inventory_sample": [
+        "prefix:aP",
+        "prefix:uP",
+        "prefix:iP",
+        "suffix:Sa",
+        "suffix:Su",
+        "suffix:Si",
+        "suffix:R7-Su",
+        "suffix:R6-Su"
+      ]
+    },
+    "synthetic_semitic_root": {
+      "corpus": "synthetic_semitic_root",
+      "n_forms": 240,
+      "n_groups": 30,
+      "score": 0.5096491228070176,
+      "null_mean": 0.23533625730994145,
+      "null_std": 0.010889568836203949,
+      "z": 25.190424857326146,
+      "p_rank": 0.0033222591362126247,
+      "n_affixes": 38,
+      "has_power": true,
+      "is_significant": true,
+      "reason": "powered: L affix inventory recurs productively across 30 independent inscriptions at exact rank p=0.0033 ± 0.0033 ≤ alpha=0.0228 (z=25.19) above the within-form null.",
+      "affix_inventory_sample": [
+        "prefix:l",
+        "prefix:l-C0",
+        "prefix:l-C2",
+        "prefix:l-C1",
+        "prefix:w",
+        "prefix:w-C0",
+        "prefix:w-C2",
+        "prefix:w-C1",
+        "prefix:C0",
+        "prefix:C0-a",
+        "prefix:C0-i",
+        "prefix:C2",
+        "prefix:C2-a",
+        "prefix:C1",
+        "prefix:C1-a",
+        "prefix:C1-i",
+        "prefix:ma",
+        "prefix:ma-C0",
+        "prefix:ma-C1",
+        "prefix:ta",
+        "prefix:ta-C0",
+        "prefix:ta-C2",
+        "prefix:ta-C1",
+        "prefix:ya",
+        "prefix:ya-C0",
+        "prefix:ya-C1",
+        "suffix:a-C0",
+        "suffix:a-C2",
+        "suffix:a-C1",
+        "suffix:a-C3",
+        "suffix:i-C0",
+        "suffix:i-C2",
+        "suffix:i-C1",
+        "suffix:i-C3",
+        "suffix:C0",
+        "suffix:C2",
+        "suffix:C1",
+        "suffix:C3"
+      ]
+    }
+  },
+  "C5_slot_verdicts": {
+    "MORPH_A": {
+      "structural_productive_prefix": true,
+      "n_distinct_stems": 115,
+      "n_sites": 21,
+      "prefix_alternates_with_JA_in_slot": true,
+      "verdict": "STRUCTURAL_ONLY",
+      "note": "A- is a productive word-initial element (L3); the 1cs-person reading is L7 and UNLICENSED; the A-~JA- alternation in the same slot contradicts a fixed 1cs marker."
+    },
+    "MORPH_TA": {
+      "slot2_after_A": {
+        "TA": 3,
+        "NA": 1
+      },
+      "slot2_invariant_TA": false,
+      "verdict": "NOT_SUPPORTED",
+      "note": "position-2 after A- is NOT invariantly TA (A-NA-TI breaks it); 'tG reflexive-causative stem' is an L7 grammatical function with no structural handle and no held-out test."
+    },
+    "MORPH_I": {
+      "sign_before_301": {
+        "I": 6,
+        "TI": 1
+      },
+      "I_fraction_distinct_forms": 0.8571428571428571,
+      "repetition_inflated": true,
+      "verdict": "PARTIAL_STRUCTURAL",
+      "note": "I recurs before *301 in most DISTINCT forms (Davis's I-*301 stem), but the '14 attestations' count is inflated by 11 identical copies of the target; A-NA-TI-*301 shows TI not I; 'stem vowel' is an L7 label, unlicensed."
+    },
+    "MORPH_ROOT": {
+      "nontarget_forms_with_301WAJA": 1,
+      "sign_after_301_distinct_forms": {
+        "WA": 3,
+        "U": 2,
+        "TI": 1,
+        "DE": 1
+      },
+      "sign_after_301_is_variable": true,
+      "verdict": "REFUTED",
+      "note": "*301-WA-JA does not recur as a unit beyond copies of the target (+A-NA-TI-*301-WA-JA); the sign AFTER *301 varies widely (WA/U/TI/DE/NA/SI/KI), so *301 forms no stable triconsonantal root; segmentation (report 04) cuts *301 AWAY from WA (b4)."
+    },
+    "PARADIGM": {
+      "fraction_nontarget_A_TA_I_intact": 0.3333333333333333,
+      "fraction_nontarget_root_301WAJA": 0.16666666666666666,
+      "verdict": "REJECT",
+      "note": "Di Mino's fixed template predicts held-out invocation forms poorly: the 'invariant root' *301-WA-JA is the MOST variable constituent; prefix (A/JA/TA-NA) and slot-2 vary; a Davis-style I-*301 stem predicts the paradigm far better."
+    },
+    "SEMITIC_MORPHOLOGY": {
+      "method_fires_on_Ugaritic": true,
+      "Ugaritic_z": 15.230743676157966,
+      "method_fires_on_synth_semitic": true,
+      "synth_semitic_z": 25.190424857326146,
+      "method_fires_on_synth_agglutinative": true,
+      "synth_agglu_z": 11.10538363788354,
+      "LA_invocation_has_power": false,
+      "LA_invocation_significant": false,
+      "LA_invocation_reason": "too few independent inscriptions (m=1 < 3): cross-inscription consistency cannot be established (corpus too sparse).",
+      "verdict": "NOT_SUPPORTED",
+      "note": "The concatenative-affix productivity gate detects real affixation in Ugaritic + both synthetic controls (power confirmed), but CANNOT distinguish 'Semitic' from 'agglutinative' from edge affixes alone, and the LA invocation set is a near-frozen formula lexeme (few distinct stems) — no productive Semitic (root-and-pattern) morphology is recoverable on held-out LA."
+    }
+  }
+}

@@ -1,0 +1,1715 @@
+{
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "task": "A \u2014 exhaustive *301 value audit (H1)",
+  "candidate_space": {
+    "n_cv_syllabary": 65,
+    "n_null": 1,
+    "onsets": [
+      "",
+      "d",
+      "j",
+      "k",
+      "m",
+      "n",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "w",
+      "z"
+    ],
+    "vowels": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u"
+    ],
+    "note": "full CV grid + NULL; subsumes every CV literature proposal; *301 AB anchor = '-' (no external anchor for ANY value)"
+  },
+  "semitic_lexicon": {
+    "source": "Ugaritic uga-heb.gold.cog consonant skeletons",
+    "n_forms": 1936,
+    "eps_NED": 0.34
+  },
+  "S_morph_primary": {
+    "score": 0.27380952380952384,
+    "deflated": 0.11481481481481484,
+    "z": 6.954931788530664,
+    "has_power": true,
+    "is_significant": true,
+    "reason": "powered: L affix inventory recurs productively across 42 independent inscriptions at exact rank p=0.0033 \u00b1 0.0033 \u2264 alpha=0.0228 (z=6.95) above the within-form null.",
+    "value_invariant_proof": {
+      "score_301_literal": 0.27380952380952384,
+      "score_301_relabelled": 0.27380952380952384,
+      "identical": true,
+      "interpretation": "S_morph is invariant under relabelling *301 -> any value; the PRIMARY held-out statistic CANNOT discriminate /na/ from any alternative. /na/'s rank on S_morph is a full tie (undetermined)."
+    }
+  },
+  "na_rank": {
+    "full_S_lex": {
+      "rank": 21,
+      "n_tied_at_rank": 30,
+      "n_candidates_scored": 65,
+      "score": 0.6666666666666666,
+      "margin_over_next_distinct": 0.16666666666666663,
+      "normalized_score": 0.6666666666666666,
+      "n_strictly_better": 20,
+      "top5": [
+        [
+          "ka",
+          0.8333333333333334
+        ],
+        [
+          "ke",
+          0.8333333333333334
+        ],
+        [
+          "ki",
+          0.8333333333333334
+        ],
+        [
+          "ko",
+          0.8333333333333334
+        ],
+        [
+          "ku",
+          0.8333333333333334
+        ]
+      ]
+    },
+    "full_S_phono": {
+      "rank": 1,
+      "n_tied_at_rank": 1,
+      "n_candidates_scored": 65,
+      "score": -2.001522094218086,
+      "margin_over_next_distinct": 0.095231492637458,
+      "normalized_score": 1.0,
+      "n_strictly_better": 0,
+      "top5": [
+        [
+          "na",
+          -2.001522094218086
+        ],
+        [
+          "ya",
+          -2.096753586855544
+        ],
+        [
+          "ka",
+          -2.0981939905230305
+        ],
+        [
+          "ra",
+          -2.1000692583984533
+        ],
+        [
+          "pa",
+          -2.112467103112703
+        ]
+      ]
+    },
+    "full_S_lex_whole_segmentation": {
+      "rank": 21,
+      "n_tied_at_rank": 15,
+      "n_candidates_scored": 65,
+      "score": 0.42857142857142855,
+      "margin_over_next_distinct": 0.14285714285714285,
+      "normalized_score": 0.5,
+      "n_strictly_better": 20,
+      "top5": [
+        [
+          "a",
+          0.7142857142857143
+        ],
+        [
+          "e",
+          0.7142857142857143
+        ],
+        [
+          "i",
+          0.7142857142857143
+        ],
+        [
+          "o",
+          0.7142857142857143
+        ],
+        [
+          "u",
+          0.7142857142857143
+        ]
+      ]
+    },
+    "leave_target_out_S_lex": {
+      "rank": 21,
+      "n_tied_at_rank": 30,
+      "n_candidates_scored": 65,
+      "score": 0.6666666666666666,
+      "margin_over_next_distinct": 0.16666666666666663,
+      "normalized_score": 0.6666666666666666,
+      "n_strictly_better": 20,
+      "top5": [
+        [
+          "ka",
+          0.8333333333333334
+        ],
+        [
+          "ke",
+          0.8333333333333334
+        ],
+        [
+          "ki",
+          0.8333333333333334
+        ],
+        [
+          "ko",
+          0.8333333333333334
+        ],
+        [
+          "ku",
+          0.8333333333333334
+        ]
+      ]
+    },
+    "leave_target_out_S_phono": {
+      "rank": 1,
+      "n_tied_at_rank": 1,
+      "n_candidates_scored": 65,
+      "score": -1.9896889887552436,
+      "margin_over_next_distinct": 0.08993138887628316,
+      "normalized_score": 1.0,
+      "n_strictly_better": 0,
+      "top5": [
+        [
+          "na",
+          -1.9896889887552436
+        ],
+        [
+          "ya",
+          -2.0796203776315267
+        ],
+        [
+          "ra",
+          -2.087412174393267
+        ],
+        [
+          "ka",
+          -2.089215216638323
+        ],
+        [
+          "pa",
+          -2.0987677770826387
+        ]
+      ]
+    }
+  },
+  "leave_site_out_S_lex": {
+    "(unprovenanced)": [
+      21,
+      20,
+      30
+    ],
+    "Apodoulou": [
+      6,
+      5,
+      40
+    ],
+    "Arkhalkhori": [
+      21,
+      20,
+      30
+    ],
+    "Haghia Triada": [
+      21,
+      20,
+      30
+    ],
+    "Iouktas": [
+      21,
+      20,
+      30
+    ],
+    "Khania": [
+      21,
+      20,
+      30
+    ],
+    "Knossos": [
+      21,
+      20,
+      30
+    ],
+    "Palaikastro": [
+      11,
+      10,
+      40
+    ],
+    "Psykhro": [
+      26,
+      25,
+      30
+    ],
+    "Skoteino Cave": [
+      21,
+      20,
+      30
+    ],
+    "Tiryns": [
+      21,
+      20,
+      30
+    ],
+    "Tylissos": [
+      21,
+      20,
+      30
+    ],
+    "Zakros": [
+      21,
+      20,
+      30
+    ]
+  },
+  "leave_form_out_S_lex": {
+    "*301-NA": [
+      21,
+      20,
+      30
+    ],
+    "*301-SI": [
+      21,
+      20,
+      30
+    ],
+    "*301-U-RA": [
+      21,
+      20,
+      30
+    ],
+    "*301-WA": [
+      21,
+      20,
+      30
+    ],
+    "A-*301": [
+      21,
+      20,
+      30
+    ],
+    "A-*301-KI-TA-A": [
+      21,
+      20,
+      30
+    ],
+    "A-NA-TI-*301-WA-JA": [
+      21,
+      20,
+      30
+    ],
+    "A-RE-NE-SI-DI-*301-PI-KE-PA-JA-TA-RI-SE-TE-RI-MU-A-JA-KU": [
+      21,
+      20,
+      30
+    ],
+    "A-TA-I-*301-DE-KA": [
+      21,
+      20,
+      30
+    ],
+    "A-TA-I-*301-WA-E": [
+      11,
+      10,
+      40
+    ],
+    "A-TA-I-*301-WA-JA": [
+      21,
+      20,
+      30
+    ],
+    "DA+*301": [
+      21,
+      20,
+      30
+    ],
+    "DA-DU-*301": [
+      21,
+      20,
+      30
+    ],
+    "E-*301": [
+      21,
+      20,
+      30
+    ],
+    "JA-TA-I-*301-U-JA": [
+      6,
+      5,
+      40
+    ],
+    "MI+*301": [
+      21,
+      20,
+      30
+    ],
+    "NA-TU-*301-NE": [
+      21,
+      20,
+      30
+    ],
+    "SA-*301-RI": [
+      21,
+      20,
+      30
+    ],
+    "TA-NA-I-*301-TI": [
+      26,
+      25,
+      30
+    ],
+    "TA-NA-I-*301-U-TI-NU": [
+      21,
+      20,
+      30
+    ],
+    "TE-*301": [
+      21,
+      20,
+      30
+    ],
+    "ZU-*301-SE-DE-*21F-*118": [
+      21,
+      20,
+      30
+    ]
+  },
+  "na_lexical_detail": {
+    "s_lex_na": 0.6666666666666666,
+    "na_roots_heldout": [
+      "ndk",
+      "nt",
+      "ntn",
+      "nw",
+      "nwy",
+      "ny"
+    ],
+    "null_mean_packard": 0.7516666666666666,
+    "deflated_na": 0.0,
+    "null_percentile_na": 49.0,
+    "n_candidates_ge_na_on_S_lex": 50,
+    "candidates_ge_na": [
+      "da",
+      "de",
+      "di",
+      "do",
+      "du",
+      "ka",
+      "ke",
+      "ki",
+      "ko",
+      "ku",
+      "ma",
+      "me",
+      "mi",
+      "mo",
+      "mu",
+      "na",
+      "ne",
+      "ni",
+      "no",
+      "nu",
+      "pa",
+      "pe",
+      "pi",
+      "po",
+      "pu",
+      "qa",
+      "qe",
+      "qi",
+      "qo",
+      "qu",
+      "ra",
+      "re",
+      "ri",
+      "ro",
+      "ru",
+      "ta",
+      "te",
+      "ti",
+      "to",
+      "tu",
+      "wa",
+      "we",
+      "wi",
+      "wo",
+      "wu",
+      "za",
+      "ze",
+      "zi",
+      "zo",
+      "zu"
+    ]
+  },
+  "N_eff": {
+    "n_candidate_values": 65,
+    "n_segmentations": 4,
+    "n_lexeme_compares_per_root": 1936,
+    "logged_value_x_segmentation_cells": 260,
+    "author_stated_simulations": 100000,
+    "E_max_null_over_logged_cells": 0.8333333333333335,
+    "E_max_null_over_author_sims": 0.8333333333333335,
+    "na_clears_Emax_logged": false,
+    "na_clears_Emax_author": false
+  },
+  "full_sweep_rows": [
+    {
+      "id": "a",
+      "onset": "",
+      "vowel": "a",
+      "root_consonant": "",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.6108015817176677,
+      "n_roots": 6,
+      "roots": [
+        "dk",
+        "t",
+        "tn",
+        "w",
+        "wy",
+        "y"
+      ]
+    },
+    {
+      "id": "e",
+      "onset": "",
+      "vowel": "e",
+      "root_consonant": "",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.8237377548606006,
+      "n_roots": 6,
+      "roots": [
+        "dk",
+        "t",
+        "tn",
+        "w",
+        "wy",
+        "y"
+      ]
+    },
+    {
+      "id": "i",
+      "onset": "",
+      "vowel": "i",
+      "root_consonant": "",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.5506957553601914,
+      "n_roots": 6,
+      "roots": [
+        "dk",
+        "t",
+        "tn",
+        "w",
+        "wy",
+        "y"
+      ]
+    },
+    {
+      "id": "o",
+      "onset": "",
+      "vowel": "o",
+      "root_consonant": "",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.913867693863781,
+      "n_roots": 6,
+      "roots": [
+        "dk",
+        "t",
+        "tn",
+        "w",
+        "wy",
+        "y"
+      ]
+    },
+    {
+      "id": "u",
+      "onset": "",
+      "vowel": "u",
+      "root_consonant": "",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.570243263512474,
+      "n_roots": 6,
+      "roots": [
+        "dk",
+        "t",
+        "tn",
+        "w",
+        "wy",
+        "y"
+      ]
+    },
+    {
+      "id": "da",
+      "onset": "d",
+      "vowel": "a",
+      "root_consonant": "d",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.1592764793428394,
+      "n_roots": 6,
+      "roots": [
+        "ddk",
+        "dt",
+        "dtn",
+        "dw",
+        "dwy",
+        "dy"
+      ]
+    },
+    {
+      "id": "de",
+      "onset": "d",
+      "vowel": "e",
+      "root_consonant": "d",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.3923774916250706,
+      "n_roots": 6,
+      "roots": [
+        "ddk",
+        "dt",
+        "dtn",
+        "dw",
+        "dwy",
+        "dy"
+      ]
+    },
+    {
+      "id": "di",
+      "onset": "d",
+      "vowel": "i",
+      "root_consonant": "d",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.118212227894935,
+      "n_roots": 6,
+      "roots": [
+        "ddk",
+        "dt",
+        "dtn",
+        "dw",
+        "dwy",
+        "dy"
+      ]
+    },
+    {
+      "id": "do",
+      "onset": "d",
+      "vowel": "o",
+      "root_consonant": "d",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.82119791832593,
+      "n_roots": 6,
+      "roots": [
+        "ddk",
+        "dt",
+        "dtn",
+        "dw",
+        "dwy",
+        "dy"
+      ]
+    },
+    {
+      "id": "du",
+      "onset": "d",
+      "vowel": "u",
+      "root_consonant": "d",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.2366669447586784,
+      "n_roots": 6,
+      "roots": [
+        "ddk",
+        "dt",
+        "dtn",
+        "dw",
+        "dwy",
+        "dy"
+      ]
+    },
+    {
+      "id": "ya",
+      "onset": "j",
+      "vowel": "a",
+      "root_consonant": "y",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.5,
+      "s_phono": -2.096753586855544,
+      "n_roots": 6,
+      "roots": [
+        "ydk",
+        "yt",
+        "ytn",
+        "yw",
+        "ywy",
+        "yy"
+      ]
+    },
+    {
+      "id": "ye",
+      "onset": "j",
+      "vowel": "e",
+      "root_consonant": "y",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.5,
+      "s_phono": -2.541401731408192,
+      "n_roots": 6,
+      "roots": [
+        "ydk",
+        "yt",
+        "ytn",
+        "yw",
+        "ywy",
+        "yy"
+      ]
+    },
+    {
+      "id": "yi",
+      "onset": "j",
+      "vowel": "i",
+      "root_consonant": "y",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.5,
+      "s_phono": -2.8306144019678374,
+      "n_roots": 6,
+      "roots": [
+        "ydk",
+        "yt",
+        "ytn",
+        "yw",
+        "ywy",
+        "yy"
+      ]
+    },
+    {
+      "id": "yo",
+      "onset": "j",
+      "vowel": "o",
+      "root_consonant": "y",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.5,
+      "s_phono": -2.8805583209048375,
+      "n_roots": 6,
+      "roots": [
+        "ydk",
+        "yt",
+        "ytn",
+        "yw",
+        "ywy",
+        "yy"
+      ]
+    },
+    {
+      "id": "yu",
+      "onset": "j",
+      "vowel": "u",
+      "root_consonant": "y",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.5,
+      "s_phono": -2.810965690940399,
+      "n_roots": 6,
+      "roots": [
+        "ydk",
+        "yt",
+        "ytn",
+        "yw",
+        "ywy",
+        "yy"
+      ]
+    },
+    {
+      "id": "ka",
+      "onset": "k",
+      "vowel": "a",
+      "root_consonant": "k",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.0981939905230305,
+      "n_roots": 6,
+      "roots": [
+        "kdk",
+        "kt",
+        "ktn",
+        "kw",
+        "kwy",
+        "ky"
+      ]
+    },
+    {
+      "id": "ke",
+      "onset": "k",
+      "vowel": "e",
+      "root_consonant": "k",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.4052182011953627,
+      "n_roots": 6,
+      "roots": [
+        "kdk",
+        "kt",
+        "ktn",
+        "kw",
+        "kwy",
+        "ky"
+      ]
+    },
+    {
+      "id": "ki",
+      "onset": "k",
+      "vowel": "i",
+      "root_consonant": "k",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.1586013885691258,
+      "n_roots": 6,
+      "roots": [
+        "kdk",
+        "kt",
+        "ktn",
+        "kw",
+        "kwy",
+        "ky"
+      ]
+    },
+    {
+      "id": "ko",
+      "onset": "k",
+      "vowel": "o",
+      "root_consonant": "k",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.5015371447612433,
+      "n_roots": 6,
+      "roots": [
+        "kdk",
+        "kt",
+        "ktn",
+        "kw",
+        "kwy",
+        "ky"
+      ]
+    },
+    {
+      "id": "ku",
+      "onset": "k",
+      "vowel": "u",
+      "root_consonant": "k",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.1550945896091647,
+      "n_roots": 6,
+      "roots": [
+        "kdk",
+        "kt",
+        "ktn",
+        "kw",
+        "kwy",
+        "ky"
+      ]
+    },
+    {
+      "id": "ma",
+      "onset": "m",
+      "vowel": "a",
+      "root_consonant": "m",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.378936465965694,
+      "n_roots": 6,
+      "roots": [
+        "mdk",
+        "mt",
+        "mtn",
+        "mw",
+        "mwy",
+        "my"
+      ]
+    },
+    {
+      "id": "me",
+      "onset": "m",
+      "vowel": "e",
+      "root_consonant": "m",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.388031618497057,
+      "n_roots": 6,
+      "roots": [
+        "mdk",
+        "mt",
+        "mtn",
+        "mw",
+        "mwy",
+        "my"
+      ]
+    },
+    {
+      "id": "mi",
+      "onset": "m",
+      "vowel": "i",
+      "root_consonant": "m",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.399834218131929,
+      "n_roots": 6,
+      "roots": [
+        "mdk",
+        "mt",
+        "mtn",
+        "mw",
+        "mwy",
+        "my"
+      ]
+    },
+    {
+      "id": "mo",
+      "onset": "m",
+      "vowel": "o",
+      "root_consonant": "m",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.964716480671742,
+      "n_roots": 6,
+      "roots": [
+        "mdk",
+        "mt",
+        "mtn",
+        "mw",
+        "mwy",
+        "my"
+      ]
+    },
+    {
+      "id": "mu",
+      "onset": "m",
+      "vowel": "u",
+      "root_consonant": "m",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.418953831311357,
+      "n_roots": 6,
+      "roots": [
+        "mdk",
+        "mt",
+        "mtn",
+        "mw",
+        "mwy",
+        "my"
+      ]
+    },
+    {
+      "id": "na",
+      "onset": "n",
+      "vowel": "a",
+      "root_consonant": "n",
+      "kind": "CV_syllabary",
+      "is_na": true,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.001522094218086,
+      "n_roots": 6,
+      "roots": [
+        "ndk",
+        "nt",
+        "ntn",
+        "nw",
+        "nwy",
+        "ny"
+      ]
+    },
+    {
+      "id": "ne",
+      "onset": "n",
+      "vowel": "e",
+      "root_consonant": "n",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.3164084325059426,
+      "n_roots": 6,
+      "roots": [
+        "ndk",
+        "nt",
+        "ntn",
+        "nw",
+        "nwy",
+        "ny"
+      ]
+    },
+    {
+      "id": "ni",
+      "onset": "n",
+      "vowel": "i",
+      "root_consonant": "n",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.27311961993061,
+      "n_roots": 6,
+      "roots": [
+        "ndk",
+        "nt",
+        "ntn",
+        "nw",
+        "nwy",
+        "ny"
+      ]
+    },
+    {
+      "id": "no",
+      "onset": "n",
+      "vowel": "o",
+      "root_consonant": "n",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.8682657706495194,
+      "n_roots": 6,
+      "roots": [
+        "ndk",
+        "nt",
+        "ntn",
+        "nw",
+        "nwy",
+        "ny"
+      ]
+    },
+    {
+      "id": "nu",
+      "onset": "n",
+      "vowel": "u",
+      "root_consonant": "n",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.2286433848720635,
+      "n_roots": 6,
+      "roots": [
+        "ndk",
+        "nt",
+        "ntn",
+        "nw",
+        "nwy",
+        "ny"
+      ]
+    },
+    {
+      "id": "pa",
+      "onset": "p",
+      "vowel": "a",
+      "root_consonant": "p",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.112467103112703,
+      "n_roots": 6,
+      "roots": [
+        "pdk",
+        "pt",
+        "ptn",
+        "pw",
+        "pwy",
+        "py"
+      ]
+    },
+    {
+      "id": "pe",
+      "onset": "p",
+      "vowel": "e",
+      "root_consonant": "p",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.8416566341242273,
+      "n_roots": 6,
+      "roots": [
+        "pdk",
+        "pt",
+        "ptn",
+        "pw",
+        "pwy",
+        "py"
+      ]
+    },
+    {
+      "id": "pi",
+      "onset": "p",
+      "vowel": "i",
+      "root_consonant": "p",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.207288053669039,
+      "n_roots": 6,
+      "roots": [
+        "pdk",
+        "pt",
+        "ptn",
+        "pw",
+        "pwy",
+        "py"
+      ]
+    },
+    {
+      "id": "po",
+      "onset": "p",
+      "vowel": "o",
+      "root_consonant": "p",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.5158102573509162,
+      "n_roots": 6,
+      "roots": [
+        "pdk",
+        "pt",
+        "ptn",
+        "pw",
+        "pwy",
+        "py"
+      ]
+    },
+    {
+      "id": "pu",
+      "onset": "p",
+      "vowel": "u",
+      "root_consonant": "p",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.3565537901822644,
+      "n_roots": 6,
+      "roots": [
+        "pdk",
+        "pt",
+        "ptn",
+        "pw",
+        "pwy",
+        "py"
+      ]
+    },
+    {
+      "id": "qa",
+      "onset": "q",
+      "vowel": "a",
+      "root_consonant": "q",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.338027630663864,
+      "n_roots": 6,
+      "roots": [
+        "qdk",
+        "qt",
+        "qtn",
+        "qw",
+        "qwy",
+        "qy"
+      ]
+    },
+    {
+      "id": "qe",
+      "onset": "q",
+      "vowel": "e",
+      "root_consonant": "q",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.614914944052363,
+      "n_roots": 6,
+      "roots": [
+        "qdk",
+        "qt",
+        "qtn",
+        "qw",
+        "qwy",
+        "qy"
+      ]
+    },
+    {
+      "id": "qi",
+      "onset": "q",
+      "vowel": "i",
+      "root_consonant": "q",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.9041276146120087,
+      "n_roots": 6,
+      "roots": [
+        "qdk",
+        "qt",
+        "qtn",
+        "qw",
+        "qwy",
+        "qy"
+      ]
+    },
+    {
+      "id": "qo",
+      "onset": "q",
+      "vowel": "o",
+      "root_consonant": "q",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.9540715335490084,
+      "n_roots": 6,
+      "roots": [
+        "qdk",
+        "qt",
+        "qtn",
+        "qw",
+        "qwy",
+        "qy"
+      ]
+    },
+    {
+      "id": "qu",
+      "onset": "q",
+      "vowel": "u",
+      "root_consonant": "q",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.884478903584571,
+      "n_roots": 6,
+      "roots": [
+        "qdk",
+        "qt",
+        "qtn",
+        "qw",
+        "qwy",
+        "qy"
+      ]
+    },
+    {
+      "id": "ra",
+      "onset": "r",
+      "vowel": "a",
+      "root_consonant": "r",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.1000692583984533,
+      "n_roots": 6,
+      "roots": [
+        "rdk",
+        "rt",
+        "rtn",
+        "rw",
+        "rwy",
+        "ry"
+      ]
+    },
+    {
+      "id": "re",
+      "onset": "r",
+      "vowel": "e",
+      "root_consonant": "r",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.224976793213641,
+      "n_roots": 6,
+      "roots": [
+        "rdk",
+        "rt",
+        "rtn",
+        "rw",
+        "rwy",
+        "ry"
+      ]
+    },
+    {
+      "id": "ri",
+      "onset": "r",
+      "vowel": "i",
+      "root_consonant": "r",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.2922429574255916,
+      "n_roots": 6,
+      "roots": [
+        "rdk",
+        "rt",
+        "rtn",
+        "rw",
+        "rwy",
+        "ry"
+      ]
+    },
+    {
+      "id": "ro",
+      "onset": "r",
+      "vowel": "o",
+      "root_consonant": "r",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.5246237368304265,
+      "n_roots": 6,
+      "roots": [
+        "rdk",
+        "rt",
+        "rtn",
+        "rw",
+        "rwy",
+        "ry"
+      ]
+    },
+    {
+      "id": "ru",
+      "onset": "r",
+      "vowel": "u",
+      "root_consonant": "r",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.16203926961087,
+      "n_roots": 6,
+      "roots": [
+        "rdk",
+        "rt",
+        "rtn",
+        "rw",
+        "rwy",
+        "ry"
+      ]
+    },
+    {
+      "id": "sa",
+      "onset": "s",
+      "vowel": "a",
+      "root_consonant": "s",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.1562864862785234,
+      "n_roots": 6,
+      "roots": [
+        "sdk",
+        "st",
+        "stn",
+        "sw",
+        "swy",
+        "sy"
+      ]
+    },
+    {
+      "id": "se",
+      "onset": "s",
+      "vowel": "e",
+      "root_consonant": "s",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.3882338821842404,
+      "n_roots": 6,
+      "roots": [
+        "sdk",
+        "st",
+        "stn",
+        "sw",
+        "swy",
+        "sy"
+      ]
+    },
+    {
+      "id": "si",
+      "onset": "s",
+      "vowel": "i",
+      "root_consonant": "s",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.2039330109271007,
+      "n_roots": 6,
+      "roots": [
+        "sdk",
+        "st",
+        "stn",
+        "sw",
+        "swy",
+        "sy"
+      ]
+    },
+    {
+      "id": "so",
+      "onset": "s",
+      "vowel": "o",
+      "root_consonant": "s",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.9400912203278167,
+      "n_roots": 6,
+      "roots": [
+        "sdk",
+        "st",
+        "stn",
+        "sw",
+        "swy",
+        "sy"
+      ]
+    },
+    {
+      "id": "su",
+      "onset": "s",
+      "vowel": "u",
+      "root_consonant": "s",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.3333333333333333,
+      "s_phono": -2.355560246760566,
+      "n_roots": 6,
+      "roots": [
+        "sdk",
+        "st",
+        "stn",
+        "sw",
+        "swy",
+        "sy"
+      ]
+    },
+    {
+      "id": "ta",
+      "onset": "t",
+      "vowel": "a",
+      "root_consonant": "t",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.1194039351711056,
+      "n_roots": 6,
+      "roots": [
+        "tdk",
+        "tt",
+        "ttn",
+        "tw",
+        "twy",
+        "ty"
+      ]
+    },
+    {
+      "id": "te",
+      "onset": "t",
+      "vowel": "e",
+      "root_consonant": "t",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.1440808540328136,
+      "n_roots": 6,
+      "roots": [
+        "tdk",
+        "tt",
+        "ttn",
+        "tw",
+        "twy",
+        "ty"
+      ]
+    },
+    {
+      "id": "ti",
+      "onset": "t",
+      "vowel": "i",
+      "root_consonant": "t",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.1403016873373413,
+      "n_roots": 6,
+      "roots": [
+        "tdk",
+        "tt",
+        "ttn",
+        "tw",
+        "twy",
+        "ty"
+      ]
+    },
+    {
+      "id": "to",
+      "onset": "t",
+      "vowel": "o",
+      "root_consonant": "t",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.339568907268491,
+      "n_roots": 6,
+      "roots": [
+        "tdk",
+        "tt",
+        "ttn",
+        "tw",
+        "twy",
+        "ty"
+      ]
+    },
+    {
+      "id": "tu",
+      "onset": "t",
+      "vowel": "u",
+      "root_consonant": "t",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.1761165408869814,
+      "n_roots": 6,
+      "roots": [
+        "tdk",
+        "tt",
+        "ttn",
+        "tw",
+        "twy",
+        "ty"
+      ]
+    },
+    {
+      "id": "wa",
+      "onset": "w",
+      "vowel": "a",
+      "root_consonant": "w",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.3512861714105804,
+      "n_roots": 6,
+      "roots": [
+        "wdk",
+        "wt",
+        "wtn",
+        "ww",
+        "wwy",
+        "wy"
+      ]
+    },
+    {
+      "id": "we",
+      "onset": "w",
+      "vowel": "e",
+      "root_consonant": "w",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.891642755548095,
+      "n_roots": 6,
+      "roots": [
+        "wdk",
+        "wt",
+        "wtn",
+        "ww",
+        "wwy",
+        "wy"
+      ]
+    },
+    {
+      "id": "wi",
+      "onset": "w",
+      "vowel": "i",
+      "root_consonant": "w",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.303151711190853,
+      "n_roots": 6,
+      "roots": [
+        "wdk",
+        "wt",
+        "wtn",
+        "ww",
+        "wwy",
+        "wy"
+      ]
+    },
+    {
+      "id": "wo",
+      "onset": "w",
+      "vowel": "o",
+      "root_consonant": "w",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.898297861909762,
+      "n_roots": 6,
+      "roots": [
+        "wdk",
+        "wt",
+        "wtn",
+        "ww",
+        "wwy",
+        "wy"
+      ]
+    },
+    {
+      "id": "wu",
+      "onset": "w",
+      "vowel": "u",
+      "root_consonant": "w",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.8333333333333334,
+      "s_phono": -2.8287052319453245,
+      "n_roots": 6,
+      "roots": [
+        "wdk",
+        "wt",
+        "wtn",
+        "ww",
+        "wwy",
+        "wy"
+      ]
+    },
+    {
+      "id": "za",
+      "onset": "z",
+      "vowel": "a",
+      "root_consonant": "z",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.882748352875666,
+      "n_roots": 6,
+      "roots": [
+        "zdk",
+        "zt",
+        "ztn",
+        "zw",
+        "zwy",
+        "zy"
+      ]
+    },
+    {
+      "id": "ze",
+      "onset": "z",
+      "vowel": "e",
+      "root_consonant": "z",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.9469349176172335,
+      "n_roots": 6,
+      "roots": [
+        "zdk",
+        "zt",
+        "ztn",
+        "zw",
+        "zwy",
+        "zy"
+      ]
+    },
+    {
+      "id": "zi",
+      "onset": "z",
+      "vowel": "i",
+      "root_consonant": "z",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.903646105041901,
+      "n_roots": 6,
+      "roots": [
+        "zdk",
+        "zt",
+        "ztn",
+        "zw",
+        "zwy",
+        "zy"
+      ]
+    },
+    {
+      "id": "zo",
+      "onset": "z",
+      "vowel": "o",
+      "root_consonant": "z",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.953590023978901,
+      "n_roots": 6,
+      "roots": [
+        "zdk",
+        "zt",
+        "ztn",
+        "zw",
+        "zwy",
+        "zy"
+      ]
+    },
+    {
+      "id": "zu",
+      "onset": "z",
+      "vowel": "u",
+      "root_consonant": "z",
+      "kind": "CV_syllabary",
+      "is_na": false,
+      "s_lex": 0.6666666666666666,
+      "s_phono": -2.4618320736752715,
+      "n_roots": 6,
+      "roots": [
+        "zdk",
+        "zt",
+        "ztn",
+        "zw",
+        "zwy",
+        "zy"
+      ]
+    },
+    {
+      "id": "NULL_logogram",
+      "onset": null,
+      "vowel": null,
+      "root_consonant": null,
+      "kind": "null_no_phonetic_value",
+      "is_na": false,
+      "s_lex": null,
+      "s_phono": null,
+      "n_roots": 0,
+      "roots": []
+    }
+  ]
+}

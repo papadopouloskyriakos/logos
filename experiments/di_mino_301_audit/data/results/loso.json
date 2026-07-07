@@ -1,0 +1,378 @@
+{
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "task": "D \u2014 leave-one-site-out formula prediction",
+  "headline_verdict": "NO_POWER",
+  "headline_reason": "Di Mino's exact-form prediction is identical to the frequency/template/structural baseline at every held-out site (it carries no regional-variation generator), so the exact-form LOSO channel has zero power to separate the system from the baseline; and the effective independent discriminating sites (3) sit at/below the NO_POWER floor (3). Every clean divergent form is a unique single-source singleton, unpredictable by any leave-one-out model.",
+  "n_peak_sanctuary_sites_total": 8,
+  "n_clean_nonderivation_sites": 6,
+  "derivation_sites_excluded": [
+    "Iouktas",
+    "Troullos"
+  ],
+  "candidate_universe": [
+    "A-NA-TI-*301-WA-JA",
+    "A-TA-I-*301-DE-KA",
+    "A-TA-I-*301-WA-E",
+    "A-TA-I-*301-WA-JA",
+    "JA-TA-I-*301-U-JA",
+    "TA-NA-I-*301-TI",
+    "TA-NA-I-*301-U-TI-NU"
+  ],
+  "n_distinct_forms": 7,
+  "distinct_forms": [
+    "A-NA-TI-*301-WA-JA",
+    "A-TA-I-*301-DE-KA",
+    "A-TA-I-*301-WA-E",
+    "A-TA-I-*301-WA-JA",
+    "JA-TA-I-*301-U-JA",
+    "TA-NA-I-*301-TI",
+    "TA-NA-I-*301-U-TI-NU"
+  ],
+  "clean_divergent_forms": [
+    "A-TA-I-*301-DE-KA",
+    "A-TA-I-*301-WA-E",
+    "JA-TA-I-*301-U-JA",
+    "TA-NA-I-*301-TI"
+  ],
+  "divergent_clean_sites": [
+    "Apodoulou",
+    "Psykhro",
+    "Zakros"
+  ],
+  "effective_independent_discriminating_sites": 3,
+  "effective_site_components_by_shared_form": 5,
+  "NO_POWER_threshold": 3,
+  "exact_form_top1_accuracy_all_sites": {
+    "M_freq": [
+      0.625,
+      8
+    ],
+    "M_tmpl": [
+      0.625,
+      8
+    ],
+    "M_markov": [
+      0.625,
+      8
+    ],
+    "M_davis": [
+      0.625,
+      8
+    ],
+    "M_dimino": [
+      0.625,
+      8
+    ]
+  },
+  "exact_form_top1_accuracy_clean_sites": {
+    "M_freq": [
+      0.5,
+      6
+    ],
+    "M_tmpl": [
+      0.5,
+      6
+    ],
+    "M_markov": [
+      0.5,
+      6
+    ],
+    "M_davis": [
+      0.5,
+      6
+    ],
+    "M_dimino": [
+      0.5,
+      6
+    ]
+  },
+  "exact_form_top1_accuracy_divergent_clean_sites": {
+    "M_freq": [
+      0.0,
+      3
+    ],
+    "M_tmpl": [
+      0.0,
+      3
+    ],
+    "M_markov": [
+      0.0,
+      3
+    ],
+    "M_davis": [
+      0.0,
+      3
+    ],
+    "M_dimino": [
+      0.0,
+      3
+    ]
+  },
+  "dimino_differs_from_freq_baseline_anywhere": false,
+  "dimino_beats_baselines_exact_form": false,
+  "any_model_predicts_a_clean_divergent_form": false,
+  "root_recurrence_H2": {
+    "clean_sites_tested": 6,
+    "clean_sites_with_WA_JA_root": 3,
+    "divergent_clean_sites_tested": 3,
+    "divergent_clean_sites_with_WA_JA_root": 0,
+    "per_site": {
+      "Apodoulou": 0,
+      "Iouktas": 1,
+      "Kophinas": 1,
+      "Palaikastro": 1,
+      "Psykhro": 0,
+      "Syme": 1,
+      "Troullos": 1,
+      "Zakros": 0
+    },
+    "reading": "The claimed *301-WA-JA root recurs ONLY in copies of the target form itself (and, on the derivation-contaminated Iouktas site, A-NA-TI-*301-WA-JA). In the 3 clean held-out DIVERGENT forms it recurs 0 times -> the root is a property of the single lexeme it was extracted from, not a cross-site morpheme. H2 root-recurrence is REFUTED on held-out divergent sites."
+  },
+  "random_semitic_null": {
+    "representative_divergent_target": "TA-NA-I-*301-TI",
+    "n_draws": 100000,
+    "null_exact_form_hit_rate": 0.14183,
+    "null_slot_parse_hit_rate": 0.25161,
+    "author_stated_sim_count": "~1e5"
+  },
+  "boundary_note": "Boundary F1 scored vs a DATA-DRIVEN structural edge reference (branching-entropy word edges {b1, b_last} from report 04); it is a structural benchmark, NOT ground truth. Reported per site in loso.json.",
+  "per_site": [
+    {
+      "held_site": "Apodoulou",
+      "held_forms": [
+        "JA-TA-I-*301-U-JA"
+      ],
+      "is_derivation_site": false,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 0,
+        "M_tmpl": 0,
+        "M_markov": 0,
+        "M_davis": 0,
+        "M_dimino": 0
+      },
+      "rank_observed": {
+        "M_freq": 7,
+        "M_markov": 6,
+        "M_dimino": 7
+      },
+      "root_recurs_WA_JA": 0,
+      "full_dimino_schema": 0,
+      "prefix_A_present": 0,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Iouktas",
+      "held_forms": [
+        "A-TA-I-*301-WA-JA",
+        "TA-NA-I-*301-U-TI-NU",
+        "A-NA-TI-*301-WA-JA"
+      ],
+      "is_derivation_site": true,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 1,
+        "M_tmpl": 1,
+        "M_markov": 1,
+        "M_davis": 1,
+        "M_dimino": 1
+      },
+      "rank_observed": {
+        "M_freq": 1,
+        "M_markov": 1,
+        "M_dimino": 1
+      },
+      "root_recurs_WA_JA": 1,
+      "full_dimino_schema": 1,
+      "prefix_A_present": 1,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Kophinas",
+      "held_forms": [
+        "A-TA-I-*301-WA-JA"
+      ],
+      "is_derivation_site": false,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 1,
+        "M_tmpl": 1,
+        "M_markov": 1,
+        "M_davis": 1,
+        "M_dimino": 1
+      },
+      "rank_observed": {
+        "M_freq": 1,
+        "M_markov": 1,
+        "M_dimino": 1
+      },
+      "root_recurs_WA_JA": 1,
+      "full_dimino_schema": 1,
+      "prefix_A_present": 1,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Palaikastro",
+      "held_forms": [
+        "A-TA-I-*301-WA-E",
+        "A-TA-I-*301-WA-JA"
+      ],
+      "is_derivation_site": false,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 1,
+        "M_tmpl": 1,
+        "M_markov": 1,
+        "M_davis": 1,
+        "M_dimino": 1
+      },
+      "rank_observed": {
+        "M_freq": 1,
+        "M_markov": 1,
+        "M_dimino": 1
+      },
+      "root_recurs_WA_JA": 1,
+      "full_dimino_schema": 1,
+      "prefix_A_present": 1,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Psykhro",
+      "held_forms": [
+        "TA-NA-I-*301-TI"
+      ],
+      "is_derivation_site": false,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 0,
+        "M_tmpl": 0,
+        "M_markov": 0,
+        "M_davis": 0,
+        "M_dimino": 0
+      },
+      "rank_observed": {
+        "M_freq": 7,
+        "M_markov": 6,
+        "M_dimino": 7
+      },
+      "root_recurs_WA_JA": 0,
+      "full_dimino_schema": 0,
+      "prefix_A_present": 0,
+      "stem_TA_I_present": 0,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Syme",
+      "held_forms": [
+        "A-TA-I-*301-WA-JA"
+      ],
+      "is_derivation_site": false,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 1,
+        "M_tmpl": 1,
+        "M_markov": 1,
+        "M_davis": 1,
+        "M_dimino": 1
+      },
+      "rank_observed": {
+        "M_freq": 1,
+        "M_markov": 1,
+        "M_dimino": 1
+      },
+      "root_recurs_WA_JA": 1,
+      "full_dimino_schema": 1,
+      "prefix_A_present": 1,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Troullos",
+      "held_forms": [
+        "A-TA-I-*301-WA-JA"
+      ],
+      "is_derivation_site": true,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 1,
+        "M_tmpl": 1,
+        "M_markov": 1,
+        "M_davis": 1,
+        "M_dimino": 1
+      },
+      "rank_observed": {
+        "M_freq": 1,
+        "M_markov": 1,
+        "M_dimino": 1
+      },
+      "root_recurs_WA_JA": 1,
+      "full_dimino_schema": 1,
+      "prefix_A_present": 1,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    },
+    {
+      "held_site": "Zakros",
+      "held_forms": [
+        "A-TA-I-*301-DE-KA"
+      ],
+      "is_derivation_site": false,
+      "n_train_sites": 7,
+      "modal_train_form": "A-TA-I-*301-WA-JA",
+      "exact_top1": {
+        "M_freq": 0,
+        "M_tmpl": 0,
+        "M_markov": 0,
+        "M_davis": 0,
+        "M_dimino": 0
+      },
+      "rank_observed": {
+        "M_freq": 7,
+        "M_markov": 4,
+        "M_dimino": 7
+      },
+      "root_recurs_WA_JA": 0,
+      "full_dimino_schema": 0,
+      "prefix_A_present": 1,
+      "stem_TA_I_present": 1,
+      "boundary_f1_vs_edgeref": {
+        "M_dimino": 0.4,
+        "M_davis": 0.0
+      }
+    }
+  ]
+}

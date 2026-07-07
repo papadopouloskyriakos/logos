@@ -10,16 +10,16 @@ tasks:
   - {task_id: T01_archive, section: IV, objective: "immutable public-claim archive (web acquire+hash aiclambake/HN/github/artifacts)", status: COMPLETE, result_note: "COMPLETE — CLB-01 archived+hashed (Fig.1 651e50d9); H7-H12 SOURCE_BLOCKED (no public artifacts on article/github/minoanmystery)"}
   - {task_id: T02_claim_graph, section: V, objective: "claim dependency graph + free-parameter (lower-bound search) receipt", status: COMPLETE, result_note: "COMPLETE — single-free-parameter structure; e2-e4 circular; lower-bound receipt + author's stated ~10^5 sims"}
   - {task_id: T03_prereg, section: VI, objective: "freeze H1-H12 preregistration + hash", status: COMPLETE, result_note: "COMPLETE — H1-H12 frozen+hashed BEFORE testing"}
-  - {task_id: T04_corpus, section: VII, objective: "libation-formula exact corpus + provenance + derivation/heldout partition", status: QUEUED}
-  - {task_id: T05_segmentation, section: VII, objective: "segmentation comparison (DiMino/Davis/Thomas/diplomatic/none/probabilistic)", status: QUEUED}
-  - {task_id: A_301_sweep, section: VIII, objective: "exhaustive *301 value audit (leave-target/site/form-out; rank /na/)", status: QUEUED}
-  - {task_id: B_root_gloss, section: IX, objective: "Semitic root + gloss specificity audit vs L_fake + search nulls", status: QUEUED}
-  - {task_id: C_morphology, section: X, objective: "exact morphology/paradigm audit + known-script controls", status: QUEUED}
-  - {task_id: D_crosssite, section: XI, objective: "leave-one-site-out formula prediction", status: QUEUED}
-  - {task_id: E_formula, section: XII, objective: "full formula interpretation audit", status: QUEUED}
+  - {task_id: T04_corpus, section: VII, objective: "libation-formula exact corpus + provenance + derivation/heldout partition", status: COMPLETE, result_note: "COMPLETE — 36 attest/23 forms/31 carriers; partition + IOZa6 leave-site contamination flagged"}
+  - {task_id: T05_segmentation, section: VII, objective: "segmentation comparison (DiMino/Davis/Thomas/diplomatic/none/probabilistic)", status: COMPLETE, result_note: "COMPLETE — DECISIVE against *301-WA-JA root boundary (b3 fwd branching-entropy 0.00); no value-free family reproduces it"}
+  - {task_id: A_301_sweep, section: VIII, objective: "exhaustive *301 value audit (leave-target/site/form-out; rank /na/)", status: REJECT, result_note: "REJECT — S_morph value-INVARIANT (NO_DISCRIMINATIVE_POWER); S_lex /na/ 21/65 (49th pctile); fails E[max] over 260 cells + author 1e5"}
+  - {task_id: B_root_gloss, section: IX, objective: "Semitic root + gloss specificity audit vs L_fake + search nulls", status: REJECT, result_note: "REJECT — root=generic search outcome (31-77% onsets hit a Semitic root); 'dwell' needs unregistered III-y->III-h; language-cherry-picked"}
+  - {task_id: C_morphology, section: X, objective: "exact morphology/paradigm audit + known-script controls", status: REJECT, result_note: "REJECT — MORPH_ROOT refuted (post-*301 varies WA/U/TI/DE/NA/SI), PARADIGM 1/6, Davis I-*301 0.833 beats Di Mino root 0.167"}
+  - {task_id: D_crosssite, section: XI, objective: "leave-one-site-out formula prediction", status: NO_POWER, result_note: "NO_POWER — no regional generator; ties all baselines; clean divergent forms are unpredictable singletons"}
+  - {task_id: E_formula, section: XII, objective: "full formula interpretation audit", status: REJECT, result_note: "ONE_NOVEL_PARAMETER — 34/35 signs conventional LB transliteration; homophony red flag (NA=AB06 already 158x); words 2-8 SOURCE_BLOCKED"}
   - {task_id: F_signmap, section: XIII, objective: "40-sign map gate OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — 40-sign table not public (H7/H8/H10)"}
   - {task_id: G_lexicon, section: XIV, objective: "408-lexicon gate OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — 408-lexicon not public (H9)"}
   - {task_id: H_corrections, section: XV, objective: "LB + logogram corrections OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — LB(5) + logogram correction lists not public (H10/H11)"}
-  - {task_id: PC_controls, section: XVI, objective: "positive controls PC1-PC6 (Uga-Heb, opaque LB, planted *301, fake Semitic, agglutinative, Semitic morph)", status: QUEUED}
+  - {task_id: PC_controls, section: XVI, objective: "positive controls PC1-PC6 (Uga-Heb, opaque LB, planted *301, fake Semitic, agglutinative, Semitic morph)", status: PASS, result_note: "PASS — pipeline CALIBRATED: PC1/PC2 recover real truth, PC3 recovers planted value rank 1/113, PC4 rejects manufactured fake, PC5/6 distinguish structures"}
   - {task_id: NULL_e2e, section: XVII, objective: "end-to-end adaptive null programme + false-positive rate", status: QUEUED}
   - {task_id: VERDICT, section: XVIII, objective: "DI_MINO_CORE_VERDICT + extended verdicts", status: QUEUED}

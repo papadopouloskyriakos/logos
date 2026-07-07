@@ -1,0 +1,477 @@
+{
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "seed": 20260708,
+  "target_word": "A-TA-I-*301-WA-JA",
+  "internal_boundary_legend": {
+    "1": "A | TA...",
+    "2": "A-TA | I...",
+    "3": "A-TA-I | *301...",
+    "4": "...*301 | WA...",
+    "5": "...WA | JA"
+  },
+  "families": {
+    "DI_MINO": {
+      "boundaries": [
+        1,
+        2,
+        3
+      ],
+      "morphs": [
+        [
+          "A"
+        ],
+        [
+          "TA"
+        ],
+        [
+          "I"
+        ],
+        [
+          "*301",
+          "WA",
+          "JA"
+        ]
+      ],
+      "commitment": "a-(1cs) | ta-(tG stem) | i-(stem vowel) | *301-WA-JA = root n-w-y",
+      "isolates_301_wa_ja_as_unit": true,
+      "301_grouped_with": "WA+JA (root)",
+      "phonetically_motivated": true,
+      "source_dependency": "CLB-01 Figure 1 (Di Mino, public claim)"
+    },
+    "DAVIS": {
+      "boundaries": [
+        2,
+        4
+      ],
+      "morphs": [
+        [
+          "A",
+          "TA"
+        ],
+        [
+          "I",
+          "*301"
+        ],
+        [
+          "WA",
+          "JA"
+        ]
+      ],
+      "commitment": "A-TA- prefix | I-*301 recurring stem | -WA-JA affix",
+      "isolates_301_wa_ja_as_unit": false,
+      "301_grouped_with": "I (I-*301 stem)",
+      "phonetically_motivated": false,
+      "source_dependency": "Davis 2014 structural family (i-*301 unit); exact paper NOT in-repo -> SOURCE_DEPENDENCY flagged"
+    },
+    "THOMAS": {
+      "boundaries": [
+        5
+      ],
+      "morphs": [
+        [
+          "A",
+          "TA",
+          "I",
+          "*301",
+          "WA"
+        ],
+        [
+          "JA"
+        ]
+      ],
+      "commitment": "A-TA-I-*301-WA stem | -JA/-E inflectional ending (WA-JA~WA-E alternation)",
+      "isolates_301_wa_ja_as_unit": false,
+      "301_grouped_with": "stem body (A-TA-I-*301-WA)",
+      "phonetically_motivated": false,
+      "source_dependency": "THOMAS reduced-boundary family; exact source NOT in-repo -> SOURCE_DEPENDENCY flagged; ending cut grounded in corpus WA-JA/WA-E alternation"
+    },
+    "DIPLOMATIC": {
+      "boundaries": [],
+      "morphs": [
+        [
+          "A",
+          "TA",
+          "I",
+          "*301",
+          "WA",
+          "JA"
+        ]
+      ],
+      "commitment": "single graphic word, GORILA word-divider bounded; NO internal morpheme claim",
+      "isolates_301_wa_ja_as_unit": false,
+      "301_grouped_with": "whole word",
+      "phonetically_motivated": false,
+      "source_dependency": "GORILA transcription (no analysis)"
+    },
+    "NO_PHONETIC_STRUCTURAL": {
+      "boundaries": [
+        3,
+        4,
+        5
+      ],
+      "commitment": "boundary where BOTH flanking substrings recur elsewhere (value-free)",
+      "isolates_301_wa_ja_as_unit": true,
+      "301_grouped_with": "data-determined",
+      "phonetically_motivated": false,
+      "source_dependency": "silver corpus distributional recurrence (this audit)",
+      "detail": {
+        "per_boundary": {
+          "1": {
+            "label": "A | TA...",
+            "left": "A",
+            "left_total_occ": 202,
+            "right": "TA-I-*301-WA-JA",
+            "right_total_occ": 11,
+            "target_occ": 11,
+            "left_recurs_elsewhere": true,
+            "right_recurs_elsewhere": false,
+            "credited_boundary": false
+          },
+          "2": {
+            "label": "A-TA | I...",
+            "left": "A-TA",
+            "left_total_occ": 20,
+            "right": "I-*301-WA-JA",
+            "right_total_occ": 11,
+            "target_occ": 11,
+            "left_recurs_elsewhere": true,
+            "right_recurs_elsewhere": false,
+            "credited_boundary": false
+          },
+          "3": {
+            "label": "A-TA-I | *301...",
+            "left": "A-TA-I",
+            "left_total_occ": 13,
+            "right": "*301-WA-JA",
+            "right_total_occ": 12,
+            "target_occ": 11,
+            "left_recurs_elsewhere": true,
+            "right_recurs_elsewhere": true,
+            "credited_boundary": true
+          },
+          "4": {
+            "label": "...*301 | WA...",
+            "left": "A-TA-I-*301",
+            "left_total_occ": 13,
+            "right": "WA-JA",
+            "right_total_occ": 14,
+            "target_occ": 11,
+            "left_recurs_elsewhere": true,
+            "right_recurs_elsewhere": true,
+            "credited_boundary": true
+          },
+          "5": {
+            "label": "...WA | JA",
+            "left": "A-TA-I-*301-WA",
+            "left_total_occ": 12,
+            "right": "JA",
+            "right_total_occ": 169,
+            "target_occ": 11,
+            "left_recurs_elsewhere": true,
+            "right_recurs_elsewhere": true,
+            "credited_boundary": true
+          }
+        },
+        "credited_boundaries": [
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "PROBABILISTIC": {
+      "boundaries_branching_entropy": [
+        1,
+        5
+      ],
+      "boundaries_viterbi": [],
+      "commitment": "corpus-driven MDL/branching-entropy (value-free)",
+      "301_grouped_with": "data-determined",
+      "phonetically_motivated": false,
+      "source_dependency": "silver corpus (this audit)",
+      "branching_entropy_detail": {
+        "1": {
+          "label": "A | TA...",
+          "prefix": "A",
+          "suffix": "TA-I-*301-WA-JA",
+          "fwd_branch_entropy_bits": 4.7859,
+          "fwd_support_occurrences": 169,
+          "bwd_branch_entropy_bits": -0.0,
+          "bwd_support_occurrences": 11,
+          "boundary_score": 4.7859
+        },
+        "2": {
+          "label": "A-TA | I...",
+          "prefix": "A-TA",
+          "suffix": "I-*301-WA-JA",
+          "fwd_branch_entropy_bits": 1.4658,
+          "fwd_support_occurrences": 19,
+          "bwd_branch_entropy_bits": -0.0,
+          "bwd_support_occurrences": 11,
+          "boundary_score": 1.4658
+        },
+        "3": {
+          "label": "A-TA-I | *301...",
+          "prefix": "A-TA-I",
+          "suffix": "*301-WA-JA",
+          "fwd_branch_entropy_bits": -0.0,
+          "fwd_support_occurrences": 13,
+          "bwd_branch_entropy_bits": 0.4138,
+          "bwd_support_occurrences": 12,
+          "boundary_score": 0.4138
+        },
+        "4": {
+          "label": "...*301 | WA...",
+          "prefix": "A-TA-I-*301",
+          "suffix": "WA-JA",
+          "fwd_branch_entropy_bits": 0.3912,
+          "fwd_support_occurrences": 13,
+          "bwd_branch_entropy_bits": 0.3912,
+          "bwd_support_occurrences": 13,
+          "boundary_score": 0.7825
+        },
+        "5": {
+          "label": "...WA | JA",
+          "prefix": "A-TA-I-*301-WA",
+          "suffix": "JA",
+          "fwd_branch_entropy_bits": 0.4138,
+          "fwd_support_occurrences": 12,
+          "bwd_branch_entropy_bits": 4.5532,
+          "bwd_support_occurrences": 95,
+          "boundary_score": 4.967
+        }
+      },
+      "viterbi_detail": {
+        "segments": [
+          "A-TA-I-*301-WA-JA"
+        ],
+        "boundaries": [],
+        "total_cost_nats": 5.8845,
+        "attested_units": {
+          "A-TA-I-*301-WA-JA": 11
+        }
+      }
+    }
+  },
+  "pairwise_agreement": {
+    "DI_MINO__vs__DAVIS": {
+      "jaccard_boundaries": 0.25,
+      "a_boundaries": [
+        1,
+        2,
+        3
+      ],
+      "b_boundaries": [
+        2,
+        4
+      ],
+      "shared": [
+        2
+      ]
+    },
+    "DI_MINO__vs__THOMAS": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [
+        1,
+        2,
+        3
+      ],
+      "b_boundaries": [
+        5
+      ],
+      "shared": []
+    },
+    "DI_MINO__vs__DIPLOMATIC": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [
+        1,
+        2,
+        3
+      ],
+      "b_boundaries": [],
+      "shared": []
+    },
+    "DI_MINO__vs__NO_PHONETIC_STRUCTURAL": {
+      "jaccard_boundaries": 0.2,
+      "a_boundaries": [
+        1,
+        2,
+        3
+      ],
+      "b_boundaries": [
+        3,
+        4,
+        5
+      ],
+      "shared": [
+        3
+      ]
+    },
+    "DI_MINO__vs__PROBABILISTIC": {
+      "jaccard_boundaries": 0.25,
+      "a_boundaries": [
+        1,
+        2,
+        3
+      ],
+      "b_boundaries": [
+        1,
+        5
+      ],
+      "shared": [
+        1
+      ]
+    },
+    "DAVIS__vs__THOMAS": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [
+        2,
+        4
+      ],
+      "b_boundaries": [
+        5
+      ],
+      "shared": []
+    },
+    "DAVIS__vs__DIPLOMATIC": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [
+        2,
+        4
+      ],
+      "b_boundaries": [],
+      "shared": []
+    },
+    "DAVIS__vs__NO_PHONETIC_STRUCTURAL": {
+      "jaccard_boundaries": 0.25,
+      "a_boundaries": [
+        2,
+        4
+      ],
+      "b_boundaries": [
+        3,
+        4,
+        5
+      ],
+      "shared": [
+        4
+      ]
+    },
+    "DAVIS__vs__PROBABILISTIC": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [
+        2,
+        4
+      ],
+      "b_boundaries": [
+        1,
+        5
+      ],
+      "shared": []
+    },
+    "THOMAS__vs__DIPLOMATIC": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [
+        5
+      ],
+      "b_boundaries": [],
+      "shared": []
+    },
+    "THOMAS__vs__NO_PHONETIC_STRUCTURAL": {
+      "jaccard_boundaries": 0.333,
+      "a_boundaries": [
+        5
+      ],
+      "b_boundaries": [
+        3,
+        4,
+        5
+      ],
+      "shared": [
+        5
+      ]
+    },
+    "THOMAS__vs__PROBABILISTIC": {
+      "jaccard_boundaries": 0.5,
+      "a_boundaries": [
+        5
+      ],
+      "b_boundaries": [
+        1,
+        5
+      ],
+      "shared": [
+        5
+      ]
+    },
+    "DIPLOMATIC__vs__NO_PHONETIC_STRUCTURAL": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [],
+      "b_boundaries": [
+        3,
+        4,
+        5
+      ],
+      "shared": []
+    },
+    "DIPLOMATIC__vs__PROBABILISTIC": {
+      "jaccard_boundaries": 0.0,
+      "a_boundaries": [],
+      "b_boundaries": [
+        1,
+        5
+      ],
+      "shared": []
+    },
+    "NO_PHONETIC_STRUCTURAL__vs__PROBABILISTIC": {
+      "jaccard_boundaries": 0.25,
+      "a_boundaries": [
+        3,
+        4,
+        5
+      ],
+      "b_boundaries": [
+        1,
+        5
+      ],
+      "shared": [
+        5
+      ]
+    }
+  },
+  "dimino_root_signature": {
+    "cuts_b3": true,
+    "no_cut_b4": true,
+    "no_cut_b5": true
+  },
+  "data_driven_reproduces_dimino_root": {
+    "NO_PHONETIC_STRUCTURAL": {
+      "isolates_*301-WA-JA_as_root_unit": false,
+      "boundaries": [
+        3,
+        4,
+        5
+      ],
+      "where_it_cuts_around_301": {
+        "b3_before_301": true,
+        "b4_after_301": true,
+        "b5_after_WA": true
+      }
+    },
+    "PROBABILISTIC": {
+      "isolates_*301-WA-JA_as_root_unit": false,
+      "boundaries": [
+        1,
+        5
+      ],
+      "where_it_cuts_around_301": {
+        "b3_before_301": false,
+        "b4_after_301": false,
+        "b5_after_WA": true
+      }
+    }
+  },
+  "interpretation_flags": {
+    "circularity_probe": "If NO data-driven family isolates *301-WA-JA as a unit, Di Mino's root boundary is phonetically motivated (chosen to make na-wa-ja=n-w-y), not distributionally supported -> supports the e2->e3->e4 circularity finding."
+  }
+}

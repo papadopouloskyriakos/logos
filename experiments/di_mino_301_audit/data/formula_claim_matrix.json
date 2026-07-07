@@ -1,0 +1,848 @@
+{
+  "task": "E_FULL_FORMULA_AUDIT",
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "generated_by": "scripts/E_full_formula_audit.py",
+  "source_inscription": "IOZa2",
+  "non_circular_note": "Conventional LB values grade benchmarks only; the sole model input under test on the LA side is *301's value. No LLM graded this.",
+  "formula_line1": [
+    "A-TA-I-*301-WA-JA",
+    "JA-DI-KI-TU",
+    "JA-SA-SA-RA-ME",
+    "U-NA-KA-NA-SI",
+    "I-PI-NA-MA",
+    "SI-RU-TE",
+    "TA-NA-RA-TE-U-TI-NU",
+    "I"
+  ],
+  "components": [
+    {
+      "position": 1,
+      "slot": "S1_invocation_verb",
+      "signs": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "conventional_transliteration": "a-ta-i-*301-wa-ja",
+      "contains_novel_301": true,
+      "n_novel_parameters": 1,
+      "exact_type_attestations": 11,
+      "exact_type_sites": [
+        "Iouktas",
+        "Kophinas",
+        "Palaikastro",
+        "Syme",
+        "Troullos"
+      ],
+      "n_sites": 5,
+      "signs_detail": [
+        {
+          "sign": "A",
+          "ab": null,
+          "lb": "B A",
+          "conventional_value": "a",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "TA",
+          "ab": null,
+          "lb": "B TA",
+          "conventional_value": "ta",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "I",
+          "ab": null,
+          "lb": "B I",
+          "conventional_value": "i",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "*301",
+          "ab": "— (none)",
+          "lb": "(none)",
+          "conventional_value": null,
+          "class": "LINEAR_A_ONLY_NEW",
+          "novel_parameter": true,
+          "value_under_test": "(proposed) /na/",
+          "scores_as_discovery": "ONLY if it clears the H1 held-out gate"
+        },
+        {
+          "sign": "WA",
+          "ab": null,
+          "lb": "B WA",
+          "conventional_value": "wa",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "JA",
+          "ab": null,
+          "lb": "B JA",
+          "conventional_value": "ja",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": true,
+      "dimino_reading": "invocation verb, root n-w-y 'to dwell'",
+      "dimino_artifact": "Figure 1 (aiclambake, 2026-06-16)",
+      "dimino_per_sign": {
+        "A": {
+          "proposed": "/ʾa/",
+          "morph": "1cs person prefix ('I')",
+          "novel": false,
+          "source": "LB transfer AB08"
+        },
+        "TA": {
+          "proposed": "/ta/",
+          "morph": "tG reflexive-causative stem morpheme",
+          "novel": false,
+          "source": "LB transfer AB59"
+        },
+        "I": {
+          "proposed": "/i/",
+          "morph": "stem vowel (invariant across 14 attest.)",
+          "novel": false,
+          "source": "LB transfer AB28"
+        },
+        "*301": {
+          "proposed": "/na/",
+          "morph": "Root C1 of √n-w-y 'to dwell'",
+          "novel": true,
+          "source": "PROPOSED (no LB anchor)"
+        },
+        "WA": {
+          "proposed": "/wa/",
+          "morph": "Root C2",
+          "novel": false,
+          "source": "LB transfer AB54"
+        },
+        "JA": {
+          "proposed": "/ja/",
+          "morph": "Root C3",
+          "novel": false,
+          "source": "LB transfer AB57"
+        }
+      },
+      "lexical_source": "Semitic √n-w-y (Hebrew/Akkadian/etc.)",
+      "morphological_source": "Di Mino Fig.1 (asserted, Semitic-styled)",
+      "prior_literature": "A-TA-I-*301-WA-JA is THE canonical LF word 1 (Duhoux, Davis, Younger, Schoep); *301 value long open.",
+      "selected_before_or_after_translation": "AFTER (chosen to yield n-w-y)",
+      "independent_prediction": "H1/H2/H3: /na/-N-W-Y-'dwell' should recur as held-out Semitic morphology across sites. Tested in family A/C; segmentation (report 04) already CONTRADICTS the *301-WA-JA root cut.",
+      "alternative_readings": [
+        "*301=any admissible CV (>=55 candidates; sweep report A)",
+        "Davis: I-*301 recurring STEM (not a root) — *301 grouped with I, not WA",
+        "Thomas: -JA inflectional ending, *301 mid-stem",
+        "value-free segmentation cuts AFTER *301 (report 04) -> no n-w-y root"
+      ],
+      "claim_status": "UNDER_TEST (family A/C) — only novel content is *301; root cut already contradicted (report 04)"
+    },
+    {
+      "position": 2,
+      "slot": "S2",
+      "signs": [
+        "JA",
+        "DI",
+        "KI",
+        "TU"
+      ],
+      "conventional_transliteration": "ja-di-ki-tu",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 1,
+      "exact_type_sites": [
+        "Iouktas"
+      ],
+      "n_sites": 1,
+      "signs_detail": [
+        {
+          "sign": "JA",
+          "ab": null,
+          "lb": "B JA",
+          "conventional_value": "ja",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "DI",
+          "ab": null,
+          "lb": "B DI",
+          "conventional_value": "di",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "KI",
+          "ab": null,
+          "lb": "B KI",
+          "conventional_value": "ki",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "TU",
+          "ab": null,
+          "lb": "B TU",
+          "conventional_value": "tu",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": true,
+      "dimino_reading": "read 'Ya Diktu' (interpretation withheld; no morpheme table published)",
+      "dimino_artifact": "manuscript TITLE only: 'Ya Diktu: Grammar of the Minoan Peak Sanctuary Libation Formula' (NOT public)",
+      "dimino_per_sign": null,
+      "lexical_source": "manuscript title only",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "JA-DI-KI-TU: rare; 'Diktu'~Mt Dikte has been floated in general LA discussion; Di Mino uses it as title 'Ya Diktu'.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "toponym 'Dikte' (place, not verb)",
+        "unanalyzed frame word"
+      ],
+      "claim_status": "SOURCE_BLOCKED (title-only, no morpheme table)"
+    },
+    {
+      "position": 3,
+      "slot": "S3_sasarame",
+      "signs": [
+        "JA",
+        "SA",
+        "SA",
+        "RA",
+        "ME"
+      ],
+      "conventional_transliteration": "ja-sa-sa-ra-me",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 7,
+      "exact_type_sites": [
+        "Iouktas",
+        "Palaikastro",
+        "Platanos",
+        "Psykhro",
+        "Troullos"
+      ],
+      "n_sites": 5,
+      "signs_detail": [
+        {
+          "sign": "JA",
+          "ab": null,
+          "lb": "B JA",
+          "conventional_value": "ja",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "SA",
+          "ab": null,
+          "lb": "B SA",
+          "conventional_value": "sa",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "SA",
+          "ab": null,
+          "lb": "B SA",
+          "conventional_value": "sa",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "RA",
+          "ab": null,
+          "lb": "B RA",
+          "conventional_value": "ra",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "ME",
+          "ab": null,
+          "lb": "B ME",
+          "conventional_value": "me",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": false,
+      "dimino_reading": null,
+      "dimino_artifact": null,
+      "dimino_per_sign": null,
+      "lexical_source": "NONE PUBLISHED",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "(JA-)SA-SA-RA-ME: most-discussed LF word; proposed theonym/'Asasara(-me)' (Hiller, Duhoux, Younger) — NOT Di Mino's.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "theonym 'Asasara(me)' (mother-goddess) — dominant prior reading, non-Semitic-verb"
+      ],
+      "claim_status": "SOURCE_BLOCKED (conventional transliteration only; no published reading)"
+    },
+    {
+      "position": 4,
+      "slot": "S4_unakanasi",
+      "signs": [
+        "U",
+        "NA",
+        "KA",
+        "NA",
+        "SI"
+      ],
+      "conventional_transliteration": "u-na-ka-na-si",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 4,
+      "exact_type_sites": [
+        "Iouktas",
+        "Kophinas",
+        "Palaikastro"
+      ],
+      "n_sites": 3,
+      "signs_detail": [
+        {
+          "sign": "U",
+          "ab": null,
+          "lb": "B U",
+          "conventional_value": "u",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "NA",
+          "ab": null,
+          "lb": "B NA",
+          "conventional_value": "na",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "KA",
+          "ab": null,
+          "lb": "B KA",
+          "conventional_value": "ka",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "NA",
+          "ab": null,
+          "lb": "B NA",
+          "conventional_value": "na",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "SI",
+          "ab": null,
+          "lb": "B SI",
+          "conventional_value": "si",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": false,
+      "dimino_reading": null,
+      "dimino_artifact": null,
+      "dimino_per_sign": null,
+      "lexical_source": "NONE PUBLISHED",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "U-NA-KA-NA-SI: standard LF frame word (Duhoux, Younger); no consensus gloss.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "unanalyzed LF frame word (no published alternative from Di Mino)"
+      ],
+      "claim_status": "SOURCE_BLOCKED (conventional transliteration only; no published reading)"
+    },
+    {
+      "position": 5,
+      "slot": "S5_ipinama",
+      "signs": [
+        "I",
+        "PI",
+        "NA",
+        "MA"
+      ],
+      "conventional_transliteration": "i-pi-na-ma",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 6,
+      "exact_type_sites": [
+        "Apodoulou",
+        "Iouktas",
+        "Kophinas",
+        "Troullos",
+        "Vrysinas"
+      ],
+      "n_sites": 5,
+      "signs_detail": [
+        {
+          "sign": "I",
+          "ab": null,
+          "lb": "B I",
+          "conventional_value": "i",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "PI",
+          "ab": null,
+          "lb": "B PI",
+          "conventional_value": "pi",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "NA",
+          "ab": null,
+          "lb": "B NA",
+          "conventional_value": "na",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "MA",
+          "ab": null,
+          "lb": "B MA",
+          "conventional_value": "ma",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": false,
+      "dimino_reading": null,
+      "dimino_artifact": null,
+      "dimino_per_sign": null,
+      "lexical_source": "NONE PUBLISHED",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "I-PI-NA-MA: standard LF frame word (Duhoux, Younger); no consensus gloss.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "unanalyzed LF frame word (no published alternative from Di Mino)"
+      ],
+      "claim_status": "SOURCE_BLOCKED (conventional transliteration only; no published reading)"
+    },
+    {
+      "position": 6,
+      "slot": "S6_sirute",
+      "signs": [
+        "SI",
+        "RU",
+        "TE"
+      ],
+      "conventional_transliteration": "si-ru-te",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 7,
+      "exact_type_sites": [
+        "Iouktas",
+        "Kophinas",
+        "Syme",
+        "Troullos",
+        "Vrysinas"
+      ],
+      "n_sites": 5,
+      "signs_detail": [
+        {
+          "sign": "SI",
+          "ab": null,
+          "lb": "B SI",
+          "conventional_value": "si",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "RU",
+          "ab": null,
+          "lb": "B RU",
+          "conventional_value": "ru",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "TE",
+          "ab": null,
+          "lb": "B TE",
+          "conventional_value": "te",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": false,
+      "dimino_reading": null,
+      "dimino_artifact": null,
+      "dimino_per_sign": null,
+      "lexical_source": "NONE PUBLISHED",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "SI-RU-TE: standard LF closing word (Duhoux, Younger); no consensus gloss.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "unanalyzed LF frame word (no published alternative from Di Mino)"
+      ],
+      "claim_status": "SOURCE_BLOCKED (conventional transliteration only; no published reading)"
+    },
+    {
+      "position": 7,
+      "slot": "P7_unlabeled",
+      "signs": [
+        "TA",
+        "NA",
+        "RA",
+        "TE",
+        "U",
+        "TI",
+        "NU"
+      ],
+      "conventional_transliteration": "ta-na-ra-te-u-ti-nu",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 1,
+      "exact_type_sites": [
+        "Iouktas"
+      ],
+      "n_sites": 1,
+      "signs_detail": [
+        {
+          "sign": "TA",
+          "ab": null,
+          "lb": "B TA",
+          "conventional_value": "ta",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "NA",
+          "ab": null,
+          "lb": "B NA",
+          "conventional_value": "na",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "RA",
+          "ab": null,
+          "lb": "B RA",
+          "conventional_value": "ra",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "TE",
+          "ab": null,
+          "lb": "B TE",
+          "conventional_value": "te",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "U",
+          "ab": null,
+          "lb": "B U",
+          "conventional_value": "u",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "TI",
+          "ab": null,
+          "lb": "B TI",
+          "conventional_value": "ti",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        },
+        {
+          "sign": "NU",
+          "ab": null,
+          "lb": "B NU",
+          "conventional_value": "nu",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": false,
+      "dimino_reading": null,
+      "dimino_artifact": null,
+      "dimino_per_sign": null,
+      "lexical_source": "NONE PUBLISHED",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "conventional GORILA transliteration; no lexical consensus.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "unanalyzed LF frame word (no published alternative from Di Mino)"
+      ],
+      "claim_status": "SOURCE_BLOCKED (conventional transliteration only; no published reading)"
+    },
+    {
+      "position": 8,
+      "slot": "P8_unlabeled",
+      "signs": [
+        "I"
+      ],
+      "conventional_transliteration": "i",
+      "contains_novel_301": false,
+      "n_novel_parameters": 0,
+      "exact_type_attestations": 39,
+      "exact_type_sites": [
+        "Haghia Triada",
+        "Iouktas",
+        "Kannia",
+        "Khania",
+        "Palaikastro",
+        "Platanos",
+        "Zakros"
+      ],
+      "n_sites": 7,
+      "signs_detail": [
+        {
+          "sign": "I",
+          "ab": null,
+          "lb": "B I",
+          "conventional_value": "i",
+          "class": "KNOWN_AB_TRANSFER",
+          "novel_parameter": false,
+          "value_under_test": null,
+          "scores_as_discovery": "NO — literature_match, score 0"
+        }
+      ],
+      "dimino_published": false,
+      "dimino_reading": null,
+      "dimino_artifact": null,
+      "dimino_per_sign": null,
+      "lexical_source": "NONE PUBLISHED",
+      "morphological_source": "NONE PUBLISHED",
+      "prior_literature": "conventional GORILA transliteration; no lexical consensus.",
+      "selected_before_or_after_translation": "n/a (conventional transfer)",
+      "independent_prediction": "NONE — no reading published, so no falsifiable prediction exists (SOURCE_BLOCKED).",
+      "alternative_readings": [
+        "unanalyzed LF frame word (no published alternative from Di Mino)"
+      ],
+      "claim_status": "SOURCE_BLOCKED (conventional transliteration only; no published reading)"
+    }
+  ],
+  "coverage_accounting": {
+    "n_formula_words_line1": 8,
+    "n_words_with_published_morpheme_table": 1,
+    "n_words_source_blocked_for_lexical_morph": 7,
+    "total_signs_in_formula": 35,
+    "novel_parameters": 1,
+    "conventional_LB_transfer_signs": 34,
+    "novel_fraction": 0.02857142857142857,
+    "note": "Of the ENTIRE published line-1 translation, exactly ONE sign (*301) is a novel parameter; every other sign is conventional Linear B transfer (literature_match, score 0). Only word 1 has ANY published morpheme table; words 2-N are transliterated but carry NO published lexical/morphological reading -> SOURCE_BLOCKED."
+  },
+  "homophony_diagnostic": {
+    "standard_NA_sign_tokens": 158,
+    "star301_sign_tokens": 31,
+    "na_appears_inside_same_formula": true,
+    "examples_in_IOZa2": [
+      "U-NA-KA-NA-SI (2x NA)",
+      "I-PI-NA-MA (NA)",
+      "TA-NA-RA-TE-U-TI-NU (NA)"
+    ],
+    "finding": "/na/ is ALREADY densely written by the standard NA sign (AB06) — 158 tokens, including inside the SAME IOZa2 line. Assigning *301 a SECOND /na/ value posits a typologically costly homophone (Aegean syllabaries strongly avoid true CV homophones). A scribe writing /na/ would use NA, not *301 — independent evidence AGAINST *301=/na/."
+  },
+  "word_order_recurrence_test": {
+    "description": "Value-free test: do LF carriers preserve the canonical slot order (a FIXED-TEMPLATE fact)?",
+    "n_carriers_with_>=2_slots": 12,
+    "n_order_consistent": 12,
+    "order_consistency_rate": 1.0,
+    "neutral_baseline": "FIXED_TEMPLATE (frozen-formula) model predicts this order with ZERO phonetic input.",
+    "interpretation": "Word order is a property of the frozen formula template, recovered WITHOUT any phonetic reading. Di Mino's Semitic morphology reproduces but does not IMPROVE on the neutral template; predicting word order is NOT evidence for the readings.",
+    "carriers_sample": [
+      [
+        "IOZa2",
+        "Iouktas",
+        [
+          "S1",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      ],
+      [
+        "IOZa6",
+        "Iouktas",
+        [
+          "S1",
+          "S3"
+        ]
+      ],
+      [
+        "IOZa9",
+        "Iouktas",
+        [
+          "S3",
+          "S4"
+        ]
+      ],
+      [
+        "IOZa15",
+        "Iouktas",
+        [
+          "S5",
+          "S6"
+        ]
+      ],
+      [
+        "IOZa16",
+        "Iouktas",
+        [
+          "S3",
+          "S4"
+        ]
+      ],
+      [
+        "KOZa1",
+        "Kophinas",
+        [
+          "S1",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      ],
+      [
+        "PKZa11",
+        "Palaikastro",
+        [
+          "S1",
+          "S3"
+        ]
+      ],
+      [
+        "SYZa2",
+        "Syme",
+        [
+          "S1",
+          "S4"
+        ]
+      ],
+      [
+        "SYZa3",
+        "Syme",
+        [
+          "S1",
+          "S4",
+          "S6"
+        ]
+      ],
+      [
+        "TLZa1",
+        "Troullos",
+        [
+          "S1",
+          "S3",
+          "S5",
+          "S6"
+        ]
+      ],
+      [
+        "VRYZa1",
+        "Vrysinas",
+        [
+          "S5",
+          "S6"
+        ]
+      ],
+      [
+        "PKZa27",
+        "Palaikastro",
+        [
+          "S3",
+          "S4"
+        ]
+      ]
+    ]
+  },
+  "system_level_prediction_audit": {
+    "word_order": "Recovered by neutral FIXED_TEMPLATE model; readings add nothing (see word_order_recurrence_test).",
+    "recurrence": "Slot recurrence is value-free (report 03/04); does not depend on any phonetic reading.",
+    "regional_variants": "WA-JA~WA-E, A-~JA- alternations are structural (report 04); no phonetic reading required or predicted.",
+    "object_type": "SOURCE_BLOCKED — no published mapping from reading to support type (all are stone libation vessels anyway).",
+    "formula_position": "Invocation-verb slot is a value-free structural marker (report 03 §E); role is L3, earns no phonetic/lexical licence.",
+    "recipient_structure": "SOURCE_BLOCKED — no published parse of JA-SA-SA-RA-ME (theonym?) / recipient beyond word 1.",
+    "grammatical_dependencies": "SOURCE_BLOCKED — only word-1 internal morphology asserted; no published cross-word syntax (verb-object agreement, etc.).",
+    "verdict": "The COMPLETE system is NOT publicly specified: only word 1 (and within it only *301) carries a novel claim. No system-level prediction (word order, recurrence, regional variation) requires or is improved by the phonetic readings over neutral structural models. Every testable structural fact is value-free; every value-laden claim beyond *301 is SOURCE_BLOCKED."
+  }
+}

@@ -1,0 +1,1882 @@
+{
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "constitution": "v2.2",
+  "generated_by": "scripts/build_libation_formula_corpus.py",
+  "seed": 20260708,
+  "note": "NON-CIRCULAR corpus assembly. No phonetic value assigned to *301. Partitions per frozen prereg; site-contamination flagged, not resolved.",
+  "partition_definition": {
+    "derivation_inscriptions": [
+      "HTWa1022",
+      "IOZa2",
+      "KN2",
+      "TLZa1"
+    ],
+    "derivation_sites": [
+      "Iouktas",
+      "Troullos"
+    ],
+    "named_heldout_forms_leave_form_out": [
+      "A-TA-I-*301-DE-KA",
+      "TA-NA-I-*301-U-TI-NU"
+    ],
+    "target_word_leave_target_out": "A-TA-I-*301-WA-JA",
+    "cv_unit": "peak-sanctuary site",
+    "grouping_unit": "inscription"
+  },
+  "summary": {
+    "seed": 20260708,
+    "total_301_attestations": 36,
+    "distinct_301_forms": 23,
+    "n_301_inscriptions": 36,
+    "n_libation_formula_carriers_total": 31,
+    "n_lf_carriers_without_301": 15,
+    "partition_counts": {
+      "DERIVATION": 4,
+      "HELD_OUT": 32
+    },
+    "held_out_301_leave_site_out_eligible": 26,
+    "held_out_invocation_slot_leave_site_out_eligible": 11,
+    "held_out_sites_leave_site_out_eligible": [
+      "Apodoulou",
+      "Arkhalkhori",
+      "Haghia Triada",
+      "Khania",
+      "Knossos",
+      "Kophinas",
+      "Palaikastro",
+      "Psykhro",
+      "Skoteino Cave",
+      "Syme",
+      "Tiryns",
+      "Tylissos",
+      "Zakros"
+    ],
+    "site_contaminated_heldout_forms": [
+      {
+        "id": "IOZa3",
+        "form": "A-TA-I-*301-WA-JA",
+        "site": "Iouktas"
+      },
+      {
+        "id": "IOZa4",
+        "form": "*301-WA",
+        "site": "Iouktas"
+      },
+      {
+        "id": "IOZa6",
+        "form": "TA-NA-I-*301-U-TI-NU",
+        "site": "Iouktas"
+      },
+      {
+        "id": "IOZa7",
+        "form": "A-TA-I-*301-WA-JA",
+        "site": "Iouktas"
+      },
+      {
+        "id": "IOZa8",
+        "form": "A-NA-TI-*301-WA-JA",
+        "site": "Iouktas"
+      }
+    ],
+    "NO_POWER_threshold_independent_heldout": 3,
+    "power_flag_H1": "ADEQUATE",
+    "power_flag_invocation_slot": "ADEQUATE",
+    "distinct_forms_index": {
+      "*301-NA": [
+        "KH5"
+      ],
+      "*301-SI": [
+        "TIZb1"
+      ],
+      "*301-U-RA": [
+        "HT115a"
+      ],
+      "*301-WA": [
+        "IOZa4"
+      ],
+      "A-*301": [
+        "KH58"
+      ],
+      "A-*301-KI-TA-A": [
+        "TYZb4"
+      ],
+      "A-NA-TI-*301-WA-JA": [
+        "IOZa8"
+      ],
+      "A-RE-NE-SI-DI-*301-PI-KE-PA-JA-TA-RI-SE-TE-RI-MU-A-JA-KU": [
+        "KNZf13"
+      ],
+      "A-TA-I-*301-DE-KA": [
+        "ZAZb3"
+      ],
+      "A-TA-I-*301-WA-E": [
+        "PKZa11"
+      ],
+      "A-TA-I-*301-WA-JA": [
+        "IOZa2",
+        "IOZa3",
+        "IOZa7",
+        "KOZa1",
+        "PKZa12",
+        "SYZa1",
+        "SYZa2",
+        "SYZa3",
+        "SYZa4",
+        "SYZa8",
+        "TLZa1"
+      ],
+      "DA+*301": [
+        "KH18"
+      ],
+      "DA-DU-*301": [
+        "DRAZg1"
+      ],
+      "E-*301": [
+        "HTWa1026"
+      ],
+      "I+*301": [
+        "HTWa1022",
+        "KN2"
+      ],
+      "JA-TA-I-*301-U-JA": [
+        "APZa1"
+      ],
+      "MI+*301": [
+        "KHWc2064",
+        "KHWc2099"
+      ],
+      "NA-TU-*301-NE": [
+        "SKOZc1"
+      ],
+      "SA-*301-RI": [
+        "ZA11b"
+      ],
+      "TA-NA-I-*301-TI": [
+        "PSZa2"
+      ],
+      "TA-NA-I-*301-U-TI-NU": [
+        "IOZa6"
+      ],
+      "TE-*301": [
+        "HT8a",
+        "HT98a"
+      ],
+      "ZU-*301-SE-DE-*21F-*118": [
+        "ARKH2"
+      ]
+    }
+  },
+  "records_301": [
+    {
+      "inscription_id": "HT8a",
+      "site": "Haghia Triada",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "TE-*301",
+      "sign_sequence": [
+        "TE",
+        "*301"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "JE-DI",
+        "OLE+KI",
+        "PA₃-KA-RA-TI",
+        "PA",
+        "TE-*301",
+        "QA-*310-I",
+        "SI-KI-RA",
+        "KI-RE-TA-NA"
+      ]
+    },
+    {
+      "inscription_id": "HT98a",
+      "site": "Haghia Triada",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "TE-*301",
+      "sign_sequence": [
+        "TE",
+        "*301"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "DE",
+        "TU",
+        "TA-NA-TI",
+        "DI-RE-DI-NA",
+        "TE-*301",
+        "RO-KE",
+        "KA-RI-*310-I"
+      ]
+    },
+    {
+      "inscription_id": "HT115a",
+      "site": "Haghia Triada",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "*301-U-RA",
+      "sign_sequence": [
+        "*301",
+        "U",
+        "RA"
+      ],
+      "n_signs": 3,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "*47-NU-RA-JA",
+        "I",
+        "GRA+BOSm",
+        "RI-TA-MA-NU-WI",
+        "*301-U-RA",
+        "NA-*21F-NE-MI-NA",
+        "SE-KU-TU",
+        "PA-RA-NE",
+        "A-SE-JA",
+        "KA-PO-RU",
+        "RI-SU-MA",
+        "SU"
+      ]
+    },
+    {
+      "inscription_id": "HTWa1022",
+      "site": "Haghia Triada",
+      "support": "Nodule",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "I+*301",
+      "sign_sequence": [
+        "I+*301"
+      ],
+      "n_signs": 1,
+      "the_301_tokens": [
+        "I+*301"
+      ],
+      "301_is_ligature": true,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "DERIVATION",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "I+*301"
+      ]
+    },
+    {
+      "inscription_id": "HTWa1026",
+      "site": "Haghia Triada",
+      "support": "Nodule",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "E-*301",
+      "sign_sequence": [
+        "E",
+        "*301"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "E-*301"
+      ]
+    },
+    {
+      "inscription_id": "IOZa2",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "I-PI-NA-MA",
+        "JA-DI-KI",
+        "SA-SA-RA",
+        "SI-RU-TE",
+        "U-NA-KA-NA"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "DERIVATION",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "JA-DI-KI-TU",
+        "JA-SA-SA-RA-ME",
+        "U-NA-KA-NA-SI",
+        "I-PI-NA-MA",
+        "SI-RU-TE",
+        "TA-NA-RA-TE-U-TI-NU",
+        "I"
+      ]
+    },
+    {
+      "inscription_id": "IOZa3",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": true,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "AU"
+      ]
+    },
+    {
+      "inscription_id": "IOZa4",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "*301-WA",
+      "sign_sequence": [
+        "*301",
+        "WA"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": true,
+      "full_inscription_words": [
+        "*301-WA"
+      ]
+    },
+    {
+      "inscription_id": "IOZa6",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "LMIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "TA-NA-I-*301-U-TI-NU",
+      "sign_sequence": [
+        "TA",
+        "NA",
+        "I",
+        "*301",
+        "U",
+        "TI",
+        "NU"
+      ],
+      "n_signs": 7,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "SA-SA-RA",
+        "TA-NA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": true,
+      "full_inscription_words": [
+        "TA-NA-I-*301-U-TI-NU",
+        "I-NA-TA-I-ZU-DI-SI-KA",
+        "JA-SA-SA-RA-ME"
+      ]
+    },
+    {
+      "inscription_id": "IOZa7",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "LMI",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": true,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "JA-TI-*321"
+      ]
+    },
+    {
+      "inscription_id": "IOZa8",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "LMI",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-NA-TI-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "NA",
+        "TI",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": true,
+      "full_inscription_words": [
+        "A-NA-TI-*301-WA-JA"
+      ]
+    },
+    {
+      "inscription_id": "KH5",
+      "site": "Khania",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "*301-NA",
+      "sign_sequence": [
+        "*301",
+        "NA"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-DA-KI-SI-KA",
+        "A-RA-U-DA",
+        "WI-SA-SA-NE",
+        "CYP+E",
+        "VINb+WI",
+        "WI-NA-DU",
+        "*301-NA",
+        "KU-PA-ZU",
+        "CYP",
+        "NI"
+      ]
+    },
+    {
+      "inscription_id": "KH18",
+      "site": "Khania",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "DA+*301",
+      "sign_sequence": [
+        "DA+*301"
+      ],
+      "n_signs": 1,
+      "the_301_tokens": [
+        "DA+*301"
+      ],
+      "301_is_ligature": true,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "I-KU-PI",
+        "*131C",
+        "KU",
+        "SI",
+        "DA+*301",
+        "*131C",
+        "RO+RO["
+      ]
+    },
+    {
+      "inscription_id": "KH58",
+      "site": "Khania",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-*301",
+      "sign_sequence": [
+        "A",
+        "*301"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "CYP",
+        "NI",
+        "CYP+E",
+        "A",
+        "CYP+E",
+        "CYP",
+        "A-*301"
+      ]
+    },
+    {
+      "inscription_id": "KHWc2064",
+      "site": "Khania",
+      "support": "Roundel",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "MI+*301",
+      "sign_sequence": [
+        "MI+*301"
+      ],
+      "n_signs": 1,
+      "the_301_tokens": [
+        "MI+*301"
+      ],
+      "301_is_ligature": true,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "MI+*301"
+      ]
+    },
+    {
+      "inscription_id": "KHWc2099",
+      "site": "Khania",
+      "support": "Roundel",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "MI+*301",
+      "sign_sequence": [
+        "MI+*301"
+      ],
+      "n_signs": 1,
+      "the_301_tokens": [
+        "MI+*301"
+      ],
+      "301_is_ligature": true,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "MI+*301"
+      ]
+    },
+    {
+      "inscription_id": "KN2",
+      "site": "Knossos",
+      "support": "Tablet",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "I+*301",
+      "sign_sequence": [
+        "I+*301"
+      ],
+      "n_signs": 1,
+      "the_301_tokens": [
+        "I+*301"
+      ],
+      "301_is_ligature": true,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "DERIVATION",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "RU-NA",
+        "I+*301"
+      ]
+    },
+    {
+      "inscription_id": "KNZf13",
+      "site": "Knossos",
+      "support": "Metal object",
+      "context_period": "LMIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-RE-NE-SI-DI-*301-PI-KE-PA-JA-TA-RI-SE-TE-RI-MU-A-JA-KU",
+      "sign_sequence": [
+        "A",
+        "RE",
+        "NE",
+        "SI",
+        "DI",
+        "*301",
+        "PI",
+        "KE",
+        "PA",
+        "JA",
+        "TA",
+        "RI",
+        "SE",
+        "TE",
+        "RI",
+        "MU",
+        "A",
+        "JA",
+        "KU"
+      ],
+      "n_signs": 19,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-RE-NE-SI-DI-*301-PI-KE-PA-JA-TA-RI-SE-TE-RI-MU-A-JA-KU"
+      ]
+    },
+    {
+      "inscription_id": "KOZa1",
+      "site": "Kophinas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "I-PI-NA-MA",
+        "SI-RU-TE",
+        "U-NA-KA-NA"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "TU-RU-SA",
+        "DU-*314-RE",
+        "I-DA-A",
+        "U-NA-KA-NA-SI",
+        "I-PI-NA-MA",
+        "SI-RU-TE"
+      ]
+    },
+    {
+      "inscription_id": "PKZa11",
+      "site": "Palaikastro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-E",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "E"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "SA-SA-RA"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-E",
+        "A-DI-KI-TE-TE",
+        "RE",
+        "PI-TE-RI",
+        "A-KO-A-NE",
+        "A",
+        "SA-SA-RA-ME",
+        "U-NA-RU-KA-NA-TI",
+        "I-PI-NA-MI-NA",
+        "SI-RU",
+        "I-NA-JA-PA-QA"
+      ]
+    },
+    {
+      "inscription_id": "PKZa12",
+      "site": "Palaikastro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "A-DI-KI-TE",
+        "SI",
+        "RA-ME",
+        "A-NE",
+        "U-NA-RU-KA-JA-SI",
+        "A-PA-DU-PA",
+        "JA",
+        "JA-PA-QA"
+      ]
+    },
+    {
+      "inscription_id": "PSZa2",
+      "site": "Psykhro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "TA-NA-I-*301-TI",
+      "sign_sequence": [
+        "TA",
+        "NA",
+        "I",
+        "*301",
+        "TI"
+      ],
+      "n_signs": 5,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "SA-SA-RA",
+        "TA-NA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "RE-I-KE",
+        "TA-NA-I-*301-TI",
+        "𐄌-JA-TI",
+        "JA-SA-SA-RA-ME"
+      ]
+    },
+    {
+      "inscription_id": "SKOZc1",
+      "site": "Skoteino Cave",
+      "support": "Inked inscription",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "NA-TU-*301-NE",
+      "sign_sequence": [
+        "NA",
+        "TU",
+        "*301",
+        "NE"
+      ],
+      "n_signs": 4,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "NA-TU-*301-NE",
+        "QA-KI-TI"
+      ]
+    },
+    {
+      "inscription_id": "SYZa1",
+      "site": "Syme",
+      "support": "Stone vessel",
+      "context_period": "MMIIIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "I-DA-MI",
+        "JA"
+      ]
+    },
+    {
+      "inscription_id": "SYZa2",
+      "site": "Syme",
+      "support": "Stone vessel",
+      "context_period": "LMI",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "U-NA-KA-NA"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "JA-SU-MA-TU-OLIV",
+        "U-NA-KA-NA-SI-OLE",
+        "A-JA"
+      ]
+    },
+    {
+      "inscription_id": "SYZa3",
+      "site": "Syme",
+      "support": "Stone vessel",
+      "context_period": "LMIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "SI-RU-TE"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "SE-KA-NA-SI",
+        "SI-RU-TE"
+      ]
+    },
+    {
+      "inscription_id": "SYZa4",
+      "site": "Syme",
+      "support": "Stone vessel",
+      "context_period": "LMIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "JA-I-NWA-ZA",
+        "PA₃-NI-WI"
+      ]
+    },
+    {
+      "inscription_id": "SYZa8",
+      "site": "Syme",
+      "support": "Stone vessel",
+      "context_period": "LMIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "JA-JA"
+      ]
+    },
+    {
+      "inscription_id": "TIZb1",
+      "site": "Tiryns",
+      "support": "Clay vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "*301-SI",
+      "sign_sequence": [
+        "*301",
+        "SI"
+      ],
+      "n_signs": 2,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "*301-SI"
+      ]
+    },
+    {
+      "inscription_id": "TLZa1",
+      "site": "Troullos",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-WA-JA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I",
+        "I-PI-NA-MA",
+        "O-SU-QA-RE",
+        "SA-SA-RA",
+        "SI-RU-TE",
+        "U-NA-KA-NA"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": true,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": true,
+      "partition": "DERIVATION",
+      "leave_form_out_eligible": false,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-TA-I-*301-WA-JA",
+        "O-SU-QA-RE",
+        "JA-SA-SA-RA-ME",
+        "U-NA-KA-NA",
+        "I-PI-NA-MA",
+        "SI-RU-TE"
+      ]
+    },
+    {
+      "inscription_id": "TYZb4",
+      "site": "Tylissos",
+      "support": "Clay vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-*301-KI-TA-A",
+      "sign_sequence": [
+        "A",
+        "*301",
+        "KI",
+        "TA",
+        "A"
+      ],
+      "n_signs": 5,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "A-*301-KI-TA-A"
+      ]
+    },
+    {
+      "inscription_id": "ZA11b",
+      "site": "Zakros",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "SA-*301-RI",
+      "sign_sequence": [
+        "SA",
+        "*301",
+        "RI"
+      ],
+      "n_signs": 3,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "E-TO-RI",
+        "SA-*301-RI",
+        "GRA+PA",
+        "I-OLIV",
+        "I-DE",
+        "RA",
+        "KU-PA",
+        "GRA+PA"
+      ]
+    },
+    {
+      "inscription_id": "ZAZb3",
+      "site": "Zakros",
+      "support": "Stone vessel",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "A-TA-I-*301-DE-KA",
+      "sign_sequence": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "DE",
+        "KA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "VIN",
+        "DI-DI-KA-SE",
+        "A-SA-MU-NE",
+        "A-SE",
+        "A-TA-I-*301-DE-KA",
+        "A-RE-PI-RE-NA",
+        "TI-TI-KU"
+      ]
+    },
+    {
+      "inscription_id": "APZa1",
+      "site": "Apodoulou",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "JA-TA-I-*301-U-JA",
+      "sign_sequence": [
+        "JA",
+        "TA",
+        "I",
+        "*301",
+        "U",
+        "JA"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": true,
+      "lf_markers_present": [
+        "A-TA-I"
+      ],
+      "formula_position": "position_1_invocation_verb",
+      "is_invocation_verb_slot": true,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "JA-TA-I-*301-U-JA"
+      ]
+    },
+    {
+      "inscription_id": "ARKH2",
+      "site": "Arkhalkhori",
+      "support": "Tablet",
+      "context_period": "LMIB",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "ZU-*301-SE-DE-*21F-*118",
+      "sign_sequence": [
+        "ZU",
+        "*301",
+        "SE",
+        "DE",
+        "*21F",
+        "*118"
+      ],
+      "n_signs": 6,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "GORILA word-divider (·) bounded; single graphic word",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": true,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "SI-DA-TE",
+        "KU-RA",
+        "*131B",
+        "A-SI-DA-TO-I",
+        "ZU-*301-SE-DE-*21F-*118",
+        "A-SU-PU-WA",
+        "RU-MI"
+      ]
+    },
+    {
+      "inscription_id": "DRAZg1",
+      "site": "(unprovenanced)",
+      "support": "Stone object",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "diplomatic_reading": "DA-DU-*301",
+      "sign_sequence": [
+        "DA",
+        "DU",
+        "*301"
+      ],
+      "n_signs": 3,
+      "the_301_tokens": [
+        "*301"
+      ],
+      "301_is_ligature": false,
+      "word_division_note": "single-word inscription",
+      "damage_note": "no damage flag in silver record; consult GORILA autopsy for lacunae",
+      "is_libation_formula_carrier": false,
+      "lf_markers_present": [],
+      "formula_position": "administrative_or_other_context",
+      "is_invocation_verb_slot": false,
+      "is_target_word": false,
+      "source_dependency": "single_source:GORILA (no independent epigraphic re-collation in corpus)",
+      "used_by_public_claim": false,
+      "partition": "HELD_OUT",
+      "leave_form_out_eligible": true,
+      "leave_site_out_eligible": false,
+      "site_contaminated_vs_derivation": false,
+      "full_inscription_words": [
+        "DA-DU-*301"
+      ]
+    }
+  ],
+  "libation_formula_frame_without_301": [
+    {
+      "inscription_id": "APZa2",
+      "site": "Apodoulou",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "I-PI-NA-MA"
+      ],
+      "full_inscription_words": [
+        "NA-SI",
+        "I-PI-NA-MA",
+        "I-KU-PA₃-NA-TU-NA-TE",
+        "PI-MI-NA-TE",
+        "I-NA-JA-RE-TA",
+        "QA"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "IOZa14",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SI-RU-TE"
+      ],
+      "full_inscription_words": [
+        "SI-RU-TE",
+        "I-DI"
+      ],
+      "partition": "DERIVATION",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "IOZa15",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "I-PI-NA-MA",
+        "SI-RU-TE"
+      ],
+      "full_inscription_words": [
+        "I-PI-NA-MA",
+        "SI-RU-TE"
+      ],
+      "partition": "DERIVATION",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "IOZa16",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "AROM",
+        "JA-SA-SA-RA",
+        "ME",
+        "U-NA-RU-KA-NA-SI"
+      ],
+      "partition": "DERIVATION",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "IOZa9",
+      "site": "Iouktas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA",
+        "U-NA-KA-NA"
+      ],
+      "full_inscription_words": [
+        "JA-SA-SA-RA-ME",
+        "U-NA-KA-NA-SI"
+      ],
+      "partition": "DERIVATION",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "IOZb10",
+      "site": "Iouktas",
+      "support": "Clay vessel",
+      "context_period": "LMI",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "A-SA-SA-RA-ME"
+      ],
+      "partition": "DERIVATION",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "KHZc106",
+      "site": "Knossos",
+      "support": "Inked inscription",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "SA-SA-RA-ME"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "KNZa10",
+      "site": "Knossos",
+      "support": "Stone vessel",
+      "context_period": "LMIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "TA-NU-MU-TI",
+        "JA-SA-SA-RA-MA",
+        "NA",
+        "DA-WA",
+        "DU-WA-TO",
+        "I-JA"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "PKZa15",
+      "site": "Palaikastro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "JA-DI-KI"
+      ],
+      "full_inscription_words": [
+        "JA-DI-KI-TE-TE-DU-PU₂-RE"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "PKZa27",
+      "site": "Palaikastro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA",
+        "U-NA-KA-NA"
+      ],
+      "full_inscription_words": [
+        "JA-SA-SA-RA-ME",
+        "U-NA-KA-NA-SI"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "PKZa4",
+      "site": "Palaikastro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "A-SA-SA-RA"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "PKZa8",
+      "site": "Palaikastro",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "JA-DI-KI",
+        "U-NA-KA-NA"
+      ],
+      "full_inscription_words": [
+        "NU",
+        "PA₃-E",
+        "JA-DI-KI-TE-TE-*307-PU₂-RE",
+        "TU-ME-I",
+        "JA-SA-U-NA-KA-NA-SI",
+        "I-PI"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "PLZf1",
+      "site": "Platanos",
+      "support": "Metal object",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "TA",
+        "WI-TE-JA-MU",
+        "U-QE-TI",
+        "JA-SA-SA-RA-ME",
+        "TA-NU-NI-KI-NA",
+        "NI-NU-NI",
+        "I"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "POZc1",
+      "site": "Poros Herakleiou",
+      "support": "Inked inscription",
+      "context_period": "LMIIIA",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "SA-SA-RA"
+      ],
+      "full_inscription_words": [
+        "RI-QE-TI-A-SA-SA-RA-*325"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    },
+    {
+      "inscription_id": "VRYZa1",
+      "site": "Vrysinas",
+      "support": "Stone vessel",
+      "context_period": "(undated)",
+      "edition": "GORILA (Godart & Olivier 1976-1985), Recueil des inscriptions en Lineaire A; digitized via SigLA / logos silver corpus",
+      "lf_markers_present": [
+        "I-PI-NA-MA",
+        "SI-RU-TE"
+      ],
+      "full_inscription_words": [
+        "I-PI-NA-MA",
+        "SI-RU-TE"
+      ],
+      "partition": "HELD_OUT",
+      "role": "libation_formula_frame_no_301 (context / non-301 formula slots)"
+    }
+  ]
+}

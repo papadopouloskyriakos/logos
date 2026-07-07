@@ -1,0 +1,1203 @@
+{
+  "prereg": "DI_MINO_EXACT_CLAIM_V1 (sha 8b098a4c)",
+  "constitution": "v2.2",
+  "seed": 20260708,
+  "task": "B — Semitic root + gloss audit (H2 root / H3 gloss)",
+  "reading_pipeline": {
+    "target_word": "A-TA-I-*301-WA-JA",
+    "novel_parameter": "*301=/na/ (only free parameter; other 5 signs are literature_match)",
+    "skeleton_from_na": "nwy",
+    "claim_root": "N-W-Y",
+    "claim_gloss": "dwell",
+    "vowel_strip": "na-wa-ya -> n-w-y"
+  },
+  "B1_target_root_table": [
+    {
+      "language": "Hebrew",
+      "attested_root": "nwh",
+      "final_radical": "h",
+      "matches_literal_na_wa_ya_yod": false,
+      "glosses": [
+        "dwell",
+        "abide",
+        "abode",
+        "habitation",
+        "pasture",
+        "rest",
+        "keep-at-home"
+      ],
+      "gloss_tier_vs_dwell": "exact",
+      "full_gloss": "navah (v.) 'to rest/dwell, abide, keep at home'; naveh (n.) 'abode, habitation, abode of shepherds/flocks, pasture'. Root written with final HE (nun-waw-he), not yod. Verb is rare/poetic; the weight of attestation is the NOUN 'abode/pasture'.",
+      "sources": [
+        "Brown-Driver-Briggs, Hebrew and English Lexicon (1906)",
+        "Strong's Hebrew Lexicon (H5115 navah / H5116 naveh)",
+        "Klein, Comprehensive Etymological Dictionary of the Hebrew Language",
+        "Koehler-Baumgartner, Hebrew & Aramaic Lexicon of the OT"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "language": "Aramaic",
+      "attested_root": "nwh",
+      "final_radical": "h",
+      "matches_literal_na_wa_ya_yod": false,
+      "glosses": [
+        "abode",
+        "dwelling",
+        "resting-place",
+        "rest"
+      ],
+      "gloss_tier_vs_dwell": "near",
+      "full_gloss": "nawa/naveh 'abode, dwelling, resting-place' (JPA/Syriac); nominal, cognate to Hebrew.",
+      "sources": [
+        "Sokoloff, Dictionary of Jewish Palestinian Aramaic",
+        "Payne Smith, Compendious Syriac Dictionary",
+        "Jastrow, Dictionary of the Targumim / Talmud"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "language": "Akkadian",
+      "attested_root": "nw'",
+      "final_radical": "'",
+      "matches_literal_na_wa_ya_yod": false,
+      "glosses": [
+        "steppe",
+        "pasture",
+        "encampment",
+        "camp"
+      ],
+      "gloss_tier_vs_dwell": "broad",
+      "full_gloss": "nawum/namu 'steppe, open grazing land, encampment of semi-nomads'; cognate of West Semitic naveh. Root n-w-' / n-w-m, NOT n-w-y. Verb sense 'become waste/desert'.",
+      "sources": [
+        "Chicago Assyrian Dictionary (N/2, s.v. namu/nawu)",
+        "von Soden, Akkadisches Handworterbuch"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "language": "Ugaritic",
+      "attested_root": "nwy",
+      "final_radical": "y",
+      "matches_literal_na_wa_ya_yod": true,
+      "glosses": [
+        "drive-away",
+        "expel",
+        "chase"
+      ],
+      "gloss_tier_vs_dwell": "unrelated",
+      "full_gloss": "DUL lists a root n-w-y; gloss debated ('to drive away / expel' in one reading). SOURCE_UNCERTAIN — NOT counted in load-bearing tiers.",
+      "sources": [
+        "del Olmo Lete & Sanmartin, Dictionary of the Ugaritic Language"
+      ],
+      "confidence": "UNCERTAIN"
+    },
+    {
+      "language": "Arabic",
+      "attested_root": "nwy",
+      "final_radical": "y",
+      "matches_literal_na_wa_ya_yod": true,
+      "glosses": [
+        "intend",
+        "purpose",
+        "resolve",
+        "journey",
+        "depart",
+        "be-distant",
+        "date-stone"
+      ],
+      "gloss_tier_vs_dwell": "unrelated",
+      "full_gloss": "nawa (n-w-y) 'to intend, purpose, resolve; to set out on a journey, be far/distant'; niyya 'intention'; nawah 'date-stone'. Final radical YA (matches na-wa-ya). Gloss is INTEND/journey, NOT dwell. Arabic 'dwell' = sakana (s-k-n) / nazala (n-z-l).",
+      "sources": [
+        "Lane, Arabic-English Lexicon (s.v. n-w-y)",
+        "Wehr, Dictionary of Modern Written Arabic",
+        "Quranic Arabic Corpus, root n-w-y (niyya)"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "language": "Phoenician",
+      "attested_root": null,
+      "final_radical": null,
+      "matches_literal_na_wa_ya_yod": false,
+      "glosses": [],
+      "gloss_tier_vs_dwell": "none",
+      "full_gloss": "No n-w-h/n-w-y 'dwell' attested in the Phoenician-Punic lexicon; 'dwell/settle' is carried by y-s-b (yasab). Root SOURCE_BLOCKED for this gloss.",
+      "sources": [
+        "Hoftijzer-Jongeling, Dict. of the North-West Semitic Inscriptions"
+      ],
+      "confidence": "SOURCE_BLOCKED"
+    }
+  ],
+  "B1_target_across_languages_strict": [
+    {
+      "lang": "Hebrew",
+      "root": "nwh",
+      "final_radical": "h",
+      "glosses": [
+        "dwell",
+        "abide",
+        "abode",
+        "habitation",
+        "pasture",
+        "rest",
+        "keep-at-home"
+      ],
+      "tier": "exact",
+      "matches_literal_y": false,
+      "attested": true,
+      "reachable_under_collapse": false,
+      "confidence": "HIGH",
+      "sources": [
+        "Brown-Driver-Briggs, Hebrew and English Lexicon (1906)",
+        "Strong's Hebrew Lexicon (H5115 navah / H5116 naveh)",
+        "Klein, Comprehensive Etymological Dictionary of the Hebrew Language",
+        "Koehler-Baumgartner, Hebrew & Aramaic Lexicon of the OT"
+      ]
+    },
+    {
+      "lang": "Aramaic",
+      "root": "nwh",
+      "final_radical": "h",
+      "glosses": [
+        "abode",
+        "dwelling",
+        "resting-place",
+        "rest"
+      ],
+      "tier": "near",
+      "matches_literal_y": false,
+      "attested": true,
+      "reachable_under_collapse": false,
+      "confidence": "HIGH",
+      "sources": [
+        "Sokoloff, Dictionary of Jewish Palestinian Aramaic",
+        "Payne Smith, Compendious Syriac Dictionary",
+        "Jastrow, Dictionary of the Targumim / Talmud"
+      ]
+    },
+    {
+      "lang": "Akkadian",
+      "root": "nw'",
+      "final_radical": "'",
+      "glosses": [
+        "steppe",
+        "pasture",
+        "encampment",
+        "camp"
+      ],
+      "tier": "broad",
+      "matches_literal_y": false,
+      "attested": true,
+      "reachable_under_collapse": false,
+      "confidence": "HIGH",
+      "sources": [
+        "Chicago Assyrian Dictionary (N/2, s.v. namu/nawu)",
+        "von Soden, Akkadisches Handworterbuch"
+      ]
+    },
+    {
+      "lang": "Ugaritic",
+      "root": "nwy",
+      "final_radical": "y",
+      "glosses": [
+        "drive-away",
+        "expel",
+        "chase"
+      ],
+      "tier": "unrelated",
+      "matches_literal_y": true,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "UNCERTAIN",
+      "sources": [
+        "del Olmo Lete & Sanmartin, Dictionary of the Ugaritic Language"
+      ]
+    },
+    {
+      "lang": "Arabic",
+      "root": "nwy",
+      "final_radical": "y",
+      "glosses": [
+        "intend",
+        "purpose",
+        "resolve",
+        "journey",
+        "depart",
+        "be-distant",
+        "date-stone"
+      ],
+      "tier": "unrelated",
+      "matches_literal_y": true,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "HIGH",
+      "sources": [
+        "Lane, Arabic-English Lexicon (s.v. n-w-y)",
+        "Wehr, Dictionary of Modern Written Arabic",
+        "Quranic Arabic Corpus, root n-w-y (niyya)"
+      ]
+    },
+    {
+      "lang": "Phoenician",
+      "root": null,
+      "glosses": [],
+      "tier": "none",
+      "matches_literal_y": false,
+      "attested": false,
+      "confidence": "SOURCE_BLOCKED",
+      "sources": [
+        "Hoftijzer-Jongeling, Dict. of the North-West Semitic Inscriptions"
+      ]
+    }
+  ],
+  "B1_target_across_languages_weakcollapse": [
+    {
+      "lang": "Hebrew",
+      "root": "nwh",
+      "final_radical": "h",
+      "glosses": [
+        "dwell",
+        "abide",
+        "abode",
+        "habitation",
+        "pasture",
+        "rest",
+        "keep-at-home"
+      ],
+      "tier": "exact",
+      "matches_literal_y": false,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "HIGH",
+      "sources": [
+        "Brown-Driver-Briggs, Hebrew and English Lexicon (1906)",
+        "Strong's Hebrew Lexicon (H5115 navah / H5116 naveh)",
+        "Klein, Comprehensive Etymological Dictionary of the Hebrew Language",
+        "Koehler-Baumgartner, Hebrew & Aramaic Lexicon of the OT"
+      ]
+    },
+    {
+      "lang": "Aramaic",
+      "root": "nwh",
+      "final_radical": "h",
+      "glosses": [
+        "abode",
+        "dwelling",
+        "resting-place",
+        "rest"
+      ],
+      "tier": "near",
+      "matches_literal_y": false,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "HIGH",
+      "sources": [
+        "Sokoloff, Dictionary of Jewish Palestinian Aramaic",
+        "Payne Smith, Compendious Syriac Dictionary",
+        "Jastrow, Dictionary of the Targumim / Talmud"
+      ]
+    },
+    {
+      "lang": "Akkadian",
+      "root": "nw'",
+      "final_radical": "'",
+      "glosses": [
+        "steppe",
+        "pasture",
+        "encampment",
+        "camp"
+      ],
+      "tier": "broad",
+      "matches_literal_y": false,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "HIGH",
+      "sources": [
+        "Chicago Assyrian Dictionary (N/2, s.v. namu/nawu)",
+        "von Soden, Akkadisches Handworterbuch"
+      ]
+    },
+    {
+      "lang": "Ugaritic",
+      "root": "nwy",
+      "final_radical": "y",
+      "glosses": [
+        "drive-away",
+        "expel",
+        "chase"
+      ],
+      "tier": "unrelated",
+      "matches_literal_y": true,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "UNCERTAIN",
+      "sources": [
+        "del Olmo Lete & Sanmartin, Dictionary of the Ugaritic Language"
+      ]
+    },
+    {
+      "lang": "Arabic",
+      "root": "nwy",
+      "final_radical": "y",
+      "glosses": [
+        "intend",
+        "purpose",
+        "resolve",
+        "journey",
+        "depart",
+        "be-distant",
+        "date-stone"
+      ],
+      "tier": "unrelated",
+      "matches_literal_y": true,
+      "attested": true,
+      "reachable_under_collapse": true,
+      "confidence": "HIGH",
+      "sources": [
+        "Lane, Arabic-English Lexicon (s.v. n-w-y)",
+        "Wehr, Dictionary of Modern Written Arabic",
+        "Quranic Arabic Corpus, root n-w-y (niyya)"
+      ]
+    },
+    {
+      "lang": "Phoenician",
+      "root": null,
+      "glosses": [],
+      "tier": "none",
+      "matches_literal_y": false,
+      "attested": false,
+      "confidence": "SOURCE_BLOCKED",
+      "sources": [
+        "Hoftijzer-Jongeling, Dict. of the North-West Semitic Inscriptions"
+      ]
+    }
+  ],
+  "B2_search_receipt": {
+    "axes": {
+      "candidate_values": 65,
+      "languages": 6,
+      "consonant_collapses_incl_hollow": 5,
+      "weak_root_transforms": [
+        "y",
+        "h",
+        "'",
+        "w",
+        "hollow"
+      ],
+      "segmentations": 4,
+      "mean_gloss_senses_per_root": 3.63,
+      "triconsonantal_roots_searched_per_language_orderOfMag": 1500
+    },
+    "logged_root_gloss_search_cells": 7800,
+    "author_stated_simulations": 100000,
+    "note": "logged cells = values x collapses x languages x segmentations (the reading's OWN degrees of freedom); the triconsonantal inventory per language (~1500) and gloss polysemy multiply the true root-search multiplicity far beyond this and beyond the author's stated ~1e5."
+  },
+  "B3_value_null_strict": {
+    "collapse_mode": "strict",
+    "n_values_C1": 13,
+    "root_existence_rate": 0.3076923076923077,
+    "dwell_tier_hit_rate": 0.0,
+    "exact_or_near_rate": 0.0,
+    "rows": [
+      {
+        "onset": "",
+        "c1": "",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "d",
+        "c1": "d",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "dwy"
+        ],
+        "glosses": [
+          "be-ill",
+          "faint",
+          "unwell"
+        ]
+      },
+      {
+        "onset": "j",
+        "c1": "y",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "k",
+        "c1": "k",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "kwy"
+        ],
+        "glosses": [
+          "brand",
+          "burn",
+          "scorch"
+        ]
+      },
+      {
+        "onset": "m",
+        "c1": "m",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "n",
+        "c1": "n",
+        "is_na": true,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "p",
+        "c1": "p",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "q",
+        "c1": "q",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "qwy"
+        ],
+        "glosses": [
+          "hope",
+          "wait"
+        ]
+      },
+      {
+        "onset": "r",
+        "c1": "r",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "rwy"
+        ],
+        "glosses": [
+          "be-saturated",
+          "drink"
+        ]
+      },
+      {
+        "onset": "s",
+        "c1": "s",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "t",
+        "c1": "t",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "w",
+        "c1": "w",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "z",
+        "c1": "z",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      }
+    ]
+  },
+  "B3_value_null_weakcollapse": {
+    "collapse_mode": "weak",
+    "n_values_C1": 13,
+    "root_existence_rate": 0.5384615384615384,
+    "dwell_tier_hit_rate": 0.07692307692307693,
+    "exact_or_near_rate": 0.07692307692307693,
+    "rows": [
+      {
+        "onset": "",
+        "c1": "",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "wh"
+        ],
+        "glosses": [
+          "desire",
+          "long-for",
+          "mark-out"
+        ]
+      },
+      {
+        "onset": "d",
+        "c1": "d",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "dwh",
+          "dwy"
+        ],
+        "glosses": [
+          "be-ill",
+          "faint",
+          "unwell"
+        ]
+      },
+      {
+        "onset": "j",
+        "c1": "y",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "k",
+        "c1": "k",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "kwy"
+        ],
+        "glosses": [
+          "brand",
+          "burn",
+          "scorch"
+        ]
+      },
+      {
+        "onset": "m",
+        "c1": "m",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "n",
+        "c1": "n",
+        "is_na": true,
+        "root_exists": true,
+        "best_gloss_tier": "exact",
+        "dwell_tier_hit": true,
+        "roots_hit": [
+          "nwh"
+        ],
+        "glosses": [
+          "abide",
+          "abode",
+          "dwell",
+          "habitation",
+          "pasture",
+          "rest"
+        ]
+      },
+      {
+        "onset": "p",
+        "c1": "p",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "q",
+        "c1": "q",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "qwh",
+          "qwy"
+        ],
+        "glosses": [
+          "collect",
+          "hope",
+          "wait"
+        ]
+      },
+      {
+        "onset": "r",
+        "c1": "r",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "rwh",
+          "rwy"
+        ],
+        "glosses": [
+          "be-saturated",
+          "drink",
+          "water"
+        ]
+      },
+      {
+        "onset": "s",
+        "c1": "s",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "t",
+        "c1": "t",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "twh"
+        ],
+        "glosses": [
+          "mark",
+          "scribble"
+        ]
+      },
+      {
+        "onset": "w",
+        "c1": "w",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "z",
+        "c1": "z",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      }
+    ]
+  },
+  "B3_value_null_weakhollow": {
+    "collapse_mode": "weak+hollow",
+    "n_values_C1": 13,
+    "root_existence_rate": 0.7692307692307693,
+    "dwell_tier_hit_rate": 0.07692307692307693,
+    "exact_or_near_rate": 0.07692307692307693,
+    "rows": [
+      {
+        "onset": "",
+        "c1": "",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "wh"
+        ],
+        "glosses": [
+          "desire",
+          "long-for",
+          "mark-out"
+        ]
+      },
+      {
+        "onset": "d",
+        "c1": "d",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "dwh",
+          "dwy"
+        ],
+        "glosses": [
+          "be-ill",
+          "faint",
+          "unwell"
+        ]
+      },
+      {
+        "onset": "j",
+        "c1": "y",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "k",
+        "c1": "k",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "kw",
+          "kwy"
+        ],
+        "glosses": [
+          "be-firm",
+          "brand",
+          "burn",
+          "establish",
+          "scorch"
+        ]
+      },
+      {
+        "onset": "m",
+        "c1": "m",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "mw"
+        ],
+        "glosses": [
+          "die"
+        ]
+      },
+      {
+        "onset": "n",
+        "c1": "n",
+        "is_na": true,
+        "root_exists": true,
+        "best_gloss_tier": "exact",
+        "dwell_tier_hit": true,
+        "roots_hit": [
+          "nw",
+          "nwh"
+        ],
+        "glosses": [
+          "abide",
+          "abode",
+          "dwell",
+          "habitation",
+          "pasture",
+          "rest",
+          "slumber"
+        ]
+      },
+      {
+        "onset": "p",
+        "c1": "p",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "q",
+        "c1": "q",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "qw",
+          "qwh",
+          "qwy"
+        ],
+        "glosses": [
+          "arise",
+          "collect",
+          "hope",
+          "stand",
+          "wait"
+        ]
+      },
+      {
+        "onset": "r",
+        "c1": "r",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "rw",
+          "rwh",
+          "rwy"
+        ],
+        "glosses": [
+          "be-high",
+          "be-saturated",
+          "be-wide",
+          "drink",
+          "water"
+        ]
+      },
+      {
+        "onset": "s",
+        "c1": "s",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "sw"
+        ],
+        "glosses": [
+          "depart",
+          "turn-aside"
+        ]
+      },
+      {
+        "onset": "t",
+        "c1": "t",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "twh"
+        ],
+        "glosses": [
+          "mark",
+          "scribble"
+        ]
+      },
+      {
+        "onset": "w",
+        "c1": "w",
+        "is_na": false,
+        "root_exists": false,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [],
+        "glosses": []
+      },
+      {
+        "onset": "z",
+        "c1": "z",
+        "is_na": false,
+        "root_exists": true,
+        "best_gloss_tier": "unrelated",
+        "dwell_tier_hit": false,
+        "roots_hit": [
+          "zw"
+        ],
+        "glosses": [
+          "be-stranger",
+          "turn-aside"
+        ]
+      }
+    ]
+  },
+  "B3_language_and_root_nulls": {
+    "best_of_language": {
+      "n_load_bearing_langs": 4,
+      "langs_with_dwell_tier": [
+        "Hebrew",
+        "Aramaic",
+        "Akkadian"
+      ],
+      "langs_exact_or_near": [
+        "Hebrew",
+        "Aramaic"
+      ],
+      "langs_unrelated": [
+        "Arabic"
+      ],
+      "prob_dwell_tier_best_of_langs": 0.75
+    },
+    "literal_yod_test": {
+      "note": "languages where the ATTESTED root actually ends in yod (matching na-wa-ya)",
+      "langs": [
+        "Ugaritic",
+        "Arabic"
+      ],
+      "glosses": {
+        "Ugaritic": [
+          "drive-away",
+          "expel",
+          "chase"
+        ],
+        "Arabic": [
+          "intend",
+          "purpose",
+          "resolve",
+          "journey",
+          "depart",
+          "be-distant",
+          "date-stone"
+        ]
+      },
+      "dwell_tier_among_literal_y": []
+    },
+    "dwelling_field_prior": {
+      "n_distinct_dwell_tier_roots": 13,
+      "roots": {
+        "ysb": [
+          "Hebrew"
+        ],
+        "skn": [
+          "Arabic",
+          "Hebrew"
+        ],
+        "gwr": [
+          "Hebrew"
+        ],
+        "lwn": [
+          "Hebrew"
+        ],
+        "'hl": [
+          "Hebrew"
+        ],
+        "nwh": [
+          "Hebrew"
+        ],
+        "dwr": [
+          "Aramaic"
+        ],
+        "sry": [
+          "Aramaic"
+        ],
+        "wsb": [
+          "Akkadian"
+        ],
+        "nw'": [
+          "Akkadian"
+        ],
+        "nzl": [
+          "Arabic"
+        ],
+        "qtn": [
+          "Arabic"
+        ],
+        "ytb": [
+          "Ugaritic"
+        ]
+      },
+      "note": "the dwell/settle semantic field is served by many DISTINCT Semitic roots; reaching SOME dwell-tier gloss under a family-wide search is a high-prior event."
+    }
+  },
+  "B3_Lfake_canary_and_matched_controls": {
+    "eps_NED": 0.34,
+    "n_target_forms": 1,
+    "n_hebrew_lexicon": 2767,
+    "s_lex_real_hebrew": 0.0,
+    "s_lex_Lfake": {
+      "mean": 1.0,
+      "sd": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "n_fake": 48,
+    "s_lex_freq_len_matched_random_real": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "s_lex_packard_permuted": {
+      "mean": 0.9791666666666666,
+      "sd": 0.1428261375083551,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "channel_verdict": "NO_POWER",
+    "interpretation": "The edit-distance 'match exists' channel has NO POWER for this probe: the L_fake INVENTED lexicon already contains a near-match to n-w-y ~100% of the time (floor mean 1.0), i.e. a near-match is essentially guaranteed in any dense Semitic-shaped lexicon; the Packard-permuted (destroyed-correspondence) control also scores ~0.98. The gold cognate WORDLIST returns 0.0 because it is a 2215-entry Ugaritic<->Hebrew cognate list, NOT a root dictionary, so it under-covers bare roots. Because L_fake >= real, this S_lex channel reads search-attractiveness, not cognacy (cf. run_canary docstring; Task A likewise caps S_lex). Root EXISTENCE is therefore established authoritatively by the BDB-cited B1 table (nwh is real), NOT by this edit-distance statistic."
+  },
+  "B3_deflation": {
+    "per_trial_dwell_hit_prob_p_language": 0.75,
+    "per_trial_dwell_hit_prob_p_onset": 0.07692307692307693,
+    "p_used_for_Emax": "p_language (best-of-language, the search the claim performs)",
+    "N_eff_logged_cells": 7800,
+    "author_stated_sims": 100000,
+    "P_at_least_one_dwell_hit_over_logged": 1.0,
+    "P_at_least_one_dwell_hit_over_author_sims": 1.0,
+    "reading": "under weak collapse 3/4 admitted languages gloss the target skeleton habitation-tier (p_language=0.75); across the logged search a dwell-tier hit is CERTAIN (P>=1 = 1.000). A single dwell match is at/below E[max]; not exceptional. (Only the onset n reaches dwell among the 13 LA onsets, but ONLY via a y->h weak collapse AND selecting Hebrew/Aramaic over the yod-matching Arabic/Ugaritic — remove either freedom and 'dwell' evaporates.)"
+  },
+  "B4_gloss_tiers": {
+    "exact": [
+      "abide",
+      "dwell",
+      "inhabit",
+      "live",
+      "reside"
+    ],
+    "near": [
+      "encamp",
+      "keep-at-home",
+      "lodge",
+      "remain",
+      "rest",
+      "settle",
+      "sojourn",
+      "spend-night",
+      "stay",
+      "tabernacle"
+    ],
+    "broad": [
+      "abode",
+      "camp",
+      "dwelling",
+      "encampment",
+      "fold",
+      "habitation",
+      "home",
+      "meadow",
+      "oasis",
+      "pasture",
+      "resting-place",
+      "steppe",
+      "tent"
+    ]
+  },
+  "B5_formula_feature_prediction": {
+    "features": {
+      "F1_precedes_theonym_recipient": "slot-1 word precedes JA-SA-SA-RA-ME (widely read as a divine name) -> favours a verb that TAKES the deity as an argument (recipient/vocative)",
+      "F2_dedicatory_libation_context": "carried on libation vessels/tables at cult sites -> favours an offering/dedication/invocation illocution",
+      "F3_transitive_object_slot": "the formula frame supplies following nominal slots -> favours a transitive verb over an intransitive stative"
+    },
+    "scores": {
+      "dwell": 0.0,
+      "give": 3.0,
+      "dedicate": 3.0,
+      "invoke": 2.5,
+      "intend": 0.5,
+      "NEUTRAL_PLACEHOLDER": 0.0
+    },
+    "detail": {
+      "dwell": {
+        "score": 0.0,
+        "max": 3,
+        "detail": {
+          "F1_precedes_theonym_recipient": 0.0,
+          "F2_dedicatory_libation_context": 0.0,
+          "F3_transitive_object_slot": 0.0,
+          "why": "intransitive stative; no natural deity-recipient; poor libation-illocution fit"
+        }
+      },
+      "give": {
+        "score": 3.0,
+        "max": 3,
+        "detail": {
+          "F1_precedes_theonym_recipient": 1.0,
+          "F2_dedicatory_libation_context": 1.0,
+          "F3_transitive_object_slot": 1.0,
+          "why": "transitive; deity as recipient; canonical dedicatory verb"
+        }
+      },
+      "dedicate": {
+        "score": 3.0,
+        "max": 3,
+        "detail": {
+          "F1_precedes_theonym_recipient": 1.0,
+          "F2_dedicatory_libation_context": 1.0,
+          "F3_transitive_object_slot": 1.0,
+          "why": "transitive dedicatory; deity recipient; matches libation context"
+        }
+      },
+      "invoke": {
+        "score": 2.5,
+        "max": 3,
+        "detail": {
+          "F1_precedes_theonym_recipient": 1.0,
+          "F2_dedicatory_libation_context": 1.0,
+          "F3_transitive_object_slot": 0.5,
+          "why": "takes the deity as vocative/object; fits invocation formula"
+        }
+      },
+      "intend": {
+        "score": 0.5,
+        "max": 3,
+        "detail": {
+          "F1_precedes_theonym_recipient": 0.0,
+          "F2_dedicatory_libation_context": 0.0,
+          "F3_transitive_object_slot": 0.5,
+          "why": "Arabic n-w-y's REAL gloss; poor dedicatory fit (wrong-gloss control)"
+        }
+      },
+      "NEUTRAL_PLACEHOLDER": {
+        "score": 0.0,
+        "max": 3,
+        "detail": {
+          "F1_precedes_theonym_recipient": 0.0,
+          "F2_dedicatory_libation_context": 0.0,
+          "F3_transitive_object_slot": 0.0,
+          "why": "carries no semantic prediction (baseline)"
+        }
+      }
+    },
+    "random_gloss_expected_score": 1.7999999999999998,
+    "verdict": "'dwell' scores 0.0/3 — at or below the neutral placeholder and BELOW give/dedicate/invoke (3.0/2.5); it does NOT predict observable formula features better than rivals. Diagnostic only (no bilingual = no ground truth)."
+  },
+  "headline_findings": {
+    "H2_root_is_generic_not_exceptional": "54% of admissible *301 C1 values yield a real Semitic weak root under the collapse the claim uses (strict n-w-y: 31%). A matching root existing is a density property of tertiae-infirmae/hollow roots, not evidence.",
+    "wrong_final_radical": "Hebrew 'dwell' is n-w-H (final HE: navah/naveh 'abode, pasture'); the claim's na-wa-ya gives final YOD (n-w-y). Reaching 'dwell' REQUIRES a III-y->III-h weak collapse, which must be (and is) charged in the receipt.",
+    "gloss_is_language_cherry_picked": "languages whose ATTESTED root actually ends in yod (Arabic, Ugaritic) gloss it 'drive-away, expel, intend, journey' — NOT dwell. 'dwell/abode' comes only from Hebrew/Aramaic n-w-h and Akkadian nawum 'steppe/pasture'. Best-of-6-languages manufactures 'dwell'.",
+    "dwell_field_high_prior": "13 distinct Semitic roots carry a dwell-tier gloss (ysb, skn, gwr, dwr, lwn, nwh, sakana, ...) — 'reach dwell' is a high-prior outcome of a family-wide root search.",
+    "edit_distance_channel_is_no_power": "the edit-distance 'match exists' channel is NO_POWER: L_fake INVENTED lexica already contain a near-match to n-w-y ~100% of the time (floor mean 1.00) and Packard-permuted controls ~98%. A near-match to n-w-y is guaranteed in any dense Semitic-shaped lexicon, so it is not evidence; root existence rests on the BDB-cited B1 table.",
+    "B5_dwell_underperforms": "'dwell' scores 0.0/3 on observable formula features, below give/dedicate (3.0) and the invocation reading (2.5), and not above the neutral placeholder (0).",
+    "verdict_tag": "ROOT_AND_GLOSS_ARE_GENERIC_SEARCH_OUTCOME (H2/H3 not exceptional)"
+  }
+}
