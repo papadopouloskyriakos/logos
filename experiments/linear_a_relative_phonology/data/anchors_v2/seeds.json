@@ -1,0 +1,2060 @@
+{
+ "task": "G3a_seed_quality",
+ "seed": 20260708,
+ "non_circular": "conventional LA values label records only; no value is a model input; held-out (LOTO) survivability is CITED from the frozen gate, not re-run.",
+ "definitions": {
+  "SEED_A": "independently secure: value-bearing external referent, firm/primary, NOT shape-only, corroborated by >=1 other independent anchor AND empirically held-out-survivable",
+  "SEED_B": "plausible-disputed: firm primary external referent but one-anchor-deep / fails empirical LOTO",
+  "SEED_C": "exploratory: hedged/cf/secondary referents, single-sign glosses, or relative-only value-bearing residue",
+  "SEED_X": "circular or excluded: shape-homomorphy (==value), Cypriot value-inheritance, value-blind onomastic resemblance, or asserts-no-value internal variation",
+  "HARD_RULE": "a shape match alone can NEVER be SEED_A"
+ },
+ "record_seed_counts": {
+  "SEED_B": 6,
+  "SEED_C": 12,
+  "SEED_X": 97
+ },
+ "expanded_class_seed_counts": {
+  "SEED_X": 6,
+  "SEED_C": 1
+ },
+ "SEED_A_count": 0,
+ "SEED_A_records": [],
+ "SEED_B_records": [
+  "top_pa_i_to",
+  "top_se_to_i_ja",
+  "top_tu_ru_sa",
+  "top_di_ki_te",
+  "top_su_ki_ri_ta",
+  "top_a_tu_ri_si_ti"
+ ],
+ "seedB_distinct_signs": [
+  "A",
+  "DI",
+  "I",
+  "JA",
+  "KI",
+  "PA",
+  "RI",
+  "RU",
+  "SA",
+  "SE",
+  "SI",
+  "SU",
+  "TA",
+  "TE",
+  "TI",
+  "TO",
+  "TU"
+ ],
+ "seedB_n_distinct_signs": 17,
+ "multiply_anchored_signs_on_paper": {
+  "I": [
+   "Phaistos",
+   "se-to-i-ja"
+  ],
+  "TO": [
+   "Phaistos",
+   "se-to-i-ja"
+  ],
+  "KI": [
+   "Mt-Dikte",
+   "Sybrita"
+  ],
+  "RI": [
+   "Sybrita",
+   "Tylissos"
+  ]
+ },
+ "loto_cited_survivors_each_one_deep": [
+  "I",
+  "RI"
+ ],
+ "why_SEED_A_is_zero": "No record clears the empirical gate. The 6 firm primary toponym equations are SEED_B: even the signs pinned by >=2 distinct firm referents (['I', 'KI', 'RI', 'TO']) collapse under the cited frozen LOTO gate, which recovers only {I,RI} and each one-toponym-deep. Shape-homomorphy (57 records) and Cypriot (11) are SEED_X by the hard rule and by value-inheritance; personal names (25) are SEED_X (value-blind).",
+ "record_seeds": [
+  {
+   "record_id": "top_pa_i_to",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "PA",
+    "I",
+    "TO"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:Phaistos",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_B",
+   "reasons": [
+    "firm primary external referent (Phaistos); signs ['PA', 'I', 'TO'] incl. corroborated ['I', 'TO']",
+    "DEMOTED from SEED_A: cited frozen gate LOTO shows even multiply-listed signs are one-toponym-deep (recovered set {I,RI}, each one-deep) -> NOT held-out-survivable"
+   ]
+  },
+  {
+   "record_id": "top_se_to_i_ja",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "SE",
+    "TO",
+    "I",
+    "JA"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-TOP:se-to-i-ja(unlocated)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_B",
+   "reasons": [
+    "firm primary external referent (se-to-i-ja); signs ['SE', 'TO', 'I', 'JA'] incl. corroborated ['TO', 'I']",
+    "DEMOTED from SEED_A: cited frozen gate LOTO shows even multiply-listed signs are one-toponym-deep (recovered set {I,RI}, each one-deep) -> NOT held-out-survivable"
+   ]
+  },
+  {
+   "record_id": "top_tu_ru_sa",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "TU",
+    "RU",
+    "SA"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:Tylissos",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_B",
+   "reasons": [
+    "firm primary external referent (Tylissos); single-anchor-deep on signs ['TU', 'RU', 'SA']",
+    "not corroborated by a 2nd independent firm anchor -> fails leave-one-anchor-out"
+   ]
+  },
+  {
+   "record_id": "top_di_ki_te",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "DI",
+    "KI",
+    "TE"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:Mt-Dikte",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_B",
+   "reasons": [
+    "firm primary external referent (Mt-Dikte); signs ['DI', 'KI', 'TE'] incl. corroborated ['KI']",
+    "DEMOTED from SEED_A: cited frozen gate LOTO shows even multiply-listed signs are one-toponym-deep (recovered set {I,RI}, each one-deep) -> NOT held-out-survivable"
+   ]
+  },
+  {
+   "record_id": "top_su_ki_ri_ta",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "SU",
+    "KI",
+    "RI",
+    "TA"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-TOP:Sybrita",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_B",
+   "reasons": [
+    "firm primary external referent (Sybrita); signs ['SU', 'KI', 'RI', 'TA'] incl. corroborated ['KI', 'RI']",
+    "DEMOTED from SEED_A: cited frozen gate LOTO shows even multiply-listed signs are one-toponym-deep (recovered set {I,RI}, each one-deep) -> NOT held-out-survivable"
+   ]
+  },
+  {
+   "record_id": "top_a_tu_ri_si_ti",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "A",
+    "TU",
+    "RI",
+    "SI",
+    "TI"
+   ],
+   "n_signs": 5,
+   "dependency_class": "LIN-TOP:Tylissos",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_B",
+   "reasons": [
+    "firm primary external referent (Tylissos); signs ['A', 'TU', 'RI', 'SI', 'TI'] incl. corroborated ['RI']",
+    "DEMOTED from SEED_A: cited frozen gate LOTO shows even multiply-listed signs are one-toponym-deep (recovered set {I,RI}, each one-deep) -> NOT held-out-survivable"
+   ]
+  },
+  {
+   "record_id": "top_i_da_a_cf",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "I",
+    "DA",
+    "A"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:Mt-Ida",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:Mt-Ida)",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "pn_a_ka_ru",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "A",
+    "KA",
+    "RU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_a_ra_na_re",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "A",
+    "RA",
+    "NA",
+    "RE"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_a_re_sa_na",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "A",
+    "RE",
+    "SA",
+    "NA"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_a_sa_ra2",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "A",
+    "SA",
+    "RA2"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_a_su_ja",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "A",
+    "SU",
+    "JA"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_a_ta_re",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "A",
+    "TA",
+    "RE"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_da_i_pi_ta",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "DA",
+    "I",
+    "PI",
+    "TA"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_da_mi_nu",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "DA",
+    "MI",
+    "NU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_di_de_ru",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "DI",
+    "DE",
+    "RU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_du_pu2_re",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "DU",
+    "PU2",
+    "RE"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_i_ja_te",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "I",
+    "JA",
+    "TE"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_ka_sa_ru",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "KA",
+    "SA",
+    "RU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_ki_da_ro",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "KI",
+    "DA",
+    "RO"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_ki_ri_ta",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "KI",
+    "RI",
+    "TA"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_ku_ku_da_ra",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "KU",
+    "KU",
+    "DA",
+    "RA"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_ku_56_nu",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "KU",
+    "*56",
+    "NU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_ku_ru_ku",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "KU",
+    "RU",
+    "KU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_mi_ja_ru",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "MI",
+    "JA",
+    "RU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_pa_ja_re",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "PA",
+    "JA",
+    "RE"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_pa_ra_ne",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "PA",
+    "RA",
+    "NE"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_qa_qa_ru",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "QA",
+    "QA",
+    "RU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_qa_ra2_wa",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "QA",
+    "RA2",
+    "WA"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_sa_ma_ro",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "SA",
+    "MA",
+    "RO"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_si_ki_ra",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "SI",
+    "KI",
+    "RA"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "pn_wa_du_ni_mi",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "covered_signs": [
+    "WA",
+    "DU",
+    "NI",
+    "MI"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "onomastic resemblance: value-blind; any CVCV string resembles some LB name (multiplicity trap)"
+   ]
+  },
+  {
+   "record_id": "ni_fig_nikuleon",
+   "channel": "L_lexical",
+   "class": "gloss_acrophonic",
+   "covered_signs": [
+    "NI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-GLOSS:acrophonic-single-sign",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "single-sign acrophonic guess; not held-out testable; exploratory only"
+   ]
+  },
+  {
+   "record_id": "kikina_sycamore_fig",
+   "channel": "L_lexical",
+   "class": "gloss_acrophonic",
+   "covered_signs": [
+    "KI",
+    "KI",
+    "NA"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-GLOSS:acrophonic-single-sign",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "single-sign acrophonic guess; not held-out testable; exploratory only"
+   ]
+  },
+  {
+   "record_id": "maru_wool",
+   "channel": "L_lexical",
+   "class": "gloss_acrophonic",
+   "covered_signs": [
+    "MA",
+    "RU"
+   ],
+   "n_signs": 2,
+   "dependency_class": "LIN-GLOSS:acrophonic-single-sign",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "single-sign acrophonic guess; not held-out testable; exploratory only"
+   ]
+  },
+  {
+   "record_id": "var_m_series",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "covered_signs": [
+    "ME",
+    "MA",
+    "MI"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "internal LA variation (ic4): asserts NO value by construction; relative-only, never a value seed"
+   ]
+  },
+  {
+   "record_id": "var_t_series",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "covered_signs": [
+    "TA",
+    "TE",
+    "TU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "internal LA variation (ic4): asserts NO value by construction; relative-only, never a value seed"
+   ]
+  },
+  {
+   "record_id": "var_u_w_series",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "covered_signs": [
+    "U",
+    "WA"
+   ],
+   "n_signs": 2,
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "internal LA variation (ic4): asserts NO value by construction; relative-only, never a value seed"
+   ]
+  },
+  {
+   "record_id": "var_s_series",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "covered_signs": [
+    "SA",
+    "SI"
+   ],
+   "n_signs": 2,
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "internal LA variation (ic4): asserts NO value by construction; relative-only, never a value seed"
+   ]
+  },
+  {
+   "record_id": "top_ku_79_ni_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "KU",
+    "*79",
+    "NI"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:Kydonia",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:Kydonia)",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_da_u_49_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "DA",
+    "U",
+    "*49"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:da-wo(minor-locality)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:da-wo(minor-locality))",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_i_ti_ni_sa_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "I",
+    "TI",
+    "NI",
+    "SA"
+   ],
+   "n_signs": 4,
+   "dependency_class": "LIN-TOP:Itanos",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:Itanos)",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_ku_ni_su_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "KU",
+    "NI",
+    "SU"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:ku-ni-su(unlocated)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:ku-ni-su(unlocated))",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_ku_ta_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "KU",
+    "TA"
+   ],
+   "n_signs": 2,
+   "dependency_class": "LIN-TOP:ku-ta-to(bare-cf)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:ku-ta-to(bare-cf))",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_sa_ra2_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "SA",
+    "RA2"
+   ],
+   "n_signs": 2,
+   "dependency_class": "LIN-TOP:Ayia-Triada(inferential)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:Ayia-Triada(inferential))",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_di_na_u_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "DI",
+    "NA",
+    "U"
+   ],
+   "n_signs": 3,
+   "dependency_class": "LIN-TOP:di-na-u(unlocated)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:di-na-u(unlocated))",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "top_i_na_ta_i_zu_di_si_ka_younger",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "covered_signs": [
+    "I",
+    "NA",
+    "TA",
+    "ZU",
+    "DI",
+    "SI",
+    "KA"
+   ],
+   "n_signs": 7,
+   "dependency_class": "LIN-TOP:Inatos(hedged)",
+   "value_bearing_channel": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "external referent but hedged/cf/secondary (LIN-TOP:Inatos(hedged))",
+    "value-bearing IN PRINCIPLE but speculative / one-object-deep"
+   ]
+  },
+  {
+   "record_id": "homo_A",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "A"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_A",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "A"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_AU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "AU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_DA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "DA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_DA",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "DA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_DE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "DE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_DI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "DI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_DU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "DU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_E",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "E"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_I",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "I"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_I",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "I"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_JA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "JA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_JE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "JE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_JU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "JU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_KA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "KA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_KE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "KE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_KI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "KI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_KO",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "KO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_KU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "KU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_MA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "MA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_ME",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "ME"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_MI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "MI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_MU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "MU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_NA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "NA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_NA",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "NA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_NE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "NE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_NI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "NI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_NU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "NU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_NWA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "NWA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_O",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "O"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_PA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "PA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_PA",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "PA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_PI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "PI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_PO",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "PO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_PO",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "PO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_PU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "PU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_PU2",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "PU2"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_QA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "QA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_QE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "QE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_QI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "QI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_RA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "RA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_RA2",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "RA2"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_RE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "RE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_RI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "RI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_RO",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "RO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_RO",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "RO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_RU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "RU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_SA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "SA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_SA",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "SA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_SE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "SE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_SE",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "SE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_SI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "SI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_SU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "SU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_TA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_TA2",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TA2"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_TE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_TI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_TI",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "TI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_TO",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "cypr_TO",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "covered_signs": [
+    "TO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "Cypriot stability: inherits the LB/Greek value; 3rd-script sign continuity, derives no value"
+   ]
+  },
+  {
+   "record_id": "homo_TU",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TU"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_TWE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "TWE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_U",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "U"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_WA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "WA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_WI",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "WI"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_ZA",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "ZA"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_ZE",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "ZE"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  },
+  {
+   "record_id": "homo_ZO",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "covered_signs": [
+    "ZO"
+   ],
+   "n_signs": 1,
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "value_bearing_channel": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "shape-homomorphy: value==GORILA shape-transcription substrate (circular, Art.XII)",
+    "SHAPE MATCH ALONE -> can never be SEED_A"
+   ]
+  }
+ ],
+ "expanded_seeds": [
+  {
+   "id": "A_libation_formula_core",
+   "category": "A_formula",
+   "signs_constrained": 19,
+   "sites": 10,
+   "value_bearing": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "RELATIVE/structural (formula/morphology/accounting/commodity/seal/foreign): value-blind, relabeling-invariant; value claim would ride on GORILA homomorphy (Art.XII). Rich RELATIVE seed, but NOT a value seed."
+   ],
+   "relative_seed_utility": "HIGH"
+  },
+  {
+   "id": "D_morphological_variants",
+   "category": "D_morphology",
+   "signs_constrained": 17,
+   "sites": 10,
+   "value_bearing": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "RELATIVE/structural (formula/morphology/accounting/commodity/seal/foreign): value-blind, relabeling-invariant; value claim would ride on GORILA homomorphy (Art.XII). Rich RELATIVE seed, but NOT a value seed."
+   ],
+   "relative_seed_utility": "HIGH"
+  },
+  {
+   "id": "B_transaction_terms",
+   "category": "B_accounting",
+   "signs_constrained": 9,
+   "sites": 3,
+   "value_bearing": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "RELATIVE/structural (formula/morphology/accounting/commodity/seal/foreign): value-blind, relabeling-invariant; value claim would ride on GORILA homomorphy (Art.XII). Rich RELATIVE seed, but NOT a value seed."
+   ],
+   "relative_seed_utility": "HIGH"
+  },
+  {
+   "id": "E_commodity_logogram",
+   "category": "E_commodity",
+   "signs_constrained": 9,
+   "sites": 3,
+   "value_bearing": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "RELATIVE/structural (formula/morphology/accounting/commodity/seal/foreign): value-blind, relabeling-invariant; value claim would ride on GORILA homomorphy (Art.XII). Rich RELATIVE seed, but NOT a value seed."
+   ],
+   "relative_seed_utility": "HIGH"
+  },
+  {
+   "id": "G_foreign_names",
+   "category": "G_foreign",
+   "signs_constrained": 9,
+   "sites": 3,
+   "value_bearing": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "RELATIVE/structural (formula/morphology/accounting/commodity/seal/foreign): value-blind, relabeling-invariant; value claim would ride on GORILA homomorphy (Art.XII). Rich RELATIVE seed, but NOT a value seed."
+   ],
+   "relative_seed_utility": "HIGH"
+  },
+  {
+   "id": "C_toponym_expansion",
+   "category": "C_toponym",
+   "signs_constrained": 10,
+   "sites": 2,
+   "value_bearing": true,
+   "seed_class": "SEED_C",
+   "reasons": [
+    "value-bearing channel (toponym expansion) but G1 shows firm set saturated, all one-toponym-deep, 0 held-out-survivable -> exploratory residue only"
+   ],
+   "relative_seed_utility": "n/a"
+  },
+  {
+   "id": "F_seal_formula",
+   "category": "F_seal",
+   "signs_constrained": 6,
+   "sites": 1,
+   "value_bearing": false,
+   "seed_class": "SEED_X",
+   "reasons": [
+    "RELATIVE/structural (formula/morphology/accounting/commodity/seal/foreign): value-blind, relabeling-invariant; value claim would ride on GORILA homomorphy (Art.XII). Rich RELATIVE seed, but NOT a value seed."
+   ],
+   "relative_seed_utility": "HIGH"
+  }
+ ]
+}

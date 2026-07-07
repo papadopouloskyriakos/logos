@@ -1,0 +1,978 @@
+{
+ "experiment": "C5_stability_and_information_gain",
+ "seed": 20260708,
+ "n_boot": 500,
+ "strong_threshold_long_frames": 2,
+ "non_circular": "every rebuild uses sign identity + frame membership + word-final position only; GORILA/LB (C,V) values GRADE the deflation afterward, never an input.",
+ "baseline": {
+  "n_clean_syllabogram_signs": 57,
+  "n_clean_edges": 130,
+  "n_strong_edges": 12,
+  "n_rel_classes": 5,
+  "rel_classes": [
+   [
+    "A",
+    "DA",
+    "JA",
+    "KA",
+    "MI",
+    "RU",
+    "SI",
+    "TA"
+   ],
+   [
+    "RA",
+    "RE"
+   ],
+   [
+    "KI",
+    "WA"
+   ],
+   [
+    "KU",
+    "MA",
+    "SA"
+   ],
+   [
+    "PA",
+    "TE"
+   ]
+  ],
+  "delta_eqclasses_if_true": 12
+ },
+ "stability_1_bootstrap": {
+  "n_boot": 500,
+  "baseline_n_clean_edges": 130,
+  "baseline_n_strong_edges": 12,
+  "clean_edge_recurrence_ge_0.50": 43,
+  "clean_edge_recurrence_ge_0.90": 1,
+  "strong_edge_recurrence_ge_0.50": 1,
+  "strong_edge_recurrence_ge_0.90": 0,
+  "mean_strong_edge_recurrence": 0.2787,
+  "mean_co_membership_recurrence": 0.1434,
+  "co_membership_recurrence_ge_0.50": 1,
+  "n_co_pairs": 34,
+  "delta_eqclasses_baseline_strong": 12,
+  "delta_eqclasses_boot_mean": 3.344,
+  "delta_eqclasses_boot_95CI": [
+   1,
+   7
+  ],
+  "n_strong_edges_boot_mean": 3.34,
+  "strong_edge_recurrence": [
+   {
+    "signs": [
+     "DA",
+     "RU"
+    ],
+    "recurrence": 0.57,
+    "w_long_frame": 3,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "A",
+     "JA"
+    ],
+    "recurrence": 0.444,
+    "w_long_frame": 3,
+    "benchmark_FLAGGED": "same_vowel"
+   },
+   {
+    "signs": [
+     "A",
+     "DA"
+    ],
+    "recurrence": 0.418,
+    "w_long_frame": 3,
+    "benchmark_FLAGGED": "same_vowel"
+   },
+   {
+    "signs": [
+     "PA",
+     "TE"
+    ],
+    "recurrence": 0.262,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "RU",
+     "TA"
+    ],
+    "recurrence": 0.256,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "KI",
+     "WA"
+    ],
+    "recurrence": 0.238,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "KU",
+     "MA"
+    ],
+    "recurrence": 0.234,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "KU",
+     "SA"
+    ],
+    "recurrence": 0.216,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "A",
+     "SI"
+    ],
+    "recurrence": 0.19,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "A",
+     "MI"
+    ],
+    "recurrence": 0.186,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "cross"
+   },
+   {
+    "signs": [
+     "RA",
+     "RE"
+    ],
+    "recurrence": 0.176,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "same_consonant"
+   },
+   {
+    "signs": [
+     "A",
+     "KA"
+    ],
+    "recurrence": 0.154,
+    "w_long_frame": 2,
+    "benchmark_FLAGGED": "same_vowel"
+   }
+  ],
+  "co_membership_recurrence": [
+   {
+    "pair": [
+     "DA",
+     "RU"
+    ],
+    "co_membership_recurrence": 0.57
+   },
+   {
+    "pair": [
+     "A",
+     "JA"
+    ],
+    "co_membership_recurrence": 0.444
+   },
+   {
+    "pair": [
+     "A",
+     "DA"
+    ],
+    "co_membership_recurrence": 0.418
+   },
+   {
+    "pair": [
+     "PA",
+     "TE"
+    ],
+    "co_membership_recurrence": 0.262
+   },
+   {
+    "pair": [
+     "RU",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.256
+   },
+   {
+    "pair": [
+     "KI",
+     "WA"
+    ],
+    "co_membership_recurrence": 0.238
+   },
+   {
+    "pair": [
+     "A",
+     "RU"
+    ],
+    "co_membership_recurrence": 0.236
+   },
+   {
+    "pair": [
+     "KU",
+     "MA"
+    ],
+    "co_membership_recurrence": 0.234
+   },
+   {
+    "pair": [
+     "KU",
+     "SA"
+    ],
+    "co_membership_recurrence": 0.216
+   },
+   {
+    "pair": [
+     "A",
+     "SI"
+    ],
+    "co_membership_recurrence": 0.19
+   },
+   {
+    "pair": [
+     "A",
+     "MI"
+    ],
+    "co_membership_recurrence": 0.186
+   },
+   {
+    "pair": [
+     "DA",
+     "JA"
+    ],
+    "co_membership_recurrence": 0.182
+   },
+   {
+    "pair": [
+     "RA",
+     "RE"
+    ],
+    "co_membership_recurrence": 0.176
+   },
+   {
+    "pair": [
+     "A",
+     "KA"
+    ],
+    "co_membership_recurrence": 0.154
+   },
+   {
+    "pair": [
+     "DA",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.134
+   },
+   {
+    "pair": [
+     "JA",
+     "MI"
+    ],
+    "co_membership_recurrence": 0.104
+   },
+   {
+    "pair": [
+     "JA",
+     "RU"
+    ],
+    "co_membership_recurrence": 0.104
+   },
+   {
+    "pair": [
+     "DA",
+     "MI"
+    ],
+    "co_membership_recurrence": 0.094
+   },
+   {
+    "pair": [
+     "JA",
+     "SI"
+    ],
+    "co_membership_recurrence": 0.084
+   },
+   {
+    "pair": [
+     "DA",
+     "KA"
+    ],
+    "co_membership_recurrence": 0.074
+   },
+   {
+    "pair": [
+     "DA",
+     "SI"
+    ],
+    "co_membership_recurrence": 0.072
+   },
+   {
+    "pair": [
+     "JA",
+     "KA"
+    ],
+    "co_membership_recurrence": 0.066
+   },
+   {
+    "pair": [
+     "MI",
+     "RU"
+    ],
+    "co_membership_recurrence": 0.058
+   },
+   {
+    "pair": [
+     "MA",
+     "SA"
+    ],
+    "co_membership_recurrence": 0.05
+   },
+   {
+    "pair": [
+     "A",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.046
+   },
+   {
+    "pair": [
+     "RU",
+     "SI"
+    ],
+    "co_membership_recurrence": 0.044
+   },
+   {
+    "pair": [
+     "MI",
+     "SI"
+    ],
+    "co_membership_recurrence": 0.042
+   },
+   {
+    "pair": [
+     "KA",
+     "RU"
+    ],
+    "co_membership_recurrence": 0.04
+   },
+   {
+    "pair": [
+     "KA",
+     "SI"
+    ],
+    "co_membership_recurrence": 0.032
+   },
+   {
+    "pair": [
+     "JA",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.018
+   },
+   {
+    "pair": [
+     "KA",
+     "MI"
+    ],
+    "co_membership_recurrence": 0.018
+   },
+   {
+    "pair": [
+     "SI",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.014
+   },
+   {
+    "pair": [
+     "KA",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.012
+   },
+   {
+    "pair": [
+     "MI",
+     "TA"
+    ],
+    "co_membership_recurrence": 0.008
+   }
+  ],
+  "clean_edge_recurrence_top": [
+   {
+    "recurrence": 0.916,
+    "signs": [
+     "DA",
+     "RU"
+    ]
+   },
+   {
+    "recurrence": 0.87,
+    "signs": [
+     "A",
+     "JA"
+    ]
+   },
+   {
+    "recurrence": 0.85,
+    "signs": [
+     "A",
+     "DA"
+    ]
+   },
+   {
+    "recurrence": 0.798,
+    "signs": [
+     "RA",
+     "TA"
+    ]
+   },
+   {
+    "recurrence": 0.774,
+    "signs": [
+     "RU",
+     "TA"
+    ]
+   },
+   {
+    "recurrence": 0.76,
+    "signs": [
+     "RE",
+     "RI"
+    ]
+   },
+   {
+    "recurrence": 0.754,
+    "signs": [
+     "PA",
+     "TE"
+    ]
+   },
+   {
+    "recurrence": 0.742,
+    "signs": [
+     "KI",
+     "WA"
+    ]
+   },
+   {
+    "recurrence": 0.728,
+    "signs": [
+     "KU",
+     "MA"
+    ]
+   },
+   {
+    "recurrence": 0.702,
+    "signs": [
+     "KU",
+     "SA"
+    ]
+   },
+   {
+    "recurrence": 0.664,
+    "signs": [
+     "E",
+     "JA"
+    ]
+   },
+   {
+    "recurrence": 0.66,
+    "signs": [
+     "RA",
+     "RE"
+    ]
+   },
+   {
+    "recurrence": 0.65,
+    "signs": [
+     "QE",
+     "TA"
+    ]
+   },
+   {
+    "recurrence": 0.646,
+    "signs": [
+     "A",
+     "SI"
+    ]
+   },
+   {
+    "recurrence": 0.646,
+    "signs": [
+     "A",
+     "KA"
+    ]
+   },
+   {
+    "recurrence": 0.64,
+    "signs": [
+     "MI",
+     "TE"
+    ]
+   },
+   {
+    "recurrence": 0.638,
+    "signs": [
+     "RO",
+     "U"
+    ]
+   },
+   {
+    "recurrence": 0.634,
+    "signs": [
+     "SU",
+     "TE"
+    ]
+   },
+   {
+    "recurrence": 0.632,
+    "signs": [
+     "NU",
+     "PA₃"
+    ]
+   },
+   {
+    "recurrence": 0.624,
+    "signs": [
+     "A",
+     "MI"
+    ]
+   },
+   {
+    "recurrence": 0.62,
+    "signs": [
+     "MA",
+     "ME"
+    ]
+   },
+   {
+    "recurrence": 0.61,
+    "signs": [
+     "TE",
+     "TI"
+    ]
+   },
+   {
+    "recurrence": 0.6,
+    "signs": [
+     "KI",
+     "TO"
+    ]
+   },
+   {
+    "recurrence": 0.596,
+    "signs": [
+     "KA",
+     "TI"
+    ]
+   },
+   {
+    "recurrence": 0.594,
+    "signs": [
+     "A",
+     "PA"
+    ]
+   }
+  ]
+ },
+ "stability_2_site_holdout": {
+  "n_sites": 52,
+  "strong_edge_survival_all_LOSO": 0,
+  "strong_edge_survival_ge_90pct_LOSO": 12,
+  "mean_strong_survival_fraction": 0.9551,
+  "worst_holdouts": [
+   {
+    "held_out_site": "Haghia Triada",
+    "docs_removed": 845,
+    "n_strong_edges_remaining": 3,
+    "baseline_strong_edges_surviving": 3,
+    "delta_eqclasses": 3
+   },
+   {
+    "held_out_site": "Phaistos",
+    "docs_removed": 48,
+    "n_strong_edges_remaining": 8,
+    "baseline_strong_edges_surviving": 8,
+    "delta_eqclasses": 8
+   },
+   {
+    "held_out_site": "Knossos",
+    "docs_removed": 51,
+    "n_strong_edges_remaining": 9,
+    "baseline_strong_edges_surviving": 9,
+    "delta_eqclasses": 9
+   },
+   {
+    "held_out_site": "Iouktas",
+    "docs_removed": 16,
+    "n_strong_edges_remaining": 10,
+    "baseline_strong_edges_surviving": 10,
+    "delta_eqclasses": 10
+   },
+   {
+    "held_out_site": "Palaikastro",
+    "docs_removed": 25,
+    "n_strong_edges_remaining": 10,
+    "baseline_strong_edges_surviving": 10,
+    "delta_eqclasses": 10
+   }
+  ],
+  "dominant_site_holdout": {
+   "held_out_site": "Haghia Triada",
+   "docs_removed": 845,
+   "n_strong_edges_remaining": 3,
+   "baseline_strong_edges_surviving": 3,
+   "delta_eqclasses": 3
+  },
+  "per_edge_survival": [
+   {
+    "signs": [
+     "A",
+     "SI"
+    ],
+    "survives_n_of": 48,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "A",
+     "KA"
+    ],
+    "survives_n_of": 48,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "A",
+     "MI"
+    ],
+    "survives_n_of": 48,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "KI",
+     "WA"
+    ],
+    "survives_n_of": 49,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "PA",
+     "TE"
+    ],
+    "survives_n_of": 49,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "RU",
+     "TA"
+    ],
+    "survives_n_of": 50,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "RA",
+     "RE"
+    ],
+    "survives_n_of": 50,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "KU",
+     "MA"
+    ],
+    "survives_n_of": 50,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "A",
+     "DA"
+    ],
+    "survives_n_of": 51,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "A",
+     "JA"
+    ],
+    "survives_n_of": 51,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "KU",
+     "SA"
+    ],
+    "survives_n_of": 51,
+    "of_sites": 52
+   },
+   {
+    "signs": [
+     "DA",
+     "RU"
+    ],
+    "survives_n_of": 51,
+    "of_sites": 52
+   }
+  ]
+ },
+ "stability_3_segmentation": [
+  {
+   "segmentation": "SEG_GORILA_WORD",
+   "n_units": 3147,
+   "n_clean_edges": 130,
+   "n_strong_edges": 12,
+   "clean_edge_jaccard_vs_gorila": 1.0,
+   "strong_edge_jaccard_vs_gorila": 1.0,
+   "baseline_strong_edges_recovered": 12,
+   "delta_eqclasses": 12
+  },
+  {
+   "segmentation": "SEG_ENTRY",
+   "n_units": 1068,
+   "n_clean_edges": 17,
+   "n_strong_edges": 0,
+   "clean_edge_jaccard_vs_gorila": 0.1221,
+   "strong_edge_jaccard_vs_gorila": 0.0,
+   "baseline_strong_edges_recovered": 0,
+   "delta_eqclasses": 0
+  },
+  {
+   "segmentation": "SEG_ROW",
+   "n_units": 2697,
+   "n_clean_edges": 82,
+   "n_strong_edges": 5,
+   "clean_edge_jaccard_vs_gorila": 0.5143,
+   "strong_edge_jaccard_vs_gorila": 0.0625,
+   "baseline_strong_edges_recovered": 1,
+   "delta_eqclasses": 5
+  },
+  {
+   "segmentation": "SEG_FORMULA",
+   "n_units": 1642,
+   "n_clean_edges": 27,
+   "n_strong_edges": 0,
+   "clean_edge_jaccard_vs_gorila": 0.1544,
+   "strong_edge_jaccard_vs_gorila": 0.0,
+   "baseline_strong_edges_recovered": 0,
+   "delta_eqclasses": 0
+  },
+  {
+   "segmentation": "SEG_PROBABILISTIC_BOUNDARY",
+   "n_units": 3526,
+   "n_clean_edges": 33,
+   "n_strong_edges": 0,
+   "clean_edge_jaccard_vs_gorila": 0.0382,
+   "strong_edge_jaccard_vs_gorila": 0.0,
+   "baseline_strong_edges_recovered": 0,
+   "delta_eqclasses": 0
+  }
+ ],
+ "stability_4_encoding": {
+  "variant": "collapse numbered/lettered allographs to base sign before building",
+  "n_clean_edges_collapsed": 144,
+  "n_strong_edges_collapsed": 17,
+  "baseline_clean_edges_after_remap": 130,
+  "baseline_strong_edges_after_remap": 12,
+  "clean_edge_jaccard": 0.9028,
+  "strong_edge_jaccard": 0.7059,
+  "strong_edges_preserved": 12,
+  "delta_eqclasses_collapsed": 17
+ },
+ "stability_5_damage_exclusion": {
+  "rule": "drop every word TYPE containing a *NNN / measure (unidentified) sign",
+  "n_types_before": 1165,
+  "n_types_after": 953,
+  "n_types_dropped": 212,
+  "n_strong_edges_after": 12,
+  "baseline_strong_edges_surviving": 12,
+  "surviving_edges": [
+   [
+    "A",
+    "DA"
+   ],
+   [
+    "A",
+    "JA"
+   ],
+   [
+    "A",
+    "KA"
+   ],
+   [
+    "A",
+    "MI"
+   ],
+   [
+    "A",
+    "SI"
+   ],
+   [
+    "DA",
+    "RU"
+   ],
+   [
+    "KI",
+    "WA"
+   ],
+   [
+    "KU",
+    "MA"
+   ],
+   [
+    "KU",
+    "SA"
+   ],
+   [
+    "PA",
+    "TE"
+   ],
+   [
+    "RA",
+    "RE"
+   ],
+   [
+    "RU",
+    "TA"
+   ]
+  ],
+  "lost_edges": [],
+  "delta_eqclasses": 12
+ },
+ "stability_6_formula_family_exclusion": {
+  "rule": "remove the single largest substitution component (the KU/SA/KI/A-RO deficit/total ledger paradigm) and rebuild",
+  "giant_component_size_forms": 361,
+  "n_types_after_removal": 804,
+  "n_strong_edges_after": 12,
+  "baseline_strong_edges_surviving_outside_giant": 12,
+  "surviving_edges": [
+   [
+    "A",
+    "DA"
+   ],
+   [
+    "A",
+    "JA"
+   ],
+   [
+    "A",
+    "KA"
+   ],
+   [
+    "A",
+    "MI"
+   ],
+   [
+    "A",
+    "SI"
+   ],
+   [
+    "DA",
+    "RU"
+   ],
+   [
+    "KI",
+    "WA"
+   ],
+   [
+    "KU",
+    "MA"
+   ],
+   [
+    "KU",
+    "SA"
+   ],
+   [
+    "PA",
+    "TE"
+   ],
+   [
+    "RA",
+    "RE"
+   ],
+   [
+    "RU",
+    "TA"
+   ]
+  ],
+  "delta_eqclasses_outside_giant": 12
+ },
+ "information_gain": {
+  "model": "N clean syllabogram signs begin as N singleton value-equivalence classes. IF an anonymous REL_CLASS of k signs is one TRUE shared-feature series it merges k signs into 1 class: ΔEqClasses = n_signs_covered - n_classes. Reported at both graph thresholds, bootstrap-CI'd, and DEFLATED by the fraction of edges that actually grade as feature-sharing on the disputed GORILA benchmark.",
+  "denominators": {
+   "clean_syllabogram_signs_present": 57,
+   "working_syllabary_estimate": 92
+  },
+  "strong_graph_w_ge_2": {
+   "n_signs_covered": 17,
+   "n_classes": 5,
+   "delta_eqclasses": 12,
+   "remaining_eqclasses_if_true": 45,
+   "bootstrap_95CI_delta": [
+    1,
+    7
+   ],
+   "bootstrap_mean_delta": 3.344
+  },
+  "loose_graph_w_ge_1": {
+   "n_signs_covered": 49,
+   "n_classes": 1,
+   "delta_eqclasses": 48,
+   "remaining_eqclasses_if_true": 9
+  },
+  "benchmark_deflation_FLAGGED": {
+   "note": "fraction of edges grading as feature-sharing (same_vowel/same_consonant/spelling) vs cross, on the GORILA homomorphy this campaign DISPUTES; grades only, earns no licence.",
+   "strong_edges_composition": {
+    "cross": 8,
+    "same_consonant": 1,
+    "same_vowel": 3
+   },
+   "strong_edges_feature_precision": 0.3333,
+   "all_clean_edges_composition": {
+    "cross": 84,
+    "same_consonant": 11,
+    "same_vowel": 35
+   },
+   "all_clean_edges_feature_precision": 0.3538,
+   "deflated_expected_delta_strong": 4.0,
+   "deflated_expected_delta_loose": 16.985
+  },
+  "toy_bits_strong_optimistic": {
+   "optimistic_bits_upper": 78.28,
+   "within_series_residual_bits": 27.86,
+   "net_bits_if_series_fully_typed": 50.42
+  },
+  "honesty": [
+   "The C4 within-graph word-final null was NOT beaten by ANY REL_CLASS (best p=0.67); the graph shows no enrichment for the ONE axis C3 certified recoverable. ΔEqClasses is an 'IF the relations are true' UPPER bound, not an earned reduction.",
+   "The benchmark feature-precision is at/near the chance rate, so the DEFLATED expected gain is the honest figure; the optimistic ΔEqClasses assumes every edge is a real series.",
+   "All edges descend from the single L_GORILA_VENTRIS transliteration lineage; the info gain is not independently corroborated (Art. XI single dependency cluster)."
+  ]
+ },
+ "verdict": {
+  "stability": "FRAGILE",
+  "dominant_site_dependency": "SEVERE (Haghia Triada holdout collapses the graph)",
+  "segmentation_robustness": "FRAGILE",
+  "formula_family_dependency": "partial",
+  "information_gain_if_true": 12,
+  "information_gain_deflated_honest": 4.0
+ }
+}

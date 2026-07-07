@@ -1,0 +1,2267 @@
+{
+ "experiment": "F4_loso_and_relative_class_compatibility",
+ "seed": 20260708,
+ "constitution": "v2.2 (Art. XII no-grade-by-creating-rule, Art. XV licences)",
+ "non_circular": "distributional profiles use sign identity + position only; LB values grade the held-out truth and define the circular shape-ceiling; never a model input.",
+ "func_high_threshold_la_attestations": 100,
+ "subsets": {
+  "all": {
+   "n": 59,
+   "signs": [
+    "A",
+    "AU",
+    "DA",
+    "DE",
+    "DI",
+    "DU",
+    "E",
+    "I",
+    "JA",
+    "JE",
+    "JU",
+    "KA",
+    "KE",
+    "KI",
+    "KO",
+    "KU",
+    "MA",
+    "ME",
+    "MI",
+    "MU",
+    "NA",
+    "NE",
+    "NI",
+    "NU",
+    "NWA",
+    "O",
+    "PA",
+    "PA3",
+    "PI",
+    "PO",
+    "PU",
+    "PU2",
+    "QA",
+    "QE",
+    "QI",
+    "RA",
+    "RA2",
+    "RE",
+    "RI",
+    "RO",
+    "RU",
+    "SA",
+    "SE",
+    "SI",
+    "SU",
+    "TA",
+    "TA2",
+    "TE",
+    "TI",
+    "TO",
+    "TU",
+    "TWE",
+    "U",
+    "WA",
+    "WI",
+    "ZA",
+    "ZE",
+    "ZO",
+    "ZU"
+   ]
+  },
+  "shape_high": {
+   "n": 25,
+   "signs": [
+    "A",
+    "DA",
+    "DI",
+    "I",
+    "KI",
+    "MA",
+    "ME",
+    "MI",
+    "MU",
+    "NA",
+    "NI",
+    "PA",
+    "PO",
+    "RI",
+    "RO",
+    "RU",
+    "SA",
+    "SE",
+    "SI",
+    "SU",
+    "TA",
+    "TE",
+    "TI",
+    "TO",
+    "TU"
+   ]
+  },
+  "paleography_high": {
+   "n": 11,
+   "signs": [
+    "A",
+    "DA",
+    "I",
+    "NA",
+    "PA",
+    "PO",
+    "RO",
+    "SA",
+    "SE",
+    "TI",
+    "TO"
+   ]
+  },
+  "function_high": {
+   "n": 19,
+   "signs": [
+    "A",
+    "DA",
+    "DI",
+    "I",
+    "JA",
+    "KA",
+    "KI",
+    "KU",
+    "MA",
+    "NA",
+    "NI",
+    "PA",
+    "RA",
+    "RE",
+    "SA",
+    "SI",
+    "TA",
+    "TE",
+    "TI"
+   ]
+  },
+  "multi_channel_high": {
+   "n": 18,
+   "signs": [
+    "A",
+    "DA",
+    "DI",
+    "I",
+    "KI",
+    "MA",
+    "NA",
+    "NI",
+    "PA",
+    "PO",
+    "RO",
+    "SA",
+    "SE",
+    "SI",
+    "TA",
+    "TE",
+    "TI",
+    "TO"
+   ]
+  },
+  "contested": {
+   "n": 5,
+   "signs": [
+    "DA",
+    "JU",
+    "MU",
+    "RO",
+    "SI"
+   ]
+  },
+  "cypro_minoan": {
+   "n": 10,
+   "signs": [
+    "A",
+    "DA",
+    "I",
+    "NA",
+    "PA",
+    "RO",
+    "SA",
+    "SE",
+    "TI",
+    "TO"
+   ]
+  }
+ },
+ "loso": {
+  "all": {
+   "n_signs_in_subset": 59,
+   "n_gradeable": 56,
+   "n_cons_gradeable": 51,
+   "vowel_accuracy": {
+    "distributional_top1": 0.2321,
+    "distributional_centroid": 0.2143,
+    "frequency": 0.1786,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.2857
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.098,
+    "distributional_centroid": 0.0784,
+    "frequency": 0.0196,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.1176
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  },
+  "shape_high": {
+   "n_signs_in_subset": 25,
+   "n_gradeable": 25,
+   "n_cons_gradeable": 23,
+   "vowel_accuracy": {
+    "distributional_top1": 0.28,
+    "distributional_centroid": 0.2,
+    "frequency": 0.2,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.32
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.1304,
+    "distributional_centroid": 0.0435,
+    "frequency": 0.0,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.2174
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  },
+  "paleography_high": {
+   "n_signs_in_subset": 11,
+   "n_gradeable": 11,
+   "n_cons_gradeable": 9,
+   "vowel_accuracy": {
+    "distributional_top1": 0.2727,
+    "distributional_centroid": 0.0909,
+    "frequency": 0.1818,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.4545
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.0,
+    "distributional_centroid": 0.0,
+    "frequency": 0.0,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.2222
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  },
+  "function_high": {
+   "n_signs_in_subset": 19,
+   "n_gradeable": 19,
+   "n_cons_gradeable": 17,
+   "vowel_accuracy": {
+    "distributional_top1": 0.2632,
+    "distributional_centroid": 0.0526,
+    "frequency": 0.2632,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.5263
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.1765,
+    "distributional_centroid": 0.0588,
+    "frequency": 0.0,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.1765
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  },
+  "multi_channel_high": {
+   "n_signs_in_subset": 18,
+   "n_gradeable": 18,
+   "n_cons_gradeable": 16,
+   "vowel_accuracy": {
+    "distributional_top1": 0.3333,
+    "distributional_centroid": 0.0556,
+    "frequency": 0.2222,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.3889
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.0625,
+    "distributional_centroid": 0.0625,
+    "frequency": 0.0,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.25
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  },
+  "contested": {
+   "n_signs_in_subset": 5,
+   "n_gradeable": 5,
+   "n_cons_gradeable": 5,
+   "vowel_accuracy": {
+    "distributional_top1": 0.8,
+    "distributional_centroid": 0.4,
+    "frequency": 0.6,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.4
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.0,
+    "distributional_centroid": 0.0,
+    "frequency": 0.0,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.2
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  },
+  "cypro_minoan": {
+   "n_signs_in_subset": 10,
+   "n_gradeable": 10,
+   "n_cons_gradeable": 8,
+   "vowel_accuracy": {
+    "distributional_top1": 0.3,
+    "distributional_centroid": 0.1,
+    "frequency": 0.2,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.5
+   },
+   "consonant_accuracy": {
+    "distributional_top1": 0.0,
+    "distributional_centroid": 0.0,
+    "frequency": 0.0,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.25
+   },
+   "exact_cell_accuracy_distributional": 0.0
+  }
+ },
+ "loso_meta": {
+  "n_lb_candidates": 66
+ },
+ "loso_permutation_vowel_null": {
+  "observed_vowel_acc": 0.2321,
+  "null_mean": 0.2083,
+  "null_p95": 0.3036,
+  "p_value": 0.3771
+ },
+ "cypro_minoan_sensitivity": {
+  "n_cm_correspondences": 10,
+  "cm_signs": [
+   "A",
+   "DA",
+   "I",
+   "NA",
+   "PA",
+   "RO",
+   "SA",
+   "SE",
+   "TI",
+   "TO"
+  ],
+  "contingency_vs_channels": [
+   {
+    "channel": "shape_homophone",
+    "cm_and_channel": 10,
+    "cm_not_channel": 0,
+    "channel_not_cm": 15,
+    "neither": 34,
+    "fisher_p_two_sided": 5.2e-05,
+    "cm_is_subset_of_channel": true,
+    "cm_coverage_of_channel": 0.4
+   },
+   {
+    "channel": "shape_homomorphic_or_better",
+    "cm_and_channel": 10,
+    "cm_not_channel": 0,
+    "channel_not_cm": 47,
+    "neither": 2,
+    "fisher_p_two_sided": 1.0,
+    "cm_is_subset_of_channel": true,
+    "cm_coverage_of_channel": 0.1754
+   },
+   {
+    "channel": "cypriot_stable_true",
+    "cm_and_channel": 10,
+    "cm_not_channel": 0,
+    "channel_not_cm": 1,
+    "neither": 48,
+    "fisher_p_two_sided": 0.0,
+    "cm_is_subset_of_channel": true,
+    "cm_coverage_of_channel": 0.9091
+   }
+  ],
+  "cm_subset_of_cypriot_stable": true,
+  "cm_signs_not_in_cypriot_stable": [],
+  "cypriot_stable_signs_not_cm": [
+   "PO"
+  ],
+  "loso_cm_vs_cypriot_stable": {
+   "cypro_minoan": {
+    "distributional_top1": 0.3,
+    "distributional_centroid": 0.1,
+    "frequency": 0.2,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.5
+   },
+   "paleography_high_cypriot_stable": {
+    "distributional_top1": 0.2727,
+    "distributional_centroid": 0.0909,
+    "frequency": 0.1818,
+    "shape_ceiling_circular": 1.0,
+    "chance_modal": 0.4545
+   }
+  },
+  "interpretation_key": "If CM is a strict subset of an existing channel (b=0) and its Fisher p is tiny, CM MULTIPLIES already-flagged signs rather than adding an independent evidence axis."
+ },
+ "relative_class_compatibility": {
+  "n_rel_classes": 5,
+  "n_tests": 10,
+  "bonferroni_factor": 10,
+  "per_class": [
+   {
+    "rel_class": "REL_CLASS_01",
+    "signs": [
+     "A",
+     "DA",
+     "JA",
+     "KA",
+     "MI",
+     "RU",
+     "SI",
+     "TA"
+    ],
+    "n_valued": 8,
+    "values": {
+     "A": "a",
+     "DA": "da",
+     "JA": "ja",
+     "KA": "ka",
+     "MI": "mi",
+     "RU": "ru",
+     "SI": "si",
+     "TA": "ta"
+    },
+    "vowel": {
+     "observed_modal_fraction": 0.625,
+     "modal_value": "A",
+     "null_mean_uncond": 0.3993,
+     "p_uncond": 0.0501,
+     "null_mean_freqmatched": 0.4405,
+     "p_freqmatched": 0.1172,
+     "n_freqmatched_valid": 20000
+    },
+    "consonant": {
+     "observed_modal_fraction": 0.125,
+     "modal_value": "D",
+     "null_mean_uncond": 0.2543,
+     "p_uncond": 1.0,
+     "null_mean_freqmatched": 0.2573,
+     "p_freqmatched": 1.0,
+     "n_freqmatched_valid": 20000
+    }
+   },
+   {
+    "rel_class": "REL_CLASS_02",
+    "signs": [
+     "KU",
+     "MA",
+     "SA"
+    ],
+    "n_valued": 3,
+    "values": {
+     "KU": "ku",
+     "MA": "ma",
+     "SA": "sa"
+    },
+    "vowel": {
+     "observed_modal_fraction": 0.6667,
+     "modal_value": "A",
+     "null_mean_uncond": 0.5226,
+     "p_uncond": 0.5261,
+     "null_mean_freqmatched": 0.5555,
+     "p_freqmatched": 0.6034,
+     "n_freqmatched_valid": 20000
+    },
+    "consonant": {
+     "observed_modal_fraction": 0.3333,
+     "modal_value": "K",
+     "null_mean_uncond": 0.3902,
+     "p_uncond": 0.9995,
+     "null_mean_freqmatched": 0.3937,
+     "p_freqmatched": 0.9999,
+     "n_freqmatched_valid": 20000
+    }
+   },
+   {
+    "rel_class": "REL_CLASS_03",
+    "signs": [
+     "RA",
+     "RE"
+    ],
+    "n_valued": 2,
+    "values": {
+     "RA": "ra",
+     "RE": "re"
+    },
+    "vowel": {
+     "observed_modal_fraction": 0.5,
+     "modal_value": "A",
+     "null_mean_uncond": 0.6009,
+     "p_uncond": 1.0,
+     "null_mean_freqmatched": 0.6207,
+     "p_freqmatched": 1.0,
+     "n_freqmatched_valid": 20000
+    },
+    "consonant": {
+     "observed_modal_fraction": 1.0,
+     "modal_value": "R",
+     "null_mean_uncond": 0.5262,
+     "p_uncond": 0.058,
+     "null_mean_freqmatched": 0.5296,
+     "p_freqmatched": 0.0628,
+     "n_freqmatched_valid": 20000
+    }
+   },
+   {
+    "rel_class": "REL_CLASS_04",
+    "signs": [
+     "PA",
+     "TE"
+    ],
+    "n_valued": 2,
+    "values": {
+     "PA": "pa",
+     "TE": "te"
+    },
+    "vowel": {
+     "observed_modal_fraction": 0.5,
+     "modal_value": "A",
+     "null_mean_uncond": 0.6025,
+     "p_uncond": 1.0,
+     "null_mean_freqmatched": 0.6213,
+     "p_freqmatched": 1.0,
+     "n_freqmatched_valid": 20000
+    },
+    "consonant": {
+     "observed_modal_fraction": 0.5,
+     "modal_value": "P",
+     "null_mean_uncond": 0.5268,
+     "p_uncond": 0.9923,
+     "null_mean_freqmatched": 0.5294,
+     "p_freqmatched": 0.9964,
+     "n_freqmatched_valid": 20000
+    }
+   },
+   {
+    "rel_class": "REL_CLASS_05",
+    "signs": [
+     "KI",
+     "WA"
+    ],
+    "n_valued": 2,
+    "values": {
+     "KI": "ki",
+     "WA": "wa"
+    },
+    "vowel": {
+     "observed_modal_fraction": 0.5,
+     "modal_value": "I",
+     "null_mean_uncond": 0.5998,
+     "p_uncond": 1.0,
+     "null_mean_freqmatched": 0.6244,
+     "p_freqmatched": 1.0,
+     "n_freqmatched_valid": 20000
+    },
+    "consonant": {
+     "observed_modal_fraction": 0.5,
+     "modal_value": "K",
+     "null_mean_uncond": 0.527,
+     "p_uncond": 0.9936,
+     "null_mean_freqmatched": 0.5296,
+     "p_freqmatched": 0.9963,
+     "n_freqmatched_valid": 20000
+    }
+   }
+  ],
+  "survivors_bonferroni_uncond": [],
+  "survivors_bonferroni_freqmatched": [],
+  "note": "A class is COMPATIBLE with a shared value-family only if its modal-fraction beats the size-matched null AND the frequency-matched null AND survives Bonferroni across 10 class x axis tests."
+ },
+ "per_sign_all_subset": [
+  {
+   "sign": "A",
+   "true_value": "a",
+   "true_cv": [
+    "",
+    "A"
+   ],
+   "distributional_top": "PO",
+   "distributional_cv": [
+    "P",
+    "O"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "TO",
+   "frequency_cv": [
+    "T",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "DA",
+   "true_value": "da",
+   "true_cv": [
+    "D",
+    "A"
+   ],
+   "distributional_top": "KA",
+   "distributional_cv": [
+    "K",
+    "A"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "JA",
+   "frequency_cv": [
+    "J",
+    "A"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "DE",
+   "true_value": "de",
+   "true_cv": [
+    "D",
+    "E"
+   ],
+   "distributional_top": "U",
+   "distributional_cv": [
+    "",
+    "U"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "M",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "QO",
+   "frequency_cv": [
+    "Q",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "DI",
+   "true_value": "di",
+   "true_cv": [
+    "D",
+    "I"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "RI",
+   "frequency_cv": [
+    "R",
+    "I"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "DU",
+   "true_value": "du",
+   "true_cv": [
+    "D",
+    "U"
+   ],
+   "distributional_top": "RA",
+   "distributional_cv": [
+    "R",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "D",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": true,
+   "frequency_top": "DA",
+   "frequency_cv": [
+    "D",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": true,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "E",
+   "true_value": "e",
+   "true_cv": [
+    "",
+    "E"
+   ],
+   "distributional_top": "QE",
+   "distributional_cv": [
+    "Q",
+    "E"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "PU",
+   "frequency_cv": [
+    "P",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "I",
+   "true_value": "i",
+   "true_cv": [
+    "",
+    "I"
+   ],
+   "distributional_top": "KA",
+   "distributional_cv": [
+    "K",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "JO",
+   "frequency_cv": [
+    "J",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "JA",
+   "true_value": "ja",
+   "true_cv": [
+    "J",
+    "A"
+   ],
+   "distributional_top": "I",
+   "distributional_cv": [
+    "",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "KO",
+   "frequency_cv": [
+    "K",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "JE",
+   "true_value": "je",
+   "true_cv": [
+    "J",
+    "E"
+   ],
+   "distributional_top": "TA2",
+   "distributional_cv": [
+    "T",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "A",
+   "centroid_cons": "Z",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "A2",
+   "frequency_cv": [
+    "",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "JU",
+   "true_value": "ju",
+   "true_cv": [
+    "J",
+    "U"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "T",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "MI",
+   "frequency_cv": [
+    "M",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "KA",
+   "true_value": "ka",
+   "true_cv": [
+    "K",
+    "A"
+   ],
+   "distributional_top": "I",
+   "distributional_cv": [
+    "",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "TA",
+   "frequency_cv": [
+    "T",
+    "A"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "KE",
+   "true_value": "ke",
+   "true_cv": [
+    "K",
+    "E"
+   ],
+   "distributional_top": "ZE",
+   "distributional_cv": [
+    "Z",
+    "E"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "A",
+   "centroid_cons": "Q",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "ZO",
+   "frequency_cv": [
+    "Z",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "KI",
+   "true_value": "ki",
+   "true_cv": [
+    "K",
+    "I"
+   ],
+   "distributional_top": "KA",
+   "distributional_cv": [
+    "K",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": true,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": true,
+   "frequency_top": "NA",
+   "frequency_cv": [
+    "N",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "KO",
+   "true_value": "ko",
+   "true_cv": [
+    "K",
+    "O"
+   ],
+   "distributional_top": "SE",
+   "distributional_cv": [
+    "S",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "S",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "DU",
+   "frequency_cv": [
+    "D",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "KU",
+   "true_value": "ku",
+   "true_cv": [
+    "K",
+    "U"
+   ],
+   "distributional_top": "TE",
+   "distributional_cv": [
+    "T",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "RO",
+   "frequency_cv": [
+    "R",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "MA",
+   "true_value": "ma",
+   "true_cv": [
+    "M",
+    "A"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "KA",
+   "frequency_cv": [
+    "K",
+    "A"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "ME",
+   "true_value": "me",
+   "true_cv": [
+    "M",
+    "E"
+   ],
+   "distributional_top": "NA",
+   "distributional_cv": [
+    "N",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "S",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "KU",
+   "frequency_cv": [
+    "K",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "MI",
+   "true_value": "mi",
+   "true_cv": [
+    "M",
+    "I"
+   ],
+   "distributional_top": "TE",
+   "distributional_cv": [
+    "T",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "W",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "WA",
+   "frequency_cv": [
+    "W",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "MU",
+   "true_value": "mu",
+   "true_cv": [
+    "M",
+    "U"
+   ],
+   "distributional_top": "DU",
+   "distributional_cv": [
+    "D",
+    "U"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "U",
+   "centroid_cons": "P",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "SU",
+   "frequency_cv": [
+    "S",
+    "U"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "NA",
+   "true_value": "na",
+   "true_cv": [
+    "N",
+    "A"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "E",
+   "frequency_cv": [
+    "",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "NE",
+   "true_value": "ne",
+   "true_cv": [
+    "N",
+    "E"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "T",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "DE",
+   "frequency_cv": [
+    "D",
+    "E"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "NI",
+   "true_value": "ni",
+   "true_cv": [
+    "N",
+    "I"
+   ],
+   "distributional_top": "RO",
+   "distributional_cv": [
+    "R",
+    "O"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "WO",
+   "frequency_cv": [
+    "W",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "NU",
+   "true_value": "nu",
+   "true_cv": [
+    "N",
+    "U"
+   ],
+   "distributional_top": "MA",
+   "distributional_cv": [
+    "M",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "D",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "PI",
+   "frequency_cv": [
+    "P",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "O",
+   "true_value": "o",
+   "true_cv": [
+    "",
+    "O"
+   ],
+   "distributional_top": "RO2",
+   "distributional_cv": [
+    "R",
+    "O"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "A",
+   "centroid_cons": "Z",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "A3",
+   "frequency_cv": [
+    "",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "PA",
+   "true_value": "pa",
+   "true_cv": [
+    "P",
+    "A"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "SI",
+   "frequency_cv": [
+    "S",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "PA3",
+   "true_value": "pa3",
+   "true_cv": [
+    "P",
+    "A"
+   ],
+   "distributional_top": "MI",
+   "distributional_cv": [
+    "M",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "M",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "MA",
+   "frequency_cv": [
+    "M",
+    "A"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "PI",
+   "true_value": "pi",
+   "true_cv": [
+    "P",
+    "I"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "DO",
+   "frequency_cv": [
+    "D",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "PO",
+   "true_value": "po",
+   "true_cv": [
+    "P",
+    "O"
+   ],
+   "distributional_top": "MU",
+   "distributional_cv": [
+    "M",
+    "U"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "U",
+   "centroid_cons": "M",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "ZA",
+   "frequency_cv": [
+    "Z",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "PU",
+   "true_value": "pu",
+   "true_cv": [
+    "P",
+    "U"
+   ],
+   "distributional_top": "DI",
+   "distributional_cv": [
+    "D",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "U",
+   "centroid_cons": "D",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "DI",
+   "frequency_cv": [
+    "D",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "PU2",
+   "true_value": "pu2",
+   "true_cv": [
+    "P",
+    "U"
+   ],
+   "distributional_top": "RA3",
+   "distributional_cv": [
+    "R",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "U",
+   "centroid_cons": "Z",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "QI",
+   "frequency_cv": [
+    "Q",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "QA",
+   "true_value": "qa",
+   "true_cv": [
+    "Q",
+    "A"
+   ],
+   "distributional_top": "DA",
+   "distributional_cv": [
+    "D",
+    "A"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "D",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "WI",
+   "frequency_cv": [
+    "W",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "QE",
+   "true_value": "qe",
+   "true_cv": [
+    "Q",
+    "E"
+   ],
+   "distributional_top": "KA",
+   "distributional_cv": [
+    "K",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "A",
+   "centroid_cons": "D",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "NE",
+   "frequency_cv": [
+    "N",
+    "E"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "QI",
+   "true_value": "qi",
+   "true_cv": [
+    "Q",
+    "I"
+   ],
+   "distributional_top": "A3",
+   "distributional_cv": [
+    "",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "U",
+   "centroid_cons": "P",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "RA3",
+   "frequency_cv": [
+    "R",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "RA",
+   "true_value": "ra",
+   "true_cv": [
+    "R",
+    "A"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": true,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "U",
+   "frequency_cv": [
+    "",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "RA2",
+   "true_value": "ra2",
+   "true_cv": [
+    "R",
+    "A"
+   ],
+   "distributional_top": "MO",
+   "distributional_cv": [
+    "M",
+    "O"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "J",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "KI",
+   "frequency_cv": [
+    "K",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "RE",
+   "true_value": "re",
+   "true_cv": [
+    "R",
+    "E"
+   ],
+   "distributional_top": "RA",
+   "distributional_cv": [
+    "R",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": true,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "WE",
+   "frequency_cv": [
+    "W",
+    "E"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "RI",
+   "true_value": "ri",
+   "true_cv": [
+    "R",
+    "I"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": true,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "W",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "NO",
+   "frequency_cv": [
+    "N",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "RO",
+   "true_value": "ro",
+   "true_cv": [
+    "R",
+    "O"
+   ],
+   "distributional_top": "MO",
+   "distributional_cv": [
+    "M",
+    "O"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "J",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "SO",
+   "frequency_cv": [
+    "S",
+    "O"
+   ],
+   "freq_vowel_correct": true,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "RU",
+   "true_value": "ru",
+   "true_cv": [
+    "R",
+    "U"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": true,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "ME",
+   "frequency_cv": [
+    "M",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "SA",
+   "true_value": "sa",
+   "true_cv": [
+    "S",
+    "A"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "KE",
+   "frequency_cv": [
+    "K",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "SE",
+   "true_value": "se",
+   "true_cv": [
+    "S",
+    "E"
+   ],
+   "distributional_top": "RO",
+   "distributional_cv": [
+    "R",
+    "O"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "TI",
+   "frequency_cv": [
+    "T",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "SI",
+   "true_value": "si",
+   "true_cv": [
+    "S",
+    "I"
+   ],
+   "distributional_top": "I",
+   "distributional_cv": [
+    "",
+    "I"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "RA",
+   "frequency_cv": [
+    "R",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "SU",
+   "true_value": "su",
+   "true_cv": [
+    "S",
+    "U"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "D",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "QE",
+   "frequency_cv": [
+    "Q",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "TA",
+   "true_value": "ta",
+   "true_cv": [
+    "T",
+    "A"
+   ],
+   "distributional_top": "RI",
+   "distributional_cv": [
+    "R",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "O",
+   "frequency_cv": [
+    "",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "TA2",
+   "true_value": "ta2",
+   "true_cv": [
+    "T",
+    "A"
+   ],
+   "distributional_top": "JE",
+   "distributional_cv": [
+    "J",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "S",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "JE",
+   "frequency_cv": [
+    "J",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "TE",
+   "true_value": "te",
+   "true_cv": [
+    "T",
+    "E"
+   ],
+   "distributional_top": "WE",
+   "distributional_cv": [
+    "W",
+    "E"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "NA",
+   "frequency_cv": [
+    "N",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "TI",
+   "true_value": "ti",
+   "true_cv": [
+    "T",
+    "I"
+   ],
+   "distributional_top": "I",
+   "distributional_cv": [
+    "",
+    "I"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "W",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "PA",
+   "frequency_cv": [
+    "P",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "TO",
+   "true_value": "to",
+   "true_cv": [
+    "T",
+    "O"
+   ],
+   "distributional_top": "QI",
+   "distributional_cv": [
+    "Q",
+    "I"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "M",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "SE",
+   "frequency_cv": [
+    "S",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "TU",
+   "true_value": "tu",
+   "true_cv": [
+    "T",
+    "U"
+   ],
+   "distributional_top": "MA",
+   "distributional_cv": [
+    "M",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "MO",
+   "frequency_cv": [
+    "M",
+    "O"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "U",
+   "true_value": "u",
+   "true_cv": [
+    "",
+    "U"
+   ],
+   "distributional_top": "DA",
+   "distributional_cv": [
+    "D",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "K",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "PE",
+   "frequency_cv": [
+    "P",
+    "E"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "WA",
+   "true_value": "wa",
+   "true_cv": [
+    "W",
+    "A"
+   ],
+   "distributional_top": "PE",
+   "distributional_cv": [
+    "P",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "M",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "NI",
+   "frequency_cv": [
+    "N",
+    "I"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "WI",
+   "true_value": "wi",
+   "true_cv": [
+    "W",
+    "I"
+   ],
+   "distributional_top": "SE",
+   "distributional_cv": [
+    "S",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "I",
+   "centroid_cons": "Q",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": false,
+   "frequency_top": "TU",
+   "frequency_cv": [
+    "T",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "ZA",
+   "true_value": "za",
+   "true_cv": [
+    "Z",
+    "A"
+   ],
+   "distributional_top": "RE",
+   "distributional_cv": [
+    "R",
+    "E"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "E",
+   "centroid_cons": "M",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "RU",
+   "frequency_cv": [
+    "R",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "ZE",
+   "true_value": "ze",
+   "true_cv": [
+    "Z",
+    "E"
+   ],
+   "distributional_top": "RO2",
+   "distributional_cv": [
+    "R",
+    "O"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "Z",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": true,
+   "frequency_top": "MU",
+   "frequency_cv": [
+    "M",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "ZO",
+   "true_value": "zo",
+   "true_cv": [
+    "Z",
+    "O"
+   ],
+   "distributional_top": "RO2",
+   "distributional_cv": [
+    "R",
+    "O"
+   ],
+   "dist_vowel_correct": true,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "O",
+   "centroid_cons": "Z",
+   "cent_vowel_correct": true,
+   "cent_cons_correct": true,
+   "frequency_top": "PU2",
+   "frequency_cv": [
+    "P",
+    "U"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  },
+  {
+   "sign": "ZU",
+   "true_value": "zu",
+   "true_cv": [
+    "Z",
+    "U"
+   ],
+   "distributional_top": "QA",
+   "distributional_cv": [
+    "Q",
+    "A"
+   ],
+   "dist_vowel_correct": false,
+   "dist_cons_correct": false,
+   "dist_exact_correct": false,
+   "centroid_vowel": "A",
+   "centroid_cons": "M",
+   "cent_vowel_correct": false,
+   "cent_cons_correct": false,
+   "frequency_top": "QA",
+   "frequency_cv": [
+    "Q",
+    "A"
+   ],
+   "freq_vowel_correct": false,
+   "freq_cons_correct": false,
+   "shape_vowel_correct": true,
+   "shape_cons_correct": true,
+   "subset": "all"
+  }
+ ]
+}

@@ -1,0 +1,1279 @@
+{
+ "experiment": "C4_linear_a_substitution_graph",
+ "seed": 20260708,
+ "n_null": 300,
+ "n_perm": 2000,
+ "non_circular": "graph + REL_CLASS formation use sign identity, frame membership, long-frame support and WORD-FINAL position only; GORILA/LB homomorphic (C,V) values read AFTERWARD to GRADE a flagged benchmark, never as an input; earns no licence.",
+ "corpus": {
+  "word_tokens": 3147,
+  "word_types": 1165,
+  "types_len_ge2": 984,
+  "documents": 1341,
+  "distinct_signs": 259,
+  "clean_syllabogram_signs": 60
+ },
+ "word_graph": {
+  "edge_type_counts": {
+   "single_sign_substitution": 2787,
+   "allographic_candidate": 7,
+   "prefix_alternation": 420,
+   "suffix_alternation": 446,
+   "optional_sign": 89,
+   "transposition": 25
+  },
+  "n_word_edges": 3774,
+  "single_sign_substitution_pairs": 2794,
+  "of_which_allographic": 7,
+  "indel_pairs": 955,
+  "transposition_pairs": 25,
+  "connected_components_over_substitution": 73,
+  "component_size_distribution": {
+   "2": 50,
+   "3": 8,
+   "4": 5,
+   "5": 3,
+   "6": 2,
+   "8": 2,
+   "18": 1,
+   "20": 1,
+   "361": 1
+  },
+  "singleton_len_ge2_nodes_no_sub_edge": 398,
+  "largest_components": [
+   {
+    "size_forms": 361,
+    "n_substitution_edges": 2601,
+    "total_tokens": 580,
+    "forms": [
+     "KU-RO",
+     "SA-RA₂",
+     "KI-RO",
+     "A-DU",
+     "I-RA₂",
+     "DA-RE",
+     "KA-PA",
+     "MA-DI",
+     "SA-RU",
+     "SI-KA",
+     "DA-KA",
+     "I-DA",
+     "*306-TU",
+     "*86-RO",
+     "A-SE",
+     "DA-ME",
+     "JA-SA",
+     "JE-DI",
+     "KU-PA",
+     "SA-MA",
+     "SA-RO",
+     "*188-DU",
+     "*21F-*118",
+     "A-JA"
+    ]
+   },
+   {
+    "size_forms": 20,
+    "n_substitution_edges": 26,
+    "total_tokens": 24,
+    "forms": [
+     "DA-QE-RA",
+     "U-*325-ZA",
+     "A-*325-ZA",
+     "A-DU-RE",
+     "A-DU-ZA",
+     "A-TA-*350",
+     "A-TA-DE",
+     "A-TA-NA",
+     "A-TA-RE",
+     "DA-TA-RA",
+     "DA-TA-RE",
+     "I-RU-JA",
+     "I-TA-JA",
+     "I-WA-JA",
+     "JE-TA-NA",
+     "KA-TA-RE",
+     "PI-TA-JA",
+     "PI-TA-RA",
+     "TA₂-TA-RE",
+     "U-DE-ZA"
+    ]
+   },
+   {
+    "size_forms": 18,
+    "n_substitution_edges": 20,
+    "total_tokens": 26,
+    "forms": [
+     "SI-RU-TE",
+     "KI-DA-RO",
+     "SI-DA-RE",
+     "A-DA-RA",
+     "A-DA-RO",
+     "A-KI-RO",
+     "A-RU-RA",
+     "A-ZU-RA",
+     "KI-DA-TA",
+     "MI-DA-NI",
+     "MI-DA-RA",
+     "NA-DA-RE",
+     "PA-DA-NI",
+     "PA-DA-RU",
+     "SI-DA-RO",
+     "SI-DA-TE",
+     "TI-DA-TA",
+     "TI-NI-TA"
+    ]
+   },
+   {
+    "size_forms": 8,
+    "n_substitution_edges": 28,
+    "total_tokens": 30,
+    "forms": [
+     "*411-VS",
+     "*409-VS",
+     "*408-VS",
+     "*417-VS",
+     "*403-VS",
+     "*404-VS",
+     "*406-VS",
+     "*410-VS"
+    ]
+   },
+   {
+    "size_forms": 8,
+    "n_substitution_edges": 11,
+    "total_tokens": 10,
+    "forms": [
+     "PA-SE-JA",
+     "A-MA-JA",
+     "A-RI-JA",
+     "A-RI-PA",
+     "A-RI-SU",
+     "A-SE-JA",
+     "A-SU-JA",
+     "NU-RI-JA"
+    ]
+   },
+   {
+    "size_forms": 6,
+    "n_substitution_edges": 5,
+    "total_tokens": 8,
+    "forms": [
+     "A-KA-RU",
+     "A-KA-TA",
+     "A-MI-TA",
+     "A-TI-RU",
+     "RI-KA-TA",
+     "SI-MI-TA"
+    ]
+   },
+   {
+    "size_forms": 6,
+    "n_substitution_edges": 5,
+    "total_tokens": 7,
+    "forms": [
+     "KU-RE-JU",
+     "KU-MA-JU",
+     "KU-MA-RO",
+     "SA-MA-RO",
+     "SA-MA-TI",
+     "SA-RE-JU"
+    ]
+   },
+   {
+    "size_forms": 5,
+    "n_substitution_edges": 4,
+    "total_tokens": 7,
+    "forms": [
+     "KI-RE-TA₂",
+     "KI-RI-TA₂",
+     "DU-RE-ZA",
+     "KI-RE-ZA",
+     "KI-RI-SI"
+    ]
+   },
+   {
+    "size_forms": 5,
+    "n_substitution_edges": 5,
+    "total_tokens": 5,
+    "forms": [
+     "DI-PA-JA",
+     "KU-PA-JA",
+     "KU-PA-RI",
+     "KU-PA-ZU",
+     "TU-PA-RI"
+    ]
+   },
+   {
+    "size_forms": 5,
+    "n_substitution_edges": 5,
+    "total_tokens": 5,
+    "forms": [
+     "*333-SA-MU",
+     "JA-SA-JA",
+     "JA-SA-MU",
+     "JA-SA-SA",
+     "JA-TO-JA"
+    ]
+   },
+   {
+    "size_forms": 4,
+    "n_substitution_edges": 3,
+    "total_tokens": 10,
+    "forms": [
+     "JA-SA-SA-RA-ME",
+     "A-SA-SA-*802-ME",
+     "A-SA-SA-RA-ME",
+     "JA-SA-SA-RA-MA"
+    ]
+   },
+   {
+    "size_forms": 4,
+    "n_substitution_edges": 3,
+    "total_tokens": 5,
+    "forms": [
+     "RI-SU-MA",
+     "KU-RU-KU",
+     "KU-RU-MA",
+     "RI-RU-MA"
+    ]
+   },
+   {
+    "size_forms": 4,
+    "n_substitution_edges": 4,
+    "total_tokens": 4,
+    "forms": [
+     "SA-RA-DI",
+     "SA-RA-ME",
+     "SA-RA-RA",
+     "SA-SA-ME"
+    ]
+   },
+   {
+    "size_forms": 4,
+    "n_substitution_edges": 3,
+    "total_tokens": 4,
+    "forms": [
+     "DA-NA-SI",
+     "DA-NA-TU",
+     "E-NA-SI",
+     "PA-NA-TU"
+    ]
+   },
+   {
+    "size_forms": 4,
+    "n_substitution_edges": 3,
+    "total_tokens": 4,
+    "forms": [
+     "A-WA-PI",
+     "JA-KI-PA₃",
+     "JA-WA-PA₃",
+     "JA-WA-PI"
+    ]
+   },
+   {
+    "size_forms": 3,
+    "n_substitution_edges": 2,
+    "total_tokens": 6,
+    "forms": [
+     "PA-JA-RE",
+     "TE-JA-RE",
+     "TE-NU-RE"
+    ]
+   },
+   {
+    "size_forms": 3,
+    "n_substitution_edges": 2,
+    "total_tokens": 6,
+    "forms": [
+     "PA-TA-NE",
+     "PA-RA-NE",
+     "PA-TA-DA"
+    ]
+   },
+   {
+    "size_forms": 3,
+    "n_substitution_edges": 2,
+    "total_tokens": 4,
+    "forms": [
+     "KU-ZU-NI",
+     "KU-ZU-NA",
+     "RU-ZU-NA"
+    ]
+   },
+   {
+    "size_forms": 3,
+    "n_substitution_edges": 2,
+    "total_tokens": 3,
+    "forms": [
+     "I-KI-RA",
+     "SI-KI-NE",
+     "SI-KI-RA"
+    ]
+   },
+   {
+    "size_forms": 3,
+    "n_substitution_edges": 2,
+    "total_tokens": 3,
+    "forms": [
+     "KA-I-KA",
+     "KA-I-RO",
+     "KA-RE-RO"
+    ]
+   }
+  ]
+ },
+ "sign_substitution_graph": {
+  "n_sign_edges_long": 150,
+  "n_clean_nonallographic_edges": 130,
+  "n_strong_edges_ge2_longframes": 12,
+  "top_edges": [
+   {
+    "rank": 1,
+    "signs": [
+     "DA",
+     "RU"
+    ],
+    "w_long_frame": 3,
+    "n_final_frames": 1,
+    "final_fraction": 0.3333,
+    "w_raw_paircount": 5,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 2,
+    "signs": [
+     "A",
+     "DA"
+    ],
+    "w_long_frame": 3,
+    "n_final_frames": 1,
+    "final_fraction": 0.3333,
+    "w_raw_paircount": 9,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 3,
+    "signs": [
+     "A",
+     "JA"
+    ],
+    "w_long_frame": 3,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 9,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 4,
+    "signs": [
+     "RU",
+     "TA"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 1,
+    "final_fraction": 0.5,
+    "w_raw_paircount": 7,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 5,
+    "signs": [
+     "RA",
+     "RE"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 1,
+    "final_fraction": 0.5,
+    "w_raw_paircount": 7,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_consonant"
+   },
+   {
+    "rank": 6,
+    "signs": [
+     "PA",
+     "TE"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 1,
+    "final_fraction": 0.5,
+    "w_raw_paircount": 3,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 7,
+    "signs": [
+     "KU",
+     "SA"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 7,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 8,
+    "signs": [
+     "KU",
+     "MA"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 2,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 4,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 9,
+    "signs": [
+     "A",
+     "SI"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 8,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 10,
+    "signs": [
+     "A",
+     "KA"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 1,
+    "final_fraction": 0.5,
+    "w_raw_paircount": 9,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 11,
+    "signs": [
+     "KI",
+     "WA"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 4,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 12,
+    "signs": [
+     "A",
+     "MI"
+    ],
+    "w_long_frame": 2,
+    "n_final_frames": 1,
+    "final_fraction": 0.5,
+    "w_raw_paircount": 9,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 13,
+    "signs": [
+     "JA",
+     "U"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 4,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 14,
+    "signs": [
+     "NU",
+     "PA₃"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 2,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 15,
+    "signs": [
+     "KA",
+     "TI"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 6,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 16,
+    "signs": [
+     "DA",
+     "PI"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 4,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 17,
+    "signs": [
+     "QE",
+     "TA"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 2,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 18,
+    "signs": [
+     "I",
+     "PI"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 2,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 19,
+    "signs": [
+     "JA",
+     "RA"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 6,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 20,
+    "signs": [
+     "QE",
+     "TU"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 1,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 21,
+    "signs": [
+     "NA",
+     "WI"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 1,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 22,
+    "signs": [
+     "RU",
+     "WA"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 1,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 23,
+    "signs": [
+     "TA",
+     "WA"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 1,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 24,
+    "signs": [
+     "TE",
+     "TI"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 4,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_consonant"
+   },
+   {
+    "rank": 25,
+    "signs": [
+     "*21F",
+     "QE"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 3,
+    "clean_syllabograms": false,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": null
+   },
+   {
+    "rank": 26,
+    "signs": [
+     "I",
+     "SI"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 7,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "same_vowel"
+   },
+   {
+    "rank": 27,
+    "signs": [
+     "NE",
+     "RA"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 4,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 28,
+    "signs": [
+     "RO",
+     "U"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 1,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   },
+   {
+    "rank": 29,
+    "signs": [
+     "*324",
+     "ZU"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 0,
+    "final_fraction": 0.0,
+    "w_raw_paircount": 1,
+    "clean_syllabograms": false,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": null
+   },
+   {
+    "rank": 30,
+    "signs": [
+     "SU",
+     "TE"
+    ],
+    "w_long_frame": 1,
+    "n_final_frames": 1,
+    "final_fraction": 1.0,
+    "w_raw_paircount": 3,
+    "clean_syllabograms": true,
+    "allographic": false,
+    "BENCHMARK_relation_FLAGGED": "cross"
+   }
+  ],
+  "benchmark_relation_counts_FLAGGED": {
+   "cross": 84,
+   "same_consonant": 11,
+   "same_vowel": 35
+  }
+ },
+ "rel_classes": [
+  {
+   "rel_class": "REL_CLASS_01",
+   "signs": [
+    "A",
+    "DA",
+    "JA",
+    "KA",
+    "MI",
+    "RU",
+    "SI",
+    "TA"
+   ],
+   "n_signs": 8,
+   "n_edges": 7,
+   "aggregate_long_frame_support": 17,
+   "final_frame_support": 5,
+   "word_final_fraction": 0.2941,
+   "edges": [
+    {
+     "signs": [
+      "DA",
+      "RU"
+     ],
+     "w_long_frame": 3,
+     "n_final_frames": 1,
+     "final_fraction": 0.3333
+    },
+    {
+     "signs": [
+      "A",
+      "DA"
+     ],
+     "w_long_frame": 3,
+     "n_final_frames": 1,
+     "final_fraction": 0.3333
+    },
+    {
+     "signs": [
+      "A",
+      "JA"
+     ],
+     "w_long_frame": 3,
+     "n_final_frames": 0,
+     "final_fraction": 0.0
+    },
+    {
+     "signs": [
+      "RU",
+      "TA"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 1,
+     "final_fraction": 0.5
+    },
+    {
+     "signs": [
+      "A",
+      "SI"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 0,
+     "final_fraction": 0.0
+    },
+    {
+     "signs": [
+      "A",
+      "KA"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 1,
+     "final_fraction": 0.5
+    },
+    {
+     "signs": [
+      "A",
+      "MI"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 1,
+     "final_fraction": 0.5
+    }
+   ],
+   "within_graph_final_null": {
+    "obs_final_fraction": 0.2941,
+    "null_mean": 0.4543,
+    "lift": 0.647,
+    "z": -1.0,
+    "p": 0.794
+   },
+   "verdict": "NOT_WORD_FINAL_DOMINANT",
+   "BENCHMARK_cv_composition_FLAGGED": {
+    "cross": 4,
+    "same_vowel": 3
+   },
+   "BENCHMARK_involves_known_vowel_sign": [
+    "A"
+   ]
+  },
+  {
+   "rel_class": "REL_CLASS_02",
+   "signs": [
+    "KU",
+    "MA",
+    "SA"
+   ],
+   "n_signs": 3,
+   "n_edges": 2,
+   "aggregate_long_frame_support": 4,
+   "final_frame_support": 2,
+   "word_final_fraction": 0.5,
+   "edges": [
+    {
+     "signs": [
+      "KU",
+      "SA"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 0,
+     "final_fraction": 0.0
+    },
+    {
+     "signs": [
+      "KU",
+      "MA"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 2,
+     "final_fraction": 1.0
+    }
+   ],
+   "within_graph_final_null": {
+    "obs_final_fraction": 0.5,
+    "null_mean": 0.4724,
+    "lift": 1.058,
+    "z": 0.08,
+    "p": 0.6744
+   },
+   "verdict": "WORD_FINAL_BUT_NULL_NOT_BEATEN",
+   "BENCHMARK_cv_composition_FLAGGED": {
+    "cross": 2
+   },
+   "BENCHMARK_involves_known_vowel_sign": []
+  },
+  {
+   "rel_class": "REL_CLASS_03",
+   "signs": [
+    "RA",
+    "RE"
+   ],
+   "n_signs": 2,
+   "n_edges": 1,
+   "aggregate_long_frame_support": 2,
+   "final_frame_support": 1,
+   "word_final_fraction": 0.5,
+   "edges": [
+    {
+     "signs": [
+      "RA",
+      "RE"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 1,
+     "final_fraction": 0.5
+    }
+   ],
+   "within_graph_final_null": {
+    "obs_final_fraction": 0.5,
+    "null_mean": 0.48,
+    "lift": 1.042,
+    "z": 0.04,
+    "p": 0.505
+   },
+   "verdict": "UNDERPOWERED",
+   "BENCHMARK_cv_composition_FLAGGED": {
+    "same_consonant": 1
+   },
+   "BENCHMARK_involves_known_vowel_sign": []
+  },
+  {
+   "rel_class": "REL_CLASS_04",
+   "signs": [
+    "PA",
+    "TE"
+   ],
+   "n_signs": 2,
+   "n_edges": 1,
+   "aggregate_long_frame_support": 2,
+   "final_frame_support": 1,
+   "word_final_fraction": 0.5,
+   "edges": [
+    {
+     "signs": [
+      "PA",
+      "TE"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 1,
+     "final_fraction": 0.5
+    }
+   ],
+   "within_graph_final_null": {
+    "obs_final_fraction": 0.5,
+    "null_mean": 0.48,
+    "lift": 1.042,
+    "z": 0.04,
+    "p": 0.505
+   },
+   "verdict": "UNDERPOWERED",
+   "BENCHMARK_cv_composition_FLAGGED": {
+    "cross": 1
+   },
+   "BENCHMARK_involves_known_vowel_sign": []
+  },
+  {
+   "rel_class": "REL_CLASS_05",
+   "signs": [
+    "KI",
+    "WA"
+   ],
+   "n_signs": 2,
+   "n_edges": 1,
+   "aggregate_long_frame_support": 2,
+   "final_frame_support": 0,
+   "word_final_fraction": 0.0,
+   "edges": [
+    {
+     "signs": [
+      "KI",
+      "WA"
+     ],
+     "w_long_frame": 2,
+     "n_final_frames": 0,
+     "final_fraction": 0.0
+    }
+   ],
+   "within_graph_final_null": {
+    "obs_final_fraction": 0.0,
+    "null_mean": 0.48,
+    "lift": 0.0,
+    "z": -0.99,
+    "p": 1.0
+   },
+   "verdict": "UNDERPOWERED",
+   "BENCHMARK_cv_composition_FLAGGED": {
+    "cross": 1
+   },
+   "BENCHMARK_involves_known_vowel_sign": []
+  }
+ ],
+ "audits": {
+  "degree_preserving_null_sweep_BENCHMARK_cv": [
+   {
+    "top_k_edges": 20,
+    "any_phon": {
+     "obs_rate": 0.3,
+     "null_mean": 0.5501,
+     "null_sd": 0.2376,
+     "lift": 0.545,
+     "z": -1.05,
+     "p": 0.8605,
+     "n_scored": 20
+    },
+    "same_vowel": {
+     "obs_rate": 0.25,
+     "null_mean": 0.5244,
+     "null_sd": 0.2339,
+     "lift": 0.477,
+     "z": -1.17,
+     "p": 0.9169,
+     "n_scored": 20
+    },
+    "same_consonant": {
+     "obs_rate": 0.05,
+     "null_mean": 0.0258,
+     "null_sd": 0.072,
+     "lift": 1.941,
+     "z": 0.34,
+     "p": 0.1395,
+     "n_scored": 20
+    }
+   },
+   {
+    "top_k_edges": 40,
+    "any_phon": {
+     "obs_rate": 0.3,
+     "null_mean": 0.3663,
+     "null_sd": 0.1552,
+     "lift": 0.819,
+     "z": -0.43,
+     "p": 0.6512,
+     "n_scored": 40
+    },
+    "same_vowel": {
+     "obs_rate": 0.225,
+     "null_mean": 0.3091,
+     "null_sd": 0.1485,
+     "lift": 0.728,
+     "z": -0.57,
+     "p": 0.6877,
+     "n_scored": 40
+    },
+    "same_consonant": {
+     "obs_rate": 0.075,
+     "null_mean": 0.0572,
+     "null_sd": 0.0739,
+     "lift": 1.312,
+     "z": 0.24,
+     "p": 0.4186,
+     "n_scored": 40
+    }
+   },
+   {
+    "top_k_edges": 80,
+    "any_phon": {
+     "obs_rate": 0.4,
+     "null_mean": 0.4154,
+     "null_sd": 0.1091,
+     "lift": 0.963,
+     "z": -0.14,
+     "p": 0.5648,
+     "n_scored": 80
+    },
+    "same_vowel": {
+     "obs_rate": 0.3125,
+     "null_mean": 0.3322,
+     "null_sd": 0.1074,
+     "lift": 0.941,
+     "z": -0.18,
+     "p": 0.5515,
+     "n_scored": 80
+    },
+    "same_consonant": {
+     "obs_rate": 0.0875,
+     "null_mean": 0.0832,
+     "null_sd": 0.0627,
+     "lift": 1.052,
+     "z": 0.07,
+     "p": 0.4319,
+     "n_scored": 80
+    }
+   }
+  ],
+  "weight_selects_wordfinal_permutation_VALUEFREE": [
+   {
+    "top_k_edges": 20,
+    "obs_mean_final_fraction": 0.3583,
+    "null_mean_final_fraction": 0.4782,
+    "p_value": 0.8891
+   },
+   {
+    "top_k_edges": 40,
+    "obs_mean_final_fraction": 0.3042,
+    "null_mean_final_fraction": 0.4782,
+    "p_value": 0.999
+   },
+   {
+    "top_k_edges": 80,
+    "obs_mean_final_fraction": 0.3771,
+    "null_mean_final_fraction": 0.4782,
+    "p_value": 0.999
+   }
+  ]
+ },
+ "productive_affixes_secondary": [
+  {
+   "boundary": "prefix",
+   "affix": "A",
+   "distinct_long_stems": 11,
+   "clean": true
+  },
+  {
+   "boundary": "prefix",
+   "affix": "I",
+   "distinct_long_stems": 9,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "JA",
+   "distinct_long_stems": 8,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "DA",
+   "distinct_long_stems": 7,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "ME",
+   "distinct_long_stems": 6,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "TA",
+   "distinct_long_stems": 6,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "RE",
+   "distinct_long_stems": 6,
+   "clean": true
+  },
+  {
+   "boundary": "prefix",
+   "affix": "SI",
+   "distinct_long_stems": 6,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "NA",
+   "distinct_long_stems": 6,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "RA",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "prefix",
+   "affix": "KA",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "MA",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "RU",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "RI",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "TA",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "TI",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "TE",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "SE",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "RA",
+   "distinct_long_stems": 5,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "RO",
+   "distinct_long_stems": 4,
+   "clean": true
+  },
+  {
+   "boundary": "prefix",
+   "affix": "KI",
+   "distinct_long_stems": 4,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "KA",
+   "distinct_long_stems": 4,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "QE",
+   "distinct_long_stems": 4,
+   "clean": true
+  },
+  {
+   "boundary": "suffix",
+   "affix": "NE",
+   "distinct_long_stems": 4,
+   "clean": true
+  },
+  {
+   "boundary": "optional",
+   "affix": "WA",
+   "distinct_long_stems": 4,
+   "clean": true
+  }
+ ],
+ "caveats": [
+  "L2/L3 relative structure only; no phonetic value assigned or transferred (Art. XV; SEMANTIC+ NOT_AUTHORIZED).",
+  "The C/V benchmark reads the GORILA Linear-B-homomorphic transliteration, the exact channel this campaign disputes; it GRADES, never gates, and earns no licence.",
+  "C3 flagged INDEL/affix edges as affixation-confounded and allographs as anti-recovered by weight; REL_CLASSes are built ONLY from clean non-allographic sign substitutions.",
+  "Single dependency cluster L_GORILA_VENTRIS: signs and segmentation both descend from one transliteration lineage; no independent channel corroborates these contrasts."
+ ]
+}

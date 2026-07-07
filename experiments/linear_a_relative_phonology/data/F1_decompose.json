@@ -1,0 +1,3947 @@
+{
+ "experiment": "F1_cross_script_evidence_decomposition",
+ "constitution": "v2.2 (Art. XI source-dependency, Art. XII no-grade-by-creating-rule, Art. XV transfer licences)",
+ "seed": 20260708,
+ "non_circular_note": "LB conventional_value used ONLY as a grading key on benchmarks; never a channel input.",
+ "channel_definitions": {
+  "shape": "Salgarella 2020 LA<->LB homomorphy grade (none/homomorphic/homophone)",
+  "stroke_structure": "palaeographic stroke decomposition (UNAVAILABLE in repo)",
+  "orientation": "glyph orientation / mirroring (UNAVAILABLE in repo)",
+  "chronology": "script-level ordering + LA-internal per-sign date span",
+  "geography": "LA per-sign find-site distribution (n_sites, entropy)",
+  "admin_function": "distributional PPMI/SVD admin-role channel (non-circular, LOTO-calibrated)",
+  "scholarly_correspondence": "Steele & Meissner 2017 Cypriot-stability status",
+  "source_dependency": "provenance / independence class of each value claim (audit)"
+ },
+ "admin_calibration": {
+  "benchmark": "shared-AB held-out LOTO (leave-one-toponym-out), value graded by LB conventional value",
+  "channel": "distributional admin-role (PPMI + SVD co-occurrence, Procrustes-aligned) -- uses NO phonetic value",
+  "R@1": 0.0,
+  "R@5": 0.071,
+  "R@10": 0.125,
+  "MRR": 0.0624,
+  "chance_R@1": 0.0112,
+  "shuffled_null_R@5": 0.066,
+  "shuffled_null_MRR": 0.0622,
+  "perm_p_R@5": 0.6,
+  "perm_p_MRR": 0.5,
+  "verdict": "NULL -- does not beat the shuffled null; no non-circular value power at LA scale",
+  "source": "linear_a_foundry/data/wp4_summary.txt (wp4_cross_script_evolution.py CAL#2)",
+  "crossscript_gate_concordance": "REFUTE_LOTO_FRAGILE; distributional channel = 0.0000 (independent 3rd null confirmation)"
+ },
+ "shape_calibration": {
+  "benchmark": "S&M-2017 stable-11 recovery (Fisher one-sided), value graded by Cypriot stability",
+  "recall_stable11": 1.0,
+  "fisher_p": 1.59e-05,
+  "twobytwo": {
+   "homophone&stable": 11,
+   "homophone&notstable": 14,
+   "other&stable": 0,
+   "other&notstable": 34
+  },
+  "verdict": "CIRCULAR -- shape grade = Salgarella LB-homophony judgment; separates the stable-11 perfectly but confounded (same latent LB-identity fact). Capped <=0.75.",
+  "source": "linear_a_foundry/data/wp4_summary.txt (wp4_cross_script_evolution.py CAL#1)"
+ },
+ "channel_meta": {
+  "shape": {
+   "coverage": 1.0,
+   "discriminative_norm_entropy": 0.7376,
+   "non_circular": false,
+   "independently_calibratable": false,
+   "calibration": {
+    "benchmark": "S&M-2017 stable-11 recovery (Fisher one-sided), value graded by Cypriot stability",
+    "recall_stable11": 1.0,
+    "fisher_p": 1.59e-05,
+    "twobytwo": {
+     "homophone&stable": 11,
+     "homophone&notstable": 14,
+     "other&stable": 0,
+     "other&notstable": 34
+    },
+    "verdict": "CIRCULAR -- shape grade = Salgarella LB-homophony judgment; separates the stable-11 perfectly but confounded (same latent LB-identity fact). Capped <=0.75.",
+    "source": "linear_a_foundry/data/wp4_summary.txt (wp4_cross_script_evolution.py CAL#1)"
+   },
+   "reason": "Circular: the grade IS an LB-homophony judgment (=identity). Calibrates perfectly but confounded with the value it should predict. Capped <=0.75. NOT independently calibratable."
+  },
+  "stroke_structure": {
+   "coverage": 0.0,
+   "discriminative_norm_entropy": 0.0,
+   "non_circular": true,
+   "independently_calibratable": false,
+   "calibration": null,
+   "reason": "Unpopulated: no LA<->LB stroke-decomposition dataset in the repo. Cannot be scored, so cannot be calibrated. (Would in principle be non-circular if a palaeographic stroke corpus were acquired.)"
+  },
+  "orientation": {
+   "coverage": 0.0,
+   "discriminative_norm_entropy": 0.0,
+   "non_circular": true,
+   "independently_calibratable": false,
+   "calibration": null,
+   "reason": "Unpopulated: no glyph-orientation dataset. A sub-facet of shape; not independently measurable here."
+  },
+  "chronology": {
+   "coverage": 1.0,
+   "discriminative_norm_entropy": 0.0,
+   "la_context_span_cv": 0.4081,
+   "non_circular": true,
+   "independently_calibratable": false,
+   "calibration": null,
+   "reason": "Script-level ordering (all LA predates all LB). Not sign-discriminative for a CORRESPONDENCE: it cannot pin which LB sign an LA sign maps to. LA-internal date span varies but carries no LB-value info."
+  },
+  "geography": {
+   "coverage": 1.0,
+   "discriminative_norm_entropy": null,
+   "n_sites_cv": 0.5242,
+   "site_entropy_cv": 0.3404,
+   "n_sites_range": [
+    1,
+    25
+   ],
+   "non_circular": true,
+   "independently_calibratable": false,
+   "calibration": null,
+   "reason": "LA per-sign site profiles ARE measurable and vary across signs, but LA (Crete find-sites) and LB (Knossos/mainland archives) share no site system, so no non-circular held-out benchmark aligns a geographic score to an LB correspondence. Measurable but not correspondence-calibratable."
+  },
+  "admin_function": {
+   "coverage": 1.0,
+   "loto_eligible_frac": 0.9153,
+   "la_attestation_cv": 0.7644,
+   "non_circular": true,
+   "independently_calibratable": true,
+   "calibration": {
+    "benchmark": "shared-AB held-out LOTO (leave-one-toponym-out), value graded by LB conventional value",
+    "channel": "distributional admin-role (PPMI + SVD co-occurrence, Procrustes-aligned) -- uses NO phonetic value",
+    "R@1": 0.0,
+    "R@5": 0.071,
+    "R@10": 0.125,
+    "MRR": 0.0624,
+    "chance_R@1": 0.0112,
+    "shuffled_null_R@5": 0.066,
+    "shuffled_null_MRR": 0.0622,
+    "perm_p_R@5": 0.6,
+    "perm_p_MRR": 0.5,
+    "verdict": "NULL -- does not beat the shuffled null; no non-circular value power at LA scale",
+    "source": "linear_a_foundry/data/wp4_summary.txt (wp4_cross_script_evolution.py CAL#2)",
+    "crossscript_gate_concordance": "REFUTE_LOTO_FRAGILE; distributional channel = 0.0000 (independent 3rd null confirmation)"
+   },
+   "reason": "The ONLY channel that is BOTH non-circular (uses no LB value) AND has a non-circular held-out benchmark (shared-AB LOTO). It IS independently calibratable -- and when calibrated it is NULL (R@1=0.000, perm-p(R@5)=0.60). Independently calibratable, independently refuted."
+  },
+  "scholarly_correspondence": {
+   "coverage": 0.4237,
+   "discriminative_norm_entropy": 0.5128,
+   "n_stable": 11,
+   "n_candidate": 1,
+   "non_circular": false,
+   "independently_calibratable": false,
+   "calibration": {
+    "note": "same benchmark as shape (S&M stable-11); confounded",
+    "benchmark": "S&M-2017 stable-11 recovery (Fisher one-sided), value graded by Cypriot stability",
+    "recall_stable11": 1.0,
+    "fisher_p": 1.59e-05,
+    "twobytwo": {
+     "homophone&stable": 11,
+     "homophone&notstable": 14,
+     "other&stable": 0,
+     "other&notstable": 34
+    },
+    "verdict": "CIRCULAR -- shape grade = Salgarella LB-homophony judgment; separates the stable-11 perfectly but confounded (same latent LB-identity fact). Capped <=0.75.",
+    "source": "linear_a_foundry/data/wp4_summary.txt (wp4_cross_script_evolution.py CAL#1)"
+   },
+   "reason": "Scholarly Cypriot-stability status is itself an expert value judgment on the same latent identity. Grading it by LB/Cypriot value is circular. High-value but not INDEPENDENT of the value channel."
+  },
+  "source_dependency": {
+   "coverage": 1.0,
+   "discriminative_norm_entropy": 0.5255,
+   "class_distribution": {
+    "litindex_seed(secondary)": 52,
+    "datapy_bridge(secondary)": 7
+   },
+   "n_correspondences_with_primary_value_source": 0,
+   "all_value_claims_secondary": true,
+   "non_circular": true,
+   "independently_calibratable": false,
+   "calibration": null,
+   "reason": "A meta / audit channel (Art. XI), not a value predictor: it measures HOW independent each claim is, not what value a sign has. Finding: 0/59 correspondences rest on a PRIMARY value attestation (52 litindex-seed + 7 bridge, all secondary); the only primary legs are shape (Salgarella, pending-primary/absent from repo) and Cypriot (S&M) -- both circular. So even the provenance audit shows no independent primary support for any LA<->LB VALUE."
+  }
+ },
+ "per_correspondence_table": [
+  {
+   "sign_id": "A",
+   "ab_number": "B008",
+   "value_KEY_gradingonly": "a",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.7366,
+    "la_contexts": {
+     "LMIB": 71,
+     "?": 57,
+     "LMI": 6,
+     "MMIIIB": 2,
+     "LMIA": 10,
+     "MMII": 2,
+     "LMIIIA": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 24,
+    "site_entropy_bits": 3.609,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 195,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "AU",
+   "ab_number": "B085",
+   "value_KEY_gradingonly": "au",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.4056,
+    "la_contexts": {
+     "LMIB": 3,
+     "?": 4,
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 6,
+    "site_entropy_bits": 2.5,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 8,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "DA",
+   "ab_number": "B001",
+   "value_KEY_gradingonly": "da",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.3211,
+    "la_contexts": {
+     "LMIB": 58,
+     "?": 40,
+     "LMIA": 1,
+     "MMII": 1,
+     "MMIIIB": 1,
+     "MMIIIA": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 22,
+    "site_entropy_bits": 3.0051,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 134,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "DE",
+   "ab_number": "B045",
+   "value_KEY_gradingonly": "de",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.3101,
+    "la_contexts": {
+     "LMIB": 18,
+     "?": 12,
+     "MMII": 1,
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 9,
+    "site_entropy_bits": 2.3903,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 35,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "DI",
+   "ab_number": "B007",
+   "value_KEY_gradingonly": "di",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.1575,
+    "la_contexts": {
+     "LMIB": 59,
+     "?": 23,
+     "LMIA": 2,
+     "MMIIIB": 1,
+     "MMII": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 7,
+    "site_entropy_bits": 1.925,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 109,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "DU",
+   "ab_number": "B051",
+   "value_KEY_gradingonly": "du",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.1267,
+    "la_contexts": {
+     "LMIB": 49,
+     "?": 18,
+     "LMIA": 1,
+     "LBI": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 14,
+    "site_entropy_bits": 2.3949,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 77,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "E",
+   "ab_number": "B038",
+   "value_KEY_gradingonly": "e",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.5955,
+    "la_contexts": {
+     "LMIB": 8,
+     "MMIII": 1,
+     "?": 14,
+     "MMII": 4
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 8,
+    "site_entropy_bits": 2.7263,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 31,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "I",
+   "ab_number": "B028",
+   "value_KEY_gradingonly": "i",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 6,
+    "la_context_entropy_bits": 1.4297,
+    "la_contexts": {
+     "LMIB": 90,
+     "?": 52,
+     "LMIA": 6,
+     "LMI": 4,
+     "MMIIIB": 2,
+     "MMII": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 24,
+    "site_entropy_bits": 2.9193,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 166,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "JA",
+   "ab_number": "B057",
+   "value_KEY_gradingonly": "ja",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.8289,
+    "la_contexts": {
+     "LMIB": 42,
+     "?": 60,
+     "LMIA": 10,
+     "LMI": 8,
+     "MMIII": 1,
+     "MMIIIB": 2,
+     "MMII": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 23,
+    "site_entropy_bits": 3.6655,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 165,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "JE",
+   "ab_number": "B046",
+   "value_KEY_gradingonly": "je",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.2533,
+    "la_contexts": {
+     "LMIB": 7,
+     "?": 9,
+     "MMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 9,
+    "site_entropy_bits": 2.8451,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 16,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "JU",
+   "ab_number": "B065",
+   "value_KEY_gradingonly": "ju",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 2,
+    "la_context_entropy_bits": 0.9812,
+    "la_contexts": {
+     "LMIB": 18,
+     "?": 13
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 7,
+    "site_entropy_bits": 1.9977,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 35,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "KA",
+   "ab_number": "B077",
+   "value_KEY_gradingonly": "ka",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 9,
+    "la_context_entropy_bits": 0.8077,
+    "la_contexts": {
+     "LMIB": 223,
+     "?": 29,
+     "LMIA": 2,
+     "MMIII": 1,
+     "Geometric": 1,
+     "MMIIIB": 1,
+     "LBI": 1,
+     "MMII": 1,
+     "LMI": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 20,
+    "site_entropy_bits": 1.3282,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 132,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "KE",
+   "ab_number": "B044",
+   "value_KEY_gradingonly": "ke",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.6895,
+    "la_contexts": {
+     "LMIB": 5,
+     "LMIIIA": 1,
+     "?": 7,
+     "LMIA": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 7,
+    "site_entropy_bits": 2.4662,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 16,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "KI",
+   "ab_number": "B067",
+   "value_KEY_gradingonly": "ki",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.0981,
+    "la_contexts": {
+     "LMIB": 62,
+     "?": 38,
+     "MMIII": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 18,
+    "site_entropy_bits": 2.7426,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 125,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "KO",
+   "ab_number": "B070",
+   "value_KEY_gradingonly": "ko",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 2,
+    "la_context_entropy_bits": 0.9403,
+    "la_contexts": {
+     "LMIB": 9,
+     "?": 5
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 6,
+    "site_entropy_bits": 2.1281,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 15,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "KU",
+   "ab_number": "B081",
+   "value_KEY_gradingonly": "ku",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 0.5273,
+    "la_contexts": {
+     "LMIB": 236,
+     "?": 26,
+     "LMIA": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 16,
+    "site_entropy_bits": 1.0584,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 154,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "MA",
+   "ab_number": "B080",
+   "value_KEY_gradingonly": "ma",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.4881,
+    "la_contexts": {
+     "LMIB": 49,
+     "?": 38,
+     "LMIA": 2,
+     "MMII": 3,
+     "LMI": 4
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 23,
+    "site_entropy_bits": 3.1427,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 117,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.6_internal_variation_p104",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "ME",
+   "ab_number": "B013",
+   "value_KEY_gradingonly": "me",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.5236,
+    "la_contexts": {
+     "LMIB": 16,
+     "?": 20,
+     "LMIA": 3,
+     "LMI": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 12,
+    "site_entropy_bits": 2.8679,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 43,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.6_internal_variation_p104",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "MI",
+   "ab_number": "B073",
+   "value_KEY_gradingonly": "mi",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.4829,
+    "la_contexts": {
+     "LMIB": 39,
+     "?": 33,
+     "MMII": 1,
+     "LMI": 2,
+     "MMIIIB": 1,
+     "LMIA": 1,
+     "LMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 15,
+    "site_entropy_bits": 2.9561,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 92,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.6_internal_variation_p104",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "MU",
+   "ab_number": "B023",
+   "value_KEY_gradingonly": "mu",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.3996,
+    "la_contexts": {
+     "LMIB": 8,
+     "LMIA": 2,
+     "?": 5
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 7,
+    "site_entropy_bits": 2.4662,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 15,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.6_internal_variation_p104(mu?)",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "NA",
+   "ab_number": "B006",
+   "value_KEY_gradingonly": "na",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 6,
+    "la_context_entropy_bits": 1.5501,
+    "la_contexts": {
+     "LMIB": 58,
+     "?": 44,
+     "LMIA": 6,
+     "LMI": 3,
+     "MMIIIB": 1,
+     "MMII": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 20,
+    "site_entropy_bits": 3.1126,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 157,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "NE",
+   "ab_number": "B024",
+   "value_KEY_gradingonly": "ne",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.23,
+    "la_contexts": {
+     "LMIB": 33,
+     "?": 16,
+     "LMIA": 2,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 12,
+    "site_entropy_bits": 2.5291,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 57,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "NI",
+   "ab_number": "B030",
+   "value_KEY_gradingonly": "ni",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 6,
+    "la_context_entropy_bits": 1.1133,
+    "la_contexts": {
+     "LMIB": 81,
+     "?": 26,
+     "MMIII": 1,
+     "LMIA": 2,
+     "MMII": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 13,
+    "site_entropy_bits": 2.2323,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 123,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.11_ideographic_p108",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "NU",
+   "ab_number": "B055",
+   "value_KEY_gradingonly": "nu",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.2921,
+    "la_contexts": {
+     "LMIB": 29,
+     "?": 22,
+     "LMIA": 2,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 15,
+    "site_entropy_bits": 2.9344,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 59,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "NWA",
+   "ab_number": "B048",
+   "value_KEY_gradingonly": "nwa",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 1,
+    "la_context_entropy_bits": 0.0,
+    "la_contexts": {
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 1,
+    "site_entropy_bits": 0.0,
+    "top_site": "Syme",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 1,
+    "loto_eligible": false,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "O",
+   "ab_number": "B061",
+   "value_KEY_gradingonly": "o",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.3352,
+    "la_contexts": {
+     "LMIB": 16,
+     "?": 10,
+     "MMII": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 7,
+    "site_entropy_bits": 2.2785,
+    "top_site": "Khania",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 14,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "PA",
+   "ab_number": "B003",
+   "value_KEY_gradingonly": "pa",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.0696,
+    "la_contexts": {
+     "LMIB": 58,
+     "?": 32,
+     "LMIA": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 12,
+    "site_entropy_bits": 2.287,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 101,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "PA3",
+   "ab_number": "",
+   "value_KEY_gradingonly": "pa3",
+   "ch_shape": {
+    "grade_ord": 0,
+    "grade": "none",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.3253,
+    "la_contexts": {
+     "LMIB": 23,
+     "?": 12,
+     "LMIA": 2,
+     "MMII": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 8,
+    "site_entropy_bits": 2.0164,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 46,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "PI",
+   "ab_number": "B039",
+   "value_KEY_gradingonly": "pi",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.3035,
+    "la_contexts": {
+     "LMIB": 18,
+     "?": 31,
+     "Geometric": 1,
+     "LMIA": 1,
+     "MMII": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 18,
+    "site_entropy_bits": 3.6767,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 57,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "PO",
+   "ab_number": "B011",
+   "value_KEY_gradingonly": "po",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 2,
+    "la_context_entropy_bits": 0.9544,
+    "la_contexts": {
+     "LMIB": 5,
+     "?": 3
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 5,
+    "site_entropy_bits": 2.0,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 8,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "PU",
+   "ab_number": "B050",
+   "value_KEY_gradingonly": "pu",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.1658,
+    "la_contexts": {
+     "LMIB": 13,
+     "?": 7,
+     "LBI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 8,
+    "site_entropy_bits": 2.2586,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 23,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "PU2",
+   "ab_number": "B029",
+   "value_KEY_gradingonly": "pu2",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 2,
+    "la_context_entropy_bits": 1.0,
+    "la_contexts": {
+     "LMIB": 7,
+     "?": 7
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 5,
+    "site_entropy_bits": 1.9852,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 13,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "QA",
+   "ab_number": "B016",
+   "value_KEY_gradingonly": "qa",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.4851,
+    "la_contexts": {
+     "LMIB": 22,
+     "?": 13,
+     "MMIII": 1,
+     "LMI": 1,
+     "LMIA": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 13,
+    "site_entropy_bits": 2.6937,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 45,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "QE",
+   "ab_number": "B078",
+   "value_KEY_gradingonly": "qe",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.0821,
+    "la_contexts": {
+     "LMIB": 31,
+     "?": 10,
+     "MMII": 1,
+     "LMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 10,
+    "site_entropy_bits": 1.9817,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 45,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "QI",
+   "ab_number": "B021",
+   "value_KEY_gradingonly": "qi",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.585,
+    "la_contexts": {
+     "LMIB": 1,
+     "MMII": 1,
+     "?": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 3,
+    "site_entropy_bits": 1.585,
+    "top_site": "Khania",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 1,
+    "loto_eligible": false,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "RA",
+   "ab_number": "B060",
+   "value_KEY_gradingonly": "ra",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 8,
+    "la_context_entropy_bits": 1.6152,
+    "la_contexts": {
+     "LMIB": 54,
+     "?": 32,
+     "LMIA": 4,
+     "LMI": 3,
+     "MMIIIB": 1,
+     "LMIIIA": 1,
+     "MMII": 1,
+     "MMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 18,
+    "site_entropy_bits": 2.9993,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 116,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "RA2",
+   "ab_number": "B076",
+   "value_KEY_gradingonly": "ra2",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 0.6856,
+    "la_contexts": {
+     "LMIB": 41,
+     "?": 6,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 6,
+    "site_entropy_bits": 0.9254,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 51,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "RE",
+   "ab_number": "B027",
+   "value_KEY_gradingonly": "re",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.2662,
+    "la_contexts": {
+     "LMIB": 60,
+     "?": 40,
+     "LMIA": 3,
+     "MMII": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 19,
+    "site_entropy_bits": 2.8774,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 124,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "RI",
+   "ab_number": "B053",
+   "value_KEY_gradingonly": "ri",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.5836,
+    "la_contexts": {
+     "LMIB": 36,
+     "?": 18,
+     "MMIIIB": 1,
+     "LMIA": 2,
+     "MMII": 2,
+     "MMIII": 1,
+     "LMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 12,
+    "site_entropy_bits": 2.441,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 77,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "RO",
+   "ab_number": "B002",
+   "value_KEY_gradingonly": "ro",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 0.5855,
+    "la_contexts": {
+     "LMIB": 152,
+     "?": 13,
+     "LMIIIA": 1,
+     "MMII": 2,
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 12,
+    "site_entropy_bits": 0.9891,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 95,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "RU",
+   "ab_number": "B026",
+   "value_KEY_gradingonly": "ru",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.1675,
+    "la_contexts": {
+     "LMIB": 47,
+     "?": 24,
+     "LMIA": 2,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 18,
+    "site_entropy_bits": 2.5861,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 92,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.11_ideographic_p108",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "SA",
+   "ab_number": "B031",
+   "value_KEY_gradingonly": "sa",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.5966,
+    "la_contexts": {
+     "LMIB": 61,
+     "?": 33,
+     "LMIA": 6,
+     "LMI": 3,
+     "MMIII": 1,
+     "MMII": 2,
+     "LMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 22,
+    "site_entropy_bits": 2.8404,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 138,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "SE",
+   "ab_number": "B009",
+   "value_KEY_gradingonly": "se",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.4196,
+    "la_contexts": {
+     "LMIB": 31,
+     "?": 21,
+     "LMIA": 5,
+     "MMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 14,
+    "site_entropy_bits": 2.9066,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 65,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "SI",
+   "ab_number": "B041",
+   "value_KEY_gradingonly": "si",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.0855,
+    "la_contexts": {
+     "LMIB": 156,
+     "?": 46,
+     "LMIA": 3,
+     "MMIII": 1,
+     "MMIIIB": 1,
+     "MMII": 1,
+     "LMI": 3
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 23,
+    "site_entropy_bits": 2.2917,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 145,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 1,
+    "cypriot_stable": "candidate",
+    "sm2017_tier": "T6.5_placenames_p102(si?)",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "SU",
+   "ab_number": "B058",
+   "value_KEY_gradingonly": "su",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.2523,
+    "la_contexts": {
+     "LMIB": 35,
+     "?": 11,
+     "MMIII": 1,
+     "LMI": 2,
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 12,
+    "site_entropy_bits": 2.4158,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 52,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TA",
+   "ab_number": "B059",
+   "value_KEY_gradingonly": "ta",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 8,
+    "la_context_entropy_bits": 1.5379,
+    "la_contexts": {
+     "LMIB": 84,
+     "?": 42,
+     "LMIA": 7,
+     "LMI": 3,
+     "MMII": 2,
+     "MMIII": 1,
+     "MMIIIB": 1,
+     "MMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 23,
+    "site_entropy_bits": 3.0111,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 150,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TA2",
+   "ab_number": "B066",
+   "value_KEY_gradingonly": "ta2",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.1863,
+    "la_contexts": {
+     "LMIB": 12,
+     "MMII": 1,
+     "LMI": 1,
+     "?": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 5,
+    "site_entropy_bits": 1.6738,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 16,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TE",
+   "ab_number": "B004",
+   "value_KEY_gradingonly": "te",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 6,
+    "la_context_entropy_bits": 1.3835,
+    "la_contexts": {
+     "LMIB": 76,
+     "?": 49,
+     "LMIA": 3,
+     "MMII": 3,
+     "LMI": 2,
+     "MMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 25,
+    "site_entropy_bits": 2.9715,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 125,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TI",
+   "ab_number": "B037",
+   "value_KEY_gradingonly": "ti",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 7,
+    "la_context_entropy_bits": 1.685,
+    "la_contexts": {
+     "LMIB": 41,
+     "?": 35,
+     "LMIA": 2,
+     "LMI": 4,
+     "MMIIIB": 1,
+     "MMII": 3,
+     "LMIIIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 19,
+    "site_entropy_bits": 3.1358,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 110,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TO",
+   "ab_number": "B005",
+   "value_KEY_gradingonly": "to",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.4295,
+    "la_contexts": {
+     "LMIB": 7,
+     "LMIA": 2,
+     "?": 6
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 9,
+    "site_entropy_bits": 2.8662,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 17,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 2,
+    "cypriot_stable": "true",
+    "sm2017_tier": "T6.2_cypriot_p98",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TU",
+   "ab_number": "B069",
+   "value_KEY_gradingonly": "tu",
+   "ch_shape": {
+    "grade_ord": 2,
+    "grade": "homophone",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.1389,
+    "la_contexts": {
+     "LMIB": 43,
+     "?": 17,
+     "MMIIIB": 1,
+     "LMI": 2
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 16,
+    "site_entropy_bits": 2.4853,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 73,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "T6.5_placenames_p102",
+    "populated": true,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "TWE",
+   "ab_number": "B087",
+   "value_KEY_gradingonly": "twe",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 1,
+    "la_context_entropy_bits": 0.0,
+    "la_contexts": {
+     "LMIB": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 1,
+    "site_entropy_bits": 0.0,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 2,
+    "loto_eligible": false,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "U",
+   "ab_number": "B010",
+   "value_KEY_gradingonly": "u",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 5,
+    "la_context_entropy_bits": 1.3162,
+    "la_contexts": {
+     "LMIB": 30,
+     "?": 26,
+     "LMIA": 1,
+     "MMIIIB": 1,
+     "LMI": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 17,
+    "site_entropy_bits": 2.9503,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 68,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "WA",
+   "ab_number": "B054",
+   "value_KEY_gradingonly": "wa",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 6,
+    "la_context_entropy_bits": 1.8586,
+    "la_contexts": {
+     "LMIB": 14,
+     "?": 23,
+     "LMI": 3,
+     "LMIA": 5,
+     "MMII": 1,
+     "MMIIIB": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 16,
+    "site_entropy_bits": 3.5091,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 45,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "WI",
+   "ab_number": "B040",
+   "value_KEY_gradingonly": "wi",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 3,
+    "la_context_entropy_bits": 1.0763,
+    "la_contexts": {
+     "LMIB": 14,
+     "?": 5,
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 9,
+    "site_entropy_bits": 2.5955,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 21,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "ZA",
+   "ab_number": "B017",
+   "value_KEY_gradingonly": "za",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.3252,
+    "la_contexts": {
+     "LMIB": 17,
+     "?": 13,
+     "LMI": 1,
+     "LMIA": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 10,
+    "site_entropy_bits": 2.7488,
+    "top_site": "Zakros",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 40,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "ZE",
+   "ab_number": "B074",
+   "value_KEY_gradingonly": "ze",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 2,
+    "la_context_entropy_bits": 0.4199,
+    "la_contexts": {
+     "LMIB": 43,
+     "?": 4
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 2,
+    "site_entropy_bits": 0.551,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 1,
+    "loto_eligible": false,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "ZO",
+   "ab_number": "B020",
+   "value_KEY_gradingonly": "zo",
+   "ch_shape": {
+    "grade_ord": 1,
+    "grade": "homomorphic",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 2,
+    "la_context_entropy_bits": 1.0,
+    "la_contexts": {
+     "LMIB": 1,
+     "?": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 2,
+    "site_entropy_bits": 1.0,
+    "top_site": "Khania",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 2,
+    "loto_eligible": false,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "litindex:lb_value_transfer",
+    "independence_class": "litindex_seed(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  },
+  {
+   "sign_id": "ZU",
+   "ab_number": "",
+   "value_KEY_gradingonly": "zu",
+   "ch_shape": {
+    "grade_ord": 0,
+    "grade": "none",
+    "populated": true,
+    "circular": true,
+    "source": "Salgarella 2020"
+   },
+   "ch_stroke_structure": {
+    "score": null,
+    "populated": false,
+    "note": "no LA<->LB stroke-decomposition dataset in repo (SigLA signs carry id/class/gorila_number only)"
+   },
+   "ch_orientation": {
+    "score": null,
+    "populated": false,
+    "note": "no glyph-orientation / mirroring dataset in repo; not a distinct measurable channel here"
+   },
+   "ch_chronology": {
+    "script_level": "LA(MMII-LMI) -> LB(LMII-IIIB) -> Cypriot(later)",
+    "la_context_span_n": 4,
+    "la_context_entropy_bits": 1.305,
+    "la_contexts": {
+     "LMIB": 21,
+     "LMIA": 2,
+     "?": 8,
+     "MMII": 1
+    },
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_geography": {
+    "n_sites": 9,
+    "site_entropy_bits": 2.2558,
+    "top_site": "Haghia Triada",
+    "populated": true,
+    "sign_discriminative_for_correspondence": false
+   },
+   "ch_admin_function": {
+    "la_attestations": 32,
+    "loto_eligible": true,
+    "populated": true,
+    "circular": false,
+    "channel_verdict": "NULL (calibrated, see admin_calibration)"
+   },
+   "ch_scholarly_correspondence": {
+    "cypriot_stable_ord": 0,
+    "cypriot_stable": "not_listed",
+    "sm2017_tier": "",
+    "populated": false,
+    "circular": true,
+    "source": "Steele & Meissner 2017"
+   },
+   "ch_source_dependency": {
+    "value_source": "data.py bridge convention",
+    "independence_class": "datapy_bridge(secondary)",
+    "n_primary_value_sources": 0,
+    "source_status": "cypriot:primary; homomorphy:pending_primary; value:secondary",
+    "note": "predictive? NO -- this is an audit instrument (Art. XI), not a value predictor"
+   }
+  }
+ ],
+ "summary": {
+  "n_correspondences": 59,
+  "n_channels": 8,
+  "channels_populated": [
+   "shape",
+   "chronology",
+   "geography",
+   "admin_function",
+   "scholarly_correspondence",
+   "source_dependency"
+  ],
+  "channels_unpopulated": [
+   "stroke_structure",
+   "orientation"
+  ],
+  "channels_non_circular": [
+   "stroke_structure",
+   "orientation",
+   "chronology",
+   "geography",
+   "admin_function",
+   "source_dependency"
+  ],
+  "channels_circular": [
+   "shape",
+   "scholarly_correspondence"
+  ],
+  "channels_independently_calibratable": [
+   "admin_function"
+  ],
+  "calibratable_channel_outcome": "admin_function=NULL",
+  "verdict": "EXACTLY ONE of the eight channels (admin_function, distributional) is BOTH non-circular AND independently calibratable against a non-circular held-out benchmark -- and it calibrates to NULL. shape and scholarly_correspondence calibrate but are CIRCULAR (confounded with LB identity, capped <=0.75). chronology is not sign-discriminative; stroke_structure and orientation are unpopulated; geography is measurable but has no correspondence-aligned non-circular benchmark; source_dependency is a provenance audit (0/59 correspondences have a primary VALUE source). Net: DECOMPOSITION CONFIRMS no channel yields an independently-calibratable NON-NULL, NON-CIRCULAR LA<->LB value correspondence."
+ }
+}

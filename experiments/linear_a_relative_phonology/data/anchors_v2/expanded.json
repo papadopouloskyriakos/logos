@@ -1,0 +1,906 @@
+{
+ "summary": {
+  "task": "G2_high_value_anchor_expansion",
+  "seed": 20260708,
+  "corpus": {
+   "n_inscriptions": 1341,
+   "n_distinct_multisign_words": 984
+  },
+  "foundry_baseline": {
+   "n_covered_signs": 61,
+   "n_record_seqs": 103
+  },
+  "n_candidate_classes": 7,
+  "ranked_by_relative_strength": [
+   {
+    "id": "A_libation_formula_core",
+    "category": "A_formula",
+    "signs_constrained": 19,
+    "sites": 10,
+    "objects": 22,
+    "tokens": 39,
+    "new_signs_vs_foundry": 0,
+    "relative_strength": 190,
+    "value_bearing": false,
+    "circular_for_value_grading": true
+   },
+   {
+    "id": "D_morphological_variants",
+    "category": "D_morphology",
+    "signs_constrained": 17,
+    "sites": 10,
+    "objects": 29,
+    "tokens": 29,
+    "new_signs_vs_foundry": 0,
+    "relative_strength": 170,
+    "value_bearing": false,
+    "circular_for_value_grading": true
+   },
+   {
+    "id": "B_transaction_terms",
+    "category": "B_accounting",
+    "signs_constrained": 9,
+    "sites": 3,
+    "objects": 58,
+    "tokens": 83,
+    "new_signs_vs_foundry": 1,
+    "relative_strength": 27,
+    "value_bearing": false,
+    "circular_for_value_grading": true
+   },
+   {
+    "id": "E_commodity_logogram",
+    "category": "E_commodity",
+    "signs_constrained": 9,
+    "sites": 3,
+    "objects": 28,
+    "tokens": 29,
+    "new_signs_vs_foundry": 1,
+    "relative_strength": 27,
+    "value_bearing": false,
+    "circular_for_value_grading": true
+   },
+   {
+    "id": "G_foreign_names",
+    "category": "G_foreign",
+    "signs_constrained": 9,
+    "sites": 3,
+    "objects": 4,
+    "tokens": 4,
+    "new_signs_vs_foundry": 0,
+    "relative_strength": 27,
+    "value_bearing": false,
+    "circular_for_value_grading": true
+   },
+   {
+    "id": "C_toponym_expansion",
+    "category": "C_toponym",
+    "signs_constrained": 10,
+    "sites": 2,
+    "objects": 5,
+    "tokens": 5,
+    "new_signs_vs_foundry": 1,
+    "relative_strength": 20,
+    "value_bearing": true,
+    "circular_for_value_grading": false
+   },
+   {
+    "id": "F_seal_formula",
+    "category": "F_seal",
+    "signs_constrained": 6,
+    "sites": 1,
+    "objects": 1,
+    "tokens": 1,
+    "new_signs_vs_foundry": 0,
+    "relative_strength": 6,
+    "value_bearing": false,
+    "circular_for_value_grading": true
+   }
+  ],
+  "HEADLINE": {
+   "n_new_value_bearing_anchor_classes": 1,
+   "value_bearing_classes": [
+    "C_toponym_expansion"
+   ],
+   "n_new_firm_held_out_value_anchors": 0,
+   "held_out_value_note": "Every VALUE-BEARING candidate is the toponym channel, which G1 already showed saturated: 5 firm referents, each one-toponym-deep, 0 held-out-survivable. Expansion adds hedged/cf residue only.",
+   "n_relative_structural_anchor_classes": 6,
+   "relative_classes": [
+    "A_libation_formula_core",
+    "D_morphological_variants",
+    "B_transaction_terms",
+    "E_commodity_logogram",
+    "G_foreign_names",
+    "F_seal_formula"
+   ],
+   "distinct_phonetic_signs_touched_by_relative_anchors": 35,
+   "distinct_NEW_phonetic_signs_vs_foundry": 1,
+   "new_phonetic_signs_vs_foundry": [
+    "PA3"
+   ],
+   "strongest_relative_anchor": "A_libation_formula_core",
+   "art_XII_verdict": "ALL high-multiplicity NEW anchors (libation formula, accounting terms, morphological paradigms, commodity, seal formulae) are VALUE-BLIND / relabeling-invariant: they enrich the RELATIVE-structure substrate (substitution/segmentation/morphology WPs) but cannot, per Art. XII, grade an absolute-value hypothesis without riding on GORILA homomorphy. NO new value-bearing held-out anchor was produced. G1's conclusion stands: a bilingual or >=3 genuinely independent held-out anchors remain required."
+  },
+  "non_circular_note": "Conventional GORILA values only label candidates; no value is a model input. Attestation counts are corpus-measured (invariant 12)."
+ },
+ "candidates": [
+  {
+   "id": "A_libation_formula_core",
+   "category": "A_formula",
+   "external_referent": false,
+   "referent_note": "cult invocation; NO external referent that fixes a phonetic value (the formula is read only by internal repetition + GORILA homomorphy)",
+   "prior_exposure": "PUBLIC-PRINT+WEB (GORILA I\u2013V; Duhoux; Davis 2014; Younger web; heavily indexed)",
+   "source": "Corpus (silver): 22 libation objects / 10 sites; Za stone-vessel class",
+   "notes": "Highest-multiplicity internal anchor: fixes many signs' RELATIVE identity across objects via slot repetition (A-TA-I-*301-WA-JA/-WA-E; U-NA-KA-NA-SI/U-NA-RU-KA-NA-TI; I-PI-NA-MA/I-PI-NA-MI-NA) \u2014 the natural substrate for the substitution channel. VALUE-BLIND: relabeling-invariant, pins no absolute value.",
+   "measured": {
+    "n_phonetic_signs_constrained": 19,
+    "phonetic_signs": [
+     "A",
+     "DI",
+     "I",
+     "JA",
+     "KA",
+     "KI",
+     "MA",
+     "ME",
+     "NA",
+     "PI",
+     "RA",
+     "RU",
+     "SA",
+     "SI",
+     "TA",
+     "TE",
+     "TU",
+     "U",
+     "WA"
+    ],
+    "non_phonetic_slots": [
+     "*301"
+    ],
+    "n_new_signs_vs_foundry": 0,
+    "new_signs_vs_foundry": [],
+    "total_tokens": 39,
+    "n_distinct_sites": 10,
+    "sites": [
+     "Apodoulou",
+     "Iouktas",
+     "Knossos",
+     "Kophinas",
+     "Palaikastro",
+     "Platanos",
+     "Psykhro",
+     "Syme",
+     "Troullos",
+     "Vrysinas"
+    ],
+    "n_distinct_objects": 22,
+    "support_context": {
+     "Stone vessel": 37,
+     "Metal object": 1,
+     "Inked inscription": 1
+    },
+    "attested_sequences": [
+     {
+      "seq": "A-TA-I-*301-WA-JA",
+      "tokens": 11,
+      "sites": [
+       "Iouktas",
+       "Kophinas",
+       "Palaikastro",
+       "Syme",
+       "Troullos"
+      ],
+      "n_objects": 11,
+      "support": {
+       "Stone vessel": 11
+      }
+     },
+     {
+      "seq": "JA-SA-SA-RA-ME",
+      "tokens": 7,
+      "sites": [
+       "Iouktas",
+       "Palaikastro",
+       "Platanos",
+       "Psykhro",
+       "Troullos"
+      ],
+      "n_objects": 7,
+      "support": {
+       "Stone vessel": 6,
+       "Metal object": 1
+      }
+     },
+     {
+      "seq": "SA-SA-RA-ME",
+      "tokens": 2,
+      "sites": [
+       "Knossos",
+       "Palaikastro"
+      ],
+      "n_objects": 2,
+      "support": {
+       "Inked inscription": 1,
+       "Stone vessel": 1
+      }
+     },
+     {
+      "seq": "U-NA-KA-NA-SI",
+      "tokens": 4,
+      "sites": [
+       "Iouktas",
+       "Kophinas",
+       "Palaikastro"
+      ],
+      "n_objects": 4,
+      "support": {
+       "Stone vessel": 4
+      }
+     },
+     {
+      "seq": "I-PI-NA-MA",
+      "tokens": 6,
+      "sites": [
+       "Apodoulou",
+       "Iouktas",
+       "Kophinas",
+       "Troullos",
+       "Vrysinas"
+      ],
+      "n_objects": 6,
+      "support": {
+       "Stone vessel": 6
+      }
+     },
+     {
+      "seq": "SI-RU-TE",
+      "tokens": 7,
+      "sites": [
+       "Iouktas",
+       "Kophinas",
+       "Syme",
+       "Troullos",
+       "Vrysinas"
+      ],
+      "n_objects": 7,
+      "support": {
+       "Stone vessel": 7
+      }
+     },
+     {
+      "seq": "JA-DI-KI-TU",
+      "tokens": 1,
+      "sites": [
+       "Iouktas"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     },
+     {
+      "seq": "A-DI-KI-TE",
+      "tokens": 1,
+      "sites": [
+       "Palaikastro"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     }
+    ],
+    "n_sequences_declared": 8,
+    "n_sequences_attested": 8
+   },
+   "rule_complexity_n_value_assignments": 19,
+   "value_bearing_from_outside_LB": false,
+   "circular_for_value_grading": true,
+   "art_XII_flag": "CIRCULAR: value claim would ride on GORILA homomorphic values (no external referent) \u2014 usable ONLY as a RELATIVE/structural anchor",
+   "relative_anchor_strength": 190
+  },
+  {
+   "id": "D_morphological_variants",
+   "category": "D_morphology",
+   "external_referent": false,
+   "referent_note": "a shared stem across inflected forms constrains that the stem signs carry the SAME value in every form \u2014 a RELATIVE constraint; asserts NO value",
+   "prior_exposure": "PUBLIC-PRINT (GORILA; Davis 2014 morphology) \u2014 indexed",
+   "source": "Corpus (silver): 80 stem-extension pairs mined (stem token>=2)",
+   "notes": "Rich RELATIVE/morphological anchor set (paradigm cells). VALUE-BLIND: relabeling-invariant by construction; feeds segmentation/morphology WPs, not values.",
+   "measured": {
+    "n_phonetic_signs_constrained": 17,
+    "phonetic_signs": [
+     "A",
+     "DA",
+     "DU",
+     "I",
+     "JA",
+     "KU",
+     "MA",
+     "MI",
+     "NA",
+     "NI",
+     "PA",
+     "RE",
+     "RI",
+     "TA",
+     "TE",
+     "ZA",
+     "ZU"
+    ],
+    "non_phonetic_slots": [],
+    "n_new_signs_vs_foundry": 0,
+    "new_signs_vs_foundry": [],
+    "total_tokens": 29,
+    "n_distinct_sites": 10,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Khania",
+     "Kophinas",
+     "Nerokurou",
+     "Palaikastro",
+     "Petras",
+     "Syme",
+     "Tylissos",
+     "Zakros"
+    ],
+    "n_distinct_objects": 29,
+    "support_context": {
+     "Tablet": 18,
+     "Stone vessel": 9,
+     "Metal object": 2
+    },
+    "attested_sequences": [
+     {
+      "seq": "A-DU",
+      "tokens": 10,
+      "sites": [
+       "Haghia Triada",
+       "Khania",
+       "Tylissos"
+      ],
+      "n_objects": 10,
+      "support": {
+       "Tablet": 10
+      }
+     },
+     {
+      "seq": "A-DU-RE",
+      "tokens": 1,
+      "sites": [
+       "Khania"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "A-DU-ZA",
+      "tokens": 1,
+      "sites": [
+       "Palaikastro"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "A-DU-NI-TA-NA",
+      "tokens": 1,
+      "sites": [
+       "Arkhalkhori"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "KU-PA",
+      "tokens": 4,
+      "sites": [
+       "Haghia Triada",
+       "Khania",
+       "Zakros"
+      ],
+      "n_objects": 4,
+      "support": {
+       "Tablet": 2,
+       "Stone vessel": 2
+      }
+     },
+     {
+      "seq": "KU-PA-RI",
+      "tokens": 1,
+      "sites": [
+       "Petras"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "KU-PA-JA",
+      "tokens": 1,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "KU-PA-ZU",
+      "tokens": 1,
+      "sites": [
+       "Khania"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "I-DA",
+      "tokens": 5,
+      "sites": [
+       "Nerokurou",
+       "Palaikastro",
+       "Zakros"
+      ],
+      "n_objects": 5,
+      "support": {
+       "Stone vessel": 5
+      }
+     },
+     {
+      "seq": "I-DA-MA-TE",
+      "tokens": 2,
+      "sites": [
+       "Arkhalkhori"
+      ],
+      "n_objects": 2,
+      "support": {
+       "Metal object": 2
+      }
+     },
+     {
+      "seq": "I-DA-MI",
+      "tokens": 1,
+      "sites": [
+       "Syme"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     },
+     {
+      "seq": "I-DA-A",
+      "tokens": 1,
+      "sites": [
+       "Kophinas"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     }
+    ],
+    "n_sequences_declared": 12,
+    "n_sequences_attested": 12
+   },
+   "rule_complexity_n_value_assignments": 17,
+   "value_bearing_from_outside_LB": false,
+   "circular_for_value_grading": true,
+   "art_XII_flag": "CIRCULAR: value claim would ride on GORILA homomorphic values (no external referent) \u2014 usable ONLY as a RELATIVE/structural anchor",
+   "relative_anchor_strength": 170
+  },
+  {
+   "id": "B_transaction_terms",
+   "category": "B_accounting",
+   "external_referent": false,
+   "referent_note": "functional accounting role (total / deficit / grand-total / collector) is inferable from object layout, but the role fixes NO phonetic value",
+   "prior_exposure": "PUBLIC-PRINT (Bennett; Schoep 2002; Younger) \u2014 extremely indexed",
+   "source": "Corpus (silver): KU-RO 37 tok/3 sites, KI-RO 16 tok, SA-RA2 20 tok, PO-TO-KU-RO 2 tok",
+   "notes": "L4 functional anchor: position after a numeric list marks 'total'. Constrains the RELATIVE identity of KU/RO/KI/PO/TO across many tablets. Any phonetic reading (e.g. Semitic kull- 'all') is a LANGUAGE hypothesis, NOT an external referent -> cannot pin a value non-circularly.",
+   "measured": {
+    "n_phonetic_signs_constrained": 9,
+    "phonetic_signs": [
+     "KI",
+     "KU",
+     "NU",
+     "PA3",
+     "PO",
+     "RA2",
+     "RO",
+     "SA",
+     "TO"
+    ],
+    "non_phonetic_slots": [],
+    "n_new_signs_vs_foundry": 1,
+    "new_signs_vs_foundry": [
+     "PA3"
+    ],
+    "total_tokens": 83,
+    "n_distinct_sites": 3,
+    "sites": [
+     "Haghia Triada",
+     "Phaistos",
+     "Zakros"
+    ],
+    "n_distinct_objects": 58,
+    "support_context": {
+     "Tablet": 82,
+     "Stone vessel": 1
+    },
+    "attested_sequences": [
+     {
+      "seq": "KU-RO",
+      "tokens": 37,
+      "sites": [
+       "Haghia Triada",
+       "Phaistos",
+       "Zakros"
+      ],
+      "n_objects": 34,
+      "support": {
+       "Tablet": 36,
+       "Stone vessel": 1
+      }
+     },
+     {
+      "seq": "KI-RO",
+      "tokens": 16,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 12,
+      "support": {
+       "Tablet": 16
+      }
+     },
+     {
+      "seq": "PO-TO-KU-RO",
+      "tokens": 2,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 2,
+      "support": {
+       "Tablet": 2
+      }
+     },
+     {
+      "seq": "SA-RA2",
+      "tokens": 20,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 20,
+      "support": {
+       "Tablet": 20
+      }
+     },
+     {
+      "seq": "KU-PA3-NU",
+      "tokens": 8,
+      "sites": [
+       "Haghia Triada",
+       "Phaistos"
+      ],
+      "n_objects": 7,
+      "support": {
+       "Tablet": 8
+      }
+     }
+    ],
+    "n_sequences_declared": 5,
+    "n_sequences_attested": 5
+   },
+   "rule_complexity_n_value_assignments": 9,
+   "value_bearing_from_outside_LB": false,
+   "circular_for_value_grading": true,
+   "art_XII_flag": "CIRCULAR: value claim would ride on GORILA homomorphic values (no external referent) \u2014 usable ONLY as a RELATIVE/structural anchor",
+   "relative_anchor_strength": 27
+  },
+  {
+   "id": "E_commodity_logogram",
+   "category": "E_commodity",
+   "external_referent": false,
+   "referent_note": "adjacency to a commodity ideogram (OLE oil, GRA grain\u2026) fixes a SEMANTIC field, not a phonetic value; the ideogram itself carries no syllabic value",
+   "prior_exposure": "PUBLIC-PRINT (GORILA) \u2014 indexed",
+   "source": "Corpus (silver): words ligatured/adjacent to commodity ideograms",
+   "notes": "L5 semantic-field anchor at best. Does NOT license a phonetic value (Art. XV SEMANTIC != PHONETIC). Circular for value grading.",
+   "measured": {
+    "n_phonetic_signs_constrained": 9,
+    "phonetic_signs": [
+     "KA",
+     "KU",
+     "NA",
+     "NU",
+     "PA3",
+     "RA2",
+     "SA",
+     "SI",
+     "U"
+    ],
+    "non_phonetic_slots": [
+     "OLE"
+    ],
+    "n_new_signs_vs_foundry": 1,
+    "new_signs_vs_foundry": [
+     "PA3"
+    ],
+    "total_tokens": 29,
+    "n_distinct_sites": 3,
+    "sites": [
+     "Haghia Triada",
+     "Phaistos",
+     "Syme"
+    ],
+    "n_distinct_objects": 28,
+    "support_context": {
+     "Stone vessel": 1,
+     "Tablet": 28
+    },
+    "attested_sequences": [
+     {
+      "seq": "U-NA-KA-NA-SI-OLE",
+      "tokens": 1,
+      "sites": [
+       "Syme"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     },
+     {
+      "seq": "KU-PA3-NU",
+      "tokens": 8,
+      "sites": [
+       "Haghia Triada",
+       "Phaistos"
+      ],
+      "n_objects": 7,
+      "support": {
+       "Tablet": 8
+      }
+     },
+     {
+      "seq": "SA-RA2",
+      "tokens": 20,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 20,
+      "support": {
+       "Tablet": 20
+      }
+     }
+    ],
+    "n_sequences_declared": 3,
+    "n_sequences_attested": 3
+   },
+   "rule_complexity_n_value_assignments": 9,
+   "value_bearing_from_outside_LB": false,
+   "circular_for_value_grading": true,
+   "art_XII_flag": "CIRCULAR: value claim would ride on GORILA homomorphic values (no external referent) \u2014 usable ONLY as a RELATIVE/structural anchor",
+   "relative_anchor_strength": 27
+  },
+  {
+   "id": "G_foreign_names",
+   "category": "G_foreign",
+   "external_referent": "conditional",
+   "referent_note": "a name shared with a READABLE script (LB/Cypriot/Egyptian list) COULD pin values via the readable side \u2014 but each proposed match is value-blind resemblance on a huge name space (the multiplicity trap); no firm bilingual",
+   "prior_exposure": "PUBLIC-PRINT (S&M 2017 onomastics; Egyptian toponym lists) \u2014 indexed",
+   "source": "Corpus (silver) onomastic residue; cross-script name overlap",
+   "notes": "In PRINCIPLE value-bearing IF a genuine bilingual name-match existed; in practice the same relabeling/multiplicity problem as the PN channel (G1). No firm anchor.",
+   "measured": {
+    "n_phonetic_signs_constrained": 9,
+    "phonetic_signs": [
+     "A",
+     "I",
+     "KA",
+     "MA",
+     "NA",
+     "RA",
+     "RE",
+     "SA",
+     "TA"
+    ],
+    "non_phonetic_slots": [],
+    "n_new_signs_vs_foundry": 0,
+    "new_signs_vs_foundry": [],
+    "total_tokens": 4,
+    "n_distinct_sites": 3,
+    "sites": [
+     "Haghia Triada",
+     "Palaikastro",
+     "Zakros"
+    ],
+    "n_distinct_objects": 4,
+    "support_context": {
+     "Tablet": 2,
+     "Stone vessel": 2
+    },
+    "attested_sequences": [
+     {
+      "seq": "A-RA-NA-RE",
+      "tokens": 1,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Tablet": 1
+      }
+     },
+     {
+      "seq": "A-SA-SA-RA",
+      "tokens": 1,
+      "sites": [
+       "Palaikastro"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     },
+     {
+      "seq": "MA-KA-I-TA",
+      "tokens": 2,
+      "sites": [
+       "Palaikastro",
+       "Zakros"
+      ],
+      "n_objects": 2,
+      "support": {
+       "Tablet": 1,
+       "Stone vessel": 1
+      }
+     }
+    ],
+    "n_sequences_declared": 3,
+    "n_sequences_attested": 3
+   },
+   "rule_complexity_n_value_assignments": 9,
+   "value_bearing_from_outside_LB": false,
+   "circular_for_value_grading": true,
+   "art_XII_flag": "CIRCULAR: value claim would ride on GORILA homomorphic values (no external referent) \u2014 usable ONLY as a RELATIVE/structural anchor",
+   "relative_anchor_strength": 27
+  },
+  {
+   "id": "C_toponym_expansion",
+   "category": "C_toponym",
+   "external_referent": true,
+   "referent_note": "a KNOWN Cretan place-name is an external referent (value-bearing IN PRINCIPLE) \u2014 but the equation is still SPOTTED via GORILA homomorphy, and G1 showed the firm-toponym set is saturated (5 firm, all one-toponym-deep)",
+   "prior_exposure": "PUBLIC-WEB (Younger LA toponym pages) \u2014 indexed",
+   "source": "Younger web toponym list minus Foundry-14; corpus header words",
+   "notes": "HEDGED/cf only. Adds ~0 FIRM new external referents beyond the Foundry 5; residue is speculative or one-object-deep. Value-bearing channel is effectively saturated.",
+   "measured": {
+    "n_phonetic_signs_constrained": 10,
+    "phonetic_signs": [
+     "I",
+     "NI",
+     "PA3",
+     "QA",
+     "RA",
+     "RU",
+     "SA",
+     "TI",
+     "TU",
+     "WA"
+    ],
+    "non_phonetic_slots": [
+     "*310"
+    ],
+    "n_new_signs_vs_foundry": 1,
+    "new_signs_vs_foundry": [
+     "PA3"
+    ],
+    "total_tokens": 5,
+    "n_distinct_sites": 2,
+    "sites": [
+     "Haghia Triada",
+     "Kophinas"
+    ],
+    "n_distinct_objects": 5,
+    "support_context": {
+     "Tablet": 4,
+     "Stone vessel": 1
+    },
+    "attested_sequences": [
+     {
+      "seq": "QA-*310-I",
+      "tokens": 4,
+      "sites": [
+       "Haghia Triada"
+      ],
+      "n_objects": 4,
+      "support": {
+       "Tablet": 4
+      }
+     },
+     {
+      "seq": "TU-RU-SA",
+      "tokens": 1,
+      "sites": [
+       "Kophinas"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Stone vessel": 1
+      }
+     }
+    ],
+    "n_sequences_declared": 4,
+    "n_sequences_attested": 2
+   },
+   "rule_complexity_n_value_assignments": 10,
+   "value_bearing_from_outside_LB": true,
+   "circular_for_value_grading": false,
+   "art_XII_flag": "VALUE-BEARING channel (external referent) \u2014 but see G1: firm set saturated, all one-toponym-deep, 0 held-out-survivable",
+   "relative_anchor_strength": 20
+  },
+  {
+   "id": "F_seal_formula",
+   "category": "F_seal",
+   "external_referent": false,
+   "referent_note": "the 'Archanes formula' on seal-stones (A-KA-NU-\u2026 / A-SA-SA-RA-ME) repeats across seals but names an unknown owner/deity \u2014 NO external value referent",
+   "prior_exposure": "PUBLIC-PRINT (CMS; Karnava; Decorte) \u2014 indexed",
+   "source": "SEAL corpus NOT PRESENT in this worktree (seals/ empty) \u2014 candidate on record only",
+   "notes": "DATA-ABSENT here: cannot be measured against the silver corpus. High multiplicity in the literature but VALUE-BLIND (internal repetition). Flagged NOT_MEASURED.",
+   "measured": {
+    "n_phonetic_signs_constrained": 6,
+    "phonetic_signs": [
+     "A",
+     "KA",
+     "ME",
+     "NU",
+     "RA",
+     "SA"
+    ],
+    "non_phonetic_slots": [],
+    "n_new_signs_vs_foundry": 0,
+    "new_signs_vs_foundry": [],
+    "total_tokens": 1,
+    "n_distinct_sites": 1,
+    "sites": [
+     "Iouktas"
+    ],
+    "n_distinct_objects": 1,
+    "support_context": {
+     "Clay vessel": 1
+    },
+    "attested_sequences": [
+     {
+      "seq": "A-SA-SA-RA-ME",
+      "tokens": 1,
+      "sites": [
+       "Iouktas"
+      ],
+      "n_objects": 1,
+      "support": {
+       "Clay vessel": 1
+      }
+     }
+    ],
+    "n_sequences_declared": 2,
+    "n_sequences_attested": 1
+   },
+   "rule_complexity_n_value_assignments": 6,
+   "value_bearing_from_outside_LB": false,
+   "circular_for_value_grading": true,
+   "art_XII_flag": "CIRCULAR: value claim would ride on GORILA homomorphic values (no external referent) \u2014 usable ONLY as a RELATIVE/structural anchor",
+   "relative_anchor_strength": 6
+  }
+ ]
+}

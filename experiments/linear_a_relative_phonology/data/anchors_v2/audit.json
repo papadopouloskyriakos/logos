@@ -1,0 +1,3212 @@
+{
+ "task": "G1_existing_anchor_audit",
+ "seed": 20260708,
+ "summary": {
+  "raw_provenance_records": 115,
+  "raw_signs_touched": 62,
+  "exact_duplicate_records": 0,
+  "exact_duplicate_detail": [],
+  "n_root_dependency_lineages": 19,
+  "records_per_lineage": {
+   "LIN-C:S&M2017-Table6.2-Cypriot-stability": 11,
+   "LIN-GLOSS:acrophonic-single-sign": 3,
+   "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)": 57,
+   "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table": 25,
+   "LIN-TOP:Ayia-Triada(inferential)": 1,
+   "LIN-TOP:Inatos(hedged)": 1,
+   "LIN-TOP:Itanos": 1,
+   "LIN-TOP:Kydonia": 1,
+   "LIN-TOP:Mt-Dikte": 1,
+   "LIN-TOP:Mt-Ida": 1,
+   "LIN-TOP:Phaistos": 1,
+   "LIN-TOP:Sybrita": 1,
+   "LIN-TOP:Tylissos": 2,
+   "LIN-TOP:da-wo(minor-locality)": 1,
+   "LIN-TOP:di-na-u(unlocated)": 1,
+   "LIN-TOP:ku-ni-su(unlocated)": 1,
+   "LIN-TOP:ku-ta-to(bare-cf)": 1,
+   "LIN-TOP:se-to-i-ja(unlocated)": 1,
+   "LIN-VAR:S&M2017-\u00a75-internal-LA-variation": 4
+  },
+  "channel_is_value_bearing": {
+   "LIN-TOP (toponym external referent)": "YES - only channel that derives a value from outside LB",
+   "LIN-PN (onomastic resemblance)": "NO - value-blind; no external referent constrains the string",
+   "LIN-GLOSS (acrophonic)": "WEAK - single-sign guess, not held-out testable",
+   "LIN-VAR (internal variation)": "NO - never pins a value by construction (ic4)",
+   "LIN-H (homomorphy)": "NO - sign-IDENTITY; inherits LB value (this IS the GORILA transcription substrate)",
+   "LIN-C (Cypriot stability)": "NO - sign continuity; inherits LB/Greek value"
+  },
+  "n_value_inheriting_lineages": 2,
+  "n_value_blind_or_neverpin_lineages": 3,
+  "toponym_channel": {
+   "raw_toponym_records": 15,
+   "distinct_external_referents_after_declone": 14,
+   "clone_collapses": {
+    "Tylissos": [
+     "top_tu_ru_sa",
+     "top_a_tu_ri_si_ti"
+    ]
+   },
+   "firm_primary_unqueried_referents": [
+    "Mt-Dikte",
+    "Phaistos",
+    "Sybrita",
+    "Tylissos",
+    "se-to-i-ja(unlocated)"
+   ],
+   "n_firm_primary_unqueried_referents": 5,
+   "hedged_or_cf_only_referents": [
+    "Ayia-Triada(inferential)",
+    "Inatos(hedged)",
+    "Kydonia",
+    "Mt-Ida",
+    "ku-ta-to(bare-cf)"
+   ]
+  },
+  "DEDUP_HEADLINE": {
+   "independent_anchor_count__tierA_firm_primary_declone": 5,
+   "independent_anchor_count__tierB_all_distinct_referents": 14,
+   "independent_VALUE_bearing_lineages": 1,
+   "empirical_heldout_survivable_independent_anchors": 0,
+   "loto_recovered_one_toponym_deep": [
+    "I",
+    "RI"
+   ],
+   "gate_verdict": "REFUTE_LOTO_FRAGILE",
+   "distributional_channel_top1": 0.0
+  },
+  "frozen_gate_citation": {
+   "verdict": "REFUTE_LOTO_FRAGILE",
+   "distributional_channel_top1": 0.0,
+   "recovered_signs_LOTO": [
+    "I",
+    "RI"
+   ],
+   "recovered_depth": "each one-toponym-deep",
+   "prereg_dois": [
+    "10.5281/zenodo.21168887",
+    "10.5281/zenodo.21173639"
+   ]
+  },
+  "non_circular_note": "Conventional LA values label records only; no value is a model input. Held-out numbers are cited from the frozen preregistered cross-script gate, not re-run."
+ },
+ "audit_rows": [
+  {
+   "record_id": "top_pa_i_to",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.4 p.102 (bold in Table 6.3 p.101); carried from toponym_anchors.csv",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Phaistos",
+   "candidate_la_locus": "pa-i-to (printed pa-i-\u1e6d\u1ecd)",
+   "covered_signs": [
+    "PA",
+    "I",
+    "TO"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "top_se_to_i_ja",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.4 p.102 (bold in Table 6.3 p.101); carried from toponym_anchors.csv",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:se-to-i-ja(unlocated)",
+   "candidate_la_locus": "se-to-i-ja",
+   "covered_signs": [
+    "SE",
+    "TO",
+    "I",
+    "JA"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "top_tu_ru_sa",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.4 p.102 (bold in Table 6.3 p.101); carried from toponym_anchors.csv",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Tylissos",
+   "candidate_la_locus": "tu-ru-sa",
+   "covered_signs": [
+    "TU",
+    "RU",
+    "SA"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_di_ki_te",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.4 p.102 (cf.-row in Table 6.3 p.101: di-ka-ta-jo KN Fp 1 / (a-)di-ki-te(-te) PK Za 11); carried from toponym_anchors.csv",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Mt-Dikte",
+   "candidate_la_locus": "di-ki-te",
+   "covered_signs": [
+    "DI",
+    "KI",
+    "TE"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_su_ki_ri_ta",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.4 p.102 (bold in Table 6.3 p.101); carried from toponym_anchors.csv",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Sybrita",
+   "candidate_la_locus": "su-ki-ri-ta",
+   "covered_signs": [
+    "SU",
+    "KI",
+    "RI",
+    "TA"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (RI); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "RI"
+   ]
+  },
+  {
+   "record_id": "top_a_tu_ri_si_ti",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.4 p.102; carried from toponym_anchors.csv (queried variant)",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Tylissos",
+   "candidate_la_locus": "a-tu-ri-si-ti (printed a-tu-\u1e5b\u1ecb-si-ti)",
+   "covered_signs": [
+    "A",
+    "TU",
+    "RI",
+    "SI",
+    "TI"
+   ],
+   "matching_slots": 5,
+   "rule_complexity": {
+    "n_value_assignments": 5,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (RI); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "RI"
+   ]
+  },
+  {
+   "record_id": "top_i_da_a_cf",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101 ('cf. also': i-da(-i-jo) KN K 875 / i-da-a KO Za 1); NOT in Table 6.4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Mt-Ida",
+   "candidate_la_locus": "i-da-a",
+   "covered_signs": [
+    "I",
+    "DA",
+    "A"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "pn_a_ka_ru",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "a-ka-ru",
+   "covered_signs": [
+    "A",
+    "KA",
+    "RU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "refuted",
+   "sm_trust": "debunked",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_a_ra_na_re",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.10 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "a-ra-na-re",
+   "covered_signs": [
+    "A",
+    "RA",
+    "NA",
+    "RE"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_a_re_sa_na",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Thera/Akrotiri (Cyclades)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "a-re-sa-na",
+   "covered_signs": [
+    "A",
+    "RE",
+    "SA",
+    "NA"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_a_sa_ra2",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "a-sa-ra2",
+   "covered_signs": [
+    "A",
+    "SA",
+    "RA2"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_a_su_ja",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "a-su-ja",
+   "covered_signs": [
+    "A",
+    "SU",
+    "JA"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_a_ta_re",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.10 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Zakros (E Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "a-ta-re",
+   "covered_signs": [
+    "A",
+    "TA",
+    "RE"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_da_i_pi_ta",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Zakros (E Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "da-i-pi-ta",
+   "covered_signs": [
+    "DA",
+    "I",
+    "PI",
+    "TA"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "pn_da_mi_nu",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "da-mi-nu",
+   "covered_signs": [
+    "DA",
+    "MI",
+    "NU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_di_de_ru",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.8 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "di-de-ru",
+   "covered_signs": [
+    "DI",
+    "DE",
+    "RU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_du_pu2_re",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Kophinas (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "du-pu2-re",
+   "covered_signs": [
+    "DU",
+    "PU2",
+    "RE"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_i_ja_te",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Phaistos (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "i-ja-te",
+   "covered_signs": [
+    "I",
+    "JA",
+    "TE"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "refuted",
+   "sm_trust": "debunked",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "pn_ka_sa_ru",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "ka-sa-ru",
+   "covered_signs": [
+    "KA",
+    "SA",
+    "RU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_ki_da_ro",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "ki-da-ro",
+   "covered_signs": [
+    "KI",
+    "DA",
+    "RO"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_ki_ri_ta",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "ki-ri-ta",
+   "covered_signs": [
+    "KI",
+    "RI",
+    "TA"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (RI); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "RI"
+   ]
+  },
+  {
+   "record_id": "pn_ku_ku_da_ra",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "ku-ku-da-ra",
+   "covered_signs": [
+    "KU",
+    "KU",
+    "DA",
+    "RA"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_ku_56_nu",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.8 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "ku-*56-nu",
+   "covered_signs": [
+    "KU",
+    "*56",
+    "NU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_ku_ru_ku",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "ku-ru-ku",
+   "covered_signs": [
+    "KU",
+    "RU",
+    "KU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_mi_ja_ru",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "MI+JA+RU (ligature)",
+   "covered_signs": [
+    "MI",
+    "JA",
+    "RU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_pa_ja_re",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.10 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "pa-ja-re",
+   "covered_signs": [
+    "PA",
+    "JA",
+    "RE"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_pa_ra_ne",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "pa-ra-ne",
+   "covered_signs": [
+    "PA",
+    "RA",
+    "NE"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_qa_qa_ru",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.8 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "qa-qa-ru",
+   "covered_signs": [
+    "QA",
+    "QA",
+    "RU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_qa_ra2_wa",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; \u00a75 p.103",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "qa-ra2-wa",
+   "covered_signs": [
+    "QA",
+    "RA2",
+    "WA"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_sa_ma_ro",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101; also Table 6.9 p.105",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "sa-ma-ro",
+   "covered_signs": [
+    "SA",
+    "MA",
+    "RO"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "tempting",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_si_ki_ra",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "si-ki-ra",
+   "covered_signs": [
+    "SI",
+    "KI",
+    "RA"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "pn_wa_du_ni_mi",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 Table 6.3 p.101",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Haghia Triada (S-central Crete)",
+   "channel": "L_lexical",
+   "class": "personal_name",
+   "dependency_class": "LIN-PN:Hooker1975/S&M-onomastic-resemblance-table",
+   "candidate_la_locus": "wa-du-ni-mi",
+   "covered_signs": [
+    "WA",
+    "DU",
+    "NI",
+    "MI"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "ni_fig_nikuleon",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 pp.106-107 (PDF pp.29-30 of corpus/bronze/steele_meissner_2017/chapter-6.pdf)",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "gloss_acrophonic",
+   "dependency_class": "LIN-GLOSS:acrophonic-single-sign",
+   "candidate_la_locus": "ni",
+   "covered_signs": [
+    "NI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "kikina_sycamore_fig",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 p.107 (PDF p.30 of corpus/bronze/steele_meissner_2017/chapter-6.pdf)",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "gloss_acrophonic",
+   "dependency_class": "LIN-GLOSS:acrophonic-single-sign",
+   "candidate_la_locus": "ki-ki-na",
+   "covered_signs": [
+    "KI",
+    "KI",
+    "NA"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "maru_wool",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 p.107 (PDF p.30 of corpus/bronze/steele_meissner_2017/chapter-6.pdf)",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "gloss_acrophonic",
+   "dependency_class": "LIN-GLOSS:acrophonic-single-sign",
+   "candidate_la_locus": "ma-ru (ligature ma+ru)",
+   "covered_signs": [
+    "MA",
+    "RU"
+   ],
+   "matching_slots": 2,
+   "rule_complexity": {
+    "n_value_assignments": 2,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "var_m_series",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 \u00a75 p.103 (fn.18: only certain attestations listed)",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "candidate_la_locus": "(j)a-sa-sa-ra-me / ja-sa-sa-ra-ma-na; i-pi-na-ma / i-pi-na-mi-na",
+   "covered_signs": [
+    "ME",
+    "MA",
+    "MI"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 0,
+    "note": "series-membership only; asserts no value (ic4)"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (series-membership; never pins a value)",
+   "failure_status": "N/A_NEVER_PINS",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "var_t_series",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 \u00a75 p.103",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "candidate_la_locus": "su-ki-ri-ta / su-ki-ri-te-i-ja; (j)a-di-ki-te-te / ja-di-ki-tu",
+   "covered_signs": [
+    "TA",
+    "TE",
+    "TU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 0,
+    "note": "series-membership only; asserts no value (ic4)"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (series-membership; never pins a value)",
+   "failure_status": "N/A_NEVER_PINS",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "var_u_w_series",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 \u00a75 p.103 (fn.19)",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "candidate_la_locus": "qe-ra2-u / qa-ra2-wa; ja-ta-i-*88-u-ja / a-ta-i-*88-wa-ja",
+   "covered_signs": [
+    "U",
+    "WA"
+   ],
+   "matching_slots": 2,
+   "rule_complexity": {
+    "n_value_assignments": 0,
+    "note": "series-membership only; asserts no value (ic4)"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (series-membership; never pins a value)",
+   "failure_status": "N/A_NEVER_PINS",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "var_s_series",
+   "source": "Steele & Meissner 2017 (primary chapter)",
+   "page_record": "S&M 2017 \u00a75 p.103; grid entry 'si?' Table 6.5 p.102",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "variation_constraint",
+   "dependency_class": "LIN-VAR:S&M2017-\u00a75-internal-LA-variation",
+   "candidate_la_locus": "tu-ru-sa / a-tu-ri-si-ti",
+   "covered_signs": [
+    "SA",
+    "SI"
+   ],
+   "matching_slots": 2,
+   "rule_complexity": {
+    "n_value_assignments": 0,
+    "note": "series-membership only; asserts no value (ic4)"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "neutral",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (series-membership; never pins a value)",
+   "failure_status": "N/A_NEVER_PINS",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_ku_79_ni_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts \u00a710c, archived Wayback capture corpus/bronze/younger_lineara/lineara-main.html (page-stated update 2023-07-03); lexicon.html s.v. KU-ZU-NI",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Kydonia",
+   "candidate_la_locus": "ku-*79-ni (lexicon: KU-ZU-NI)",
+   "covered_signs": [
+    "KU",
+    "*79",
+    "NI"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_da_u_49_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts \u00a710c, archived Wayback capture corpus/bronze/younger_lineara/lineara-main.html; lexicon.html s.v. DA-U-*049",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:da-wo(minor-locality)",
+   "candidate_la_locus": "da-u-*49",
+   "covered_signs": [
+    "DA",
+    "U",
+    "*49"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_i_ti_ni_sa_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts \u00a710c, archived Wayback capture corpus/bronze/younger_lineara/lineara-main.html; lexicon.html s.v. I-TI-NI-SA",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Itanos",
+   "candidate_la_locus": "i-ti-ni-sa",
+   "covered_signs": [
+    "I",
+    "TI",
+    "NI",
+    "SA"
+   ],
+   "matching_slots": 4,
+   "rule_complexity": {
+    "n_value_assignments": 4,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "top_ku_ni_su_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts \u00a710c, archived Wayback capture corpus/bronze/younger_lineara/lineara-main.html; lexicon.html s.v. KU-NI-SU",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:ku-ni-su(unlocated)",
+   "candidate_la_locus": "ku-ni-su",
+   "covered_signs": [
+    "KU",
+    "NI",
+    "SU"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_ku_ta_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts \u00a710c, archived Wayback capture corpus/bronze/younger_lineara/lineara-main.html; lexicon.html s.v. KU-TA[",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:ku-ta-to(bare-cf)",
+   "candidate_la_locus": "ku-ta[ (truncated)",
+   "covered_signs": [
+    "KU",
+    "TA"
+   ],
+   "matching_slots": 2,
+   "rule_complexity": {
+    "n_value_assignments": 2,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_sa_ra2_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts \u00a710c, archived Wayback capture corpus/bronze/younger_lineara/lineara-main.html",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Ayia-Triada(inferential)",
+   "candidate_la_locus": "sa-ra2",
+   "covered_signs": [
+    "SA",
+    "RA2"
+   ],
+   "matching_slots": 2,
+   "rule_complexity": {
+    "n_value_assignments": 2,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_di_na_u_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts lexicon, archived Wayback capture corpus/bronze/younger_lineara/lexicon.html s.v. DI-NA-U",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:di-na-u(unlocated)",
+   "candidate_la_locus": "di-na-u",
+   "covered_signs": [
+    "DI",
+    "NA",
+    "U"
+   ],
+   "matching_slots": 3,
+   "rule_complexity": {
+    "n_value_assignments": 3,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "REFUTE_LOTO_FRAGILE (not recovered; distributional channel=0.0000)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "top_i_na_ta_i_zu_di_si_ka_younger",
+   "source": "Younger LA pages (secondary, Wayback)",
+   "page_record": "Younger, Linear A texts lexicon, archived Wayback capture corpus/bronze/younger_lineara/lexicon.html s.v. I-NA-TA-I-ZU-DI-SI-KA",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "Crete (find-site not pinned in source)",
+   "channel": "L_lexical",
+   "class": "toponym",
+   "dependency_class": "LIN-TOP:Inatos(hedged)",
+   "candidate_la_locus": "i-na-ta-i-zu-di-si-ka",
+   "covered_signs": [
+    "I",
+    "NA",
+    "TA",
+    "ZU",
+    "DI",
+    "SI",
+    "KA"
+   ],
+   "matching_slots": 7,
+   "rule_complexity": {
+    "n_value_assignments": 7,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "unrated",
+   "sm_trust": "n/a",
+   "source_status": "secondary",
+   "prior_exposure": "PUBLIC-WEB (Younger LA pages, archived Wayback; heavily indexed)",
+   "heldout_prediction": "if value correct, held-out LA distribution should re-derive it (LOTO)",
+   "failure_status": "RECOVERED_BUT_ONE-TOPONYM-DEEP (I); non-survivable if that toponym also held out",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "homo_A",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "A",
+   "covered_signs": [
+    "A"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_A",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "A",
+   "covered_signs": [
+    "A"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_AU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "AU",
+   "covered_signs": [
+    "AU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_DA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "DA",
+   "covered_signs": [
+    "DA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_DA",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "DA",
+   "covered_signs": [
+    "DA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_DE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "DE",
+   "covered_signs": [
+    "DE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_DI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "DI",
+   "covered_signs": [
+    "DI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_DU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "DU",
+   "covered_signs": [
+    "DU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_E",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "E",
+   "covered_signs": [
+    "E"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_I",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "I",
+   "covered_signs": [
+    "I"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "cypr_I",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "I",
+   "covered_signs": [
+    "I"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": [
+    "I"
+   ]
+  },
+  {
+   "record_id": "homo_JA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "JA",
+   "covered_signs": [
+    "JA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_JE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "JE",
+   "covered_signs": [
+    "JE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_JU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "JU",
+   "covered_signs": [
+    "JU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_KA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "KA",
+   "covered_signs": [
+    "KA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_KE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "KE",
+   "covered_signs": [
+    "KE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_KI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "KI",
+   "covered_signs": [
+    "KI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_KO",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "KO",
+   "covered_signs": [
+    "KO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_KU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "KU",
+   "covered_signs": [
+    "KU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_MA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "MA",
+   "covered_signs": [
+    "MA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_ME",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "ME",
+   "covered_signs": [
+    "ME"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_MI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "MI",
+   "covered_signs": [
+    "MI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_MU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "MU",
+   "covered_signs": [
+    "MU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_NA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "NA",
+   "covered_signs": [
+    "NA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_NA",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "NA",
+   "covered_signs": [
+    "NA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_NE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "NE",
+   "covered_signs": [
+    "NE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_NI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "NI",
+   "covered_signs": [
+    "NI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_NU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "NU",
+   "covered_signs": [
+    "NU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_NWA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "NWA",
+   "covered_signs": [
+    "NWA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_O",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "O",
+   "covered_signs": [
+    "O"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_PA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "PA",
+   "covered_signs": [
+    "PA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_PA",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "PA",
+   "covered_signs": [
+    "PA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_PI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "PI",
+   "covered_signs": [
+    "PI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_PO",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "PO",
+   "covered_signs": [
+    "PO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_PO",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "PO",
+   "covered_signs": [
+    "PO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_PU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "PU",
+   "covered_signs": [
+    "PU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_PU2",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "PU2",
+   "covered_signs": [
+    "PU2"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_QA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "QA",
+   "covered_signs": [
+    "QA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_QE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "QE",
+   "covered_signs": [
+    "QE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_QI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "QI",
+   "covered_signs": [
+    "QI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_RA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "RA",
+   "covered_signs": [
+    "RA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_RA2",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "RA2",
+   "covered_signs": [
+    "RA2"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_RE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "RE",
+   "covered_signs": [
+    "RE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_RI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "RI",
+   "covered_signs": [
+    "RI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": [
+    "RI"
+   ]
+  },
+  {
+   "record_id": "homo_RO",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "RO",
+   "covered_signs": [
+    "RO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_RO",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "RO",
+   "covered_signs": [
+    "RO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_RU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "RU",
+   "covered_signs": [
+    "RU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_SA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "SA",
+   "covered_signs": [
+    "SA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_SA",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "SA",
+   "covered_signs": [
+    "SA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_SE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "SE",
+   "covered_signs": [
+    "SE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_SE",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "SE",
+   "covered_signs": [
+    "SE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_SI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "SI",
+   "covered_signs": [
+    "SI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_SU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "SU",
+   "covered_signs": [
+    "SU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TA",
+   "covered_signs": [
+    "TA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TA2",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TA2",
+   "covered_signs": [
+    "TA2"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TE",
+   "covered_signs": [
+    "TE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TI",
+   "covered_signs": [
+    "TI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_TI",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "TI",
+   "covered_signs": [
+    "TI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TO",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TO",
+   "covered_signs": [
+    "TO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "cypr_TO",
+   "source": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "page_record": "Steele & Meissner 2017 Table 6.2 p.98 (primary)",
+   "chronology": "LA Neopalatial (~1600-1450 BCE) <- via LB <- Cypriot syll. (1st mill. BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "C_cypriot",
+   "class": "cross_script_stability",
+   "dependency_class": "LIN-C:S&M2017-Table6.2-Cypriot-stability",
+   "candidate_la_locus": "TO",
+   "covered_signs": [
+    "TO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TU",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TU",
+   "covered_signs": [
+    "TU"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "high",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_TWE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "TWE",
+   "covered_signs": [
+    "TWE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_U",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "U",
+   "covered_signs": [
+    "U"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_WA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "WA",
+   "covered_signs": [
+    "WA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_WI",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "WI",
+   "covered_signs": [
+    "WI"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_ZA",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "ZA",
+   "covered_signs": [
+    "ZA"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_ZE",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "ZE",
+   "covered_signs": [
+    "ZE"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  },
+  {
+   "record_id": "homo_ZO",
+   "source": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "page_record": "Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4",
+   "chronology": "LA Neopalatial (MM III-LM IB, ~1600-1450 BCE); comparandum LB Mycenaean (~1400-1200 BCE)",
+   "geography": "cross-Aegean sign continuity",
+   "channel": "H_homomorphy",
+   "class": "sign_shape",
+   "dependency_class": "LIN-H:Salgarella2020-homomorphy(=GORILA shape-transcription substrate)",
+   "candidate_la_locus": "ZO",
+   "covered_signs": [
+    "ZO"
+   ],
+   "matching_slots": 1,
+   "rule_complexity": {
+    "n_value_assignments": 1,
+    "note": "one LB value asserted per covered sign simultaneously"
+   },
+   "quality_tier": "mid",
+   "sm_trust": "",
+   "source_status": "primary",
+   "prior_exposure": "PUBLIC-PRINT (Steele&Meissner 2017 CUP / Salgarella 2020 CUP; indexed)",
+   "heldout_prediction": "none (sign-IDENTITY channel; inherits LB value, derives none)",
+   "failure_status": "N/A_NO_VALUE_DERIVED (structural corroboration only)",
+   "loto_recovered_signs": []
+  }
+ ]
+}

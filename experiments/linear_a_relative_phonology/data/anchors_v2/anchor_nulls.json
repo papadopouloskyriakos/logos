@@ -1,0 +1,899 @@
+{
+ "task": "G3c_anchor_nulls",
+ "seed": 20260708,
+ "n_trials_montecarlo": 2000,
+ "method": "LA locus (LB values) vs place-name folded to same open-CV skeleton; sim = 1 - normalized (Cclass,V) alignment distance. LB values render+grade only (Art. XII).",
+ "corpus_syllable_freq_words": 3147,
+ "observed": {
+  "pa_i_to": {
+   "locus_skel": [
+    "Pa",
+    ".i",
+    "To"
+   ],
+   "referent": "Phaistos",
+   "firm": true,
+   "status": "primary",
+   "sim_to_referent": 1.0
+  },
+  "se_to_i_ja": {
+   "locus_skel": [
+    "Se",
+    "To",
+    ".i",
+    "Ja"
+   ],
+   "referent": "Seteia",
+   "firm": true,
+   "status": "primary",
+   "sim_to_referent": 0.75
+  },
+  "tu_ru_sa": {
+   "locus_skel": [
+    "Tu",
+    "Ru",
+    "Sa"
+   ],
+   "referent": "Tylissos",
+   "firm": true,
+   "status": "primary",
+   "sim_to_referent": 0.6667
+  },
+  "a_tu_ri_si_ti": {
+   "locus_skel": [
+    ".a",
+    "Tu",
+    "Ri",
+    "Si",
+    "Ti"
+   ],
+   "referent": "Tylissos",
+   "firm": true,
+   "status": "primary",
+   "sim_to_referent": 0.5
+  },
+  "di_ki_te": {
+   "locus_skel": [
+    "Ti",
+    "Ki",
+    "Te"
+   ],
+   "referent": "Dikte",
+   "firm": true,
+   "status": "primary",
+   "sim_to_referent": 0.6667
+  },
+  "su_ki_ri_ta": {
+   "locus_skel": [
+    "Su",
+    "Ki",
+    "Ri",
+    "Ta"
+   ],
+   "referent": "Sybrita",
+   "firm": true,
+   "status": "primary",
+   "sim_to_referent": 0.75
+  },
+  "i_da_a": {
+   "locus_skel": [
+    ".i",
+    "Ta",
+    ".a"
+   ],
+   "referent": "Ida",
+   "firm": false,
+   "status": "primary",
+   "sim_to_referent": 0.6667
+  },
+  "ku_79_ni": {
+   "locus_skel": [
+    "Ku",
+    "Ni"
+   ],
+   "referent": "Kydonia",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.5
+  },
+  "da_u_49": {
+   "locus_skel": [
+    "Ta",
+    ".u"
+   ],
+   "referent": "Dawos",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.5
+  },
+  "i_ti_ni_sa": {
+   "locus_skel": [
+    ".i",
+    "Ti",
+    "Ni",
+    "Sa"
+   ],
+   "referent": "Itanos",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.5
+  },
+  "ku_ni_su": {
+   "locus_skel": [
+    "Ku",
+    "Ni",
+    "Su"
+   ],
+   "referent": "Knossos",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.3333
+  },
+  "ku_ta": {
+   "locus_skel": [
+    "Ku",
+    "Ta"
+   ],
+   "referent": "Kytaion",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.5
+  },
+  "sa_ra2": {
+   "locus_skel": [
+    "Sa",
+    "Ra"
+   ],
+   "referent": "Saro",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.75
+  },
+  "di_na_u": {
+   "locus_skel": [
+    "Ti",
+    "Na",
+    ".u"
+   ],
+   "referent": "Dinauos",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.75
+  },
+  "i_na_ta_i_zu_di_si_ka": {
+   "locus_skel": [
+    ".i",
+    "Na",
+    "Ta",
+    ".i",
+    "Su",
+    "Ti",
+    "Si",
+    "Ka"
+   ],
+   "referent": "Inatos",
+   "firm": false,
+   "status": "secondary",
+   "sim_to_referent": 0.3125
+  }
+ },
+ "summary_scores": {
+  "mean_sim_assigned_ALL15": 0.6097,
+  "mean_sim_assigned_FIRM6": 0.7222,
+  "mean_best_match_REAL_AEGEAN_gaz": 0.6042,
+  "mean_best_match_UNRELATED_lang_gaz": 0.4919
+ },
+ "null1_2_montecarlo_random_gaz": {
+  "uniform_random": {
+   "mean_agg_best": 0.476,
+   "p95_agg_best": 0.5181,
+   "per_locus_mean_best": {
+    "pa_i_to": 0.5032,
+    "se_to_i_ja": 0.4445,
+    "tu_ru_sa": 0.4969,
+    "a_tu_ri_si_ti": 0.3905,
+    "di_ki_te": 0.4961,
+    "su_ki_ri_ta": 0.4408,
+    "i_da_a": 0.4976,
+    "ku_79_ni": 0.5326,
+    "da_u_49": 0.5372,
+    "i_ti_ni_sa": 0.4361,
+    "ku_ni_su": 0.4988,
+    "ku_ta": 0.534,
+    "sa_ra2": 0.5332,
+    "di_na_u": 0.4973,
+    "i_na_ta_i_zu_di_si_ka": 0.3014
+   }
+  },
+  "freq_matched_LA_phonotactic": {
+   "mean_agg_best": 0.5365,
+   "p95_agg_best": 0.5808,
+   "per_locus_mean_best": {
+    "pa_i_to": 0.5186,
+    "se_to_i_ja": 0.4543,
+    "tu_ru_sa": 0.5466,
+    "a_tu_ri_si_ti": 0.449,
+    "di_ki_te": 0.5643,
+    "su_ki_ri_ta": 0.4941,
+    "i_da_a": 0.5984,
+    "ku_79_ni": 0.6015,
+    "da_u_49": 0.585,
+    "i_ti_ni_sa": 0.4972,
+    "ku_ni_su": 0.537,
+    "ku_ta": 0.6622,
+    "sa_ra2": 0.6319,
+    "di_na_u": 0.55,
+    "i_na_ta_i_zu_di_si_ka": 0.3581
+   }
+  },
+  "interpret": "aggregate mean best-match a random gazetteer of Aegean size yields per locus"
+ },
+ "null3_length_matched": {
+  "pa_i_to": {
+   "P(random_len_matched >= assigned)": 0.0,
+   "mean_random_len_matched_sim": 0.1748
+  },
+  "se_to_i_ja": {
+   "P(random_len_matched >= assigned)": 0.0005,
+   "mean_random_len_matched_sim": 0.1664
+  },
+  "tu_ru_sa": {
+   "P(random_len_matched >= assigned)": 0.0,
+   "mean_random_len_matched_sim": 0.1993
+  },
+  "a_tu_ri_si_ti": {
+   "P(random_len_matched >= assigned)": 0.01,
+   "mean_random_len_matched_sim": 0.2238
+  },
+  "di_ki_te": {
+   "P(random_len_matched >= assigned)": 0.0,
+   "mean_random_len_matched_sim": 0.2043
+  },
+  "su_ki_ri_ta": {
+   "P(random_len_matched >= assigned)": 0.0,
+   "mean_random_len_matched_sim": 0.2397
+  },
+  "i_da_a": {
+   "P(random_len_matched >= assigned)": 0.0,
+   "mean_random_len_matched_sim": 0.2402
+  },
+  "ku_79_ni": {
+   "P(random_len_matched >= assigned)": 0.0075,
+   "mean_random_len_matched_sim": 0.1849
+  },
+  "da_u_49": {
+   "P(random_len_matched >= assigned)": 0.178,
+   "mean_random_len_matched_sim": 0.2086
+  },
+  "i_ti_ni_sa": {
+   "P(random_len_matched >= assigned)": 0.0405,
+   "mean_random_len_matched_sim": 0.2159
+  },
+  "ku_ni_su": {
+   "P(random_len_matched >= assigned)": 0.307,
+   "mean_random_len_matched_sim": 0.1903
+  },
+  "ku_ta": {
+   "P(random_len_matched >= assigned)": 0.025,
+   "mean_random_len_matched_sim": 0.2274
+  },
+  "sa_ra2": {
+   "P(random_len_matched >= assigned)": 0.0385,
+   "mean_random_len_matched_sim": 0.265
+  },
+  "di_na_u": {
+   "P(random_len_matched >= assigned)": 0.0,
+   "mean_random_len_matched_sim": 0.2337
+  },
+  "i_na_ta_i_zu_di_si_ka": {
+   "P(random_len_matched >= assigned)": 0.0535,
+   "mean_random_len_matched_sim": 0.1917
+  }
+ },
+ "null4_unrelated_language": {
+  "per_locus_best": {
+   "pa_i_to": [
+    0.5,
+    "Kyoto"
+   ],
+   "se_to_i_ja": [
+    0.625,
+    "Sendai"
+   ],
+   "tu_ru_sa": [
+    0.6667,
+    "Toluca"
+   ],
+   "a_tu_ri_si_ti": [
+    0.4,
+    "Helsinki"
+   ],
+   "di_ki_te": [
+    0.5,
+    "Akita"
+   ],
+   "su_ki_ri_ta": [
+    0.5,
+    "Akita"
+   ],
+   "i_da_a": [
+    0.6667,
+    "Imatra"
+   ],
+   "ku_79_ni": [
+    0.375,
+    "Kuopio"
+   ],
+   "da_u_49": [
+    0.5,
+    "Turku"
+   ],
+   "i_ti_ni_sa": [
+    0.375,
+    "Helsinki"
+   ],
+   "ku_ni_su": [
+    0.375,
+    "Kuopio"
+   ],
+   "ku_ta": [
+    0.5,
+    "Kotka"
+   ],
+   "sa_ra2": [
+    0.75,
+    "Salo"
+   ],
+   "di_na_u": [
+    0.3333,
+    "Turku"
+   ],
+   "i_na_ta_i_zu_di_si_ka": [
+    0.3125,
+    "Oaxaca"
+   ]
+  },
+  "mean_best": 0.4919,
+  "interpret": "if ~ real Aegean, the 'Cretan' specificity of the anchors is illusory"
+ },
+ "multiplicity_within_real_aegean": {
+  "per_locus": {
+   "pa_i_to": {
+    "sim_to_assigned": 1.0,
+    "best_alt_aegean": 0.6667,
+    "best_alt_name": "Praisos",
+    "assigned_is_uniquely_best": true
+   },
+   "se_to_i_ja": {
+    "sim_to_assigned": 0.75,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Kydonia",
+    "assigned_is_uniquely_best": true
+   },
+   "tu_ru_sa": {
+    "sim_to_assigned": 0.6667,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Sybrita",
+    "assigned_is_uniquely_best": true
+   },
+   "a_tu_ri_si_ti": {
+    "sim_to_assigned": 0.5,
+    "best_alt_aegean": 0.4,
+    "best_alt_name": "Amnisos",
+    "assigned_is_uniquely_best": true
+   },
+   "di_ki_te": {
+    "sim_to_assigned": 0.6667,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Arkades",
+    "assigned_is_uniquely_best": true
+   },
+   "su_ki_ri_ta": {
+    "sim_to_assigned": 0.75,
+    "best_alt_aegean": 0.625,
+    "best_alt_name": "Sybritos",
+    "assigned_is_uniquely_best": true
+   },
+   "i_da_a": {
+    "sim_to_assigned": 0.6667,
+    "best_alt_aegean": 0.6667,
+    "best_alt_name": "Itanos",
+    "assigned_is_uniquely_best": true
+   },
+   "ku_79_ni": {
+    "sim_to_assigned": 0.5,
+    "best_alt_aegean": 0.375,
+    "best_alt_name": "Kytaion",
+    "assigned_is_uniquely_best": true
+   },
+   "da_u_49": {
+    "sim_to_assigned": 0.5,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Tarrha",
+    "assigned_is_uniquely_best": false
+   },
+   "i_ti_ni_sa": {
+    "sim_to_assigned": 0.5,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Amnisos",
+    "assigned_is_uniquely_best": false
+   },
+   "ku_ni_su": {
+    "sim_to_assigned": 0.3333,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Amnisos",
+    "assigned_is_uniquely_best": false
+   },
+   "ku_ta": {
+    "sim_to_assigned": 0.5,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Lyktos",
+    "assigned_is_uniquely_best": false
+   },
+   "sa_ra2": {
+    "sim_to_assigned": 0.75,
+    "best_alt_aegean": 0.75,
+    "best_alt_name": "Zakros",
+    "assigned_is_uniquely_best": false
+   },
+   "di_na_u": {
+    "sim_to_assigned": 0.75,
+    "best_alt_aegean": 0.5,
+    "best_alt_name": "Inatos",
+    "assigned_is_uniquely_best": true
+   },
+   "i_na_ta_i_zu_di_si_ka": {
+    "sim_to_assigned": 0.3125,
+    "best_alt_aegean": 0.3125,
+    "best_alt_name": "Hierapytna",
+    "assigned_is_uniquely_best": false
+   }
+  },
+  "n_loci_where_assigned_NOT_uniquely_best": 6,
+  "n_loci": 15
+ },
+ "null5_best_of_subset": {
+  "k": 6,
+  "real_topk_mean": 0.7778,
+  "null_random_topk": {
+   "null_mean_topk": 0.6435,
+   "null_p95_topk": 0.7292
+  },
+  "firm_all_mean": 0.7222,
+  "interpret": "real top-k vs cherry-picked top-k from a random gazetteer of same size"
+ },
+ "null6_generic_soundfold": {
+  "per_locus": {
+   "pa_i_to": {
+    "coarse_sim_assigned": 1.0,
+    "coarse_best_alt": 1.0,
+    "coarse_alt_name": "Praisos"
+   },
+   "se_to_i_ja": {
+    "coarse_sim_assigned": 0.75,
+    "coarse_best_alt": 0.625,
+    "coarse_alt_name": "Kydonia"
+   },
+   "tu_ru_sa": {
+    "coarse_sim_assigned": 0.6667,
+    "coarse_best_alt": 0.8333,
+    "coarse_alt_name": "Sybrita"
+   },
+   "a_tu_ri_si_ti": {
+    "coarse_sim_assigned": 0.5,
+    "coarse_best_alt": 0.6,
+    "coarse_alt_name": "Anopolis"
+   },
+   "di_ki_te": {
+    "coarse_sim_assigned": 0.6667,
+    "coarse_best_alt": 0.6667,
+    "coarse_alt_name": "Tylissos"
+   },
+   "su_ki_ri_ta": {
+    "coarse_sim_assigned": 0.75,
+    "coarse_best_alt": 0.75,
+    "coarse_alt_name": "Kydonia"
+   },
+   "i_da_a": {
+    "coarse_sim_assigned": 0.6667,
+    "coarse_best_alt": 0.6667,
+    "coarse_alt_name": "Itanos"
+   },
+   "ku_79_ni": {
+    "coarse_sim_assigned": 0.5,
+    "coarse_best_alt": 0.75,
+    "coarse_alt_name": "Lyktos"
+   },
+   "da_u_49": {
+    "coarse_sim_assigned": 0.5,
+    "coarse_best_alt": 0.6667,
+    "coarse_alt_name": "Rhaukos"
+   },
+   "i_ti_ni_sa": {
+    "coarse_sim_assigned": 0.5,
+    "coarse_best_alt": 0.625,
+    "coarse_alt_name": "Sybrita"
+   },
+   "ku_ni_su": {
+    "coarse_sim_assigned": 0.3333,
+    "coarse_best_alt": 0.8333,
+    "coarse_alt_name": "Tylissos"
+   },
+   "ku_ta": {
+    "coarse_sim_assigned": 0.5,
+    "coarse_best_alt": 0.75,
+    "coarse_alt_name": "Lyktos"
+   },
+   "sa_ra2": {
+    "coarse_sim_assigned": 0.75,
+    "coarse_best_alt": 1.0,
+    "coarse_alt_name": "Tarrha"
+   },
+   "di_na_u": {
+    "coarse_sim_assigned": 0.75,
+    "coarse_best_alt": 0.6667,
+    "coarse_alt_name": "Kisamos"
+   },
+   "i_na_ta_i_zu_di_si_ka": {
+    "coarse_sim_assigned": 0.3125,
+    "coarse_best_alt": 0.5,
+    "coarse_alt_name": "Palaikastro"
+   }
+  },
+  "note": "consonants collapsed to one class; measures vowel-pattern-only coincidence"
+ },
+ "null7_leave_one_anchor_out": {
+  "per_anchor": {
+   "pa_i_to": {
+    "n_signs": 3,
+    "signs_lost_all_firm_support": [
+     "PA"
+    ],
+    "n_lost": 1,
+    "signs_still_covered_by_another": [
+     "I",
+     "TO"
+    ]
+   },
+   "se_to_i_ja": {
+    "n_signs": 4,
+    "signs_lost_all_firm_support": [
+     "SE",
+     "JA"
+    ],
+    "n_lost": 2,
+    "signs_still_covered_by_another": [
+     "TO",
+     "I"
+    ]
+   },
+   "tu_ru_sa": {
+    "n_signs": 3,
+    "signs_lost_all_firm_support": [
+     "RU",
+     "SA"
+    ],
+    "n_lost": 2,
+    "signs_still_covered_by_another": [
+     "TU"
+    ]
+   },
+   "a_tu_ri_si_ti": {
+    "n_signs": 5,
+    "signs_lost_all_firm_support": [
+     "A",
+     "SI",
+     "TI"
+    ],
+    "n_lost": 3,
+    "signs_still_covered_by_another": [
+     "TU",
+     "RI"
+    ]
+   },
+   "di_ki_te": {
+    "n_signs": 3,
+    "signs_lost_all_firm_support": [
+     "DI",
+     "TE"
+    ],
+    "n_lost": 2,
+    "signs_still_covered_by_another": [
+     "KI"
+    ]
+   },
+   "su_ki_ri_ta": {
+    "n_signs": 4,
+    "signs_lost_all_firm_support": [
+     "SU",
+     "TA"
+    ],
+    "n_lost": 2,
+    "signs_still_covered_by_another": [
+     "KI",
+     "RI"
+    ]
+   }
+  },
+  "n_firm_signs": 17,
+  "n_signs_single_anchor_support": 12,
+  "n_signs_multi_anchor_support": 5
+ },
+ "null8_leave_one_rule_out": {
+  "per_sign": {
+   "A": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "a_tu_ri_si_ti",
+      "base_sim": 0.5,
+      "wildcard_sim": 0.5,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "DI": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "di_ki_te",
+      "base_sim": 0.6667,
+      "wildcard_sim": 0.6667,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "I": {
+    "n_equations_touched": 2,
+    "detail": [
+     {
+      "anchor": "pa_i_to",
+      "base_sim": 1.0,
+      "wildcard_sim": 1.0,
+      "delta": 0.0
+     },
+     {
+      "anchor": "se_to_i_ja",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.75,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "JA": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "se_to_i_ja",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.875,
+      "delta": 0.125
+     }
+    ],
+    "max_gain_from_wildcard": 0.125
+   },
+   "KI": {
+    "n_equations_touched": 2,
+    "detail": [
+     {
+      "anchor": "di_ki_te",
+      "base_sim": 0.6667,
+      "wildcard_sim": 0.6667,
+      "delta": 0.0
+     },
+     {
+      "anchor": "su_ki_ri_ta",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.75,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "PA": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "pa_i_to",
+      "base_sim": 1.0,
+      "wildcard_sim": 1.0,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "RI": {
+    "n_equations_touched": 2,
+    "detail": [
+     {
+      "anchor": "a_tu_ri_si_ti",
+      "base_sim": 0.5,
+      "wildcard_sim": 0.5,
+      "delta": 0.0
+     },
+     {
+      "anchor": "su_ki_ri_ta",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.75,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "RU": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "tu_ru_sa",
+      "base_sim": 0.6667,
+      "wildcard_sim": 0.8333,
+      "delta": 0.1666
+     }
+    ],
+    "max_gain_from_wildcard": 0.1666
+   },
+   "SA": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "tu_ru_sa",
+      "base_sim": 0.6667,
+      "wildcard_sim": 0.8333,
+      "delta": 0.1666
+     }
+    ],
+    "max_gain_from_wildcard": 0.1666
+   },
+   "SE": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "se_to_i_ja",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.75,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "SI": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "a_tu_ri_si_ti",
+      "base_sim": 0.5,
+      "wildcard_sim": 0.6,
+      "delta": 0.1
+     }
+    ],
+    "max_gain_from_wildcard": 0.1
+   },
+   "SU": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "su_ki_ri_ta",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.75,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "TA": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "su_ki_ri_ta",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.75,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "TE": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "di_ki_te",
+      "base_sim": 0.6667,
+      "wildcard_sim": 0.6667,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   },
+   "TI": {
+    "n_equations_touched": 1,
+    "detail": [
+     {
+      "anchor": "a_tu_ri_si_ti",
+      "base_sim": 0.5,
+      "wildcard_sim": 0.6,
+      "delta": 0.1
+     }
+    ],
+    "max_gain_from_wildcard": 0.1
+   },
+   "TO": {
+    "n_equations_touched": 2,
+    "detail": [
+     {
+      "anchor": "pa_i_to",
+      "base_sim": 1.0,
+      "wildcard_sim": 1.0,
+      "delta": 0.0
+     },
+     {
+      "anchor": "se_to_i_ja",
+      "base_sim": 0.75,
+      "wildcard_sim": 0.875,
+      "delta": 0.125
+     }
+    ],
+    "max_gain_from_wildcard": 0.125
+   },
+   "TU": {
+    "n_equations_touched": 2,
+    "detail": [
+     {
+      "anchor": "tu_ru_sa",
+      "base_sim": 0.6667,
+      "wildcard_sim": 0.6667,
+      "delta": 0.0
+     },
+     {
+      "anchor": "a_tu_ri_si_ti",
+      "base_sim": 0.5,
+      "wildcard_sim": 0.5,
+      "delta": 0.0
+     }
+    ],
+    "max_gain_from_wildcard": 0.0
+   }
+  },
+  "most_load_bearing_signs": [
+   [
+    "I",
+    2
+   ],
+   [
+    "KI",
+    2
+   ],
+   [
+    "RI",
+    2
+   ],
+   [
+    "TO",
+    2
+   ],
+   [
+    "TU",
+    2
+   ],
+   [
+    "A",
+    1
+   ]
+  ]
+ },
+ "cited_frozen_gate": {
+  "verdict": "REFUTE_LOTO_FRAGILE",
+  "distributional_channel_top1": 0.0,
+  "loto_recovered": [
+   "I",
+   "RI"
+  ],
+  "depth": "each one-toponym-deep",
+  "dois": [
+   "10.5281/zenodo.21168887",
+   "10.5281/zenodo.21173639"
+  ]
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "task": "G3b_compound_systems",
+ "seed": 20260708,
+ "strict_bar": ">=4 distinct signs, >=2 contexts, >=2 INDEPENDENT value-bearing channels",
+ "loose_bar": ">=4 distinct signs, >=2 contexts, >=2 evidence channels (any)",
+ "value_bearing_channels": [
+  "L_toponym"
+ ],
+ "note_channels": "shape-homomorphy and Cypriot-stability channels INHERIT the LB value (Art. XII circular) -> they are NOT independent value-bearing channels; the ONLY value-bearing channel is the toponym external-referent channel, whose 'sub-channels' are distinct firm referents.",
+ "systems": [
+  {
+   "name": "TOP-FIRM: 6 firm toponym equations",
+   "n_records": 6,
+   "signs": [
+    "A",
+    "DI",
+    "I",
+    "JA",
+    "KI",
+    "PA",
+    "RI",
+    "RU",
+    "SA",
+    "SE",
+    "SI",
+    "SU",
+    "TA",
+    "TE",
+    "TI",
+    "TO",
+    "TU"
+   ],
+   "n_signs": 17,
+   "channels": [
+    "L_toponym"
+   ],
+   "n_channels": 1,
+   "contexts": [
+    "Mt-Dikte",
+    "Phaistos",
+    "Sybrita",
+    "Tylissos",
+    "se-to-i-ja"
+   ],
+   "n_contexts": 5,
+   "value_bearing_channel_types_present": [
+    "L_toponym"
+   ],
+   "n_independent_value_channels": 1,
+   "distinct_value_referents_within_channel": [
+    "Mt-Dikte",
+    "Phaistos",
+    "Sybrita",
+    "Tylissos",
+    "se-to-i-ja"
+   ],
+   "n_distinct_value_referents": 5,
+   "clears_loose_bar(>=4sign,>=2ctx,>=2chan)": false,
+   "clears_STRICT_bar(>=4sign,>=2ctx,>=2 INDEP value chan)": false
+  },
+  {
+   "name": "TOP-CORROB-A: Phaistos + se-to-i-ja (share I,TO)",
+   "n_records": 2,
+   "signs": [
+    "I",
+    "JA",
+    "PA",
+    "SE",
+    "TO"
+   ],
+   "n_signs": 5,
+   "channels": [
+    "L_toponym"
+   ],
+   "n_channels": 1,
+   "contexts": [
+    "Phaistos",
+    "se-to-i-ja"
+   ],
+   "n_contexts": 2,
+   "value_bearing_channel_types_present": [
+    "L_toponym"
+   ],
+   "n_independent_value_channels": 1,
+   "distinct_value_referents_within_channel": [
+    "Phaistos",
+    "se-to-i-ja"
+   ],
+   "n_distinct_value_referents": 2,
+   "clears_loose_bar(>=4sign,>=2ctx,>=2chan)": false,
+   "clears_STRICT_bar(>=4sign,>=2ctx,>=2 INDEP value chan)": false
+  },
+  {
+   "name": "TOP-CORROB-B: Sybrita + Tylissos (share RI)",
+   "n_records": 3,
+   "signs": [
+    "A",
+    "KI",
+    "RI",
+    "RU",
+    "SA",
+    "SI",
+    "SU",
+    "TA",
+    "TI",
+    "TU"
+   ],
+   "n_signs": 10,
+   "channels": [
+    "L_toponym"
+   ],
+   "n_channels": 1,
+   "contexts": [
+    "Sybrita",
+    "Tylissos"
+   ],
+   "n_contexts": 2,
+   "value_bearing_channel_types_present": [
+    "L_toponym"
+   ],
+   "n_independent_value_channels": 1,
+   "distinct_value_referents_within_channel": [
+    "Sybrita",
+    "Tylissos"
+   ],
+   "n_distinct_value_referents": 2,
+   "clears_loose_bar(>=4sign,>=2ctx,>=2chan)": false,
+   "clears_STRICT_bar(>=4sign,>=2ctx,>=2 INDEP value chan)": false
+  },
+  {
+   "name": "HUB-SA: every anchor touching sign SA (all channels)",
+   "n_records": 10,
+   "signs": [
+    "A",
+    "I",
+    "KA",
+    "MA",
+    "NA",
+    "NI",
+    "RA2",
+    "RE",
+    "RO",
+    "RU",
+    "SA",
+    "SI",
+    "TI",
+    "TU"
+   ],
+   "n_signs": 14,
+   "channels": [
+    "C_cypriot",
+    "H_shape",
+    "L_personal_name",
+    "L_toponym",
+    "L_variation_constraint"
+   ],
+   "n_channels": 5,
+   "contexts": [
+    "cypr_SA",
+    "homo_SA",
+    "pn_a_re_sa_na",
+    "pn_a_sa_ra2",
+    "pn_ka_sa_ru",
+    "pn_sa_ma_ro",
+    "top_i_ti_ni_sa_younger",
+    "top_sa_ra2_younger",
+    "top_tu_ru_sa",
+    "var_s_series"
+   ],
+   "n_contexts": 10,
+   "value_bearing_channel_types_present": [
+    "L_toponym"
+   ],
+   "n_independent_value_channels": 1,
+   "distinct_value_referents_within_channel": [
+    "Tylissos"
+   ],
+   "n_distinct_value_referents": 1,
+   "clears_loose_bar(>=4sign,>=2ctx,>=2chan)": true,
+   "clears_STRICT_bar(>=4sign,>=2ctx,>=2 INDEP value chan)": false
+  },
+  {
+   "name": "CROSS-3CH: firm toponyms + shape + Cypriot on the same signs",
+   "n_records": 30,
+   "signs": [
+    "A",
+    "DI",
+    "I",
+    "JA",
+    "KI",
+    "PA",
+    "RI",
+    "RU",
+    "SA",
+    "SE",
+    "SI",
+    "SU",
+    "TA",
+    "TE",
+    "TI",
+    "TO",
+    "TU"
+   ],
+   "n_signs": 17,
+   "channels": [
+    "C_cypriot",
+    "H_shape",
+    "L_toponym"
+   ],
+   "n_channels": 3,
+   "contexts": [
+    "cypr_A",
+    "cypr_I",
+    "cypr_PA",
+    "cypr_SA",
+    "cypr_SE",
+    "cypr_TI",
+    "cypr_TO",
+    "homo_A",
+    "homo_DI",
+    "homo_I",
+    "homo_JA",
+    "homo_KI",
+    "homo_PA",
+    "homo_RI",
+    "homo_RU",
+    "homo_SA",
+    "homo_SE",
+    "homo_SI",
+    "homo_SU",
+    "homo_TA",
+    "homo_TE",
+    "homo_TI",
+    "homo_TO",
+    "homo_TU",
+    "top_a_tu_ri_si_ti",
+    "top_di_ki_te",
+    "top_pa_i_to",
+    "top_se_to_i_ja",
+    "top_su_ki_ri_ta",
+    "top_tu_ru_sa"
+   ],
+   "n_contexts": 30,
+   "value_bearing_channel_types_present": [
+    "L_toponym"
+   ],
+   "n_independent_value_channels": 1,
+   "distinct_value_referents_within_channel": [
+    "Mt-Dikte",
+    "Phaistos",
+    "Sybrita",
+    "Tylissos",
+    "se-to-i-ja"
+   ],
+   "n_distinct_value_referents": 5,
+   "clears_loose_bar(>=4sign,>=2ctx,>=2chan)": true,
+   "clears_STRICT_bar(>=4sign,>=2ctx,>=2 INDEP value chan)": false
+  }
+ ],
+ "systems_clearing_loose_bar": [
+  "HUB-SA: every anchor touching sign SA (all channels)",
+  "CROSS-3CH: firm toponyms + shape + Cypriot on the same signs"
+ ],
+ "systems_clearing_STRICT_bar": [],
+ "max_independent_value_channel_TYPES_any_system": 1,
+ "max_distinct_value_referents_within_channel": 5,
+ "richest_signs_by_channel_count": [
+  [
+   "SA",
+   5
+  ],
+  [
+   "NA",
+   5
+  ],
+  [
+   "PA",
+   4
+  ],
+  [
+   "I",
+   4
+  ],
+  [
+   "RU",
+   4
+  ],
+  [
+   "KI",
+   4
+  ],
+  [
+   "TE",
+   4
+  ],
+  [
+   "TA",
+   4
+  ]
+ ],
+ "headline": "Compound systems that reach >=2 EVIDENCE channels exist (e.g. HUB-SA spans 5 channels; CROSS-3CH spans 3), but EVERY system reaches the >=2-channel bar only by adding value-INHERITING channels (shape-homomorphy, Cypriot, personal-name). The number of INDEPENDENT value-bearing channel TYPES in any system is at most 1 (the toponym channel; there is no second value-bearing channel type). Within that one channel, up to 5 distinct firm referents co-occur and can share a sign (apparent corroboration), but the cited frozen LOTO gate collapses even that to {I,RI}, each one-toponym-deep. So NO compound system has >=2 genuinely INDEPENDENT value-bearing channels: the entire value substrate is one channel."
+}
