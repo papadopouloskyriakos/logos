@@ -1,0 +1,76 @@
+{
+ "n_forms": 4759,
+ "n_gold_nontrivial": 66,
+ "lf_coverage": {
+  "LF_TOPONYM_INDEX": 0.009,
+  "LF_TITLE_INDEX": 0.0036,
+  "LF_OPERATOR_INDEX": 0.0027,
+  "LF_QUALIFIER_INDEX": 0.0015,
+  "LF_PERSON_NAME_INDEX": 0.0,
+  "LF_LOGOGRAM_ADJACENCY": 0.0208,
+  "LF_NUMERAL_POSITION": 0.0017,
+  "LF_ENTRY_POSITION": 0.0782,
+  "LF_DOCUMENT_SERIES": 0.0,
+  "LF_RECURRENCE_PATTERN": 0.0166,
+  "LF_HEADER_POSITION": 0.0315,
+  "LF_TOTAL_POSITION": 0.0017,
+  "LF_NEGATIVE_EXCLUSION": 0.5955,
+  "LF_CROSS_SOURCE_CONCORDANCE": 0.0004
+ },
+ "lf_est_precision_on_gold": {
+  "LF_TOPONYM_INDEX": 1.0,
+  "LF_TITLE_INDEX": 1.0,
+  "LF_OPERATOR_INDEX": null,
+  "LF_QUALIFIER_INDEX": null,
+  "LF_PERSON_NAME_INDEX": null,
+  "LF_LOGOGRAM_ADJACENCY": 0.0,
+  "LF_NUMERAL_POSITION": null,
+  "LF_ENTRY_POSITION": 0.029,
+  "LF_DOCUMENT_SERIES": null,
+  "LF_RECURRENCE_PATTERN": 0.667,
+  "LF_HEADER_POSITION": 0.0,
+  "LF_TOTAL_POSITION": null,
+  "LF_NEGATIVE_EXCLUSION": null,
+  "LF_CROSS_SOURCE_CONCORDANCE": 1.0
+ },
+ "mean_lfs_firing": 0.76,
+ "conflict_rate": 0.0441,
+ "abstain_rate": 0.2919,
+ "ws_variants": {
+  "WS0_majority": {
+   "coverage": 0.7081,
+   "est_precision_on_gold": 1.0,
+   "n_gold_covered": 60
+  },
+  "WS1_source_weighted": {
+   "coverage": 0.7081,
+   "est_precision_on_gold": 1.0,
+   "n_gold_covered": 60
+  },
+  "WS2_generative": {
+   "coverage": 0.7081,
+   "est_precision_on_gold": 1.0,
+   "n_gold_covered": 60
+  },
+  "WS3_dependency_aware": {
+   "coverage": 0.7081,
+   "est_precision_on_gold": 1.0,
+   "n_gold_covered": 60
+  },
+  "WS4_conservative_intersection": {
+   "coverage": 0.664,
+   "est_precision_on_gold": 1.0,
+   "n_gold_covered": 23
+  }
+ },
+ "dependency_sensitivity_WS1_vs_WS3": 0.0,
+ "class_balance_WS3": {
+  "UNKNOWN": 2834,
+  "HUMAN_OR_INSTITUTION": 334,
+  "PLACE": 83,
+  "OPERATOR_OR_RELATION": 13,
+  "COMMODITY_OR_COUNTED_CATEGORY": 93,
+  "QUALIFIER": 7,
+  "DOCUMENT_STRUCTURE": 6
+ }
+}
