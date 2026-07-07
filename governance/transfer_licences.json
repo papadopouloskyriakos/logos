@@ -1,0 +1,25 @@
+{
+ "schema": "logos.governance.transfer_licences/v1",
+ "constitution": "v2.0",
+ "article": "XV",
+ "as_of": "2026-07-07",
+ "count_provenance": "Art. XIX: any numeric figure implied here is not hand-derived — it traces to the generated experiment artifacts (observable_channels/results/*.json, no_human_structure power_gate.json). This file records qualitative licence STATE only.",
+ "note": "Machine-readable transfer-licence state for Linear A. A lower licence never implies a higher one (Art. XV). NOT_YET_EARNED = prerequisites defined but not met; NOT_AUTHORIZED = gated by owner constraint and/or a lower licence not yet earned. No licence is currently held.",
+ "licences": {
+  "STRUCTURAL_TRANSFER_LICENSE": {
+   "state": "NOT_YET_EARNED",
+   "prerequisite": "readable-script (opaque Linear B) success under unseen-family + cross-site + O2+D8 nulls",
+   "current_evidence": "observable_channels programme RUNNING; Exp1 (masked logogram) = bounded negative for the commodity channel; >=2-channel gate not met"
+  },
+  "FUNCTIONAL_TRANSFER_LICENSE": {
+   "state": "NOT_YET_EARNED",
+   "prerequisite": "readable-script validation + observable-channel grounding",
+   "current_evidence": "pending observable_channels experiments 2-6"
+  },
+  "SEMANTIC_TRANSFER_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "owner constraint SEMANTIC_DECIPHERMENT=NOT_AUTHORIZED; and STRUCTURAL/FUNCTIONAL not yet earned"},
+  "LEXICAL_TRANSFER_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "no lower licence earned"},
+  "PHONETIC_TRANSFER_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "Egyptian/Cretan anchor programme CLOSED as TRIVIAL_RECOVERY; no non-trivial external anchor survives leave-one-anchor-out"},
+  "LANGUAGE_IDENTIFICATION_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "no phonetic authority"},
+  "TRANSLATION_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "no lower licence earned"}
+ }
+}

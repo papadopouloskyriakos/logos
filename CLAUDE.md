@@ -23,6 +23,31 @@ that null result — rigorously mapping what the corpus can and cannot support �
 the aim.* Do NOT write defeatist "Linear A is uncrackable" framing into any doc, prompt, or
 UI copy.
 
+## Constitution — v2.0 is authoritative (ratified 2026-07-07)
+
+The full governing document is **[`governance/CONSTITUTION-v2.0.md`](./governance/CONSTITUTION-v2.0.md)**
+(Preamble + Articles I–XXIII + claim/licence matrix + status vocabulary). It **supersedes** the 12
+invariants below — which remain the day-to-day condensed form, now subsumed by the Articles. Where the two
+differ, **governance/ governs**. Amendment protocol: Article XXIII only (see
+[`governance/AMENDMENT-001-v1-to-v2.md`](./governance/AMENDMENT-001-v1-to-v2.md)); never change it silently.
+
+What v2.0 adds beyond the invariants (use these in every stage):
+
+- **Claim layers L0–L9** (Art. V) — physical → sign-id → structure → functional role → semantic → lexical →
+  phonetic → grammar → language-id → translation. **No result may be worded above its earned layer.**
+- **Transfer licences** (Art. XV) — STRUCTURAL / FUNCTIONAL / SEMANTIC / LEXICAL / PHONETIC / LANGUAGE_ID /
+  TRANSLATION, each earned separately on a readable-script analogue; a lower licence never implies a higher.
+  Current Linear A state: `governance/transfer_licences.json` (none earned; SEMANTIC+ NOT_AUTHORIZED).
+- **effective_n, not raw_n** (Art. VIII); **complete search receipt** (Art. VII); **information-budget
+  panel** (Art. IX); **source-dependency graph** (Art. XI); **no grading a target by the rule that created
+  it** (Art. XII); **assumption register** (Art. XVIII → `governance/assumption_register.json`).
+- **Append-only record** (Art. XVII) — corrections are ERRATUM / SUPERSEDING / INVALIDATION, never silent
+  deletion; an amendment may not turn a failed result into a success.
+- **Explicit status vocabulary only** (PROPOSED/RUNNING/COMPLETE/SUPPORTED/REFUTED/NO_POWER/TRIVIAL_RECOVERY/
+  UNDERDETERMINED/REJECT_ARCHITECTURE/…) — no "promising"/"partial success" without a mechanical definition.
+- **Every stage cites articles** (Art. XXII): open with articles_triggered + gates + assumptions; close with
+  a compliance line.
+
 ## Invariants — do not break these
 
 1. **No claim without a committed prediction (fail CLOSED).** Before any verdict, a
@@ -72,8 +97,14 @@ UI copy.
 
 ## Current status
 
-**NOW (2026-07-03) — SUBMITTED: Zenodo preprint published + TACL under way; paper stays
-byte-frozen through review.**
+**NOW (2026-07-07) — CONSTITUTION v2.0 ratified (`governance/`); paper stays SUBMITTED +
+byte-frozen through review; post-submission research continues on child branches under v2.0.**
+Governance: v2.0 adopted 2026-07-07 (AMENDMENT-001, non-retroactive — no prior null becomes a
+success). Post-submission structural work: the no-human source-label route CLOSED as `NO_POWER`;
+the **Observable Administrative Channel Recovery** programme is `RUNNING`
+(`research/observable-admin-channel-recovery`) — Experiment 1 (masked logogram) = bounded negative
+(commodity is a document-series shortcut; word-context fails A12 + cross-site). The frozen paper is
+unaffected (audited COMPLIANT at adoption; any gap → ERRATUM, never a silent rebuild).
 The harness is built, exercised, calibrated, written up, and out the door:
 
 - **Corpus ingested** (silver: 1,341 inscriptions / 52 sites; DĀMOS Linear B 13,562
