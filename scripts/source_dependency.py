@@ -41,39 +41,101 @@ def lineage_of(source_id, graph):
     return src["lineage"]
 
 
-def collapse(source_ids, graph=None):
-    """Group cited sources by evidentiary lineage. Returns {lineage_id: [source_ids...]} (sorted)."""
+def _derives_transitive(sid, graph, seen=None):
+    """All sources sid derives from, transitively."""
+    seen = seen if seen is not None else set()
+    for dep in graph["sources"][sid].get("derives_from", []):
+        if dep not in seen:
+            seen.add(dep)
+            _derives_transitive(dep, graph, seen)
+    return seen
+
+
+def _dependent(a, b, graph):
+    """Mechanical B4 test (Art. XI): two sources are DEPENDENT unless they have (i) distinct underlying
+    edition AND (ii) distinct decipherment lineage AND (iii) no shared upstream lexicon — and neither
+    derives from the other without demonstrating independence. Computed from the ATOMIC fields, not the
+    hand-authored lineage label alone; `independence_demonstrated` releases the derives_from / shared-edition
+    link (e.g. STRUCTURAL_RULES derives from DAMOS but is edition-independent)."""
+    sa, sb = graph["sources"][a], graph["sources"][b]
+    if a == b:
+        return True
+    if b in _derives_transitive(a, graph) and not sa.get("independence_demonstrated"):
+        return True
+    if a in _derives_transitive(b, graph) and not sb.get("independence_demonstrated"):
+        return True
+
+    def shared(field):
+        va, vb = sa.get(field), sb.get(field)
+        return va is not None and va == vb
+
+    if shared("shared_decipherment_tradition"):
+        return True
+    if shared("upstream_lexicon"):
+        return True
+    if shared("underlying_edition") and not (sa.get("independence_demonstrated") and sb.get("independence_demonstrated")):
+        return True
+    if sa.get("lineage") == sb.get("lineage"):
+        return True
+    return False
+
+
+def _components(source_ids, graph):
+    """Union-find over the mechanical B4 dependency -> list of components (each a sorted list of sources)."""
+    ids = list(dict.fromkeys(source_ids))
+    for sid in ids:
+        if sid not in graph["sources"]:
+            raise KeyError(f"unknown source '{sid}' — cannot assess independence (Art. XI/XVI: fail loud)")
+    parent = {s: s for s in ids}
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]; x = parent[x]
+        return x
+
+    for i in range(len(ids)):
+        for j in range(i + 1, len(ids)):
+            if _dependent(ids[i], ids[j], graph):
+                parent[find(ids[i])] = find(ids[j])
+    comps = {}
+    for s in ids:
+        comps.setdefault(find(s), []).append(s)
+    return [sorted(v) for v in comps.values()]
+
+
+def component_map(source_ids, graph=None):
+    """{source_id -> component representative} — the mechanical evidentiary-unit id (for effective_n folds)."""
     graph = graph or load_graph()
-    out = {}
-    for sid in source_ids:
-        out.setdefault(lineage_of(sid, graph), []).append(sid)
-    return {k: sorted(v) for k, v in sorted(out.items())}
+    return {s: comp[0] for comp in _components(source_ids, graph) for s in comp}
+
+
+def collapse(source_ids, graph=None):
+    """Group cited sources into evidentiary components (mechanical B4). Returns {representative: [sources]}."""
+    graph = graph or load_graph()
+    return {comp[0]: comp for comp in _components(source_ids, graph)}
 
 
 def effective_sources(source_ids, graph=None):
-    """The number of INDEPENDENT evidentiary votes = distinct lineages (Art. XI -> Art. VIII effective_n)."""
+    """Number of INDEPENDENT evidentiary votes = mechanical B4 components (Art. XI -> Art. VIII effective_n)."""
     graph = graph or load_graph()
-    return len(collapse(source_ids, graph))
+    return len(_components(source_ids, graph))
 
 
 def concordance(source_ids, graph=None):
-    """Full independence assessment of a set of 'agreeing' sources. `raw_n` sources collapse to
-    `effective_n` independent votes; agreement is independent replication ONLY if effective_n == raw_n."""
+    """Full independence assessment. `raw_n` sources collapse to `effective_n` independent votes (mechanical
+    B4); agreement is independent replication ONLY if effective_n == raw_n."""
     graph = graph or load_graph()
-    ids = list(dict.fromkeys(source_ids))                  # dedup, preserve order
-    by_lineage = collapse(ids, graph)
-    eff = len(by_lineage)
-    collapsed = {lin: sids for lin, sids in by_lineage.items() if len(sids) > 1}
+    ids = list(dict.fromkeys(source_ids))
+    comps = _components(ids, graph)
+    eff = len(comps)
+    collapsed = {c[0]: c for c in comps if len(c) > 1}
+    # lineage labels appearing in a collapsed (multi-source) component
+    collapsed_lineages = {graph["sources"][s]["lineage"] for c in comps if len(c) > 1 for s in c}
     is_indep = eff == len(ids)
-    if is_indep:
-        verdict = "INDEPENDENT_REPLICATION"
-    elif eff == 1:
-        verdict = "SINGLE_LINEAGE"                          # all one evidentiary vote (e.g. SHARED_DECIPHERMENT)
-    else:
-        verdict = "PARTIALLY_DEPENDENT"
+    verdict = ("INDEPENDENT_REPLICATION" if is_indep else "SINGLE_LINEAGE" if eff == 1 else "PARTIALLY_DEPENDENT")
     return {"raw_n": len(ids), "effective_n": eff, "independent": is_indep, "verdict": verdict,
-            "by_lineage": by_lineage, "collapsed_lineages": collapsed,
-            "note": "effective_n independent evidentiary votes (Art. XI); count agreement as effective_n, never raw_n."}
+            "components": comps, "collapsed": collapsed, "collapsed_lineages": sorted(collapsed_lineages),
+            "note": "effective_n independent evidentiary votes (mechanical B4, Art. XI); count agreement as effective_n, never raw_n."}
 
 
 def validate(graph=None):

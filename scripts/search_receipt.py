@@ -35,11 +35,16 @@ class SearchReceipt:
         self.trials = []
 
     def log(self, partition, config=None, label="", prereg=None, outcome=None):
-        """Record one evaluated configuration. `config` maps Art. VII dimensions -> values. A confirmatory
-        trial MUST cite a preregistration (`prereg`) — enforced by validate() (Art. II fail-closed)."""
+        """Record one evaluated configuration. `config` maps Art. VII dimensions -> values and must be
+        NON-EMPTY (a trial with no recorded configuration cannot be counted — and must not be free, else
+        multiplicity is gameable by logging sparse/empty branches). A confirmatory trial MUST cite a
+        preregistration (`prereg`) — enforced by validate() (Art. II fail-closed)."""
         if partition not in PARTITIONS:
             raise ValueError(f"partition must be one of {PARTITIONS}, got {partition!r}")
         config = config or {}
+        if not config:
+            raise ValueError("empty config — every logged trial must record >=1 Art. VII dimension "
+                             "(an empty-config trial would collapse the multiplicity count; Art. VII)")
         bad = [k for k in config if k not in DIMENSIONS]
         if bad:
             raise KeyError(f"not Art. VII search dimensions: {bad}")
@@ -48,15 +53,18 @@ class SearchReceipt:
         return self
 
     def _sig(self, t):
-        return json.dumps(t["config"], sort_keys=True)
+        # full trial identity (partition + label + config) — two genuinely distinct analyses that happen
+        # to share the recorded dimensions do NOT collapse into one trial.
+        return json.dumps([t["partition"], t["label"], t["config"]], sort_keys=True)
 
     def n_trials(self, partition=None):
         return sum(1 for t in self.trials if partition is None or t["partition"] == partition)
 
     def multiplicity_n(self):
-        """The honest trial count for multiplicity deflation: the number of DISTINCT evaluated
-        configurations across ALL partitions (every one was a chance at accidental success — the garden of
-        forking paths). Feed this as N to logos_stats deflation / dsr_trial_count."""
+        """The honest trial count for multiplicity deflation: DISTINCT full trial identities (partition +
+        label + config) across ALL partitions — every evaluated configuration is a chance at accidental
+        success (the garden of forking paths). Feed this as N to logos_stats deflation / dsr_trial_count.
+        Only exact replays (same partition+label+config) collapse; empty configs are rejected at log()."""
         return len({self._sig(t) for t in self.trials})
 
     def partition_counts(self):

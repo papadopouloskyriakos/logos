@@ -38,6 +38,18 @@ def test_linear_a_corpus_collapses():
     assert sd.effective_sources(["SRC-GORILA", "SRC-SIGLA", "SRC-SILVER"]) == 1
 
 
+def test_b4_mechanical_collapse_ignores_label_when_derived():
+    """Salgarella has a DIFFERENT lineage label (L_SIGN_HOMOMORPHY) but derives_from GORILA with
+    independence_demonstrated=false -> mechanical B4 collapses them to ONE vote (not 2)."""
+    r = sd.concordance(["SRC-GORILA", "SRC-SALGARELLA-2020"])
+    assert r["effective_n"] == 1 and r["independent"] is False
+
+
+def test_structural_rules_stay_independent_despite_deriving_from_damos():
+    """STRUCTURAL_RULES derives_from DAMOS but independence_demonstrated=true -> stays a distinct vote."""
+    assert sd.effective_sources(["SRC-STRUCTURAL-RULES", "SRC-DAMOS"]) == 2
+
+
 def test_egyptian_is_independent_of_aegean():
     """Cross-domain: an Egyptian edition is independent of the Aegean decipherment lineage."""
     r = sd.concordance(["SRC-EDEL-GORG-2005", "SRC-DMIC"])

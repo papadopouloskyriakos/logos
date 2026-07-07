@@ -36,30 +36,42 @@ def distinct_units(items, by):
     return len(seen)
 
 
-def effective_n(items, dims, source_key="source_id"):
-    """Report raw_n + per-dimension independent-unit counts + the bottleneck effective_n.
+def effective_n(items, dims, source_key="source_id", require_source=False):
+    """Report raw_n + per-dimension marginals (UPPER bounds) + the JOINT effective_n.
 
     `dims` are the grouping dimensions the claim must be independent along (e.g. ['lexical_family',
-    'site', 'document_id']). effective_n = the MINIMUM distinct count across those dims — the tightest
-    independence constraint. If items carry `source_key`, the Art. XI source-lineage count is folded in as
-    another dimension (dependent editions/lexica collapse to one lineage)."""
+    'site', 'document_id']). Two records are dependent if they SHARE a value on ANY of those dims (or the
+    Art. XI source lineage), so the honest independent-evidence count is the number of connected components
+    under union-find over all of them — which is <= the min of the per-dimension marginals (the min
+    OVERSTATES independence when the claim must be independent along several dims simultaneously). The
+    conservative joint count is the headline `effective_n`; graduation keys off it (guilty-until-proven).
+
+    If items carry `source_key`, dependent editions/lexica are collapsed to one Art. XI lineage and folded
+    into the union-find. `require_source=True` (for graduating calls) raises if no source provenance is
+    present, so the lineage collapse cannot be silently skipped."""
     dims = list(dims)
     by_dim = {d: distinct_units(items, d) for d in dims}
-    # Art. XI: collapse cited sources to independent lineages
-    src_ids = [s for s in (_val(it, source_key) for it in items) if s is not None]
-    if src_ids:
-        try:
-            from scripts import source_dependency
-            by_dim["source_lineage"] = source_dependency.effective_sources(sorted(set(src_ids)))
-        except Exception as e:                                  # unknown source fails loud upstream
-            raise
-    if not by_dim:
-        return {"raw_n": len(items), "by_dim": {}, "effective_n": len(items),
-                "bottleneck_dim": None, "note": "no dimensions given — effective_n defaults to raw_n"}
-    bottleneck_dim = min(by_dim, key=by_dim.get)
-    return {"raw_n": len(items), "by_dim": by_dim, "effective_n": by_dim[bottleneck_dim],
-            "bottleneck_dim": bottleneck_dim,
-            "note": "effective_n = min independent-unit count across the claim's required-independence dims (Art. VIII); graduation keys off this, never raw_n."}
+    proj = [{d: _val(it, d) for d in dims} for it in items]              # projection for the union-find
+    link_keys = list(dims)
+    src_ids = [_val(it, source_key) for it in items]
+    if any(s is not None for s in src_ids):
+        from scripts import source_dependency
+        graph = source_dependency.load_graph()
+        for p, s in zip(proj, src_ids):
+            p["_lineage"] = source_dependency.lineage_of(s, graph) if s is not None else None
+        link_keys.append("_lineage")
+        by_dim["source_lineage"] = source_dependency.effective_sources(
+            sorted({s for s in src_ids if s is not None}))
+    elif require_source:
+        raise ValueError("no source provenance (source_key absent) — a graduating effective_n call must "
+                         "provide source ids so the Art. XI lineage collapse cannot be silently skipped")
+    joint = dependency_components(proj, link_keys) if (link_keys and items) else len(items)
+    marginal_min = min(by_dim.values()) if by_dim else len(items)
+    return {"raw_n": len(items), "by_dim": by_dim, "marginal_min_upper_bound": marginal_min,
+            "effective_n": joint,
+            "note": "effective_n = JOINT connected-components over all required dims + Art. XI source lineage "
+                    "(the conservative count; by_dim are per-dimension marginal UPPER bounds). Graduation "
+                    "keys off effective_n, never raw_n or the marginal min."}
 
 
 def dependency_components(items, link_keys):

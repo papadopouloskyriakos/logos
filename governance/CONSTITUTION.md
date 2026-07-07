@@ -1,9 +1,10 @@
-# LOGOS Constitution v2.1
+# LOGOS Constitution v2.2
 
-**Status:** RATIFIED · **Effective:** 2026-07-07 (v2.0) · **Amended:** 2026-07-07 (v2.1) ·
+**Status:** RATIFIED · **Effective:** 2026-07-07 (v2.0) · **Amended:** 2026-07-07 (v2.1, v2.2) ·
 **Supersedes:** v1.0 (the Mission + 12 Invariants formerly in `CLAUDE.md`)
 **Amendment records:** [`AMENDMENT-001-v1-to-v2.md`](./AMENDMENT-001-v1-to-v2.md) (v1→v2.0),
-[`AMENDMENT-002-v2.0-to-v2.1.md`](./AMENDMENT-002-v2.0-to-v2.1.md) (v2.0→v2.1, precision fixes B1–B8).
+[`AMENDMENT-002-v2.0-to-v2.1.md`](./AMENDMENT-002-v2.0-to-v2.1.md) (v2.0→v2.1, precision fixes B1–B8),
+[`AMENDMENT-003-v2.1-to-v2.2.md`](./AMENDMENT-003-v2.1-to-v2.2.md) (v2.1→v2.2, corrects B5 tier direction + B6 layer→licence map).
 
 This document is the authoritative constitution of the LOGOS decipherment-research platform.
 `CLAUDE.md` carries a condensed pointer for day-to-day work; where the two differ, **this document
@@ -261,20 +262,43 @@ ACCEPTED
 authorized by a deterministic predicate over (evidence tier from Article IV × `effective_n` from Article VIII
 × deflated significance from Article VII), computed by code, never asserted:
 
+Article IV numbers evidence strongest-first (1 = newly-discovered inscription … 6 = resampled internal
+validation, which is in-sample). The predicates below are stated qualitatively so the ladder stays
+monotonic with that ordering; **resampled internal validation (tier 6) NEVER satisfies a held-out
+predicate** (corrected in AMENDMENT-003 — the earlier `tier >= N` phrasing inverted the ordering and let
+in-sample resampling qualify):
+
 ```text
 SPECULATIVE            no held-out evidence (exploratory only)
-EXPLORATORY            in-sample / derivation-set fit only
-SUPPORTED              beats the null on held-out data (Art. IV tier >= 3) after deflation
-HELD_OUT_SUPPORTED     SUPPORTED on a held-out SITE/SCRIBE/SERIES or unseen FAMILY (Art. IV tier >= 4)
-REPLICATED             HELD_OUT_SUPPORTED under an INDEPENDENT verifier (Art. III independence_class differs)
+EXPLORATORY            in-sample / derivation-set fit only (incl. Art. IV tier 6 resampled internal)
+SUPPORTED              beats the null (after deflation) on genuinely HELD-OUT data — any of Art. IV tiers 1-5; NEVER tier 6
+HELD_OUT_SUPPORTED     SUPPORTED where the hold-out crosses a STRUCTURAL boundary — held-out SITE/SCRIBE/SERIES/CHRONOLOGY or unseen LEXICAL/MORPHOLOGICAL FAMILY (Art. IV tiers 1-2, 4-5), not merely a within-population inscription split (tier 3)
+REPLICATED             HELD_OUT_SUPPORTED reproduced under an INDEPENDENT verifier (Art. III independence_class differs)
 PROVISIONALLY_ACCEPTED REPLICATED + survives qualified external review
 ACCEPTED               PROVISIONALLY_ACCEPTED + predicts a newly-discovered inscription (Art. IV tier 1)
 ```
 
 **Licence caps confidence (B6).** A claim's confidence class is **capped by the transfer licence earned for
-its claim layer (Article XV)**: the licence gate dominates. A claim at layer L may not be labeled above
-`SUPPORTED` unless the licence for layer L is held. (E.g. an L6 phonetic claim cannot be `HELD_OUT_SUPPORTED`
-while no `PHONETIC_TRANSFER_LICENSE` is held.)
+its claim layer (Article XV)**: the licence gate dominates. A claim at a layer that HAS a licence may not be
+labeled above `SUPPORTED` unless that licence is held. The total layer→licence map (AMENDMENT-003, so no
+layer is undefined) is:
+
+```text
+L0 physical observation      -> none (exempt from the cap — an observation is not a transfer claim)
+L1 sign identification       -> none (exempt from the cap)
+L2 segmentation/structure    -> STRUCTURAL_TRANSFER_LICENSE
+L3 administrative/functional -> FUNCTIONAL_TRANSFER_LICENSE
+L4 semantic class            -> SEMANTIC_TRANSFER_LICENSE
+L5 lexical meaning           -> LEXICAL_TRANSFER_LICENSE
+L6 phonetic value            -> PHONETIC_TRANSFER_LICENSE
+L7 grammatical analysis      -> LANGUAGE_IDENTIFICATION_LICENSE (grammar is gated by the language-id licence)
+L8 language identification    -> LANGUAGE_IDENTIFICATION_LICENSE
+L9 continuous translation    -> TRANSLATION_LICENSE
+```
+
+L0/L1 are observation/identification, not transfer claims, so they are **exempt** from the cap (never
+frozen at `SUPPORTED`). E.g. an L6 phonetic claim cannot be `HELD_OUT_SUPPORTED` while no
+`PHONETIC_TRANSFER_LICENSE` is held.
 
 Confidence must be deflated for:
 

@@ -79,3 +79,29 @@ is not mistaken for a bug: these classes are reserved for out-of-repo human adju
 **Status:** `RESOLVED` — B1–B8 were enacted in **AMENDMENT-002 (v2.0 → v2.1)**, 2026-07-07, owner-approved.
 See [`AMENDMENT-002-v2.0-to-v2.1.md`](./AMENDMENT-002-v2.0-to-v2.1.md). A1/A2/A3 were resolved in the v2.0
 ratification commit. This audit record is retained (append-only, Art. XVII) as the provenance of v2.1.
+
+---
+
+## Second round — v2.1 + tooling adversarial review (2026-07-07)
+
+After building the enforcement tooling, a 4-agent adversarial review (workflow `wf_c5c47c7f-d52`, find →
+independently verify) raised 19 findings; **16 confirmed** by a second verifier. All fixed in the same
+session:
+
+- **Code (fail-open → fail-closed):** `licence_gate.py` accepted mistyped/out-of-range layers and unknown
+  confidence strings (a **critical** Art. XV/B6 bypass) → normalize + fail closed, block boundary tracks the
+  licence matrix; `info_budget.requires_panel` exempted unknown confidence/layer → fail closed + added
+  `source_dependency_structure`/`search_space_size` to load-bearing + a power floor; `search_receipt`
+  empty-config collapsed multiplicity → reject empty config, count full trial identity; `assumption_gate`
+  only blocked FALSE/STALE → **VERIFIED is now the sole non-blocking state** (UNKNOWN/PARTIAL block);
+  `stage_header` never validated the close block → added `validate_close`.
+- **`effective_n` correctness:** the headline was `min` of per-dimension marginals, which **overstates**
+  independence vs the joint dependency → headline is now the **joint union-find components** (conservative,
+  guilty-until-proven); marginals reported as upper bounds.
+- **`source_dependency` faithfulness (B4):** collapsed on the hand-authored `lineage` label, ignoring the
+  atomic fields → now computes independence **mechanically** from `derives_from` / shared edition / lexicon /
+  tradition, honoring `independence_demonstrated` (GORILA+Salgarella now correctly = 1 vote).
+- **Constitution (B5/B6):** the B5 tier comparator was inverted (let in-sample tier-6 qualify as held-out)
+  and B6's layer→licence map was partial (froze L0/L1/L7 at SUPPORTED) → **AMENDMENT-003 (v2.2)**.
+
+3 findings were not confirmed by the verifier and dropped. All new behaviour is locked by regression tests.

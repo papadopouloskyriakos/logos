@@ -31,9 +31,18 @@ def test_confirmatory_without_prereg_is_a_violation():
 def test_rejects_bad_partition_and_dimension():
     r = SearchReceipt()
     with pytest.raises(ValueError):
-        r.log("not_a_partition", {})
+        r.log("not_a_partition", {"seed": 1})
     with pytest.raises(KeyError):
         r.log("exploratory", {"not_a_dimension": 1})
+
+
+def test_rejects_empty_config():
+    """An empty-config trial must be rejected — otherwise multiplicity collapses to 1 (the review finding)."""
+    r = SearchReceipt()
+    with pytest.raises(ValueError):
+        r.log("exploratory")                 # no config -> would collapse the multiplicity count
+    with pytest.raises(ValueError):
+        r.log("exploratory", {})
 
 
 def test_dimensions_used():

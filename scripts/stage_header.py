@@ -53,9 +53,24 @@ def validate(header, enforce_assumptions=True):
             from scripts import assumption_gate
             r = assumption_gate.check(header["assumptions_checked"])
             for b in r["blocked"]:
-                problems.append(f"stage depends on FALSE/STALE assumption {b['id']} ({b['status']}) — Art. XVIII blocks")
+                problems.append(f"stage depends on non-VERIFIED assumption {b['id']} ({b['status']}) — Art. XVIII blocks")
         except KeyError as e:
             problems.append(str(e))
+    return problems
+
+
+def validate_close(close):
+    """Art. XXII: a final report must CLOSE with a well-formed compliance block. Returns problems (empty=OK).
+    A stage without a non-empty `constitutional_compliance` value is not compliant with Art. XXII."""
+    problems = []
+    if not isinstance(close, dict):
+        return ["missing close block (Art. XXII requires a closing compliance record)"]
+    cc = close.get("constitutional_compliance")
+    if not (isinstance(cc, str) and cc.strip()):
+        problems.append("close block missing a non-empty 'constitutional_compliance' value (Art. XXII)")
+    for k in ("deviations", "violations", "waivers", "amendments_required"):
+        if k in close and not isinstance(close[k], list):
+            problems.append(f"close block field '{k}' must be a list")
     return problems
 
 

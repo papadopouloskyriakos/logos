@@ -25,9 +25,13 @@ FIELDS = [
     "missing_feature_burden", "damage_rate", "class_balance", "domain_shift",
     "minimum_detectable_effect", "estimated_power",
 ]
-# fields that MUST be known to certify a graduating claim (the inferential core)
+# fields that MUST be known to certify a graduating claim (the inferential + multiplicity/independence core)
 LOAD_BEARING = ["effective_independent_evidence", "parameter_count", "minimum_detectable_effect",
-                "estimated_power"]
+                "estimated_power", "source_dependency_structure", "search_space_size"]
+
+CONF_ORDER = ["SPECULATIVE", "EXPLORATORY", "SUPPORTED", "HELD_OUT_SUPPORTED", "REPLICATED",
+              "PROVISIONALLY_ACCEPTED", "ACCEPTED"]
+POWER_FLOOR = 0.5                     # a positive graduating claim needs adequate power to detect its effect
 
 UNKNOWN = "UNKNOWN"
 
@@ -50,19 +54,28 @@ def underdetermined(panel):
 
 
 def requires_panel(claim_layer=None, confidence=None):
-    """B7 scope: required for layer >= L2 or confidence >= SUPPORTED; bare L0/L1 observations exempt."""
+    """B7 scope: required for layer >= L2 or confidence >= SUPPORTED; bare L0/L1 observations exempt.
+    FAILS CLOSED — a supplied-but-unrecognized layer or confidence string REQUIRES the panel (never exempt)."""
     layer_needs = False
-    if isinstance(claim_layer, str) and claim_layer.upper().startswith("L") and claim_layer[1:].isdigit():
-        layer_needs = int(claim_layer[1:]) >= 2
-    conf_order = ["SPECULATIVE", "EXPLORATORY", "SUPPORTED", "HELD_OUT_SUPPORTED", "REPLICATED",
-                  "PROVISIONALLY_ACCEPTED", "ACCEPTED"]
-    conf_needs = confidence in conf_order and conf_order.index(confidence) >= conf_order.index("SUPPORTED")
+    if claim_layer is not None:
+        cl = str(claim_layer).strip().upper()
+        if cl.startswith("L") and cl[1:].isdigit():
+            layer_needs = int(cl[1:]) >= 2
+        else:
+            return True                                       # unrecognized layer -> require (fail closed)
+    conf_needs = False
+    if confidence is not None:
+        cn = str(confidence).strip().upper()
+        if cn in CONF_ORDER:
+            conf_needs = CONF_ORDER.index(cn) >= CONF_ORDER.index("SUPPORTED")
+        else:
+            return True                                       # unrecognized confidence -> require (fail closed)
     return bool(layer_needs or conf_needs)
 
 
-def certify(panel, claim_layer=None, confidence=None):
+def certify(panel, claim_layer=None, confidence=None, power_floor=POWER_FLOOR):
     """Fail-closed certification (Art. IX/XVI). A claim that requires the panel is NOT certified while a
-    load-bearing field is UNKNOWN or the claim is underdetermined."""
+    load-bearing field is UNKNOWN, the claim is underdetermined, or it is underpowered."""
     needed = requires_panel(claim_layer, confidence)
     reasons = []
     if not needed:
@@ -74,7 +87,11 @@ def certify(panel, claim_layer=None, confidence=None):
     if ud is True:
         reasons.append(f"UNDERDETERMINED: parameter_count {panel['parameter_count']} > "
                        f"effective_independent_evidence {panel['effective_independent_evidence']}")
-    return {"required": True, "certified": len(reasons) == 0, "underdetermined": ud, "reasons": reasons or ["all load-bearing fields present; not underdetermined"]}
+    ep = panel.get("estimated_power")
+    if ep != UNKNOWN and ep is not None and float(ep) < power_floor:
+        reasons.append(f"UNDERPOWERED: estimated_power {ep} < floor {power_floor}")
+    return {"required": True, "certified": len(reasons) == 0, "underdetermined": ud,
+            "reasons": reasons or ["all load-bearing fields present; not underdetermined; adequately powered"]}
 
 
 def render(panel):

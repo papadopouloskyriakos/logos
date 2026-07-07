@@ -30,6 +30,13 @@ def test_unknown_assumption_fails_loud():
         ag.check(["A99"])
 
 
+def test_partial_load_bearing_assumption_blocks():
+    """Art. XVIII 'verified': a PARTIAL load-bearing premise (A03) is NOT affirmatively verified -> blocks."""
+    assert "A03" in ag.blocking()
+    with pytest.raises(RuntimeError):
+        ag.require(["A03"])
+
+
 # ---- Art. XV licence gate ----
 
 def test_linear_a_functional_output_blocked_without_licence():
@@ -48,6 +55,19 @@ def test_l0_l1_observation_needs_no_licence():
     assert lg.check_claim("L1", "ACCEPTED")["allowed"] is True
 
 
+def test_licence_gate_fails_closed_on_layer_typo():
+    """A whitespace/case/out-of-range layer must NOT slip past the gate (the critical review finding)."""
+    assert lg.check_claim("L4 ", "ACCEPTED")["allowed"] is False    # normalizes to L4 -> SEMANTIC block
+    assert lg.check_claim("l4", "ACCEPTED")["allowed"] is False
+    assert lg.check_claim("L10", "ACCEPTED")["allowed"] is False    # out of range -> fail closed
+    assert lg.check_claim("banana", "ACCEPTED")["allowed"] is False
+
+
+def test_licence_gate_fails_closed_on_unknown_confidence():
+    r = lg.check_claim("L2", "REPLICATED_PLUS", linear_a=False)     # L2 not LA-blocked, but bad confidence
+    assert r["allowed"] is False and "unrecognized confidence" in r["reason"]
+
+
 # ---- Art. XXII stage header ----
 
 def test_valid_header_passes():
@@ -64,3 +84,9 @@ def test_header_flags_bad_article_and_false_assumption():
 
 def test_header_missing_field():
     assert any("missing" in p for p in sh.validate({"stage": "s"}))
+
+
+def test_validate_close_requires_compliance():
+    assert sh.validate_close(sh.close_block("COMPLIANT")) == []
+    assert sh.validate_close(sh.close_block("")) != []        # empty compliance -> flagged
+    assert sh.validate_close(None) != []                      # missing close block -> flagged

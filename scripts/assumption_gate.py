@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Assumption-register enforcement hook (Constitution v2.0/2.1 Art. XVIII).
 
-Art. XVIII: a FALSE (or STALE) load-bearing premise BLOCKS downstream execution. A stage declares the
-assumptions it depends on and calls `require()` at entry; if any is FALSE/STALE it raises (fail closed).
-Reads governance/assumption_register.json (schema v2, append-only). Deterministic; no DB.
+Art. XVIII ("...explicit, VERIFIED, and pinned"): a load-bearing premise that is NOT affirmatively VERIFIED
+(i.e. FALSE / STALE / UNKNOWN / PARTIAL / missing) BLOCKS downstream execution — an unverified premise
+cannot silently be load-bearing (guilty until proven, Art. IV/XVI). A stage declares the assumptions it
+depends on and calls `require()` at entry; if any is not VERIFIED it raises (fail closed). Reads
+governance/assumption_register.json (schema v2, append-only). Deterministic; no DB.
 
 CLI:
-    python3 scripts/assumption_gate.py            # list blocking (FALSE/STALE) load-bearing premises
+    python3 scripts/assumption_gate.py            # list blocking (not-VERIFIED) load-bearing premises
     python3 scripts/assumption_gate.py A01 A06    # check a stage's dependencies
 """
 import json
@@ -15,7 +17,10 @@ import sys
 
 _REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REGISTER = os.path.join(_REPO, "governance", "assumption_register.json")
-BLOCKING_STATUSES = {"FALSE", "STALE"}
+# Art. XVIII ("...explicit, VERIFIED, and pinned") + fail-closed doctrine: a load-bearing premise is
+# non-blocking ONLY when affirmatively VERIFIED. FALSE/STALE/UNKNOWN/PARTIAL/missing/unrecognized all block
+# (guilty until proven — an unverified premise cannot silently be load-bearing).
+NONBLOCKING_STATUS = "VERIFIED"
 
 
 def load_register(path=REGISTER):
@@ -27,19 +32,28 @@ def _by_id(reg):
     return {a["assumption_id"]: a for a in reg["assumptions"]}
 
 
+def _status(a):
+    st = a.get("current_status", a.get("status"))
+    return st.strip().upper() if isinstance(st, str) else None
+
+
 def status_of(aid, reg=None):
     reg = reg or load_register()
     a = _by_id(reg).get(aid)
     if a is None:
         raise KeyError(f"unknown assumption '{aid}' (Art. XVIII/XVI: fail loud)")
-    return a.get("current_status", a.get("status"))
+    return _status(a)
+
+
+def _blocks(a):
+    """A load-bearing premise blocks unless it is affirmatively VERIFIED."""
+    return bool(a.get("load_bearing")) and _status(a) != NONBLOCKING_STATUS
 
 
 def blocking(reg=None):
-    """All load-bearing premises whose current status BLOCKS execution (FALSE/STALE)."""
+    """All load-bearing premises whose current status BLOCKS execution (anything but VERIFIED)."""
     reg = reg or load_register()
-    return [a["assumption_id"] for a in reg["assumptions"]
-            if a.get("load_bearing") and a.get("current_status", a.get("status")) in BLOCKING_STATUSES]
+    return [a["assumption_id"] for a in reg["assumptions"] if _blocks(a)]
 
 
 def check(assumption_ids, reg=None):
@@ -51,9 +65,8 @@ def check(assumption_ids, reg=None):
         a = by.get(aid)
         if a is None:
             raise KeyError(f"unknown assumption '{aid}' (Art. XVIII/XVI: fail loud)")
-        st = a.get("current_status", a.get("status"))
-        if a.get("load_bearing") and st in BLOCKING_STATUSES:
-            blocked.append({"id": aid, "status": st, "statement": a["statement"]})
+        if _blocks(a):
+            blocked.append({"id": aid, "status": _status(a), "statement": a["statement"]})
     return {"ok": not blocked, "blocked": blocked, "checked": list(assumption_ids)}
 
 

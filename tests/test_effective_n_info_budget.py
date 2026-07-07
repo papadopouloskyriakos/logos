@@ -20,11 +20,21 @@ ITEMS = [
 ]
 
 
-def test_effective_n_bottleneck_is_min_dimension():
+def test_effective_n_reports_marginals_and_joint():
     r = en.effective_n(ITEMS, ["lexical_family", "site", "document_id"])
     assert r["raw_n"] == 4
-    assert r["by_dim"] == {"lexical_family": 3, "site": 2, "document_id": 3}
-    assert r["effective_n"] == 2 and r["bottleneck_dim"] == "site"   # site is the tightest constraint
+    assert r["by_dim"] == {"lexical_family": 3, "site": 2, "document_id": 3}   # per-dim upper bounds
+    assert r["marginal_min_upper_bound"] == 2
+    assert r["effective_n"] == 2                       # joint components (a,b,c linked via KN; d alone)
+
+
+def test_effective_n_joint_below_marginal_min():
+    """The crossed 2x2 case: 2 families x 2 sites, but all four items transitively dependent -> 1, not 2.
+    The old min-of-marginals would overstate independence as 2 and let an underdetermined claim certify."""
+    crossed = [{"lexical_family": "F1", "site": "S1"}, {"lexical_family": "F1", "site": "S2"},
+               {"lexical_family": "F2", "site": "S1"}, {"lexical_family": "F2", "site": "S2"}]
+    r = en.effective_n(crossed, ["lexical_family", "site"])
+    assert r["marginal_min_upper_bound"] == 2 and r["effective_n"] == 1
 
 
 def test_effective_n_folds_source_lineage():
@@ -34,7 +44,12 @@ def test_effective_n_folds_source_lineage():
     r = en.effective_n(items, ["lexical_family"])
     assert r["by_dim"]["lexical_family"] == 2
     assert r["by_dim"]["source_lineage"] == 1        # DAMOS + DMic = one L_LB_DECIPHERMENT vote
-    assert r["effective_n"] == 1                     # the source-lineage bottleneck dominates
+    assert r["effective_n"] == 1                     # the shared lineage collapses them jointly
+
+
+def test_effective_n_require_source_raises_when_absent():
+    with pytest.raises(ValueError):
+        en.effective_n([{"lexical_family": "F1"}], ["lexical_family"], require_source=True)
 
 
 def test_dependency_components_union_find():
@@ -78,18 +93,31 @@ def test_b7_scope():
     assert ib.requires_panel("L0", "EXPLORATORY") is False
 
 
+def test_requires_panel_fails_closed_on_unknown_labels():
+    assert ib.requires_panel(None, "CONFIRMED") is True        # unknown confidence -> require (fail closed)
+    assert ib.requires_panel("banana", None) is True           # unrecognized layer -> require (fail closed)
+
+
+# all six load-bearing fields, adequately powered, not underdetermined
+FULL = dict(effective_independent_evidence=400, parameter_count=8, minimum_detectable_effect=0.05,
+            estimated_power=0.9, source_dependency_structure="6 lineages", search_space_size=12)
+
+
 def test_certify_fails_closed_on_unknown_and_underdetermination():
     # L1 observation is exempt
     assert ib.certify(ib.build_panel(), "L1", None)["certified"] is True
+    # unknown confidence must NOT sneak past as exempt -> requires panel, empty -> not certified
+    assert ib.certify(ib.build_panel(), None, "ACCEPTED_HELDOUT")["certified"] is False
     # graduating claim missing load-bearing fields -> not certified
     c = ib.certify(ib.build_panel(raw_corpus_size=100), "L3", "SUPPORTED")
     assert c["certified"] is False and any("UNKNOWN" in r for r in c["reasons"])
     # graduating claim, all present but underdetermined -> not certified
-    p = ib.build_panel(effective_independent_evidence=19, parameter_count=57,
-                       minimum_detectable_effect=0.92, estimated_power=0.0)
+    p = ib.build_panel(effective_independent_evidence=19, parameter_count=57, minimum_detectable_effect=0.92,
+                       estimated_power=0.9, source_dependency_structure="1 lineage", search_space_size=100)
     c2 = ib.certify(p, "L4", "SUPPORTED")
     assert c2["certified"] is False and c2["underdetermined"] is True
-    # all present, not underdetermined -> certified
-    p2 = ib.build_panel(effective_independent_evidence=400, parameter_count=8,
-                        minimum_detectable_effect=0.05, estimated_power=0.9)
-    assert ib.certify(p2, "L2", "SUPPORTED")["certified"] is True
+    # underpowered -> not certified even when not underdetermined
+    under = dict(FULL); under["estimated_power"] = 0.1
+    assert ib.certify(ib.build_panel(**under), "L2", "SUPPORTED")["certified"] is False
+    # all present, not underdetermined, adequately powered -> certified
+    assert ib.certify(ib.build_panel(**FULL), "L2", "SUPPORTED")["certified"] is True

@@ -44,29 +44,47 @@ def earned(licence, lic=None):
     return state_of(licence, lic) == "EARNED"
 
 
+def _norm_layer(claim_layer):
+    """Normalize + recognize a layer. Returns the canonical 'Ln' or None if unrecognized (fail closed)."""
+    if not isinstance(claim_layer, str):
+        return None
+    cl = claim_layer.strip().upper()
+    return cl if cl in LAYER_LICENCE else None
+
+
 def check_claim(claim_layer, confidence, linear_a=True, lic=None):
     """Enforce Art. XV + B6 for a claim. Returns {allowed, reason, licence, licence_state, max_confidence}.
 
-    - Linear A output at a layer with an unearned licence and confidence > SUPPORTED is BLOCKED (B6).
-    - Linear A output at L3+ with an unearned licence is BLOCKED outright (Art. XV — no functional/semantic/
-      phonetic LA claim without the licence)."""
+    FAILS CLOSED (Art. XVI): an unrecognized layer or confidence string is BLOCKED, never waved through.
+    - L0/L1 (observation / sign-identification) carry no licence and are exempt from the cap (B6).
+    - Any Linear A output at a LICENCED layer (L2..L9) whose licence is unearned is BLOCKED outright
+      (Art. XV — the boundary tracks the licence matrix, not a bare layer number; L2 structural-role
+      transfer needs STRUCTURAL just as L3 functional needs FUNCTIONAL).
+    - Otherwise confidence is capped at SUPPORTED without the layer's licence (B6)."""
     lic = lic or load_licences()
-    licence = LAYER_LICENCE.get(claim_layer)
-    if licence is None:                                       # L0/L1: observation, no licence needed
-        return {"allowed": True, "reason": "L0/L1 observation — no transfer licence required",
+    layer = _norm_layer(claim_layer)
+    if layer is None:                                         # unrecognized layer -> fail closed
+        return {"allowed": False, "reason": f"unrecognized claim_layer {claim_layer!r} — fail closed (Art. XVI)",
+                "licence": None, "licence_state": None, "max_confidence": "SPECULATIVE"}
+    licence = LAYER_LICENCE[layer]
+    if licence is None:                                       # L0/L1: observation/identification, no licence
+        return {"allowed": True, "reason": f"{layer} observation/identification — no transfer licence required",
                 "licence": None, "licence_state": None, "max_confidence": "ACCEPTED"}
     st = state_of(licence, lic)
     is_earned = st == "EARNED"
     max_conf = "ACCEPTED" if is_earned else "SUPPORTED"       # B6: capped at SUPPORTED without the licence
-    layer_n = int(claim_layer[1:])
-    # Art. XV: LA output above L2 requires the licence outright
-    if linear_a and layer_n >= 3 and not is_earned:
-        return {"allowed": False, "reason": f"Linear A L{layer_n} output requires {licence} (state {st}) — Art. XV",
+    if linear_a and not is_earned:                            # Art. XV: LA transfer output needs the licence
+        return {"allowed": False, "reason": f"Linear A {layer} output requires {licence} (state {st}) — Art. XV",
                 "licence": licence, "licence_state": st, "max_confidence": max_conf}
-    if confidence and confidence in CONF_ORDER and CONF_ORDER.index(confidence) > CONF_ORDER.index(max_conf):
-        return {"allowed": False,
-                "reason": f"confidence {confidence} exceeds the cap {max_conf} — {licence} not EARNED (B6)",
-                "licence": licence, "licence_state": st, "max_confidence": max_conf}
+    if confidence is not None:                                # B6 cap for non-LA / earned-licence claims
+        cn = str(confidence).strip().upper()
+        if cn not in CONF_ORDER:
+            return {"allowed": False, "reason": f"unrecognized confidence {confidence!r} — fail closed (Art. XVI)",
+                    "licence": licence, "licence_state": st, "max_confidence": max_conf}
+        if CONF_ORDER.index(cn) > CONF_ORDER.index(max_conf):
+            return {"allowed": False,
+                    "reason": f"confidence {cn} exceeds the cap {max_conf} — {licence} not EARNED (B6)",
+                    "licence": licence, "licence_state": st, "max_confidence": max_conf}
     return {"allowed": True, "reason": "within licence + confidence cap", "licence": licence,
             "licence_state": st, "max_confidence": max_conf}
 
