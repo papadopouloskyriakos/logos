@@ -1,11 +1,14 @@
-# LOGOS Constitution v2.0
+# LOGOS Constitution v2.1
 
-**Status:** RATIFIED · **Effective:** 2026-07-07 · **Supersedes:** v1.0 (the Mission + 12
-Invariants formerly in `CLAUDE.md`) · **Amendment record:** [`AMENDMENT-001-v1-to-v2.md`](./AMENDMENT-001-v1-to-v2.md)
+**Status:** RATIFIED · **Effective:** 2026-07-07 (v2.0) · **Amended:** 2026-07-07 (v2.1) ·
+**Supersedes:** v1.0 (the Mission + 12 Invariants formerly in `CLAUDE.md`)
+**Amendment records:** [`AMENDMENT-001-v1-to-v2.md`](./AMENDMENT-001-v1-to-v2.md) (v1→v2.0),
+[`AMENDMENT-002-v2.0-to-v2.1.md`](./AMENDMENT-002-v2.0-to-v2.1.md) (v2.0→v2.1, precision fixes B1–B8).
 
 This document is the authoritative constitution of the LOGOS decipherment-research platform.
 `CLAUDE.md` carries a condensed pointer for day-to-day work; where the two differ, **this document
-governs**. Amendments follow Article XXIII only.
+governs**. Amendments follow Article XXIII only. The v2.0 text is preserved in git history at the
+commits before AMENDMENT-002.
 
 ---
 
@@ -233,12 +236,16 @@ not verdicts.
 
 Their native confidence is advisory.
 
-The governance ceiling of `0.75` remains in force for unverified model-generated claims, but it is not a
-calibrated probability and must not be presented as one.
+The ceiling of `0.75` for unverified model-generated claims is an **explicitly conventional governance
+constant**, not a calibrated probability and not an epistemic threshold — it is an admitted convention whose
+only empirical anchor is the gate false-graduation calibration (`scripts/gate_null_calibration.py`); it must
+never be presented as a probability (**B8**).
 
 Only mechanically verified held-out performance may authorize a higher project confidence class.
 
-Allowed project confidence classes:
+Allowed project confidence classes (this is the **confidence axis** — distinct from the **lifecycle status**
+axis of the "Required status vocabulary"; a claim carries exactly one token from EACH axis, and where a token
+appears on both lists it is disambiguated by axis, e.g. `confidence:SUPPORTED` vs `status:SUPPORTED` — **B2**):
 
 ```text
 SPECULATIVE
@@ -249,6 +256,25 @@ REPLICATED
 PROVISIONALLY_ACCEPTED
 ACCEPTED
 ```
+
+**Mechanical class predicates (B5).** Graduation between classes is not discretionary — each class is
+authorized by a deterministic predicate over (evidence tier from Article IV × `effective_n` from Article VIII
+× deflated significance from Article VII), computed by code, never asserted:
+
+```text
+SPECULATIVE            no held-out evidence (exploratory only)
+EXPLORATORY            in-sample / derivation-set fit only
+SUPPORTED              beats the null on held-out data (Art. IV tier >= 3) after deflation
+HELD_OUT_SUPPORTED     SUPPORTED on a held-out SITE/SCRIBE/SERIES or unseen FAMILY (Art. IV tier >= 4)
+REPLICATED             HELD_OUT_SUPPORTED under an INDEPENDENT verifier (Art. III independence_class differs)
+PROVISIONALLY_ACCEPTED REPLICATED + survives qualified external review
+ACCEPTED               PROVISIONALLY_ACCEPTED + predicts a newly-discovered inscription (Art. IV tier 1)
+```
+
+**Licence caps confidence (B6).** A claim's confidence class is **capped by the transfer licence earned for
+its claim layer (Article XV)**: the licence gate dominates. A claim at layer L may not be labeled above
+`SUPPORTED` unless the licence for layer L is held. (E.g. an L6 phonetic claim cannot be `HELD_OUT_SUPPORTED`
+while no `PHONETIC_TRANSFER_LICENSE` is held.)
 
 Confidence must be deflated for:
 
@@ -339,7 +365,9 @@ The following do not automatically count as independent:
 - sources descending from one underlying edition;
 - multiple rows from one document.
 
-Graduation is based on `effective_n`, not raw corpus volume.
+Graduation is based on `effective_n`, not raw corpus volume. Independence of evidence units is decided by
+the operational test in Article XI (**B4**: distinct edition AND lineage AND no shared lexicon; DEPENDENT
+until proven), and source-lineage collapse is computed by `scripts/source_dependency.py`.
 
 Power must be simulated before expensive modelling and before opening a sealed evaluation.
 
@@ -347,7 +375,10 @@ Power must be simulated before expensive modelling and before opening a sealed e
 
 ## Article IX — The information floor is always visible
 
-Every claim must display an information-budget panel.
+Every **inferential / graduating** claim must display an information-budget panel (**B7**: the panel is
+required for any claim at layer L2 or above, or any claim seeking a confidence class ≥ `SUPPORTED`; bare L0/L1
+OBSERVED data points, for which minimum-detectable-effect and power are undefined, are exempt — an observation
+is not an inference).
 
 At minimum:
 
@@ -440,6 +471,14 @@ access date
 Sources from one dependency family count as one evidentiary lineage unless genuine independence is
 demonstrated.
 
+**Genuine independence (operational test, B4).** Two sources are independent ONLY if ALL hold: (i) a
+distinct underlying edition, AND (ii) a distinct decipherment/reading lineage, AND (iii) no shared upstream
+lexicon. The default is **DEPENDENT until independence is proven** (Article VIII likewise). This test is
+enforced mechanically by `governance/source_dependency_graph.json` + `scripts/source_dependency.py`, which
+collapses cited sources to distinct lineages and reports `effective_n` = the number of independent
+evidentiary votes (feeding Article VIII). An unassessable (unknown) source fails loud (Article XVI), never
+counting as independent.
+
 Concordance across dependent sources may strengthen provenance, but it may not be presented as
 independent replication.
 
@@ -474,7 +513,8 @@ Load-bearing evaluation targets must be independent of the features used to pred
 
 Every load-bearing claim must survive the removal or perturbation of its most convenient support.
 
-Required stress tests may include:
+Required stress tests (B3 — every item **applicable to the claim's layer/data is MANDATORY**; any omission
+must be recorded as an explicit deviation under Article XXII, never silently skipped) include:
 
 ```text
 remove lexical identity
@@ -526,7 +566,8 @@ All pipelines must support rollback to the last valid frozen stage without rewri
 Before LOGOS assigns roles, meanings, or sounds to Linear A, the full method must succeed on a
 readable-script analogue in which the model is denied the answer.
 
-Required controls may include:
+Required controls (B3 — every control **applicable to the claim's layer is MANDATORY**; any omission must be
+recorded as an explicit deviation under Article XXII, never silently skipped) include:
 
 ```text
 opaque-sign Linear B
@@ -887,7 +928,10 @@ Requires all lower licences plus grammatical and contextual coherence on sealed 
 
 # Required status vocabulary
 
-Use only explicit project statuses:
+This is the **lifecycle status** axis, distinct from the Article VI **confidence** axis (**B2**); a claim
+carries one token from each, disambiguated by axis where a token (e.g. `SUPPORTED`, `EXPLORATORY`) appears on
+both. Use only explicit project statuses (the failure states enumerated in Article XVI — `DEPENDENCY_COLLAPSE`,
+`LEAKAGE_DETECTED`, `DOMAIN_SHIFT_FAILURE` — are part of this closed vocabulary, **B1**):
 
 ```text
 PROPOSED
@@ -903,6 +947,9 @@ SOURCE_BLOCKED
 REJECT_ARCHITECTURE
 TRIVIAL_RECOVERY
 UNDERDETERMINED
+DEPENDENCY_COLLAPSE
+LEAKAGE_DETECTED
+DOMAIN_SHIFT_FAILURE
 SUPERSEDED
 INVALIDATED
 RETRACTED

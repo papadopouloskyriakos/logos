@@ -23,13 +23,15 @@ that null result — rigorously mapping what the corpus can and cannot support �
 the aim.* Do NOT write defeatist "Linear A is uncrackable" framing into any doc, prompt, or
 UI copy.
 
-## Constitution — v2.0 is authoritative (ratified 2026-07-07)
+## Constitution — v2.1 is authoritative (ratified 2026-07-07)
 
-The full governing document is **[`governance/CONSTITUTION-v2.0.md`](./governance/CONSTITUTION-v2.0.md)**
-(Preamble + Articles I–XXIII + claim/licence matrix + status vocabulary). It **supersedes** the 12
+The full governing document is **[`governance/CONSTITUTION.md`](./governance/CONSTITUTION.md)** (v2.1:
+Preamble + Articles I–XXIII + claim/licence matrix + status vocabulary). It **supersedes** the 12
 invariants below — which remain the day-to-day condensed form, now subsumed by the Articles. Where the two
-differ, **governance/ governs**. Amendment protocol: Article XXIII only (see
-[`governance/AMENDMENT-001-v1-to-v2.md`](./governance/AMENDMENT-001-v1-to-v2.md)); never change it silently.
+differ, **governance/ governs**. Amendment protocol: Article XXIII only (records:
+[`AMENDMENT-001`](./governance/AMENDMENT-001-v1-to-v2.md) v1→v2.0,
+[`AMENDMENT-002`](./governance/AMENDMENT-002-v2.0-to-v2.1.md) v2.0→v2.1 precision fixes B1–B8); never change
+it silently.
 
 What v2.0 adds beyond the invariants (use these in every stage):
 

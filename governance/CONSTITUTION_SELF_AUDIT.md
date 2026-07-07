@@ -76,6 +76,6 @@ is not mistaken for a bug: these classes are reserved for out-of-repo human adju
 
 ---
 
-**Status:** `OPEN` — B1–B8 await owner decision as AMENDMENT-002. v2.0 stands ratified as delivered; none of
-B1–B8 blocks adoption (all are precision-tightening; the anti-self-deception spine is intact and coherent).
-A2/A3/A1 are resolved in the ratification commit.
+**Status:** `RESOLVED` — B1–B8 were enacted in **AMENDMENT-002 (v2.0 → v2.1)**, 2026-07-07, owner-approved.
+See [`AMENDMENT-002-v2.0-to-v2.1.md`](./AMENDMENT-002-v2.0-to-v2.1.md). A1/A2/A3 were resolved in the v2.0
+ratification commit. This audit record is retained (append-only, Art. XVII) as the provenance of v2.1.

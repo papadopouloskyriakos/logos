@@ -9,7 +9,7 @@ and non-retroactive**: it does not, and may not, convert any prior failed or nul
 | **date** | 2026-07-07 |
 | **approver** | Repository owner (delivered Constitution v2.0 for adoption) |
 | **old text** | `CLAUDE.md` — "Mission" + "Invariants — do not break these" (the 12 numbered invariants), as committed at `f6a5682` |
-| **new text** | [`governance/CONSTITUTION-v2.0.md`](./CONSTITUTION-v2.0.md) (Preamble + Articles I–XXIII + claim/licence matrix + status vocabulary + conventions + one-line rule) |
+| **new text** | [`governance/CONSTITUTION.md`](./CONSTITUTION.md) (was `CONSTITUTION-v2.0.md` at ratification; renamed by AMENDMENT-002) (Preamble + Articles I–XXIII + claim/licence matrix + status vocabulary + conventions + one-line rule) |
 | **retroactivity** | **NON-RETROACTIVE.** All prior verdicts stand unchanged. The existing record is *re-expressed* in the v2.0 status vocabulary and claim-layer scheme in [`RETROACTIVE_COMPLIANCE.md`](./RETROACTIVE_COMPLIANCE.md); it is not re-graded. The honest forward clock (Art. XVII) begins at this commit. |
 | **commit** | the commit that adds this file (append-only) |
 
