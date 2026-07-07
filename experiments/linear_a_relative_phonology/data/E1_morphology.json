@@ -1,0 +1,4641 @@
+{
+  "seed": 20260708,
+  "segmentations": {
+    "GORILA_WORD": {
+      "label": "GORILA_WORD",
+      "n_words": 3147,
+      "n_types": 1165,
+      "mdl": {
+        "n_morphs": 1141,
+        "total_dl": 43817.17,
+        "prefixes": {
+          "SI": 5,
+          "A": 3,
+          "KU": 3,
+          "KA": 2,
+          "I": 2,
+          "TE": 2,
+          "TA": 2,
+          "JADI": 2,
+          "RO": 1,
+          "INA": 1,
+          "*34TIRI": 1,
+          "JU": 1,
+          "ARE": 1,
+          "ARA": 1,
+          "U": 1,
+          "O": 1,
+          "JASA": 1,
+          "RI": 1
+        },
+        "suffixes": {
+          "NI": 4,
+          "KA": 4,
+          "KU": 3,
+          "TE": 3,
+          "SI": 2,
+          "UTINU": 2,
+          "ZA": 2,
+          "PU₂RE": 2,
+          "VIR+[?]": 1,
+          "TA": 1,
+          "CYP": 1,
+          "ZU": 1,
+          "SINA": 1,
+          "INA": 1,
+          "UNAKANASI": 1,
+          "*325": 1,
+          "MI": 1
+        },
+        "n_stem_families": 17,
+        "mean_morphs_per_word": 1.083
+      },
+      "bayes": {
+        "concentration": {
+          "affix": 1.0,
+          "stem": 2.0
+        },
+        "beta_prior": [
+          1.0,
+          1.0
+        ],
+        "pi_prefix_posterior_mean": 0.1451,
+        "pi_suffix_posterior_mean": 0.1642,
+        "frac_words_with_prefix": 0.145,
+        "frac_words_with_suffix": 0.164,
+        "prefixes": {
+          "A": 43,
+          "I": 17,
+          "U": 16,
+          "DA": 16,
+          "DU": 15,
+          "SI": 12,
+          "QA": 12,
+          "SA": 12,
+          "JA": 12,
+          "KI": 11,
+          "PA": 10,
+          "KU": 10,
+          "PI": 10,
+          "WI": 9,
+          "KA": 8,
+          "QE": 8,
+          "MA": 7,
+          "E": 6,
+          "TU": 6,
+          "TA": 6,
+          "DE": 6,
+          "RA": 5,
+          "*306": 5,
+          "DI": 5,
+          "RI": 5
+        },
+        "suffixes": {
+          "JA": 22,
+          "TI": 21,
+          "RA": 19,
+          "TA": 18,
+          "NA": 18,
+          "TE": 17,
+          "MI": 17,
+          "RE": 15,
+          "NI": 12,
+          "SE": 12,
+          "MA": 11,
+          "RU": 11,
+          "NE": 11,
+          "KI": 10,
+          "SA": 9,
+          "ZA": 8,
+          "PA₃": 8,
+          "SI": 8,
+          "RO": 8,
+          "DI": 8,
+          "ME": 7,
+          "DU": 6,
+          "WA": 6,
+          "E": 6,
+          "WI": 6
+        },
+        "n_stem_families": 167
+      },
+      "paradigm": {
+        "prefixes": {
+          "A": 47,
+          "I": 28,
+          "DA": 22,
+          "JA": 22,
+          "KA": 21,
+          "SI": 20,
+          "KU": 19,
+          "PA": 16,
+          "SA": 16,
+          "KI": 14,
+          "TA": 13,
+          "MI": 13,
+          "TE": 12,
+          "MA": 11,
+          "QA": 10,
+          "U": 10,
+          "RE": 10,
+          "RU": 9,
+          "TU": 9,
+          "DU": 9,
+          "DI": 9,
+          "PI": 9,
+          "QE": 8,
+          "TI": 7,
+          "NU": 6
+        },
+        "suffixes": {
+          "JA": 26,
+          "RA": 22,
+          "TI": 20,
+          "RE": 19,
+          "TE": 18,
+          "TA": 18,
+          "NA": 17,
+          "RU": 15,
+          "KI": 14,
+          "MI": 14,
+          "SI": 14,
+          "RO": 13,
+          "SA": 13,
+          "MA": 12,
+          "NI": 12,
+          "TU": 12,
+          "ME": 12,
+          "NE": 11,
+          "PI": 11,
+          "DI": 11,
+          "KA": 11,
+          "PA": 11,
+          "SE": 11,
+          "DA": 10,
+          "SU": 9
+        },
+        "n_stem_families": 305,
+        "n_reduplication": 39,
+        "reduplication_examples": [
+          [
+            "TITIMA",
+            "sign",
+            "TI"
+          ],
+          [
+            "KUKUDARA",
+            "sign",
+            "KU"
+          ],
+          [
+            "KIKIRAJA",
+            "sign",
+            "KI"
+          ],
+          [
+            "ASASA*802ME",
+            "sign",
+            "SA"
+          ],
+          [
+            "ASASARAME",
+            "sign",
+            "SA"
+          ],
+          [
+            "QAQARU",
+            "sign",
+            "QA"
+          ],
+          [
+            "JASASARA",
+            "sign",
+            "SA"
+          ],
+          [
+            "VINVIN",
+            "sign",
+            "VIN"
+          ],
+          [
+            "JADIKITETE*307PU₂RE",
+            "sign",
+            "TE"
+          ],
+          [
+            "DIDIZAKE",
+            "sign",
+            "DI"
+          ],
+          [
+            "QAQADA",
+            "sign",
+            "QA"
+          ],
+          [
+            "*312TETE",
+            "sign",
+            "TE"
+          ],
+          [
+            "ADIKITETE",
+            "sign",
+            "TE"
+          ],
+          [
+            "DIDI",
+            "sign",
+            "DI"
+          ],
+          [
+            "KIKINA",
+            "sign",
+            "KI"
+          ],
+          [
+            "NAMAMATITI*904",
+            "sign",
+            "MA"
+          ],
+          [
+            "SASARAME",
+            "sign",
+            "SA"
+          ],
+          [
+            "JADIKITETEDUPU₂RE",
+            "sign",
+            "TE"
+          ],
+          [
+            "RIQETIASASARA*325",
+            "sign",
+            "SA"
+          ],
+          [
+            "TETE",
+            "sign",
+            "TE"
+          ]
+        ],
+        "optional_signs": {
+          "DA": 7,
+          "TA": 6,
+          "RA": 5,
+          "RU": 5,
+          "RI": 5,
+          "MA": 5,
+          "NA": 4,
+          "SA": 4,
+          "WA": 4,
+          "DU": 4,
+          "KA": 4,
+          "QE": 4,
+          "TI": 3,
+          "ZU": 3,
+          "TE": 3
+        },
+        "n_initial_alternation_stems": 100,
+        "n_final_alternation_stems": 107,
+        "initial_alternation_examples": {
+          "*305": [
+            "KA",
+            "KU",
+            "QA",
+            "RI",
+            "SE"
+          ],
+          "ZA": [
+            "I",
+            "MA",
+            "ME",
+            "PA",
+            "RE"
+          ],
+          "DARO": [
+            "A",
+            "KI",
+            "SI"
+          ],
+          "DU": [
+            "*188",
+            "A",
+            "RA₂",
+            "SI",
+            "SU",
+            "WI",
+            "ZU"
+          ],
+          "RO": [
+            "*86",
+            "KI",
+            "KU",
+            "NU",
+            "RE",
+            "SA"
+          ],
+          "DA": [
+            "A",
+            "DA",
+            "I",
+            "KI",
+            "KU",
+            "MI",
+            "O"
+          ],
+          "PI": [
+            "A",
+            "I",
+            "JA",
+            "KU",
+            "NI",
+            "TA",
+            "WI"
+          ],
+          "TE": [
+            "*47",
+            "NU",
+            "RA",
+            "SI",
+            "TE",
+            "U",
+            "WA"
+          ],
+          "JA": [
+            "A",
+            "DU",
+            "I",
+            "JA",
+            "KO",
+            "MI",
+            "OLE",
+            "PA",
+            "RE",
+            "RI",
+            "RU",
+            "TA",
+            "TE",
+            "WI"
+          ],
+          "SITE": [
+            "KE",
+            "QE"
+          ],
+          "TA": [
+            "*312",
+            "A",
+            "KI",
+            "KU",
+            "MI",
+            "NI",
+            "OLE",
+            "PA",
+            "SA",
+            "TA"
+          ],
+          "VIN": [
+            "*806",
+            "ME",
+            "PU",
+            "SA",
+            "VIN",
+            "VIR+KA"
+          ],
+          "VS": [
+            "*403",
+            "*404",
+            "*406",
+            "*408",
+            "*409",
+            "*410",
+            "*411",
+            "*417"
+          ],
+          "KA": [
+            "*86",
+            "DA",
+            "DU",
+            "E",
+            "I",
+            "KU",
+            "MI",
+            "QE",
+            "SI"
+          ],
+          "DARE": [
+            "NA",
+            "SI"
+          ]
+        },
+        "_pre_stems": {
+          "SE": [
+            "*305",
+            "I",
+            "JE",
+            "SI"
+          ],
+          "PA": [
+            "DANI",
+            "DARU",
+            "DE",
+            "IKI",
+            "JA",
+            "JARE",
+            "NATU",
+            "OLE+MI",
+            "RA",
+            "RE",
+            "RIDE",
+            "SE",
+            "SEJA",
+            "TA",
+            "TANE",
+            "ZA"
+          ],
+          "SI": [
+            "*805MI",
+            "CYP",
+            "DARE",
+            "DARO",
+            "DIJA",
+            "DU",
+            "ISI",
+            "KA",
+            "KIRA",
+            "MA",
+            "MITA",
+            "NA",
+            "NI",
+            "PU",
+            "RA",
+            "RU",
+            "TE",
+            "TETU",
+            "TU",
+            "VIR+[?]"
+          ],
+          "NU": [
+            "RIJA",
+            "RO",
+            "SE",
+            "TE",
+            "TI",
+            "WI"
+          ],
+          "TA": [
+            "HIDE+B",
+            "JA",
+            "KE",
+            "MI",
+            "NATI",
+            "NE",
+            "PA",
+            "PI",
+            "RA",
+            "RINA",
+            "TA",
+            "TI",
+            "U"
+          ],
+          "PA₃": [
+            "*188",
+            "E",
+            "NI",
+            "PU₂"
+          ],
+          "SU": [
+            "DU",
+            "KI",
+            "PA",
+            "PU₂",
+            "RE"
+          ],
+          "O": [
+            "DA",
+            "MI",
+            "TEJA",
+            "TI"
+          ],
+          "NI": [
+            "MI",
+            "PI",
+            "RA",
+            "TA"
+          ],
+          "RU": [
+            "DI",
+            "JA",
+            "MA",
+            "MI",
+            "NA",
+            "NI",
+            "RA₂",
+            "SA",
+            "ZUNA"
+          ],
+          "KE": [
+            "KIRU",
+            "SITE"
+          ],
+          "A": [
+            "*301",
+            "*325ZA",
+            "DA",
+            "DARA",
+            "DARO",
+            "DE",
+            "DU",
+            "DURE",
+            "I",
+            "JA",
+            "JE",
+            "JU",
+            "KARU",
+            "KATA",
+            "KIRO",
+            "KUMINA",
+            "MA",
+            "MI",
+            "MITA",
+            "NA",
+            "NE",
+            "NU",
+            "PA",
+            "PARANE",
+            "PA₃",
+            "PI",
+            "RA",
+            "RANARE",
+            "RE",
+            "RI",
+            "RIJA",
+            "RISU",
+            "RU",
+            "SARA₂",
+            "SASARA",
+            "SASARAME",
+            "SE",
+            "SEJA",
+            "SI",
+            "SI*118",
+            "SIKIRA",
+            "TA",
+            "TANA",
+            "TANATE",
+            "TARE",
+            "TU",
+            "WAPI"
+          ],
+          "PU": [
+            "DE",
+            "KO",
+            "RA",
+            "RA₂",
+            "VIN"
+          ],
+          "KA": [
+            "*305",
+            "DI",
+            "IKA",
+            "JE",
+            "JU",
+            "KI",
+            "KU",
+            "KUPA",
+            "NA",
+            "NE",
+            "NUTI",
+            "PA",
+            "QA",
+            "RA₂",
+            "RERO",
+            "RU",
+            "SA",
+            "SARU",
+            "SI",
+            "TARE",
+            "TI"
+          ],
+          "RI": [
+            "*305",
+            "DAU",
+            "JA",
+            "KATA",
+            "RUMA",
+            "TAJE"
+          ],
+          "CYP+D": [
+            "*304+PA"
+          ],
+          "*411": [
+            "VS"
+          ],
+          "MA": [
+            "*321",
+            "DI",
+            "I",
+            "JU",
+            "RE",
+            "RI",
+            "RU",
+            "SI",
+            "SIDU",
+            "ZA",
+            "ZU"
+          ],
+          "I": [
+            "*47",
+            "DA",
+            "DADA",
+            "DAMATE",
+            "DAMI",
+            "DE",
+            "DI",
+            "GRA+PA",
+            "JA",
+            "JAPA",
+            "KA",
+            "KI",
+            "KIRA",
+            "KUPI",
+            "KUTA",
+            "MA",
+            "NA",
+            "OLIV",
+            "PI",
+            "QA*118",
+            "RA₂",
+            "RUJA",
+            "SE",
+            "SI",
+            "TAJA",
+            "TI",
+            "WAJA",
+            "ZA"
+          ],
+          "QE": [
+            "KA",
+            "KURE",
+            "PITA",
+            "PU",
+            "SITE",
+            "TI",
+            "TU",
+            "TUNE"
+          ],
+          "DE": [
+            "DI",
+            "KITI",
+            "MI",
+            "NU",
+            "SU"
+          ],
+          "MI": [
+            "DA",
+            "DANI",
+            "DARA",
+            "JA",
+            "KA",
+            "KISANE",
+            "NA",
+            "NE",
+            "NUTE",
+            "RE",
+            "TA",
+            "TI",
+            "TU"
+          ],
+          "TI": [
+            "DATA",
+            "MA",
+            "NA",
+            "NI",
+            "NITA",
+            "SA",
+            "TIMA"
+          ],
+          "DA": [
+            "*118",
+            "DA",
+            "I",
+            "KA",
+            "KI",
+            "KU",
+            "KUNA",
+            "MATE",
+            "ME",
+            "MINU",
+            "NASI",
+            "NATU",
+            "PA₃",
+            "RA",
+            "RE",
+            "RIDA",
+            "SI*118",
+            "TARA",
+            "TARE",
+            "TU",
+            "U*49",
+            "WA"
+          ],
+          "*306": [
+            "CYP+E",
+            "TAJE",
+            "TU",
+            "VIR+*307"
+          ],
+          "KU": [
+            "*305",
+            "*321",
+            "DA",
+            "KA",
+            "MAJU",
+            "MARO",
+            "NI",
+            "PA",
+            "PAJA",
+            "PARI",
+            "PA₃",
+            "PI",
+            "RA",
+            "RE",
+            "REJU",
+            "RO",
+            "RUMA",
+            "TA",
+            "ZUNA"
+          ],
+          "QA": [
+            "*118",
+            "*305",
+            "KI",
+            "KITI",
+            "KURE",
+            "NE",
+            "PU",
+            "QARU",
+            "RU",
+            "SA"
+          ],
+          "*417": [
+            "VS"
+          ],
+          "*47": [
+            "KUNA",
+            "TE"
+          ],
+          "RA": [
+            "MASI",
+            "ME",
+            "RI",
+            "RIDE",
+            "TE"
+          ],
+          "*307+*387": [
+            "GRA+QE"
+          ],
+          "RO": [
+            "E",
+            "KE",
+            "NI",
+            "QA",
+            "SIRA",
+            "VIR+KA"
+          ],
+          "*404": [
+            "VS"
+          ],
+          "TU": [
+            "MA",
+            "ME",
+            "NU",
+            "PA",
+            "PARI",
+            "PITA",
+            "RUSA",
+            "SU",
+            "SUPU₂"
+          ],
+          "TE": [
+            "*301",
+            "AROM",
+            "GRA+F",
+            "JA",
+            "JARE",
+            "KE",
+            "KI",
+            "NI",
+            "RI",
+            "TE",
+            "TU",
+            "ZU"
+          ],
+          "TA₂": [
+            "CYP",
+            "TARE"
+          ],
+          "U": [
+            "*325ZA",
+            "JU",
+            "KI",
+            "NAA",
+            "QETI",
+            "SU",
+            "TA₂",
+            "TE",
+            "TI",
+            "TINU"
+          ],
+          "DU": [
+            "DAMA",
+            "JA",
+            "JU",
+            "KA",
+            "MITATIRA₂",
+            "NEMI",
+            "RA",
+            "REZA",
+            "RI"
+          ],
+          "NA": [
+            "APA₃",
+            "DARE",
+            "KI",
+            "SI",
+            "TI"
+          ],
+          "SI+TA2": [
+            "*304"
+          ],
+          "SA": [
+            "DI",
+            "MA",
+            "MARO",
+            "NE",
+            "PO",
+            "PU",
+            "RA",
+            "RAME",
+            "RA₂",
+            "REJU",
+            "RI",
+            "RO",
+            "RU",
+            "SARAME",
+            "TA",
+            "VIN"
+          ],
+          "*309C": [
+            "DAJU"
+          ],
+          "JA": [
+            "*21F",
+            "*304",
+            "DI",
+            "JA",
+            "KI",
+            "KU",
+            "PA",
+            "PI",
+            "QE",
+            "RA",
+            "RE",
+            "SA",
+            "SAJA",
+            "SAMU",
+            "SASA",
+            "SASARA",
+            "SASARAME",
+            "SI",
+            "SU",
+            "WA",
+            "WAPI",
+            "WI"
+          ],
+          "VIN": [
+            "MI",
+            "SU",
+            "VIN"
+          ],
+          "*327": [
+            "JU"
+          ],
+          "*312": [
+            "TA",
+            "TA₂",
+            "TETE"
+          ],
+          "DI": [
+            "*306",
+            "DE",
+            "DI",
+            "KAKI",
+            "KI",
+            "NA",
+            "PAJA",
+            "RINA",
+            "SI"
+          ],
+          "RE": [
+            "*86",
+            "AJA",
+            "JA",
+            "RO",
+            "SA",
+            "SU",
+            "TA₂",
+            "TI",
+            "TU",
+            "ZA"
+          ],
+          "*324": [
+            "DIRA"
+          ],
+          "*406": [
+            "VS"
+          ],
+          "JE": [
+            "DI",
+            "TANA"
+          ],
+          "NE": [
+            "*22M",
+            "KI",
+            "MI",
+            "MINA",
+            "TI"
+          ],
+          "KI": [
+            "DA",
+            "DARO",
+            "DATA",
+            "DINI",
+            "MARU",
+            "NU",
+            "RA",
+            "RETA₂",
+            "REZA",
+            "RO",
+            "RU",
+            "SANE",
+            "TA",
+            "TAI"
+          ],
+          "*305": [
+            "RU"
+          ],
+          "*805": [
+            "MI"
+          ],
+          "PI": [
+            "KUZU",
+            "MITATIRA₂",
+            "MU",
+            "NU",
+            "O",
+            "SA",
+            "TAJA",
+            "TARA",
+            "TERI"
+          ],
+          "KO": [
+            "E",
+            "JA",
+            "MU",
+            "RU"
+          ],
+          "*304+PA": [
+            "CYP+D",
+            "KUPA"
+          ],
+          "OLE": [
+            "JA",
+            "TA"
+          ],
+          "*322": [
+            "RI"
+          ],
+          "ZU": [
+            "DIRA",
+            "DU",
+            "SU"
+          ],
+          "TO": [
+            "ME",
+            "SA"
+          ],
+          "RA₂": [
+            "DU",
+            "TI"
+          ],
+          "*309B": [
+            "RIJU"
+          ],
+          "*164": [
+            "RIDA"
+          ],
+          "*409": [
+            "VS"
+          ],
+          "SI+SE": [
+            "NI"
+          ],
+          "*86": [
+            "KA",
+            "RO",
+            "SINI"
+          ],
+          "*560": [
+            "RE"
+          ],
+          "WI": [
+            "DINA",
+            "DU",
+            "JA",
+            "PI",
+            "SA"
+          ],
+          "*806": [
+            "VIN"
+          ],
+          "*21F": [
+            "*118",
+            "TU",
+            "TUNE"
+          ],
+          "WA": [
+            "DINI",
+            "JAPI",
+            "OMI",
+            "TE"
+          ],
+          "*333": [
+            "SAMU"
+          ],
+          "ME": [
+            "KIDI",
+            "VIN",
+            "ZA"
+          ],
+          "PU₂": [
+            "RA₂",
+            "RE",
+            "REJA"
+          ],
+          "*358": [
+            "NI"
+          ],
+          "GRA": [
+            "PA₃"
+          ],
+          "E": [
+            "*301",
+            "KA",
+            "KURU",
+            "MI",
+            "NASI"
+          ],
+          "*188": [
+            "DU"
+          ],
+          "*118": [
+            "MI",
+            "MINA"
+          ],
+          "HIDE+[?]": [
+            "*328"
+          ],
+          "*403": [
+            "VS"
+          ],
+          "*301": [
+            "NA",
+            "SI",
+            "WA"
+          ],
+          "MU": [
+            "*312",
+            "RU"
+          ],
+          "QI": [
+            "VIN+TE"
+          ],
+          "*28B": [
+            "TI"
+          ],
+          "*408": [
+            "VS"
+          ],
+          "ZA": [
+            "*321"
+          ],
+          "𐄌": [
+            "JATI"
+          ],
+          "VIR+KA": [
+            "VIN"
+          ],
+          "VIR+[?]": [
+            "I"
+          ],
+          "JU": [
+            "RA"
+          ],
+          "*410": [
+            "VS"
+          ],
+          "*348": [
+            "CYP"
+          ],
+          "*328": [
+            "E"
+          ],
+          "*304": [
+            "CYP"
+          ],
+          "*314": [
+            "TAMA"
+          ],
+          "PO": [
+            "SA"
+          ],
+          "*309": [
+            "RIJU"
+          ]
+        },
+        "_suf_stems": {
+          "*305": [
+            "KA",
+            "KU",
+            "QA",
+            "RI",
+            "SE"
+          ],
+          "NE": [
+            "*21FTU",
+            "A",
+            "KA",
+            "MI",
+            "PARA",
+            "PATA",
+            "QA",
+            "QETU",
+            "SA",
+            "SIKI",
+            "TA"
+          ],
+          "WI": [
+            "JA",
+            "JADI",
+            "NU",
+            "PA₃NI"
+          ],
+          "ZA": [
+            "ADU",
+            "DURE",
+            "I",
+            "KIRE",
+            "MA",
+            "ME",
+            "PA",
+            "RE"
+          ],
+          "RO": [
+            "*86",
+            "ADA",
+            "DINA",
+            "KAI",
+            "KI",
+            "KIDA",
+            "KU",
+            "KUMA",
+            "NU",
+            "RE",
+            "SA",
+            "SAMA",
+            "SIDA"
+          ],
+          "DU": [
+            "*188",
+            "A",
+            "MASI",
+            "RA₂",
+            "SI",
+            "SU",
+            "WI",
+            "ZU"
+          ],
+          "TI": [
+            "DAKUSENE",
+            "I",
+            "JAKU",
+            "KA",
+            "MATE",
+            "MI",
+            "NA",
+            "NE",
+            "NU",
+            "O",
+            "QAKI",
+            "QE",
+            "RA₂",
+            "RE",
+            "RIRUMA",
+            "SAMA",
+            "TA",
+            "TANA",
+            "U",
+            "UNARUKANA"
+          ],
+          "*188": [
+            "PA₃",
+            "SUPU₂"
+          ],
+          "DA": [
+            "A",
+            "DA",
+            "I",
+            "IDA",
+            "KI",
+            "KU",
+            "MI",
+            "O",
+            "PATA",
+            "QAQA"
+          ],
+          "*82": [
+            "E"
+          ],
+          "PI": [
+            "A",
+            "I",
+            "IKU",
+            "JA",
+            "JAWA",
+            "KU",
+            "NI",
+            "TA",
+            "TAMA",
+            "WAJA",
+            "WI"
+          ],
+          "TE": [
+            "*47",
+            "ADIKITE",
+            "ATANA",
+            "DAJU",
+            "DAMA",
+            "DURI",
+            "IJA",
+            "KUNI",
+            "MINU",
+            "NU",
+            "RA",
+            "SI",
+            "SIDA",
+            "SIRU",
+            "TANA",
+            "TE",
+            "U",
+            "WA"
+          ],
+          "JA": [
+            "*306TU",
+            "A",
+            "AMA",
+            "ARI",
+            "ASE",
+            "ATAI*301WA",
+            "DU",
+            "I",
+            "JA",
+            "JASA",
+            "KO",
+            "KUPA",
+            "MI",
+            "OLE",
+            "PA",
+            "PASE",
+            "PITA",
+            "PU₂RE",
+            "QERA₂",
+            "RE",
+            "RI",
+            "RU",
+            "TA",
+            "TE",
+            "TINU",
+            "WI"
+          ],
+          "DI": [
+            "APA₃",
+            "DE",
+            "DI",
+            "I",
+            "JA",
+            "JE",
+            "KA",
+            "MA",
+            "RU",
+            "SA",
+            "SARA"
+          ],
+          "TA": [
+            "*312",
+            "A",
+            "AKA",
+            "AMI",
+            "IKU",
+            "KI",
+            "KIDA",
+            "KU",
+            "MAKAI",
+            "MI",
+            "NI",
+            "OLE",
+            "PA",
+            "RUMA",
+            "SA",
+            "SESI",
+            "TA",
+            "TINI"
+          ],
+          "VIN": [
+            "ME",
+            "PU",
+            "SA",
+            "VIN",
+            "VIR+KA"
+          ],
+          "RU": [
+            "*305",
+            "A",
+            "AKA",
+            "DIDE",
+            "KA",
+            "KASA",
+            "KI",
+            "KO",
+            "MA",
+            "MU",
+            "PADA",
+            "QA",
+            "QAQA",
+            "SA",
+            "SI"
+          ],
+          "*304+PA": [
+            "CYP+D"
+          ],
+          "KI": [
+            "APA",
+            "DA",
+            "DI",
+            "I",
+            "JA",
+            "KA",
+            "NA",
+            "NE",
+            "PAI",
+            "QA",
+            "QATI",
+            "SU",
+            "TE",
+            "U"
+          ],
+          "KA": [
+            "*86",
+            "DA",
+            "DU",
+            "E",
+            "I",
+            "KAI",
+            "KU",
+            "MI",
+            "QE",
+            "SI",
+            "UNA"
+          ],
+          "RE": [
+            "A",
+            "ADU",
+            "ATA",
+            "DA",
+            "DATA",
+            "DURA",
+            "JA",
+            "KATA",
+            "KI*310",
+            "KU",
+            "MA",
+            "MATE",
+            "MI",
+            "PA",
+            "PAJA",
+            "PU₂",
+            "SIDA",
+            "SU",
+            "TEJA"
+          ],
+          "MI": [
+            "*118",
+            "A",
+            "DE",
+            "E",
+            "IDA",
+            "JARE",
+            "MAI",
+            "MINU",
+            "NE",
+            "NI",
+            "O",
+            "RU",
+            "TA",
+            "VIN"
+          ],
+          "PA": [
+            "A",
+            "ARI",
+            "DARO",
+            "IJA",
+            "JA",
+            "KA",
+            "KAKU",
+            "KU",
+            "SU",
+            "TA",
+            "TU"
+          ],
+          "OLE+MI": [
+            "PA"
+          ],
+          "MA": [
+            "A",
+            "I",
+            "JASASARA",
+            "KURU",
+            "RISU",
+            "RU",
+            "SA",
+            "SAJA",
+            "SI",
+            "TI",
+            "TITI",
+            "TU"
+          ],
+          "NI": [
+            "KIDI",
+            "KU",
+            "KUZU",
+            "MIDA",
+            "PADA",
+            "PA₃",
+            "RO",
+            "RU",
+            "SI",
+            "SI+SE",
+            "TE",
+            "TI"
+          ],
+          "TU": [
+            "*21F",
+            "*306",
+            "A",
+            "ARA",
+            "DA",
+            "DANA",
+            "MI",
+            "QE",
+            "RE",
+            "SI",
+            "SITE",
+            "TE"
+          ],
+          "SA": [
+            "AJE",
+            "JA",
+            "JASA",
+            "KA",
+            "PI",
+            "PO",
+            "QA",
+            "QA*118",
+            "RE",
+            "RU",
+            "TI",
+            "TO",
+            "WI"
+          ],
+          "SI": [
+            "*301",
+            "A",
+            "DANA",
+            "DI",
+            "I",
+            "JA",
+            "KA",
+            "KIRI",
+            "MA",
+            "NA",
+            "SE",
+            "UNAKANA",
+            "UNARUKANA",
+            "UTAI"
+          ],
+          "DE": [
+            "A",
+            "ATA",
+            "DI",
+            "I",
+            "PA",
+            "PARI",
+            "PU",
+            "RARI"
+          ],
+          "NA": [
+            "*118MI",
+            "*301",
+            "A",
+            "ATA",
+            "DAKU",
+            "DI",
+            "I",
+            "KA",
+            "KUZU",
+            "MI",
+            "NEMI",
+            "PA₃NI",
+            "RU",
+            "SI",
+            "TI",
+            "UNA",
+            "UNAKA"
+          ],
+          "QA": [
+            "JAPA",
+            "KA",
+            "RO"
+          ],
+          "I": [
+            "A",
+            "DA",
+            "DIJA",
+            "KITA",
+            "MA",
+            "SE",
+            "TUME",
+            "VIR+[?]"
+          ],
+          "CYP+E": [
+            "*306"
+          ],
+          "O": [
+            "AMIDA",
+            "PI"
+          ],
+          "PU": [
+            "QA",
+            "QE",
+            "SA",
+            "SI"
+          ],
+          "ME": [
+            "ARATU",
+            "ASASARA",
+            "DA",
+            "IJAPA",
+            "JASASARA",
+            "MARU",
+            "RA",
+            "SARA",
+            "SASA",
+            "SASARA",
+            "TO",
+            "TU"
+          ],
+          "*49": [
+            "DAU",
+            "U"
+          ],
+          "QE": [
+            "JA",
+            "KAPA",
+            "KUMINA",
+            "SARO"
+          ],
+          "NU": [
+            "A",
+            "DAMI",
+            "DE",
+            "KI",
+            "KUPA₃",
+            "PI",
+            "TU",
+            "UTI"
+          ],
+          "E": [
+            "*328",
+            "ATAI*301WA",
+            "JASI",
+            "KO",
+            "PA₃",
+            "RO"
+          ],
+          "RI": [
+            "A",
+            "DU",
+            "KUPA",
+            "MA",
+            "RA",
+            "SA",
+            "TE",
+            "TUPA"
+          ],
+          "VIR+KA": [
+            "RO"
+          ],
+          "CYP": [
+            "*304",
+            "SI",
+            "TA₂"
+          ],
+          "ZU": [
+            "KUPA",
+            "MA",
+            "TE"
+          ],
+          "SE": [
+            "*188DU",
+            "A",
+            "DIKI",
+            "DUREZA",
+            "I",
+            "MAKAI",
+            "NU",
+            "PA",
+            "RUMATA",
+            "TUME",
+            "UTAI"
+          ],
+          "JE": [
+            "A",
+            "ATANA",
+            "KA",
+            "SE"
+          ],
+          "RA": [
+            "A",
+            "ADA",
+            "ARU",
+            "DA",
+            "DATA",
+            "DU",
+            "IKI",
+            "JA",
+            "JASASA",
+            "JU",
+            "KI",
+            "KU",
+            "MIDA",
+            "NI",
+            "PA",
+            "PITA",
+            "PU",
+            "SA",
+            "SARA",
+            "SI",
+            "SIKI",
+            "TA"
+          ],
+          "VIR+[?]": [
+            "SI"
+          ],
+          "RA₂": [
+            "I",
+            "KA",
+            "PU",
+            "PU₂",
+            "RU",
+            "SA"
+          ],
+          "*118": [
+            "*21F",
+            "ASI",
+            "DA",
+            "QA"
+          ],
+          "*86": [
+            "RE"
+          ],
+          "SU": [
+            "ARI",
+            "DE",
+            "JA",
+            "KUNI",
+            "RE",
+            "TU",
+            "U",
+            "VIN",
+            "ZU"
+          ],
+          "KE": [
+            "RO",
+            "TA",
+            "TE"
+          ],
+          "U": [
+            "AMIDA",
+            "DINA",
+            "QERA₂",
+            "RIDA",
+            "TA"
+          ],
+          "*22M": [
+            "NE"
+          ],
+          "JU": [
+            "A",
+            "ARA",
+            "DU",
+            "KA",
+            "KUMA",
+            "KURE",
+            "MA",
+            "QATI",
+            "U"
+          ],
+          "AROM": [
+            "TAI",
+            "TE"
+          ],
+          "PA₃": [
+            "A",
+            "DA",
+            "GRA",
+            "JAKI",
+            "JAWA",
+            "KU",
+            "KUPA₃",
+            "NAA"
+          ],
+          "*350": [
+            "ATA"
+          ],
+          "VIR+*307": [
+            "*306"
+          ],
+          "TA₂": [
+            "*312",
+            "KIRE",
+            "KIRI",
+            "RE",
+            "U"
+          ],
+          "TO": [
+            "PAI"
+          ],
+          "GRA+PA": [
+            "I"
+          ],
+          "*321": [
+            "JATI",
+            "KU",
+            "MA",
+            "ZA"
+          ],
+          "PU₂": [
+            "PA₃",
+            "SU",
+            "TUSU"
+          ],
+          "KU": [
+            "DA",
+            "DARE",
+            "JA",
+            "KA",
+            "KURU",
+            "TITI"
+          ],
+          "CYP+D": [
+            "*304+PA"
+          ],
+          "*516": [
+            "SI"
+          ],
+          "*310": [
+            "KI"
+          ],
+          "A": [
+            "IDA",
+            "MARU",
+            "UNA"
+          ],
+          "*47": [
+            "I"
+          ],
+          "GRA+F": [
+            "TE"
+          ],
+          "HIDE+B": [
+            "TA"
+          ],
+          "*21F": [
+            "JA"
+          ],
+          "PO": [
+            "SA"
+          ],
+          "*306": [
+            "DI"
+          ],
+          "KO": [
+            "PU"
+          ],
+          "WA": [
+            "*301",
+            "DA",
+            "INA",
+            "JA"
+          ],
+          "*328": [
+            "HIDE+[?]"
+          ],
+          "*301": [
+            "A",
+            "E",
+            "TE"
+          ],
+          "OLE": [
+            "UNAKANASI"
+          ],
+          "MU": [
+            "JASA",
+            "KO",
+            "KURA",
+            "PI"
+          ],
+          "*312": [
+            "MU"
+          ],
+          "VIN+TE": [
+            "QI"
+          ],
+          "*329": [
+            "DARU",
+            "VIR+[?]"
+          ],
+          "*314": [
+            "PI"
+          ],
+          "OLIV": [
+            "I"
+          ],
+          "*345": [
+            "JA"
+          ],
+          "*307": [
+            "OLE"
+          ],
+          "*308": [
+            "I"
+          ],
+          "*362": [
+            "WA"
+          ],
+          "*304": [
+            "JA"
+          ],
+          "*331": [
+            "I"
+          ],
+          "RA+KA": [
+            "SI+SE"
+          ]
+        }
+      },
+      "agreement": {
+        "prefixes": {
+          "top_k": 10,
+          "mdl": [
+            "A",
+            "I",
+            "INA",
+            "JADI",
+            "KA",
+            "KU",
+            "RO",
+            "SI",
+            "TA",
+            "TE"
+          ],
+          "bayes": [
+            "A",
+            "DA",
+            "DU",
+            "I",
+            "JA",
+            "KI",
+            "QA",
+            "SA",
+            "SI",
+            "U"
+          ],
+          "paradigm": [
+            "A",
+            "DA",
+            "I",
+            "JA",
+            "KA",
+            "KI",
+            "KU",
+            "PA",
+            "SA",
+            "SI"
+          ],
+          "three_way_intersection": [
+            "A",
+            "I",
+            "SI"
+          ],
+          "jaccard_mdl_bayes": 0.176,
+          "jaccard_mdl_para": 0.333,
+          "jaccard_bayes_para": 0.538
+        },
+        "suffixes": {
+          "top_k": 10,
+          "mdl": [
+            "KA",
+            "KU",
+            "NI",
+            "PU₂RE",
+            "SI",
+            "TA",
+            "TE",
+            "UTINU",
+            "VIR+[?]",
+            "ZA"
+          ],
+          "bayes": [
+            "JA",
+            "MI",
+            "NA",
+            "NI",
+            "RA",
+            "RE",
+            "SE",
+            "TA",
+            "TE",
+            "TI"
+          ],
+          "paradigm": [
+            "JA",
+            "KI",
+            "MI",
+            "NA",
+            "RA",
+            "RE",
+            "RU",
+            "TA",
+            "TE",
+            "TI"
+          ],
+          "three_way_intersection": [
+            "TA",
+            "TE"
+          ],
+          "jaccard_mdl_bayes": 0.176,
+          "jaccard_mdl_para": 0.111,
+          "jaccard_bayes_para": 0.667
+        }
+      }
+    },
+    "ENTRY": {
+      "label": "ENTRY",
+      "n_words": 1068,
+      "n_types": 633,
+      "mdl": {
+        "n_morphs": 632,
+        "total_dl": 19763.71,
+        "prefixes": {
+          "MASI": 1,
+          "O": 1,
+          "TI": 1,
+          "A": 1
+        },
+        "suffixes": {
+          "GRA+PA": 1,
+          "NA": 1,
+          "VIN": 1,
+          "OLIV": 1
+        },
+        "n_stem_families": 1,
+        "mean_morphs_per_word": 1.028
+      },
+      "bayes": {
+        "concentration": {
+          "affix": 1.0,
+          "stem": 2.0
+        },
+        "beta_prior": [
+          1.0,
+          1.0
+        ],
+        "pi_prefix_posterior_mean": 0.1935,
+        "pi_suffix_posterior_mean": 0.2084,
+        "frac_words_with_prefix": 0.193,
+        "frac_words_with_suffix": 0.208,
+        "prefixes": {
+          "A": 15,
+          "QA": 12,
+          "KA": 12,
+          "KU": 10,
+          "U": 9,
+          "MA": 7,
+          "SI": 7,
+          "KI": 7,
+          "DA": 7,
+          "QE": 7,
+          "DU": 6,
+          "PA": 5,
+          "SA": 5,
+          "JA": 5,
+          "I": 5,
+          "DI": 4,
+          "MI": 3,
+          "PU": 3,
+          "*86": 3,
+          "NA": 3,
+          "TA": 2,
+          "*312": 2,
+          "*21F": 2,
+          "RI": 2,
+          "SI+SE": 2
+        },
+        "suffixes": {
+          "GRA": 30,
+          "TI": 12,
+          "GRA+PA": 12,
+          "JA": 10,
+          "NI": 8,
+          "TA": 7,
+          "NA": 7,
+          "RA": 6,
+          "SE": 6,
+          "MA": 6,
+          "MI": 6,
+          "SU": 5,
+          "VIN": 5,
+          "GRA+QE": 4,
+          "ZA": 4,
+          "SA": 4,
+          "RE": 4,
+          "RO": 4,
+          "OLIV": 4,
+          "JU": 3,
+          "TE": 3,
+          "OLE+U": 3,
+          "WA": 3,
+          "*22M": 3,
+          "VIR+[?]": 3
+        },
+        "n_stem_families": 89
+      },
+      "paradigm": {
+        "prefixes": {
+          "A": 10,
+          "KA": 8,
+          "SI": 7,
+          "KU": 7,
+          "SA": 7,
+          "TA": 6,
+          "DA": 6,
+          "MA": 6,
+          "NA": 5,
+          "QE": 4,
+          "RE": 4,
+          "KI": 4,
+          "RU": 4,
+          "PI": 4,
+          "RI": 3,
+          "I": 3,
+          "PA": 3,
+          "TE": 3,
+          "DI": 3,
+          "NE": 3,
+          "TU": 3,
+          "U": 3,
+          "JA": 3,
+          "DU": 3,
+          "PA₃": 2
+        },
+        "suffixes": {
+          "TI": 11,
+          "GRA": 11,
+          "RU": 8,
+          "JA": 7,
+          "TU": 7,
+          "NI": 7,
+          "RE": 7,
+          "RA": 7,
+          "KI": 6,
+          "TE": 6,
+          "VIN": 6,
+          "RO": 5,
+          "NA": 5,
+          "SU": 5,
+          "SE": 5,
+          "I": 4,
+          "ZA": 4,
+          "CYP": 4,
+          "TA": 4,
+          "GRA+PA": 4,
+          "DI": 4,
+          "JU": 4,
+          "MI": 4,
+          "DE": 3,
+          "OLIV": 3
+        },
+        "n_stem_families": 138,
+        "n_reduplication": 12,
+        "reduplication_examples": [
+          [
+            "KUKUDARA",
+            "sign",
+            "KU"
+          ],
+          [
+            "QAQARU",
+            "sign",
+            "QA"
+          ],
+          [
+            "DIDIZAKE",
+            "sign",
+            "DI"
+          ],
+          [
+            "QAQARUIGRA+PA",
+            "sign",
+            "QA"
+          ],
+          [
+            "WISASANECYP+E",
+            "sign",
+            "SA"
+          ],
+          [
+            "JASASARATE",
+            "sign",
+            "SA"
+          ],
+          [
+            "UNANA",
+            "sign",
+            "NA"
+          ],
+          [
+            "KUPA₃PA₃",
+            "sign",
+            "PA₃"
+          ],
+          [
+            "ATAI*301WAJAJASUMATUOLIV",
+            "sign",
+            "JA"
+          ],
+          [
+            "WIJASUMATITI",
+            "sign",
+            "TI"
+          ],
+          [
+            "NIKIKINA",
+            "sign",
+            "KI"
+          ],
+          [
+            "MASIDUPA*342IIGRA+PA",
+            "sign",
+            "I"
+          ]
+        ],
+        "optional_signs": {
+          "RA": 2,
+          "TE": 2,
+          "NA": 1,
+          "TI": 1,
+          "QA": 1,
+          "TA": 1,
+          "DU": 1,
+          "DA": 1,
+          "RI": 1,
+          "MA": 1,
+          "A": 1,
+          "JU": 1,
+          "SU": 1,
+          "NU": 1,
+          "JA": 1
+        },
+        "n_initial_alternation_stems": 34,
+        "n_final_alternation_stems": 60,
+        "initial_alternation_examples": {
+          "DARE": [
+            "NA",
+            "SI"
+          ],
+          "KA": [
+            "*86",
+            "I",
+            "QE"
+          ],
+          "GRA": [
+            "E",
+            "NA",
+            "NE",
+            "RO",
+            "SI+SE",
+            "TA₂"
+          ],
+          "JARE": [
+            "PA",
+            "TE"
+          ],
+          "DE": [
+            "A",
+            "PA",
+            "PU"
+          ],
+          "NA": [
+            "A",
+            "DI",
+            "RU"
+          ],
+          "TA₂GRA+PA": [
+            "*312",
+            "RE"
+          ],
+          "TU": [
+            "*21F",
+            "*306",
+            "MI",
+            "QE",
+            "SI",
+            "TE"
+          ],
+          "RO": [
+            "KI",
+            "KU",
+            "SA"
+          ],
+          "TI": [
+            "*28B",
+            "KA",
+            "NA",
+            "O",
+            "RA₂",
+            "RE",
+            "TA",
+            "U"
+          ],
+          "NI": [
+            "NA",
+            "PA₃",
+            "RO",
+            "RU",
+            "SI+SE"
+          ],
+          "JU": [
+            "*327",
+            "A",
+            "KA",
+            "U"
+          ],
+          "TA": [
+            "*312",
+            "KI",
+            "OLE"
+          ],
+          "ZA": [
+            "MA",
+            "ME",
+            "RE"
+          ],
+          "KI": [
+            "DA",
+            "DI",
+            "KA",
+            "NA",
+            "NE",
+            "TE"
+          ]
+        },
+        "_pre_stems": {
+          "TA": [
+            "HIDE+B",
+            "NATI",
+            "RA",
+            "RE",
+            "RINA",
+            "TI"
+          ],
+          "PA₃": [
+            "*188",
+            "NI"
+          ],
+          "RI": [
+            "*305",
+            "JA",
+            "RUMA"
+          ],
+          "KA": [
+            "DI",
+            "JU",
+            "KI",
+            "KU",
+            "MI+JA+RU",
+            "QA",
+            "SARU",
+            "TI"
+          ],
+          "SI": [
+            "CYP",
+            "DARE",
+            "DIJA",
+            "RA",
+            "RU",
+            "TETU",
+            "TU"
+          ],
+          "I": [
+            "KA",
+            "KIRA",
+            "OLIV"
+          ],
+          "RO": [
+            "GRA",
+            "NI"
+          ],
+          "PA": [
+            "A",
+            "DE",
+            "JARE"
+          ],
+          "A": [
+            "DE",
+            "I",
+            "JU",
+            "KIRO",
+            "NA",
+            "RU",
+            "SARA₂",
+            "SE",
+            "SI",
+            "TANATE"
+          ],
+          "*312": [
+            "TA",
+            "TA₂GRA+PA"
+          ],
+          "PU": [
+            "DE",
+            "RA₂GRA"
+          ],
+          "TE": [
+            "JARE",
+            "KI",
+            "TU"
+          ],
+          "KU": [
+            "DA",
+            "NITE",
+            "PA",
+            "PI",
+            "RA",
+            "RO",
+            "ROGRA"
+          ],
+          "TA₂": [
+            "GRA",
+            "TARE"
+          ],
+          "NA": [
+            "DARE",
+            "GRA",
+            "KI",
+            "NI",
+            "TI"
+          ],
+          "QA": [
+            "QARU",
+            "RU"
+          ],
+          "*327": [
+            "JU"
+          ],
+          "QE": [
+            "KA",
+            "PITA",
+            "PU",
+            "TU"
+          ],
+          "RE": [
+            "SA",
+            "TA₂GRA+PA",
+            "TI",
+            "ZA"
+          ],
+          "DI": [
+            "KI",
+            "NA",
+            "RINA"
+          ],
+          "NI": [
+            "MI",
+            "TE"
+          ],
+          "NE": [
+            "*22M",
+            "GRA",
+            "KI"
+          ],
+          "SU": [
+            "RE"
+          ],
+          "O": [
+            "TEJA",
+            "TI"
+          ],
+          "RA": [
+            "*22F"
+          ],
+          "DA": [
+            "I",
+            "KI",
+            "ME",
+            "MINU",
+            "RE",
+            "TARE"
+          ],
+          "*305": [
+            "RU"
+          ],
+          "TU": [
+            "MA",
+            "SU",
+            "SUPU₂"
+          ],
+          "KO": [
+            "JA",
+            "RU"
+          ],
+          "OLE": [
+            "JA",
+            "TA"
+          ],
+          "*306": [
+            "TU",
+            "VIR+*307"
+          ],
+          "*322": [
+            "RI"
+          ],
+          "*406VAS+KE": [
+            "VIR+[?]"
+          ],
+          "KI": [
+            "RA",
+            "RETA₂",
+            "RO",
+            "TA"
+          ],
+          "MA": [
+            "DI",
+            "RE",
+            "RU",
+            "SI",
+            "ZA",
+            "ZU"
+          ],
+          "U": [
+            "JU",
+            "SU",
+            "TI"
+          ],
+          "SA": [
+            "DI",
+            "MA",
+            "RA₂",
+            "RA₂GRA",
+            "RO",
+            "RU",
+            "VIN"
+          ],
+          "RA₂": [
+            "TI"
+          ],
+          "JA": [
+            "KU",
+            "PA",
+            "RE"
+          ],
+          "SI+SE": [
+            "GRA",
+            "NI"
+          ],
+          "*304+PA": [
+            "CYP+D"
+          ],
+          "JE": [
+            "GRA+F"
+          ],
+          "*560": [
+            "RE"
+          ],
+          "WI": [
+            "DU"
+          ],
+          "*21F": [
+            "*118",
+            "TU"
+          ],
+          "ME": [
+            "KIDI",
+            "ZA"
+          ],
+          "*86": [
+            "KA"
+          ],
+          "DE": [
+            "DI",
+            "MI"
+          ],
+          "RU": [
+            "GRA+KU",
+            "NA",
+            "NI",
+            "SA"
+          ],
+          "PI": [
+            "MU",
+            "SA",
+            "SE",
+            "TARA"
+          ],
+          "E": [
+            "GRA",
+            "KURU"
+          ],
+          "DU": [
+            "JA",
+            "NEMI",
+            "RA"
+          ],
+          "*188": [
+            "DU"
+          ],
+          "MI": [
+            "TU"
+          ],
+          "*118": [
+            "MI"
+          ],
+          "ZU": [
+            "DU",
+            "SU"
+          ],
+          "*28B": [
+            "TI"
+          ],
+          "DA+*301": [
+            "*131C"
+          ],
+          "VIR+KA": [
+            "VIN"
+          ],
+          "VIR+[?]": [
+            "GRA+PA",
+            "I"
+          ],
+          "ZA": [
+            "SU"
+          ],
+          "MU": [
+            "RU"
+          ]
+        },
+        "_suf_stems": {
+          "TI": [
+            "DAKUSENE",
+            "KA",
+            "MATE",
+            "NA",
+            "O",
+            "RA₂",
+            "RE",
+            "SAMA",
+            "TA",
+            "TANA",
+            "U"
+          ],
+          "*188": [
+            "PA₃",
+            "SUPU₂"
+          ],
+          "*82": [
+            "E"
+          ],
+          "*305": [
+            "RI"
+          ],
+          "GRA": [
+            "ADU",
+            "E",
+            "KIRETA₂",
+            "KURO",
+            "NA",
+            "NE",
+            "PURA₂",
+            "RO",
+            "SARA₂",
+            "SI+SE",
+            "TA₂"
+          ],
+          "KA": [
+            "I",
+            "QE"
+          ],
+          "RO": [
+            "DINA",
+            "KI",
+            "KU",
+            "SA",
+            "SAMA"
+          ],
+          "QI+SI": [
+            "ATANA",
+            "RA"
+          ],
+          "*21M": [
+            "MADI"
+          ],
+          "DE": [
+            "A",
+            "PA",
+            "PU"
+          ],
+          "NA": [
+            "A",
+            "DI",
+            "NEMI",
+            "PA₃NI",
+            "RU"
+          ],
+          "I": [
+            "A",
+            "DA",
+            "DIJA",
+            "VIR+[?]"
+          ],
+          "VIR+KA": [
+            "ADU"
+          ],
+          "ME": [
+            "DA",
+            "MARU"
+          ],
+          "JA": [
+            "*306TU",
+            "DU",
+            "KO",
+            "OLE",
+            "PASE",
+            "PITA",
+            "RI"
+          ],
+          "*131B": [
+            "DUREZASE",
+            "KURA"
+          ],
+          "TU": [
+            "*21F",
+            "*306",
+            "ARA",
+            "MI",
+            "QE",
+            "SI",
+            "TE"
+          ],
+          "OLIV": [
+            "I",
+            "KURO",
+            "SARU"
+          ],
+          "NI": [
+            "KIDI",
+            "NA",
+            "PA₃",
+            "PURA₂",
+            "RO",
+            "RU",
+            "SI+SE"
+          ],
+          "CAPm+KU": [
+            "KURO",
+            "RU"
+          ],
+          "MI+JA+RU": [
+            "KA"
+          ],
+          "ZA": [
+            "ADU",
+            "MA",
+            "ME",
+            "RE"
+          ],
+          "OLE+DI": [
+            "SARA₂"
+          ],
+          "A": [
+            "PA"
+          ],
+          "KI": [
+            "DA",
+            "DI",
+            "KA",
+            "NA",
+            "NE",
+            "TE"
+          ],
+          "CYP": [
+            "KIRO",
+            "MINUTE",
+            "SARA₂",
+            "SI"
+          ],
+          "TE": [
+            "ATANA",
+            "DURI",
+            "KUNI",
+            "MINU",
+            "NI",
+            "TANA"
+          ],
+          "*22M": [
+            "DURI",
+            "NE"
+          ],
+          "RE": [
+            "DA",
+            "JA",
+            "MA",
+            "MATE",
+            "SU",
+            "TA",
+            "TEJA"
+          ],
+          "TA": [
+            "KI",
+            "MAKAI",
+            "OLE",
+            "RUMA"
+          ],
+          "*22F": [
+            "RA"
+          ],
+          "OLE+KI": [
+            "ADU",
+            "SARO"
+          ],
+          "RU": [
+            "*305",
+            "A",
+            "KO",
+            "MA",
+            "MU",
+            "QA",
+            "SA",
+            "SI"
+          ],
+          "GRA+PA": [
+            "KUPA",
+            "PA₃NI",
+            "RETA₂",
+            "VIR+[?]"
+          ],
+          "DI": [
+            "DE",
+            "KA",
+            "MA",
+            "SA"
+          ],
+          "PI": [
+            "KU"
+          ],
+          "AROM": [
+            "TE"
+          ],
+          "RA": [
+            "ARU",
+            "DU",
+            "KI",
+            "KU",
+            "PITA",
+            "SI",
+            "TA"
+          ],
+          "DA": [
+            "KU",
+            "PATA"
+          ],
+          "MA": [
+            "SA",
+            "TU"
+          ],
+          "*414+A": [
+            "KURO"
+          ],
+          "VIR+*307": [
+            "*306"
+          ],
+          "GRA+K+L": [
+            "DAME",
+            "KUNISU"
+          ],
+          "JU": [
+            "A",
+            "ARA",
+            "KA",
+            "U"
+          ],
+          "OLE+U": [
+            "KIRETANA",
+            "KUPA₃"
+          ],
+          "SU": [
+            "KUNI",
+            "TU",
+            "U",
+            "ZA",
+            "ZU"
+          ],
+          "RA₂": [
+            "SA"
+          ],
+          "SI": [
+            "A",
+            "MA"
+          ],
+          "PU₂": [
+            "TUSU"
+          ],
+          "KU": [
+            "JA",
+            "KA",
+            "KURU"
+          ],
+          "CYP+D": [
+            "*304+PA"
+          ],
+          "GRA+F": [
+            "JE"
+          ],
+          "DU": [
+            "*188",
+            "WI",
+            "ZU"
+          ],
+          "*47": [
+            "I"
+          ],
+          "GRA+B": [
+            "DAME",
+            "KIRETANA"
+          ],
+          "VIN": [
+            "DINAU",
+            "JA*21F",
+            "KADI",
+            "KURO",
+            "SA",
+            "VIR+KA"
+          ],
+          "HIDE+B": [
+            "TA"
+          ],
+          "PA": [
+            "JA",
+            "KU"
+          ],
+          "MI": [
+            "*118",
+            "DE",
+            "JARE",
+            "NI"
+          ],
+          "NU": [
+            "KUPA₃"
+          ],
+          "SA": [
+            "PI",
+            "RE",
+            "RU"
+          ],
+          "SE": [
+            "A",
+            "DIKI",
+            "MAKAI",
+            "PI",
+            "RUMATA"
+          ],
+          "*49": [
+            "U"
+          ],
+          "PA₃": [
+            "KUPA₃"
+          ],
+          "QA": [
+            "KA"
+          ],
+          "*321": [
+            "MA"
+          ],
+          "*413+SU": [
+            "RU"
+          ],
+          "GRA+QE": [
+            "JA*21F",
+            "PASE"
+          ],
+          "MU": [
+            "KURA",
+            "PI"
+          ],
+          "VIR+[?]": [
+            "KAPA",
+            "KIRETANA",
+            "SARA₂"
+          ],
+          "ZU": [
+            "MA"
+          ],
+          "DA+RE+SE": [
+            "DIRINA"
+          ],
+          "NE": [
+            "*21FTU",
+            "PATA"
+          ],
+          "*301": [
+            "TE"
+          ],
+          "GRA+KU": [
+            "RU"
+          ],
+          "*345": [
+            "JA"
+          ],
+          "U": [
+            "DINA"
+          ],
+          "*118": [
+            "*21F"
+          ],
+          "KE": [
+            "TE"
+          ],
+          "*307": [
+            "OLE"
+          ],
+          "PU": [
+            "QE"
+          ],
+          "*308": [
+            "I"
+          ],
+          "*362": [
+            "WA"
+          ],
+          "QE": [
+            "KAPA"
+          ]
+        }
+      },
+      "agreement": {
+        "prefixes": {
+          "top_k": 10,
+          "mdl": [
+            "A",
+            "MASI",
+            "O",
+            "TI"
+          ],
+          "bayes": [
+            "A",
+            "DA",
+            "KA",
+            "KI",
+            "KU",
+            "MA",
+            "QA",
+            "QE",
+            "SI",
+            "U"
+          ],
+          "paradigm": [
+            "A",
+            "DA",
+            "KA",
+            "KU",
+            "MA",
+            "NA",
+            "QE",
+            "SA",
+            "SI",
+            "TA"
+          ],
+          "three_way_intersection": [
+            "A"
+          ],
+          "jaccard_mdl_bayes": 0.077,
+          "jaccard_mdl_para": 0.077,
+          "jaccard_bayes_para": 0.538
+        },
+        "suffixes": {
+          "top_k": 10,
+          "mdl": [
+            "GRA+PA",
+            "NA",
+            "OLIV",
+            "VIN"
+          ],
+          "bayes": [
+            "GRA",
+            "GRA+PA",
+            "JA",
+            "MA",
+            "NA",
+            "NI",
+            "RA",
+            "SE",
+            "TA",
+            "TI"
+          ],
+          "paradigm": [
+            "GRA",
+            "JA",
+            "KI",
+            "NI",
+            "RA",
+            "RE",
+            "RU",
+            "TE",
+            "TI",
+            "TU"
+          ],
+          "three_way_intersection": [],
+          "jaccard_mdl_bayes": 0.167,
+          "jaccard_mdl_para": 0.0,
+          "jaccard_bayes_para": 0.333
+        }
+      }
+    },
+    "FORMULA": {
+      "label": "FORMULA",
+      "n_words": 1642,
+      "n_types": 662,
+      "mdl": {
+        "n_morphs": 625,
+        "total_dl": 23099.87,
+        "prefixes": {
+          "ATAI*301WAJA": 9,
+          "SI": 7,
+          "KU": 6,
+          "A": 5,
+          "TA": 4,
+          "I": 2,
+          "ME": 2,
+          "JASA": 2,
+          "JA": 2,
+          "ATA": 2,
+          "VIN": 1,
+          "ASIJAKA": 1,
+          "*21FTUNE": 1,
+          "MA": 1,
+          "KA": 1,
+          "WADINI": 1,
+          "QA": 1,
+          "SIRUTE": 1,
+          "UTINU": 1,
+          "IPINAMA": 1,
+          "RO": 1,
+          "NADAWADUWATO": 1,
+          "*34TIRIADIDA": 1,
+          "JU": 1,
+          "ARE": 1
+        },
+        "suffixes": {
+          "SI": 6,
+          "TE": 5,
+          "I": 3,
+          "SIRUTE": 3,
+          "JA": 3,
+          "NI": 2,
+          "KA": 2,
+          "DI": 2,
+          "PA": 2,
+          "JASASARAME": 2,
+          "NA": 2,
+          "KU": 2,
+          "RE": 2,
+          "A": 2,
+          "QA": 2,
+          "RU": 1,
+          "RO": 1,
+          "TA": 1,
+          "DI*306CYP+D*304+PA": 1,
+          "NAMAMATITI*904": 1,
+          "IPINAMA": 1,
+          "AU": 1,
+          "JATI*321": 1,
+          "IDA": 1,
+          "DA": 1
+        },
+        "n_stem_families": 32,
+        "mean_morphs_per_word": 1.48
+      },
+      "bayes": {
+        "concentration": {
+          "affix": 1.0,
+          "stem": 2.0
+        },
+        "beta_prior": [
+          1.0,
+          1.0
+        ],
+        "pi_prefix_posterior_mean": 0.1083,
+        "pi_suffix_posterior_mean": 0.132,
+        "frac_words_with_prefix": 0.108,
+        "frac_words_with_suffix": 0.132,
+        "prefixes": {
+          "A": 16,
+          "PA": 10,
+          "I": 9,
+          "JA": 9,
+          "MI": 8,
+          "SI": 7,
+          "DA": 6,
+          "SA": 6,
+          "QA": 5,
+          "KA": 5,
+          "DI": 5,
+          "RE": 5,
+          "NU": 4,
+          "KU": 4,
+          "NA": 4,
+          "KI": 4,
+          "TE": 3,
+          "WA": 3,
+          "RO": 3,
+          "QE": 3,
+          "TI": 3,
+          "RU": 3,
+          "PI": 3,
+          "*21F": 2,
+          "SE": 2
+        },
+        "suffixes": {
+          "JA": 12,
+          "TE": 10,
+          "MI": 9,
+          "TA": 8,
+          "NE": 8,
+          "CYP": 7,
+          "VIR+[?]": 7,
+          "RA": 6,
+          "JE": 6,
+          "PI": 6,
+          "GRA": 5,
+          "NI": 5,
+          "DA": 5,
+          "RO": 5,
+          "DU": 5,
+          "NA": 4,
+          "ME": 4,
+          "PA": 4,
+          "KI": 4,
+          "RE": 4,
+          "*305": 4,
+          "*118": 4,
+          "VIN": 4,
+          "KE": 4,
+          "RA₂": 4
+        },
+        "n_stem_families": 85
+      },
+      "paradigm": {
+        "prefixes": {
+          "A": 23,
+          "SI": 12,
+          "I": 11,
+          "KA": 11,
+          "PA": 8,
+          "KU": 7,
+          "JA": 7,
+          "NU": 6,
+          "QA": 6,
+          "MI": 6,
+          "SA": 6,
+          "TA": 6,
+          "TI": 5,
+          "RU": 5,
+          "RO": 5,
+          "TE": 5,
+          "DA": 5,
+          "RE": 5,
+          "KI": 5,
+          "SU": 4,
+          "PI": 4,
+          "SE": 3,
+          "RA": 3,
+          "NI": 3,
+          "TU": 3
+        },
+        "suffixes": {
+          "JA": 9,
+          "TE": 8,
+          "TA": 8,
+          "KA": 7,
+          "RO": 6,
+          "RE": 6,
+          "PA": 6,
+          "SA": 6,
+          "RA": 6,
+          "DU": 5,
+          "VIR+[?]": 5,
+          "MI": 5,
+          "SI": 5,
+          "CYP": 5,
+          "KI": 5,
+          "PI": 5,
+          "TI": 4,
+          "DA": 4,
+          "NU": 4,
+          "ME": 4,
+          "NE": 4,
+          "RI": 4,
+          "RA₂": 4,
+          "GRA": 4,
+          "SU": 4
+        },
+        "n_stem_families": 132,
+        "n_reduplication": 48,
+        "reduplication_examples": [
+          [
+            "TAWITEJAMUUQETIJASASARAMETANUNIKINANINUNII",
+            "sign",
+            "SA"
+          ],
+          [
+            "KIKIRAJA",
+            "sign",
+            "KI"
+          ],
+          [
+            "ASASA*802ME",
+            "sign",
+            "SA"
+          ],
+          [
+            "ASASARAME",
+            "sign",
+            "SA"
+          ],
+          [
+            "SASARAMEUNARUKANATI",
+            "sign",
+            "SA"
+          ],
+          [
+            "VINVIN",
+            "sign",
+            "VIN"
+          ],
+          [
+            "QAQADA",
+            "sign",
+            "QA"
+          ],
+          [
+            "*312TETE",
+            "sign",
+            "TE"
+          ],
+          [
+            "SITEDIDI",
+            "sign",
+            "DI"
+          ],
+          [
+            "JUJASISI",
+            "sign",
+            "SI"
+          ],
+          [
+            "TANAI*301UTINUINATAIZUDISIKAJASASARAME",
+            "sign",
+            "SA"
+          ],
+          [
+            "AROMJASASARA",
+            "sign",
+            "SA"
+          ],
+          [
+            "NADADA",
+            "sign",
+            "DA"
+          ],
+          [
+            "MIJAJAWAPA₃",
+            "sign",
+            "JA"
+          ],
+          [
+            "SASARAME",
+            "sign",
+            "SA"
+          ],
+          [
+            "JADIKITETEDUPU₂RE",
+            "sign",
+            "TE"
+          ],
+          [
+            "RAMEANEUNARUKAJASIAPADUPAJAJAPAQA",
+            "sign",
+            "JA"
+          ],
+          [
+            "ATAI*301WAJAJADIKITUJASASARAMEUNAKANASIIPINAMA",
+            "sign",
+            "JA"
+          ],
+          [
+            "RIQETIASASARA*325",
+            "sign",
+            "SA"
+          ],
+          [
+            "TITIMANA",
+            "sign",
+            "TI"
+          ]
+        ],
+        "optional_signs": {
+          "DA": 3,
+          "RI": 2,
+          "KU": 2,
+          "RU": 1,
+          "A": 1,
+          "NA": 1,
+          "RA": 1,
+          "QE": 1,
+          "DU": 1,
+          "KA": 1,
+          "RE": 1,
+          "DI": 1,
+          "MA": 1,
+          "*314": 1,
+          "SE": 1
+        },
+        "n_initial_alternation_stems": 58,
+        "n_final_alternation_stems": 48,
+        "initial_alternation_examples": {
+          "*305": [
+            "KA",
+            "QA",
+            "SE"
+          ],
+          "ZA": [
+            "I",
+            "PA"
+          ],
+          "DARO": [
+            "KI",
+            "SI"
+          ],
+          "DU": [
+            "*188",
+            "A",
+            "RA₂",
+            "SI",
+            "SU",
+            "ZU"
+          ],
+          "RO": [
+            "*86",
+            "KI",
+            "KU",
+            "NU"
+          ],
+          "DA": [
+            "I",
+            "KI",
+            "O"
+          ],
+          "TE": [
+            "NI",
+            "NU",
+            "RA",
+            "SI",
+            "TE",
+            "U"
+          ],
+          "SITE": [
+            "KE",
+            "QE"
+          ],
+          "TA": [
+            "A",
+            "KU",
+            "NI",
+            "SA"
+          ],
+          "VS": [
+            "*404",
+            "*408",
+            "*409",
+            "*411",
+            "*417"
+          ],
+          "KA": [
+            "*401+RO",
+            "DA",
+            "DU",
+            "KU",
+            "MI",
+            "SI"
+          ],
+          "TIVIR+[?]": [
+            "NU",
+            "QE"
+          ],
+          "NI": [
+            "*358",
+            "KU",
+            "SI",
+            "TI"
+          ],
+          "MI": [
+            "*805",
+            "A",
+            "E",
+            "O",
+            "RU",
+            "TA"
+          ],
+          "SI": [
+            "*301",
+            "DI",
+            "KA",
+            "SE",
+            "VIN"
+          ]
+        },
+        "_pre_stems": {
+          "SE": [
+            "*305",
+            "I",
+            "SI"
+          ],
+          "PA": [
+            "IKI",
+            "OLE+MI",
+            "RA",
+            "RE",
+            "RIDE",
+            "SEJA",
+            "TANE",
+            "ZA"
+          ],
+          "SI": [
+            "*805MI",
+            "CYP",
+            "DARO",
+            "DU",
+            "KA",
+            "KIRA",
+            "NA",
+            "NI",
+            "PU",
+            "TE",
+            "TU",
+            "VIR+[?]"
+          ],
+          "NU": [
+            "RIJA",
+            "RO",
+            "SE",
+            "TE",
+            "TI",
+            "TIVIR+[?]"
+          ],
+          "SU": [
+            "DU",
+            "KI",
+            "PA",
+            "PU₂"
+          ],
+          "O": [
+            "DA",
+            "MI"
+          ],
+          "KE": [
+            "SITE"
+          ],
+          "A": [
+            "*301",
+            "DU",
+            "I",
+            "JA",
+            "JE",
+            "KARU",
+            "KATA",
+            "MA",
+            "MI",
+            "NE",
+            "NU",
+            "PA",
+            "PARANE",
+            "PA₃",
+            "PI",
+            "RA",
+            "RE",
+            "RI",
+            "RIJA",
+            "SASARA",
+            "SASARAME",
+            "SEJA",
+            "TA"
+          ],
+          "*411": [
+            "VS"
+          ],
+          "QE": [
+            "SITE",
+            "TIVIR+[?]"
+          ],
+          "TI": [
+            "ISI",
+            "MA",
+            "NA",
+            "NI",
+            "NITA"
+          ],
+          "RU": [
+            "DI",
+            "MA",
+            "MI",
+            "PARANE",
+            "RA₂"
+          ],
+          "*306": [
+            "CYP+E"
+          ],
+          "QA": [
+            "*305",
+            "KI",
+            "KITI",
+            "NE",
+            "PU",
+            "SA"
+          ],
+          "*417": [
+            "VS"
+          ],
+          "DE": [
+            "KITI",
+            "NU"
+          ],
+          "JU": [
+            "RA",
+            "VIR+[?]"
+          ],
+          "RA": [
+            "RIDE",
+            "TA₂",
+            "TE"
+          ],
+          "NI": [
+            "TA",
+            "TE",
+            "double mina"
+          ],
+          "MI": [
+            "DARA",
+            "KA",
+            "KISANE",
+            "NA",
+            "RE",
+            "TU"
+          ],
+          "RO": [
+            "E",
+            "KE",
+            "QA",
+            "VIN",
+            "VIR+KA"
+          ],
+          "*404": [
+            "VS"
+          ],
+          "TU": [
+            "ME",
+            "NU",
+            "PA"
+          ],
+          "KU": [
+            "KA",
+            "NI",
+            "OLE",
+            "PA",
+            "RE",
+            "RO",
+            "TA"
+          ],
+          "TA₂": [
+            "CYP"
+          ],
+          "TE": [
+            "*301",
+            "JA",
+            "RI",
+            "TE",
+            "ZU"
+          ],
+          "U": [
+            "KI",
+            "NAA",
+            "TE"
+          ],
+          "DU": [
+            "JU",
+            "KA",
+            "MITATIRA₂"
+          ],
+          "SA": [
+            "MATE",
+            "NE",
+            "PU",
+            "RA₂",
+            "RI",
+            "TA"
+          ],
+          "DA": [
+            "I",
+            "KA",
+            "KU",
+            "MATE",
+            "PA₃"
+          ],
+          "VIN": [
+            "SI",
+            "VIN"
+          ],
+          "I": [
+            "CYP+E",
+            "DA",
+            "DADA",
+            "DAMATE",
+            "DE",
+            "MA",
+            "PI",
+            "RA₂",
+            "SE",
+            "WAJA",
+            "ZA"
+          ],
+          "*312": [
+            "TETE"
+          ],
+          "DI": [
+            "DE",
+            "KAKI",
+            "SI"
+          ],
+          "RE": [
+            "*86",
+            "AJA",
+            "JA",
+            "SU",
+            "TI"
+          ],
+          "KA": [
+            "*305",
+            "CYP+D",
+            "IKA",
+            "JE",
+            "KUPA",
+            "NA",
+            "PA",
+            "RA₂",
+            "RU",
+            "SA",
+            "SI"
+          ],
+          "TA": [
+            "JA",
+            "KE",
+            "MI",
+            "NE",
+            "PI",
+            "U"
+          ],
+          "NA": [
+            "APA₃",
+            "DADA",
+            "O"
+          ],
+          "*805": [
+            "MI"
+          ],
+          "AROM": [
+            "JASASARA"
+          ],
+          "*304+PA": [
+            "KUPA"
+          ],
+          "PI": [
+            "MITATIRA₂",
+            "NU",
+            "O",
+            "SA"
+          ],
+          "JA": [
+            "KI",
+            "QE",
+            "RA",
+            "SA",
+            "SASARAME",
+            "SU",
+            "WI"
+          ],
+          "TO": [
+            "ME"
+          ],
+          "*409": [
+            "VS"
+          ],
+          "PU": [
+            "RA"
+          ],
+          "MA": [
+            "I",
+            "RI"
+          ],
+          "KI": [
+            "DA",
+            "DARO",
+            "RA",
+            "RO",
+            "RU"
+          ],
+          "*358": [
+            "NI"
+          ],
+          "*188": [
+            "DU"
+          ],
+          "E": [
+            "*301",
+            "MI"
+          ],
+          "*301": [
+            "SI",
+            "WA"
+          ],
+          "PA₃": [
+            "PU₂"
+          ],
+          "*86": [
+            "RO"
+          ],
+          "WI": [
+            "JA",
+            "SA"
+          ],
+          "CYP": [
+            "double mina"
+          ],
+          "*408": [
+            "VS"
+          ],
+          "RA₂": [
+            "DU"
+          ],
+          "ZU": [
+            "DU",
+            "VIR+[?]"
+          ],
+          "*401+RO": [
+            "KA"
+          ],
+          "*348": [
+            "CYP"
+          ],
+          "*304": [
+            "CYP"
+          ],
+          "ME": [
+            "VIN"
+          ],
+          "*314": [
+            "TAMA"
+          ],
+          "PO": [
+            "SA"
+          ],
+          "JE": [
+            "TANA"
+          ],
+          "*118": [
+            "MINA"
+          ]
+        },
+        "_suf_stems": {
+          "*305": [
+            "KA",
+            "QA",
+            "SE"
+          ],
+          "ZA": [
+            "I",
+            "PA"
+          ],
+          "RO": [
+            "*86",
+            "KI",
+            "KIDA",
+            "KU",
+            "NU",
+            "SIDA"
+          ],
+          "DU": [
+            "A",
+            "RA₂",
+            "SI",
+            "SU",
+            "ZU"
+          ],
+          "TI": [
+            "NU",
+            "QAKI",
+            "RE",
+            "TANA"
+          ],
+          "DA": [
+            "I",
+            "IDA",
+            "KI",
+            "O"
+          ],
+          "TE": [
+            "INA",
+            "NI",
+            "NU",
+            "RA",
+            "SI",
+            "SIDA",
+            "TE",
+            "U"
+          ],
+          "OLE+MI": [
+            "PA",
+            "TERI"
+          ],
+          "TA": [
+            "A",
+            "AKA",
+            "IKI",
+            "KU",
+            "NI",
+            "SA",
+            "SESI",
+            "TINI"
+          ],
+          "KA": [
+            "*401+RO",
+            "DA",
+            "DU",
+            "KU",
+            "MI",
+            "SI",
+            "UNA"
+          ],
+          "VIR+[?]": [
+            "ADU",
+            "JU",
+            "NUTI",
+            "SI",
+            "ZU"
+          ],
+          "NI": [
+            "KU",
+            "SI",
+            "TI"
+          ],
+          "RE": [
+            "A",
+            "ADU",
+            "KATA",
+            "KU",
+            "MI",
+            "PA"
+          ],
+          "MI": [
+            "A",
+            "E",
+            "O",
+            "RU",
+            "TA"
+          ],
+          "SI": [
+            "*301",
+            "DI",
+            "KA",
+            "SE",
+            "VIN"
+          ],
+          "PU": [
+            "QA",
+            "SA",
+            "SI"
+          ],
+          "PA": [
+            "A",
+            "ARI",
+            "KA",
+            "KU",
+            "SU",
+            "TU"
+          ],
+          "NU": [
+            "A",
+            "DE",
+            "PI",
+            "TU"
+          ],
+          "VIR+KA": [
+            "RO"
+          ],
+          "ME": [
+            "ASASARA",
+            "JASASARA",
+            "SASARA",
+            "TU"
+          ],
+          "double mina": [
+            "CYP",
+            "NI"
+          ],
+          "CYP": [
+            "KAKUPA",
+            "KANA",
+            "SARA₂",
+            "SI",
+            "TA₂"
+          ],
+          "ZU": [
+            "TE"
+          ],
+          "KI": [
+            "APA",
+            "JA",
+            "QA",
+            "SU",
+            "U"
+          ],
+          "SE": [
+            "*188DU",
+            "I",
+            "NU"
+          ],
+          "NE": [
+            "A",
+            "QA",
+            "SA",
+            "TA"
+          ],
+          "JE": [
+            "A",
+            "KA"
+          ],
+          "RI": [
+            "A",
+            "MA",
+            "SA",
+            "TE"
+          ],
+          "]TU+RO": [
+            "KA"
+          ],
+          "SA": [
+            "AJE",
+            "JA",
+            "KA",
+            "PI",
+            "QA",
+            "WI"
+          ],
+          "VIN": [
+            "ME",
+            "RO",
+            "VIN"
+          ],
+          "RA₂": [
+            "I",
+            "KA",
+            "RU",
+            "SA"
+          ],
+          "*86": [
+            "RE"
+          ],
+          "GRA": [
+            "DARE",
+            "IDA",
+            "IKA",
+            "U*34SI"
+          ],
+          "SU": [
+            "JA",
+            "KAKI",
+            "KUNI",
+            "RE"
+          ],
+          "KE": [
+            "RO",
+            "TA"
+          ],
+          "CYP+D": [
+            "ISI",
+            "KA",
+            "KISANE"
+          ],
+          "JA": [
+            "A",
+            "ARI",
+            "ASE",
+            "JASA",
+            "QERA₂",
+            "RE",
+            "TA",
+            "TE",
+            "WI"
+          ],
+          "O": [
+            "NA",
+            "PI"
+          ],
+          "I": [
+            "A",
+            "DA",
+            "MA",
+            "SE"
+          ],
+          "CYP+E": [
+            "I"
+          ],
+          "DI": [
+            "APA₃",
+            "RU"
+          ],
+          "PA₃": [
+            "A",
+            "DA",
+            "JAKI",
+            "NAA"
+          ],
+          "WI": [
+            "JA"
+          ],
+          "MA": [
+            "A",
+            "I",
+            "RU",
+            "TI"
+          ],
+          "OLE": [
+            "KU",
+            "UNAKANASI"
+          ],
+          "DE": [
+            "DI",
+            "I"
+          ],
+          "NA": [
+            "KA",
+            "MI",
+            "SI",
+            "TI"
+          ],
+          "U": [
+            "QERA₂",
+            "TA"
+          ],
+          "RA": [
+            "A",
+            "JA",
+            "JU",
+            "KI",
+            "PA",
+            "PU"
+          ],
+          "A": [
+            "UNA"
+          ],
+          "MI+JA+RU": [
+            "ASE"
+          ],
+          "RU": [
+            "AKA",
+            "KA",
+            "KI"
+          ],
+          "TA₂": [
+            "RA"
+          ],
+          "TU": [
+            "MI",
+            "SI"
+          ],
+          "L": [
+            "DARA"
+          ],
+          "*328": [
+            "HIDE+[?]"
+          ],
+          "*301": [
+            "A",
+            "E",
+            "TE"
+          ],
+          "WA": [
+            "*301",
+            "INA"
+          ],
+          "*21M": [
+            "TERI"
+          ],
+          "AU": [
+            "ATAI*301WAJA"
+          ],
+          "PU₂": [
+            "PA₃",
+            "SU"
+          ],
+          "*312": [
+            "MU"
+          ],
+          "E": [
+            "RO"
+          ],
+          "CAP": [
+            "KUMINAQE"
+          ],
+          "PI": [
+            "A",
+            "I",
+            "TA",
+            "TAMA",
+            "WAJA"
+          ],
+          "KU": [
+            "DA",
+            "DARE"
+          ],
+          "QA": [
+            "RO"
+          ],
+          "GRA+F": [
+            "SE"
+          ],
+          "JU": [
+            "DU"
+          ],
+          "MI+JA+KA": [
+            "SARA₂"
+          ],
+          "QE": [
+            "JA"
+          ],
+          "*331": [
+            "I"
+          ],
+          "RA+KA": [
+            "SI+SE"
+          ]
+        }
+      },
+      "agreement": {
+        "prefixes": {
+          "top_k": 10,
+          "mdl": [
+            "A",
+            "ATA",
+            "ATAI*301WAJA",
+            "I",
+            "JA",
+            "JASA",
+            "KU",
+            "ME",
+            "SI",
+            "TA"
+          ],
+          "bayes": [
+            "A",
+            "DA",
+            "I",
+            "JA",
+            "KA",
+            "MI",
+            "PA",
+            "QA",
+            "SA",
+            "SI"
+          ],
+          "paradigm": [
+            "A",
+            "I",
+            "JA",
+            "KA",
+            "KU",
+            "MI",
+            "NU",
+            "PA",
+            "QA",
+            "SI"
+          ],
+          "three_way_intersection": [
+            "A",
+            "I",
+            "JA",
+            "SI"
+          ],
+          "jaccard_mdl_bayes": 0.25,
+          "jaccard_mdl_para": 0.333,
+          "jaccard_bayes_para": 0.667
+        },
+        "suffixes": {
+          "top_k": 10,
+          "mdl": [
+            "DI",
+            "I",
+            "JA",
+            "JASASARAME",
+            "KA",
+            "NI",
+            "PA",
+            "SI",
+            "SIRUTE",
+            "TE"
+          ],
+          "bayes": [
+            "CYP",
+            "JA",
+            "JE",
+            "MI",
+            "NE",
+            "PI",
+            "RA",
+            "TA",
+            "TE",
+            "VIR+[?]"
+          ],
+          "paradigm": [
+            "DU",
+            "JA",
+            "KA",
+            "PA",
+            "RA",
+            "RE",
+            "RO",
+            "SA",
+            "TA",
+            "TE"
+          ],
+          "three_way_intersection": [
+            "JA",
+            "TE"
+          ],
+          "jaccard_mdl_bayes": 0.111,
+          "jaccard_mdl_para": 0.25,
+          "jaccard_bayes_para": 0.25
+        }
+      }
+    }
+  },
+  "c4_characterization": {
+    "cross_family_productivity": {
+      "mdl": {
+        "A_prefix": 3,
+        "I_prefix": 2,
+        "JA_suffix": 0
+      },
+      "bayes": {
+        "A_prefix": 43,
+        "I_prefix": 17,
+        "JA_suffix": 22
+      },
+      "paradigm": {
+        "A_prefix": 47,
+        "I_prefix": 28,
+        "JA_suffix": 26
+      },
+      "paradigm_recurrent_stem": {
+        "A_prefix": 47,
+        "I_prefix": 28,
+        "JA_suffix": 26
+      }
+    },
+    "frequency_matched_null": {
+      "prefix": {
+        "A": {
+          "observed": 47,
+          "null_mean": 23.94,
+          "null_95ci": [
+            16,
+            32
+          ],
+          "p_ge": 0.005,
+          "p_holm": 0.05
+        },
+        "I": {
+          "observed": 28,
+          "null_mean": 22.09,
+          "null_95ci": [
+            15,
+            31
+          ],
+          "p_ge": 0.0796,
+          "p_holm": 0.7164
+        },
+        "U": {
+          "observed": 10,
+          "null_mean": 8.71,
+          "null_95ci": [
+            4,
+            14
+          ],
+          "p_ge": 0.3831,
+          "p_holm": 1.0
+        },
+        "E": {
+          "observed": 5,
+          "null_mean": 4.32,
+          "null_95ci": [
+            1,
+            9
+          ],
+          "p_ge": 0.403,
+          "p_holm": 1.0
+        },
+        "O": {
+          "observed": 4,
+          "null_mean": 3.72,
+          "null_95ci": [
+            0,
+            8
+          ],
+          "p_ge": 0.4975,
+          "p_holm": 0.995
+        }
+      },
+      "suffix": {
+        "JA": {
+          "observed": 26,
+          "null_mean": 19.94,
+          "null_95ci": [
+            12,
+            29
+          ],
+          "p_ge": 0.1144,
+          "p_holm": 0.9152
+        },
+        "RE": {
+          "observed": 19,
+          "null_mean": 15.02,
+          "null_95ci": [
+            9,
+            22
+          ],
+          "p_ge": 0.1592,
+          "p_holm": 0.9552
+        },
+        "NE": {
+          "observed": 11,
+          "null_mean": 7.26,
+          "null_95ci": [
+            3,
+            13
+          ],
+          "p_ge": 0.1144,
+          "p_holm": 0.8008
+        },
+        "TU": {
+          "observed": 12,
+          "null_mean": 9.07,
+          "null_95ci": [
+            4,
+            15
+          ],
+          "p_ge": 0.1841,
+          "p_holm": 0.9205
+        },
+        "SI": {
+          "observed": 14,
+          "null_mean": 27.16,
+          "null_95ci": [
+            19,
+            37
+          ],
+          "p_ge": 1.0,
+          "p_holm": 1.0
+        }
+      },
+      "n_null": 200,
+      "n_tests_holm": 10
+    },
+    "grading_benchmark_noninput": {
+      "top6_prefixes_paradigm": [
+        "A",
+        "I",
+        "DA",
+        "JA",
+        "KA",
+        "SI"
+      ],
+      "fraction_pure_vowel": 0.333,
+      "note": "GRADING ONLY — pure-vowel identity never entered any model; L2/L3, no licence."
+    }
+  },
+  "lb_positive_control": {
+    "n_words": 13562,
+    "n_types": 4946,
+    "mdl_top_suffixes": [
+      [
+        "POTINIJA",
+        3
+      ],
+      [
+        "MENA",
+        3
+      ],
+      [
+        "RIJO",
+        3
+      ],
+      [
+        "IJO",
+        2
+      ],
+      [
+        "TERIJA",
+        2
+      ],
+      [
+        "IJEREJA",
+        1
+      ],
+      [
+        "SIJEWO",
+        1
+      ],
+      [
+        "MENO",
+        1
+      ],
+      [
+        "SODE",
+        1
+      ],
+      [
+        "WEIJO",
+        1
+      ],
+      [
+        "OQE",
+        1
+      ],
+      [
+        "NETO",
+        1
+      ]
+    ],
+    "bayes_pi_prefix": 0.203,
+    "bayes_pi_suffix": 0.2112,
+    "bayes_top_suffixes": [
+      [
+        "JO",
+        354
+      ],
+      [
+        "JA",
+        123
+      ],
+      [
+        "TA",
+        115
+      ],
+      [
+        "RO",
+        105
+      ],
+      [
+        "TO",
+        88
+      ],
+      [
+        "WO",
+        88
+      ],
+      [
+        "QE",
+        80
+      ],
+      [
+        "O",
+        78
+      ],
+      [
+        "WE",
+        73
+      ],
+      [
+        "NO",
+        61
+      ],
+      [
+        "DE",
+        61
+      ],
+      [
+        "SO",
+        54
+      ]
+    ],
+    "paradigm_top_suffixes": [
+      [
+        "JO",
+        308
+      ],
+      [
+        "RO",
+        172
+      ],
+      [
+        "JA",
+        165
+      ],
+      [
+        "TO",
+        163
+      ],
+      [
+        "TA",
+        156
+      ],
+      [
+        "WO",
+        130
+      ],
+      [
+        "NO",
+        124
+      ],
+      [
+        "WE",
+        119
+      ],
+      [
+        "O",
+        103
+      ],
+      [
+        "U",
+        101
+      ],
+      [
+        "QE",
+        100
+      ],
+      [
+        "KO",
+        89
+      ]
+    ],
+    "la_bayes_pi_prefix": 0.1451,
+    "la_bayes_pi_suffix": 0.1642,
+    "grading_note": "LB endings listed for GRADING recovery only; never a model input."
+  }
+}

@@ -1,0 +1,468 @@
+{
+ "meta": {
+  "seed": 20260708,
+  "n_signs": 74,
+  "n_vowels": 5,
+  "vowel_signs": [
+   "E",
+   "A",
+   "O",
+   "U",
+   "I"
+  ],
+  "freq_min": 20,
+  "alpha": 0.2,
+  "knn": 7,
+  "beta_sub": 0.5,
+  "audited_claim": "3-4 correct C/V seeds -> held-out AUC 0.78(kv3)/0.82(kv4 pos)/0.87(kv4 pos+sub)",
+  "note": "independent reimpl; SUB graph imported read-only; LB values grade ONLY"
+ },
+ "R_reconstruction_small_draw": {
+  "pos": [
+   {
+    "kv": 1,
+    "kc": 3,
+    "n_draws": 5,
+    "auc_mean": 0.5841,
+    "auc_min": 0.5,
+    "recall_mean": 0.15,
+    "mean_heldout_vowels": 4.0
+   },
+   {
+    "kv": 2,
+    "kc": 3,
+    "n_draws": 10,
+    "auc_mean": 0.6722,
+    "auc_min": 0.3586,
+    "recall_mean": 0.1333,
+    "mean_heldout_vowels": 3.0
+   },
+   {
+    "kv": 3,
+    "kc": 3,
+    "n_draws": 10,
+    "auc_mean": 0.7803,
+    "auc_min": 0.303,
+    "recall_mean": 0.1,
+    "mean_heldout_vowels": 2.0
+   },
+   {
+    "kv": 4,
+    "kc": 4,
+    "n_draws": 5,
+    "auc_mean": 0.8215,
+    "auc_min": 0.6154,
+    "recall_mean": 0.0,
+    "mean_heldout_vowels": 1.0
+   }
+  ],
+  "pos+sub": [
+   {
+    "kv": 1,
+    "kc": 3,
+    "n_draws": 5,
+    "auc_mean": 0.5576,
+    "auc_min": 0.4015,
+    "recall_mean": 0.1,
+    "mean_heldout_vowels": 4.0
+   },
+   {
+    "kv": 2,
+    "kc": 3,
+    "n_draws": 10,
+    "auc_mean": 0.6545,
+    "auc_min": 0.4091,
+    "recall_mean": 0.1,
+    "mean_heldout_vowels": 3.0
+   },
+   {
+    "kv": 3,
+    "kc": 3,
+    "n_draws": 10,
+    "auc_mean": 0.8189,
+    "auc_min": 0.4697,
+    "recall_mean": 0.1,
+    "mean_heldout_vowels": 2.0
+   },
+   {
+    "kv": 4,
+    "kc": 4,
+    "n_draws": 5,
+    "auc_mean": 0.8738,
+    "auc_min": 0.7692,
+    "recall_mean": 0.0,
+    "mean_heldout_vowels": 1.0
+   }
+  ]
+ },
+ "E_full_enumeration_honest_ci": {
+  "pos": [
+   {
+    "kv": 1,
+    "kc": 3,
+    "auc": {
+     "mean": 0.5613,
+     "sd": 0.1694,
+     "min": 0.1023,
+     "max": 0.8826,
+     "n": 300
+    },
+    "recall": {
+     "mean": 0.1583,
+     "sd": 0.1812,
+     "min": 0.0,
+     "max": 0.5,
+     "n": 300
+    },
+    "n_heldout_vowels": 4
+   },
+   {
+    "kv": 2,
+    "kc": 3,
+    "auc": {
+     "mean": 0.6386,
+     "sd": 0.1864,
+     "min": 0.0455,
+     "max": 0.9444,
+     "n": 600
+    },
+    "recall": {
+     "mean": 0.1072,
+     "sd": 0.1557,
+     "min": 0.0,
+     "max": 0.3333,
+     "n": 600
+    },
+    "n_heldout_vowels": 3
+   },
+   {
+    "kv": 3,
+    "kc": 3,
+    "auc": {
+     "mean": 0.6927,
+     "sd": 0.2122,
+     "min": 0.0152,
+     "max": 0.9621,
+     "n": 600
+    },
+    "recall": {
+     "mean": 0.0817,
+     "sd": 0.1848,
+     "min": 0.0,
+     "max": 0.5,
+     "n": 600
+    },
+    "n_heldout_vowels": 2
+   },
+   {
+    "kv": 4,
+    "kc": 4,
+    "auc": {
+     "mean": 0.7293,
+     "sd": 0.2307,
+     "min": 0.0154,
+     "max": 1.0,
+     "n": 300
+    },
+    "recall": {
+     "mean": 0.0067,
+     "sd": 0.0814,
+     "min": 0.0,
+     "max": 1.0,
+     "n": 300
+    },
+    "n_heldout_vowels": 1
+   }
+  ],
+  "pos+sub": [
+   {
+    "kv": 1,
+    "kc": 3,
+    "auc": {
+     "mean": 0.5064,
+     "sd": 0.1532,
+     "min": 0.1288,
+     "max": 0.8523,
+     "n": 300
+    },
+    "recall": {
+     "mean": 0.095,
+     "sd": 0.1247,
+     "min": 0.0,
+     "max": 0.5,
+     "n": 300
+    },
+    "n_heldout_vowels": 4
+   },
+   {
+    "kv": 2,
+    "kc": 3,
+    "auc": {
+     "mean": 0.6387,
+     "sd": 0.1734,
+     "min": 0.0606,
+     "max": 0.9343,
+     "n": 600
+    },
+    "recall": {
+     "mean": 0.0861,
+     "sd": 0.1472,
+     "min": 0.0,
+     "max": 0.6667,
+     "n": 600
+    },
+    "n_heldout_vowels": 3
+   },
+   {
+    "kv": 3,
+    "kc": 3,
+    "auc": {
+     "mean": 0.7487,
+     "sd": 0.1928,
+     "min": 0.0152,
+     "max": 0.9848,
+     "n": 600
+    },
+    "recall": {
+     "mean": 0.09,
+     "sd": 0.1921,
+     "min": 0.0,
+     "max": 0.5,
+     "n": 600
+    },
+    "n_heldout_vowels": 2
+   },
+   {
+    "kv": 4,
+    "kc": 4,
+    "auc": {
+     "mean": 0.7836,
+     "sd": 0.1899,
+     "min": 0.0154,
+     "max": 1.0,
+     "n": 300
+    },
+    "recall": {
+     "mean": 0.0567,
+     "sd": 0.2312,
+     "min": 0.0,
+     "max": 1.0,
+     "n": 300
+    },
+    "n_heldout_vowels": 1
+   }
+  ]
+ },
+ "L_leak_signature_auc_vs_class_revealed": [
+  {
+   "kv_vowel_seeds": 1,
+   "frac_positive_class_revealed": 0.2,
+   "n_heldout_vowels": 4,
+   "auc_mean_pos+sub": 0.5064,
+   "recall_mean_pos+sub": 0.095
+  },
+  {
+   "kv_vowel_seeds": 2,
+   "frac_positive_class_revealed": 0.4,
+   "n_heldout_vowels": 3,
+   "auc_mean_pos+sub": 0.6387,
+   "recall_mean_pos+sub": 0.0861
+  },
+  {
+   "kv_vowel_seeds": 3,
+   "frac_positive_class_revealed": 0.6,
+   "n_heldout_vowels": 2,
+   "auc_mean_pos+sub": 0.7487,
+   "recall_mean_pos+sub": 0.09
+  },
+  {
+   "kv_vowel_seeds": 4,
+   "frac_positive_class_revealed": 0.8,
+   "n_heldout_vowels": 1,
+   "auc_mean_pos+sub": 0.7836,
+   "recall_mean_pos+sub": 0.0567
+  }
+ ],
+ "S_leave_one_seed_out": {
+  "pos": {
+   "base_auc": 0.7846,
+   "base_n_heldout_vowels": 1,
+   "vowel_seed_drops": [
+    {
+     "dropped_vowel_seed": "E",
+     "auc_without": 0.9231,
+     "delta_vs_base": 0.1385,
+     "n_heldout_vowels": 2
+    },
+    {
+     "dropped_vowel_seed": "A",
+     "auc_without": 0.9,
+     "delta_vs_base": 0.1154,
+     "n_heldout_vowels": 2
+    },
+    {
+     "dropped_vowel_seed": "O",
+     "auc_without": 0.5385,
+     "delta_vs_base": -0.2462,
+     "n_heldout_vowels": 2
+    },
+    {
+     "dropped_vowel_seed": "U",
+     "auc_without": 0.2692,
+     "delta_vs_base": -0.5154,
+     "n_heldout_vowels": 2
+    }
+   ],
+   "cons_seed_drops": [
+    {
+     "dropped_cons_seed": "TO",
+     "auc_without": 0.7879,
+     "delta_vs_base": 0.0033
+    },
+    {
+     "dropped_cons_seed": "JO",
+     "auc_without": 0.7879,
+     "delta_vs_base": 0.0033
+    },
+    {
+     "dropped_cons_seed": "KO",
+     "auc_without": 0.7576,
+     "delta_vs_base": -0.027
+    },
+    {
+     "dropped_cons_seed": "RO",
+     "auc_without": 0.7879,
+     "delta_vs_base": 0.0033
+    }
+   ]
+  },
+  "pos+sub": {
+   "base_auc": 0.8154,
+   "base_n_heldout_vowels": 1,
+   "vowel_seed_drops": [
+    {
+     "dropped_vowel_seed": "E",
+     "auc_without": 0.9462,
+     "delta_vs_base": 0.1308,
+     "n_heldout_vowels": 2
+    },
+    {
+     "dropped_vowel_seed": "A",
+     "auc_without": 0.8615,
+     "delta_vs_base": 0.0462,
+     "n_heldout_vowels": 2
+    },
+    {
+     "dropped_vowel_seed": "O",
+     "auc_without": 0.6385,
+     "delta_vs_base": -0.1769,
+     "n_heldout_vowels": 2
+    },
+    {
+     "dropped_vowel_seed": "U",
+     "auc_without": 0.4692,
+     "delta_vs_base": -0.3462,
+     "n_heldout_vowels": 2
+    }
+   ],
+   "cons_seed_drops": [
+    {
+     "dropped_cons_seed": "TO",
+     "auc_without": 0.8333,
+     "delta_vs_base": 0.0179
+    },
+    {
+     "dropped_cons_seed": "JO",
+     "auc_without": 0.8485,
+     "delta_vs_base": 0.0331
+    },
+    {
+     "dropped_cons_seed": "KO",
+     "auc_without": 0.7879,
+     "delta_vs_base": -0.0275
+    },
+    {
+     "dropped_cons_seed": "RO",
+     "auc_without": 0.8182,
+     "delta_vs_base": 0.0028
+    }
+   ]
+  }
+ },
+ "A_adversarial_wrong_seeds": {
+  "pos": {
+   "adversarial_wrong_seed_auc": {
+    "mean": 0.345,
+    "sd": 0.2933,
+    "min": 0.0,
+    "max": 0.9692,
+    "n": 40
+   },
+   "interpretation": "AUC<0.5 => seeds drive the score (sanity); AUC~0.5 => seeds inert"
+  },
+  "pos+sub": {
+   "adversarial_wrong_seed_auc": {
+    "mean": 0.1796,
+    "sd": 0.1539,
+    "min": 0.0,
+    "max": 0.7692,
+    "n": 40
+   },
+   "interpretation": "AUC<0.5 => seeds drive the score (sanity); AUC~0.5 => seeds inert"
+  }
+ },
+ "N_random_seed_null_regimeB": {
+  "pos": {
+   "obs_correct_seed_auc": 0.5872,
+   "random_seed_null": {
+    "mean": 0.4985,
+    "sd": 0.1807,
+    "min": 0.0582,
+    "max": 0.9375,
+    "n": 500
+   },
+   "z": 0.491,
+   "p_value": 0.3253,
+   "n_null": 500
+  },
+  "pos+sub": {
+   "obs_correct_seed_auc": 0.701,
+   "random_seed_null": {
+    "mean": 0.4967,
+    "sd": 0.172,
+    "min": 0.0741,
+    "max": 0.9435,
+    "n": 500
+   },
+   "z": 1.188,
+   "p_value": 0.1337,
+   "n_null": 500
+  }
+ },
+ "F_frequency_artifact": {
+  "F1_pure_frequency_ranking_auc_no_seeds_no_prop": 0.8725,
+  "F2_pure_initial_rate_ranking_auc_no_seeds_no_prop": 0.7594,
+  "F3_freq_matched_random_seed_auc_pos+sub": {
+   "mean": 0.5987,
+   "sd": 0.1348,
+   "min": 0.2459,
+   "max": 0.8918,
+   "n": 300
+  },
+  "F4_no_propagation_seed_centroid_auc_pos": {
+   "mean": 0.7423,
+   "sd": 0.2669,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 150
+  },
+  "seed_prop_kv4_pos+sub_auc": 0.7836,
+  "interpretation": "If F1/F2 (no seeds) already >= the seed-prop AUC, the '0.87' carries no information beyond the frequency ordering WP-A flagged as an artifact."
+ },
+ "verdict": "SEED_PROPAGATION_FREQUENCY_ARTIFACT",
+ "verdict_reasons": [
+  "pure frequency ranking (no seeds, no propagation) AUC=0.872 >= seed-prop kv4 pos+sub AUC=0.784",
+  "initial_rate ranking (WP-A artifact feature) alone AUC=0.759 \u2014 no seeds",
+  "kv=4 reveals 0.8 of the 5-vowel positive class; only 1 held-out vowel(s); recall@k=0.057 (AUC is a rank stat on ~1 positive)"
+ ]
+}

@@ -1,0 +1,1095 @@
+{
+ "task": "D2_view_ablations",
+ "seed": 20260708,
+ "as_of": "2026-07-07",
+ "non_circular": "known LB values used ONLY as grading benchmark (vowel identity / C-V split); every model input is a pure distributional/structural statistic over sign identities. LB is a positive control graded on its own known values.",
+ "method": {
+  "families": [
+   "SINGLE (include-only)",
+   "LEAVE_ONE_OUT (drop-from-full)",
+   "COMBINATIONS",
+   "RANDOM_floor"
+  ],
+  "shared_channel_space": [
+   "POSITION",
+   "FREQUENCY",
+   "MORPHOLOGY",
+   "SUBSTITUTION"
+  ],
+  "la_only_channels": [
+   "FORMULA",
+   "SITE"
+  ],
+  "capped_channel": "SHAPE (circular, not value-gradable)",
+  "partition_metric": "KMeans(k=6) anonymous classes on PCA latent scores; graded by AMI vs vowel/CV benchmark",
+  "auc_metric": "one-vs-rest 5-vowel CV-AUC on PCA latent scores; +label-perm p; +freq-residualized AUC",
+  "perm_reps": {
+   "vowel_auc": 300,
+   "cv_auc": 300,
+   "ami": 300
+  },
+  "note_cv_axis": "the pure-vowel-sign vs consonantal (C/V) contrast is the wave-1 position->C/V axis already REFUTED under multiplicity + oriented null; reported for continuity, NOT re-credited.",
+  "lb_substitution_note": "LB SUBSTITUTION is a generic frame-based minimal-pair channel (signs sharing a (left,right) context frame); LA SUBSTITUTION is the audited wave-2 long-frame graph (C_la_graph). Definitions differ; each is internally consistent within its script."
+ },
+ "linear_a": {
+  "tag": "LINEAR_A",
+  "threshold_freq_ge": 8,
+  "n_graded_signs": 54,
+  "n_pure_vowel_signs": 5,
+  "vowel_counts": {
+   "A": 16,
+   "E": 11,
+   "I": 10,
+   "U": 12,
+   "O": 5
+  },
+  "channel_coverage": {
+   "POSITION": 1.0,
+   "FREQUENCY": 1.0,
+   "SUBSTITUTION": 0.574,
+   "MORPHOLOGY": 1.0,
+   "FORMULA": 1.0,
+   "SITE": 1.0
+  },
+  "channel_present_n": {
+   "POSITION": 54,
+   "FREQUENCY": 54,
+   "SUBSTITUTION": 31,
+   "MORPHOLOGY": 54,
+   "FORMULA": 54,
+   "SITE": 54
+  },
+  "graded_signs": [
+   "A",
+   "DA",
+   "DE",
+   "DI",
+   "DU",
+   "E",
+   "I",
+   "JA",
+   "JE",
+   "JU",
+   "KA",
+   "KE",
+   "KI",
+   "KO",
+   "KU",
+   "MA",
+   "ME",
+   "MI",
+   "MU",
+   "NA",
+   "NE",
+   "NI",
+   "NU",
+   "O",
+   "PA",
+   "PA₃",
+   "PI",
+   "PO",
+   "PU",
+   "PU₂",
+   "QA",
+   "QE",
+   "RA",
+   "RA₂",
+   "RE",
+   "RI",
+   "RO",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TA₂",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U",
+   "WA",
+   "WI",
+   "ZA",
+   "ZE",
+   "ZU"
+  ],
+  "ablations": {
+   "single__POSITION": {
+    "channels": [
+     "POSITION"
+    ],
+    "fused_dim": 7,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5116,
+    "fused_vowel_perm_p": 0.0963,
+    "fused_vowel_auc_freq_resid": 0.5026,
+    "fused_cv_contrast_auc": 0.8327,
+    "fused_cv_contrast_perm_p": 0.1462,
+    "partition_ami_vowel": {
+     "nmi": 0.1433,
+     "adjusted_mi": 0.01,
+     "mi_obs": 0.2288,
+     "mi_null_mean": 0.215,
+     "perm_p": 0.3953
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1195,
+     "adjusted_mi": 0.0729,
+     "mi_obs": 0.1165,
+     "mi_null_mean": 0.0491,
+     "perm_p": 0.0133
+    },
+    "verdict": "NULL"
+   },
+   "single__FREQUENCY": {
+    "channels": [
+     "FREQUENCY"
+    ],
+    "fused_dim": 2,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.587,
+    "fused_vowel_perm_p": 0.0033,
+    "fused_vowel_auc_freq_resid": 0.3065,
+    "fused_cv_contrast_auc": 0.2367,
+    "fused_cv_contrast_perm_p": 0.4319,
+    "partition_ami_vowel": {
+     "nmi": 0.2125,
+     "adjusted_mi": 0.0902,
+     "mi_obs": 0.351,
+     "mi_null_mean": 0.222,
+     "perm_p": 0.0266
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1013,
+     "adjusted_mi": 0.0497,
+     "mi_obs": 0.1044,
+     "mi_null_mean": 0.056,
+     "perm_p": 0.0498
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "single__MORPHOLOGY": {
+    "channels": [
+     "MORPHOLOGY"
+    ],
+    "fused_dim": 4,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.6194,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.4113,
+    "fused_cv_contrast_auc": 0.8612,
+    "fused_cv_contrast_perm_p": 0.0963,
+    "partition_ami_vowel": {
+     "nmi": 0.2372,
+     "adjusted_mi": 0.1177,
+     "mi_obs": 0.3535,
+     "mi_null_mean": 0.2018,
+     "perm_p": 0.01
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0953,
+     "adjusted_mi": 0.0408,
+     "mi_obs": 0.0828,
+     "mi_null_mean": 0.0494,
+     "perm_p": 0.1096
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "single__SUBSTITUTION": {
+    "channels": [
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 4,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.4804,
+    "fused_vowel_perm_p": 0.2093,
+    "fused_vowel_auc_freq_resid": 0.3891,
+    "fused_cv_contrast_auc": 0.2592,
+    "fused_cv_contrast_perm_p": 0.2957,
+    "partition_ami_vowel": {
+     "nmi": 0.1621,
+     "adjusted_mi": 0.018,
+     "mi_obs": 0.2542,
+     "mi_null_mean": 0.23,
+     "perm_p": 0.3023
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0225,
+     "adjusted_mi": -0.0352,
+     "mi_obs": 0.0213,
+     "mi_null_mean": 0.0527,
+     "perm_p": 1.0
+    },
+    "verdict": "NULL"
+   },
+   "FULL_shared": {
+    "channels": [
+     "POSITION",
+     "FREQUENCY",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 17,
+    "K_latent": 4,
+    "fused_vowel_macro_auc": 0.5728,
+    "fused_vowel_perm_p": 0.0532,
+    "fused_vowel_auc_freq_resid": 0.485,
+    "fused_cv_contrast_auc": 0.8531,
+    "fused_cv_contrast_perm_p": 0.0831,
+    "partition_ami_vowel": {
+     "nmi": 0.2084,
+     "adjusted_mi": 0.0888,
+     "mi_obs": 0.3328,
+     "mi_null_mean": 0.2096,
+     "perm_p": 0.0233
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0668,
+     "adjusted_mi": 0.0153,
+     "mi_obs": 0.0652,
+     "mi_null_mean": 0.051,
+     "perm_p": 0.2259
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_POSITION": {
+    "channels": [
+     "FREQUENCY",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 10,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5874,
+    "fused_vowel_perm_p": 0.0166,
+    "fused_vowel_auc_freq_resid": 0.42,
+    "fused_cv_contrast_auc": 0.6204,
+    "fused_cv_contrast_perm_p": 0.6412,
+    "partition_ami_vowel": {
+     "nmi": 0.1538,
+     "adjusted_mi": 0.0211,
+     "mi_obs": 0.2354,
+     "mi_null_mean": 0.2075,
+     "perm_p": 0.2791
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1058,
+     "adjusted_mi": 0.0528,
+     "mi_obs": 0.0962,
+     "mi_null_mean": 0.0509,
+     "perm_p": 0.0598
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "LOO__minus_FREQUENCY": {
+    "channels": [
+     "POSITION",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 15,
+    "K_latent": 4,
+    "fused_vowel_macro_auc": 0.5699,
+    "fused_vowel_perm_p": 0.0565,
+    "fused_vowel_auc_freq_resid": 0.4941,
+    "fused_cv_contrast_auc": 0.8571,
+    "fused_cv_contrast_perm_p": 0.0664,
+    "partition_ami_vowel": {
+     "nmi": 0.1968,
+     "adjusted_mi": 0.0762,
+     "mi_obs": 0.3149,
+     "mi_null_mean": 0.2089,
+     "perm_p": 0.0498
+    },
+    "partition_ami_cv": {
+     "nmi": 0.066,
+     "adjusted_mi": 0.0145,
+     "mi_obs": 0.0646,
+     "mi_null_mean": 0.0511,
+     "perm_p": 0.2757
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_MORPHOLOGY": {
+    "channels": [
+     "POSITION",
+     "FREQUENCY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 13,
+    "K_latent": 4,
+    "fused_vowel_macro_auc": 0.5368,
+    "fused_vowel_perm_p": 0.0997,
+    "fused_vowel_auc_freq_resid": 0.501,
+    "fused_cv_contrast_auc": 0.8041,
+    "fused_cv_contrast_perm_p": 0.1728,
+    "partition_ami_vowel": {
+     "nmi": 0.2341,
+     "adjusted_mi": 0.1162,
+     "mi_obs": 0.3735,
+     "mi_null_mean": 0.2128,
+     "perm_p": 0.0066
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0502,
+     "adjusted_mi": -0.0009,
+     "mi_obs": 0.0489,
+     "mi_null_mean": 0.0497,
+     "perm_p": 0.4286
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_SUBSTITUTION": {
+    "channels": [
+     "POSITION",
+     "FREQUENCY",
+     "MORPHOLOGY"
+    ],
+    "fused_dim": 13,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5702,
+    "fused_vowel_perm_p": 0.0332,
+    "fused_vowel_auc_freq_resid": 0.4126,
+    "fused_cv_contrast_auc": 0.8571,
+    "fused_cv_contrast_perm_p": 0.113,
+    "partition_ami_vowel": {
+     "nmi": 0.1624,
+     "adjusted_mi": 0.0292,
+     "mi_obs": 0.2596,
+     "mi_null_mean": 0.2193,
+     "perm_p": 0.2458
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1372,
+     "adjusted_mi": 0.0893,
+     "mi_obs": 0.1341,
+     "mi_null_mean": 0.0514,
+     "perm_p": 0.0033
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "combo__MORPH+POS": {
+    "channels": [
+     "MORPHOLOGY",
+     "POSITION"
+    ],
+    "fused_dim": 11,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5664,
+    "fused_vowel_perm_p": 0.0365,
+    "fused_vowel_auc_freq_resid": 0.4184,
+    "fused_cv_contrast_auc": 0.8653,
+    "fused_cv_contrast_perm_p": 0.0831,
+    "partition_ami_vowel": {
+     "nmi": 0.1624,
+     "adjusted_mi": 0.0292,
+     "mi_obs": 0.2596,
+     "mi_null_mean": 0.2193,
+     "perm_p": 0.2458
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1372,
+     "adjusted_mi": 0.0893,
+     "mi_obs": 0.1341,
+     "mi_null_mean": 0.0514,
+     "perm_p": 0.0033
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "combo__MORPH+SUB": {
+    "channels": [
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 8,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5876,
+    "fused_vowel_perm_p": 0.0133,
+    "fused_vowel_auc_freq_resid": 0.4056,
+    "fused_cv_contrast_auc": 0.6122,
+    "fused_cv_contrast_perm_p": 0.6545,
+    "partition_ami_vowel": {
+     "nmi": 0.2074,
+     "adjusted_mi": 0.0861,
+     "mi_obs": 0.3237,
+     "mi_null_mean": 0.2072,
+     "perm_p": 0.0465
+    },
+    "partition_ami_cv": {
+     "nmi": 0.087,
+     "adjusted_mi": 0.0328,
+     "mi_obs": 0.0818,
+     "mi_null_mean": 0.0527,
+     "perm_p": 0.1262
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "combo__POS+SUB": {
+    "channels": [
+     "POSITION",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 11,
+    "K_latent": 4,
+    "fused_vowel_macro_auc": 0.5169,
+    "fused_vowel_perm_p": 0.1429,
+    "fused_vowel_auc_freq_resid": 0.516,
+    "fused_cv_contrast_auc": 0.8163,
+    "fused_cv_contrast_perm_p": 0.1362,
+    "partition_ami_vowel": {
+     "nmi": 0.2103,
+     "adjusted_mi": 0.0911,
+     "mi_obs": 0.3358,
+     "mi_null_mean": 0.2093,
+     "perm_p": 0.0299
+    },
+    "partition_ami_cv": {
+     "nmi": 0.071,
+     "adjusted_mi": 0.021,
+     "mi_obs": 0.0692,
+     "mi_null_mean": 0.0498,
+     "perm_p": 0.2126
+    },
+    "verdict": "SIGNAL"
+   },
+   "combo__structural3_no_freq": {
+    "channels": [
+     "POSITION",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 15,
+    "K_latent": 4,
+    "fused_vowel_macro_auc": 0.5699,
+    "fused_vowel_perm_p": 0.0565,
+    "fused_vowel_auc_freq_resid": 0.4941,
+    "fused_cv_contrast_auc": 0.8571,
+    "fused_cv_contrast_perm_p": 0.0664,
+    "partition_ami_vowel": {
+     "nmi": 0.1968,
+     "adjusted_mi": 0.0762,
+     "mi_obs": 0.3149,
+     "mi_null_mean": 0.2089,
+     "perm_p": 0.0498
+    },
+    "partition_ami_cv": {
+     "nmi": 0.066,
+     "adjusted_mi": 0.0145,
+     "mi_obs": 0.0646,
+     "mi_null_mean": 0.0511,
+     "perm_p": 0.2757
+    },
+    "verdict": "SIGNAL"
+   },
+   "single__FORMULA": {
+    "channels": [
+     "FORMULA"
+    ],
+    "fused_dim": 4,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.4662,
+    "fused_vowel_perm_p": 0.309,
+    "fused_vowel_auc_freq_resid": 0.4743,
+    "fused_cv_contrast_auc": 0.7837,
+    "fused_cv_contrast_perm_p": 0.2259,
+    "partition_ami_vowel": {
+     "nmi": 0.1612,
+     "adjusted_mi": 0.0301,
+     "mi_obs": 0.2594,
+     "mi_null_mean": 0.2175,
+     "perm_p": 0.2359
+    },
+    "partition_ami_cv": {
+     "nmi": 0.085,
+     "adjusted_mi": 0.0344,
+     "mi_obs": 0.084,
+     "mi_null_mean": 0.0517,
+     "perm_p": 0.0731
+    },
+    "verdict": "NULL"
+   },
+   "single__SITE": {
+    "channels": [
+     "SITE"
+    ],
+    "fused_dim": 4,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5005,
+    "fused_vowel_perm_p": 0.206,
+    "fused_vowel_auc_freq_resid": 0.4187,
+    "fused_cv_contrast_auc": 0.751,
+    "fused_cv_contrast_perm_p": 0.3455,
+    "partition_ami_vowel": {
+     "nmi": 0.1789,
+     "adjusted_mi": 0.049,
+     "mi_obs": 0.28,
+     "mi_null_mean": 0.2139,
+     "perm_p": 0.103
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0545,
+     "adjusted_mi": 0.0023,
+     "mi_obs": 0.0514,
+     "mi_null_mean": 0.0493,
+     "perm_p": 0.4518
+    },
+    "verdict": "NULL"
+   },
+   "combo__D1_full_5view": {
+    "channels": [
+     "POSITION",
+     "SUBSTITUTION",
+     "MORPHOLOGY",
+     "FORMULA",
+     "SITE"
+    ],
+    "fused_dim": 23,
+    "K_latent": 4,
+    "fused_vowel_macro_auc": 0.5384,
+    "fused_vowel_perm_p": 0.103,
+    "fused_vowel_auc_freq_resid": 0.4501,
+    "fused_cv_contrast_auc": 0.8816,
+    "fused_cv_contrast_perm_p": 0.0498,
+    "partition_ami_vowel": {
+     "nmi": 0.172,
+     "adjusted_mi": 0.0452,
+     "mi_obs": 0.2738,
+     "mi_null_mean": 0.2114,
+     "perm_p": 0.1661
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0811,
+     "adjusted_mi": 0.0304,
+     "mi_obs": 0.0787,
+     "mi_null_mean": 0.0508,
+     "perm_p": 0.1362
+    },
+    "verdict": "NULL"
+   },
+   "RANDOM_floor": {
+    "channels": [
+     "RANDOM"
+    ],
+    "fused_dim": 5,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.4611,
+    "fused_vowel_perm_p": 0.309,
+    "fused_vowel_auc_freq_resid": 0.4592,
+    "fused_cv_contrast_auc": 0.2898,
+    "fused_cv_contrast_perm_p": 0.3455,
+    "partition_ami_vowel": {
+     "nmi": 0.1613,
+     "adjusted_mi": 0.0297,
+     "mi_obs": 0.2597,
+     "mi_null_mean": 0.2183,
+     "perm_p": 0.2259
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0562,
+     "adjusted_mi": 0.0028,
+     "mi_obs": 0.0556,
+     "mi_null_mean": 0.053,
+     "perm_p": 0.4053
+    },
+    "verdict": "NULL"
+   }
+  }
+ },
+ "linear_b_control": {
+  "tag": "LINEAR_B_CONTROL",
+  "threshold_freq_ge": 20,
+  "n_graded_signs": 66,
+  "n_pure_vowel_signs": 7,
+  "vowel_counts": {
+   "A": 18,
+   "E": 13,
+   "I": 11,
+   "O": 14,
+   "U": 10
+  },
+  "channel_coverage": {
+   "POSITION": 1.0,
+   "FREQUENCY": 1.0,
+   "MORPHOLOGY": 1.0,
+   "SUBSTITUTION": 1.0
+  },
+  "channel_present_n": {
+   "POSITION": 66,
+   "FREQUENCY": 66,
+   "MORPHOLOGY": 66,
+   "SUBSTITUTION": 66
+  },
+  "graded_signs": [
+   "A",
+   "A2",
+   "A3",
+   "DA",
+   "DE",
+   "DI",
+   "DO",
+   "DU",
+   "E",
+   "I",
+   "JA",
+   "JE",
+   "JO",
+   "KA",
+   "KE",
+   "KI",
+   "KO",
+   "KU",
+   "MA",
+   "ME",
+   "MI",
+   "MO",
+   "MU",
+   "NA",
+   "NE",
+   "NI",
+   "NO",
+   "NU",
+   "O",
+   "PA",
+   "PE",
+   "PI",
+   "PO",
+   "PU",
+   "PU2",
+   "QA",
+   "QE",
+   "QI",
+   "QO",
+   "RA",
+   "RA2",
+   "RA3",
+   "RE",
+   "RI",
+   "RO",
+   "RO2",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SO",
+   "SU",
+   "TA",
+   "TA2",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U",
+   "WA",
+   "WE",
+   "WI",
+   "WO",
+   "ZA",
+   "ZE",
+   "ZO"
+  ],
+  "ablations": {
+   "single__POSITION": {
+    "channels": [
+     "POSITION"
+    ],
+    "fused_dim": 7,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5448,
+    "fused_vowel_perm_p": 0.0365,
+    "fused_vowel_auc_freq_resid": 0.5437,
+    "fused_cv_contrast_auc": 0.7506,
+    "fused_cv_contrast_perm_p": 0.2027,
+    "partition_ami_vowel": {
+     "nmi": 0.2052,
+     "adjusted_mi": 0.1093,
+     "mi_obs": 0.3402,
+     "mi_null_mean": 0.1785,
+     "perm_p": 0.01
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0442,
+     "adjusted_mi": 0.0006,
+     "mi_obs": 0.0456,
+     "mi_null_mean": 0.045,
+     "perm_p": 0.4452
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "single__FREQUENCY": {
+    "channels": [
+     "FREQUENCY"
+    ],
+    "fused_dim": 2,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5292,
+    "fused_vowel_perm_p": 0.0233,
+    "fused_vowel_auc_freq_resid": 0.3978,
+    "fused_cv_contrast_auc": 0.46,
+    "fused_cv_contrast_perm_p": 0.8638,
+    "partition_ami_vowel": {
+     "nmi": 0.1187,
+     "adjusted_mi": 0.0118,
+     "mi_obs": 0.1935,
+     "mi_null_mean": 0.1763,
+     "perm_p": 0.3223
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0474,
+     "adjusted_mi": 0.0024,
+     "mi_obs": 0.0476,
+     "mi_null_mean": 0.0453,
+     "perm_p": 0.4086
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "single__MORPHOLOGY": {
+    "channels": [
+     "MORPHOLOGY"
+    ],
+    "fused_dim": 4,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5594,
+    "fused_vowel_perm_p": 0.0133,
+    "fused_vowel_auc_freq_resid": 0.4986,
+    "fused_cv_contrast_auc": 0.7046,
+    "fused_cv_contrast_perm_p": 0.3189,
+    "partition_ami_vowel": {
+     "nmi": 0.1406,
+     "adjusted_mi": 0.0291,
+     "mi_obs": 0.2092,
+     "mi_null_mean": 0.1708,
+     "perm_p": 0.1495
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1424,
+     "adjusted_mi": 0.1011,
+     "mi_obs": 0.1229,
+     "mi_null_mean": 0.0397,
+     "perm_p": 0.0033
+    },
+    "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+   },
+   "single__SUBSTITUTION": {
+    "channels": [
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 4,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5909,
+    "fused_vowel_perm_p": 0.0033,
+    "fused_vowel_auc_freq_resid": 0.5617,
+    "fused_cv_contrast_auc": 0.4455,
+    "fused_cv_contrast_perm_p": 0.8007,
+    "partition_ami_vowel": {
+     "nmi": 0.1976,
+     "adjusted_mi": 0.0972,
+     "mi_obs": 0.3213,
+     "mi_null_mean": 0.1809,
+     "perm_p": 0.0166
+    },
+    "partition_ami_cv": {
+     "nmi": 0.04,
+     "adjusted_mi": -0.0038,
+     "mi_obs": 0.0401,
+     "mi_null_mean": 0.0438,
+     "perm_p": 0.5349
+    },
+    "verdict": "SIGNAL"
+   },
+   "FULL_shared": {
+    "channels": [
+     "POSITION",
+     "FREQUENCY",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 17,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5977,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.5639,
+    "fused_cv_contrast_auc": 0.7579,
+    "fused_cv_contrast_perm_p": 0.2027,
+    "partition_ami_vowel": {
+     "nmi": 0.2085,
+     "adjusted_mi": 0.111,
+     "mi_obs": 0.3394,
+     "mi_null_mean": 0.1786,
+     "perm_p": 0.0033
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1405,
+     "adjusted_mi": 0.1016,
+     "mi_obs": 0.1409,
+     "mi_null_mean": 0.0434,
+     "perm_p": 0.0033
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_POSITION": {
+    "channels": [
+     "FREQUENCY",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 10,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.588,
+    "fused_vowel_perm_p": 0.0033,
+    "fused_vowel_auc_freq_resid": 0.5503,
+    "fused_cv_contrast_auc": 0.6901,
+    "fused_cv_contrast_perm_p": 0.3422,
+    "partition_ami_vowel": {
+     "nmi": 0.1761,
+     "adjusted_mi": 0.071,
+     "mi_obs": 0.279,
+     "mi_null_mean": 0.1792,
+     "perm_p": 0.0299
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1427,
+     "adjusted_mi": 0.1014,
+     "mi_obs": 0.1369,
+     "mi_null_mean": 0.0441,
+     "perm_p": 0.0066
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_FREQUENCY": {
+    "channels": [
+     "POSITION",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 15,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5968,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.5703,
+    "fused_cv_contrast_auc": 0.7603,
+    "fused_cv_contrast_perm_p": 0.1761,
+    "partition_ami_vowel": {
+     "nmi": 0.194,
+     "adjusted_mi": 0.0959,
+     "mi_obs": 0.3182,
+     "mi_null_mean": 0.1779,
+     "perm_p": 0.0066
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1414,
+     "adjusted_mi": 0.103,
+     "mi_obs": 0.1436,
+     "mi_null_mean": 0.0435,
+     "perm_p": 0.0033
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_MORPHOLOGY": {
+    "channels": [
+     "POSITION",
+     "FREQUENCY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 13,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.6002,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.5665,
+    "fused_cv_contrast_auc": 0.7603,
+    "fused_cv_contrast_perm_p": 0.1794,
+    "partition_ami_vowel": {
+     "nmi": 0.2179,
+     "adjusted_mi": 0.1226,
+     "mi_obs": 0.3583,
+     "mi_null_mean": 0.1786,
+     "perm_p": 0.0033
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0495,
+     "adjusted_mi": 0.0053,
+     "mi_obs": 0.0504,
+     "mi_null_mean": 0.0452,
+     "perm_p": 0.3522
+    },
+    "verdict": "SIGNAL"
+   },
+   "LOO__minus_SUBSTITUTION": {
+    "channels": [
+     "POSITION",
+     "FREQUENCY",
+     "MORPHOLOGY"
+    ],
+    "fused_dim": 13,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5812,
+    "fused_vowel_perm_p": 0.01,
+    "fused_vowel_auc_freq_resid": 0.5711,
+    "fused_cv_contrast_auc": 0.7409,
+    "fused_cv_contrast_perm_p": 0.2027,
+    "partition_ami_vowel": {
+     "nmi": 0.2319,
+     "adjusted_mi": 0.1359,
+     "mi_obs": 0.3734,
+     "mi_null_mean": 0.1788,
+     "perm_p": 0.0033
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1351,
+     "adjusted_mi": 0.0958,
+     "mi_obs": 0.1331,
+     "mi_null_mean": 0.0428,
+     "perm_p": 0.01
+    },
+    "verdict": "SIGNAL"
+   },
+   "combo__MORPH+POS": {
+    "channels": [
+     "MORPHOLOGY",
+     "POSITION"
+    ],
+    "fused_dim": 11,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5722,
+    "fused_vowel_perm_p": 0.0166,
+    "fused_vowel_auc_freq_resid": 0.5668,
+    "fused_cv_contrast_auc": 0.7482,
+    "fused_cv_contrast_perm_p": 0.2027,
+    "partition_ami_vowel": {
+     "nmi": 0.2026,
+     "adjusted_mi": 0.1022,
+     "mi_obs": 0.3245,
+     "mi_null_mean": 0.179,
+     "perm_p": 0.0133
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1355,
+     "adjusted_mi": 0.0967,
+     "mi_obs": 0.1324,
+     "mi_null_mean": 0.042,
+     "perm_p": 0.0066
+    },
+    "verdict": "SIGNAL"
+   },
+   "combo__MORPH+SUB": {
+    "channels": [
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 8,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5883,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.5503,
+    "fused_cv_contrast_auc": 0.6925,
+    "fused_cv_contrast_perm_p": 0.3522,
+    "partition_ami_vowel": {
+     "nmi": 0.186,
+     "adjusted_mi": 0.0831,
+     "mi_obs": 0.2945,
+     "mi_null_mean": 0.1777,
+     "perm_p": 0.0133
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1405,
+     "adjusted_mi": 0.1002,
+     "mi_obs": 0.1346,
+     "mi_null_mean": 0.0429,
+     "perm_p": 0.0066
+    },
+    "verdict": "SIGNAL"
+   },
+   "combo__POS+SUB": {
+    "channels": [
+     "POSITION",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 11,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5919,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.5704,
+    "fused_cv_contrast_auc": 0.77,
+    "fused_cv_contrast_perm_p": 0.1595,
+    "partition_ami_vowel": {
+     "nmi": 0.2179,
+     "adjusted_mi": 0.1226,
+     "mi_obs": 0.3583,
+     "mi_null_mean": 0.1786,
+     "perm_p": 0.0033
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0495,
+     "adjusted_mi": 0.0053,
+     "mi_obs": 0.0504,
+     "mi_null_mean": 0.0452,
+     "perm_p": 0.3522
+    },
+    "verdict": "SIGNAL"
+   },
+   "combo__structural3_no_freq": {
+    "channels": [
+     "POSITION",
+     "MORPHOLOGY",
+     "SUBSTITUTION"
+    ],
+    "fused_dim": 15,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.5968,
+    "fused_vowel_perm_p": 0.0066,
+    "fused_vowel_auc_freq_resid": 0.5703,
+    "fused_cv_contrast_auc": 0.7603,
+    "fused_cv_contrast_perm_p": 0.1761,
+    "partition_ami_vowel": {
+     "nmi": 0.194,
+     "adjusted_mi": 0.0959,
+     "mi_obs": 0.3182,
+     "mi_null_mean": 0.1779,
+     "perm_p": 0.0066
+    },
+    "partition_ami_cv": {
+     "nmi": 0.1414,
+     "adjusted_mi": 0.103,
+     "mi_obs": 0.1436,
+     "mi_null_mean": 0.0435,
+     "perm_p": 0.0033
+    },
+    "verdict": "SIGNAL"
+   },
+   "RANDOM_floor": {
+    "channels": [
+     "RANDOM"
+    ],
+    "fused_dim": 5,
+    "K_latent": 3,
+    "fused_vowel_macro_auc": 0.4528,
+    "fused_vowel_perm_p": 0.4485,
+    "fused_vowel_auc_freq_resid": 0.3888,
+    "fused_cv_contrast_auc": 0.4673,
+    "fused_cv_contrast_perm_p": 0.8937,
+    "partition_ami_vowel": {
+     "nmi": 0.1413,
+     "adjusted_mi": 0.0356,
+     "mi_obs": 0.2384,
+     "mi_null_mean": 0.1848,
+     "perm_p": 0.1661
+    },
+    "partition_ami_cv": {
+     "nmi": 0.0266,
+     "adjusted_mi": -0.0192,
+     "mi_obs": 0.0283,
+     "mi_null_mean": 0.0478,
+     "perm_p": 0.7542
+    },
+    "verdict": "NULL"
+   }
+  }
+ },
+ "shape_channel": {
+  "verdict": "CAPPED_CIRCULAR_NOT_VALUE_GRADABLE",
+  "cap": 0.75,
+  "reason": "F1: the SHAPE channel's grade IS an LB-homophony (identity) judgment (Salgarella stable-11 recovered perfectly, Fisher p=1.6e-5) — the same latent LB-identity fact it would predict. It therefore carries NO independent anonymous-partition signal and is excluded from value grading in every ablation. Reported, not scored.",
+  "source": "data/F1_decompose.json channel_meta.shape"
+ }
+}

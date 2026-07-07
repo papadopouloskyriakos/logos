@@ -1,0 +1,202 @@
+{
+  "seed": 20260708,
+  "segmentation": "SEG_GORILA_WORD",
+  "n_words": 3147,
+  "n_multi_sign": 1369,
+  "V_signs": 259,
+  "nfold": 5,
+  "config": {
+    "alpha": 0.5,
+    "beta": 1.0,
+    "prod_min": 3,
+    "n_perm": 25,
+    "n_nullcorp": 60,
+    "n_boot": 2000
+  },
+  "real_morphology": {
+    "held_out_gain_bits_per_word_all": {
+      "mean": 2.812,
+      "ci95": [
+        2.5807,
+        3.0449
+      ],
+      "positive": true
+    },
+    "held_out_gain_bits_per_word_multisign": {
+      "mean": 6.266,
+      "ci95": [
+        5.773,
+        6.7351
+      ],
+      "positive": true
+    },
+    "baseline_free_learned_vs_random_advantage": {
+      "mean": 0.7595,
+      "ci95": [
+        0.6156,
+        0.9071
+      ],
+      "positive": true,
+      "note": "bits by which learned seg beats random seg on same held-out words; baseline-invariant, so comparable ACROSS corpora."
+    }
+  },
+  "label_corruption_controls": {
+    "shuffled_suffixes": {
+      "control_mean_gain_bits": 2.091,
+      "control_ci95": [
+        1.8215,
+        2.3611
+      ],
+      "paired_all": {
+        "mean_diff_bits": 0.721,
+        "ci95": [
+          0.6326,
+          0.8158
+        ],
+        "p_real_le_ctrl": 0.0005,
+        "real_beats": true
+      },
+      "paired_multisign": {
+        "mean_diff_bits": 1.6575,
+        "ci95": [
+          1.4598,
+          1.8545
+        ],
+        "p_real_le_ctrl": 0.0005,
+        "real_beats": true
+      }
+    },
+    "shuffled_stems": {
+      "control_mean_gain_bits": 1.1567,
+      "control_ci95": [
+        0.8601,
+        1.4563
+      ],
+      "paired_all": {
+        "mean_diff_bits": 1.6554,
+        "ci95": [
+          1.5107,
+          1.8067
+        ],
+        "p_real_le_ctrl": 0.0005,
+        "real_beats": true
+      },
+      "paired_multisign": {
+        "mean_diff_bits": 3.0502,
+        "ci95": [
+          2.7282,
+          3.3818
+        ],
+        "p_real_le_ctrl": 0.0005,
+        "real_beats": true
+      }
+    },
+    "random_segmentation": {
+      "control_mean_gain_bits": 2.3891,
+      "control_ci95": [
+        2.1353,
+        2.6715
+      ],
+      "paired_all": {
+        "mean_diff_bits": 0.423,
+        "ci95": [
+          0.3109,
+          0.5347
+        ],
+        "p_real_le_ctrl": 0.0005,
+        "real_beats": true
+      },
+      "paired_multisign": {
+        "mean_diff_bits": 0.9332,
+        "ci95": [
+          0.6751,
+          1.1962
+        ],
+        "p_real_le_ctrl": 0.0005,
+        "real_beats": true
+      }
+    }
+  },
+  "corpus_null_controls": {
+    "site_preserving_shuffle": {
+      "absolute_gain_confounded": {
+        "statistic": "whole_word_baseline_gain_bits",
+        "null_mean": 4.4368,
+        "null_95range": [
+          4.1865,
+          4.6458
+        ],
+        "real_mean": 2.812,
+        "p_null_ge_real": 1.0,
+        "real_beats": false
+      },
+      "baseline_free_advantage": {
+        "statistic": "learned_vs_random_advantage_bits",
+        "null_mean": 0.5643,
+        "null_95range": [
+          0.5028,
+          0.6339
+        ],
+        "real_mean": 0.7595,
+        "p_null_ge_real": 0.0164,
+        "real_beats": true
+      }
+    },
+    "frequency_matched_pseudo": {
+      "absolute_gain_confounded": {
+        "statistic": "whole_word_baseline_gain_bits",
+        "null_mean": 4.4959,
+        "null_95range": [
+          4.2832,
+          4.778
+        ],
+        "real_mean": 2.812,
+        "p_null_ge_real": 1.0,
+        "real_beats": false
+      },
+      "baseline_free_advantage": {
+        "statistic": "learned_vs_random_advantage_bits",
+        "null_mean": 0.5373,
+        "null_95range": [
+          0.4713,
+          0.6265
+        ],
+        "real_mean": 0.7595,
+        "p_null_ge_real": 0.0164,
+        "real_beats": true
+      }
+    },
+    "synthetic_wrong_language": {
+      "absolute_gain_confounded": {
+        "statistic": "whole_word_baseline_gain_bits",
+        "null_mean": 3.3856,
+        "null_95range": [
+          3.2113,
+          3.5963
+        ],
+        "real_mean": 2.812,
+        "p_null_ge_real": 1.0,
+        "real_beats": false
+      },
+      "baseline_free_advantage": {
+        "statistic": "learned_vs_random_advantage_bits",
+        "null_mean": 0.7824,
+        "null_95range": [
+          0.6606,
+          0.916
+        ],
+        "real_mean": 0.7595,
+        "p_null_ge_real": 0.6393,
+        "real_beats": false
+      }
+    }
+  },
+  "verdict": "REAL_STRUCTURE_BEATS_WRONG_STRUCTURE_CONTROLS",
+  "gates": {
+    "real_gain_positive": true,
+    "beats_all_label_corruptions": true,
+    "beats_no_morphology_nulls": true,
+    "beats_planted_morphology_reference": false,
+    "planted_reference_note": "synthetic_wrong_language has densely planted morphology; it bounds LA's morphological richness from above and confirms detector sensitivity, it is not a falsification gate."
+  }
+}

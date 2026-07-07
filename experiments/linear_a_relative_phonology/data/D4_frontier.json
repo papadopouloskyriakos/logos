@@ -1,0 +1,982 @@
+{
+ "meta": {
+  "seed": 20260708,
+  "task": "D4 minimal-seed frontier",
+  "control": "Linear B known-truth (V-vs-C partition gradable)",
+  "n_signs": 74,
+  "n_vowels": 5,
+  "base_rate_vowel": 0.0676,
+  "freq_min": 20,
+  "alpha": 0.2,
+  "knn": 7,
+  "beta_sub": 0.5,
+  "channels": [
+   "pos",
+   "pos+sub"
+  ],
+  "seed_types": [
+   "random",
+   "shape_selected",
+   "secure_shared",
+   "anchor_derived",
+   "incorrect"
+  ],
+  "k_grid": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "kc_matched": "k consonant seeds per k vowel seeds",
+  "metric": "held-out AUC + recall@#heldout_vowels; honest signal = lift over random-null at matched k",
+  "vowel_signs": [
+   "E",
+   "A",
+   "O",
+   "U",
+   "I"
+  ],
+  "anchor_pool_present": [
+   "A",
+   "DI",
+   "I",
+   "JA",
+   "KI",
+   "PA",
+   "RI",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TE",
+   "TI",
+   "TO",
+   "TU"
+  ],
+  "anchor_true_vowels": [
+   "A",
+   "I"
+  ],
+  "anchor_true_cons_n": 15,
+  "loto_survivors_present": [
+   "I",
+   "RI"
+  ],
+  "non_circular": "LB values grade/seed ONLY; never a model feature. log_freq dropped from propagation."
+ },
+ "note_k_ceiling": "The vowel class has only 5 members; k=5 seeds all of them (no held-out vowel), so the V/C frontier SATURATES at k=4. 'k=5+' is degenerate on this axis, not a higher-power regime.",
+ "frontier_LB_control": {
+  "pos": {
+   "random_null_by_k": {
+    "0": null,
+    "1": {
+     "n_draws": 300,
+     "auc_mean": 0.5132,
+     "auc_sd": 0.1672,
+     "auc_ci95": [
+      0.191,
+      0.7885
+     ],
+     "recall_mean": 0.0743
+    },
+    "2": {
+     "n_draws": 300,
+     "auc_mean": 0.4934,
+     "auc_sd": 0.1732,
+     "auc_ci95": [
+      0.1938,
+      0.8519
+     ],
+     "recall_mean": 0.0378
+    },
+    "3": {
+     "n_draws": 300,
+     "auc_mean": 0.4886,
+     "auc_sd": 0.1676,
+     "auc_ci95": [
+      0.1841,
+      0.824
+     ],
+     "recall_mean": 0.0524
+    },
+    "4": {
+     "n_draws": 300,
+     "auc_mean": 0.4947,
+     "auc_sd": 0.1626,
+     "auc_ci95": [
+      0.1895,
+      0.8034
+     ],
+     "recall_mean": 0.0516
+    },
+    "5": {
+     "n_draws": 300,
+     "auc_mean": 0.499,
+     "auc_sd": 0.1794,
+     "auc_ci95": [
+      0.1726,
+      0.832
+     ],
+     "recall_mean": 0.0643
+    }
+   },
+   "by_type": {
+    "random": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4918,
+      "auc_sd": 0.1759,
+      "auc_ci95": [
+       0.1617,
+       0.8167
+      ],
+      "recall_mean": 0.0573,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": -0.0214,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4966,
+      "auc_sd": 0.1792,
+      "auc_ci95": [
+       0.153,
+       0.8571
+      ],
+      "recall_mean": 0.0339,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.0032,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4791,
+      "auc_sd": 0.1757,
+      "auc_ci95": [
+       0.1422,
+       0.8157
+      ],
+      "recall_mean": 0.0443,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": -0.0095,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4897,
+      "auc_sd": 0.1666,
+      "auc_ci95": [
+       0.192,
+       0.7988
+      ],
+      "recall_mean": 0.0668,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": -0.005,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5075,
+      "auc_sd": 0.1684,
+      "auc_ci95": [
+       0.2332,
+       0.8546
+      ],
+      "recall_mean": 0.0719,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": 0.0085,
+      "exceeds_null_ci95_upper": false
+     }
+    ],
+    "shape_selected": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4992,
+      "auc_sd": 0.1872,
+      "auc_ci95": [
+       0.171,
+       0.863
+      ],
+      "recall_mean": 0.0672,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": -0.014,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4955,
+      "auc_sd": 0.1797,
+      "auc_ci95": [
+       0.163,
+       0.8026
+      ],
+      "recall_mean": 0.0369,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.0021,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5102,
+      "auc_sd": 0.1714,
+      "auc_ci95": [
+       0.1981,
+       0.8471
+      ],
+      "recall_mean": 0.0469,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": 0.0216,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4797,
+      "auc_sd": 0.1746,
+      "auc_ci95": [
+       0.1786,
+       0.8036
+      ],
+      "recall_mean": 0.0537,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": -0.015,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.457,
+      "auc_sd": 0.1579,
+      "auc_ci95": [
+       0.1848,
+       0.7777
+      ],
+      "recall_mean": 0.0356,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": -0.042,
+      "exceeds_null_ci95_upper": false
+     }
+    ],
+    "secure_shared": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.6079,
+      "auc_sd": 0.1537,
+      "auc_ci95": [
+       0.2647,
+       0.8419
+      ],
+      "recall_mean": 0.175,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": 0.0947,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.6839,
+      "auc_sd": 0.1874,
+      "auc_ci95": [
+       0.322,
+       0.9218
+      ],
+      "recall_mean": 0.1022,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.1905,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.6902,
+      "auc_sd": 0.2132,
+      "auc_ci95": [
+       0.1797,
+       0.9284
+      ],
+      "recall_mean": 0.08,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": 0.2016,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.7585,
+      "auc_sd": 0.2278,
+      "auc_ci95": [
+       0.0923,
+       0.9846
+      ],
+      "recall_mean": 0.0133,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": 0.2638,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": null,
+      "auc_sd": null,
+      "auc_ci95": null,
+      "recall_mean": null,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": null,
+      "exceeds_null_ci95_upper": null
+     }
+    ],
+    "anchor_derived": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5285,
+      "auc_sd": 0.1541,
+      "auc_ci95": [
+       0.2537,
+       0.75
+      ],
+      "recall_mean": 0.125,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": 0.0153,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.7015,
+      "auc_sd": 0.1542,
+      "auc_ci95": [
+       0.3582,
+       0.8806
+      ],
+      "recall_mean": 0.1911,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.2081,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "k": 3,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "k>#true anchor vowels (only {A,I}) \u2014 anchor channel exhausted"
+     },
+     {
+      "k": 4,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "k>#true anchor vowels (only {A,I}) \u2014 anchor channel exhausted"
+     },
+     {
+      "k": 5,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "k>#true anchor vowels (only {A,I}) \u2014 anchor channel exhausted"
+     }
+    ],
+    "incorrect": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.3941,
+      "auc_sd": 0.1579,
+      "auc_ci95": [
+       0.1414,
+       0.7373
+      ],
+      "recall_mean": 0.0317,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": -0.1191,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.3195,
+      "auc_sd": 0.1953,
+      "auc_ci95": [
+       0.0796,
+       0.8706
+      ],
+      "recall_mean": 0.0111,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": -0.1739,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.282,
+      "auc_sd": 0.1962,
+      "auc_ci95": [
+       0.0758,
+       0.8307
+      ],
+      "recall_mean": 0.0033,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": -0.2066,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.2743,
+      "auc_sd": 0.2478,
+      "auc_ci95": [
+       0.0112,
+       0.8392
+      ],
+      "recall_mean": 0.0,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": -0.2204,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": null,
+      "auc_sd": null,
+      "auc_ci95": null,
+      "recall_mean": null,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": null,
+      "exceeds_null_ci95_upper": null
+     }
+    ]
+   }
+  },
+  "pos+sub": {
+   "random_null_by_k": {
+    "0": null,
+    "1": {
+     "n_draws": 300,
+     "auc_mean": 0.5173,
+     "auc_sd": 0.1867,
+     "auc_ci95": [
+      0.2001,
+      0.8386
+     ],
+     "recall_mean": 0.0677
+    },
+    "2": {
+     "n_draws": 300,
+     "auc_mean": 0.4962,
+     "auc_sd": 0.1646,
+     "auc_ci95": [
+      0.2056,
+      0.7978
+     ],
+     "recall_mean": 0.0222
+    },
+    "3": {
+     "n_draws": 300,
+     "auc_mean": 0.4965,
+     "auc_sd": 0.1658,
+     "auc_ci95": [
+      0.1996,
+      0.8239
+     ],
+     "recall_mean": 0.0408
+    },
+    "4": {
+     "n_draws": 300,
+     "auc_mean": 0.4951,
+     "auc_sd": 0.1527,
+     "auc_ci95": [
+      0.2117,
+      0.7934
+     ],
+     "recall_mean": 0.0379
+    },
+    "5": {
+     "n_draws": 300,
+     "auc_mean": 0.4973,
+     "auc_sd": 0.1712,
+     "auc_ci95": [
+      0.1785,
+      0.8189
+     ],
+     "recall_mean": 0.0427
+    }
+   },
+   "by_type": {
+    "random": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.496,
+      "auc_sd": 0.1713,
+      "auc_ci95": [
+       0.2095,
+       0.7889
+      ],
+      "recall_mean": 0.0503,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": -0.0213,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5032,
+      "auc_sd": 0.1735,
+      "auc_ci95": [
+       0.1768,
+       0.8172
+      ],
+      "recall_mean": 0.0303,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.007,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4883,
+      "auc_sd": 0.1711,
+      "auc_ci95": [
+       0.179,
+       0.7986
+      ],
+      "recall_mean": 0.0367,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": -0.0082,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4881,
+      "auc_sd": 0.1547,
+      "auc_ci95": [
+       0.2076,
+       0.7796
+      ],
+      "recall_mean": 0.0509,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": -0.007,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5141,
+      "auc_sd": 0.1574,
+      "auc_ci95": [
+       0.2379,
+       0.8233
+      ],
+      "recall_mean": 0.0541,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": 0.0168,
+      "exceeds_null_ci95_upper": false
+     }
+    ],
+    "shape_selected": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5041,
+      "auc_sd": 0.1797,
+      "auc_ci95": [
+       0.2179,
+       0.8218
+      ],
+      "recall_mean": 0.0527,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": -0.0132,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.5067,
+      "auc_sd": 0.1863,
+      "auc_ci95": [
+       0.1569,
+       0.811
+      ],
+      "recall_mean": 0.0219,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.0105,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.507,
+      "auc_sd": 0.1667,
+      "auc_ci95": [
+       0.1952,
+       0.8338
+      ],
+      "recall_mean": 0.0308,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": 0.0105,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.486,
+      "auc_sd": 0.1733,
+      "auc_ci95": [
+       0.1935,
+       0.8438
+      ],
+      "recall_mean": 0.0551,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": -0.0091,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.4578,
+      "auc_sd": 0.1494,
+      "auc_ci95": [
+       0.2042,
+       0.7322
+      ],
+      "recall_mean": 0.0292,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": -0.0395,
+      "exceeds_null_ci95_upper": false
+     }
+    ],
+    "secure_shared": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.6976,
+      "auc_sd": 0.1407,
+      "auc_ci95": [
+       0.3603,
+       0.8897
+      ],
+      "recall_mean": 0.14,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": 0.1803,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.7444,
+      "auc_sd": 0.1713,
+      "auc_ci95": [
+       0.3522,
+       0.9254
+      ],
+      "recall_mean": 0.0978,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.2482,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.7497,
+      "auc_sd": 0.1838,
+      "auc_ci95": [
+       0.2837,
+       0.9621
+      ],
+      "recall_mean": 0.08,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": 0.2532,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.805,
+      "auc_sd": 0.197,
+      "auc_ci95": [
+       0.1985,
+       1.0
+      ],
+      "recall_mean": 0.1133,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": 0.3099,
+      "exceeds_null_ci95_upper": true
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": null,
+      "auc_sd": null,
+      "auc_ci95": null,
+      "recall_mean": null,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": null,
+      "exceeds_null_ci95_upper": null
+     }
+    ],
+    "anchor_derived": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.6237,
+      "auc_sd": 0.1594,
+      "auc_ci95": [
+       0.3235,
+       0.8162
+      ],
+      "recall_mean": 0.1617,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": 0.1064,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.7227,
+      "auc_sd": 0.1522,
+      "auc_ci95": [
+       0.393,
+       0.9104
+      ],
+      "recall_mean": 0.1356,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": 0.2265,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "k": 3,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "k>#true anchor vowels (only {A,I}) \u2014 anchor channel exhausted"
+     },
+     {
+      "k": 4,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "k>#true anchor vowels (only {A,I}) \u2014 anchor channel exhausted"
+     },
+     {
+      "k": 5,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "k>#true anchor vowels (only {A,I}) \u2014 anchor channel exhausted"
+     }
+    ],
+    "incorrect": [
+     {
+      "k": 0,
+      "available": false,
+      "auc_mean": null,
+      "recall_mean": null,
+      "note": "no seeds \u2192 classes cannot be attached to values \u2192 chance (AUC=0.5)"
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.3221,
+      "auc_sd": 0.1392,
+      "auc_ci95": [
+       0.1176,
+       0.6648
+      ],
+      "recall_mean": 0.0217,
+      "k": 1,
+      "available": true,
+      "lift_auc_over_random_null": -0.1952,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.2505,
+      "auc_sd": 0.1632,
+      "auc_ci95": [
+       0.0683,
+       0.6368
+      ],
+      "recall_mean": 0.0022,
+      "k": 2,
+      "available": true,
+      "lift_auc_over_random_null": -0.2457,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.2229,
+      "auc_sd": 0.1678,
+      "auc_ci95": [
+       0.0509,
+       0.7095
+      ],
+      "recall_mean": 0.0,
+      "k": 3,
+      "available": true,
+      "lift_auc_over_random_null": -0.2736,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": 0.2137,
+      "auc_sd": 0.1914,
+      "auc_ci95": [
+       0.0,
+       0.7581
+      ],
+      "recall_mean": 0.0,
+      "k": 4,
+      "available": true,
+      "lift_auc_over_random_null": -0.2814,
+      "exceeds_null_ci95_upper": false
+     },
+     {
+      "n_draws": 150,
+      "auc_mean": null,
+      "auc_sd": null,
+      "auc_ci95": null,
+      "recall_mean": null,
+      "k": 5,
+      "available": true,
+      "lift_auc_over_random_null": null,
+      "exceeds_null_ci95_upper": null
+     }
+    ]
+   }
+  }
+ },
+ "frontier_k_star": {
+  "pos": {
+   "random": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "shape_selected": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "secure_shared": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "anchor_derived": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "incorrect": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   }
+  },
+  "pos+sub": {
+   "random": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "shape_selected": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "secure_shared": {
+    "k_star_auc_beats_null95": 4,
+    "k_star_recall_ge_0.5": null
+   },
+   "anchor_derived": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   },
+   "incorrect": {
+    "k_star_auc_beats_null95": null,
+    "k_star_recall_ge_0.5": null
+   }
+  }
+ },
+ "LA_placement": {
+  "secure_value_seeds_available_SEED_A": 0,
+  "why": "WP-G: SEED_A=0. 6 SEED_B toponym equations are one-anchor-deep and collapse under the cited frozen LOTO gate (survivors {I,RI}, each 1-toponym-deep); shape-homomorphy (57 recs) and Cypriot (11) are SEED_X by rule; no non-circular secure value seed exists.",
+  "availability_by_type_for_LA": {
+   "random": "unlimited but value-blind \u2192 sits on the null floor (no recovery)",
+   "shape_selected": "available (SigLA shapes) but shape \u22a5 value (WP-F circular/capped \u22640.75); value-blind \u2192 null floor",
+   "secure_shared": "0 (no bilingual / no secure shared-sign value; relabeling-invariant)",
+   "anchor_derived": "\u22642 on paper (toponym vowels among SEED_B) but LOTO-survivable = 1 vowel {I}; each one-anchor-deep, fails held-out gate \u2192 effectively 0 secure",
+   "incorrect": "the risk if disputed anchors are trusted \u2014 actively harmful (see incorrect curve)"
+  },
+  "where_LA_sits": "k=0 SECURE seeds. LA has access only to the value-blind (random/shape) channels, which the LB control measures at the null floor; and to anchor_derived seeds that cap at k\u22642 on paper and 0 after LOTO. LA is at the pre-frontier origin."
+ }
+}

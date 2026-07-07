@@ -1,0 +1,998 @@
+{
+ "task": "E2_formula_grammar",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3 structure-role; no phonetic value; no transfer licence",
+ "corpus": {
+  "n_inscriptions": 1341
+ },
+ "ledger_grammar": {
+  "n_inscriptions": 333,
+  "unigram_counts": {
+   "W": 1220,
+   "DEF": 16,
+   "N": 1276,
+   "LOG": 1178,
+   "FR": 270,
+   "TOT": 39
+  },
+  "fsa_transition_prob": {
+   "DEF": {
+    "$": 0.0625,
+    "FR": 0.125,
+    "LOG": 0.125,
+    "N": 0.375,
+    "W": 0.3125
+   },
+   "FR": {
+    "$": 0.1222,
+    "DEF": 0.0222,
+    "FR": 0.0111,
+    "LOG": 0.4148,
+    "N": 0.0222,
+    "TOT": 0.0111,
+    "W": 0.3963
+   },
+   "LOG": {
+    "$": 0.1265,
+    "DEF": 0.0008,
+    "FR": 0.0823,
+    "LOG": 0.191,
+    "N": 0.4559,
+    "TOT": 0.0051,
+    "W": 0.1384
+   },
+   "N": {
+    "$": 0.1042,
+    "DEF": 0.0039,
+    "FR": 0.0972,
+    "LOG": 0.3025,
+    "N": 0.0298,
+    "TOT": 0.0212,
+    "W": 0.4412
+   },
+   "TOT": {
+    "LOG": 0.1795,
+    "N": 0.7949,
+    "W": 0.0256
+   },
+   "W": {
+    "$": 0.0139,
+    "DEF": 0.0016,
+    "FR": 0.0361,
+    "LOG": 0.2426,
+    "N": 0.5352,
+    "TOT": 0.0016,
+    "W": 0.1689
+   },
+   "^": {
+    "DEF": 0.006,
+    "LOG": 0.4505,
+    "N": 0.015,
+    "TOT": 0.003,
+    "W": 0.5255
+   }
+  },
+  "fsa_transition_counts": {
+   "DEF->$": 1,
+   "DEF->FR": 2,
+   "DEF->LOG": 2,
+   "DEF->N": 6,
+   "DEF->W": 5,
+   "FR->$": 33,
+   "FR->DEF": 6,
+   "FR->FR": 3,
+   "FR->LOG": 112,
+   "FR->N": 6,
+   "FR->TOT": 3,
+   "FR->W": 107,
+   "LOG->$": 149,
+   "LOG->DEF": 1,
+   "LOG->FR": 97,
+   "LOG->LOG": 225,
+   "LOG->N": 537,
+   "LOG->TOT": 6,
+   "LOG->W": 163,
+   "N->$": 133,
+   "N->DEF": 5,
+   "N->FR": 124,
+   "N->LOG": 386,
+   "N->N": 38,
+   "N->TOT": 27,
+   "N->W": 563,
+   "TOT->LOG": 7,
+   "TOT->N": 31,
+   "TOT->W": 1,
+   "W->$": 17,
+   "W->DEF": 2,
+   "W->FR": 44,
+   "W->LOG": 296,
+   "W->N": 653,
+   "W->TOT": 2,
+   "W->W": 206,
+   "^->DEF": 2,
+   "^->LOG": 150,
+   "^->N": 5,
+   "^->TOT": 1,
+   "^->W": 175
+  },
+  "entry_carrier_followed_by_number": {
+   "LOG_yes": 634,
+   "LOG_no": 544,
+   "W_yes": 697,
+   "W_no": 523,
+   "LOG_rate": 0.5382,
+   "W_rate": 0.5713
+  },
+  "TOTAL_slot": {
+   "occurrences": 39,
+   "carrier_inscriptions": 35,
+   "mean_norm_position": 0.6918,
+   "frac_in_last_third": 0.5897,
+   "followed_by_number": 31,
+   "followed_by_number_rate": 0.7949
+  },
+  "DEFICIT_slot": {
+   "occurrences": 16,
+   "carrier_inscriptions": 12,
+   "mean_norm_position": 0.5034,
+   "frac_in_last_third": 0.375,
+   "followed_by_number": 8,
+   "followed_by_number_rate": 0.5
+  },
+  "TOTAL_sum_consistency": {
+   "occurrences": 39,
+   "with_following_number": 31,
+   "no_following_number": 8,
+   "exact_match": 7,
+   "near_match_within_2": 5,
+   "exact_rate_of_testable": 0.2258,
+   "exact_or_near_rate_of_testable": 0.3871,
+   "testable_segments_with_fractions": 5,
+   "note": "silver corpus stores only integer numerals; fraction glyphs (½ ¼ ...) are uncounted, which deflates exact matches on segments that carry them.",
+   "examples": [
+    {
+     "id": "HT9a",
+     "total": 31,
+     "cumsum": 29,
+     "match": "near",
+     "nfrac": 4
+    },
+    {
+     "id": "HT9b",
+     "total": 24,
+     "cumsum": 24,
+     "match": "exact"
+    },
+    {
+     "id": "HT11b",
+     "total": 180,
+     "cumsum": 180,
+     "match": "exact"
+    },
+    {
+     "id": "HT13",
+     "total": 130,
+     "cumsum": 130,
+     "match": "exact"
+    },
+    {
+     "id": "HT85a",
+     "total": 66,
+     "cumsum": 66,
+     "match": "exact"
+    },
+    {
+     "id": "HT89",
+     "total": 87,
+     "cumsum": 87,
+     "match": "exact"
+    },
+    {
+     "id": "HT94a",
+     "total": 110,
+     "cumsum": 111,
+     "match": "near",
+     "nfrac": 0
+    },
+    {
+     "id": "HT94b",
+     "total": 5,
+     "cumsum": 5,
+     "match": "exact"
+    },
+    {
+     "id": "HT104",
+     "total": 95,
+     "cumsum": 94,
+     "match": "near",
+     "nfrac": 2
+    },
+    {
+     "id": "HT117a",
+     "total": 10,
+     "cumsum": 10,
+     "match": "exact"
+    },
+    {
+     "id": "HT119",
+     "total": 160,
+     "cumsum": 158,
+     "match": "near",
+     "nfrac": 0
+    },
+    {
+     "id": "HT127b",
+     "total": 291,
+     "cumsum": 292,
+     "match": "near",
+     "nfrac": 0
+    }
+   ]
+  },
+  "coverage": {
+   "token_level_in_accounting_alphabet": 1.0,
+   "token_level_note": "1.0 by construction (all non-layout tokens map to the accounting alphabet); reported only for completeness.",
+   "numerals_total": 1276,
+   "numerals_anchored_to_carrier": 1233,
+   "numeral_wellformed_rate": 0.9663,
+   "numeral_wellformed_note": "fraction of numerals immediately preceded by a value-carrier (W/LOG/TOT/DEF/FR) = a well-formed (carrier VALUE) accounting entry.",
+   "inscriptions_all_numerals_wellformed": 295,
+   "inscriptions_all_numerals_wellformed_rate": 0.8859
+  },
+  "by_support": {
+   "Tablet": {
+    "n": 273,
+    "with_TOT": 34,
+    "with_DEF": 12,
+    "numerals": 1099,
+    "entries_WN": 1154
+   },
+   "Stone vessel": {
+    "n": 35,
+    "with_TOT": 1,
+    "with_DEF": 0,
+    "numerals": 127,
+    "entries_WN": 129
+   },
+   "Clay vessel": {
+    "n": 5,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 7,
+    "entries_WN": 7
+   },
+   "Lames (short thin tablet)": {
+    "n": 4,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 4,
+    "entries_WN": 4
+   },
+   "4-sided bar": {
+    "n": 4,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 17,
+    "entries_WN": 14
+   },
+   "3-sided bar": {
+    "n": 3,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 6,
+    "entries_WN": 6
+   },
+   "Roundel": {
+    "n": 3,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 3,
+    "entries_WN": 3
+   },
+   "Nodule": {
+    "n": 2,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 2,
+    "entries_WN": 2
+   },
+   "Stone object": {
+    "n": 2,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 6,
+    "entries_WN": 6
+   },
+   "Graffito": {
+    "n": 1,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 4,
+    "entries_WN": 5
+   },
+   "Label": {
+    "n": 1,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 1,
+    "entries_WN": 1
+   }
+  },
+  "by_site": {
+   "Haghia Triada": {
+    "n": 171,
+    "with_TOT": 33,
+    "with_DEF": 12,
+    "numerals": 834,
+    "entries_WN": 843
+   },
+   "Khania": {
+    "n": 61,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 121,
+    "entries_WN": 161
+   },
+   "Zakros": {
+    "n": 34,
+    "with_TOT": 1,
+    "with_DEF": 0,
+    "numerals": 126,
+    "entries_WN": 128
+   },
+   "Phaistos": {
+    "n": 14,
+    "with_TOT": 1,
+    "with_DEF": 0,
+    "numerals": 37,
+    "entries_WN": 40
+   },
+   "Malia": {
+    "n": 13,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 30,
+    "entries_WN": 28
+   },
+   "Knossos": {
+    "n": 9,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 14,
+    "entries_WN": 14
+   },
+   "Arkhalkhori": {
+    "n": 8,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 33,
+    "entries_WN": 32
+   },
+   "Petras": {
+    "n": 6,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 11,
+    "entries_WN": 15
+   },
+   "Thera": {
+    "n": 4,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 10,
+    "entries_WN": 10
+   },
+   "Tylissos": {
+    "n": 3,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 31,
+    "entries_WN": 31
+   }
+  },
+  "by_period": {
+   "LMIB": {
+    "n": 231,
+    "with_TOT": 33,
+    "with_DEF": 12,
+    "numerals": 966,
+    "entries_WN": 1010
+   },
+   "UNDATED": {
+    "n": 96,
+    "with_TOT": 2,
+    "with_DEF": 0,
+    "numerals": 292,
+    "entries_WN": 303
+   },
+   "MMII": {
+    "n": 3,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 3,
+    "entries_WN": 3
+   },
+   "LMI": {
+    "n": 2,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 14,
+    "entries_WN": 14
+   },
+   "MMIIIB": {
+    "n": 1,
+    "with_TOT": 0,
+    "with_DEF": 0,
+    "numerals": 1,
+    "entries_WN": 1
+   }
+  },
+  "by_length": {
+   "5+carriers": {
+    "n": 226,
+    "with_TOT": 30,
+    "with_DEF": 11,
+    "numerals": 1108,
+    "entries_WN": 1178
+   },
+   "2-4carriers": {
+    "n": 91,
+    "with_TOT": 5,
+    "with_DEF": 0,
+    "numerals": 152,
+    "entries_WN": 138
+   },
+   "1carrier": {
+    "n": 16,
+    "with_TOT": 0,
+    "with_DEF": 1,
+    "numerals": 16,
+    "entries_WN": 15
+   }
+  }
+ },
+ "votive_libation_grammar": {
+  "n_carriers": 29,
+  "by_support": {
+   "Stone vessel": 24,
+   "Clay vessel": 1,
+   "Inked inscription": 2,
+   "Metal object": 1,
+   "Nodule": 1
+  },
+  "by_site": {
+   "Iouktas": 10,
+   "Knossos": 2,
+   "Kophinas": 1,
+   "Palaikastro": 4,
+   "Platanos": 1,
+   "Poros Herakleiou": 1,
+   "Psykhro": 1,
+   "Samothrace": 1,
+   "Syme": 5,
+   "Troullos": 1,
+   "Zakros": 1,
+   "Apodoulou": 1
+  },
+  "by_period": {
+   "UNDATED": 15,
+   "LMIA": 5,
+   "LMI": 5,
+   "LMIIIA": 1,
+   "MMII": 1,
+   "MMIIIB": 1,
+   "LMIB": 1
+  },
+  "anchor_family_carrier_counts": {
+   "OP": 18,
+   "SSR": 16,
+   "UNK": 6,
+   "IPN": 4,
+   "SIR": 5
+  },
+  "pairwise_order": [
+   {
+    "pair": "OP<SSR",
+    "n_both": 5,
+    "a_before_b": 5,
+    "consistency": 1.0,
+    "dominant": "OP<SSR"
+   },
+   {
+    "pair": "OP<UNK",
+    "n_both": 4,
+    "a_before_b": 4,
+    "consistency": 1.0,
+    "dominant": "OP<UNK"
+   },
+   {
+    "pair": "OP<SIR",
+    "n_both": 5,
+    "a_before_b": 5,
+    "consistency": 1.0,
+    "dominant": "OP<SIR"
+   },
+   {
+    "pair": "SSR<UNK",
+    "n_both": 4,
+    "a_before_b": 4,
+    "consistency": 1.0,
+    "dominant": "SSR<UNK"
+   },
+   {
+    "pair": "IPN<OP",
+    "n_both": 4,
+    "a_before_b": 0,
+    "consistency": 1.0,
+    "dominant": "OP<IPN"
+   },
+   {
+    "pair": "IPN<SSR",
+    "n_both": 3,
+    "a_before_b": 0,
+    "consistency": 1.0,
+    "dominant": "SSR<IPN"
+   },
+   {
+    "pair": "IPN<UNK",
+    "n_both": 3,
+    "a_before_b": 0,
+    "consistency": 1.0,
+    "dominant": "UNK<IPN"
+   },
+   {
+    "pair": "IPN<SIR",
+    "n_both": 4,
+    "a_before_b": 4,
+    "consistency": 1.0,
+    "dominant": "IPN<SIR"
+   },
+   {
+    "pair": "SIR<SSR",
+    "n_both": 3,
+    "a_before_b": 0,
+    "consistency": 1.0,
+    "dominant": "SSR<SIR"
+   },
+   {
+    "pair": "SIR<UNK",
+    "n_both": 3,
+    "a_before_b": 0,
+    "consistency": 1.0,
+    "dominant": "UNK<SIR"
+   }
+  ],
+  "canonical_template": [
+   "OP",
+   "SSR",
+   "UNK",
+   "IPN",
+   "SIR"
+  ],
+  "template_gloss": {
+   "OP": "opener *301-WA family",
+   "SSR": "*SA-SA-RA(-ME) core",
+   "UNK": "U-NA-(RU-)KA-NA-SI/TI",
+   "IPN": "I-PI-NA-M(A/INA)",
+   "SIR": "SI-RU(-TE)"
+  },
+  "slot_fill_rate": {
+   "OP": 0.6207,
+   "SSR": 0.5517,
+   "UNK": 0.2069,
+   "IPN": 0.1379,
+   "SIR": 0.1724
+  },
+  "order_permutation_null": {
+   "n_multi_anchor_carriers": 10,
+   "observed_perfectly_consistent_pairs": 10,
+   "co_occurring_pairs_tested": 10,
+   "n_permutations": 20000,
+   "p_value_ge_observed": 5e-05,
+   "note": "null shuffles each carrier's realised anchor order uniformly; statistic = number of co-occurring anchor pairs that are 100% consistent in direction. Small n per pair -> treat as suggestive."
+  },
+  "template_order_coverage": {
+   "carriers_matching_canonical_subsequence": 29,
+   "rate": 1.0,
+   "note": "carriers whose observed anchor order is a subsequence of the canonical template (extra/missing slots allowed, order must not invert)."
+  },
+  "anchors_realised_hist": {
+   "5": 2,
+   "1": 19,
+   "2": 6,
+   "4": 2
+  },
+  "carrier_sequences": [
+   {
+    "id": "IOZa2",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "SSR",
+     "UNK",
+     "IPN",
+     "SIR"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "JA-DI-KI-TU",
+     "JA-SA-SA-RA-ME",
+     "U-NA-KA-NA-SI",
+     "I-PI-NA-MA",
+     "SI-RU-TE",
+     "TA-NA-RA-TE-U-TI-NU",
+     "I"
+    ]
+   },
+   {
+    "id": "IOZa3",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "AU"
+    ]
+   },
+   {
+    "id": "IOZa4",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "*301-WA"
+    ]
+   },
+   {
+    "id": "IOZa6",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "SSR"
+    ],
+    "words": [
+     "TA-NA-I-*301-U-TI-NU",
+     "I-NA-TA-I-ZU-DI-SI-KA",
+     "JA-SA-SA-RA-ME"
+    ]
+   },
+   {
+    "id": "IOZa7",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "JA-TI-*321"
+    ]
+   },
+   {
+    "id": "IOZa8",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-NA-TI-*301-WA-JA"
+    ]
+   },
+   {
+    "id": "IOZa9",
+    "support": "Stone vessel",
+    "order": [
+     "SSR",
+     "UNK"
+    ],
+    "words": [
+     "JA-SA-SA-RA-ME",
+     "U-NA-KA-NA-SI"
+    ]
+   },
+   {
+    "id": "IOZb10",
+    "support": "Clay vessel",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "A-SA-SA-RA-ME"
+    ]
+   },
+   {
+    "id": "IOZa12",
+    "support": "Stone vessel",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "JA-SA",
+     "SA-RA-ME",
+     "I-TI"
+    ]
+   },
+   {
+    "id": "IOZa16",
+    "support": "Stone vessel",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "AROM",
+     "JA-SA-SA-RA",
+     "ME",
+     "U-NA-RU-KA-NA-SI"
+    ]
+   },
+   {
+    "id": "KNZa10",
+    "support": "Stone vessel",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "TA-NU-MU-TI",
+     "JA-SA-SA-RA-MA",
+     "NA",
+     "DA-WA",
+     "DU-WA-TO",
+     "I-JA"
+    ]
+   },
+   {
+    "id": "KHZc106",
+    "support": "Inked inscription",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "SA-SA-RA-ME"
+    ]
+   },
+   {
+    "id": "KOZa1",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "UNK",
+     "IPN",
+     "SIR"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "TU-RU-SA",
+     "DU-*314-RE",
+     "I-DA-A",
+     "U-NA-KA-NA-SI",
+     "I-PI-NA-MA",
+     "SI-RU-TE"
+    ]
+   },
+   {
+    "id": "PKZa4",
+    "support": "Stone vessel",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "A-SA-SA-RA"
+    ]
+   },
+   {
+    "id": "PKZa11",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "SSR",
+     "IPN",
+     "SIR"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-E",
+     "A-DI-KI-TE-TE",
+     "RE",
+     "PI-TE-RI",
+     "A-KO-A-NE",
+     "A",
+     "SA-SA-RA-ME",
+     "U-NA-RU-KA-NA-TI",
+     "I-PI-NA-MI-NA",
+     "SI-RU",
+     "I-NA-JA-PA-QA"
+    ]
+   },
+   {
+    "id": "PKZa12",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "A-DI-KI-TE",
+     "SI",
+     "RA-ME",
+     "A-NE",
+     "U-NA-RU-KA-JA-SI",
+     "A-PA-DU-PA",
+     "JA",
+     "JA-PA-QA"
+    ]
+   },
+   {
+    "id": "PLZf1",
+    "support": "Metal object",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "TA",
+     "WI-TE-JA-MU",
+     "U-QE-TI",
+     "JA-SA-SA-RA-ME",
+     "TA-NU-NI-KI-NA",
+     "NI-NU-NI",
+     "I"
+    ]
+   },
+   {
+    "id": "POZc1",
+    "support": "Inked inscription",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "RI-QE-TI-A-SA-SA-RA-*325"
+    ]
+   },
+   {
+    "id": "PSZa2",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "SSR"
+    ],
+    "words": [
+     "RE-I-KE",
+     "TA-NA-I-*301-TI",
+     "𐄌-JA-TI",
+     "JA-SA-SA-RA-ME"
+    ]
+   },
+   {
+    "id": "SAMWa1",
+    "support": "Nodule",
+    "order": [
+     "SSR"
+    ],
+    "words": [
+     "JA-SA",
+     "SA-RA",
+     "TE"
+    ]
+   },
+   {
+    "id": "SYZa1",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "I-DA-MI",
+     "JA"
+    ]
+   },
+   {
+    "id": "SYZa2",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "UNK"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "JA-SU-MA-TU-OLIV",
+     "U-NA-KA-NA-SI-OLE",
+     "A-JA"
+    ]
+   },
+   {
+    "id": "SYZa3",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "SIR"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "SE-KA-NA-SI",
+     "SI-RU-TE"
+    ]
+   },
+   {
+    "id": "SYZa4",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "JA-I-NWA-ZA",
+     "PA₃-NI-WI"
+    ]
+   },
+   {
+    "id": "SYZa8",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "JA-JA"
+    ]
+   },
+   {
+    "id": "TLZa1",
+    "support": "Stone vessel",
+    "order": [
+     "OP",
+     "SSR",
+     "UNK",
+     "IPN",
+     "SIR"
+    ],
+    "words": [
+     "A-TA-I-*301-WA-JA",
+     "O-SU-QA-RE",
+     "JA-SA-SA-RA-ME",
+     "U-NA-KA-NA",
+     "I-PI-NA-MA",
+     "SI-RU-TE"
+    ]
+   },
+   {
+    "id": "ZAZb3",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "VIN",
+     "DI-DI-KA-SE",
+     "A-SA-MU-NE",
+     "A-SE",
+     "A-TA-I-*301-DE-KA",
+     "A-RE-PI-RE-NA",
+     "TI-TI-KU"
+    ]
+   },
+   {
+    "id": "APZa1",
+    "support": "Stone vessel",
+    "order": [
+     "OP"
+    ],
+    "words": [
+     "JA-TA-I-*301-U-JA"
+    ]
+   },
+   {
+    "id": "PKZa27",
+    "support": "Stone vessel",
+    "order": [
+     "SSR",
+     "UNK"
+    ],
+    "words": [
+     "JA-SA-SA-RA-ME",
+     "U-NA-KA-NA-SI"
+    ]
+   }
+  ]
+ }
+}

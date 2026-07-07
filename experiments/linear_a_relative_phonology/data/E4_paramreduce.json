@@ -1,0 +1,460 @@
+{
+  "seed": 20260708,
+  "note": "L2/L3 anonymous relative structure; no value assigned; no licence.",
+  "linear_a": {
+    "GORILA_WORD": {
+      "label": "GORILA_WORD",
+      "mdl_compression": {
+        "n_word_types": 1165,
+        "n_tokens": 3147,
+        "flat": {
+          "L_model_bits": 36057.3,
+          "L_corpus_bits": 26604.8,
+          "DL_total_bits": 62662.1,
+          "n_lexical_units": 1165
+        },
+        "morph": {
+          "L_model_bits": 21220.6,
+          "L_corpus_bits": 32513.0,
+          "DL_total_bits": 53733.6,
+          "n_prefix_types": 54,
+          "n_suffix_types": 58,
+          "n_stem_types": 597,
+          "n_lexical_units": 709
+        },
+        "compression_improvement": 0.1425,
+        "delta_DL_bits": 8928.5,
+        "param_reduction_ratio": 0.6086,
+        "delta_lexical_units": 456
+      },
+      "heldout_cv": {
+        "k": 5,
+        "n_tokens": 3147,
+        "P0": {
+          "bits_per_word": 24.7808,
+          "bits_per_sign": 13.4643
+        },
+        "FLAT": {
+          "bits_per_word": 15.6075,
+          "bits_per_sign": 8.4801
+        },
+        "MORPH": {
+          "bits_per_word": 14.0182,
+          "bits_per_sign": 7.6166
+        },
+        "MORPH_RANDNULL": {
+          "bits_per_word": 13.6688,
+          "bits_per_sign": 7.4267
+        },
+        "delta_bpw_morph_minus_flat": -1.5893,
+        "delta_bpw_morph_minus_p0": -10.7626,
+        "delta_bpw_flat_minus_p0": -9.1733,
+        "delta_bpw_morph_minus_randnull": 0.3494,
+        "per_fold_delta_morph_flat_mean_sd": [
+          -1.5893,
+          0.3112
+        ],
+        "per_fold_delta_morph_p0_mean_sd": [
+          -10.7628,
+          0.341
+        ],
+        "per_fold_delta_morph_randnull_mean_sd": [
+          0.3493,
+          0.0961
+        ],
+        "seen": {
+          "P0": {
+            "bits_per_word": 21.6273,
+            "n": 2211
+          },
+          "FLAT": {
+            "bits_per_word": 7.7942,
+            "n": 2211
+          },
+          "MORPH": {
+            "bits_per_word": 8.6287,
+            "n": 2211
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 8.3564,
+            "n": 2211
+          },
+          "delta_bpw_morph_minus_flat": 0.8345,
+          "delta_bpw_morph_minus_p0": -12.9986,
+          "delta_bpw_morph_minus_randnull": 0.2723
+        },
+        "unseen": {
+          "P0": {
+            "bits_per_word": 32.2299,
+            "n": 936
+          },
+          "FLAT": {
+            "bits_per_word": 34.0638,
+            "n": 936
+          },
+          "MORPH": {
+            "bits_per_word": 26.7491,
+            "n": 936
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 26.2177,
+            "n": 936
+          },
+          "delta_bpw_morph_minus_flat": -7.3147,
+          "delta_bpw_morph_minus_p0": -5.4808,
+          "delta_bpw_morph_minus_randnull": 0.5314
+        }
+      },
+      "verdict_flags": {
+        "compresses": true,
+        "beats_flat_overall": true,
+        "beats_p0_overall": true,
+        "gen_beats_p0_on_unseen": true,
+        "gen_beats_randnull_on_unseen": false,
+        "beats_flat_on_unseen": true
+      },
+      "verdict": "COMPRESSES_TRAINING__HELDOUT_GAIN_NOT_STRUCTURAL"
+    },
+    "ENTRY": {
+      "label": "ENTRY",
+      "mdl_compression": {
+        "n_word_types": 633,
+        "n_tokens": 1068,
+        "flat": {
+          "L_model_bits": 19091.1,
+          "L_corpus_bits": 9259.0,
+          "DL_total_bits": 28350.1,
+          "n_lexical_units": 633
+        },
+        "morph": {
+          "L_model_bits": 13910.3,
+          "L_corpus_bits": 12025.7,
+          "DL_total_bits": 25936.0,
+          "n_prefix_types": 35,
+          "n_suffix_types": 50,
+          "n_stem_types": 410,
+          "n_lexical_units": 495
+        },
+        "compression_improvement": 0.0852,
+        "delta_DL_bits": 2414.0,
+        "param_reduction_ratio": 0.782,
+        "delta_lexical_units": 138
+      },
+      "heldout_cv": {
+        "k": 5,
+        "n_tokens": 1068,
+        "P0": {
+          "bits_per_word": 26.59,
+          "bits_per_sign": 11.8227
+        },
+        "FLAT": {
+          "bits_per_word": 20.6006,
+          "bits_per_sign": 9.1596
+        },
+        "MORPH": {
+          "bits_per_word": 18.5985,
+          "bits_per_sign": 8.2694
+        },
+        "MORPH_RANDNULL": {
+          "bits_per_word": 18.1327,
+          "bits_per_sign": 8.0623
+        },
+        "delta_bpw_morph_minus_flat": -2.0021,
+        "delta_bpw_morph_minus_p0": -7.9915,
+        "delta_bpw_flat_minus_p0": -5.9894,
+        "delta_bpw_morph_minus_randnull": 0.4658,
+        "per_fold_delta_morph_flat_mean_sd": [
+          -2.0021,
+          0.5024
+        ],
+        "per_fold_delta_morph_p0_mean_sd": [
+          -7.9908,
+          0.3638
+        ],
+        "per_fold_delta_morph_randnull_mean_sd": [
+          0.4658,
+          0.2211
+        ],
+        "seen": {
+          "P0": {
+            "bits_per_word": 21.7125,
+            "n": 535
+          },
+          "FLAT": {
+            "bits_per_word": 8.3741,
+            "n": 535
+          },
+          "MORPH": {
+            "bits_per_word": 9.8551,
+            "n": 535
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 9.3838,
+            "n": 535
+          },
+          "delta_bpw_morph_minus_flat": 1.481,
+          "delta_bpw_morph_minus_p0": -11.8574,
+          "delta_bpw_morph_minus_randnull": 0.4713
+        },
+        "unseen": {
+          "P0": {
+            "bits_per_word": 31.4858,
+            "n": 533
+          },
+          "FLAT": {
+            "bits_per_word": 32.873,
+            "n": 533
+          },
+          "MORPH": {
+            "bits_per_word": 27.3747,
+            "n": 533
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 26.9143,
+            "n": 533
+          },
+          "delta_bpw_morph_minus_flat": -5.4983,
+          "delta_bpw_morph_minus_p0": -4.1111,
+          "delta_bpw_morph_minus_randnull": 0.4604
+        }
+      },
+      "verdict_flags": {
+        "compresses": true,
+        "beats_flat_overall": true,
+        "beats_p0_overall": true,
+        "gen_beats_p0_on_unseen": true,
+        "gen_beats_randnull_on_unseen": false,
+        "beats_flat_on_unseen": true
+      },
+      "verdict": "COMPRESSES_TRAINING__HELDOUT_GAIN_NOT_STRUCTURAL"
+    },
+    "FORMULA": {
+      "label": "FORMULA",
+      "mdl_compression": {
+        "n_word_types": 662,
+        "n_tokens": 1642,
+        "flat": {
+          "L_model_bits": 22509.0,
+          "L_corpus_bits": 12113.2,
+          "DL_total_bits": 34622.3,
+          "n_lexical_units": 662
+        },
+        "morph": {
+          "L_model_bits": 17126.9,
+          "L_corpus_bits": 14549.3,
+          "DL_total_bits": 31676.1,
+          "n_prefix_types": 35,
+          "n_suffix_types": 44,
+          "n_stem_types": 421,
+          "n_lexical_units": 500
+        },
+        "compression_improvement": 0.0851,
+        "delta_DL_bits": 2946.1,
+        "param_reduction_ratio": 0.7553,
+        "delta_lexical_units": 162
+      },
+      "heldout_cv": {
+        "k": 5,
+        "n_tokens": 1642,
+        "P0": {
+          "bits_per_word": 24.7908,
+          "bits_per_sign": 12.0078
+        },
+        "FLAT": {
+          "bits_per_word": 17.2234,
+          "bits_per_sign": 8.3424
+        },
+        "MORPH": {
+          "bits_per_word": 15.8654,
+          "bits_per_sign": 7.6846
+        },
+        "MORPH_RANDNULL": {
+          "bits_per_word": 15.55,
+          "bits_per_sign": 7.5319
+        },
+        "delta_bpw_morph_minus_flat": -1.358,
+        "delta_bpw_morph_minus_p0": -8.9254,
+        "delta_bpw_flat_minus_p0": -7.5674,
+        "delta_bpw_morph_minus_randnull": 0.3154,
+        "per_fold_delta_morph_flat_mean_sd": [
+          -1.3582,
+          0.1623
+        ],
+        "per_fold_delta_morph_p0_mean_sd": [
+          -8.9256,
+          0.3069
+        ],
+        "per_fold_delta_morph_randnull_mean_sd": [
+          0.3152,
+          0.1295
+        ],
+        "seen": {
+          "P0": {
+            "bits_per_word": 18.8547,
+            "n": 1068
+          },
+          "FLAT": {
+            "bits_per_word": 6.2727,
+            "n": 1068
+          },
+          "MORPH": {
+            "bits_per_word": 6.7569,
+            "n": 1068
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 6.6274,
+            "n": 1068
+          },
+          "delta_bpw_morph_minus_flat": 0.4842,
+          "delta_bpw_morph_minus_p0": -12.0978,
+          "delta_bpw_morph_minus_randnull": 0.1295
+        },
+        "unseen": {
+          "P0": {
+            "bits_per_word": 35.8356,
+            "n": 574
+          },
+          "FLAT": {
+            "bits_per_word": 37.5986,
+            "n": 574
+          },
+          "MORPH": {
+            "bits_per_word": 32.8129,
+            "n": 574
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 32.1518,
+            "n": 574
+          },
+          "delta_bpw_morph_minus_flat": -4.7857,
+          "delta_bpw_morph_minus_p0": -3.0227,
+          "delta_bpw_morph_minus_randnull": 0.6611
+        }
+      },
+      "verdict_flags": {
+        "compresses": true,
+        "beats_flat_overall": true,
+        "beats_p0_overall": true,
+        "gen_beats_p0_on_unseen": true,
+        "gen_beats_randnull_on_unseen": false,
+        "beats_flat_on_unseen": true
+      },
+      "verdict": "COMPRESSES_TRAINING__HELDOUT_GAIN_NOT_STRUCTURAL"
+    }
+  },
+  "linear_b_positive_control": {
+    "DAMOS": {
+      "label": "LINEAR_B_DAMOS",
+      "mdl_compression": {
+        "n_word_types": 4946,
+        "n_tokens": 13562,
+        "flat": {
+          "L_model_bits": 181124.6,
+          "L_corpus_bits": 146342.8,
+          "DL_total_bits": 327467.4,
+          "n_lexical_units": 4946
+        },
+        "morph": {
+          "L_model_bits": 90265.9,
+          "L_corpus_bits": 183178.1,
+          "DL_total_bits": 273443.9,
+          "n_prefix_types": 68,
+          "n_suffix_types": 64,
+          "n_stem_types": 2435,
+          "n_lexical_units": 2567
+        },
+        "compression_improvement": 0.165,
+        "delta_DL_bits": 54023.4,
+        "param_reduction_ratio": 0.519,
+        "delta_lexical_units": 2379
+      },
+      "heldout_cv": {
+        "k": 5,
+        "n_tokens": 13562,
+        "P0": {
+          "bits_per_word": 34.4725,
+          "bits_per_sign": 10.6574
+        },
+        "FLAT": {
+          "bits_per_word": 17.8331,
+          "bits_per_sign": 5.5132
+        },
+        "MORPH": {
+          "bits_per_word": 16.6916,
+          "bits_per_sign": 5.1603
+        },
+        "MORPH_RANDNULL": {
+          "bits_per_word": 15.8687,
+          "bits_per_sign": 4.9059
+        },
+        "delta_bpw_morph_minus_flat": -1.1415,
+        "delta_bpw_morph_minus_p0": -17.7809,
+        "delta_bpw_flat_minus_p0": -16.6394,
+        "delta_bpw_morph_minus_randnull": 0.8229,
+        "per_fold_delta_morph_flat_mean_sd": [
+          -1.1414,
+          0.1992
+        ],
+        "per_fold_delta_morph_p0_mean_sd": [
+          -17.781,
+          0.2091
+        ],
+        "per_fold_delta_morph_randnull_mean_sd": [
+          0.8229,
+          0.1085
+        ],
+        "seen": {
+          "P0": {
+            "bits_per_word": 33.7254,
+            "n": 10002
+          },
+          "FLAT": {
+            "bits_per_word": 10.5138,
+            "n": 10002
+          },
+          "MORPH": {
+            "bits_per_word": 12.715,
+            "n": 10002
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 12.066,
+            "n": 10002
+          },
+          "delta_bpw_morph_minus_flat": 2.2012,
+          "delta_bpw_morph_minus_p0": -21.0104,
+          "delta_bpw_morph_minus_randnull": 0.649
+        },
+        "unseen": {
+          "P0": {
+            "bits_per_word": 36.5716,
+            "n": 3560
+          },
+          "FLAT": {
+            "bits_per_word": 38.3968,
+            "n": 3560
+          },
+          "MORPH": {
+            "bits_per_word": 27.8643,
+            "n": 3560
+          },
+          "MORPH_RANDNULL": {
+            "bits_per_word": 26.5524,
+            "n": 3560
+          },
+          "delta_bpw_morph_minus_flat": -10.5325,
+          "delta_bpw_morph_minus_p0": -8.7073,
+          "delta_bpw_morph_minus_randnull": 1.3119
+        }
+      },
+      "verdict_flags": {
+        "compresses": true,
+        "beats_flat_overall": true,
+        "beats_p0_overall": true,
+        "gen_beats_p0_on_unseen": true,
+        "gen_beats_randnull_on_unseen": false,
+        "beats_flat_on_unseen": true
+      },
+      "verdict": "COMPRESSES_TRAINING__HELDOUT_GAIN_NOT_STRUCTURAL"
+    }
+  }
+}

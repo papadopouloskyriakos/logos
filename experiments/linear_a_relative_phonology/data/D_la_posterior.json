@@ -1,0 +1,2425 @@
+{
+ "task": "D5_linear_a_relative_posterior",
+ "seed": 20260708,
+ "as_of": "2026-07-07",
+ "highest_layer": "L2/L3 (anonymous relative structure)",
+ "phonetic_value_assigned": false,
+ "non_circular": "known LB syllabic values used ONLY to grade the anonymous partition; every model input is a distributional/structural statistic over sign identities. No class or sign is given any phonetic value.",
+ "seed_reality_D3_D4": {
+  "secure_value_seeds_SEED_A": 0,
+  "seed_propagation_verdict": "SEED_PROPAGATION_FREQUENCY_ARTIFACT (D3): pure frequency ranking AUC=0.872 >= seed-prop kv4 pos+sub AUC=0.784; initial-rate ranking alone AUC=0.759, no seeds.",
+  "frontier_D4": "LA sits at k=0 SECURE seeds (pre-frontier origin); only value-blind channels (random/shape) available, which the LB control measures at the null floor; anchor-derived seeds cap at <=2 on paper and 0 after LOTO. No phonetic decoding is unlocked.",
+  "consequence_for_D5": "posterior classes are ANONYMOUS RELATIVE partitions only; no seed exists to attach any class to a phonetic value, and D1 shows the partition does not align with vowel/CV beyond chance."
+ },
+ "graded_sign_set": {
+  "threshold_freq_ge": 8,
+  "n_signs": 54,
+  "n_pure_vowel_signs": 5,
+  "vowel_counts_benchmark": {
+   "A": 16,
+   "E": 11,
+   "I": 10,
+   "U": 12,
+   "O": 5
+  },
+  "signs": [
+   "A",
+   "DA",
+   "DE",
+   "DI",
+   "DU",
+   "E",
+   "I",
+   "JA",
+   "JE",
+   "JU",
+   "KA",
+   "KE",
+   "KI",
+   "KO",
+   "KU",
+   "MA",
+   "ME",
+   "MI",
+   "MU",
+   "NA",
+   "NE",
+   "NI",
+   "NU",
+   "O",
+   "PA",
+   "PA₃",
+   "PI",
+   "PO",
+   "PU",
+   "PU₂",
+   "QA",
+   "QE",
+   "RA",
+   "RA₂",
+   "RE",
+   "RI",
+   "RO",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TA₂",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U",
+   "WA",
+   "WI",
+   "ZA",
+   "ZE",
+   "ZU"
+  ]
+ },
+ "fused_latent": {
+  "fused_views": [
+   "POSITION",
+   "SUBSTITUTION",
+   "MORPHOLOGY",
+   "FORMULA",
+   "SITE"
+  ],
+  "K_latent_used": 4,
+  "explained_variance_top": [
+   0.3321,
+   0.2361,
+   0.1689,
+   0.0801
+  ],
+  "fused_vowel_macro_auc": 0.5384,
+  "fused_vowel_perm_p": 0.0958,
+  "fused_cv_contrast_auc": 0.8816
+ },
+ "bootstrap": {
+  "B_requested": 400,
+  "B_used": 400,
+  "resample": "GORILA-word + FORMULA corpora with replacement; graded sign set fixed"
+ },
+ "reference_partition_K2": {
+  "grade_vs_phonetic_benchmark": {
+   "vs_vowel": {
+    "nmi": 0.0668,
+    "adjusted_mi": 0.0317,
+    "mi_obs": 0.0747,
+    "mi_null_mean": 0.0406,
+    "perm_p": 0.1397
+   },
+   "vs_CV": {
+    "nmi": 0.0604,
+    "adjusted_mi": 0.0395,
+    "mi_obs": 0.0299,
+    "mi_null_mean": 0.0108,
+    "perm_p": 0.1457
+   }
+  },
+  "classes": [
+   {
+    "anon_class": "C2_0",
+    "n": 23,
+    "signs": [
+     "A",
+     "DE",
+     "E",
+     "JE",
+     "KE",
+     "KO",
+     "ME",
+     "MU",
+     "O",
+     "PI",
+     "PO",
+     "PU",
+     "PU₂",
+     "QA",
+     "QE",
+     "TA₂",
+     "TO",
+     "U",
+     "WA",
+     "WI",
+     "ZA",
+     "ZE",
+     "ZU"
+    ],
+    "struct": {
+     "initial_rate": 0.485,
+     "final_rate": 0.4524,
+     "mean_pos": 0.4989,
+     "lone_rate": 0.1721,
+     "prefix_stems": 12.4783,
+     "suffix_stems": 6.9565,
+     "mid_stems": 6.2609,
+     "n_sites": 9.7826
+    },
+    "benchmark_vowel_composition": {
+     "A": 5,
+     "E": 7,
+     "O": 4,
+     "U": 5,
+     "I": 2
+    },
+    "benchmark_pure_vowel_signs": 4
+   },
+   {
+    "anon_class": "C2_1",
+    "n": 31,
+    "signs": [
+     "DA",
+     "DI",
+     "DU",
+     "I",
+     "JA",
+     "JU",
+     "KA",
+     "KI",
+     "KU",
+     "MA",
+     "MI",
+     "NA",
+     "NE",
+     "NI",
+     "NU",
+     "PA",
+     "PA₃",
+     "RA",
+     "RA₂",
+     "RE",
+     "RI",
+     "RO",
+     "RU",
+     "SA",
+     "SE",
+     "SI",
+     "SU",
+     "TA",
+     "TE",
+     "TI",
+     "TU"
+    ],
+    "struct": {
+     "initial_rate": 0.393,
+     "final_rate": 0.4986,
+     "mean_pos": 0.5501,
+     "lone_rate": 0.184,
+     "prefix_stems": 19.0,
+     "suffix_stems": 23.3548,
+     "mid_stems": 26.4516,
+     "n_sites": 16.3871
+    },
+    "benchmark_vowel_composition": {
+     "A": 11,
+     "I": 8,
+     "U": 7,
+     "E": 4,
+     "O": 1
+    },
+    "benchmark_pure_vowel_signs": 1
+   }
+  ],
+  "posterior_alignment_note": "class labels C2_0/C2_1 are anonymous; bootstrap posteriors aligned to this reference by max-overlap (Hungarian)."
+ },
+ "reference_partition_K6": {
+  "grade_vs_phonetic_benchmark": {
+   "vs_vowel": {
+    "nmi": 0.172,
+    "adjusted_mi": 0.0457,
+    "mi_obs": 0.2738,
+    "mi_null_mean": 0.2107,
+    "perm_p": 0.1577
+   },
+   "vs_CV": {
+    "nmi": 0.0811,
+    "adjusted_mi": 0.0306,
+    "mi_obs": 0.0787,
+    "mi_null_mean": 0.0506,
+    "perm_p": 0.1377
+   }
+  },
+  "classes": [
+   {
+    "anon_class": "C6_0",
+    "n": 13,
+    "signs": [
+     "DA",
+     "DI",
+     "DU",
+     "I",
+     "KI",
+     "MA",
+     "NU",
+     "PA",
+     "PA₃",
+     "RI",
+     "SA",
+     "SU",
+     "TU"
+    ],
+    "struct": {
+     "initial_rate": 0.4025,
+     "final_rate": 0.3514,
+     "mean_pos": 0.4694,
+     "lone_rate": 0.1053,
+     "prefix_stems": 22.0769,
+     "suffix_stems": 15.5385,
+     "mid_stems": 28.1538,
+     "n_sites": 15.7692
+    },
+    "benchmark_vowel_composition": {
+     "A": 5,
+     "I": 4,
+     "U": 4
+    },
+    "benchmark_pure_vowel_signs": 1
+   },
+   {
+    "anon_class": "C6_1",
+    "n": 1,
+    "signs": [
+     "A"
+    ],
+    "struct": {
+     "initial_rate": 0.8911,
+     "final_rate": 0.1634,
+     "mean_pos": 0.1386,
+     "lone_rate": 0.1238,
+     "prefix_stems": 115.0,
+     "suffix_stems": 8.0,
+     "mid_stems": 13.0,
+     "n_sites": 24.0
+    },
+    "benchmark_vowel_composition": {
+     "A": 1
+    },
+    "benchmark_pure_vowel_signs": 1
+   },
+   {
+    "anon_class": "C6_2",
+    "n": 9,
+    "signs": [
+     "KO",
+     "PI",
+     "PO",
+     "QA",
+     "QE",
+     "TO",
+     "U",
+     "WI",
+     "ZU"
+    ],
+    "struct": {
+     "initial_rate": 0.5044,
+     "final_rate": 0.268,
+     "mean_pos": 0.3886,
+     "lone_rate": 0.0733,
+     "prefix_stems": 12.7778,
+     "suffix_stems": 5.6667,
+     "mid_stems": 7.3333,
+     "n_sites": 10.6667
+    },
+    "benchmark_vowel_composition": {
+     "O": 3,
+     "I": 2,
+     "A": 1,
+     "E": 1,
+     "U": 2
+    },
+    "benchmark_pure_vowel_signs": 1
+   },
+   {
+    "anon_class": "C6_3",
+    "n": 14,
+    "signs": [
+     "DE",
+     "E",
+     "JE",
+     "JU",
+     "KE",
+     "ME",
+     "MU",
+     "O",
+     "PU",
+     "PU₂",
+     "RA₂",
+     "TA₂",
+     "WA",
+     "ZA"
+    ],
+    "struct": {
+     "initial_rate": 0.3615,
+     "final_rate": 0.5912,
+     "mean_pos": 0.6348,
+     "lone_rate": 0.1714,
+     "prefix_stems": 4.4286,
+     "suffix_stems": 9.2143,
+     "mid_stems": 5.7857,
+     "n_sites": 8.2857
+    },
+    "benchmark_vowel_composition": {
+     "E": 5,
+     "U": 4,
+     "O": 1,
+     "A": 4
+    },
+    "benchmark_pure_vowel_signs": 2
+   },
+   {
+    "anon_class": "C6_4",
+    "n": 11,
+    "signs": [
+     "JA",
+     "MI",
+     "NA",
+     "NE",
+     "RA",
+     "RE",
+     "RU",
+     "SE",
+     "TA",
+     "TE",
+     "TI"
+    ],
+    "struct": {
+     "initial_rate": 0.289,
+     "final_rate": 0.5296,
+     "mean_pos": 0.6191,
+     "lone_rate": 0.1272,
+     "prefix_stems": 17.0909,
+     "suffix_stems": 35.7273,
+     "mid_stems": 29.1818,
+     "n_sites": 18.7273
+    },
+    "benchmark_vowel_composition": {
+     "A": 4,
+     "I": 2,
+     "E": 4,
+     "U": 1
+    },
+    "benchmark_pure_vowel_signs": 0
+   },
+   {
+    "anon_class": "C6_5",
+    "n": 6,
+    "signs": [
+     "KA",
+     "KU",
+     "NI",
+     "RO",
+     "SI",
+     "ZE"
+    ],
+    "struct": {
+     "initial_rate": 0.7393,
+     "final_rate": 0.7696,
+     "mean_pos": 0.5155,
+     "lone_rate": 0.6186,
+     "prefix_stems": 18.1667,
+     "suffix_stems": 16.8333,
+     "mid_stems": 19.5,
+     "n_sites": 14.3333
+    },
+    "benchmark_vowel_composition": {
+     "A": 1,
+     "U": 1,
+     "I": 2,
+     "O": 1,
+     "E": 1
+    },
+    "benchmark_pure_vowel_signs": 0
+   }
+  ]
+ },
+ "view_ablation_loo_agreement_K2": {
+  "minus_POSITION": 0.963,
+  "minus_SUBSTITUTION": 0.9259,
+  "minus_MORPHOLOGY": 0.7222,
+  "minus_FORMULA": 1.0,
+  "minus_SITE": 0.5
+ },
+ "affixation_paradigm_L2_L3_anonymous": {
+  "role_counts": {
+   "PREFIX_EDGE": 16,
+   "MID_INTERIOR": 20,
+   "SUFFIX_EDGE": 18
+  },
+  "note": "anonymous edge/interior roles from stem-affixation profiles; the LA-real axis is word-INITIAL affixation (wave-2). NO phonetic value implied by any role.",
+  "signs": [
+   {
+    "sign": "A",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 115,
+    "suffix_stems": 8,
+    "mid_stems": 13,
+    "initial_rate": 0.8911,
+    "final_rate": 0.1634
+   },
+   {
+    "sign": "DA",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 36,
+    "suffix_stems": 16,
+    "mid_stems": 42,
+    "initial_rate": 0.5,
+    "final_rate": 0.2319
+   },
+   {
+    "sign": "DE",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 7,
+    "suffix_stems": 10,
+    "mid_stems": 11,
+    "initial_rate": 0.2571,
+    "final_rate": 0.4
+   },
+   {
+    "sign": "DI",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 20,
+    "suffix_stems": 17,
+    "mid_stems": 32,
+    "initial_rate": 0.422,
+    "final_rate": 0.3945
+   },
+   {
+    "sign": "DU",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 22,
+    "suffix_stems": 14,
+    "mid_stems": 22,
+    "initial_rate": 0.359,
+    "final_rate": 0.3846
+   },
+   {
+    "sign": "E",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 8,
+    "suffix_stems": 9,
+    "mid_stems": 3,
+    "initial_rate": 0.5625,
+    "final_rate": 0.6562
+   },
+   {
+    "sign": "I",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 54,
+    "suffix_stems": 17,
+    "mid_stems": 36,
+    "initial_rate": 0.6198,
+    "final_rate": 0.3177
+   },
+   {
+    "sign": "JA",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 51,
+    "suffix_stems": 48,
+    "mid_stems": 25,
+    "initial_rate": 0.4379,
+    "final_rate": 0.4497
+   },
+   {
+    "sign": "JE",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 2,
+    "suffix_stems": 7,
+    "mid_stems": 1,
+    "initial_rate": 0.4706,
+    "final_rate": 0.6471
+   },
+   {
+    "sign": "JU",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 2,
+    "suffix_stems": 16,
+    "mid_stems": 11,
+    "initial_rate": 0.2222,
+    "final_rate": 0.6389
+   },
+   {
+    "sign": "KA",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 35,
+    "suffix_stems": 22,
+    "mid_stems": 26,
+    "initial_rate": 0.757,
+    "final_rate": 0.7183
+   },
+   {
+    "sign": "KE",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 3,
+    "suffix_stems": 7,
+    "mid_stems": 5,
+    "initial_rate": 0.25,
+    "final_rate": 0.5
+   },
+   {
+    "sign": "KI",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 25,
+    "suffix_stems": 20,
+    "mid_stems": 37,
+    "initial_rate": 0.5116,
+    "final_rate": 0.3333
+   },
+   {
+    "sign": "KO",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 6,
+    "suffix_stems": 2,
+    "mid_stems": 5,
+    "initial_rate": 0.4667,
+    "final_rate": 0.2
+   },
+   {
+    "sign": "KU",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 33,
+    "suffix_stems": 13,
+    "mid_stems": 29,
+    "initial_rate": 0.8436,
+    "final_rate": 0.5993
+   },
+   {
+    "sign": "MA",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 25,
+    "suffix_stems": 20,
+    "mid_stems": 37,
+    "initial_rate": 0.3782,
+    "final_rate": 0.3613
+   },
+   {
+    "sign": "ME",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 4,
+    "suffix_stems": 14,
+    "mid_stems": 9,
+    "initial_rate": 0.186,
+    "final_rate": 0.6744
+   },
+   {
+    "sign": "MI",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 18,
+    "suffix_stems": 29,
+    "mid_stems": 30,
+    "initial_rate": 0.2917,
+    "final_rate": 0.4062
+   },
+   {
+    "sign": "MU",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 2,
+    "suffix_stems": 6,
+    "mid_stems": 3,
+    "initial_rate": 0.4,
+    "final_rate": 0.6
+   },
+   {
+    "sign": "NA",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 9,
+    "suffix_stems": 45,
+    "mid_stems": 53,
+    "initial_rate": 0.1392,
+    "final_rate": 0.4241
+   },
+   {
+    "sign": "NE",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 5,
+    "suffix_stems": 27,
+    "mid_stems": 10,
+    "initial_rate": 0.2241,
+    "final_rate": 0.7414
+   },
+   {
+    "sign": "NI",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 6,
+    "suffix_stems": 20,
+    "mid_stems": 21,
+    "initial_rate": 0.6074,
+    "final_rate": 0.7333
+   },
+   {
+    "sign": "NU",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 7,
+    "suffix_stems": 14,
+    "mid_stems": 20,
+    "initial_rate": 0.2,
+    "final_rate": 0.4167
+   },
+   {
+    "sign": "O",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 8,
+    "suffix_stems": 2,
+    "mid_stems": 2,
+    "initial_rate": 0.8621,
+    "final_rate": 0.6552
+   },
+   {
+    "sign": "PA",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 25,
+    "suffix_stems": 14,
+    "mid_stems": 22,
+    "initial_rate": 0.5294,
+    "final_rate": 0.402
+   },
+   {
+    "sign": "PA₃",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 8,
+    "suffix_stems": 12,
+    "mid_stems": 9,
+    "initial_rate": 0.3556,
+    "final_rate": 0.3778
+   },
+   {
+    "sign": "PI",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 17,
+    "suffix_stems": 13,
+    "mid_stems": 14,
+    "initial_rate": 0.3793,
+    "final_rate": 0.2931
+   },
+   {
+    "sign": "PO",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 3,
+    "suffix_stems": 1,
+    "mid_stems": 3,
+    "initial_rate": 0.5,
+    "final_rate": 0.125
+   },
+   {
+    "sign": "PU",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 7,
+    "suffix_stems": 8,
+    "mid_stems": 2,
+    "initial_rate": 0.5417,
+    "final_rate": 0.5417
+   },
+   {
+    "sign": "PU₂",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 3,
+    "suffix_stems": 4,
+    "mid_stems": 5,
+    "initial_rate": 0.3571,
+    "final_rate": 0.4286
+   },
+   {
+    "sign": "QA",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 23,
+    "suffix_stems": 5,
+    "mid_stems": 6,
+    "initial_rate": 0.6889,
+    "final_rate": 0.1556
+   },
+   {
+    "sign": "QE",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 14,
+    "suffix_stems": 8,
+    "mid_stems": 7,
+    "initial_rate": 0.6087,
+    "final_rate": 0.3696
+   },
+   {
+    "sign": "RA",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 14,
+    "suffix_stems": 37,
+    "mid_stems": 36,
+    "initial_rate": 0.1983,
+    "final_rate": 0.4914
+   },
+   {
+    "sign": "RA₂",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 3,
+    "suffix_stems": 12,
+    "mid_stems": 5,
+    "initial_rate": 0.1154,
+    "final_rate": 0.8077
+   },
+   {
+    "sign": "RE",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 12,
+    "suffix_stems": 44,
+    "mid_stems": 27,
+    "initial_rate": 0.256,
+    "final_rate": 0.592
+   },
+   {
+    "sign": "RI",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 11,
+    "suffix_stems": 15,
+    "mid_stems": 37,
+    "initial_rate": 0.1688,
+    "final_rate": 0.2597
+   },
+   {
+    "sign": "RO",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 6,
+    "suffix_stems": 18,
+    "mid_stems": 8,
+    "initial_rate": 0.5401,
+    "final_rate": 0.9251
+   },
+   {
+    "sign": "RU",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 14,
+    "suffix_stems": 21,
+    "mid_stems": 25,
+    "initial_rate": 0.2581,
+    "final_rate": 0.4731
+   },
+   {
+    "sign": "SA",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 26,
+    "suffix_stems": 15,
+    "mid_stems": 34,
+    "initial_rate": 0.4676,
+    "final_rate": 0.1727
+   },
+   {
+    "sign": "SE",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 10,
+    "suffix_stems": 23,
+    "mid_stems": 16,
+    "initial_rate": 0.2537,
+    "final_rate": 0.5672
+   },
+   {
+    "sign": "SI",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 29,
+    "suffix_stems": 28,
+    "mid_stems": 33,
+    "initial_rate": 0.6875,
+    "final_rate": 0.6417
+   },
+   {
+    "sign": "SU",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 9,
+    "suffix_stems": 12,
+    "mid_stems": 21,
+    "initial_rate": 0.3091,
+    "final_rate": 0.4364
+   },
+   {
+    "sign": "TA",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 28,
+    "suffix_stems": 33,
+    "mid_stems": 48,
+    "initial_rate": 0.3879,
+    "final_rate": 0.4
+   },
+   {
+    "sign": "TA₂",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 3,
+    "suffix_stems": 8,
+    "mid_stems": 1,
+    "initial_rate": 0.3529,
+    "final_rate": 0.7647
+   },
+   {
+    "sign": "TE",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 15,
+    "suffix_stems": 44,
+    "mid_stems": 19,
+    "initial_rate": 0.5064,
+    "final_rate": 0.7308
+   },
+   {
+    "sign": "TI",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 12,
+    "suffix_stems": 42,
+    "mid_stems": 32,
+    "initial_rate": 0.2252,
+    "final_rate": 0.5495
+   },
+   {
+    "sign": "TO",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 4,
+    "suffix_stems": 3,
+    "mid_stems": 7,
+    "initial_rate": 0.2353,
+    "final_rate": 0.2353
+   },
+   {
+    "sign": "TU",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 19,
+    "suffix_stems": 16,
+    "mid_stems": 17,
+    "initial_rate": 0.411,
+    "final_rate": 0.4795
+   },
+   {
+    "sign": "U",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 30,
+    "suffix_stems": 5,
+    "mid_stems": 13,
+    "initial_rate": 0.6324,
+    "final_rate": 0.2353
+   },
+   {
+    "sign": "WA",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 8,
+    "suffix_stems": 9,
+    "mid_stems": 13,
+    "initial_rate": 0.3333,
+    "final_rate": 0.3125
+   },
+   {
+    "sign": "WI",
+    "role_anonymous": "PREFIX_EDGE",
+    "prefix_stems": 11,
+    "suffix_stems": 8,
+    "mid_stems": 1,
+    "initial_rate": 0.5909,
+    "final_rate": 0.4545
+   },
+   {
+    "sign": "ZA",
+    "role_anonymous": "SUFFIX_EDGE",
+    "prefix_stems": 2,
+    "suffix_stems": 17,
+    "mid_stems": 10,
+    "initial_rate": 0.15,
+    "final_rate": 0.65
+   },
+   {
+    "sign": "ZE",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 0,
+    "suffix_stems": 0,
+    "mid_stems": 0,
+    "initial_rate": 1.0,
+    "final_rate": 1.0
+   },
+   {
+    "sign": "ZU",
+    "role_anonymous": "MID_INTERIOR",
+    "prefix_stems": 7,
+    "suffix_stems": 6,
+    "mid_stems": 10,
+    "initial_rate": 0.4375,
+    "final_rate": 0.3438
+   }
+  ]
+ },
+ "stability_summary": {
+  "K2_modal_fraction": {
+   "mean": 0.7551,
+   "min": 0.505,
+   "median": 0.8025,
+   "frac_signs_ge_0.8": 0.5185,
+   "frac_signs_ge_0.9": 0.0
+  },
+  "K6_modal_fraction": {
+   "mean": 0.6529,
+   "min": 0.34,
+   "median": 0.6575,
+   "frac_signs_ge_0.5": 0.8148
+  }
+ },
+ "signs": [
+  {
+   "sign": "A",
+   "primary_partition_K2": {
+    "p_class_1": 0.7,
+    "p_class_2": 0.3,
+    "modal_class": "C2_0",
+    "stability": 0.7,
+    "coassign_stability": 0.6451,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0425,
+     "C6_1": 0.84,
+     "C6_2": 0.0225,
+     "C6_3": 0.015,
+     "C6_4": 0.08,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_1",
+    "stability": 0.84
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "(vowel-sign)",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "DA",
+   "primary_partition_K2": {
+    "p_class_1": 0.1575,
+    "p_class_2": 0.8425,
+    "modal_class": "C2_1",
+    "stability": 0.8425,
+    "coassign_stability": 0.7725,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.37,
+     "C6_1": 0.305,
+     "C6_2": 0.07,
+     "C6_3": 0.0125,
+     "C6_4": 0.2425,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.37
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "D",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "DE",
+   "primary_partition_K2": {
+    "p_class_1": 0.5975,
+    "p_class_2": 0.4025,
+    "modal_class": "C2_0",
+    "stability": 0.5975,
+    "coassign_stability": 0.6723,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.25,
+     "C6_1": 0.0275,
+     "C6_2": 0.255,
+     "C6_3": 0.3875,
+     "C6_4": 0.0775,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_3",
+    "stability": 0.3875
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "D",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "DI",
+   "primary_partition_K2": {
+    "p_class_1": 0.1675,
+    "p_class_2": 0.8325,
+    "modal_class": "C2_1",
+    "stability": 0.8325,
+    "coassign_stability": 0.7917,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.7625,
+     "C6_1": 0.0175,
+     "C6_2": 0.155,
+     "C6_3": 0.015,
+     "C6_4": 0.05,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.7625
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "D",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "DU",
+   "primary_partition_K2": {
+    "p_class_1": 0.195,
+    "p_class_2": 0.805,
+    "modal_class": "C2_1",
+    "stability": 0.805,
+    "coassign_stability": 0.7693,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.66,
+     "C6_1": 0.0225,
+     "C6_2": 0.175,
+     "C6_3": 0.0525,
+     "C6_4": 0.09,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.66
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "D",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "E",
+   "primary_partition_K2": {
+    "p_class_1": 0.805,
+    "p_class_2": 0.195,
+    "modal_class": "C2_0",
+    "stability": 0.805,
+    "coassign_stability": 0.767,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0175,
+     "C6_1": 0.0725,
+     "C6_2": 0.345,
+     "C6_3": 0.525,
+     "C6_4": 0.0325,
+     "C6_5": 0.0075
+    },
+    "modal_class": "C6_3",
+    "stability": 0.525
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "(vowel-sign)",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "I",
+   "primary_partition_K2": {
+    "p_class_1": 0.11,
+    "p_class_2": 0.89,
+    "modal_class": "C2_1",
+    "stability": 0.89,
+    "coassign_stability": 0.7865,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.54,
+     "C6_1": 0.1625,
+     "C6_2": 0.0775,
+     "C6_3": 0.0025,
+     "C6_4": 0.2125,
+     "C6_5": 0.005
+    },
+    "modal_class": "C6_0",
+    "stability": 0.54
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "(vowel-sign)",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "JA",
+   "primary_partition_K2": {
+    "p_class_1": 0.275,
+    "p_class_2": 0.725,
+    "modal_class": "C2_1",
+    "stability": 0.725,
+    "coassign_stability": 0.6964,
+    "loo_view_agreement": 0.6
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0475,
+     "C6_1": 0.2025,
+     "C6_2": 0.0125,
+     "C6_3": 0.03,
+     "C6_4": 0.7075,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.7075
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "J",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "JE",
+   "primary_partition_K2": {
+    "p_class_1": 0.825,
+    "p_class_2": 0.175,
+    "modal_class": "C2_0",
+    "stability": 0.825,
+    "coassign_stability": 0.7789,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.005,
+     "C6_1": 0.0475,
+     "C6_2": 0.1275,
+     "C6_3": 0.765,
+     "C6_4": 0.05,
+     "C6_5": 0.005
+    },
+    "modal_class": "C6_3",
+    "stability": 0.765
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "J",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "JU",
+   "primary_partition_K2": {
+    "p_class_1": 0.57,
+    "p_class_2": 0.43,
+    "modal_class": "C2_0",
+    "stability": 0.57,
+    "coassign_stability": 0.6286,
+    "loo_view_agreement": 0.4
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.12,
+     "C6_1": 0.0375,
+     "C6_2": 0.225,
+     "C6_3": 0.4625,
+     "C6_4": 0.1525,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_3",
+    "stability": 0.4625
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "J",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "KA",
+   "primary_partition_K2": {
+    "p_class_1": 0.185,
+    "p_class_2": 0.815,
+    "modal_class": "C2_1",
+    "stability": 0.815,
+    "coassign_stability": 0.7206,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0175,
+     "C6_1": 0.005,
+     "C6_2": 0.0,
+     "C6_3": 0.0,
+     "C6_4": 0.005,
+     "C6_5": 0.9725
+    },
+    "modal_class": "C6_5",
+    "stability": 0.9725
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "K",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "KE",
+   "primary_partition_K2": {
+    "p_class_1": 0.815,
+    "p_class_2": 0.185,
+    "modal_class": "C2_0",
+    "stability": 0.815,
+    "coassign_stability": 0.7765,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.03,
+     "C6_1": 0.0225,
+     "C6_2": 0.1275,
+     "C6_3": 0.77,
+     "C6_4": 0.05,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_3",
+    "stability": 0.77
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "K",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "KI",
+   "primary_partition_K2": {
+    "p_class_1": 0.1375,
+    "p_class_2": 0.8625,
+    "modal_class": "C2_1",
+    "stability": 0.8625,
+    "coassign_stability": 0.8073,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.8225,
+     "C6_1": 0.0,
+     "C6_2": 0.095,
+     "C6_3": 0.0025,
+     "C6_4": 0.08,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.8225
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "K",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "KO",
+   "primary_partition_K2": {
+    "p_class_1": 0.725,
+    "p_class_2": 0.275,
+    "modal_class": "C2_0",
+    "stability": 0.725,
+    "coassign_stability": 0.7441,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.28,
+     "C6_1": 0.0225,
+     "C6_2": 0.5175,
+     "C6_3": 0.17,
+     "C6_4": 0.01,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_2",
+    "stability": 0.5175
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "K",
+    "vowel": "O"
+   }
+  },
+  {
+   "sign": "KU",
+   "primary_partition_K2": {
+    "p_class_1": 0.2,
+    "p_class_2": 0.8,
+    "modal_class": "C2_1",
+    "stability": 0.8,
+    "coassign_stability": 0.719,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0125,
+     "C6_1": 0.005,
+     "C6_2": 0.005,
+     "C6_3": 0.0,
+     "C6_4": 0.0025,
+     "C6_5": 0.975
+    },
+    "modal_class": "C6_5",
+    "stability": 0.975
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "K",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "MA",
+   "primary_partition_K2": {
+    "p_class_1": 0.13,
+    "p_class_2": 0.87,
+    "modal_class": "C2_1",
+    "stability": 0.87,
+    "coassign_stability": 0.8063,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.565,
+     "C6_1": 0.0025,
+     "C6_2": 0.01,
+     "C6_3": 0.0,
+     "C6_4": 0.4225,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.565
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "M",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "ME",
+   "primary_partition_K2": {
+    "p_class_1": 0.745,
+    "p_class_2": 0.255,
+    "modal_class": "C2_0",
+    "stability": 0.745,
+    "coassign_stability": 0.758,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0025,
+     "C6_1": 0.0175,
+     "C6_2": 0.0425,
+     "C6_3": 0.7125,
+     "C6_4": 0.2225,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_3",
+    "stability": 0.7125
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "M",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "MI",
+   "primary_partition_K2": {
+    "p_class_1": 0.125,
+    "p_class_2": 0.875,
+    "modal_class": "C2_1",
+    "stability": 0.875,
+    "coassign_stability": 0.7996,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.3975,
+     "C6_1": 0.005,
+     "C6_2": 0.0075,
+     "C6_3": 0.0,
+     "C6_4": 0.59,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.59
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "M",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "MU",
+   "primary_partition_K2": {
+    "p_class_1": 0.81,
+    "p_class_2": 0.19,
+    "modal_class": "C2_0",
+    "stability": 0.81,
+    "coassign_stability": 0.78,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0175,
+     "C6_1": 0.0475,
+     "C6_2": 0.345,
+     "C6_3": 0.5675,
+     "C6_4": 0.0225,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_3",
+    "stability": 0.5675
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "M",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "NA",
+   "primary_partition_K2": {
+    "p_class_1": 0.125,
+    "p_class_2": 0.875,
+    "modal_class": "C2_1",
+    "stability": 0.875,
+    "coassign_stability": 0.7948,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.2975,
+     "C6_1": 0.005,
+     "C6_2": 0.005,
+     "C6_3": 0.0,
+     "C6_4": 0.6925,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.6925
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "N",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "NE",
+   "primary_partition_K2": {
+    "p_class_1": 0.35,
+    "p_class_2": 0.65,
+    "modal_class": "C2_1",
+    "stability": 0.65,
+    "coassign_stability": 0.6822,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0675,
+     "C6_1": 0.02,
+     "C6_2": 0.02,
+     "C6_3": 0.3,
+     "C6_4": 0.5925,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.5925
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "N",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "NI",
+   "primary_partition_K2": {
+    "p_class_1": 0.2825,
+    "p_class_2": 0.7175,
+    "modal_class": "C2_1",
+    "stability": 0.7175,
+    "coassign_stability": 0.6712,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.015,
+     "C6_1": 0.01,
+     "C6_2": 0.0025,
+     "C6_3": 0.0125,
+     "C6_4": 0.1675,
+     "C6_5": 0.7925
+    },
+    "modal_class": "C6_5",
+    "stability": 0.7925
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "N",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "NU",
+   "primary_partition_K2": {
+    "p_class_1": 0.165,
+    "p_class_2": 0.835,
+    "modal_class": "C2_1",
+    "stability": 0.835,
+    "coassign_stability": 0.7822,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.6125,
+     "C6_1": 0.0125,
+     "C6_2": 0.095,
+     "C6_3": 0.0075,
+     "C6_4": 0.2725,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.6125
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "N",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "O",
+   "primary_partition_K2": {
+    "p_class_1": 0.8375,
+    "p_class_2": 0.1625,
+    "modal_class": "C2_0",
+    "stability": 0.8375,
+    "coassign_stability": 0.6789,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0025,
+     "C6_1": 0.0875,
+     "C6_2": 0.21,
+     "C6_3": 0.3525,
+     "C6_4": 0.005,
+     "C6_5": 0.3425
+    },
+    "modal_class": "C6_3",
+    "stability": 0.3525
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "(vowel-sign)",
+    "vowel": "O"
+   }
+  },
+  {
+   "sign": "PA",
+   "primary_partition_K2": {
+    "p_class_1": 0.155,
+    "p_class_2": 0.845,
+    "modal_class": "C2_1",
+    "stability": 0.845,
+    "coassign_stability": 0.8011,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.8,
+     "C6_1": 0.005,
+     "C6_2": 0.1425,
+     "C6_3": 0.0025,
+     "C6_4": 0.05,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.8
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "P",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "PA₃",
+   "primary_partition_K2": {
+    "p_class_1": 0.34,
+    "p_class_2": 0.66,
+    "modal_class": "C2_1",
+    "stability": 0.66,
+    "coassign_stability": 0.6988,
+    "loo_view_agreement": 0.6
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.615,
+     "C6_1": 0.015,
+     "C6_2": 0.315,
+     "C6_3": 0.0425,
+     "C6_4": 0.01,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_0",
+    "stability": 0.615
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "P",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "PI",
+   "primary_partition_K2": {
+    "p_class_1": 0.695,
+    "p_class_2": 0.305,
+    "modal_class": "C2_0",
+    "stability": 0.695,
+    "coassign_stability": 0.7215,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.1225,
+     "C6_1": 0.0975,
+     "C6_2": 0.34,
+     "C6_3": 0.3075,
+     "C6_4": 0.13,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_2",
+    "stability": 0.34
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "P",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "PO",
+   "primary_partition_K2": {
+    "p_class_1": 0.7075,
+    "p_class_2": 0.2925,
+    "modal_class": "C2_0",
+    "stability": 0.7075,
+    "coassign_stability": 0.7371,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.2375,
+     "C6_1": 0.03,
+     "C6_2": 0.6325,
+     "C6_3": 0.1,
+     "C6_4": 0.0,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_2",
+    "stability": 0.6325
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "P",
+    "vowel": "O"
+   }
+  },
+  {
+   "sign": "PU",
+   "primary_partition_K2": {
+    "p_class_1": 0.7975,
+    "p_class_2": 0.2025,
+    "modal_class": "C2_0",
+    "stability": 0.7975,
+    "coassign_stability": 0.7513,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.08,
+     "C6_1": 0.03,
+     "C6_2": 0.345,
+     "C6_3": 0.4925,
+     "C6_4": 0.03,
+     "C6_5": 0.0225
+    },
+    "modal_class": "C6_3",
+    "stability": 0.4925
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "P",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "PU₂",
+   "primary_partition_K2": {
+    "p_class_1": 0.805,
+    "p_class_2": 0.195,
+    "modal_class": "C2_0",
+    "stability": 0.805,
+    "coassign_stability": 0.7655,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.055,
+     "C6_1": 0.0275,
+     "C6_2": 0.3125,
+     "C6_3": 0.5825,
+     "C6_4": 0.02,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_3",
+    "stability": 0.5825
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "P",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "QA",
+   "primary_partition_K2": {
+    "p_class_1": 0.57,
+    "p_class_2": 0.43,
+    "modal_class": "C2_0",
+    "stability": 0.57,
+    "coassign_stability": 0.6945,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.4425,
+     "C6_1": 0.0075,
+     "C6_2": 0.535,
+     "C6_3": 0.0125,
+     "C6_4": 0.0025,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_2",
+    "stability": 0.535
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "Q",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "QE",
+   "primary_partition_K2": {
+    "p_class_1": 0.5275,
+    "p_class_2": 0.4725,
+    "modal_class": "C2_0",
+    "stability": 0.5275,
+    "coassign_stability": 0.6842,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.4425,
+     "C6_1": 0.03,
+     "C6_2": 0.4625,
+     "C6_3": 0.055,
+     "C6_4": 0.0075,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_2",
+    "stability": 0.4625
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "Q",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "RA",
+   "primary_partition_K2": {
+    "p_class_1": 0.2575,
+    "p_class_2": 0.7425,
+    "modal_class": "C2_1",
+    "stability": 0.7425,
+    "coassign_stability": 0.7394,
+    "loo_view_agreement": 0.6
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.075,
+     "C6_1": 0.0075,
+     "C6_2": 0.0125,
+     "C6_3": 0.075,
+     "C6_4": 0.83,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.83
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "R",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "RA₂",
+   "primary_partition_K2": {
+    "p_class_1": 0.515,
+    "p_class_2": 0.485,
+    "modal_class": "C2_0",
+    "stability": 0.515,
+    "coassign_stability": 0.6067,
+    "loo_view_agreement": 0.6
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.09,
+     "C6_1": 0.0525,
+     "C6_2": 0.1925,
+     "C6_3": 0.545,
+     "C6_4": 0.1075,
+     "C6_5": 0.0125
+    },
+    "modal_class": "C6_3",
+    "stability": 0.545
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "R",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "RE",
+   "primary_partition_K2": {
+    "p_class_1": 0.1575,
+    "p_class_2": 0.8425,
+    "modal_class": "C2_1",
+    "stability": 0.8425,
+    "coassign_stability": 0.786,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.2675,
+     "C6_1": 0.0025,
+     "C6_2": 0.005,
+     "C6_3": 0.0025,
+     "C6_4": 0.7225,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.7225
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "R",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "RI",
+   "primary_partition_K2": {
+    "p_class_1": 0.1675,
+    "p_class_2": 0.8325,
+    "modal_class": "C2_1",
+    "stability": 0.8325,
+    "coassign_stability": 0.7857,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.695,
+     "C6_1": 0.0125,
+     "C6_2": 0.105,
+     "C6_3": 0.025,
+     "C6_4": 0.1625,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.695
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "R",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "RO",
+   "primary_partition_K2": {
+    "p_class_1": 0.26,
+    "p_class_2": 0.74,
+    "modal_class": "C2_1",
+    "stability": 0.74,
+    "coassign_stability": 0.6838,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0075,
+     "C6_1": 0.0025,
+     "C6_2": 0.005,
+     "C6_3": 0.0,
+     "C6_4": 0.005,
+     "C6_5": 0.98
+    },
+    "modal_class": "C6_5",
+    "stability": 0.98
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "R",
+    "vowel": "O"
+   }
+  },
+  {
+   "sign": "RU",
+   "primary_partition_K2": {
+    "p_class_1": 0.215,
+    "p_class_2": 0.785,
+    "modal_class": "C2_1",
+    "stability": 0.785,
+    "coassign_stability": 0.7571,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.2475,
+     "C6_1": 0.05,
+     "C6_2": 0.1025,
+     "C6_3": 0.1,
+     "C6_4": 0.4975,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_4",
+    "stability": 0.4975
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "R",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "SA",
+   "primary_partition_K2": {
+    "p_class_1": 0.1725,
+    "p_class_2": 0.8275,
+    "modal_class": "C2_1",
+    "stability": 0.8275,
+    "coassign_stability": 0.7888,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.79,
+     "C6_1": 0.0075,
+     "C6_2": 0.18,
+     "C6_3": 0.0,
+     "C6_4": 0.0225,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.79
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "S",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "SE",
+   "primary_partition_K2": {
+    "p_class_1": 0.435,
+    "p_class_2": 0.565,
+    "modal_class": "C2_1",
+    "stability": 0.565,
+    "coassign_stability": 0.6495,
+    "loo_view_agreement": 0.4
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0525,
+     "C6_1": 0.0075,
+     "C6_2": 0.015,
+     "C6_3": 0.27,
+     "C6_4": 0.655,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.655
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "S",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "SI",
+   "primary_partition_K2": {
+    "p_class_1": 0.195,
+    "p_class_2": 0.805,
+    "modal_class": "C2_1",
+    "stability": 0.805,
+    "coassign_stability": 0.7167,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.02,
+     "C6_1": 0.0125,
+     "C6_2": 0.0025,
+     "C6_3": 0.0,
+     "C6_4": 0.1325,
+     "C6_5": 0.8325
+    },
+    "modal_class": "C6_5",
+    "stability": 0.8325
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "S",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "SU",
+   "primary_partition_K2": {
+    "p_class_1": 0.15,
+    "p_class_2": 0.85,
+    "modal_class": "C2_1",
+    "stability": 0.85,
+    "coassign_stability": 0.7966,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.785,
+     "C6_1": 0.0,
+     "C6_2": 0.0975,
+     "C6_3": 0.005,
+     "C6_4": 0.1125,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.785
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "S",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "TA",
+   "primary_partition_K2": {
+    "p_class_1": 0.12,
+    "p_class_2": 0.88,
+    "modal_class": "C2_1",
+    "stability": 0.88,
+    "coassign_stability": 0.7735,
+    "loo_view_agreement": 0.6
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.16,
+     "C6_1": 0.11,
+     "C6_2": 0.0225,
+     "C6_3": 0.005,
+     "C6_4": 0.7,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_4",
+    "stability": 0.7
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "T",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "TA₂",
+   "primary_partition_K2": {
+    "p_class_1": 0.78,
+    "p_class_2": 0.22,
+    "modal_class": "C2_0",
+    "stability": 0.78,
+    "coassign_stability": 0.752,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0425,
+     "C6_1": 0.0325,
+     "C6_2": 0.175,
+     "C6_3": 0.68,
+     "C6_4": 0.0625,
+     "C6_5": 0.0075
+    },
+    "modal_class": "C6_3",
+    "stability": 0.68
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "T",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "TE",
+   "primary_partition_K2": {
+    "p_class_1": 0.32,
+    "p_class_2": 0.68,
+    "modal_class": "C2_1",
+    "stability": 0.68,
+    "coassign_stability": 0.6531,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.015,
+     "C6_1": 0.075,
+     "C6_2": 0.005,
+     "C6_3": 0.03,
+     "C6_4": 0.765,
+     "C6_5": 0.11
+    },
+    "modal_class": "C6_4",
+    "stability": 0.765
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "T",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "TI",
+   "primary_partition_K2": {
+    "p_class_1": 0.165,
+    "p_class_2": 0.835,
+    "modal_class": "C2_1",
+    "stability": 0.835,
+    "coassign_stability": 0.7844,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.225,
+     "C6_1": 0.0025,
+     "C6_2": 0.005,
+     "C6_3": 0.0075,
+     "C6_4": 0.76,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_4",
+    "stability": 0.76
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "T",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "TO",
+   "primary_partition_K2": {
+    "p_class_1": 0.6875,
+    "p_class_2": 0.3125,
+    "modal_class": "C2_0",
+    "stability": 0.6875,
+    "coassign_stability": 0.7387,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.165,
+     "C6_1": 0.0425,
+     "C6_2": 0.595,
+     "C6_3": 0.1825,
+     "C6_4": 0.015,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_2",
+    "stability": 0.595
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "T",
+    "vowel": "O"
+   }
+  },
+  {
+   "sign": "TU",
+   "primary_partition_K2": {
+    "p_class_1": 0.1625,
+    "p_class_2": 0.8375,
+    "modal_class": "C2_1",
+    "stability": 0.8375,
+    "coassign_stability": 0.7933,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.755,
+     "C6_1": 0.0125,
+     "C6_2": 0.14,
+     "C6_3": 0.0175,
+     "C6_4": 0.075,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_0",
+    "stability": 0.755
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "T",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "U",
+   "primary_partition_K2": {
+    "p_class_1": 0.425,
+    "p_class_2": 0.575,
+    "modal_class": "C2_1",
+    "stability": 0.575,
+    "coassign_stability": 0.7118,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.5075,
+     "C6_1": 0.01,
+     "C6_2": 0.4625,
+     "C6_3": 0.015,
+     "C6_4": 0.0025,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_0",
+    "stability": 0.5075
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "(vowel-sign)",
+    "vowel": "U"
+   }
+  },
+  {
+   "sign": "WA",
+   "primary_partition_K2": {
+    "p_class_1": 0.8125,
+    "p_class_2": 0.1875,
+    "modal_class": "C2_0",
+    "stability": 0.8125,
+    "coassign_stability": 0.7792,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0225,
+     "C6_1": 0.0925,
+     "C6_2": 0.275,
+     "C6_3": 0.515,
+     "C6_4": 0.095,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_3",
+    "stability": 0.515
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "W",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "WI",
+   "primary_partition_K2": {
+    "p_class_1": 0.68,
+    "p_class_2": 0.32,
+    "modal_class": "C2_0",
+    "stability": 0.68,
+    "coassign_stability": 0.7305,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.225,
+     "C6_1": 0.035,
+     "C6_2": 0.4825,
+     "C6_3": 0.2425,
+     "C6_4": 0.0125,
+     "C6_5": 0.0025
+    },
+    "modal_class": "C6_2",
+    "stability": 0.4825
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "W",
+    "vowel": "I"
+   }
+  },
+  {
+   "sign": "ZA",
+   "primary_partition_K2": {
+    "p_class_1": 0.745,
+    "p_class_2": 0.255,
+    "modal_class": "C2_0",
+    "stability": 0.745,
+    "coassign_stability": 0.7596,
+    "loo_view_agreement": 1.0
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.005,
+     "C6_1": 0.0175,
+     "C6_2": 0.035,
+     "C6_3": 0.735,
+     "C6_4": 0.2075,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_3",
+    "stability": 0.735
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "Z",
+    "vowel": "A"
+   }
+  },
+  {
+   "sign": "ZE",
+   "primary_partition_K2": {
+    "p_class_1": 0.82,
+    "p_class_2": 0.18,
+    "modal_class": "C2_0",
+    "stability": 0.82,
+    "coassign_stability": 0.6697,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.0,
+     "C6_1": 0.0275,
+     "C6_2": 0.025,
+     "C6_3": 0.0125,
+     "C6_4": 0.0025,
+     "C6_5": 0.9325
+    },
+    "modal_class": "C6_5",
+    "stability": 0.9325
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "Z",
+    "vowel": "E"
+   }
+  },
+  {
+   "sign": "ZU",
+   "primary_partition_K2": {
+    "p_class_1": 0.495,
+    "p_class_2": 0.505,
+    "modal_class": "C2_1",
+    "stability": 0.505,
+    "coassign_stability": 0.6853,
+    "loo_view_agreement": 0.8
+   },
+   "fine_partition_K6": {
+    "posterior": {
+     "C6_0": 0.45,
+     "C6_1": 0.005,
+     "C6_2": 0.48,
+     "C6_3": 0.06,
+     "C6_4": 0.005,
+     "C6_5": 0.0
+    },
+    "modal_class": "C6_2",
+    "stability": 0.48
+   },
+   "benchmark_value_LB_grading_only": {
+    "consonant": "Z",
+    "vowel": "U"
+   }
+  }
+ ],
+ "NOT_DETERMINED": [
+  "No phonetic value (no A_SIGN=/a/, no vowel, no consonant) is assigned to any sign or class.",
+  "Vowel identity is NOT recoverable: fused-latent macro vowel AUC=0.538 (perm-p=0.096); K=2 and K=6 partitions do not align with the vowel benchmark beyond chance (see grade_vs_phonetic_benchmark).",
+  "C/V split is NOT recoverable value-independently: the wave-1 position->C/V axis is REFUTED (multiplicity + oriented null); any C/V AUC here is reported, not credited.",
+  "No secure value seed exists (SEED_A=0); seed-propagation gains are a frequency artifact (D3).",
+  "Cross-script value transfer is NULL; the classes are relative structure internal to Linear A.",
+  "Class labels are ANONYMOUS; C2_0/C2_1/C6_j carry ordering only from KMeans, no external meaning."
+ ]
+}

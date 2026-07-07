@@ -1,0 +1,810 @@
+{
+ "experiment": "B6_downstream_causal_segmentation_test",
+ "seed": 20260708,
+ "n_null": 200,
+ "non_circular": "channel inputs are anonymous sign-distribution statistics; LB values / true endings and LA pure-vowel identities grade recovery only, never an input.",
+ "lb_analogue_recovery": {
+  "LB_WORD": {
+   "n_units": 13562,
+   "n_types": 4946,
+   "mean_len_signs": 3.235,
+   "substitution_recovery": {
+    "same_consonant_auc": 0.6327,
+    "same_consonant_npos": 122,
+    "same_vowel_auc": 0.5362,
+    "same_vowel_npos": 512,
+    "spelling_variant_auc": 0.5259,
+    "spelling_variant_npos": 9,
+    "morphophonological_final_auc": 0.7435,
+    "morphophonological_final_npos": 788,
+    "morphophonological_final_nneg": 14063,
+    "n_subst_edges": 2827,
+    "n_word_minimal_pairs": 21308
+   },
+   "morphology_recovery": {
+    "n_true_endings": 58,
+    "top10_suffixes": [
+     "JO",
+     "RO",
+     "JA",
+     "TO",
+     "TA",
+     "WO",
+     "NO",
+     "WE",
+     "O",
+     "U"
+    ],
+    "suffix_precision_at5": 1.0,
+    "suffix_precision_at10": 0.8,
+    "n_recovered_in_top10": 8,
+    "n_stem_families": 1909,
+    "n_initial_alternation_stems": 531,
+    "n_final_alternation_stems": 703
+   }
+  },
+  "LB_ENTRY": {
+   "n_units": 8004,
+   "n_types": 5908,
+   "mean_len_signs": 5.481,
+   "substitution_recovery": {
+    "same_consonant_auc": 0.6237,
+    "same_consonant_npos": 122,
+    "same_vowel_auc": 0.5296,
+    "same_vowel_npos": 512,
+    "spelling_variant_auc": 0.4093,
+    "spelling_variant_npos": 9,
+    "morphophonological_final_auc": 0.7311,
+    "morphophonological_final_npos": 220,
+    "morphophonological_final_nneg": 3443,
+    "n_subst_edges": 1816,
+    "n_word_minimal_pairs": 5276
+   },
+   "morphology_recovery": {
+    "n_true_endings": 58,
+    "top10_suffixes": [
+     "JO",
+     "JA",
+     "TO",
+     "RO",
+     "WO",
+     "TA",
+     "WA",
+     "NO",
+     "KO",
+     "RA"
+    ],
+    "suffix_precision_at5": 1.0,
+    "suffix_precision_at10": 1.0,
+    "n_recovered_in_top10": 10,
+    "n_stem_families": 576,
+    "n_initial_alternation_stems": 171,
+    "n_final_alternation_stems": 177
+   }
+  },
+  "LB_FORMULA": {
+   "n_units": 11773,
+   "n_types": 5286,
+   "mean_len_signs": 3.726,
+   "substitution_recovery": {
+    "same_consonant_auc": 0.6323,
+    "same_consonant_npos": 122,
+    "same_vowel_auc": 0.5358,
+    "same_vowel_npos": 512,
+    "spelling_variant_auc": 0.5307,
+    "spelling_variant_npos": 9,
+    "morphophonological_final_auc": 0.7413,
+    "morphophonological_final_npos": 773,
+    "morphophonological_final_nneg": 13789,
+    "n_subst_edges": 2820,
+    "n_word_minimal_pairs": 20894
+   },
+   "morphology_recovery": {
+    "n_true_endings": 58,
+    "top10_suffixes": [
+     "JO",
+     "RO",
+     "TO",
+     "JA",
+     "TA",
+     "WO",
+     "NO",
+     "WE",
+     "U",
+     "QE"
+    ],
+    "suffix_precision_at5": 1.0,
+    "suffix_precision_at10": 0.9,
+    "n_recovered_in_top10": 9,
+    "n_stem_families": 1863,
+    "n_initial_alternation_stems": 517,
+    "n_final_alternation_stems": 679
+   }
+  },
+  "LB_ENSEMBLE": {
+   "n_units": 17547,
+   "n_types": 4512,
+   "mean_len_signs": 2.5,
+   "substitution_recovery": {
+    "same_consonant_auc": 0.587,
+    "same_consonant_npos": 122,
+    "same_vowel_auc": 0.5605,
+    "same_vowel_npos": 512,
+    "spelling_variant_auc": 0.318,
+    "spelling_variant_npos": 9,
+    "morphophonological_final_auc": 0.8175,
+    "morphophonological_final_npos": 272,
+    "morphophonological_final_nneg": 7398,
+    "n_subst_edges": 2392,
+    "n_word_minimal_pairs": 11307
+   },
+   "morphology_recovery": {
+    "n_true_endings": 58,
+    "top10_suffixes": [
+     "A",
+     "JO",
+     "JA",
+     "TO",
+     "RO",
+     "E",
+     "TA",
+     "WO",
+     "U",
+     "WE"
+    ],
+    "suffix_precision_at5": 0.8,
+    "suffix_precision_at10": 0.7,
+    "n_recovered_in_top10": 7,
+    "n_stem_families": 1193,
+    "n_initial_alternation_stems": 373,
+    "n_final_alternation_stems": 349
+   }
+  },
+  "LB_CONTEXT": {
+   "n_units": 3856,
+   "n_types": 3301,
+   "mean_len_signs": 11.377,
+   "substitution_recovery": {
+    "same_consonant_auc": 0.6083,
+    "same_consonant_npos": 122,
+    "same_vowel_auc": 0.5296,
+    "same_vowel_npos": 512,
+    "spelling_variant_auc": 0.3669,
+    "spelling_variant_npos": 9,
+    "morphophonological_final_auc": 0.6587,
+    "morphophonological_final_npos": 157,
+    "morphophonological_final_nneg": 2629,
+    "n_subst_edges": 1638,
+    "n_word_minimal_pairs": 4031
+   },
+   "morphology_recovery": {
+    "n_true_endings": 58,
+    "top10_suffixes": [
+     "JO",
+     "JA",
+     "TO",
+     "RO",
+     "TA",
+     "WO",
+     "NO",
+     "WA",
+     "KO",
+     "SO"
+    ],
+    "suffix_precision_at5": 1.0,
+    "suffix_precision_at10": 1.0,
+    "n_recovered_in_top10": 10,
+    "n_stem_families": 377,
+    "n_initial_alternation_stems": 127,
+    "n_final_alternation_stems": 119
+   }
+  }
+ },
+ "la_internal_descriptors": {
+  "GORILA_WORD": {
+   "n_words": 3147,
+   "n_types": 1165,
+   "subst": {
+    "n_types": 1165,
+    "n_types_ge2": 984,
+    "n_subst_edges": 1507,
+    "n_longframe_edges": 150,
+    "n_word_minimal_pairs": 2794,
+    "mean_edge_weight": 1.854,
+    "n_strong_edges_ge2": 585
+   },
+   "morph": {
+    "top_prefixes": [
+     [
+      "A",
+      47
+     ],
+     [
+      "I",
+      28
+     ],
+     [
+      "DA",
+      22
+     ],
+     [
+      "JA",
+      22
+     ],
+     [
+      "KA",
+      21
+     ],
+     [
+      "SI",
+      20
+     ]
+    ],
+    "top_suffixes": [
+     [
+      "JA",
+      26
+     ],
+     [
+      "RA",
+      22
+     ],
+     [
+      "TI",
+      20
+     ],
+     [
+      "RE",
+      19
+     ],
+     [
+      "TE",
+      18
+     ],
+     [
+      "TA",
+      18
+     ]
+    ],
+    "A_prefix_productivity": 47,
+    "I_prefix_productivity": 28,
+    "JA_suffix_productivity": 26,
+    "A_prefix_null_p": 0.005,
+    "I_prefix_null_p": 0.0796,
+    "JA_suffix_null_p": 0.1144,
+    "A_prefix_null_mean": 23.94,
+    "n_stem_families": 305,
+    "n_initial_alternation_stems": 100,
+    "n_final_alternation_stems": 107,
+    "jaccard_bayes_para_prefixes": 0.538,
+    "jaccard_mdl_para_suffixes": 0.176
+   },
+   "grading_noninput": {
+    "top6_prefixes": [
+     "A",
+     "I",
+     "DA",
+     "JA",
+     "KA",
+     "SI"
+    ],
+    "frac_pure_vowel_prefix": 0.333
+   }
+  },
+  "ENTRY": {
+   "n_words": 1068,
+   "n_types": 633,
+   "subst": {
+    "n_types": 633,
+    "n_types_ge2": 511,
+    "n_subst_edges": 408,
+    "n_longframe_edges": 56,
+    "n_word_minimal_pairs": 442,
+    "mean_edge_weight": 1.083,
+    "n_strong_edges_ge2": 30
+   },
+   "morph": {
+    "top_prefixes": [
+     [
+      "A",
+      10
+     ],
+     [
+      "KA",
+      8
+     ],
+     [
+      "KU",
+      7
+     ],
+     [
+      "SA",
+      7
+     ],
+     [
+      "SI",
+      7
+     ],
+     [
+      "DA",
+      6
+     ]
+    ],
+    "top_suffixes": [
+     [
+      "GRA",
+      11
+     ],
+     [
+      "TI",
+      11
+     ],
+     [
+      "RU",
+      8
+     ],
+     [
+      "JA",
+      7
+     ],
+     [
+      "TU",
+      7
+     ],
+     [
+      "RE",
+      7
+     ]
+    ],
+    "A_prefix_productivity": 10,
+    "I_prefix_productivity": 3,
+    "JA_suffix_productivity": 7,
+    "A_prefix_null_p": 0.0597,
+    "I_prefix_null_p": 0.9005,
+    "JA_suffix_null_p": 0.1741,
+    "A_prefix_null_mean": 5.8,
+    "n_stem_families": 138,
+    "n_initial_alternation_stems": 34,
+    "n_final_alternation_stems": 60,
+    "jaccard_bayes_para_prefixes": 0.538,
+    "jaccard_mdl_para_suffixes": 0.077
+   },
+   "grading_noninput": {
+    "top6_prefixes": [
+     "A",
+     "KA",
+     "KU",
+     "SA",
+     "SI",
+     "DA"
+    ],
+    "frac_pure_vowel_prefix": 0.167
+   }
+  },
+  "FORMULA": {
+   "n_words": 1642,
+   "n_types": 662,
+   "subst": {
+    "n_types": 662,
+    "n_types_ge2": 549,
+    "n_subst_edges": 575,
+    "n_longframe_edges": 35,
+    "n_word_minimal_pairs": 685,
+    "mean_edge_weight": 1.191,
+    "n_strong_edges_ge2": 95
+   },
+   "morph": {
+    "top_prefixes": [
+     [
+      "A",
+      23
+     ],
+     [
+      "SI",
+      12
+     ],
+     [
+      "KA",
+      11
+     ],
+     [
+      "I",
+      11
+     ],
+     [
+      "PA",
+      8
+     ],
+     [
+      "KU",
+      7
+     ]
+    ],
+    "top_suffixes": [
+     [
+      "JA",
+      9
+     ],
+     [
+      "TA",
+      8
+     ],
+     [
+      "TE",
+      8
+     ],
+     [
+      "KA",
+      7
+     ],
+     [
+      "SA",
+      6
+     ],
+     [
+      "RO",
+      6
+     ]
+    ],
+    "A_prefix_productivity": 23,
+    "I_prefix_productivity": 11,
+    "JA_suffix_productivity": 9,
+    "A_prefix_null_p": 0.005,
+    "I_prefix_null_p": 0.5274,
+    "JA_suffix_null_p": 0.602,
+    "A_prefix_null_mean": 11.1,
+    "n_stem_families": 132,
+    "n_initial_alternation_stems": 58,
+    "n_final_alternation_stems": 48,
+    "jaccard_bayes_para_prefixes": 0.667,
+    "jaccard_mdl_para_suffixes": 0.25
+   },
+   "grading_noninput": {
+    "top6_prefixes": [
+     "A",
+     "SI",
+     "KA",
+     "I",
+     "PA",
+     "KU"
+    ],
+    "frac_pure_vowel_prefix": 0.333
+   }
+  },
+  "B5_ENSEMBLE": {
+   "n_words": 3526,
+   "n_types": 656,
+   "subst": {
+    "n_types": 656,
+    "n_types_ge2": 606,
+    "n_subst_edges": 686,
+    "n_longframe_edges": 52,
+    "n_word_minimal_pairs": 809,
+    "mean_edge_weight": 1.179,
+    "n_strong_edges_ge2": 97
+   },
+   "morph": {
+    "top_prefixes": [
+     [
+      "I",
+      9
+     ],
+     [
+      "WI",
+      8
+     ],
+     [
+      "QA",
+      8
+     ],
+     [
+      "KU",
+      8
+     ],
+     [
+      "WA",
+      7
+     ],
+     [
+      "SA",
+      7
+     ]
+    ],
+    "top_suffixes": [
+     [
+      "RO",
+      19
+     ],
+     [
+      "ME",
+      11
+     ],
+     [
+      "RA₂",
+      10
+     ],
+     [
+      "WA",
+      9
+     ],
+     [
+      "DE",
+      8
+     ],
+     [
+      "ZA",
+      7
+     ]
+    ],
+    "A_prefix_productivity": 6,
+    "I_prefix_productivity": 9,
+    "JA_suffix_productivity": 0,
+    "A_prefix_null_p": 1.0,
+    "I_prefix_null_p": 0.8657,
+    "JA_suffix_null_p": 0.995,
+    "A_prefix_null_mean": 13.83,
+    "n_stem_families": 143,
+    "n_initial_alternation_stems": 64,
+    "n_final_alternation_stems": 66,
+    "jaccard_bayes_para_prefixes": 0.429,
+    "jaccard_mdl_para_suffixes": 0.0
+   },
+   "grading_noninput": {
+    "top6_prefixes": [
+     "I",
+     "WI",
+     "QA",
+     "KU",
+     "WA",
+     "SA"
+    ],
+    "frac_pure_vowel_prefix": 0.167
+   }
+  },
+  "INSCRIPTION_CONTEXT": {
+   "n_words": 1341,
+   "n_types": 626,
+   "subst": {
+    "n_types": 626,
+    "n_types_ge2": 565,
+    "n_subst_edges": 173,
+    "n_longframe_edges": 3,
+    "n_word_minimal_pairs": 185,
+    "mean_edge_weight": 1.069,
+    "n_strong_edges_ge2": 11
+   },
+   "morph": {
+    "top_prefixes": [
+     [
+      "A",
+      10
+     ],
+     [
+      "SI",
+      8
+     ],
+     [
+      "KA",
+      4
+     ],
+     [
+      "RE",
+      4
+     ],
+     [
+      "CYP",
+      3
+     ],
+     [
+      "RO",
+      3
+     ]
+    ],
+    "top_suffixes": [
+     [
+      "NI",
+      6
+     ],
+     [
+      "TE",
+      5
+     ],
+     [
+      "SA",
+      4
+     ],
+     [
+      "RO",
+      4
+     ],
+     [
+      "JA",
+      4
+     ],
+     [
+      "GRA",
+      4
+     ]
+    ],
+    "A_prefix_productivity": 10,
+    "I_prefix_productivity": 3,
+    "JA_suffix_productivity": 4,
+    "A_prefix_null_p": 0.0398,
+    "I_prefix_null_p": 0.8358,
+    "JA_suffix_null_p": 0.7065,
+    "A_prefix_null_mean": 5.42,
+    "n_stem_families": 70,
+    "n_initial_alternation_stems": 29,
+    "n_final_alternation_stems": 27,
+    "jaccard_bayes_para_prefixes": 0.176,
+    "jaccard_mdl_para_suffixes": 0.429
+   },
+   "grading_noninput": {
+    "top6_prefixes": [
+     "A",
+     "SI",
+     "KA",
+     "RE",
+     "CYP",
+     "RO"
+    ],
+    "frac_pure_vowel_prefix": 0.167
+   }
+  }
+ },
+ "la_internal_proxy": {
+  "GORILA_WORD": {
+   "n_subst_edges": 1507,
+   "A_prefix_productivity": 47,
+   "A_prefix_significant": true,
+   "n_final_alternation_stems": 107
+  },
+  "ENTRY": {
+   "n_subst_edges": 408,
+   "A_prefix_productivity": 10,
+   "A_prefix_significant": false,
+   "n_final_alternation_stems": 60
+  },
+  "FORMULA": {
+   "n_subst_edges": 575,
+   "A_prefix_productivity": 23,
+   "A_prefix_significant": true,
+   "n_final_alternation_stems": 48
+  },
+  "B5_ENSEMBLE": {
+   "n_subst_edges": 686,
+   "A_prefix_productivity": 6,
+   "A_prefix_significant": false,
+   "n_final_alternation_stems": 66
+  },
+  "INSCRIPTION_CONTEXT": {
+   "n_subst_edges": 173,
+   "A_prefix_productivity": 10,
+   "A_prefix_significant": true,
+   "n_final_alternation_stems": 27
+  }
+ },
+ "true_lb_endings": [
+  "DA",
+  "DE",
+  "DO",
+  "DU",
+  "JA",
+  "JE",
+  "JO",
+  "KA",
+  "KE",
+  "KI",
+  "KO",
+  "KU",
+  "MA",
+  "ME",
+  "MI",
+  "MO",
+  "MU",
+  "NA",
+  "NE",
+  "NI",
+  "NO",
+  "NU",
+  "PA",
+  "PE",
+  "PI",
+  "PO",
+  "PU",
+  "PU2",
+  "QA",
+  "QE",
+  "QI",
+  "QO",
+  "RA",
+  "RA2",
+  "RA3",
+  "RE",
+  "RI",
+  "RO",
+  "RO2",
+  "RU",
+  "SA",
+  "SE",
+  "SI",
+  "SO",
+  "SU",
+  "TA",
+  "TA2",
+  "TE",
+  "TI",
+  "TO",
+  "TU",
+  "WA",
+  "WE",
+  "WI",
+  "WO",
+  "ZA",
+  "ZE",
+  "ZO"
+ ],
+ "causal_verdict": {
+  "endorsed_lb_strategy": "LB_WORD",
+  "endorsed_la_segmentation": "GORILA_WORD",
+  "lb_recovery_rank": [
+   "LB_WORD",
+   "LB_FORMULA",
+   "LB_ENTRY",
+   "LB_ENSEMBLE",
+   "LB_CONTEXT"
+  ],
+  "lb_recovery_score": {
+   "LB_WORD": 0.1327,
+   "LB_ENTRY": 0.03454,
+   "LB_FORMULA": 0.12978,
+   "LB_ENSEMBLE": 0.03003,
+   "LB_CONTEXT": 0.02158
+  },
+  "la_rank_by_edges": [
+   "GORILA_WORD",
+   "B5_ENSEMBLE",
+   "FORMULA",
+   "ENTRY",
+   "INSCRIPTION_CONTEXT"
+  ],
+  "la_rank_by_A_prefix_productivity": [
+   "GORILA_WORD",
+   "FORMULA",
+   "ENTRY",
+   "INSCRIPTION_CONTEXT",
+   "B5_ENSEMBLE"
+  ],
+  "spearman_lbrecovery_vs_la_edges": 0.7,
+  "spearman_lbrecovery_vs_la_Aprod": 0.9,
+  "segmentation_search_multiplicity": 5,
+  "recovery_components": {
+   "LB_WORD": {
+    "same_consonant_auc": 0.6327,
+    "n_morphophonological_final_pairs": 788,
+    "mean_len_signs": 3.235
+   },
+   "LB_FORMULA": {
+    "same_consonant_auc": 0.6323,
+    "n_morphophonological_final_pairs": 773,
+    "mean_len_signs": 3.726
+   },
+   "LB_ENTRY": {
+    "same_consonant_auc": 0.6237,
+    "n_morphophonological_final_pairs": 220,
+    "mean_len_signs": 5.481
+   },
+   "LB_ENSEMBLE": {
+    "same_consonant_auc": 0.587,
+    "n_morphophonological_final_pairs": 272,
+    "mean_len_signs": 2.5
+   },
+   "LB_CONTEXT": {
+    "same_consonant_auc": 0.6083,
+    "n_morphophonological_final_pairs": 157,
+    "mean_len_signs": 11.377
+   }
+  },
+  "interpretation": "The held-out KNOWN-SCRIPT (LB) recovery endorses 'LB_WORD' -> LA 'GORILA_WORD'. LA-internal edge-count and A-prefix productivity are reported as anonymous descriptors ONLY; their rank agreement with the LB-recovery ranking (spearman above) says whether an LA-internal search would have reached the same choice. Because C/V is refuted and LA carries no ground truth, the LA-internal peaks are NOT evidence; the segmentation to freeze is the one LB recovery charges."
+ }
+}

@@ -1,0 +1,325 @@
+{
+ "task": "D1_multiview_relative_features",
+ "seed": 20260708,
+ "as_of": "2026-07-07",
+ "non_circular": "known LB values parsed from transliteration used ONLY as grading benchmark; every model input is a distributional/structural statistic over sign identities.",
+ "graded_sign_set": {
+  "threshold_freq_ge": 8,
+  "n_signs": 54,
+  "n_pure_vowel_signs": 5,
+  "signs": [
+   "A",
+   "DA",
+   "DE",
+   "DI",
+   "DU",
+   "E",
+   "I",
+   "JA",
+   "JE",
+   "JU",
+   "KA",
+   "KE",
+   "KI",
+   "KO",
+   "KU",
+   "MA",
+   "ME",
+   "MI",
+   "MU",
+   "NA",
+   "NE",
+   "NI",
+   "NU",
+   "O",
+   "PA",
+   "PA₃",
+   "PI",
+   "PO",
+   "PU",
+   "PU₂",
+   "QA",
+   "QE",
+   "RA",
+   "RA₂",
+   "RE",
+   "RI",
+   "RO",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TA₂",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U",
+   "WA",
+   "WI",
+   "ZA",
+   "ZE",
+   "ZU"
+  ],
+  "vowel_counts": {
+   "A": 16,
+   "E": 11,
+   "I": 10,
+   "U": 12,
+   "O": 5
+  }
+ },
+ "channel_signal": {
+  "POSITION": {
+   "coverage": 1.0,
+   "n_present": 54,
+   "status_prior": "wave1: frequency-confounded (position->C/V REFUTED)",
+   "vowel_macro_auc": 0.5017,
+   "vowel_perm_p": 0.17165668662674652,
+   "vowel_macro_auc_freq_residualized": 0.5381,
+   "cv_contrast_auc": 0.8571,
+   "cv_contrast_perm_p": 0.0849,
+   "cv_contrast_auc_freq_residualized": 0.8408,
+   "cv_note": "pure-vowel-sign vs consonantal rests on only 5 pure-vowel signs; this is the wave-1 position->C/V contrast, already REFUTED under multiplicity+oriented-null -- not re-credited here",
+   "verdict": "NULL"
+  },
+  "FREQUENCY": {
+   "coverage": 1.0,
+   "n_present": 54,
+   "status_prior": "nuisance/confound channel (kept separate)",
+   "vowel_macro_auc": 0.587,
+   "vowel_perm_p": 0.001996007984031936,
+   "vowel_macro_auc_freq_residualized": 0.3345,
+   "cv_contrast_auc": 0.2367,
+   "cv_contrast_perm_p": 0.3996,
+   "cv_contrast_auc_freq_residualized": 0.2633,
+   "cv_note": "pure-vowel-sign vs consonantal rests on only 5 pure-vowel signs; this is the wave-1 position->C/V contrast, already REFUTED under multiplicity+oriented-null -- not re-credited here",
+   "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+  },
+  "SUBSTITUTION": {
+   "coverage": 0.574,
+   "n_present": 31,
+   "status_prior": "wave2: consonant-held axis validated on LB, underpowered on LA",
+   "vowel_macro_auc": 0.3436,
+   "vowel_perm_p": 0.6447105788423154,
+   "vowel_macro_auc_freq_residualized": 0.3162,
+   "cv_contrast_auc": 0.2619,
+   "cv_contrast_perm_p": 0.5125,
+   "cv_contrast_auc_freq_residualized": 0.1071,
+   "cv_note": "pure-vowel-sign vs consonantal rests on only 3 pure-vowel signs; this is the wave-1 position->C/V contrast, already REFUTED under multiplicity+oriented-null -- not re-credited here",
+   "verdict": "NULL"
+  },
+  "MORPHOLOGY": {
+   "coverage": 1.0,
+   "n_present": 54,
+   "status_prior": "wave2: LA's real axis (word-INITIAL affixation), anonymous",
+   "vowel_macro_auc": 0.6339,
+   "vowel_perm_p": 0.003992015968063872,
+   "vowel_macro_auc_freq_residualized": 0.4119,
+   "cv_contrast_auc": 0.8612,
+   "cv_contrast_perm_p": 0.1049,
+   "cv_contrast_auc_freq_residualized": 0.8857,
+   "cv_note": "pure-vowel-sign vs consonantal rests on only 5 pure-vowel signs; this is the wave-1 position->C/V contrast, already REFUTED under multiplicity+oriented-null -- not re-credited here",
+   "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+  },
+  "FORMULA": {
+   "coverage": 1.0,
+   "n_present": 54,
+   "status_prior": "administrative slot structure",
+   "vowel_macro_auc": 0.3956,
+   "vowel_perm_p": 0.6207584830339321,
+   "vowel_macro_auc_freq_residualized": 0.4644,
+   "cv_contrast_auc": 0.8327,
+   "cv_contrast_perm_p": 0.1518,
+   "cv_contrast_auc_freq_residualized": 0.8816,
+   "cv_note": "pure-vowel-sign vs consonantal rests on only 5 pure-vowel signs; this is the wave-1 position->C/V contrast, already REFUTED under multiplicity+oriented-null -- not re-credited here",
+   "verdict": "NULL"
+  },
+  "SITE": {
+   "coverage": 1.0,
+   "n_present": 54,
+   "status_prior": "provenance dispersion",
+   "vowel_macro_auc": 0.4841,
+   "vowel_perm_p": 0.16766467065868262,
+   "vowel_macro_auc_freq_residualized": 0.3644,
+   "cv_contrast_auc": 0.6735,
+   "cv_contrast_perm_p": 0.5345,
+   "cv_contrast_auc_freq_residualized": 0.7347,
+   "cv_note": "pure-vowel-sign vs consonantal rests on only 5 pure-vowel signs; this is the wave-1 position->C/V contrast, already REFUTED under multiplicity+oriented-null -- not re-credited here",
+   "verdict": "NULL"
+  }
+ },
+ "shape_channel": {
+  "coverage": 1.0,
+  "status_prior": "F1: circular (grade = LB-homophony judgment); capped <=0.75; NOT independently calibratable",
+  "verdict": "CAPPED_NOT_VALUE_GRADABLE",
+  "note": "Present as a view in principle but excluded from value grading: any vowel/consonant it predicts is the same latent LB-identity fact it is graded on. Confidence capped <=0.75."
+ },
+ "fused_latent_model": {
+  "fused_views": [
+   "POSITION",
+   "SUBSTITUTION",
+   "MORPHOLOGY",
+   "FORMULA",
+   "SITE"
+  ],
+  "fused_feature_dim": 23,
+  "n_feature_cols": 18,
+  "n_mask_cols": 5,
+  "missing_handling": "per-view mean imputation (=0 after within-view standardization) + explicit per-view present/absent indicator columns carried into fusion",
+  "pca_components_for_80pct_var": 4,
+  "K_latent_used": 4,
+  "explained_variance_top": [
+   0.3321,
+   0.2361,
+   0.1689,
+   0.0801
+  ],
+  "fused_vowel_macro_auc": 0.5384,
+  "fused_vowel_perm_p": 0.0958,
+  "fused_vowel_macro_auc_freq_residualized": 0.4501,
+  "fused_cv_contrast_auc": 0.8816,
+  "fused_cv_contrast_perm_p": 0.0579,
+  "n_class": 6,
+  "anonymous_classes": [
+   {
+    "anon_class": "LATENT_00",
+    "n": 13,
+    "signs": [
+     "DA",
+     "DI",
+     "DU",
+     "I",
+     "KI",
+     "MA",
+     "NU",
+     "PA",
+     "PA₃",
+     "RI",
+     "SA",
+     "SU",
+     "TU"
+    ]
+   },
+   {
+    "anon_class": "LATENT_01",
+    "n": 1,
+    "signs": [
+     "A"
+    ]
+   },
+   {
+    "anon_class": "LATENT_02",
+    "n": 9,
+    "signs": [
+     "KO",
+     "PI",
+     "PO",
+     "QA",
+     "QE",
+     "TO",
+     "U",
+     "WI",
+     "ZU"
+    ]
+   },
+   {
+    "anon_class": "LATENT_03",
+    "n": 14,
+    "signs": [
+     "DE",
+     "E",
+     "JE",
+     "JU",
+     "KE",
+     "ME",
+     "MU",
+     "O",
+     "PU",
+     "PU₂",
+     "RA₂",
+     "TA₂",
+     "WA",
+     "ZA"
+    ]
+   },
+   {
+    "anon_class": "LATENT_04",
+    "n": 11,
+    "signs": [
+     "JA",
+     "MI",
+     "NA",
+     "NE",
+     "RA",
+     "RE",
+     "RU",
+     "SE",
+     "TA",
+     "TE",
+     "TI"
+    ]
+   },
+   {
+    "anon_class": "LATENT_05",
+    "n": 6,
+    "signs": [
+     "KA",
+     "KU",
+     "NI",
+     "RO",
+     "SI",
+     "ZE"
+    ]
+   }
+  ],
+  "class_vs_vowel_benchmark": {
+   "nmi": 0.172,
+   "adjusted_mi": 0.0457,
+   "mi_obs": 0.2738,
+   "mi_null_mean": 0.2107,
+   "perm_p": 0.1577
+  },
+  "class_vs_CV_benchmark": {
+   "nmi": 0.0811,
+   "adjusted_mi": 0.0306,
+   "mi_obs": 0.0787,
+   "mi_null_mean": 0.0506,
+   "perm_p": 0.1377
+  }
+ },
+ "channel_ranking_by_vowel_auc": [
+  {
+   "view": "MORPHOLOGY",
+   "vowel_auc": 0.6339,
+   "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+  },
+  {
+   "view": "FREQUENCY",
+   "vowel_auc": 0.587,
+   "verdict": "SIGNAL_BUT_FREQUENCY_ARTIFACT"
+  },
+  {
+   "view": "POSITION",
+   "vowel_auc": 0.5017,
+   "verdict": "NULL"
+  },
+  {
+   "view": "SITE",
+   "vowel_auc": 0.4841,
+   "verdict": "NULL"
+  },
+  {
+   "view": "FORMULA",
+   "vowel_auc": 0.3956,
+   "verdict": "NULL"
+  },
+  {
+   "view": "SUBSTITUTION",
+   "vowel_auc": 0.3436,
+   "verdict": "NULL"
+  }
+ ]
+}
