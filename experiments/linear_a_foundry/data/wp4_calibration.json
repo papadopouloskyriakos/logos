@@ -1,0 +1,43 @@
+{
+ "cal1_cypriot_shape_enrichment": {
+  "test": "shape(homophone) predicts LB<->Cypriot stability, value-blind",
+  "contingency_2x2": {
+   "homophone&stable": 11,
+   "homophone&notstable": 14,
+   "other&stable": 0,
+   "other&notstable": 34
+  },
+  "recall_of_stable_11": 1.0,
+  "precision": 0.44,
+  "fisher_one_sided_p": 1.5926579576090194e-05,
+  "interpretation_note": "Non-value-based cross-channel agreement between two independent scholars (Salgarella LA<->LB shape; Steele-Meissner LB<->Cypriot stability). CONFOUND: both grades proxy the same latent 'core stable syllabogram' fact, so this is convergent-but-not-independent evidence, not two orthogonal signals."
+ },
+ "cal2_distributional_LOTO": {
+  "method": "Procrustes(MUSE) align on all-but-one anchor; rank true LB partner",
+  "channel": "ADMIN-FUNCTION (co-occurrence), value-blind, NON-CIRCULAR",
+  "real": {
+   "n": 56,
+   "nB": 89,
+   "recall_at_1": 0.0,
+   "recall_at_5": 0.07142857142857142,
+   "recall_at_10": 0.125,
+   "mrr": 0.062373987568120993,
+   "median_rank": 31.0,
+   "chance_recall_at_1": 0.011235955056179775,
+   "chance_recall_at_5": 0.056179775280898875,
+   "chance_recall_at_10": 0.11235955056179775,
+   "chance_mrr_approx": 0.056982690918397805
+  },
+  "shuffled_null_mean": {
+   "recall_at_1": 0.01607142857142857,
+   "recall_at_5": 0.06607142857142857,
+   "mrr": 0.06215867812789879
+  },
+  "perm_p": {
+   "recall_at_1": 1.0,
+   "recall_at_5": 0.6,
+   "mrr": 0.5
+  },
+  "shape_baseline_note": "SHAPE channel as a value-predictor is DEGENERATE/CIRCULAR: Salgarella's homomorphy grade is assigned by identifying the LA sign WITH its LB counterpart, so 'predict the LB value from shape' hands back the answer (recall@1 = 1.0 by construction). It supplies zero non-circular value information and is capped <=0.75 as a truth-layer signal."
+ }
+}

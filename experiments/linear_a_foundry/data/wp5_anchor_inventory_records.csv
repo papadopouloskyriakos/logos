@@ -1,0 +1,116 @@
+record_id,channel,class,independence_class,covered_signs,tier,sm_trust,source_status,provenance
+top_pa_i_to,L_lexical,toponym,1,PA|I|TO,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+top_se_to_i_ja,L_lexical,toponym,1,SE|TO|I|JA,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+top_tu_ru_sa,L_lexical,toponym,1,TU|RU|SA,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+top_di_ki_te,L_lexical,toponym,1,DI|KI|TE,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+top_su_ki_ri_ta,L_lexical,toponym,1,SU|KI|RI|TA,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+top_a_tu_ri_si_ti,L_lexical,toponym,1,A|TU|RI|SI|TI,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+top_i_da_a_cf,L_lexical,toponym,1,I|DA|A,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+pn_a_ka_ru,L_lexical,personal_name,2,A|KA|RU,refuted,debunked,primary,Steele & Meissner 2017 (primary chapter)
+pn_a_ra_na_re,L_lexical,personal_name,2,A|RA|NA|RE,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_a_re_sa_na,L_lexical,personal_name,2,A|RE|SA|NA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_a_sa_ra2,L_lexical,personal_name,2,A|SA|RA2,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_a_su_ja,L_lexical,personal_name,2,A|SU|JA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_a_ta_re,L_lexical,personal_name,2,A|TA|RE,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_da_i_pi_ta,L_lexical,personal_name,2,DA|I|PI|TA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_da_mi_nu,L_lexical,personal_name,2,DA|MI|NU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_di_de_ru,L_lexical,personal_name,2,DI|DE|RU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_du_pu2_re,L_lexical,personal_name,2,DU|PU2|RE,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_i_ja_te,L_lexical,personal_name,2,I|JA|TE,refuted,debunked,primary,Steele & Meissner 2017 (primary chapter)
+pn_ka_sa_ru,L_lexical,personal_name,2,KA|SA|RU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_ki_da_ro,L_lexical,personal_name,2,KI|DA|RO,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_ki_ri_ta,L_lexical,personal_name,2,KI|RI|TA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_ku_ku_da_ra,L_lexical,personal_name,2,KU|KU|DA|RA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_ku_56_nu,L_lexical,personal_name,2,KU|*56|NU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_ku_ru_ku,L_lexical,personal_name,2,KU|RU|KU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_mi_ja_ru,L_lexical,personal_name,2,MI|JA|RU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_pa_ja_re,L_lexical,personal_name,2,PA|JA|RE,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_pa_ra_ne,L_lexical,personal_name,2,PA|RA|NE,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_qa_qa_ru,L_lexical,personal_name,2,QA|QA|RU,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+pn_qa_ra2_wa,L_lexical,personal_name,2,QA|RA2|WA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_sa_ma_ro,L_lexical,personal_name,2,SA|MA|RO,high,tempting,primary,Steele & Meissner 2017 (primary chapter)
+pn_si_ki_ra,L_lexical,personal_name,2,SI|KI|RA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+pn_wa_du_ni_mi,L_lexical,personal_name,2,WA|DU|NI|MI,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+ni_fig_nikuleon,L_lexical,gloss_acrophonic,3,NI,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+kikina_sycamore_fig,L_lexical,gloss_acrophonic,3,KI|KI|NA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+maru_wool,L_lexical,gloss_acrophonic,3,MA|RU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+var_m_series,L_lexical,variation_constraint,4,ME|MA|MI,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+var_t_series,L_lexical,variation_constraint,4,TA|TE|TU,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+var_u_w_series,L_lexical,variation_constraint,4,U|WA,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+var_s_series,L_lexical,variation_constraint,4,SA|SI,mid,neutral,primary,Steele & Meissner 2017 (primary chapter)
+top_ku_79_ni_younger,L_lexical,toponym,1,KU|*79|NI,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_da_u_49_younger,L_lexical,toponym,1,DA|U|*49,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_i_ti_ni_sa_younger,L_lexical,toponym,1,I|TI|NI|SA,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_ku_ni_su_younger,L_lexical,toponym,1,KU|NI|SU,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_ku_ta_younger,L_lexical,toponym,1,KU|TA,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_sa_ra2_younger,L_lexical,toponym,1,SA|RA2,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_di_na_u_younger,L_lexical,toponym,1,DI|NA|U,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+top_i_na_ta_i_zu_di_si_ka_younger,L_lexical,toponym,1,I|NA|TA|ZU|DI|SI|KA,unrated,n/a,secondary,"Younger LA pages (secondary, Wayback)"
+homo_A,H_homomorphy,sign_shape,,A,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_A,C_cypriot,cross_script_stability,,A,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_AU,H_homomorphy,sign_shape,,AU,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_DA,H_homomorphy,sign_shape,,DA,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_DA,C_cypriot,cross_script_stability,,DA,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_DE,H_homomorphy,sign_shape,,DE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_DI,H_homomorphy,sign_shape,,DI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_DU,H_homomorphy,sign_shape,,DU,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_E,H_homomorphy,sign_shape,,E,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_I,H_homomorphy,sign_shape,,I,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_I,C_cypriot,cross_script_stability,,I,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_JA,H_homomorphy,sign_shape,,JA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_JE,H_homomorphy,sign_shape,,JE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_JU,H_homomorphy,sign_shape,,JU,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_KA,H_homomorphy,sign_shape,,KA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_KE,H_homomorphy,sign_shape,,KE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_KI,H_homomorphy,sign_shape,,KI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_KO,H_homomorphy,sign_shape,,KO,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_KU,H_homomorphy,sign_shape,,KU,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_MA,H_homomorphy,sign_shape,,MA,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_ME,H_homomorphy,sign_shape,,ME,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_MI,H_homomorphy,sign_shape,,MI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_MU,H_homomorphy,sign_shape,,MU,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_NA,H_homomorphy,sign_shape,,NA,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_NA,C_cypriot,cross_script_stability,,NA,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_NE,H_homomorphy,sign_shape,,NE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_NI,H_homomorphy,sign_shape,,NI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_NU,H_homomorphy,sign_shape,,NU,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_NWA,H_homomorphy,sign_shape,,NWA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_O,H_homomorphy,sign_shape,,O,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_PA,H_homomorphy,sign_shape,,PA,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_PA,C_cypriot,cross_script_stability,,PA,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_PI,H_homomorphy,sign_shape,,PI,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_PO,H_homomorphy,sign_shape,,PO,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_PO,C_cypriot,cross_script_stability,,PO,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_PU,H_homomorphy,sign_shape,,PU,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_PU2,H_homomorphy,sign_shape,,PU2,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_QA,H_homomorphy,sign_shape,,QA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_QE,H_homomorphy,sign_shape,,QE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_QI,H_homomorphy,sign_shape,,QI,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_RA,H_homomorphy,sign_shape,,RA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_RA2,H_homomorphy,sign_shape,,RA2,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_RE,H_homomorphy,sign_shape,,RE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_RI,H_homomorphy,sign_shape,,RI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_RO,H_homomorphy,sign_shape,,RO,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_RO,C_cypriot,cross_script_stability,,RO,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_RU,H_homomorphy,sign_shape,,RU,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_SA,H_homomorphy,sign_shape,,SA,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_SA,C_cypriot,cross_script_stability,,SA,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_SE,H_homomorphy,sign_shape,,SE,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_SE,C_cypriot,cross_script_stability,,SE,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_SI,H_homomorphy,sign_shape,,SI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_SU,H_homomorphy,sign_shape,,SU,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_TA,H_homomorphy,sign_shape,,TA,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_TA2,H_homomorphy,sign_shape,,TA2,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_TE,H_homomorphy,sign_shape,,TE,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_TI,H_homomorphy,sign_shape,,TI,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_TI,C_cypriot,cross_script_stability,,TI,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_TO,H_homomorphy,sign_shape,,TO,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+cypr_TO,C_cypriot,cross_script_stability,,TO,high,,primary,Steele & Meissner 2017 Table 6.2 p.98 (primary)
+homo_TU,H_homomorphy,sign_shape,,TU,high,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_TWE,H_homomorphy,sign_shape,,TWE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_U,H_homomorphy,sign_shape,,U,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_WA,H_homomorphy,sign_shape,,WA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_WI,H_homomorphy,sign_shape,,WI,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_ZA,H_homomorphy,sign_shape,,ZA,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_ZE,H_homomorphy,sign_shape,,ZE,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"
+homo_ZO,H_homomorphy,sign_shape,,ZO,mid,,primary,"Salgarella 2020 Aegean Linear Script(s) (CUP), Tables 2-4"

@@ -35,5 +35,17 @@
   "power_curve": "LB subsample ladder",
   "metric": "max-weight + weight-feature AUC vs corpus size",
   "result": "LA ~1.7x below clean regime"
+ },
+ "WP4": {
+  "known_truth": "LB<->Cypriot + shared-AB LOTO",
+  "null": "shuffled-anchor 10-perm",
+  "verdict": "NULL (fourth distributional null)"
+ },
+ "WP5": {
+  "inventory": "115 records/62 signs/3 channels",
+  "bootstrap": "reduced-seed label spreading",
+  "lb_validated": "3-4 seeds -> AUC 0.87",
+  "la": "NULL (underpowered propagation)",
+  "null_realizations": 200
  }
 }

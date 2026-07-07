@@ -1,0 +1,17 @@
+WP4 CROSS-SCRIPT SIGN EVOLUTION -- summary
+============================================================
+
+CHANNELS (kept separate): SHAPE(Salgarella homomorphy), ADMIN-FUNCTION(distributional), CHRONOLOGY(script-level).
+
+CAL#1 known-truth LB<->Cypriot (value-blind, SHAPE channel):
+  recall of S&M stable-11 = 1.00, Fisher one-sided p = 1.59e-05
+  2x2 = {'homophone&stable': 11, 'homophone&notstable': 14, 'other&stable': 0, 'other&notstable': 34}
+  -> shape grade PERFECTLY separates the stable-11 (11/11 homophone; 0/34 non-homophone stable) BUT confounded (same latent fact).
+
+CAL#2 shared-AB held-out (LOTO), ADMIN-FUNCTION channel (NON-CIRCULAR):
+  R@1=0.000 R@5=0.071 R@10=0.125 MRR=0.0624
+  chance R@1=0.0112; shuffled-null R@5=0.066 MRR=0.0622
+  perm-p(R@5)=0.60 perm-p(MRR)=0.50
+  -> distributional channel does NOT beat the shuffled null: no non-circular value power at LA scale.
+
+VERDICT: The ONLY channel that predicts an LB value is SHAPE, which is CIRCULAR (Salgarella homomorphy = LB-identity, capped <=0.75). The non-circular ADMIN channel is null. Therefore cross-script channels give NO non-circular value constraint for Linear A. Consistent with the crossscript_gate REFUTE_LOTO_FRAGILE (distributional=0.0000).

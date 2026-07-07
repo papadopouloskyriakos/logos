@@ -1,0 +1,1576 @@
+{
+ "experiment": "WP5(a)_anchor_inventory",
+ "sources": {
+  "anchors_csv": "/home/claude-runner/gitlab/n8n/logos-la-lb-continuity/experiments/crossscript_gate/anchors.csv",
+  "census_csv": "/home/claude-runner/gitlab/n8n/logos-la-lb-continuity/experiments/crossscript_gate/phase2/anchor_census.csv",
+  "toponym_csv": "/home/claude-runner/gitlab/n8n/logos-la-lb-continuity/experiments/crossscript_gate/toponym_anchors.csv",
+  "salgarella_json": "/home/claude-runner/gitlab/n8n/logos-la-lb-continuity/experiments/crossscript_gate/salgarella_2020_grades.json"
+ },
+ "channels": {
+  "L": "lexical/onomastic equation (census+toponyms)",
+  "H": "homomorphy / sign-shape (Salgarella 2020)",
+  "C": "Cypriot cross-script stability (S&M 2017 high-certainty 11)"
+ },
+ "summary": {
+  "n_signs_total_inventory": 62,
+  "n_signs_with_any_anchor": 61,
+  "n_lexical_records": 47,
+  "n_toponym_records": 15,
+  "n_personal_name_records": 25,
+  "n_homomorphy_graded_signs": 57,
+  "n_cypriot_stable_signs": 11,
+  "n_provenance_records_total": 115,
+  "dependency_tier_counts": {
+   "one_toponym_deep_pin": 3,
+   "weak_lexical_only": 1,
+   "multi_channel_independent": 26,
+   "structural_only": 31,
+   "no_anchor": 1
+  },
+  "n_independent_multi_channel": 26,
+  "independent_signs": [
+   "A",
+   "DA",
+   "DI",
+   "I",
+   "JA",
+   "KA",
+   "KI",
+   "KU",
+   "NA",
+   "NI",
+   "PA",
+   "PO",
+   "RA2",
+   "RI",
+   "RO",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U"
+  ],
+  "n_held_out_survivable_candidate": 26,
+  "held_out_survivable_signs": [
+   "A",
+   "DA",
+   "DI",
+   "I",
+   "JA",
+   "KA",
+   "KI",
+   "KU",
+   "NA",
+   "NI",
+   "PA",
+   "PO",
+   "RA2",
+   "RI",
+   "RO",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U"
+  ],
+  "n_one_toponym_deep_pins": 3,
+  "one_toponym_deep_pin_signs": [
+   "*49",
+   "*79",
+   "ZU"
+  ],
+  "frozen_empirical_held_out": {
+   "verdict": "REFUTE_LOTO_FRAGILE",
+   "distributional_channel_top1": 0.0,
+   "recovered_signs_LOTO": [
+    "I",
+    "RI"
+   ],
+   "recovered_depth": "each one-toponym-deep",
+   "prereg_dois": [
+    "10.5281/zenodo.21168887",
+    "10.5281/zenodo.21173639"
+   ],
+   "note": "empirical held-out survivability from the frozen preregistered gate; cited, not recomputed"
+  },
+  "reconciliation": "INVENTORY-side independence (multi-channel / multi-item corroboration) is far more generous than EMPIRICAL held-out survivability. The frozen gate's LOTO recovered only 2 signs (I, RI), each one-toponym-deep, with the distributional channel at 0.0000 \u2014 i.e. even signs the inventory grades 'multi_channel_independent' are NOT recoverable from LA-internal distribution once their toponym is held out. The structural channels (homomorphy, Cypriot-stability) corroborate sign IDENTITY across scripts but do not, by themselves, let the value be re-derived from held-out LA."
+ },
+ "sign_inventory": [
+  {
+   "sign_id": "*49",
+   "conventional_value": "",
+   "la_attestations": null,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_da_u_49_younger"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 0,
+   "channel_H_grade": "",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 1,
+   "robust_anchor": false,
+   "dependency_tier": "one_toponym_deep_pin"
+  },
+  {
+   "sign_id": "*56",
+   "conventional_value": "",
+   "la_attestations": null,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_ku_56_nu"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 0,
+   "channel_H_grade": "",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 1,
+   "robust_anchor": false,
+   "dependency_tier": "weak_lexical_only"
+  },
+  {
+   "sign_id": "*79",
+   "conventional_value": "",
+   "la_attestations": null,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_ku_79_ni_younger"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 0,
+   "channel_H_grade": "",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 1,
+   "robust_anchor": false,
+   "dependency_tier": "one_toponym_deep_pin"
+  },
+  {
+   "sign_id": "A",
+   "conventional_value": "a",
+   "la_attestations": 195,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_a_tu_ri_si_ti",
+     "top_i_da_a_cf"
+    ],
+    "name_items": [
+     "pn_a_ra_na_re",
+     "pn_a_re_sa_na",
+     "pn_a_sa_ra2",
+     "pn_a_su_ja",
+     "pn_a_ta_re"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": [
+     "pn_a_ka_ru"
+    ]
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 7,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "AU",
+   "conventional_value": "au",
+   "la_attestations": 8,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 36 (Table 3, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "DA",
+   "conventional_value": "da",
+   "la_attestations": 134,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_da_u_49_younger",
+     "top_i_da_a_cf"
+    ],
+    "name_items": [
+     "pn_da_i_pi_ta",
+     "pn_da_mi_nu",
+     "pn_ki_da_ro",
+     "pn_ku_ku_da_ra"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 6,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "DE",
+   "conventional_value": "de",
+   "la_attestations": 35,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_di_de_ru"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 1,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "DI",
+   "conventional_value": "di",
+   "la_attestations": 109,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_di_ki_te",
+     "top_di_na_u_younger",
+     "top_i_na_ta_i_zu_di_si_ka_younger"
+    ],
+    "name_items": [
+     "pn_di_de_ru"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 3,
+   "any_lexical_items": 4,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "DU",
+   "conventional_value": "du",
+   "la_attestations": 77,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_du_pu2_re",
+     "pn_wa_du_ni_mi"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "E",
+   "conventional_value": "e",
+   "la_attestations": 31,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "I",
+   "conventional_value": "i",
+   "la_attestations": 166,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_i_da_a_cf",
+     "top_i_na_ta_i_zu_di_si_ka_younger",
+     "top_i_ti_ni_sa_younger",
+     "top_pa_i_to",
+     "top_se_to_i_ja"
+    ],
+    "name_items": [
+     "pn_da_i_pi_ta"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": [
+     "pn_i_ja_te"
+    ]
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 5,
+   "any_lexical_items": 6,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "JA",
+   "conventional_value": "ja",
+   "la_attestations": 165,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_se_to_i_ja"
+    ],
+    "name_items": [
+     "pn_a_su_ja",
+     "pn_mi_ja_ru",
+     "pn_pa_ja_re"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": [
+     "pn_i_ja_te"
+    ]
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 4,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "JE",
+   "conventional_value": "je",
+   "la_attestations": 16,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "JU",
+   "conventional_value": "ju",
+   "la_attestations": 35,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic ju? (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "KA",
+   "conventional_value": "ka",
+   "la_attestations": 132,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_i_na_ta_i_zu_di_si_ka_younger"
+    ],
+    "name_items": [
+     "pn_ka_sa_ru"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": [
+     "pn_a_ka_ru"
+    ]
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "KE",
+   "conventional_value": "ke",
+   "la_attestations": 16,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "KI",
+   "conventional_value": "ki",
+   "la_attestations": 125,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_di_ki_te",
+     "top_su_ki_ri_ta"
+    ],
+    "name_items": [
+     "pn_ki_da_ro",
+     "pn_ki_ri_ta",
+     "pn_si_ki_ra"
+    ],
+    "gloss_items": [
+     "kikina_sycamore_fig"
+    ],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 6,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "KO",
+   "conventional_value": "ko",
+   "la_attestations": 15,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "KU",
+   "conventional_value": "ku",
+   "la_attestations": 154,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_ku_79_ni_younger",
+     "top_ku_ni_su_younger",
+     "top_ku_ta_younger"
+    ],
+    "name_items": [
+     "pn_ku_56_nu",
+     "pn_ku_ku_da_ra",
+     "pn_ku_ru_ku"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 3,
+   "any_lexical_items": 6,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "MA",
+   "conventional_value": "ma",
+   "la_attestations": 117,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_sa_ma_ro"
+    ],
+    "gloss_items": [
+     "maru_wool"
+    ],
+    "variation_items": [
+     "var_m_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "ME",
+   "conventional_value": "me",
+   "la_attestations": 43,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [
+     "var_m_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "MI",
+   "conventional_value": "mi",
+   "la_attestations": 92,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_da_mi_nu",
+     "pn_mi_ja_ru",
+     "pn_wa_du_ni_mi"
+    ],
+    "gloss_items": [],
+    "variation_items": [
+     "var_m_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 3,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "MU",
+   "conventional_value": "mu",
+   "la_attestations": 15,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "NA",
+   "conventional_value": "na",
+   "la_attestations": 157,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_di_na_u_younger",
+     "top_i_na_ta_i_zu_di_si_ka_younger"
+    ],
+    "name_items": [
+     "pn_a_ra_na_re",
+     "pn_a_re_sa_na"
+    ],
+    "gloss_items": [
+     "kikina_sycamore_fig"
+    ],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 5,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "NE",
+   "conventional_value": "ne",
+   "la_attestations": 57,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_pa_ra_ne"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 1,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "NI",
+   "conventional_value": "ni",
+   "la_attestations": 123,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_i_ti_ni_sa_younger",
+     "top_ku_79_ni_younger",
+     "top_ku_ni_su_younger"
+    ],
+    "name_items": [
+     "pn_wa_du_ni_mi"
+    ],
+    "gloss_items": [
+     "ni_fig_nikuleon"
+    ],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 3,
+   "any_lexical_items": 5,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "NU",
+   "conventional_value": "nu",
+   "la_attestations": 59,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_da_mi_nu",
+     "pn_ku_56_nu"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "NWA",
+   "conventional_value": "nwa",
+   "la_attestations": 1,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 36 (Table 3, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "O",
+   "conventional_value": "o",
+   "la_attestations": 14,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "PA",
+   "conventional_value": "pa",
+   "la_attestations": 101,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_pa_i_to"
+    ],
+    "name_items": [
+     "pn_pa_ja_re",
+     "pn_pa_ra_ne"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 3,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "PA3",
+   "conventional_value": "pa3",
+   "la_attestations": 46,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 0,
+   "channel_H_grade": "pending_primary (searched Salgarella 2020 sign treatment; token not graded there)",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 0,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "no_anchor"
+  },
+  {
+   "sign_id": "PI",
+   "conventional_value": "pi",
+   "la_attestations": 57,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_da_i_pi_ta"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 1,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "PO",
+   "conventional_value": "po",
+   "la_attestations": 8,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "PU",
+   "conventional_value": "pu",
+   "la_attestations": 23,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "PU2",
+   "conventional_value": "pu2",
+   "la_attestations": 13,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_du_pu2_re"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic pu2 (/phu/</bhu/) (Salgarella 2020, 36 (Table 3, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 1,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "QA",
+   "conventional_value": "qa",
+   "la_attestations": 45,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_qa_qa_ru",
+     "pn_qa_ra2_wa"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "QE",
+   "conventional_value": "qe",
+   "la_attestations": 45,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "QI",
+   "conventional_value": "qi",
+   "la_attestations": 1,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "RA",
+   "conventional_value": "ra",
+   "la_attestations": 116,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_a_ra_na_re",
+     "pn_ku_ku_da_ra",
+     "pn_pa_ra_ne",
+     "pn_si_ki_ra"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 4,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "RA2",
+   "conventional_value": "ra2",
+   "la_attestations": 51,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_sa_ra2_younger"
+    ],
+    "name_items": [
+     "pn_a_sa_ra2",
+     "pn_qa_ra2_wa"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 36 (Table 3, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 3,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "RE",
+   "conventional_value": "re",
+   "la_attestations": 124,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_a_ra_na_re",
+     "pn_a_re_sa_na",
+     "pn_a_ta_re",
+     "pn_du_pu2_re",
+     "pn_pa_ja_re"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 5,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "RI",
+   "conventional_value": "ri",
+   "la_attestations": 77,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_a_tu_ri_si_ti",
+     "top_su_ki_ri_ta"
+    ],
+    "name_items": [
+     "pn_ki_ri_ta"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 3,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "RO",
+   "conventional_value": "ro",
+   "la_attestations": 95,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_ki_da_ro",
+     "pn_sa_ma_ro"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "RU",
+   "conventional_value": "ru",
+   "la_attestations": 92,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_tu_ru_sa"
+    ],
+    "name_items": [
+     "pn_di_de_ru",
+     "pn_ka_sa_ru",
+     "pn_ku_ru_ku",
+     "pn_mi_ja_ru",
+     "pn_qa_qa_ru"
+    ],
+    "gloss_items": [
+     "maru_wool"
+    ],
+    "variation_items": [],
+    "debunked_items": [
+     "pn_a_ka_ru"
+    ]
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 7,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "SA",
+   "conventional_value": "sa",
+   "la_attestations": 138,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_i_ti_ni_sa_younger",
+     "top_sa_ra2_younger",
+     "top_tu_ru_sa"
+    ],
+    "name_items": [
+     "pn_a_re_sa_na",
+     "pn_a_sa_ra2",
+     "pn_ka_sa_ru",
+     "pn_sa_ma_ro"
+    ],
+    "gloss_items": [],
+    "variation_items": [
+     "var_s_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 3,
+   "any_lexical_items": 7,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "SE",
+   "conventional_value": "se",
+   "la_attestations": 65,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_se_to_i_ja"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 1,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "SI",
+   "conventional_value": "si",
+   "la_attestations": 145,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_a_tu_ri_si_ti",
+     "top_i_na_ta_i_zu_di_si_ka_younger"
+    ],
+    "name_items": [
+     "pn_si_ki_ra"
+    ],
+    "gloss_items": [],
+    "variation_items": [
+     "var_s_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 3,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "SU",
+   "conventional_value": "su",
+   "la_attestations": 52,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_ku_ni_su_younger",
+     "top_su_ki_ri_ta"
+    ],
+    "name_items": [
+     "pn_a_su_ja"
+    ],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 3,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "TA",
+   "conventional_value": "ta",
+   "la_attestations": 150,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_i_na_ta_i_zu_di_si_ka_younger",
+     "top_ku_ta_younger",
+     "top_su_ki_ri_ta"
+    ],
+    "name_items": [
+     "pn_a_ta_re",
+     "pn_da_i_pi_ta",
+     "pn_ki_ri_ta"
+    ],
+    "gloss_items": [],
+    "variation_items": [
+     "var_t_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 3,
+   "any_lexical_items": 6,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "TA2",
+   "conventional_value": "ta2",
+   "la_attestations": 16,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic ta2? (Salgarella 2020, 36 (Table 3, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "TE",
+   "conventional_value": "te",
+   "la_attestations": 125,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_di_ki_te"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [
+     "var_t_series"
+    ],
+    "debunked_items": [
+     "pn_i_ja_te"
+    ]
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 1,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "TI",
+   "conventional_value": "ti",
+   "la_attestations": 110,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_a_tu_ri_si_ti",
+     "top_i_ti_ni_sa_younger"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "TO",
+   "conventional_value": "to",
+   "la_attestations": 17,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_pa_i_to",
+     "top_se_to_i_ja"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": true,
+   "n_independent_channels": 3,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "TU",
+   "conventional_value": "tu",
+   "la_attestations": 73,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_a_tu_ri_si_ti",
+     "top_tu_ru_sa"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [
+     "var_t_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 3,
+   "channel_H_grade": "homomorphic and also likely homophone (Salgarella 2020, 35 (Table 2, dark-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "TWE",
+   "conventional_value": "twe",
+   "la_attestations": 2,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic twe? (KN) (Salgarella 2020, 36 (Table 3, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "U",
+   "conventional_value": "u",
+   "la_attestations": 68,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_da_u_49_younger",
+     "top_di_na_u_younger"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [
+     "var_u_w_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 2,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "multi_channel_independent"
+  },
+  {
+   "sign_id": "WA",
+   "conventional_value": "wa",
+   "la_attestations": 45,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [
+     "pn_qa_ra2_wa",
+     "pn_wa_du_ni_mi"
+    ],
+    "gloss_items": [],
+    "variation_items": [
+     "var_u_w_series"
+    ],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 2,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 2,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "WI",
+   "conventional_value": "wi",
+   "la_attestations": 21,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "ZA",
+   "conventional_value": "za",
+   "la_attestations": 40,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": true,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "ZE",
+   "conventional_value": "ze",
+   "la_attestations": 1,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "ZO",
+   "conventional_value": "zo",
+   "la_attestations": 2,
+   "channel_L_lexical": {
+    "toponym_items": [],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 2,
+   "channel_H_grade": "homomorphic (Salgarella 2020, 35 (Table 2, light-blue cell; category key p. 34))",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 0,
+   "any_lexical_items": 0,
+   "robust_anchor": false,
+   "dependency_tier": "structural_only"
+  },
+  {
+   "sign_id": "ZU",
+   "conventional_value": "zu",
+   "la_attestations": 32,
+   "channel_L_lexical": {
+    "toponym_items": [
+     "top_i_na_ta_i_zu_di_si_ka_younger"
+    ],
+    "name_items": [],
+    "gloss_items": [],
+    "variation_items": [],
+    "debunked_items": []
+   },
+   "channel_H_homomorphy_tier": 0,
+   "channel_H_grade": "pending_primary (searched Salgarella 2020 sign treatment; token not graded there)",
+   "channel_C_cypriot_stable": false,
+   "n_independent_channels": 1,
+   "strong_lexical_items": 1,
+   "any_lexical_items": 1,
+   "robust_anchor": false,
+   "dependency_tier": "one_toponym_deep_pin"
+  }
+ ]
+}

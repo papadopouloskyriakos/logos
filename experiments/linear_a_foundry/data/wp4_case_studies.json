@@ -1,0 +1,122 @@
+[
+ {
+  "sign_id": "A",
+  "ab_number": "B008",
+  "value_KEY_LB": "a",
+  "cypriot_CS_value_KEY": "a",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 15,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 15/89)"
+ },
+ {
+  "sign_id": "I",
+  "ab_number": "B028",
+  "value_KEY_LB": "i",
+  "cypriot_CS_value_KEY": "i",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 74,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 74/89)"
+ },
+ {
+  "sign_id": "DA",
+  "ab_number": "B001",
+  "value_KEY_LB": "da",
+  "cypriot_CS_value_KEY": "ta",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 71,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 71/89)"
+ },
+ {
+  "sign_id": "PA",
+  "ab_number": "B003",
+  "value_KEY_LB": "pa",
+  "cypriot_CS_value_KEY": "pa",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 86,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 86/89)"
+ },
+ {
+  "sign_id": "PO",
+  "ab_number": "B011",
+  "value_KEY_LB": "po",
+  "cypriot_CS_value_KEY": "po",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 65,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 65/89)"
+ },
+ {
+  "sign_id": "RO",
+  "ab_number": "B002",
+  "value_KEY_LB": "ro",
+  "cypriot_CS_value_KEY": "lo",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 14,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 14/89)"
+ },
+ {
+  "sign_id": "SA",
+  "ab_number": "B031",
+  "value_KEY_LB": "sa",
+  "cypriot_CS_value_KEY": "sa",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 21,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 21/89)"
+ },
+ {
+  "sign_id": "SE",
+  "ab_number": "B009",
+  "value_KEY_LB": "se",
+  "cypriot_CS_value_KEY": "se",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 47,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 47/89)"
+ },
+ {
+  "sign_id": "TI",
+  "ab_number": "B037",
+  "value_KEY_LB": "ti",
+  "cypriot_CS_value_KEY": "ti",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 74,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 74/89)"
+ },
+ {
+  "sign_id": "TO",
+  "ab_number": "B005",
+  "value_KEY_LB": "to",
+  "cypriot_CS_value_KEY": "to",
+  "channel_SHAPE": "homophone",
+  "channel_CHRONOLOGY": "script-level only (non-discriminative)",
+  "channel_ADMIN_distrib_rank_of_true_LB": 20,
+  "distrib_nB": 89,
+  "cypriot_stable": "true",
+  "circularity_verdict": "SHAPE->value CIRCULAR (Salgarella grade = LB-identity); ADMIN channel non-circular but FAILS to recover partner (rank 20/89)"
+ }
+]
