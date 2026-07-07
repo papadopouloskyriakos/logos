@@ -1,0 +1,562 @@
+{
+ "experiment": "candidate_language_round_1",
+ "seed": 20260708,
+ "n_nulls_per_family": 200,
+ "held_out": {
+  "unit": "GORILA multi-sign syllabic word tokens",
+  "n_tokens": 973,
+  "n_types": 704,
+  "la_word_length_dist": {
+   "2": 0.444,
+   "3": 0.3268,
+   "4": 0.1583,
+   "5": 0.0493,
+   "6": 0.0123,
+   "7": 0.0062,
+   "8": 0.001,
+   "9": 0.001,
+   "16": 0.001
+  }
+ },
+ "wrong_language_null": {
+  "corpus": "DAMOS Linear B wordforms (load_b_damos), multi-sign, length-matched to LA",
+  "n_lb_multisign_words": 13562
+ },
+ "families": {
+  "ANA_preGreek_Anatolian": {
+   "gloss": "Pre-Greek Aegean / Anatolian-contact (Luwic). Sources: L.R. Palmer; M. Finkelberg (2001); Woudhuizen; the pre-Greek toponymic -ss-/-nth- substrate; Hittite/Luwian ishassara-.",
+   "effective_n_predicted_forms": 233,
+   "n_word_forms": 204,
+   "n_suffix_forms": 29,
+   "per_lexeme": [
+    {
+     "form": "ishassara",
+     "function": "THEONYM(lady/mistress; Hitt. ishassara-)",
+     "kind": "word",
+     "n_predicted": 2,
+     "examples": [
+      "I-SA-SA-RA",
+      "KI-SA-SA-RA"
+     ]
+    },
+    {
+     "form": "tarhunt",
+     "function": "THEONYM(storm-god name)",
+     "kind": "word",
+     "n_predicted": 200,
+     "examples": [
+      "TA-RA-KU-NA-TA",
+      "TA-RA-KU-NA-TE",
+      "TA-RA-KU-NA-TI",
+      "TA-RA-KU-NA-TO",
+      "TA-RA-KU-NA-TU",
+      "TA-RA-KU-NE-TA"
+     ]
+    },
+    {
+     "form": "piha",
+     "function": "NAME-element(shine)",
+     "kind": "word",
+     "n_predicted": 2,
+     "examples": [
+      "PI-A",
+      "PI-KA"
+     ]
+    },
+    {
+     "form": "-assi",
+     "function": "GENITIVAL/ADJ suffix",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "A-SI"
+     ]
+    },
+    {
+     "form": "-want",
+     "function": "POSSESSIVE-adj suffix (-want-)",
+     "kind": "suffix",
+     "n_predicted": 20,
+     "examples": [
+      "WA-NA-TA",
+      "WA-NA-TE",
+      "WA-NA-TI",
+      "WA-NA-TO",
+      "WA-NA-TU",
+      "WA-NE-TA"
+     ]
+    },
+    {
+     "form": "-nd/-nt",
+     "function": "PLACE suffix (pre-Greek -nth-/-nd-)",
+     "kind": "suffix",
+     "n_predicted": 8,
+     "examples": [
+      "NA-DA",
+      "NA-TA",
+      "NE-DA",
+      "NE-TA",
+      "NI-DA",
+      "NI-TA"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.00411,
+   "real_matched_tokens": 4,
+   "n_heldout_tokens": 973,
+   "matched_LA_word_types": [
+    "A-RI-NI-TA",
+    "I-ZU-RI-NI-TA",
+    "TI-NI-TA"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00716,
+    "sd": 0.00233,
+    "p95": 0.01131,
+    "max": 0.01336,
+    "emp_p": 0.9403,
+    "z": -1.307
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00125,
+    "sd": 0.00128,
+    "p95": 0.00308,
+    "max": 0.00617,
+    "emp_p": 0.0498,
+    "z": 2.225
+   },
+   "null_R_random_prior": {
+    "mean": 0.00277,
+    "sd": 0.00698,
+    "p95": 0.01244,
+    "max": 0.04317,
+    "emp_p": 0.1592,
+    "z": 0.192
+   },
+   "p_S": 0.9403,
+   "p_W": 0.0498,
+   "p_R": 0.1592,
+   "decisive_FWER_maxWR": 0.1592,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "ishassara",
+     "sub_real_rate": 0.00411,
+     "p_W": 0.0498,
+     "p_R": 0.1891,
+     "decisive_p": 0.1891
+    },
+    {
+     "dropped": "tarhunt",
+     "sub_real_rate": 0.00411,
+     "p_W": 0.0498,
+     "p_R": 0.1542,
+     "decisive_p": 0.1542
+    },
+    {
+     "dropped": "piha",
+     "sub_real_rate": 0.00411,
+     "p_W": 0.0448,
+     "p_R": 0.1542,
+     "decisive_p": 0.1542
+    },
+    {
+     "dropped": "-assi",
+     "sub_real_rate": 0.00411,
+     "p_W": 0.0498,
+     "p_R": 0.1791,
+     "decisive_p": 0.1791
+    },
+    {
+     "dropped": "-want",
+     "sub_real_rate": 0.00411,
+     "p_W": 0.0498,
+     "p_R": 0.1741,
+     "decisive_p": 0.1741
+    },
+    {
+     "dropped": "-nd/-nt",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "materialized_lexicon": null,
+   "holm_adjusted_decisive_p": 0.1592,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.00302,
+    "random_lexicon_match_rate_p95": 0.01552,
+    "random_lexicon_match_rate_max": 0.06886,
+    "real_percentile_p_vs_random_lexicons": 0.1894,
+    "raw_bar_false_clear_rate": 0.0433
+   },
+   "clears_calibrated": false
+  },
+  "SEM_westSemitic": {
+   "gloss": "West/Common Semitic. Sources: C.H. Gordon (1966, Evidence for the Minoan Language); J. Best (1972); Best & Woudhuizen (1988). Proto/Common-Semitic admin/commodity/name roots derived through the fixed coarse correspondence.",
+   "effective_n_predicted_forms": 99,
+   "n_word_forms": 99,
+   "n_suffix_forms": 0,
+   "per_lexeme": [
+    {
+     "form": "kull",
+     "function": "TOTAL(all/whole; Gordon: KU-RO)",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "KU-RA",
+      "KU-RE",
+      "KU-RI",
+      "KU-RO",
+      "KU-RU"
+     ]
+    },
+    {
+     "form": "Hasir",
+     "function": "DEFICIT(lacking; owed)",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "A-SI-RA",
+      "A-SI-RE",
+      "A-SI-RI",
+      "A-SI-RO",
+      "A-SI-RU"
+     ]
+    },
+    {
+     "form": "samn",
+     "function": "OIL",
+     "kind": "word",
+     "n_predicted": 16,
+     "examples": [
+      "SA-MA-NA",
+      "SA-MA-NE",
+      "SA-MA-NI",
+      "SA-MA-NU",
+      "SA-ME-NA",
+      "SA-ME-NE"
+     ]
+    },
+    {
+     "form": "wayn",
+     "function": "WINE",
+     "kind": "word",
+     "n_predicted": 12,
+     "examples": [
+      "WA-JA-NA",
+      "WA-JA-NE",
+      "WA-JA-NI",
+      "WA-JA-NU",
+      "WA-JE-NA",
+      "WA-JE-NE"
+     ]
+    },
+    {
+     "form": "malk",
+     "function": "NAME(king/ruler element)",
+     "kind": "word",
+     "n_predicted": 25,
+     "examples": [
+      "MA-RA-KA",
+      "MA-RA-KE",
+      "MA-RA-KI",
+      "MA-RA-KO",
+      "MA-RA-KU",
+      "MA-RE-KA"
+     ]
+    },
+    {
+     "form": "9abd",
+     "function": "NAME(servant-of element)",
+     "kind": "word",
+     "n_predicted": 36,
+     "examples": [
+      "A-PA-DA",
+      "A-PA-DE",
+      "A-PA-DI",
+      "A-PA-DU",
+      "A-PA-TA",
+      "A-PA-TE"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.04214,
+   "real_matched_tokens": 41,
+   "n_heldout_tokens": 973,
+   "matched_LA_word_types": [
+    "KU-RA",
+    "KU-RE",
+    "KU-RO"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.02161,
+    "sd": 0.0031,
+    "p95": 0.02672,
+    "max": 0.0298,
+    "emp_p": 0.005,
+    "z": 6.613
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00066,
+    "sd": 0.00079,
+    "p95": 0.00206,
+    "max": 0.00308,
+    "emp_p": 0.005,
+    "z": 52.583
+   },
+   "null_R_random_prior": {
+    "mean": 0.00108,
+    "sd": 0.00369,
+    "p95": 0.00308,
+    "max": 0.04214,
+    "emp_p": 0.01,
+    "z": 11.128
+   },
+   "p_S": 0.005,
+   "p_W": 0.005,
+   "p_R": 0.01,
+   "decisive_FWER_maxWR": 0.01,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "kull",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "Hasir",
+     "sub_real_rate": 0.04214,
+     "p_W": 0.005,
+     "p_R": 0.005,
+     "decisive_p": 0.005
+    },
+    {
+     "dropped": "samn",
+     "sub_real_rate": 0.04214,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "wayn",
+     "sub_real_rate": 0.04214,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "malk",
+     "sub_real_rate": 0.04214,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "9abd",
+     "sub_real_rate": 0.04214,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "materialized_lexicon": null,
+   "holm_adjusted_decisive_p": 0.03,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.00079,
+    "random_lexicon_match_rate_p95": 0.00313,
+    "random_lexicon_match_rate_max": 0.01336,
+    "real_percentile_p_vs_random_lexicons": 0.0033,
+    "raw_bar_false_clear_rate": 0.03
+   },
+   "clears_calibrated": false
+  },
+  "CTRL_agnostic_random": {
+   "gloss": "Agnostic negative control: a fixed random lexicon of matched size/length-structure, no linguistic motivation. Expected FWER ~ uniform; verifies the pipeline is not rigged to pass.",
+   "effective_n_predicted_forms": 20,
+   "n_word_forms": 10,
+   "n_suffix_forms": 10,
+   "per_lexeme": [
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 0,
+     "examples": []
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "DE-RE-KA",
+      "DE-RE-KE",
+      "DE-RE-KI",
+      "DE-RE-KO",
+      "DE-RE-KU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 4,
+     "examples": [
+      "JA-KO-MA",
+      "JA-KO-ME",
+      "JA-KO-MI",
+      "JA-KO-MU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "RO-RU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "suffix",
+     "n_predicted": 5,
+     "examples": [
+      "NI-TA",
+      "NI-TE",
+      "NI-TI",
+      "NI-TO",
+      "NI-TU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "suffix",
+     "n_predicted": 5,
+     "examples": [
+      "MA-TA",
+      "MA-TE",
+      "MA-TI",
+      "MA-TO",
+      "MA-TU"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.01542,
+   "real_matched_tokens": 15,
+   "n_heldout_tokens": 973,
+   "matched_LA_word_types": [
+    "A-RI-NI-TA",
+    "DA-DU-MA-TA",
+    "DA-MA-TE",
+    "I-DA-MA-TE",
+    "I-ZU-RI-NI-TA",
+    "KA-NA-NI-TI",
+    "KI-TA-NI-TE",
+    "KU-NI-TE",
+    "RI-RU-MA-TI",
+    "RU-MA-TA",
+    "SA-MA-TI",
+    "TI-NI-TA"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00537,
+    "sd": 0.00232,
+    "p95": 0.00925,
+    "max": 0.01131,
+    "emp_p": 0.005,
+    "z": 4.339
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00308,
+    "sd": 0.00182,
+    "p95": 0.00617,
+    "max": 0.01233,
+    "emp_p": 0.005,
+    "z": 6.791
+   },
+   "null_R_random_prior": {
+    "mean": 0.00175,
+    "sd": 0.00243,
+    "p95": 0.00617,
+    "max": 0.01644,
+    "emp_p": 0.0149,
+    "z": 5.625
+   },
+   "p_S": 0.005,
+   "p_W": 0.005,
+   "p_R": 0.0149,
+   "decisive_FWER_maxWR": 0.0149,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.01542,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.01542,
+     "p_W": 0.005,
+     "p_R": 0.005,
+     "decisive_p": 0.005
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.01542,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.01542,
+     "p_W": 0.005,
+     "p_R": 0.01,
+     "decisive_p": 0.01
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00822,
+     "p_W": 0.01,
+     "p_R": 0.0299,
+     "decisive_p": 0.0299
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00719,
+     "p_W": 0.005,
+     "p_R": 0.0498,
+     "decisive_p": 0.0498
+    }
+   ],
+   "loo_worst_decisive_p": 0.0498,
+   "materialized_lexicon": [
+    "p e m i",
+    "d e l e k",
+    "y a k o m",
+    "r o l u",
+    "n i t",
+    "m a t"
+   ],
+   "holm_adjusted_decisive_p": 0.03,
+   "clears_raw_bar": true,
+   "clears_calibrated": false
+  }
+ },
+ "families_clearing_calibrated": [],
+ "ctrl_cleared_raw_bar": true,
+ "verdict": "AT_END_TO_END_NULL",
+ "interpretation": "Three candidate families tested as held-out hypotheses against the WP6 multi-family end-to-end null (S order-shuffle; W wrong-language opaque LB; R random-prior). A family is a GENUINE signal only if it (1) clears the decisive bar max(p_W,p_R) Holm-adjusted<0.05, (2) survives leave-one-lexeme-out (not carried by a single word), AND (3) beats a random-lexicon calibration (real match rate above the same-structure random-lexicon band at p<0.05 with a controlled false-clear rate). Result: AT_END_TO_END_NULL. No family is a genuine signal. SEM_westSemitic's raw clearing (decisive p=0.010) is driven ENTIRELY by the single lexeme kull->KU-RO/KU-RA/KU-RE (leave-one-lexeme-out decisive p=1.00 \u2014 dropping it erases the signal). ANA fails the wrong-language null (p_W=0.050). Critically, the AGNOSTIC RANDOM control (CTRL) cleared the raw bar, and random lexicons of matched structure clear it at rate 3.0%(SEM)/4.3%(ANA) \u2014 so the bar is passable by generic LA word-shape typicality, not language-specific lexical fit. This is the WP6 AT_END_TO_END_NULL trap confirmed for named candidate languages: a single famous administrative match (KU-RO 'total') survives, but no family predicts held-out LA forms beyond a same-structure random lexicon."
+}

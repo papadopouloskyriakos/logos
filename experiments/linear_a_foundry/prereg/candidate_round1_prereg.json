@@ -1,0 +1,59 @@
+{
+ "experiment": "CANDIDATE_LANGUAGE_ROUND_1",
+ "seed": 20260708,
+ "registered_before_run": true,
+ "design_summary": "Three justified candidate families, each a BOUNDED preregistered correspondence (phoneme inventory + allowed changes into the LA syllabary + a SMALL lexicon of candidate-language WORDS). Each lexeme is expanded to its predicted LA syllabogram-value string(s) via the FIXED correspondence (never read off LA). A held-out LA multi-sign word MATCHES a family iff its value-string is a predicted whole-word form, or (for affix entries) it ends with a predicted affix string. Primary statistic = token-weighted match rate on the held-out multi-sign syllabic word set. Scored vs the WP6 multi-family end-to-end null: (S) order-shuffle, (W) wrong-language opaque LB length-matched, (R) random-prior (lexicon permuted, search size preserved). Decisive nulls for a LANGUAGE claim = W and R. FWER per family = fraction of decisive null realizations with match >= real. Search-adjusted across the 3 families by Holm. Leave-one-lexeme-out reported for robustness.",
+ "non_circularity": "Correspondences map candidate-language PHONEMES to syllabogram VALUES; predicted forms are DERIVED from candidate-language dictionary words, not fitted to LA. LB values only ever appear as the wrong-language NULL corpus. The conventional LA transliteration is a fixed published convention applied identically to every corpus and family.",
+ "bounded_no_root_search": "Lexicons are fixed a priori (6 entries/family), from cited proposals; no unbounded thesaurus search. The combinatorial expansion size (effective_n predicted forms) is reported and is automatically deflated because every null realization runs the SAME expansion/matcher.",
+
+ "syllabogram_decomposition_note": "Each AB syllabogram is decomposed to (onset_consonant, vowel) by standard Ventris-Chadwick values in the runner. Pure-vowel signs have empty onset.",
+
+ "families": {
+  "ANA_preGreek_Anatolian": {
+   "gloss": "Pre-Greek Aegean / Anatolian-contact (Luwic). Sources: L.R. Palmer; M. Finkelberg (2001); Woudhuizen; the pre-Greek toponymic -ss-/-nth- substrate; Hittite/Luwian ishassara-.",
+   "phoneme_inventory": ["p","t","d","k","g","kw","s","z","l","r","m","n","w","y","h","a","e","i","u","o"],
+   "consonant_to_series": {"p":["P"],"b":["P"],"t":["T"],"d":["D","T"],"k":["K"],"g":["K"],"kw":["Q"],"s":["S"],"z":["Z"],"ts":["Z"],"l":["R"],"r":["R"],"m":["M"],"n":["N"],"w":["W","U"],"y":["J","I"],"h":["",  "K"]},
+   "vowel_map": {"a":["a"],"e":["e"],"i":["i"],"u":["u"],"o":["o"]},
+   "coda_spelling": "echo preceding vowel (1 option)",
+   "lexicon": [
+    {"form":"ishassara","function":"THEONYM(lady/mistress; Hitt. ishassara-)","kind":"word","phonemes":"h i s a s a r a"},
+    {"form":"tarhunt","function":"THEONYM(storm-god name)","kind":"word","phonemes":"t a r h u n t"},
+    {"form":"piha","function":"NAME-element(shine)","kind":"word","phonemes":"p i h a"},
+    {"form":"-assi","function":"GENITIVAL/ADJ suffix","kind":"suffix","phonemes":"a s i"},
+    {"form":"-want","function":"POSSESSIVE-adj suffix (-want-)","kind":"suffix","phonemes":"w a n t"},
+    {"form":"-nd/-nt","function":"PLACE suffix (pre-Greek -nth-/-nd-)","kind":"suffix","phonemes":"n d a"}
+   ]
+  },
+
+  "SEM_westSemitic": {
+   "gloss": "West/Common Semitic. Sources: C.H. Gordon (1966, Evidence for the Minoan Language); J. Best (1972); Best & Woudhuizen (1988). Proto/Common-Semitic admin/commodity/name roots derived through the fixed coarse correspondence.",
+   "phoneme_inventory": ["p","b","t","d","k","g","q","s","z","l","r","m","n","w","y","a","i","u"],
+   "consonant_to_series": {"p":["P"],"b":["P"],"f":["P"],"t":["T"],"T":["T"],"d":["D","T"],"k":["K"],"g":["K"],"q":["Q","K"],"x":["K"],"s":["S"],"S":["S"],"z":["Z","S"],"c":["Z"],"l":["R"],"r":["R"],"m":["M"],"n":["N"],"w":["W","U"],"y":["J","I"],"H":["",""],"'":[""],"9":[""]},
+   "vowel_map": {"a":["a"],"i":["i"],"u":["u"],"e":["e"],"o":["o"]},
+   "coda_spelling": "echo preceding vowel (1 option)",
+   "lexicon": [
+    {"form":"kull","function":"TOTAL(all/whole; Gordon: KU-RO)","kind":"word","phonemes":"k u l l"},
+    {"form":"Hasir","function":"DEFICIT(lacking; owed)","kind":"word","phonemes":"H a s i r"},
+    {"form":"samn","function":"OIL","kind":"word","phonemes":"s a m n"},
+    {"form":"wayn","function":"WINE","kind":"word","phonemes":"w a y n"},
+    {"form":"malk","function":"NAME(king/ruler element)","kind":"word","phonemes":"m a l k"},
+    {"form":"9abd","function":"NAME(servant-of element)","kind":"word","phonemes":"9 a b d"}
+   ]
+  },
+
+  "CTRL_agnostic_random": {
+   "gloss": "Agnostic negative control: a fixed random lexicon of matched size/length-structure, no linguistic motivation. Expected FWER ~ uniform; verifies the pipeline is not rigged to pass.",
+   "phoneme_inventory": ["p","t","d","k","s","z","l","r","m","n","w","y","a","i","u","e","o"],
+   "consonant_to_series": {"p":["P"],"t":["T"],"d":["D"],"k":["K"],"s":["S"],"z":["Z"],"l":["R"],"r":["R"],"m":["M"],"n":["N"],"w":["W"],"y":["J"]},
+   "vowel_map": {"a":["a"],"i":["i"],"u":["u"],"e":["e"],"o":["o"]},
+   "coda_spelling": "echo preceding vowel (1 option)",
+   "lexicon": "GENERATED at runtime: 6 random entries (4 word + 2 suffix) with lengths matched to the mean of ANA/SEM, phonemes drawn uniformly from this inventory under fixed seed 20260708."
+  }
+ },
+
+ "held_out_target": "GORILA word units, syllabic-only, multi-sign (>=2 signs): 973 tokens / discriminating set. Single-sign words excluded (non-discriminating for lexical hypotheses).",
+ "primary_statistic": "token-weighted match rate = sum token-freq(matching words)/total tokens, on the multi-sign held-out set.",
+ "nulls_per_family": 200,
+ "decision_rule": "A family CLEARS iff Holm-adjusted decisive FWER (max over the W and R per-null empirical p) < 0.05 AND the leave-one-lexeme-out decisive FWER stays < 0.05 (not driven by a single lexeme).",
+ "prior_expectation": "WP6 was AT_END_TO_END_NULL (wrong-language LB scored higher). Expectation is NULL; run properly and report which family, if any, clears."
+}

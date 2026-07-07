@@ -1,0 +1,644 @@
+{
+ "experiment": "WP8_word_segmented_reduced_seed_CV",
+ "seed": 20260708,
+ "alpha": 0.2,
+ "knn": 7,
+ "beta_sub": 0.5,
+ "freq_min": 20,
+ "non_circular": "position features + sign-identity substitution edges on the LA side; A/I are typological pure-vowel seeds (transcription-definitional), NOT graded LB values; LB values grade only the opaque-LB benchmark",
+ "LB_benchmark_word_units": {
+  "unsupervised_null": {
+   "auc": 0.568,
+   "ari": 0.001,
+   "ref": "wp3_cv_cluster ARI~0.005"
+  },
+  "freq_only_ranking_auc": 0.872,
+  "supervised_ceiling_auc": 0.835,
+  "minimal_seed_requirement": {
+   "clean_seed_min_vowels_for_auc>=0.75": 3,
+   "freq_prior_min_k_for_auc>=0.75": null,
+   "bar": "held-out vowel-score AUC 0.75 = midpoint of unsupervised-null (~0.5) and supervised ceiling (0.835)"
+  },
+  "regime_B_pos": [
+   {
+    "channel": "pos",
+    "k_vowel_seeds": 1,
+    "k_cons_seeds": 3,
+    "n_draws": 5,
+    "auc_mean": 0.5841,
+    "auc_sd": 0.0637,
+    "auc_min": 0.5,
+    "recall_mean": 0.15,
+    "mean_heldout_vowels": 4.0
+   },
+   {
+    "channel": "pos",
+    "k_vowel_seeds": 2,
+    "k_cons_seeds": 3,
+    "n_draws": 10,
+    "auc_mean": 0.6722,
+    "auc_sd": 0.1587,
+    "auc_min": 0.3586,
+    "recall_mean": 0.1333,
+    "mean_heldout_vowels": 3.0
+   },
+   {
+    "channel": "pos",
+    "k_vowel_seeds": 3,
+    "k_cons_seeds": 3,
+    "n_draws": 10,
+    "auc_mean": 0.7803,
+    "auc_sd": 0.1776,
+    "auc_min": 0.303,
+    "recall_mean": 0.1,
+    "mean_heldout_vowels": 2.0
+   },
+   {
+    "channel": "pos",
+    "k_vowel_seeds": 4,
+    "k_cons_seeds": 4,
+    "n_draws": 5,
+    "auc_mean": 0.8215,
+    "auc_sd": 0.1158,
+    "auc_min": 0.6154,
+    "recall_mean": 0.0,
+    "mean_heldout_vowels": 1.0
+   }
+  ]
+ },
+ "LA_packed_baseline": {
+  "unit": "packed_inscription",
+  "n_units": 539,
+  "mean_signs_per_unit": 7.876,
+  "n_signs_freq>=20": 46,
+  "vowel_anchors_present": [
+   "A",
+   "I"
+  ],
+  "cons_anchors_lowfreq": [
+   "PU",
+   "WI",
+   "*118"
+  ],
+  "AI_anchor_seeding": {
+   "n_signs": 46,
+   "n_vowel_seeds_used": 2,
+   "n_cons_seeds_used": 3,
+   "n_heldout": 41,
+   "n_heldout_vowel_like": 6,
+   "heldout_vowel_like_signs": [
+    "SI",
+    "TU",
+    "JA",
+    "KA",
+    "DA",
+    "KI"
+   ],
+   "heldout_top8": [
+    [
+     "SI",
+     0.006
+    ],
+    [
+     "TU",
+     0.005
+    ],
+    [
+     "JA",
+     0.005
+    ],
+    [
+     "KA",
+     0.005
+    ],
+    [
+     "DA",
+     0.004
+    ],
+    [
+     "KI",
+     0.004
+    ],
+    [
+     "U",
+     -0.001
+    ],
+    [
+     "RI",
+     -0.001
+    ]
+   ],
+   "heldout_bottom5": [
+    [
+     "DE",
+     -0.011
+    ],
+    [
+     "ZU",
+     -0.012
+    ],
+    [
+     "WA",
+     -0.013
+    ],
+    [
+     "ME",
+     -0.014
+    ],
+    [
+     "PA3",
+     -0.017
+    ]
+   ],
+   "wp1_vowel_cands_recovered": [],
+   "vscore_spread": 1.6029
+  },
+  "freq_prior_k3_pos+sub": {
+   "n_signs": 46,
+   "n_vowel_seeds_used": 3,
+   "n_cons_seeds_used": 3,
+   "n_heldout": 40,
+   "n_heldout_vowel_like": 27,
+   "heldout_vowel_like_signs": [
+    "SI",
+    "TU",
+    "KA",
+    "DA",
+    "KI",
+    "TI",
+    "U",
+    "NU",
+    "RI",
+    "TE",
+    "DI",
+    "SE",
+    "TA",
+    "PA",
+    "DU",
+    "NA",
+    "SA",
+    "QE",
+    "MA",
+    "RE",
+    "MI",
+    "RU",
+    "NI",
+    "KU",
+    "JU",
+    "E",
+    "RA"
+   ],
+   "heldout_top8": [
+    [
+     "SI",
+     0.016
+    ],
+    [
+     "TU",
+     0.015
+    ],
+    [
+     "KA",
+     0.014
+    ],
+    [
+     "DA",
+     0.013
+    ],
+    [
+     "KI",
+     0.013
+    ],
+    [
+     "TI",
+     0.007
+    ],
+    [
+     "U",
+     0.003
+    ],
+    [
+     "NU",
+     0.002
+    ]
+   ],
+   "heldout_bottom5": [
+    [
+     "DE",
+     -0.007
+    ],
+    [
+     "ZU",
+     -0.009
+    ],
+    [
+     "WA",
+     -0.01
+    ],
+    [
+     "ME",
+     -0.011
+    ],
+    [
+     "PA3",
+     -0.014
+    ]
+   ],
+   "wp1_vowel_cands_recovered": [
+    "U"
+   ],
+   "vscore_spread": 1.6093
+  },
+  "freq_prior_k3_pos_only": {
+   "n_signs": 46,
+   "n_vowel_seeds_used": 3,
+   "n_cons_seeds_used": 3,
+   "n_heldout": 40,
+   "n_heldout_vowel_like": 15,
+   "heldout_vowel_like_signs": [
+    "SI",
+    "TU",
+    "KA",
+    "DA",
+    "KI",
+    "TI",
+    "U",
+    "TA",
+    "MA",
+    "DI",
+    "NU",
+    "TE",
+    "RE",
+    "DU",
+    "RI"
+   ],
+   "heldout_top8": [
+    [
+     "SI",
+     0.058
+    ],
+    [
+     "TU",
+     0.054
+    ],
+    [
+     "KA",
+     0.049
+    ],
+    [
+     "DA",
+     0.046
+    ],
+    [
+     "KI",
+     0.041
+    ],
+    [
+     "TI",
+     0.019
+    ],
+    [
+     "U",
+     0.014
+    ],
+    [
+     "TA",
+     0.003
+    ]
+   ],
+   "heldout_bottom5": [
+    [
+     "ZU",
+     -0.037
+    ],
+    [
+     "*301",
+     -0.045
+    ],
+    [
+     "WA",
+     -0.047
+    ],
+    [
+     "ME",
+     -0.049
+    ],
+    [
+     "PA3",
+     -0.053
+    ]
+   ],
+   "wp1_vowel_cands_recovered": [
+    "U"
+   ],
+   "vscore_spread": 1.6655
+  }
+ },
+ "LA_word_segmented": {
+  "unit": "gorila_word",
+  "n_units": 2479,
+  "mean_signs_per_unit": 2.003,
+  "n_signs_freq>=20": 48,
+  "vowel_anchors_present": [
+   "A",
+   "I"
+  ],
+  "cons_anchors_lowfreq": [
+   "PU",
+   "WI",
+   "*118"
+  ],
+  "AI_anchor_seeding": {
+   "n_signs": 48,
+   "n_vowel_seeds_used": 2,
+   "n_cons_seeds_used": 3,
+   "n_heldout": 43,
+   "n_heldout_vowel_like": 9,
+   "heldout_vowel_like_signs": [
+    "QA",
+    "U",
+    "DA",
+    "KI",
+    "SA",
+    "KU",
+    "QE",
+    "SI",
+    "KA"
+   ],
+   "heldout_top8": [
+    [
+     "QA",
+     0.012
+    ],
+    [
+     "U",
+     0.011
+    ],
+    [
+     "DA",
+     0.009
+    ],
+    [
+     "KI",
+     0.008
+    ],
+    [
+     "SA",
+     0.003
+    ],
+    [
+     "KU",
+     0.003
+    ],
+    [
+     "QE",
+     0.003
+    ],
+    [
+     "SI",
+     0.003
+    ]
+   ],
+   "heldout_bottom5": [
+    [
+     "RA2",
+     -0.009
+    ],
+    [
+     "O",
+     -0.011
+    ],
+    [
+     "ZU",
+     -0.015
+    ],
+    [
+     "PA3",
+     -0.016
+    ],
+    [
+     "WA",
+     -0.018
+    ]
+   ],
+   "wp1_vowel_cands_recovered": [
+    "U"
+   ],
+   "vscore_spread": 1.6147
+  },
+  "freq_prior_k3_pos+sub": {
+   "n_signs": 48,
+   "n_vowel_seeds_used": 3,
+   "n_cons_seeds_used": 3,
+   "n_heldout": 42,
+   "n_heldout_vowel_like": 30,
+   "heldout_vowel_like_signs": [
+    "TE",
+    "I",
+    "NI",
+    "E",
+    "RO",
+    "TU",
+    "QA",
+    "RI",
+    "DE",
+    "A",
+    "U",
+    "NA",
+    "MA",
+    "DU",
+    "TI",
+    "RE",
+    "DI",
+    "DA",
+    "MI",
+    "NU",
+    "RA",
+    "SA",
+    "SE",
+    "KI",
+    "SU",
+    "JA",
+    "RU",
+    "TA",
+    "O",
+    "QE"
+   ],
+   "heldout_top8": [
+    [
+     "TE",
+     0.018
+    ],
+    [
+     "I",
+     0.015
+    ],
+    [
+     "NI",
+     0.014
+    ],
+    [
+     "E",
+     0.011
+    ],
+    [
+     "RO",
+     0.006
+    ],
+    [
+     "TU",
+     0.006
+    ],
+    [
+     "QA",
+     0.004
+    ],
+    [
+     "RI",
+     0.003
+    ]
+   ],
+   "heldout_bottom5": [
+    [
+     "PA",
+     -0.007
+    ],
+    [
+     "ZE",
+     -0.008
+    ],
+    [
+     "ZU",
+     -0.012
+    ],
+    [
+     "PA3",
+     -0.012
+    ],
+    [
+     "WA",
+     -0.014
+    ]
+   ],
+   "wp1_vowel_cands_recovered": [
+    "A",
+    "I",
+    "U"
+   ],
+   "vscore_spread": 1.6224
+  },
+  "freq_prior_k3_pos_only": {
+   "n_signs": 48,
+   "n_vowel_seeds_used": 3,
+   "n_cons_seeds_used": 3,
+   "n_heldout": 42,
+   "n_heldout_vowel_like": 15,
+   "heldout_vowel_like_signs": [
+    "TE",
+    "NI",
+    "I",
+    "E",
+    "RO",
+    "TU",
+    "O",
+    "A",
+    "QA",
+    "RE",
+    "KI",
+    "DI",
+    "JA",
+    "DA",
+    "U"
+   ],
+   "heldout_top8": [
+    [
+     "TE",
+     0.062
+    ],
+    [
+     "NI",
+     0.058
+    ],
+    [
+     "I",
+     0.044
+    ],
+    [
+     "E",
+     0.037
+    ],
+    [
+     "RO",
+     0.021
+    ],
+    [
+     "TU",
+     0.014
+    ],
+    [
+     "O",
+     0.006
+    ],
+    [
+     "A",
+     0.001
+    ]
+   ],
+   "heldout_bottom5": [
+    [
+     "ZA",
+     -0.027
+    ],
+    [
+     "RA2",
+     -0.03
+    ],
+    [
+     "ZU",
+     -0.04
+    ],
+    [
+     "PA3",
+     -0.043
+    ],
+    [
+     "WA",
+     -0.051
+    ]
+   ],
+   "wp1_vowel_cands_recovered": [
+    "A",
+    "I",
+    "U"
+   ],
+   "vscore_spread": 1.6915
+  }
+ },
+ "packed_vs_word_delta": {
+  "n_signs_freq>=20": {
+   "packed": 46,
+   "word": 48
+  },
+  "AI_anchor_heldout_vowel_like": {
+   "packed": 6,
+   "word": 9,
+   "delta": 3
+  },
+  "AI_anchor_wp1_recovered": {
+   "packed": [],
+   "word": [
+    "U"
+   ]
+  },
+  "freq_prior_pos+sub_heldout_vowel_like": {
+   "packed": 27,
+   "word": 30
+  },
+  "vscore_spread_AI": {
+   "packed": 1.6029,
+   "word": 1.6147
+  }
+ },
+ "verdict": "IMPROVED",
+ "headline": "Opaque-LB gate holds (reduced-seed propagation recovers held-out C/V with min 3 clean vowel seed(s)). On LA, seeding {A,I} as typological vowels propagates to 6 held-out vowel-like signs packed -> 9 word (delta +3). Word position features are word-relative (true initial/final), so the C/V bootstrap propagates further under word segmentation."
+}

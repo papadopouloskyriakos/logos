@@ -1,0 +1,455 @@
+{
+ "experiment": "WP7_word_segmented_substitution_channel",
+ "seed": 20260708,
+ "n_null": 300,
+ "ngrams": [
+  2,
+  3,
+  4
+ ],
+ "non_circular": "LA sign-identity contexts only; LB values grade the LB benchmark only",
+ "LB_benchmark_word_units": {
+  "passed": true,
+  "operating_point": {
+   "threshold": 80,
+   "edges": 652,
+   "nodes": 48,
+   "density": 0.578,
+   "prec_either": 0.3175,
+   "prec_vowel": 0.2454,
+   "prec_cons": 0.0721,
+   "null_mean": 0.2754,
+   "null_sd": 0.005,
+   "lift": 1.153,
+   "z": 8.46,
+   "p": 0.0033
+  },
+  "pair_auc_rawweight": 0.552,
+  "graded_edges_scored": 2538,
+  "lb_max_edge_weight": 303
+ },
+ "LA_packed_baseline": {
+  "unit": "packed_inscription",
+  "n_units": 539,
+  "mean_signs_per_unit": 7.876,
+  "n_ngrams": 9620,
+  "full_graph": {
+   "nodes": 85,
+   "edges": 2940,
+   "density": 0.8235,
+   "mean_degree": 69.18,
+   "max_degree": 84,
+   "components": 1,
+   "largest_component": 85
+  },
+  "max_edge_weight": 105,
+  "top3_weights": [
+   105,
+   95,
+   94
+  ],
+  "weight_tail_counts": {
+   ">=2": 2512,
+   ">=3": 2224,
+   ">=5": 1844,
+   ">=8": 1521,
+   ">=12": 1265,
+   ">=20": 946,
+   ">=30": 654,
+   ">=50": 328,
+   ">=80": 26,
+   ">=120": 0
+  },
+  "strong_threshold": 50,
+  "strong_subgraph": {
+   "nodes": 31,
+   "edges": 328,
+   "density": 0.7054,
+   "mean_degree": 21.16,
+   "max_degree": 29,
+   "components": 1,
+   "largest_component": 31
+  },
+  "top_substitution_edges": [
+   {
+    "pair": [
+     "A",
+     "JA"
+    ],
+    "contexts": 105
+   },
+   {
+    "pair": [
+     "A",
+     "PA"
+    ],
+    "contexts": 95
+   },
+   {
+    "pair": [
+     "A",
+     "DA"
+    ],
+    "contexts": 94
+   },
+   {
+    "pair": [
+     "A",
+     "TE"
+    ],
+    "contexts": 94
+   },
+   {
+    "pair": [
+     "A",
+     "I"
+    ],
+    "contexts": 94
+   },
+   {
+    "pair": [
+     "A",
+     "KU"
+    ],
+    "contexts": 93
+   },
+   {
+    "pair": [
+     "KI",
+     "KU"
+    ],
+    "contexts": 90
+   },
+   {
+    "pair": [
+     "A",
+     "TA"
+    ],
+    "contexts": 88
+   },
+   {
+    "pair": [
+     "JA",
+     "NA"
+    ],
+    "contexts": 87
+   },
+   {
+    "pair": [
+     "A",
+     "MA"
+    ],
+    "contexts": 87
+   },
+   {
+    "pair": [
+     "DA",
+     "KU"
+    ],
+    "contexts": 86
+   },
+   {
+    "pair": [
+     "A",
+     "SI"
+    ],
+    "contexts": 86
+   },
+   {
+    "pair": [
+     "KU",
+     "NA"
+    ],
+    "contexts": 84
+   },
+   {
+    "pair": [
+     "DA",
+     "JA"
+    ],
+    "contexts": 83
+   },
+   {
+    "pair": [
+     "MA",
+     "TE"
+    ],
+    "contexts": 83
+   },
+   {
+    "pair": [
+     "TA",
+     "TE"
+    ],
+    "contexts": 82
+   },
+   {
+    "pair": [
+     "KU",
+     "MA"
+    ],
+    "contexts": 82
+   },
+   {
+    "pair": [
+     "NA",
+     "TA"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "I",
+     "JA"
+    ],
+    "contexts": 81
+   },
+   {
+    "pair": [
+     "JA",
+     "SI"
+    ],
+    "contexts": 81
+   }
+  ],
+  "cv_partition_check": {
+   "n_null": 150,
+   "graded_edges": 328,
+   "nodes": 31,
+   "obs_same_CVclass_rate": 0.7835,
+   "null_mean": 0.7734,
+   "null_sd": 0.0039,
+   "z": 2.59,
+   "p_two_sided": 0.053,
+   "note": "exploratory median-split of WP3.1 vowel-likeness; NOT a gate, values never fed to graph",
+   "threshold": 50
+  }
+ },
+ "LA_word_segmented": {
+  "unit": "gorila_word",
+  "n_units": 2479,
+  "mean_signs_per_unit": 2.003,
+  "n_ngrams": 4203,
+  "full_graph": {
+   "nodes": 81,
+   "edges": 2526,
+   "density": 0.7796,
+   "mean_degree": 62.37,
+   "max_degree": 79,
+   "components": 1,
+   "largest_component": 81
+  },
+  "max_edge_weight": 47,
+  "top3_weights": [
+   47,
+   47,
+   46
+  ],
+  "weight_tail_counts": {
+   ">=2": 2012,
+   ">=3": 1711,
+   ">=5": 1353,
+   ">=8": 1017,
+   ">=12": 736,
+   ">=20": 389,
+   ">=30": 154,
+   ">=50": 0,
+   ">=80": 0,
+   ">=120": 0
+  },
+  "strong_threshold": 30,
+  "strong_subgraph": {
+   "nodes": 24,
+   "edges": 154,
+   "density": 0.558,
+   "mean_degree": 12.83,
+   "max_degree": 21,
+   "components": 1,
+   "largest_component": 24
+  },
+  "top_substitution_edges": [
+   {
+    "pair": [
+     "JA",
+     "NA"
+    ],
+    "contexts": 47
+   },
+   {
+    "pair": [
+     "A",
+     "JA"
+    ],
+    "contexts": 47
+   },
+   {
+    "pair": [
+     "NA",
+     "TA"
+    ],
+    "contexts": 46
+   },
+   {
+    "pair": [
+     "KA",
+     "TA"
+    ],
+    "contexts": 42
+   },
+   {
+    "pair": [
+     "KA",
+     "NA"
+    ],
+    "contexts": 41
+   },
+   {
+    "pair": [
+     "DA",
+     "NA"
+    ],
+    "contexts": 41
+   },
+   {
+    "pair": [
+     "KI",
+     "TA"
+    ],
+    "contexts": 41
+   },
+   {
+    "pair": [
+     "KI",
+     "TI"
+    ],
+    "contexts": 41
+   },
+   {
+    "pair": [
+     "DA",
+     "KA"
+    ],
+    "contexts": 40
+   },
+   {
+    "pair": [
+     "JA",
+     "MA"
+    ],
+    "contexts": 40
+   },
+   {
+    "pair": [
+     "NA",
+     "TE"
+    ],
+    "contexts": 40
+   },
+   {
+    "pair": [
+     "DA",
+     "KI"
+    ],
+    "contexts": 40
+   },
+   {
+    "pair": [
+     "DI",
+     "TA"
+    ],
+    "contexts": 40
+   },
+   {
+    "pair": [
+     "MA",
+     "MI"
+    ],
+    "contexts": 39
+   },
+   {
+    "pair": [
+     "DA",
+     "TA"
+    ],
+    "contexts": 39
+   },
+   {
+    "pair": [
+     "A",
+     "DA"
+    ],
+    "contexts": 39
+   },
+   {
+    "pair": [
+     "A",
+     "NA"
+    ],
+    "contexts": 39
+   },
+   {
+    "pair": [
+     "NA",
+     "SI"
+    ],
+    "contexts": 39
+   },
+   {
+    "pair": [
+     "KA",
+     "MA"
+    ],
+    "contexts": 38
+   },
+   {
+    "pair": [
+     "MA",
+     "NA"
+    ],
+    "contexts": 38
+   }
+  ],
+  "cv_partition_check": {
+   "n_null": 150,
+   "graded_edges": 154,
+   "nodes": 24,
+   "obs_same_CVclass_rate": 0.8377,
+   "null_mean": 0.8406,
+   "null_sd": 0.0058,
+   "z": -0.5,
+   "p_two_sided": 1.0,
+   "note": "exploratory median-split of WP3.1 vowel-likeness; NOT a gate, values never fed to graph",
+   "threshold": 30
+  }
+ },
+ "packed_vs_word_delta": {
+  "max_edge_weight": {
+   "packed": 105,
+   "word": 47,
+   "delta": -58
+  },
+  "clean_regime_target": 120,
+  "reaches_clean_regime": {
+   "packed": false,
+   "word": false
+  },
+  "strong_edges": {
+   "packed": 328,
+   "word": 154
+  },
+  "strong_largest_component": {
+   "packed": 31,
+   "word": 24
+  },
+  "cv_check_z": {
+   "packed": 2.59,
+   "word": -0.5,
+   "same_CVclass_rate": {
+    "packed": 0.7835,
+    "word": 0.8377
+   }
+  }
+ },
+ "verdict": "AT_END_TO_END_NULL",
+ "headline": "Word-segmentation moved LA substitution max context-weight 105 -> 47 (delta -58; clean regime ~120). Strong-subgraph edges 328 -> 154. GORILA words are short (mean 1.84), which starves the substitution channel of multi-sign contexts; the context-starvation (-) direction dominates."
+}

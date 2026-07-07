@@ -71,5 +71,20 @@
   "packed_auc": 0.685,
   "word_auc": 0.76,
   "lb_ceiling": 0.835
+ },
+ "WordSeg": {
+  "verdict": "IMPROVED (channel-dependent)",
+  "substitution": "105->47 (hurt)",
+  "cv_bootstrap": "6->9 vowel-like (helped)"
+ },
+ "CandidateRound1": {
+  "verdict": "AT_END_TO_END_NULL",
+  "families": 3,
+  "note": "SEM clears 0.030 but random control also clears -> artifact"
+ },
+ "SourceAudit": {
+  "sources": 63,
+  "independent": 48,
+  "held_out_gold": "Anetaki II"
  }
 }
