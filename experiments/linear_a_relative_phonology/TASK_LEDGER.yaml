@@ -12,6 +12,7 @@ meta:
   gitignore_note: "reports/ and data/ are ignored -> git add -f; models/seals/manifests/configs/preregistrations tracked"
 
 tasks:
+  # BONUS (wave2): C_AUDIT -> SUBSTITUTION_CONSONANT_AXIS_VALIDATED on LB (survives the WP-A battery); scope: detector on known script, no LA licence
 
   # ===== WP-A: replicate & audit the C/V analogue result (THE critical honesty task) =====
   - task_id: A1_reconstruct
@@ -138,14 +139,16 @@ tasks:
     work_package: C
     objective: "LA substitution graph (anonymous REL_CLASS_xx only); edge types single-sub/prefix/suffix/optional/transposition/allograph"
     dependencies: [C3_lb_calib]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — graph built; CONSONANT_HELD_ANALOGUE NOT_RECOVERED on LA (underpowered + word-initial wrong-signature)"
     required_outputs: [reports/C_LINEAR_A_SUBSTITUTION_GRAPH.md, data/C_la_graph.json]
     next_task_on_success: C5_stability
   - task_id: C5_stability
     work_package: C
     objective: "Bootstrap/site-holdout/segmentation/encoding/damage/formula-exclusion stability + information gain (classes reduced)"
     dependencies: [C4_la_graph]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — FRAGILE; severe Haghia-Triada dependency; deflated info-gain 4 bits (vs 12 if-true)"
     required_outputs: [reports/C_STABILITY_AND_NULLS.md, reports/C_INFORMATION_GAIN.md]
     next_task_on_success: D1_multiview
 
@@ -228,21 +231,24 @@ tasks:
     work_package: F
     objective: "Per-correspondence separate scores: shape/stroke/orientation/chrono/geo/function/scholarly-status/source-dependency (no combining until each calibrated)"
     dependencies: []
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — only admin_function non-circular+calibratable, = NULL; value channels circular; 0/59 primary value source"
     required_outputs: [reports/F_EVIDENCE_DECOMPOSITION.md]
     next_task_on_success: F2_calib
   - task_id: F2_calib
     work_package: F
     objective: "Known-script pairs/stages: does shape predict descent? descent->value continuity? function help? chrono reduce false matches?"
     dependencies: [F1_decompose]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — known-script calibration; cross-script value power NULL at LA scale"
     required_outputs: [reports/F_KNOWN_SCRIPT_CALIBRATION.md]
     next_task_on_success: F4_loso
   - task_id: F4_loso
     work_package: F
     objective: "LA-LB subsets (shape/paleo/function/multi-channel/contested); leave-one-sign-out predict class/value-family vs shape-only+freq baselines; Cypro-Minoan sensitivity; relative-class compatibility w/ WP-D"
     dependencies: [F2_calib]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — LOSO NULL (R@5 0.071 vs shuffled 0.066; 4th distributional null, concordant REFUTE_LOTO_FRAGILE)"
     required_outputs: [reports/F_LINEAR_A_LINEAR_B_SUBSETS.md, reports/F_LEAVE_ONE_SIGN_OUT.md, reports/F_CYPRO_MINOAN_SENSITIVITY.md, reports/F_RELATIVE_CLASS_COMPATIBILITY.md]
     next_task_on_success: G1_anchor_audit
 
@@ -251,21 +257,24 @@ tasks:
     work_package: G
     objective: "Audit existing 115 anchors (source/page/chrono/geo/dependency/locus/slots/rule-complexity/tier/exposure/held-out/failure); remove dup+dependency clones"
     dependencies: []
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — 115 records -> 6 lineages / 1 value channel / 5 toponym equations; zero held-out-survivable"
     required_outputs: [reports/G_EXISTING_ANCHOR_AUDIT.md, data/anchors_v2/]
     next_task_on_success: G2_expand
   - task_id: G2_expand
     work_package: G
     objective: "Expand high-value multi-sign-constraining classes (multi-slot toponyms, repeated names, titles w/ morphology, commodity+context, seal-owner, foreign names, shared formulae)"
     dependencies: [G1_anchor_audit]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — rich relative substrate but ZERO new value-bearing anchors"
     required_outputs: [reports/G_NEW_HIGH_VALUE_ANCHORS.md]
     next_task_on_success: G3_seedq
   - task_id: G3_seedq
     work_package: G
     objective: "Seed quality classes SEED_A/B/C/X (shape alone cannot be SEED_A); compound systems (>=4 signs, >=2 contexts, >=2 channels); anchor nulls (incl best-of-subset, leave-one-anchor/rule-out)"
     dependencies: [G2_expand]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — SEED_A=0; no independently-secure value seed; value substrate = one circular toponym lineage"
     required_outputs: [reports/G_SEED_QUALITY.md, reports/G_COMPOUND_SYSTEMS.md, reports/G_ANCHOR_NULLS.md]
     next_task_on_success: H1_round1
 
