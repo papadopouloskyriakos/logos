@@ -2,3 +2,7 @@ source_id,name,type,lineage,machine_readable,new_information,status,notes
 SRC-SILVER,logos silver corpus (LA),derived,L_LA_CORPUS,yes,baseline,PRESENT,read-only from main
 SRC-SIGNS-ONTOLOGY,signs_ontology.json,derived,L_LA_CORPUS,yes,sign classes+allograph families,PRESENT,Stage A parameter recount
 SRC-INVENTORIES,inventory_syllabograms_{raw,conservative,exploratory},derived,L_LA_CORPUS,yes,V=131/92/88,PRESENT,parameter sensitivity
+SRC-SALGARELLA-2020,Salgarella 2020 Aegean Linear Scripts,print,L_SIGN_HOMOMORPHY,partial(pdf),shape homomorphy grades (circular),PRESENT,corpus/bronze/salgarella_2020 — un-blocked
+SRC-YOUNGER-LA,Younger Linear A edition,print/txt,L_LA_CORPUS,yes,findspot + lexicon (same lineage),PRESENT,corpus/bronze/younger_lineara
+SRC-KANTA-2024-ANETAKI,Kanta et al 2024 Anetaki,excavation,L_LA_CORPUS,partial,1 new inscription KO-RO-NO-WE-SA,PRESENT,single 5-sign sequence
+SRC-CHIAPELLO-PRED,Chiapello 2024 ivory-circle prediction,academia,external,partial,3rd-party prediction registry object,PRESENT,not a LOGOS route

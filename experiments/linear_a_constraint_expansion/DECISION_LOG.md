@@ -16,3 +16,8 @@
   clean wordform types for Stage D. Recovered channels: support-invariance (H(support|site)=1.23), accounting
   (blocked on notation typing), findspot (Younger bronze). Data-hygiene: subscript key normalization fixed.
   Commit: _(this)_. Checkpoint 1 written.
+- **Stage C `C_NEW_INFORMATION_FOUND` (not value-informative).** Bronze holds new/newly-available material:
+  Salgarella 2020 (shape homomorphy — circular, <=0.75), Younger edition (same lineage + findspot), Kanta 2024
+  Anetaki = 1 new inscription KO-RO-NO-WE-SA (5 signs), del Freo rapport, Chiapello prepub prediction (3rd-party
+  registry). None supplies a non-circular VALUE constraint; corpus near-exhausted for value evidence. Findspot
+  (Younger) + support-type (B6) are the usable new invariance axes for Stage D. Commit: _(this)_.
