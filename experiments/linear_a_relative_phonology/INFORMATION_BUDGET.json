@@ -1,0 +1,11 @@
+{
+ "as_of": "2026-07-07",
+ "corpus": {
+  "la_silver_inscriptions": 1341,
+  "la_sites": 52,
+  "lb_damos_wordforms": 13562,
+  "la_packed_load_a": 539,
+  "la_gorila_words": 3147
+ },
+ "note": "effective_n computed per task; raw counts are script-generated"
+}

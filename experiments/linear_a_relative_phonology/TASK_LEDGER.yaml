@@ -1,0 +1,335 @@
+# TASK_LEDGER — Linear A relative-phonology, segmentation & prospective-seal campaign
+# Branch research/linear-a-relative-phonology-seals · parent Foundry 09f7ef9 · Constitution v2.2
+# States: QUEUED | RUNNING | BLOCKED | COMPLETE | REFUTED | NO_POWER | INVALID
+# A checkpoint is NOT a stopping point. After each: update ledger -> select next unblocked -> continue.
+
+meta:
+  parent_commit: 09f7ef9
+  main_untouched: 6fd4f20
+  constitution: v2.2
+  paper_frozen_sha256_16: a2ab89fa313e5b30
+  test_baseline: "38 passed (core governance+cross-script; run_tamburini collection quirk pre-existing)"
+  gitignore_note: "reports/ and data/ are ignored -> git add -f; models/seals/manifests/configs/preregistrations tracked"
+
+tasks:
+
+  # ===== WP-A: replicate & audit the C/V analogue result (THE critical honesty task) =====
+  - task_id: A1_reconstruct
+    work_package: A
+    objective: "Recover & recompute from scratch the Foundry position->C/V result (LB cv_auc 0.835, perm_p 0.01, single-feat WP1 0.744, p 0.035)"
+    dependencies: []
+    entry_gate: "Foundry data/wp3_cv_recovery.json + scripts/wp3_cv_recovery.py + wp1_symmetry_break.py present"
+    required_outputs: [reports/A_ORIGINAL_RESULT_RECONSTRUCTION.md, data/A1_recompute.json]
+    tests: ["recomputed AUC within tolerance of published; seeds/splits documented"]
+    status: QUEUED
+    next_task_on_success: A2_multiplicity
+    next_task_on_failure: A2_multiplicity   # audit continues regardless
+
+  - task_id: A2_multiplicity
+    work_package: A
+    objective: "Was p~0.035 corrected for feature-family/segmentation/model/threshold/seed/site/sign-inventory/post-hoc search? Report unadjusted, FWER, FDR-q, end-to-end search-adjusted."
+    dependencies: [A1_reconstruct]
+    status: QUEUED
+    required_outputs: [reports/A_MULTIPLICITY_AUDIT.md, data/A2_multiplicity.json]
+    next_task_on_success: A3_replications
+    next_task_on_failure: A3_replications
+
+  - task_id: A3_replications
+    work_package: A
+    objective: "3+ genuinely distinct implementations (position-distribution / Bayesian latent class / sequence-FSM latent class), not sharing all decisive assumptions"
+    dependencies: [A1_reconstruct]
+    status: QUEUED
+    required_outputs: [reports/A_INDEPENDENT_REPLICATIONS.md, data/A3_replications.json]
+    next_task_on_success: A4_grouped
+    next_task_on_failure: A4_grouped
+
+  - task_id: A4_grouped
+    work_package: A
+    objective: "Grouped eval: leave-one-site-out, leave-one-series-out, leave-one-freq-band-out, chronological holdout"
+    dependencies: [A3_replications]
+    status: QUEUED
+    required_outputs: [reports/A_GROUPED_GENERALIZATION.md, data/A4_grouped.json]
+    next_task_on_success: A5_degradation
+    next_task_on_failure: A5_degradation
+
+  - task_id: A5_degradation
+    work_package: A
+    objective: "Degrade opaque LB toward LA along SEPARATE axes (size/hapax/site-imbalance/damage/seg-uncertainty/layout/scribe/seq-length/notation) -> full response surface, not just '1.7x below power'"
+    dependencies: [A3_replications]
+    status: QUEUED
+    required_outputs: [reports/A_DEGRADATION_RESPONSE_SURFACE.md, data/A5_surface.json]
+    next_task_on_success: A6_nulls
+    next_task_on_failure: A6_nulls
+
+  - task_id: A6_nulls
+    work_package: A
+    objective: "Complete nulls incl. best-of-model/segmentation/seed selection nulls"
+    dependencies: [A2_multiplicity, A3_replications]
+    status: QUEUED
+    required_outputs: [reports/A_END_TO_END_NULLS.md, data/A6_nulls.json]
+    verdict_options: [CV_ANALOGUE_REPLICATED, CV_ANALOGUE_EXPLORATORY_ONLY, CV_ANALOGUE_REFUTED, CV_ANALOGUE_INCOMPLETE]
+    next_task_on_success: B1_representations
+    next_task_on_failure: B1_representations
+
+  # ===== WP-B: channel-specific segmentation =====
+  - task_id: B1_representations
+    work_package: B
+    objective: "Build SEG_{DIPLOMATIC,GORILA_WORD,INSCRIPTION_CONTEXT,ROW,ENTRY,FORMULA,PROBABILISTIC_BOUNDARY,MULTI_SCALE}; provenance+reversibility preserved"
+    dependencies: []
+    status: QUEUED
+    required_outputs: [reports/B_SEGMENTATION_REPRESENTATIONS.md, data/segmentations/]
+    next_task_on_success: B3_known_script
+  - task_id: B3_known_script
+    work_package: B
+    objective: "LB (lexical hidden): boundary F1 + downstream C/V/substitution/morphology recovery per segmentation model family"
+    dependencies: [B1_representations]
+    status: QUEUED
+    required_outputs: [reports/B_KNOWN_SCRIPT_BOUNDARY_RECOVERY.md]
+    next_task_on_success: B4_synthetic
+  - task_id: B4_synthetic
+    work_package: B
+    objective: "Synthetic syllabic corpora (known morpheme boundaries, formulaic, high hapax, damage, imbalance, mixed conventions) -> calibration+failure"
+    dependencies: [B1_representations]
+    status: QUEUED
+    required_outputs: [reports/B_SYNTHETIC_SEGMENTATION.md]
+    next_task_on_success: B5_la_ensemble
+  - task_id: B5_la_ensemble
+    work_package: B
+    objective: "Apply only VALIDATED models to LA; per-boundary prob + cross-model agreement + site/encoding/damage sensitivity (no single deterministic ground-truth)"
+    dependencies: [B3_known_script, B4_synthetic]
+    status: QUEUED
+    required_outputs: [reports/B_LINEAR_A_SEGMENTATION_ENSEMBLE.md, data/segmentations/la_ensemble.json]
+    next_task_on_success: B6_downstream
+  - task_id: B6_downstream
+    work_package: B
+    objective: "Causal test: freeze each seg -> rerun class/substitution/morphology -> must improve HELD-OUT known-script recovery, not LA internal fit; charge seg search"
+    dependencies: [B5_la_ensemble]
+    status: QUEUED
+    required_outputs: [reports/B_DOWNSTREAM_CAUSAL_TEST.md]
+    next_task_on_success: C1_candidates
+
+  # ===== WP-C: scribal substitutions & orthographic alternations =====
+  - task_id: C1_candidates
+    work_package: C
+    objective: "Find one/few-sign-diff pairs in matched contexts; separate same-doc/formula/site/cross-site/chrono/correction/allograph/damage/edition-disagreement"
+    dependencies: []
+    status: QUEUED
+    required_outputs: [reports/C_CANDIDATE_SUBSTITUTIONS.md]
+    next_task_on_success: C3_lb_calib
+  - task_id: C3_lb_calib
+    work_package: C
+    objective: "LB benchmark: recover same-V/same-C/spelling-variant/morphophono/error vs freq-matched/edit-distance/context-only/formula-only baselines"
+    dependencies: [C1_candidates]
+    status: QUEUED
+    required_outputs: [reports/C_LINEAR_B_CALIBRATION.md]
+    next_task_on_success: C4_la_graph
+  - task_id: C4_la_graph
+    work_package: C
+    objective: "LA substitution graph (anonymous REL_CLASS_xx only); edge types single-sub/prefix/suffix/optional/transposition/allograph"
+    dependencies: [C3_lb_calib]
+    status: QUEUED
+    required_outputs: [reports/C_LINEAR_A_SUBSTITUTION_GRAPH.md, data/C_la_graph.json]
+    next_task_on_success: C5_stability
+  - task_id: C5_stability
+    work_package: C
+    objective: "Bootstrap/site-holdout/segmentation/encoding/damage/formula-exclusion stability + information gain (classes reduced)"
+    dependencies: [C4_la_graph]
+    status: QUEUED
+    required_outputs: [reports/C_STABILITY_AND_NULLS.md, reports/C_INFORMATION_GAIN.md]
+    next_task_on_success: D1_multiview
+
+  # ===== WP-D: relative phonological feature induction =====
+  - task_id: D1_multiview
+    work_package: D
+    objective: "Multi-view latent model over audited channels (position/substitution/morphology/formula/site/shape-capped) w/ missing-channel handling"
+    dependencies: [C5_stability]
+    status: QUEUED
+    required_outputs: [reports/D_MULTIVIEW_RELATIVE_FEATURES.md]
+    next_task_on_success: D2_ablations
+  - task_id: D2_ablations
+    work_package: D
+    objective: "View ablations (position/substitution/morphology/shape and combinations); shape-only capped, no phonetic authority"
+    dependencies: [D1_multiview]
+    status: QUEUED
+    required_outputs: [reports/D_VIEW_ABLATIONS.md]
+    next_task_on_success: D3_seed_audit
+  - task_id: D3_seed_audit
+    work_package: D
+    objective: "Audit the Foundry '3-4 seeds -> 0.87' claim: which seeds, selection, independence, sensitivity, random/adversarial/leave-one-seed-out, measured on INDEPENDENT signs; forbid post-hoc seed selection"
+    dependencies: [D1_multiview]
+    status: QUEUED
+    required_outputs: [reports/D_SEED_PROPAGATION_AUDIT.md]
+    next_task_on_success: D4_frontier
+  - task_id: D4_frontier
+    work_package: D
+    objective: "Minimal-seed frontier 0..5+ seeds x {random, shared-sign, shape-selected, anchor-derived, incorrect}"
+    dependencies: [D3_seed_audit]
+    status: QUEUED
+    required_outputs: [reports/D_MINIMAL_SEED_FRONTIER.md]
+    next_task_on_success: D5_posterior
+  - task_id: D5_posterior
+    work_package: D
+    objective: "LA anonymous posterior classes + uncertainties ONLY (no absolute values)"
+    dependencies: [D2_ablations, D4_frontier]
+    status: QUEUED
+    required_outputs: [reports/D_LINEAR_A_RELATIVE_POSTERIOR.md, data/D_la_posterior.json]
+    next_task_on_success: E1_morphology
+
+  # ===== WP-E: morphology & formula grammar =====
+  - task_id: E1_morphology
+    work_package: E
+    objective: "3 anonymous morphology families (MDL/Bayesian/FSM-paradigm) -> stems/prefix/suffix/optional/reduplication/slot-alternation"
+    dependencies: [B6_downstream]
+    status: QUEUED
+    required_outputs: [reports/E_MORPHOLOGY_MODELS.md]
+    next_task_on_success: E2_formula
+  - task_id: E2_formula
+    work_package: E
+    objective: "Formula grammar (FSM/prob) by site/support/doc-type/chrono/length"
+    dependencies: [E1_morphology]
+    status: QUEUED
+    required_outputs: [reports/E_FORMULA_GRAMMAR.md]
+    next_task_on_success: E3_crosssite
+  - task_id: E3_crosssite
+    work_package: E
+    objective: "Cross-site generalization: train major->other, non-major->major, LOSO, leave-one-formula-family-out"
+    dependencies: [E1_morphology]
+    status: QUEUED
+    required_outputs: [reports/E_CROSS_SITE_GENERALIZATION.md]
+    next_task_on_success: E4_paramreduce
+  - task_id: E4_paramreduce
+    work_package: E
+    objective: "Parameter reduction: compression AND held-out predictive improvement (compression-only does not advance)"
+    dependencies: [E1_morphology]
+    status: QUEUED
+    required_outputs: [reports/E_PARAMETER_REDUCTION.md]
+    next_task_on_success: E5_wrongstruct
+  - task_id: E5_wrongstruct
+    work_package: E
+    objective: "Wrong-structure controls (shuffled suffix/stem, random seg, site-preserving shuffle, freq-matched pseudo-morph, synthetic wrong-language)"
+    dependencies: [E1_morphology]
+    status: QUEUED
+    required_outputs: [reports/E_WRONG_STRUCTURE_CONTROLS.md]
+    next_task_on_success: F1_decompose
+
+  # ===== WP-F: sign-shape, diachrony, cross-script =====
+  - task_id: F1_decompose
+    work_package: F
+    objective: "Per-correspondence separate scores: shape/stroke/orientation/chrono/geo/function/scholarly-status/source-dependency (no combining until each calibrated)"
+    dependencies: []
+    status: QUEUED
+    required_outputs: [reports/F_EVIDENCE_DECOMPOSITION.md]
+    next_task_on_success: F2_calib
+  - task_id: F2_calib
+    work_package: F
+    objective: "Known-script pairs/stages: does shape predict descent? descent->value continuity? function help? chrono reduce false matches?"
+    dependencies: [F1_decompose]
+    status: QUEUED
+    required_outputs: [reports/F_KNOWN_SCRIPT_CALIBRATION.md]
+    next_task_on_success: F4_loso
+  - task_id: F4_loso
+    work_package: F
+    objective: "LA-LB subsets (shape/paleo/function/multi-channel/contested); leave-one-sign-out predict class/value-family vs shape-only+freq baselines; Cypro-Minoan sensitivity; relative-class compatibility w/ WP-D"
+    dependencies: [F2_calib]
+    status: QUEUED
+    required_outputs: [reports/F_LINEAR_A_LINEAR_B_SUBSETS.md, reports/F_LEAVE_ONE_SIGN_OUT.md, reports/F_CYPRO_MINOAN_SENSITIVITY.md, reports/F_RELATIVE_CLASS_COMPATIBILITY.md]
+    next_task_on_success: G1_anchor_audit
+
+  # ===== WP-G: external anchors & seed design =====
+  - task_id: G1_anchor_audit
+    work_package: G
+    objective: "Audit existing 115 anchors (source/page/chrono/geo/dependency/locus/slots/rule-complexity/tier/exposure/held-out/failure); remove dup+dependency clones"
+    dependencies: []
+    status: QUEUED
+    required_outputs: [reports/G_EXISTING_ANCHOR_AUDIT.md, data/anchors_v2/]
+    next_task_on_success: G2_expand
+  - task_id: G2_expand
+    work_package: G
+    objective: "Expand high-value multi-sign-constraining classes (multi-slot toponyms, repeated names, titles w/ morphology, commodity+context, seal-owner, foreign names, shared formulae)"
+    dependencies: [G1_anchor_audit]
+    status: QUEUED
+    required_outputs: [reports/G_NEW_HIGH_VALUE_ANCHORS.md]
+    next_task_on_success: G3_seedq
+  - task_id: G3_seedq
+    work_package: G
+    objective: "Seed quality classes SEED_A/B/C/X (shape alone cannot be SEED_A); compound systems (>=4 signs, >=2 contexts, >=2 channels); anchor nulls (incl best-of-subset, leave-one-anchor/rule-out)"
+    dependencies: [G2_expand]
+    status: QUEUED
+    required_outputs: [reports/G_SEED_QUALITY.md, reports/G_COMPOUND_SYSTEMS.md, reports/G_ANCHOR_NULLS.md]
+    next_task_on_success: H1_round1
+
+  # ===== WP-H: bounded decipherment candidate rounds =====
+  - task_id: H1_round1
+    work_package: H
+    objective: "ROUND_1 relative-class-constrained family models (<=3 serious + 1 neg-control + 1 agnostic); admission requires chrono/geo/class/morphology/anchor/structure compatibility"
+    dependencies: [D5_posterior, G3_seedq]
+    status: QUEUED
+    required_outputs: [reports/H_ROUND_1.md, data/candidates_v2/]
+    next_task_on_success: H2_round2
+  - task_id: H2_round2
+    work_package: H
+    objective: "ROUND_2 anchor-constrained family/isolate models"
+    dependencies: [H1_round1]
+    status: QUEUED
+    required_outputs: [reports/H_ROUND_2.md]
+    next_task_on_success: H3_round3
+  - task_id: H3_round3
+    work_package: H
+    objective: "ROUND_3 morphology-first joint decipherment models; model families Bayesian-joint/MDL/constraint-satisfaction; no semantic rescue (revision needs new plan hash+receipt+seal)"
+    dependencies: [H2_round2, E1_morphology]
+    status: QUEUED
+    required_outputs: [reports/H_ROUND_3.md, reports/H_MODEL_COMPARISON.md]
+    next_task_on_success: I1_agnostic
+
+  # ===== WP-I: agnostic search with relative constraints =====
+  - task_id: I1_agnostic
+    work_package: I
+    objective: "Constraint-reduced agnostic value search (>=2 methods: beam/best-first + Bayesian/MCMC); frozen objective; collapse relabeling/permutation/synonym equivalence"
+    dependencies: [D5_posterior, C5_stability]
+    status: QUEUED
+    required_outputs: [reports/I_AGNOSTIC_SEARCH_SPEC.md, reports/I_AGNOSTIC_SEARCH_RESULTS.md, reports/I_EQUIVALENCE_CLASSES.md]
+    next_task_on_success: J1_exposure
+
+  # ===== WP-J: prospective & internal sealed prediction =====
+  - task_id: J1_exposure
+    work_package: J
+    objective: "Anetaki PUBLIC-EXPOSURE AUDIT: list+hash all public preliminary sources, record known signs/layout/interp, define the unseen FINAL-EDITION DELTA only"
+    dependencies: []
+    status: QUEUED
+    required_outputs: [reports/J_PUBLIC_EXPOSURE_AUDIT.md]
+    next_task_on_success: J2_seals
+  - task_id: J2_seals
+    work_package: J
+    objective: "Freeze ANETAKI_FINAL_EDITION_DELTA_SEAL (delta-only predictions) + 4 more seals (withheld editions/disputed readings/unseen site/formula/damage/late-ingest/accounting); hashed manifests, one-at-a-time, no failed-seal reuse"
+    dependencies: [J1_exposure, D5_posterior]
+    status: QUEUED
+    required_outputs: [seals/, reports/J_SEAL_REGISTER.md]
+    next_task_on_success: K1_nulls
+
+  # ===== WP-K: full null & adversarial programme =====
+  - task_id: K1_nulls
+    work_package: K
+    objective: "Full adaptive-process null reproducing ALL selection steps (seg/class/seed/anchor/family/model/threshold/restart/subgroup); >=500 cheap / >=200 moderate / >=50 full-pipeline; estimate adaptive false-positive rate"
+    dependencies: [A6_nulls, C5_stability, D5_posterior, H3_round3, I1_agnostic]
+    status: QUEUED
+    required_outputs: [reports/K_NULL_SPEC.md, reports/K_NULL_RESULTS.md, reports/K_ADAPTIVE_FALSE_POSITIVE_RATE.md]
+    next_task_on_success: L1_sourcewatch
+
+  # ===== WP-L: active evidence & source acquisition (runs when model work blocked) =====
+  - task_id: L1_sourcewatch
+    work_package: L
+    objective: "Source watch (Anetaki II / KN Zg 57-58 final / new inscriptions / joins / re-editions / museum images / excavation reports / catalogues / onomastica / CH+CM updates); expected-info-gain ranking; ingestion readiness; prospective clock"
+    dependencies: []
+    status: QUEUED
+    required_outputs: [reports/L_SOURCE_WATCH.md, reports/L_EXPECTED_INFORMATION_GAIN.md, reports/L_INGESTION_READINESS.md, data/source_watch/]
+    next_task_on_success: M1_synthesis
+
+  # ===== WP-M: synthesis & licence evaluation =====
+  - task_id: M1_synthesis
+    work_package: M
+    objective: "Integrate w/o crossing claim layers; per-result L0-L9 wording ceiling; evaluate all 7 licence gates separately (relative-class does NOT auto-earn PHONETIC)"
+    dependencies: [K1_nulls, F4_loso, J2_seals]
+    status: QUEUED
+    required_outputs: [reports/M_SYNTHESIS.md, LICENCE_STATE.json, reports/M_FINAL_VERDICT.md]
+    verdict_options: [DECIPHERMENT_CANDIDATE_READY_FOR_EXTERNAL_REVIEW, PHONETIC_TRANSFER_LICENSE_EARNED, LEXICAL_TRANSFER_LICENSE_EARNED, SEMANTIC_TRANSFER_LICENSE_EARNED, FUNCTIONAL_TRANSFER_LICENSE_EARNED, STRUCTURAL_TRANSFER_LICENSE_EARNED, RELATIVE_PHONOLOGICAL_STRUCTURE_SUPPORTED, NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT, UNDERDETERMINED_WITHIN_TESTED_SCOPE, NO_POWER, REJECT_ARCHITECTURE, INCOMPLETE]
+    next_task_on_success: DONE

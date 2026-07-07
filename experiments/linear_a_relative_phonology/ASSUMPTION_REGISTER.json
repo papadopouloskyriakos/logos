@@ -1,0 +1,21 @@
+{
+ "as_of": "2026-07-07",
+ "assumptions": [
+  {
+   "id": "AS1",
+   "text": "Foundry p~0.035 may NOT be multiplicity-corrected \u2014 treat as exploratory until WP-A audit",
+   "status": "UNDER_TEST"
+  },
+  {
+   "id": "AS2",
+   "text": "LA relative classes are NOT assumed to be C/V until independently validated",
+   "status": "HELD"
+  },
+  {
+   "id": "AS3",
+   "text": "Anetaki inscription is PARTLY public \u2014 only the final-edition DELTA is sealable",
+   "status": "HELD"
+  }
+ ],
+ "note": "Art. XVIII assumption register"
+}
