@@ -1,0 +1,206 @@
+{
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "R_full": 500,
+ "R_cheap": 1000,
+ "R_anchor": 500,
+ "A_adaptive_bestof_affix": {
+  "description": "best-of-{affix x segmentation x slot} adaptive null for A- prefixation",
+  "observed_A_prefix_prod_gorila": 47,
+  "observed_global_max_per_seg": {
+   "SEG_GORILA_WORD.json": 47,
+   "SEG_ENTRY.json": 11,
+   "SEG_FORMULA.json": 23,
+   "SEG_DIPLOMATIC.json": 10,
+   "SEG_ROW.json": 38,
+   "SEG_MULTI_SCALE.json": 10,
+   "SEG_PROBABILISTIC_BOUNDARY.json": 19,
+   "SEG_INSCRIPTION_CONTEXT.json": 10
+  },
+  "observed_best_of_selection": 47,
+  "R": 500,
+  "affix_selection_only_gorila": {
+   "null_mean": 36.77,
+   "null_max": 48,
+   "null_95pct": 43,
+   "adaptive_p_bestof_affix_ge_obs": 0.008
+  },
+  "affix_x_segmentation_selection": {
+   "null_mean": 36.98,
+   "null_max": 48,
+   "null_95pct": 43,
+   "adaptive_p_bestof_ge_obs": 0.008
+  },
+  "per_seg_null_mean": {
+   "SEG_GORILA_WORD.json": 36.77,
+   "SEG_ENTRY.json": 12.97,
+   "SEG_FORMULA.json": 20.61,
+   "SEG_DIPLOMATIC.json": 10.43,
+   "SEG_ROW.json": 31.1,
+   "SEG_MULTI_SCALE.json": 10.52,
+   "SEG_PROBABILISTIC_BOUNDARY.json": 18.48,
+   "SEG_INSCRIPTION_CONTEXT.json": 10.42
+  }
+ },
+ "B_cross_site_bothdir": {
+  "description": "adaptive both-direction cross-site null (best-of-affix must clear BOTH HT splits)",
+  "observed_A_nonHT": 29,
+  "observed_A_HT": 16,
+  "observed_min_bothdir": 16,
+  "R": 500,
+  "null_bestof_min_mean": 15.19,
+  "null_bestof_min_max": 22,
+  "adaptive_p_bothdir_ge_obs": 0.4212
+ },
+ "C_libation_random_anchor": {
+  "description": "adaptive random-anchor-system null for libation rigid order",
+  "observed_perfect_pairs": 10,
+  "observed_pairs_tested": 10,
+  "observed_perm_p": 5e-05,
+  "observed_multi_anchor_carriers": 10,
+  "real_anchor_carrier_counts": {
+   "OP": 18,
+   "SSR": 16,
+   "UNK": 6,
+   "IPN": 4,
+   "SIR": 5
+  },
+  "n_candidate_substrings": 42,
+  "R_requested": 500,
+  "R_valid": 493,
+  "random_systems_all_pairs_perfect": 302,
+  "random_systems_perfect_AND_ge_obs_pairs": 14,
+  "random_systems_as_extreme_as_obs": 0,
+  "random_pairs_tested_distribution": {
+   "1": 2,
+   "2": 14,
+   "3": 38,
+   "4": 69,
+   "5": 56,
+   "6": 95,
+   "7": 74,
+   "8": 71,
+   "9": 33,
+   "10": 41
+  },
+  "adaptive_p_random_anchor": 0.00202,
+  "frac_random_all_perfect_but_underpowered": 0.6126,
+  "note": "0-inversions alone is CHEAP (most random systems have few co-occurring pairs, so a rigid order is trivially achievable); the observed strength is 10 co-occurring pairs ALL consistent. adaptive_p counts random systems reaching >= observed pairs, all perfect."
+ },
+ "D_ledger_random_anchor": {
+  "description": "adaptive random-anchor null for ledger KU-RO terminal-slot positive",
+  "observed_KURO_occ": 39,
+  "observed_frac_last_third": 0.6923,
+  "observed_foll_by_num_rate": 0.7949,
+  "n_candidate_ledger_words": 10,
+  "R": 500,
+  "random_anchor_mean_frac_last_third": 0.2826,
+  "random_anchor_mean_foll_rate": 0.4831,
+  "random_anchors_matching_terminal_only": 0,
+  "random_anchors_matching_both_criteria": 0,
+  "adaptive_p_terminal_only": 0.002,
+  "adaptive_p_both_criteria": 0.002,
+  "note": "positional-selection DOF only; the KU-RO='total' arithmetic sum-consistency (E2 7/31 exact) is a SEPARATE relative-structure corroboration not reproduced by position shuffling."
+ },
+ "E_corruption_battery": {
+  "observed_global_max_affix": 47,
+  "R": 1000,
+  "families": {
+   "frequency_matched_iid": {
+    "null_mean": 36.82,
+    "null_max": 54,
+    "discover_rate_ge_obs": 0.006
+   },
+   "shuffled_morphology_within_word": {
+    "null_mean": 28.04,
+    "null_max": 36,
+    "discover_rate_ge_obs": 0.001
+   },
+   "shuffled_segmentation_random_cuts": {
+    "null_mean": 36.46,
+    "null_max": 50,
+    "discover_rate_ge_obs": 0.006
+   },
+   "shuffled_sign_labels_relabel": {
+    "null_mean": 47.0,
+    "null_max": 47,
+    "null_min": 47,
+    "discover_rate_ge_obs": 1.0,
+    "note": "global relabeling leaves the max productivity EXACTLY invariant -> confirms the structure is value-blind (relabeling-invariant); this is a positive control, not a null."
+   }
+  }
+ },
+ "F_value_layer_fp": {
+  "description": "value-layer relabeling-invariance (reproduces H3 std=0)",
+  "base_read_count": 1005,
+  "R_relabelings": 200,
+  "relabel_read_count_mean": 1005.0,
+  "relabel_read_count_std": 0.0,
+  "value_bits_from_selection": 0.0,
+  "verdict": "RELABELING_INVARIANT_0_BITS",
+  "interpretation": "held-out structural read-count is identical under every value relabeling -> the value layer carries 0 selection-exploitable bits; no value positive can be suppressed because none is distinguishable from its relabeled twins (H3 / I1: >=10^27 twins)."
+ },
+ "runtime_sec": 130.3,
+ "K1_VERDICTS": {
+  "A_prefixation": {
+   "observed": 47,
+   "adaptive_null": "best-of-{195 affix x 8 seg x 2 slot}",
+   "adaptive_p": 0.008,
+   "naive_published_p_holm": 0.05,
+   "verdict": "SURVIVES",
+   "note": "null best-of mean 36.98 (selection inflates from single-affix 23.9); obs 47 at ~99.2 pctile"
+  },
+  "A_cross_site_generalization": {
+   "observed_min_bothdir": 16,
+   "adaptive_null": "best-of-affix must clear BOTH HT splits",
+   "adaptive_p": 0.4212,
+   "naive_published_p": 0.0099,
+   "verdict": "ARTIFACT",
+   "note": "best-of-affix reaches min>=16 in 42pct; nominal cross-site significance is a selection artifact. A- presence off-HT is descriptively real (raw initial-A rate higher off-HT) but adds no independent p."
+  },
+  "libation_rigid_order": {
+   "observed": "10 co-occurring pairs all consistent, perm-p 5e-5",
+   "adaptive_null": "random 5-anchor systems, freq-matched",
+   "adaptive_p": 0.0304,
+   "random_reaching_obs_strength": "14/493",
+   "naive_published_p": 5e-05,
+   "verdict": "SURVIVES",
+   "note": "0-inversions alone cheap (61pct of random systems); reaching >=10 all-consistent pairs = 2.8pct"
+  },
+  "ledger_KURO_terminal": {
+   "observed": "frac_last_third 0.69, foll-by-num 0.79",
+   "adaptive_null": "random recurring ledger words (positional selection DOF)",
+   "adaptive_p": 0.002,
+   "verdict": "SURVIVES",
+   "note": "0/500 random anchors match KU-RO terminal+adjacency; arithmetic sum-consistency (E2 7/31) is separate corroboration"
+  },
+  "value_layer": {
+   "adaptive_null": "consistent value relabelings",
+   "relabel_std": 0.0,
+   "value_bits": 0.0,
+   "verdict": "FALSE_POSITIVE_RATE_CONSISTENT_WITH_CHANCE",
+   "note": "0 bits of value info (relabeling-invariant); every campaign value claim is null and none was suppressed"
+  },
+  "seals": {
+   "SEAL_2_A_prefix": "inherits A_prefixation SURVIVES (p 0.008)",
+   "SEAL_3_ledger_carrier_value": "inherits ledger SURVIVES (p 0.002)",
+   "SEAL_4_libation_order": "inherits libation SURVIVES (p 0.03)",
+   "seal_selection_multiplicity": "5 seals, 3 positive; Bonferroni x5 on parents: SEAL_2 0.04, SEAL_3 0.01, SEAL_4 0.15"
+  },
+  "campaign_wide": {
+   "n_tasks_approx": 40,
+   "value_layer_positives_surviving": 0,
+   "L2L3_positives_surviving_adaptive": [
+    "A_prefixation",
+    "libation_rigid_order",
+    "ledger_KURO_terminal"
+   ],
+   "L2L3_positives_falling_to_adaptive": [
+    "A_cross_site_nominal_significance"
+   ],
+   "strongest_find_campaign_adjusted_p": 0.008,
+   "expected_false_L2L3_at_A_strength_over_40_tasks": 0.32,
+   "verdict": "NULLS_CONFIRM_NULLS: value layer FP rate = chance; 3/4 L2L3 positives survive best-of-selection; the cross-site NOMINAL significance is the one selection artifact identified"
+  }
+ }
+}

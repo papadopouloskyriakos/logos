@@ -1,6 +1,9 @@
 {
- "as_of": "2026-07-07",
+ "as_of": "2026-07-08",
  "all_LA_transfer": "NOT_EARNED",
- "campaign_state": "OPEN",
- "note": "Relative-class results (if any) do NOT auto-earn PHONETIC_TRANSFER_LICENSE. Seven licences evaluated separately at WP-M. Foundry state inherited: RELATIVE_PHONOLOGICAL_CONSTRAINT SUPPORTED_ON_KNOWN_SCRIPT_ANALOGUE, UNVALIDATED_ON_LINEAR_A."
+ "campaign_state": "CLOSED",
+ "final_verdict": "NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT",
+ "highest_earned": "L2/L3 anonymous administrative structure (A- prefixation + formula grammars), adaptive-null-validated",
+ "relative_phonological_structure": "SUPPORTED_ON_KNOWN_SCRIPT_ANALOGUE (LB substitution, C_AUDIT); NULL_ON_LINEAR_A",
+ "note": "Three audited corrections to the Foundry (position->C/V frequency artifact; seed-propagation frequency artifact; substitution precisely bounded). Value layer relabeling-invariant on LA (0 bits). K1 NULLS_CONFIRM_NULLS. E3 cross-site downgraded to descriptive (WP-K erratum)."
 }

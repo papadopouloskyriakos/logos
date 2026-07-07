@@ -349,7 +349,8 @@ tasks:
     work_package: K
     objective: "Full adaptive-process null reproducing ALL selection steps (seg/class/seed/anchor/family/model/threshold/restart/subgroup); >=500 cheap / >=200 moderate / >=50 full-pipeline; estimate adaptive false-positive rate"
     dependencies: [A6_nulls, C5_stability, D5_posterior, H3_round3, I1_agnostic]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — NULLS_CONFIRM_NULLS; value-layer FP=chance (0 bits); 3 L2/L3 positives survive adaptive null; E3 cross-site downgraded"
     required_outputs: [reports/K_NULL_SPEC.md, reports/K_NULL_RESULTS.md, reports/K_ADAPTIVE_FALSE_POSITIVE_RATE.md]
     next_task_on_success: L1_sourcewatch
 
@@ -368,7 +369,8 @@ tasks:
     work_package: M
     objective: "Integrate w/o crossing claim layers; per-result L0-L9 wording ceiling; evaluate all 7 licence gates separately (relative-class does NOT auto-earn PHONETIC)"
     dependencies: [K1_nulls, F4_loso, J2_seals]
-    status: QUEUED
+    status: COMPLETE
+    result_note: "COMPLETE — NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT; all 7 licences NOT_EARNED; highest L2/L3"
     required_outputs: [reports/M_SYNTHESIS.md, LICENCE_STATE.json, reports/M_FINAL_VERDICT.md]
     verdict_options: [DECIPHERMENT_CANDIDATE_READY_FOR_EXTERNAL_REVIEW, PHONETIC_TRANSFER_LICENSE_EARNED, LEXICAL_TRANSFER_LICENSE_EARNED, SEMANTIC_TRANSFER_LICENSE_EARNED, FUNCTIONAL_TRANSFER_LICENSE_EARNED, STRUCTURAL_TRANSFER_LICENSE_EARNED, RELATIVE_PHONOLOGICAL_STRUCTURE_SUPPORTED, NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT, UNDERDETERMINED_WITHIN_TESTED_SCOPE, NO_POWER, REJECT_ARCHITECTURE, INCOMPLETE]
     next_task_on_success: DONE
