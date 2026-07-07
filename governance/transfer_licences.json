@@ -9,12 +9,12 @@
   "STRUCTURAL_TRANSFER_LICENSE": {
    "state": "NOT_YET_EARNED",
    "prerequisite": "readable-script (opaque Linear B) success under unseen-family + cross-site + O2+D8 nulls",
-   "current_evidence": "observable_channels programme RUNNING; Exp1 (masked logogram) = bounded negative for the commodity channel; >=2-channel gate not met"
+   "current_evidence": "observable_channels Exp3-4: L2 document structure SUPPORTED held-out (template 0.508 vs 0.398 on unseen docs; accounting closure 0.071 > null 0.049, 100% masked-line reconstruction where present) — but cross-site is single-direction and O2+D8 not run, so the gate is NOT cleared"
   },
   "FUNCTIONAL_TRANSFER_LICENSE": {
    "state": "NOT_YET_EARNED",
    "prerequisite": "readable-script validation + observable-channel grounding",
-   "current_evidence": "pending observable_channels experiments 2-6"
+   "current_evidence": "observable_channels gate verdict OBSERVABLE_CHANNEL_READY=NO: the L3 word-context question is REFUTED (Exp1 commodity + Exp2 quantity, well-powered 457+1593 A12 units, word-context below baseline/null) — the primary route to this licence is a bounded negative"
   },
   "SEMANTIC_TRANSFER_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "owner constraint SEMANTIC_DECIPHERMENT=NOT_AUTHORIZED; and STRUCTURAL/FUNCTIONAL not yet earned"},
   "LEXICAL_TRANSFER_LICENSE": {"state": "NOT_AUTHORIZED", "reason": "no lower licence earned"},
