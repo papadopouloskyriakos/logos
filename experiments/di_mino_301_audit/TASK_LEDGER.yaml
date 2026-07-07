@@ -17,9 +17,9 @@ tasks:
   - {task_id: C_morphology, section: X, objective: "exact morphology/paradigm audit + known-script controls", status: QUEUED}
   - {task_id: D_crosssite, section: XI, objective: "leave-one-site-out formula prediction", status: QUEUED}
   - {task_id: E_formula, section: XII, objective: "full formula interpretation audit", status: QUEUED}
-  - {task_id: F_signmap, section: XIII, objective: "40-sign map gate OR SOURCE_BLOCKED", status: QUEUED}
-  - {task_id: G_lexicon, section: XIV, objective: "408-lexicon gate OR SOURCE_BLOCKED", status: QUEUED}
-  - {task_id: H_corrections, section: XV, objective: "LB + logogram corrections OR SOURCE_BLOCKED", status: QUEUED}
+  - {task_id: F_signmap, section: XIII, objective: "40-sign map gate OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — 40-sign table not public (H7/H8/H10)"}
+  - {task_id: G_lexicon, section: XIV, objective: "408-lexicon gate OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — 408-lexicon not public (H9)"}
+  - {task_id: H_corrections, section: XV, objective: "LB + logogram corrections OR SOURCE_BLOCKED", status: SOURCE_BLOCKED, result_note: "SOURCE_BLOCKED — LB(5) + logogram correction lists not public (H10/H11)"}
   - {task_id: PC_controls, section: XVI, objective: "positive controls PC1-PC6 (Uga-Heb, opaque LB, planted *301, fake Semitic, agglutinative, Semitic morph)", status: QUEUED}
   - {task_id: NULL_e2e, section: XVII, objective: "end-to-end adaptive null programme + false-positive rate", status: QUEUED}
   - {task_id: VERDICT, section: XVIII, objective: "DI_MINO_CORE_VERDICT + extended verdicts", status: QUEUED}
