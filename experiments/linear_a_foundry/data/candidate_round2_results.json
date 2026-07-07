@@ -1,0 +1,543 @@
+{
+ "experiment": "candidate_language_round_2",
+ "seed": 20260708,
+ "n_nulls_per_family": 200,
+ "n_calibration_lexicons": 300,
+ "deterministic_note": "per-family random-prior offsets from md5(family) (not salted hash); fully reproducible under seed 20260708",
+ "held_out": {
+  "unit": "GORILA multi-sign syllabic word tokens",
+  "n_tokens": 973,
+  "n_types": 704,
+  "la_word_length_dist": {
+   "2": 0.444,
+   "3": 0.3268,
+   "4": 0.1583,
+   "5": 0.0493,
+   "6": 0.0123,
+   "7": 0.0062,
+   "8": 0.001,
+   "9": 0.001,
+   "16": 0.001
+  }
+ },
+ "wrong_language_null": {
+  "corpus": "DAMOS Linear B wordforms (load_b_damos), multi-sign, length-matched to LA",
+  "n_lb_multisign_words": 13562
+ },
+ "families": {
+  "HUR_Hurrian": {
+   "gloss": "Hurro-Urartian (Hurrian). Sources: Wegner, Hurritisch: Eine Einfuhrung (2000); Wilhelm, The Hurrians (1989); the recurring Aegean-Hurrian contact proposals. Ergative agglutinating language; voiceless/voiced stop allophony -> both mapped to the plain LA series. Common admin/kinship/title lexemes derived through the fixed coarse correspondence.",
+   "effective_n_predicted_forms": 6,
+   "n_word_forms": 5,
+   "n_suffix_forms": 1,
+   "per_lexeme": [
+    {
+     "form": "ewri",
+     "function": "TITLE(lord/king)",
+     "kind": "word",
+     "n_predicted": 2,
+     "examples": [
+      "E-WA-RI",
+      "E-WI-RI"
+     ]
+    },
+    {
+     "form": "sharri",
+     "function": "TITLE(king; Akk. loan)",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "SA-RI"
+     ]
+    },
+    {
+     "form": "sheni",
+     "function": "KINSHIP(brother)",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "SE-NI"
+     ]
+    },
+    {
+     "form": "omini",
+     "function": "NOUN(land/country)",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "O-MI-NI"
+     ]
+    },
+    {
+     "form": "-ne",
+     "function": "ARTICLE suffix (-ne)",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "NE"
+     ]
+    },
+    {
+     "form": "-we",
+     "function": "GENITIVE suffix (-we)",
+     "kind": "suffix",
+     "n_predicted": 0,
+     "examples": []
+    }
+   ],
+   "real_token_match_rate": 0.03083,
+   "real_matched_tokens": 30,
+   "n_heldout_tokens": 973,
+   "matched_LA_word_types": [
+    "A-DI-NE",
+    "A-KO-A-NE",
+    "A-MA-RA-NE",
+    "A-NE",
+    "A-PA-RA-NE",
+    "A-SA-MU-NE",
+    "DA-DU-MI-NE",
+    "DA-KU-SE-NE",
+    "JA-RU-MA-NE",
+    "JA-SA-RA-A-NA-NE",
+    "KA-DU-MA-NE",
+    "KA-NE",
+    "KI-SA-NE",
+    "MI-KI-SA-NE",
+    "MI-NE",
+    "PA-RA-NE",
+    "PA-TA-NE",
+    "QA-NE",
+    "QE-TU-NE",
+    "SA-NE",
+    "SA-RI",
+    "SI-KI-NE",
+    "TA-NE",
+    "WI-SA-SA-NE"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.01413,
+    "sd": 0.00297,
+    "p95": 0.0185,
+    "max": 0.02158,
+    "emp_p": 0.005,
+    "z": 5.618
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00827,
+    "sd": 0.00296,
+    "p95": 0.01336,
+    "max": 0.01644,
+    "emp_p": 0.005,
+    "z": 7.633
+   },
+   "null_R_random_prior": {
+    "mean": 0.04252,
+    "sd": 0.02773,
+    "p95": 0.09558,
+    "max": 0.1223,
+    "emp_p": 0.6517,
+    "z": -0.421
+   },
+   "p_S": 0.005,
+   "p_W": 0.005,
+   "p_R": 0.6517,
+   "decisive_FWER_maxWR": 0.6517,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "ewri",
+     "sub_real_rate": 0.03083,
+     "p_W": 0.005,
+     "p_R": 0.5821,
+     "decisive_p": 0.5821
+    },
+    {
+     "dropped": "sharri",
+     "sub_real_rate": 0.0298,
+     "p_W": 0.005,
+     "p_R": 0.6269,
+     "decisive_p": 0.6269
+    },
+    {
+     "dropped": "sheni",
+     "sub_real_rate": 0.03083,
+     "p_W": 0.005,
+     "p_R": 0.6468,
+     "decisive_p": 0.6468
+    },
+    {
+     "dropped": "omini",
+     "sub_real_rate": 0.03083,
+     "p_W": 0.005,
+     "p_R": 0.5572,
+     "decisive_p": 0.5572
+    },
+    {
+     "dropped": "-ne",
+     "sub_real_rate": 0.00103,
+     "p_W": 0.1393,
+     "p_R": 0.8358,
+     "decisive_p": 0.8358
+    },
+    {
+     "dropped": "-we",
+     "sub_real_rate": 0.03083,
+     "p_W": 0.005,
+     "p_R": 0.2836,
+     "decisive_p": 0.2836
+    }
+   ],
+   "loo_worst_decisive_p": 0.8358,
+   "materialized_lexicon": null,
+   "holm_adjusted_decisive_p": 1.0,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.03938,
+    "random_lexicon_match_rate_p95": 0.09455,
+    "random_lexicon_match_rate_max": 0.13977,
+    "real_percentile_p_vs_random_lexicons": 0.5781,
+    "raw_bar_false_clear_rate": 0.0333
+   },
+   "clears_calibrated": false
+  },
+  "LUW2_Luwian": {
+   "gloss": "Luwian / Anatolian-2 (distinct from round-1's broad pre-Greek/Luwic ANA). Sources: Melchert, Cuneiform Luvian Lexicon (1993); Yakubovich, Sociolinguistics of the Luvian Language (2010). Vowel system a/i/u (no e/o) reflected in the vowel_map. Core divine/kinship/administrative lexemes and the -assa genitival adjective, derived through the fixed correspondence.",
+   "effective_n_predicted_forms": 11,
+   "n_word_forms": 9,
+   "n_suffix_forms": 2,
+   "per_lexeme": [
+    {
+     "form": "massana",
+     "function": "NOUN(god; massani-)",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "MA-SA-NA"
+     ]
+    },
+    {
+     "form": "tati",
+     "function": "KINSHIP(father; tati-)",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "TA-TI"
+     ]
+    },
+    {
+     "form": "anni",
+     "function": "KINSHIP(mother; anni-)",
+     "kind": "word",
+     "n_predicted": 1,
+     "examples": [
+      "A-NI"
+     ]
+    },
+    {
+     "form": "tiwad",
+     "function": "THEONYM(sun-god; Tiwad-)",
+     "kind": "word",
+     "n_predicted": 6,
+     "examples": [
+      "TI-WA-DA",
+      "TI-WA-DI",
+      "TI-WA-DU",
+      "TI-WA-TA",
+      "TI-WA-TI",
+      "TI-WA-TU"
+     ]
+    },
+    {
+     "form": "-assa",
+     "function": "GENITIVAL-ADJ suffix (-assa/-assi-)",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "A-SA"
+     ]
+    },
+    {
+     "form": "-wanni",
+     "function": "POSSESSIVE-adj suffix (-wanni-)",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "WA-NI"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.00206,
+   "real_matched_tokens": 2,
+   "n_heldout_tokens": 973,
+   "matched_LA_word_types": [
+    "TA-TI"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00227,
+    "sd": 0.00129,
+    "p95": 0.00416,
+    "max": 0.00617,
+    "emp_p": 0.6866,
+    "z": -0.163
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.00015,
+    "sd": 0.00039,
+    "p95": 0.00103,
+    "max": 0.00206,
+    "emp_p": 0.0149,
+    "z": 4.889
+   },
+   "null_R_random_prior": {
+    "mean": 0.00038,
+    "sd": 0.00098,
+    "p95": 0.00206,
+    "max": 0.00617,
+    "emp_p": 0.0945,
+    "z": 1.715
+   },
+   "p_S": 0.6866,
+   "p_W": 0.0149,
+   "p_R": 0.0945,
+   "decisive_FWER_maxWR": 0.0945,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "massana",
+     "sub_real_rate": 0.00206,
+     "p_W": 0.0149,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "tati",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    },
+    {
+     "dropped": "anni",
+     "sub_real_rate": 0.00206,
+     "p_W": 0.0149,
+     "p_R": 0.0647,
+     "decisive_p": 0.0647
+    },
+    {
+     "dropped": "tiwad",
+     "sub_real_rate": 0.00206,
+     "p_W": 0.0149,
+     "p_R": 0.0746,
+     "decisive_p": 0.0746
+    },
+    {
+     "dropped": "-assa",
+     "sub_real_rate": 0.00206,
+     "p_W": 0.01,
+     "p_R": 0.0796,
+     "decisive_p": 0.0796
+    },
+    {
+     "dropped": "-wanni",
+     "sub_real_rate": 0.00206,
+     "p_W": 0.005,
+     "p_R": 0.0945,
+     "decisive_p": 0.0945
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "materialized_lexicon": null,
+   "holm_adjusted_decisive_p": 0.2835,
+   "clears_raw_bar": false,
+   "calibration": {
+    "n_random_lexicons": 300,
+    "random_lexicon_match_rate_mean": 0.0004,
+    "random_lexicon_match_rate_p95": 0.00206,
+    "random_lexicon_match_rate_max": 0.01131,
+    "real_percentile_p_vs_random_lexicons": 0.0365,
+    "raw_bar_false_clear_rate": 0.0267
+   },
+   "clears_calibrated": false
+  },
+  "CTRL_agnostic_random_r2": {
+   "gloss": "Agnostic negative control: a fixed random lexicon of matched size/length-structure, no linguistic motivation. Expected FWER ~ uniform; verifies the pipeline is not rigged to pass. If this control clears the raw bar, no round-2 family can COUNT.",
+   "effective_n_predicted_forms": 11,
+   "n_word_forms": 10,
+   "n_suffix_forms": 1,
+   "per_lexeme": [
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 0,
+     "examples": []
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "NU-NI-RA",
+      "NU-NI-RE",
+      "NU-NI-RI",
+      "NU-NI-RO",
+      "NU-NI-RU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 5,
+     "examples": [
+      "TI-NE-RA",
+      "TI-NE-RE",
+      "TI-NE-RI",
+      "TI-NE-RO",
+      "TI-NE-RU"
+     ]
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "word",
+     "n_predicted": 0,
+     "examples": []
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "suffix",
+     "n_predicted": 0,
+     "examples": []
+    },
+    {
+     "form": "ctrl",
+     "function": "CONTROL",
+     "kind": "suffix",
+     "n_predicted": 1,
+     "examples": [
+      "JE"
+     ]
+    }
+   ],
+   "real_token_match_rate": 0.00617,
+   "real_matched_tokens": 6,
+   "n_heldout_tokens": 973,
+   "matched_LA_word_types": [
+    "A-JE",
+    "A-TA-NA-JE",
+    "KA-JE",
+    "RI-TA-JE",
+    "SE-JE",
+    "TA-NA-MA-JE"
+   ],
+   "null_S_order_shuffle": {
+    "mean": 0.00522,
+    "sd": 0.00169,
+    "p95": 0.00822,
+    "max": 0.00925,
+    "emp_p": 0.408,
+    "z": 0.562
+   },
+   "null_W_wrong_language_LB": {
+    "mean": 0.0022,
+    "sd": 0.00151,
+    "p95": 0.00514,
+    "max": 0.00719,
+    "emp_p": 0.0448,
+    "z": 2.62
+   },
+   "null_R_random_prior": {
+    "mean": 0.0199,
+    "sd": 0.01755,
+    "p95": 0.04625,
+    "max": 0.07605,
+    "emp_p": 0.7413,
+    "z": -0.783
+   },
+   "p_S": 0.408,
+   "p_W": 0.0448,
+   "p_R": 0.7413,
+   "decisive_FWER_maxWR": 0.7413,
+   "leave_one_lexeme_out": [
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00617,
+     "p_W": 0.0448,
+     "p_R": 0.7413,
+     "decisive_p": 0.7413
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00617,
+     "p_W": 0.0448,
+     "p_R": 0.7463,
+     "decisive_p": 0.7463
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00617,
+     "p_W": 0.0448,
+     "p_R": 0.7662,
+     "decisive_p": 0.7662
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00617,
+     "p_W": 0.0448,
+     "p_R": 0.7164,
+     "decisive_p": 0.7164
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.00617,
+     "p_W": 0.0448,
+     "p_R": 0.6667,
+     "decisive_p": 0.6667
+    },
+    {
+     "dropped": "ctrl",
+     "sub_real_rate": 0.0,
+     "p_W": 1.0,
+     "p_R": 1.0,
+     "decisive_p": 1.0
+    }
+   ],
+   "loo_worst_decisive_p": 1.0,
+   "materialized_lexicon": [
+    "p e m i z",
+    "n u n i l",
+    "t i n e r",
+    "w u z a",
+    "d a p e t",
+    "y e"
+   ],
+   "holm_adjusted_decisive_p": 1.0,
+   "clears_raw_bar": false,
+   "clears_calibrated": false
+  }
+ },
+ "families_clearing_calibrated": [],
+ "families_that_count": [],
+ "ctrl_cleared_raw_bar": false,
+ "per_family_FWER": {
+  "HUR_Hurrian": {
+   "decisive_FWER_maxWR": 0.6517,
+   "holm_adjusted": 1.0,
+   "loo_worst": 0.8358
+  },
+  "LUW2_Luwian": {
+   "decisive_FWER_maxWR": 0.0945,
+   "holm_adjusted": 0.2835,
+   "loo_worst": 1.0
+  },
+  "CTRL_agnostic_random_r2": {
+   "decisive_FWER_maxWR": 0.7413,
+   "holm_adjusted": 1.0,
+   "loo_worst": 1.0
+  }
+ },
+ "verdict": "AT_END_TO_END_NULL",
+ "interpretation": "candidate_language_round_2: real families HUR_Hurrian, LUW2_Luwian tested as held-out hypotheses vs the WP6 multi-family end-to-end null (S order-shuffle; W wrong-language opaque LB; R random-prior). A family COUNTS only if it (1) clears the decisive bar max(p_W,p_R) Holm-adjusted<0.05, (2) survives leave-one-lexeme-out, (3) beats the 300-draw random-lexicon calibration, AND the agnostic control does NOT clear the raw bar. Result: AT_END_TO_END_NULL. No family counts as a genuine signal. Agnostic control cleared raw bar: False. Per-family Holm-adjusted decisive FWER: {'HUR_Hurrian': 1.0, 'LUW2_Luwian': 0.2835}. As pre-registered, the honest expectation was AT_END_TO_END_NULL; each family's raw-bar false-clear rate under same-structure random lexicons is reported so a bare match rate is never read as language-specific fit."
+}

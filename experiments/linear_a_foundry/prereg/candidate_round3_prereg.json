@@ -1,0 +1,59 @@
+{
+ "experiment": "CANDIDATE_LANGUAGE_ROUND_3",
+ "seed": 20260708,
+ "registered_before_run": true,
+ "design_summary": "Round 3 of the bounded candidate-language programme. Two justified families (a Tyrrhenian/Etruscan-related family and a pre-Greek Aegean-isolate substrate model) plus an agnostic random control, each a BOUNDED preregistered correspondence (phoneme inventory + allowed changes into the LA syllabary) + a SMALL cited lexicon of candidate-language WORDS. Each lexeme is expanded to its predicted LA syllabogram-value string(s) via the FIXED correspondence (never read off LA). A held-out LA multi-sign word MATCHES a family iff its value-string is a predicted whole-word form, or (for affix entries) it ends with a predicted affix string. Primary statistic = token-weighted match rate on the held-out multi-sign syllabic word set. Scored vs the WP6 multi-family end-to-end null: (S) order-shuffle, (W) wrong-language opaque LB length-matched, (R) random-prior. Decisive nulls = W and R. FWER per family = fraction of decisive null realizations with match >= real. Holm across families. Leave-one-lexeme-out. 300-draw random-lexicon false-clear calibration.",
+ "non_circularity": "Correspondences map candidate-language PHONEMES to syllabogram VALUES; predicted forms are DERIVED from candidate-language dictionary words (Etruscan lexicon; Beekes' Pre-Greek reconstructions), not fitted to LA. LB values only ever appear as the wrong-language NULL corpus. The conventional LA transliteration is a fixed published convention applied identically to every corpus and family.",
+ "bounded_no_root_search": "Lexicons are fixed a priori (6 entries/family), from cited proposals; no unbounded thesaurus search. The combinatorial expansion size (effective_n predicted forms) is reported and is automatically deflated because every null realization runs the SAME expansion/matcher.",
+ "syllabogram_decomposition_note": "Each AB syllabogram is decomposed to (onset_consonant, vowel) by standard Ventris-Chadwick values in the runner. Pure-vowel signs have empty onset.",
+
+ "families": {
+  "TYR_Etruscan": {
+   "gloss": "Tyrrhenian / Etruscan-related. Sources: Bonfante & Bonfante, The Etruscan Language (2002); Facchetti, the Lemnos-stele Tyrrhenian link and Minoan-as-Tyrrhenian proposals; de Simone. Etruscan has NO voiced stops and NO /o/ (four-vowel a/e/i/u system) -- both constraints encoded in the correspondence. Core lexemes (year, son, wife, magistrate) + genitive/dative suffixes derived through the fixed correspondence.",
+   "phoneme_inventory": ["p","t","k","c","q","ph","th","kh","s","sh","z","f","h","l","r","m","n","v","a","e","i","u"],
+   "consonant_to_series": {"p":["P"],"ph":["P"],"t":["T"],"th":["T"],"k":["K"],"c":["K"],"kh":["K"],"q":["Q","K"],"s":["S"],"sh":["S"],"z":["Z","S"],"f":["P"],"h":["","K"],"l":["R"],"r":["R"],"m":["M"],"n":["N"],"v":["W","U"]},
+   "vowel_map": {"a":["a"],"e":["e"],"i":["i"],"u":["u"]},
+   "coda_spelling": "echo preceding vowel (1 option)",
+   "lexicon": [
+    {"form":"avil","function":"NOUN(year)","kind":"word","phonemes":"a v i l"},
+    {"form":"clan","function":"KINSHIP(son)","kind":"word","phonemes":"k l a n"},
+    {"form":"puia","function":"KINSHIP(wife)","kind":"word","phonemes":"p u i a"},
+    {"form":"zila","function":"TITLE(magistrate; zila-)","kind":"word","phonemes":"z i l a"},
+    {"form":"-al","function":"GENITIVE suffix (-al)","kind":"suffix","phonemes":"a l"},
+    {"form":"-si","function":"DATIVE/PERTINENTIVE suffix (-si)","kind":"suffix","phonemes":"s i"}
+   ]
+  },
+
+  "AEG_isolate_substrate": {
+   "gloss": "Pre-Greek Aegean-isolate substrate model (a non-Indo-European, non-Semitic isolate reconstructed ONLY from Greek loanwords/toponyms). Sources: Beekes, Pre-Greek: Phonology, Morphology, Lexicon (2014); Furnee. Deliberately speculative -- the honest test of whether a substrate isolate reconstructed from Greek predicts held-out LA forms. Characteristic -nth-/-ss- suffixes and substrate nouns derived through the fixed correspondence.",
+   "phoneme_inventory": ["p","b","t","d","k","g","kw","s","z","l","r","m","n","w","y","a","e","i","u","o"],
+   "consonant_to_series": {"p":["P"],"b":["P"],"t":["T"],"d":["D","T"],"k":["K"],"g":["K"],"kw":["Q"],"s":["S"],"z":["Z"],"l":["R"],"r":["R"],"m":["M"],"n":["N"],"w":["W","U"],"y":["J","I"]},
+   "vowel_map": {"a":["a"],"e":["e"],"i":["i"],"u":["u"],"o":["o"]},
+   "coda_spelling": "echo preceding vowel (1 option)",
+   "lexicon": [
+    {"form":"thalas","function":"NOUN(sea; thalassa substrate root)","kind":"word","phonemes":"t a l a s"},
+    {"form":"depas","function":"NOUN(cup; depas, pre-Greek)","kind":"word","phonemes":"d e p a s"},
+    {"form":"asamin","function":"NOUN(bath-tub; asaminthos substrate root)","kind":"word","phonemes":"a s a m i n"},
+    {"form":"plint","function":"NOUN(brick; plinthos substrate root)","kind":"word","phonemes":"p l i n t"},
+    {"form":"-nthos","function":"PLACE/NOUN suffix (-nth-)","kind":"suffix","phonemes":"n t o"},
+    {"form":"-ssos","function":"PLACE/NOUN suffix (-ss-)","kind":"suffix","phonemes":"s o"}
+   ]
+  },
+
+  "CTRL_agnostic_random_r3": {
+   "gloss": "Agnostic negative control: a fixed random lexicon of matched size/length-structure, no linguistic motivation. Expected FWER ~ uniform; verifies the pipeline is not rigged to pass. If this control clears the raw bar, no round-3 family can COUNT.",
+   "phoneme_inventory": ["p","t","d","k","s","z","l","r","m","n","w","y","a","i","u","e","o"],
+   "consonant_to_series": {"p":["P"],"t":["T"],"d":["D"],"k":["K"],"s":["S"],"z":["Z"],"l":["R"],"r":["R"],"m":["M"],"n":["N"],"w":["W"],"y":["J"]},
+   "vowel_map": {"a":["a"],"i":["i"],"u":["u"],"e":["e"],"o":["o"]},
+   "coda_spelling": "echo preceding vowel (1 option)",
+   "lexicon": "GENERATED at runtime: 6 random entries (4 word + 2 suffix) with lengths matched to the round-3 real families, phonemes drawn C/V-alternating from this inventory under fixed seed 20260708."
+  }
+ },
+
+ "held_out_target": "GORILA word units, syllabic-only, multi-sign (>=2 signs): 973 tokens. Single-sign words excluded (non-discriminating for lexical hypotheses).",
+ "primary_statistic": "token-weighted match rate = sum token-freq(matching words)/total tokens, on the multi-sign held-out set.",
+ "nulls_per_family": 200,
+ "calibration_lexicons": 300,
+ "decision_rule": "A family COUNTS iff Holm-adjusted decisive FWER < 0.05 AND leave-one-lexeme-out worst decisive FWER < 0.05 AND it beats the random-lexicon calibration (real percentile p<0.05, false-clear rate <=0.10) AND the agnostic control does NOT clear the raw bar.",
+ "prior_expectation": "Rounds 1-2 were AT_END_TO_END_NULL. Honest expectation for round 3 is again AT_END_TO_END_NULL; run properly and report which family, if any, COUNTS."
+}

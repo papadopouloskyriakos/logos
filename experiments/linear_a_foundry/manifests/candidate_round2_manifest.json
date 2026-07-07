@@ -1,0 +1,41 @@
+{
+ "experiment": "candidate_language_round_2",
+ "generated_by": "candidate_engine.py via run_round",
+ "seed": 20260708,
+ "prereg": {
+  "path": "/home/claude-runner/gitlab/n8n/logos-linear-a-decipherment-foundry/experiments/linear_a_foundry/prereg/candidate_round2_prereg.json",
+  "sha256": "2e67ca0a93a49393c5a0af705cecd8a396ba8b73e99095ff2d39079969f63a08"
+ },
+ "corpus_inputs_readonly": [
+  {
+   "path": "/home/claude-runner/gitlab/n8n/logos/corpus/silver/inscriptions_structured.json",
+   "sha256": "aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500"
+  },
+  {
+   "path": "/home/claude-runner/gitlab/n8n/logos/corpus/silver/inventory_syllabograms_conservative.json",
+   "sha256": "8a2a8928d9f1c53dd3105265dfcefc8abc91acdd586ae82ccedd2cb2b3df9721"
+  }
+ ],
+ "derived_inputs": [
+  {
+   "path": "/home/claude-runner/gitlab/n8n/logos-linear-a-decipherment-foundry/experiments/linear_a_foundry/data/candidate_wordunits.json",
+   "sha256": "7aed021550e934a10c30368b582e9dbd4763dd17b76548979b56851cc64ee3b4"
+  }
+ ],
+ "wrong_language_null_corpus": "scripts.cross_script.data.load_b_damos (DAMOS Linear B)",
+ "output": {
+  "path": "/home/claude-runner/gitlab/n8n/logos-linear-a-decipherment-foundry/experiments/linear_a_foundry/data/candidate_round2_results.json",
+  "sha256": "7b9a175c392316b77bc64ae1f9f469e286ab106b6c2378b40b755b902d94c422"
+ },
+ "counts": {
+  "n_heldout_LA_multisign_tokens": 973,
+  "n_heldout_LA_multisign_types": 704,
+  "n_LB_multisign_null_words": 13562,
+  "families": [
+   "HUR_Hurrian",
+   "LUW2_Luwian",
+   "CTRL_agnostic_random_r2"
+  ]
+ },
+ "verdict": "AT_END_TO_END_NULL"
+}
