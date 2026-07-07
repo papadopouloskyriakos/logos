@@ -27,3 +27,9 @@
   validated on LB and would reach power on a larger/segmented LA corpus; C/V needs only a few seed labels
   (reduced anchor requirement). Obstacle = LA corpus power for relative channels, not a symmetry theorem.
   Commit: _(this)_.
+- **WP3.2b substitution POWER CURVE.** Subsampled LB max-weight grows with corpus (3000w->112, 5000w->150,
+  8000w->212, 13562w->303); raw-weight->feature AUC 0.565->0.579 (weaker than the agent's hub-normalized 0.714).
+  LA operating point: 539 multi-sign inscriptions, max-weight 105. Clean regime (max-weight>=120) reached at
+  ~5000 LB words; LA-equivalent ~3000 -> corpus_multiple_needed ~1.7x. REFINES the second correction: LA is
+  only ~1.7x below the substitution clean regime (or needs segmentation), NOT ~10x -- a modest, achievable gap.
+  Commit: _(this)_.

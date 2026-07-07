@@ -30,5 +30,10 @@
    "WP3.3",
    "WP3.4_detector"
   ]
+ },
+ "WP3.2b": {
+  "power_curve": "LB subsample ladder",
+  "metric": "max-weight + weight-feature AUC vs corpus size",
+  "result": "LA ~1.7x below clean regime"
  }
 }
