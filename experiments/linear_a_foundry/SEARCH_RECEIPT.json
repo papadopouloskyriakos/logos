@@ -1,0 +1,13 @@
+{
+ "schema": "foundry.search_receipt/v1",
+ "WP1": {
+  "model_families": 0,
+  "tests": "position-AUC vs 2000-perm null",
+  "multiplicity": "1 feature, 1 test",
+  "partition": "exploratory/validation"
+ },
+ "charged_total_configs": 0,
+ "null_realizations": {
+  "WP1_position": 2000
+ }
+}

@@ -1,0 +1,4 @@
+source_id,name,type,lineage,machine_readable,new_information,status,notes
+SRC-DAMOS-LB,DAMOS Linear B wordforms,derived,L_LB_DECIPHERMENT,yes,known-truth C/V validation,PRESENT,load_b_damos()
+SRC-SILVER-LA,logos silver LA,derived,L_LA_CORPUS,yes,LA sign sequences,PRESENT,load_a()
+SRC-SIGNS-ONTOLOGY,signs_ontology.json,derived,L_LA_CORPUS,yes,sign classes/allographs,PRESENT,WP1 param scope

@@ -1,0 +1,30 @@
+{
+ "schema": "foundry.assumption_register/v1",
+ "append_only": true,
+ "assumptions": [
+  {
+   "id": "FA01",
+   "statement": "The relabeling stopping theorem is scoped to identity-co-occurrence objectives; internal relational objectives break partial symmetry",
+   "load_bearing": true,
+   "current_status": "VERIFIED",
+   "source": "WP1 theorem + counterexample (AUC 0.744 p=0.035)",
+   "revisions": []
+  },
+  {
+   "id": "FA02",
+   "statement": "Word-position statistics carry C/V information in a syllabary (validated on LB)",
+   "load_bearing": true,
+   "current_status": "VERIFIED",
+   "source": "wp1_symmetry_break.json",
+   "revisions": []
+  },
+  {
+   "id": "FA03",
+   "statement": "corpus/silver + DAMOS are read-only reference; campaign never mutates them",
+   "load_bearing": true,
+   "current_status": "VERIFIED",
+   "source": "gitignored, absolute MAIN path",
+   "revisions": []
+  }
+ ]
+}

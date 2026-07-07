@@ -1,0 +1,107 @@
+{
+ "LB_validation": {
+  "n_signs_ge20": 77,
+  "n_true_vowels_present": 5,
+  "AUC_initial_rate_separates_vowels": 0.744,
+  "permutation_p": 0.035,
+  "true_vowel_ranks_by_initial_rate": {
+   "A": 4,
+   "U": 51,
+   "E": 9,
+   "I": 29,
+   "O": 14
+  },
+  "top10_by_initial_rate": [
+   [
+    "AU",
+    1.0
+   ],
+   [
+    "*63",
+    0.95
+   ],
+   [
+    "A3",
+    0.95
+   ],
+   [
+    "A",
+    0.9
+   ],
+   [
+    "*47",
+    0.9
+   ],
+   [
+    "*56",
+    0.78
+   ],
+   [
+    "KU",
+    0.76
+   ],
+   [
+    "PA",
+    0.7
+   ],
+   [
+    "E",
+    0.69
+   ],
+   [
+    "PE",
+    0.66
+   ]
+  ],
+  "interpretation": "word-initial-rate separates the 5 known LB vowel signs from consonants with AUC=0.744 (perm p=0.035) \u2014 a position objective is NOT relabeling-invariant, so internal evidence DOES break the vowel/consonant symmetry."
+ },
+ "LA_application": {
+  "n_signs_ge20": 46,
+  "top8_vowel_candidates_by_initial_rate": [
+   [
+    "A",
+    0.43,
+    195
+   ],
+   [
+    "QE",
+    0.2,
+    45
+   ],
+   [
+    "I",
+    0.2,
+    166
+   ],
+   [
+    "ZU",
+    0.19,
+    32
+   ],
+   [
+    "KA",
+    0.18,
+    132
+   ],
+   [
+    "SI",
+    0.18,
+    145
+   ],
+   [
+    "QA",
+    0.18,
+    45
+   ],
+   [
+    "U",
+    0.18,
+    68
+   ]
+  ],
+  "note": "candidate vowel-like signs from LA-internal position structure ONLY (no LB values used). These define a reduced value-equivalence structure; validation vs the AB-vowel hypothesis is a separate (circular) check, not training."
+ },
+ "theorem_verdict": "PRIOR_THEOREM_OVERSTATED",
+ "effect_strength": "modest (single position feature, AUC 0.744); WP3 builds the full multi-feature C/V + substitution + morphology recovery",
+ "formal_scope": "The relabeling invariance holds ONLY for objectives that are functions of sign-identity co-occurrence counts (e.g. bigram likelihood). Objectives coupling internal relational structure (word position, substitution similarity, morphological class) to value-space structure (C/V, phonological features) are invariant only under the SUBGROUP preserving that structure (S_v x S_(n-v) for C/V), so internal evidence reduces the value equivalence classes. Absolute phoneme naming still needs external anchors; the equivalence-class SIZE does not."
+}
