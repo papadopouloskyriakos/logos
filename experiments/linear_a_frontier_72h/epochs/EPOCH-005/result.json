@@ -1,0 +1,93 @@
+{
+  "epoch": "EPOCH-005",
+  "title": "KNZg57a provenance trace (frontier F8, gate H)",
+  "campaign": "research/linear-a-frontier-72h",
+  "date": "2026-07-08",
+  "seed": 20260708,
+  "constitution": "v2.2",
+  "plan_hash_sha256": "0f96100a230c51aa92aab76194ed646dd20ac9d74c20dada7e3428c30d050754",
+  "claim_layer": "L0 (documentary provenance only; no sign-value/structural/semantic claim)",
+  "articles_cited": ["VII", "IX", "XI", "XII", "XVII", "XVIII", "XXII"],
+
+  "verdict": "PROVENANCE_ESTABLISHED",
+  "verdict_qualifier": "The established source is an EDITORIAL PHOTO-READING, not a scholarly edition: the lineara.xyz maintainer (Robert Hogan / mwenge) authored the 17-slot reading from the Kanta et al. 2024 photographs (credit 'Ph. Sapirstein', Fig. 7) and published it on GitHub/lineara.xyz on 2025-03-23. Epistemic confidence in the reading itself stays <= 0.5 (EPOCH-001 assumption A-3 UPDATED, not removed: source now known, reliability still unvetted).",
+  "erratum_required": true,
+  "hypothesis_outcomes": {
+    "H-P1_identifiable_public_source": "SUPPORTED — the source is identifiable and public (lineara.xyz GitHub commit 5facf29c, 2025-03-23T17:22:23Z), predating silver ingest; it prints all 5 silver tokens in order (5/5 >= 4/5 rule)",
+    "H-P2_editorial_reconstruction": "SUPPORTED as the MECHANISM — no scholarly transliteration exists (Del Freo: 'inédit'; Kanta et al. 2024 prints no sequence); the tokens are the maintainer's own photo-derived reading",
+    "H-P3_fabrication": "REJECTED — the reading is consistent with the editors' physical description (vessel ligatures incl. vas+RU on Face A; Fig. 7 photos are the cited basis); no contradiction found"
+  },
+
+  "provenance_chain": [
+    {"step": 1, "node": "Kanta, Nakassis, Palaima & Perna 2024, Ariadne Suppl. 5, pp. 27-43 (DOI 10.26248/ariadne.vi.1841)", "content": "photographs (Fig. 7, credit Ph. Sapirstein) + prose 'vas+PA, vas+RU, etc.' on Face A; prints NO transliterated sequence", "sha256": "87dad27b79ee3ef4539b844d7ed30a0069ac14acdd2ff75eed160f9baadf57d2"},
+    {"step": 2, "node": "github.com/mwenge/lineara.xyz commit 9e426baa (2025-03-23T10:31:37Z, 'Add KNZg57 KNZg58')", "content": "KNZg57 + KNZg58 added as EMPTY shells; imageRightsURL = the Ariadne article (ejournals.lib.uoc.gr/Ariadne/article/view/1841/1751); imageRights 'Ph Saperstein' [sic]"},
+    {"step": 3, "node": "github.com/mwenge/lineara.xyz commit 5facf29c (2025-03-23T17:22:23Z, 'Add missing images')", "content": "KNZg57 renamed KNZg57a; 17-slot reading added: *401+RU, *652, *653, *401+RU, *418+L2, [4 lacunae], NI, [4 lacunae], VAS, [2 lacunae]; KNZg57b added (empty transliteration); cropped images KNZg57a/b-Inscription.jpg added; the local papers/KNZg57.pdf is byte-identical to the Kanta 2024 PDF"},
+    {"step": 4, "node": "corpus bronze clone /tmp/lineara (shallow, fetched ~2026-06-30)", "content": "raw items_analysis/inscriptions.json carries the 7 identified tokens + 10 lacuna slots"},
+    {"step": 5, "node": "scripts/corpus_io.py (deterministic silver builder)", "content": "is_sign_token requires a latin letter -> drops '*652','*653' + lacunae -> silver KNZg57a = exactly [*401+RU, *401+RU, *418+L2, NI, VAS]; KNZg57b dropped (empty transliteratedWords)"},
+    {"step": 6, "node": "corpus/silver/inscriptions.json KNZg57a", "content": "the 5-token record EPOCH-001 flagged; in the corpus since before both Anetaki seals were frozen"}
+  ],
+
+  "positive_control": {"target": "KNZg55 (known provenance)", "result": "PASS — same pipeline recovers JA-SA-JA in Younger misctexts (HM 621; CMS II 2, no. 213); method has power", "ran_first": true},
+  "negative_control": {"target": "nonexistent 'KN Zg 56' reading", "result": "PASS — 0 hits across all candidate sources; the trace does not confabulate"},
+  "mechanical_checks": {"file": "audit_checks.json", "n_pass": 13, "n_total": 13},
+
+  "kanta_2024_vas_RU_subquestion": {
+    "statement": "'Some vases have a syllabic sign, placed above in ligature ... (vas+PA, vas+RU, etc.)' (p. 38, Face A)",
+    "entailment_rule_applied": "(a) same sign identities (b) same count/order (c) same face",
+    "verdict": "DOES_NOT_LICENSE — names ligature TYPES only (and includes vas+PA, absent from silver); no count, no order, no per-slot identities. The silver reading is CONSISTENT with it but not derivable from it."
+  },
+
+  "source_audit": {
+    "n_distinct_records": 25,
+    "records": [
+      {"id": "R01", "src": "corpus/silver/inscriptions.json KNZg57a", "finding": "5 tokens, target of the trace"},
+      {"id": "R02", "src": "scripts/corpus_io.py", "finding": "deterministic lineara.xyz -> silver normalizer; letter-filter explains 7->5"},
+      {"id": "R03", "src": "docs/data-provenance.md", "finding": "declares silver normalized from lineara.xyz; no per-item source"},
+      {"id": "R04", "src": "/tmp/lineara items_analysis/inscriptions.json KNZg57a", "finding": "7 identified tokens + 10 lacunae; imageRights Ph Saperstein; imageRightsURL papers/KNZg57.pdf"},
+      {"id": "R05", "src": "/tmp/lineara items_analysis/inscriptions.json KNZg57b", "finding": "second face record, EMPTY transliteration (internally inconsistent copy-paste of 57a parsedInscription) — dropped by builder"},
+      {"id": "R06", "src": "/tmp/lineara papers/KNZg57.pdf", "finding": "sha256 87dad27b… == bronze kanta_etal_2024 — lineara.xyz's cited source IS the Kanta article"},
+      {"id": "R07", "src": "/tmp/lineara annotations.js", "finding": "KNZg57a word tags only (lacuna/word); no independent source note"},
+      {"id": "R08", "src": "GitHub commit 9e426baa 2025-03-23T10:31Z", "finding": "empty-shell creation; Ariadne article URL as source"},
+      {"id": "R09", "src": "GitHub commit 5facf29c 2025-03-23T17:22Z", "finding": "THE reading-creation act (17 slots) + cropped article images; same day as shell"},
+      {"id": "R10", "src": "GitHub commits for papers/KNZg57.pdf (4659f09d 2025-06-15)", "finding": "article PDF added later; imageRightsURL switched to local copy"},
+      {"id": "R11", "src": "lineara.xyz live site /items/KNZg57a.html (2026-07-08, HTTP 200)", "finding": "page live; cites KNZg57.pdf + Saperstein — the transliteration is PUBLIC today"},
+      {"id": "R12", "src": "Kanta et al. 2024 p. 38 prose", "finding": "vas+PA/vas+RU ligature types on Face A; no sequence printed"},
+      {"id": "R13", "src": "Kanta et al. 2024 Fig. 7 caption", "finding": "'Photo Ph. Sapirstein' — matches lineara.xyz's 'Ph Saperstein' credit"},
+      {"id": "R14", "src": "Del Freo, Rapport 2016-2021, pp. 99-100 (on disk)", "finding": "KN Zg 57/58 'inédit'; physical description only; no reading"},
+      {"id": "R15", "src": "Younger misctexts.txt", "finding": "no ivory-ring reading; 'KN Zh no no.' sceptre entry (Kanta 2018 no. 280) with NO transliteration; his 'KN Zg 58' is the OLD steatite collision"},
+      {"id": "R16", "src": "Younger lineara-main/lexicon captures", "finding": "no *401+RU / Zg 57 entry"},
+      {"id": "R17", "src": "SigLA decode (sigla_documents.json, 802 docs)", "finding": "0 hits for Zg 57 — not in SigLA"},
+      {"id": "R18", "src": "Civitillo 2024 (Ariadne Suppl. 5, 511-526)", "finding": "KN Zg 55 only; no Zg 57"},
+      {"id": "R19", "src": "Rjabchikov 2025 proceedings PDF (QUARANTINED registry object)", "finding": "0 token overlap with the silver reading; postdates the lineara commit (2025-08 vs 2025-03) — cannot be the source; checked for overlap only, never as evidence"},
+      {"id": "R20", "src": "Chiapello 2024 archived page", "finding": "no readings printed; prediction object only"},
+      {"id": "R21", "src": "GORILA I-V coverage", "finding": "categorical exclusion — corpus closed 1985; object found 2016"},
+      {"id": "R22", "src": "Kanta 2018 exhibition catalogue ref (via Younger R15)", "finding": "B/W photograph only, no transliteration"},
+      {"id": "R23", "src": "J1_exposure.json (seal branch, 2026-07-07)", "finding": "asserts NO public transliteration exists; omits lineara.xyz — the audited gap"},
+      {"id": "R24", "src": "EPOCH-001 editions.json + delta.json", "finding": "recorded the provenance gap as assumption A-3 (conf <= 0.5) — now resolved by R09"},
+      {"id": "R25", "src": "silver KNZg55 + Younger misctexts (positive control)", "finding": "pipeline recovers a genuine published source when one exists"}
+    ]
+  },
+
+  "seal_breach_assessment": {
+    "headline": "A public preliminary transliteration of KN Zg 57 EXISTS (lineara.xyz, since 2025-03-23) and is ABSENT from both seals' exposure/exclusion records -> ERRATUM_REQUIRED (Art. XVII) on the exposure documents BEFORE any scoring. The seals' scoring TARGETS are, however, not exposed by it.",
+    "J1_exposure_json": "FACTUALLY FALSE finding ('No public source ... carries a transliterated sign-group sequence from KN Zg 57 or KN Zg 58'): false for Zg 57 since 2025-03-23; still true for Zg 58 (KNZg58 shell is empty). ERRATUM: add lineara.xyz as SRC row; correct the finding.",
+    "ANETAKI_FINAL_EDITION_DELTA_SEAL": {
+      "in_current_corpus_false": "MISSTATED — silver holds the 5-token fragment; needs erratum wording ('full carrier text not in corpus; a 5-token preliminary fragment is')",
+      "P1_faceB_A_prefixation": "NOT exposed — the 7 public tokens are vessel/commodity ligatures + NI, consistent with Face A; no Face-B sign-group revealed; scoreable",
+      "P2_handle_ledger_grammar": "NOT exposed — KNZg58 has no public reading; scoreable",
+      "P3_ring_libation_order": "NOT exposed — no libation anchor among the public tokens; scoreable"
+    },
+    "M_ANETAKI_LATTICE_DELTA_SEAL": {
+      "in_current_corpus_false": "MISSTATED — same erratum wording needed",
+      "MP1_A_only_fraction": "PARTIALLY exposed denominator: 5-7 of ~119 target sign slots are publicly known; NI = syllabogram-AB, the ligatures are not A-only syllabogram types, so the A-only COUNT contamination is ~0 — but the scoring rule must EXCLUDE the publicly-known slots from prediction credit (EPOCH-001's flag, now mandatory)",
+      "MP2_anchor_delta": "NOT exposed — no value-bearing anchor derivable from the 7 tokens",
+      "MP3_substitution_nonrescue": "NOT exposed — no both-pinned variant pair derivable"
+    },
+    "self_inclusion_note": "MP1's corpus base rate (281/5792 A-only tokens) was computed on a silver corpus that already CONTAINS KNZg57a's 5 tokens — harmless at this magnitude (<0.1% of tokens) but must be stated in the erratum."
+  },
+
+  "quarantine_recommendation": "Independent of the erratum: KNZg57a's reading remains an unvetted single-editor photo-reading. Keep it in silver (it is part of the frozen derivation-time state) but EXCLUDE it from (a) any future seal prediction credit and (b) any held-out scoring unit, until Anetaki II confirms or refutes it. When Anetaki II lands, grade lineara.xyz's 7 tokens as a committed external hypothesis — exactly like Rjabchikov's and Chiapello's registry objects.",
+
+  "information_budget_note": "Art. IX: this epoch adds ZERO decipherment information (L0 metadata only); no licence state change; no new anchors.",
+  "compliance": "Art. VII search receipt = source_audit (25 records); Art. XI chain explicit; Art. XII: verdict computed by the pre-frozen rule, positive control ran first; Art. XVII: erratum flagged, nothing deleted; Art. XVIII: assumption A-3 updated (source identified; reliability still <= 0.5)."
+}

@@ -1,0 +1,72 @@
+{
+ "epoch": "EPOCH-005",
+ "checks": [
+  {
+   "check": "C1_silver_record",
+   "pass": true,
+   "detail": "silver KNZg57a signs == ['*401+RU', '*401+RU', '*418+L2', 'NI', 'VAS']"
+  },
+  {
+   "check": "C2_raw_lineara_tokens",
+   "pass": true,
+   "detail": "raw identified (non-lacuna) tokens ['*401+RU', '*652', '*653', '*401+RU', '*418+L2', 'NI', 'VAS'] == ['*401+RU', '*652', '*653', '*401+RU', '*418+L2', 'NI', 'VAS'] (17 slots incl. 10 lacunae)"
+  },
+  {
+   "check": "C3_builder_filter",
+   "pass": true,
+   "detail": "corpus_io.is_sign_token (requires a latin letter) drops '*652','*653' + lacunae -> exactly the 5 silver tokens"
+  },
+  {
+   "check": "C4_cited_paper_is_kanta2024",
+   "pass": true,
+   "detail": "lineara.xyz papers/KNZg57.pdf sha256 == 87dad27b79ee\u2026 (== bronze kanta_etal_2024)"
+  },
+  {
+   "check": "C4b_imageRights",
+   "pass": true,
+   "detail": "record credits 'Ph Saperstein' [= Ph. Sapirstein, Fig. 7 photo credit] + links the article PDF"
+  },
+  {
+   "check": "C5_kanta_vasRU_does_not_license",
+   "pass": true,
+   "detail": "prose 'vas+PA, vas+RU, etc.' present; NO sign-sequence printed -> DOES_NOT_LICENSE (consistent only)"
+  },
+  {
+   "check": "C6_positive_control_KNZg55",
+   "pass": true,
+   "detail": "silver KNZg55=JA-SA-JA recovered in Younger misctexts (HM 621; CMS II 2 213) -> method has power"
+  },
+  {
+   "check": "C7_negative_control_Zg56",
+   "pass": true,
+   "detail": "'KN Zg 56' hits across candidate sources = 0 (expected 0)"
+  },
+  {
+   "check": "C8_delfreo_inedit",
+   "pass": true,
+   "detail": "Rapport 2016-2021 lists KN Zg 57/58 as in\u00e9dit \u2014 no transliteration"
+  },
+  {
+   "check": "C9_J1_gap",
+   "pass": true,
+   "detail": "J1_exposure.json asserts 'No public source carries a transliterated sign-group sequence' and omits lineara.xyz -> factually false since 2025-03-23"
+  },
+  {
+   "check": "C10_seal_misstatement",
+   "pass": true,
+   "detail": "both seals record in_current_corpus:false; silver contains KNZg57a (partial) -> ERRATUM wording needed"
+  },
+  {
+   "check": "C11_token_classes",
+   "pass": true,
+   "detail": "NI=syllabogram-AB; the vessel ligatures are not A-only syllabogram types -> MP1 A-only count contamination ~0, denominator overlap 5-7 tokens"
+  },
+  {
+   "check": "W1_reading_commit",
+   "pass": true,
+   "detail": "GitHub 5facf29c 2025-03-23T17:22:23Z adds the 17-slot reading (Robert Hogan)"
+  }
+ ],
+ "n_pass": 13,
+ "n_total": 13
+}

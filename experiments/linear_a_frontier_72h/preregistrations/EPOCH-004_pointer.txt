@@ -1,0 +1,4 @@
+EPOCH-004 prereg: epochs/EPOCH-004/prereg.md
+plan_hash: da6e024832d2dc75f1c2ecf91ce36179fa425671def15220736cfe724a4ba4ef
+frozen: 2026-07-08 (before any derivation stage ran)
+seal: data/seals/FRACTION_ORDER_ANETAKI_SEAL.json sha256 45f34e8776a70928d7aaec62f1f6ec00c542506f6d2b1e1ad162c3c6502b3fa6

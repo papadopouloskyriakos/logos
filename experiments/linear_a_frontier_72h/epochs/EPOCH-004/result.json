@@ -1,0 +1,69 @@
+{
+  "epoch": "EPOCH-004",
+  "title": "FRACTION_ORDER_ANETAKI_SEAL — third prospective seal: fraction relative-value order vs Anetaki II face-δ (frontier F10, gate D)",
+  "campaign": "research/linear-a-frontier-72h",
+  "date": "2026-07-08",
+  "seed": 20260708,
+  "constitution": "v2.2",
+  "plan_hash_sha256": "da6e024832d2dc75f1c2ecf91ce36179fa425671def15220736cfe724a4ba4ef",
+  "claim_layer": "L2/L3 (numeral-notation structure; klasmatogram relative-value order); no licence claimed or consumed",
+  "articles_cited": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XVII", "XVIII", "XXII"],
+
+  "verdict": "SEAL_FROZEN_PROSPECTIVE",
+  "verdict_rule_check": {
+    "PC1_pass": true,
+    "PC2_pass": true,
+    "NC1_p_lt_0.10": true,
+    "NC3_pass": true,
+    "C1_C5_all_pass": true,
+    "primary_matrix_claims_ge_8": true,
+    "seal_and_manifest_written": true
+  },
+
+  "positive_controls_run_first": {
+    "PC1_pipeline_recovery": "PASS — noiseless planted-value regeneration of the 20 primary sequence tokens: 12/12 claimed direct pairs direction-correct, q monotone in vote count; noisy(0.2) variant mean direction accuracy 0.799 (descriptive, matches noise rate)",
+    "PC2_scorer_roundtrip": "PASS — synthetic descending six-sign face-δ scores OURS_SUPPORTED (9/9 pairs, binom p .00195); reversed scores OURS_REFUTED (0/9)"
+  },
+  "negative_controls": {
+    "NC1_order_shuffle": "PASS — real cross-document unanimity W=16; shuffle null (20,000 reps) p = 0.0442",
+    "NC2_frequency_adversary": "PASS — 5 claimed pairs contradict glyph-frequency rank (A>B, JE>B, E>L2, H>K, K>L2); channel not reducible to frequency",
+    "NC3_relabeling": "PASS — matrix exactly equivariant under letter permutation"
+  },
+
+  "derivation_summary": {
+    "input": "corpus/silver/inscriptions_structured.json ONLY (1,341 inscriptions); 26 multi-sign fraction sequence tokens, 20 in the primary LM I horizon (18 docs: HT/KH/ZA)",
+    "p_desc_posterior": "Beta(8,2) prior; the single arithmetic-checkable primary instance (ZA 8: E written before J) VIOLATES the descending convention -> posterior Beta(8,3), mean 0.727; sensitivity band Beta(4,1)/Beta(16,4) in the seal",
+    "primary_matrix": "25 claims: 3 arithmetic (J>E, JE>J, JE>E @0.99), 12 sequence-vote (J>B @0.957 4-doc-unanimous; K>L2 @0.857; 10 single-doc @0.727), 10 transitive (@0.62-0.72); all other pairs ABSTAIN",
+    "map_orderings": "972 tied maximum-likelihood linear extensions over 10 letters (top: JE>J>...>{A,E,B,H,K}>L2>{L4,L6}); P(all 25 claims correct) = 0.0011 — per-pair confidences are the committed content, not the total order",
+    "secondary_tier_non_primary": "L>E (PH7b, MM-II-adjacent), F>K (PH1b), L>L2 (ZA11a) @0.727 — quarantined from the primary gate per A-FD6"
+  },
+
+  "divergence_registry_vs_corazza_2021": [
+    {"pair": "H vs K", "ours": "H>K @0.727 (HT34)", "corazza": "K=1/10 > H=1/16(uncertain)"},
+    {"pair": "A vs B", "ours": "A>B @0.727 (KH86)", "corazza": "B=1/5 > A=1/24(uncertain)"}
+  ],
+  "corazza_comparator": "verified 2026-07-08 vs secondary source reproducing the paper's table; identical to repo scripts/comparison/metrology.py::CORAZZA_2021; citation doi:10.1016/j.jas.2020.105214",
+
+  "contamination_audit": {
+    "C1_public_pdf": "PASS — Kanta et al. 2024 pdftotext: 0 Aegean fraction glyphs, 0 identity patterns near 'fraction'; public surface = existence + novelty statement only (pp. 41-42)",
+    "C2_epoch001_register": "PASS — row 35 quarantine=unpublished_content; fringe rows 37-39 carry no fraction patterns",
+    "C3_fringe_blind": "PASS — blind pattern counts only (pdf:1, wayback html:5); fringe content never read",
+    "C4_input_isolation": "PASS — derivation opens only corpus/silver",
+    "C5_no_new_search": "PASS — EPOCH-001 14-route receipt (2026-07-08) is the currency check; no re-exposure",
+    "known_leak_discounted": "the editors' public 'different from Corazza' statement earns zero credit in scoring; only frozen pair directions score"
+  },
+
+  "seal": {
+    "path": "data/seals/FRACTION_ORDER_ANETAKI_SEAL.json",
+    "sha256": "45f34e8776a70928d7aaec62f1f6ec00c542506f6d2b1e1ad162c3c6502b3fa6",
+    "manifest": "data/seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256",
+    "status": "SEALED_PROSPECTIVE",
+    "scorer": "scripts/fraction_order_seal.py::score_sequence (sha256 7fa96ee5dbf14b649ff5bebf44e33fc197c99d8293d1174c8b3af72e77444f22)",
+    "ordinal": "third Anetaki-targeting seal; zero overlap with ANETAKI_FINAL_EDITION_DELTA_SEAL (sign-groups) and M_ANETAKI_LATTICE_DELTA_SEAL (lattice deltas)"
+  },
+
+  "information_budget": "committed ~15 direct + 10 implied direction bits; scoring n capped at C(6,2)=15 pairs; P(NO_POWER) est. 0.3-0.4 (non-binding)",
+  "effective_n_note": "doc-level dedup enforced (KH11's 3 identical tokens = 1 vote); site clustering visible (J>B: HT+KH; K>L2: KH only) and recorded in docs_for",
+
+  "compliance_line": "Art. V layer L2/L3 stated; Art. VII inherited receipt cited, no new search; Art. VIII doc-level effective-n dedup; Art. IX budget panel above; Art. XI source-dependency graph in seal (Corazza comparator-only, never in derivation); Art. XII held-out target untouched, PC/NC run before seal freeze, leak discounted; Art. XV no licence consumed; Art. XVII append-only, prior epochs untouched; Art. XVIII A-FD1..A-FD6 recorded; Art. XXII this header+line. Counts generated by scripts/fraction_order_seal.py (Invariant 12)."
+}

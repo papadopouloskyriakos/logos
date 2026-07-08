@@ -1,0 +1,1984 @@
+[
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 4,
+  "exact_acc_mean": 0.05030165912518854,
+  "exact_acc_median": 0.058823529411764705,
+  "acc_ci95": [
+   0.0,
+   0.13365384615384615
+  ],
+  "median_p": 1.0,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 13.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 8,
+  "exact_acc_mean": 0.05224116161616162,
+  "exact_acc_median": 0.0625,
+  "acc_ci95": [
+   0.0,
+   0.1568181818181818
+  ],
+  "median_p": 1.0,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 13.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 8,
+  "exact_acc_mean": 0.03181818181818182,
+  "exact_acc_median": 0.0,
+  "acc_ci95": [
+   0.0,
+   0.09090909090909091
+  ],
+  "median_p": 1.0,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 12.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 16,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 16,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 20,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 20,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 20,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.05,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.0712179487179487,
+  "exact_acc_median": 0.07692307692307693,
+  "acc_ci95": [
+   0.00625,
+   0.12833333333333333
+  ],
+  "median_p": 0.7312687312687313,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 15.2,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.043689458689458685,
+  "exact_acc_median": 0.04,
+  "acc_ci95": [
+   0.015833333333333335,
+   0.07853846153846154
+  ],
+  "median_p": 0.7392607392607393,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 26.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.037963383692769,
+  "exact_acc_median": 0.038461538461538464,
+  "acc_ci95": [
+   0.0,
+   0.1069293478260869
+  ],
+  "median_p": 0.7407592407592407,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 25.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04747844908714474,
+  "exact_acc_median": 0.04257246376811594,
+  "acc_ci95": [
+   0.0,
+   0.1147727272727272
+  ],
+  "median_p": 0.6463536463536463,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 24.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04619738956695478,
+  "exact_acc_median": 0.045454545454545456,
+  "acc_ci95": [
+   0.0,
+   0.12624999999999992
+  ],
+  "median_p": 0.6733266733266734,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 22.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03304478694605226,
+  "exact_acc_median": 0.021739130434782608,
+  "acc_ci95": [
+   0.0,
+   0.10833333333333332
+  ],
+  "median_p": 0.8196803196803197,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 19.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04141330891330892,
+  "exact_acc_median": 0.0,
+  "acc_ci95": [
+   0.0,
+   0.17393162393162376
+  ],
+  "median_p": 1.0,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 14.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 12,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 20,
+  "cell_verdict": "NO_POWER"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.1,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.04074555074555074,
+  "exact_acc_median": 0.03571428571428571,
+  "acc_ci95": [
+   0.0033333333333333335,
+   0.07272727272727272
+  ],
+  "median_p": 0.6533466533466533,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 29.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03097896986054881,
+  "exact_acc_median": 0.02532051282051282,
+  "acc_ci95": [
+   0.0,
+   0.08124999999999999
+  ],
+  "median_p": 0.6218781218781219,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 38.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.021251752041225726,
+  "exact_acc_median": 0.02564102564102564,
+  "acc_ci95": [
+   0.0,
+   0.06712304409672827
+  ],
+  "median_p": 0.6248751248751249,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 37.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.02868739482516572,
+  "exact_acc_median": 0.02702702702702703,
+  "acc_ci95": [
+   0.0,
+   0.05727124183006535
+  ],
+  "median_p": 0.6028971028971029,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 36.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.024801295518207284,
+  "exact_acc_median": 0.02817460317460317,
+  "acc_ci95": [
+   0.0,
+   0.0625
+  ],
+  "median_p": 0.6058941058941059,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 34.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.025153474399164055,
+  "exact_acc_median": 0.030303030303030304,
+  "acc_ci95": [
+   0.0,
+   0.08197737068965513
+  ],
+  "median_p": 0.592907092907093,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 31.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03058099308099308,
+  "exact_acc_median": 0.036375661375661374,
+  "acc_ci95": [
+   0.0,
+   0.08028846153846153
+  ],
+  "median_p": 0.516983016983017,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 26.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03869060001783113,
+  "exact_acc_median": 0.044466403162055336,
+  "acc_ci95": [
+   0.0,
+   0.08695652173913043
+  ],
+  "median_p": 0.44705294705294707,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 21.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 4,
+  "exact_acc_mean": 0.024912587412587416,
+  "exact_acc_median": 0.0,
+  "acc_ci95": [
+   0.0,
+   0.08566433566433566
+  ],
+  "median_p": 1.0,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 12.25,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.25,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.019308579490088282,
+  "exact_acc_median": 0.023255813953488372,
+  "acc_ci95": [
+   0.002325581395348837,
+   0.02551594746716698
+  ],
+  "median_p": 0.6503496503496503,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 41.6,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.026799557032115173,
+  "exact_acc_median": 0.023255813953488372,
+  "acc_ci95": [
+   0.0,
+   0.08197674418604647
+  ],
+  "median_p": 0.6238761238761239,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 42.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04186991869918699,
+  "exact_acc_median": 0.03600464576074332,
+  "acc_ci95": [
+   0.0,
+   0.09523809523809523
+  ],
+  "median_p": 0.4210789210789211,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.25,
+  "n_heldout_mean": 41.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.036981707317073176,
+  "exact_acc_median": 0.024390243902439025,
+  "acc_ci95": [
+   0.0,
+   0.11312499999999996
+  ],
+  "median_p": 0.6023976023976024,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.1,
+  "n_heldout_mean": 40.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03221997300944669,
+  "exact_acc_median": 0.02564102564102564,
+  "acc_ci95": [
+   0.0,
+   0.06538461538461535
+  ],
+  "median_p": 0.5889110889110889,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 38.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03214285714285715,
+  "exact_acc_median": 0.027777777777777776,
+  "acc_ci95": [
+   0.0,
+   0.0708928571428571
+  ],
+  "median_p": 0.518981018981019,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 35.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04408602150537634,
+  "exact_acc_median": 0.03225806451612903,
+  "acc_ci95": [
+   0.0,
+   0.11596774193548381
+  ],
+  "median_p": 0.4785214785214785,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.1,
+  "n_heldout_mean": 30.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.07007692307692308,
+  "exact_acc_median": 0.07692307692307693,
+  "acc_ci95": [
+   0.0,
+   0.1619999999999999
+  ],
+  "median_p": 0.2017982017982018,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.2,
+  "n_heldout_mean": 25.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.08249999999999999,
+  "exact_acc_median": 0.0625,
+  "acc_ci95": [
+   0.029687500000000002,
+   0.16177083333333325
+  ],
+  "median_p": 0.2972027972027972,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.15,
+  "n_heldout_mean": 15.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.5,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.09603864734299518,
+  "exact_acc_median": 0.08888888888888889,
+  "acc_ci95": [
+   0.06739130434782609,
+   0.12826086956521737
+  ],
+  "median_p": 0.005994005994005994,
+  "survival_rate": 0.4,
+  "nominal_rate": 0.8,
+  "n_heldout_mean": 45.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.029968287526427058,
+  "exact_acc_median": 0.02299154334038055,
+  "acc_ci95": [
+   0.0,
+   0.09201902748414376
+  ],
+  "median_p": 0.6393606393606394,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.15,
+  "n_heldout_mean": 43.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.028239202657807307,
+  "exact_acc_median": 0.02353266888150609,
+  "acc_ci95": [
+   0.0,
+   0.08313953488372089
+  ],
+  "median_p": 0.6013986013986015,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 42.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03373983739837399,
+  "exact_acc_median": 0.024390243902439025,
+  "acc_ci95": [
+   0.0,
+   0.10884146341463412
+  ],
+  "median_p": 0.5994005994005993,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.1,
+  "n_heldout_mean": 41.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.039294871794871795,
+  "exact_acc_median": 0.05,
+  "acc_ci95": [
+   0.0,
+   0.08903846153846151
+  ],
+  "median_p": 0.25124875124875123,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.1,
+  "n_heldout_mean": 39.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.043956456456456454,
+  "exact_acc_median": 0.027777777777777776,
+  "acc_ci95": [
+   0.0,
+   0.10968468468468467
+  ],
+  "median_p": 0.47502497502497504,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.25,
+  "n_heldout_mean": 36.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.07469758064516127,
+  "exact_acc_median": 0.07913306451612903,
+  "acc_ci95": [
+   0.03172883064516129,
+   0.11159274193548382
+  ],
+  "median_p": 0.08541458541458541,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.45,
+  "n_heldout_mean": 31.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.07763532763532764,
+  "exact_acc_median": 0.0754985754985755,
+  "acc_ci95": [
+   0.017592592592592594,
+   0.17133190883190877
+  ],
+  "median_p": 0.1878121878121878,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.35,
+  "n_heldout_mean": 26.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.11011029411764706,
+  "exact_acc_median": 0.11764705882352941,
+  "acc_ci95": [
+   0.0,
+   0.2430147058823529
+  ],
+  "median_p": 0.11938061938061938,
+  "survival_rate": 0.15,
+  "nominal_rate": 0.3,
+  "n_heldout_mean": 16.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 0.75,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.14264569842738203,
+  "exact_acc_median": 0.10869565217391304,
+  "acc_ci95": [
+   0.08723404255319149,
+   0.21521739130434783
+  ],
+  "median_p": 0.003996003996003996,
+  "survival_rate": 0.8,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 46.4,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04090909090909091,
+  "exact_acc_median": 0.045454545454545456,
+  "acc_ci95": [
+   0.0,
+   0.08011363636363633
+  ],
+  "median_p": 0.25374625374625376,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.05,
+  "n_heldout_mean": 44.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04534883720930233,
+  "exact_acc_median": 0.046511627906976744,
+  "acc_ci95": [
+   0.011046511627906977,
+   0.08197674418604647
+  ],
+  "median_p": 0.2872127872127872,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.1,
+  "n_heldout_mean": 43.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03928571428571429,
+  "exact_acc_median": 0.03571428571428571,
+  "acc_ci95": [
+   0.01130952380952381,
+   0.07142857142857142
+  ],
+  "median_p": 0.4170829170829171,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.0,
+  "n_heldout_mean": 42.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.057499999999999996,
+  "exact_acc_median": 0.05,
+  "acc_ci95": [
+   0.011875000000000002,
+   0.1
+  ],
+  "median_p": 0.15834165834165836,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.15,
+  "n_heldout_mean": 40.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.06351351351351352,
+  "exact_acc_median": 0.06756756756756757,
+  "acc_ci95": [
+   0.02702702702702703,
+   0.12229729729729727
+  ],
+  "median_p": 0.14885114885114886,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.3,
+  "n_heldout_mean": 37.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.06875,
+  "exact_acc_median": 0.078125,
+  "acc_ci95": [
+   0.0,
+   0.125
+  ],
+  "median_p": 0.09490509490509491,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.25,
+  "n_heldout_mean": 32.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.08888888888888888,
+  "exact_acc_median": 0.09259259259259259,
+  "acc_ci95": [
+   0.037037037037037035,
+   0.16759259259259252
+  ],
+  "median_p": 0.10989010989010989,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.4,
+  "n_heldout_mean": 27.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.1411764705882353,
+  "exact_acc_median": 0.11764705882352941,
+  "acc_ci95": [
+   0.058823529411764705,
+   0.29411764705882354
+  ],
+  "median_p": 0.050949050949050945,
+  "survival_rate": 0.2,
+  "nominal_rate": 0.5,
+  "n_heldout_mean": 17.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "KNOWN",
+  "frac": 1.0,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 1,
+  "invalid": 0,
+  "exact_acc_mean": 0.14893617021276595,
+  "exact_acc_median": 0.14893617021276595,
+  "acc_ci95": [
+   0.14893617021276595,
+   0.14893617021276595
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 47.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.032920088790233074,
+  "exact_acc_median": 0.03773584905660377,
+  "acc_ci95": [
+   0.0,
+   0.07547169811320754
+  ],
+  "median_p": 0.2612387612387612,
+  "survival_rate": 0.0,
+  "nominal_rate": 0.15,
+  "n_heldout_mean": 51.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03547095761381476,
+  "exact_acc_median": 0.02943485086342229,
+  "acc_ci95": [
+   0.0,
+   0.08158163265306118
+  ],
+  "median_p": 0.43006993006993005,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.25,
+  "n_heldout_mean": 50.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.03543042216886754,
+  "exact_acc_median": 0.0392156862745098,
+  "acc_ci95": [
+   0.0,
+   0.0784313725490196
+  ],
+  "median_p": 0.26473526473526476,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.15,
+  "n_heldout_mean": 49.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04748390568068115,
+  "exact_acc_median": 0.04301572617946346,
+  "acc_ci95": [
+   0.0,
+   0.0844276841171251
+  ],
+  "median_p": 0.18331668331668333,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.25,
+  "n_heldout_mean": 47.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.05208658884088611,
+  "exact_acc_median": 0.045454545454545456,
+  "acc_ci95": [
+   0.0,
+   0.1150237843551797
+  ],
+  "median_p": 0.2017982017982018,
+  "survival_rate": 0.05,
+  "nominal_rate": 0.3,
+  "n_heldout_mean": 44.4,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.0775813831012804,
+  "exact_acc_median": 0.07317073170731707,
+  "acc_ci95": [
+   0.025304878048780486,
+   0.17171052631578942
+  ],
+  "median_p": 0.044455544455544456,
+  "survival_rate": 0.2,
+  "nominal_rate": 0.55,
+  "n_heldout_mean": 39.4,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.08565062388591801,
+  "exact_acc_median": 0.08333333333333333,
+  "acc_ci95": [
+   0.013194444444444444,
+   0.18005793226381453
+  ],
+  "median_p": 0.04695304695304695,
+  "survival_rate": 0.25,
+  "nominal_rate": 0.5,
+  "n_heldout_mean": 34.4,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.11414437012263101,
+  "exact_acc_median": 0.11538461538461539,
+  "acc_ci95": [
+   0.0,
+   0.21308876811594202
+  ],
+  "median_p": 0.023976023976023976,
+  "survival_rate": 0.25,
+  "nominal_rate": 0.55,
+  "n_heldout_mean": 24.4,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.05,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.1661500449236298,
+  "exact_acc_median": 0.16666666666666666,
+  "acc_ci95": [
+   0.12678571428571428,
+   0.20566037735849058
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 54.4,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04196652485445589,
+  "exact_acc_median": 0.03636363636363636,
+  "acc_ci95": [
+   0.0,
+   0.09968344155844153
+  ],
+  "median_p": 0.1918081918081918,
+  "survival_rate": 0.1,
+  "nominal_rate": 0.2,
+  "n_heldout_mean": 56.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.046383129541024276,
+  "exact_acc_median": 0.03636363636363636,
+  "acc_ci95": [
+   0.0,
+   0.11987373737373734
+  ],
+  "median_p": 0.24925074925074925,
+  "survival_rate": 0.2,
+  "nominal_rate": 0.3,
+  "n_heldout_mean": 55.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04728960766696616,
+  "exact_acc_median": 0.04664570230607966,
+  "acc_ci95": [
+   0.0,
+   0.1042452830188679
+  ],
+  "median_p": 0.14785214785214784,
+  "survival_rate": 0.15,
+  "nominal_rate": 0.3,
+  "n_heldout_mean": 54.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.05782637841461372,
+  "exact_acc_median": 0.056623931623931624,
+  "acc_ci95": [
+   0.009134615384615385,
+   0.09803921568627451
+  ],
+  "median_p": 0.06643356643356643,
+  "survival_rate": 0.25,
+  "nominal_rate": 0.4,
+  "n_heldout_mean": 52.0,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.0674969987995198,
+  "exact_acc_median": 0.0625,
+  "acc_ci95": [
+   0.009313725490196078,
+   0.1331632653061224
+  ],
+  "median_p": 0.041458541458541456,
+  "survival_rate": 0.2,
+  "nominal_rate": 0.55,
+  "n_heldout_mean": 49.0,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.10255882893648313,
+  "exact_acc_median": 0.10085945399393326,
+  "acc_ci95": [
+   0.03258399209486166,
+   0.17278012684989427
+  ],
+  "median_p": 0.007492507492507492,
+  "survival_rate": 0.45,
+  "nominal_rate": 0.75,
+  "n_heldout_mean": 44.0,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.11303446232842893,
+  "exact_acc_median": 0.11360718870346598,
+  "acc_ci95": [
+   0.07317073170731707,
+   0.15597165991902834
+  ],
+  "median_p": 0.004995004995004995,
+  "survival_rate": 0.5,
+  "nominal_rate": 0.95,
+  "n_heldout_mean": 39.0,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.1663733513427618,
+  "exact_acc_median": 0.17549261083743845,
+  "acc_ci95": [
+   0.03331479421579533,
+   0.31674876847290634
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.6,
+  "nominal_rate": 0.8,
+  "n_heldout_mean": 29.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.1,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.2171235304826053,
+  "exact_acc_median": 0.22033898305084745,
+  "acc_ci95": [
+   0.15604861503674392,
+   0.3122443015780245
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 59.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.05897857462877624,
+  "exact_acc_median": 0.055443548387096774,
+  "acc_ci95": [
+   0.0,
+   0.11290322580645161
+  ],
+  "median_p": 0.043456543456543456,
+  "survival_rate": 0.25,
+  "nominal_rate": 0.5,
+  "n_heldout_mean": 62.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.057499811135453646,
+  "exact_acc_median": 0.06400409626216078,
+  "acc_ci95": [
+   0.0,
+   0.10599550502379691
+  ],
+  "median_p": 0.01948051948051948,
+  "survival_rate": 0.3,
+  "nominal_rate": 0.55,
+  "n_heldout_mean": 61.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.0665926317644985,
+  "exact_acc_median": 0.06666666666666667,
+  "acc_ci95": [
+   0.02432377049180328,
+   0.1163524590163934
+  ],
+  "median_p": 0.013986013986013988,
+  "survival_rate": 0.3,
+  "nominal_rate": 0.6,
+  "n_heldout_mean": 60.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.08577927138125853,
+  "exact_acc_median": 0.0847457627118644,
+  "acc_ci95": [
+   0.02488505747126437,
+   0.14587229690239623
+  ],
+  "median_p": 0.004995004995004995,
+  "survival_rate": 0.45,
+  "nominal_rate": 0.75,
+  "n_heldout_mean": 58.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.10481772613351562,
+  "exact_acc_median": 0.10909090909090909,
+  "acc_ci95": [
+   0.01818181818181818,
+   0.18085227272727267
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.7,
+  "nominal_rate": 0.8,
+  "n_heldout_mean": 55.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.1376711915535445,
+  "exact_acc_median": 0.13862745098039217,
+  "acc_ci95": [
+   0.06888235294117648,
+   0.223604826546003
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.8,
+  "nominal_rate": 0.95,
+  "n_heldout_mean": 50.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.17046561825470244,
+  "exact_acc_median": 0.17777777777777778,
+  "acc_ci95": [
+   0.09719858156028369,
+   0.2222222222222222
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.95,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 45.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.2383000858000858,
+  "exact_acc_median": 0.22539682539682537,
+  "acc_ci95": [
+   0.15416666666666665,
+   0.3154091591591592
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 35.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.25,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.4499718192255505,
+  "exact_acc_median": 0.44776119402985076,
+  "acc_ci95": [
+   0.39916083916083916,
+   0.4900466200466201
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 65.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.04707459207459208,
+  "exact_acc_median": 0.045804195804195806,
+  "acc_ci95": [
+   0.007196969696969697,
+   0.10017482517482512
+  ],
+  "median_p": 0.07842157842157842,
+  "survival_rate": 0.1,
+  "nominal_rate": 0.45,
+  "n_heldout_mean": 65.8,
+  "cell_verdict": "FLOOR"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.06403846153846153,
+  "exact_acc_median": 0.06153846153846154,
+  "acc_ci95": [
+   0.015384615384615385,
+   0.11576923076923075
+  ],
+  "median_p": 0.016983016983016984,
+  "survival_rate": 0.3,
+  "nominal_rate": 0.75,
+  "n_heldout_mean": 64.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.07368551587301587,
+  "exact_acc_median": 0.078125,
+  "acc_ci95": [
+   0.03125,
+   0.11861979166666664
+  ],
+  "median_p": 0.005494505494505494,
+  "survival_rate": 0.45,
+  "nominal_rate": 0.7,
+  "n_heldout_mean": 63.8,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.10355631940772078,
+  "exact_acc_median": 0.0967741935483871,
+  "acc_ci95": [
+   0.03225806451612903,
+   0.17822580645161284
+  ],
+  "median_p": 0.001998001998001998,
+  "survival_rate": 0.75,
+  "nominal_rate": 0.9,
+  "n_heldout_mean": 61.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.13436586791350089,
+  "exact_acc_median": 0.13559322033898305,
+  "acc_ci95": [
+   0.033050847457627125,
+   0.23728813559322035
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.9,
+  "nominal_rate": 0.9,
+  "n_heldout_mean": 58.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.2166317260656883,
+  "exact_acc_median": 0.20562543675751221,
+  "acc_ci95": [
+   0.14814814814814814,
+   0.3278389238294898
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 53.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.233609693877551,
+  "exact_acc_median": 0.24489795918367346,
+  "acc_ci95": [
+   0.16488095238095238,
+   0.2997767857142857
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 48.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.3053306342780027,
+  "exact_acc_median": 0.3117408906882591,
+  "acc_ci95": [
+   0.19423076923076923,
+   0.38461538461538464
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 38.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.5,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.5872549019607843,
+  "exact_acc_median": 0.6029411764705882,
+  "acc_ci95": [
+   0.47681159420289854,
+   0.6492753623188405
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 68.8,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.05253877670471174,
+  "exact_acc_median": 0.059714795008912656,
+  "acc_ci95": [
+   0.0,
+   0.08230837789661317
+  ],
+  "median_p": 0.01948051948051948,
+  "survival_rate": 0.25,
+  "nominal_rate": 0.55,
+  "n_heldout_mean": 66.6,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.07861966391817136,
+  "exact_acc_median": 0.07692307692307693,
+  "acc_ci95": [
+   0.014179104477611941,
+   0.12307692307692308
+  ],
+  "median_p": 0.0024975024975024975,
+  "survival_rate": 0.6,
+  "nominal_rate": 0.9,
+  "n_heldout_mean": 65.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.08273747086247087,
+  "exact_acc_median": 0.078125,
+  "acc_ci95": [
+   0.030997596153846153,
+   0.13959735576923077
+  ],
+  "median_p": 0.0024975024975024975,
+  "survival_rate": 0.6,
+  "nominal_rate": 0.8,
+  "n_heldout_mean": 64.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.12462877624167945,
+  "exact_acc_median": 0.125,
+  "acc_ci95": [
+   0.05564516129032258,
+   0.1935483870967742
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.85,
+  "nominal_rate": 0.95,
+  "n_heldout_mean": 62.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.18437436324905068,
+  "exact_acc_median": 0.19836065573770492,
+  "acc_ci95": [
+   0.07517655367231638,
+   0.2590233398166157
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.95,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 59.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.24072390572390573,
+  "exact_acc_median": 0.25227272727272726,
+  "acc_ci95": [
+   0.15694444444444444,
+   0.324537037037037
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 54.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.2907458983593437,
+  "exact_acc_median": 0.30612244897959184,
+  "acc_ci95": [
+   0.13112244897959183,
+   0.4067745098039215
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.95,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 49.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.416521263289556,
+  "exact_acc_median": 0.3951219512195122,
+  "acc_ci95": [
+   0.33719512195121953,
+   0.5375703564727955
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 39.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 0.75,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 5,
+  "invalid": 0,
+  "exact_acc_mean": 0.7210958504651095,
+  "exact_acc_median": 0.7246376811594203,
+  "acc_ci95": [
+   0.6840579710144927,
+   0.7546680080482897
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 69.6,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 3,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.06764705882352941,
+  "exact_acc_median": 0.058823529411764705,
+  "acc_ci95": [
+   0.021691176470588235,
+   0.11066176470588233
+  ],
+  "median_p": 0.013986013986013988,
+  "survival_rate": 0.45,
+  "nominal_rate": 0.75,
+  "n_heldout_mean": 68.0,
+  "cell_verdict": "NOMINAL"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 4,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.09253731343283582,
+  "exact_acc_median": 0.1044776119402985,
+  "acc_ci95": [
+   0.022014925373134327,
+   0.14925373134328357
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.75,
+  "nominal_rate": 0.9,
+  "n_heldout_mean": 67.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 5,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.11212121212121211,
+  "exact_acc_median": 0.11363636363636365,
+  "acc_ci95": [
+   0.0375,
+   0.18181818181818182
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.85,
+  "nominal_rate": 0.9,
+  "n_heldout_mean": 66.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 7,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.128125,
+  "exact_acc_median": 0.1171875,
+  "acc_ci95": [
+   0.04609375,
+   0.21132812499999998
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 0.85,
+  "nominal_rate": 0.95,
+  "n_heldout_mean": 64.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 10,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.19426229508196718,
+  "exact_acc_median": 0.19672131147540983,
+  "acc_ci95": [
+   0.1139344262295082,
+   0.2872950819672131
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 61.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 15,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.28660714285714295,
+  "exact_acc_median": 0.30357142857142855,
+  "acc_ci95": [
+   0.20491071428571428,
+   0.35714285714285715
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 56.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 20,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.3676470588235294,
+  "exact_acc_median": 0.37254901960784315,
+  "acc_ci95": [
+   0.29411764705882354,
+   0.46127450980392154
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 51.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": 30,
+  "k_wrong": 0,
+  "replicates": 20,
+  "invalid": 0,
+  "exact_acc_mean": 0.4292682926829269,
+  "exact_acc_median": 0.43902439024390244,
+  "acc_ci95": [
+   0.31585365853658537,
+   0.5609756097560976
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 41.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ },
+ {
+  "pair": "CTRL",
+  "frac": 1.0,
+  "budget": "LOO",
+  "k_wrong": 0,
+  "replicates": 1,
+  "invalid": 0,
+  "exact_acc_mean": 0.7746478873239436,
+  "exact_acc_median": 0.7746478873239436,
+  "acc_ci95": [
+   0.7746478873239436,
+   0.7746478873239436
+  ],
+  "median_p": 0.000999000999000999,
+  "survival_rate": 1.0,
+  "nominal_rate": 1.0,
+  "n_heldout_mean": 71.0,
+  "cell_verdict": "SURVIVES_HOLM"
+ }
+]

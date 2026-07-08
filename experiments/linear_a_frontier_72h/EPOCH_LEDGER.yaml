@@ -1,5 +1,28 @@
 # EPOCH_LEDGER — one record per epoch; substantive gate A-H per campaign §5
 epochs:
+  - id: EPOCH-003
+    frontier: F3
+    name: seed-poverty + corpus-power surface for the trigram-frame motif bridge
+    substantive_gate: A/E
+    plan_hash: be6dd7e786d373df3cad5c9b9bdba9b1786e6d98629a6c211eee9e8901e025d6
+    prereg_frozen: 2026-07-08T03:46:58Z
+    completed: 2026-07-08
+    positive_control: PASS (KNOWN M1-LOO 7/47 + CTRL 55/71 reproduced exactly; code paths identical)
+    negative_control: PASS (all-5-wrong-seed scramble at floor)
+    verdicts:
+      epoch: BRIDGE_NOT_VIABLE_AT_LA_SEED_BUDGET
+      min_seed_budget_known_full: LOO_46   # NO finite budget 3..30 Holm-survives at ANY corpus fraction
+      la_cell: FLOOR                        # (KNOWN, b=5, f_LA=0.75) acc .034 med_p .60
+    adversarial_findings:
+      - 1 wrong seed among 5 poisons a genuine Holm-surviving signal (CTRL b5 SURVIVES->NOMINAL; 2 wrong -> FLOOR); b=7 tolerates 1-2 wrong -> G-surface anchor fragility reproduces
+      - corpus axis secondary; KNOWN LOO dies below f=0.75 even with 46 anchors
+      - required-hit-rate posthoc = the ONE open door -> required 5-seed rate .119 < channel's LOO rate .149; M1's 5-dim profile geometry delivers only .039 -> estimator limitation, NOT information impossibility
+      - harness power control -> CTRL identity survives at 4 seeds; KNOWN failure is channel signal-strength, not detector power
+    committed_prediction: CONFIRMED (min budget > 5 @0.70; NOT_VIABLE-or-MARGINAL @0.75)
+    layer: L2
+    licences_changed: none
+    artifacts: [epochs/EPOCH-003/result.json, reports/EPOCH003_SEED_POVERTY_SURFACE.md, data/motifs/seed_poverty/]
+    successors_spawned: 6
   - id: EPOCH-002
     frontier: F3
     name: higher-order substitution motifs (trigram-frame / formula-slot / site-stratified)
@@ -32,4 +55,36 @@ epochs:
     gate: A
     verdict: "MOTIF_WITHIN_EQUIVALENT + MOTIF_CROSS_SUPERIOR + LA_MOTIF_GEOMETRY_CONSISTENT_WITH_AB_HOMOMORPHY_L2"
     result: "FIRST Holm-surviving cross-script recovery on KNOWN LB<->Cypriot (trigram-frame M1-LOO 7/47=0.149 p=0.001 vs flat 0.064 zero survivors; order-dependent, not frequency). LA leg 8/51 p=0.001 but = consistency test of assumed homomorphic seeds. Bridge is anchor-SEEDED only (46 seeds; LA has ~5) -> seed-poverty curve is THE question. NEW adversarial constraint: within-script C-axis is composition-driven not order-driven."
+    substantive: true
+  - epoch_id: EPOCH-004
+    frontier: F10
+    gate: D
+    plan_hash: da6e024832d2dc75f1c2ecf91ce36179fa425671def15220736cfe724a4ba4ef
+    completed: 2026-07-08
+    positive_control: PASS (PC1 12/12 planted directions + q monotone; PC2 scorer roundtrip SUPPORTED/REFUTED)
+    verdict: SEAL_FROZEN_PROSPECTIVE
+    result: "THIRD prospective Anetaki seal frozen: FRACTION_ORDER_ANETAKI_SEAL (sha256 45f34e87..2b3fa6). NEW corpus channel: within-token fraction sequence order (26 multi-glyph tokens; 20 LM-I). 25-claim pairwise matrix (J>B 4-doc @0.957; K>L2 @0.857; arithmetic J>E/JE @0.99; k=1 @0.727) + 972-way-tied MAP extensions. Convention reliability honestly tempered: ZA8 E-before-J VIOLATES descending order -> p_desc 0.727. Pre-registered divergences vs Corazza-2021: H>K and A>B (both hit Corazza's self-flagged uncertain values). NC1 shuffle p=0.0442; NC2 5 anti-frequency claims; contamination C1-C5 PASS (face-delta identities verified unpublished; fringe scanned blind; known 'differs from Corazza' leak discounted to zero credit). Scorer frozen in manifest."
+    layer: L2/L3
+    licences_changed: none
+    artifacts: [epochs/EPOCH-004/result.json, reports/EPOCH004_FRACTION_SEAL.md, data/seals/FRACTION_ORDER_ANETAKI_SEAL.json]
+    successors_spawned: 6
+    substantive: true
+
+  - epoch_id: EPOCH-003
+    frontier: F3
+    gate: A/E
+    verdict: BRIDGE_NOT_VIABLE_AT_LA_SEED_BUDGET
+    result: "113-cell seed x corpus surface (prereg be6dd7e7): min seed budget = 46/LOO (no finite budget 3..30 Holm-survives); LA cell (b=5,f=0.75) FLOOR acc .034; 1 wrong seed in 5 poisons a genuine signal; OPEN DOOR: failure is ESTIMATOR GEOMETRY not information (required 5-seed hit rate .119 < available .149; M1 delivers .039). Blocks over-reading E002's LA consistency hit."
+    substantive: true
+  - epoch_id: EPOCH-004
+    frontier: F10
+    gate: D
+    verdict: SEAL_FROZEN_PROSPECTIVE
+    result: "FRACTION_ORDER_ANETAKI_SEAL (3rd prospective seal, zero target overlap): 25-claim Corazza-independent pairwise fraction ordering from a NEW derivation channel (26 multi-glyph fraction sequences carry order info); 2 blind divergences from Corazza 2021 (H>K, A>B); ZA8 anomaly undermines the descending convention; contamination surface verified clean."
+    substantive: true
+  - epoch_id: EPOCH-005
+    frontier: F8
+    gate: H
+    verdict: PROVENANCE_ESTABLISHED + ERRATUM_REQUIRED
+    result: "KNZg57a chain FULLY established: lineara.xyz maintainer's photo-reading of Kanta 2024 Fig.7, committed 2025-03-23 (empty shell -> 17-slot reading same day); corpus_io letter-filter explains silver's 5 tokens deterministically; NO hand-editing; fabrication REJECTED. PUBLIC preliminary transliteration of Zg 57 exists -> J1 'no public source' finding FALSE for Zg 57 -> Art. XVII ERRATUM required on seal branches. Seal scoring targets NOT exposed (7 tokens = Face-A vessel ligatures + NI)."
     substantive: true

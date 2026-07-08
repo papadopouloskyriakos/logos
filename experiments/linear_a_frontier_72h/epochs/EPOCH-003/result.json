@@ -1,0 +1,96 @@
+{
+  "epoch": "EPOCH-003",
+  "frontier": "F3 substitution-neighborhood bridges v2 — seed-poverty + corpus-power surface",
+  "substantive_gate": "A/E",
+  "plan_hash": "be6dd7e786d373df3cad5c9b9bdba9b1786e6d98629a6c211eee9e8901e025d6",
+  "prereg": "epochs/EPOCH-003/prereg.md (frozen 2026-07-08T03:46:58Z, before any run)",
+  "seed": 20260708,
+  "claim_layer": "L2 relative/structural, KNOWN-script power calibration; no LA value claim; no licence change (Art. XV)",
+  "articles": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XXII"],
+  "positive_control": {
+    "KNOWN_M1_LOO_exact": "7/47 (reproduces EPOCH-002 exactly)",
+    "CTRL_M1_LOO_exact": "55/71 = 0.775 (reproduces EPOCH-002 exactly)",
+    "e002_vs_e003_code_paths": "prediction-identical on both pairs",
+    "status": "PASS"
+  },
+  "design_executed": {
+    "pairs": ["KNOWN LB-cog<->Cyp-cog (n_alignable=47 full)", "CTRL LB-DAMOS split-half (n=71 full)"],
+    "fractions": [0.05, 0.1, 0.25, 0.5, 0.75, 1.0],
+    "budgets": [3, 4, 5, 7, 10, 15, 20, 30, "LOO"],
+    "replicates_per_cell": 20,
+    "cells_total": 113,
+    "cell_bar": "SURVIVES_HOLM if median perm-p <= 0.05/12 (E002 Holm-12 per-test bar); NOMINAL <= 0.05; else FLOOR; NO_POWER if >R/2 replicates have <10 gradeable held-out signs"
+  },
+  "seed_axis_KNOWN_full_corpus": {
+    "b3": {"acc": 0.041, "median_p": 0.254, "verdict": "FLOOR"},
+    "b4": {"acc": 0.045, "median_p": 0.287, "verdict": "FLOOR"},
+    "b5": {"acc": 0.039, "median_p": 0.417, "verdict": "FLOOR", "survival_rate": 0.0, "nominal_rate": 0.0},
+    "b7": {"acc": 0.057, "median_p": 0.158, "verdict": "FLOOR"},
+    "b10": {"acc": 0.064, "median_p": 0.149, "verdict": "FLOOR"},
+    "b15": {"acc": 0.069, "median_p": 0.095, "verdict": "FLOOR"},
+    "b20": {"acc": 0.089, "median_p": 0.110, "verdict": "FLOOR"},
+    "b30": {"acc": 0.141, "median_p": 0.051, "verdict": "FLOOR", "note": "hit rate reaches LOO level but held-out shrinks to 17 -> no significance"},
+    "LOO_46": {"acc": 0.149, "median_p": 0.001, "verdict": "SURVIVES_HOLM", "survival_rate": 1.0}
+  },
+  "min_seed_budget_KNOWN_full": "LOO (=46) — NO finite budget in {3..30} Holm-survives; monotone-closure scan",
+  "corpus_axis_KNOWN_at_LOO": {
+    "f0.05": "FLOOR (p 0.73)", "f0.1": "FLOOR (p 0.65)", "f0.25": "FLOOR (p 0.65)",
+    "f0.5": "NOMINAL (acc 0.096, p 0.006)", "f0.75": "SURVIVES_HOLM (acc 0.143, p 0.004, survival 0.8)",
+    "f1.0": "SURVIVES_HOLM (acc 0.149, p 0.001)",
+    "reading": "even at 46 anchors the cross-script bridge needs >= ~75% of the cog-list corpus"
+  },
+  "harness_power_control_CTRL": {
+    "b4_f1.0": "SURVIVES_HOLM (acc 0.093, p 0.001)",
+    "b5_f1.0": "SURVIVES_HOLM (acc 0.112, p 0.001)",
+    "b5_f0.75": "SURVIVES_HOLM (acc 0.083, p 0.0025)",
+    "reading": "the harness CAN detect a strong (identity) signal at 4-5 seeds -> the KNOWN failure is channel signal-strength, not detector power"
+  },
+  "adversarial_wrong_seed_KNOWN": {
+    "b5_wrong1": {"acc": 0.027, "verdict": "FLOOR"},
+    "b5_wrong2": {"acc": 0.032, "verdict": "FLOOR"},
+    "b7_wrong1": {"acc": 0.048, "verdict": "FLOOR"},
+    "b7_wrong2": {"acc": 0.034, "verdict": "FLOOR"},
+    "b5_wrong5_negative_control": {"acc": 0.023, "median_p": 0.64, "verdict": "FLOOR", "gate": "PASS (full scramble at floor)"},
+    "note": "clean KNOWN cells already FLOOR at b=5/7 -> preregistered tier-drop contrast uninformative there; see declared post-hoc on CTRL"
+  },
+  "posthoc_declared": {
+    "ctrl_poisoning_b5": {
+      "clean": "SURVIVES_HOLM (acc 0.090)",
+      "wrong1": "NOMINAL (acc 0.065) — tier drop 1",
+      "wrong2": "FLOOR (acc 0.050) — tier drop 2",
+      "reading": "ONE wrong seed among 5 poisons a genuine Holm-surviving signal below the bar (G-surface anchor fragility REPRODUCES on this channel); b=7 tolerates 1-2 wrong (stays SURVIVES_HOLM, acc -36%/-51%)"
+    },
+    "required_hit_rate_b5_KNOWN": {
+      "k_needed_holm": "5/42 = 0.119", "k_needed_nominal": "4/42 = 0.095",
+      "loo_hit_rate_measured": 0.149, "b5_hit_rate_measured": 0.039,
+      "reading": "the required 5-seed hit rate (0.119) is BELOW the channel's measured LOO rate (0.149): the failure is M1's discriminative geometry at 5 anchor-profile dimensions (delivers only 0.039), NOT an information impossibility — a seed-efficient estimator is not excluded by this surface"
+    }
+  },
+  "la_operating_point": {
+    "seeds": 5,
+    "f_la": 0.75,
+    "mapping": "min-side median alignable support: LA=47 vs KNOWN realized {f0.75: 41.3, f1.0: 56.0} -> f_LA=0.75 (frozen rule); secondary token-ratio mapping would clamp to 1.0 — b=5 is FLOOR at BOTH, mapping choice does not matter",
+    "cell": {"pair": "KNOWN", "frac": 0.75, "budget": 5, "acc_mean": 0.034, "median_p": 0.599, "survival_rate": 0.05, "verdict": "FLOOR"},
+    "gap": "LA has 5 firm seeds; the bridge as-built needs 46 (9x), or a 3x hit-rate improvement at 5 seeds (0.039 -> 0.119)"
+  },
+  "epoch_verdict": "BRIDGE_NOT_VIABLE_AT_LA_SEED_BUDGET",
+  "verdict_mechanics": "CELL_LA (KNOWN, b=5, f=0.75) = FLOOR -> rule 3 of prereg; min_seed_budget = LOO(46); wrong-seed cells corroborate (all FLOOR)",
+  "effective_n": {
+    "known_signs": 47, "ctrl_signs": 71, "replicates": "20/cell x 113 cells",
+    "info_note": "per-cell decision inherits the E002 Holm-12 per-test bar (0.00417); the verdict rests on 2 preregistered cells (CELL_LA, WRONG1) + a monotone-closure scan over 9 budgets — not on any post-hoc cell selection"
+  },
+  "search_receipt": {
+    "cells": 113, "method": "M1/MF_A only (only E002 Holm survivor)", "endpoint": "exact count only",
+    "posthoc_declared": ["CTRL poisoning b5/b7 x wrong{0,1,2}", "required-hit-rate MC at b5"],
+    "no_other_variants_tried": true
+  },
+  "committed_prediction_outcome": "CONFIRMED: min_seed_budget > 5 (predicted 0.70) and verdict in {NOT_VIABLE, MARGINAL} (predicted 0.75); corpus axis confirmed the weaker constraint at LA's operating point (f_LA=0.75, where LOO still survives)",
+  "artifacts": [
+    "data/motifs/seed_poverty/E003_surface.json",
+    "data/motifs/seed_poverty/E003_positive_control.json",
+    "data/motifs/seed_poverty/E003_posthoc.json",
+    "scripts/e003_seed_poverty.py", "scripts/e003_posthoc.py",
+    "reports/EPOCH003_SEED_POVERTY_SURFACE.md"
+  ],
+  "compliance": "Art XXII: prereg frozen+hashed before any run; positive control gated first; negative control (full-scramble) gated; verdict mechanical per frozen rules from preregistered cells; post-hoc analyses declared and verdict-neutral; append-only."
+}

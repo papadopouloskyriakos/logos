@@ -1,0 +1,33 @@
+{
+ "PC1": {
+  "pass": true,
+  "n_synth_docs": 20,
+  "n_claims_checked": 12,
+  "wrong_direction_pairs": [],
+  "q_monotone_in_k": true,
+  "noisy_variant_mean_direction_accuracy": 0.7992
+ },
+ "PC2": {
+  "pass": true,
+  "forward_verdict": "OURS_SUPPORTED",
+  "reverse_verdict": "OURS_REFUTED",
+  "forward": {
+   "verdict": "OURS_SUPPORTED",
+   "n_claimed": 9,
+   "n_correct": 9,
+   "accuracy": 1.0,
+   "binomial_p_one_sided": 0.00195,
+   "brier": 0.0228,
+   "log_score": -1.2986
+  },
+  "reverse": {
+   "verdict": "OURS_REFUTED",
+   "n_claimed": 9,
+   "n_correct": 0,
+   "accuracy": 0.0,
+   "binomial_p_one_sided": 1.0,
+   "brier": 0.7603,
+   "log_score": -22.1679
+  }
+ }
+}
