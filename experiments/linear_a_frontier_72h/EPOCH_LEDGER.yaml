@@ -931,3 +931,28 @@ epochs:
     artifacts: [epochs/EPOCH-039/prereg.md, epochs/EPOCH-039/plan_hash.txt, epochs/EPOCH-039/machinery.py, epochs/EPOCH-039/result.json, epochs/EPOCH-039/_run_full.json, reports/EPOCH039_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-040
+    frontier: F13
+    gate: A
+    name: "Intra-word sign repetition (reduplication vs anti-repetition), i.i.d.-unigram length-matched null"
+    plan_hash: "see epochs/EPOCH-040/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: observed rep_rate=0.0709 (result 0.071) EXACT; i.i.d.-unigram length-matched null mean=0.0741 (result 0.073); two-sided p~0.69 (result 0.74) NOT significant; analytic P(repeat|L=2)=sum p_i^2=0.0227 confirms GLM's CORRECTED null (buggy null was ~0.005). AT_CHANCE confirmed."
+    positive_control: "PASSED (verified): detects planted repetition EXCESS (p=0, dir excess) AND planted DEFICIT (p=0, dir deficit); false-positive rate 0.10 (2/20, at the gate boundary) on true-H0 i.i.d. words. Bidirectional detector validated."
+    verdict: "REPETITION_AT_CHANCE — intra-word sign repetition (0.071) is statistically indistinguishable from the i.i.d.-unigram length-matched null (0.074, p=0.74). No reduplication process and no anti-repetition constraint. Cross-site: 1/6 sites significant (HT deficit only), direction inconsistent, LOO n.s. (p 0.487)."
+    numbers: {n_words: 1369, rep_rate_observed: 0.071, null_mean: 0.074, null_p: 0.74, direction: "deficit(n.s.)", analytic_P_repeat_L2: 0.0227, sites_testable: 6, sites_sig: 1, loo_p: 0.487}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "CLEAN NULL: Linear A words neither favour nor avoid repeating signs within a word beyond what sign frequencies + word lengths predict. RULES OUT reduplication as a productive LA word-formation process AND rules out a strong anti-repetition (dissimilation/OCP-like) orthographic constraint, at this corpus scale. A genuine negative that bounds the morphological hypothesis space. STRUCTURAL L2/L3; signs anonymous; no phonetics/meaning."
+    committed_prediction: "modal EXCESS(reduplication)/DEFICIT(avoidance)/AT_CHANCE; OUTCOME = AT_CHANCE. Neither reduplication nor anti-repetition is a detectable LA feature."
+    deviations:
+      - "GLM CAUGHT + FIXED its own null bug mid-run: a padding-sentinel inflated distinct-sign counts, producing a spurious strong-excess signal; caught via an analytic P(repeat|L=2)=sum p_i^2 check + brute-force reference, rewritten to length-grouped padding-free draws (corrected null 0.0735). Frozen metric/null DEFINITION unchanged; only the implementation was corrected. Corrected AT_CHANCE supersedes the buggy excess. Excellent honest self-correction — orchestrator independently reconfirmed the corrected null."
+      - "PC false-positive rate exactly at the 0.10 boundary (2/20); passes the <=0.10 rule; noted."
+    non_circular: "Signs anonymous; repetition is distributional; LB control-only; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Seventeenth gated-runner epoch (repairs=0). Notable for the WORKER's own mid-run bug-catch (analytic + brute-force cross-check) — the discipline propagating into GLM's process. Coordinator independently reconfirmed the corrected null."
+    artifacts: [epochs/EPOCH-040/prereg.md, epochs/EPOCH-040/plan_hash.txt, epochs/EPOCH-040/machinery.py, epochs/EPOCH-040/result.json, reports/EPOCH040_REPORT.md]
+    successors_spawned: 5
+    substantive: true

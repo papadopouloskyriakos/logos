@@ -1,0 +1,41 @@
+{
+  "epoch": "EPOCH-040",
+  "metric": "rep_rate = fraction of len>=2 words with >=1 repeated sign",
+  "null": "i.i.d.-unigram, length-matched, 2000 draws, two-sided p",
+  "global": {
+    "n_words_len_ge_2": 1369,
+    "n_words_with_repeat": 97,
+    "rep_rate_observed": 0.07085463842220599,
+    "null_mean": 0.07346201607012422,
+    "null_p": 0.74,
+    "direction": "deficit",
+    "stability_p_range_across_5_seeds": [0.702, 0.729, 0.715, 0.736, 0.72]
+  },
+  "positive_control": {
+    "benchmark": "Linear B (DAMOS), 2000-word subsample",
+    "detect_excess_p": 0.0,
+    "detect_excess_dir": "excess",
+    "detect_deficit_p": 0.0,
+    "detect_deficit_dir": "deficit",
+    "false_pos_rate": 0.1,
+    "n_fp_sets": 20,
+    "pc_verdict": "PASSED"
+  },
+  "cross_site": {
+    "n_sites_testable": 6,
+    "n_sites_sig": 1,
+    "direction_consistent": false,
+    "loo_excluded": "Haghia Triada",
+    "loo_n_words": 675,
+    "loo_rep_rate": 0.10814814814814815,
+    "loo_null_mean": 0.1000481481481482,
+    "loo_p": 0.487,
+    "loo_direction": "excess"
+  },
+  "analytic_crosscheck": {
+    "P_repeat_given_L2_sum_pi_sq": 0.0227,
+    "observed_rep_rate_L2": 0.0113,
+    "brute_force_null_mean_pure_python": 0.0739
+  },
+  "verdict": "REPETITION_AT_CHANCE"
+}
