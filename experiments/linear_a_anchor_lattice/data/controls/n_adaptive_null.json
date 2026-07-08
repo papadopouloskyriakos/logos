@@ -1,0 +1,3566 @@
+{
+ "task": "N_full_adaptive_null_programme",
+ "seed": 20260708,
+ "spec": "reports/N_NULL_SPEC.md (frozen before run)",
+ "constitution": "v2.2",
+ "observed_targets": {
+  "T1_retained": 0,
+  "T2_A_only_S2_red_bits": 0.0,
+  "T3_max_indep_collapsed_anchors": 1,
+  "T4_rel_sat": "9/24 (viol 15, UNSAT)",
+  "T5_licensed_S0_abs_bits": 0.0,
+  "T6_naive_contrasts": {
+   "naive_MDL_dl_bits": -656.4,
+   "naive_ge3_channel_signs_real_data": 23,
+   "wrong_language_bench_G": "0.836-0.895 recovered @ FP 0.9998-1.0"
+  }
+ },
+ "reused_nulls_cited": {
+  "random_anchor_null_H": {
+   "n": 200,
+   "verdict": "REAL_BELOW_NULL",
+   "p_null_leq_real": 0.0
+  },
+  "random_hyperedge_null_I": {
+   "n": 200,
+   "retained_max": 0,
+   "max_indep_anchors": 2
+  },
+  "wrong_language_bench_G": [
+   {
+    "n_anchors": 0,
+    "abs_recovery": 0.0,
+    "rel_recovery": 0.0555,
+    "eq_reduction": 0.0,
+    "residual_ambiguity_log10": 7.2653,
+    "heldout_word_recovery": 0.0,
+    "fp_rate": 0.0,
+    "recovered_frac": 0.0,
+    "n_independent": 0.0
+   },
+   {
+    "n_anchors": 2,
+    "abs_recovery": 0.0002,
+    "rel_recovery": 0.0617,
+    "eq_reduction": 2.285,
+    "residual_ambiguity_log10": 4.6622,
+    "heldout_word_recovery": 0.0008,
+    "fp_rate": 0.9998,
+    "recovered_frac": 0.8362,
+    "n_independent": 2.0
+   },
+   {
+    "n_anchors": 4,
+    "abs_recovery": 0.0,
+    "rel_recovery": 0.0468,
+    "eq_reduction": 3.2017,
+    "residual_ambiguity_log10": 3.9299,
+    "heldout_word_recovery": 0.0005,
+    "fp_rate": 1.0,
+    "recovered_frac": 0.8638,
+    "n_independent": 4.0
+   },
+   {
+    "n_anchors": 6,
+    "abs_recovery": 0.0002,
+    "rel_recovery": 0.0519,
+    "eq_reduction": 3.5796,
+    "residual_ambiguity_log10": 3.6585,
+    "heldout_word_recovery": 0.0004,
+    "fp_rate": 0.9998,
+    "recovered_frac": 0.8763,
+    "n_independent": 6.0
+   },
+   {
+    "n_anchors": 8,
+    "abs_recovery": 0.0,
+    "rel_recovery": 0.0473,
+    "eq_reduction": 3.9794,
+    "residual_ambiguity_log10": 2.9199,
+    "heldout_word_recovery": 0.0011,
+    "fp_rate": 1.0,
+    "recovered_frac": 0.8951,
+    "n_independent": 8.0
+   }
+  ],
+  "gate_null_calibration_repo": "scripts/gate_null_calibration.py: 3/500=0.6% (paper)"
+ },
+ "tier1_component_nulls": {
+  "CN1_random_value_maps": {
+   "n": 2000,
+   "mean_viol": 17.706,
+   "mean_sat": 6.295,
+   "p_viol_ge_15": 0.9315,
+   "p_unsat_ge1_viol": 1.0,
+   "p_sat_ge_9": 0.152,
+   "viol_min_max": [
+    10,
+    24
+   ]
+  },
+  "CN2_frequency_matched_values": {
+   "n": 2000,
+   "mean_viol": 16.255,
+   "mean_sat": 7.745,
+   "p_viol_ge_15": 0.7745,
+   "p_unsat_ge1_viol": 1.0,
+   "p_sat_ge_9": 0.3725,
+   "viol_min_max": [
+    7,
+    24
+   ]
+  },
+  "CN3_random_anchors": {
+   "n": 1000,
+   "cites_identical_component": "h_null_random_anchor.json (N=200)",
+   "A_only_mean_reduction_mean": 0.039,
+   "A_only_mean_reduction_p5_p95": [
+    0.0304,
+    0.0475
+   ],
+   "p_null_leq_real_0bits": 0.0,
+   "mean_A_only_pinned": 20.52,
+   "real_A_only_reduction": 0.0
+  },
+  "CN4_dependency_cloned_anchors": {
+   "n": 1000,
+   "max_indep_anchors_overall": 2,
+   "mean_max_indep_anchors": 1.684,
+   "reps_with_branchA_open_ge3": 0,
+   "cites_identical_component": "per_sign/random_hyperedge_null.json (N=200, max=2)"
+  },
+  "CN5_random_external_names": {
+   "n": 1000,
+   "mean_both_pinned": 23.22,
+   "mean_sat_rate": 0.3233,
+   "p_unsat_ge1_viol": 1.0
+  },
+  "CN6_wrong_language_random_lexica": {
+   "n_lexica": 1000,
+   "n_readable_forms": 6,
+   "mean_matches": 0.075,
+   "max_matches": 2,
+   "p95_matches": 1,
+   "match_rate_mean": 0.0125,
+   "cites_corpus_scale_version": "G surface wrong_language_misspecified: recovered_frac 0.836-0.895 at fp_rate 0.9998-1.0 (n_anchors 2-8)"
+  },
+  "CN7_random_stroke_correspondences": {
+   "n": 1000,
+   "real_top1_combined_score_percentile_p": 0.0759,
+   "note": "p = P(shuffled top-1 >= real top-1); channel already SOURCE_BLOCKED (Task E)"
+  },
+  "CN8_random_substitution_graphs": {
+   "n": 1000,
+   "mean_both_pinned": 21.44,
+   "mean_sat_rate": 0.3192,
+   "real_sat_rate": 0.375,
+   "p_unsat_ge1_viol": 1.0,
+   "p_viol_rate_ge_real": 0.728
+  },
+  "CN9_shuffled_morphology": {
+   "n": 1000,
+   "gate_outcomes_changed": 0,
+   "status": "STRUCTURALLY_INERT (value-free channel never enters the retention gate; invariance check, not a power claim)"
+  },
+  "CN10_shuffled_formula_roles": {
+   "n": 1000,
+   "gate_outcomes_changed": 0,
+   "status": "STRUCTURALLY_INERT (value-free channel never enters the retention gate; invariance check, not a power claim)"
+  },
+  "CN11_shuffled_sites": {
+   "n": 1000,
+   "real_signs_passing_loo_site": 10,
+   "null_mean": 4.51,
+   "null_min_max": [
+    0,
+    11
+   ],
+   "p_null_ge_real": 0.005,
+   "note": "loo_site alone never decides retention (branches A/B/C all fail first)"
+  },
+  "CN12_alternate_sign_inventories": {
+   "grains": {
+    "conservative": {
+     "n_syllabic": 128,
+     "n_A_only": 69,
+     "n_pins": 38
+    },
+    "split": {
+     "n_syllabic": 131,
+     "n_A_only": 72,
+     "n_pins": 38
+    },
+    "merged": {
+     "n_syllabic": 124,
+     "n_A_only": 69,
+     "n_pins": 36
+    }
+   },
+   "cites": "H sensitivity: 38/38/37 pins, A-only-with-pin=[] all grains"
+  }
+ },
+ "tier2_lattice_nulls": {
+  "LN1_retarget_values_sites": {
+   "n": 150,
+   "retained_max": 0,
+   "retained_mean": 0.0,
+   "max_indep_anchors_overall": 2,
+   "naive_retained_mean": 19.91,
+   "naive_retained_reps_ge1": 150
+  },
+  "LN2_cloned_full_gate": {
+   "n": 100,
+   "retained_max": 0,
+   "max_indep_anchors_overall": 2,
+   "cites": "per_sign/random_hyperedge_null.json (N=200, retained_max=0, max_ia=2)"
+  },
+  "LN3_grain_alternate": {
+   "conservative": {
+    "n": 50,
+    "retained_max": 0,
+    "max_ia": 2
+   },
+   "split": {
+    "n": 50,
+    "retained_max": 0,
+    "max_ia": 2
+   },
+   "merged": {
+    "n": 50,
+    "retained_max": 0,
+    "max_ia": 2
+   }
+  }
+ },
+ "tier3_full_adaptive": {
+  "n_reps": 120,
+  "disciplined_FWER": 0.08333333333333333,
+  "disciplined_FWER_CP95_upper": 0.1373,
+  "disciplined_breakdown": {
+   "d1": 0,
+   "d2": 10,
+   "d3": 0
+  },
+  "disciplined_retained_max": 0,
+  "disciplined_S2_A_only_red_max": 0.1064,
+  "observed_S2_A_only_red": 0.0,
+  "null_reps_with_red_ge_observed": 120,
+  "naive_FWER": 1.0,
+  "naive_breakdown": {
+   "n1": 120,
+   "n2": 120,
+   "n3": 117,
+   "n4": 120,
+   "n5": 8
+  },
+  "naive_min_nominal_p_median": 0.00141
+ },
+ "tier3_reps": [
+  {
+   "rep": 0,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.0515,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 1,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.0309,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00019,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 2,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.9942,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 22,
+    "min_nominal_p": 0.00443,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 3,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1026,
+    "p_rel_global": 0.3521,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00117,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 4,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0929,
+    "p_rel_global": 0.0258,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 5,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0836,
+    "p_rel_global": 0.2517,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00312,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 6,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0855,
+    "p_rel_global": 0.6356,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00238,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 7,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.082,
+    "p_rel_global": 0.4298,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00144,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 8,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0929,
+    "p_rel_global": 0.1749,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00018,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 9,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 1.0,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00012,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 10,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.1824,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00056,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 11,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.8867,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 20,
+    "min_nominal_p": 0.00765,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 12,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0911,
+    "p_rel_global": 0.781,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 4e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 13,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0988,
+    "p_rel_global": 0.7265,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00015,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 14,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1007,
+    "p_rel_global": 0.6356,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 20,
+    "min_nominal_p": 0.00044,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 15,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.1331,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 6e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 16,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.033,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.033,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 17,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.8301,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00238,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 18,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.0227,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.0,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 19,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0817,
+    "p_rel_global": 0.2517,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00463,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 20,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0947,
+    "p_rel_global": 0.8301,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00044,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 21,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.9145,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.00303,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 22,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.082,
+    "p_rel_global": 0.5088,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 24,
+    "min_nominal_p": 0.00463,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 23,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 1e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 24,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.1026,
+    "p_rel_global": 0.7265,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.00179,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 25,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.04809,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 26,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0911,
+    "p_rel_global": 0.8256,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00985,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 27,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0856,
+    "p_rel_global": 0.4441,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 26,
+    "min_nominal_p": 4e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 28,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.661,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.033,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 29,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0965,
+    "p_rel_global": 0.6442,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.00379,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 30,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.3872,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 23,
+    "min_nominal_p": 0.00379,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 31,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.0967,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.0054,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 32,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0965,
+    "p_rel_global": 0.0191,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 1e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 33,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.9518,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 4e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 34,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.9595,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00095,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 35,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0929,
+    "p_rel_global": 0.6442,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00379,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 36,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.2359,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00141,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 37,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.5088,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00463,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 38,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.1007,
+    "p_rel_global": 0.2711,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 39,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00051,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 40,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.6442,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00056,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 41,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0855,
+    "p_rel_global": 0.3465,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.0,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 42,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0836,
+    "p_rel_global": 0.6771,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.0006,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 43,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.9403,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 20,
+    "min_nominal_p": 0.00256,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 44,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0911,
+    "p_rel_global": 0.9347,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 22,
+    "min_nominal_p": 1e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 45,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.4544,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 14,
+    "min_nominal_p": 0.00867,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 46,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.5805,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 12,
+    "min_nominal_p": 0.0,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 47,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.4932,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.01617,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 48,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.5834,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.01575,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 49,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 0.0,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 50,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1064,
+    "p_rel_global": 0.7265,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.05847,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 51,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.8609,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.13,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": false,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 52,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0988,
+    "p_rel_global": 0.3504,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.1304,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": false,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 53,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.9857,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 10,
+    "min_nominal_p": 0.10801,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": false,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 54,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0965,
+    "p_rel_global": 0.9347,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 0.05847,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 55,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00051,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 56,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0856,
+    "p_rel_global": 0.888,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 57,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.8802,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 26,
+    "min_nominal_p": 0.03621,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 58,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0947,
+    "p_rel_global": 0.4544,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00759,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 59,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 6e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 60,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0988,
+    "p_rel_global": 0.6356,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00238,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 61,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0988,
+    "p_rel_global": 0.3521,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 62,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0911,
+    "p_rel_global": 0.3872,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 6e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 63,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.7265,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 20,
+    "min_nominal_p": 0.01262,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 64,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0988,
+    "p_rel_global": 0.0227,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 65,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.9757,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00337,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 66,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0856,
+    "p_rel_global": 0.1749,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00018,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 67,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0836,
+    "p_rel_global": 0.3465,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.0,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 68,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.58,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00018,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 69,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.2711,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 20,
+    "min_nominal_p": 0.0,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 70,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0855,
+    "p_rel_global": 0.4544,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 71,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0855,
+    "p_rel_global": 0.1749,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00018,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 72,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0765,
+    "p_rel_global": 0.0246,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00463,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 73,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.7265,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00015,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 74,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.8619,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.01835,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 75,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0892,
+    "p_rel_global": 0.8301,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 23,
+    "min_nominal_p": 0.00044,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 76,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0856,
+    "p_rel_global": 0.1259,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 77,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0892,
+    "p_rel_global": 0.4932,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00592,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 78,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.076,
+    "p_rel_global": 0.9894,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00581,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 79,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1007,
+    "p_rel_global": 0.7265,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.01262,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 80,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.076,
+    "p_rel_global": 0.0533,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 22,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 81,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0912,
+    "p_rel_global": 0.4702,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00095,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 82,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1002,
+    "p_rel_global": 0.3872,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00379,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 83,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0911,
+    "p_rel_global": 0.2931,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 1e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 84,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.2078,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00052,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 85,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0817,
+    "p_rel_global": 0.3872,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00056,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 86,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0836,
+    "p_rel_global": 0.3504,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00289,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 87,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0836,
+    "p_rel_global": 0.7937,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.06475,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 88,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.8256,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 14,
+    "min_nominal_p": 0.0089,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 89,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0798,
+    "p_rel_global": 0.58,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.04232,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 90,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.2931,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 0.00303,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 91,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.5268,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00186,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 92,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.3872,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00056,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 93,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0817,
+    "p_rel_global": 0.3521,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 22,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 94,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.2359,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00759,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 95,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.2711,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00095,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 96,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.8619,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 0.0663,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 97,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.4544,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00759,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 98,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.6442,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.00056,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 99,
+   "kind": "uniform",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0931,
+    "p_rel_global": 0.8912,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 2e-05,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 100,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0893,
+    "p_rel_global": 0.3189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00164,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 101,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.095,
+    "p_rel_global": 0.58,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 14,
+    "min_nominal_p": 0.00018,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 102,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1002,
+    "p_rel_global": 1.0,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 0.05847,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 103,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.5189,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.01224,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 104,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.6865,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 20,
+    "min_nominal_p": 0.00443,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 105,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0838,
+    "p_rel_global": 0.3521,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 23,
+    "min_nominal_p": 0.00018,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 106,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.2711,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00443,
+    "best_lang_matches": 1,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": true
+   }
+  },
+  {
+   "rep": 107,
+   "kind": "cloned",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0969,
+    "p_rel_global": 0.808,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 18,
+    "min_nominal_p": 0.00574,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 108,
+   "kind": "uniform",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.6865,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00095,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 109,
+   "kind": "freqvals",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.0967,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 23,
+    "min_nominal_p": 0.00141,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 110,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0856,
+    "p_rel_global": 0.5088,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 22,
+    "min_nominal_p": 0.00463,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 111,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0874,
+    "p_rel_global": 0.134,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 22,
+    "ge3_stacked_signs": 13,
+    "min_nominal_p": 0.00141,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 112,
+   "kind": "freqvals",
+   "grain": "merged",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1007,
+    "p_rel_global": 0.1879,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00015,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 113,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.082,
+    "p_rel_global": 0.2931,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00303,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 114,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0722,
+    "p_rel_global": 0.072,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 19,
+    "ge3_stacked_signs": 23,
+    "min_nominal_p": 0.00037,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 115,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.1002,
+    "p_rel_global": 0.0663,
+    "positive": true,
+    "d1": false,
+    "d2": true,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 15,
+    "min_nominal_p": 0.00056,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 116,
+   "kind": "cloned",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0836,
+    "p_rel_global": 0.8609,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 21,
+    "min_nominal_p": 0.00016,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 117,
+   "kind": "uniform",
+   "grain": "conservative",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0798,
+    "p_rel_global": 0.5088,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 16,
+    "min_nominal_p": 0.00463,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 118,
+   "kind": "freqvals",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 2,
+    "S2_A_only_red": 0.0783,
+    "p_rel_global": 0.8912,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 20,
+    "ge3_stacked_signs": 17,
+    "min_nominal_p": 0.03089,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  },
+  {
+   "rep": 119,
+   "kind": "cloned",
+   "grain": "split",
+   "disciplined": {
+    "retained": 0,
+    "max_ia": 1,
+    "S2_A_only_red": 0.0692,
+    "p_rel_global": 0.0481,
+    "positive": false,
+    "d1": false,
+    "d2": false,
+    "d3": false
+   },
+   "naive": {
+    "retained": 21,
+    "ge3_stacked_signs": 19,
+    "min_nominal_p": 0.00051,
+    "best_lang_matches": 0,
+    "positive": true,
+    "n1": true,
+    "n2": true,
+    "n3": true,
+    "n4": true,
+    "n5": false
+   }
+  }
+ ],
+ "planted_positive_calibration": {
+  "n": 20,
+  "retained_ge1": 20,
+  "retained_counts_minmax": [
+   1,
+   1
+  ],
+  "verdict": "GATE_OPENS_ON_GENUINE_INDEPENDENCE"
+ },
+ "unsat_adjudication": {
+  "observed_violations": 15,
+  "observed_pairs": 24,
+  "CN1_uniform": {
+   "mean_viol": 17.706,
+   "p_viol_ge_15": 0.9315,
+   "p_unsat": 1.0
+  },
+  "CN2_freq_matched": {
+   "mean_viol": 16.255,
+   "p_viol_ge_15": 0.7745,
+   "p_unsat": 1.0
+  },
+  "CN8_random_graphs_p_unsat": 1.0,
+  "direction_sat_high_p": 0.2794,
+  "verdict": "UNSAT_GENERIC"
+ },
+ "fdr_bh_campaign_pvalues": [
+  {
+   "test": "CN7_stroke_top1_percentile",
+   "p": 0.0759,
+   "bh_q": 0.4554
+  },
+  {
+   "test": "rel_binom_calibration_H",
+   "p": 0.2521,
+   "bh_q": 0.5588
+  },
+  {
+   "test": "rel_perm_global_I",
+   "p": 0.2794,
+   "bh_q": 0.5588
+  },
+  {
+   "test": "F2_bridge_best_exact_perm",
+   "p": 1.0,
+   "bh_q": 1.0
+  },
+  {
+   "test": "UNSAT_viol_ge_15_x2_directions",
+   "p": 1.0,
+   "bh_q": 1.0
+  },
+  {
+   "test": "rel_best_per_sign_x24_I",
+   "p": 1.0,
+   "bh_q": 1.0
+  }
+ ],
+ "n_discoveries_q05": 0,
+ "counts": {
+  "component_nulls_new": 13000,
+  "lattice_nulls_new": 400,
+  "lattice_nulls_cited": 400,
+  "full_adaptive_reps": 120,
+  "planted_reps": 20
+ }
+}

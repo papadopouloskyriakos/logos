@@ -1,6 +1,8 @@
 {
  "as_of": "2026-07-08",
  "all_LA_transfer": "NOT_EARNED",
- "campaign_state": "OPEN",
- "note": "equivalence-class reduction does NOT auto-earn phonetic licence; absolute values need >=3 independent anchors or bilingual (SEED_A=0)"
+ "campaign_state": "CLOSED",
+ "note": "equivalence-class reduction does NOT auto-earn phonetic licence; absolute values need >=3 independent anchors or bilingual (SEED_A=0)",
+ "final_verdict": "ANCHOR_LATTICE_UNDERDETERMINED",
+ "closed": "2026-07-08"
 }
