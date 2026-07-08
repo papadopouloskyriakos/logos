@@ -1,10 +1,11 @@
-# LOGOS Constitution v2.2
+# LOGOS Constitution v2.3
 
-**Status:** RATIFIED · **Effective:** 2026-07-07 (v2.0) · **Amended:** 2026-07-07 (v2.1, v2.2) ·
+**Status:** RATIFIED · **Effective:** 2026-07-07 (v2.0) · **Amended:** 2026-07-07 (v2.1, v2.2), 2026-07-08 (v2.3) ·
 **Supersedes:** v1.0 (the Mission + 12 Invariants formerly in `CLAUDE.md`)
 **Amendment records:** [`AMENDMENT-001-v1-to-v2.md`](./AMENDMENT-001-v1-to-v2.md) (v1→v2.0),
 [`AMENDMENT-002-v2.0-to-v2.1.md`](./AMENDMENT-002-v2.0-to-v2.1.md) (v2.0→v2.1, precision fixes B1–B8),
-[`AMENDMENT-003-v2.1-to-v2.2.md`](./AMENDMENT-003-v2.1-to-v2.2.md) (v2.1→v2.2, corrects B5 tier direction + B6 layer→licence map).
+[`AMENDMENT-003-v2.1-to-v2.2.md`](./AMENDMENT-003-v2.1-to-v2.2.md) (v2.1→v2.2, corrects B5 tier direction + B6 layer→licence map),
+[`AMENDMENT-004-v2.2-to-v2.3.md`](./AMENDMENT-004-v2.2-to-v2.3.md) (v2.2→v2.3, Art. XXI: LLM-provider agnosticism via the LiteLLM proxy).
 
 This document is the authoritative constitution of the LOGOS decipherment-research platform.
 `CLAUDE.md` carries a condensed pointer for day-to-day work; where the two differ, **this document
@@ -814,24 +815,32 @@ reproducibility limitations
 
 Operational constraints must be explicit.
 
-Current defaults:
+Current defaults (v2.3, AMENDMENT-004):
 
 ```text
 LLM access:
-  Claude Code subscription through `claude -p`
+  Provider-agnostic through the approved LiteLLM proxy (nllei01litellm01:4000),
+  selectable at runtime via $LOGOS_LLM_BACKEND. The proxy holds all vendor keys;
+  logos holds only a scoped LiteLLM virtual key via env / an untracked secret file
+  (runtime/secrets/litellm.env, gitignored). Backends wired: z.ai/GLM, local Ollama,
+  Mistral/Codestral/Devstral. Claude Code (`claude -p`) remains for the agentic layer.
 
 Prohibited:
-  ANTHROPIC_API_KEY
+  Setting ANTHROPIC_API_KEY in-process; committing any raw vendor key to the repo.
 
 Local models:
-  Ollama on the approved GPU host
+  Ollama on the approved GPU host (reachable directly or through the proxy).
 ```
 
 These rules govern execution and cost control.
 
-They do not grant epistemic privilege to a particular model or vendor.
+They do not grant epistemic privilege to a particular model or vendor. The proposer LLM is a
+capped signal (Art. VI; invariants #2/#4/#5) and is never on the verdict path, so the tests are
+LLM-agnostic by construction: changing the proposer model may change which hypotheses are explored,
+never a mechanically-computed verdict.
 
-A model change requires a recorded compatibility and reproducibility note.
+A model change requires a recorded compatibility and reproducibility note (see
+`AMENDMENT-004-v2.2-to-v2.3.md`).
 
 ---
 
