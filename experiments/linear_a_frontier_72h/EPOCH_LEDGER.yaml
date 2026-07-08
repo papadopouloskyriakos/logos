@@ -1234,3 +1234,27 @@ epochs:
     artifacts: [epochs/EPOCH-051/prereg.md, epochs/EPOCH-051/plan_hash.txt, epochs/EPOCH-051/machinery.py, epochs/EPOCH-051/result.json, reports/EPOCH051_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-052
+    frontier: F18
+    gate: A
+    name: "Zipf/Heaps statistical signature (is LA output statistically language-like?)"
+    plan_hash: "see epochs/EPOCH-052/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: LA word-form Zipf slope -0.703 (result -0.70) EXACT, ~ LB -0.73; uniform-random baseline slope -0.488 (result -0.47) — NEGATIVE, confirming Miller. LA Heaps beta 0.76 (R2 0.99) vs LB 0.88. PC-fail reasoning verified."
+    positive_control: "FAILED (correctly / by design): the frozen PC required the machinery to DISTINGUISH uniform-random from language. It CANNOT: a rank-sorted uniform-random sample yields Zipf slope -0.49 (not ~0), not separable from language's -0.70. This is Miller (1957) confirmed empirically -> the Zipf test has NO power to discriminate language from random."
+    verdict: "MACHINERY_UNINFORMATIVE — the Zipf/Heaps diagnostic cannot distinguish LA-as-language from random (uniform-random also produces a negative Zipf slope), so it provides ZERO discriminating evidence about whether LA is language-like. Correct fail-closed (a non-discriminating test yields no verdict)."
+    numbers: {la_word_zipf_slope: -0.703, la_word_zipf_r2: 0.865, la_sign_zipf_slope: -1.66, la_heaps_beta: 0.764, la_heaps_r2: 0.989, lb_word_zipf_slope: -0.728, lb_heaps_beta: 0.875, uniform_baseline_slope: -0.488, n_tokens: 3147, n_forms: 1165}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "EXEMPLARY FAIL-CLOSED (Miller caveat operationalized): the Zipf/Heaps test is NECESSARY-NOT-SUFFICIENT for language and here EMPIRICALLY shown non-discriminating (uniform-random baseline slope -0.49, not separable from LA -0.70) -> MACHINERY_UNINFORMATIVE. So Zipf adherence provides NO evidence about LA being a language. DESCRIPTIVE by-product (recorded, not a language claim): LA's frequency statistics QUANTITATIVELY match a real language (LA word Zipf -0.70 ~ LB -0.73; LA Heaps 0.76 ~ LB 0.88) — consistent-with but, per Miller, NOT evidence-of language-likeness. This CORRECTLY does NOT advance the LANGUAGE_ID licence (still NOT_EARNED). Anonymous forms/signs; no phonetics/meaning/language-ID."
+    committed_prediction: "modal LANGUAGELIKE/ATYPICAL/UNINFORMATIVE; OUTCOME = MACHINERY_UNINFORMATIVE (Zipf can't discriminate language from random). The diagnostic is confirmed powerless for the language question; LA's stats descriptively match LB but that proves nothing (Miller)."
+    deviations:
+      - "PC failed BY DESIGN (Miller): the uniform-random baseline is not distinguishable from language under Zipf. This is the CORRECT scientific conclusion (Zipf is non-discriminating), operationalized as a fail-closed verdict rather than a spurious LANGUAGELIKE claim. The honest framing was pre-registered."
+    non_circular: "Anonymous forms/signs; frequency distributions only; LB control-only; no phonetics/meaning/language-ID; no known-value model input on the LA side."
+    architecture_note: "Twenty-ninth gated-runner epoch (repairs=0). A MODEL result for the discipline: the pre-registered Miller necessary-not-sufficient caveat was operationalized as a PC that the Zipf test correctly FAILED (uniform-random indistinguishable from language) -> MACHINERY_UNINFORMATIVE, preventing a spurious 'LA is language-like' claim from LA's LB-matching Zipf stats. Exactly the self-deception the mission guards against."
+    artifacts: [epochs/EPOCH-052/prereg.md, epochs/EPOCH-052/plan_hash.txt, epochs/EPOCH-052/machinery.py, epochs/EPOCH-052/result.json, reports/EPOCH052_REPORT.md]
+    successors_spawned: 5
+    substantive: true

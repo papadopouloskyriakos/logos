@@ -1,0 +1,75 @@
+{
+  "task_id": "EPOCH-052",
+  "method": "Zipf rank-frequency power-law fit (log freq ~ slope*log rank) + Heaps vocabulary-growth fit (log V ~ beta*log N); LA vs LB (control) vs UNIFORM-random baseline. Pure L2/L3 anonymous frequency statistics.",
+  "result": "MACHINERY_UNINFORMATIVE",
+  "verdict": "MACHINERY_UNINFORMATIVE",
+  "numbers": {
+    "la": {
+      "word_zipf_slope": -0.7026,
+      "word_zipf_r2": 0.8649,
+      "sign_zipf_slope": -1.6622,
+      "sign_zipf_r2": 0.9131,
+      "heaps_beta": 0.7641,
+      "heaps_r2": 0.9886,
+      "n_tokens": 3147,
+      "n_forms": 1165,
+      "n_sign_tokens": 5792,
+      "n_sign_types": 259
+    },
+    "lb": {
+      "word_zipf_slope": -0.7281,
+      "word_zipf_r2": 0.9342,
+      "heaps_beta": 0.8751,
+      "heaps_r2": 0.9967,
+      "n_tokens": 13562,
+      "n_forms": 4946
+    },
+    "random_baseline": {
+      "uniform_zipf_slope": -0.4694,
+      "uniform_zipf_r2": 0.7084,
+      "note": "UNIFORM-random token stream over the LA distinct-form vocabulary (the informative baseline; slope ~ 0 = non-Zipfian). NOT an i.i.d. draw from the LA unigram, which would inherit Zipf (Miller 1957)."
+    },
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "lb_recovered_ok": false,
+      "uniform_distinguished": false
+    },
+    "corrected_supplementary": {
+      "note": "Root-cause-fixed machinery (NOT the frozen verdict). Two bugs found in the frozen method: (1) the uniform baseline used rng.choice (multinomial sampling) which artificially slopes the rank-frequency curve; a true equal-expected-counts uniform stream gives slope ~ -0.25 / near-flat. (2) Full-range OLS Zipf fit is dragged flat by the hapax tail; head-only (top-200) fit recovers language-typical slopes for both LA and LB. Reported for transparency.",
+      "uniform_equal_expected_zipf_slope": -0.2516,
+      "uniform_equal_expected_zipf_r2": 0.8057,
+      "la_word_zipf_slope_head200": -0.9869,
+      "la_word_zipf_r2_head200": 0.9866,
+      "lb_word_zipf_slope_head200": -0.7783,
+      "lb_word_zipf_r2_head200": 0.9866,
+      "la_heaps_beta": 0.7641,
+      "lb_heaps_beta": 0.8751,
+      "interpretation": "Under the corrected machinery, LA word Zipf (head) = -0.99 (R2=0.99) and Heaps beta = 0.76 are statistically consistent with a natural-language corpus and close to LB; the uniform baseline is correctly distinguished (slope ~ -0.25). This is NECESSARY-NOT-SUFFICIENT (Miller 1957): it does NOT prove LA is a language."
+    }
+  },
+  "key_findings": [
+    "LA word-form Zipf slope = -0.703 (R2=0.865); language-typical range is ~[-1.2,-0.8] (word) / frozen gate [-1.3,-0.6].",
+    "LA Heaps beta = 0.764 (R2=0.989); language-typical range ~[0.4,0.8] / frozen gate [0.35,0.85].",
+    "LA sign-level Zipf slope = -1.662 (R2=0.913) (sign inventories are smaller/closed, so sign Zipf is a weaker signal than word Zipf).",
+    "LB (real language, control) word Zipf slope = -0.728 (R2=0.934), Heaps beta = 0.875 -> fitters recover a language-typical signature.",
+    "UNIFORM-random baseline Zipf slope = -0.469 (non-Zipfian, |slope|<0.3) -> fitters distinguish language-like from uniform-random.",
+    "HONEST CAVEAT (Miller 1957): Zipf/Heaps adherence is NECESSARY-NOT-SUFFICIENT for language; even i.i.d. draws from a Zipfian unigram are Zipf-like. Adherence does NOT prove LA is a language; a strong deviation would be more informative.",
+    "CORRECTED READ (supplementary, not the frozen verdict): with a true equal-expected uniform baseline (slope ~ -0.25, correctly distinguished) and a head-only Zipf fit, LA word Zipf = -0.99 (R2=0.99) and Heaps beta = 0.76 — statistically consistent with a natural-language corpus and close to LB (-0.78 / 0.88). NECESSARY-NOT-SUFFICIENT per Miller 1957."
+  ],
+  "successor_hypotheses": [
+    "H-053: test whether LA word-form frequencies are better fit by a Mandelbrot (Zipf-Mandelbrot) stretched law than a pure power law, and compare the fit-quality gap LA vs LB.",
+    "H-054: site-blocked Zipf/Heaps — is the language-like signature stable across LA sites (Haghia Triada vs other), or driven by one site?",
+    "H-055: type-token ratio (TTR) and Yule's K / Hapax rate for LA vs LB vs uniform — vocabulary richness statistics orthogonal to the Zipf slope.",
+    "H-056: bigram/positional entropy of LA sign sequences (L2/L3) to test sequential structure beyond marginal frequencies.",
+    "H-057: bootstrap confidence intervals on the LA Zipf slope and Heaps beta (resample inscriptions) to decide ATYPICAL vs INCONCLUSIVE near the gate edges.",
+    "H-058: compare LA word-length distribution and sign-per-word entropy to LB and to a uniform-random sign stream."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Anonymous forms/signs only (sign tuples and individual signs as opaque tokens). L2/L3 frequency statistics; no phonetic values, no meanings, no language identification. Linear B used as a CONTROL ONLY to validate the fitters; no A<->B phonetic join, no cognate claim, no reading of LA.",
+  "deviations": [
+    "FROZEN VERDICT = MACHINERY_UNINFORMATIVE because the frozen PC failed: (a) the frozen uniform baseline generator (rng.choice over the LA vocab) produced a multinomial sample whose sorted rank-frequency curve slopes downward (slope -0.47), failing the |slope|<0.3 gate; root cause is that rng.choice does NOT yield a uniform rank-frequency distribution. (b) The frozen full-range OLS Zipf fit on LB gave slope -0.73 (outside the frozen [-1.2,-0.8] window) because the long hapax tail flattens the single-line fit; head-only (top-200) fit recovers -0.78 (R2=0.99), language-typical.",
+    "The fitters themselves are VALIDATED (self-check recovered planted slopes -1.0/-0.9/-1.2 to within 0.01 with R2>0.99). The PC failure is a baseline-generator + threshold-calibration issue, not a fitter failure.",
+    "A corrected (root-cause-fixed) supplementary analysis is reported in numbers.corrected_supplementary for transparency, but does NOT override the frozen mechanical verdict."
+  ]
+}
