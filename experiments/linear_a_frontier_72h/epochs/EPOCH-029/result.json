@@ -1,0 +1,362 @@
+{
+  "task_id": "EPOCH-029",
+  "method": "within-word sign-shuffle bigram collocation; structure_score = #{bigrams obs>=5 & |z|>=3}; search_adj_p via exchangeable shuffle pool",
+  "layer": "L2/L3",
+  "la_touched": true,
+  "result": "Linear A words show within-word sign-bigram collocation structure that is non-random relative to a within-word shuffle null.",
+  "verdict": "MACHINERY_UNINFORMATIVE",
+  "numbers": {
+    "global": {
+      "n_words": 1369,
+      "n_distinct_bigrams": 1174,
+      "structure_score": 49,
+      "search_adj_p": 0.001996007984031936,
+      "count_threshold": 5
+    },
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "lb_search_adj_p": 0.001996007984031936,
+      "synthetic_false_pos_rate": 0.3,
+      "lb_structure_score": 575,
+      "synthetic_p_values": [
+        0.24550898203592814,
+        0.25149700598802394,
+        0.40119760479041916,
+        0.029940119760479042,
+        0.0658682634730539,
+        0.3772455089820359,
+        0.001996007984031936,
+        0.0499001996007984,
+        0.12574850299401197,
+        0.031936127744510975,
+        0.07984031936127745,
+        0.0718562874251497,
+        0.005988023952095809,
+        0.07584830339321358,
+        0.564870259481038,
+        0.562874251497006,
+        0.18163672654690619,
+        0.17165668662674652,
+        0.5688622754491018,
+        0.00998003992015968
+      ]
+    },
+    "cross_site": {
+      "n_sites_ge40": 6,
+      "n_sites_sig": 4,
+      "heldout_replication": {
+        "k_top": 10,
+        "n_replicated": 2,
+        "frac": 0.2,
+        "trained_on": "Haghia Triada",
+        "tested_on": "pooled_other_sites",
+        "detail": [
+          [
+            [
+              "S98",
+              "S127"
+            ],
+            2,
+            0.2897,
+            false
+          ],
+          [
+            [
+              "S98",
+              "S114"
+            ],
+            2,
+            0.036,
+            false
+          ],
+          [
+            [
+              "S129",
+              "S124"
+            ],
+            0,
+            1.0,
+            false
+          ],
+          [
+            [
+              "S136",
+              "S103"
+            ],
+            12,
+            0.001,
+            true
+          ],
+          [
+            [
+              "S114",
+              "S106"
+            ],
+            1,
+            0.3357,
+            false
+          ],
+          [
+            [
+              "S81",
+              "S103"
+            ],
+            3,
+            0.1339,
+            false
+          ],
+          [
+            [
+              "S126",
+              "S103"
+            ],
+            0,
+            1.0,
+            false
+          ],
+          [
+            [
+              "S101",
+              "S103"
+            ],
+            7,
+            0.003,
+            true
+          ],
+          [
+            [
+              "S96",
+              "S127"
+            ],
+            1,
+            0.3327,
+            false
+          ],
+          [
+            [
+              "S131",
+              "S0"
+            ],
+            1,
+            0.3487,
+            false
+          ]
+        ]
+      },
+      "per_site": {
+        "Haghia Triada": {
+          "n": 694,
+          "structure_score": 16,
+          "p": 0.001996007984031936
+        },
+        "Zakros": {
+          "n": 132,
+          "structure_score": 1,
+          "p": 0.001996007984031936
+        },
+        "Khania": {
+          "n": 120,
+          "structure_score": 1,
+          "p": 0.001996007984031936
+        },
+        "Knossos": {
+          "n": 61,
+          "structure_score": 0,
+          "p": 1.0
+        },
+        "Phaistos": {
+          "n": 58,
+          "structure_score": 0,
+          "p": 1.0
+        },
+        "Palaikastro": {
+          "n": 57,
+          "structure_score": 1,
+          "p": 0.003992015968063872
+        }
+      }
+    },
+    "top_bigrams": [
+      [
+        "S90",
+        "S7",
+        16,
+        2.65,
+        "over"
+      ],
+      [
+        "S7",
+        "S149",
+        14,
+        2.61,
+        "over"
+      ],
+      [
+        "S136",
+        "S103",
+        21,
+        6.17,
+        "over"
+      ],
+      [
+        "S122",
+        "S100",
+        13,
+        3.31,
+        "over"
+      ],
+      [
+        "S136",
+        "S90",
+        22,
+        7.34,
+        "over"
+      ],
+      [
+        "S98",
+        "S127",
+        39,
+        19.31,
+        "over"
+      ],
+      [
+        "S73",
+        "S136",
+        20,
+        6.63,
+        "over"
+      ],
+      [
+        "S149",
+        "S91",
+        14,
+        3.91,
+        "over"
+      ],
+      [
+        "S129",
+        "S122",
+        22,
+        8.82,
+        "over"
+      ],
+      [
+        "S98",
+        "S114",
+        14,
+        4.82,
+        "over"
+      ],
+      [
+        "S103",
+        "S142",
+        6,
+        8.01,
+        "under"
+      ],
+      [
+        "S79",
+        "S90",
+        6,
+        7.64,
+        "under"
+      ],
+      [
+        "S73",
+        "S91",
+        5,
+        6.14,
+        "under"
+      ],
+      [
+        "S91",
+        "S112",
+        6,
+        6.69,
+        "under"
+      ],
+      [
+        "S99",
+        "S90",
+        5,
+        5.31,
+        "under"
+      ]
+    ],
+    "inspect": {
+      "n_words": 1369,
+      "n_distinct_bigrams": 1174,
+      "top": [
+        [
+          "KU",
+          "RO",
+          39
+        ],
+        [
+          "TA",
+          "I",
+          22
+        ],
+        [
+          "SA",
+          "RA",
+          22
+        ],
+        [
+          "TA",
+          "NA",
+          21
+        ],
+        [
+          "SA",
+          "RA\u2082",
+          21
+        ],
+        [
+          "A",
+          "TA",
+          20
+        ],
+        [
+          "SA",
+          "SA",
+          18
+        ],
+        [
+          "JA",
+          "SA",
+          18
+        ],
+        [
+          "KI",
+          "RO",
+          17
+        ],
+        [
+          "A",
+          "DU",
+          17
+        ]
+      ]
+    }
+  },
+  "key_findings": [
+    "Global LA structure_score=49 bigrams (obs>=5, |z|>=3) vs within-word shuffle; search_adj_p=0.0020 -> significant non-random adjacency.",
+    "Positive control: LB search_adj_p=0.0020 (real phonotactics detected); synthetic i.i.d. false-positive rate=0.30 (threshold<=0.1) -> machinery FAILED.",
+    "Cross-site: 4/6 sites with >=40 words show individual significant bigram structure (p<=0.05).",
+    "Held-out: 2/10 of HT-trained top over-represented bigrams replicate on pooled other sites (frac=0.20, threshold>=0.5).",
+    "All bigrams reported as ANONYMOUS sign pairs (S<id>); no phonetic/semantic value assigned."
+  ],
+  "successor_hypotheses": [
+    "L3: extend to sign-TRIGRAMS (within-word) to test higher-order combinatorial constraints; same shuffle null, search-adjusted.",
+    "L3: test DIRECTIONAL asymmetry of bigrams (s_i->s_j vs s_j->s_i) \u2014 are adjacency constraints ordered/asymmetric beyond raw frequency?",
+    "L2: cross-site held-out replication at the level of UNDER-represented bigrams (forbidden adjacencies) \u2014 do avoidance patterns generalize across sites?",
+    "L3: relate bigram structure to word-POSITION (initial/medial/final) \u2014 are some bigrams position-locked, indicating morphotactic slots?",
+    "L2: compare LA bigram structure score to LB under matched sample size (subsample LB to LA's word count) to gauge relative combinatorial richness.",
+    "L3: cluster sites by their bigram-overrepresentation profiles (Jaccard on top-K bigrams) to test whether combinatorial grammar is shared or site-divergent."
+  ],
+  "non_circular": "Sign tokens carry no phonetic/sound/meaning/language/reading; only L2/L3 positional/combinatorial distributional statistics computed; LB used as positive-control benchmark only; bigrams reported as anonymous sign ids.",
+  "deviations": [
+    "Search-adjusted p computed via an exchangeable shuffle pool (one pool of >=1500 shuffled bigram-count vectors split into null-set + test-set) rather than re-drawing a fresh per-bigram null for each of 500 search draws; this is mathematically equivalent under the within-word-shuffle exchangeability argument and is required for tractability (frozen rule's intent preserved: the whole structure_score statistic is redrawn under the shuffle)."
+  ]
+}

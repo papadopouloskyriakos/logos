@@ -656,3 +656,27 @@ epochs:
     artifacts: [epochs/EPOCH-028/prereg.md, epochs/EPOCH-028/plan_hash.txt, epochs/EPOCH-028/machinery.py, epochs/EPOCH-028/result.json, reports/EPOCH028_REPORT.md]
     successors_spawned: 6
     substantive: true
+
+  - epoch_id: EPOCH-029
+    frontier: F7
+    gate: A
+    name: "Word-internal sign-bigram collocation structure (combinatorial adjacency grammar, cross-site held-out)"
+    plan_hash: "see epochs/EPOCH-029/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=1."
+    orchestrator_verification: "Claude independently ran the PC's i.i.d.-synthetic check: raw structure_score on i.i.d. data is LOW (0-2), confirming (a) LA's global score 49 reflects REAL non-random adjacency structure, and (b) the PC-fail is in the SIGNIFICANCE CALIBRATION, not the raw detector. GLM's reported synthetic p-values are left-skewed with 6/20<=0.05 => search-adjusted-p anti-conservative (traced to the disclosed shuffle-pool shortcut). Held-out replication independently weak."
+    positive_control: "FAILED (correctly, fail-closed): synthetic false-positive rate 0.30 > 0.10 threshold (the method certifies 'significant structure' on i.i.d. random words 30% of the time). Root cause (orchestrator-diagnosed): the search-adjusted-p was computed via an exchangeable shuffle-pool shortcut (GLM-disclosed deviation) that is anti-conservative; the raw structure detector itself is fine (synthetic scores 0-2 in independent recompute). Because the PC failed, NO LA significance claim is authorized."
+    verdict: "MACHINERY_UNINFORMATIVE — the PC failed (method's significance test is anti-conservative), so no certified Linear A bigram-structure claim. The method is disqualified at this calibration."
+    numbers: {n_words: 1369, n_distinct_bigrams: 1174, la_structure_score: 49, la_search_adj_p: 0.002, count_threshold: 5, pc_lb_structure_score: 575, pc_synthetic_false_pos_rate: 0.30, cross_site_n_ge40: 6, cross_site_n_sig: 4, heldout_k_top: 10, heldout_replicated: 2, heldout_frac: 0.2, heldout_trained: "Haghia Triada", heldout_tested: "pooled_other_sites", null_draws: 1000}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "Fail-closed NO-POWER on the FORMAL claim, with TWO substantive honest by-products: (1) Linear A words DO carry real non-random adjacency structure (global structure_score 49 vs i.i.d.-synthetic ~0-2, orchestrator-confirmed) — but the significance calibration failed its PC, so it cannot be CERTIFIED at a stated level here; (2) whatever bigram structure exists is largely SITE-LOCAL: HT-trained top bigrams replicate on pooled other sites only 2/10 (frac 0.2), so NO shared cross-site combinatorial grammar is established (parallels E026 RO site-locality; contrasts A- prefixation which DOES generalize). ANONYMOUS sign-pairs, no phonetic/semantic value."
+    committed_prediction: "modal CROSS_SITE_ROBUST or SITE_LOCAL; OUTCOME = MACHINERY_UNINFORMATIVE (PC fail) with an underlying SITE_LOCAL signal (2/10 held-out). A null is not an early stop."
+    deviations:
+      - "GLM computed the search-adjusted p via an exchangeable shuffle-pool split rather than fresh per-draw redraws; disclosed. This shortcut is the likely cause of the anti-conservative PC-fail. SUCCESSOR: re-run with fresh-redraw search-adjusted p to test whether a calibrated version passes the PC; if so, the SITE_LOCAL (2/10 held-out) result would still stand."
+    non_circular: "LB control-only (its known phonotactics were the PC target); anonymous sign ids; no phonetic value; no known-value model input on the LA side."
+    architecture_note: "Sixth gated-runner epoch; second PC fail-closed. Coordinator verification ADDED signal the raw verdict lacked: distinguished 'raw structure is real' from 'significance uncertified', and surfaced the weak held-out replication (2/10) as the substantive finding. The fail-closed gate + coordinator scrutiny together prevented an uncertified 'LA has combinatorial grammar' overclaim."
+    artifacts: [epochs/EPOCH-029/prereg.md, epochs/EPOCH-029/plan_hash.txt, epochs/EPOCH-029/machinery.py, epochs/EPOCH-029/result.json, reports/EPOCH029_REPORT.md]
+    successors_spawned: 6
+    substantive: true
