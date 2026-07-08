@@ -1183,3 +1183,29 @@ epochs:
     artifacts: [epochs/EPOCH-049/prereg.md, epochs/EPOCH-049/plan_hash.txt, epochs/EPOCH-049/machinery.py, epochs/EPOCH-049/result.json, reports/EPOCH049_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-050
+    frontier: F4
+    gate: A
+    name: "A-prefix continuation selectivity (is A- a selectional/grammatical prefix or free?)"
+    plan_hash: "see epochs/EPOCH-050/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=1."
+    orchestrator_verification: "Claude verified (gate repro_check + scrutiny): H_after_A=4.76 bits over 155 A-initial words (40 distinct 2nd signs, top-10 share 0.59) vs frequency-matched null 5.31 (p=0). COMPARATOR CONTEXT (key): KU 3.06, SI 3.92, I 4.31, KA 4.44 — several initial signs are MORE restricted than A-. Cross-site 2/3 restricted (HT p=0; Zakros p=0.044 BORDERLINE, 0.039-0.0505 across seeds; Khania p=0.63 NOT restricted); LOO drop HT p=0."
+    positive_control: "PASSED (verified): detects a planted restricted-continuation prefix (obs H 2.26 < null 4.10, p=0) and false-positive rate 0.063 (stable 0.02-0.073 across 6 seeds) on free-continuation synthetics. Calibrated."
+    verdict: "A_PREFIX_SELECTIONAL_CROSS_SITE (mechanical: global H<null AND >=2 sites restricted AND LOO-survives) — with an HONEST SCOPE CAVEAT (below): A- has genuine but WEAK, GENERIC continuation restriction."
+    verdict_nuance: "A- DOES restrict its continuation (H 4.76 < null 5.31, p=0; preferred 2nd-signs TA/DU/RA/RI/SI cover 59%) — consistent with A- combining with a STRUCTURED (non-random) continuation set, as a real morphological/lexical prefix would. BUT this is NOT special to A-: it is a GENERIC property of word-initial signs — comparators KU (3.06), SI (3.92), I (4.31) are MORE restricted than A-, so A- is on the LESS-selective end. And cross-site support is HT-driven (HT p=0 strong; Zakros borderline p~0.044; Khania NOT restricted p=0.63). So the honest reading is: 'A-, like other initial signs, has non-random continuations (script/language-consistent); A- is modestly and weakly selective, not a specially strong selectional morpheme.' Does NOT elevate A- beyond its established L2/L3 positional-prefix status."
+    numbers: {n_A_initial_ge2: 155, H_after_A: 4.76, null_H: 5.31, H_p: 0.0, top_continuations: [["TA", 20], ["DU", 14], ["RA", 10], ["RI", 8], ["SI", 7]], top10_share: 0.59, n_distinct_2nd: 40, comparator_H: {KU: 3.06, SI: 3.92, I: 4.31, KA: 4.44}, sites_testable: 3, sites_restricted: 2, zakros_borderline: true, khania_p: 0.63, loo_p: 0.0, pc_fp: 0.063}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "MODEST deepening of the flagship A- result (no elevation). A- combines with a non-random, structured continuation set (H 4.76<5.31 null) — consistent with A- being a genuine morphological/lexical prefix rather than attaching to arbitrary continuations. HOWEVER continuation-restriction is GENERIC to word-initial signs (KU/SI/I more restricted than A-), so A- is NOT specially selective; and cross-site rests mainly on Haghia Triada (Zakros borderline, Khania non-restricted). NET: A- remains an L2/L3 productive positional prefix with ordinary (script-consistent) continuation structure — NOT evidence of a strong grammatical selection specific to A-, and NO phonetic/lexical value. 'A-' anonymous; continuation entropy is distributional. No transfer licence."
+    committed_prediction: "modal SELECTIONAL/NON_SELECTIONAL; OUTCOME = mechanically SELECTIONAL but WEAK+GENERIC (A- less selective than comparators). A- has ordinary continuation structure, not special grammatical selection."
+    deviations:
+      - "Zakros per-site p borderline (0.0435 frozen seed; 0.039-0.0505 across 6 seeds) — disclosed; the cross-site conjunct rests on HT (robust) + Zakros (borderline)."
+      - "COORDINATOR SCOPE CAVEAT (Art. XVII): the SELECTIONAL verdict is bounded by the comparator context (A- less selective than KU/SI/I) -> continuation-restriction is generic to initial signs, not special to A-. Recorded to prevent over-reading A- as a strong selectional morpheme."
+    non_circular: "A- = anonymous word-initial sign token; continuation entropy distributional; LB control-only; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Twenty-seventh gated-runner epoch (repairs=1). Deepened the flagship A- result but coordinator BOUNDED the SELECTIONAL verdict with comparator context (A- weaker than KU/SI/I) — preventing an over-read of A- as a special grammatical selector. A- stays exactly at its earned L2/L3 positional-prefix status."
+    artifacts: [epochs/EPOCH-050/prereg.md, epochs/EPOCH-050/plan_hash.txt, epochs/EPOCH-050/machinery.py, epochs/EPOCH-050/result.json, reports/EPOCH050_REPORT.md]
+    successors_spawned: 5
+    substantive: true

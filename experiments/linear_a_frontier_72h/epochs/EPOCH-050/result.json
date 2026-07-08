@@ -1,0 +1,89 @@
+{
+  "task_id": "EPOCH-050",
+  "method": "A-prefix continuation selectivity test (L2/L3). Continuation = 2nd sign (signs[1]) of A-initial words (len>=2). Selectivity = observed 2nd-sign entropy H_after_A significantly LOWER than a frequency-matched bootstrap null (2nd-signs drawn from the global 2nd-position distribution, same N=155, B=2000). One-sided p = P(null_H <= obs_H). Cross-site: per site with >=15 A-initial words, null drawn from that site's own 2nd-position distribution; leave-one-site-out on Haghia Triada. Positive control gates verdict: DETECT a synthetic restricted-continuation prefix (K=5 signs) AND keep false-positive rate on free-continuation synthetics <=0.10. Signs anonymous; 'A' = word-initial sign token 'A' ONLY (no phonetic value, no morpheme, no meaning). LB control-only.",
+  "result": "A_PREFIX_SELECTIONAL_CROSS_SITE",
+  "verdict": "A_PREFIX_SELECTIONAL_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_A_initial_ge2": 155,
+      "H_after_A_bits": 4.7619,
+      "null_H_bits": 5.312,
+      "H_p": 0.0,
+      "top_continuations": [
+        ["TA", 20],
+        ["DU", 14],
+        ["RA", 10],
+        ["RI", 8],
+        ["SI", 7],
+        ["SE", 7],
+        ["SA", 7],
+        ["KA", 6],
+        ["RE", 6],
+        ["PA", 6]
+      ],
+      "top_share": 0.5871,
+      "n_distinct_2nd": 40
+    },
+    "comparators": {
+      "KU": {"n": 89, "H_2nd_bits": 3.0637},
+      "KA": {"n": 46, "H_2nd_bits": 4.4363},
+      "SI": {"n": 47, "H_2nd_bits": 3.9164},
+      "I": {"n": 80, "H_2nd_bits": 4.3129}
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "detect_obs_H_bits": 2.255,
+      "detect_null_H_bits": 4.098,
+      "false_pos_rate": 0.0633,
+      "fp_n": 300,
+      "fp_threshold": 0.10,
+      "fp_rate_stability_across_seeds": [0.02, 0.0567, 0.0333, 0.0733, 0.0367, 0.0533]
+    },
+    "cross_site": {
+      "n_sites_testable": 3,
+      "n_sites_restricted": 2,
+      "site_results": {
+        "Haghia Triada": {"n": 41, "H_after_A_bits": 3.7594, "null_H_bits": 4.4713, "p": 0.0, "restricted": true},
+        "Khania": {"n": 20, "H_after_A_bits": 3.5464, "null_H_bits": 3.4435, "p": 0.632, "restricted": false},
+        "Zakros": {"n": 19, "H_after_A_bits": 3.3661, "null_H_bits": 3.7432, "p": 0.0435, "restricted": true, "note": "borderline; p ranges 0.039-0.0505 across alternative seeds"}
+      },
+      "loo_excluded": "Haghia Triada",
+      "loo_n": 114,
+      "loo_H_after_A_bits": 4.6251,
+      "loo_null_H_bits": 5.0801,
+      "loo_p": 0.0
+    },
+    "lb_sanity": {
+      "lb_initial": "A",
+      "lb_n": 1287,
+      "lb_H_2nd_bits": 5.1528,
+      "lb_null_H_bits": 5.5582,
+      "lb_p": 0.0,
+      "note": "Linear B control-only; LB 'A'-initial 2nd-sign entropy also below its null (large-N), consistent with positional structure, not a Linear A claim."
+    }
+  },
+  "key_findings": [
+    "GLOBAL: A-initial words (len>=2, n=155) have a 2nd-sign entropy H_after_A = 4.762 bits, significantly BELOW the frequency-matched bootstrap null (5.312 bits; one-sided p=0.0). A- does NOT attach freely: its continuation set is restricted relative to the global 2nd-position distribution.",
+    "The restriction is MODERATE, not tight: 40 distinct 2nd signs appear after A-, and the top-10 continuations (anonymous: TA, DU, RA, RI, SI, SE, SA, KA, RE, PA) account for only 58.7% of tokens. This is selectional structure, not a closed-class stem paradigm.",
+    "COMPARATOR CONTRAST: A- has the HIGHEST 2nd-sign entropy among common initials (4.762 bits vs KU 3.064, SI 3.916, I 4.313, KA 4.436). A- is the LEAST restrictive common initial sign in absolute terms; its selectivity shows up only against the frequency-matched null, not against other initials. KU is far more strongly selectional.",
+    "CROSS-SITE: of 3 sites with >=15 A-initial words, 2 are significantly restricted — Haghia Triada (n=41, p=0.0, strongly restricted) and Zakros (n=19, p=0.0435, borderline). Khania (n=20, p=0.632) is NOT restricted. Leave-one-site-out excluding HT still gives p=0.0 (n=114), so the global effect does not depend on HT alone.",
+    "POSITIVE CONTROL PASSED: the machinery detects a synthetic restricted-continuation prefix (p=0.0) and holds the free-continuation false-positive rate at 0.063 (<=0.10; stable 0.02-0.07 across 6 seeds). The selectivity test is informative.",
+    "Zakros is the fragile leg of the cross-site claim: its p sits at 0.039-0.0505 across alternative seeds, right at the 0.05 boundary. The cross-site verdict rests on HT (robust) + Zakros (borderline); Khania actively contradicts restriction."
+  ],
+  "successor_hypotheses": [
+    "E051: Test whether A-'s restriction is driven by a small set of HIGH-FREQUENCY continuations (TA, DU, RA) vs a long tail — i.e. is the selectivity a few preferred stems or a broad distributional skew? Fit a power-law / broken-stick to the A-continuation rank-frequency.",
+    "E052: Compare A-'s selectivity MAGNITUDE (H_after_A - null_H, the entropy gap) against all other initial signs ranked; is A- an outlier in the LOW-selectivity direction among initials that are nonetheless significantly restricted? Place A- on a selectivity spectrum.",
+    "E053: CONDITIONAL selectivity — does A-'s continuation depend on word LENGTH or on the 3rd sign (bigram A-X -> Y structure)? Test whether the 2nd-sign restriction tightens or loosens conditional on word length / position.",
+    "E054: Cross-site CONCORDANCE of the continuation set — do HT and Zakros restrict to the SAME continuations, or different ones? Concordance would support a shared grammatical prefix; divergence would support site-local lexical routines. Khania's non-restriction is the key disconfirming site to explain.",
+    "E055: KU as the stronger-selection comparator — run the full selectivity machinery on KU (H_2nd=3.06, far below A) to calibrate what a STRONGLY selectional prefix looks like in this corpus, and check whether KU's restriction is cross-site robust (the bar A- should be measured against).",
+    "E056: Power-limit audit — only 3 sites have >=15 A-initial words; resample / subsample HT to n=20 to estimate the detection power at Khania/Zakros sample sizes, to determine whether Khania's null result is a true free attachment or an underpowered non-detection."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are ANONYMOUS throughout. 'A' denotes the word-initial sign token 'A' ONLY — no phonetic value, no morpheme assignment, no meaning, no cognate. The metric is pure continuation-distribution structure (2nd-sign entropy vs a frequency-matched bootstrap null). No phonetic, semantic, or value-level claim is made or required. LB is used control-only (machinery sanity), not as evidence about Linear A. The verdict is a distributional (L2/L3) statement about whether the positional token 'A' restricts its continuation, not a claim that 'A' is a morpheme or carries meaning.",
+  "deviations": [
+    "Zakros per-site p (0.0435 at the frozen seed) is borderline; across 6 alternative seeds it ranges 0.039-0.0505, occasionally crossing 0.05. Reported honestly; the frozen-seed result stands but the cross-site verdict's second leg is fragile.",
+    "Only 3 sites meet the >=15 A-initial-word threshold (HT 41, Khania 20, Zakros 19); the cross-site test is at the lower edge of the preregistered power floor. Khania (n=20) returns null, so the claim rests on 2 of 3 sites."
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "Haghia Triada": {
+    "RA": 5,
+    "KA": 3,
+    "RU": 4,
+    "SI": 3,
+    "SU": 1,
+    "PU\u2082": 1,
+    "RI": 3,
+    "RE": 1,
+    "SE": 4,
+    "DU": 7,
+    "TU": 1,
+    "SA": 1,
+    "PA": 2,
+    "AROM": 1,
+    "I": 1,
+    "NA": 2,
+    "JU": 1
+  },
+  "Iouktas": {
+    "JE": 1,
+    "TA": 3,
+    "NA": 1,
+    "SA": 1
+  },
+  "Khania": {
+    "DU": 3,
+    "DA": 2,
+    "RA": 2,
+    "SI": 3,
+    "KI": 1,
+    "TO": 1,
+    "TA": 2,
+    "SE": 1,
+    "MA": 1,
+    "ME": 1,
+    "*301": 1,
+    "DI": 1,
+    "MI": 1
+  },
+  "Knossos": {
+    "PA": 2,
+    "KA": 2,
+    "TU": 1,
+    "ZU": 1,
+    "PI": 1,
+    "RE": 1,
+    "WA": 1,
+    "DA": 1
+  },
+  "Kophinas": {
+    "TA": 1,
+    "RA": 1
+  },
+  "Malia": {
+    "MA": 1,
+    "JA": 1,
+    "SA": 1
+  },
+  "Papourou": {
+    "KU": 1
+  },
+  "Petras": {
+    "*325": 1,
+    "RI": 1,
+    "NU": 1,
+    "KA": 1,
+    "JA": 1
+  },
+  "Phaistos": {
+    "SE": 1,
+    "RI": 3,
+    "MI": 2,
+    "PA\u2083": 1
+  },
+  "Palaikastro": {
+    "DU": 1,
+    "SA": 1,
+    "TA": 2,
+    "DI": 2,
+    "KO": 1,
+    "NE": 1,
+    "PA": 1,
+    "PA\u2083": 1
+  },
+  "Prassa": {
+    "SA": 1
+  },
+  "Skhinia": {
+    "MA": 1
+  },
+  "Syme": {
+    "TA": 5,
+    "JA": 1
+  },
+  "Thera": {
+    "RE": 2,
+    "NE": 1,
+    "JE": 1,
+    "TA": 1
+  },
+  "Troullos": {
+    "TA": 1
+  },
+  "Tylissos": {
+    "DU": 1,
+    "DA": 1,
+    "KU": 1,
+    "*301": 1
+  },
+  "Zakros": {
+    "TI": 3,
+    "RA": 1,
+    "RE": 2,
+    "MA": 1,
+    "TA": 4,
+    "RI": 1,
+    "KU": 1,
+    "MI": 2,
+    "DU": 1,
+    "DE": 1,
+    "SA": 1,
+    "SE": 1
+  },
+  "Arkhalkhori": {
+    "RA": 1,
+    "SU": 2,
+    "PA": 1,
+    "SI": 1,
+    "KI": 1,
+    "DU": 1,
+    "DA": 1
+  },
+  "Crete": {
+    "MA": 1,
+    "TA": 1,
+    "RO": 1
+  },
+  "Gournia": {
+    "SA": 1
+  },
+  "Haghios Stehanos": {
+    "MA": 1
+  }
+}
