@@ -1,0 +1,87 @@
+{
+  "epoch_id": "EPOCH-010",
+  "frontier": "F3",
+  "substantive_gates": "A/G",
+  "plan_hash": "0380e6c327b72fa1a0e65d9d95dff93572de95b783fb70e2c4de9783daa878fe",
+  "prereg_frozen": "2026-07-08T04:47:58Z",
+  "seed": 20260708,
+  "claim_layer": "L2",
+  "licences_changed": "none (Art. XV; no LA data touched)",
+  "articles": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XXII"],
+  "epoch_verdict": "DOOR_MARGINAL",
+  "gates": {
+    "PC0_harness_identity": "PASS (KNOWN M1-LOO 7/47, CTRL 55/71, code paths identical)",
+    "PC_CAP_ctrl_power": "PASS (all 4 probes exceed on CTRL identity: LIN .227, CCA .235, BATTERY .242, PICK3 .530 vs required ~.076)",
+    "NEG_CAP_scrambled_gt": "PASS (no probe OVERFIT_BROKEN: margins -.071/-.071/-.071/-.048; oracle leakage does not manufacture capacity)",
+    "NEG_ENS_scrambled_anchors": "FLOOR/FLOOR (family ok)",
+    "NEG_HUB_scrambled_anchors": "FLOOR (family ok)"
+  },
+  "part1_capacity_known_b5": {
+    "required_rate_median": {"f075": 0.122, "f10": 0.119},
+    "f075": {
+      "CAP_ORACLE_LIN": {"acc_median": 0.073, "margin_median": -0.048, "exceeds": false},
+      "CAP_ORACLE_CCA": {"acc_median": 0.096, "margin_median": -0.036, "exceeds": false},
+      "CAP_BEST_BATTERY": {"acc_median": 0.073, "margin_median": -0.049, "exceeds": false},
+      "CAP_ORACLE_PICK3": {"acc_median": 0.143, "acc_mean": 0.136, "margin_median": 0.0, "exceeds": true},
+      "CAP_FANO_report_only": {"bound_median": 0.333, "vacuous_as_predicted": true}
+    },
+    "f10": {
+      "CAP_ORACLE_LIN": {"acc_median": 0.083, "margin_median": -0.036, "exceeds": false},
+      "CAP_ORACLE_CCA": {"acc_median": 0.095, "margin_median": -0.024, "exceeds": false},
+      "CAP_BEST_BATTERY": {"acc_median": 0.083, "margin_median": -0.036, "exceeds": false},
+      "CAP_ORACLE_PICK3": {"acc_median": 0.143, "margin_median": 0.024, "exceeds": true},
+      "CAP_FANO_report_only": {"bound_median": 0.365, "vacuous_as_predicted": true}
+    },
+    "capacity_verdict_f075": "CAPACITY_EXCEEDS (PICK3 only, margin exactly 0.000)",
+    "seed_span_metric_class": "FORMALLY EXHAUSTED: oracle ridge/CCA/battery WITH full-GT leakage stay below required (max .096 < .122)"
+  },
+  "part2_ensemble": {
+    "error_overlap_pairwise_jaccard_f075": {"M1|EST_GW": 0.930, "M1|EST_OT": 0.904, "EST_GW|EST_OT": 0.894},
+    "cells": {
+      "ENS_RANK_f075": {"verdict": "FLOOR", "acc": 0.068, "median_p": 0.0809},
+      "ENS_POE_f075": {"verdict": "FLOOR", "acc": 0.051, "median_p": 0.2622},
+      "ENS_RANK_f10": {"verdict": "FLOOR", "acc": 0.080, "median_p": 0.0519},
+      "ENS_POE_f10": {"verdict": "FLOOR", "acc": 0.070, "median_p": 0.0964}
+    },
+    "reading": "errors ~90% shared; fusion lands between best single (EST_OT .071) and the union ceiling (.136), far from Holm"
+  },
+  "part3_hub_anchors": {
+    "cells": {
+      "HUB_SUP_M1_f075": {"verdict": "FLOOR", "acc": 0.021}, "HUB_SUP_M1_f10": {"verdict": "FLOOR", "acc": 0.040},
+      "HUB_SUP_EST_OT_f075": {"verdict": "FLOOR", "acc": 0.068}, "HUB_SUP_EST_OT_f10": {"verdict": "FLOOR", "acc": 0.068},
+      "HUB_CEN_M1_f075": {"verdict": "FLOOR", "acc": 0.042}, "HUB_CEN_M1_f10": {"verdict": "FLOOR", "acc": 0.048},
+      "HUB_CEN_EST_OT_f075": {"verdict": "FLOOR", "acc": 0.069}, "HUB_CEN_EST_OT_f10": {"verdict": "FLOOR", "acc": 0.049}
+    },
+    "uniform_references": {"M1_f075": 0.034, "M1_f10": 0.039, "EST_OT_f075": 0.071, "EST_OT_f10": 0.071},
+    "reading": "hub stratification beats uniform in only 3/8 cells (prediction (c) REFUTED): LA's high-frequency-anchor structure confers NO measurable advantage on this channel"
+  },
+  "multiplicity": "12 claim-bearing cells, per-test bar 0.05/12 = 0.0041667 (frozen, = Holm-12 entry bar); capacity probes are bounds acting only in the CLOSED direction",
+  "committed_prediction_outcome": {
+    "distribution": "P(CLOSED)=.40 P(MARGINAL)=.45 P(REOPENED)=.15 -> MARGINAL occurred (modal)",
+    "subpredictions": {
+      "a_error_jaccard_ge_0.5": "CONFIRMED (.89-.93)",
+      "b_no_ensemble_holm": "CONFIRMED",
+      "c_hub_beats_uniform_5of8": "REFUTED (3/8)",
+      "d_pick3_exceeds_f075": "OCCURRED (committed P=.45; margin exactly 0.000)",
+      "e_fano_vacuous": "CONFIRMED (.33 vs required .12; report-only as declared)",
+      "f_neg_cap_breaks_0to2_probes": "CONFIRMED (0 broken)"
+    }
+  },
+  "posthoc_descriptive": {
+    "pick3_f075": {"margin_median": 0.0, "margin_mean": 0.007, "frac_reps_strictly_above": 0.45, "frac_reps_ge": 0.60},
+    "pick3_f10": {"margin_median": 0.0238, "frac_reps_strictly_above": 0.60},
+    "union_hits": "spread over 32 distinct signs (top: A 16/20 reps, KA, RI); unique contributions from ALL three experts (OT 49, GW 30, M1 19 at f075) -> a realizable per-sign selector has no concentrated structure to key on",
+    "union_minus_best_single": "+0.052 acc"
+  },
+  "effective_n": "12 preregistered claim cells x 20 replicates + 4x20x4 capacity-control replicates; zero hyperparameter tuning; one endpoint",
+  "runtime_s": 4.6,
+  "artifacts": [
+    "data/motifs/capacity/E010_result.json",
+    "data/motifs/capacity/E010_pc0.json",
+    "data/motifs/capacity/E010_posthoc.json",
+    "scripts/e010_channel_capacity.py",
+    "scripts/e010_posthoc.py",
+    "reports/EPOCH010_CHANNEL_CAPACITY.md"
+  ],
+  "compliance": "Stage opened with articles_triggered + gates + frozen plan (prereg 0380e6c3); positive controls ran first; negative/adversarial controls all behaved; verdict computed by the frozen mechanical rule; oracle leakage declared and validated against scrambled-GT control; no LA data touched; licences unchanged."
+}

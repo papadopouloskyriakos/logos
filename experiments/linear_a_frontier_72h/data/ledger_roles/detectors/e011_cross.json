@@ -1,0 +1,18 @@
+{
+ "stage": "CROSS",
+ "plan_hash": "38e5762b187cdda84d49e41c726d1c8df39108577a73fbd1269f96345478d25c",
+ "n_fraction_bearing_ledger_docs": 158,
+ "n_fraction_events": 409,
+ "predecessor_distribution": {
+  "line_initial": 183,
+  "numeral": 108,
+  "multi_sign_word": 27,
+  "other": 13,
+  "other_single_sign_word": 76,
+  "fraction": 2
+ },
+ "unit_candidate_base_rate": 0.0,
+ "n_prev_is_unit_candidate": 0,
+ "p_binomial_enrichment": null,
+ "note": "non-gating coherence check (prereg C)"
+}

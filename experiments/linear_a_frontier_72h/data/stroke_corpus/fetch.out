@@ -1,0 +1,19 @@
+[pass1 0/802] ARKH 1a: fetched
+[pass1 50/802] HT 123b: cached
+[pass1 100/802] HT 24a: fetched
+[pass1 150/802] HT 55b: fetched
+[pass1 200/802] HT 97b: fetched
+[pass1 250/802] HT Wa 1199: fetched
+[pass1 300/802] HT Wa 1579: fetched
+[pass1 350/802] HT Wc 3004a: fetched
+[pass1 400/802] KH 11: fetched
+[pass1 450/802] KH 58: fetched
+[pass1 500/802] KH Wa 1002γ: fetched
+[pass1 550/802] KH Wc 2029: fetched
+[pass1 600/802] KH Wc 2104: fetched
+[pass1 650/802] MA 10a: fetched
+[pass1 700/802] PH 25: fetched
+[pass1 750/802] THE 7b: fetched
+[pass1 800/802] `KE Wc 2a: fetched
+pass1 done: 0 failures; retrying once
+DONE: 802/802 available (767 fetched this run)

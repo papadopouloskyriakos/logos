@@ -1,0 +1,98 @@
+{
+ "epoch": "EPOCH-011",
+ "frontier": "F5 unit-slot + arithmetic-totals detectors (E007 successors #1-#3)",
+ "plan_hash": "38e5762b187cdda84d49e41c726d1c8df39108577a73fbd1269f96345478d25c",
+ "prereg": "epochs/EPOCH-011/prereg.md (frozen 2026-07-08T04:46:45Z, before any run)",
+ "seed": 20260708,
+ "claim_layer": "L2/L3 functional-slot / notation-structure only; no value/semantic claim; no licence touched (Art. XV)",
+ "articles": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XVII", "XVIII", "XXII"],
+ "deviations": [],
+ "positive_controls_run_first": {
+  "PC_A_geomA": {"selected_rule": "R6_fn50", "test_f1": 0.9576, "threshold": 0.90, "pass": true},
+  "PC_A_geomB": {"selected_rule": "R2_prev_num", "test_f1": 1.0, "threshold": 0.90, "pass": true},
+  "PC_B": {"selected_variant": "V1+A2", "test_precision": 1.0, "test_recall": 1.0, "threshold": 0.90, "pass": true}
+ },
+ "corpora": {
+  "LB_ledger_docs": 1093, "KN_train": 308, "KN_test": 352, "nonKN": 433,
+  "LA_ledger_docs": 207, "LA_HT": 134, "LA_nonHT": 73
+ },
+ "detector_A_unit_slot": {
+  "rule_space": ["R1_TRUE", "R2_prev_num", "R3_prev_group", "R4_not_line_initial", "R5_prev_num_and_fn50", "R6_fn50"],
+  "selected_on_KN_train": "R4_not_line_initial",
+  "KN_test": {"precision": 0.1483, "recall": 0.8626, "f1": 0.253},
+  "nonKN": {"precision": 0.4833, "recall": 0.8919, "f1": 0.6269},
+  "null_N_A1_numeral_detach": {"reps": 25, "f1_p95": 0.2565},
+  "fire_criteria": {
+   "a_KN_test_f1_ge_.60": {"observed": 0.253, "pass": false},
+   "b_nonKN_f1_ge_.50": {"observed": 0.6269, "pass": true},
+   "c_gt_null_p95": {"observed": 0.6269, "null_p95": 0.2565, "pass": true}
+  },
+  "fires": false,
+  "LA_leg": "NOT RUN for record (gated)",
+  "verdict": "NO_POWER"
+ },
+ "detector_B_totals": {
+  "variant_space": ["V1+A1", "V1+A2", "V2+A1", "V2+A2", "V3+A1", "V3+A2"],
+  "selected_on_KN": "V2+A2",
+  "fallback_used": false,
+  "selection_scores_KN_f1": {"V1+A1": 0.0, "V1+A2": 0.0, "V2+A1": 0.0, "V2+A2": 0.1081, "V3+A1": 0.0, "V3+A2": 0.0833},
+  "nonKN": {"n_candidates": 19, "tp": 1, "precision": 0.0526, "n_gold_pairs": 80, "recall": 0.0125},
+  "null_N_B1_value_perm": {"reps": 25, "prec_p95": 0.0375},
+  "adversarial_baseline_maxnum": {"n_candidates": 423, "precision": 0.0307, "recall": 0.1625},
+  "fire_criteria": {
+   "a_precision_ge_.30": {"observed": 0.0526, "pass": false},
+   "b_recall_ge_.10": {"observed": 0.0125, "pass": false},
+   "c_gt_null_p95": {"observed": 0.0526, "null_p95": 0.0375, "pass": true},
+   "d_n_candidates_ge_10": {"observed": 19, "pass": true}
+  },
+  "fires": false,
+  "LA_leg": "NOT RUN for record (gated)",
+  "verdict": "NO_POWER"
+ },
+ "cross_check_C_nongating": {
+  "n_fraction_bearing_LA_ledger_docs": 158,
+  "n_fraction_events": 409,
+  "predecessor_distribution": {"line_initial": 183, "numeral": 108, "other_single_sign_word": 76, "multi_sign_word": 27, "other": 13, "fraction": 2},
+  "reading": "fractions attach to quantity positions (after numerals or directly after single-sign logogram-like words); with no validated unit-slot candidate class, no unit-slot mediation is demonstrable"
+ },
+ "posthoc_nonverdict": {
+  "PH_A1_oracle_rule_table": "no rule exceeds F1 .262 within KN (best R6 .2621 KN-test) while the same rules reach .53-.67 nonKN (R6 .6653); selection is not the failure - the geometry itself has no within-KN power",
+  "PH_A2_class_prior_unmasking": {
+   "single_sign_numeral_followed_gold_mix": {"KN": {"U": 285, "C": 1688, "W": 78}, "nonKN": {"U": 1258, "C": 1407, "W": 35}},
+   "reading": "U share of the single-sign+numeral-followed slot: KN 14%, nonKN 47%. The apparent E007 'live U channel' (recall .862) is largely a CLASS-PRIOR effect at unit-heavy sites, not discriminative geometry: precision tracks base rate at every site"
+  },
+  "PH_B1_lb_arithmetic_surface": {
+   "n_goldT_docs_nonKN": 67,
+   "docs_with_any_sum_consistent_numeral": {"V1": 2, "V2": 3, "V3": 21},
+   "share_goldT_docs_with_unit_signs": 0.716,
+   "mean_unitsign_types": 1.21,
+   "reading": "LB totals are multi-denomination (GRA n T m V k); exact integer sum-consistency is structurally absent - LB is the WRONG calibration analogue for integer-sum totals logic; machinery itself proven by PC_B = 1.0"
+  },
+  "PH_LA1_exploratory_totals_readout": {
+   "V2+A2_on_LA": {"n_candidates": 13, "KURO_hits": 7, "KURO_chance_share": 0.033},
+   "V3+A2_on_LA": {"n_candidates": 35, "KURO_hits": 9, "KURO_chance_share": 0.033},
+   "reading": "EXPLORATORY ONLY (gate closed, no constraint emitted): the identical blind sum logic concentrates on KU-RO in LA (7/13 candidates vs 3.3% chance) - the arithmetic-totals channel plainly exists in LA but this epoch's LB-gated design cannot license it (Art. XII: KU-RO role is prior knowledge; recovery here is a detector-sanity signal, not a discovery)"
+  },
+  "PH_LA2_exploratory_unitslot_readout": "frozen R4 / oracle R6 on LA flag *21M (4 hits, 3 sites), SU (4, 3 sites), NA (3, 3 sites), DU, *22M, *131B etc.; given PH_A2 these flags mean 'single sign before numeral' (logogram-class prior), NOT a validated metrogram class - listed only as exploratory"
+ },
+ "verdicts": {
+  "detector_A_unit_slot": "NO_POWER",
+  "detector_B_totals": "NO_POWER",
+  "reason": "frozen conjunctive LB fire criteria not met (A: within-site KN-test F1 .253 < .60; B: precision .0526 < .30, recall .0125 < .10); both PCs passed, so these are power/analogue negatives, not machinery failures"
+ },
+ "licences_changed": "none",
+ "constraints_emitted": "none (gates closed)",
+ "artifacts": [
+  "epochs/EPOCH-011/prereg.md",
+  "epochs/EPOCH-011/plan_hash.txt",
+  "epochs/EPOCH-011/result.json",
+  "reports/EPOCH011_UNIT_TOTALS.md",
+  "data/ledger_roles/detectors/e011_pc.json",
+  "data/ledger_roles/detectors/e011_lb.json",
+  "data/ledger_roles/detectors/e011_la.json",
+  "data/ledger_roles/detectors/e011_cross.json",
+  "data/ledger_roles/detectors/e011_posthoc.json",
+  "scripts/e011_detectors.py",
+  "scripts/e011_posthoc.py"
+ ]
+}

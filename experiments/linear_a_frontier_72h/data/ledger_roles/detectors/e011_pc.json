@@ -1,0 +1,194 @@
+{
+ "stage": "PC",
+ "plan_hash": "38e5762b187cdda84d49e41c726d1c8df39108577a73fbd1269f96345478d25c",
+ "seed": 20260708,
+ "PC_A": {
+  "geomA": {
+   "selected_rule": "R6_fn50",
+   "train_scores": {
+    "R1_TRUE": {
+     "tp": 258,
+     "fp": 163,
+     "fn": 0,
+     "precision": 0.6128,
+     "recall": 1.0,
+     "f1": 0.7599
+    },
+    "R2_prev_num": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 258,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R3_prev_group": {
+     "tp": 258,
+     "fp": 163,
+     "fn": 0,
+     "precision": 0.6128,
+     "recall": 1.0,
+     "f1": 0.7599
+    },
+    "R4_not_line_initial": {
+     "tp": 258,
+     "fp": 163,
+     "fn": 0,
+     "precision": 0.6128,
+     "recall": 1.0,
+     "f1": 0.7599
+    },
+    "R5_prev_num_and_fn50": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 258,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R6_fn50": {
+     "tp": 258,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "test": {
+    "tp": 260,
+    "fp": 23,
+    "fn": 0,
+    "precision": 0.9187,
+    "recall": 1.0,
+    "f1": 0.9576
+   },
+   "pass": true
+  },
+  "geomB": {
+   "selected_rule": "R2_prev_num",
+   "train_scores": {
+    "R1_TRUE": {
+     "tp": 248,
+     "fp": 392,
+     "fn": 0,
+     "precision": 0.3875,
+     "recall": 1.0,
+     "f1": 0.5586
+    },
+    "R2_prev_num": {
+     "tp": 248,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "R3_prev_group": {
+     "tp": 0,
+     "fp": 392,
+     "fn": 248,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R4_not_line_initial": {
+     "tp": 248,
+     "fp": 392,
+     "fn": 0,
+     "precision": 0.3875,
+     "recall": 1.0,
+     "f1": 0.5586
+    },
+    "R5_prev_num_and_fn50": {
+     "tp": 248,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "R6_fn50": {
+     "tp": 248,
+     "fp": 392,
+     "fn": 0,
+     "precision": 0.3875,
+     "recall": 1.0,
+     "f1": 0.5586
+    }
+   },
+   "test": {
+    "tp": 237,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "pass": true
+  }
+ },
+ "PC_A_pass": true,
+ "PC_B": {
+  "selected_variant": "V1+A2",
+  "train_scores": {
+   "V1+A1": {
+    "n_candidates": 75,
+    "tp": 0,
+    "precision": 0.0,
+    "n_gold_pairs": 75,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "V1+A2": {
+    "n_candidates": 75,
+    "tp": 75,
+    "precision": 1.0,
+    "n_gold_pairs": 75,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "V2+A1": {
+    "n_candidates": 78,
+    "tp": 0,
+    "precision": 0.0,
+    "n_gold_pairs": 75,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "V2+A2": {
+    "n_candidates": 78,
+    "tp": 75,
+    "precision": 0.9615,
+    "n_gold_pairs": 75,
+    "recall": 1.0,
+    "f1": 0.9804
+   },
+   "V3+A1": {
+    "n_candidates": 87,
+    "tp": 0,
+    "precision": 0.0,
+    "n_gold_pairs": 75,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "V3+A2": {
+    "n_candidates": 87,
+    "tp": 75,
+    "precision": 0.8621,
+    "n_gold_pairs": 75,
+    "recall": 1.0,
+    "f1": 0.9259
+   }
+  },
+  "test": {
+   "n_candidates": 75,
+   "tp": 75,
+   "precision": 1.0,
+   "n_gold_pairs": 75,
+   "recall": 1.0
+  },
+  "pass": true
+ },
+ "PC_B_pass": true
+}

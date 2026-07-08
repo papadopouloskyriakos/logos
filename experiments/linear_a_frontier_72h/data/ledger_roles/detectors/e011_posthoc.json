@@ -1,0 +1,603 @@
+{
+ "label": "POST-HOC (exploratory, non-verdict-changing)",
+ "PH_A1_oracle_rule_table_f1": {
+  "R1_TRUE": {
+   "KN_train": 0.2303,
+   "KN_test": 0.2485,
+   "nonKN": 0.6197,
+   "PY": 0.5801,
+   "TH": 0.7868,
+   "MY": 0.6065
+  },
+  "R2_prev_num": {
+   "KN_train": 0.1845,
+   "KN_test": 0.2141,
+   "nonKN": 0.3512,
+   "PY": 0.3923,
+   "TH": 0.2667,
+   "MY": 0.1391
+  },
+  "R3_prev_group": {
+   "KN_train": 0.2208,
+   "KN_test": 0.2242,
+   "nonKN": 0.533,
+   "PY": 0.49,
+   "TH": 0.6594,
+   "MY": 0.6435
+  },
+  "R4_not_line_initial": {
+   "KN_train": 0.241,
+   "KN_test": 0.253,
+   "nonKN": 0.6269,
+   "PY": 0.5973,
+   "TH": 0.7457,
+   "MY": 0.6378
+  },
+  "R5_prev_num_and_fn50": {
+   "KN_train": 0.1931,
+   "KN_test": 0.2186,
+   "nonKN": 0.3568,
+   "PY": 0.3991,
+   "TH": 0.2673,
+   "MY": 0.1429
+  },
+  "R6_fn50": {
+   "KN_train": 0.2409,
+   "KN_test": 0.2621,
+   "nonKN": 0.6653,
+   "PY": 0.6255,
+   "TH": 0.8193,
+   "MY": 0.6222
+  }
+ },
+ "PH_A2_single_sign_numfollowed_gold_mix": {
+  "KN": {
+   "U": 285,
+   "C": 1688,
+   "W": 78
+  },
+  "nonKN": {
+   "C": 1407,
+   "U": 1258,
+   "W": 35
+  }
+ },
+ "PH_B1_lb_totals_denomination_diag": {
+  "n_goldT_docs": 67,
+  "docs_with_any_sumhit": {
+   "V1": 2,
+   "V2": 3,
+   "V3": 21
+  },
+  "mean_unitsign_types": 1.21,
+  "share_ge1_unitsign": 0.716
+ },
+ "PH_LA1_exploratory_totals_readout": {
+  "V1+A1": {
+   "n_candidates": 8,
+   "KURO_hits": 4,
+   "KURO_chance_share": 0.0302,
+   "POTOKURO_hits": 0,
+   "top_types": {
+    "KU-RO": 4,
+    "DA-I": 1,
+    "RE": 1,
+    "ZU": 1,
+    "TA": 1
+   }
+  },
+  "V1+A2": {
+   "n_candidates": 8,
+   "KURO_hits": 4,
+   "KURO_chance_share": 0.033,
+   "POTOKURO_hits": 0,
+   "top_types": {
+    "KU-RO": 4,
+    "DA-I": 1,
+    "RE": 1,
+    "ZU": 1,
+    "TA": 1
+   }
+  },
+  "V2+A1": {
+   "n_candidates": 13,
+   "KURO_hits": 7,
+   "KURO_chance_share": 0.0302,
+   "POTOKURO_hits": 0,
+   "top_types": {
+    "KU-RO": 7,
+    "DA-I": 1,
+    "ZU": 1,
+    "SA-RU": 1,
+    "GRA": 1,
+    "*22F": 1,
+    "RA": 1
+   }
+  },
+  "V2+A2": {
+   "n_candidates": 13,
+   "KURO_hits": 7,
+   "KURO_chance_share": 0.033,
+   "POTOKURO_hits": 0,
+   "top_types": {
+    "KU-RO": 7,
+    "DA-I": 1,
+    "ZU": 1,
+    "SA-RU": 1,
+    "SA-RA2": 1,
+    "*22F": 1,
+    "RA": 1
+   }
+  },
+  "V3+A1": {
+   "n_candidates": 35,
+   "KURO_hits": 9,
+   "KURO_chance_share": 0.0302,
+   "POTOKURO_hits": 0,
+   "top_types": {
+    "KU-RO": 9,
+    "NI": 2,
+    "SI-TU-RA2-RE": 1,
+    "A-RU": 1,
+    "DI-NA-U": 1,
+    "TA2": 1,
+    "DA-I": 1,
+    "VIN": 1,
+    "VIR+KA-VIN": 1,
+    "OLE+DI": 1,
+    "SA-JA-MA": 1,
+    "ZU": 1
+   }
+  },
+  "V3+A2": {
+   "n_candidates": 35,
+   "KURO_hits": 9,
+   "KURO_chance_share": 0.033,
+   "POTOKURO_hits": 0,
+   "top_types": {
+    "KU-RO": 9,
+    "SI-TU-RA2-RE": 1,
+    "A-RU": 1,
+    "DI-NA-U": 1,
+    "TA2": 1,
+    "DA-I": 1,
+    "NI": 1,
+    "VIN": 1,
+    "VIR+KA-VIN": 1,
+    "I-TA-JA": 1,
+    "PU-RA2": 1,
+    "SA-JA-MA": 1
+   }
+  }
+ },
+ "PH_LA2_exploratory_unitslot_readout": {
+  "frozen_R4_not_line_initial": {
+   "GRA": {
+    "n": 37,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "GRA+PA": {
+    "n": 9,
+    "sites": [
+     "Haghia Triada",
+     "Zakros"
+    ]
+   },
+   "CYP": {
+    "n": 8,
+    "sites": [
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "OLE+KI": {
+    "n": 7,
+    "sites": [
+     "Haghia Triada",
+     "Tylissos"
+    ]
+   },
+   "VIR+[?]": {
+    "n": 7,
+    "sites": [
+     "Haghia Triada",
+     "Petras"
+    ]
+   },
+   "NI": {
+    "n": 6,
+    "sites": [
+     "Haghia Triada",
+     "Khania",
+     "Zakros"
+    ]
+   },
+   "VIN": {
+    "n": 5,
+    "sites": [
+     "Haghia Triada",
+     "Zakros"
+    ]
+   },
+   "OLIV": {
+    "n": 5,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "OLE+U": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada",
+     "Tylissos"
+    ]
+   },
+   "OLE+DI": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "SA": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "*22F": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada",
+     "Zakros"
+    ]
+   },
+   "GRA+QE": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "GRA+K+L": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "CYP+E": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "GRA+KU": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "VIR+*313b": {
+    "n": 3,
+    "sites": [
+     "Khania"
+    ]
+   },
+   "QI+SI": {
+    "n": 3,
+    "sites": [
+     "Zakros"
+    ]
+   }
+  },
+  "oracle_R6_fn50": {
+   "GRA": {
+    "n": 41,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Khania",
+     "Zakros"
+    ]
+   },
+   "NI": {
+    "n": 37,
+    "sites": [
+     "Haghia Triada",
+     "Khania",
+     "Knossos",
+     "Phaistos",
+     "Zakros"
+    ]
+   },
+   "OLIV": {
+    "n": 20,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Tylissos",
+     "Zakros"
+    ]
+   },
+   "VIN": {
+    "n": 20,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Khania",
+     "Zakros"
+    ]
+   },
+   "OLE+U": {
+    "n": 19,
+    "sites": [
+     "Haghia Triada",
+     "Tylissos"
+    ]
+   },
+   "VIR+[?]": {
+    "n": 16,
+    "sites": [
+     "Haghia Triada",
+     "Petras",
+     "Phaistos",
+     "Tylissos"
+    ]
+   },
+   "OLE+KI": {
+    "n": 14,
+    "sites": [
+     "Haghia Triada",
+     "Tylissos"
+    ]
+   },
+   "OLE+MI": {
+    "n": 14,
+    "sites": [
+     "Haghia Triada",
+     "Tylissos"
+    ]
+   },
+   "GRA+PA": {
+    "n": 13,
+    "sites": [
+     "Haghia Triada",
+     "Petras",
+     "Zakros"
+    ]
+   },
+   "OLE": {
+    "n": 12,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Khania",
+     "Knossos",
+     "Tylissos"
+    ]
+   },
+   "DI": {
+    "n": 11,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "OLE+DI": {
+    "n": 11,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "RE": {
+    "n": 11,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "KI": {
+    "n": 10,
+    "sites": [
+     "Haghia Triada",
+     "Khania",
+     "Tylissos"
+    ]
+   },
+   "PA": {
+    "n": 8,
+    "sites": [
+     "Haghia Triada",
+     "Zakros"
+    ]
+   },
+   "KA": {
+    "n": 8,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "SI": {
+    "n": 7,
+    "sites": [
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "TA": {
+    "n": 7,
+    "sites": [
+     "Haghia Triada",
+     "Khania",
+     "Thera",
+     "Zakros"
+    ]
+   },
+   "*22F": {
+    "n": 7,
+    "sites": [
+     "Haghia Triada",
+     "Phaistos",
+     "Zakros"
+    ]
+   },
+   "E": {
+    "n": 6,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "CYP+E": {
+    "n": 6,
+    "sites": [
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "TU": {
+    "n": 6,
+    "sites": [
+     "Haghia Triada",
+     "Zakros"
+    ]
+   },
+   "GRA+KU": {
+    "n": 6,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "TI": {
+    "n": 5,
+    "sites": [
+     "Haghia Triada",
+     "Malia",
+     "Palaikastro",
+     "Zakros"
+    ]
+   },
+   "QE": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada",
+     "Palaikastro"
+    ]
+   },
+   "SA": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "*23M": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "*21M": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada",
+     "Khania",
+     "Phaistos"
+    ]
+   },
+   "VIR+*313b": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada",
+     "Khania"
+    ]
+   },
+   "SU": {
+    "n": 4,
+    "sites": [
+     "Haghia Triada",
+     "Khania",
+     "Zakros"
+    ]
+   },
+   "*131B": {
+    "n": 4,
+    "sites": [
+     "Arkhalkhori",
+     "Zakros"
+    ]
+   },
+   "OLE+E": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "GRA+QE": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "QA2+[?]+RE": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "KI+MU": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "DU": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada",
+     "Zakros"
+    ]
+   },
+   "ZU": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "NA": {
+    "n": 3,
+    "sites": [
+     "Arkhalkhori",
+     "Haghia Triada",
+     "Phaistos"
+    ]
+   },
+   "GRA+K+L": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "VIR+KA": {
+    "n": 3,
+    "sites": [
+     "Haghia Triada"
+    ]
+   },
+   "*22M": {
+    "n": 3,
+    "sites": [
+     "Phaistos",
+     "Zakros"
+    ]
+   },
+   "QI+SI": {
+    "n": 3,
+    "sites": [
+     "Zakros"
+    ]
+   }
+  }
+ }
+}

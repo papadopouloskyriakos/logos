@@ -1,0 +1,15 @@
+{
+ "stage": "LA",
+ "plan_hash": "38e5762b187cdda84d49e41c726d1c8df39108577a73fbd1269f96345478d25c",
+ "n_docs": {
+  "LA": 207,
+  "HT": 134,
+  "nonHT": 73
+ },
+ "A": {
+  "gated": "LB did not fire; LA leg not run for record"
+ },
+ "B": {
+  "gated": "LB did not fire; LA leg not run for record"
+ }
+}

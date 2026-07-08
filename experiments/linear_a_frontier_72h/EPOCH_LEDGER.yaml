@@ -157,3 +157,51 @@ epochs:
     verdict: STROKE_RECOVERY_PARTIAL (SOURCE UNBLOCKED)
     result: "SigLA DOES serve per-document raster renders of hand-traced vectors (ink in ALPHA channel; CC BY-NC-SA) -> per-instance LA stroke graphs at ~0.1s/glyph, dominating GORILA/CEFAEL plates (EFA copyright, 60-120h manual). v1 frozen pipeline INFEASIBLE (alpha+despeckle amendment -> 8/10 extraction); held-out counterpart MRR 0.273 vs chance 0.066 (p .031) vs aspect adversary 0.155 — real but weak; standardized-font ceiling 0.653. SUPERSEDES anchor-lattice WP-E 'bbox-only' SOURCE_BLOCKED (erratum filed)."
     substantive: true
+  - epoch_id: EPOCH-010
+    frontier: F3
+    gate: A/G
+    verdict: DOOR_MARGINAL
+    plan_hash: 0380e6c327b72fa1a0e65d9d95dff93572de95b783fb70e2c4de9783daa878fe
+    prereg_frozen: 2026-07-08T04:47:58Z
+    completed: 2026-07-08
+    positive_control: PC0 PASS (KNOWN 7/47, CTRL 55/71) + PC_CAP PASS (all capacity probes exceed on CTRL identity at b=5)
+    negative_control: NEG_CAP scrambled-GT (no probe OVERFIT_BROKEN) + NEG_ENS/NEG_HUB 5-wrong-anchor scrambles all FLOOR
+    result: "Channel-capacity + ensemble + hub anchors on KNOWN LB<->Cyp at b=5 (prereg 0380e6c3): SEED-SPAN METRIC CLASS FORMALLY EXHAUSTED — oracle ridge/CCA/battery WITH full-GT leakage max .096 < required .122 (NEG_CAP-validated); ensemble fusion FLOOR (errors 89-93% shared Jaccard); hub/high-frequency anchors NO advantage (3/8 cells beat uniform — LA's toponym-anchor profile buys nothing, prediction REFUTED); ONLY the 3-expert union ceiling touches the bar EXACTLY (PICK3 .143 vs required .122, median margin +0.000, unrealizable without a per-sign selector carrying NEW information). Door not formally closed by one zero-margin unrealizable bound; de facto spent. LA stays BLOCKED."
+    layer: L2
+    licences_changed: none
+    artifacts: [epochs/EPOCH-010/result.json, reports/EPOCH010_CHANNEL_CAPACITY.md, data/motifs/capacity/]
+    successors_spawned: 5
+    substantive: true
+  - epoch_id: EPOCH-009
+    frontier: F2
+    gate: C/E
+    plan_hash: ec87a23b87d0c984ba47e79d6b9d8dfd0d83f397fa5a1f05cb188e3cc8d88cdc
+    prereg_frozen: 2026-07-08T04:44:07Z
+    completed: 2026-07-08
+    positive_control: PASS (5/5 synthetic stroke-graph ground truths, run first)
+    verdict: STROKE_CHANNEL_CALIBRATED_USEFUL
+    result: "Full-corpus SigLA stroke sweep: 802/802 renders fetched (0 failures), 3744/4756 instances ok (78.7%; 1009 too_many_components), 303 sign signatures (133 robust). LEG1 AB->LB-font calibration n=57/57: agg MRR .171 p 1.5e-4 > aspect .099 > chance .066 (top-5 25%) — E008's n=5 pilot .273 OVERESTIMATED the channel; aggregation beats per-instance (.171 vs .143). LEG2 split-half allograph stability n=116: self-MRR .399 p 5e-5 (post-hoc DOC-DISJOINT audit .389 -> not tracing-session leakage; AB .49 / A3xx .23 / other .25 vs chance .046). LEG3 dark-sign coverage 65/69 usable (94%), 21/69 robust (missing A335/A347/A361/A365). Channel is stronger LA-internal (allograph clustering) than as LA->LB bridge (font domain gap binds). All-pairs decomposed similarity matrix (377 names, NO values) emitted lattice-ready with power statement + trace-standardization upper-bound caveat."
+    layer: L1
+    licences_changed: none
+    artifacts: [epochs/EPOCH-009/result.json, epochs/EPOCH-009/posthoc.json, reports/EPOCH009_STROKE_CORPUS_SWEEP.md, data/stroke_corpus/]
+    successors_spawned: 6
+    substantive: true
+
+  - epoch_id: EPOCH-009
+    frontier: F2
+    gate: C/E
+    verdict: STROKE_CHANNEL_CALIBRATED_USEFUL
+    result: "FIRST new calibrated evidence channel: 802/802 SigLA renders, 3744 glyph instances, 303 sign signatures (133 robust); LEG1 MRR .171 p=1.5e-4 (beats aspect adversary .099); LEG2 self-retrieval .399 p=5e-5, doc-disjoint .389 (no leakage); 65/69 dark A-only signs covered (21 robust). HONEST: E008 pilot overestimated (.273->.171); channel 2.3x stronger WITHIN-script -> LA-internal form-clustering axis, not an LA->LB bridge (font domain gap binds). Lattice-ready decomposed similarity matrix emitted."
+    substantive: true
+  - epoch_id: EPOCH-010
+    frontier: F3
+    gate: A/G
+    verdict: DOOR_MARGINAL (seed-span metric class FORMALLY EXHAUSTED)
+    result: "Exhaustion proof: oracle probes WITH full GT leakage top at .096 vs required .122 at (b=5,f=0.75) — no linear/metric estimator on 5-anchor profiles can Holm-survive; residual door = a per-sign expert-selection oracle whose ceiling equals the bar to 3 decimals. Ensemble fails (errors 89-93% shared); hub-anchor advantage REFUTED. F3 seeded-bridge family effectively closed at LA budget; successors: multiplex-SNR raise + stroke-channel fusion."
+    substantive: true
+  - epoch_id: EPOCH-011
+    frontier: F5
+    gate: A
+    verdict: BOTH_DETECTORS_NO_POWER
+    result: "Unit-slot detector: E007's 'live U channel' (recall .862) UNMASKED as a class-prior artifact (3rd frequency-artifact unmasking; no rule exceeds F1 .262 within-KN). Totals detector: LB is the WRONG analogue for integer sum-consistency (0 gold-T numeral-followed) though weak genuine signal (.053>p95 .038). EXPLORATORY: blind sum-logic on LA concentrates on KU-RO (7/13 vs 3.3% chance); LA fractions occupy post-quantity (unit) positions -> fraction-as-unit supports the E004 seal channel."
+    substantive: true
