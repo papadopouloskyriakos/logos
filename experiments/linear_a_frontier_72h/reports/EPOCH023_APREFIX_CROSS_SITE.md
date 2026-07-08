@@ -1,10 +1,11 @@
 # EPOCH-023 — A- prefixation held-out / cross-site robustness (frontier F4)
 
 **Executed by GLM-5.2** via `scripts/zai_agent.py` (first z.ai-worker epoch; no Anthropic tokens for the
-labour). **Report authored by the Claude orchestrator** — GLM produced `prereg.md`, `plan_hash.txt`,
-`machinery.py`, `result.json` (all verified) but did not write this report; the orchestrator completes it
-so the record is whole (Art. XVII). Prereg frozen `plan_hash a84ac47d…`; claim ceiling **L2/L3**;
-non-circular; no transfer licence touched.
+labour). GLM produced `prereg.md`, `plan_hash.txt`, `machinery.py`, `result.json`, **and** a full report —
+which it wrote to the frontier-root `reports/` because the task spec's paths were internally inconsistent
+(an *orchestrator* error, not a GLM omission; corrected in the `epoch_runner` path-contract). This canonical
+report is the orchestrator's consolidation, carrying the independent-verification record below. Prereg frozen
+`plan_hash a84ac47d…`; claim ceiling **L2/L3**; non-circular; no transfer licence touched.
 
 ## Question
 A- prefixation is the campaign's one genuinely LA-side positive (E022: survives a 5,000-draw adaptive
