@@ -1,0 +1,143 @@
+{
+  "inspect": {
+    "n_words": 3147,
+    "sign_vocab": 259,
+    "mean_word_len": 1.840482999682237,
+    "unigram_entropy_bits": 6.210574397879918,
+    "pct_len1_words": 56.5
+  },
+  "cv_folds": [
+    {
+      "k": 0.05,
+      "unigram_xent": 6.496250054773904,
+      "markov_xent": 7.514114623356594,
+      "improvement": -1.0178645685826897,
+      "p": 0.0,
+      "n_test": 630
+    },
+    {
+      "k": 0.05,
+      "unigram_xent": 6.468560924001592,
+      "markov_xent": 7.518409845826198,
+      "improvement": -1.0498489218246059,
+      "p": 0.0,
+      "n_test": 630
+    },
+    {
+      "k": 0.05,
+      "unigram_xent": 6.622791523566832,
+      "markov_xent": 7.564949996241589,
+      "improvement": -0.9421584726747572,
+      "p": 0.0,
+      "n_test": 629
+    },
+    {
+      "k": 0.05,
+      "unigram_xent": 6.531962417573344,
+      "markov_xent": 7.4534494191661205,
+      "improvement": -0.9214870015927765,
+      "p": 0.0,
+      "n_test": 629
+    },
+    {
+      "k": 0.05,
+      "unigram_xent": 6.767109124764187,
+      "markov_xent": 7.831420155588851,
+      "improvement": -1.0643110308246637,
+      "p": 0.0,
+      "n_test": 629
+    }
+  ],
+  "site_blocked_per_site": {
+    "Haghia Triada": {
+      "n_test": 1891,
+      "k": 0.05,
+      "unigram_xent": 7.248788696785364,
+      "markov_xent": 9.180679195584831,
+      "improvement": -1.9318904987994676,
+      "p": 0.0
+    },
+    "Khania": {
+      "n_test": 368,
+      "k": 0.05,
+      "unigram_xent": 8.999889311495968,
+      "markov_xent": 10.795299751592546,
+      "improvement": -1.7954104400965782,
+      "p": 0.0
+    },
+    "Zakros": {
+      "n_test": 218,
+      "k": 0.05,
+      "unigram_xent": 6.73572933044944,
+      "markov_xent": 8.34799375849835,
+      "improvement": -1.612264428048909,
+      "p": 0.0
+    },
+    "Phaistos": {
+      "n_test": 110,
+      "k": 0.05,
+      "unigram_xent": 7.843436450651398,
+      "markov_xent": 9.668339150175472,
+      "improvement": -1.824902699524074,
+      "p": 0.0
+    },
+    "Knossos": {
+      "n_test": 98,
+      "k": 0.05,
+      "unigram_xent": 6.347032309017489,
+      "markov_xent": 8.400996003407931,
+      "improvement": -2.0539636943904416,
+      "p": 0.045
+    },
+    "Palaikastro": {
+      "n_test": 77,
+      "k": 0.05,
+      "unigram_xent": 5.915674497023628,
+      "markov_xent": 6.784993211682062,
+      "improvement": -0.8693187146584345,
+      "p": 0.0
+    },
+    "Arkhalkhori": {
+      "n_test": 63,
+      "k": 0.05,
+      "unigram_xent": 6.19990809899741,
+      "markov_xent": 7.384591975587754,
+      "improvement": -1.184683876590344,
+      "p": 0.0
+    },
+    "Tylissos": {
+      "n_test": 43,
+      "k": 0.05,
+      "unigram_xent": 10.80833983333323,
+      "markov_xent": 13.090322437252288,
+      "improvement": -2.281982603919058,
+      "p": 0.025
+    },
+    "Malia": {
+      "n_test": 41,
+      "k": 0.05,
+      "unigram_xent": 12.019714692358628,
+      "markov_xent": 16.36275102432791,
+      "improvement": -4.343036331969282,
+      "p": 0.025
+    },
+    "Iouktas": {
+      "n_test": 39,
+      "k": 0.05,
+      "unigram_xent": 5.743959265328598,
+      "markov_xent": 5.417831346981216,
+      "improvement": 0.32612791834738175,
+      "p": 0.0
+    }
+  },
+  "positive_control": {
+    "lb_improvement_bits": 0.26022631623271375,
+    "lb_p": 0.0,
+    "lb_markov_xent": 5.42023132573323,
+    "lb_unigram_xent": 5.680457641965944,
+    "detect": true,
+    "false_pos_rate": 0.0,
+    "false_pos_n_sets": 20,
+    "passed": true
+  }
+}

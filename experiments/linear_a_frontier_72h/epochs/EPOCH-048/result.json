@@ -1,0 +1,78 @@
+{
+  "task_id": "EPOCH-048",
+  "method": "First-order sign Markov P(next|cur) with add-k smoothing vs sign-unigram baseline; held-out cross-entropy (bits/sign) under 5-fold random CV and site-blocked leave-one-site-out; order-shuffle permutation null (R=200). Signs are ANONYMOUS ids (L2/L3).",
+  "result": "SIGN_SEQUENCE_NEAR_RANDOM",
+  "verdict": "SIGN_SEQUENCE_NEAR_RANDOM",
+  "numbers": {
+    "cv": {
+      "markov_xent_bits_per_sign": 7.5765,
+      "unigram_xent_bits_per_sign": 6.5773,
+      "improvement_bits": -0.9991,
+      "order_shuffle_p": 0.0,
+      "sign_vocab": 259
+    },
+    "entropy": {
+      "la_entropy_rate_bits_per_sign": 7.5765,
+      "la_unigram_entropy_bits": 6.5773,
+      "lb_entropy_rate_bits_per_sign": 5.4204
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "lb_improvement_bits": 0.2601,
+      "false_pos_rate": 0.0
+    },
+    "site_blocked": {
+      "n_sites": 10,
+      "n_sites_improving": 1,
+      "per_site_improvement": {
+        "Haghia Triada": -1.9319,
+        "Khania": -1.7954,
+        "Zakros": -1.6123,
+        "Phaistos": -1.8249,
+        "Knossos": -2.054,
+        "Palaikastro": -0.8693,
+        "Arkhalkhori": -1.1847,
+        "Tylissos": -2.282,
+        "Malia": -4.343,
+        "Iouktas": 0.3261
+      }
+    },
+    "inspect": {
+      "n_words": 3147,
+      "sign_vocab": 259,
+      "mean_word_len": 1.840482999682237,
+      "unigram_entropy_bits": 6.210574397879918
+    },
+    "robustness_checks": {
+      "note": "Frozen verdict uses the preregistered asymmetric cross-entropy (Markov predicts L+1 positions incl EOS, unigram predicts L). Verified the negative result is NOT a definitional artifact:",
+      "symmetric_def_cv_improvement_bits": -0.159,
+      "len_ge2_frozen_def_cv_improvement_bits": -0.7364,
+      "lb_symmetric_def_cv_improvement_bits": 0.67,
+      "interpretation": "Under a symmetric definition (same predicted positions for both models) LA improvement is still negative (-0.16); restricted to len>=2 words it is still negative (-0.74). LB under the same symmetric def is +0.67. So the machinery detects redundancy in a real language (LB) and LA genuinely lacks generalizable first-order sign-sequential structure."
+    }
+  },
+  "key_findings": [
+    "PC PASSED: on LB (a real language) the sign-Markov beats the unigram by +0.260 bits/sign (p=0.0); false-positive rate on order-shuffled LA words is 0/20. Machinery is informative.",
+    "LA global 5-fold CV: first-order sign Markov held-out cross-entropy is 7.576 bits/sign vs unigram 6.577 bits/sign -> improvement = -0.999 bits/sign (Markov WORSE than unigram). The Markov overfits LA's transitions and does not generalize.",
+    "Estimated LA entropy rate (Markov held-out xent) = 7.576 bits/sign; LA unigram entropy = 6.577 bits/sign. For comparison LB entropy rate = 5.420 bits/sign (lower = more predictable).",
+    "Site-blocked leave-one-site-out: of 10 sites with >=30 words, only 1 (Iouktas, +0.326) shows Markov>unigram; 9/10 are negative. Sequential redundancy does NOT generalize across sites.",
+    "Robustness: the negative result holds under a symmetric cross-entropy definition (-0.16) and when restricted to length->=2 words (-0.74). LB under the same symmetric definition is +0.67. The contrast LA-negative vs LB-positive is real and large, not an artifact.",
+    "Structural reason: 56.5% of LA words are single signs (len==1), mean word length 1.84, vocab 259 signs -> very few transition observations per context, so a first-order model cannot learn generalizable sequential dependencies."
+  ],
+  "successor_hypotheses": [
+    "H1: Test HIGHER-ORDER or sparse-prior Markov models (e.g. interpolated Kneser-Ney, or a Dirichlet prior on transitions) that may extract weak sequential structure the add-k first-order model misses.",
+    "H2: Test whether redundancy appears at the WORD level (word-token n-grams across an inscription) rather than the sign-within-word level -- LA may be sequentially structured between words, not within them.",
+    "H3: Test sign BIGRAM frequency-spectrum / Zipf-like statistics to see if a small set of frequent sign-pairs carries structure even when the full transition matrix does not generalize.",
+    "H4: Restrict to length->=3 words only (rare longer LA words) and re-test sequential redundancy there; if present, structure may be concentrated in a long-word minority.",
+    "H5: Compare LA entropy rate to a matched-random sign-sequence null (same unigram marginals, iid draws) to bound how far LA is from pure unigram output.",
+    "H6: Cross-script transfer test: train sign-Markov on LB, evaluate on LA held-out -- if LA xent under an LB-trained model is near its own unigram, that independently confirms no shared sequential regime.",
+    "H7: Test positional/templatic structure (sign-position-within-word distributions) instead of Markovian transition structure -- LA may be positionally structured rather than transitionally."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are ANONYMOUS identifiers throughout. No phonetic values, sound, meaning, reading, or language identification was used or inferred. LB was used ONLY as a positive-control benchmark (a known language to confirm the machinery detects redundancy). The redundancy metric is purely information-theoretic (held-out cross-entropy of anonymous sign sequences). A negative result means LA sign-within-word sequences lack generalizable first-order sequential structure; it is NOT a claim that LA is/is not a language.",
+  "deviations": [
+    "No deviation from the frozen protocol. The frozen (asymmetric) cross-entropy definition was used for the verdict exactly as preregistered.",
+    "Transparency note (not a deviation): the frozen definition gives the Markov an extra EOS-prediction term per word (L+1 predicted positions vs L for the unigram), which inflates the Markov's per-sign cost especially for the 56.5% of LA words that are single signs. I verified post-hoc that the negative verdict is NOT an artifact of this asymmetry: under a symmetric definition LA improvement is still -0.16 bits/sign, and restricted to length->=2 words still -0.74. LB under the same symmetric definition is +0.67. The verdict (NEAR_RANDOM) is robust to the definition."
+  ]
+}

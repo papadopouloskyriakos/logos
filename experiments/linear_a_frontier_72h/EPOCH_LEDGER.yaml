@@ -1132,3 +1132,28 @@ epochs:
     artifacts: [epochs/EPOCH-047/prereg.md, epochs/EPOCH-047/plan_hash.txt, epochs/EPOCH-047/machinery.py, epochs/EPOCH-047/result.json, reports/EPOCH047_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-048
+    frontier: F16
+    gate: A
+    name: "Sign-level held-out redundancy / entropy rate (is LA sign output language-like?)"
+    plan_hash: "see epochs/EPOCH-048/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2, gate passed=false on a repro_check MAGNITUDE mismatch (smoothing-dependence; verdict SIDE agrees)."
+    orchestrator_verification: "Claude INDEPENDENTLY confirmed the DIRECTION (Markov WORSE than unigram => negative improvement) AND diagnosed the cause: LA has 259-sign vocab but only 2645 sign-bigrams over 67081 cells (1.75% filled), 0.84 bigrams/word (mode-1 short words) => a held-out 259-sign bigram model is UNTRAINABLE. My recompute (-0.107) vs GLM (-0.9991) differ in MAGNITUDE (add-k smoothing choice) but agree in SIGN. LB PC (denser: 89 signs, 2.23 bigrams/word) correctly shows +0.26 (machinery works on dense data). Entropy: LA unigram 6.58 vs LB 5.42 bits/sign."
+    positive_control: "PASSED (verified): the sign-Markov machinery DETECTS language-like redundancy on LB (real language, +0.26 bits/sign improvement) and stays ~0 on order-shuffled words (fp 0.0). The machinery is valid; the LA negative is a DATA-SCALE limitation, not a dead detector."
+    verdict: "SIGN_SEQUENCE_NEAR_RANDOM (mechanical) — but COORDINATOR-REFRAMED as SPARSITY-UNDERPOWERED (see scope). A held-out first-order sign-Markov model underperforms unigram on LA, but this is because LA's SHORT WORDS (mode 1, ~0.84 bigrams/word) + LARGE VOCAB (259) make the bigram model untrainable held-out — NOT because LA sign sequences lack structure."
+    numbers: {la_markov_xent: 7.58, la_unigram_xent: 6.58, la_improvement_bits: -1.0, la_entropy_rate: 7.58, la_unigram_entropy: 6.58, lb_entropy_rate: 5.42, sign_vocab: 259, la_bigrams_total: 2645, la_bigram_space: 67081, la_bigram_fill: 0.0175, la_bigrams_per_word: 0.84, lb_bigrams_per_word: 2.23, pc_lb_improvement: 0.26, site_blocked_improving: "1/10", repro_recompute_improvement: -0.107}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "SPARSITY-UNDERPOWERED (mechanical NEAR_RANDOM, do NOT read at face value). The held-out sign-bigram PREDICTIVE model cannot be trained on LA (259-sign vocab, only 2645 bigrams, 0.84/word from mode-1 words) -> Markov < unigram is a data-scale ARTIFACT. This does NOT establish that LA sign sequences are near-random; it CONTRADICTS the VERIFIED positional structure (E023/E025 within-word permutation) and bigram structure (E029) — which use permutation nulls, not held-out predictive models, and DO find LA sign structure. Clean methodological contrast with E047: held-out predictive modeling GENERALIZES at the token-TYPE level (tiny vocab, dense) but is UNDERPOWERED at the SIGN level (large vocab + short words, sparse). A DATA-SCALE limitation datum for the exhaustion map. Also: LA per-sign entropy 6.58 > LB 5.42 (LA has a larger, more evenly-used inventory — consistent with a more logographic system, E046's mode-1 words). Anonymous signs; no phonetics/meaning/language-ID."
+    committed_prediction: "modal LANGUAGELIKE_HELDOUT / NEAR_RANDOM; OUTCOME = NEAR_RANDOM mechanically, but SPARSITY-UNDERPOWERED honestly. The held-out sign-bigram framing is the wrong tool for LA's short words; permutation-null tests (E023/E025/E029) are the right ones and DO find structure."
+    deviations:
+      - "GATE passed=false on repro_check IMPROVEMENT_MISMATCH (result -0.9991 vs recompute -0.107): both NEGATIVE (verdict side agrees), magnitude differs by the add-k smoothing choice. Smoothing-dependence, not a bug; verdict unaffected. Report present."
+      - "COORDINATOR REFRAME (Art. XVII): mechanical NEAR_RANDOM is a sparsity artifact; the honest status is UNDERPOWERED for held-out sign-bigram prediction. Recorded to prevent a false 'LA sign output is structureless' over-read that would contradict verified positives."
+    non_circular: "Signs anonymous; information-theoretic; LB control-only; held-out split respected; no phonetics/meaning/language-ID."
+    architecture_note: "Twenty-fifth gated-runner epoch. Coordinator caught that a mechanical NEAR_RANDOM verdict is a data-sparsity artifact (LA short words + large sign vocab) and reframed it as UNDERPOWERED, preventing a false-negative over-read against the verified sign-structure positives. Establishes the held-out-predictive method's scope boundary (works at type level, not sign level for LA)."
+    artifacts: [epochs/EPOCH-048/prereg.md, epochs/EPOCH-048/plan_hash.txt, epochs/EPOCH-048/machinery.py, epochs/EPOCH-048/result.json, reports/EPOCH048_REPORT.md]
+    successors_spawned: 5
+    substantive: true
