@@ -1,0 +1,104 @@
+{
+  "scope": "di_mino",
+  "auditor": "independent RED-TEAM verifier (Constitution v2.2)",
+  "date": "2026-07-08",
+  "p1_rows_in_scope": 22,
+  "source_worktree": "/home/claude-runner/gitlab/n8n/logos-di-mino-301-audit",
+  "audit_branch": "research/di-mino-301-exact-audit",
+  "audit_head_commit": "1cd3f86 (di-mino-audit: FINAL VERDICT — DI_MINO_CORE_VERDICT = REJECT)",
+
+  "step1_independent_method_census": {
+    "distinct_method_instances_found": [
+      "T00 prior-test census (exact core gate H1-H6 never run) — meta",
+      "T01 public-claim archive + hashing (CLB-01 + Figure 1) — source acquisition",
+      "T02 claim graph + free-parameter receipt (circularity e2->e3->e4) — L1 structural",
+      "T03 frozen preregistration H1-H12 (sha 8b098a4c) — design",
+      "T04 non-circular libation/*301 corpus build (36 att / 23 forms / partition 4 deriv / 32 held-out) — L2",
+      "T05 segmentation comparison across 6 families — L2 structural",
+      "A exhaustive *301 value sweep (H1) — L6",
+      "B root-existence search-null (H2) — L5",
+      "B L_fake / Packard edit-distance canary — L5 calibration",
+      "B gloss specificity + formula-feature (H3) — L4",
+      "C exact morphology / paradigm + head-to-head + controls (H5) — L7",
+      "D leave-one-site-out formula prediction (H4/H6) — L3",
+      "E full formula audit + homophony + fixed-template (novel-param accounting) — L4",
+      "PC positive/negative control battery PC1-6 + PCNP — L0 calibration",
+      "E2E end-to-end adaptive null + whole-pipeline FP — L5",
+      "F 40-sign map gate (H7/H8/H10) — SOURCE_BLOCKED",
+      "G 408-lexicon gate (H9) — SOURCE_BLOCKED",
+      "H LB corrections gate (H10) — SOURCE_BLOCKED",
+      "H logogram corrections gate (H11) — SOURCE_BLOCKED",
+      "VERDICT mechanical composition (DI_MINO_CORE_VERDICT=REJECT) — L3",
+      "PRIOR qualitative literature audit (docs/linear-a-claims-2026.md) — SUPERSEDED, not a mechanical verdict"
+    ],
+    "scripts_present": ["A_exhaustive_301_value_audit.py","B_semitic_root_gloss_audit.py","C_morphology_audit.py","D_leave_one_site_out.py","E_full_formula_audit.py","PC_positive_controls.py","end_to_end_null.py","build_libation_formula_corpus.py","segmentation_compare.py"],
+    "independent_verification_of_headline_numbers": {
+      "S_lex_21_of_65": "REPRODUCED — 301_value_sweep.json na_rank.full_S_lex {rank:21, n_candidates_scored:65, n_strictly_better:20, n_tied_at_rank:30, score:0.6667}",
+      "49th_percentile_Packard_null": "REPRODUCED — end_to_end_null.json observed_chain.na_S_lex_null_percentile = 49.0",
+      "S_morph_value_invariant_0.2738": "REPRODUCED — 301_value_sweep.json S_morph_primary score 0.27380952 literal == relabelled == identical:true; z=6.95, has_power:true; value_invariant_proof.interpretation = cannot discriminate /na/",
+      "PC3_rank_1_of_113": "REPRODUCED — positive_controls.json PC3 value_space_size:113, true_value_rank:1, margin_over_next_best:0.9634",
+      "PC1_0.780_vs_floor_0.357": "REPRODUCED — positive_controls.json PC1 positive_s_lex 0.78 vs lfake_floor_mean 0.3571",
+      "PC2_0.923_vs_p95_0.385_2.7x": "REPRODUCED — positive_controls.json PC2 0.9227 vs permuted_map_null_p95 0.3845, power_ratio 2.7",
+      "end_to_end_FP_1.0": "REPRODUCED — end_to_end_null.json end_to_end_false_positive_rate.PRIMARY_free_target_best_of_search = 1.0; search_adjusted_p ~1.0. NOTE: same block also reports conservative_dwell_best_of_language=0.75 and value_graduation_FP_M_gate_PC_calibrated=0.0",
+      "head_to_head_Davis_0.833_gt_DiMino_0.167_Thomas_0.5": "REPRODUCED — morphology.json C3_head_to_head heldout_invariance DI_MINO 0.1667(1/6), DAVIS 0.8333(5/6), THOMAS 0.5(3/6)",
+      "gloss_dwell_0_of_3": "REPRODUCED — root_search.json B5_formula_feature_prediction.scores dwell 0.0 (give 3.0, dedicate 3.0, invoke 2.5, NEUTRAL 0.0)",
+      "root_density_31_54_77": "REPRODUCED — root_search.json B3 strict 0.3077, weak 0.5385, weak+hollow 0.7692",
+      "158x_NA_AB06": "ARTIFACT_VERIFIED — reports/E_FULL_FORMULA_AUDIT.md line 61 '158', 3x same IOZa2 line",
+      "segmentation_b3_entropy_0.00_cost_5.8845": "REPRODUCED — segmentation_target.json boundary-3 (A-TA-I | *301) fwd_branch_entropy_bits = -0.0; viterbi total_cost_nats 5.8845",
+      "leave_site_form_out_range_6_26_never_rank1": "REPRODUCED — 301_value_sweep.json leave_site_out_S_lex ranks 6..26; leave_form_out_S_lex ranks 6..26; none == 1",
+      "N_eff_260_Emax_0.833_na_0.667_fails": "REPRODUCED — 301_value_sweep.json N_eff logged_value_x_segmentation_cells 260, E_max_null 0.8333, na_clears_Emax false; author_stated_simulations 100000",
+      "10_of_13_onsets_real_root": "REPRODUCED — end_to_end_null.json best_of_search.n_onsets_manufacture_real_root_exact_reading = 10 / 13",
+      "7800_root_gloss_cells": "REPORT_ONLY — cited in verdict/E2E prose as the search-receipt product; not traced to a single JSON field (the load-bearing certainty is dwell_hit_certain_over_search=1.0, which IS artifact-verified)"
+    }
+  },
+
+  "step2_per_row_verification": [
+    {"method_id":"DIMINO-T00-CENSUS","status":"VERIFIED","note":"report 00 + STATUS + DECISION_LOG confirm exact H1-H6 gate never run; correctly L0/meta, NOT_APPLICABLE outcome; explicitly does not supersede the qualitative audit."},
+    {"method_id":"DIMINO-T01-ARCHIVE","status":"VERIFIED","note":"manifests/di_mino_public_claim.sha256 + minoan-fig1.png present; H7-H12 artifacts SOURCE_BLOCKED. Figure-1 sha 651e50d9 cited in FINAL verdict."},
+    {"method_id":"DIMINO-T02-CLAIMGRAPH","status":"VERIFIED","note":"circularity e2->e3->e4 and '5/6 signs conventional LB transfer, single unanchored parameter *301=/na/' match report 02 + FINAL verdict s6-7."},
+    {"method_id":"DIMINO-T03-PREREG","status":"VERIFIED","note":"prereg sha 8b098a4c matches manifest DI_MINO_EXACT_CLAIM_V1.sha256 and every results JSON's prereg field; IOZa6 leave-form-out integrity flag consistent with corpus."},
+    {"method_id":"DIMINO-T04-CORPUS","status":"VERIFIED","note":"counts 36/23/31, partition 4 deriv / 32 held-out (26 LSO-eligible) match corpus.json; IOZa6-on-Iouktas flag stated not resolved (honest)."},
+    {"method_id":"DIMINO-T05-SEGMENTATION","status":"VERIFIED","note":"segmentation_target.json confirms no value-free family isolates *301-WA-JA; b3 fwd entropy 0.00; Viterbi cost 5.8845; STRUCTURAL_ONLY outcome correct (value-free, no phonetic licence)."},
+    {"method_id":"DIMINO-A-VALUE-SWEEP","status":"VERIFIED","note":"All numbers reproduce (rank 21/65, 20 strictly better/30 tied, 49th pctile, S_phono margin 0.095, N_eff 260, Emax fail). Semantics CORRECT: row explicitly states S_morph value-invariant = NO_DISCRIMINATIVE_POWER_FOR_VALUE 'not itself a rejection', REJECT rests on lexical channel + combined gate conditional on PC. scientific_outcome=REFUTED maps to H1=REJECT — defensible."},
+    {"method_id":"DIMINO-B-ROOT-SEARCH-NULL","status":"VERIFIED","note":"31%/77% density reproduced; NULL_PUBLISHED semantics correct (root existence is a generic density property, not evidence); language cherry-pick (Arabic nawa/Ugaritic vs Hebrew) charged."},
+    {"method_id":"DIMINO-B-LFAKE-CANARY","status":"VERIFIED","note":"NO_POWER correctly stated (floor mean 1.0 / permuted ~0.98 -> channel reads search-attractiveness, not cognacy). Correctly NOT treated as a refutation. Minor: this is a calibration canary (also in LIN-14) split out as its own instance — defensible but a granularity choice."},
+    {"method_id":"DIMINO-B-GLOSS-FEATURE","status":"VERIFIED","note":"dwell 0.0/3 vs give/dedicate 3.0 reproduced from B5; III-y->III-h unregistered transform charged; semantic (H3) not earned — correct."},
+    {"method_id":"DIMINO-C-MORPHOLOGY","status":"VERIFIED","note":"Head-to-head 0.167/0.833/0.5 reproduced; MORPH_ROOT refuted (post-*301 varies WA/U/TI/DE; 0 held-out recurrence beyond A-NA-TI-*301-WA-JA); MORPH_A/TA survive only at L3 (favour Davis). Semitic-morphology detector-cannot-distinguish caveat honest."},
+    {"method_id":"DIMINO-D-LOSO","status":"VERIFIED","note":"loso.json headline_verdict=NO_POWER; effective discriminating sites 3 at NO_POWER floor 3; Di Mino identical to freq/template/Davis baseline (dimino_differs_from_freq_baseline_anywhere:false); root recurrence 0/3 on divergent clean sites. Semantics CORRECT: NO_POWER stated as no-power, not refutation. Row correctly attributes H4 functional support to E, not D."},
+    {"method_id":"DIMINO-E-FULLFORMULA","status":"VERIFIED","note":"34/35 conventional LB, one novel parameter; 158x NA homophony flag; FIXED_TEMPLATE order_consistency 1.0 (12/12); STRUCTURAL_ONLY / L3 correct (words 2-8 SOURCE_BLOCKED)."},
+    {"method_id":"DIMINO-PC-CONTROLS","status":"VERIFIED","note":"PC1-6 + PCNP all reproduce from positive_controls.json (pipeline_calibrated:true). Semantics: scientific_outcome=SUPPORTED means PIPELINE CALIBRATED, not an LA reading supported — correctly labeled L0/calibration family; makes families A/B/E2E interpretable as genuine negatives. Not counted as an LA-decipherment method."},
+    {"method_id":"DIMINO-E2E-NULL","status":"VERIFIED","note":"FP=1.0 (PRIMARY free-target best-of-search) reproduced; 10/13 onsets yield real root; NULL_PUBLISHED for lexical/gloss legs; 'because PC passed, genuine negative' correct. Nuance (see semantics_flags): the 1.0 is the primary adversarial metric; the PC-calibrated value-graduation FP in the same JSON is 0.0 and conservative-dwell is 0.75 — P1 (like the verdict) headlines the pre-registered primary, which is defensible, but the distinction should be legible."},
+    {"method_id":"DIMINO-F-SIGNMAP","status":"VERIFIED","note":"SOURCE_BLOCKED, NOT a refutation, not collapsed into core — correct. 40-sign table not obtainable (only Figure-1 6-sign line)."},
+    {"method_id":"DIMINO-G-LEXICON","status":"VERIFIED","note":"SOURCE_BLOCKED; correct Art. VIII context note that a 408-gloss list on a tiny corpus without held-out prediction is the multiple-testing failure mode — but not scored absent the list. No verdict manufactured."},
+    {"method_id":"DIMINO-H-LB-CORRECTIONS","status":"VERIFIED","note":"SOURCE_BLOCKED; Art. XII guard flagged (LB correction may not validate the LA analysis it was derived from). Correct."},
+    {"method_id":"DIMINO-H-LOGOGRAM-CORRECTIONS","status":"VERIFIED","note":"SOURCE_BLOCKED; nothing to gate; not a refutation. Correct."},
+    {"method_id":"DIMINO-VERDICT","status":"VERIFIED","note":"Composite matches FINAL_DI_MINO_CLAIM_VERDICT.md: H1/H2/H3/H5 REJECT, H4 PARTIAL_SUPPORT (L3 functional = mainstream Davis/Thomas, not Di Mino novelty), H6 NO_POWER, H7-H12 SOURCE_BLOCKED. Scope binding: rejects the CHAIN, not the i-*301 core or etymology-in-principle; III-y->III-h charged; no impossibility claimed. Highest earned layer L3, no transfer licence. All correctly scoped."},
+    {"method_id":"DIMINO-PRIOR-QUALITATIVE-AUDIT","status":"VERIFIED_WITH_MINOR_CORRECTION","note":"Correctly flagged as a SEPARATE, pre-existing, non-mechanical instance (docs/linear-a-claims-2026.md), SUPERSEDED / NO_VERDICT_RECORDED, MEDIUM/REPORT_ONLY — this is the correct handling that PREVENTS qualitative+mechanical double-counting. MINOR: record_confidence says 'file not in this worktree's experiment dir', but docs/linear-a-claims-2026.md IS present in the audit worktree (it was read directly); the row could be upgraded from REPORT_ONLY to VERIFIED_FROM_ARTIFACT for existence, though its 'no mechanical verdict' status is unchanged. Not material to any outcome."}
+  ],
+
+  "step3a_omitted_methods": [
+    "NONE material. All 9 audit scripts, setup reports 00-04, families A-H, PC, E2E, VERDICT, and the prior qualitative audit are represented. No method on a newer/owning branch was skipped — the di_mino audit is self-contained on research/di-mino-301-exact-audit and its parent-branch prior audit is captured as DIMINO-PRIOR-QUALITATIVE-AUDIT."
+  ],
+  "step3b_duplicates_false_novelty": [
+    "NO material duplicate. Family B is split into 3 instances (root-search-null / L_fake-canary / gloss-feature) from one script — genuinely distinct techniques, not parameter-tweak-as-new-method; acceptable.",
+    "The qualitative/mechanical pair is CORRECTLY de-duplicated: DIMINO-PRIOR-QUALITATIVE-AUDIT is marked SUPERSEDED / NO_VERDICT_RECORDED and is NOT counted as a positive/negative result alongside DIMINO-VERDICT. This is the exact double-count risk the task warns about, handled correctly.",
+    "DIMINO-PC-CONTROLS (calibration battery) and DIMINO-B-LFAKE-CANARY (null-floor canary) are counted as method instances but are labeled calibration/L0-L5 and are NOT counted as LA-decipherment successes — no false novelty."
+  ],
+  "step3c_numerical": [
+    "All load-bearing numbers REPRODUCED or ARTIFACT_VERIFIED from the cited JSON/reports (see step1 map). No MISMATCH found.",
+    "MINOR COMPLETENESS: the primary_metric_value column is EMPTY for every di_mino row in both METHOD_INSTANCES.csv and RESULT_NUMBERS.csv — all numbers live in the verdict-text column. Not a mismatch, but the numeric field is unpopulated so RESULT_NUMBERS.csv adds little beyond the classification_hint (all 21 mechanical rows = VERIFIED_FROM_ARTIFACT, PRIOR = REPORT_ONLY).",
+    "7,800 root/gloss cells is REPORT_ONLY (search-receipt product, not a single JSON field); the certainty it supports (dwell_hit_certain_over_search=1.0) is artifact-verified."
+  ],
+  "step3d_verdict_semantics": [
+    "S_morph = NO_DISCRIMINATIVE_POWER correctly stated as 'not itself a rejection' in DIMINO-A row (H1 REJECT rests on lexical channel + combined gate, PC-conditional). CORRECT.",
+    "H7-H12 SOURCE_BLOCKED correctly stated as 'not a refutation, not collapsed into core' in F/G/H rows. CORRECT.",
+    "REJECT correctly scoped to the CHAIN (*301=/na/->N-W-Y->dwell->Semitic); does NOT touch the i-*301 structural core (Davis/Thomas) or claim universal etymological impossibility. CORRECT in VERDICT row + FINAL verdict.",
+    "NO_POWER (D-LOSO, B-LFAKE, H6) correctly stated as absence of discriminating power, not as a negative result. CORRECT.",
+    "H4 PARTIAL_SUPPORT correctly localized to L3 functional = the mainstream reading, explicitly NOT Di Mino's phonetic novelty; no transfer licence. CORRECT.",
+    "PC PASS correctly used to license the null-indistinguishability as a GENUINE NEGATIVE (not a dead detector). CORRECT.",
+    "NUANCE (not an error): DIMINO-E2E-NULL headlines end-to-end FP=1.0 (the pre-registered PRIMARY free-target best-of-search metric). The same artifact also reports a conservative-dwell FP of 0.75 and a PC-calibrated value-graduation-gate FP of 0.0. Headlining 1.0 matches the frozen prereg and the FINAL verdict, and P1's power field flags that the value channel HAS power (PC3 1/113) while /na/ fails the rank-1 clause — so the framing is internally consistent, but the coexistence of 1.0 / 0.75 / 0.0 in one block should be legible to avoid a reader over-reading '1.0' as the gate FP.",
+    "NUANCE (not an error): DIMINO-PC-CONTROLS scientific_outcome=SUPPORTED could be skim-misread as 'a Di Mino sub-claim supported'; it is pipeline-calibration SUPPORTED and is clearly labeled L0/calibration. No LA reading is elevated."
+  ],
+
+  "overall_assessment": "P1's di_mino inventory is ACCURATE and NON-INFLATIONARY. All 22 rows verified against the actual artifacts; every load-bearing number reproduces from the committed JSON/reports; all four verdict-semantics traps (NO_POWER-as-refutation, SOURCE_BLOCKED-as-negative, unscoped-REJECT, qualitative+mechanical double-count) are handled correctly. No MATERIAL_ERROR, no UNSUPPORTED, no MISSING_ARTIFACT, no WRONG_LINEAGE, no STALE_STATUS, no omitted method. The only items are (1) a minor REPORT_ONLY->VERIFIED upgrade available for the prior-qualitative row's file-existence, (2) an unpopulated primary_metric_value column, and (3) two framing nuances (E2E FP 1.0-vs-0.0/0.75; PC SUPPORTED=calibration) that are already correctly caveated in the row text. P1 did not rubber-stamp anything into a false positive; the di_mino campaign itself is a REJECT, and P1 records it as such at the correct layers."
+}

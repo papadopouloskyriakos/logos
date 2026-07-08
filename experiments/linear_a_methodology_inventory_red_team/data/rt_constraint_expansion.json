@@ -1,0 +1,215 @@
+{
+  "scope": "constraint_expansion",
+  "auditor": "independent red-team verifier (LOGOS Constitution v2.2)",
+  "source_worktree": "/home/claude-runner/gitlab/n8n/logos-linear-a-constraint-expansion",
+  "source_dir": "experiments/linear_a_constraint_expansion",
+  "campaign_head_commit": "2996567",
+  "p1_rows_in_scope": 20,
+  "rows_checked": 20,
+  "step1_independent_findings": {
+    "distinct_method_instances_found": [
+      "Stage A identifiability recount (259->92 category-error audit)",
+      "Stage B1 SigLA cross-edition independence",
+      "Stage B2 sign/allography forensics",
+      "Stage B4 joins/effective_n",
+      "Stage B5 notation-channel typing",
+      "Stage B6 support/invariance-axis metadata forensics",
+      "Stage C source-discovery audit",
+      "Stage D1 formula-grammar mining",
+      "Stage D2 morphology paradigm (interpolated-bigram null)",
+      "Stage D4 accounting-closure / fraction typing",
+      "Stage D5 cross-site/support phonotactic invariance (held-out)",
+      "Stage D7 admin-grammar compression (held-out)",
+      "Stage E method-validation positive-control battery",
+      "Stage F external-anchor (Salgarella) circularity re-audit",
+      "Stage G language-family authorization gate",
+      "Stage H relabeling-invariance null",
+      "Stage I sealed-challenge proposal (not instantiated)",
+      "Stage J end-to-end gate-bounded null",
+      "Stage K active-unlock ranking",
+      "Stage L final verdict synthesis"
+    ],
+    "no_D3_D6_or_B3": "campaign's own numbering skips D3/D6 and B3; not method instances; NOT an omission by P1",
+    "259_to_92_correction_verdict": "VERIFIED. stage_a_budget.json commits conservative_inventory_V=92, prior_all_stream_tokens=259, ge4_sign_non_dominant_site_STRUCTURAL=212, value_informative_heldout_anchors=2, structural_ratio 0.434, value_ratio 46.0. The correction is correctly scoped as necessary-not-sufficient: the favourable structural count (92<212) is explicitly NOT claimed as a licence; the real deficit is value-informativeness (2 vs 92, 46x). No overclaim.",
+    "value_blindness_framing_verdict": "The narrow claim is TRUE and artifact-verified: held-out bigram log-likelihood = -4.172251 identical across 30 random sign-value bijections (stage_hj_null.json) is an analytic relabeling-invariance of that statistic. BUT the campaign generalized it to a PROVABLE global theorem ('no agnostic internal search can rank value maps' / 'value layer permanently closed'). Per P1's OWN LLIN-05 lineage record this global theorem is SUPERSEDED/OVERSTATED by the downstream foundry campaign (commit 09f7ef9, WP1): current-authoritative = 'internal methods NOT universally value-blind (substitution breaks C/V on LB) BUT Linear A specifically is relabeling-invariant/underdetermined (H3 0 bits; I1 >=10^27 twins)'. So: invariance != universal impossibility -- and the constraint_expansion INSTANCE rows (CE-H/CE-J) present it as universal impossibility without that narrowing."
+  },
+  "per_row_verification": [
+    {
+      "method_id": "CE-A-identifiability-recount",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED",
+      "evidence": "data/stage_a_budget.json + INFORMATION_BUDGET.json: 92, 212, 2, ratio 0.434, deficit 46x all present and consistent (commit 2996567). Correction correctly framed as count-favourable-but-value-deficient; explicitly not a licence.",
+      "notes": "Supersedes prior 12h '259>212' headline (bac88a5), non-retroactively. Correct."
+    },
+    {
+      "method_id": "CE-B2-sign-allography-recount",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED (load-bearing) / REPORT_ONLY (sub-breakdown)",
+      "evidence": "syllabary=92 (stage_b_representation.json, INFORMATION_BUDGET.json); allography_param_reduction=7 (INFORMATION_BUDGET.json). Load-bearing numbers reproduce.",
+      "notes": "Prose '259 = 108 ligatures + 13 damage-tokens' (B_CORPUS_FORENSICS.md, REPORT_ONLY) does NOT arithmetically reconstruct 259/258 (108+13=121; report also writes '121/258'); non-load-bearing, P1 already labels it REPORT_ONLY. No material impact."
+    },
+    {
+      "method_id": "CE-B1-sigla-cross-edition-independence",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED (10 contested) / REPORT_ONLY (38%/590/34)",
+      "evidence": "AB_class_signs_contested=10 in INFORMATION_BUDGET.json. 38% byte-identical / 590 docs / 34 tokens are report-md only (no committed B1 json) -- P1 flags this correctly.",
+      "notes": "Correctly identifies lineage-collapse risk (Art. XI): SigLA is a second digitization of the same GORILA editions, 0 held-out weight. Semantics correct (SOURCE_BLOCKED-style dependency, not an independent replication)."
+    },
+    {
+      "method_id": "CE-B4-joins-effective-n",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED (denominators) / REPORT_ONLY (600 nodules, 86 joins)",
+      "evidence": "effective_denominators 1341/1242/618/565 in stage_b_representation.json reproduce exactly. 600-nodule/14-type and 86-join figures are report-md only -- P1 flags REPORT_ONLY.",
+      "notes": "Correct effective_n discipline (Art. VIII)."
+    },
+    {
+      "method_id": "CE-B5-notation-typing",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED",
+      "evidence": "word_token_types PHONETIC 2328 / LIGATURE 402 / LOGOGRAM 298 / MIXED 119 (sum 3147), phonetic_wordform_types 944, phonetic_multisign 878, logogram_tokens_separated 417 (stage_b_representation.json); nonphonetic_word_tokens_removed 819 (INFORMATION_BUDGET.json). 819/3147=26.0%. All reproduce.",
+      "notes": "P1 self-flagged the report-vs-json conflict '222 commodity logograms mis-routed' (B report) vs 298 LOGOGRAM word-token types (json). Genuine scope mismatch (commodity subset vs all logogram types), NOT load-bearing to the verdict; P1's disclosure is adequate."
+    },
+    {
+      "method_id": "CE-B6-support-invariance-axis",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY",
+      "evidence": "H(support|site)=1.23 bits stated in B_CORPUS_FORENSICS.md; no committed B6 json. P1 labels REPORT_ONLY honestly.",
+      "notes": "Metadata mislabel finding ('context' holds chronology). Enables D5. Correctly characterized."
+    },
+    {
+      "method_id": "CE-C-source-discovery",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED (register) / REPORT_ONLY (circularity verdicts)",
+      "evidence": "SOURCE_REGISTER.csv lists Salgarella-2020, Younger-LA, Kanta-2024 (KO-RO-NO-WE-SA, 1 new 5-sign), Chiapello-2024 + baseline sources; new_information='shape homomorphy grades (circular)' for Salgarella, 'same lineage' for Younger. All present.",
+      "notes": "Semantics correct: C_NEW_INFORMATION_FOUND but 0 value-informative -- new source discovered is NOT a discovery of value evidence. Salgarella flagged circular (LB values baked into transliteration). Correct."
+    },
+    {
+      "method_id": "CE-D1-formula-grammar",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY (report-consistent)",
+      "evidence": "template coverage 0% under holdout, recurring-frame p=0.53, mean 2.3 words/inscription -- match D_CONSTRAINT_MINING.md exactly. No committed D1 json (workflow wf_b5d7fd20).",
+      "notes": "TRIVIAL_RECOVERY / CONFIRMS_KNOWN correctly labeled (libation chain + KU-RO/KI-RO)."
+    },
+    {
+      "method_id": "CE-D2-morphology",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY (report-consistent)",
+      "evidence": "lambda=0.9 bigram beats morph CI-excludes-0, k=1 reproduces -- match D report. Power cross-referenced to Stage E LB positive control (0.5625 vs 0.3125).",
+      "notes": "NULL (has power, not NO_POWER) correctly distinguished -- the honest interpolated-bigram control erased a would-be false positive. This is a re-run/hardening of the prior 12h+paper morphology NULL on cleaned material; P1 discloses this in supersession_relations (not false-novelty)."
+    },
+    {
+      "method_id": "CE-D4-accounting-closure",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY (report-consistent; script committed, no output json)",
+      "evidence": "8/31=25.8% both integer-only and with fractions (net zero); A700 inert (0 problems); planted 0.9 vs 0.22 p=0.003; LA fraction balance 0.0 p=1.0 -- match D/EF reports. d4_accounting_closure.py committed.",
+      "notes": "TRIVIAL_RECOVERY (re-derives Bennett KU-RO=total; retires A700 as inert). Correctly labeled; planted control shows power (p=1.0 LA null is genuine, not NO_POWER)."
+    },
+    {
+      "method_id": "CE-D5-cross-site-support-invariance",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY (report-consistent; script committed)",
+      "evidence": "cross-genre r=0.607 p=0.001, held-out r up to 0.931 p=0.0005 -- match D report. stage_d5_cross_site_support_invariance.py committed, no output json.",
+      "notes": "GENUINE held-out positive but explicitly value-free (known CV phonotactics); earns NO functional/value licence. Semantics correctly bounded (L2, held-out but re-derives known epigraphy)."
+    },
+    {
+      "method_id": "CE-D7-compression-grammar",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY (report-consistent)",
+      "evidence": "1.42 vs 1.77 (positional-bigram) vs 2.57 (unigram) bits/tok, +0.33 over all baselines+shuffles -- match D report. No committed D7 json.",
+      "notes": "Strongest structural positive; correctly labeled CONFIRMS_KNOWN (known LA admin list format), value-free, no licence."
+    },
+    {
+      "method_id": "CE-E-method-validation-battery",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY within worktree (underlying artifacts in prior/main tree, cross-referenced by filename)",
+      "evidence": "LB morph 0.5625 vs 0.3125; opaque-LB 11/11 (0 FP); planted top-1 0.997 at s=13; metrology 0.9 vs 0.22 p=0.003; gate FP 3/500=0.6% (CP upper 1.54%); KU-RO 25% vs 1.47% =17x p=0.0005 -- match EF report. These are RE-AUDITS of prior-campaign committed controls, not new runs (status REPRODUCED, correctly).",
+      "notes": "This is a positive-control battery, NOT a Linear-A value-recovery method. P1 labels claim_layer=meta / status REPRODUCED. Duplicate-risk: the same controls (LB morph 0.5625, gate 3/500, opaque-LB 11/11) are inventoried under other lineages (LIN-14 falsification instruments, LIN-07 morphology) -- potential cross-scope double-count of one underlying artifact set; disclosed via cross-reference."
+    },
+    {
+      "method_id": "CE-F-external-anchor-reaudit",
+      "status": "VERIFIED",
+      "numbers_class": "REPORT_ONLY (page cites + circularity cap; one-shots not re-run)",
+      "evidence": "0 anchor classes with >=3 independent held-out non-circular anchors; Salgarella circularity cap <=0.75; page cites p.34/p.374 n.2; prior REFUTE DOIs 21168887/21173639 -- match EF report.",
+      "notes": "Verdict NO_POWER (NO_NONCIRCULAR_ANCHOR) CORRECTLY labeled as NO_POWER for the value lever, NOT as a refutation of any specific reading. Salgarella circularity correctly diagnosed (LB values in transliteration). Un-blocks the standing 'Salgarella absent/paywalled' item as PRESENT-but-circular. Good semantics."
+    },
+    {
+      "method_id": "CE-G-language-family-gate",
+      "status": "VERIFIED",
+      "numbers_class": "N/A (gate)",
+      "evidence": "CAMPAIGN.md line 37: G_NOT_AUTHORIZED (no value anchor).",
+      "notes": "This is a constitutional authorization GATE, not a method run (POWER_GATED_BEFORE_RUN). Correctly NOT counted as a family-test result. Correct."
+    },
+    {
+      "method_id": "CE-H-relabeling-invariance-null",
+      "status": "VERIFIED_WITH_MINOR_CORRECTION",
+      "numbers_class": "ARTIFACT_VERIFIED",
+      "evidence": "held-out bigram LL = -4.172251 identical across 30 maps (min=max, range<1e-9), 1369 seqs, 156 signs -- data/stage_hj_null.json, commit 2996567. The NUMBER and the narrow analytic claim are correct.",
+      "correction": "The instance row escalates the narrow statistic-specific invariance to a GLOBAL PROVABLE theorem ('internal structure is relabeling-invariant, so NO agnostic internal search can rank value maps'; power='PROVABLE'). Per P1's OWN METHOD_LINEAGES.json LIN-05 and LINEAR_A_METHODS_MASTER_REPORT.md (line 51-52), this 'permanently closed global theorem' is SUPERSEDED/OVERSTATED by the foundry campaign (commit 09f7ef9, WP1): 'internal methods NOT universally value-blind (substitution breaks C/V on LB) BUT Linear A specifically is relabeling-invariant/underdetermined'. The CE-H instance row carries NO forward-supersession link to LIN-05/foundry -- it is STALE relative to P1's own lineage layer.",
+      "semantics_flag": "objective-invariance stated as universal-impossibility-theorem (the exact trap). Invariance of a bigram-LL statistic != impossibility for all internal methods."
+    },
+    {
+      "method_id": "CE-J-end-to-end-null",
+      "status": "VERIFIED_WITH_MINOR_CORRECTION",
+      "numbers_class": "ARTIFACT_VERIFIED",
+      "evidence": "gate FP 3/500=0.6% (CP upper 1.54%), internal held-out value hits 0.0000 (4 confirmations) -- data/stage_hj_null.json. Numbers correct.",
+      "correction": "'internal channel provably null (from Stage H)' inherits CE-H's overstated global framing (see LIN-05, foundry 09f7ef9). The gate-bounded end-to-end null and 0.0000 held-out hits ARE valid for the agnostic-internal-search regime; the row should scope 'provably null' to internal-only agnostic search, not present it as a standing global impossibility. Instance row omits the downstream narrowing.",
+      "semantics_flag": "same relabeling-invariance-as-universal-impossibility inheritance as CE-H."
+    },
+    {
+      "method_id": "CE-I-sealed-challenges",
+      "status": "VERIFIED",
+      "numbers_class": "N/A (proposal)",
+      "evidence": "CAMPAIGN.md line 39: 'n/a -- no surviving hypothesis to seal'. PROPOSED_ONLY.",
+      "notes": "Correctly NOT counted as a run. Proposal, not a method result."
+    },
+    {
+      "method_id": "CE-K-active-unlock-ranking",
+      "status": "VERIFIED",
+      "numbers_class": "N/A (acquisition planning) / grounded on verified stage_hj_null.json",
+      "evidence": "3 ranked unlocks (bilingual > >=3 held-out anchors > related read script) + 3 non-unlocks -- KL report.",
+      "notes": "Meta/value-of-information analysis, not a method run. NOTABLY: CE-K is the correct anti-universal-impossibility statement -- it explicitly says external evidence WOULD help, i.e. LA is underdetermined, NOT uncrackable. This is consistent with the corrected LIN-05 framing (unlike CE-H/CE-J's prose)."
+    },
+    {
+      "method_id": "CE-L-final-verdict-synthesis",
+      "status": "VERIFIED",
+      "numbers_class": "ARTIFACT_VERIFIED",
+      "evidence": "highest_earned_layer=L2, L6 value=NONE, licences NOT_EARNED -- CAMPAIGN.md + KL report + INFORMATION_BUDGET.json consistent. decipherment_readiness=NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT.",
+      "notes": "Synthesis (meta). CE-L's supersession_relations DOES carry the orchestrator caveat that the campaign's own summary/prose headline was SUPERSEDED downstream and to treat '92-syllabary + value-blindness as load-bearing results, not the prose headline'. So P1 partially captured the CE-H overstatement here -- but NOT on the CE-H/CE-J instance rows themselves."
+    }
+  ],
+  "omitted_methods": {
+    "within_scope_dir": "NONE. All campaign stages A/B1-B6/C/D1-D7/E/F/G/H/I/J/K/L are inventoried. No B3/D3/D6 exist in the campaign numbering.",
+    "cross_lineage_note": "The downstream REFUTATION of the value-blindness theorem lives in the foundry campaign (commit 09f7ef9) which is a SEPARATE scope P1 covered (instances_foundry.json, LIN-05). It is therefore not an omitted method for this scope, but the CE-H/CE-J instance rows omit the forward-supersession link to it."
+  },
+  "duplicates_false_novelty": [
+    "CE-E positive-control battery re-audits prior-campaign artifacts (LB morph 0.5625, gate 3/500=0.6%, opaque-LB 11/11, KU-RO 17x); these underlying controls are also inventoried under LIN-14 (falsification instruments) / LIN-07 (morphology). REPRODUCED status disclosed -- potential cross-scope double-count, not false-novelty within scope.",
+    "CE-D2 (morphology NULL) and CE-D5 (phonotactics positive) are confirmations/hardenings of the prior 12h+paper campaign results on cleaned material; P1 discloses via supersession_relations. Distinct method INSTANCES (clean material) but not novel METHODS.",
+    "No renamed-identical or parameter-tweak-as-new-method within scope beyond the above disclosed re-runs."
+  ],
+  "meta_vs_la_method_note": "7 of the 20 scope rows are meta/audit/gate/proposal/positive-control rather than novel Linear-A value-recovery method instances: CE-A (recount audit), CE-C (source-discovery audit), CE-E (LB positive-control battery), CE-G (authorization gate), CE-I (proposal, not instantiated), CE-K (acquisition planning), CE-L (synthesis). P1 labels each with claim_layer=meta and appropriate status, so they are NOT mis-counted as LA value-recovery successes -- but any headline 'N methods tried' for this scope should exclude these ~7.",
+  "numerical_summary": {
+    "load_bearing_numbers_traced": [
+      {"num": "syllabary=92", "class": "ARTIFACT_VERIFIED", "src": "stage_a_budget.json / INFORMATION_BUDGET.json / stage_b_representation.json"},
+      {"num": "212 structural constraints, 2 value-informative, ratio 0.434, deficit 46x", "class": "ARTIFACT_VERIFIED", "src": "stage_a_budget.json"},
+      {"num": "1341->1242->618->565 effective_n; 944/878 phonetic; 819 removed; 417 logogram; allography 7; AB contested 10", "class": "ARTIFACT_VERIFIED", "src": "stage_b_representation.json + INFORMATION_BUDGET.json"},
+      {"num": "held-out bigram LL -4.172251 identical / 30 maps / 1369 seqs / 156 signs", "class": "ARTIFACT_VERIFIED", "src": "stage_hj_null.json"},
+      {"num": "gate FP 3/500=0.6% (CP upper 1.54%); internal value hits 0.0000 (4x)", "class": "ARTIFACT_VERIFIED", "src": "stage_hj_null.json"},
+      {"num": "D1 0%/p=0.53; D2 lambda0.9 bigram>morph; D4 8/31=25.8%, 0.9/0.22 p=0.003, 0.0 p=1.0; D5 r=0.607/0.931; D7 1.42/1.77/2.57", "class": "REPORT_ONLY (report-consistent; no committed output json for D1/D5/D7/D2/D4-output)", "src": "D_CONSTRAINT_MINING.md"},
+      {"num": "E: LB morph 0.5625/0.3125; opaque-LB 11/11; planted 0.997 s=13; metrology 0.9/0.22 p=0.003; KU-RO 17x p=0.0005", "class": "REPORT_ONLY within worktree (underlying artifacts in prior tree, cross-referenced)", "src": "EF_KNOWN_SCRIPT_AND_ANCHORS.md"}
+    ],
+    "mismatches": "NONE material. Two non-load-bearing prose looseness items, both already disclosed by P1: (a) '259 = 108 ligatures + 13 damage' does not arithmetically reconstruct 259/258; (b) B5 report '222 commodity logograms' vs json 298 LOGOGRAM word-token types (commodity-subset vs all-types)."
+  },
+  "verdict_semantics_audit": {
+    "NO_POWER_not_refutation": "PASS -- CE-F NO_POWER (NO_NONCIRCULAR_ANCHOR) correctly framed as no-power for the value lever, not a refutation of a specific reading.",
+    "SOURCE_BLOCKED_not_negative": "PASS -- CE-B1/CE-C treat SigLA/Younger as same-lineage dependency (Art. XI), not as independent replications; CE-C 'new source found but not value-informative' is correct.",
+    "literature_recovery_not_discovery": "PASS -- CE-D1/D4/D5/D7 CONFIRMS_KNOWN correctly labeled (Bennett KU-RO=total, CV phonotactics, admin list format) as re-derivations of known epigraphy, value-free, no licence.",
+    "relative_not_absolute": "PASS -- all structural positives kept at L2, no value/absolute claim.",
+    "broad_family_null": "PASS -- CE-G gated (NOT_AUTHORIZED), no family-null overreach.",
+    "objective_invariance_as_universal_impossibility": "FLAGGED -- CE-H/CE-J instance rows present bigram-LL relabeling-invariance as a global PROVABLE impossibility ('no agnostic internal search can rank value maps'). P1's own LIN-05 + master report mark this global theorem SUPERSEDED/OVERSTATED by foundry (09f7ef9); the instance rows are stale relative to the lineage layer. CE-K/CE-L carry the corrected framing; CE-H/CE-J do not.",
+    "dependent_sources_as_independent": "PASS -- SigLA/Younger/Salgarella all correctly flagged as dependent/circular lineages, not independent replications."
+  },
+  "overall": {
+    "verification_histogram": {"VERIFIED": 18, "VERIFIED_WITH_MINOR_CORRECTION": 2, "MATERIAL_ERROR": 0, "UNSUPPORTED": 0, "AMBIGUOUS": 0, "MISSING_ARTIFACT": 0, "DUPLICATE_INSTANCE": 0, "WRONG_LINEAGE": 0, "STALE_STATUS": 0},
+    "bottom_line": "P1's constraint_expansion inventory is substantially accurate: every committed-artifact number reproduces exactly, the 259->92 category-error correction is VERIFIED and correctly scoped (necessary-not-sufficient), and verdict semantics are almost entirely correct. The single genuine defect is that the CE-H/CE-J instance rows present the relabeling-invariance result as a GLOBAL provable-impossibility theorem, whereas P1's OWN LIN-05 lineage records that theorem as SUPERSEDED/OVERSTATED by the foundry campaign (invariance != universal impossibility). This is an internal inconsistency between P1's instance layer and lineage layer, partially mitigated by the CE-L note. Secondary: ~7/20 rows are meta/audit/gate/control not novel LA methods (correctly labeled), and CE-E's controls risk cross-scope double-count (disclosed)."
+  }
+}

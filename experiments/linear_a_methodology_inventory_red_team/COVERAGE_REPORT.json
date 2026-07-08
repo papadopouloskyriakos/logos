@@ -1,0 +1,21 @@
+{
+ "independent_denominator_distinct_content": 986,
+ "p1_index": 923,
+ "p1_undercount": 63,
+ "undercount_breakdown": "41 .pyc irrelevant + 11 reference pdf/srt + ~11 branch STATUS/ledger copies + material misses on stale-read external-anchor lineage",
+ "method_instances_p1": 214,
+ "method_instances_verified": 215,
+ "omitted_methods_material": 1,
+ "omitted": "EA-13 FROZEN_POWER_PASS",
+ "rows_verified": 215,
+ "VERIFIED": 203,
+ "MINOR": 12,
+ "MATERIAL_ERROR": 0,
+ "UNSUPPORTED": 0,
+ "MISSING_ARTIFACT": 0,
+ "DUPLICATE_INSTANCE": 0,
+ "numerical": "~60 load-bearing checked; REPRODUCED/ARTIFACT_VERIFIED; 0 MISMATCH 0 MISSING",
+ "method_coverage": "214/215=99.5%",
+ "artifact_coverage": "986 distinct-content all mapped/classified (41 pyc + 11 reference excluded w/ reason)",
+ "unresolved": "0 new; P1 48 stand; CSA-clamp ERRATUM confirmed accurate"
+}

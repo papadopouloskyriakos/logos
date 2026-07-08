@@ -1,0 +1,602 @@
+[
+ {
+  "hash": "fb65c921dc79690e",
+  "basename": "validate_human_submission.cpython-311.pyc",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/src/annotation/__pycache__/validate_human_submission.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "172eac9b3372becb",
+  "basename": "build_linear_b_graph.cpython-311.pyc",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/src/corpus/__pycache__/build_linear_b_graph.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "190c857fe11484b6",
+  "basename": "validate_admin_graph.cpython-311.pyc",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/src/corpus/__pycache__/validate_admin_graph.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "d697fd6ae26a4b76",
+  "basename": "compute_pilot_stats.cpython-311.pyc",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/src/pilot/__pycache__/compute_pilot_stats.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "3cd50589231daa37",
+  "basename": "anon_key.json",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/human_pilot/anon_key.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "983f182878297199",
+  "basename": "pilot_sample.jsonl",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/human_pilot/pilot_sample.jsonl",
+  "n_locations": 1,
+  "ext": "jsonl"
+ },
+ {
+  "hash": "9aa6e72731099bdb",
+  "basename": "annotator_A_packet.csv",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/human_pilot/annotator_A_packet.csv",
+  "n_locations": 1,
+  "ext": "csv"
+ },
+ {
+  "hash": "45be3989baeac8a4",
+  "basename": "pilot_sample.csv",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/human_pilot/pilot_sample.csv",
+  "n_locations": 1,
+  "ext": "csv"
+ },
+ {
+  "hash": "7e00494ea498784a",
+  "basename": "annotator_B_packet.csv",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/human_pilot/annotator_B_packet.csv",
+  "n_locations": 1,
+  "ext": "csv"
+ },
+ {
+  "hash": "625708bf11233a9f",
+  "basename": "pilot_items.json",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/evaluation_only/pilot_items.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "277131a483291137",
+  "basename": "pilot_annotations.json",
+  "experiment_dir": "admin_schema",
+  "canonical": "logos-admin-schema:experiments/admin_schema/data/evaluation_only/pilot_annotations.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "45eaa81d91bf6fdb",
+  "basename": "lb_indexes.cpython-311.pyc",
+  "experiment_dir": "no_human_structure",
+  "canonical": "logos-no-human-structure:experiments/no_human_structure/src/source_labels/__pycache__/lb_indexes.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "73b1ac38819dc398",
+  "basename": "labeling_functions.cpython-311.pyc",
+  "experiment_dir": "no_human_structure",
+  "canonical": "logos-no-human-structure:experiments/no_human_structure/src/weak_supervision/__pycache__/labeling_functions.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "5dfcd8cff8fe7a5e",
+  "basename": "linear_b_source_labels.jsonl",
+  "experiment_dir": "no_human_structure",
+  "canonical": "logos-no-human-structure:experiments/no_human_structure/data/source_labels/linear_b_source_labels.jsonl",
+  "n_locations": 1,
+  "ext": "jsonl"
+ },
+ {
+  "hash": "107fb5eafbab7565",
+  "basename": "nulllib.cpython-311.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/src/nulls/__pycache__/nulllib.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "4e082de60f0b948b",
+  "basename": "degrade.cpython-311.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/src/positive_control/__pycache__/degrade.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "70101d1df8866951",
+  "basename": "test_nulls_structure.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/tests/__pycache__/test_nulls_structure.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "cca19b2959a15a3f",
+  "basename": "test_slot_manifest_reproducibility.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/tests/__pycache__/test_slot_manifest_reproducibility.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "94a590a5440f89eb",
+  "basename": "test_slot_classifier_rules.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/tests/__pycache__/test_slot_classifier_rules.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "155f58361f90a0f8",
+  "basename": "test_positive_control_degrade.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/tests/__pycache__/test_positive_control_degrade.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "b1b70d5fe0934106",
+  "basename": "test_slot_classifier_leakage.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/tests/__pycache__/test_slot_classifier_leakage.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "8066faebe6aca6fe",
+  "basename": "frozen_power_envelope.json",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/results/power/frozen_power_envelope.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "1f3d800438fa3a10",
+  "basename": "toponym_power_envelope.json",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/results/power/toponym_power_envelope.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "8d399e49eff6df5f",
+  "basename": "linear_a_slot_features.jsonl",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/silver/linear_a_slot_features.jsonl",
+  "n_locations": 1,
+  "ext": "jsonl"
+ },
+ {
+  "hash": "dc9653a91d7ba14d",
+  "basename": "slot_candidate_manifest.jsonl",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/gold/slot_candidate_manifest.jsonl",
+  "n_locations": 1,
+  "ext": "jsonl"
+ },
+ {
+  "hash": "0942e191115d4e83",
+  "basename": "wiener_bronze-age-trade.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/wiener_bronze-age-trade.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "8e04933243baf495",
+  "basename": "mari_and_the_minoans_IMAGE.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/mari_and_the_minoans_IMAGE.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "deb4dadb260732c4",
+  "basename": "kelder2018_egypt-crete-mycenae.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/kelder2018_egypt-crete-mycenae.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "4ecff477b371f073",
+  "basename": "kilani2019_vocalization-group-writing.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/kilani2019_vocalization-group-writing.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "4df9bc092325648c",
+  "basename": "hoch1994_semitic-words-in-egyptian-texts.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/hoch1994_semitic-words-in-egyptian-texts.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "265b6749b8949f11",
+  "basename": "malamat_literary-sources-mari.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/malamat_literary-sources-mari.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "ab6ac0492d7a9a00",
+  "basename": "mari_and_the_minoans_p342_OCR.txt",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/mari_and_the_minoans_p342_OCR.txt",
+  "n_locations": 1,
+  "ext": "txt"
+ },
+ {
+  "hash": "666a5d3e073a9aa6",
+  "basename": "hojen-sorensen2009_approaching-levantine-shores.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/hojen-sorensen2009_approaching-levantine-shores.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "db38cb1fb55c72f5",
+  "basename": "cline-stannish2011_komelhetan-aegean-list.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/cline-stannish2011_komelhetan-aegean-list.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "5d6404bc6bf33f6f",
+  "basename": "dautais-gabolde_ea5647_jaei47.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/dautais-gabolde_ea5647_jaei47.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "9608e466eb6695e5",
+  "basename": "watrous_ugarit-and-caphtor_gredos.pdf",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/watrous_ugarit-and-caphtor_gredos.pdf",
+  "n_locations": 1,
+  "ext": "pdf"
+ },
+ {
+  "hash": "f34cec2475165d3f",
+  "basename": "salgarella2025_lecture.srt",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/data/bronze/pdf_local/salgarella2025_lecture.srt",
+  "n_locations": 1,
+  "ext": "srt"
+ },
+ {
+  "hash": "65ed96ec053386ec",
+  "basename": "frozen_power_pass.py",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/experiments/power/frozen_power_pass.py",
+  "n_locations": 1,
+  "ext": "py"
+ },
+ {
+  "hash": "97a9285d44428dd6",
+  "basename": "FROZEN_POWER_PASS.md",
+  "experiment_dir": "external_anchors",
+  "canonical": "logos-external-anchors:experiments/external_anchors/reports/FROZEN_POWER_PASS.md",
+  "n_locations": 1,
+  "ext": "md"
+ },
+ {
+  "hash": "b73e0c1609cbd895",
+  "basename": "test_continuity_controls.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_controls.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "9a0439222c17825a",
+  "basename": "test_continuity_model.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_model.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "5f0d5b973b82a4db",
+  "basename": "test_la_candidate_freeze.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_la_candidate_freeze.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "4c0f1059892cb6a9",
+  "basename": "test_sigla_reconcile_crosswalk.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_sigla_reconcile_crosswalk.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "2ad21c3260a18d1f",
+  "basename": "test_continuity_power.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_power.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "b1f3f0a8fac346d2",
+  "basename": "test_continuity_heldout.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_heldout.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "d4980fc26e42de47",
+  "basename": "test_known_pairs.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_known_pairs.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "42970a5a0369582f",
+  "basename": "test_sigla_reconcile_normalization.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_sigla_reconcile_normalization.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "ef3e6e87fe703a36",
+  "basename": "test_lb_target_independence.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_lb_target_independence.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "969c46caa9acb134",
+  "basename": "test_ab_equivalence_blindness.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_ab_equivalence_blindness.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "c9faf28cab4e2fcf",
+  "basename": "test_la_candidate_leakage.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_la_candidate_leakage.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "e1dd0961d7b37cfa",
+  "basename": "test_continuity_nulls.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_nulls.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "bf60a979de31ae80",
+  "basename": "test_continuity_verdict.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_verdict.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "faedfa152e1f8652",
+  "basename": "test_ab_equivalence_structure.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_ab_equivalence_structure.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "d0eb625fa01bd000",
+  "basename": "test_continuity_circularity.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_circularity.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "f3d084f838b1fd5e",
+  "basename": "test_continuity_partitions.cpython-311-pytest-9.0.2.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/tests/__pycache__/test_continuity_partitions.cpython-311-pytest-9.0.2.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "098fe1cdf68a917a",
+  "basename": "RECONCILE_SUMMARY.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/RECONCILE_SUMMARY.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "eddbce3f81ec772c",
+  "basename": "reconcile_detail.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/reconcile_detail.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "97c81a3861053a21",
+  "basename": "circularity.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/results/circularity.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "16e5d6cbb0e06786",
+  "basename": "power.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/results/power.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "e12c2c965be26482",
+  "basename": "ablations.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/results/ablations.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "ae15e31dc4f1d778",
+  "basename": "heldout.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/results/heldout.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "be421c5e016b7afe",
+  "basename": "nulls.json",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/results/nulls.json",
+  "n_locations": 1,
+  "ext": "json"
+ },
+ {
+  "hash": "2f8eac0d82f53293",
+  "basename": "la_candidate_manifest.jsonl",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/data/gold/la_candidate_manifest.jsonl",
+  "n_locations": 1,
+  "ext": "jsonl"
+ },
+ {
+  "hash": "c5c30acfe870b61c",
+  "basename": "config.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/sigla_reconcile/__pycache__/config.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "c920a5c1d0fa97e1",
+  "basename": "reconcile.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/sigla_reconcile/__pycache__/reconcile.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "d1edfc7b5eb6e95e",
+  "basename": "build_la_candidates.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/candidate_freeze/__pycache__/build_la_candidates.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "f7be0e65d02b499f",
+  "basename": "build_equivalence.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/ab_equivalence/__pycache__/build_equivalence.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "d8f38c3a26c011e4",
+  "basename": "build_lb_targets.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/target_build/__pycache__/build_lb_targets.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "4f1ac88b72d68cd9",
+  "basename": "build_known_pairs.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/known_pairs/__pycache__/build_known_pairs.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "e2d1c619ff22de5d",
+  "basename": "partitions.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/continuity/__pycache__/partitions.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "3bb086e834df59ae",
+  "basename": "heldout.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/continuity/__pycache__/heldout.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "ab4c7f5c6ae42504",
+  "basename": "circularity.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/continuity/__pycache__/circularity.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "512a5060cd7a072a",
+  "basename": "power.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/continuity/__pycache__/power.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "f002d0807e067ed9",
+  "basename": "nulls.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/continuity/__pycache__/nulls.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ },
+ {
+  "hash": "e92790e39eea23d1",
+  "basename": "cfg.cpython-311.pyc",
+  "experiment_dir": "la_lb_continuity",
+  "canonical": "logos-la-lb-continuity:experiments/la_lb_continuity/src/continuity/__pycache__/cfg.cpython-311.pyc",
+  "n_locations": 1,
+  "ext": "pyc"
+ }
+]

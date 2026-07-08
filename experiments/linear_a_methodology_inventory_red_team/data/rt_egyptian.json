@@ -1,0 +1,180 @@
+{
+  "scope": "egyptian",
+  "auditor": "independent RED-TEAM verifier (LOGOS Constitution v2.2)",
+  "audited_branch": "research/egyptian-calibration-gate",
+  "audited_worktree": "/home/claude-runner/gitlab/n8n/logos-egyptian-calibration",
+  "p1_rows_in_scope": 14,
+  "rows_checked": 14,
+  "method_ids": ["EGY-01","EGY-02","EGY-03","EGY-04","EGY-05","EGY-06","EGY-07","EGY-08","EGY-09","EGY-10","EGY-11","EGY-12","EGY-13","EGY-14"],
+
+  "step1_independent_reconstruction": {
+    "mechanical_vs_honest_split_correctly_classified": true,
+    "detail": "EGY-14 is correctly recorded with mechanical_verdict = CONFIRM_GENERALIZES (pre-registered, no retune, invariant 3) but scientific_outcome = NULL_PUBLISHED with the honest interpretation RECOVERED_TRIVIAL / effective-n approx 1 fully disclosed. This exactly matches the primary artifact reports/CRETAN_ANCHOR_RESULT.md (commit dfa291e): adversarial adjudication DOWNGRADE_TO_TRIVIAL, result_stands=false; a fair sibilant-fold generic-Egyptian baseline ties M2 at 3/3; the sole discriminating correspondence /s/->egy sh is learned from a single training record HV-0234 and leave-one-out of that record flips 3->1 (REFUTE); Lyktos r-k-t is a pure-identity freebie; so effective-n approx 1 not 3.",
+    "run_commit": "1e5c33b (results/cretan_oneshot_verdict.json, CONFIRM_GENERALIZES)",
+    "honest_correction_commit": "dfa291e (CRETAN_ANCHOR_RESULT.md, TRIVIAL/NULL)",
+    "stale_status_headline_correctly_flagged": true,
+    "stale_status_detail": "STATUS.md still headlines 'egyptian_channel_readiness = READY_FOR_PREREG_DRAFT ... first channel to pass its gate' and DECISION_LOG.md stops at E6 (READY); neither reflects the EGY-14 TRIVIAL/NULL downgrade. P1 flags this in EGY-10.supersession_relations, LIN-11.obsolete, and reports/METHODOLOGY_STATUS_RECONCILIATION.md line 24. FINAL_EGYPTIAN_CHANNEL_VERDICT.md (=EGY-10) and results/final_verdict.json were NOT updated post-run, consistent with the append-only 'mechanical verdict stands, interpretation corrected' discipline.",
+    "distinct_method_instances_independently_found": 14,
+    "independent_reconstruction_matches_p1": true
+  },
+
+  "per_row_verification": [
+    {
+      "method_id": "EGY-01",
+      "status": "VERIFIED",
+      "claim_layer": "L0",
+      "outcome": "SOURCE_BLOCKED / INCOMPLETE (NOT_READY)",
+      "notes": "Source-status + buildability audit -> mechanical INCOMPLETE, egyptian_channel_readiness=NOT_READY. Verdict-semantics CORRECT: explicitly 'NOT a disguised NO_POWER (no fittable-but-weak corpus exists)' -> a blocked-INCOMPLETE is not mis-stated as a negative/refutation. Matches DECISION_LOG E2..E3 and PROJECT_CHARTER verdict ontology. build_corpus()->[] / 8 tests. Superseded by EGY-04.",
+      "artifact": "experiments/egyptian_calibration/DECISION_LOG.md (E2..E3); src/calibration/verdict.py",
+      "number_class": "REPORT_ONLY (corpus gitignored; buildable=False attested by tests)"
+    },
+    {
+      "method_id": "EGY-02",
+      "status": "VERIFIED",
+      "claim_layer": "L0",
+      "outcome": "DESIGNED_NOT_RUN / NOT_APPLICABLE (SPEC_FROZEN_AWAITING_CORPUS)",
+      "notes": "Design freeze, sha 3c56ed71. P1 itself honestly flags that the M0-M9 doc is 'aspirational ... NOT the operative estimator' (the operative M2 lives in src/calibration/model.py, hash e76b2f23 per prereg inputs) -> no false-novelty and no leakage of validation results into design.",
+      "artifact": "data/manifests/egyptian_model_freeze.sha256; prereg/prereg_cretan_anchor_test.json (inputs.operative_model)",
+      "number_class": "ARTIFACT_VERIFIED (sha)"
+    },
+    {
+      "method_id": "EGY-03",
+      "status": "VERIFIED",
+      "claim_layer": "L0",
+      "outcome": "PARTIALLY_IMPLEMENTED / INCOMPLETE",
+      "notes": "Hoch OCR auto-extraction: 101 entries / 76 tier-A / 25 tier-C (76+25=101). Verdict UNCHANGED INCOMPLETE; correctly notes similarity-based pairing FORBIDDEN as circular. Matches DECISION_LOG E4. Superseded by EGY-04. Distinct method from EGY-01 (extraction attempt vs source audit) - not a duplicate.",
+      "artifact": "DECISION_LOG.md (E4); src/calibration/extract_hoch.py",
+      "number_class": "REPORT_ONLY (extractor+counts committed, derived data gitignored - Hoch copyrighted)"
+    },
+    {
+      "method_id": "EGY-04",
+      "status": "VERIFIED",
+      "claim_layer": "L0",
+      "outcome": "REPRODUCED / SUPPORTED (corpus derived, blocker LIFTED)",
+      "notes": "INDEPENDENTLY REPRODUCED from data/gold/egyptian_calibration_handverified.jsonl on disk: 159 records; tiers A=99 B=53 C=7 -> tier-A/B=152; 156 distinct consonantal roots; cls breakdown LOANWORD 130 / PERSONAL_NAME 23 / DIVINE_NAME 3 / TOPONYM 1 / ETHNONYM 1 / OTHER 1 (sum 159) - ALL EXACT match to P1. sha256 recomputed = cc2c20d8ef... matches P1's cc2c20d8. Correctly scoped 'NONE (a calibration corpus, not a transfer licence)'.",
+      "artifact": "data/gold/egyptian_calibration_handverified.jsonl (sha cc2c20d8)",
+      "number_class": "REPRODUCED"
+    },
+    {
+      "method_id": "EGY-05",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_CONFIRMATORY / SUPPORTED",
+      "notes": "REPRODUCED against results/model_validation.json: M2 top-1 0.691, top5 0.855, MRR 0.753 vs M0/M1 top-1 0.434 MRR 0.562; LOFO NW 0.767 (n=30) / South 0.667 (n=3) / cross-Semitic 0.602 (n=118); East Semitic subgroup NO_POWER (n_test=1). n_records=152. beats_baselines=true, acceptance=PASS. Verdict-semantics CORRECT: licence_earned='NONE (calibration-internal; no transfer licence to Aegean)' - an L6 in-corpus fit is NOT overclaimed as a phonetic licence over Aegean.",
+      "artifact": "results/model_validation.json; src/calibration/validation.py",
+      "number_class": "REPRODUCED"
+    },
+    {
+      "method_id": "EGY-06",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_CONFIRMATORY / SUPPORTED (positive control PASS)",
+      "notes": "REPRODUCED against results/gate.json.positive_control: recovery len2 0.818 / len3 0.638 / len4 0.864 / len5 1.0; short-form(<=4) 0.685; per_anchor_null 0.00671; min_detectable_anchors=2; by_K[3] expected 2.05 vs null P(>=1)=0.020. All exact. This is a Linear-B (DAMOS) positive control - correctly a control, NOT counted as a Linear A method.",
+      "artifact": "results/gate.json (positive_control); src/calibration/gate.py",
+      "number_class": "REPRODUCED"
+    },
+    {
+      "method_id": "EGY-07",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_CONFIRMATORY / SUPPORTED (nulls specific)",
+      "notes": "REPRODUCED against results/gate.json.nulls: real M2 0.691 vs random 0.0 / permuted 0.1184 / permissive M9 0.0066; specificity_ok=true; permissive_excessive_fp=false. P1 correctly notes the report rounds 0.0066->0.007. Negative-control battery; specificity not mis-stated as a positive result.",
+      "artifact": "results/gate.json (nulls)",
+      "number_class": "REPRODUCED"
+    },
+    {
+      "method_id": "EGY-08",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_CONFIRMATORY / SUPPORTED (robust to uncertainty)",
+      "notes": "REPRODUCED against results/gate.json.transcription_uncertainty: top-1 LOW 0.691 / CENTRAL 0.586 / HIGH 0.349; short-recovery LOW 0.685 / CENTRAL 0.577 / HIGH 0.342. verdict_reverses_under_uncertainty=false. HIGH short 0.342 vs per-anchor null 0.00671 approx 51x ('approx 50x null') OK. (Aside: STATUS.md heading cites CENTRAL 0.577 which is the short-recovery figure not the top-1 0.586 - a STATUS.md loosening, not a P1 error.)",
+      "artifact": "results/gate.json (transcription_uncertainty)",
+      "number_class": "REPRODUCED"
+    },
+    {
+      "method_id": "EGY-09",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_CONFIRMATORY / SUPPORTED (power sizing)",
+      "notes": "REPRODUCED against results/gate.json.power: min_detectable_anchors=2; prob_no_power_at_K3=0.031; recovery_by_length len2 0.818 ... len5 1.0. This IS the power analysis; not mis-labeled.",
+      "artifact": "results/gate.json (power)",
+      "number_class": "REPRODUCED"
+    },
+    {
+      "method_id": "EGY-10",
+      "status": "VERIFIED_WITH_MINOR_CORRECTION",
+      "claim_layer": "L0",
+      "outcome": "RUN_CONFIRMATORY / SUPPORTED (COMPLETE, READY_FOR_PREREG_DRAFT)",
+      "notes": "All key_numbers REPRODUCED against results/final_verdict.json (tier_A_B 152, M2_top1 0.691, baseline 0.434, short_recovery 0.685, min_detectable 2, null_random 0.0, null_permuted 0.1184, HIGH 0.342, P_no_power_K3 0.031; all 10 criteria true). Verdict-semantics CORRECT: READY_FOR_PREREG_DRAFT scoped as DESIGN readiness not a decipherment, and correctly flagged STALE vs STATUS.md/DECISION_LOG. MINOR CORRECTION: EGY-10.supersession_relations mislabels the confirmatory RUN that returned honest NULL as 'the later one-shot (EGY-13)' and 'the EGY-13 TRIVIAL/NULL downgrade' - EGY-13 is the prereg MINT (NOT_APPLICABLE / FROZEN_MINTED, commit a0b2403); the RUN that returned the honest NULL is EGY-14 (results/cretan_oneshot_verdict.json, commit 1e5c33b, honest interp dfa291e). EGY-14's own supersession text correctly says it supersedes EGY-10, so the graph edge exists; only the method-id in EGY-10's prose is off by one. Does not affect the numbers or the STALE flag.",
+      "artifact": "results/final_verdict.json; supersession cross-ref should read EGY-14 not EGY-13 (commits a0b2403 mint vs 1e5c33b run)",
+      "number_class": "REPRODUCED (numbers); minor prose citation error"
+    },
+    {
+      "method_id": "EGY-11",
+      "status": "VERIFIED",
+      "claim_layer": "L1",
+      "outcome": "PARTIALLY_IMPLEMENTED / INCOMPLETE (ADVANCED_PROXIMATE_ONLY)",
+      "notes": "REQ-01 candidate target set via Belohoubkova 2014 thesis: 3 FREEZABLE(candidate) / 2 not-freezable; req01_status=ADVANCED_PROXIMATE_ONLY (not CLOSED); cretan_targets_confirmatory_eligible=false. Reading-independence 15.6 caveat (Edel read eroded ovals using Greek IDs) correctly recorded. Superseded by EGY-12. Per-agent apparatus lives in the wf journal (not on disk here) -> correctly marked REPORT_ONLY; summary is internally consistent with reports/REQ01_APPARATUS_DETERMINATION.md.",
+      "artifact": "reports/REQ01_APPARATUS_DETERMINATION.md; reports/REQ01_PRIMARY_STATUS.md",
+      "number_class": "REPORT_ONLY"
+    },
+    {
+      "method_id": "EGY-12",
+      "status": "VERIFIED",
+      "claim_layer": "L1",
+      "outcome": "REPRODUCED / SUPPORTED (REQ-01 CLOSED_PRIMARY_COLLATED)",
+      "notes": "Direct collation of Edel & Gorg 2005 -> 3->5 anchors (Phaistos/Kydonia overturned via Osing autopsy). Cited targets json sha 6903f5f1 ARTIFACT_VERIFIED via git: frozen/cretan_confirmatory_targets.json at commit dd491fe (EGY-12 freeze) = 6903f5f127...; it then changed to b749e2f7 at a0b2403 (EGY-13 mint, 'l->r annotation struck, re-frozen'). So EGY-12's 6903f5f1 and EGY-13's b749e2f7 are two genuinely different frozen versions correctly attributed to their respective stages - NOT a mismatch. Reading-independence 15.6 correctly noted NOT fully resolved (Falttafeln 13/14 unavailable; claim scoped to 'recovers Edel's ID-informed readings').",
+      "artifact": "frozen/cretan_confirmatory_targets.json @ dd491fe (sha 6903f5f1); reports/REQ01_EN_COLLATION_FROZEN_TARGETS.md",
+      "number_class": "ARTIFACT_VERIFIED (git-history hash)"
+    },
+    {
+      "method_id": "EGY-13",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_PREREGISTERED / NOT_APPLICABLE (FROZEN_MINTED prereg)",
+      "notes": "Prereg mint plan_hash 2eab1536cf70c20d0faebafff813b190b9cea573433698b2fdc2d83825cd130a - EXACT match to prereg/prereg_cretan_anchor_test.json.plan_hash. Input hashes VERIFIED: target b749e2f7 (=on-disk frozen file), operative_model model.py e76b2f23 - both present in prereg inputs. Supersedes withdrawn v1 (red-team REVISE_THEN_COMMIT). This is the MINT; EGY-14 is the RUN - two distinct instances, NOT a duplicate/false-novelty.",
+      "artifact": "prereg/prereg_cretan_anchor_test.json; prereg/MINT_RECORD.md; commit a0b2403",
+      "number_class": "ARTIFACT_VERIFIED (plan_hash + input hashes)"
+    },
+    {
+      "method_id": "EGY-14",
+      "status": "VERIFIED",
+      "claim_layer": "L6",
+      "outcome": "RUN_PREREGISTERED / NULL_PUBLISHED (mechanical CONFIRM_GENERALIZES, honest RECOVERED_TRIVIAL / effective-n approx 1)",
+      "notes": "REPRODUCED against results/cretan_oneshot_verdict.json: r1_M2=3/3, r1_B_id=1, r1_B_egy=1, p=0.0014, surprisal 9.48 bits, null r1 hist {0:9062,1:881,2:44,3:13}; per-anchor Knossos rank_M2 1/B_id 2/B_egy 10, Amnisos 1/2/13, Lyktos 1/1/1 - ALL exact. The mechanical-vs-honest split is the model of CORRECT classification: mechanical CONFIRM_GENERALIZES recorded as the pre-registered outcome (invariant 3, no retune), scientific_outcome=NULL_PUBLISHED, and the RECOVERED_TRIVIAL rationale (fair sibilant-fold baseline ties M2; single-record HV-0234 support; LOO flips 3->1; effective-n approx 1; Egyptian-orthography convention not an Aegean phonological link; homophony over de-duped pool; p-value tests non-randomness ONLY) fully disclosed. licence_earned='NONE (downstream vocalization / LA probe / sound-JEPA NOT licensed)'. Verdict-semantics CORRECT: a mechanical CONFIRM is NOT dressed as a discovery.",
+      "artifact": "results/cretan_oneshot_verdict.json (commit 1e5c33b); reports/CRETAN_ANCHOR_RESULT.md (commit dfa291e)",
+      "number_class": "REPRODUCED"
+    }
+  ],
+
+  "omitted_methods": [
+    "None within the egyptian-calibration-gate branch. All ~30 reports in experiments/egyptian_calibration/reports map onto the 14 captured instances. FINAL_EGYPTIAN_CHANNEL_VERDICT.md == EGY-10; BLOCKED_DOWNSTREAM_GATES.md is an honest placeholder from the pre-EGY-04 INCOMPLETE phase (superseded, correctly not a distinct method). No post-EGY-14 corrected final_verdict.json exists to capture (that IS the stale-status condition P1 already flags).",
+    "CROSS-SCOPE (not an omission for this scope, flagged for the reviewer): the Egyptian corpus-build + correspondence-model ALSO appear as pre-fork ancestors on research/external-minoan-anchors, catalogued by P1 under the external_language scope (EA-03-FROZEN-EGYPTIAN-CORRESPONDENCE-MODEL designed-not-run; EA-12-EGYPTIAN-CALIBRATION-CORPUS-BUILD source-blocked) and under paper_core (PC-39-campaign-egyptian-power NO_POWER, PC-38 audit; LC-12 LA<->LB-vs-Egyptian channel comparison). These are correctly partitioned to other scopes by dir-ownership and connected via LIN-10 trajectory ('... -> egyptian calibration -> ...'); they are the same lineage at an earlier branch/time, not independent methods."
+  ],
+
+  "duplicates_false_novelty": [
+    "None within scope. EGY-13 (prereg MINT, FROZEN_MINTED) and EGY-14 (one-shot RUN) are genuinely distinct instances of the same test, not a parameter-tweak-as-new-method duplicate.",
+    "EGY-11 -> EGY-12 is a real supersession chain (candidate target set ADVANCED_PROXIMATE_ONLY -> primary-collation CLOSED, 3->5 anchors), correctly marked SUPERSEDES, not double-counted.",
+    "EGY-06 (Linear-B matched-scarcity positive control) and EGY-07 (negative-control null battery) are controls, correctly NOT counted as Linear A decipherment methods.",
+    "LOW-SEVERITY cross-scope note: EA-12 (external_language) and EGY-01/EGY-04 (egyptian) both describe building the Egyptian calibration corpus across the branch fork; a naive GLOBAL method count summed across scopes could read them as separate methods. Within the egyptian scope there is no duplication, and the branch-fork supersession is disclosed via LIN-10. Reviewer of the merged inventory should confirm the total-method count does not double the corpus-build."
+  ],
+
+  "numerical_issues": [
+    "None. Every load-bearing number in the 14 rows traces to an artifact and REPRODUCED or ARTIFACT_VERIFIED: EGY-04 corpus counts (159/152/156/cls) REPRODUCED from handverified.jsonl; EGY-05 from model_validation.json; EGY-06/07/08/09 from gate.json; EGY-10 from final_verdict.json; EGY-14 from cretan_oneshot_verdict.json; EGY-12 sha 6903f5f1 ARTIFACT_VERIFIED at commit dd491fe; EGY-13 plan_hash 2eab1536 + input hashes ARTIFACT_VERIFIED from prereg json. No MISMATCH, no MISSING.",
+    "Non-issue clarification: EGY-12 (6903f5f1) vs EGY-13 (b749e2f7) target-file hashes differ because the file was re-frozen at mint (l->r annotation struck); both are correct for their stage - not a numerical mismatch."
+  ],
+
+  "verdict_semantics_flags": [
+    "CORRECT: SOURCE_BLOCKED / blocked-INCOMPLETE (EGY-01, EGY-03) is NOT stated as a negative result or NO_POWER - explicitly 'NOT a disguised NO_POWER'.",
+    "CORRECT: EGY-14 mechanical CONFIRM_GENERALIZES is NOT presented as a discovery; honest RECOVERED_TRIVIAL / NULL with effective-n approx 1 (LOO flips, single-record support, fair-baseline tie) fully disclosed - textbook mechanical-vs-honest split.",
+    "CORRECT: EGY-05 L6 in-corpus SUPPORTED is bounded to licence_earned=NONE (no transfer licence to Aegean) - not inflated to a phonetic reading.",
+    "CORRECT: EGY-10 READY_FOR_PREREG_DRAFT scoped as DESIGN readiness (not a decipherment) and correctly flagged STALE against STATUS.md/DECISION_LOG.",
+    "CORRECT: LIN-11 lineage ('READY (stale) -> mechanical CONFIRM but honest NULL/TRIVIAL, effective-n approx 1; programme CLOSED') is accurate.",
+    "MINOR (benign vocabulary): EGY-14 scientific_outcome uses 'NULL_PUBLISHED' rather than the task-hint 'TRIVIAL_RECOVERY'. Defensible - CRETAN_ANCHOR_RESULT.md itself concludes 'this is another honest NULL' - and the RECOVERED_TRIVIAL/effective-n nuance is captured verbatim in mechanical_verdict; not an error.",
+    "MINOR: EGY-10 prose cross-references the confirmatory RUN as 'EGY-13' where it should be 'EGY-14' (see per-row correction)."
+  ],
+
+  "stale_status_verdict": "CORRECTLY FLAGGED. STATUS.md READY_FOR_PREREG_DRAFT / 'first channel to pass its gate' and DECISION_LOG (stops at E6) are STALE relative to the EGY-14 TRIVIAL/NULL downgrade. P1 captures this in EGY-10.supersession_relations, EGY-14.supersession_relations ('CONTRADICTS stale STATUS.md/DECISION_LOG'), LIN-11.obsolete, and METHODOLOGY_STATUS_RECONCILIATION.md.",
+
+  "overall_assessment": "P1's egyptian-scope inventory is accurate and honestly framed. 13/14 rows VERIFIED, 1 VERIFIED_WITH_MINOR_CORRECTION (EGY-10 off-by-one method-id in prose). No material errors, no fabricated numbers, no verdict-semantics inflation, no within-scope duplicates or omissions. The two hardest judgments - (1) mechanical CONFIRM_GENERALIZES vs honest TRIVIAL/NULL effective-n approx 1, and (2) STATUS.md READY headline is STALE - are both classified correctly."
+}

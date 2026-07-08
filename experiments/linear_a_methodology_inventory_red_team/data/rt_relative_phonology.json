@@ -1,0 +1,116 @@
+{
+  "scope": "relative_phonology",
+  "verifier": "independent RED-TEAM (Constitution v2.2)",
+  "source_branch": "research/linear-a-relative-phonology-seals",
+  "source_dir": "experiments/linear_a_relative_phonology",
+  "campaign_final_commit": "8a98607",
+  "p1_rows_checked": 46,
+  "overall_assessment": "P1 inventory for this scope is HIGH-QUALITY and largely accurate. Every load-bearing number I independently recomputed/traced reproduced against the cited JSON; every cited artifact exists; the 9 lineages (LIN-01/02/03/04/05/07/08/09/10) are correctly assigned; the master/matrix reports scope the LB-analogue positives correctly ('on the analogue only', 'BONUS'). No MATERIAL_ERROR and no numerical mismatch found in the 46 rows. Findings are limited to (a) semantics/labeling caveats P1 mostly already scoped, (b) an intra-family double-count of the single A- positive across 4 method rows, (c) one near-duplicate LB-substitution row, (d) one artifact-internal p-value ambiguity carried faithfully from the campaign's own final report, and (e) STALE source STATUS.md/DECISION_LOG that P1 correctly did NOT propagate.",
+
+  "step1_independent_number_verification": {
+    "note": "Recomputed/traced directly from the source-branch JSON before reading P1. cat-format cited.",
+    "WP_A": {
+      "single_feature_position_AUC_0.744": "VERIFIED — data/A1_recompute.json WP1_single_feature.recomputed_auc_int77=0.744 (explog74=0.759). commit 3c1ddab.",
+      "seven_feature_CV_AUC_0.835": "VERIFIED — A1_recompute.json WP3_cv.recomputed_cv_auc_explog74=0.835 (int77=0.825), perm_p 0.01.",
+      "oriented_null_p_0.146": "VERIFIED — data/A3_replications.json oriented_two_sided_perm_p=0.146; corroborated data/A6_nulls.json random_cv_labels p=0.1464. Foundry perm_p 0.01 reproduces ONLY one-sided.",
+      "freq_band_disjoint_position_only_0.481": "VERIFIED — data/A4_grouped.json position_only oof_auc=0.481 (=chance); log_freq/full survives, position collapses.",
+      "multiplicity": "VERIFIED — A2_multiplicity.json Bonf x13=0.455, Holm=0.36, FDR q=0.168; log_freq AUC 0.878 > position 0.744 (position not even best feature)."
+    },
+    "C_AUDIT_freq_matched_p_0.0033": "VERIFIED — data/C_audit.json perm_p_two_sided / bh_fdr_q = 0.0033; Maslov-Sneppen p_one_sided 0.0033; Holm-adj 0.0166; same-consonant AUC range 0.643-0.703 (4/4 impl A/B/C/D); freq-band-disjoint pooled 0.6565 & 0.7245 (=0.657-0.725); verdict SUBSTITUTION_CONSONANT_AXIS_VALIDATED. commit f99eca6. SCOPED: opaque-LB analogue ONLY.",
+    "D3_seed_frequency_artifact_0.872_gt_0.784": "VERIFIED — data/D3_seed_audit.json F_frequency_artifact.F1_pure_frequency_ranking_auc=0.8725 >= honest seed-prop kv4 pos+sub 0.784 (small-draw lucky n=5 sample was 0.8738); verdict SEED_PROPAGATION_FREQUENCY_ARTIFACT; kv=4 reveals 0.8 of 5-vowel key; drop-U auc ~0.469. commit b20ee39.",
+    "K1_adaptive_A_prefix_p_0.008": "VERIFIED — data/K1_nulls.json A_adaptive_bestof_affix.affix_selection_only_gorila.adaptive_p_bestof_affix_ge_obs=0.008 (obs 47 vs null 95pct 43); ledger KU-RO adaptive_p=0.002; commit 8a98607.",
+    "E3_cross_site_contradiction_0.0099_vs_0.42": "VERIFIED — data/E3_crosssite.json A-prefix cross-site p_holm=0.0099; data/K1_nulls.json B_cross_site_bothdir.adaptive_p_bothdir_ge_obs=0.4212 -> ERRATUM downgrade to descriptive off-HT presence. Correctly handled as append-only ERRATUM in M_FINAL_VERDICT sec 11."
+  },
+
+  "per_row_verification": [
+    {"method_id":"A1_reconstruct","status":"VERIFIED","numbers":"REPRODUCED (A1_recompute.json 0.744/0.759/0.835/0.825 all matched)","note":"scientific_outcome=SUPPORTED but this is a REPRODUCTION of the Foundry position->C/V result which is itself REFUTED downstream by A2-A6; P1 scopes it '(L2, LB-only)' and records supersession -> correct, but 'SUPPORTED' read in isolation could be mistaken for an LA finding. SEMANTICS-FLAG.","verdict":"CONFIRMED"},
+    {"method_id":"A2_multiplicity","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (Bonf x13 0.455, Holm 0.36, FDR 0.168, log_freq 0.878)","note":"REFUTED tag correct; position not even best single feature."},
+    {"method_id":"A3_replications","status":"VERIFIED","numbers":"ARTIFACT_VERIFIED (oriented p 0.146, drop-A 0.448, GMM/HMM both present & fail)","note":"P1 tagged REPORT_ONLY/VERIFIED; oriented two-sided p and drop-A confirmed in A3_replications.json."},
+    {"method_id":"A4_grouped","status":"VERIFIED","numbers":"ARTIFACT_VERIFIED (position_only oof_auc 0.481)","note":"the load-bearing freq-band-disjoint collapse; matches."},
+    {"method_id":"A5_degradation","status":"VERIFIED","numbers":"REPORT_ONLY (flat plateau; undegraded LB p~0.16) — data/A5_surface.json present, not independently recomputed cell-by-cell","note":"P1's REPORT_ONLY tag is honest; qualitative claim consistent with A5_surface.json existence."},
+    {"method_id":"A6_nulls","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (random-label 0.1464, freq-matched 0.1299, best_of_model 0.1294)","note":"CV_ANALOGUE_REFUTED verdict correct."},
+    {"method_id":"B1_representations","status":"VERIFIED","numbers":"ARTIFACT (8 representations)","note":"L1 substrate; SUPPORTED as a build, not a claim — fine."},
+    {"method_id":"B3_known_script","status":"VERIFIED","numbers":"ARTIFACT (Bayesian F1 0.608; 6 families)","note":"LB known-script positive control; P1 scopes '(L2)'/known-script. Analogue positive, not LA. SEMANTICS-FLAG (handled)."},
+    {"method_id":"B4_synthetic","status":"VERIFIED","numbers":"ARTIFACT (boundary skill ~0 at hapax)","note":"NO_POWER correctly stated (not a refutation)."},
+    {"method_id":"B5_la_ensemble","status":"VERIFIED","numbers":"ARTIFACT (row-break AUC 0.875 vs distributional 0.565)","note":"STRUCTURAL_ONLY correct; boundary signal is admin/physical layout."},
+    {"method_id":"B6_downstream","status":"VERIFIED","numbers":"ARTIFACT (GORILA_WORD endorsed)","note":"PARTIAL_SUPPORT correctly scoped to segmentation choice, no value licence."},
+    {"method_id":"C1_candidates","status":"VERIFIED","numbers":"ARTIFACT (3749 pairs)","note":"L1 catalogue; SUPPORTED as a catalogue only."},
+    {"method_id":"C3_lb_calib","status":"VERIFIED","numbers":"ARTIFACT (consonant-held AUC 0.744)","note":"NEAR-DUPLICATE of C_AUDIT: both establish the LB substitution consonant axis; C_AUDIT is the rigorous full-battery re-do. Both LB analogue positives (not LA). DUPLICATE-FLAG + SEMANTICS-FLAG (P1 scopes '(L2, LB)')."},
+    {"method_id":"C_AUDIT","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (0.643-0.703 4/4 impl; freq-band 0.657-0.725; freq-matched p 0.0033; Holm 0.0166; same-vowel n.s.)","note":"VALIDATED on OPAQUE LINEAR B ONLY. RESULT_NUMBERS.csv names it 'audit on LB (BONUS)'. The sole surviving basis for 'internal methods not universally value-blind'. Must NOT be read as LA substitution support: LA fails (C4 NULL / C5 UNDERDETERMINED). SEMANTICS-FLAG (handled by P1)."},
+    {"method_id":"C4_la_graph","status":"VERIFIED","numbers":"ARTIFACT (REL_CLASS_01 final-frac 0.294 < null 0.454; word-INITIAL opposite signature)","note":"NULL correct; LA axis is word-initial prefixation, wrong signature for the LB detector."},
+    {"method_id":"C5_stability","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (deflated info-gain 4.0 bits; HT holdout collapses)","note":"UNDERDETERMINED/FRAGILE correct; severe Haghia-Triada single-site dependency."},
+    {"method_id":"D1_multiview","status":"VERIFIED","numbers":"ARTIFACT (fused vowel-AUC 0.538 perm-p 0.096; every config <0.55)","note":"NULL correct after frequency residualization."},
+    {"method_id":"D2_ablations","status":"VERIFIED","numbers":"ARTIFACT (all LA views <0.55; LB control 0.564 freq-robust)","note":"NULL correct; LB positive control confirms detector is live."},
+    {"method_id":"D3_seed_audit","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (pure-freq 0.872 > honest 0.784; kv4 lucky 0.874; drop-U ~0.469)","note":"REFUTED (frequency artifact + design leak) correct; 3rd Foundry correction."},
+    {"method_id":"D4_frontier","status":"VERIFIED","numbers":"ARTIFACT (value-blind selection flat 0.50; SEED_A=0)","note":"NO_POWER correctly stated (no secure seeds), not a refutation."},
+    {"method_id":"D5_posterior","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (K2 adjMI vs vowel 0.0317 p 0.1397; vs CV 0.0395 p 0.1457)","note":"NULL correct; stable K=2 partition aligns with provenance+morphology, not phonetics."},
+    {"method_id":"E1_morphology","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (A- productivity 47; freq-matched p_holm 0.050; I- p_holm 0.72)","note":"STRUCTURAL_ONLY; the genuine L3 positive; adaptive-null validated at K1. Part of A- family (see duplicates)."},
+    {"method_id":"E2_formula","status":"VERIFIED","numbers":"ARTIFACT (KU-RO 7/31 exact; libation order permutation p 5e-5)","note":"STRUCTURAL_ONLY; two complementary formula grammars; L3."},
+    {"method_id":"E3_crosssite","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (naive p_holm 0.0099 -> K1 adaptive 0.4212)","note":"NULL correct; the caught artifact/ERRATUM. Exemplary append-only downgrade."},
+    {"method_id":"E4_paramreduce","status":"VERIFIED","numbers":"ARTIFACT (training DL -14.2%; held-out gain not structural)","note":"NULL correct; metric-insensitivity (even LB morphology fails it) — correctly NOT read as evidence against A-."},
+    {"method_id":"E5_wrongstruct","status":"VERIFIED","numbers":"ARTIFACT (paired p 0.0005; A- 0.760 vs random 0.56)","note":"SUPPORTED; a wrong-structure CONTROL for the A- claim -> same underlying positive as E1 (see duplicates)."},
+    {"method_id":"F1_decompose","status":"VERIFIED","numbers":"ARTIFACT (only admin_function non-circular -> NULL; 0/59 have primary value source)","note":"NULL correct; other channels capped circular <=0.75."},
+    {"method_id":"F2_calib","status":"VERIFIED","numbers":"ARTIFACT (cross-script value power null at LA scale)","note":"NO_POWER correct (not a refutation of cross-script in principle)."},
+    {"method_id":"F4_loso","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (R@5 0.071 vs 0.066; LOSO vowel-acc 0.2321 vs 0.2083 p 0.3771)","note":"NULL correct; 4th independent distributional null."},
+    {"method_id":"G1_anchor_audit","status":"VERIFIED","numbers":"ARTIFACT (115 -> 6 lineages / 1 value channel / 5 toponym eqns)","note":"NULL correct; anchor base collapses to one circular toponym lineage (source-dependency, Art XI)."},
+    {"method_id":"G2_expand","status":"VERIFIED","numbers":"ARTIFACT (0 new value anchors)","note":"NULL correct."},
+    {"method_id":"G3_seedq","status":"VERIFIED","numbers":"ARTIFACT (SEED_A=0)","note":"Row folds THREE scripts (g3_anchor_nulls.py, g3_compound_systems.py, g3_seed_quality.py) -> reasonable collapse, not an omission; artifact paths all cited."},
+    {"method_id":"H1_round1","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (SEM 0.03818; FWER 0.0149 but Holm 0.0745; LOO worst p 1.0 = only KU-RO)","note":"NULL (AT_END_TO_END_NULL) correct; West-Semitic clears raw only on the single KU-RO='total' accounting shortcut, collapses under Holm+LOO."},
+    {"method_id":"H2_round2","status":"VERIFIED","numbers":"ARTIFACT (17 anchors cover 135/1067 words -> 0 readings)","note":"NULL correct; anchors add zero reading power."},
+    {"method_id":"H3_round3","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (relabel read-count mean 82.0 std 0.0 invariant=True; 3.585 bits)","note":"UNDERDETERMINED correct; the decisive relabeling-invariance result (0 bits of value info)."},
+    {"method_id":"I1_agnostic","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (LB control AMI 0.504 p 0.024 fires; LA C15 p 0.046 refuted; >=10^27 twins)","note":"UNDERDETERMINED_NO_RECOVERY correct; row folds i1_agnostic.py + i1_robustness.py + free-objective-collapse -> reasonable collapse. Detector live (LB fires) so LA null is informative."},
+    {"method_id":"J1_exposure","status":"VERIFIED","numbers":"ARTIFACT (public metadata layer enumerated; only unpublished values sealable)","note":"SUPPORTED as a clean prospective-delta definition; PIT/leakage discipline honored."},
+    {"method_id":"J2_seals_programme","status":"VERIFIED","numbers":"ARTIFACT (5 seals frozen; phonetic NO_CANDIDATE_TO_SEAL)","note":"STRUCTURAL_ONLY; hashed manifests present in manifests/SEALS_INDEX.json."},
+    {"method_id":"SEAL_2","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (SEALS_INDEX.json holdout_rate_A 0.05253 in band; ledger_wf 0.8571; KU-RO 7)","note":"SUPPORTED; held-out A- + ledger generalization. Inherits A- family positive (see duplicates)."},
+    {"method_id":"SEAL_3","status":"VERIFIED","numbers":"ARTIFACT (carrier-value wf 0.8525; KU-RO absent correctly; A not enriched)","note":"SUPPORTED; unseen site Khania; abstract grammar transfers while HT-specific lexeme correctly absent."},
+    {"method_id":"SEAL_4","status":"VERIFIED","numbers":"ARTIFACT (13 carriers, 45 pairs, 0 inversions)","note":"SUPPORTED; unseen libation family LOO."},
+    {"method_id":"SEAL_5","status":"VERIFIED","numbers":"ARTIFACT (n=6; arith_exact 1 vs baseline 2 -> FAIL)","note":"NULL — honest committed NEGATIVE seal; correctly recorded, not hidden (Art XVII compliance)."},
+    {"method_id":"ANETAKI_DELTA_SEAL","status":"VERIFIED","numbers":"ARTIFACT (prospective; NO_CANDIDATE_TO_SEAL; in_current_corpus=false)","note":"INCOMPLETE/SEALED_PROSPECTIVE correct; dated hashed structural-only test."},
+    {"method_id":"K1_nulls","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (A- 0.008; KU-RO 0.002; value-layer relabel read-count std 0.0 = 0 bits)","note":"scientific_outcome=SUPPORTED for a NULL-CALIBRATION meta-method (outcome NULLS_CONFIRM_NULLS). Defensible (the positives it tests survive) but it is a verification method, not an LA discovery. See numerical caveat on libation p. SEMANTICS-FLAG."},
+    {"method_id":"L1_sourcewatch","status":"VERIFIED","numbers":"ARTIFACT (9 acquisitions ranked; Anetaki II unpublished web-verified 2026-07-08)","note":"INCOMPLETE (source watch) correct; L0."},
+    {"method_id":"M1_synthesis","status":"VERIFIED","numbers":"VERIFIED_FROM_ARTIFACT (LICENCE_STATE.json all 7 licences NOT_EARNED; highest L2/L3)","note":"NULL_PUBLISHED / NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT matches M_FINAL_VERDICT.md. P1 correctly used the FINAL verdict, NOT the stale STATUS.md."}
+  ],
+
+  "material_errors": [],
+
+  "omitted_methods_assessment": {
+    "material_omissions": "NONE. All 187 files the branch changed vs Foundry parent 09f7ef9 live under experiments/linear_a_relative_phonology/ (git diff --stat verified), so P1's dir-ownership missed no branch content. No newer/owning branch supersedes this scope.",
+    "non_material_collapses": [
+      "G3_seedq folds 3 scripts (g3_anchor_nulls.py + g3_compound_systems.py + g3_seed_quality.py) into one row — reasonable (all WP-G3 anchor-null sub-analyses); artifact paths all cited.",
+      "I1_agnostic folds i1_agnostic.py + i1_robustness.py + I1_agnostic_free_objective_collapse.json into one row — reasonable.",
+      "Several WP-F report write-ups (F_CYPRO_MINOAN_SENSITIVITY.md, F_RELATIVE_CLASS_COMPATIBILITY.md, F_LINEAR_A_LINEAR_B_SUBSETS.md) are sub-analyses subsumed under F1_decompose/F2_calib rather than separate rows — defensible; no distinct load-bearing number lost."
+    ]
+  },
+
+  "duplicates_and_false_novelty": [
+    "A- prefixation single positive is represented across FOUR rows: E1_morphology (induction), E5_wrongstruct (wrong-structure control), K1_nulls (adaptive null), SEAL_2 (held-out). Legitimate as distinct METHOD instances, but a synthesis-level tally of 'supported methods' must treat A- as ONE underlying claim, not four independent positives.",
+    "C3_lb_calib and C_AUDIT are NEAR-DUPLICATES: both establish the Linear B substitution consonant axis; C_AUDIT is the rigorous full-battery re-implementation that supersedes C3's initial calibration. Both are LB-analogue positives, not Linear A results.",
+    "No renamed-identical runs, no parameter-tweak-as-new-method, no proposals miscounted as executed methods were found."
+  ],
+
+  "positive_controls_and_analogue_positives_counted": [
+    "A1_reconstruct (LB reproduction), B3_known_script (LB boundary control), C3_lb_calib (LB substitution calibration), C_AUDIT (opaque-LB substitution VALIDATION), F2_calib (LB known-script calibration), plus LB positive controls embedded in D2/I1. These are LB-analogue / positive-control methods, NOT Linear A decipherment methods. P1 scopes each correctly ('(L2, LB)', 'on the analogue only', 'BONUS', 'known-script'), and the master report labels the whole substitution result 'RELATIVE_PHONOLOGY_ONLY, on the analogue only'. No overclaim found; flagged so downstream counts never read an analogue positive as Linear-A support."
+  ],
+
+  "numerical_caveats": [
+    "K1_nulls libation rigid-order p: P1 (following M_FINAL_VERDICT sec 19) reports 'p 0.030'. The K1_nulls.json field literally named C_libation_random_anchor.adaptive_p_random_anchor = 0.00202 (0 random systems as-extreme-as-obs -> (0+1)/(493+1)). The 0.030 figure is random_systems_perfect_AND_ge_obs_pairs = 14/493 = 0.0284 (the '2.8% reached the 10 co-occurring consistent pairs' statistic). Both live in the artifact; P1's choice of the conservative 0.030 is consistent with the campaign's own final report. Classification: ARTIFACT_VERIFIED with a source-internal label ambiguity — NOT a P1 fabrication or mismatch.",
+    "All other load-bearing numbers traced to JSON: REPRODUCED or ARTIFACT_VERIFIED. No MISMATCH, no MISSING artifact."
+  ],
+
+  "verdict_semantics_flags": [
+    "NO_POWER stated as refutation: NOT present — B4_synthetic (NO_POWER), D4_frontier (NO_POWER), F2_calib (NO_POWER) are all correctly worded as insufficient power, not as refuting the underlying method.",
+    "Analogue-positive stated as LA support: risk exists (C_AUDIT / C3_lb_calib / B3 SUPPORTED) but P1 CORRECTLY scopes every one to the readable-script analogue; not an error, flagged for downstream readers.",
+    "A1_reconstruct 'SUPPORTED' is a REPRODUCTION of a claim that is REFUTED downstream (A2-A6); scoped and supersession-linked by P1, but the bare SUPPORTED tag is semantically loose.",
+    "K1_nulls 'SUPPORTED' tags a null-calibration meta-method (outcome NULLS_CONFIRM_NULLS); defensible but it verifies rather than discovers.",
+    "REJECT unscoped / objective-invariance as universal-impossibility: NOT present — M1/H3/I1 correctly frame relabeling-invariance as underdetermination-by-monolingual-evidence (>=10^27 twins), explicitly NOT a proof of impossibility (M_FINAL_VERDICT sec 24). Correct.",
+    "Relative-classes as absolute values: NOT present — D5/C4/C5 consistently label the recovered partitions as anonymous/relative, licences NOT_EARNED.",
+    "Broad-family-null as refuting-all-models: NOT present — H1 null is scoped to the tested candidate families; Finnish + agnostic controls sit at the null (bar is specific, not leaky).",
+    "Dependent-sources as independent-replications: NOT present — G1 collapses 115 anchors to 6 lineages / 1 value channel (source-dependency graph applied)."
+  ],
+
+  "stale_status_note": "The SOURCE branch STATUS.md (dated 2026-07-07, 'Next automatic task: A1_reconstruct') and DECISION_LOG.md (entries stop at 'WP-A COMPLETE') are STALE/INCOMPLETE relative to the actually-completed campaign (M_FINAL_VERDICT.md + TASK_LEDGER + final commit 8a98607 = NEW_CONSTRAINTS_BUT_NO_DECIPHERMENT). This is a SOURCE-branch hygiene issue, NOT a P1 defect: P1's M1 row and master report correctly use the final verdict artifacts. Flagged because a naive re-audit via STATUS.md alone would misread the campaign as still at scaffold/WP-A.",
+
+  "constitution_compliance_observed": "The campaign is exemplary on Art. XVII (append-only): E3 cross-site downgrade and D3/position->C/V corrections are recorded as ERRATUM/SUPERSEDING, never silent deletion; the Foundry record is preserved. Art. XII (no grading a target by the rule that created it) and non-circularity (LB values grade only, never model input) held throughout. SEAL_5 negative honestly recorded (no silent exclusion of a failed prediction).",
+
+  "bottom_line": "For scope relative_phonology: 46/46 P1 rows VERIFIED against source artifacts; 0 material errors; 0 numerical mismatches; 0 missing artifacts; lineages correct; no material omissions. Adversarial findings reduce to labeling/semantics caveats (all of which P1 already scoped in strongest_authorized_claim / master report), one intra-family 4x double-count of the single A- positive, one near-duplicate LB row (C3 vs C_AUDIT), one source-internal p-value ambiguity carried faithfully from the campaign, and a stale source STATUS.md that P1 correctly ignored. P1 was NOT rubber-stamped: every one of the six requested numbers plus ~8 additional load-bearing figures was independently re-traced to its JSON."
+}

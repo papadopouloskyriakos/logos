@@ -1,0 +1,17 @@
+{
+ "red_team_branch": "audit/linear-a-methodology-inventory-red-team",
+ "parent": "e800b63",
+ "independent_method": "content-hash enumeration (SHA-256) across ALL 12 worktrees BEFORE reading P1 as truth",
+ "refs_worktrees": "13 refs / 12 worktrees / 1 tag (re-enumerated independently)",
+ "distinct_content_artifacts": 986,
+ "total_files_scanned": 2587,
+ "verification_agents": 8,
+ "rows_verified": 215,
+ "VERIFIED": 203,
+ "MINOR": 12,
+ "MATERIAL_ERROR": 0,
+ "omitted_methods_found": 1,
+ "numerical_checked": "~60 all REPRODUCED/ARTIFACT_VERIFIED",
+ "p1_report_preserved": "experiments/linear_a_methodology_inventory/ UNCHANGED (verified by git diff)",
+ "prohibitions_honored": "no experiments; no verdict-ledger/paper/P1-report edits; read-only"
+}

@@ -1,0 +1,86 @@
+{
+  "scope": "admin_structure",
+  "verifier": "independent RED-TEAM (LOGOS Constitution v2.2)",
+  "date": "2026-07-08",
+  "source_worktree": "/home/claude-runner/gitlab/n8n/logos-observable-channels",
+  "branches_audited": [
+    "research/blinded-admin-schema-induction",
+    "research/no-human-structural-decipherment",
+    "research/observable-admin-channel-recovery"
+  ],
+  "method": "Independently enumerated method instances from artifacts (STATUS/DECISION_LOG/reports/committed result JSONs + git log) BEFORE reading P1. Then verified each P1 row against the artifact it cites. All 6 observable_channels result JSONs + pilot_stats.json + power_gate.json + weak_supervision_metrics.json + source_labels_summary.json + stage4_2_graph_freeze.json confirmed git-TRACKED (committed) and opened; numbers reproduced by direct read.",
+  "independent_method_instance_census": {
+    "admin_schema": [
+      "prior-art/novelty audit -> NOVELTY_SUPPORTED (0/20)",
+      "source/licence audit + de-phoneticisation blinding design",
+      "canonical de-phoneticised document graph (Stage4/4.1/4.2) — infrastructure",
+      "blind formula-cluster induction (grouping, 9432 edges)",
+      "LB role ontology freeze (hash 781902c0) — target definition, DESIGNED_NOT_RUN",
+      "automated annotation feasibility pilot (Stage 5.1) -> NO_POWER (alpha 0.614)",
+      "human-expert annotation package -> DESIGNED_NOT_RUN / BLOCKED"
+    ],
+    "no_human_structure": [
+      "source-label dependency audit -> ONE SHARED_DECIPHERMENT cluster (93)",
+      "deterministic source-derived label corpus -> 66 REFERENCE_GOLD_A, 2/4 load-bearing classes",
+      "weak supervision (LFs, WS0-4) -> edition-independent structural signal 0.026; index-LF precision circular",
+      "pre-Stage-5 power gate -> NO_POWER_BEFORE_MODELING (est 0.291 << min-detectable 0.92 @ n=19; power 0.0)"
+    ],
+    "observable_channels": [
+      "Exp1 masked logogram -> NEGATIVE (L3)",
+      "Exp2 masked quantity (presence+magnitude) -> NEGATIVE (L3)",
+      "Exp3 accounting-closure -> L2 positive but sparse",
+      "Exp4 document-template completion -> L2 positive",
+      "Exp5 cross-site invariance -> SITE_DEPENDENT",
+      "Exp6 pseudo-script O2+D8 -> template O2-identical/D8-robust, closure D8-fragile",
+      "mechanical gate -> OBSERVABLE_CHANNEL_READY=NO"
+    ],
+    "count": 18,
+    "p1_count_admin_structure": 18,
+    "coverage": "P1 mapped all 18 method instances present in the three declared dirs. No omission within the declared dir-ownership."
+  },
+  "key_semantic_checks": {
+    "NO_POWER_not_stated_as_refutation": "PASS — ADMIN-06 and NOHUM-04 are stated as NO_POWER / NO_POWER_BEFORE_MODELING, never as refutation. Only the L3 word-context question (OBS-07) is REFUTED, matching GATE_VERDICT.md.",
+    "L2_STRUCTURAL_ONLY_earns_no_licence": "PASS — OBS-03/04/05/06 licence_earned=NONE; STRUCTURAL_TRANSFER_LICENSE NOT_EARNED (site-dependent + D8-fragile + sign-agnostic). Correct per GATE_VERDICT.",
+    "pilot_vs_human_gate_separation": "PASS — ADMIN-06 (automated pilot, RUN_EXPLORATORY, NO_POWER) and ADMIN-07 (human package, DESIGNED_NOT_RUN, BLOCKED QUALIFIED_HUMAN_ANNOTATORS_REQUIRED) are correctly separate rows with distinct implementation_status.",
+    "pilot_artifacts_subsumed": "PASS — ADMIN-07 references the committed annotator templates (annotator_A/B_response_template.csv) + human_pilot_manifest.json; reading-bearing packets/anon_key gitignored (DAMOS courtesy) as expected, not omitted. anon_key file is not on disk (gitignored) — consistent with P1's 'packets gitignored' note.",
+    "well_powered_negative_vs_underpower": "PASS — P1 correctly distinguishes the OBS L3 negatives as WELL-POWERED (457 + 1593 A12 units) from the NOHUM label-route NO_POWER (underpowered before modeling). This is the load-bearing semantic distinction and P1 gets it right."
+  },
+  "per_row_verification": [
+    {"method_id": "ADMIN-01", "status": "VERIFIED", "note": "NOVELTY_SUPPORTED, 0/20 works satisfy conjunction. prior_art_register.csv has 20 data rows (21 lines incl header). Correctly claim_layer NOT_APPLICABLE (meta audit, not an LA reading).", "artifact": "experiments/admin_schema/data/prior_art/prior_art_register.csv; DECISION_LOG.md Stage 2", "commit": "cf2f7eb/76afe6e"},
+    {"method_id": "ADMIN-02", "status": "VERIFIED", "note": "Source/licence audit + blinding design; NOT_APPLICABLE outcome correct. Design/source-audit, not counted as an LA method (semantics correct).", "artifact": "reports/LINEAR_B_SOURCE_AUDIT.md; DECISION_LOG Stage 3", "commit": "4526c5c"},
+    {"method_id": "ADMIN-03", "status": "VERIFIED", "note": "ALL LA channel counts match stage4_2_graph_freeze.json la_node_counts EXACTLY: NUMERAL 1276, ROW 3435, ENTRY 3738, WORD_FORM 3147, SIGN 5792, LOGOGRAM 654, FRACTION 311, MEASURE_MARKER 52. 1056 'other' -> 91% resolved (LOGOGRAM 654/FRACTION 311/OTHER_NOTATION 52/DAMAGED 9/UNRESOLVED 30). scribes 293 (3944/5799 docs), 19 canonical sites. NOTE: MEASURE_MARKER=52 AND OTHER_NOTATION=52 are two distinct real channels that coincidentally both equal 52 — both counts are correct, not a duplication error.", "artifact": "experiments/admin_schema/data/manifests/stage4_2_graph_freeze.json", "commit": "fd3e009/687de99"},
+    {"method_id": "ADMIN-04", "status": "VERIFIED", "note": "9,432 SAME_FORMULA_CLUSTER edges match lb_edge_counts.SAME_FORMULA_CLUSTER=9432 (and FORMULA_CLUSTER nodes=9432). GROUPING_ONLY leakage-control, no scored hypothesis — correctly NOT_APPLICABLE.", "artifact": "stage4_2_graph_freeze.json lb_edge_counts", "commit": "79ddca4"},
+    {"method_id": "ADMIN-05", "status": "VERIFIED", "note": "Ontology hash 781902c0; Krippendorff alpha >=0.80 primary / 0.67-0.80 provisional. DESIGNED_NOT_RUN (frozen target definition, no gold/splits/models). L4 target-definition-only correctly does not assert an L4 reading.", "artifact": "reports/ROLE_ONTOLOGY.md; data/manifests/stage5_ontology_freeze.json; DECISION_LOG Stage 5 FROZEN", "commit": "f2ab545"},
+    {"method_id": "ADMIN-06", "status": "VERIFIED", "note": "pilot_stats.json reproduces ALL numbers: krippendorff_alpha 0.614, raw 0.725, gold_a_agreed_yield 0.056 (~9/160), nontrivial_gold_a_agreed 4 (KN 0/nonKN 4/hapax 1), est_unseen 39, est_nonKN 140, min_detectable_K 16. Verdict NO_POWER (alpha<0.667) correctly NOT called refutation. model-based alpha = optimistic-upper-bound caveat carried.", "artifact": "experiments/admin_schema/data/pilot/pilot_stats.json", "commit": "51ba8ef"},
+    {"method_id": "ADMIN-07", "status": "VERIFIED", "note": "DESIGNED_NOT_RUN / BLOCKED (QUALIFIED_HUMAN_ANNOTATORS_REQUIRED); no agreement computed; INCOMPLETE outcome correct. Correctly separated from ADMIN-06. Templates+manifest committed; packets/anon_key gitignored (expected).", "artifact": "reports/HUMAN_EXPERT_GATE_STATUS.md; data/human_pilot/*; DECISION_LOG", "commit": "dd98f1a/aac69b4/6606e80"},
+    {"method_id": "NOHUM-01", "status": "VERIFIED", "note": "dependency_clusters SHARED_DECIPHERMENT=93 matches source_labels_summary.json; only STRUCTURAL_RULES edition-independent. Source-dependency audit correctly NOT_APPLICABLE claim layer.", "artifact": "experiments/no_human_structure/data/source_labels/source_labels_summary.json", "commit": "ac327a7"},
+    {"method_id": "NOHUM-02", "status": "VERIFIED", "note": "power_gate.json: non_trivial_REFERENCE_GOLD_A 66, PLACE 43 / HUMAN_OR_INSTITUTION 23; load_bearing_absent OPERATOR_OR_RELATION + QUALIFIER (2 of 4). Verified exactly.", "artifact": "power_gate.json / source_labels_summary.json", "commit": "60bd0ee"},
+    {"method_id": "NOHUM-03", "status": "VERIFIED_WITH_MINOR_CORRECTION", "note": "coverage 0.7081, abstain 0.2919, conflict 0.0441 (weak_supervision_metrics.json); structural_signal_precision 0.026 (power_gate.json); index-LF precision on gold 1.0 (LF_TOPONYM_INDEX, LF_TITLE_INDEX, LF_CROSS_SOURCE_CONCORDANCE) correctly flagged CIRCULAR. MINOR: P1 says '13 LFs' (faithfully copied from STATUS/DECISION_LOG) but weak_supervision_metrics.json lf_coverage lists 14 keys (incl LF_NEGATIVE_EXCLUSION as an exclusion-LF). Discrepancy is inherited from the source artifact's own labelling, not introduced by P1.", "artifact": "weak_supervision_metrics.json; power_gate.json", "commit": "2b3de70"},
+    {"method_id": "NOHUM-04", "status": "VERIFIED", "note": "power_gate.json: est_O2_D8_model_accuracy 0.291, min_detectable_accuracy 0.92, proposed_sealed_eval_size 19, power_at_est_O2_D8 0.0, verdict NO_POWER_BEFORE_MODELING. 2 load-bearing classes absent. Correctly framed as rigorous negative / route-closure, NOT refutation and NOT a modeling failure.", "artifact": "power_gate.json; reports/PRE_STAGE5_POWER_GATE.md", "commit": "6adacec"},
+    {"method_id": "OBS-01", "status": "VERIFIED_WITH_MINOR_CORRECTION", "note": "masked_logogram.json reproduces exactly: M_sign_A12 0.182, baseline_frequency 0.175, series 0.63, null 0.144, M_struct 0.186; cross-site KN->nonKN M_sign 0.073 vs baseline 0.115; n_test_unseen_family 457. MINOR SEMANTICS: scientific_outcome labels the individual experiment 'REFUTED', but the per-experiment verdict in the artifact is NEGATIVE; REFUTED is the aggregate gate verdict (OBS-07). P1 clarifies '(per-channel NEGATIVE for word-context)' in-cell, so not misleading.", "artifact": "experiments/observable_channels/results/masked_logogram.json", "commit": "9675dc8"},
+    {"method_id": "OBS-02", "status": "VERIFIED_WITH_MINOR_CORRECTION", "note": "masked_quantity.json reproduces exactly: presence M_sign 0.651 < majority 0.68 / series 0.688 / null 0.611, M_struct 0.709, cross-site 0.579 vs 0.557; magnitude M_sign 0.637 < null 0.665, series 0.702, cross-site 0.69 vs 0.753; n_test 1593. MINOR: scientific_outcome uses 'TRIVIAL_RECOVERY' (not the artifact's term for Exp2 — report says per-channel NEGATIVE) and 'only LAYOUT/L2 beats baseline' holds ONLY for the presence sub-target (M_struct 0.709>0.68); for magnitude, layout M_struct 0.663 = baseline 0.663 (does NOT beat). mechanical_verdict field is accurate; overstatement is immaterial to the negative conclusion.", "artifact": "experiments/observable_channels/results/masked_quantity.json", "commit": "cf0ffe5"},
+    {"method_id": "OBS-03", "status": "VERIFIED", "note": "accounting_closure.json reproduces exactly: closure_rate_exact 0.071 vs null 0.049; tol1 0.214/0.143; KN 0.111 / nonKN 0.052; masked-summand reconstruction 1.0 vs median baseline 0.2 (n_closing 25). STRUCTURAL_ONLY (L2), earns no functional licence — correct.", "artifact": "experiments/observable_channels/results/accounting_closure.json", "commit": "ff304ac"},
+    {"method_id": "OBS-04", "status": "VERIFIED", "note": "template_completion.json: M_template 0.508 > position 0.398 > global 0.338 (n_masked 1324); KN 0.407 (<0.443 base); nonKN 0.633 (vs 0.342). STRUCTURAL_ONLY, held-out unseen docs. Correct.", "artifact": "experiments/observable_channels/results/template_completion.json", "commit": "ff304ac"},
+    {"method_id": "OBS-05", "status": "VERIFIED", "note": "cross_site_invariance.json: KN->nonKN template 0.616 vs 0.238; nonKN->KN 0.389 vs 0.289; entry_type_TVD 0.281; cross_site_gap 0.227; site_shuffle_null_p 0.0; verdict SITE_DEPENDENT. Correctly one of two STRUCTURAL-gate failure grounds.", "artifact": "experiments/observable_channels/results/cross_site_invariance.json", "commit": "71eb0e6"},
+    {"method_id": "OBS-06", "status": "VERIFIED", "note": "pseudo_script_o2d8.json: O2 template 0.497=0.497 identical (sign-agnostic -> content-free, the honest caveat); D8 template 0.497/0.591/0.602/0.589 vs baseline 0.408->0.48; closure 0.071/0.049/0.047/0.033 vs null 0.049/0.036/0.008/0.054 (D8-fragile); LA density 2.73 vs LB 2.29, both_ge3 0.28. Correct; LA-density line correctly flagged corpus-statistic-only, NOT an LA model result.", "artifact": "experiments/observable_channels/results/pseudo_script_o2d8.json", "commit": "71eb0e6"},
+    {"method_id": "OBS-07", "status": "VERIFIED", "note": "Gate synthesis matches GATE_VERDICT.md: OBSERVABLE_CHANNEL_READY=NO; FUNCTIONAL_TRANSFER_LICENSE NOT_EARNED (L3 REFUTED); STRUCTURAL_TRANSFER_LICENSE NOT_EARNED (site-dependent + D8-fragile + sign-agnostic). Well-powered negative correctly distinguished from underpower. No LA output authorized (SEMANTIC+ NOT_AUTHORIZED). Verdict semantics all correct.", "artifact": "experiments/observable_channels/reports/GATE_VERDICT.md", "commit": "ff304ac/71eb0e6"}
+  ],
+  "omitted_methods": [
+    "NONE within the declared admin_structure dir-ownership (admin_schema/no_human_structure/observable_channels). All 18 method instances mapped.",
+    "CROSS-SCOPE NOTE (not an admin_structure omission): the exploratory main-branch admin methods schema_recon, schema_induction (LA total-reconciliation 29.2%/7-24 exact, 35% clean, vs 0.54% null ~55-65x, EXPLORATORY/NOT gate-validated) and representation_audit are administrative-structure-relevant but P1 assigned them to the paper_core scope (rows PC-35 representation-audit, PC-36 schema-recon, PC-37 schema-induction, PC-42 campaign-kuro-control). They are NOT globally omitted; a different scope owner covers them. Reasonable scoping (they live on main under separate dirs and predate the admin programmes)."
+  ],
+  "duplicates_false_novelty": [
+    "NONE material. ADMIN-01/ADMIN-02 are a prior-art audit + a source/blinding-design audit (not LA reading methods); P1 correctly tags both claim_layer=NOT_APPLICABLE and scientific_outcome=NOT_APPLICABLE — they are inventoried but NOT counted as LA decipherment methods, so no false-novelty inflation.",
+    "ADMIN-03/04/05 are infrastructure (graph build, grouping, ontology freeze), all correctly NOT_APPLICABLE/DESIGNED_NOT_RUN — not counted as scored LA methods.",
+    "OVERLAP acknowledged by P1, not double-counted: OBS-03 accounting-closure, PC-37 schema-induction, and PC-42 KU-RO control all touch KU-RO/total reconciliation; P1's cross-references note the overlap ('overlaps campaign KU-RO control PC-42', 'overlaps PC-37 schema induction') rather than presenting them as independent novel confirmations."
+  ],
+  "numerical_issues": [
+    "CLASSIFICATION UNDERSTATEMENT (minor, conservative direction): RESULT_NUMBERS.csv tags the classification_hint column 'REPORT_ONLY' for ALL 18 admin_structure rows, yet ~13 rows (ADMIN-03/04/06, NOHUM-01/02/03/04, OBS-01..07) draw their load-bearing numbers from GIT-TRACKED committed JSON artifacts (masked_*.json, accounting_closure.json, template_completion.json, cross_site_invariance.json, pseudo_script_o2d8.json, pilot_stats.json, power_gate.json, weak_supervision_metrics.json, source_labels_summary.json, stage4_2_graph_freeze.json — all confirmed tracked). P1's own inline primary_metric_value cells label these 'VERIFIED_FROM_ARTIFACT', contradicting the REPORT_ONLY column. Correct classification is ARTIFACT_VERIFIED/REPRODUCED. I independently opened every cited JSON and reproduced every number. Direction is conservative (understates verification strength), inflates nothing.",
+    "All load-bearing numbers REPRODUCED from committed JSON: no MISMATCH, no MISSING artifact found in this scope."
+  ],
+  "verdict_semantics_errors": [
+    "NONE material. NO_POWER (ADMIN-06, NOHUM-04) is never presented as refutation. SOURCE_BLOCKED/BLOCKED (ADMIN-07) is presented as INCOMPLETE, not a negative result. L3 REFUTED is scoped to the word-context->channel question (not unscoped). L2 SUPPORTED is correctly denied a functional licence. The well-powered-negative vs underpower distinction is preserved.",
+    "MINOR (lineage narrative, not a row): METHOD_LINEAGES.json admin lineage 'origin' field reads 'paper + admin_schema blinded LB role/schema induction (29.2% exact, not gate-validated)'. The 29.2%-exact figure is actually from schema_induction/reconcile_results.json (LA total-reconciliation), NOT from admin_schema (whose pilot produced alpha 0.614, no 29.2% figure). The origin string conflates two distinct methods' provenance. Immaterial to any admin_structure row verdict; flagged for lineage-narrative accuracy."
+  ],
+  "summary_judgement": "The admin_structure inventory is SUBSTANTIVELY ACCURATE. All 18 P1 rows verify: 15 VERIFIED, 3 VERIFIED_WITH_MINOR_CORRECTION (loose scientific_outcome wording on OBS-01/OBS-02; '13 vs 14 LFs' inherited count nuance on NOHUM-03). Every load-bearing number reproduced from committed artifacts. Verdict semantics are correct throughout — NO_POWER != refutation, L2 earns no licence, pilot/human-gate separated, pilot artifacts subsumed, well-powered-negative distinguished from underpower. No material errors, no omissions within scope, no false-novelty/duplication. The only cross-cutting bookkeeping defect is the uniformly-'REPORT_ONLY' classification column in RESULT_NUMBERS.csv, which understates (does not inflate) the verification strength of ~13 artifact-backed rows."
+}

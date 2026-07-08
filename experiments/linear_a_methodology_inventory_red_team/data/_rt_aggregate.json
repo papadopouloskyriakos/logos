@@ -1,0 +1,357 @@
+{
+ "verif": {
+  "VERIFIED": 203,
+  "VERIFIED_WITH_MINOR_CORRECTION": 12,
+  "MATERIAL_ERROR": 0,
+  "UNSUPPORTED": 0,
+  "AMBIGUOUS": 0,
+  "MISSING_ARTIFACT": 0,
+  "DUPLICATE_INSTANCE": 0,
+  "WRONG_LINEAGE": 0,
+  "STALE_STATUS": 0
+ },
+ "omitted": [
+  {
+   "scope": "external_language",
+   "item": "EA-13-FROZEN-EGYPTIAN-POWER-PASS (frozen_power_pass.py + reports/FROZEN_POWER_PASS.md + results/power/frozen_power_envelope.json @ commit 3310e4b, HEAD of research/external-minoan-anchors). DISTINCT executed method from EA-02: EA-02 = frozen=False naive mapping-SEARCH regime (NO_POWER-leaning); EA-13 = frozen=True fixed-a-priori-correspondence regime, verdict POWERED_DESIGN / any_config_powered=true / best config n=4,La=4 -> FP=0.043, REC=0.91, powered at La>=4 (NOT powered at La=3). Honest reading in the MD = 'design-viable but scarcity-limited, NOT a crack'; the single real confirmatory attempt was TRIVIAL_RECOVERY (LOO flips 3->1). P1 missed it because the artifacts exist ONLY at 3310e4b, absent from the older external_anchors snapshot inherited into the la-lb-ritual worktree P1 read. This materially qualifies EA-02's bare 'leans NO_POWER'."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "NONE within the declared admin_structure dir-ownership (admin_schema/no_human_structure/observable_channels) \u2014 all 18 method instances mapped."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "Cross-scope (NOT an admin_structure omission): exploratory main-branch admin methods schema_recon, schema_induction (LA total-reconciliation 29.2%/7-24 exact, 35% clean, vs 0.54% null ~55-65x; EXPLORATORY/NOT gate-validated) and representation_audit are admin-relevant but P1 assigned them to the paper_core scope (PC-35/36/37, PC-42 KU-RO control). Reasonable scoping; not globally omitted."
+  },
+  {
+   "scope": "egyptian",
+   "item": "None within the egyptian-calibration-gate branch: all ~30 reports map onto the 14 captured instances (FINAL_EGYPTIAN_CHANNEL_VERDICT.md==EGY-10; BLOCKED_DOWNSTREAM_GATES.md is a superseded pre-EGY-04 placeholder). No post-EGY-14 corrected final_verdict exists to capture -- that absence IS the stale-status condition P1 already flags."
+  },
+  {
+   "scope": "egyptian",
+   "item": "Cross-scope (not an omission for this scope): the Egyptian corpus-build + correspondence-model appear as pre-fork ancestors under external_language scope (EA-03 designed-not-run, EA-12 source-blocked) and paper_core scope (PC-39 NO_POWER, LC-12 channel comparison) -- correctly partitioned by dir-ownership and connected via LIN-10, not independent methods."
+  },
+  {
+   "scope": "paper_core",
+   "item": "NONE material: all 27 docs/findings map 1:1 to PC rows; crossscript_gate (3 phases), segmentation_extension, representation_audit, schema_recon, schema_induction, linear_a_campaign T2-T5 all covered. paper_core coverage is complete."
+  },
+  {
+   "scope": "paper_core",
+   "item": "INFORMATIONAL only (out-of-scope, not an omission): PC-05 morphology NULL and PC-11 distributional-phonology NULL are later partly reversed on newer branches (relative-phonology E: A- prefixation SUPPORTED L3; WP-A: CV_ANALOGUE_REFUTED as frequency artifact per LIN-07/LIN-01) \u2014 those belong to relative_phonology/foundry scopes; the paper_core rows correctly report paper-state status but do not cross-reference the downstream reversal."
+  },
+  {
+   "scope": "foundry",
+   "item": "None material. candidate_round1_wordunits.py / candidate_wordunits.json (973 held-out multi-sign tokens) is input construction for the candidate rounds, not a separate result \u2014 correctly not a distinct instance. Helper scripts (candidate_engine.py, word_units.py, seal_common.py, wp7_cvcheck_patch.py) are infrastructure. All WP1-8 + synthetic lab + WP6 + 3 candidate rounds + seals + sources are covered by FND-01..FND-23."
+  },
+  {
+   "scope": "foundry",
+   "item": "Cross-scope (not an omission): the relative-phonology campaign that refutes foundry C1/seed-propagation lives on branch research/linear-a-relative-phonology-seals and is a separate P1 scope; correctly cross-referenced from foundry rows."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "NONE material \u2014 all 187 files the branch changed vs Foundry parent 09f7ef9 are under experiments/linear_a_relative_phonology/ (git diff --stat verified); no newer/owning branch skipped by dir-ownership."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "Non-material collapses only: G3_seedq folds g3_anchor_nulls.py+g3_compound_systems.py+g3_seed_quality.py into one row; I1_agnostic folds i1_agnostic.py+i1_robustness.py+free-objective-collapse; WP-F sub-reports (F_CYPRO_MINOAN_SENSITIVITY, F_RELATIVE_CLASS_COMPATIBILITY, F_LINEAR_A_LINEAR_B_SUBSETS) subsumed under F1/F2. All reasonable, no load-bearing number lost."
+  }
+ ],
+ "duplicates": [
+  {
+   "scope": "admin_structure",
+   "item": "NONE material. ADMIN-01/02 (prior-art + source/blinding-design audits) and ADMIN-03/04/05 (graph/grouping/ontology infrastructure) are inventoried but correctly tagged claim_layer=NOT_APPLICABLE / DESIGNED_NOT_RUN \u2014 not counted as scored LA methods, so no false-novelty inflation."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "KU-RO/total-reconciliation overlap across OBS-03, PC-37, PC-42 is explicitly cross-referenced by P1, not double-counted as independent confirmations."
+  },
+  {
+   "scope": "egyptian",
+   "item": "None within scope. EGY-13 (prereg MINT) and EGY-14 (one-shot RUN) are genuinely distinct instances of the same test, not a parameter-tweak duplicate."
+  },
+  {
+   "scope": "egyptian",
+   "item": "EGY-11 -> EGY-12 is a real supersession chain (ADVANCED_PROXIMATE_ONLY -> CLOSED_PRIMARY_COLLATED, 3->5 anchors), correctly marked, not double-counted."
+  },
+  {
+   "scope": "egyptian",
+   "item": "EGY-06 (LB matched-scarcity positive control) and EGY-07 (negative-control nulls) are controls, correctly NOT counted as Linear A methods."
+  },
+  {
+   "scope": "egyptian",
+   "item": "LOW-SEVERITY cross-scope: EA-12 (external_language) and EGY-01/EGY-04 (egyptian) both describe the Egyptian corpus build across the branch fork; a naive GLOBAL sum could read them as separate methods. No within-scope duplication; branch-fork supersession disclosed via LIN-10."
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "CE-E positive-control battery re-audits prior-campaign controls (LB morph 0.5625/0.3125, gate 3/500=0.6%, opaque-LB 11/11, KU-RO 17x) that are also inventoried under LIN-14/LIN-07 \u2014 potential cross-scope double-count of one underlying artifact set; disclosed as REPRODUCED, not false-novelty within scope"
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "CE-D2 (morphology NULL) and CE-D5 (phonotactics positive) are confirmations/hardenings of the prior 12h+paper campaign results on cleaned material \u2014 distinct instances but not novel methods; disclosed via supersession_relations"
+  },
+  {
+   "scope": "paper_core",
+   "item": "NONE material. CSA cluster PC-19/PC-21/PC-22 = engineering stages of one matcher, none counted as an LA result (NOT_APPLICABLE/COMPUTE_BLOCKED/INVALIDATED)."
+  },
+  {
+   "scope": "paper_core",
+   "item": "LLM-ablation PC-15/16/17 = three distinct gates of one probe with supersession chain recorded \u2014 not false novelty."
+  },
+  {
+   "scope": "paper_core",
+   "item": "Controls/instruments PC-07/13/18/42/20 counted as instances but all claim-layer NOT_APPLICABLE/control, none presented as a Linear A reading \u2014 not miscounted as LA methods."
+  },
+  {
+   "scope": "foundry",
+   "item": "None material. LB-positive-control + LA-null pairs (FND-04/06/08/09/13) correctly recorded as SINGLE instances (one method, two corpora), not double-counted. FND-03 (13-channel atlas) marked PROPOSED_ONLY and FND-22 (seals) DESIGNED_NOT_RUN \u2014 proposals/infrastructure correctly NOT counted as executed LA methods; FND-23 correctly meta (source audit)."
+  },
+  {
+   "scope": "foundry",
+   "item": "Minor/disclosed: FND-16 (WP6 agnostic) and FND-19/20/21 (candidate rounds 1-3) share candidate_engine.py + the same S/W/R end-to-end null \u2014 distinct LANGUAGE hypotheses but one METHOD. P1 discloses the shared engine; the report's 'six independent hypotheses' phrasing is a mild dependent-as-independent risk but P1 surfaces it."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "A- prefixation single positive spread across 4 rows (E1_morphology induction, E5_wrongstruct control, K1_nulls adaptive-null, SEAL_2 held-out) \u2014 legit as distinct method instances but must be counted as ONE underlying claim at synthesis level."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "C3_lb_calib is a near-duplicate of C_AUDIT: both establish the same LB substitution consonant axis; C_AUDIT is the rigorous full-battery re-do that supersedes C3's initial calibration. Both LB-analogue positives, not LA."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "No renamed-identical runs / parameter-tweak-as-new-method / proposals-miscounted found."
+  }
+ ],
+ "numerical": [
+  {
+   "scope": "admin_structure",
+   "item": "No MISMATCH: all load-bearing numbers REPRODUCED from git-tracked committed JSONs (masked_*/accounting_closure/template_completion/cross_site_invariance/pseudo_script_o2d8/pilot_stats/power_gate/weak_supervision_metrics/source_labels_summary/stage4_2_graph_freeze)."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "Classification understatement (minor, conservative): RESULT_NUMBERS.csv tags classification_hint='REPORT_ONLY' for ALL 18 rows, but ~13 rows are ARTIFACT_VERIFIED from committed JSONs (P1's own inline cells say 'VERIFIED_FROM_ARTIFACT' \u2014 contradicting the column). Understates verification strength; inflates nothing."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "ADMIN-03 MEASURE_MARKER=52 and OTHER_NOTATION=52 are two distinct real channels that coincidentally both equal 52 \u2014 both correct, not a duplication."
+  },
+  {
+   "scope": "egyptian",
+   "item": "None. All load-bearing numbers REPRODUCED or ARTIFACT_VERIFIED: EGY-04 corpus counts (159/152A+B[99A/53B]/156 roots/cls 130-23-3-1-1-1) reproduced from handverified.jsonl (sha cc2c20d8); EGY-05 from model_validation.json; EGY-06/07/08/09 from gate.json; EGY-10 from final_verdict.json; EGY-14 (r1_M2 3/3, p=0.0014, 9.48 bits, per-anchor ranks) from cretan_oneshot_verdict.json; EGY-12 sha 6903f5f1 verified at commit dd491fe; EGY-13 plan_hash 2eab1536 + input hashes verified from prereg json."
+  },
+  {
+   "scope": "egyptian",
+   "item": "Non-issue clarification: EGY-12 (6903f5f1) vs EGY-13 (b749e2f7) target-file hashes differ only because the file was re-frozen at mint (l->r annotation struck); both correct for their stage -- not a mismatch."
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "No material MISMATCH: all committed-artifact numbers reproduce exactly (92/212/2/0.434/46 in stage_a_budget.json; 1341/1242/618/565, 2328/402/298/119, 944/878/417/819/7/10 in stage_b_representation.json+INFORMATION_BUDGET.json; -4.172251 across 30 maps, gate 3/500=0.6%, 0.0000 hits in stage_hj_null.json)"
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "Non-load-bearing prose looseness, both self-disclosed by P1 as REPORT_ONLY: (a) '259 = 108 ligatures + 13 damage' does not arithmetically reconstruct 259/258; (b) B5 report '222 commodity logograms' vs json 298 LOGOGRAM word-token types (commodity-subset vs all-types)"
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "D1/D2/D4/D5/D7 and Stage E metrics are REPORT_ONLY (report-consistent) \u2014 no committed output json in this worktree; E's controls live in the prior/main tree, cross-referenced by filename"
+  },
+  {
+   "scope": "paper_core",
+   "item": "NONE. All 10 hardest-check load-bearing numbers REPRODUCED from cited json/finding: morphology 0.250/0.375 (morphology-real.json), segmentation 0.4361/0.3888 (gate_results.json), metrology p=1.0 7/28 (metrology-real.json), cross-script 0.020/0.0145 + DAMOS 0.025/0.011 (results_ab*.json), gate 3/500=0.006 CP 0.01543 (gate_null_calibration.json), CSA clamp 0.04438==size-276 endpoint with sizes 400-919 recovery_mean=null (csa_full_report.json), KU-RO 0.25/0.0147/17x (kuro_reconciliation.json), 259>212 (identifiability_metrics.json), LLM-ablation n_a28.3/n_b9.9/JA-NE14-40/known+0.588 (findings), Ugaritic-Hebrew 0.0055/12-2182 (finding)."
+  },
+  {
+   "scope": "paper_core",
+   "item": "REPORT_ONLY (correctly labeled by P1, not a mismatch): PC-25 NeuroCipher 6/7 from-PDF; PC-38/39/40 campaign FP numbers; PC-37 secondary '7/20 clean 35%' not present at json top level (headline 7/24=29.2% vs null 0.54% IS reproduced)."
+  },
+  {
+   "scope": "foundry",
+   "item": "FND-14 (WP5.2) MISMATCH: P1's primary_metric_value states 'monotone 0.647->0.752 over 539->13562', but data/wp5_2_seed_propagation_power_curve.json is NON-monotone within that range (1500=0.6941 -> 2000=0.6804 drop; 10000=0.7563 -> 13562=0.752 drop) and the 13562 anchor is a single draw (n_effective_draws=1, sd=0). The 2620wf/4.9x crossing is interpolated across a noisy non-monotone curve. P1 already flags the low-end (size 300) non-monotonicity and marks the row CONFLICTING, so the defect is contained."
+  },
+  {
+   "scope": "foundry",
+   "item": "FND-07 (WP3.2b) proxy-vs-metric under-flag: 1.7x transcribed correctly, but the 'validated power/clean regime' is defined ONLY on max_weight>=120 while the curve's own discriminative metric weight_feature_auc stays flat ~0.568->0.579 across the whole ladder (never approaches the headline hub-norm 0.714). P1 marks FND-07 clean VERIFIED without this caveat."
+  },
+  {
+   "scope": "foundry",
+   "item": "FND-06 (trivial, correctly flagged by P1): report z=7.07 vs sweep-table perm p=0.0033 presentational gap."
+  },
+  {
+   "scope": "foundry",
+   "item": "All other load-bearing numbers REPRODUCED from JSON: 0.744/0.035, 0.835/0.01, ablation 0.838/0.783/0.67, 0.552/0.714/0.2477, 1.7x, 4.9x/2620, 26 independent + 2 held-out (I,RI), WP6 0.01339/z=8.46, candidate rates 0.04214/0.01542/0.00411/0.03083/0.00206/0.00617/0.03289/0.05447."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "NONE material. All six requested numbers reproduced: WP-A 0.744/0.835 (A1_recompute.json), oriented-null p 0.146 (A3_replications.json + A6_nulls.json 0.1464), freq-band position-only 0.481 (A4_grouped.json); C_AUDIT freq-matched p 0.0033 (C_audit.json); D3 pure-freq 0.872 > honest 0.784 (D3_seed_audit.json); K1 A- adaptive p 0.008 (K1_nulls.json); E3 cross-site p_holm 0.0099 vs K1 adaptive 0.4212. Plus Holm 0.0166, drop-A 0.448, drop-U 0.469, SEAL_2 0.05253/0.8571, ledger p 0.002 all ARTIFACT_VERIFIED."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "CAVEAT (not a mismatch): K1_nulls libation p reported as 0.030 \u2014 the artifact field literally named adaptive_p_random_anchor=0.00202; 0.030 = 14/493 co-occurring-pairs fraction. Both values are in the JSON; P1 followed the campaign's own M_FINAL_VERDICT sec 19 conservative choice. ARTIFACT_VERIFIED with source-internal label ambiguity."
+  }
+ ],
+ "semantics": [
+  {
+   "scope": "external_language",
+   "item": "EA-02 'leans NO_POWER' is STALE \u2014 materially qualified by the omitted EA-13 frozen-regime pass showing POWERED_DESIGN at La>=4; channel is design-conditionally-powered-but-scarcity-limited, not simply NO_POWER-leaning."
+  },
+  {
+   "scope": "external_language",
+   "item": "reproducibility-asymmetry CONFIRMED: continuity result JSONs gitignored BUT hash-pinned in TRACKED administrative_channel_closure.json (sha256 ledger for all 7 results); ritual result JSONs on-disk-readable BUT untracked/uncommitted with NO tracked hash pin. P1's differing LC-vs-LR record_confidence wording is accurate."
+  },
+  {
+   "scope": "external_language",
+   "item": "H_exact=NULL_PUBLISHED / H_drift=NO_POWER VERIFIED VERBATIM (FINAL_CHANNEL_VERDICT.md line 1 + final_verdict.json). Split-verdict semantics correct \u2014 NO_POWER not stated as refutation."
+  },
+  {
+   "scope": "external_language",
+   "item": "P1 verdict-semantics correct across the scope: EA-12 SOURCE_BLOCKED->INCOMPLETE (not negative), EA-07 EA5647=Greek->TRIVIAL_RECOVERY (literature-recovery not discovery), LR-04 REFUTED scoped to D3 admissibility (feasibility not empirical drift-absence)."
+  },
+  {
+   "scope": "external_language",
+   "item": "MILD inflation (not a material error): 7 external_anchors rows (EA-03/04/05/06/09/10/11) are DESIGNED_NOT_RUN/PROPOSED_ONLY proposals/scaffolds/source-audits catalogued as method instances \u2014 transparently labeled, but the external_language count should not be read as executed LA methods."
+  },
+  {
+   "scope": "external_language",
+   "item": "P1 marked all continuity result numbers REPORT_ONLY; on the OWNING branch they are present and independently REPRODUCED -> upgradable to ARTIFACT_VERIFIED. Numbers all correct; only the confidence tag is conservative."
+  },
+  {
+   "scope": "di_mino",
+   "item": "All four semantics traps handled correctly by P1: S_morph value-invariance reported as NO_DISCRIMINATIVE_POWER 'not itself a rejection' (DIMINO-A); H7-H12 SOURCE_BLOCKED reported as 'not a refutation, not collapsed into core' (F/G/H); REJECT correctly scoped to the CHAIN *301=/na/->N-W-Y->dwell->Semitic, NOT the i-*301 structural core or etymology-in-principle (VERDICT); NO_POWER (D-LOSO, B-LFAKE-canary, H6) reported as no-power not negative."
+  },
+  {
+   "scope": "di_mino",
+   "item": "NUANCE (not an error): DIMINO-E2E-NULL headlines end-to-end FP=1.0, the pre-registered PRIMARY free-target best-of-search metric; the SAME end_to_end_null.json block also reports conservative_dwell_best_of_language=0.75 and value_graduation_FP_M_gate_PC_calibrated=0.0 \u2014 the 1.0 framing matches the frozen prereg + FINAL verdict and P1 flags that the value channel HAS power (PC3 1/113), so it is internally consistent, but the 1.0/0.75/0.0 coexistence should be legible so '1.0' is not misread as the graduation-gate FP."
+  },
+  {
+   "scope": "di_mino",
+   "item": "NUANCE (not an error): DIMINO-PC-CONTROLS scientific_outcome=SUPPORTED denotes PIPELINE CALIBRATION supported (L0/calibration family), not a Di Mino sub-claim supported; correctly labeled and not counted as an LA-decipherment success."
+  },
+  {
+   "scope": "di_mino",
+   "item": "DIMINO-PRIOR-QUALITATIVE-AUDIT correctly de-duplicates qualitative-vs-mechanical: marked SUPERSEDED / NO_VERDICT_RECORDED / REPORT_ONLY, NOT counted as a result alongside DIMINO-VERDICT."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "PASS: NO_POWER (ADMIN-06 alpha 0.614; NOHUM-04 power 0.0) never stated as refutation."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "PASS: L3 REFUTED scoped to word-context->channel; L2 STRUCTURAL_ONLY (OBS-03/04/05/06) earns NO functional/structural licence."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "PASS: automated pilot (ADMIN-06 NO_POWER) vs human gate (ADMIN-07 DESIGNED_NOT_RUN/BLOCKED) correctly separated; pilot artifacts (annotator templates+manifest committed, packets/anon_key gitignored) subsumed not omitted."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "PASS: well-powered L3 negative (457+1593 A12 units) correctly distinguished from label-route underpower."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "MINOR: OBS-01 labels an individual experiment 'REFUTED' (artifact=NEGATIVE; REFUTED is the OBS-07 gate aggregate) \u2014 clarified in-cell. OBS-02 uses loose 'TRIVIAL_RECOVERY' and 'only LAYOUT beats baseline' holds only for presence sub-target (magnitude layout 0.663=baseline)."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "MINOR lineage-narrative: METHOD_LINEAGES 'origin' attributes the 29.2%-exact figure to 'admin_schema blinded LB role/schema induction', but 29.2% is from schema_induction (LA reconciliation), not admin_schema (which produced alpha 0.614). Provenance conflation, immaterial to any row verdict."
+  },
+  {
+   "scope": "admin_structure",
+   "item": "MINOR: NOHUM-03 '13 LFs' faithfully copies STATUS/DECISION_LOG, but weak_supervision_metrics.json lf_coverage lists 14 keys (incl LF_NEGATIVE_EXCLUSION) \u2014 discrepancy inherited from source artifact, not introduced by P1."
+  },
+  {
+   "scope": "egyptian",
+   "item": "CORRECT: mechanical CONFIRM_GENERALIZES vs honest RECOVERED_TRIVIAL/NULL (effective-n approx 1; LOO of single record HV-0234 flips 3->1; fair sibilant-fold baseline ties M2) is classified correctly on EGY-14 and LIN-11 -- the textbook mechanical-vs-honest split."
+  },
+  {
+   "scope": "egyptian",
+   "item": "CORRECT: STATUS.md READY_FOR_PREREG_DRAFT / 'first channel to pass its gate' headline is correctly flagged STALE (EGY-10 + EGY-14 supersession, LIN-11 obsolete, reconciliation report)."
+  },
+  {
+   "scope": "egyptian",
+   "item": "CORRECT: SOURCE_BLOCKED/blocked-INCOMPLETE (EGY-01/03) not stated as a negative or NO_POWER; EGY-05 L6 SUPPORTED bounded to licence=NONE (no Aegean transfer); EGY-10 READY scoped as DESIGN readiness not a decipherment."
+  },
+  {
+   "scope": "egyptian",
+   "item": "MINOR (per-row correction on EGY-10): supersession prose cites the confirmatory RUN as 'EGY-13' where it should be 'EGY-14' (EGY-13 is the prereg mint a0b2403; the run is 1e5c33b / honest-null dfa291e). Numbers and STALE flag unaffected."
+  },
+  {
+   "scope": "egyptian",
+   "item": "MINOR (benign vocabulary): EGY-14 scientific_outcome labeled NULL_PUBLISHED rather than TRIVIAL_RECOVERY; defensible since the artifact concludes 'another honest NULL' and RECOVERED_TRIVIAL/effective-n is captured verbatim in mechanical_verdict."
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "OBJECTIVE-INVARIANCE-AS-UNIVERSAL-IMPOSSIBILITY (primary finding): CE-H and CE-J instance rows present the bigram-LL relabeling-invariance (LL=-4.172251 identical/30 maps, genuinely true and artifact-verified in stage_hj_null.json) as a GLOBAL PROVABLE theorem ('no agnostic internal search can rank value maps'). P1's OWN METHOD_LINEAGES.json LIN-05 + LINEAR_A_METHODS_MASTER_REPORT.md (line 51-52) record this global theorem as SUPERSEDED/OVERSTATED by the foundry campaign (commit 09f7ef9, WP1): current-authoritative = 'internal methods NOT universally value-blind BUT Linear A specifically underdetermined'. The CE-H/CE-J rows carry no forward-supersession link and are STALE vs the lineage layer. Assigned VERIFIED_WITH_MINOR_CORRECTION. Partially mitigated: CE-K/CE-L carry the corrected underdetermined-not-uncrackable framing and CE-L's supersession note flags the prose headline as downstream-superseded."
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "259->92 correction: VERIFIED and correctly scoped as necessary-not-sufficient (favourable structural count 92<212 explicitly NOT claimed as a licence; real deficit is value-informativeness 2 vs 92, 46x). No overclaim."
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "META-NOT-METHOD: 7 of 20 rows are meta/audit/gate/proposal/positive-control (CE-A recount, CE-C source-audit, CE-E LB positive-control battery, CE-G authorization gate, CE-I proposal-not-instantiated, CE-K acquisition-planning, CE-L synthesis), not novel Linear-A value-recovery methods. P1 labels each claim_layer=meta with correct status, so not mis-counted as LA successes \u2014 but a headline 'N LA methods tried' should exclude these ~7."
+  },
+  {
+   "scope": "constraint_expansion",
+   "item": "Verdict-semantics otherwise correct: CE-F NO_POWER (NO_NONCIRCULAR_ANCHOR) correctly framed as no-power-for-value-lever not refutation; CE-B1/CE-C treat SigLA/Younger/Salgarella as dependent/circular lineages (Art. XI) not independent replications; CE-D1/D4/D5/D7 CONFIRMS_KNOWN correctly labeled as literature re-derivation not discovery, held at L2 with no licence; CE-G correctly gated."
+  },
+  {
+   "scope": "paper_core",
+   "item": "CORRECT throughout: NO_POWER never stated as refutation (PC-05/11/42-crosssite/39); SOURCE_BLOCKED (PC-33) recorded as VERDICT UNMOVED not a negative; circularity flagged (PC-12 palaeo CIRCULAR excluded from claims, PC-38 Cypriot triangulation circular literature-recovery); PC-04 WITHDRAWN not counted; PC-31/32 refutations SCOPED to LOTO-fragility not blanket."
+  },
+  {
+   "scope": "paper_core",
+   "item": "MINOR NIT (disclosed, not material): PC-41 '259 params > 212 constraints -> underdetermined BY COUNT' is a SUPERSEDED category error (real conservative syllabary V=92 < 212 is count-FAVOURABLE; deficit is value-informativeness). P1 discloses this in the row supersession_relations + LIN-06 + master report, but the metric headline still leads with 259>212."
+  },
+  {
+   "scope": "paper_core",
+   "item": "MINOR NIT: master report Section 2 summary sentence lists CSA sufficiency sweep among core probes without the clamp/INVALIDATED caveat; the dedicated PC-22 row is fully accurate. Altitude nit only."
+  },
+  {
+   "scope": "paper_core",
+   "item": "CONFIRMED: the CSA-clamp contradiction (deposited LA-scale value is an _interp endpoint clamp from size 276, NOT a 600-700-word measurement; invariant-12 break in submitted TACL #11385) is CORRECTLY and precisely reported by P1 (PC-22), independently verified in csa_full_report.json."
+  },
+  {
+   "scope": "foundry",
+   "item": "CONFLICT-1 (corpus multiple 1.7x vs 4.9x): GENUINE_CONFIRMED. FND-07 substitution channel=1.7x vs FND-14 C/V-bootstrap channel=4.9x; different channels never reconciled, report headlines the favorable 1.7x (CAMPAIGN.md quotes a third ~1.9x). Already flagged by P1."
+  },
+  {
+   "scope": "foundry",
+   "item": "CONFLICT-2 (non-monotone WP5.2): GENUINE_CONFIRMED (see numerical_mismatches). Already flagged by P1."
+  },
+  {
+   "scope": "foundry",
+   "item": "CONFLICT-3 (anchor independence n=26): GENUINE_CONFIRMED. wp5_anchor_inventory.json: 26 multi_channel_independent / n_held_out_survivable=26, but same JSON's frozen_empirical_held_out (crossscript gate, REFUTE_LOTO_FRAGILE) recovers only I,RI (2, each one-toponym-deep) \u2014 ~13x optimism; report headlines '115 records/62 signs'. Already flagged by P1 (FND-12 CONFLICTING)."
+  },
+  {
+   "scope": "foundry",
+   "item": "SUPERSESSION correct + artifact-backed: position->C/V (FND-02/04/10) and reduced-seed (FND-13/14/18) correctly marked LATER REFUTED; verified the refuting artifact EXISTS on branch research/linear-a-relative-phonology-seals (commit 3c1ddab 'CV_ANALOGUE_REFUTED \u2014 refutes my own prior Foundry C1 position pillar'; b20ee39; D3 pure-freq AUC 0.872>seed 0.784). MINOR: P1's per-row CSV cites only '(task note)', underselling its own STATUS_CONTRADICTIONS/LINEAGES rows which cite the real WP-A/D3 artifacts."
+  },
+  {
+   "scope": "foundry",
+   "item": "Verdict semantics otherwise CLEAN: NO_POWER not called refutation (FND-06/08), TRIVIAL_RECOVERY for anchors (FND-12), theorem scoped not universalized (FND-01), relative-classes not absolute (FND-04), family-nulls not refuting-all-languages (FND-19/21)."
+  },
+  {
+   "scope": "foundry",
+   "item": "WATCH: foundry headline framing (C1/C2/C3 'value layer reopened / more corpus helps') is a positive spin NET-REVERSED by the same author's relative-phonology campaign; P1 correctly demotes the empirical legs but row-level scientific_outcome fields still carry optimistic 'PARTIAL_SUPPORT/SUPPORTED-on-LB' language \u2014 a reader scanning only scientific_outcome (ignoring supersession_relations) could over-read the standing state. Also note FINAL_CAMPAIGN_REPORT header date inconsistency (Opened 2026-07-08, Closed 2026-07-07)."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "Analogue-positive vs LA-support: C_AUDIT / C3_lb_calib / B3_known_script are all SUPPORTED but only on OPAQUE LINEAR B (Linear A fails: C4 NULL, C5 UNDERDETERMINED). P1 CORRECTLY scopes each ('on the analogue only','BONUS','known-script') \u2014 flagged for downstream readers, not a P1 error."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "A1_reconstruct 'SUPPORTED' reproduces a Foundry result that is REFUTED downstream by A2-A6; scoped + supersession-linked by P1 but the bare tag is loose."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "K1_nulls 'SUPPORTED' tags a null-calibration meta-method (outcome NULLS_CONFIRM_NULLS) \u2014 verifies rather than discovers."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "CLEAN on the classic traps: NO_POWER (B4/D4/F2) correctly worded as insufficient power not refutation; relabeling-invariance (H3/I1/M1) framed as monolingual underdetermination (>=10^27 twins) NOT an impossibility theorem; relative classes labeled anonymous (D5/C4); H1 broad-family null scoped to tested families with Finnish/agnostic controls at null; G1 dependent-sources collapsed to 6 lineages / 1 value channel."
+  },
+  {
+   "scope": "relative_phonology",
+   "item": "STALE source hygiene: branch STATUS.md (says 'Next task A1') and DECISION_LOG (stops at WP-A) are stale vs the completed campaign (final commit 8a98607); P1 correctly used the FINAL verdict artifacts, not the stale STATUS \u2014 a source-branch issue, not a P1 defect."
+  }
+ ]
+}

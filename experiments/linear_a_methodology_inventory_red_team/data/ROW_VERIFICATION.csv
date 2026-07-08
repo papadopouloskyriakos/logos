@@ -1,0 +1,40 @@
+scope,method_id,status,citation
+paper_core,PC-01-scaffold,VERIFIED,"verdict engine; grep-verified sole writer; 0 graduations ever. Infrastructure, correctly NOT_APPLICABLE."
+paper_core,PC-02-decontamination-framework,VERIFIED,S_morph FP 3.0%/power 100% consistent with test suite + finding. Infrastructure.
+paper_core,PC-03-inventory-ontology,VERIFIED,"V=92 conservative, STRUCTURAL_ONLY licence. Consistent with identifiability + representation-audit artifacts."
+paper_core,PC-04-information-floor,VERIFIED,correctly recorded as WITHDRAWN/SUPERSEDED; not counted as a result. Good verdict-semantics.
+paper_core,PC-05-morphology-pooled,VERIFIED,runtime/morphology-real.json
+paper_core,PC-06-segmentation-published,VERIFIED,gate_results.json/morphology-real.json
+paper_core,PC-07-linb-morphology-control,VERIFIED,results/linb_morphology_control.json
+paper_core,PC-08-morphology-stratified,VERIFIED,runtime/morphology-stratified.json
+paper_core,PC-09-metrology,VERIFIED,runtime/metrology-real.json
+paper_core,PC-10-ab-alignment-null,VERIFIED,scripts/cross_script/results_ab.json + results_ab_damos.json
+paper_core,PC-11-distributional-phonology-pilot,VERIFIED,runtime/phono-distributional.json
+paper_core,PC-12-palaeo-image,VERIFIED,corpus/bronze/palaeo/results_palaeo.json
+paper_core,PC-13-lfake-canary,VERIFIED,results/lfake_canary.json
+paper_core,PC-14-litindex-population,VERIFIED,"6 accepted/2 rejected; contamination targets all DISPUTED, correctly NOT_APPLICABLE. Not counted as LA readings."
+paper_core,PC-15-llm-ablation-c4,VERIFIED,docs/findings/2026-06-30-c4-ablation-qwen72b.md
+paper_core,PC-16-llm-ablation-gate2,VERIFIED,docs/findings/2026-06-30-c4-gate2-qwen72b.md
+paper_core,PC-17-lvirgin-lnotindexed,VERIFIED,docs/findings/2026-06-30-lvirgin-qwen72b.md
+paper_core,PC-18-gate-null-calibration,VERIFIED,results/gate_null_calibration.json
+paper_core,PC-19-tamburini-reproduction,VERIFIED,docs/findings/2026-06-30-tamburini-reproduction.md
+paper_core,PC-20-ugaritic-hebrew-heuristic,VERIFIED,docs/findings/2026-06-30-ugaritic-hebrew-baseline.md
+paper_core,PC-21-csa-h100-build,VERIFIED,"build validated bit-identical (best_energy 60.169151); full sweep NOT completed; curve_lowerbounds.json marked .INVALID (confirmed present in results/csa/). COMPUTE_BLOCKED/engineering, correctly NOT "
+paper_core,PC-22-csa-sufficiency-curve,VERIFIED,results/csa/csa_full_report.json
+paper_core,PC-23-referee-simulation,VERIFIED,meta/review roadmap; correctly NOT_APPLICABLE; drives PC-07/PC-24.
+paper_core,PC-24-review-code-fixes,VERIFIED,"365 passed/4 xfailed; deterministic probes reproduced; P0 gate bugs LATENT (0 graduations). Code-integrity, NOT_APPLICABLE."
+paper_core,PC-25-paper-audit-priorart,VERIFIED,Tamburini-as-prior-art positioning; NOT_APPLICABLE; the 6/7 NeuroCipher-beat numbers are REPORT_ONLY-from-PDF and P1 labels them so.
+paper_core,PC-26-redteam-synthesis,VERIFIED,"7 withdrawn overclaims correctly recorded; WITHDRAWS PC-04, reframes PC-10/12/20; qualitative meta, NOT_APPLICABLE."
+paper_core,PC-30-crossscript-gate-phase0,VERIFIED,experiments/crossscript_gate/results/power_precheck.json + power_precheck_phase05.json
+paper_core,PC-31-crossscript-gate-phase1,VERIFIED,experiments/crossscript_gate/results/oneshot_gate.json
+paper_core,PC-32-crossscript-gate-phase2,VERIFIED,experiments/crossscript_gate/phase2/results/p2_oneshot_gate.json
+paper_core,PC-33-crossscript-gate-phase3,VERIFIED,experiments/crossscript_gate/phase3/sweep/diff_summary.json
+paper_core,PC-34-segmentation-extension,VERIFIED,experiments/segmentation_extension/results/models_summary.json + gate_results.json
+paper_core,PC-35-representation-audit,VERIFIED,"read-only sensitivity audit; magnitudes (V -6.1% conservative, -55% excl_unident) consistent with sensitivity_results.json framing; confirms PC-03 robustness."
+paper_core,PC-36-schema-recon,VERIFIED,experiments/schema_recon (read-only)
+paper_core,PC-37-schema-induction,VERIFIED_WITH_MINOR_CORRECTION,experiments/schema_induction/reconcile_results.json
+paper_core,PC-38-campaign-phaseA-audit,VERIFIED,"UNDERDETERMINED campaign audit; Cypriot 'REFUTED_ALREADY (circular)' correctly flagged as circular literature-recovery, not a discovery. Numbers REPORT_ONLY, labeled so. record_confidence medium (appr"
+paper_core,PC-39-campaign-egyptian-power,VERIFIED,"POWER_GATED_BEFORE_RUN -> NO_POWER; scarcity-limited design; real confirmatory attempt already TRIVIAL_RECOVERY. FP numbers REPORT_ONLY, labeled. Truth-layer cap<=0.75 respected."
+paper_core,PC-40-campaign-completeness-critic,VERIFIED,"UNDERDETERMINED critic; REPORT_ONLY, medium confidence. Consistent."
+paper_core,PC-41-campaign-identifiability-synthesis,VERIFIED,experiments/linear_a_campaign/identifiability_metrics.json
+paper_core,PC-42-campaign-kuro-control,VERIFIED,experiments/linear_a_campaign/kuro_reconciliation.json

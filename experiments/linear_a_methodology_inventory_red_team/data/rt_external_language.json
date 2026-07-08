@@ -1,0 +1,88 @@
+{
+  "scope": "external_language",
+  "verifier": "independent red-team, LOGOS Constitution v2.2",
+  "read_from_owning_branches": {
+    "external_anchors": "research/external-minoan-anchors @ 3310e4b (HEAD; NEWER than the la-lb-ritual inherited copy P1 read)",
+    "la_lb_continuity": "research/la-lb-toponym-continuity @ 87b4dea",
+    "la_lb_ritual": "research/la-lb-ritual-feasibility @ e6ee2b4"
+  },
+  "rows_checked": 33,
+  "per_row_verification": [
+    {"method_id": "EA-01-SLOT-CLASSIFIER", "status": "VERIFIED", "note": "Frozen internal-only slot classifier; reports/SLOT_CLASSIFIER_SPEC.md + tests present; 1165 candidates, 11 tier-B TOPONYM_LIKE. Reproducibility hash MATCH per SLOT_MANIFEST_REPRODUCIBILITY.md. Counts REPORT_ONLY (gold jsonl gitignored) as P1 states. Semantics (STRUCTURAL_ONLY, no licence) correct."},
+    {"method_id": "EA-02-TOPONYM-POWER-ENVELOPE", "status": "VERIFIED_WITH_MINOR_CORRECTION", "artifact": "results/power/toponym_power_envelope.json @3310e4b", "numeric_class": "ARTIFACT_VERIFIED", "note": "All envelope numbers ARTIFACT_VERIFIED (in-sample FP 1.0/0.9733/1.0/0.98/0.7233; held-out FP 0.2567/0.2667/0.27/0.2167/0.2967; recovery 0.3533-0.4533) — P1's rounded figures match exactly. TWO minor corrections: (1) P1 marks these REPORT_ONLY but they are on-disk and hash-verifiable on the owning branch -> ARTIFACT_VERIFIED. (2) STALE: this is the frozen=False naive-search regime ONLY; P1's 'leans NO_POWER' is materially qualified by the OMITTED frozen-regime pass (see omissions) which shows POWERED_DESIGN at La>=4."},
+    {"method_id": "EA-03-FROZEN-EGYPTIAN-CORRESPONDENCE-MODEL", "status": "VERIFIED", "note": "DESIGNED_NOT_RUN / INCOMPLETE correct. Hoch-OCR blocker LIFTED by Kilani 2019 verified in EGYPTIAN_CALIBRATION_CORPUS_AUDIT.md + source_notes. Model not fit this pass. Semantics accurate."},
+    {"method_id": "EA-04-LB-MATCHED-SCARCITY-POSITIVE-CONTROL", "status": "VERIFIED", "note": "DESIGNED_NOT_RUN; LINEAR_B_POSITIVE_CONTROL_DESIGN.md + degrade.py + 3 tests present, not executed. Positive-control (comparator) correctly NOT counted as an LA result. Correct."},
+    {"method_id": "EA-05-END-TO-END-NULL-FRAMEWORK", "status": "VERIFIED", "note": "PARTIALLY_IMPLEMENTED scaffold; END_TO_END_NULL_SPEC.md + nulllib.py + configs + 5 tests; families 2/6/7/8/9 stubs. INCOMPLETE correct."},
+    {"method_id": "EA-06-E3-TOPONYM-CONFIRMATORY", "status": "VERIFIED", "note": "PROPOSED_ONLY, behind Stage-4 human gate, never run. PHONETIC licence NOT_AUTHORIZED. Correct. (Its internal reference to 'EA-02 leans NO_POWER' is itself stale given the frozen pass, but EA-06 is a proposal so no downgrade.)"},
+    {"method_id": "EA-07-EA5647-PERSONAL-NAMES-GREEK", "status": "VERIFIED", "note": "REQ-03 closed: EA5647 seven Keftiu names read GREEK (Dautais & Gabolde 2022), ingested as Greek negative-control. TRIVIAL_RECOVERY classification is CORRECT semantics (literature-recovery, not a decipherment). Good."},
+    {"method_id": "EA-08-E5-ADMIN-SEMANTIC-ONTOLOGY", "status": "VERIFIED", "numeric_class": "REPORT_ONLY", "note": "PROPOSED_ONLY channel design; the ~29-35% vs 0.5%-null number is OFF-BRANCH main-repo exploratory input and P1 correctly flags it REPORT_ONLY/off-branch/not-evidence. Mari scan = chronology sidebar, not Kaptara texts (REQ-04). Cannot independently verify the off-branch number here, but P1's disclosure is accurate and it is not treated as this-branch evidence."},
+    {"method_id": "EA-09-E6-KEFTIU-RITUAL-PHONOLOGY", "status": "VERIFIED", "note": "PROPOSED_ONLY exploratory phonology constraint; no LA word-matching permitted. Correct."},
+    {"method_id": "EA-10-E8-CANDIDATE-LANGUAGE-TOURNAMENT", "status": "VERIFIED", "note": "PROPOSED_ONLY, LANGUAGE_ID NOT_AUTHORIZED, runs last. Correct."},
+    {"method_id": "EA-11-E7-POPULATION-PRIOR", "status": "VERIFIED", "note": "PROPOSED_ONLY, weak-prior-only ('genes != language'), not built. Correct."},
+    {"method_id": "EA-12-EGYPTIAN-CALIBRATION-CORPUS-BUILD", "status": "VERIFIED", "note": "SOURCE_BLOCKED -> INCOMPLETE (NOT NO_POWER) is CORRECT semantics: a source blocker is not a negative result. Blocker LIFTED by Kilani but corpus not populated this pass. Audit VERIFIED_FROM_ARTIFACT."},
+    {"method_id": "LC-01-SIGLA-SILVER-RECONCILE", "status": "VERIFIED", "note": "Crosswalk 575/766/227; SIGLA_CORPUS_DELTA.md present; counts REPORT_ONLY (derived JSON gitignored), input hashes in RECONCILE_SUMMARY.json. STRUCTURAL_ONLY correct."},
+    {"method_id": "LC-02-AB-SIGN-EQUIVALENCE-MAP", "status": "VERIFIED", "artifact": "data/gold/ab_sign_equivalence.json (tracked, sha 77de6684)", "note": "77 tier-A homomorphs; gold JSON tracked + hash-pinned in closure manifest. ORTHOGRAPHIC-only, phonetic firewalled. Correct."},
+    {"method_id": "LC-03-KNOWN-PAIR-AUDIT", "status": "VERIFIED", "note": "5 known pairs, all la_candidate_selected_without_lb_reading=false, post-hoc HIGH, CONFIRMATORY-ineligible. TRIVIAL_RECOVERY (development material) correct. Corroborated by heldout.json LOO rows."},
+    {"method_id": "LC-04-LA-CANDIDATE-PACKET-FREEZE", "status": "VERIFIED", "note": "11 PRIMARY / 33 SENSITIVITY / 21 NEG / 1 QUARANTINED (I-DA); 0/5 known in PRIMARY/SENSITIVITY. Counts REPORT_ONLY (gold jsonl gitignored) but input hash eb2bb293 pinned in tracked closure manifest. Correct."},
+    {"method_id": "LC-05-LB-TARGET-MANIFEST-FREEZE", "status": "VERIFIED", "note": "33 targets (5 DEV / 16 EVAL / 12 NEG), all DAMOS-attested; hash 29e25d49 pinned in closure manifest. Correct."},
+    {"method_id": "LC-06-CONTINUITY-MATCHING-MODEL", "status": "VERIFIED", "artifact": "data/results/ablations.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "ablations.json ARTIFACT_VERIFIED: 0 pairs at every layer A1-A5 (PRIMARY_B x EVALUATION and B+C). H_exact=NULL_PUBLISHED mapping correct. P1's REPORT_ONLY is conservative -> upgradable to ARTIFACT_VERIFIED on owning branch."},
+    {"method_id": "LC-07-CONTINUITY-POSITIVE-CONTROLS", "status": "VERIFIED", "note": "positive_controls.json present (hash 3ac85fdf in closure manifest). PC1 100%/0FP, PC2 recovered only by A3, PC3 11/11 0 cross-FP consistent with reports. SUPPORTED (sensitivity) correct."},
+    {"method_id": "LC-08-CONTINUITY-END-TO-END-NULLS", "status": "VERIFIED", "artifact": "data/results/nulls.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "nulls.json ARTIFACT_VERIFIED EXACTLY: family2 0.0125, families 1/3/8 = 0.007/0.006/0.007, real-data nulls 4/5/6/7/9 = 0 matches, combined best-of upper bound 0.0321, observed primary 0. NULL_PUBLISHED correct."},
+    {"method_id": "LC-09-CONTINUITY-HELDOUT", "status": "VERIFIED", "artifact": "data/results/heldout.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "heldout.json confirms 0 held-out matches and 2/5 exact-representable (PA-I-TO A1-A4 true; TU-RU-SA/I-DA/DI-KI-TA unreachable). Correct."},
+    {"method_id": "LC-10-CONTINUITY-POWER-ENVELOPE", "status": "VERIFIED", "artifact": "data/results/power.json + final_verdict.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "power.json step function (exact min-detectable 1, recovery 1.0; drift undetectable) verified; prob_no_power_realistic=0.6 in final_verdict.json. NO_POWER for drift correct."},
+    {"method_id": "LC-11-CONTINUITY-CIRCULARITY-AUDIT", "status": "VERIFIED", "artifact": "data/results/circularity.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "circularity.json overall=CIRCULARITY_LOW, worst-load-bearing-component rule, all load-bearing components LOW. SUPPORTED correct."},
+    {"method_id": "LC-12-CHANNEL-COMPARISON", "status": "VERIFIED", "note": "LA<->LB FP 0.0125 (3.2% best-of) vs Egyptian held-out 0.22-0.30 (from EA-02 envelope, verified); LA<->LB drift recovery 0 vs Egyptian ~0.35-0.45. PARTIAL_SUPPORT with 'neither supports confirmatory claim' is correct. Egyptian side correctly flagged provisional/REPORT_ONLY."},
+    {"method_id": "LC-13-ADMIN-CHANNEL-CLOSURE", "status": "VERIFIED", "artifact": "reports/FINAL_CHANNEL_VERDICT.md + data/manifests/administrative_channel_closure.json (tracked)", "note": "H_exact=NULL_PUBLISHED / H_drift=NO_POWER VERIFIED VERBATIM (FINAL_CHANNEL_VERDICT.md line 1). final_verdict.json status=COMPLETE, channel_readiness=NO_POWER, circularity=CIRCULARITY_LOW, prob 0.6. Closure manifest carries sha256 for all 7 result JSONs -> tracked hash ledger VERIFIED. Split-verdict semantics correct (NO_POWER not stated as refutation)."},
+    {"method_id": "LR-01-LA-RITUAL-CANDIDATE-INVENTORY", "status": "VERIFIED", "note": "9 PRIMARY (7 cross-site) / 231 SENSITIVITY / 20 NEG / 3 quarantined; LA_RITUAL_CANDIDATE_AUDIT.md present. STRUCTURAL_ONLY correct."},
+    {"method_id": "LR-02-LB-RITUAL-TARGET-INVENTORY", "status": "VERIFIED", "note": "29 targets (15 EVAL / 4 DEV / 4 quarantined / 6 NEG), DAMOS-attested; LB_RITUAL_TARGET_AUDIT.md present. Correct."},
+    {"method_id": "LR-03-KNOWN-RITUAL-PAIR-LEDGER", "status": "VERIFIED", "note": "5 pairs, 2/5 exact (SE-TO-I-JA, PA-I-TO) / 3/5 need 2 edits; TRIVIAL_RECOVERY / CONFIRMATORY_INELIGIBLE correct. Confirmed vs ritual_nulls_power family 11 (known_exact_representable=2, known_drift=3)."},
+    {"method_id": "LR-04-INDEPENDENT-DRIFT-FEASIBILITY", "status": "VERIFIED", "artifact": "data/results/drift_feasibility.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "drift_feasibility.json: D0/D1 span 0, D2 <=1 flagged, D3 available=null (inadmissible). 'REFUTED' is a scoped FEASIBILITY refutation (independent drift model not specifiable from current sources), NOT an empirical claim that drift is absent - P1's text scopes it correctly."},
+    {"method_id": "LR-05-RITUAL-LEAKAGE-FIREWALL", "status": "VERIFIED", "note": "7/7 firewall tests pass (test_ritual_leakage.py); RITUAL_LEAKAGE_AUDIT.md lists 8 guarantees. SUPPORTED correct."},
+    {"method_id": "LR-06-RITUAL-POSITIVE-CONTROLS", "status": "VERIFIED", "artifact": "data/results/ritual_controls.json", "note": "PC-R1 100% exact, PC-R3 15/15 self-persistence 0 cross-FP, PC-R4 2 exact/3 drift POSTHOC_FACE_VALIDITY_ONLY. SUPPORTED correct."},
+    {"method_id": "LR-07-RITUAL-NULLS-POWER-SIM", "status": "VERIFIED", "artifact": "data/results/ritual_nulls_power.json", "numeric_class": "ARTIFACT_VERIFIED", "note": "ARTIFACT_VERIFIED EXACTLY: permissive-drift (family 10) FP 0.9962 / mean 13.0762; exact FP 0.008; combined_best_of_search_fp 0.9963; post-hoc-bounded 0.016 (family 12); family 9 N/A (D3 inadmissible); power block exact FULL / drift undetectable. NO_POWER correct."},
+    {"method_id": "LR-08-RITUAL-FINAL-FEASIBILITY-VERDICT", "status": "VERIFIED", "artifact": "data/results/ritual_final_verdict.json", "note": "status=COMPLETE, ritual_channel_readiness=NO_POWER, prob 0.6, in_domain_known_exemplar_exists=false; 3 no_power_triggers match P1. NO_POWER (not refutation) correct."}
+  ],
+  "omitted_methods": [
+    {
+      "proposed_id": "EA-13-FROZEN-EGYPTIAN-POWER-PASS",
+      "artifacts": ["experiments/power/frozen_power_pass.py", "reports/FROZEN_POWER_PASS.md", "results/power/frozen_power_envelope.json"],
+      "commit": "3310e4b (HEAD of research/external-minoan-anchors; NEWER than P1's inherited la-lb-ritual copy)",
+      "why_distinct": "This is a SEPARATE executed method from EA-02. EA-02 = frozen=False naive mapping-SEARCH regime (in-sample FP 0.72-1.00, held-out FP 0.22-0.30, leans NO_POWER). EA-13 = frozen=True FIXED-a-priori-correspondence regime (no search), a different script producing a different result artifact.",
+      "outcome_numbers": "verdict POWERED_DESIGN; any_config_powered=true; best_config n=4,La=4,Lc=4 -> FP_frozen=0.043, REC_optimistic=0.91, gap=0.868, powered=true. At La=3 NOT powered (FP~0.24-0.42). Envelope of 16 configs ARTIFACT_VERIFIED in frozen_power_envelope.json.",
+      "honest_semantics": "The MD's honest reading is 'design-viable but scarcity-limited, NOT a crack': the one REAL confirmatory attempt (egyptian-calibration-gate branch) returned TRIVIAL_RECOVERY (single training record s~s, LOO flips 3->1); broader run stays SOURCE-limited by anchor scarcity. So the correct method outcome = DESIGN_CONDITIONALLY_POWERED (La>=4) + real-attempt-trivial, which MATERIALLY QUALIFIES EA-02's bare 'leans NO_POWER'.",
+      "impact": "P1 references 'a FROZEN correspondence model' only as a future LEVER inside EA-02's supersession text; it never records the executed frozen pass or its POWERED_DESIGN verdict. Confirmed omission mechanism: the frozen_power_pass artifacts exist ONLY at commit 3310e4b, absent from the older external_anchors snapshot inherited into la-lb-ritual that P1 read."
+    }
+  ],
+  "duplicates_false_novelty": [],
+  "numerical": {
+    "traced_reproduced_from_artifact": [
+      "EA-02 toponym_power_envelope.json (in-sample/held-out FP + recovery) — MATCH",
+      "EA-13 frozen_power_envelope.json (16-config envelope, best FP 0.043) — MATCH (omitted method)",
+      "LC-08 nulls.json (0.0125/0.007/0.006/0.0321, real-data 0) — MATCH",
+      "LC-06 ablations.json (0 at A1-A5) — MATCH",
+      "LC-09 heldout.json (0 held-out, 2/5 exact) — MATCH",
+      "LC-10 power.json + final_verdict.json (prob 0.6, step function) — MATCH",
+      "LC-11 circularity.json (CIRCULARITY_LOW) — MATCH",
+      "LC-13 final_verdict.json + closure manifest hash ledger + H_exact/H_drift verbatim — MATCH",
+      "LR-07 ritual_nulls_power.json (0.9962/13.0762/0.008/0.9963/0.016) — MATCH",
+      "LR-08 ritual_final_verdict.json (NO_POWER, prob 0.6) — MATCH",
+      "LR-04 drift_feasibility.json (D3 inadmissible) — MATCH"
+    ],
+    "mismatches": [],
+    "classification_correction": "P1 marked all continuity result JSONs REPORT_ONLY (because it read the la-lb-ritual worktree where those gitignored JSONs are absent). On the OWNING la_lb_continuity branch they are present and independently reproduced -> ARTIFACT_VERIFIED. Numbers themselves are all correct; only the record_confidence tag is conservative."
+  },
+  "verdict_semantics_check": {
+    "correctly_handled_by_P1": [
+      "EA-12 SOURCE_BLOCKED -> INCOMPLETE (not a negative/NO_POWER result)",
+      "EA-07 EA5647=Greek -> TRIVIAL_RECOVERY (literature-recovery, not discovery)",
+      "LC-13 / LR-08 NO_POWER kept SPLIT from H_exact=NULL_PUBLISHED, not stated as a refutation of continuity",
+      "LR-04 'REFUTED' scoped to D3 admissibility (feasibility), not an empirical drift-absence claim",
+      "positive controls (LC-07/LR-06) and LB comparator (EA-04) NOT counted as LA decipherment results"
+    ],
+    "flags": [
+      "EA-02 'leans NO_POWER' is STALE — materially qualified by omitted EA-13 frozen pass (POWERED_DESIGN at La>=4). The channel is design-conditionally-powered-but-scarcity-limited, not simply NO_POWER-leaning.",
+      "reproducibility-asymmetry CONFIRMED: continuity result JSONs are gitignored BUT hash-pinned in the TRACKED administrative_channel_closure.json (reproducible via committed sha256 ledger); ritual result JSONs are on-disk-readable BUT untracked/uncommitted with NO tracked hash pin (weaker reproducibility). P1's differing record_confidence wording for LC vs LR rows is therefore accurate.",
+      "MILD inflation: 7 external_anchors rows are DESIGNED_NOT_RUN / PROPOSED_ONLY (EA-03/04/05/06/09/10/11) — proposals/source-audits/scaffolds catalogued as 'method instances'. Transparent (clearly labeled, no verdicts claimed) so not a material error, but readers should not read the external_language count as executed LA methods; only EA-01 (frozen classifier), EA-02/EA-13 (power sims), EA-07/EA-12 (source audits) and the LC/LR campaigns are actually run."
+    ]
+  }
+}
