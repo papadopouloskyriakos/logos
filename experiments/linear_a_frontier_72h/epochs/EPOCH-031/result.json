@@ -1,0 +1,102 @@
+{
+  "task_id": "EPOCH-031",
+  "method": "Word->numeral adjacency ORDER in the token stream; CALIBRATED pair-flip null (each adjacent word/num pair independently flipped w.p.0.5; exchangeable by construction). Exact Binomial(n,0.5) two-sided p computed alongside and required to agree. PC = detect planted 90% word-first bias + false-positive control on fair-coin H0 (>=30 sets, rate<=0.10).",
+  "result": "Word-before-numeral is the dominant adjacency order, robustly across independent sites, under a properly-calibrated null. Global p_wordfirst=0.982 (1040 word->num vs 19 num->word); pair-flip two-sided p=0.0 (binom p=6.85e-279, agree). PC PASSED: detected planted 90% bias (p=0.0, correct direction) and false-positive rate 0.033 (<=0.10) on fair-coin H0 -> null calibrated. 8/8 testable sites individually significant (p<=0.05) ALL word-first direction; leave-one-site-out (Haghia Triada) survives (p=0.0, p_wordfirst=0.965 on pooled rest).",
+  "verdict": "LEDGER_WORD_NUMERAL_CROSS_SITE_ROBUST",
+  "numbers": {
+    "global": {
+      "n_adj": 1059,
+      "n_word_first": 1040,
+      "n_num_first": 19,
+      "p_wordfirst": 0.9820585457979226,
+      "pairflip_p": 0.0,
+      "binom_p": 6.849300065953688e-279,
+      "null_mean_p_wordfirst": 0.5002222851746921
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_planted_p": 0.0,
+      "detect_direction_ok": true,
+      "false_pos_rate": 0.03333333333333333,
+      "fp_n_sets": 30,
+      "fp_rejects": 1
+    },
+    "cross_site": {
+      "n_sites_testable": 8,
+      "n_sites_sig": 8,
+      "direction_consistent": true,
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.0,
+      "loo_binom_p": 1.9596760345327646e-87,
+      "loo_survives": true,
+      "loo_n_adj": 367,
+      "loo_p_wordfirst": 0.9645776566757494,
+      "per_site": {
+        "Haghia Triada": {
+          "n_adj": 692,
+          "p_wordfirst": 0.9913294797687862,
+          "p": 0.0
+        },
+        "Khania": {
+          "n_adj": 80,
+          "p_wordfirst": 0.95,
+          "p": 0.0
+        },
+        "Malia": {
+          "n_adj": 25,
+          "p_wordfirst": 1.0,
+          "p": 0.0
+        },
+        "Phaistos": {
+          "n_adj": 30,
+          "p_wordfirst": 0.9666666666666667,
+          "p": 0.0
+        },
+        "Palaikastro": {
+          "n_adj": 18,
+          "p_wordfirst": 1.0,
+          "p": 0.0
+        },
+        "Tylissos": {
+          "n_adj": 28,
+          "p_wordfirst": 1.0,
+          "p": 0.0
+        },
+        "Zakros": {
+          "n_adj": 117,
+          "p_wordfirst": 0.9743589743589743,
+          "p": 0.0
+        },
+        "Arkhalkhori": {
+          "n_adj": 27,
+          "p_wordfirst": 1.0,
+          "p": 0.0
+        }
+      }
+    }
+  },
+  "key_findings": [
+    "Word->numeral is the overwhelmingly dominant stream order: 1040 word->num vs 19 num->word (p_wordfirst=0.982) under a CALIBRATED pair-flip null (pair-flip two-sided p=0.0; exact Binomial(1059,0.5) two-sided p=6.85e-279; the two agree, confirming calibration).",
+    "POSITIVE CONTROL PASSED: the pair-flip null detected a planted 90% word-first bias (p=0.0, correct direction) AND held a false-positive rate of 0.033 (1/30) on fair-coin H0 data (<=0.10) -> null is properly calibrated, unlike E030's miscalibrated stream-shuffle null (fp=0.48).",
+    "CROSS-SITE ROBUST: all 8 sites with >=15 word/num adjacencies are individually significant (p<=0.05) in the SAME word-first direction (per-site p_wordfirst 0.95-1.00); 8/8 significant, direction consistent.",
+    "LEAVE-ONE-SITE-OUT survives: excluding the largest site (Haghia Triada, 692 adj), word-first remains highly significant on the pooled rest (n_adj=367, p_wordfirst=0.965, pair-flip p=0.0, binom p=1.96e-87) -> not driven by a single site.",
+    "This CERTIFIES (L2/L3) the Linear A administrative 'entry-then-quantity' ledger grammar at the token-ORDER level: a word (the entry) is followed by its numeral (the quantity)."
+  ],
+  "successor_hypotheses": [
+    "E032: characterize the 19 num->word EXCEPTIONS (which signs/sites/document classes) -> a structural exception class to the ledger grammar.",
+    "Test whether word->numeral holds WITHIN document class (tablet vs roundel vs other) controlling for length-register (E028).",
+    "Multi-numeral runs after a single word (list entries: word num num num) vs one-numeral-per-word -> ledger entry cardinality / aggregation structure.",
+    "Fraction-sign vs integer-num positioning relative to words: is the fraction system ordered differently from integer numerals?",
+    "Distance structure: how many tokens separate a word from its numeral when not strictly adjacent (nl/div intervening) -> ledger line/field grammar.",
+    "Numeral MAGNITUDE (value bucket, no arithmetic) vs word length/position -> structural correlates of quantity size (L3, no value arithmetic).",
+    "Cross-script check: does the same word->numeral order hold in Linear B administrative texts (read-only comparison, no LB decoding of LA)?"
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Token TYPES (word/num) and stream ORDER are directly observed in the structured corpus; no phonetic value, no arithmetic on numeral values, Linear B not used here; anonymous (no sign identities enter the statistic). The pair-flip null is exchangeable by construction (H0: word-first prob=0.5 per pair) and its calibration was confirmed by the false-positive control (rate 0.033<=0.10).",
+  "deviations": [
+    "None material. The binomial PMF was computed in log-space (lgamma) to avoid float overflow at n=1059; this is a numerical-stability implementation detail, not a method change, and the exact two-sided binomial p is unchanged in value.",
+    "pairflip_p reports 0.0 (a floor effect: with 5000 draws none reached the observed extremity p_wordfirst=0.982); the exact Binomial(1059,0.5) two-sided p=6.85e-279 is reported alongside and agrees (both <<0.05), satisfying the agreement requirement.",
+    "Corpus path resolved to repo root corpus/silver/inscriptions_structured.json (the campaign dir has no corpus/ subdir); token type key is 'num' (not 'numeral'), matching E030's corrected inspection."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "global": {
+    "n_adj": 1059,
+    "n_word_first": 1040,
+    "n_num_first": 19,
+    "p_wordfirst": 0.9820585457979226,
+    "pairflip_p": 0.0,
+    "binom_p": 6.849300065953688e-279,
+    "null_mean_p_wordfirst": 0.5002222851746921
+  },
+  "positive_control": {
+    "pc_verdict": "PASSED",
+    "detect_planted_p": 0.0,
+    "detect_direction_ok": true,
+    "false_pos_rate": 0.03333333333333333,
+    "fp_n_sets": 30,
+    "fp_rejects": 1
+  },
+  "cross_site": {
+    "n_sites_testable": 8,
+    "n_sites_sig": 8,
+    "direction_consistent": true,
+    "loo_excluded": "Haghia Triada",
+    "loo_p": 0.0,
+    "loo_binom_p": 1.9596760345327646e-87,
+    "loo_survives": true,
+    "loo_n_adj": 367,
+    "loo_p_wordfirst": 0.9645776566757494,
+    "per_site": {
+      "Haghia Triada": {
+        "n_adj": 692,
+        "n_word_first": 686,
+        "n_num_first": 6,
+        "p_wordfirst": 0.9913294797687862,
+        "p": 0.0,
+        "binom_p": 1.4653525082386637e-194,
+        "sig": true
+      },
+      "Khania": {
+        "n_adj": 80,
+        "n_word_first": 76,
+        "n_num_first": 4,
+        "p_wordfirst": 0.95,
+        "p": 0.0,
+        "binom_p": 2.757788729388439e-18,
+        "sig": true
+      },
+      "Malia": {
+        "n_adj": 25,
+        "n_word_first": 25,
+        "n_num_first": 0,
+        "p_wordfirst": 1.0,
+        "p": 0.0,
+        "binom_p": 5.96046447753906e-08,
+        "sig": true
+      },
+      "Phaistos": {
+        "n_adj": 30,
+        "n_word_first": 29,
+        "n_num_first": 1,
+        "p_wordfirst": 0.9666666666666667,
+        "p": 0.0,
+        "binom_p": 5.774199962616064e-08,
+        "sig": true
+      },
+      "Palaikastro": {
+        "n_adj": 18,
+        "n_word_first": 18,
+        "n_num_first": 0,
+        "p_wordfirst": 1.0,
+        "p": 0.0,
+        "binom_p": 7.629394531250002e-06,
+        "sig": true
+      },
+      "Tylissos": {
+        "n_adj": 28,
+        "n_word_first": 28,
+        "n_num_first": 0,
+        "p_wordfirst": 1.0,
+        "p": 0.0,
+        "binom_p": 7.450580596923836e-09,
+        "sig": true
+      },
+      "Zakros": {
+        "n_adj": 117,
+        "n_word_first": 114,
+        "n_num_first": 3,
+        "p_wordfirst": 0.9743589743589743,
+        "p": 0.0,
+        "binom_p": 3.214304854809196e-30,
+        "sig": true
+      },
+      "Arkhalkhori": {
+        "n_adj": 27,
+        "n_word_first": 27,
+        "n_num_first": 0,
+        "p_wordfirst": 1.0,
+        "p": 0.0,
+        "binom_p": 1.4901161193847648e-08,
+        "sig": true
+      }
+    }
+  },
+  "verdict": "LEDGER_WORD_NUMERAL_CROSS_SITE_ROBUST"
+}

@@ -1,0 +1,45 @@
+{
+  "global": {
+    "n_adj": 1059,
+    "n_word_first": 1040,
+    "n_num_first": 19,
+    "p_wordfirst": 0.9820585457979226,
+    "pairflip_p": 0.0,
+    "binom_p": 6.849300065953688e-279,
+    "null_mean_p_wordfirst": 0.5002222851746921
+  },
+  "per_site_raw": {
+    "Haghia Triada": [
+      686,
+      6
+    ],
+    "Khania": [
+      76,
+      4
+    ],
+    "Malia": [
+      25,
+      0
+    ],
+    "Phaistos": [
+      29,
+      1
+    ],
+    "Palaikastro": [
+      18,
+      0
+    ],
+    "Tylissos": [
+      28,
+      0
+    ],
+    "Zakros": [
+      114,
+      3
+    ],
+    "Arkhalkhori": [
+      27,
+      0
+    ]
+  }
+}

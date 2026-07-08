@@ -708,3 +708,29 @@ epochs:
     artifacts: [epochs/EPOCH-030/prereg.md, epochs/EPOCH-030/plan_hash.txt, epochs/EPOCH-030/machinery.py, epochs/EPOCH-030/result.json, epochs/EPOCH-030/_full_results.json, reports/EPOCH030_REPORT.md]
     successors_spawned: 6
     substantive: true
+
+  - epoch_id: EPOCH-031
+    frontier: F8
+    gate: A
+    name: "Ledger word->numeral order, CALIBRATED pair-flip null (certification successor of E030)"
+    plan_hash: "see epochs/EPOCH-031/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0 (clean)."
+    orchestrator_verification: "Claude INDEPENDENTLY confirmed: global 1040/19 p_wordfirst=0.982 EXACT; exact two-sided Binomial(1059,0.5) p reproduced = 6.85e-279; leave-one-site-out (drop Haghia Triada) -> 354/13 p_wf=0.965, binomial p~0; 8/8 sites word-first (per-site 0.95-1.00, verified E030). PC pair-flip null is calibrated BY CONSTRUCTION (fair coin per pair = H0); empirical fp ~0.03-0.13 across cheap/clean estimates, consistent with ~5%."
+    positive_control: "PASSED (verified): pair-flip null detects a planted 90% word-first bias (p=0.0, correct direction) AND false-positive rate 0.033 (1/30) on fair-coin H0 data <= 0.10. Unlike E030's miscalibrated stream-shuffle null (fp 0.48), the pair-flip null is exchangeable by construction and calibrated."
+    verdict: "LEDGER_WORD_NUMERAL_CROSS_SITE_ROBUST (all frozen conjuncts TRUE, orchestrator-verified): PC passed AND global pair-flip/binomial p<<0.05 (word-first) AND all 8 testable sites individually significant same direction AND survives leave-one-site-out."
+    numbers: {n_adj: 1059, word_first: 1040, num_first: 19, p_wordfirst: 0.982, pairflip_p: 0.0, binom_two_sided_p: 6.85e-279, pc_false_pos_rate: 0.033, pc_detect_planted: true, sites_testable: 8, sites_sig: 8, direction_consistent: true, loo_excluded: "Haghia Triada", loo_p: 0.0, per_site_p_wordfirst: {Haghia_Triada: 0.991, Khania: 0.95, Malia: 1.0, Phaistos: 0.967, Palaikastro: 1.0, Tylissos: 1.0, Zakros: 0.974, Arkhalkhori: 1.0}}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "CERTIFIED STRUCTURAL POSITIVE (L2/L3). The Linear A ledger grammar places the WORD (entry) BEFORE the NUMERAL (quantity): word->numeral order dominates at p_wordfirst 0.982, cross-site-robust across ALL 8 testable sites under a CALIBRATED pair-flip null, surviving leave-one-site-out. This certifies E030's raw signal and the mission-named 'carrier-value ledger grammar' as a held-out-robust constraint. SCOPE: token-ORDER only — NO arithmetic on numeral values, NO phonetic/semantic/lexical content, NO reading of any sign. The campaign's THIRD solid cross-site positive (with A- prefixation and E028 document-length register). Earns NO transfer licence (it is administrative sequence structure, not a phonetic step)."
+    committed_prediction: "E030 predicted the calibrated re-test would be CROSS_SITE_ROBUST given 8/8 raw consistency; OUTCOME = CROSS_SITE_ROBUST, orchestrator-verified. Prediction confirmed."
+    deviations:
+      - "Binomial PMF computed in log-space (lgamma) for n=1059 numerical stability; value unchanged (orchestrator reproduced 6.85e-279)."
+      - "pairflip_p reported as 0.0 (floor effect at 5000 draws; the exact binomial p=6.85e-279 is reported alongside and agrees, satisfying the agreement requirement)."
+      - "SUCCESS: this epoch resolves E030's null-model failure. Method fix (pair-flip vs stream-shuffle) + synchronous compute + correct 'num' key all landed cleanly (repairs=0)."
+    non_circular: "Token types + stream order directly observed; no arithmetic on numeral values; LB not used; anonymous sign/word tokens."
+    architecture_note: "Eighth gated-runner epoch; a clean POSITIVE that vindicates the fail-closed discipline: E030 REFUSED to certify via a miscalibrated null, E031 certified the SAME signal via a calibrated one. The committed E030->E031 successor prediction was confirmed. repairs=0 after the E030 lessons (synchronous compute, correct key) were baked into the prompt."
+    artifacts: [epochs/EPOCH-031/prereg.md, epochs/EPOCH-031/plan_hash.txt, epochs/EPOCH-031/machinery.py, epochs/EPOCH-031/result.json, reports/EPOCH031_REPORT.md]
+    successors_spawned: 5
+    substantive: true
