@@ -1,0 +1,18 @@
+{
+  "loo_excluded": "Haghia Triada",
+  "loo_global_fraction": 0.21951219512195122,
+  "loo_n_specialized": 9,
+  "loo_n_tested": 41,
+  "loo_specialized_signs": [
+    "*411",
+    "A",
+    "I",
+    "JA",
+    "ME",
+    "NE",
+    "TE",
+    "U",
+    "VS"
+  ],
+  "loo_survives_ge015": true
+}

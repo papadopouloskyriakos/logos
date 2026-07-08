@@ -1007,3 +1007,29 @@ epochs:
     artifacts: [epochs/EPOCH-042/prereg.md, epochs/EPOCH-042/plan_hash.txt, epochs/EPOCH-042/machinery.py, epochs/EPOCH-042/result.json, reports/EPOCH042_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-043
+    frontier: F12
+    gate: A
+    name: "Cross-site certification of positional specialization (feasible >=80-token threshold, replication)"
+    plan_hash: "see epochs/EPOCH-043/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY verified (gate repro_check + manual scrutiny): 9 sites qualify at >=80 tokens; per-site fractions HT 0.255(n47), Khania 0.30(n10), Knossos 0.333(n6), Palaikastro 0.143(n7), Zakros 0.087(n23), Phaistos/Iouktas 0.0, Arkhalkhori/Syme 1.0 but n_tested=1 (DEGENERATE). REPLICATION: only A replicates in >=2 NON-HT sites (5 non-HT); I & TI in exactly 1 non-HT site each (HT-paired); other 14 specialized signs single-site (mostly HT). PC passed cleanly (LB pseudo-sites 0.41-0.49, shuffled ~0)."
+    positive_control: "PASSED (verified): analytic machinery detects specialization in all 4 LB pseudo-sites (0.41-0.49) and stays ~0 on within-word-shuffled pseudo-sites (max 0.014, fp 0.0014). Calibrated."
+    verdict: "SPECIALIZATION_CROSS_SITE_ROBUST (mechanical, frozen rule) — BUT COORDINATOR-DOWNGRADED (see below). The frozen replication criterion ('>=3 E042 signs enriched in >=2 sites') passed with A,I,TI=3, but that counted HT+1 as 'replication'."
+    verdict_downgrade: "HONEST READ = effectively SPECIALIZATION_SITE_LOCAL beyond A-. The ONLY genuinely cross-site-robust specialized sign is A- (5 non-HT sites) — and A- was ALREADY certified in E023/E025. I & TI replicate in just 1 non-HT site each; the other 14 of 17 specialized signs are single-site (predominantly Haghia Triada). Two 'fraction>=0.15' sites (Arkhalkhori, Syme) are DEGENERATE (n_tested=1 -> fraction 1.0 is an artifact). Non-degenerate sites with frac>=0.15: only HT, Khania, Knossos. => E043 does NOT establish a NEW shared cross-site specialized inventory; it RE-CONFIRMS A- and shows the rest of the 33% specialization (E042) is HT-CONCENTRATED / site-local. The mechanical rule was too lenient (HT+1 counted as cross-site)."
+    numbers: {n_sites_qualifying: 9, token_threshold: 80, global_specialized_fraction: 0.333, non_degenerate_sites_ge015: 3, signs_replicating_ge2_nonHT_sites: 1, only_robust_sign: "A (5 non-HT sites)", I_nonHT_sites: 1, TI_nonHT_sites: 1, single_site_specialized_signs: 14, degenerate_sites: ["Arkhalkhori(n1)", "Syme(n1)"], loo_drop_HT_fraction: 0.22, pc_lb_min_fraction: 0.414, pc_fp: 0.0014}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "Mechanically SPECIALIZATION_CROSS_SITE_ROBUST, HONESTLY DOWNGRADED to 'A- re-confirmed cross-site; broader specialization HT-local'. NET: (1) A- prefixation is (again) the sole robustly-cross-site position-specialized sign — consistent with E023/E025, adds no new licence; (2) the E042 global 33%-specialized inventory does NOT replicate as a shared cross-site system — 14/17 signs are single-site, mostly Haghia Triada, reinforcing the campaign theme that non-A structure is site-local. No new positive beyond A-. Anonymous signs; positional statistics only; no phonetics/meaning/language-ID; no transfer licence."
+    committed_prediction: "modal ROBUST/SITE_LOCAL/NOT_REPLICATED; OUTCOME = mechanically ROBUST but coordinator-downgraded to effectively SITE_LOCAL-beyond-A. Honest net: A- reconfirmed, rest HT-local."
+    deviations:
+      - "COORDINATOR DOWNGRADE (Art. XVII, recorded not silently relabeled): the frozen replication rule counted 'enriched in >=2 sites' INCLUDING HT, so A(6)/I(2)/TI(2) passed =3; under the stricter honest criterion '>=2 NON-HT sites' only A qualifies. The mechanical verdict label overstates; the honest finding is SITE_LOCAL-beyond-A. Lesson: future cross-site replication rules must require >=2 sites INDEPENDENT of the dominant site (HT)."
+      - "Arkhalkhori/Syme fractions of 1.0 are degenerate (n_signs_tested=1); excluded from the honest site count."
+    non_circular: "Signs anonymous; analytic within-word null; LB control-only; no phonetics/meaning/language-ID; no known-value model input on the LA side."
+    architecture_note: "Twentieth gated-runner epoch (repairs=0). MOST IMPORTANT coordinator intervention of the specialization thread: refused to let a mechanically-passing but LENIENT-rule verdict inflate into a new cross-site positive. Independent per-site scrutiny showed only A- is HT-independent; downgraded honestly and logged the rule-leniency lesson. Closes the positional-specialization thread: net = A- (already known) + HT-local remainder."
+    artifacts: [epochs/EPOCH-043/prereg.md, epochs/EPOCH-043/plan_hash.txt, epochs/EPOCH-043/machinery.py, epochs/EPOCH-043/result.json, reports/EPOCH043_REPORT.md]
+    successors_spawned: 5
+    substantive: true

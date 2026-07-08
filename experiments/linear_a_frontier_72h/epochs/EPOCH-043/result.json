@@ -1,0 +1,417 @@
+{
+  "task_id": "EPOCH-043",
+  "method": "Analytic Poisson-binomial within-word null (E042 reuse); Holm within-scope; cross-site at >=80 sign-token threshold; LB positive control seeded into >=4 pseudo-sites; replication of E042 global set; leave-one-site-out on HT.",
+  "result": "SPECIALIZATION_CROSS_SITE_ROBUST",
+  "verdict": "SPECIALIZATION_CROSS_SITE_ROBUST",
+  "numbers": {
+    "global": {
+      "n_sites_qualifying": 9,
+      "token_threshold": 80,
+      "global_specialized_signs": 17,
+      "global_specialized_fraction": 0.3333333333333333,
+      "global_n_tested": 51,
+      "global_n_initial_spec": 6,
+      "global_n_final_spec": 11,
+      "global_min_occ": 15,
+      "global_specialized_signs_list": [
+        "*118",
+        "*411",
+        "A",
+        "I",
+        "KU",
+        "ME",
+        "NE",
+        "QA",
+        "RA₂",
+        "RE",
+        "RO",
+        "SE",
+        "TE",
+        "TI",
+        "U",
+        "VS",
+        "ZA"
+      ]
+    },
+    "per_site": {
+      "Haghia Triada": {
+        "n_tokens": 1857,
+        "n_words": 694,
+        "n_signs_tested": 47,
+        "n_specialized": 12,
+        "specialized_fraction": 0.2553191489361702,
+        "n_initial_spec": 6,
+        "n_final_spec": 6,
+        "specialized_signs": [
+          "A",
+          "DA",
+          "KI",
+          "KU",
+          "NA",
+          "NE",
+          "QA",
+          "RA₂",
+          "RO",
+          "SA",
+          "TA₂",
+          "TI"
+        ]
+      },
+      "Zakros": {
+        "n_tokens": 399,
+        "n_words": 132,
+        "n_signs_tested": 23,
+        "n_specialized": 2,
+        "specialized_fraction": 0.08695652173913043,
+        "n_initial_spec": 1,
+        "n_final_spec": 1,
+        "specialized_signs": [
+          "A",
+          "SE"
+        ]
+      },
+      "Khania": {
+        "n_tokens": 307,
+        "n_words": 120,
+        "n_signs_tested": 10,
+        "n_specialized": 3,
+        "specialized_fraction": 0.3,
+        "n_initial_spec": 2,
+        "n_final_spec": 1,
+        "specialized_signs": [
+          "*411",
+          "A",
+          "VS"
+        ]
+      },
+      "Knossos": {
+        "n_tokens": 219,
+        "n_words": 61,
+        "n_signs_tested": 6,
+        "n_specialized": 2,
+        "specialized_fraction": 0.3333333333333333,
+        "n_initial_spec": 1,
+        "n_final_spec": 1,
+        "specialized_signs": [
+          "A",
+          "TI"
+        ]
+      },
+      "Palaikastro": {
+        "n_tokens": 208,
+        "n_words": 57,
+        "n_signs_tested": 7,
+        "n_specialized": 1,
+        "specialized_fraction": 0.14285714285714285,
+        "n_initial_spec": 1,
+        "n_final_spec": 0,
+        "specialized_signs": [
+          "A"
+        ]
+      },
+      "Phaistos": {
+        "n_tokens": 170,
+        "n_words": 58,
+        "n_signs_tested": 3,
+        "n_specialized": 0,
+        "specialized_fraction": 0.0,
+        "n_initial_spec": 0,
+        "n_final_spec": 0,
+        "specialized_signs": []
+      },
+      "Iouktas": {
+        "n_tokens": 143,
+        "n_words": 34,
+        "n_signs_tested": 4,
+        "n_specialized": 0,
+        "specialized_fraction": 0.0,
+        "n_initial_spec": 0,
+        "n_final_spec": 0,
+        "specialized_signs": []
+      },
+      "Arkhalkhori": {
+        "n_tokens": 101,
+        "n_words": 34,
+        "n_signs_tested": 1,
+        "n_specialized": 1,
+        "specialized_fraction": 1.0,
+        "n_initial_spec": 1,
+        "n_final_spec": 0,
+        "specialized_signs": [
+          "A"
+        ]
+      },
+      "Syme": {
+        "n_tokens": 86,
+        "n_words": 21,
+        "n_signs_tested": 1,
+        "n_specialized": 1,
+        "specialized_fraction": 1.0,
+        "n_initial_spec": 0,
+        "n_final_spec": 1,
+        "specialized_signs": [
+          "JA"
+        ]
+      }
+    },
+    "replication": {
+      "top_signs_checked": 17,
+      "n_replicated_ge2_sites": 3,
+      "replicated_signs": [
+        "A",
+        "I",
+        "TI"
+      ],
+      "detail": {
+        "*118": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "*411": {
+          "global_pref": "initial",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Khania"
+          ]
+        },
+        "A": {
+          "global_pref": "initial",
+          "n_sites_enriched": 6,
+          "sites": [
+            "Haghia Triada",
+            "Zakros",
+            "Khania",
+            "Knossos",
+            "Palaikastro",
+            "Arkhalkhori"
+          ]
+        },
+        "I": {
+          "global_pref": "initial",
+          "n_sites_enriched": 2,
+          "sites": [
+            "Haghia Triada",
+            "Iouktas"
+          ]
+        },
+        "KU": {
+          "global_pref": "initial",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "ME": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "NE": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "QA": {
+          "global_pref": "initial",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "RA₂": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "RE": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "RO": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "SE": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Zakros"
+          ]
+        },
+        "TE": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Zakros"
+          ]
+        },
+        "TI": {
+          "global_pref": "final",
+          "n_sites_enriched": 2,
+          "sites": [
+            "Haghia Triada",
+            "Knossos"
+          ]
+        },
+        "U": {
+          "global_pref": "initial",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        },
+        "VS": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Khania"
+          ]
+        },
+        "ZA": {
+          "global_pref": "final",
+          "n_sites_enriched": 1,
+          "sites": [
+            "Haghia Triada"
+          ]
+        }
+      }
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "lb_min_site_fraction": 0.4142857142857143,
+      "false_pos_rate": 0.0014185110663983904,
+      "n_pseudo_sites": 4,
+      "n_shuffle_sets": 20,
+      "pseudo_site_details": [
+        {
+          "pseudo_site": 0,
+          "n_words": 3391,
+          "n_tokens": 10998,
+          "n_tested": 73,
+          "n_specialized": 32,
+          "specialized_fraction": 0.4383561643835616,
+          "n_initial_spec": 18,
+          "n_final_spec": 14
+        },
+        {
+          "pseudo_site": 1,
+          "n_words": 3391,
+          "n_tokens": 11017,
+          "n_tested": 68,
+          "n_specialized": 33,
+          "specialized_fraction": 0.4852941176470588,
+          "n_initial_spec": 18,
+          "n_final_spec": 15
+        },
+        {
+          "pseudo_site": 2,
+          "n_words": 3390,
+          "n_tokens": 10904,
+          "n_tested": 70,
+          "n_specialized": 29,
+          "specialized_fraction": 0.4142857142857143,
+          "n_initial_spec": 15,
+          "n_final_spec": 14
+        },
+        {
+          "pseudo_site": 3,
+          "n_words": 3390,
+          "n_tokens": 10949,
+          "n_tested": 69,
+          "n_specialized": 34,
+          "specialized_fraction": 0.4927536231884058,
+          "n_initial_spec": 20,
+          "n_final_spec": 14
+        }
+      ],
+      "shuffled_max_fracs": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.014285714285714285,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.014084507042253521,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "detect_ok": true,
+      "fp_ok": true
+    },
+    "loo": {
+      "loo_excluded": "Haghia Triada",
+      "loo_global_fraction": 0.21951219512195122,
+      "loo_n_specialized": 9,
+      "loo_n_tested": 41,
+      "loo_specialized_signs": [
+        "*411",
+        "A",
+        "I",
+        "JA",
+        "ME",
+        "NE",
+        "TE",
+        "U",
+        "VS"
+      ],
+      "loo_survives_ge015": true
+    },
+    "n_sites_ge015": 5,
+    "qualifying_sites": [
+      "Haghia Triada",
+      "Zakros",
+      "Khania",
+      "Knossos",
+      "Palaikastro",
+      "Phaistos",
+      "Iouktas",
+      "Arkhalkhori",
+      "Syme"
+    ]
+  },
+  "key_findings": [
+    "9 LA sites qualify at the >=80 sign-token threshold (Haghia Triada, Zakros, Khania, Knossos, Palaikastro, Phaistos, Iouktas, Arkhalkhori, Syme); 5 reach specialized_fraction >= 0.15.",
+    "Global specialized set reproduces E042: 17/51 signs (0.333) (6 initial, 11 final).",
+    "Positive control PASSED: LB detected in all 4 pseudo-sites (min frac=0.414); false-positive rate on shuffled words = 0.0014 (<=0.10 required).",
+    "Replication: 3/17 E042 global specialized signs are same-direction enriched (Holm or nominal p<=0.05) in >=2 sites (A, I, TI).",
+    "Leave-one-site-out (exclude Haghia Triada): global specialized_fraction = 0.220 (9/41); SURVIVES the >=0.15 threshold."
+  ],
+  "successor_hypotheses": [
+    "E045: at the >=80-token threshold, run a SIGN-LEVEL concordance test (e.g. a permutation/Fisher test on the joint pattern of preferred positions across sites for the replicated signs) to quantify cross-site agreement beyond per-sign enrichment counts.",
+    "E046: extend the per-site test to MEDIAL positions (interior slots) to test whether specialization is bipartite (initial+final templatic) or also has interior slot structure, cross-site.",
+    "E047: pair the replicated specialized signs with the LB positive-control specialized set (anonymous) to test whether the LA positional template is STRUCTURALLY congruent with LB (same fraction initial vs final), without any phonetic mapping.",
+    "E048: bootstrap the per-site specialized_fraction (resample words within site) to attach CIs and test whether site-to-site fraction differences are significant or compatible with a single underlying rate.",
+    "E049: test whether the replicated initial-specialized and final-specialized signs tend to CO-OCCUR in the same words (templatic co-occurrence) more than chance, cross-site — a structural signature of slot morphology.",
+    "E050: re-run the cross-site certification with a stricter per-site min-occ (>=12) and a sign-exact (per-sign, per-site) multiple-comparison scheme to check robustness of the replication count to the testing threshold."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are ANONYMOUS tokens throughout. No phonetic, sound, meaning, value, or reading is assigned to any sign. 'Specialized' is a positional-distribution statistic (enrichment in initial/final within-word position under an analytic Poisson-binomial within-word permutation null), not a morpheme-with-meaning. LB is used ONLY as a positive-control benchmark; its deciphered values are not used in any LA inference. L2/L3 only.",
+  "deviations": []
+}

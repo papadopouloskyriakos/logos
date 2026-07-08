@@ -1,0 +1,73 @@
+{
+  "pc_verdict": "PASSED",
+  "lb_min_site_fraction": 0.4142857142857143,
+  "false_pos_rate": 0.0014185110663983904,
+  "n_pseudo_sites": 4,
+  "n_shuffle_sets": 20,
+  "pseudo_site_details": [
+    {
+      "pseudo_site": 0,
+      "n_words": 3391,
+      "n_tokens": 10998,
+      "n_tested": 73,
+      "n_specialized": 32,
+      "specialized_fraction": 0.4383561643835616,
+      "n_initial_spec": 18,
+      "n_final_spec": 14
+    },
+    {
+      "pseudo_site": 1,
+      "n_words": 3391,
+      "n_tokens": 11017,
+      "n_tested": 68,
+      "n_specialized": 33,
+      "specialized_fraction": 0.4852941176470588,
+      "n_initial_spec": 18,
+      "n_final_spec": 15
+    },
+    {
+      "pseudo_site": 2,
+      "n_words": 3390,
+      "n_tokens": 10904,
+      "n_tested": 70,
+      "n_specialized": 29,
+      "specialized_fraction": 0.4142857142857143,
+      "n_initial_spec": 15,
+      "n_final_spec": 14
+    },
+    {
+      "pseudo_site": 3,
+      "n_words": 3390,
+      "n_tokens": 10949,
+      "n_tested": 69,
+      "n_specialized": 34,
+      "specialized_fraction": 0.4927536231884058,
+      "n_initial_spec": 20,
+      "n_final_spec": 14
+    }
+  ],
+  "shuffled_max_fracs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.014285714285714285,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.014084507042253521,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "detect_ok": true,
+  "fp_ok": true
+}

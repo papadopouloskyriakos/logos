@@ -1,0 +1,128 @@
+{
+  "*118": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "*411": {
+    "global_pref": "initial",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Khania"
+    ]
+  },
+  "A": {
+    "global_pref": "initial",
+    "n_sites_enriched": 6,
+    "sites": [
+      "Haghia Triada",
+      "Zakros",
+      "Khania",
+      "Knossos",
+      "Palaikastro",
+      "Arkhalkhori"
+    ]
+  },
+  "I": {
+    "global_pref": "initial",
+    "n_sites_enriched": 2,
+    "sites": [
+      "Haghia Triada",
+      "Iouktas"
+    ]
+  },
+  "KU": {
+    "global_pref": "initial",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "ME": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "NE": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "QA": {
+    "global_pref": "initial",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "RA₂": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "RE": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "RO": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "SE": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Zakros"
+    ]
+  },
+  "TE": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Zakros"
+    ]
+  },
+  "TI": {
+    "global_pref": "final",
+    "n_sites_enriched": 2,
+    "sites": [
+      "Haghia Triada",
+      "Knossos"
+    ]
+  },
+  "U": {
+    "global_pref": "initial",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  },
+  "VS": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Khania"
+    ]
+  },
+  "ZA": {
+    "global_pref": "final",
+    "n_sites_enriched": 1,
+    "sites": [
+      "Haghia Triada"
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "Haghia Triada": {
+    "n_tokens": 1857,
+    "n_words": 694,
+    "n_signs_tested": 47,
+    "n_specialized": 12,
+    "specialized_fraction": 0.2553191489361702,
+    "n_initial_spec": 6,
+    "n_final_spec": 6,
+    "specialized_signs": [
+      "A",
+      "DA",
+      "KI",
+      "KU",
+      "NA",
+      "NE",
+      "QA",
+      "RA₂",
+      "RO",
+      "SA",
+      "TA₂",
+      "TI"
+    ]
+  },
+  "Zakros": {
+    "n_tokens": 399,
+    "n_words": 132,
+    "n_signs_tested": 23,
+    "n_specialized": 2,
+    "specialized_fraction": 0.08695652173913043,
+    "n_initial_spec": 1,
+    "n_final_spec": 1,
+    "specialized_signs": [
+      "A",
+      "SE"
+    ]
+  },
+  "Khania": {
+    "n_tokens": 307,
+    "n_words": 120,
+    "n_signs_tested": 10,
+    "n_specialized": 3,
+    "specialized_fraction": 0.3,
+    "n_initial_spec": 2,
+    "n_final_spec": 1,
+    "specialized_signs": [
+      "*411",
+      "A",
+      "VS"
+    ]
+  },
+  "Knossos": {
+    "n_tokens": 219,
+    "n_words": 61,
+    "n_signs_tested": 6,
+    "n_specialized": 2,
+    "specialized_fraction": 0.3333333333333333,
+    "n_initial_spec": 1,
+    "n_final_spec": 1,
+    "specialized_signs": [
+      "A",
+      "TI"
+    ]
+  },
+  "Palaikastro": {
+    "n_tokens": 208,
+    "n_words": 57,
+    "n_signs_tested": 7,
+    "n_specialized": 1,
+    "specialized_fraction": 0.14285714285714285,
+    "n_initial_spec": 1,
+    "n_final_spec": 0,
+    "specialized_signs": [
+      "A"
+    ]
+  },
+  "Phaistos": {
+    "n_tokens": 170,
+    "n_words": 58,
+    "n_signs_tested": 3,
+    "n_specialized": 0,
+    "specialized_fraction": 0.0,
+    "n_initial_spec": 0,
+    "n_final_spec": 0,
+    "specialized_signs": []
+  },
+  "Iouktas": {
+    "n_tokens": 143,
+    "n_words": 34,
+    "n_signs_tested": 4,
+    "n_specialized": 0,
+    "specialized_fraction": 0.0,
+    "n_initial_spec": 0,
+    "n_final_spec": 0,
+    "specialized_signs": []
+  },
+  "Arkhalkhori": {
+    "n_tokens": 101,
+    "n_words": 34,
+    "n_signs_tested": 1,
+    "n_specialized": 1,
+    "specialized_fraction": 1.0,
+    "n_initial_spec": 1,
+    "n_final_spec": 0,
+    "specialized_signs": [
+      "A"
+    ]
+  },
+  "Syme": {
+    "n_tokens": 86,
+    "n_words": 21,
+    "n_signs_tested": 1,
+    "n_specialized": 1,
+    "specialized_fraction": 1.0,
+    "n_initial_spec": 0,
+    "n_final_spec": 1,
+    "specialized_signs": [
+      "JA"
+    ]
+  }
+}
