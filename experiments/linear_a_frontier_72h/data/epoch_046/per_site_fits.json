@@ -1,0 +1,119 @@
+{
+  "Haghia Triada": {
+    "length_hist": {
+      "1": 1197,
+      "2": 341,
+      "3": 261,
+      "4": 74,
+      "5": 12,
+      "6": 6
+    },
+    "mode": 1,
+    "mean": 1.615,
+    "geometric_p_hat": 0.619188,
+    "geometric_gof_p": 0.0,
+    "peaked_bic_minus_geom_bic": 484.2031,
+    "classification": "INCONCLUSIVE"
+  },
+  "Khania": {
+    "length_hist": {
+      "1": 248,
+      "2": 74,
+      "3": 30,
+      "4": 11,
+      "5": 5
+    },
+    "mode": 1,
+    "mean": 1.5082,
+    "geometric_p_hat": 0.663063,
+    "geometric_gof_p": 0.708255,
+    "peaked_bic_minus_geom_bic": 141.4848,
+    "classification": "geometric"
+  },
+  "Knossos": {
+    "length_hist": {
+      "1": 37,
+      "2": 20,
+      "3": 23,
+      "4": 6,
+      "5": 6,
+      "6": 3,
+      "9": 1,
+      "10": 1,
+      "19": 1
+    },
+    "mode": 1,
+    "mean": 2.6122,
+    "geometric_p_hat": 0.382813,
+    "geometric_gof_p": 0.108163,
+    "peaked_bic_minus_geom_bic": 19.7127,
+    "classification": "geometric"
+  },
+  "Phaistos": {
+    "length_hist": {
+      "1": 52,
+      "2": 24,
+      "3": 19,
+      "4": 11,
+      "5": 3,
+      "6": 1
+    },
+    "mode": 1,
+    "mean": 2.0182,
+    "geometric_p_hat": 0.495495,
+    "geometric_gof_p": 0.106205,
+    "peaked_bic_minus_geom_bic": 8.683,
+    "classification": "geometric"
+  },
+  "Palaikastro": {
+    "length_hist": {
+      "1": 20,
+      "2": 18,
+      "3": 15,
+      "4": 8,
+      "5": 7,
+      "6": 5,
+      "7": 2,
+      "8": 2
+    },
+    "mode": 1,
+    "mean": 2.961,
+    "geometric_p_hat": 0.337719,
+    "geometric_gof_p": 0.48634,
+    "peaked_bic_minus_geom_bic": 13.0404,
+    "classification": "geometric"
+  },
+  "Zakros": {
+    "length_hist": {
+      "1": 86,
+      "2": 56,
+      "3": 34,
+      "4": 31,
+      "5": 7,
+      "6": 2,
+      "7": 2
+    },
+    "mode": 1,
+    "mean": 2.2248,
+    "geometric_p_hat": 0.449485,
+    "geometric_gof_p": 0.000452,
+    "peaked_bic_minus_geom_bic": 7.1869,
+    "classification": "INCONCLUSIVE"
+  },
+  "Arkhalkhori": {
+    "length_hist": {
+      "1": 29,
+      "2": 17,
+      "3": 6,
+      "4": 7,
+      "5": 3,
+      "6": 1
+    },
+    "mode": 1,
+    "mean": 2.0635,
+    "geometric_p_hat": 0.484615,
+    "geometric_gof_p": 0.501196,
+    "peaked_bic_minus_geom_bic": 10.23,
+    "classification": "geometric"
+  }
+}

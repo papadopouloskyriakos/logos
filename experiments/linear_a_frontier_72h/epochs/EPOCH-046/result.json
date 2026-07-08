@@ -1,0 +1,64 @@
+{
+  "task_id": "EPOCH-046",
+  "method": "Word-length distribution shape classification (L2/L3, signs ANONYMOUS). Fit GEOMETRIC P(L=k)=(1-p)^(k-1)p (MLE p=1/mean, chi-square GoF on tail-collapsed bins with expected>=5) vs PEAKED shifted-Poisson (forced mode>=2, lam=max(1,mean-1)); compare by BIC on identical bins. Per-unit classify: geometric iff mode==1 AND GoF p>0.05; peaked iff mode>=2 AND peaked_BIC<geom_BIC; else INCONCLUSIVE. Cross-site on sites with >=50 words; LOO on Haghia Triada. PC: synthetic geometric->geometric AND synthetic peaked(mode>=2)->peaked (DETECT both directions); LB classified as sanity.",
+  "result": "PC PASSED (synthetic geometric labeled 'geometric', synthetic peaked labeled 'peaked'). GLOBAL LA: mode=1, mean=1.84, monotone-decreasing from k=1, geometric MASSIVELY beats peaked (BIC gap +661.4 in favor of geometric), BUT strict chi-square geometric GoF is REJECTED (p=1.8e-12) at n=3147 — a real structural dip at k=2 (obs 617 vs exp 781, -21%) and bump at k=3 (obs 446 vs exp 357, +25%) deviate from pure memoryless. Global classification = INCONCLUSIVE. CROSS-SITE: 5/7 sites (Khania, Knossos, Palaikastro, Phaistos, Arkhalkhori) classify GEOMETRIC (mode=1, GoF p>0.05); 2/7 INCONCLUSIVE (Haghia Triada GoF rejected at n=1891; Zakros GoF rejected p=4.5e-4). 0 sites peaked. LOO (HT excluded): INCONCLUSIVE (GoF p=0.0076). LB control: mode=3, mean=3.23, classified PEAKED (peaked BIC beats geometric by ~12400) — LB has a strong preferred word length of 3, a genuine peaked/templatic shape, distinct from LA. Verdict: WORD_LENGTH_INCONCLUSIVE — the LA length distribution is unambiguously NOT peaked/templatic (mode=1 everywhere, geometric beats peaked at every site and globally by >600 BIC), and 5/7 sites individually fit geometric, but the GLOBAL geometric GoF is rejected at large n due to a systematic k=2 dip / k=3 bump, so the strict frozen 'global geometric adequate' gate is not met.",
+  "verdict": "WORD_LENGTH_INCONCLUSIVE",
+  "numbers": {
+    "global": {
+      "length_hist": {"1": 1778, "2": 617, "3": 446, "4": 189, "5": 67, "6": 33, "7": 8, "8": 4, "9": 1, "10": 1, "11": 1, "16": 1, "19": 1},
+      "mode": 1,
+      "mean": 1.8405,
+      "geometric_p_hat": 0.543336,
+      "geometric_gof_p": 1.7779111516347257e-12,
+      "peaked_bic_minus_geom_bic": 661.3577,
+      "classification": "INCONCLUSIVE"
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "synth_geometric_labeled": "geometric",
+      "synth_peaked_labeled": "peaked",
+      "lb_classification": "peaked",
+      "lb_mode": 3,
+      "lb_mean": 3.2346,
+      "lb_geometric_gof_p": 0.0,
+      "lb_peaked_bic_minus_geom_bic": -12417.1
+    },
+    "cross_site": {
+      "n_sites": 7,
+      "shape_counts": {"geometric": 5, "INCONCLUSIVE": 2, "peaked": 0},
+      "loo_excluded": "Haghia Triada",
+      "loo_classification": "INCONCLUSIVE",
+      "loo_geometric_gof_p": 0.007586,
+      "per_site": {
+        "Haghia Triada": {"n": 1891, "mode": 1, "mean": 1.615, "geometric_gof_p": 0.0, "classification": "INCONCLUSIVE"},
+        "Khania": {"n": 368, "mode": 1, "mean": 1.5082, "geometric_gof_p": 0.708255, "classification": "geometric"},
+        "Zakros": {"n": 218, "mode": 1, "mean": 2.2248, "geometric_gof_p": 0.000452, "classification": "INCONCLUSIVE"},
+        "Phaistos": {"n": 110, "mode": 1, "mean": 2.0182, "geometric_gof_p": 0.106205, "classification": "geometric"},
+        "Knossos": {"n": 98, "mode": 1, "mean": 2.6122, "geometric_gof_p": 0.108163, "classification": "geometric"},
+        "Palaikastro": {"n": 77, "mode": 1, "mean": 2.961, "geometric_gof_p": 0.48634, "classification": "geometric"},
+        "Arkhalkhori": {"n": 63, "mode": 1, "mean": 2.0635, "geometric_gof_p": 0.501196, "classification": "geometric"}
+      }
+    }
+  },
+  "key_findings": [
+    "LA word-length distribution is MONOTONE-DECREASING from k=1 at EVERY site and globally (mode=1 everywhere); it is unambiguously NOT peaked/templatic — no site shows a preferred word length >=2, and geometric beats peaked by BIC at all 7 sites and globally (gap +661).",
+    "Despite the monotone-decreasing shape, the strict chi-square GEOMETRIC goodness-of-fit is REJECTED at large n (global p=1.8e-12; Haghia Triada p=0; Zakros p=4.5e-4) due to a systematic structural deviation: a DIP at length 2 (obs -21% vs geometric) and BUMP at length 3 (obs +25%). 5/7 sites with smaller n DO pass geometric GoF (p>0.05).",
+    "The global classification is INCONCLUSIVE under the frozen rule (mode==1 but GoF inadequate), and LOO excluding Haghia Triada is also INCONCLUSIVE (GoF p=0.0076). The shape is geometric-LIKE but not a clean memoryless geometric process.",
+    "POSITIVE CONTROL PASSED: the classifier correctly labels synthetic geometric data 'geometric' and synthetic peaked (mode>=2) data 'peaked' (DETECT both directions), validating the machinery.",
+    "LB (Linear B) control benchmark is classified PEAKED (mode=3, mean=3.23, peaked BIC beats geometric by ~12400) — LB has a strong preferred word length of 3, a genuinely templatic/peaked shape that is qualitatively DIFFERENT from LA's monotone-decreasing profile. This confirms the classifier discriminates the two regimes on real data."
+  ],
+  "successor_hypotheses": [
+    "H1 (L2/L3): The systematic k=2 dip / k=3 bump in the LA length distribution may reflect a discrete morphological regularity (e.g. a frequent 3-sign word class) superimposed on an otherwise memoryless base — testable by mixture-of-geometrics or a 2-component finite-state model on lengths only.",
+    "H2 (L2/L3): Refit with a NEGATIVE BINOMIAL or zero-truncated discrete distribution that allows over-/under-dispersion relative to geometric, to determine whether the deviation is over-dispersion or a true multi-modal component (length structure only).",
+    "H3 (L2/L3): Test whether the k=2 dip is driven by a small set of high-frequency 2-sign tokens vs many rare ones (token-frequency vs type-frequency length distributions) — pure counts, no phonetics.",
+    "H4 (L2/L3): Compare the LA length-distribution shape parameter (continuation probability p_hat ~0.54) against LB's peaked profile quantitatively (e.g. KL divergence, mode-shift statistic) as a distributional typology contrast — control-only LB.",
+    "H5 (L2/L3): Per-context (Tablet vs Seal vs other support) length-distribution shape classification, to test whether the geometric-like vs deviant profile varies by inscription class (length structure only).",
+    "H6 (L2/L3): Power-calibrate the geometric GoF rejection: at what subsample size does LA stop rejecting geometric? This would separate 'large-n over-power' from 'real structural deviation' (length-only bootstrap)."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Pure word-LENGTH distributional statistics on ANONYMOUS sign ids. No phonetics, no sound, no meaning, no reading, no sign-value inference. Length = len(signs) only. LB used as POSITIVE-CONTROL benchmark only (control-only); LB result (peaked) is reported as a sanity/classifier-discrimination check, not as evidence about LA language. Verdict is mechanical from the frozen rule. L2/L3 only.",
+  "deviations": [
+    "Implementation bug in the initial chi-square binning (geometric tail mass beyond max observed length was not absorbed into the final bin, yielding NaN GoF and a sum-mismatch error) was corrected to implement the FROZEN method as stated (tail-collapsed bins, expected>=5, total expected==n). The frozen METHOD, decision rule, seeds, and verdict logic are unchanged; only the binning arithmetic was fixed to match the prereg specification. Re-running after the fix is the reported result."
+  ]
+}

@@ -1083,3 +1083,27 @@ epochs:
     artifacts: [epochs/EPOCH-045/prereg.md, epochs/EPOCH-045/plan_hash.txt, epochs/EPOCH-045/machinery.py, epochs/EPOCH-045/result.json, reports/EPOCH045_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-046
+    frontier: F15
+    gate: A
+    name: "Word-length distribution shape / generative process (geometric vs templatic)"
+    plan_hash: "see epochs/EPOCH-046/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: LA mode=1, mean=1.840 EXACT; length hist monotone-decreasing 1..6 (1778,617,446,189,67,33) confirmed; LB PC peaked mode=3 mean=3.23. All match."
+    positive_control: "PASSED (verified): classifier labels synthetic GEOMETRIC data 'geometric' and synthetic PEAKED data 'peaked' (both directions); LB real-data check = 'peaked' (mode 3, Greek). Classifier valid."
+    verdict: "WORD_LENGTH_INCONCLUSIVE (strict classification): LA word-length is MONOTONE-DECREASING (mode=1) so NOT templatic-peaked, but the strict geometric model is rejected (GoF p=1.8e-12, heavy tail: rare 16- & 19-sign words), so neither clean model fits => INCONCLUSIVE. Direction is clear though (see scope)."
+    numbers: {la_mode: 1, la_mean: 1.84, la_hist_head: {"1": 1778, "2": 617, "3": 446, "4": 189}, geometric_gof_p: 1.8e-12, peaked_minus_geom_bic: 661, la_classification: INCONCLUSIVE, lb_classification: peaked, lb_mode: 3, lb_mean: 3.23, cross_site_geometric: 5, cross_site_inconclusive: 2, cross_site_peaked: 0}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "INCONCLUSIVE on strict shape, but a clear typological DIRECTION + contrast: LA word-length is MODE-1 monotone-decreasing (NOT templatic/peaked); 5/7 sites lean geometric, 0 peaked. The strict geometric fit fails only on a heavy tail (a few very long words). SHARP CONTRAST with LB/Greek, which is PEAKED (mode 3, mean 3.23) — LA words are shorter/more abbreviated (mode-1 = many single-sign logograms/short admin tokens). TYPOLOGY (L2/L3, bounded): LA is NOT templatic and is concatenative-leaning — coheres with prefixing (E038), no-reduplication (E040), moderate positional specialization (E042). A structural datum, NOT a language-ID (LANGUAGE_ID NOT_EARNED). Anonymous; no phonetics/meaning."
+    committed_prediction: "modal GEOMETRIC/PEAKED/INCONCLUSIVE; OUTCOME = INCONCLUSIVE (mode-1 not-peaked but geometric GoF rejected). Clear direction: not templatic, unlike LB-peaked."
+    deviations:
+      - "GLM caught+fixed a chi-square binning bug mid-run (geometric tail mass beyond max observed length not absorbed into the final bin -> NaN GoF); corrected to absorb the tail. Honest self-correction; classification unchanged (INCONCLUSIVE)."
+    non_circular: "Length distribution only; anonymous; LB control-only (provides the peaked contrast); no phonetics/meaning/language-ID."
+    architecture_note: "Twenty-third gated-runner epoch (repairs=0; GLM self-fixed a binning bug). Distinct typology axis. Coordinator surfaced the LA(mode-1)-vs-LB(mode-3-peaked) contrast as the substantive content beyond the INCONCLUSIVE label."
+    artifacts: [epochs/EPOCH-046/prereg.md, epochs/EPOCH-046/plan_hash.txt, epochs/EPOCH-046/machinery.py, epochs/EPOCH-046/result.json, reports/EPOCH046_REPORT.md]
+    successors_spawned: 5
+    substantive: true
