@@ -1,0 +1,55 @@
+{
+ "task": "M1_candidate_value_system_check",
+ "seed": 20260708,
+ "licensed_scenario_S0": {
+  "rho_META": 0.0,
+  "mean_reduction_all_163": 0.000159,
+  "mean_reduction_A_only_69": 6.62e-06,
+  "signs_reduced_gt_0.1bit": 0
+ },
+ "random_anchor_null": {
+  "real_A_only_mean_reduction_bits": 0.0,
+  "null_mean": 0.03158,
+  "p_null_leq_real": 0.0,
+  "verdict": "REAL_BELOW_NULL"
+ },
+ "continuity_x_substitution": {
+  "hard_anchor_hard_rel": "UNSAT",
+  "violated_pairs": "15/24"
+ },
+ "S0_model_counting_keys": {
+  "log10_solutions_rel_subgraph": 43.40533721395994,
+  "log10_solutions_total": 280.7950615650674,
+  "log10_gauge_group": 10.759518210130269,
+  "log10_equivalence_classes_lower_bound": 270.0355433549371,
+  "joint_bits_removed_by_rel_hard": 55.99153412599301,
+  "note": "joint reduction only; per-sign marginals stay uniform (gauge symmetry); absolute per-sign bits earned = 0 (Art. XV)"
+ },
+ "mdl_accounting": [
+  {
+   "accounting": "naive_raw",
+   "credit_slots": 147,
+   "DL_anchored_minus_unanchored_bits": -660.2037217598972,
+   "winner": "ANCHORED"
+  },
+  {
+   "accounting": "dedup_unique_signpins",
+   "credit_slots": 38,
+   "DL_anchored_minus_unanchored_bits": 1.0,
+   "winner": "UNANCHORED"
+  },
+  {
+   "accounting": "art12_discounted",
+   "credit_slots": 0,
+   "DL_anchored_minus_unanchored_bits": 231.51138923739535,
+   "winner": "UNANCHORED"
+  }
+ ],
+ "licence_state": {
+  "as_of": "2026-07-08",
+  "all_LA_transfer": "NOT_EARNED",
+  "campaign_state": "OPEN",
+  "note": "equivalence-class reduction does NOT auto-earn phonetic licence; absolute values need >=3 independent anchors or bilingual (SEED_A=0)"
+ },
+ "verdict": "NO_CANDIDATE_TO_SEAL"
+}

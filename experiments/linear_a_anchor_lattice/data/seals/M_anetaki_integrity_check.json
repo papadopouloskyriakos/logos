@@ -1,0 +1,24 @@
+{
+ "task": "M3_anetaki_delta_seal_integrity",
+ "checked_on": "2026-07-08",
+ "seal_as_of": {
+  "type": "prospective_pre_registration_STRUCTURAL_ONLY",
+  "status": "SEALED_PROSPECTIVE",
+  "verdict": "SEALED_PROSPECTIVE_NOT_YET_SCORED",
+  "split": {
+   "KN Zg 57": "ivory Ring (~119 signs, no numerals)",
+   "KN Zg 58": "ivory handle (accounting: numerals+fractions)"
+  }
+ },
+ "web_verification": {
+  "query_scope": "Anetaki / KN Zg 57 / KN Zg 58 / Kanta-Nakassis-Palaima-Perna editio princeps or full transliteration, through 2026-07",
+  "found": "only the 2025 preliminary overview (Kanta, Nakassis, Palaima & Perna, Ariadne, pp. 27-43, doi 10.26248/ariadne.vi.1841) and 2025/2026 press coverage of the same paper (GreekReporter 2026-03-30; La Brujula Verde 2025-03; Biblical Archaeology Society; languagehat). No full edition / held-out transliteration located.",
+  "sources": [
+   "https://ejournals.lib.uoc.gr/Ariadne/article/download/1841/1751",
+   "https://greekreporter.com/2026/03/30/minoan-ivory-scepter-longest-linear-a-inscription/",
+   "https://www.labrujulaverde.com/en/2025/03/the-longest-known-inscription-in-the-undeciphered-linear-a-script-found-on-an-ivory-scepter-in-knossos/",
+   "https://www.biblicalarchaeology.org/daily/ancient-cultures/longest-linear-a-inscription-found-in-knossos/"
+  ]
+ },
+ "verdict": "SEAL_STILL_UNOPENED_AND_UNCONTAMINATED"
+}

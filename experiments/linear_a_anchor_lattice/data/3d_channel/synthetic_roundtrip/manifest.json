@@ -1,0 +1,739 @@
+{
+ "schema_version": "1.0",
+ "records": [
+  {
+   "record_id": "SEAL_00",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_00"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_00.npz",
+    "format": "npz",
+    "sha256": "4ea6bd53b60e864a5d49170324bf4720a1d54ef3424d79a995b9b7c23f5df01f",
+    "bytes": 30129
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.5426078226966626
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "IMP_00"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_01",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_01"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_01.npz",
+    "format": "npz",
+    "sha256": "fd8ffb5e229a5cb9b0a598e27b56b8e7c24948f5ca20cc9d4353e11f3843405a",
+    "bytes": 25282
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.51812048605023
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "IMP_01"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_02",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_02"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_02.npz",
+    "format": "npz",
+    "sha256": "8ba6cd4251f68bd06ea32ad621f7c0eb15d30d921a404a84f856e96dea8b5fd2",
+    "bytes": 23710
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.40639979666528
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "IMP_02"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_03",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_03"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_03.npz",
+    "format": "npz",
+    "sha256": "157949941a94165d815eb27784ea5252b517f5f85a42c4d4a461220ec2f7a227",
+    "bytes": 33602
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.598578702974803
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "IMP_03"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_04",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_04"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_04.npz",
+    "format": "npz",
+    "sha256": "b172883d1f65fc6ad4768c6fe2bd6397ced2c4a9196a6eb377ce2c91ab6f62ac",
+    "bytes": 25324
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.5699944967562494
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "IMP_04"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_05",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_05"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_05.npz",
+    "format": "npz",
+    "sha256": "b87aeded1d23ddd8267b885e51ecb204ec2ee4116e93643ccdb76a7715af7721",
+    "bytes": 15180
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.534671174988641
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "IMP_05"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_06",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_06"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_06.npz",
+    "format": "npz",
+    "sha256": "e9ccc3169063e6af8b5892a3ce851a6294fe0201e5b7c98a74a6fc093bc88b76",
+    "bytes": 32012
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.5462157963544527
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_07",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_07"
+   },
+   "object_class": "seal",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/SEAL_07.npz",
+    "format": "npz",
+    "sha256": "715f18de3aaca03f9c3a16d02e219cbfb783cc2fbde0cb035cf69199a26612b0",
+    "bytes": 20228
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.573507513608466
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_00",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_00"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_00.npz",
+    "format": "npz",
+    "sha256": "1ce4beb9683c7f6b79b00071e97cc17e5c816a1fde7a8d3488b5ec7b7f65ab2e",
+    "bytes": 34616
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.5984475439158254
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "SEAL_00"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_01",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_01"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_01.npz",
+    "format": "npz",
+    "sha256": "92ec589c254938ab52dbb67edee3f43cf7faad20f88532554d211a6f1f7ad653",
+    "bytes": 34627
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.5950196090147877
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "SEAL_01"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_02",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_02"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_02.npz",
+    "format": "npz",
+    "sha256": "f0e3a548392d87fb3040ff3279e0561faf983d9ae7bc9e339e16b77c5b4599cd",
+    "bytes": 34616
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.516309535558399
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "SEAL_02"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_03",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_03"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_03.npz",
+    "format": "npz",
+    "sha256": "0130336a545f967b7ea43ff6c39d1a4b6333469c39a7cdb95dd287528b01f0dd",
+    "bytes": 34680
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.689399952799926
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "SEAL_03"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_04",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_04"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_04.npz",
+    "format": "npz",
+    "sha256": "d908d118b36b2a25ed04f039a20ad1f5fda04320d4afe3850fa7f8d874ee58c4",
+    "bytes": 34624
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.651907097231105
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "SEAL_04"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_05",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_05"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_05.npz",
+    "format": "npz",
+    "sha256": "22505c4877b4d600e29afecab8172109121c56d184e8071cbf99bfcbeb2a8dd2",
+    "bytes": 34564
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.616690482671343
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [
+     "SEAL_05"
+    ],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_DISTRACTOR_0",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_DISTRACTOR_0"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_DISTRACTOR_0.npz",
+    "format": "npz",
+    "sha256": "f5920767bce7dbe0052ef9d043e28332fcd7c973a8deec75de66a7254d57efe3",
+    "bytes": 34581
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.5799325034481426
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "IMP_DISTRACTOR_1",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "IMP_DISTRACTOR_1"
+   },
+   "object_class": "sealing",
+   "modality": "depthmap",
+   "file": {
+    "path": "files/IMP_DISTRACTOR_1.npz",
+    "format": "npz",
+    "sha256": "e8bad223548a47e61a3be71607661cf4637c9dd3f9922195eec3f9b69dfb4718",
+    "bytes": 34718
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     2.610257466229527
+    ],
+    "n_vertices": 9216,
+    "n_faces": 0
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   },
+   "ground_truth": {
+    "joins": [],
+    "allograph_group": null
+   }
+  },
+  {
+   "record_id": "SEAL_00_MESH",
+   "corpus_ref": {
+    "system": "SYNTHETIC",
+    "id": "SEAL_00"
+   },
+   "object_class": "seal",
+   "modality": "mesh",
+   "file": {
+    "path": "files/SEAL_00_mesh.obj",
+    "format": "obj",
+    "sha256": "636a6a3254c9f011f0eab3df72d337531aac79939ce0e72a89b963b8d326d64a",
+    "bytes": 542031
+   },
+   "geometry": {
+    "units_mm": true,
+    "bbox_mm": [
+     24.0,
+     24.0,
+     1.0
+    ],
+    "n_vertices": 9216,
+    "n_faces": 18050
+   },
+   "acquisition": {
+    "method": "synthetic",
+    "device": "l_3d_pipeline.py",
+    "date": "2026-07-08",
+    "operator": "seed20260708"
+   },
+   "provenance": {
+    "source": "synthetic round-trip",
+    "url": null,
+    "license": "CC0",
+    "license_ok_for_analysis": true,
+    "redistributable": true
+   }
+  }
+ ]
+}

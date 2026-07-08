@@ -1,0 +1,74 @@
+{
+  "task": "L_3d",
+  "audit_date": "2026-07-08",
+  "method": "WebSearch + direct API queries (api.sketchfab.com/v3, zenodo.org/api) run 2026-07-08; counts are from live API responses, not estimates",
+  "verdict": "SOURCE_BLOCKED",
+  "blocking_summary": "No licensed, downloadable, corpus-scale 3D/RTI/photogrammetry data exists for Linear A-bearing objects, CMS seals/impressions, or Anetaki material. The single relevant open item (1 CC-BY Minoan seal mesh) is below any calibration threshold (known-join/allograph calibration needs >= tens of ground-truthed meshes).",
+  "sources": [
+    {
+      "source": "CMS (Corpus der minoischen und mykenischen Siegel) via iDAI.objects Arachne",
+      "url": "https://arachne.dainst.org/ ; https://www.uni-heidelberg.de/fakultaeten/philosophie/zaw/cms/databases/databasesfull.html",
+      "content": "~12k Aegean seals/sealings, 2D photographs + drawings + impression photos; free web viewing, free registration for higher resolution",
+      "modality_3d": "none published at corpus scale (a Heidelberg '3D-forensic' pilot exists; dataset not released)",
+      "license": "no explicit CC statement on images; DAI/CMS rights reserved; bulk redistribution not authorized",
+      "status": "BLOCKED_3D / 2D-view-only"
+    },
+    {
+      "source": "MUSINT II virtual museum (Haghia Triada sealings + Florence/Rome seals; Sketchfab user amjasink)",
+      "url": "https://api.sketchfab.com/v3/models?user=amjasink",
+      "content": "43 photogrammetry/laser-scan models (measured 2026-07-08 by paging the API)",
+      "downloadable": "0/43 (isDownloadable=false on every model; license field null = all rights reserved)",
+      "status": "LICENSE_BLOCKED (exists digitally, view-only)"
+    },
+    {
+      "source": "Sketchfab open/downloadable search",
+      "url": "https://api.sketchfab.com/v3/search",
+      "content": "q='minoan seal' downloadable=true -> 2 hits: 'Minoan seal MUSINT II' (CC-BY, 400k faces, n=1 seal) + Phaistos Disc replica (CC-BY); q='linear a minoan' downloadable=true -> 1 hit (a stirrup jar, CC-BY-NC-SA, not an inscription corpus)",
+      "status": "USABLE_BUT_NO_POWER (n=1 relevant mesh; no ground-truth joins/allographs)"
+    },
+    {
+      "source": "Zenodo",
+      "url": "https://zenodo.org/api/records",
+      "content": "q='Linear A' AND (photogrammetry OR 3D model OR RTI) -> total=2, both Maltese-stone items, irrelevant; q='minoan seal' AND (3D OR scan) -> total=0",
+      "status": "EMPTY"
+    },
+    {
+      "source": "Heraklion Archaeological Museum 3D exhibition",
+      "url": "https://heraklionmuseum.gr/en/3d-exhibition/",
+      "content": "browser 3D viewer for selected exhibits; no download endpoint",
+      "license": "Hellenic Ministry of Culture; Greek antiquities imagery requires ministry permission (L.4858/2021 regime)",
+      "status": "LICENSE_BLOCKED"
+    },
+    {
+      "source": "Anetaki plot imagery (Kanta/Nakassis/Palaima/Perna; INSTAP-supported; Ariadne Suppl. 5, 2024/2025; ivory scepter 2024)",
+      "url": "https://ejournals.lib.uoc.gr/Ariadne/article/view/1841",
+      "content": "2D publication photographs only; no 3D/RTI dataset released; scepter unpublished in 3D",
+      "status": "SOURCE_BLOCKED (publication-photo channel only)"
+    },
+    {
+      "source": "Focus-stacked macro-photogrammetry workflow for small Aegean inscriptions (J. Cultural Heritage 2022, incl. 3 Linear A items, ~30 micron density)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1296207422000097",
+      "content": "method paper; paywalled; no open dataset repository found on Zenodo or elsewhere",
+      "status": "SOURCE_BLOCKED"
+    },
+    {
+      "source": "'Material Insights' (2025): structured-light scans of 98 CMS modern impressions + 27 original seals/sealings",
+      "url": "https://www.researchgate.net/publication/399379897",
+      "content": "study exists; scan dataset not openly released",
+      "status": "SOURCE_BLOCKED (candidate for a data-request; see report)"
+    },
+    {
+      "source": "SigLA (already in repo, corpus/bronze/sigla_browse_2026)",
+      "content": "802 docs / 376 signs, sign bounding boxes only; no stroke vectors, no 3D; CC BY-NC-SA",
+      "status": "IN_REPO_2D_BBOX_ONLY (WP-E already established aspect channel AUC 0.57-0.60 = no identity power)"
+    }
+  ],
+  "counts": {
+    "sketchfab_downloadable_minoan_seal_meshes": 2,
+    "sketchfab_downloadable_linear_a_inscription_meshes": 0,
+    "musint_ii_models_total": 43,
+    "musint_ii_models_downloadable": 0,
+    "zenodo_relevant_datasets": 0,
+    "cms_arachne_3d_bulk": 0
+  }
+}

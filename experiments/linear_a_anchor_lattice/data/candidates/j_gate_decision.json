@@ -1,0 +1,28 @@
+{
+ "task": "J_LANGUAGE_CONDITIONAL_GATE",
+ "gate_inputs": {
+  "real_A_only_mean_reduction_bits": 0.0,
+  "null_A_only_mean_reduction_mean_bits": 0.03158294603286815,
+  "null_p5_p95_bits": [
+   0.022803571142865093,
+   0.03810096678453706
+  ],
+  "p_null_leq_real": 0.0,
+  "h_null_verdict": "REAL_BELOW_NULL",
+  "A_only_signs_with_parseable_pin": 0,
+  "vacuous_A_only_pin": [
+   "*49"
+  ],
+  "S0_licensed_A_only_mean_reduction_bits": 1e-05,
+  "S0_licensed_A_only_signs_gt_0.1bit": 0,
+  "pinned_sign_reduction_bits_S2": 0.13112053407147428,
+  "pinned_reduction_conditional_on": "META_CONTINUITY_LA_eq_LB (licence NOT_EARNED)"
+ },
+ "criteria": {
+  "G1_real_exceeds_random_anchor_null_p95": false,
+  "G2_licensed_state_S0_nonzero": false,
+  "G3_unconditional_A_only_constraint_exists": false
+ },
+ "verdict": "J_NOT_AUTHORIZED",
+ "consequence": "NO language tournament run; prior 6-family AT_END_TO_END_NULL stands (research/linear-a-decipherment-foundry)"
+}

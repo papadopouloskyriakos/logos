@@ -1,0 +1,7 @@
+{
+ "n_reps": 200,
+ "signs_with_ge1_anchor_mean": 88.325,
+ "retained_max": 0,
+ "max_indep_anchors_overall": 2,
+ "note": "All value-bearing lineages collapse to META_CONTINUITY_LA_eq_LB (+LIN_EG with SEED_A=0), so independent-anchor count is <=2 in ANY re-targeting; the gate retains 0 under the null as well \u2014 the real-data zero is structural (lineage accounting), and the real lattice is NOT distinguishable from random re-targetings at gate level."
+}

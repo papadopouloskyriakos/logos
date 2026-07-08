@@ -1,0 +1,104 @@
+{
+ "task": "M2_scoreability_audit",
+ "seed": 20260708,
+ "partitions": {
+  "SEAL_2": {
+   "type": "held_out_partition_scored_now",
+   "status": "SEALED_AND_SCORED",
+   "verdict": "SUPPORTED",
+   "split": {
+    "criterion": "random 15% of 1341 inscriptions held out (rng seed+2)",
+    "n_train": 1140,
+    "n_holdout": 201
+   }
+  },
+  "SEAL_3": {
+   "type": "held_out_partition_scored_now",
+   "status": "SEALED_AND_SCORED",
+   "verdict": "SUPPORTED",
+   "split": {
+    "criterion": "whole non-HT site 'Khania' held out",
+    "n_train": 1182,
+    "n_holdout": 159
+   }
+  },
+  "SEAL_4": {
+   "type": "held_out_family_LOO_scored_now",
+   "status": "SEALED_AND_SCORED",
+   "verdict": "SUPPORTED",
+   "split": {
+    "criterion": "libation carriers held out from ledger induction; canonical order predicted per-carrier by leave-one-carrier-out"
+   }
+  },
+  "SEAL_5": {
+   "type": "held_out_masking_scored_now",
+   "status": "SEALED_AND_SCORED",
+   "verdict": "UNDERPOWERED_NO_SIGNAL",
+   "split": {
+    "criterion": "15% of ALL numerals masked (rng seed+5); reconstruct via ledger arithmetic"
+   }
+  },
+  "ANETAKI_FINAL_EDITION_DELTA_SEAL": {
+   "type": "prospective_pre_registration_STRUCTURAL_ONLY",
+   "status": "SEALED_PROSPECTIVE",
+   "verdict": "SEALED_PROSPECTIVE_NOT_YET_SCORED",
+   "split": {
+    "KN Zg 57": "ivory Ring (~119 signs, no numerals)",
+    "KN Zg 58": "ivory handle (accounting: numerals+fractions)"
+   }
+  }
+ },
+ "matrix": {
+  "UNSAT_continuity_x_substitution": {
+   "prediction": {
+    "statement": "continuity pins (hard) + LA substitution neighborhoods (hard, same-C-or-same-V semantics) are mutually UNSAT (15/24 both-pinned pairs violate)",
+    "derived_from": [
+     "literature continuity pins (corpus-external)",
+     "F4 substitution neighborhoods (FULL 1341-inscription corpus, incl. every held-out partition's text)"
+    ],
+    "target_type": "global consistency property of anchor-topology x corpus channel"
+   },
+   "per_partition": {
+    "SEAL_2": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_3": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_4": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_5": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "ANETAKI_FINAL_EDITION_DELTA_SEAL": "CONDITIONALLY_SCOREABLE_PROSPECTIVELY \u2014 only if the editio princeps supplies new substitution-variant contexts for both-pinned signs; low prior, register as conditional"
+   }
+  },
+  "A_only_darkness": {
+   "prediction": {
+    "statement": "68/69 A-only signs receive no value-bearing anchor; real lattice sits BELOW all 200 random-anchor nulls (p=0.000)",
+    "derived_from": [
+     "literature anchor inventory (corpus-external)",
+     "A-only classification (FULL corpus attestation)"
+    ],
+    "target_type": "property of the published-anchor topology, not of corpus text"
+   },
+   "per_partition": {
+    "SEAL_2": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_3": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_4": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_5": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "ANETAKI_FINAL_EDITION_DELTA_SEAL": "SCOREABLE_PROSPECTIVELY \u2014 the new text was never used in lattice derivation (in_current_corpus=false); register delta predictions (M seal below)"
+   }
+  },
+  "substitution_channel_at_chance": {
+   "prediction": {
+    "statement": "same-C-or-same-V rate 9/28=0.321 vs chance 0.251, p=0.252",
+    "derived_from": [
+     "F4 substitution neighborhoods (FULL corpus)"
+    ],
+    "target_type": "channel calibration on full-corpus-derived pairs"
+   },
+   "per_partition": {
+    "SEAL_2": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_3": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_4": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "SEAL_5": "NOT_SCOREABLE \u2014 derivation contamination (F4/sign-universe built on FULL corpus incl. this partition) AND partition already opened (status=SEALED_AND_SCORED); scoring now would grade a target by data that created the prediction (Art. IX/XII)",
+    "ANETAKI_FINAL_EDITION_DELTA_SEAL": "CONDITIONALLY_SCOREABLE_PROSPECTIVELY (needs new pair contexts)"
+   }
+  }
+ },
+ "verdict": "NO_UNCONTAMINATED_HELD_OUT_SCORING_AVAILABLE_NOW; ONLY_PROSPECTIVE_ANETAKI_DELTA_IS_CLEAN"
+}

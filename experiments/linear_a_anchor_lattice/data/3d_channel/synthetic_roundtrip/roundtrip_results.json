@@ -1,0 +1,88 @@
+{
+ "seed": 20260708,
+ "validation_clean": {
+  "n_pass": 17,
+  "n_fail": 0,
+  "n_records": 17
+ },
+ "corruption_battery": {
+  "sha256_tamper": {
+   "caught": true,
+   "example": [
+    "V2:sha256_mismatch"
+   ]
+  },
+  "units_meters": {
+   "caught": true,
+   "example": [
+    "V4:units_or_bbox_implausible"
+   ]
+  },
+  "forbidden_license": {
+   "caught": true,
+   "example": [
+    "V5:license_not_allowlisted",
+    "V5:license_flag_inconsistent"
+   ]
+  },
+  "redistribution_overclaim": {
+   "caught": true,
+   "example": [
+    "V5:redistribution_overclaim"
+   ]
+  },
+  "self_join": {
+   "caught": true,
+   "example": [
+    "V6:joins_invalid"
+   ]
+  },
+  "dangling_join": {
+   "caught": true,
+   "example": [
+    "V6:join_target_missing"
+   ]
+  },
+  "missing_field": {
+   "caught": true,
+   "example": [
+    "V1:missing:acquisition"
+   ]
+  },
+  "nan_depth": {
+   "caught": true,
+   "example": [
+    "V3:nonfinite_depth"
+   ]
+  }
+ },
+ "corruptions_caught": 8,
+ "corruptions_total": 8,
+ "join_recovery": {
+  "n_seals": 8,
+  "n_impressions": 8,
+  "n_planted_joins": 6,
+  "argmax_recovered": 6,
+  "null_max_score": 0.575,
+  "planted_scores": [
+   0.9704,
+   0.9533,
+   0.966,
+   0.9828,
+   0.9679,
+   0.9492
+  ],
+  "planted_above_null_max": 6,
+  "min_margin": 0.3742,
+  "null_n": 58,
+  "null_mean": 0.4002
+ },
+ "allograph": {
+  "n_items": 20,
+  "n_groups": 4,
+  "within_mean": 0.8517,
+  "between_mean": 0.4143,
+  "auc_within_vs_between": 0.9997,
+  "nn1_grouping_acc": 1.0
+ }
+}

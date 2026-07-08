@@ -1,0 +1,821 @@
+{
+ "task": "K_acquisition",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "articles": [
+  "VII",
+  "VIII",
+  "IX",
+  "XI",
+  "XII",
+  "XV",
+  "XXII"
+ ],
+ "inputs": {
+  "surface": "data/controls/anchor_threshold/surface.json",
+  "lattice": "data/anchor_lattice/lattice.json",
+  "sign_universe": "data/sign_universe/conservative.json"
+ },
+ "la_operating_point": {
+  "residual_ambiguity_log10": 63.3765,
+  "whole_system_eq_classes_log10": ">=270 (Task H)",
+  "independent_anchors": 0
+ },
+ "gain_model": {
+  "first_anchor_by_slots": {
+   "1": {
+    "eqred_log10": 2.67,
+    "abs_recovery": 0.015,
+    "heldout_word": 0.0,
+    "basis": "MEASURED degraded_LB_LA_matched cell (1,1)"
+   },
+   "2": {
+    "eqred_log10": 5.05,
+    "abs_recovery": 0.037,
+    "heldout_word": 0.002,
+    "basis": "MEASURED degraded_LB_LA_matched cell (1,2)"
+   },
+   "4": {
+    "eqred_log10": 9.14,
+    "abs_recovery": 0.113,
+    "heldout_word": 0.014,
+    "basis": "EXTRAPOLATED (LA-matched slots-2 cell x cov-0.55 slots ratio); measured cov-0.55 upper bound eqred=6.8, abs=0.142"
+   },
+   "8": {
+    "eqred_log10": 14.63,
+    "abs_recovery": 0.27,
+    "heldout_word": 0.066,
+    "basis": "EXTRAPOLATED (LA-matched slots-2 cell x cov-0.55 slots ratio); measured cov-0.55 upper bound eqred=10.8, abs=0.341"
+   }
+  },
+  "foothold": {
+   "n_anchors": 3,
+   "slots": 8,
+   "lineages": 5,
+   "abs_recovery": 0.7578,
+   "rel_recovery": 1.0,
+   "eq_reduction": 18.6731,
+   "residual_ambiguity_log10": 5.7053,
+   "heldout_word_recovery": 0.5431,
+   "fp_rate": 0.0,
+   "recovered_frac": 0.7578,
+   "n_independent": 3.0
+  },
+  "frontier": {
+   "n_anchors": 12,
+   "slots": 8,
+   "lineages": 12,
+   "abs_recovery": 0.9722,
+   "rel_recovery": 1.0,
+   "eq_reduction": 23.8179,
+   "residual_ambiguity_log10": 0.3118,
+   "heldout_word_recovery": 0.9515,
+   "fp_rate": 0.0,
+   "recovered_frac": 0.9722,
+   "n_independent": 12.0
+  },
+  "coverage_note": "abs saturates ~0.65 by coverage 0.7-1.0 at fixed anchors; at 0 anchors abs=0.0 and eqred=0.0 for ALL coverage values (measured)",
+  "caveat": "p_anchor/p_avail are stated estimates (flagged), not measurements; all downstream numbers are arithmetic on measured surface cells"
+ },
+ "source_classes": [
+  {
+   "id": "new_inscription_occurrence",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 0.9,
+   "licence": "varies (excavation/publication)",
+   "automation": "low (manual ingest)",
+   "value_free_role": "raises relative-channel coverage + n_documents; G: 0 anchors => 0.0 abs at every coverage",
+   "note": "~0-2 new LA docs/yr base rate",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  },
+  {
+   "id": "longer_continuous_context",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 1.0,
+   "licence": "published (Ariadne Suppl. 2025)",
+   "automation": "medium (transcription exists)",
+   "value_free_role": "segmentation/formula/morphology channels; held-out test bed; 0 absolute bits",
+   "note": "Anetaki ivory scepter ~119 signs IS this class, available now",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  },
+  {
+   "id": "new_site",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 0.3,
+   "licence": "excavation-gated",
+   "automation": "low",
+   "value_free_role": "site_coverage axis is mild (abs 0.463@0.2 -> 0.617@1.0) and only matters once anchors exist",
+   "note": "",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  },
+  {
+   "id": "new_join",
+   "anchor_producing": true,
+   "slots": 2,
+   "p_anchor": 0.02,
+   "p_avail": 0.5,
+   "licence": "museum access (HM/INSTAP)",
+   "automation": "medium (bbox/3D match)",
+   "value_free_role": "lengthens words; could push PA-I-TO-type pins past the >=4-slot bar",
+   "note": "anchor only if a join completes an externally-equated word",
+   "gain_if_realized": {
+    "eqred_log10": 5.05,
+    "abs_recovery": 0.037,
+    "heldout_word": 0.002,
+    "basis": "MEASURED degraded_LB_LA_matched cell (1,2)"
+   },
+   "expected_eqred_log10": 0.05,
+   "expected_abs_recovery": 0.0004
+  },
+  {
+   "id": "high_resolution_image",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 0.7,
+   "licence": "CC BY-NC-SA (SigLA) / museum",
+   "automation": "high",
+   "value_free_role": "reading corrections + join detection; shape channel carries 0 value bits (WP-E: AUC 0.57-0.60, H-lineage circular)",
+   "note": "",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  },
+  {
+   "id": "stroke_decomposition",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 0.5,
+   "licence": "CC BY-NC-SA; needs Salgarella/Castellan raw vectors",
+   "automation": "high once unblocked",
+   "value_free_role": "unblocks WP-E; still not value-bearing (Art. XI: H lineage circular for values)",
+   "note": "SOURCE_BLOCKED today",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  },
+  {
+   "id": "external_name_equation",
+   "anchor_producing": true,
+   "slots": 4,
+   "p_anchor": 1.0,
+   "p_avail": 0.03,
+   "licence": "publication",
+   "automation": "low",
+   "value_free_role": "\u2014",
+   "note": "THE unlock: LIN_EG is the only dependency-distinct value-bearing lineage (SEED_A=0 because {Eg-rendered Cretan toponyms} \u2229 {LA >=4-slot words} = {Phaistos,3-slot} only); requires a NEW LA attestation of Amnisos/Kydonia/Knossos-class name",
+   "gain_if_realized": {
+    "eqred_log10": 9.14,
+    "abs_recovery": 0.113,
+    "heldout_word": 0.014,
+    "basis": "EXTRAPOLATED (LA-matched slots-2 cell x cov-0.55 slots ratio); measured cov-0.55 upper bound eqred=6.8, abs=0.142"
+   },
+   "expected_eqred_log10": 0.274,
+   "expected_abs_recovery": 0.0034
+  },
+  {
+   "id": "commodity_measure_equation",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 0.8,
+   "licence": "published",
+   "automation": "medium",
+   "value_free_role": "L3-functional only; loan-etymologies (KU-NI-SU etc.) presuppose the reading (Art. XII circular) => 0 absolute bits",
+   "note": "",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  },
+  {
+   "id": "bilingual_biscriptal_fragment",
+   "anchor_producing": true,
+   "slots": 8,
+   "p_anchor": 1.0,
+   "p_avail": 0.002,
+   "licence": "excavation-gated",
+   "automation": "low",
+   "value_free_role": "\u2014",
+   "note": "Rosetta-class; none found in ~120 yrs; if long enough could reach the (12,8,12) frontier in one object, but Art.-XI treatment of a single-provenance document caps effective lineages (bounds reported both ways)",
+   "gain_if_realized": {
+    "eqred_log10": 14.63,
+    "abs_recovery": 0.27,
+    "heldout_word": 0.066,
+    "basis": "EXTRAPOLATED (LA-matched slots-2 cell x cov-0.55 slots ratio); measured cov-0.55 upper bound eqred=10.8, abs=0.341"
+   },
+   "expected_eqred_log10": 0.048,
+   "expected_abs_recovery": 0.0019,
+   "bounds_if_realized": {
+    "conservative_1_lineage": {
+     "eqred_log10": 14.63,
+     "abs_recovery": 0.27,
+     "heldout_word": 0.066,
+     "basis": "EXTRAPOLATED (LA-matched slots-2 cell x cov-0.55 slots ratio); measured cov-0.55 upper bound eqred=10.8, abs=0.341"
+    },
+    "liberal_many_word_equations": {
+     "eqred_log10": 23.8,
+     "abs_recovery": 0.9722,
+     "basis": "measured (12,8,12) frontier cell"
+    }
+   }
+  },
+  {
+   "id": "anetaki_final_edition_delta",
+   "anchor_producing": false,
+   "slots": 0,
+   "p_anchor": 0.0,
+   "p_avail": 1.0,
+   "licence": "published (Kanta et al., Ariadne 2025; suppl. series)",
+   "automation": "medium",
+   "value_free_role": "new readings/joins for KN cult-center pieces + PROSPECTIVE held-out gold for L2/L3 claims (libation-order, A-prefixation)",
+   "note": "scepter + overview published 2025; full final edition of all cult-center epigraphy still rolling",
+   "gain_if_realized": {
+    "eqred_log10": 0.0,
+    "abs_recovery": 0.0,
+    "basis": "MEASURED: 0-anchor row => 0.0 abs / 0.0 eqred at every coverage (value-free channels are relabeling-invariant)"
+   },
+   "expected_eqred_log10": 0.0,
+   "expected_abs_recovery": 0.0
+  }
+ ],
+ "acquisitions_ranked": [
+  {
+   "rank": 1,
+   "id": "ACQ-02",
+   "name": "Egyptian-rendered toponym equation on newly published LA text (Amnisos i-m-n-y-s3 / Kydonia k3-tw-n3-y / Knossos k-n-s class, >=4 LA slots)",
+   "source_class": [
+    "external_name_equation"
+   ],
+   "status": "EXCAVATION-GATED (WP-D: overlap empty after ~120 yrs; base rate ~0-2 new LA docs/yr)",
+   "absolute_value_bits": "first dependency-distinct anchor",
+   "value": "IF realized: eqred ~9.14 log10 of 63.4 (abs ~0.113); EXTRAPOLATED (LA-matched slots-2 cell x cov-0.55 slots ratio); measured cov-0.55 upper bound eqred=6.8, abs=0.142. Residual still >= 10^54",
+   "expected_eqred_log10": 0.274,
+   "licence": "publication",
+   "automation": "low"
+  },
+  {
+   "rank": 2,
+   "id": "ACQ-05",
+   "name": "Systematic join search in the HT archive (RTI/3D of fragment edges)",
+   "source_class": [
+    "new_join",
+    "high_resolution_image"
+   ],
+   "status": "museum-access-gated (Heraklion Museum / INSTAP)",
+   "absolute_value_bits": "only if a join completes an externally-equated word (P~0.02)",
+   "value": "lengthens words; the PA-I-TO pin fails WP-D's >=4-slot bar at 3 slots/1 site \u2014 a join or new attestation is the cheapest way to move an EXISTING pin",
+   "expected_eqred_log10": 0.05,
+   "licence": "museum",
+   "automation": "medium"
+  },
+  {
+   "rank": 3,
+   "id": "ACQ-03",
+   "name": "Bilingual / biscriptal fragment (LA + any read script)",
+   "source_class": [
+    "bilingual_biscriptal_fragment"
+   ],
+   "status": "NOT KNOWN TO EXIST (P~0.002 within 2 yrs)",
+   "absolute_value_bits": "up to script recovery",
+   "value": "only acquisition class that can reach the (12,8,12) frontier (abs 0.9722); conservative Art.-XI bound (single provenance = 1 lineage) caps it at eqred ~14.63 log10 / abs ~0.27",
+   "expected_eqred_log10": 0.048,
+   "licence": "excavation-gated",
+   "automation": "low"
+  },
+  {
+   "rank": 4,
+   "id": "ACQ-01",
+   "name": "Ingest the Anetaki ivory scepter (Knossos cult center, ~119 signs; Kanta, Nakassis, Palaima & Perna, Ariadne Supplements, 2025)",
+   "source_class": [
+    "longer_continuous_context",
+    "new_inscription_occurrence",
+    "anetaki_final_edition_delta"
+   ],
+   "status": "AVAILABLE_NOW (published 2025; NOT in silver corpus \u2014 only KNZg55/57 Anetaki pieces are)",
+   "absolute_value_bits": 0.0,
+   "value": "longest continuous LA text (~119 signs vs KNZf13's 19); non-administrative, numeral-free => unique held-out gold for L2/L3 structural claims (libation order, A-prefixation, formula slots); ~+1.5% corpus tokens; possible new attestations of A-only signs in ritual vocabulary",
+   "expected_eqred_log10": 0.0,
+   "licence": "academic publication",
+   "automation": "medium"
+  },
+  {
+   "rank": 5,
+   "id": "ACQ-07",
+   "name": "Full Knossos-cult-center (Anetaki plot) final epigraphic edition beyond the scepter",
+   "source_class": [
+    "anetaki_final_edition_delta",
+    "new_inscription_occurrence"
+   ],
+   "status": "ROLLING (Ariadne 2025 overview out; further volumes expected)",
+   "absolute_value_bits": 0.0,
+   "value": "more KN non-administrative texts; new-site-class contexts for A-only ritual signs; held-out gold",
+   "expected_eqred_log10": 0.0,
+   "licence": "academic publication",
+   "automation": "medium"
+  },
+  {
+   "rank": 6,
+   "id": "ACQ-04",
+   "name": "SigLA raw stroke vectors from Salgarella/Castellan (unblock WP-E)",
+   "source_class": [
+    "stroke_decomposition",
+    "high_resolution_image"
+   ],
+   "status": "SOURCE_BLOCKED; data exists as drawings; requires author contact",
+   "absolute_value_bits": 0.0,
+   "value": "unblocks the stroke channel for sign-identity/allography ONLY; H-lineage is circular for values (Art. XI)",
+   "expected_eqred_log10": 0.0,
+   "licence": "CC BY-NC-SA",
+   "automation": "high once obtained"
+  },
+  {
+   "rank": 7,
+   "id": "ACQ-06",
+   "name": "Kom el-Hettan recollation / new Aegean-list fragments (Sourouzian excavation, ongoing)",
+   "source_class": [
+    "external_name_equation"
+   ],
+   "status": "Egyptian side may grow; binds NOTHING without the LA-side attestation (WP-D)",
+   "absolute_value_bits": 0.0,
+   "value": "raises the menu of Egyptian-rendered toponyms awaiting an LA match; zero bits until ACQ-02 fires",
+   "expected_eqred_log10": 0.0,
+   "licence": "publication",
+   "automation": "low"
+  },
+  {
+   "rank": 8,
+   "id": "ACQ-08",
+   "name": "Routine new-excavation LA documents (Sissi, Zominthos, Palaikastro 2022+, Gournia)",
+   "source_class": [
+    "new_inscription_occurrence",
+    "new_site"
+   ],
+   "status": "base rate ~0-2/yr, mostly roundels/nodules (1-3 signs)",
+   "absolute_value_bits": 0.0,
+   "value": "coverage axis only; G: 0 anchors => abs 0.0 at every coverage (measured)",
+   "expected_eqred_log10": 0.0,
+   "licence": "excavation-gated",
+   "automation": "low"
+  }
+ ],
+ "per_sign_queue": [
+  {
+   "target_sign": "ZU",
+   "sign_class": "AB-shared",
+   "occurrences": 32,
+   "n_sites": 9,
+   "stroke_image": true,
+   "relationally_dark": false,
+   "p_appears_in_new_4slot_anchor_word": 0.0219,
+   "needed_evidence": "second dependency-distinct lineage for the existing pin",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.006
+  },
+  {
+   "target_sign": "*301",
+   "sign_class": "A-only",
+   "occurrences": 31,
+   "n_sites": 16,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0212,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00581
+  },
+  {
+   "target_sign": "*118",
+   "sign_class": "A-only",
+   "occurrences": 21,
+   "n_sites": 7,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0144,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00395
+  },
+  {
+   "target_sign": "*411",
+   "sign_class": "A-only",
+   "occurrences": 15,
+   "n_sites": 1,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0103,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00282
+  },
+  {
+   "target_sign": "*306",
+   "sign_class": "A-only",
+   "occurrences": 14,
+   "n_sites": 4,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0096,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00263
+  },
+  {
+   "target_sign": "*304",
+   "sign_class": "A-only",
+   "occurrences": 12,
+   "n_sites": 3,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0083,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00228
+  },
+  {
+   "target_sign": "*401",
+   "sign_class": "A-only",
+   "occurrences": 12,
+   "n_sites": 3,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0083,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00228
+  },
+  {
+   "target_sign": "*131",
+   "sign_class": "A-only",
+   "occurrences": 10,
+   "n_sites": 5,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0069,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00189
+  },
+  {
+   "target_sign": "*309",
+   "sign_class": "A-only",
+   "occurrences": 10,
+   "n_sites": 1,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0069,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00189
+  },
+  {
+   "target_sign": "*310",
+   "sign_class": "A-only",
+   "occurrences": 9,
+   "n_sites": 3,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0062,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.0017
+  },
+  {
+   "target_sign": "*188",
+   "sign_class": "A-only",
+   "occurrences": 8,
+   "n_sites": 2,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0055,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00151
+  },
+  {
+   "target_sign": "*305",
+   "sign_class": "A-only",
+   "occurrences": 8,
+   "n_sites": 5,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0055,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00151
+  },
+  {
+   "target_sign": "*34",
+   "sign_class": "A-only",
+   "occurrences": 8,
+   "n_sites": 4,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0055,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00151
+  },
+  {
+   "target_sign": "*86",
+   "sign_class": "A-only",
+   "occurrences": 8,
+   "n_sites": 3,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0055,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00151
+  },
+  {
+   "target_sign": "*47",
+   "sign_class": "A-only",
+   "occurrences": 7,
+   "n_sites": 5,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0048,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00132
+  },
+  {
+   "target_sign": "*28",
+   "sign_class": "A-only",
+   "occurrences": 5,
+   "n_sites": 2,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0034,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00093
+  },
+  {
+   "target_sign": "*314",
+   "sign_class": "A-only",
+   "occurrences": 5,
+   "n_sites": 4,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0034,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00093
+  },
+  {
+   "target_sign": "*325",
+   "sign_class": "A-only",
+   "occurrences": 5,
+   "n_sites": 3,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0034,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00093
+  },
+  {
+   "target_sign": "*409",
+   "sign_class": "A-only",
+   "occurrences": 5,
+   "n_sites": 2,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0034,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00093
+  },
+  {
+   "target_sign": "LOGO:CAP",
+   "sign_class": "logogram",
+   "occurrences": 5,
+   "n_sites": 3,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0034,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00093
+  },
+  {
+   "target_sign": "*312",
+   "sign_class": "A-only",
+   "occurrences": 4,
+   "n_sites": 2,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0028,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00077
+  },
+  {
+   "target_sign": "*321",
+   "sign_class": "A-only",
+   "occurrences": 4,
+   "n_sites": 4,
+   "stroke_image": true,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0028,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00077
+  },
+  {
+   "target_sign": "LOGO:*22M",
+   "sign_class": "logogram",
+   "occurrences": 4,
+   "n_sites": 2,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0028,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00077
+  },
+  {
+   "target_sign": "*49",
+   "sign_class": "A-only",
+   "occurrences": 4,
+   "n_sites": 3,
+   "stroke_image": false,
+   "relationally_dark": false,
+   "p_appears_in_new_4slot_anchor_word": 0.0028,
+   "needed_evidence": "second dependency-distinct lineage for the existing pin",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00077
+  },
+  {
+   "target_sign": "*OLIV",
+   "sign_class": "A-only",
+   "occurrences": 3,
+   "n_sites": 1,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0021,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00058
+  },
+  {
+   "target_sign": "*164",
+   "sign_class": "A-only",
+   "occurrences": 2,
+   "n_sites": 2,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0014,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00038
+  },
+  {
+   "target_sign": "*414",
+   "sign_class": "A-only",
+   "occurrences": 2,
+   "n_sites": 2,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0014,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00038
+  },
+  {
+   "target_sign": "*348",
+   "sign_class": "A-only",
+   "occurrences": 1,
+   "n_sites": 1,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0007,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00019
+  },
+  {
+   "target_sign": "*404",
+   "sign_class": "A-only",
+   "occurrences": 1,
+   "n_sites": 1,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0007,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00019
+  },
+  {
+   "target_sign": "*405",
+   "sign_class": "A-only",
+   "occurrences": 1,
+   "n_sites": 1,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0007,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00019
+  },
+  {
+   "target_sign": "*413",
+   "sign_class": "A-only",
+   "occurrences": 1,
+   "n_sites": 1,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0007,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00019
+  },
+  {
+   "target_sign": "*82",
+   "sign_class": "A-only",
+   "occurrences": 1,
+   "n_sites": 1,
+   "stroke_image": false,
+   "relationally_dark": true,
+   "p_appears_in_new_4slot_anchor_word": 0.0007,
+   "needed_evidence": "occurrence inside an externally-equated word (external_name_equation / bilingual)",
+   "best_source_class": "external_name_equation",
+   "expected_value_bits_from_context_only": 0.0,
+   "expected_eqred_log10": 0.00019
+  }
+ ],
+ "headline": {
+  "best_single_acquisition_for_absolute_ambiguity": "NONE AVAILABLE NOW reduces the 10^63.4 residual at all; expectation-weighted best = ACQ-02 (Egyptian-attested toponym on a new LA text): E[eqred] ~ 0.27 log10; conditional-on-realization best = ACQ-03 bilingual",
+  "best_available_now": "ACQ-01 Anetaki scepter ingest \u2014 0 absolute bits, but the largest held-out L2/L3 test bed added to the corpus since GORILA",
+  "honest_bound": "even a realized 4-slot independent anchor leaves >= 10^54 equivalence classes"
+ }
+}
