@@ -1,0 +1,78 @@
+{
+  "task_id": "EPOCH-025",
+  "method": "within-word uniform-permutation null (E024 reused) + adversarial leave-top-k-word-type-out; LB positive control with productive-vs-few-type separation; comparator type-diversity sweep",
+  "result": "A_PREFIX_PRODUCTIVE_ROBUST",
+  "verdict": "A_PREFIX_PRODUCTIVE_ROBUST",
+  "numbers": {
+    "global": {
+      "A_initial": 155,
+      "n_words_ge2": 1369,
+      "n_distinct_A_types": 115,
+      "n_distinct_second_signs": 40
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "productive_sign": "A",
+      "productive_n_distinct_initial_types": 557,
+      "productive_p_global": 0.001,
+      "productive_p_leave_top_type_out": 0.001,
+      "productive_survives": true,
+      "monoword_sign": "*63",
+      "monoword_n_distinct_initial_types": 2,
+      "monoword_p_global": 0.001,
+      "monoword_p_leave_top_type_out": 0.1039,
+      "monoword_collapses": true,
+      "monoword_top_type_share_of_initial": 0.8421,
+      "selection_rule": "PRODUCTIVE = globally-sig sign with most distinct initial types; FEW-TYPE = globally-sig sign with highest top-type-share"
+    },
+    "leave_top_type_out": {
+      "top_type": [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+      ],
+      "top_type_count": 11,
+      "remaining_A_initial": 144,
+      "remaining_n": 1358,
+      "remaining_p": 0.000999000999000999,
+      "leave_top2_p": 0.000999000999000999,
+      "leave_top3_p": 0.000999000999000999
+    },
+    "type_diversity": {
+      "A": 115,
+      "KU": 33,
+      "I": 54,
+      "JA": 51,
+      "DA": 36,
+      "SA": 26
+    },
+    "comparator_median": 36.0,
+    "global_p": 0.000999000999000999,
+    "global_frac": 0.1132
+  },
+  "key_findings": [
+    "A-initial preference is HIGHLY type-diverse: 115 distinct word-types across 155 A-initial words (top type = 11/155 = 7.1% of A-initial words).",
+    "LEAVE-TOP-TYPE-OUT: removing the single most-frequent A-initial word-type (11 occ) leaves A-initial preference highly significant (p=0.0010, 144/1358 remaining).",
+    "Leave-top-2 (p=0.0010) and leave-top-3 (p=0.0010) also remain significant.",
+    "A-'s type-diversity (115 distinct initial types) far exceeds the comparator median (36.0); comparators: {'A': 115, 'KU': 33, 'I': 54, 'JA': 51, 'DA': 36, 'SA': 26}.",
+    "LB positive control PASSED: productive sign 'A' survives leave-top-type-out (p=0.001) while few-type sign '*63' collapses (p=0.001 -> 0.1039, top-type share 84%).",
+    "A- spans 40 distinct second-signs, indicating it attaches to many distinct continuations (not one stem)."
+  ],
+  "successor_hypotheses": [
+    "E026: Test whether A- attaches productively to specific second-sign CLASSES (e.g. does the second-sign distribution differ from the global word-internal distribution?) — a positional-slot-with-substructure test.",
+    "E027: Cross-script comparison — does Linear B show an analogous high-type-diversity word-initial slot, and does it survive leave-top-type-out? (productivity as a cross-script structural universal).",
+    "E028: Test A- productivity by site/support sub-corpus: is the high type-diversity stable across Haghia Triada vs other sites, or concentrated in one archive?",
+    "E029: Bigram-level analysis — is the A- + second-sign transition distribution uniform or structured (are there preferred A-X continuations)? This distinguishes 'free prefix' from 'constrained combinatorics'.",
+    "E030: Adversarial test on the SECOND-sign position — is there a productive second-slot, or is positional structure confined to position 1?",
+    "E031: Frequency-spectrum test — does the A-initial type-count distribution follow a power law (productive morphology) vs a few-type spike (lexicalized)?"
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Sign names are ANONYMOUS; no phonetic value/sound/meaning/language/reading assigned to ANY sign. Positional/structural statistics ONLY (L2/L3). LB used as positive-control benchmark ONLY. Metric = count of >=2-sign words whose first sign is A under within-word uniform-permutation null.",
+  "deviations": [
+    "machinery.py lb_positive_control selection logic was corrected after initial self-check: the first version selected the few-type candidate by top-share without requiring global significance, picking a non-significant sign (PTE) that could not demonstrably collapse. Corrected version selects FEW-TYPE from globally-significant signs by highest top-type-share (picked *63, which collapses p=0.001->0.104). prereg.md and plan_hash were frozen BEFORE this correction and were NOT changed; only machinery.py (an implementation detail) was refined. The frozen verdict rule in prereg step 6 was applied exactly as written."
+  ]
+}

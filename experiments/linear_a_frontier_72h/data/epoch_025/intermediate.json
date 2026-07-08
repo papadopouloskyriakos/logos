@@ -1,0 +1,258 @@
+{
+  "task_id": "EPOCH-025",
+  "inspect_step0": {
+    "n_distinct_A_types": 115,
+    "n_distinct_second_signs": 40,
+    "top_A_initial_word_types": [
+      {
+        "type": [
+          "A",
+          "TA",
+          "I",
+          "*301",
+          "WA",
+          "JA"
+        ],
+        "count": 11
+      },
+      {
+        "type": [
+          "A",
+          "DU"
+        ],
+        "count": 10
+      },
+      {
+        "type": [
+          "A",
+          "SE"
+        ],
+        "count": 4
+      },
+      {
+        "type": [
+          "A",
+          "KA",
+          "RU"
+        ],
+        "count": 3
+      },
+      {
+        "type": [
+          "A",
+          "RA"
+        ],
+        "count": 3
+      },
+      {
+        "type": [
+          "A",
+          "RI"
+        ],
+        "count": 3
+      },
+      {
+        "type": [
+          "A",
+          "MA"
+        ],
+        "count": 3
+      },
+      {
+        "type": [
+          "A",
+          "JA"
+        ],
+        "count": 3
+      },
+      {
+        "type": [
+          "A",
+          "RU"
+        ],
+        "count": 2
+      },
+      {
+        "type": [
+          "A",
+          "RI",
+          "NI",
+          "TA"
+        ],
+        "count": 2
+      }
+    ],
+    "top_second_signs": [
+      {
+        "sign": "TA",
+        "count": 20
+      },
+      {
+        "sign": "DU",
+        "count": 14
+      },
+      {
+        "sign": "RA",
+        "count": 10
+      },
+      {
+        "sign": "RI",
+        "count": 8
+      },
+      {
+        "sign": "SI",
+        "count": 7
+      },
+      {
+        "sign": "SE",
+        "count": 7
+      },
+      {
+        "sign": "SA",
+        "count": 7
+      },
+      {
+        "sign": "KA",
+        "count": 6
+      },
+      {
+        "sign": "RE",
+        "count": 6
+      },
+      {
+        "sign": "PA",
+        "count": 6
+      }
+    ]
+  },
+  "global": {
+    "A_initial": 155,
+    "n_words_ge2": 1369,
+    "frac": 0.1132,
+    "null_mean": 55.567,
+    "p": 0.000999000999000999
+  },
+  "positive_control": {
+    "pc_verdict": "PASSED",
+    "productive_sign": "A",
+    "productive_sign_occ": 1423,
+    "productive_sign_initial": 1287,
+    "productive_n_distinct_initial_types": 557,
+    "productive_p_global": 0.001,
+    "productive_p_leave_top_type_out": 0.001,
+    "productive_top_type": [
+      "A",
+      "PU",
+      "DO",
+      "SI"
+    ],
+    "productive_survives": true,
+    "monoword_sign": "*63",
+    "monoword_sign_occ": 20,
+    "monoword_sign_initial": 19,
+    "monoword_n_distinct_initial_types": 2,
+    "monoword_p_global": 0.001,
+    "monoword_p_leave_top_type_out": 0.1039,
+    "monoword_top_type": [
+      "*63",
+      "TE",
+      "RA",
+      "DE"
+    ],
+    "monoword_collapses": true,
+    "monoword_top_type_share_of_initial": 0.8421,
+    "selection_rule": "PRODUCTIVE = globally-sig sign with most distinct initial types; FEW-TYPE = globally-sig sign with highest top-type-share"
+  },
+  "leave_top_type_out": {
+    "top_type": [
+      "A",
+      "TA",
+      "I",
+      "*301",
+      "WA",
+      "JA"
+    ],
+    "top_type_count": 11,
+    "remaining_A_initial": 144,
+    "remaining_n": 1358,
+    "remaining_p": 0.000999000999000999,
+    "leave_top2_p": 0.000999000999000999,
+    "leave_top3_p": 0.000999000999000999,
+    "leave_top1_detail": {
+      "k": 1,
+      "removed_types": [
+        [
+          "A",
+          "TA",
+          "I",
+          "*301",
+          "WA",
+          "JA"
+        ]
+      ],
+      "remaining_n": 1358,
+      "remaining_sign_initial": 144,
+      "remaining_p": 0.000999000999000999,
+      "null_mean": 53.741,
+      "underpowered": false
+    },
+    "leave_top2_detail": {
+      "k": 2,
+      "removed_types": [
+        [
+          "A",
+          "DU"
+        ],
+        [
+          "A",
+          "TA",
+          "I",
+          "*301",
+          "WA",
+          "JA"
+        ]
+      ],
+      "remaining_n": 1348,
+      "remaining_sign_initial": 134,
+      "remaining_p": 0.000999000999000999,
+      "null_mean": 49.034,
+      "underpowered": false
+    },
+    "leave_top3_detail": {
+      "k": 3,
+      "removed_types": [
+        [
+          "A",
+          "DU"
+        ],
+        [
+          "A",
+          "SE"
+        ],
+        [
+          "A",
+          "TA",
+          "I",
+          "*301",
+          "WA",
+          "JA"
+        ]
+      ],
+      "remaining_n": 1344,
+      "remaining_sign_initial": 130,
+      "remaining_p": 0.000999000999000999,
+      "null_mean": 46.876,
+      "underpowered": false
+    }
+  },
+  "type_diversity": {
+    "A": 115,
+    "KU": 33,
+    "I": 54,
+    "JA": 51,
+    "DA": 36,
+    "SA": 26
+  },
+  "comparator_median": 36.0,
+  "verdict": "A_PREFIX_PRODUCTIVE_ROBUST"
+}

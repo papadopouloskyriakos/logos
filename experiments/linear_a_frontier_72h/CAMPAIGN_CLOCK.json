@@ -4,8 +4,8 @@
  "duration_hours": 72,
  "minimum_epochs": 18,
  "target_epochs": 24,
- "completed_epochs": 24,
- "last_checkpoint_utc": "2026-07-08T15:13:56.854Z",
+ "completed_epochs": 25,
+ "last_checkpoint_utc": "2026-07-08T16:02:15.859Z",
  "finalization_authorized": false,
  "rule": "finalization_authorized = (now>=campaign_end_utc) AND (completed_substantive_epochs>=18); computed by scripts/clock_check.py, never narrated"
 }
