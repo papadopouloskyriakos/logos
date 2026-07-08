@@ -1,0 +1,72 @@
+[
+ {
+  "candidate": "A|PRE",
+  "obs": 47,
+  "null_mean": 24.532,
+  "raw_p": 0.0001999600079984003,
+  "holm_p": 0.014397
+ },
+ {
+  "candidate": "ME|SUF",
+  "obs": 12,
+  "null_mean": 6.098,
+  "raw_p": 0.01219756048790242,
+  "holm_p": 0.866027
+ },
+ {
+  "candidate": "RA|SUF",
+  "obs": 22,
+  "null_mean": 15.531,
+  "raw_p": 0.036392721455708855,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "I|PRE",
+  "obs": 28,
+  "null_mean": 21.337,
+  "raw_p": 0.052589482103579284,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "JU|SUF",
+  "obs": 9,
+  "null_mean": 5.148,
+  "raw_p": 0.05798840231953609,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "TI|SUF",
+  "obs": 20,
+  "null_mean": 14.748,
+  "raw_p": 0.07338532293541292,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "TA\u2082|SUF",
+  "obs": 5,
+  "null_mean": 2.453,
+  "raw_p": 0.08638272345530894,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "QA|PRE",
+  "obs": 10,
+  "null_mean": 6.406,
+  "raw_p": 0.08798240351929613,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "*306|PRE",
+  "obs": 4,
+  "null_mean": 1.908,
+  "raw_p": 0.10997800439912017,
+  "holm_p": 1.0
+ },
+ {
+  "candidate": "DE|SUF",
+  "obs": 8,
+  "null_mean": 5.063,
+  "raw_p": 0.11437712457508498,
+  "holm_p": 1.0
+ }
+]

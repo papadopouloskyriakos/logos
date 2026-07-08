@@ -464,3 +464,45 @@ epochs:
     artifacts: [epochs/EPOCH-020/prereg.md, epochs/EPOCH-020/plan_hash.txt, epochs/EPOCH-020/result.json, reports/EPOCH020_ALLOGRAPH_ADAPTIVE_NULL.md, scripts/, data/allograph_adaptive_null/]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-021
+    frontier: "§12 (third power surface — ATTEMPT 2)"
+    gate: A
+    name: "redesigned component-channel value-recovery surface (asymmetric block amplitude + anchor-learned Fisher weighting)"
+    plan_hash: 397633786d941f96f96d769ea6781c6a7a3a09d85ec4e81fe28b17f9fffa66a6
+    completed: 2026-07-08
+    positive_control: "FAILED (PC_PASS=false): the redesign FIXED E019's diagnosed geometric tie (oracle ceiling 0.4514->0.8907; monotonic-q rho 1.0) but 2/4 PC sub-checks still fail — oracle ceiling 0.8907<0.9 (narrow) and LB-point 0.2567<0.5 (clear)."
+    adversarial_control: "PASSED (shuffled-identity max ARI 0.0058<<0.05) -> no leakage; fail is honest under-power."
+    verdict: "HARNESS_NOT_VALIDATED (fail-closed, 2nd attempt) -- but with a STRONG diagnosis disclosed pre-freeze: the residual LB-point failure is ANALYTICALLY INVARIANT to amplitude tuning (bisection-calibrated noise scales with A_ROW, self-cancelling row SNR gains; verified across A_ROW in {1.3,2,3,4}). The real barrier is ANCHOR COVERAGE: 12 anchors over an 18-class row axis cover only ~9/18 in expectation (birthday-problem gap) at LB's real noise -> no recovery algorithm overcomes it. This is a genuine information/coverage limit, NOT a harness bug -> consistent with the campaign's underdetermination thesis."
+    numbers: {oracle_ceiling: 0.8907, oracle_ceiling_bar: 0.9, lb_point: 0.2567, lb_point_bar: 0.5, adversarial_max_ari: 0.0058, la_point_ari_uncertified: 0.0787, la_gap_to_foothold: 0.4213, e019_oracle_for_cmp: 0.4514}
+    section12_status: "third power surface NOT validated (attempt 2). Diagnosis upgraded: the component-channel value-recovery surface is likely UNBUILDABLE at LA's real (anchors=0..12, 18-class) parameters -> honest §12 note: 2 valid surfaces (E003,E010) + a diagnosed coverage-impossibility for this channel."
+    layer: L1
+    licences_changed: none
+    la_touched: "descriptive only (uncertified; PC failed)"
+    deviations: none
+    committed_prediction: "modal LA_BELOW_FOOTHOLD or HARNESS_NOT_VALIDATED; OUTCOME = HARNESS_NOT_VALIDATED with a sharpened, disclosed root-cause (anchor coverage, not geometry)."
+    artifacts: [epochs/EPOCH-021/prereg.md, epochs/EPOCH-021/plan_hash.txt, epochs/EPOCH-021/result.json, epochs/EPOCH-021/DEVIATIONS.md, reports/EPOCH021_COMPONENT_POWER_SURFACE_V2.md, scripts/epoch021_component_power_surface_v2.py, data/component_power_surface_v2/]
+    successors_spawned: 5
+    substantive: true
+
+  - epoch_id: EPOCH-022
+    frontier: "§12 (dedicated adaptive-null family 3 of 3)"
+    gate: A
+    name: "dedicated LA-structure-matched adaptive-null family for A- prefixation (independent of E015's vacuous PC-LB gate)"
+    completed: 2026-07-08
+    reproduction: "A- obs 47 reproduced (null mean 24.9, p .0005)."
+    positive_control: "PASS (power 25/25 seeds at p<=.01; calibration false-graduation 0/300, CP95 upper .0099)."
+    null_design: "LA-matched: sign-unigram + word-length + doc structure preserved; PERMUTE 5,000 (+ bootstrap 2,000)."
+    verdict: "A_PREFIX_SURVIVES_ADAPTIVE_NULL -- single-confirmatory adaptive p (PERMUTE, independent of E015) = 0.0002 (0/5000 null >= 47; null max 39). Best-of-72-candidate deflation: maxT (correct, correlation-aware) p = 0.0002 (z 5.63 > null max-z 5.19); Bonferroni/Holm = 0.0144 (clears .05 family bar but NOT .01 in isolation -- honestly reported crude-vs-correct multiplicity divergence). A- is the SOLE survivor in the 72-member GORILA universe."
+    numbers: {obs: 47, permute_null_mean: 24.53, permute_null_max: 39, M_permute: 5000, p_single_permute: 0.0002, n_candidates: 72, p_maxT: 0.0002, z_obs_A: 5.63, p_bonferroni_holm: 0.0144, PC_power: "25/25", PC_calibration_fg: "0/300"}
+    section12_status: "dedicated adaptive-null families now 3 of 3 COMPLETE (E018, E020, E022)."
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    note: "This prices A-'s OWN null directly and strongly; it does NOT re-open E015's PC-LB morphology-recovery vacuity (A- still not gate-licensed at the recovery layer). A- is the campaign's strongest genuine LA-side positive: a productive positional prefix slot, no phonetic value, no language named."
+    committed_prediction: "modal SURVIVES; CONFIRMED at single-confirmatory AND best-of-family (maxT) bars; the crude Bonferroni divergence flagged honestly."
+    deviations: none
+    non_circular: "sign identities anonymous; no phonetic value; A- = positional slot only."
+    artifacts: [epochs/EPOCH-022/prereg.md, epochs/EPOCH-022/plan_hash.txt, epochs/EPOCH-022/result.json, reports/EPOCH022_APREFIX_ADAPTIVE_NULL.md, scripts/, data/aprefix_adaptive_null/]
+    successors_spawned: 5
+    substantive: true

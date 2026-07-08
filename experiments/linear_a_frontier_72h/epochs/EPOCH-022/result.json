@@ -1,0 +1,319 @@
+{
+ "task_id": "EPOCH-022",
+ "epoch": "EPOCH-022",
+ "frontier": "sec12-adaptive-null-family-3-of-3",
+ "gate": "A",
+ "name": "dedicated adaptive-null family for A- prefixation (E015/E1 positive), independent of PC-LB",
+ "plan_hash": "5b4547602f9e908a357c3851d44d464f41f8ee140545ee65d5ff26cba2556c3a",
+ "seed": 20260708,
+ "claim_ceiling": "L2/L3",
+ "la_touched": true,
+ "step1_reproduction": {
+  "obs": 47,
+  "p": 0.0004997501249375312,
+  "null_mean": 24.947,
+  "expected_obs": 47,
+  "expected_p_approx": 0.0004998,
+  "expected_null_mean_approx": 24.947,
+  "match": true
+ },
+ "step2_adaptive_null": {
+  "M_permute": 5000,
+  "N_bootstrap": 2000,
+  "permute_A_null_summary": {
+   "mean": 24.532,
+   "sd": 3.9898,
+   "p50": 24,
+   "p95": 31,
+   "max": 39
+  },
+  "bootstrap_A_null_summary": {
+   "mean": 24.833,
+   "sd": 4.2272,
+   "p50": 25,
+   "p95": 32,
+   "max": 39
+  },
+  "p_single_permute": 0.0001999600079984003,
+  "p_single_bootstrap": 0.0004997501249375312,
+  "lift_over_permute_null_mean": 1.916
+ },
+ "step3_family_deflation": {
+  "n_candidates": 72,
+  "p_single_confirmatory": 0.0001999600079984003,
+  "p_bonferroni": 0.014397,
+  "p_holm": 0.014397,
+  "p_maxT": 0.0001999600079984003,
+  "z_obs_A": 5.6314,
+  "maxT_null_summary": {
+   "mean": 2.5421,
+   "sd": 0.5111,
+   "p50": 2.4724605736855643,
+   "p95": 3.4874600322373426,
+   "max": 5.1941613455593165
+  },
+  "degenerate_sd_candidates": [],
+  "per_candidate_top10_by_raw_p": [
+   {
+    "candidate": "A|PRE",
+    "obs": 47,
+    "null_mean": 24.532,
+    "raw_p": 0.0001999600079984003,
+    "holm_p": 0.014397
+   },
+   {
+    "candidate": "ME|SUF",
+    "obs": 12,
+    "null_mean": 6.098,
+    "raw_p": 0.01219756048790242,
+    "holm_p": 0.866027
+   },
+   {
+    "candidate": "RA|SUF",
+    "obs": 22,
+    "null_mean": 15.531,
+    "raw_p": 0.036392721455708855,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "I|PRE",
+    "obs": 28,
+    "null_mean": 21.337,
+    "raw_p": 0.052589482103579284,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "JU|SUF",
+    "obs": 9,
+    "null_mean": 5.148,
+    "raw_p": 0.05798840231953609,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "TI|SUF",
+    "obs": 20,
+    "null_mean": 14.748,
+    "raw_p": 0.07338532293541292,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "TA\u2082|SUF",
+    "obs": 5,
+    "null_mean": 2.453,
+    "raw_p": 0.08638272345530894,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "QA|PRE",
+    "obs": 10,
+    "null_mean": 6.406,
+    "raw_p": 0.08798240351929613,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "*306|PRE",
+    "obs": 4,
+    "null_mean": 1.908,
+    "raw_p": 0.10997800439912017,
+    "holm_p": 1.0
+   },
+   {
+    "candidate": "DE|SUF",
+    "obs": 8,
+    "null_mean": 5.063,
+    "raw_p": 0.11437712457508498,
+    "holm_p": 1.0
+   }
+  ]
+ },
+ "step4_positive_control": {
+  "power": {
+   "n_seeds": 25,
+   "n_pass_at_0.01": 25,
+   "pass_rate": 1.0,
+   "pass_condition": ">=0.8 (20/25)",
+   "power_pass": true,
+   "detail": [
+    {
+     "seed": 0,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 1,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 2,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 3,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 4,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 5,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 6,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 7,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 8,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 9,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 10,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 11,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 12,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 13,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 14,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 15,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 16,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 17,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 18,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 19,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 20,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 21,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 22,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 23,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    },
+    {
+     "seed": 24,
+     "obs_plant": 45,
+     "p_plant": 0.0033222591362126247,
+     "k_stems_target": 45
+    }
+   ]
+  },
+  "calibration": {
+   "R": 300,
+   "n_false_graduations": 0,
+   "false_grad_rate": 0.0,
+   "false_grad_cp_upper_95": 0.009936,
+   "pass_condition": "CP-upper-95% <= 0.05",
+   "calibration_pass": true
+  },
+  "pc_pass": true
+ },
+ "verdict": "A_PREFIX_SURVIVES_ADAPTIVE_NULL",
+ "deviations": [
+  {
+   "id": "D1",
+   "kind": "pre-result-fix",
+   "status": "APPLIED_BEFORE_RESULT_WRITTEN",
+   "text": "PC-power planted-corpus construction: productivities() dedupes the word list into a set, so two IDENTICAL PLANT+stem words (the prereg's literal reading) collapse to one and do not mechanically guarantee rc[stem]>=2. Fixed to insert the bare stem as a standalone word (satisfies the `t in wset` branch directly) before any run's result.json was finalized -- same status as E020's pre-result bugfix, not an erratum. First-pass (flawed) run already showed power_pass=True (obs_plant 30-37, p_plant~0.0033); corrected run gives obs_plant=45 exactly on all 25 seeds, same p_plant, same power_pass=True. See DEVIATIONS.md."
+  }
+ ],
+ "n_docs": 618,
+ "n_gorila_words": 2424,
+ "n_candidates_universe": 72,
+ "search_receipt": {
+  "K_prior_epochs_computing_this_statistic": 2,
+  "prior_epochs": [
+   "E1(relphono)",
+   "E015"
+  ]
+ },
+ "runtime_s": 87.0
+}
