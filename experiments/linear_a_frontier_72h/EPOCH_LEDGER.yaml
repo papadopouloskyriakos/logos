@@ -905,3 +905,29 @@ epochs:
     artifacts: [epochs/EPOCH-038/prereg.md, epochs/EPOCH-038/plan_hash.txt, epochs/EPOCH-038/machinery.py, epochs/EPOCH-038/result.json, reports/EPOCH038_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-039
+    frontier: F12
+    gate: A
+    name: "Prefix paradigm vs A-only: does initial-concentration + a prefix inventory exist beyond A?"
+    plan_hash: "see epochs/EPOCH-039/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: 6 Holm-significant word-initial-enriched signs (U, KU, A, I, QA, *411) EXACT (51 signs tested); a-removed global asymmetry -0.107 EXACT (initial-concentrated, p 0.029); LEAVE-ONE-OUT drop HT -> a-removed asymmetry -0.042, p 0.294 (COLLAPSES, verified). Cross-site 2/6 a-removed-significant (HT p0.0005, Knossos p0.0115; Khania REVERSED +0.47). All confirmed."
+    positive_control: "PASSED (verified): the machinery detects a planted multi-prefix paradigm (4 planted prefixes, detect_asymmetry -0.54, p 0.0005) and has false-positive rate 0.05 on within-word-shuffled words. Valid multi-prefix detector."
+    verdict: "PREFIX_PARADIGM_BEYOND_A (frozen conjuncts met: PC passed AND a-removed global p<=0.05 AND >=2 non-A signs Holm-initial-enriched AND >=2 sites a-removed-significant). See scope for the robust/fragile split."
+    verdict_nuance: "TWO-PART honest read. ROBUST: a multi-sign PREFIX INVENTORY exists beyond A — 6 signs (A 0.91, QA 0.74, KU 0.66, U 0.61, I 0.53 initial-rate, + *411 1.0) are Holm-significant word-initial-enriched over the whole corpus. This is the solid finding: LA prefixation is NOT A-only. FRAGILE: the whole-inventory ENTROPY-CONCENTRATION surviving A-removal is HT-DRIVEN — globally significant (p 0.029) but COLLAPSES under leave-one-site-out (p 0.294 without Haghia Triada), only 2/6 sites individually significant, Khania reversed. So 'the aggregate initial-concentration persists beyond A across sites' is NOT cross-site-robust; the durable claim is the per-sign prefix INVENTORY."
+    numbers: {n_words: 1369, full_asymmetry: -0.223, full_null_p: 0.0005, a_removed_asymmetry: -0.107, a_removed_null_p: 0.029, a_removed_loo_drop_HT_asymmetry: -0.042, a_removed_loo_p: 0.294, prefix_inventory_signs: [["A", 0.906], ["QA", 0.744], ["KU", 0.664], ["U", 0.609], ["I", 0.533], ["*411", 1.0]], n_initial_enriched: 6, n_besides_A: 5, n_signs_tested: 51, cross_site_a_removed_sig: 2, cross_site_testable: 6, khania_reversed: 0.474, pc_false_pos_rate: 0.05}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "MORPHOLOGICAL-STRUCTURE positive (L2/L3), robust part = a multi-sign PREFIX INVENTORY: Linear A has >=6 productive word-initial-enriched signs (A, QA, KU, U, I, *411), not just A- => prefixation is a SYSTEM, coherent with E038's prefixing typology and E025/E034's A- class. FRAGILE part (recorded, not certified): the aggregate entropy-concentration beyond A is Haghia-Triada-driven (LOO collapses). Sign names are ANONYMOUS positional identifiers; 'prefix' = word-initial enrichment, NOT a grammatical morpheme with meaning or phonetic value; no LANGUAGE_ID. No transfer licence earned. NOTE: GLM left result.json layer=None; orchestrator sets L2/L3 (this ledger is authoritative)."
+    committed_prediction: "modal PARADIGM_BEYOND_A or A_ONLY; OUTCOME = PARADIGM_BEYOND_A. The robust core is the 6-sign prefix inventory; the aggregate-concentration-beyond-A is HT-driven (honest downgrade)."
+    deviations:
+      - "result.json layer field returned None by GLM; orchestrator sets layer=L2/L3 in this ledger (authoritative). Minor schema omission; all numbers verified."
+      - "Verdict rule required >=2 a-removed-significant sites (met: HT+Knossos) but NOT LOO-survival; the LOO collapse is recorded as the fragility caveat, not a verdict change (append-only honesty)."
+    non_circular: "Signs anonymous; entropy/initial-rate observed; LB control-only; no phonetics/meaning/language-ID; no known-value model input on the LA side."
+    architecture_note: "Sixteenth gated-runner epoch (repairs=2). Coordinator scrutiny split a mechanically-'paradigm' verdict into a ROBUST prefix inventory (6 signs, Holm) + a FRAGILE HT-driven aggregate (LOO fails) — preventing over-reading the PARADIGM_BEYOND_A label as a cross-site-robust claim. Also corrected the missing layer field."
+    artifacts: [epochs/EPOCH-039/prereg.md, epochs/EPOCH-039/plan_hash.txt, epochs/EPOCH-039/machinery.py, epochs/EPOCH-039/result.json, epochs/EPOCH-039/_run_full.json, reports/EPOCH039_REPORT.md]
+    successors_spawned: 5
+    substantive: true

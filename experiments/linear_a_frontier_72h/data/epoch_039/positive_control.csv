@@ -1,0 +1,10 @@
+metric,value
+pc_verdict,PASSED
+detect_p,0.0005
+detect_asymmetry,-0.5372
+detect,1
+false_pos_rate,0.05
+fp_ok,1
+n_fp_sets,20
+n_planted_prefixes,4
+attach_rate,0.55

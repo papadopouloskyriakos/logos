@@ -1,0 +1,78 @@
+{
+  "task_id": "EPOCH-039",
+  "method": "PREFIX PARADIGM vs A-ONLY (morphology; L2/L3). Positional Shannon-entropy asymmetry (H_first - H_last; <0 => word-INITIAL more concentrated) computed (a) over ALL len>=2 words and (b) EXCLUDING words whose first sign is A (A-removed). Within-word permutation null (>=2000 draws; permutes sign order WITHIN each word, preserving each word's multiset+length => calibrated); one-sided p for initial-concentration. PREFIX INVENTORY: signs with >=15 occurrences whose word-INITIAL rate significantly exceeds the within-word permutation null (one-sided p<=0.05, Holm-corrected across tested signs). Positive control on Linear B (DAMOS) gates the verdict: DETECT (plant >=3 distinct signs as productive prefixes; A-removed-style concentration SURVIVES removing ONE planted prefix => multi-prefix paradigm detected) AND false-positive control (within-word-shuffled words, rejection rate <=0.10 across >=20 sets). Cross-site held-out per site with >=50 words; leave-one-site-out on Haghia Triada. Pure L2/L3 statistics on ANONYMOUS sign ids; no phonetics/sound/meaning/reading. 'prefix' = word-INITIAL positional enrichment (a distributional statistic), NOT a grammatical morpheme with meaning.",
+  "result": "The word-INITIAL concentration is a genuine PREFIX PARADIGM beyond sign A, not an A-only artifact. The FULL asymmetry is initial-concentrated (H_first=5.5292 < H_last=5.7518; asymmetry=-0.2227 bits; within-word permutation p=0.0005). Crucially, after EXCLUDING all A-initial words (n=155 removed, 1214 remain), the asymmetry REMAINS significantly initial-concentrated (H_first=5.6605 < H_last=5.7670; asymmetry=-0.1065 bits; p=0.0295). The prefix inventory contains 6 Holm-significant word-initial-enriched signs, of which 5 are BESIDES A (U, KU, I, QA, *411; all Holm p=0.0255), each with initial-rates far above chance (0.53-1.00). The A-removed concentration holds in 2 of 6 testable sites (Haghia Triada p=0.0005; Knossos p=0.0115) and survives leave-one-site-out excluding Haghia Triada (asymmetry=-0.0423, p=0.2944 — direction-consistent though non-significant once the largest site is removed). The positive control PASSED: a planted 4-prefix paradigm is detected as multi-prefix after removing one planted prefix (detect p=0.0005, asymmetry=-0.5372) with a 0.05 false-positive rate (<=0.10). NOTE: 'prefix paradigm' is a distributional observation (a SET of signs enriched at word-INITIAL position); it is NOT a grammatical/meaning claim.",
+  "verdict": "PREFIX_PARADIGM_BEYOND_A",
+  "numbers": {
+    "global": {
+      "n_words_len_ge_2": 1369,
+      "n_A_initial": 155,
+      "n_A_initial_removed": 1214,
+      "full_H_first": 5.5292,
+      "full_H_last": 5.7518,
+      "full_asymmetry_H_first_minus_H_last": -0.2227,
+      "full_null_p_initial_concentration": 0.0005,
+      "full_initial_concentrated": true,
+      "a_removed_H_first": 5.6605,
+      "a_removed_H_last": 5.7670,
+      "a_removed_asymmetry_H_first_minus_H_last": -0.1065,
+      "a_removed_null_p_initial_concentration": 0.0295,
+      "a_removed_initial_concentrated": true
+    },
+    "prefix_inventory": {
+      "n_initial_enriched_signs": 6,
+      "n_initial_enriched_besides_A": 5,
+      "n_signs_tested": 51,
+      "min_sign_occ": 15,
+      "holm_alpha": 0.05,
+      "significant_signs": [
+        {"sign": "U", "initial_rate": 0.6094, "holm_p": 0.0255, "raw_p": 0.0005, "n_initial": 39, "n_contain": 64},
+        {"sign": "KU", "initial_rate": 0.6642, "holm_p": 0.0255, "raw_p": 0.0005, "n_initial": 89, "n_contain": 134},
+        {"sign": "A", "initial_rate": 0.9064, "holm_p": 0.0255, "raw_p": 0.0005, "n_initial": 155, "n_contain": 171},
+        {"sign": "I", "initial_rate": 0.5333, "holm_p": 0.0255, "raw_p": 0.0005, "n_initial": 32, "n_contain": 60},
+        {"sign": "QA", "initial_rate": 0.7436, "holm_p": 0.0255, "raw_p": 0.0005, "n_initial": 29, "n_contain": 39},
+        {"sign": "*411", "initial_rate": 1.0000, "holm_p": 0.0255, "raw_p": 0.0005, "n_initial": 15, "n_contain": 15}
+      ]
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0005,
+      "detect_asymmetry": -0.5372,
+      "detect": true,
+      "false_pos_rate": 0.05,
+      "fp_ok": true,
+      "n_fp_sets": 20,
+      "n_planted_prefixes": 4,
+      "attach_rate": 0.55
+    },
+    "cross_site": {
+      "n_sites_testable": 6,
+      "n_sites_a_removed_sig": 2,
+      "loo_excluded": "Haghia Triada",
+      "loo_a_removed_asymmetry": -0.0423,
+      "loo_a_removed_p": 0.2944,
+      "per_site": {
+        "Haghia Triada": {"n": 694, "n_a_removed": 653, "asymmetry": -0.2429, "p": 0.0005, "H_first": 5.2193, "H_last": 5.4623, "sig": true},
+        "Khania": {"n": 120, "n_a_removed": 100, "asymmetry": 0.4739, "p": 0.9940, "H_first": 5.0191, "H_last": 4.5451, "sig": false},
+        "Knossos": {"n": 61, "n_a_removed": 51, "asymmetry": -0.4864, "p": 0.0115, "H_first": 4.4261, "H_last": 4.9125, "sig": true},
+        "Phaistos": {"n": 58, "n_a_removed": 51, "asymmetry": -0.2521, "p": 0.1059, "H_first": 4.7729, "H_last": 5.0250, "sig": false},
+        "Palaikastro": {"n": 57, "n_a_removed": 47, "asymmetry": -0.0613, "p": 0.3713, "H_first": 4.1712, "H_last": 4.2325, "sig": false},
+        "Zakros": {"n": 132, "n_a_removed": 113, "asymmetry": 0.0936, "p": 0.7331, "H_first": 5.1547, "H_last": 5.0612, "sig": false}
+      }
+    }
+  },
+  "key_findings": [
+    "PREFIX PARADIGM BEYOND A: the word-INITIAL concentration is NOT driven only by sign A. After excluding all 155 A-initial words (1214 remain), the asymmetry stays significantly initial-concentrated (H_first=5.6605 < H_last=5.7670; asymmetry=-0.1065 bits; within-word permutation p=0.0295).",
+    "Multi-sign prefix inventory: 6 signs are Holm-significant word-initial-enriched (Holm p=0.0255, alpha=0.05), of which 5 are BESIDES A — U (init rate 0.609), KU (0.664), I (0.533), QA (0.744), *411 (1.000) — each with initial-rates far above the within-word permutation null. This is a SET of word-initial markers, not a single-sign effect.",
+    "Positive control PASSED: a planted 4-prefix paradigm is correctly detected as multi-prefix after removing ONE planted prefix (detect p=0.0005, asymmetry=-0.5372), and the false-positive rate on within-word-shuffled words is 0.05 (<=0.10 over 20 sets). Machinery is informative; verdict unlocked.",
+    "Cross-site: A-removed initial-concentration is significant in 2 of 6 testable sites (Haghia Triada p=0.0005; Knossos p=0.0115); 4 of 6 sites have negative (initial-concentrated) asymmetry. Leave-one-site-out excluding Haghia Triada gives asymmetry=-0.0423 (direction-consistent, p=0.2944 non-significant once the largest site is removed — the global signal is concentrated in Haghia Triada).",
+    "Caveat: 'prefix paradigm' is a distributional observation (a SET of signs enriched at word-INITIAL position relative to a within-word permutation null). It is NOT a grammatical or meaning claim; signs carry no phonetic value, sound, meaning, or reading."
+  ],
+  "successor_hypotheses": [
+    "EPOCH-040: Decompose the prefix inventory by sign CLASS — are the 5 non-A initial-enriched signs (U, KU, I, QA, *411) a coherent distributional class (shared positional/collocational profile), or an arbitrary set of high-initial-frequency signs? Test via clustering on within-corpus positional profiles.",
+    "EPOCH-041: Test whether the prefix paradigm is PRODUCTIVE (combines with diverse stem sets) vs LEXICALIZED (each prefix sign co-occurs with a small fixed stem set). For each initial-enriched sign, measure the entropy/diversity of the following stem (positions 2+) conditional on that prefix.",
+    "EPOCH-042: Cross-script comparison — does Linear B show an analogous multi-sign word-initial-enriched set under the same within-word permutation null, or is initial-concentration a Linear-A-specific distributional signature?",
+    "EPOCH-043: Power analysis on the smaller sites — the A-removed concentration is non-significant at Phaistos (p=0.106, n=51) and Palaikastro (p=0.371, n=47) despite negative asymmetry; is this genuine heterogeneity or an underpowering artifact? Bootstrap a pooled small-site estimate.",
+    "EPOCH-044: Conditional positional entropy along the FULL word (not just first/last) — does the initial concentration extend to position 2, or is it strictly a word-boundary (position-1) effect? Map the entropy profile across all positions."
+  ]
+}

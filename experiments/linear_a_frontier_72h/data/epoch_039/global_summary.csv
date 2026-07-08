@@ -1,0 +1,20 @@
+metric,value
+n_words_len_ge_2,1369
+n_A_initial,155
+n_A_initial_removed,1214
+full_H_first,5.5292
+full_H_last,5.7518
+full_asymmetry_H_first_minus_H_last,-0.2227
+full_null_p_initial_concentration,0.0005
+full_initial_concentrated,1
+a_removed_H_first,5.6605
+a_removed_H_last,5.7670
+a_removed_asymmetry_H_first_minus_H_last,-0.1065
+a_removed_null_p_initial_concentration,0.0295
+a_removed_initial_concentrated,1
+n_initial_enriched_signs,6
+n_initial_enriched_besides_A,5
+n_signs_tested_inventory,51
+loo_excluded_site,Haghia Triada
+loo_a_removed_asymmetry,-0.0423
+loo_a_removed_p,0.2944

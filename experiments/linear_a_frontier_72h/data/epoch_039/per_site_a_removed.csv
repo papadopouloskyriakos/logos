@@ -1,0 +1,7 @@
+site,n_words,n_a_removed,asymmetry,p_initial_concentration,H_first,H_last,sig
+Haghia Triada,694,653,-0.2429,0.0005,5.2193,5.4623,1
+Khania,120,100,0.4739,0.9940,5.0191,4.5451,0
+Knossos,61,51,-0.4864,0.0115,4.4261,4.9125,1
+Phaistos,58,51,-0.2521,0.1059,4.7729,5.0250,0
+Palaikastro,57,47,-0.0613,0.3713,4.1712,4.2325,0
+Zakros,132,113,0.0936,0.7331,5.1547,5.0612,0

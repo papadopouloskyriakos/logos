@@ -1,0 +1,122 @@
+{
+  "verdict": "PREFIX_PARADIGM_BEYOND_A",
+  "global": {
+    "full_asymmetry": -0.2226902665464925,
+    "full_null_p": 0.0004997501249375312,
+    "a_removed_asymmetry": -0.10650229977397085,
+    "a_removed_null_p": 0.02948525737131434,
+    "n_words": 1369,
+    "n_a_initial_removed": 155,
+    "full_H_first": 5.529156501025168,
+    "full_H_last": 5.751846767571661,
+    "a_removed_H_first": 5.66048781138656,
+    "a_removed_H_last": 5.766990111160531,
+    "full_initial_concentrated": true,
+    "a_removed_initial_concentrated": true
+  },
+  "prefix_inventory": {
+    "n_initial_enriched_signs": 6,
+    "n_besides_A": 5,
+    "signs": [
+      [
+        "U",
+        0.609375,
+        0.025487256371814093
+      ],
+      [
+        "KU",
+        0.664179104477612,
+        0.025487256371814093
+      ],
+      [
+        "A",
+        0.9064327485380117,
+        0.025487256371814093
+      ],
+      [
+        "I",
+        0.5333333333333333,
+        0.025487256371814093
+      ],
+      [
+        "QA",
+        0.7435897435897436,
+        0.025487256371814093
+      ],
+      [
+        "*411",
+        1.0,
+        0.025487256371814093
+      ]
+    ],
+    "n_tested": 51
+  },
+  "positive_control": {
+    "pc_verdict": "PASSED",
+    "detect_p": 0.0004997501249375312,
+    "detect_asymmetry": -0.5371806690552274,
+    "detect": true,
+    "false_pos_rate": 0.05,
+    "fp_ok": true,
+    "n_fp_sets": 20,
+    "n_planted_prefixes": 4,
+    "attach_rate": 0.55
+  },
+  "cross_site": {
+    "n_sites_testable": 6,
+    "n_sites_a_removed_sig": 2,
+    "loo_excluded": "Haghia Triada",
+    "loo_a_removed_p": 0.2943528235882059,
+    "loo_a_removed_asymmetry": -0.04232772707735766,
+    "per_site": {
+      "Haghia Triada": {
+        "n": 694,
+        "n_a_removed": 653,
+        "asymmetry": -0.24294463557663448,
+        "p": 0.0004997501249375312,
+        "H_first": 5.2193134393883485,
+        "H_last": 5.462258074964983
+      },
+      "Khania": {
+        "n": 120,
+        "n_a_removed": 100,
+        "asymmetry": 0.4739318034013067,
+        "p": 0.9940029985007496,
+        "H_first": 5.019079570624175,
+        "H_last": 4.545147767222868
+      },
+      "Knossos": {
+        "n": 61,
+        "n_a_removed": 51,
+        "asymmetry": -0.48644382955242627,
+        "p": 0.011494252873563218,
+        "H_first": 4.426081757474689,
+        "H_last": 4.912525587027115
+      },
+      "Phaistos": {
+        "n": 58,
+        "n_a_removed": 51,
+        "asymmetry": -0.25205397984849665,
+        "p": 0.10594702648675662,
+        "H_first": 4.7729292050905725,
+        "H_last": 5.024983184939069
+      },
+      "Palaikastro": {
+        "n": 57,
+        "n_a_removed": 47,
+        "asymmetry": -0.061289032366728335,
+        "p": 0.3713143428285857,
+        "H_first": 4.1711941706424485,
+        "H_last": 4.232483203009177
+      },
+      "Zakros": {
+        "n": 132,
+        "n_a_removed": 113,
+        "asymmetry": 0.09356507739117781,
+        "p": 0.7331334332833583,
+        "H_first": 5.154744644399892,
+        "H_last": 5.061179567008714
+      }
+    }
+  }
+}
