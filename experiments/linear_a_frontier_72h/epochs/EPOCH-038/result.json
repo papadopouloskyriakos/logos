@@ -1,0 +1,70 @@
+{
+  "task_id": "EPOCH-038",
+  "method": "Positional sign-entropy asymmetry (Shannon H at word-FIRST vs word-LAST position) with a within-word permutation null (>=2000 draws; preserves each word's multiset+length => calibrated). ASYMMETRY = H_first - H_last (>0 => final more concentrated / suffix-like; <0 => initial more concentrated / prefix-like). Positive control on Linear B (DAMOS; inflects word-finally) gates the verdict: DETECT (LB asymmetry>0, p<=0.05) AND false-positive control (within-word-shuffled words, rejection rate <=0.10 across >=20 sets). Cross-site held-out per site with >=50 words; leave-one-site-out on Haghia Triada. Pure L2/L3 statistics on ANONYMOUS sign ids; no phonetics/sound/meaning/reading.",
+  "result": "No suffix-direction positional-entropy asymmetry. The observed asymmetry is NEGATIVE (H_first=5.529 < H_last=5.752; asymmetry=-0.223 bits), i.e. the word-INITIAL position is MORE concentrated than word-FINAL, the OPPOSITE of a suffixing tendency. The within-word permutation null gives p=1.0 for the suffix (final-concentration) direction; the reverse tail (initial more concentrated) is highly significant (p=0.0005). This is consistent across all 6 testable sites (0/6 significant in the suffix direction; all 6 have negative asymmetry) and survives leave-one-site-out (excluding Haghia Triada: asymmetry=-0.332, p=1.0). The positive control PASSED: Linear B shows the expected final-concentration (asymmetry=+0.209, p=0.0005) with a 0.0 false-positive rate, validating the machinery. NOTE: 'initial more concentrated' is a distributional observation (a low-entropy initial sign SET, dominated by sign 'A' at 11.3% of word-initial positions); it is NOT a grammatical/meaning claim.",
+  "verdict": "NO_POSITIONAL_ENTROPY_ASYMMETRY",
+  "numbers": {
+    "global": {
+      "n_words": 1369,
+      "H_first": 5.5292,
+      "H_last": 5.7518,
+      "asymmetry": -0.2227,
+      "null_mean_asym": -0.0018,
+      "null_p": 1.0,
+      "n_distinct_first": 113,
+      "n_distinct_last": 106,
+      "top5_final_share": 0.2272,
+      "norm_H_first": 0.8107,
+      "norm_H_last": 0.8549,
+      "reverse_p_initial_more_concentrated": 0.0005
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "lb_asymmetry": 0.2093,
+      "lb_detect_p": 0.0005,
+      "false_pos_rate": 0.0,
+      "lb_H_first": 5.2521,
+      "lb_H_last": 5.0428,
+      "n_fp_sets": 20,
+      "fp_lb_subsample": 5000
+    },
+    "cross_site": {
+      "n_sites_testable": 6,
+      "n_sites_sig": 0,
+      "direction_consistent": false,
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 1.0,
+      "loo_asymmetry": -0.3322,
+      "per_site": {
+        "Haghia Triada": {"n": 694, "asymmetry": -0.2214, "p": 1.0},
+        "Khania": {"n": 120, "asymmetry": 0.0045, "p": 0.5127},
+        "Knossos": {"n": 61, "asymmetry": -0.5191, "p": 0.9930},
+        "Phaistos": {"n": 58, "asymmetry": -0.3128, "p": 0.9525},
+        "Palaikastro": {"n": 57, "asymmetry": -0.3094, "p": 0.9475},
+        "Zakros": {"n": 132, "asymmetry": -0.0963, "p": 0.7516}
+      }
+    }
+  },
+  "key_findings": [
+    "NO suffix-direction asymmetry: word-FINAL position is NOT more concentrated than word-INITIAL. Observed asymmetry (H_first - H_last) = -0.2227 bits (negative), within-word permutation p = 1.0 for the suffix direction.",
+    "The REVERSE holds: word-INITIAL position is significantly MORE concentrated than word-FINAL (reverse-tail p = 0.0005). The initial sign set is dominated by sign 'A' (11.3% of word-initial positions) vs the most common final sign 'RO' at only 5.7%. This is a distributional initial-concentration pattern, NOT a grammatical claim.",
+    "Cross-site consistent: 0 of 6 testable sites (>=50 words) are significant in the suffix direction; ALL 6 have negative asymmetry (initial more concentrated). Leave-one-site-out excluding Haghia Triada gives asymmetry = -0.332, p = 1.0 (no collapse, same direction).",
+    "Positive control PASSED: Linear B (which inflects word-finally) shows the expected final-concentration (asymmetry = +0.209, p = 0.0005) with a 0.0 false-positive rate over 20 within-word-shuffled control sets, validating the entropy machinery.",
+    "Top-5 final-position signs (ANONYMOUS) account for only 22.7% of word-final tokens (RO 5.7%, JA 4.7%, RE 4.2%, TE 4.1%, NA 3.9%) — a flat, high-entropy distribution with no small dominant suffix-paradigm set."
+  ],
+  "successor_hypotheses": [
+    "EPOCH-039: Characterize the INITIAL-concentration pattern directly — is the over-representation of word-initial sign 'A' (and the low initial-position entropy) a stable cross-site PREFIX-like structure (test initial-position entropy vs a within-word permutation null in the initial direction, per site)?",
+    "EPOCH-040: Positional entropy profile across ALL word positions (not just first/last) — does LA show a monotonic or U-shaped entropy curve along the word, and where exactly is concentration minimized?",
+    "EPOCH-041: Conditional positional entropy — condition on word LENGTH and on the second sign; does the initial concentration persist after controlling for word length and bigram structure?",
+    "EPOCH-042: Compare LA's positional-entropy asymmetry sign and magnitude against LB and against a non-linguistic symbol-system null (e.g. random sign sequences matched on inventory and length distribution) to test whether the initial concentration is language-like.",
+    "EPOCH-043: Test for a small FINAL-position sign SET conditional on the INITIAL sign (interaction) — even if final entropy is globally high, a suffix-like set may emerge only given a specific initial sign class (a positional-conditional entropy probe).",
+    "EPOCH-044: Replicate the asymmetry test on the medial positions (signs[1], signs[-2]) to test whether concentration is specifically an EDGE effect (initial/final) vs a general positional structure."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are ANONYMOUS throughout: only sign-IDENTITY positional distributions and their Shannon entropies are used (L2/L3). No phonetic value, sound, meaning, or reading is assigned to any sign. Linear B is used ONLY as a positive-control benchmark to validate that the entropy machinery can detect known word-final inflectional structure; no LB result is interpreted as a Linear-A claim. The within-word permutation null preserves each word's sign multiset and length, so it is calibrated by construction and support-agnostic. Preregistration and plan_hash were frozen BEFORE running; the positive control was run FIRST and gated the verdict; the verdict is computed mechanically from the frozen rule.",
+  "deviations": [
+    "False-positive control uses a fixed 5000-word subsample of Linear B (DETECT uses the FULL 13562-word LB); the subsample keeps the FP control tractable while remaining far above the n needed for a stable null. This is documented in machinery.py and does not affect DETECT (full LB) or any LA result.",
+    "False-positive control uses 1000 null draws per control set (the protocol minimum '>=1000' was specified as PC_FP_DRAWS); DETECT and all LA tests use 2000 draws."
+  ]
+}

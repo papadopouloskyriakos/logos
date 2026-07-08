@@ -1,0 +1,17 @@
+metric,value
+n_words_len_ge_2,1369
+H_first,5.5292
+H_last,5.7518
+asymmetry_H_first_minus_H_last,-0.2227
+null_mean_asymmetry,-0.0018
+p_suffix_direction,1.0
+p_initial_more_concentrated_reverse_tail,0.0005
+n_distinct_first,113
+n_distinct_last,106
+norm_H_first,0.8107
+norm_H_last,0.8549
+top5_final_share,0.2272
+loo_excluded_site,Haghia Triada
+loo_n,675
+loo_asymmetry,-0.3322
+loo_p_suffix_direction,1.0

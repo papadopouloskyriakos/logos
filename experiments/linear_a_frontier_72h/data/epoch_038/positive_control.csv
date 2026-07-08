@@ -1,0 +1,9 @@
+test,outcome
+LB_detect_asymmetry_gt_0,0.2093
+LB_detect_p,0.0005
+LB_detect_pass,True
+false_positive_rate,0.0
+false_positive_pass_le_0.10,True
+n_fp_sets,20
+fp_lb_subsample,5000
+pc_verdict,PASSED

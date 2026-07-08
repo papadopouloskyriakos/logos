@@ -881,3 +881,27 @@ epochs:
     artifacts: [epochs/EPOCH-037/prereg.md, epochs/EPOCH-037/plan_hash.txt, epochs/EPOCH-037/machinery.py, epochs/EPOCH-037/result.json, reports/EPOCH037_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-038
+    frontier: F12
+    gate: A
+    name: "Positional sign-entropy asymmetry (final-suffix concentration?) — morphology-typology probe"
+    plan_hash: "see epochs/EPOCH-038/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: LA H_first=5.529 < H_last=5.752, asymmetry -0.223 (INITIAL more concentrated) EXACT; per-site 5/6 initial-concentrated (HT -0.221, Knossos -0.519, Phaistos -0.313, Palaikastro -0.309, Zakros -0.096; Khania +0.004 neutral); LB PC H_first=5.252 > H_last=5.043, asymmetry +0.209 (FINAL concentrated, suffixing). Typological contrast confirmed."
+    positive_control: "PASSED (verified): the entropy machinery detects Linear B's KNOWN word-final grammatical concentration (asymmetry +0.209, p=0.0005, final < initial entropy) and has false-positive rate 0.0 on within-word-shuffled words. Valid detector; LA's opposite direction is therefore a real signal, not a dead detector."
+    verdict: "NO_POSITIONAL_ENTROPY_ASYMMETRY (for the pre-registered SUFFIX hypothesis final<initial: REJECTED, null_p=1.0). SUBSTANTIVE REVERSAL: the OPPOSITE holds — word-INITIAL entropy is significantly LOWER than word-final (initial more concentrated), global reverse p=0.0005."
+    numbers: {n_words: 1369, H_first: 5.529, H_last: 5.752, asymmetry_first_minus_last: -0.223, null_p_suffix: 1.0, reverse_p_initial_concentrated: 0.0005, n_distinct_first: 113, n_distinct_last: 106, top5_final_share: 0.227, lb_asymmetry: 0.209, lb_H_first: 5.252, lb_H_last: 5.043, sites_testable: 6, sites_initial_concentrated: 5, per_site_asymmetry: {Haghia_Triada: -0.221, Zakros: -0.096, Khania: 0.004, Knossos: -0.519, Phaistos: -0.313, Palaikastro: -0.309}}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "The pre-registered suffix-concentration hypothesis is REJECTED, with a strong SUBSTANTIVE by-product: Linear A is word-INITIAL-concentrated (prefixing-like), the OPPOSITE of Linear B/Greek which is word-FINAL-concentrated (suffixing/inflectional) — verified on both scripts with the same machinery. Global reverse significant (p=0.0005), directionally consistent 5/6 sites (per-site reverse significance not formally certified -> 'strongly suggested, not fully cross-site-certified'). Coheres with the A-prefix productive class (E025/E034). TYPOLOGICAL IMPLICATION (L2/L3, carefully bounded): LA's positional morphology is initial-marked, structurally INCONSISTENT with a Greek-like final-inflectional system — this is a STRUCTURAL datum, NOT a language identification (LANGUAGE_ID licence remains NOT_EARNED; no language named, no phonetic value). No transfer licence earned."
+    committed_prediction: "modal FINAL_SUFFIX_CONCENTRATION or NO_ASYMMETRY; OUTCOME = NO_POSITIONAL_ENTROPY_ASYMMETRY (suffix rejected) with a significant REVERSE (initial-concentration). The suffixing/Greek-like expectation is falsified; LA is prefixing-leaning."
+    deviations:
+      - "FP control uses a 5000-word LB subsample + 1000 null draws (tractability); DETECT uses full LB (13562) + 2000 draws. Does not affect DETECT or LA results."
+    non_circular: "Signs anonymous; entropy is distributional; LB control-only (validates the detector + provides the suffixing contrast); no phonetics/meaning/language-ID."
+    architecture_note: "Fifteenth gated-runner epoch (repairs=2). A rejected hypothesis whose REVERSAL is the finding — coordinator verified the LA-vs-LB typological contrast (initial- vs final-concentration) on both scripts and bounded the language-typology implication to L2/L3 (no LANGUAGE_ID claim). The entropy metric avoided E027's count-metric bias (PC passed cleanly)."
+    artifacts: [epochs/EPOCH-038/prereg.md, epochs/EPOCH-038/plan_hash.txt, epochs/EPOCH-038/machinery.py, epochs/EPOCH-038/result.json, reports/EPOCH038_REPORT.md]
+    successors_spawned: 5
+    substantive: true
