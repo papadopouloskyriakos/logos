@@ -808,3 +808,27 @@ epochs:
     artifacts: [epochs/EPOCH-034/prereg.md, epochs/EPOCH-034/plan_hash.txt, epochs/EPOCH-034/machinery.py, epochs/EPOCH-034/result.json, reports/EPOCH034_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-035
+    frontier: F10
+    gate: A
+    name: "Terminal total-slot: recurring word-form in inscription-FINAL position (KU-RO-slot, tested anonymously)"
+    plan_hash: "see epochs/EPOCH-035/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed top inscription-FINAL forms: NI 22/71 (enrich 0.31), KU-RO 12/36 (0.33), CYP 12/48 (0.25), VIN 10/42 (0.24), GRA 10/61 (0.16) — EXACT match. Candidate NI cross-site weak: HT p 0.055 (n.s.), Khania p 0.27; LOO drop HT p 0.132 (fails). All confirmed."
+    positive_control: "PASSED (verified): position-permutation null detects a planted terminal marker (p=0.0, correct direction), false-positive rate 0.067 <= 0.10. Calibrated."
+    verdict: "TERMINAL_TOTAL_SLOT_SITE_LOCAL: the top terminal candidate (NI) is globally over-represented in inscription-final position (p=0.017) BUT 0/2 sites individually significant and it collapses under leave-one-site-out (p 0.132). No cross-site-robust single total-slot form."
+    numbers: {candidate_form: NI, candidate_total: 71, candidate_final: 22, candidate_final_enrichment: 0.31, candidate_null_p: 0.017, candidate_initial_rate: 0.085, top_final_forms: [[NI, 22, 71], ["KU-RO", 12, 36], [CYP, 12, 48], [VIN, 10, 42], [GRA, 10, 61], [A, 7, 19]], kuro_final_enrichment: 0.33, pc_false_pos_rate: 0.067, sites_testable: 2, sites_sig: 0, loo_excluded: "Haghia Triada", loo_p: 0.132}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "SITE_LOCAL / weak result with a coherent structural picture: the inscription-FINAL (total/last-entry) slot is SHARED among several commodity-logogram word-forms (NI/CYP/VIN/GRA, each ~16-31% final) AND the mission-named KU-RO total-word (33% final) — no single form dominates the terminal slot robustly across sites. KEY ASYMMETRY vs E034: document-INITIAL (heading) structure is GLOBAL+LOO-robust (A-, E034), but document-FINAL (total) structure is WEAK + not cross-site-robust. Consistent with 'the last line is either the final commodity entry or a KU-RO total' — a modest, site-variable terminal convention rather than a fixed total-slot. STRICTLY POSITIONAL L2/L3; forms are anonymous sign sequences; KU-RO's final-enrichment is a POSITION statistic, NOT a reading of it as 'total'. No transfer licence."
+    committed_prediction: "modal CROSS_SITE_ROBUST or SITE_LOCAL; OUTCOME = SITE_LOCAL. The mission-named KU-RO terminal total-slot is real but modest (0.33 final-enrichment) and shares the terminal slot with commodity logograms; not a dominant cross-site-robust total marker."
+    deviations:
+      - "Candidate NI has >=10 occurrences in only 2 sites; the aggregate final-slot concentration fallback was also run (both agree: not cross-site robust). Primary metric = candidate, as pre-committed."
+    non_circular: "Candidate selected by FINAL COUNT pre-committed in prereg (no post-hoc p-hacking); forms anonymous; KU-RO enrichment is positional only; LB control-only; no phonetics/meaning."
+    architecture_note: "Twelfth gated-runner epoch (repairs=0). Symmetric counterpart to E034 (document-end vs document-start). Coordinator surfaced the initial-vs-final asymmetry (strong heading slot, weak total slot) and the shared commodity+KU-RO terminal structure — the substantive read beyond the SITE_LOCAL label."
+    artifacts: [epochs/EPOCH-035/prereg.md, epochs/EPOCH-035/plan_hash.txt, epochs/EPOCH-035/machinery.py, epochs/EPOCH-035/result.json, reports/EPOCH035_REPORT.md]
+    successors_spawned: 5
+    substantive: true

@@ -1,0 +1,79 @@
+{
+  "task_id": "EPOCH-035",
+  "method": "TERMINAL TOTAL-SLOT: inscription-FINAL word-form over-representation. Candidate = word-form with most inscription-FINAL occurrences among forms with total>=8 AND final>=5 (frozen selection rule, by final count). Metric = candidate final-position enrichment (final occurrences / all occurrences in >=2-word inscriptions). Null = within-inscription word-order position permutation (>=2000 draws, one-sided). LB positive control (DAMOS, seeded pseudo-inscriptions, no site metadata) gates the verdict: DETECT planted terminal bias + FALSE-POSITIVE on position-randomized sets.",
+  "result": "Global candidate (anonymous single-sign sequence 'NI') shows significant inscription-FINAL enrichment (final_enrichment=0.310, p=0.017, initial_rate=0.085 control). However the effect is NOT robust across sites: only 2 sites have >=10 candidate occurrences and NEITHER is individually significant (Haghia Triada p=0.055, Khania p=0.266); the aggregate final-slot concentration fallback yields only 1/5 sites significant (Haghia Triada alone); and leave-one-site-out excluding Haghia Triada collapses the global signal (p=0.132). The terminal-slot structure is concentrated in / driven by the largest site.",
+  "verdict": "TERMINAL_TOTAL_SLOT_SITE_LOCAL",
+  "numbers": {
+    "n_inscriptions": 1341,
+    "n_qualifying": 415,
+    "candidate": {
+      "form_signs": "NI",
+      "total_count": 71,
+      "final_count": 22,
+      "final_enrichment": 0.30985915492957744,
+      "null_mean": 14.6915,
+      "null_p": 0.017,
+      "initial_rate": 0.08450704225352113
+    },
+    "top_final_forms": [
+      ["NI", 22, 71],
+      ["KU,RO", 12, 36],
+      ["CYP", 12, 48],
+      ["VIN", 10, 42],
+      ["GRA", 10, 61],
+      ["A", 7, 19],
+      ["SI", 6, 25],
+      ["KU", 5, 17],
+      ["KI", 5, 15],
+      ["I", 5, 13]
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_planted_p": 0.0,
+      "false_pos_rate": 0.06666666666666667
+    },
+    "cross_site": {
+      "metric_used": "candidate",
+      "n_sites_testable": 2,
+      "n_sites_sig": 0,
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.132,
+      "per_site": {
+        "Haghia Triada": {"total": 40, "final": 10, "null_mean": 5.945, "p": 0.055, "sig": false},
+        "Khania": {"total": 23, "final": 8, "null_mean": 6.287, "p": 0.2655, "sig": false}
+      },
+      "aggregate_concentration_fallback": {
+        "n_sites_testable": 5,
+        "n_sites_sig": 1,
+        "per_site": {
+          "Haghia Triada": {"n_insc": 181, "top_form": "KU,RO", "top_share": 0.066, "null_mean": 0.041, "p": 0.015, "sig": true},
+          "Khania": {"n_insc": 67, "top_form": "CYP", "top_share": 0.149, "null_mean": 0.123, "p": 0.2115, "sig": false},
+          "Zakros": {"n_insc": 34, "top_form": "GRA", "top_share": 0.059, "null_mean": 0.061, "p": 0.911, "sig": false},
+          "Knossos": {"n_insc": 24, "top_form": "E", "top_share": 0.083, "null_mean": 0.068, "p": 0.585, "sig": false},
+          "Phaistos": {"n_insc": 22, "top_form": "NI", "top_share": 0.091, "null_mean": 0.087, "p": 0.774, "sig": false}
+        }
+      }
+    }
+  },
+  "key_findings": [
+    "The frozen selection rule surfaced a single anonymous sign sequence ('NI') as the most inscription-FINAL word-form meeting the threshold (final=22, total=71); it is treated purely positionally with no phonetic/semantic reading.",
+    "GLOBALLY the candidate shows significant inscription-FINAL enrichment: final_enrichment=0.310 vs position-permutation null_mean final-count 14.69, one-sided p=0.017; its initial-position rate is only 0.085 (control), consistent with a FINAL-slot, not initial-slot, role.",
+    "POSITIVE CONTROL PASSED: the machinery DETECTS a planted terminal bias on LB (p=0.0, correct direction) and has a FALSE-POSITIVE rate of 0.067 (<=0.10) on position-randomized pseudo-inscriptions, so the global signal is not a machinery artifact.",
+    "The effect is NOT cross-site robust: only 2 sites have >=10 candidate occurrences and NEITHER is individually significant (Haghia Triada p=0.055, Khania p=0.266); the aggregate final-slot concentration fallback yields only 1/5 sites significant (Haghia Triada alone).",
+    "Leave-one-site-out excluding the largest site (Haghia Triada) COLLAPSES the global signal (p=0.132), confirming the terminal-slot structure is concentrated in / driven by Haghia Triada rather than being a pan-Cretan document-structural regularity."
+  ],
+  "successor_hypotheses": [
+    "E036: Test whether the 'NI' terminal-slot signal at Haghia Triada is itself document-internal (e.g. line-final / section-final within multi-line tablets) vs inscription-final only, using the stream's nl/div tokens as sub-document position markers.",
+    "E037: Replicate the terminal-slot test on a Haghia-Triada-EXCLUDED corpus to see whether ANY other form carries a cross-site terminal signal, or whether the terminal-slot role is genuinely HT-specific.",
+    "E038: Pair the E034 A-initial heading signal with this terminal signal: do inscriptions tend to OPEN with an A-initial word AND CLOSE with the terminal form (a bracketing/heading+total document frame)?",
+    "E039: Test whether the terminal-slot concentration correlates with inscription LENGTH (short ledger-like inscriptions vs long narrative tablets) to distinguish a 'total/summary' structural role from a generic end-marker.",
+    "E040: Apply the same frozen candidate-selection rule to the Linear B positive-control corpus (with real inscription boundaries where available) to check whether a terminal-slot form exists there and whether it is cross-site robust, calibrating the SITE_LOCAL vs CROSS_SITE_ROBUST distinction."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Word-forms are ANONYMOUS sign sequences carrying no phonetic/sound/meaning/reading. The candidate was selected by a FROZEN rule (most inscription-final occurrences among forms with total>=8 AND final>=5), committed in the prereg BEFORE any p-value was computed; the surfaced identifier 'NI' is reported only as an anonymous sign sequence and the verdict does not depend on any assumed value of it. All statistics are L2/L3 positional (within-inscription word-order permutation). LB is a positive-control benchmark ONLY (DAMOS has no site metadata -> seeded pseudo-inscription partition, stated explicitly); it certifies the machinery detects a planted terminal bias and does not fire on noise, and is never used to read or validate a Linear A claim.",
+  "deviations": [
+    "The candidate 'NI' has >=10 occurrences in only 2 sites, so per the protocol the aggregate final-slot CONCENTRATION fallback metric was ALSO run (>=15 qualifying inscriptions per site); both metrics are reported. The verdict uses the candidate metric as primary (metric_used='candidate') with the aggregate as supporting evidence; both agree the effect is not cross-site robust.",
+    "No other deviations from the frozen protocol."
+  ]
+}

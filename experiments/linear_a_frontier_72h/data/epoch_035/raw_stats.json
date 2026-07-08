@@ -1,0 +1,129 @@
+{
+  "global": {
+    "form_signs": "NI",
+    "total_count": 71,
+    "final_count": 22,
+    "final_enrichment": 0.30985915492957744,
+    "null_mean": 14.6915,
+    "null_p": 0.017,
+    "initial_rate": 0.08450704225352113
+  },
+  "top_final_forms": [
+    [
+      "NI",
+      22,
+      71
+    ],
+    [
+      "KU,RO",
+      12,
+      36
+    ],
+    [
+      "CYP",
+      12,
+      48
+    ],
+    [
+      "VIN",
+      10,
+      42
+    ],
+    [
+      "GRA",
+      10,
+      61
+    ],
+    [
+      "A",
+      7,
+      19
+    ],
+    [
+      "SI",
+      6,
+      25
+    ],
+    [
+      "KU",
+      5,
+      17
+    ],
+    [
+      "KI",
+      5,
+      15
+    ],
+    [
+      "I",
+      5,
+      13
+    ]
+  ],
+  "cross_site_candidate": {
+    "Haghia Triada": {
+      "total": 40,
+      "final": 10,
+      "obs_final": 10,
+      "null_mean": 5.9685,
+      "p": 0.064,
+      "sig": false
+    },
+    "Khania": {
+      "total": 23,
+      "final": 8,
+      "obs_final": 8,
+      "null_mean": 6.2725,
+      "p": 0.247,
+      "sig": false
+    }
+  },
+  "cross_site_aggregate": {
+    "Haghia Triada": {
+      "n_insc": 181,
+      "top_form": "KU,RO",
+      "top_share": 0.06629834254143646,
+      "null_mean": 0.04138674033149197,
+      "p": 0.011,
+      "sig": true
+    },
+    "Khania": {
+      "n_insc": 67,
+      "top_form": "CYP",
+      "top_share": 0.14925373134328357,
+      "null_mean": 0.12250746268656805,
+      "p": 0.2125,
+      "sig": false
+    },
+    "Knossos": {
+      "n_insc": 24,
+      "top_form": "E",
+      "top_share": 0.08333333333333333,
+      "null_mean": 0.0688124999999997,
+      "p": 0.6085,
+      "sig": false
+    },
+    "Phaistos": {
+      "n_insc": 22,
+      "top_form": "NI",
+      "top_share": 0.09090909090909091,
+      "null_mean": 0.085704545454546,
+      "p": 0.762,
+      "sig": false
+    },
+    "Zakros": {
+      "n_insc": 34,
+      "top_form": "GRA",
+      "top_share": 0.058823529411764705,
+      "null_mean": 0.061588235294119914,
+      "p": 0.9185,
+      "sig": false
+    }
+  },
+  "loo_exclude_HaghiaTriada": {
+    "obs_final": 12,
+    "null_mean": 8.8095,
+    "p": 0.132,
+    "sig": false
+  }
+}
