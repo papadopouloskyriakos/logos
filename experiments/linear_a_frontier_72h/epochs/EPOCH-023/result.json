@@ -1,0 +1,92 @@
+{
+  "task_id": "EPOCH-023",
+  "campaign": "linear-a-frontier-72h",
+  "frontier": "F4",
+  "layer": "L2/L3",
+  "method": "Within-word sign-permutation null for word-initial incidence of sign 'A' (positional slot only), applied globally, per-site (sites with >=20 qualifying words), leave-one-site-out, and to 5 frequency-matched comparator signs. Linear B used ONLY as positive-control benchmark via a seeded balanced 5-way random split (no per-site LB metadata available).",
+  "result": "A_PREFIX_CROSS_SITE_ROBUST",
+  "verdict": "A_PREFIX_CROSS_SITE_ROBUST",
+  "verdict_rule_applied": "(PC passed) AND A- significant (p<=0.05) in >=3 independent sites AND A- significant under leave-one-site-out AND A- clears >=2 more sites than median comparator sign. All four conjuncts TRUE.",
+  "numbers": {
+    "global": {
+      "qualifying_words_ge2_signs": 1369,
+      "A_total_occurrences": 177,
+      "A_word_initial_count": 155,
+      "A_word_initial_fraction": 0.1132,
+      "A_initial_of_A_occurrences": 0.876,
+      "null_mean": 55.53,
+      "p_one_sided_1000draws": 0.0010
+    },
+    "positive_control": {
+      "lb_corpus": "DAMOS via load_b_damos()",
+      "lb_qualifying_words": 13562,
+      "lb_partition": "seeded balanced 5-way random split (seed=20240123); NO per-site/series/scribe metadata available in load_b_damos return",
+      "lb_partition_sizes": [2713, 2713, 2712, 2712, 2712],
+      "chosen_lb_prefix_analogue": "A3",
+      "lb_A3_total_occurrences": 110,
+      "lb_A3_initial_rate": 0.945,
+      "lb_A3_partitions_significant_p_le_0.05": "5/5",
+      "lb_A3_per_partition_p": [0.0010, 0.0010, 0.0010, 0.0010, 0.0010],
+      "lb_AU_check_total_44_rate_1.000_partitions_significant": "5/5",
+      "frequency_matched_random_comparator": "QI",
+      "lb_QI_total_occurrences": 105,
+      "lb_QI_initial_rate": 0.210,
+      "lb_QI_partitions_significant_p_le_0.05": "0/5",
+      "lb_QI_per_partition_p": [0.9011, 0.9421, 0.8262, 0.9530, 0.7642],
+      "pc_verdict": "PASSED (machinery recovers a known cross-partition prefix and rejects a frequency-matched random sign)"
+    },
+    "la_per_site_A": {
+      "qualifying_sites_ge20_words": 10,
+      "sites_significant_raw_p_le_0.05": 9,
+      "sites_significant_holm_adj_le_0.05": 9,
+      "per_site": {
+        "Haghia Triada": {"n": 694, "obs": 41, "null_mean": 16.28, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Zakros": {"n": 132, "obs": 19, "null_mean": 6.10, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Khania": {"n": 120, "obs": 20, "null_mean": 7.29, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Knossos": {"n": 61, "obs": 10, "null_mean": 4.28, "raw_p": 0.0030, "holm_adj": 0.0060},
+        "Phaistos": {"n": 58, "obs": 7, "null_mean": 2.86, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Palaikastro": {"n": 57, "obs": 10, "null_mean": 2.97, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Iouktas": {"n": 34, "obs": 6, "null_mean": 1.21, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Arkhalkhori": {"n": 34, "obs": 8, "null_mean": 2.81, "raw_p": 0.0020, "holm_adj": 0.0060},
+        "Syme": {"n": 21, "obs": 6, "null_mean": 1.36, "raw_p": 0.0010, "holm_adj": 0.0040},
+        "Tylissos": {"n": 21, "obs": 4, "null_mean": 2.22, "raw_p": 0.1449, "holm_adj": 0.1449}
+      }
+    },
+    "la_leave_one_site_out": {
+      "excluded_site": "Haghia Triada",
+      "n": 675,
+      "obs": 114,
+      "null_mean": 39.68,
+      "p_one_sided_1000draws": 0.0010,
+      "survives": true
+    },
+    "la_adversarial_comparators": {
+      "comparator_signs": ["KU", "I", "JA", "DA", "SA"],
+      "sites_cleared_p_le_0.05": {"KU": 1, "I": 3, "JA": 3, "DA": 1, "SA": 2},
+      "median_comparator_sites_cleared": 2,
+      "A_sites_cleared": 9,
+      "A_minus_median_comparator": 7
+    }
+  },
+  "key_findings": [
+    "A- is word-initial 155/177 (87.6%) of its occurrences and 155/1369 (11.3%) of all >=2-sign words; global permutation null p=0.001 (1000 draws).",
+    "Positive control PASSED: LB prefix analogue A3 (94.5% initial, 110 occ) is significant in 5/5 seeded partitions; frequency-matched random sign QI (21% initial) is significant in 0/5. Machinery is informative.",
+    "A- is significant (raw p<=0.05) in 9 of 10 qualifying LA sites, and Holm-significant (family of 10) in the same 9; only Tylissos (n=21) fails.",
+    "A- survives leave-one-site-out: with the largest site (Haghia Triada, 694 words) removed, p=0.001 on the remaining 675 words.",
+    "A- clears 9 sites vs a median of 2 for the 5 next-most-initial comparator signs (KU=1, I=3, JA=3, DA=1, SA=2); A- clears 7 more than the median comparator, far exceeding the >=2 threshold.",
+    "All four conjuncts of the frozen A_PREFIX_CROSS_SITE_ROBUST rule are TRUE."
+  ],
+  "successor_hypotheses": [
+    "H1 (L2/L3): Test whether A- is also word-initial in the SECOND position of multi-clause/administrative lines (line-initial vs word-initial) — does the prefix slot align with line boundaries?",
+    "H2 (L2/L3): Conditional on the following sign — is the A- slot followed by a restricted set of signs (suggesting a closed class of A-prefixed lexemes) or freely distributed?",
+    "H3 (L2/L3): Co-occurrence of A- with numeric/quantity tokens (t=='num') in the same line — is the A- slot associated with enumeration contexts (a possible determinative/heading role)?",
+    "H4 (L2/L3): Within-site stability over support type — partition Haghia Triada by 'support'/'context' field and re-test A-; does it hold across support types within the dominant site?",
+    "H5 (L2/L3): Bigram-prefix test — is the A-X bigram (first two signs) overrepresented vs the within-word permutation null, i.e. is there a fixed A-initial template beyond the single-slot effect?",
+    "H6 (L2/L3): Replicate the cross-site protocol for the one comparator that cleared 3 sites (I, JA) to determine whether any non-A sign also meets a weaker cross-site robustness bar, calibrating how 'special' A- truly is.",
+    "H7 (method): Replace the seeded random LB split with a real LB series/scribe partition if metadata can be reconstructed from DAMOS item ids, to remove the only soft spot in the positive control."
+  ],
+  "la_touched": true,
+  "non_circular": "Sign names (A, JA, KU, ...) are ANONYMOUS identifiers. No phonetic value, sound, meaning, language, or reading is assigned or implied to ANY sign. 'A-' denotes a POSITIONAL SLOT (word-initial occurrence of the sign token 'A') only. No known-value data is a model input on the LA side. Linear B is used ONLY as a positive-control benchmark for the machinery; because load_b_damos() exposes no per-site/series/scribe metadata, the LB partition is a seeded balanced 5-way random split (stated explicitly).",
+  "prereg_hash": "a84ac47db4799dc0e75aeaed391ff87e26895e6e666babdfa5c320f86841568a",
+  "deviations": []
+}

@@ -1,0 +1,26 @@
+{
+ "label": "POST-HOC (descriptive; frozen verdict untouched)",
+ "question": "leg-1 spread signal restricted to Tablet-support docs (medium held fixed)",
+ "n_signs": 44,
+ "sites_in_frame": [
+  "ARKH",
+  "HT",
+  "KE",
+  "KH",
+  "KN",
+  "MA",
+  "MI",
+  "PA",
+  "PE",
+  "PH",
+  "PYR",
+  "TY"
+ ],
+ "tablet_docs": 301,
+ "instances_kept": 2581,
+ "T_obs": 0.1931,
+ "perm_p95": 0.0605,
+ "p_raw": 9.999000099990002e-05,
+ "seed": 20260709,
+ "n_perm": 10000
+}

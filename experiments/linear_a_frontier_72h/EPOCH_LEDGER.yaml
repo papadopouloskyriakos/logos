@@ -506,3 +506,26 @@ epochs:
     artifacts: [epochs/EPOCH-022/prereg.md, epochs/EPOCH-022/plan_hash.txt, epochs/EPOCH-022/result.json, reports/EPOCH022_APREFIX_ADAPTIVE_NULL.md, scripts/, data/aprefix_adaptive_null/]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-023
+    frontier: F4
+    gate: A
+    name: "A- prefixation held-out / cross-site robustness (Linear-B held-out standard applied to the campaign's strongest LA positive)"
+    plan_hash: a84ac47db4799dc0e75aeaed391ff87e26895e6e666babdfa5c320f86841568a
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py (FIRST z.ai-worker epoch; NO Anthropic tokens for the labour)"
+    orchestrator_verification: "Claude (this session) INDEPENDENTLY recomputed with different code + seed: sites>=20=10 MATCH; A- significant 9/10 MATCH; leave-one-out p<=0.001 MATCH (pool-definition nuance: GLM pooled all non-HT words n=675, orchestrator pooled >=20-word sites n=538 — both p<=0.001, defensible, not an error); comparators 1/3/4/1/2 MATCH; PC (A3 5/5 recovered, QI 0/5 rejected) MATCH. Null machinery audited: within-word uniform permutation + a distributionally-equivalent Bernoulli(k/L) fast path — CORRECT."
+    positive_control: "PASSED (verified): LB A3 (94.5% initial) significant 5/5 seeded partitions; frequency-matched QI (21% initial) 0/5. LB metadata absent -> seeded balanced 5-way split, disclosed."
+    verdict: "A_PREFIX_CROSS_SITE_ROBUST (all 4 frozen conjuncts TRUE, orchestrator-verified): PC passed AND A- significant (raw + Holm) in 9/10 sites AND survives leave-one-site-out (drop Haghia Triada 694w -> p .001 on remaining 675) AND clears 9 sites vs median 2 for the 5 next-most-initial comparators (KU1/I3/JA3/DA1/SA2)."
+    numbers: {global_A_initial: 155, global_A_total: 177, global_frac: 0.876, n_qualifying_words: 1369, sites_ge20: 10, sites_sig_raw: 9, sites_sig_holm: 9, only_nonsig_site: "Tylissos(n=21)", loo_drop: "Haghia Triada", loo_p: 0.001, comparator_sites_cleared: {KU: 1, I: 3, JA: 3, DA: 1, SA: 2}, pc_lb_prefix: "A3 5/5", pc_lb_random: "QI 0/5", null_draws: 1000}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "STRUCTURAL result only — A- is a cross-site-robust productive positional prefix SLOT. Does NOT license any phonetic value, sound, meaning, language, or reading (L4+). Strengthens E022 (global adaptive-null survival) to a held-out-SITE generalization = the Linear-B held-out standard at layer L2/L3."
+    committed_prediction: "modal CROSS_SITE_ROBUST or SINGLE_SITE; OUTCOME = CROSS_SITE_ROBUST, orchestrator-verified. A- is now the campaign's strongest genuinely-held-out LA-side positive."
+    deviations: []
+    non_circular: "LB control-only; anonymous sign ids; no phonetic value; no known-value model input on the LA side."
+    architecture_note: "First epoch executed entirely by a z.ai/GLM worker under the coordinator/worker split (owner directive 2026-07-08). Claude = orchestrator (prereg design, independent verification, banking); GLM = proposer/operator. Mechanical rule + independent recompute decided, not narration."
+    artifacts: [epochs/EPOCH-023/prereg.md, epochs/EPOCH-023/plan_hash.txt, epochs/EPOCH-023/machinery.py, epochs/EPOCH-023/result.json, reports/EPOCH023_APREFIX_CROSS_SITE.md]
+    successors_spawned: 7
+    substantive: true

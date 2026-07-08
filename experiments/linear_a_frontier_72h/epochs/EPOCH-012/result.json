@@ -1,0 +1,342 @@
+{
+ "epoch": "EPOCH-012",
+ "frontier": "F6 scribal/site allograph structure (stroke channel, gates A/E)",
+ "plan_hash": "a051ea371c3e6ac74f5b35d30fa52084e7023644a90f5135c29c75bf97818969",
+ "prereg": "epochs/EPOCH-012/prereg.md (frozen 2026-07-08T05:15:18Z, before any run)",
+ "seed": 20260708,
+ "claim_layer": "L1 palaeographic only; SigLA trace-standardization caveat applies; no values, no licence touched",
+ "articles": [
+  "V",
+  "VII",
+  "VIII",
+  "IX",
+  "XI",
+  "XII",
+  "XV",
+  "XVII",
+  "XVIII",
+  "XXII"
+ ],
+ "deviations": [],
+ "inventory": {
+  "n_ok_instances": 3744,
+  "n_docs": 722,
+  "n_robust_labels": 133,
+  "ok_by_site": {
+   "HT": 2287,
+   "KH": 475,
+   "ZA": 325,
+   "PH": 162,
+   "KN": 154,
+   "ARKH": 74,
+   "MA": 53,
+   "TY": 49,
+   "PE": 41,
+   "PK": 40,
+   "GO": 22,
+   "PS": 15,
+   "SY": 13,
+   "THE": 9,
+   "KE": 7,
+   "PYR": 7,
+   "PA": 5,
+   "HS": 2,
+   "MI": 2,
+   "KY": 1,
+   "MY": 1
+  }
+ },
+ "positive_control_run_first": {
+  "protocol": "LOO 1-NN sign id, robust-label instances",
+  "n_instances": 3540,
+  "n_labels": 133,
+  "top1_acc": 0.2048,
+  "aspect_top1_acc": 0.0322,
+  "chance_largest_class": 0.0441,
+  "perm_null_mean": 0.0165,
+  "p_perm": 0.000999000999000999,
+  "thresholds": "acc>=0.15 & p<0.001 & acc>aspect",
+  "PASS": true
+ },
+ "frames": {
+  "F_SIGN_n": 60,
+  "F_SIGN": [
+   "A301",
+   "A303",
+   "A304",
+   "A306",
+   "A516",
+   "A574",
+   "A615",
+   "A702",
+   "A704",
+   "A707",
+   "A708",
+   "A709",
+   "AB01",
+   "AB02",
+   "AB03",
+   "AB04",
+   "AB06",
+   "AB07",
+   "AB08",
+   "AB09",
+   "AB10",
+   "AB100",
+   "AB118",
+   "AB120",
+   "AB13",
+   "AB131",
+   "AB17",
+   "AB21",
+   "AB22",
+   "AB23",
+   "AB24",
+   "AB26",
+   "AB27",
+   "AB28",
+   "AB30",
+   "AB31",
+   "AB37",
+   "AB38",
+   "AB39",
+   "AB40",
+   "AB41",
+   "AB51",
+   "AB53",
+   "AB55",
+   "AB56",
+   "AB57",
+   "AB58",
+   "AB59",
+   "AB60",
+   "AB61",
+   "AB65",
+   "AB67",
+   "AB69",
+   "AB70",
+   "AB73",
+   "AB74",
+   "AB77",
+   "AB80",
+   "AB81",
+   "AB86"
+  ]
+ },
+ "leg1_spread": {
+  "T_obs": 0.2046,
+  "perm_null_mean": 0.0002,
+  "perm_null_p95": 0.0542,
+  "p1_raw": 9.999000099990002e-05,
+  "n_signs": 60,
+  "n_signs_holm05": 1,
+  "top_signs": [
+   {
+    "sign": "AB58",
+    "n_inst": 45,
+    "n_pairs": 986,
+    "D_std": 0.494,
+    "p_raw": 0.00019998000199980003,
+    "p_holm": 0.012
+   },
+   {
+    "sign": "A704",
+    "n_inst": 65,
+    "n_pairs": 2052,
+    "D_std": 0.4973,
+    "p_raw": 0.0015998400159984002,
+    "p_holm": 0.09439
+   },
+   {
+    "sign": "AB73",
+    "n_inst": 47,
+    "n_pairs": 1067,
+    "D_std": 0.4752,
+    "p_raw": 0.001999800019998,
+    "p_holm": 0.11599
+   },
+   {
+    "sign": "AB27",
+    "n_inst": 76,
+    "n_pairs": 2835,
+    "D_std": 0.3371,
+    "p_raw": 0.0033996600339966003,
+    "p_holm": 0.19378
+   },
+   {
+    "sign": "A301",
+    "n_inst": 45,
+    "n_pairs": 990,
+    "D_std": 0.3948,
+    "p_raw": 0.0051994800519948,
+    "p_holm": 0.29117
+   },
+   {
+    "sign": "AB131",
+    "n_inst": 41,
+    "n_pairs": 816,
+    "D_std": 0.459,
+    "p_raw": 0.0064993500649935,
+    "p_holm": 0.35746
+   },
+   {
+    "sign": "AB80",
+    "n_inst": 67,
+    "n_pairs": 2200,
+    "D_std": 0.341,
+    "p_raw": 0.0071992800719928,
+    "p_holm": 0.38876
+   },
+   {
+    "sign": "AB30",
+    "n_inst": 72,
+    "n_pairs": 2544,
+    "D_std": 0.3072,
+    "p_raw": 0.0081991800819918,
+    "p_holm": 0.43456
+   },
+   {
+    "sign": "AB69",
+    "n_inst": 47,
+    "n_pairs": 1074,
+    "D_std": 0.3823,
+    "p_raw": 0.008899110088991101,
+    "p_holm": 0.46275
+   },
+   {
+    "sign": "AB56",
+    "n_inst": 34,
+    "n_pairs": 552,
+    "D_std": 0.3533,
+    "p_raw": 0.0115988401159884,
+    "p_holm": 0.59154
+   },
+   {
+    "sign": "AB41",
+    "n_inst": 84,
+    "n_pairs": 3476,
+    "D_std": 0.2386,
+    "p_raw": 0.012098790120987902,
+    "p_holm": 0.60494
+   },
+   {
+    "sign": "AB28",
+    "n_inst": 86,
+    "n_pairs": 3637,
+    "D_std": 0.2656,
+    "p_raw": 0.012798720127987202,
+    "p_holm": 0.62714
+   }
+  ]
+ },
+ "leg2_doc_site": {
+  "F_sites": [
+   "HT",
+   "KH",
+   "KN",
+   "PH",
+   "ZA"
+  ],
+  "n_docs": 258,
+  "docs_per_site": {
+   "HT": 168,
+   "KH": 37,
+   "KN": 18,
+   "PH": 12,
+   "ZA": 23
+  },
+  "balanced_acc": 0.2797,
+  "per_site_recall": {
+   "HT": 0.7083,
+   "KH": 0.2432,
+   "KN": 0.0556,
+   "PH": 0.0,
+   "ZA": 0.3913
+  },
+  "p2_raw": 0.006099390060993901,
+  "N2a_null_mean": 0.197,
+  "N2b_inventory_null_mean": 0.2021,
+  "N2b_p95": 0.2523,
+  "p_vs_N2b": 0.011988011988011988,
+  "nuisance_balanced_acc": 0.3307,
+  "nuisance_per_site_recall": {
+   "HT": 0.7262,
+   "KH": 0.1351,
+   "KN": 0.2778,
+   "PH": 0.1667,
+   "ZA": 0.3478
+  }
+ },
+ "multiplicity": {
+  "raw_p": [
+   9.999000099990002e-05,
+   0.006099390060993901
+  ],
+  "holm": [
+   0.00019998000199980003,
+   0.006099390060993901
+  ]
+ },
+ "fires": {
+  "LEG1_FIRE": true,
+  "LEG2_FIRE": true
+ },
+ "leg3_support_HT": {
+  "n_signs": 12,
+  "minority_docs": 33,
+  "T_obs": 0.248,
+  "p3_raw": 0.0027997200279972004,
+  "status": "SUPPORT_STRUCTURE_DETECTED"
+ },
+ "leg4_context": {
+  "classes_ge8": [
+   "LMIB"
+  ],
+  "counts": {
+   "LMIB": 177,
+   "MMIIIB": 2,
+   "LMIA": 1,
+   "MMII": 1,
+   "MMIII": 1
+  },
+  "status": "CHRONOLOGY_CONTEXT_NO_POWER"
+ },
+ "gates": {
+  "G1": {
+   "n_signs": 44,
+   "T_obs": 0.1766,
+   "p": 9.999000099990002e-05,
+   "survive": true
+  },
+  "G2": {
+   "sites": [
+    "HT",
+    "KH"
+   ],
+   "n_docs": 174,
+   "balanced_acc": 0.5431,
+   "null_p95": 0.5725,
+   "p": 0.15528447155284472,
+   "survive": false
+  },
+  "G3": {
+   "allograph_bal": 0.2797,
+   "nuisance_bal": 0.3307,
+   "survive": false
+  },
+  "G4_residualized_bal": {
+   "balanced_acc": 0.2242,
+   "non_gating": true
+  }
+ },
+ "doc_coherence_descriptive": {
+  "mean_same_doc_pair_dist": 2.6338,
+  "mean_within_site_cross_doc_dist": 3.1888,
+  "note": "tracer style and scribal hand are inseparable at doc level (one trace per doc)"
+ },
+ "verdict": "ALLOGRAPH_STRUCTURE_CONFOUNDED",
+ "clustering_descriptive": {
+  "k": 5,
+  "ARI_vs_site": 0.0202
+ }
+}

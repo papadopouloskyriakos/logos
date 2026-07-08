@@ -5,6 +5,42 @@
    "id": "FR1",
    "text": "epoch substantive gates A-H enforced mechanically per ledger; no padding",
    "status": "HELD"
+  },
+  {
+   "id": "A-FD1",
+   "epoch": "EPOCH-004",
+   "text": "multi-sign fraction strings written in non-increasing value order (descending convention); reliability posterior Beta(8,3) mean 0.727 after the ZA8 violation",
+   "status": "HELD_WITH_MEASURED_UNCERTAINTY"
+  },
+  {
+   "id": "A-FD2",
+   "epoch": "EPOCH-004",
+   "text": "Beta(8,2) prior frozen after derivation-set census, before pipeline output; sensitivity Beta(4,1)/Beta(16,4) in seal",
+   "status": "HELD"
+  },
+  {
+   "id": "A-FD3",
+   "epoch": "EPOCH-004",
+   "text": "silver raw token character order preserves editorial reading order (lineara.xyz convention)",
+   "status": "HELD"
+  },
+  {
+   "id": "A-FD4",
+   "epoch": "EPOCH-004",
+   "text": "composite klasmatograms additive (JE=3/4) except D-composites (Schrijver); E=1/4 anchored, D unanchored",
+   "status": "HELD"
+  },
+  {
+   "id": "A-FD5",
+   "epoch": "EPOCH-004",
+   "text": "GORILA letters in Unicode glyph names identify the classes the ed.pr. will use",
+   "status": "HELD"
+  },
+  {
+   "id": "A-FD6",
+   "epoch": "EPOCH-004",
+   "text": "LM I horizon restriction controls system drift; PH/MM II quarantined to secondary tier",
+   "status": "HELD"
   }
  ]
 }
