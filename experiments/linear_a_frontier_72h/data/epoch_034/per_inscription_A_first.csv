@@ -1,0 +1,416 @@
+id,site,n_words,first_word_A,last_word_A,n_A_words
+HT1,Haghia Triada,6,0,1,1
+HT2,Haghia Triada,7,1,0,1
+HT3,Haghia Triada,11,0,0,0
+HT4,Haghia Triada,4,0,0,0
+HT5,Haghia Triada,2,0,0,0
+HT6a,Haghia Triada,12,0,0,0
+HT6b,Haghia Triada,7,0,0,0
+HT7a,Haghia Triada,7,0,0,0
+HT7b,Haghia Triada,2,0,0,0
+HT8a,Haghia Triada,8,0,0,0
+HT8b,Haghia Triada,5,0,0,0
+HT9a,Haghia Triada,11,0,0,1
+HT9b,Haghia Triada,11,0,0,1
+HT10a,Haghia Triada,9,0,0,0
+HT10b,Haghia Triada,6,0,0,0
+HT11a,Haghia Triada,7,1,0,2
+HT11b,Haghia Triada,10,0,0,0
+HT12,Haghia Triada,9,0,0,0
+HT13,Haghia Triada,10,0,0,0
+HT14,Haghia Triada,11,0,0,1
+HT15,Haghia Triada,5,0,0,0
+HT16,Haghia Triada,6,0,0,0
+HT17,Haghia Triada,5,0,0,0
+HT18,Haghia Triada,6,0,0,0
+HT19,Haghia Triada,5,0,0,0
+HT20,Haghia Triada,8,0,0,0
+HT21,Haghia Triada,6,0,0,0
+HT22,Haghia Triada,2,0,0,0
+HT23a,Haghia Triada,14,0,0,0
+HT23b,Haghia Triada,8,0,0,0
+HT24a,Haghia Triada,7,0,0,0
+HT25a,Haghia Triada,10,0,0,1
+HT25b,Haghia Triada,6,0,0,0
+HT26a,Haghia Triada,5,0,0,0
+HT26b,Haghia Triada,6,0,0,0
+HT27a,Haghia Triada,14,0,0,0
+HT27b,Haghia Triada,17,0,0,0
+HT28a,Haghia Triada,17,1,0,2
+HT28b,Haghia Triada,14,1,0,1
+HT29,Haghia Triada,7,0,0,1
+HT30,Haghia Triada,15,0,0,0
+HT31,Haghia Triada,10,0,0,0
+HT32,Haghia Triada,10,0,0,0
+HT33,Haghia Triada,7,0,0,0
+HT34,Haghia Triada,15,0,0,0
+HT35,Haghia Triada,9,0,0,0
+HT36,Haghia Triada,3,0,0,0
+HT37,Haghia Triada,9,0,0,1
+HT38,Haghia Triada,6,0,0,0
+HT39,Haghia Triada,9,0,0,0
+HT40,Haghia Triada,7,0,0,0
+HT41a,Haghia Triada,5,0,0,0
+HT42+59,Haghia Triada,15,0,0,0
+HT43,Haghia Triada,4,0,0,0
+HT44a,Haghia Triada,8,0,0,0
+HT44b,Haghia Triada,4,0,0,0
+HT45b,Haghia Triada,8,0,0,1
+HT46a,Haghia Triada,2,0,0,0
+HT47a,Haghia Triada,8,0,0,0
+HT49a,Haghia Triada,12,0,0,1
+HT49b,Haghia Triada,4,0,0,0
+HT50a,Haghia Triada,6,0,0,0
+HT50b,Haghia Triada,2,0,0,0
+HT51a,Haghia Triada,6,0,0,0
+HT51b,Haghia Triada,3,0,0,0
+HT52a,Haghia Triada,3,0,0,0
+HT52b,Haghia Triada,2,0,0,0
+HT53a,Haghia Triada,3,0,0,0
+HT54a,Haghia Triada,2,0,0,0
+HT55a,Haghia Triada,5,0,0,0
+HT55b,Haghia Triada,4,0,0,0
+HT56a,Haghia Triada,2,0,0,0
+HT57a,Haghia Triada,2,0,1,1
+HT58,Haghia Triada,7,0,0,0
+HT60,Haghia Triada,5,0,0,0
+HT61,Haghia Triada,2,0,0,0
+HT62+73,Haghia Triada,15,0,0,0
+HT63,Haghia Triada,4,0,0,0
+HT64,Haghia Triada,4,0,0,0
+HT66,Haghia Triada,6,0,0,0
+HT67,Haghia Triada,3,0,0,0
+HT68,Haghia Triada,2,0,0,0
+HT69,Haghia Triada,3,0,0,0
+HT70,Haghia Triada,4,0,0,0
+HT79+83,Haghia Triada,7,0,0,0
+HT81,Haghia Triada,4,1,0,1
+HT84,Haghia Triada,3,0,0,0
+HT85a,Haghia Triada,10,1,0,1
+HT85b,Haghia Triada,12,0,0,0
+HT86a,Haghia Triada,10,1,0,2
+HT86b,Haghia Triada,5,1,0,1
+HT87,Haghia Triada,9,0,1,2
+HT88,Haghia Triada,13,1,0,1
+HT89,Haghia Triada,9,1,0,1
+HT90,Haghia Triada,9,0,0,0
+HT91,Haghia Triada,12,0,0,0
+HT92,Haghia Triada,3,0,0,1
+HT93a,Haghia Triada,20,0,0,1
+HT94a,Haghia Triada,14,0,0,0
+HT94b,Haghia Triada,10,0,0,0
+HT95a,Haghia Triada,8,0,0,0
+HT95b,Haghia Triada,7,1,0,1
+HT96a,Haghia Triada,10,0,0,2
+HT96b,Haghia Triada,5,1,0,1
+HT97a,Haghia Triada,13,0,1,1
+HT98a,Haghia Triada,7,0,0,0
+HT98b,Haghia Triada,2,0,0,0
+HT99a,Haghia Triada,6,1,0,1
+HT99b,Haghia Triada,4,0,0,0
+HT100,Haghia Triada,14,0,0,0
+HT101,Haghia Triada,14,0,0,0
+HT102,Haghia Triada,12,0,0,0
+HT103,Haghia Triada,7,0,0,0
+HT104,Haghia Triada,6,0,0,0
+HT105,Haghia Triada,4,0,0,0
+HT106,Haghia Triada,6,0,0,0
+HT108,Haghia Triada,7,0,0,0
+HT109,Haghia Triada,4,0,1,1
+HT110a,Haghia Triada,5,0,0,0
+HT110b,Haghia Triada,5,0,0,0
+HT111a,Haghia Triada,5,0,0,0
+HT111b,Haghia Triada,4,0,0,0
+HT112a,Haghia Triada,2,0,0,0
+HT113,Haghia Triada,3,0,0,0
+HT114a,Haghia Triada,7,0,0,0
+HT115a,Haghia Triada,12,0,0,1
+HT115b,Haghia Triada,12,0,0,1
+HT116a,Haghia Triada,21,0,0,0
+HT116b,Haghia Triada,3,0,0,0
+HT117a,Haghia Triada,20,0,0,0
+HT117b,Haghia Triada,3,0,0,0
+HT118,Haghia Triada,10,0,0,1
+HT119,Haghia Triada,9,0,0,0
+HT120,Haghia Triada,10,0,0,0
+HT121,Haghia Triada,8,0,0,0
+HT122a,Haghia Triada,19,0,0,0
+HT122b,Haghia Triada,9,0,0,1
+HT123+124a,Haghia Triada,16,0,0,0
+HT123+124b,Haghia Triada,9,0,0,0
+HT125a,Haghia Triada,7,0,0,0
+HT125b,Haghia Triada,4,0,0,0
+HT126a,Haghia Triada,6,0,0,1
+HT126b,Haghia Triada,4,0,0,0
+HT127a,Haghia Triada,2,0,0,0
+HT127b,Haghia Triada,7,0,0,0
+HT128a,Haghia Triada,11,0,0,0
+HT128b,Haghia Triada,5,0,0,0
+HT129,Haghia Triada,8,0,0,0
+HT130,Haghia Triada,8,0,0,0
+HT131a,Haghia Triada,5,0,0,0
+HT131b,Haghia Triada,4,0,0,0
+HT132,Haghia Triada,4,1,0,1
+HT133,Haghia Triada,3,1,0,1
+HT135a,Haghia Triada,5,0,0,0
+HT137,Haghia Triada,4,0,0,0
+HT139,Haghia Triada,4,0,0,0
+HT140,Haghia Triada,16,0,0,0
+HT141,Haghia Triada,2,1,0,1
+HT146,Haghia Triada,4,0,0,0
+HT147,Haghia Triada,2,0,0,0
+HT154.,Haghia Triada,2,0,0,0
+HT154a,Haghia Triada,5,0,0,0
+HT154n,Haghia Triada,2,0,0,0
+HTWa1019,Haghia Triada,2,0,0,0
+HTWa1020,Haghia Triada,2,0,0,0
+HTWa1021,Haghia Triada,2,0,0,0
+HTWc3004,Haghia Triada,2,0,0,0
+HTWc3005,Haghia Triada,2,0,0,0
+HTWc3006,Haghia Triada,2,0,0,0
+HTWc3008,Haghia Triada,2,0,0,0
+HTWc3012,Haghia Triada,2,0,0,0
+HTWc3014,Haghia Triada,2,0,0,0
+HTWc3015,Haghia Triada,2,0,0,0
+HTWc3016,Haghia Triada,2,0,0,0
+HTWc3017,Haghia Triada,3,0,0,0
+HTWc<3018>,Haghia Triada,2,0,0,0
+HTWc3024,Haghia Triada,2,1,0,1
+HTWeWc3020,Haghia Triada,2,0,0,0
+HTZd155,Haghia Triada,2,1,0,1
+HTZd157+156,Haghia Triada,2,0,0,0
+HTZf168,Haghia Triada,2,0,0,0
+IOZa2,Iouktas,8,1,0,1
+IOZa3,Iouktas,2,1,0,1
+IOZa5,Iouktas,2,0,0,0
+IOZa6,Iouktas,3,0,0,0
+IOZa7,Iouktas,2,1,0,1
+IOZa9,Iouktas,2,0,0,0
+IOZa11,Iouktas,4,0,0,0
+IOZa12,Iouktas,3,0,0,0
+IOZa14,Iouktas,2,0,0,0
+IOZa15,Iouktas,2,0,0,0
+IOZa16,Iouktas,4,0,0,0
+KANZa1,Kannia,2,1,0,1
+KH1,Khania,3,0,0,0
+KH2,Khania,3,0,0,0
+KH4,Khania,2,1,0,1
+KH5,Khania,10,1,0,2
+KH6,Khania,18,0,0,0
+KH7a,Khania,18,0,0,0
+KH7b,Khania,7,0,0,0
+KH8,Khania,9,0,0,0
+KH9,Khania,10,1,0,1
+KH10,Khania,5,0,0,1
+KH11,Khania,14,1,0,3
+KH12,Khania,4,0,0,0
+KH13,Khania,3,1,0,1
+KH14,Khania,8,0,0,1
+KH15,Khania,3,0,0,0
+KH16,Khania,4,0,0,0
+KH17,Khania,3,0,1,1
+KH18,Khania,7,0,0,0
+KH19,Khania,2,0,0,0
+KH20,Khania,5,1,0,1
+KH21,Khania,3,0,0,0
+KH22,Khania,5,0,0,0
+KH23,Khania,2,1,0,1
+KH25,Khania,2,0,0,0
+KH26,Khania,2,0,0,0
+KH27,Khania,2,0,0,0
+KH28,Khania,2,0,0,0
+KH29,Khania,4,0,0,0
+KH33,Khania,2,0,1,1
+KH34,Khania,2,0,0,0
+KH36,Khania,3,0,0,0
+KH39,Khania,2,1,0,1
+KH43,Khania,2,0,0,0
+KH47,Khania,3,0,0,0
+KH49,Khania,2,0,0,0
+KH50,Khania,3,0,0,0
+KH51,Khania,2,0,0,0
+KH53,Khania,2,1,0,1
+KH54,Khania,2,0,0,0
+KH55,Khania,2,0,0,0
+KH57,Khania,3,0,0,0
+KH58,Khania,7,0,1,2
+KH59,Khania,2,0,0,0
+KH60,Khania,4,0,0,0
+KH61,Khania,4,0,0,0
+KH63,Khania,2,0,0,0
+KH73,Khania,4,1,1,2
+KH74,Khania,3,0,0,0
+KH75,Khania,2,0,0,0
+KH76,Khania,2,0,0,0
+KH79+89,Khania,4,0,0,1
+KH83,Khania,2,1,0,1
+KH84,Khania,2,0,0,0
+KH85,Khania,4,0,0,0
+KH86,Khania,5,0,0,0
+KH88,Khania,4,0,0,0
+KH90,Khania,2,0,0,0
+KH91,Khania,7,0,0,0
+KH92,Khania,3,1,0,1
+KH94,Khania,2,0,0,0
+KH97a,Khania,2,0,0,0
+KH99,Khania,3,0,0,1
+KH100,Khania,3,0,0,0
+KHWa1001,Khania,2,0,0,0
+KHWa1002,Khania,2,0,0,0
+KN1a,Knossos,2,0,0,0
+KN1b,Knossos,2,0,0,0
+KN2,Knossos,2,0,0,0
+KN22a,Knossos,2,0,0,0
+KN22c,Knossos,2,0,0,0
+KN28a,Knossos,2,0,0,0
+KN28b,Knossos,2,0,0,0
+KN32a,Knossos,2,1,1,2
+KN32b,Knossos,4,0,0,0
+KN54,Knossos,2,0,0,0
+KNWb33,Knossos,2,0,0,0
+KNWc26,Knossos,2,0,0,0
+KNWc42,Knossos,2,0,0,0
+KNZa10,Knossos,6,0,0,0
+KNZa18,Knossos,3,0,0,0
+KNZa19,Knossos,2,0,0,0
+KNZb4,Knossos,3,0,0,0
+KNZb<27>,Knossos,2,0,0,0
+KNZb35,Knossos,3,0,0,0
+KNZb40,Knossos,2,1,0,1
+KNZc6,Knossos,3,0,0,0
+KNZc7,Knossos,5,1,0,2
+KNZf31,Knossos,9,0,0,2
+KOZa1,Kophinas,7,1,0,1
+MA1a,Malia,2,0,0,0
+MA1b,Malia,2,1,0,1
+MA2b,Malia,4,0,0,0
+MA2c,Malia,2,0,0,0
+MA4a,Malia,4,0,0,0
+MA4b,Malia,2,1,0,1
+MA6a,Malia,2,0,0,0
+MA6c,Malia,3,0,0,0
+MA10a,Malia,3,0,0,0
+MA10b,Malia,4,0,0,0
+MA10c,Malia,2,0,0,0
+MAWc<5>,Malia,2,1,0,1
+MI2,Milos,4,0,0,0
+PE1,Petras,7,0,0,0
+PE2,Petras,6,0,0,2
+PEZb7,Petras,2,1,0,1
+PEZc4,Petras,2,1,0,1
+PEZg6,Petras,3,0,0,0
+PH1a,Phaistos,3,0,0,0
+PH1b,Phaistos,3,0,0,0
+PH2,Phaistos,4,1,0,1
+PH3a,Phaistos,3,0,0,0
+PH3b,Phaistos,3,0,0,0
+PH6,Phaistos,5,0,0,2
+PH7a,Phaistos,4,0,0,0
+PH7b,Phaistos,5,0,0,0
+PH8a,Phaistos,3,0,0,0
+PH10,Phaistos,2,0,0,0
+PH14a,Phaistos,2,0,0,0
+PH16a,Phaistos,2,0,0,0
+PH16b,Phaistos,2,0,0,0
+PH27,Phaistos,2,0,1,1
+PH28a,Phaistos,3,1,1,2
+PH30,Phaistos,2,0,0,0
+PH(?)31a,Phaistos,14,1,0,1
+PH(?)31b,Phaistos,14,0,0,1
+PHWc39,Phaistos,2,0,0,0
+PHWc40,Phaistos,2,0,0,0
+PHWc46,Phaistos,2,0,0,0
+PHZb4,Phaistos,2,0,0,0
+PK1,Palaikastro,14,0,0,1
+PK3,Palaikastro,5,0,0,0
+PKZa8,Palaikastro,6,0,0,0
+PKZa9,Palaikastro,2,0,0,0
+PKZa10,Palaikastro,3,0,0,0
+PKZa11,Palaikastro,11,1,0,4
+PKZa12,Palaikastro,9,1,0,4
+PKZa14,Palaikastro,3,0,0,0
+PKZa16,Palaikastro,3,0,0,0
+PKZa18,Palaikastro,3,0,0,0
+PKZb?,Palaikastro,2,1,0,1
+PLZf1,Platanos,7,0,0,0
+PRZa1,Prassa,3,0,1,1
+PSZa2,Psykhro,4,0,0,0
+PYR1,Pyrgos,2,0,0,0
+PYRWc4,Pyrgos,2,0,0,0
+SAMWa1,Samothrace,3,0,0,0
+SIZg1,Sitia,2,1,0,1
+SKOZc1,Skoteino Cave,2,0,0,0
+SYZa1,Syme,3,1,0,1
+SYZa2,Syme,4,1,1,2
+SYZa3,Syme,3,1,0,1
+SYZa4,Syme,3,1,0,1
+SYZa5,Syme,2,0,0,0
+SYZa8,Syme,2,1,0,1
+TELZb1,Tel Haror,3,0,0,0
+THEtab.4,Thera,2,0,0,0
+THEZg5,Thera,4,0,0,0
+THEZb13,Thera,2,0,0,0
+TLZa1,Troullos,6,1,0,1
+TRYZb1,Trypiti,2,0,0,0
+TY2,Tylissos,12,0,0,0
+TY3a,Tylissos,21,0,0,3
+TY3b,Tylissos,7,0,0,0
+VRYZa1,Vrysinas,2,0,0,0
+ZA1a,Zakros,3,0,0,0
+ZA1b,Zakros,3,0,0,0
+ZA4a,Zakros,12,0,0,1
+ZA5a,Zakros,5,0,0,0
+ZA5b,Zakros,3,0,0,0
+ZA6a,Zakros,10,0,0,0
+ZA6b,Zakros,8,0,0,0
+ZA7a,Zakros,3,0,1,2
+ZA8,Zakros,10,0,0,2
+ZA9,Zakros,12,0,0,1
+ZA10a,Zakros,8,0,0,4
+ZA10b,Zakros,14,0,0,2
+ZA11a,Zakros,12,0,0,0
+ZA11b,Zakros,8,0,0,0
+ZA12a,Zakros,3,0,0,0
+ZA12b,Zakros,4,0,0,0
+ZA14,Zakros,8,0,0,0
+ZA15a,Zakros,11,0,0,0
+ZA15b,Zakros,5,0,0,0
+ZA16,Zakros,3,0,0,0
+ZA18a,Zakros,8,0,0,0
+ZA20,Zakros,7,0,0,0
+ZA21a,Zakros,9,0,0,1
+ZA21b,Zakros,4,0,0,0
+ZA22,Zakros,6,0,0,0
+ZA23,Zakros,2,0,0,0
+ZA24a,Zakros,2,0,0,0
+ZA26a,Zakros,5,0,0,0
+ZA27,Zakros,2,0,0,0
+ZA29,Zakros,2,0,0,0
+ZAWc2,Zakros,2,1,1,2
+ZAZb3,Zakros,7,0,0,4
+ZAZb34,Zakros,3,0,0,0
+ZAZg35,Zakros,2,0,0,0
+APZa2,Apodoulou,6,0,0,0
+ARGZg1,Arkhalkhori,2,0,0,0
+ARKH1a,Arkhalkhori,8,0,0,3
+ARKH1b,Arkhalkhori,4,1,0,1
+ARKH2,Arkhalkhori,7,0,0,2
+ARKH3a,Arkhalkhori,8,0,0,0
+ARKH3b,Arkhalkhori,7,0,0,0
+ARKH4a,Arkhalkhori,8,0,0,1
+ARKH4b,Arkhalkhori,6,0,0,1
+ARKH5,Arkhalkhori,5,1,1,3
+ARKH6,Arkhalkhori,3,0,0,0
+ARKHZf9,Arkhalkhori,2,0,0,0
+CR(?)Zf1,Crete,5,1,1,2
+CRZg3,Crete,3,0,0,0
+CRZg4,Crete,2,0,1,1
+GO2r,Gournia,6,0,0,0
+GO2v,Gournia,3,0,0,0
+KH103,Khania,6,0,0,0
+PKZa27,Palaikastro,2,0,0,0
+LACHZa1,Larani,3,0,0,0
+PKZa28,Palaikastro,2,0,0,0
+KH104,Khania,3,0,0,0
+THEZg16,Thera,2,0,0,0
+KNZg57a,Knossos,5,0,0,0

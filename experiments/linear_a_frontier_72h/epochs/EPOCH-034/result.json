@@ -1,0 +1,64 @@
+{
+  "task_id": "EPOCH-034",
+  "method": "Within-inscription word-ORDER position permutation null (>=2000 draws, one-sided) testing whether A-initial words occupy the inscription-INITIAL (first-word) position more than chance; cross-site held-out per-site tests + leave-one-site-out on Haghia Triada. LB (DĀMOS) positive control with planted heading bias (DETECT) and position-randomized false-positive arm. L2/L3 positional statistics only; anonymous signs; no phonetics/meaning/reading.",
+  "result": "A-initial words occupy the inscription-initial (first-word) position far above chance globally (p_A_first=0.1446 vs null mean 0.0790, p=0.0 across 2000 draws; observed exceeds the null maximum of 0.1108). The control axis confirms directionality: p_A_last=0.0458 is BELOW the base A-rate (0.0795), i.e. A-initial words are initial-biased, not final-biased, as a heading-marker hypothesis predicts. The effect is robust at the largest site (Haghia Triada, p=0.0005) and at Khania (p=0.0075), and survives leave-one-site-out of Haghia Triada (p=0.0). However only 2 of 5 testable sites reach individual significance (Knossos, Phaistos, Zakros do not; Zakros in fact trends reverse, p=1.0 with obs below null), so the cross-site robustness bar (>=3 significant sites) is NOT met. Verdict: SITE_LOCAL.",
+  "verdict": "A_HEADING_ROLE_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "n_inscriptions_ge2w": 415,
+      "p_A_first_observed": 0.14457831325301204,
+      "null_mean_p_A_first": 0.07898554216867451,
+      "null_p": 0.0,
+      "p_A_last_observed": 0.04578313253012048,
+      "base_A_rate": 0.07952266136886971
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_planted_p": 0.0,
+      "detect_obs": 0.49690265486725665,
+      "detect_null_mean": 0.16239380530973316,
+      "detect_reject_correct_direction": true,
+      "false_pos_rate": 0.03333333333333333,
+      "n_fp_sets": 30
+    },
+    "cross_site": {
+      "n_sites_testable": 5,
+      "n_sites_sig": 2,
+      "direction_consistent": true,
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.0,
+      "loo_obs": 0.1794871794871795,
+      "loo_survives": true,
+      "per_site": {
+        "Haghia Triada": {"n_insc": 181, "p_A_first": 0.09944751381215469, "null_mean": 0.040834254143646484, "p": 0.0005, "sig_initial": true},
+        "Khania": {"n_insc": 67, "p_A_first": 0.1791044776119403, "null_mean": 0.09585820895522316, "p": 0.0075, "sig_initial": true},
+        "Knossos": {"n_insc": 24, "p_A_first": 0.125, "null_mean": 0.08966666666666676, "p": 0.3315, "sig_initial": false},
+        "Phaistos": {"n_insc": 22, "p_A_first": 0.13636363636363635, "null_mean": 0.09065909090909055, "p": 0.301, "sig_initial": false},
+        "Zakros": {"n_insc": 34, "p_A_first": 0.029411764705882353, "null_mean": 0.09870588235294428, "p": 1.0, "sig_initial": false}
+      }
+    }
+  },
+  "key_findings": [
+    "GLOBAL heading-position signal is strong and real: A-initial words are the FIRST word of an inscription 14.46% of the time vs a within-inscription position-permutation null mean of 7.90% (p=0.0 over 2000 draws; observed exceeds the null maximum of 0.1108). This is a document-structural (initial-position) role for the A- class, purely positional.",
+    "Directionality is correct on the CONTROL axis: p_A_last (A-initial word in FINAL position) = 4.58%, BELOW the base A-rate of 7.95%. A-initial words are initial-biased, not final-biased — consistent with a heading/label role and inconsistent with a generic frequency artifact.",
+    "The effect is driven by the two largest sites: Haghia Triada (n=181, p=0.0005) and Khania (n=67, p=0.0075) are individually significant in the initial-biased direction. It SURVIVES leave-one-site-out of Haghia Triada (p=0.0).",
+    "Cross-site robustness is only PARTIAL: only 2 of 5 testable sites (>=15 qualifying inscriptions) reach individual significance. Knossos (p=0.33) and Phaistos (p=0.30) trend in the right direction but are underpowered; Zakros (n=34) trends REVERSE (p=1.0, obs 0.029 below null 0.099) — a genuine site heterogeneity that blocks the CROSS_SITE_ROBUST verdict.",
+    "POSITIVE CONTROL PASSED: the machinery DETECTS a planted heading bias on LB (DĀMOS) pseudo-inscriptions (p=0.0, correct initial-biased direction) and has a false-positive rate of 0.033 (<=0.10) on position-randomized pseudo-inscriptions across 30 sets. The null is calibrated by construction."
+  ],
+  "successor_hypotheses": [
+    "E035: Why does Zakros REVERSE the heading signal (A-initial words AVOID the first position)? Test whether Zakros uses a different document-opening convention (e.g. a different opening sign-class as heading marker) — a comparative site-level document-structure contrast, L2/L3.",
+    "E036: Is the heading role of A-initial words SPECIFIC to the A- class, or shared by other common word-initial signs? Run the same position-permutation test for every frequent initial sign (top-N by base rate) to build a positional-profile signature of which sign-classes are heading-biased.",
+    "E037: Does the A-initial-first-word effect concentrate on specific SUPPORT types (Tablet vs other)? E033 found A-words depleted on ledger entries; test whether A-initial-first-word is a TABLET-heading phenomenon specifically (support x position interaction, L2/L3).",
+    "E038: Combine E033 (A-words are non-entry/label words) with E034 (A-words are inscription-initial): test whether A-initial-first-word inscriptions are disproportionately NON-ledger (few numerals) — i.e. whether A- marks a heading that opens a non-enumerative document section.",
+    "E039: Power the underpowered sites. Knossos/Phaistos trend right but n=24/22; acquire or pool comparable small-site inscriptions to push them past significance and re-test the >=3-site robustness bar.",
+    "E040: Test SECOND-position and THIRD-position A-initial rates to characterize the full positional decay profile of the A- class (does the heading bias decay monotonically with word rank, as a true document-initial marker should?)."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Tokens carry NO phonetic/sound/meaning/reading. All statistics are L2/L3 POSITIONAL (word-in-document order) only. The null permutes word ORDER within each inscription, holding each inscription's word multiset fixed, testing POSITION exclusively — calibrated by construction and verified by the false-positive arm of the positive control (FPR=0.033<=0.10). LB (DĀMOS) is used ONLY as a positive-control benchmark to certify the machinery detects a planted positional effect and does not fire on noise; it is never used to read or validate any Linear A claim. 'A-' and 'heading' are anonymous positional labels; 'heading' means DOCUMENT-INITIAL POSITION only.",
+  "deviations": [
+    "LB (DĀMOS) has NO site/inscription metadata, so the positive control uses a SEEDED pseudo-inscription partition (chunking the flat wordform list into ordered groups of 6 words) as stated in the protocol; this is a benchmark-only construction and does not affect the Linear A test.",
+    "The planted-heading-bias DETECT arm forces sign 'A' (a common LB first sign, freq 1287/13562) into initial position in ~45% of pseudo-inscriptions by swapping an existing A-initial word into slot 0; this is the 'plant a heading bias' fallback explicitly permitted by the protocol when no native LB heading sign is identifiable.",
+    "No deviations from the frozen metric, null, or verdict rule."
+  ]
+}

@@ -782,3 +782,29 @@ epochs:
     artifacts: [epochs/EPOCH-033/prereg.md, epochs/EPOCH-033/plan_hash.txt, epochs/EPOCH-033/machinery.py, epochs/EPOCH-033/result.json, reports/EPOCH033_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-034
+    frontier: F10
+    gate: A
+    name: "A-initial words as inscription-initial (heading) markers, within-inscription position-permutation null"
+    plan_hash: "see epochs/EPOCH-034/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=1."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: global p_A_first=0.145 over 415 inscriptions EXACT (base A-rate ~0.080, ~2x), null p~0.0005; per-site HT 0.099 p0.0007 SIG, Khania 0.179 p0.0067 SIG, Zakros 0.029 p1.0 REVERSED, Knossos 0.125 p0.32 (trend, underpowered n24), Phaistos 0.136 p0.30 (trend, underpowered n22); leave-one-site-out (drop HT) -> 0.179 p0.0005 SURVIVES. All match."
+    positive_control: "PASSED (verified): position-permutation null detects a planted inscription-initial bias (p=0.0, correct direction) with false-positive rate 0.033 on position-randomized sets. Calibrated by construction (permuting word order = H0)."
+    verdict: "A_HEADING_ROLE_SITE_LOCAL (frozen rule: global significant + survives LOO BUT only 2/5 sites individually significant, <3-site bar). A-initial words are over-represented in inscription-initial (heading) position, but not certified to the full cross-site standard."
+    verdict_nuance: "STRONGER than 'site-local' implies: the effect is GLOBAL (0.145 vs 0.080, ~2x, p~0.0005) AND survives leave-one-site-out (drop HT -> non-HT pool 0.179, p0.0005), so it is NOT HT-confined. It falls short of CROSS_SITE_ROBUST only on the >=3-individually-significant-sites bar, which is a POWER limit (Knossos/Phaistos trend the right way but n=22-24) plus a Zakros reversal (0.029, distinct site style). Characterize as: globally-supported, LOO-robust, power-limited cross-site A- heading role — weaker than the certified A-prefix (E023 9/10) and ledger-order (E031 8/8) positives."
+    numbers: {n_inscriptions_ge2w: 415, p_A_first_observed: 0.145, null_mean: 0.079, null_p: 0.0005, p_A_last_observed: 0.046, base_A_rate: 0.080, sites_testable: 5, sites_sig: 2, direction_consistent: true, loo_excluded: "Haghia Triada", loo_p: 0.0005, per_site: {Haghia_Triada: {p_A_first: 0.099, p: 0.0007}, Khania: {p_A_first: 0.179, p: 0.0067}, Knossos: {p_A_first: 0.125, p: 0.32}, Phaistos: {p_A_first: 0.136, p: 0.30}, Zakros: {p_A_first: 0.029, p: 1.0}}}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "DOCUMENT-STRUCTURAL role for the A- class, globally supported + LOO-robust but power-limited cross-site (SITE_LOCAL per the frozen >=3-site rule). Connects the A- story: A- is a productive word-INITIAL prefix (E025) that is DEPLETED on ledger entries (E033) and ENRICHED in inscription-INITIAL/heading position (E034, ~2x). Coherent picture: the A- class marks HEADINGS/LABELS (document-initial), not counted commodities. Also A- is initial-biased not final (p_A_last 0.046 < base). Zakros reverses (distinct site style, cf. HT in E033). STRICTLY POSITIONAL L2/L3 — 'A-' anonymous, 'heading' = document-initial POSITION only, no semantic reading; earns no transfer licence."
+    committed_prediction: "modal CROSS_SITE_ROBUST or SITE_LOCAL; OUTCOME = SITE_LOCAL (global+LOO strong, but 2/5 sites, power-limited). The A-heading role is real but not certified cross-site."
+    deviations:
+      - "LB PC uses seeded pseudo-inscription chunks (6-word groups) — DAMOS has no inscription metadata; benchmark-only."
+      - "PC DETECT arm plants an inscription-initial bias by forcing an A-initial word into slot 0 in ~45% of pseudo-inscriptions (permitted fallback; no native LB heading sign identifiable)."
+    non_circular: "A-initial defined by first sign; document position observed; LB control-only; anonymous; no phonetics/meaning."
+    architecture_note: "Eleventh gated-runner epoch (repairs=1). Chased E033's negative-by-product lead (A- depleted on entries) into a positive-direction test; found a globally-real but power-limited A- heading role. Coordinator verification distinguished 'site-local' (the mechanical label) from the stronger 'global+LOO but power-limited' reality — the kind of scope calibration the frozen rule alone cannot express."
+    artifacts: [epochs/EPOCH-034/prereg.md, epochs/EPOCH-034/plan_hash.txt, epochs/EPOCH-034/machinery.py, epochs/EPOCH-034/result.json, reports/EPOCH034_REPORT.md]
+    successors_spawned: 5
+    substantive: true
