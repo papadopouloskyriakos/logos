@@ -1,0 +1,88 @@
+{
+ "epoch": "EPOCH-018",
+ "seed": 20260708,
+ "prereg_sha256": "b0dd95792b5c9a2eaa4c6814f4d537c1d51d137eaba6e5ae492f0523640ddc45",
+ "alpha": 0.01,
+ "k_search": 3,
+ "positive_control": {
+  "pc_signal": {
+   "obs_agg_mrr": 0.98,
+   "n_null": 250,
+   "null_mean": 0.13479410182762003,
+   "null_p95": 0.20208660223087055,
+   "p_adaptive": 0.00398406374501992,
+   "pass": true
+  },
+  "pc_null": {
+   "n_null": 250,
+   "null_mean": 0.15551895390317647,
+   "fpr_at_alpha": 0.008,
+   "alpha": 0.01,
+   "binom_95ci_frac": [
+    0.0,
+    0.024
+   ],
+   "pass": true
+  },
+  "PASS": true
+ },
+ "reproduction": {
+  "observed_agg_mrr": 0.24701551940826028,
+  "stored_e013_agg_mrr": 0.24701551940826028,
+  "diff": 0.0,
+  "n_eligible_values": 57,
+  "n_query_ids_ok": 3744,
+  "lambda": 4.7737936165662065,
+  "gallery_n": 74
+ },
+ "null_permute": {
+  "n": 999,
+  "mean": 0.05966120096970535,
+  "std": 0.00975955365340368,
+  "p5": 0.046592737153063835,
+  "p50": 0.0578289276119377,
+  "p95": 0.0773872796893116,
+  "max": 0.09592226396908578,
+  "p_adaptive_raw": 0.001
+ },
+ "null_bootstrap_weaker": {
+  "n": 500,
+  "mean": 0.05945480578526432,
+  "std": 0.009708243368273691,
+  "p5": 0.046142611188495906,
+  "p50": 0.05795721285566219,
+  "p95": 0.07816176815846314,
+  "max": 0.09740368775150426,
+  "p_adaptive_raw": 0.001996007984031936
+ },
+ "deflation": {
+  "p_adaptive_raw": 0.001,
+  "k_search": 3,
+  "p_deflated_bonferroni": 0.003,
+  "p_deflated_holm": 0.003
+ },
+ "effect": {
+  "observed_agg_mrr": 0.24701551940826028,
+  "null_permute_mean": 0.05966120096970535,
+  "lift_over_null_mean": 4.140304174126319,
+  "obs_minus_null_p95": 0.1696282397189487,
+  "e009_baseline_mrr": 0.17097617653735678,
+  "naive_lift_vs_e009_pct": 44.5
+ },
+ "verdict": "CHANNEL_SURVIVES_ADAPTIVE_NULL",
+ "deviations": [
+  "N raised 300->999 (PERMUTE) / 250->500 (BOOTSTRAP) after first pass hit the Monte Carlo p-floor (0/300 null draws >= observed); see DEVIATIONS.md #1. Both N satisfy the prereg's >=200 floor throughout; verdict bucket unchanged (CHANNEL_SURVIVES_ADAPTIVE_NULL) at both N."
+ ],
+ "first_pass_floor_note": {
+  "N": 300,
+  "p_adaptive_raw_floor": 0.0033222591362126247,
+  "p_deflated_bonferroni_floor": 0.009966777408637873,
+  "null_max_at_N300": 0.09477411098976102,
+  "note": "at N=300, 0/300 permute draws reached the observed MRR; raw p sat at the MC floor 1/301=0.00332, and 3x-deflated floor 0.00997 clears alpha=0.01 only by construction of the floor, not because the effect is marginal -- see z-score below computed at the larger N."
+ },
+ "parametric_cross_check": {
+  "z_obs_vs_null_permute": 19.197017106741804,
+  "note": "observed MRR expressed in null-PERMUTE standard deviations above the null mean; a Gaussian tail approximation only (null is empirically right-skewed, bounded below by 0) -- reported as a robustness cross-check, NOT as the confirmatory statistic (the empirical adaptive p above is confirmatory)."
+ },
+ "runtime_s": 139.0
+}

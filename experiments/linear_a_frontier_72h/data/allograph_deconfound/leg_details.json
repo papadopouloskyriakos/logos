@@ -1,0 +1,91 @@
+{
+ "leg1_prime": {
+  "INV": {
+   "T_obs": 0.1767,
+   "p_raw": 9.999000099990002e-05,
+   "n_signs": 60
+  },
+  "SEN": {
+   "T_obs": 0.1445,
+   "p_raw": 9.999000099990002e-05,
+   "n_signs": 60
+  }
+ },
+ "leg2_prime": {
+  "F_sites": [
+   "HT",
+   "KH",
+   "KN",
+   "PH",
+   "ZA"
+  ],
+  "n_docs": 258,
+  "INV": {
+   "balanced_acc": 0.2811,
+   "per_site_recall": {
+    "HT": 0.7024,
+    "KH": 0.0811,
+    "KN": 0.1111,
+    "PH": 0.25,
+    "ZA": 0.2609
+   },
+   "p_raw": 0.008599140085991401,
+   "N2b_p95": 0.2512,
+   "beats_N2b": true
+  },
+  "SEN": {
+   "balanced_acc": 0.2227,
+   "per_site_recall": {
+    "HT": 0.7024,
+    "KH": 0.027,
+    "KN": 0.0,
+    "PH": 0.1667,
+    "ZA": 0.2174
+   },
+   "p_raw": 0.1872812718728127,
+   "N2b_p95": 0.2576,
+   "beats_N2b": false
+  },
+  "nuisance_balanced_acc": 0.3307
+ },
+ "rendering_shuffle_null": {
+  "n_reps": 30,
+  "leg1_SEN_shuffled_p_median": 0.4351,
+  "leg1_SEN_collapse_rate": 0.9666666666666667,
+  "leg2_SEN_shuffled_bal_median": 0.1923,
+  "leg2_SEN_collapse_rate": 0.9333333333333333,
+  "COLLAPSES": true
+ },
+ "positive_control_synthetic": {
+  "n_synth_instances": 3540,
+  "n_signs": 60,
+  "d_eff": 1.2,
+  "scenarios": {
+   "S1_site_only": {
+    "T_obs_INV": 0.848,
+    "p_INV": 0.0004997501249375312,
+    "T_obs_SEN": 0.0394,
+    "p_SEN": 0.10644677661169415,
+    "fires_INV": true,
+    "fires_SEN": false
+   },
+   "S2_nuisance_only": {
+    "T_obs_INV": 0.0077,
+    "p_INV": 0.4002998500749625,
+    "T_obs_SEN": 1.3296,
+    "p_SEN": 0.0004997501249375312,
+    "fires_INV": false,
+    "fires_SEN": true
+   },
+   "S3_mixed": {
+    "T_obs_INV": 1.1033,
+    "p_INV": 0.0004997501249375312,
+    "T_obs_SEN": 0.9163,
+    "p_SEN": 0.0004997501249375312,
+    "fires_INV": true,
+    "fires_SEN": true
+   }
+  },
+  "PC_PASS": true
+ }
+}

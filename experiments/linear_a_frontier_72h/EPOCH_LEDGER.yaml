@@ -377,3 +377,49 @@ epochs:
     artifacts: [epochs/EPOCH-015/prereg.md, epochs/EPOCH-015/plan_hash.txt, epochs/EPOCH-015/DEVIATIONS.md, epochs/EPOCH-015/result.json, reports/EPOCH015_MARGINALIZED_MORPHOLOGY.md, scripts/e015_lib.py, scripts/e015_pc_lb.py, scripts/e015_pc_lb2.py, scripts/e015_synth.py, scripts/e015_la.py, data/marginalized_morph/]
     successors_spawned: 6
     substantive: true
+
+  - epoch_id: EPOCH-017
+    frontier: F6
+    gate: A/B
+    name: "photograph/second-rendering allograph de-confound of E012's doc->site tracer confound (feature-partition fallback: rendering-invariant topology INV vs rendering-sensitive curve/orientation SEN)"
+    plan_hash: 3b527541f2ed427028fff73c5264394b874150257833c0f5f6cc32b0b48624c9
+    prereg_frozen: 2026-07-08
+    completed: 2026-07-08
+    source_audit: "PHOTOGRAPHS and any SECOND independent per-instance rendering of LA signs = SOURCE_BLOCKED (sigla.phis.me ships only single-tracer vector line-drawings; corpus/bronze/sign_images is one modern font per VALUE, not per-instance hand-copies; no GORILA plate scans; no same-scribe attribution data) -- confirmed in-repo + 2 polite live fetches. Ran the prereg fallback channel (C) feature-partition; substituted a rendering-shuffle null for the SOURCE_BLOCKED same-scribe negative control."
+    positive_control: "PASS -- synthetic partition PC cleanly separates a planted site signal (in INV) from a planted site-correlated rendering nuisance (in SEN), incl. co-occurrence (PC_S1_INV p .0005, PC_S2_SEN p .0005, PC_S1_SEN p .106 ns, PC_S2_INV p .40 ns)."
+    negative_control: "rendering-shuffle null collapses the SEN leg1 signal 96.7% / leg2 93.3% -> the per-instance structure is genuine, not test-apparatus noise (but this alone cannot separate ancient allograph from tracer-session artifact)."
+    verdict: "SITE_ALLOGRAPH_REAL (frozen rule, on INV/topology partition) -- HONESTLY QUALIFIED: carried entirely by leg1 (pairwise within<cross-site spread), which fires on BOTH INV (T .177, p_holm .0004) AND SEN (T .145, p_holm .0004) -> real data are the PC's MIXED scenario, not the clean topology-only scenario the rule was designed for; leg2 (doc->site classifier) remains CONFOUNDED after partition (INV bal_acc .281, SEN .223, both < metadata-only nuisance .331 = E012's original G3 failure). Net: downgrades but does not dissolve E012's CONFOUNDED reading; upgrades leg1-topology to a PC-validated L1 palaeographic signal; leg2 confound fully open."
+    numbers: {n_instances: 3744, n_docs: 722, n_signs: 60, n_sites: 5, leg1_INV_T: 0.177, leg1_INV_p_holm: 0.0004, leg1_SEN_T: 0.145, leg1_SEN_p_holm: 0.0004, leg2_INV_balacc: 0.281, leg2_SEN_balacc: 0.223, nuisance_balacc: 0.331, sen_shuffle_collapse: 0.967}
+    layer: L1
+    licences_changed: none
+    la_touched: true
+    committed_prediction: "modal TRACER_ARTIFACT or SITE_ALLOGRAPH_REAL depending on whether topology-restricted signal survives; OUTCOME = SITE_ALLOGRAPH_REAL on INV but non-exclusive (also in SEN) and leg2 confound unresolved -> partial de-confound, photograph channel SOURCE_BLOCKED."
+    deviations: none
+    non_circular: "shape/topology features only; no phonetic value; SigLA sign identities anonymous."
+    artifacts: [epochs/EPOCH-017/prereg.md, epochs/EPOCH-017/plan_hash.txt, epochs/EPOCH-017/result.json, epochs/EPOCH-017/DEVIATIONS.md, scripts/e017_allograph_deconfound.py, data/allograph_deconfound/, reports/EPOCH017_ALLOGRAPH_DECONFOUND.md]
+    successors_spawned: 5
+    substantive: true
+
+  - epoch_id: EPOCH-018
+    frontier: "§12 (dedicated adaptive-null family 1 of 3)"
+    gate: A
+    name: "dedicated adaptive-null family (>=200 realizations) for the E013 component-decomposition cross-script channel"
+    plan_hash: b0dd95792b5c9a2eaa4c6814f4d537c1d51d137eaba6e5ae492f0523640ddc45
+    prereg_frozen: 2026-07-08
+    completed: 2026-07-08
+    positive_control: "PASS -- planted component<->component correspondence detected (PC signal obs MRR .98, adaptive p .004) AND null calibrated on no-signal synthetic data (FPR .008 at alpha .01)."
+    reproduction: "E013 LEG-1 statistic reproduced byte-for-byte before any null run (diff 0.0): observed agg MRR 0.2470 vs E009 whole-sign 0.1710 (+44.5%)."
+    null_design: "frequency+degree-EXACT permutation of component identities (preserves component-frequency profile, per-instance component count, cross-script pairing DoF); 999 realizations. Weaker with-replacement bootstrap (500) as comparison -- immaterial at this effect size (p .002)."
+    verdict: "CHANNEL_SURVIVES_ADAPTIVE_NULL -- observed exceeds all 999 null draws (null mean .0597, sd .0098, p95 .0774, max .0959); ~19 null-SDs above mean, 4.14x null mean; p_adaptive_raw .001, Bonferroni-deflated over K=3 (E008/E009/E013 architectures) = .003 < alpha .01."
+    numbers: {observed_agg_mrr: 0.2470, e009_baseline_mrr: 0.1710, lift_pct: 44.5, null_N: 999, null_mean: 0.0597, null_p95: 0.0774, null_max: 0.0959, z_vs_null: 19.2, p_adaptive_raw: 0.001, p_deflated_k3: 0.003, alpha: 0.01, pc_signal_p: 0.004, pc_null_fpr: 0.008}
+    open_limitation: "the null CANNOT detect confounds SHARED by the LA-extraction and LB-font-rendering pipelines (both use the same despeckle/skeletonize rules) -> a future epoch needs an independently-rendered LB gallery or pipeline-ablation to close this."
+    layer: L1
+    licences_changed: none
+    la_touched: false
+    committed_prediction: "modal CHANNEL_SURVIVES (E013 p 5e-5 was strong); CONFIRMED at p_deflated .003; compatible with E013's own HOLD-gate within-script failure (decomposition trades within-script discrimination for cross-script calibration)."
+    deviations:
+      - "D1 (POSTHOC precision): N raised 300/250 -> 999/500 to escape the Monte-Carlo p-floor (first pass 0/300 >= observed made deflated p .00997 look marginal purely from discretization); no threshold/verdict/hypothesis changed; both runs reported; bucket identical."
+    non_circular: "LB/Cypriot known values grade the benchmark only; component identities anonymous; no phonetic value assigned."
+    artifacts: [epochs/EPOCH-018/prereg.md, epochs/EPOCH-018/plan_hash.txt, epochs/EPOCH-018/result.json, epochs/EPOCH-018/DEVIATIONS.md, scripts/epoch018_decomp_adaptive_null.py, data/decomp_adaptive_null/, reports/EPOCH018_DECOMP_ADAPTIVE_NULL.md]
+    successors_spawned: 5
+    substantive: true

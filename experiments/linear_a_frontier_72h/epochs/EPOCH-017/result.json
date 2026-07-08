@@ -1,0 +1,208 @@
+{
+ "epoch": "EPOCH-017",
+ "frontier": "F6 photograph/second-rendering allograph de-confound (gates A/B)",
+ "plan_hash": "3b527541f2ed427028fff73c5264394b874150257833c0f5f6cc32b0b48624c9",
+ "prereg": "epochs/EPOCH-017/prereg.md (frozen 2026-07-08T13:08:35Z, before any run)",
+ "seed": 20260708,
+ "claim_layer": "L1 palaeographic only; no values, no licence touched",
+ "articles": [
+  "V",
+  "VII",
+  "VIII",
+  "IX",
+  "XI",
+  "XII",
+  "XV",
+  "XVII",
+  "XVIII",
+  "XXII"
+ ],
+ "deviations": [],
+ "step0_source_audit": {
+  "photographs": {
+   "checked": [
+    "corpus/bronze/sigla_browse_2026/*.html (in-repo)",
+    "sigla.phis.me/about.html (live, 1 polite fetch)",
+    "sigla.phis.me/document/ARKH%207/ (live, 1 polite fetch)"
+   ],
+   "finding": "SigLA ships only vector line-drawings/traces. about.html: 'Dataset and drawings are available under CC BY-NC-SA 4.0'. Document page: 'Link to tablet drawing'; image files are .png vector traces (ARKH 7.png, ARKH 7_1.png, ARKH 7_2.png); no photo/drawing toggle; no photograph referenced anywhere on the site or in the in-repo snapshot.",
+   "status": "SOURCE_BLOCKED"
+  },
+  "second_rendering": {
+   "checked": [
+    "corpus/bronze/sign_images/ (Aegean/UFAS font glyphs per idealized VALUE, not per-instance, not a scholarly hand-copy of specific inscriptions)",
+    "corpus/bronze/younger_lineara/ (text-only, no images)",
+    "corpus/bronze/ full listing (no GORILA plate scans / GesA facsimiles)"
+   ],
+   "finding": "No second independent image rendering of the same inscribed signs exists in-repo. SigLA states GORILA as its textual/attestation basis but no GORILA plate images are shipped anywhere in this corpus.",
+   "status": "SOURCE_BLOCKED"
+  },
+  "same_scribe_attribution": {
+   "checked": [
+    "corpus/silver/inscriptions_structured.json",
+    "corpus/bronze/palaeo/*.json",
+    "corpus/bronze/sigla_browse_2026/*",
+    "corpus/bronze/younger_lineara/*"
+   ],
+   "finding": "No GORILA/SigLA same-hand or scribe attribution found anywhere in-repo.",
+   "status": "SOURCE_BLOCKED",
+   "substitute": "rendering-shuffle null (needs no attribution data)"
+  },
+  "channel_run": "(C) FEATURE-PARTITION only, as pre-registered for this source state"
+ },
+ "partition": {
+  "INV_idx": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "INV_names": [
+   "n_endpoints",
+   "n_junctions",
+   "n_loops",
+   "n_components",
+   "n_strokes"
+  ],
+  "SEN_idx": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "SEN_names": [
+   "skel_len_norm",
+   "orient_0",
+   "orient_1",
+   "orient_2",
+   "orient_3"
+  ]
+ },
+ "inventory": {
+  "n_ok_instances": 3744,
+  "n_docs": 722,
+  "n_robust_labels": 133,
+  "n_F_SIGN": 60
+ },
+ "positive_control_synthetic": {
+  "n_synth_instances": 3540,
+  "n_signs": 60,
+  "d_eff": 1.2,
+  "scenarios": {
+   "S1_site_only": {
+    "T_obs_INV": 0.848,
+    "p_INV": 0.0004997501249375312,
+    "T_obs_SEN": 0.0394,
+    "p_SEN": 0.10644677661169415,
+    "fires_INV": true,
+    "fires_SEN": false
+   },
+   "S2_nuisance_only": {
+    "T_obs_INV": 0.0077,
+    "p_INV": 0.4002998500749625,
+    "T_obs_SEN": 1.3296,
+    "p_SEN": 0.0004997501249375312,
+    "fires_INV": false,
+    "fires_SEN": true
+   },
+   "S3_mixed": {
+    "T_obs_INV": 1.1033,
+    "p_INV": 0.0004997501249375312,
+    "T_obs_SEN": 0.9163,
+    "p_SEN": 0.0004997501249375312,
+    "fires_INV": true,
+    "fires_SEN": true
+   }
+  },
+  "PC_PASS": true
+ },
+ "leg1_prime": {
+  "INV": {
+   "T_obs": 0.1767,
+   "p_raw": 9.999000099990002e-05,
+   "n_signs": 60
+  },
+  "SEN": {
+   "T_obs": 0.1445,
+   "p_raw": 9.999000099990002e-05,
+   "n_signs": 60
+  }
+ },
+ "leg2_prime": {
+  "F_sites": [
+   "HT",
+   "KH",
+   "KN",
+   "PH",
+   "ZA"
+  ],
+  "n_docs": 258,
+  "INV": {
+   "balanced_acc": 0.2811,
+   "per_site_recall": {
+    "HT": 0.7024,
+    "KH": 0.0811,
+    "KN": 0.1111,
+    "PH": 0.25,
+    "ZA": 0.2609
+   },
+   "p_raw": 0.008599140085991401,
+   "N2b_p95": 0.2512,
+   "beats_N2b": true
+  },
+  "SEN": {
+   "balanced_acc": 0.2227,
+   "per_site_recall": {
+    "HT": 0.7024,
+    "KH": 0.027,
+    "KN": 0.0,
+    "PH": 0.1667,
+    "ZA": 0.2174
+   },
+   "p_raw": 0.1872812718728127,
+   "N2b_p95": 0.2576,
+   "beats_N2b": false
+  },
+  "nuisance_balanced_acc": 0.3307
+ },
+ "multiplicity": {
+  "labels": [
+   "p1_INV",
+   "p1_SEN",
+   "p2_INV",
+   "p2_SEN"
+  ],
+  "raw_p": [
+   9.999000099990002e-05,
+   9.999000099990002e-05,
+   0.008599140085991401,
+   0.1872812718728127
+  ],
+  "holm": [
+   0.00039996000399960006,
+   0.00039996000399960006,
+   0.017198280171982803,
+   0.1872812718728127
+  ]
+ },
+ "fires": {
+  "leg1_INV_fire": true,
+  "leg1_SEN_fire": true,
+  "leg2_INV_fire": false,
+  "leg2_SEN_fire": false,
+  "FIRE_INV": true,
+  "FIRE_SEN": true
+ },
+ "rendering_shuffle_null": {
+  "n_reps": 30,
+  "leg1_SEN_shuffled_p_median": 0.4351,
+  "leg1_SEN_collapse_rate": 0.9666666666666667,
+  "leg2_SEN_shuffled_bal_median": 0.1923,
+  "leg2_SEN_collapse_rate": 0.9333333333333333,
+  "COLLAPSES": true
+ },
+ "verdict": "SITE_ALLOGRAPH_REAL",
+ "honest_accounting": "A SITE_ALLOGRAPH_REAL verdict is STILL L1 palaeographic, STILL bounded by 'one trace per document' (tracer-vs-scribe inseparable at the document level, per E012) -- this epoch only removes the SPECIFIC rendering-style confound G3 caught (continuous curve/orientation nuisance); it does not and cannot certify photograph-level truth, because no photograph channel is obtainable (STEP 0)."
+}
