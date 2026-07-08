@@ -1,0 +1,67 @@
+{
+ "epoch": "EPOCH-014",
+ "frontier": "F7 register-stratified phonotactics (value-free strata test)",
+ "plan_hash": "017c615febb848749e72c941789542e5dce214ca0b956a8eda6400ede7be2ff9",
+ "prereg": "epochs/EPOCH-014/prereg.md (frozen 2026-07-08T05:14:39Z, before any run)",
+ "seed": 20260708,
+ "claim_layer": "L2 structure only; no language named; no phonetic value used; no licence touched (Art. XV)",
+ "articles": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XVII", "XVIII", "XXII"],
+ "deviations": [],
+ "positive_controls_run_first": {
+  "PC1_LB_KNA_vs_KND_must_fire": {"jsd": 0.307564, "p_perm": 0.0005, "excess_ratio": 1.9219, "pass": true},
+  "PC2_random_split_KND_must_not_fire": {"fp": 2, "of": 20, "threshold": 3, "pass": true},
+  "PC3_power_at_LA_sizes": {"LIB-LEDG": "10/10", "LIB-SEAL": "10/10", "LEDG-SEAL": "10/10", "all_pairs_powered": true}
+ },
+ "registers": {
+  "LIB_stone_vessels": {"docs": 85, "words_ge2signs": 259, "bigram_tokens": 1155},
+  "LEDG_tablets": {"docs": 257, "words_ge2signs": 844, "bigram_tokens": 3138},
+  "SEAL_nodule_roundel_sealing": {"docs": 92, "words_ge2signs": 106, "bigram_tokens": 372}
+ },
+ "LA_register_pairs_bigram_JSD": {
+  "LIB-LEDG": {"jsd": 0.213542, "excess_ratio": 1.2028, "p_perm": 0.0005, "p_holm": 0.0015, "significant": true, "site_discounted": true},
+  "LIB-SEAL": {"jsd": 0.266327, "excess_ratio": 0.8268, "p_perm": 0.0005, "p_holm": 0.0015, "significant": true, "site_discounted": true},
+  "LEDG-SEAL": {"jsd": 0.197441, "excess_ratio": 0.6228, "p_perm": 0.0005, "p_holm": 0.0015, "significant": true, "site_discounted": true}
+ },
+ "site_control_within_register": {
+  "LEDG_HT_vs_nonHT": {"jsd": 0.185077, "excess_ratio": 0.7735, "p_perm": 0.0005},
+  "SEAL_HT_vs_nonHT": {"jsd": 0.339415, "excess_ratio": 1.5117, "p_perm": 0.0005},
+  "site_benchmark_S": 1.5117,
+  "gate": "every register pair's excess_ratio (max 1.2028) <= S=1.5117 -> ALL pairs site-discounted"
+ },
+ "LB_single_language_benchmark": {
+  "postremoval_p": 0.0005, "postremoval_excess_ratio": 0.2125, "n_recurrent_types_removed": 72,
+  "meaning": "one language (LB Greek), two document types, STILL systemic post-removal divergence xr=0.21 -> systemic phonotactic register divergence does NOT by itself indicate distinct languages"
+ },
+ "step3_vocabulary_attribution": "NOT RUN for the record (gated: no pair survived the site gate); see posthoc",
+ "verdict": "REGISTER_STRATA_NO_POWER",
+ "verdict_basis": "PC1/PC2/PC3 all pass (machinery + power validated); all 3 LA register pairs Holm-significant at the permutation floor (p_holm=0.0015) BUT all are site-discounted: within-register site divergence (SEAL HT/nonHT excess_ratio 1.51) exceeds every between-register divergence (max 1.20) -> the register-vs-site attribution is undecidable on this corpus by the frozen rule",
+ "posthoc_nonverdict": {
+  "PH1_register_within_site_unconfounded": {
+   "LEDG-SEAL@HT": {"jsd": 0.176681, "excess_ratio": 0.4407, "p_perm": 0.0005},
+   "LEDG-SEAL@Khania": {"jsd": 0.286324, "excess_ratio": 1.378, "p_perm": 0.0005},
+   "note": "a real register contrast EXISTS when site is held fixed; LIB never co-occurs with LEDG/SEAL at a site, so libation-vs-admin is permanently site-confounded in this corpus"
+  },
+  "PH2_recurrent_word_removal_everywhere": {
+   "LIB-LEDG": {"xr_pre": 1.2028, "xr_post": 0.4483, "p_post": 0.0005},
+   "LIB-SEAL": {"xr_pre": 0.8268, "xr_post": 0.3336, "p_post": 0.0005},
+   "LEDG-SEAL": {"xr_pre": 0.6228, "xr_post": 0.1931, "p_post": 0.0005},
+   "LEDG@HT-vs-nonHT": {"xr_pre": 0.7735, "xr_post": 0.3126, "p_post": 0.0005},
+   "LEDG-SEAL@HT": {"xr_pre": 0.4407, "xr_post": 0.1264, "p_post": 0.017},
+   "SEAL@HT-vs-nonHT": {"runnable_post": false, "postremoval_words": [31, 26]},
+   "reading": "divergence is mostly recurrent-vocabulary; residuals (0.13-0.45) straddle the LB single-language benchmark (0.21); only LIB-involving residuals exceed it, and LIB is exactly the register that cannot be de-confounded from site"
+  },
+  "PH4_length_only_adversary": {
+   "LIB-LEDG": {"jsd_lenonly": 0.00575, "p": 0.0005},
+   "LEDG-SEAL": {"jsd_lenonly": 0.000762, "p": 0.476},
+   "SEAL@HT-vs-nonHT": {"jsd_lenonly": 2.7e-05, "p": 0.948},
+   "reading": "word-length profile alone is significant only for LIB pairs (long formula words) and is tiny in absolute JSD; divergences are not length artifacts"
+  }
+ },
+ "bearing_on_F7_mixed_language": "NO SUPPORT GAINED: (i) register divergence is not separable from site divergence at corpus scale; (ii) where site is held fixed (posthoc), the register residual after vocabulary removal (0.126) is BELOW the LB single-language ceiling (0.2125); (iii) LIB (libation) pairs exceed the ceiling but are permanently site-confounded. The mixed-language hypothesis remains unsupported at L2; nothing here refutes it either.",
+ "artifacts": [
+  "epochs/EPOCH-014/prereg.md", "epochs/EPOCH-014/plan_hash.txt",
+  "data/register_strata/e014_results.json", "data/register_strata/e014_posthoc.json",
+  "scripts/e014_register_strata.py", "scripts/e014_posthoc.py",
+  "reports/EPOCH014_REGISTER_STRATA.md"
+ ]
+}

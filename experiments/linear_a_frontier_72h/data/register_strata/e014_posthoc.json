@@ -1,0 +1,296 @@
+{
+ "label": "POST-HOC NON-VERDICT (EPOCH-014)",
+ "PH1_register_within_site": {
+  "LEDG-SEAL@HT": {
+   "n_docs": [
+    162,
+    43
+   ],
+   "n_words": [
+    630,
+    53
+   ],
+   "n_bigram_tokens": [
+    2307,
+    187
+   ],
+   "jsd_obs": 0.176681,
+   "null_mean": 0.122632,
+   "null_p95": 0.1366,
+   "excess": 0.054049,
+   "excess_ratio": 0.4407,
+   "p_perm": 0.0005,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.18671,
+   "jsd_final_descriptive": 0.173168,
+   "mean_word_len": [
+    2.662,
+    2.528
+   ]
+  },
+  "LEDG-SEAL@KH": {
+   "n_docs": [
+    45,
+    34
+   ],
+   "n_words": [
+    86,
+    34
+   ],
+   "n_bigram_tokens": [
+    321,
+    106
+   ],
+   "jsd_obs": 0.286324,
+   "null_mean": 0.120406,
+   "null_p95": 0.143895,
+   "excess": 0.165918,
+   "excess_ratio": 1.378,
+   "p_perm": 0.0005,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.371574,
+   "jsd_final_descriptive": 0.402117,
+   "mean_word_len": [
+    2.733,
+    2.118
+   ]
+  },
+  "note": "LIB has no HT/Khania presence; libation-vs-admin cannot be de-confounded from site in this corpus"
+ },
+ "PH2_recurrent_removal_everywhere": {
+  "LIB-LEDG": {
+   "n_docs": [
+    77,
+    236
+   ],
+   "n_words": [
+    207,
+    632
+   ],
+   "n_bigram_tokens": [
+    890,
+    2429
+   ],
+   "jsd_obs": 0.160084,
+   "null_mean": 0.110533,
+   "null_p95": 0.120482,
+   "excess": 0.049551,
+   "excess_ratio": 0.4483,
+   "p_perm": 0.0005,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.091094,
+   "jsd_final_descriptive": 0.078803,
+   "mean_word_len": [
+    3.3,
+    2.843
+   ],
+   "n_types_removed": 46
+  },
+  "LIB-SEAL": {
+   "n_docs": [
+    77,
+    45
+   ],
+   "n_words": [
+    211,
+    57
+   ],
+   "n_bigram_tokens": [
+    903,
+    225
+   ],
+   "jsd_obs": 0.168508,
+   "null_mean": 0.126354,
+   "null_p95": 0.140802,
+   "excess": 0.042154,
+   "excess_ratio": 0.3336,
+   "p_perm": 0.0005,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.192475,
+   "jsd_final_descriptive": 0.144897,
+   "mean_word_len": [
+    3.28,
+    2.947
+   ],
+   "n_types_removed": 17
+  },
+  "LEDG-SEAL": {
+   "n_docs": [
+    235,
+    45
+   ],
+   "n_words": [
+    631,
+    57
+   ],
+   "n_bigram_tokens": [
+    2426,
+    225
+   ],
+   "jsd_obs": 0.132788,
+   "null_mean": 0.111298,
+   "null_p95": 0.121723,
+   "excess": 0.02149,
+   "excess_ratio": 0.1931,
+   "p_perm": 0.0005,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.119483,
+   "jsd_final_descriptive": 0.122237,
+   "mean_word_len": [
+    2.845,
+    2.947
+   ],
+   "n_types_removed": 45
+  },
+  "LEDG@HT-LEDG@nonHT": {
+   "n_docs": [
+    143,
+    93
+   ],
+   "n_words": [
+    434,
+    207
+   ],
+   "n_bigram_tokens": [
+    1647,
+    809
+   ],
+   "jsd_obs": 0.155567,
+   "null_mean": 0.118518,
+   "null_p95": 0.128194,
+   "excess": 0.03705,
+   "excess_ratio": 0.3126,
+   "p_perm": 0.0005,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.126188,
+   "jsd_final_descriptive": 0.090925,
+   "mean_word_len": [
+    2.795,
+    2.908
+   ],
+   "n_types_removed": 34
+  },
+  "SEAL@HT-SEAL@nonHT": {
+   "runnable": false,
+   "postremoval_words": [
+    31,
+    26
+   ],
+   "n_types_removed": 8
+  },
+  "LEDG-SEAL@HT": {
+   "n_docs": [
+    143,
+    23
+   ],
+   "n_words": [
+    434,
+    31
+   ],
+   "n_bigram_tokens": [
+    1647,
+    121
+   ],
+   "jsd_obs": 0.126445,
+   "null_mean": 0.112258,
+   "null_p95": 0.12339,
+   "excess": 0.014187,
+   "excess_ratio": 0.1264,
+   "p_perm": 0.017491,
+   "n_perm": 2000,
+   "jsd_initial_descriptive": 0.133442,
+   "jsd_final_descriptive": 0.108061,
+   "mean_word_len": [
+    2.795,
+    2.903
+   ],
+   "n_types_removed": 38
+  }
+ },
+ "PH3_seal_composition": {
+  "SEAL_site_counts": [
+   [
+    "Haghia Triada",
+    43
+   ],
+   [
+    "Khania",
+    34
+   ],
+   [
+    "Phaistos",
+    6
+   ],
+   [
+    "Knossos",
+    4
+   ],
+   [
+    "Malia",
+    1
+   ],
+   [
+    "Pyrgos",
+    1
+   ],
+   [
+    "Samothrace",
+    1
+   ],
+   [
+    "Zakros",
+    1
+   ],
+   [
+    "Gournia",
+    1
+   ]
+  ],
+  "SEAL_support_HT": [
+   [
+    "Nodule",
+    25
+   ],
+   [
+    "Roundel",
+    18
+   ]
+  ],
+  "SEAL_support_nonHT": [
+   [
+    "Roundel",
+    42
+   ],
+   [
+    "Nodule",
+    6
+   ],
+   [
+    "Sealing",
+    1
+   ]
+  ]
+ },
+ "PH4_length_only_adversary": {
+  "LIB-LEDG": {
+   "jsd_lenonly": 0.00575,
+   "p": 0.0005,
+   "xr": 43.1952
+  },
+  "LIB-SEAL": {
+   "jsd_lenonly": 0.010681,
+   "p": 0.001,
+   "xr": 1.8319
+  },
+  "LEDG-SEAL": {
+   "jsd_lenonly": 0.000762,
+   "p": 0.475762,
+   "xr": -0.0371
+  },
+  "SEAL@HT-SEAL@nonHT": {
+   "jsd_lenonly": 2.7e-05,
+   "p": 0.948026,
+   "xr": -0.972
+  }
+ }
+}

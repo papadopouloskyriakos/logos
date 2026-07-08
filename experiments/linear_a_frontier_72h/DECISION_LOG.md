@@ -12,3 +12,16 @@
   E003 seed-poverty curve (F3, decisive for LA applicability), E004 fraction-order third seal (F10, cheap
   falsifiable prereg before Anetaki II lands), E005 KNZg57a provenance trace (F8; seals' exclusion lists may
   need ERRATUM). Launching all three.
+- EPOCH-007 (F5, gate A/C) executed: ledger-role induction as anchor constraints. Prereg 6c85277d frozen
+  04:13:24Z BEFORE any run. PC1 caught the initial machinery (k=5/13-feature) as broken (macro-F1 .69,
+  recall(U)=0) — calibrated on SYNTHETIC ONLY (DEV-1 preceding-token features, DEV-2 k=12 -> PC1 1.00),
+  then a single real run. LB detector did NOT fire: heldout macro-F1 .341 (<.50), recall(T)=recall(U)=0 —
+  KN-vs-rest split crosses a genuine convention divide (to-so is a Pylos habit: 261 PY vs 57 KN; KN gold T
+  = 0.4% of derivation tokens). Verdict ROLE_INDUCTION_NO_POWER (mechanical). Post-hoc (labeled): units-slot
+  IS structurally identifiable (recall .862 under recall-lift decode) -> successor channel; totals need
+  arithmetic sum-consistency features + within-site splits. LA leg stayed gated (exploratory readout only,
+  no constraints emitted).
+- EPOCH-014 banked (12/18). E012 (allograph structure) + E013 (component matcher) hit the provider session
+  limit (resets 09:00 Europe/Amsterdam = 07:00 UTC) -> COMPUTE_BLOCKED temporarily; workflow resume-id
+  wf_aca1e317-7d0 (E014 replays from cache; E012/E013 run live on resume). Not an early-stop condition;
+  campaign continues on reset.

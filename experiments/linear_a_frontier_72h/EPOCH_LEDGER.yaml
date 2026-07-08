@@ -205,3 +205,34 @@ epochs:
     verdict: BOTH_DETECTORS_NO_POWER
     result: "Unit-slot detector: E007's 'live U channel' (recall .862) UNMASKED as a class-prior artifact (3rd frequency-artifact unmasking; no rule exceeds F1 .262 within-KN). Totals detector: LB is the WRONG analogue for integer sum-consistency (0 gold-T numeral-followed) though weak genuine signal (.053>p95 .038). EXPLORATORY: blind sum-logic on LA concentrates on KU-RO (7/13 vs 3.3% chance); LA fractions occupy post-quantity (unit) positions -> fraction-as-unit supports the E004 seal channel."
     substantive: true
+
+  - id: EPOCH-014
+    frontier: F7
+    name: register-stratified phonotactics (value-free strata test)
+    substantive_gate: A
+    plan_hash: 017c615febb848749e72c941789542e5dce214ca0b956a8eda6400ede7be2ff9
+    prereg_frozen: 2026-07-08T05:14:39Z
+    completed: 2026-07-08
+    positive_control: PASS (PC1 LB KN-A vs KN-D fires p .0005 xr 1.92; PC2 random-split FP 2/20; PC3 power 10/10 at all 3 LA pair sizes)
+    negative_control: PASS (PC2; length-only adversary posthoc; document-length-matched permutation null)
+    verdicts:
+      epoch: REGISTER_STRATA_NO_POWER
+      basis: all 3 LA register pairs Holm-significant at floor (p_holm .0015) BUT site-discounted — within-register site divergence (SEAL HT/nonHT xr 1.51) exceeds every register divergence (max 1.20)
+    adversarial_findings:
+      - LB single-language benchmark = the calibration star: one language, two doc types, STILL systemic post-removal xr 0.21 -> systemic register phonotactics never licenses a distinct-language reading alone
+      - posthoc unconfounded LEDG-SEAL@HT after vocab removal: xr 0.126 (p .017) BELOW the LB single-language ceiling -> where the comparison is clean, LA registers look like ONE language's document types
+      - LIB (libation) never co-occurs with LEDG/SEAL at any site -> libation-vs-admin is PERMANENTLY site-confounded in the extant corpus; the missing cell is a data-acquisition target
+      - divergences are recurrent-vocabulary-dominated (xr drops 2-3x on removal) and NOT length artifacts (length-only JSD <= .006)
+    committed_prediction: mixed-language F7 hypothesis gains NO SUPPORT (not refuted; discriminating comparison does not exist in corpus)
+    layer: L2
+    licences_changed: none
+    artifacts: [epochs/EPOCH-014/result.json, reports/EPOCH014_REGISTER_STRATA.md, data/register_strata/]
+    successors_spawned: 6
+    substantive: true
+
+  - epoch_id: EPOCH-014
+    frontier: F7
+    gate: A
+    verdict: REGISTER_STRATA_NO_POWER
+    result: "Machinery fully validated (PC1 LB fires p=.0005; PC2 FP 2/20; PC3 power 10/10). All 3 LA register pairs Holm-significant BUT within-register SITE divergence is as large or larger (SEAL HT/nonHT xr 1.51 > every register pair) -> site-discounted by frozen rule. KEY: LA's dominant value-free stratification axis is PLACE >= document type; where unconfounded (LEDG-SEAL@HT) the vocabulary-stripped residual (xr .126) falls BELOW the LB single-language ceiling (.21) -> consistent with ONE language's document types. Libation-vs-admin is PERMANENTLY site-confounded in the extant corpus (no co-occurrence at any site). F7 mixed-language: no support gained, not refuted."
+    substantive: true
