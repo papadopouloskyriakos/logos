@@ -423,3 +423,44 @@ epochs:
     artifacts: [epochs/EPOCH-018/prereg.md, epochs/EPOCH-018/plan_hash.txt, epochs/EPOCH-018/result.json, epochs/EPOCH-018/DEVIATIONS.md, scripts/epoch018_decomp_adaptive_null.py, data/decomp_adaptive_null/, reports/EPOCH018_DECOMP_ADAPTIVE_NULL.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-019
+    frontier: "§12 (third power surface — ATTEMPT 1)"
+    gate: A
+    name: "component-channel value-recovery identifiability surface (anchor-budget x channel-quality -> value-class ARI)"
+    completed: 2026-07-08
+    positive_control: "FAILED (PC_PASS=false): adding anchors made value-class recovery WORSE than blind clustering at every quality level; oracle+12-anchor ceiling 0.451 < b=0 level 0.473 -> per prereg fail-closed rule forces HARNESS_NOT_VALIDATED."
+    adversarial_control: "PASSED (shuffled-identity null max ARI 0.0057 << 0.05) -> harness is conservative, never fabricates recovery; it fails by under-powering the fine (row) axis."
+    verdict: "HARNESS_NOT_VALIDATED (mechanical, fail-closed) -- the surface as designed does not clear its own PC, so NO certified claim about LA's component-channel value-recovery point is licensed. Root cause diagnosed: concatenated equal-noise one-hot representation makes same-row and same-column pairwise distances numerically identical, so no Euclidean method can separate the axes without already knowing the block split (circular). A declared non-circular posthoc (seeded-KMeans) failed the identical PC the same way -> not a single-algorithm artifact."
+    numbers: {K: 90, n_c: 18, n_v: 5, LA_measured_MRR: 0.247, LB_within_MRR: 0.399, PC_oracle_ceiling: 0.4514, PC_lb_point: 0.1145, adversarial_max_ari: 0.0057, LA_point_ari_uncertified: 0.131, foothold_bar: 0.5}
+    section12_status: "third power surface NOT satisfied by this attempt (broken benchmark); §12 still needs a valid third surface -> successor: asymmetric-scaling redesign."
+    layer: L1
+    licences_changed: none
+    la_touched: "descriptive only (uncertified; PC failed at every cell incl. non-LA cells)"
+    committed_prediction: "modal LA_COMPONENT_POINT_BELOW_FOOTHOLD; OUTCOME = HARNESS_NOT_VALIDATED (could not certify because PC failed) -- discipline caught a broken surface before any LA claim."
+    deviations:
+      - "D1 (declared non-circular posthoc seeded-KMeans alternative; failed identical PC gate; POSTHOC, not the verdict)"
+    artifacts: [epochs/EPOCH-019/prereg.md, epochs/EPOCH-019/plan_hash.txt, epochs/EPOCH-019/DEVIATIONS.md, epochs/EPOCH-019/result.json, reports/EPOCH019_COMPONENT_POWER_SURFACE.md, scripts/epoch019_component_power_surface.py, scripts/epoch019_posthoc_seeded.py, data/component_power_surface/]
+    successors_spawned: 5
+    substantive: true
+
+  - epoch_id: EPOCH-020
+    frontier: "§12 (dedicated adaptive-null family 2 of 3)"
+    gate: A
+    name: "dedicated matched-marginal adaptive-null family for the E017 leg1-topology (INV) site-allograph signal"
+    completed: 2026-07-08
+    reproduction: "E017 leg1-INV T_obs reproduced byte-for-byte (0.1767)."
+    null_design: "restricted site-label permutation preserving site sizes + per-sign site-support + doc imbalance; 10,000 realizations (free-shuffle 10,000 as weaker comparison). Family calibration: 2,000 leave-one-out null draws."
+    positive_control: "PASS (power: planted site signal p 0.000999; calibration: 0/100 spurious graduations, CP95 upper 0.0005)."
+    verdict: "SITE_ALLOGRAPH_SURVIVES_ADAPTIVE_NULL (INV partition) -- aggregate T_obs 0.1767 exceeds the max of 10,000 restricted-null draws (0.1452); adaptive p at 1/10001 floor; per-sign Holm family false-graduation rate 0.0000. BUT NARROWED: only 1 of 60 signs individually clears Holm (2nd-smallest p 0.0002 just misses) -> the signal is CONCENTRATED in one (possibly two borderline) sign, NOT broadly distributed. SEN partition 0/60 (CONTRAST_ONLY). E017 leg2 remains CONFOUNDED (not re-opened)."
+    numbers: {T_obs_INV: 0.1767, restricted_null_max: 0.1452, restricted_null_p95: 0.0663, adaptive_p: 0.0001, n_signs: 60, n_holm_surviving: 1, top5_persign_p: [0.0001,0.0002,0.006,0.007,0.0101], family_false_graduation_rate: 0.0, PC_power_p: 0.000999, PC_calibration_R: 100}
+    section12_status: "dedicated adaptive-null family 2 of 3 delivered (E018 = 1/3); one more needed."
+    layer: L1
+    licences_changed: none
+    la_touched: true
+    committed_prediction: "modal SURVIVES (E017 doc-perm p_holm .0004 was strong); CONFIRMED under a much stricter matched-marginal null, but with a NEW sharper finding: the signal is 1-sign-concentrated, materially narrowing E017's 'site-allograph' framing."
+    deviations: none
+    non_circular: "topology features only; site/sign identities anonymous; no phonetic value."
+    artifacts: [epochs/EPOCH-020/prereg.md, epochs/EPOCH-020/plan_hash.txt, epochs/EPOCH-020/result.json, reports/EPOCH020_ALLOGRAPH_ADAPTIVE_NULL.md, scripts/, data/allograph_adaptive_null/]
+    successors_spawned: 5
+    substantive: true

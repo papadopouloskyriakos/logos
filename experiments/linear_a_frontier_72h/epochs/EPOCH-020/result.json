@@ -1,0 +1,177 @@
+{
+ "epoch": "EPOCH-020",
+ "family": "S12 dedicated adaptive-null family 2 of 3, gate A (E017 leg1-INV site-allograph re-pricing)",
+ "plan_hash": "9025339523fc34770a95ddcd58673b5f280654d0eadbd0cb19241bb7ab599d79",
+ "prereg": "epochs/EPOCH-020/prereg.md (frozen before any run)",
+ "seed": 20260708,
+ "claim_layer": "L1 palaeographic only; leg2 (doc classification) stays CONFOUNDED/untouched",
+ "articles": [
+  "V",
+  "VII",
+  "VIII",
+  "XI",
+  "XII",
+  "XVII",
+  "XVIII",
+  "XXII"
+ ],
+ "deviations": [],
+ "partition": {
+  "INV_idx": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "SEN_idx": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ "inventory": {
+  "n_ok_instances": 3744,
+  "n_docs": 722,
+  "n_F_SIGN": 60,
+  "n_sites_total": 21,
+  "site_doc_counts": {
+   "ARKH": 10,
+   "GO": 4,
+   "HS": 1,
+   "HT": 355,
+   "KE": 5,
+   "KH": 189,
+   "KN": 36,
+   "KY": 1,
+   "MA": 16,
+   "MI": 1,
+   "MY": 1,
+   "PA": 1,
+   "PE": 3,
+   "PH": 50,
+   "PK": 2,
+   "PS": 1,
+   "PYR": 2,
+   "SY": 1,
+   "THE": 5,
+   "TY": 3,
+   "ZA": 35
+  }
+ },
+ "step1_reproduction": {
+  "T_obs_INV_reproduced": 0.1767,
+  "T_obs_INV_E017_reported": 0.1767,
+  "matches_4dp": true
+ },
+ "support_strata": {
+  "edges_lo_exclusive_hi_inclusive": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    8,
+    9999
+   ]
+  ],
+  "stratum_doc_counts": {
+   "0": 311,
+   "1": 112,
+   "2": 76,
+   "3": 88,
+   "4": 135
+  }
+ },
+ "step2_persign_sitesupport_diagnostic": {
+  "n_signs": 60,
+  "n_signs_restricted_closer_to_real": 31,
+  "n_signs_free_closer_to_real": 29,
+  "n_signs_tied": 0,
+  "mean_abs_dev_restricted": 1.6319,
+  "mean_abs_dev_free": 1.6707,
+  "pass_majority_restricted_better": true
+ },
+ "step3_inv": {
+  "n_signs_tested": 60,
+  "n_signs_holm_surviving_real": 1,
+  "any_sign_survives_holm_real": true,
+  "false_graduation_rate_matched_null": 0.0,
+  "false_graduation_rate_n_loo_draws": 2000,
+  "false_graduation_alpha_target": 0.01
+ },
+ "step4_positive_control": {
+  "n_synth_instances": 3540,
+  "n_signs": 60,
+  "d_eff": 1.2,
+  "M_PC": 1000,
+  "power": {
+   "T_obs_S1": 1.3555,
+   "p_S1": 0.000999000999000999,
+   "power_pass": true
+  },
+  "calibration": {
+   "R": 100,
+   "false_graduation_rate": 0.0,
+   "n_graduated": 0,
+   "clopper_pearson_upper_95": 0.0005,
+   "target_alpha": 0.05,
+   "calib_pass": true
+  },
+  "PC_PASS": true
+ },
+ "step2_inv_restricted": {
+  "T_obs": 0.1767,
+  "p": 9.999000099990002e-05,
+  "null_T_mean": 0.0014,
+  "null_T_p95": 0.0663,
+  "null_T_max": 0.1452,
+  "n_draws": 10000
+ },
+ "step2_inv_free_weaker_comparison": {
+  "T_obs": 0.1767,
+  "p": 9.999000099990002e-05,
+  "null_T_mean": 0.0004,
+  "null_T_p95": 0.0568,
+  "null_T_max": 0.1304,
+  "n_draws": 10000
+ },
+ "step2_sen_restricted_contrast": {
+  "T_obs": 0.1445,
+  "p": 0.0010998900109989002,
+  "null_T_mean": 0.0327,
+  "null_T_p95": 0.091,
+  "null_T_max": 0.1687,
+  "n_draws": 10000
+ },
+ "step3_sen_contrast": {
+  "n_signs_tested": 60,
+  "n_signs_holm_surviving_real": 0,
+  "any_sign_survives_holm_real": false,
+  "false_graduation_rate_matched_null": 0.0
+ },
+ "deflated_significance": {
+  "adaptive_p_restricted_INV": 9.999000099990002e-05,
+  "E017_free_shuffle_holm_p_INV": 0.00039996000399960006,
+  "inflation_factor_adaptive_over_E017": 0.25,
+  "note": "adaptive p uses the matched-marginal restricted null directly (M=10,000, single test, no further Holm needed at the aggregate level since this is the sole confirmatory aggregate test for INV in this epoch); E017's figure was Holm-adjusted across its 4-test {p1_INV,p1_SEN,p2_INV,p2_SEN} family -- the two are not the same quantity, reported side by side for scale, not as a strict before/after ratio."
+ },
+ "verdict_INV": "SITE_ALLOGRAPH_SURVIVES_ADAPTIVE_NULL",
+ "verdict_SEN_contrast": "CONTRAST_ONLY_NO_VERDICT",
+ "leg2_note": "E017 leg2 (doc-level site classification) stays CONFOUNDED / not re-opened here.",
+ "honest_accounting": "This is a re-pricing of E017's leg1'-INV finding under a stricter, matched-marginal null, not a new discovery channel. It stays L1 palaeographic and touches no transfer licence regardless of verdict; E017's CONFOUNDED leg2 (doc classification) is untouched."
+}
