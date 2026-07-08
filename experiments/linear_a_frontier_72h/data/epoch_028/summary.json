@@ -1,0 +1,76 @@
+{
+  "global_kruskal": {
+    "H": 556.6697080503224,
+    "p": 3.688365097760776e-119,
+    "n_supports": 5
+  },
+  "within_site_per_site": {
+    "Haghia Triada": {
+      "supports": [
+        "Nodule",
+        "Roundel",
+        "Tablet"
+      ],
+      "n_per_support": {
+        "Nodule": 618,
+        "Roundel": 34,
+        "Tablet": 1219
+      },
+      "mean_per_support": {
+        "Nodule": 1.0502,
+        "Roundel": 2.4706,
+        "Tablet": 1.8589
+      },
+      "p": 2.8484532509245656e-90,
+      "longer": "Roundel",
+      "shorter": "Nodule"
+    },
+    "Khania": {
+      "supports": [
+        "Roundel",
+        "Tablet"
+      ],
+      "n_per_support": {
+        "Roundel": 55,
+        "Tablet": 298
+      },
+      "mean_per_support": {
+        "Roundel": 1.6182,
+        "Tablet": 1.5
+      },
+      "p": 0.006027748497172693,
+      "longer": "Roundel",
+      "shorter": "Tablet"
+    },
+    "Knossos": {
+      "supports": [
+        "Clay vessel",
+        "Tablet"
+      ],
+      "n_per_support": {
+        "Clay vessel": 19,
+        "Tablet": 19
+      },
+      "mean_per_support": {
+        "Clay vessel": 2.0,
+        "Tablet": 1.6316
+      },
+      "p": 0.4484219325222988,
+      "longer": "Clay vessel",
+      "shorter": "Tablet"
+    }
+  },
+  "pooled_perm_p": 0.0002,
+  "pc": {
+    "pc_verdict": "PASSED",
+    "detect_planted_p": 0.0,
+    "false_pos_rate": 0.065,
+    "n_null_splits": 200
+  },
+  "sensitivity_min_len_2": {
+    "global_p": 5.551052203362617e-13,
+    "n_sig": 2,
+    "direction_consistent": true,
+    "pooled_perm_p": 0.0002
+  }
+}

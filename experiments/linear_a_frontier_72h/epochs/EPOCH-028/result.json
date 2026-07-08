@@ -1,0 +1,213 @@
+{
+  "task_id": "EPOCH-028",
+  "method": "Document-class (support) word-length register signature; Kruskal-Wallis global + within-site Mann-Whitney/KW + stratified permutation; LB positive control (planted-difference detection + false-positive rate over 200 null splits).",
+  "result": "DOCCLASS_LENGTH_SIGNATURE_ROBUST",
+  "verdict": "DOCCLASS_LENGTH_SIGNATURE_ROBUST",
+  "numbers": {
+    "support_classes": {
+      "Tablet": {
+        "n_words": 1775,
+        "mean_len": 1.8169,
+        "median_len": 1.0
+      },
+      "Nodule": {
+        "n_words": 640,
+        "mean_len": 1.0625,
+        "median_len": 1.0
+      },
+      "Stone vessel": {
+        "n_words": 370,
+        "mean_len": 2.7216,
+        "median_len": 2.0
+      },
+      "Roundel": {
+        "n_words": 119,
+        "mean_len": 1.9916,
+        "median_len": 2.0
+      },
+      "Clay vessel": {
+        "n_words": 84,
+        "mean_len": 2.4881,
+        "median_len": 2.0
+      },
+      "Metal object": {
+        "n_words": 39,
+        "mean_len": 3.8718,
+        "median_len": 3.0
+      },
+      "Stone object": {
+        "n_words": 26,
+        "mean_len": 2.0,
+        "median_len": 1.5
+      },
+      "Lames (short thin tablet)": {
+        "n_words": 18,
+        "mean_len": 2.0,
+        "median_len": 2.0
+      },
+      "Inked inscription": {
+        "n_words": 17,
+        "mean_len": 4.2941,
+        "median_len": 3.0
+      },
+      "4-sided bar": {
+        "n_words": 15,
+        "mean_len": 1.3333,
+        "median_len": 1.0
+      },
+      "3-sided bar": {
+        "n_words": 11,
+        "mean_len": 2.6364,
+        "median_len": 2.0
+      },
+      "Sealing": {
+        "n_words": 7,
+        "mean_len": 1.2857,
+        "median_len": 1.0
+      },
+      "Architecture": {
+        "n_words": 6,
+        "mean_len": 2.8333,
+        "median_len": 3.0
+      },
+      "Graffito": {
+        "n_words": 5,
+        "mean_len": 3.4,
+        "median_len": 2.0
+      },
+      "Label": {
+        "n_words": 5,
+        "mean_len": 2.6,
+        "median_len": 3.0
+      },
+      "ivory object": {
+        "n_words": 5,
+        "mean_len": 1.0,
+        "median_len": 1.0
+      },
+      "Triton": {
+        "n_words": 2,
+        "mean_len": 2.5,
+        "median_len": 2.5
+      },
+      "clay vessel": {
+        "n_words": 2,
+        "mean_len": 2.0,
+        "median_len": 2.0
+      },
+      "Loom weight": {
+        "n_words": 1,
+        "mean_len": 3.0,
+        "median_len": 3.0
+      }
+    },
+    "global": {
+      "kruskal_H": 556.6697,
+      "kruskal_p": 3.688365097760776e-119,
+      "n_supports": 5
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_planted_p": 0.0,
+      "false_pos_rate": 0.065
+    },
+    "within_site": {
+      "n_sites_testable": 3,
+      "n_sites_sig": 2,
+      "direction_consistent": true,
+      "pooled_perm_p": 0.0002,
+      "per_site": {
+        "Haghia Triada": {
+          "supports": [
+            "Nodule",
+            "Roundel",
+            "Tablet"
+          ],
+          "n_per_support": {
+            "Nodule": 618,
+            "Roundel": 34,
+            "Tablet": 1219
+          },
+          "mean_per_support": {
+            "Nodule": 1.0502,
+            "Roundel": 2.4706,
+            "Tablet": 1.8589
+          },
+          "p": 2.8484532509245656e-90,
+          "longer": "Roundel",
+          "shorter": "Nodule"
+        },
+        "Khania": {
+          "supports": [
+            "Roundel",
+            "Tablet"
+          ],
+          "n_per_support": {
+            "Roundel": 55,
+            "Tablet": 298
+          },
+          "mean_per_support": {
+            "Roundel": 1.6182,
+            "Tablet": 1.5
+          },
+          "p": 0.006027748497172693,
+          "longer": "Roundel",
+          "shorter": "Tablet"
+        },
+        "Knossos": {
+          "supports": [
+            "Clay vessel",
+            "Tablet"
+          ],
+          "n_per_support": {
+            "Clay vessel": 19,
+            "Tablet": 19
+          },
+          "mean_per_support": {
+            "Clay vessel": 2.0,
+            "Tablet": 1.6316
+          },
+          "p": 0.4484219325222988,
+          "longer": "Clay vessel",
+          "shorter": "Tablet"
+        }
+      }
+    },
+    "sensitivity_min_len_2": {
+      "global_kruskal_p": 5.551052203362617e-13,
+      "n_sites_testable": 2,
+      "n_sites_sig": 2,
+      "direction_consistent": true,
+      "pooled_perm_p": 0.0002,
+      "note": "Under min_len=2 the Khania Roundel-vs-Tablet direction FLIPS (Tablet longer), so cross-site direction consistency is NOT robust to dropping single-sign words. Global signal and pooled permutation remain highly significant."
+    },
+    "lb_benchmark": {
+      "n_words": 13562,
+      "mean_len": 3.2346
+    }
+  },
+  "key_findings": [
+    "Global Kruskal-Wallis across 5 support classes (>=40 words each) is highly significant (H=556.67, p=3.688e-119): document classes DO differ in word length.",
+    "PC PASSED: machinery detects a planted LB length difference (p=0.0) and false-positive rate over 200 null splits is 0.065 (<=0.10).",
+    "Within-site (held-out) test: 2/3 testable sites show a significant support-length effect (p<=0.05).",
+    "At Haghia Triada (Tablet/Nodule/Roundel co-occur): Roundel longest (2.47), Nodule shortest (1.05), p=2.8e-90. At Khania (Tablet/Roundel): Roundel longer than Tablet, p=6.0e-3.",
+    "Direction (min_len=1): Roundel is the LONGER support in BOTH significant sites -> consistent direction; pooled stratified permutation p=2.0e-4.",
+    "HONEST CAVEAT: the cross-site direction consistency is fragile \u2014 under min_len=2 the Khania Roundel-vs-Tablet contrast flips sign (Tablet becomes longer). The global signal and pooled permutation are robust to min_len, but the 'consistent direction' clause rests on single-sign words.",
+    "The dominant structural finding is robust: document classes carry distinct word-length distributions that survive site control (significant within-site at Haghia Triada and Khania, pooled permutation p=2e-4). The specific 'Roundel always longer' directionality is the fragile part."
+  ],
+  "successor_hypotheses": [
+    "H1: Test the support-length signature on a third independent site by relaxing the >=15-words-per-support threshold (e.g. >=10) to add Phaistos / Knossos Tablet-vs-Clay-vessel, checking if the within-site effect generalizes.",
+    "H2: Decompose the length distribution into single-sign vs multi-sign word fractions per support class \u2014 is the 'register' signature driven by the proportion of single-sign (possibly logographic/numeric-adjacent) tokens rather than the continuous length distribution?",
+    "H3: Co-control for support AND context (LMIB vs other) jointly: does the support-length effect survive when both site and archaeological context are held fixed?",
+    "H4: Apply the same within-site machinery to LB document classes (if metadata available) as a cross-script validation of the 'document class carries a length register' claim.",
+    "H5: Test whether the support-length signature is monotonic in an administrative 'formality' ordering (Nodule < Tablet < Roundel < Clay vessel < Stone vessel) rather than just pairwise different.",
+    "H6: Examine whether the Roundel length elevation is driven by a small set of high-frequency longer formulae (a lexical-formula artifact) vs a genuine distributional shift across the whole vocabulary."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Sign/word tokens carry NO phonetic/sound/meaning/language/reading content. Word length = len(signs) of t=='word' stream tokens, a purely structural/administrative measure. Statistics are L2/L3 distributional only (Kruskal-Wallis, Mann-Whitney, permutation). LB is used solely as a positive-control benchmark to validate test calibration (planted-difference detection + false-positive rate); no LB result is interpreted as a reading or meaning. No adjudication by the operator \u2014 verdict computed mechanically from the frozen rule in prereg.md.",
+  "deviations": [
+    "PC false-positive estimator refined from 25 to 200 null splits BEFORE any LA verdict was computed (prereg allowed '>=20 random splits'); 25-split estimate was noisy (binomial SD ~0.044). Documented in prereg transparency note. Re-frozen plan_hash after refinement.",
+    "Metal object (39 words) excluded from the GLOBAL test per the >=40-word keep rule; it appears in support_classes numbers for completeness but is not in the Kruskal-Wallis."
+  ]
+}

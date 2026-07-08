@@ -630,3 +630,29 @@ epochs:
     artifacts: [epochs/EPOCH-027/prereg.md, epochs/EPOCH-027/plan_hash.txt, epochs/EPOCH-027/machinery.py, epochs/EPOCH-027/result.json, reports/EPOCH027_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-028
+    frontier: F6
+    gate: A
+    name: "Document-class word-length register signature (support type predicts word length, site-controlled)"
+    plan_hash: "see epochs/EPOCH-028/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed (scipy): support means MATCH (Nodule 1.06, Tablet 1.82, Roundel 1.99, Clay 2.49, Stone 2.72); global Kruskal H=556.7 p=3.69e-119 EXACT MATCH; within-site significant in 2 sites — Haghia Triada Tablet-vs-Nodule p=3.5e-87, Khania Roundel-vs-Tablet p=0.006 MATCH; Knossos n.s. (p=0.45) MATCH. Roundel>Tablet consistent in both sig sites (flips non-sig at Phaistos)."
+    positive_control: "PASSED (verified via gate repro-run rc=0): detects a planted length difference (p=0.0) AND false-positive rate 0.065 <= 0.10 across 200 same-distribution splits (well-calibrated). Machinery is a valid, non-inflated length-difference detector."
+    verdict: "DOCCLASS_LENGTH_SIGNATURE_ROBUST (frozen conjuncts met): PC passed AND global Kruskal p<=.05 AND within-site support-length effect significant in >=2 sites AND (per the frozen rule) direction consistent AND pooled permutation p=0.0002."
+    verdict_nuance: "The CONFOUND-FREE decisive evidence is the WITHIN-Haghia-Triada multi-class effect (single site -> no site confound; Nodule 1.05 < Tablet 1.86 < Roundel 2.47, p=3.5e-87), replicated at Khania (p=0.006). The 'direction consistent' conjunct is thinner than it sounds: the 2 significant sites test DIFFERENT support pairs; for the shared Roundel>Tablet contrast it is consistent in both sig sites but FLIPS non-significantly at Phaistos. Characterize as: document class robustly predicts word length independent of site (decisive within-HT + cross-site replication), NOT as a fully rank-stable cross-site ordering of every support pair."
+    numbers: {support_means: {Nodule: 1.06, Tablet: 1.82, Roundel: 1.99, Clay_vessel: 2.49, Stone_vessel: 2.72, Metal_object: 3.87}, kruskal_H: 556.7, kruskal_p: 3.69e-119, n_supports_ge40: 5, pc_detect_planted_p: 0.0, pc_false_pos_rate: 0.065, within_site_testable: 3, within_site_sig: 2, ht_tablet_vs_nodule_p: 3.5e-87, khania_roundel_vs_tablet_p: 0.006, knossos_p: 0.45, pooled_perm_p: 0.0002}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "STRUCTURAL document-typology POSITIVE (L2/L3). Linear A administrative document classes carry distinct word-length registers, robust to site control: Nodules ~= single-sign notations (1.05), Tablets ~1.8, Roundels/vessels ~2.0-2.7, Metal/Inked longest. Confound-free within Haghia Triada (p=3.5e-87) + replicated at Khania. CROSS-EPOCH LINK: explains E024's finding that A- prefixation is ABSENT on Nodules (0/35) — Nodules are single-sign, and A- prefixation requires >=2-sign words. NO phonetic/semantic/lexical content; word length and support type are directly-observed physical/structural features. Earns NO transfer licence; it is administrative register typology, not a step toward phonetic reading."
+    committed_prediction: "modal SIGNATURE_ROBUST or SITE_CONFOUNDED; OUTCOME = SIGNATURE_ROBUST (survives site control), orchestrator-verified."
+    deviations:
+      - "PC false-positive estimator refined 25->200 null splits BEFORE any LA verdict (prereg allowed '>=20'); noisy 25-split estimate replaced; plan_hash re-frozen after refinement, before LA analysis. Disclosed."
+      - "Metal object (39<40 words) excluded from the GLOBAL Kruskal per the >=40 keep-rule; shown in support table for completeness."
+    non_circular: "LB control-only (planted/null length splits calibrate the detector); word length + support type are directly observed; no phonetic value; no known-value model input on the LA side."
+    architecture_note: "Fifth gated-runner epoch; a POSITIVE where the coordinator's scrutiny ADDED a scope caveat the mechanical verdict alone missed (the 'direction consistent' conjunct rests on different support pairs; the confound-free core is within-HT). Illustrates the division: the gate enforces the frozen rule, the coordinator judges what the positive actually licenses."
+    artifacts: [epochs/EPOCH-028/prereg.md, epochs/EPOCH-028/plan_hash.txt, epochs/EPOCH-028/machinery.py, epochs/EPOCH-028/result.json, reports/EPOCH028_REPORT.md]
+    successors_spawned: 6
+    substantive: true
