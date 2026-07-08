@@ -56,7 +56,7 @@ _ROOT = os.path.dirname(os.path.dirname(_HERE))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-from scripts.comparison import lexstat, litindex, ollama_client  # noqa: E402
+from scripts.comparison import lexstat, litindex, llm_backend, ollama_client  # noqa: E402
 from scripts.comparison import run_canary  # noqa: E402  (re-uses load_hebrew_reject_set)
 
 # NOTE (invariant #2): scripts.verdict is deliberately NOT imported. The ablation measures the
@@ -491,8 +491,11 @@ def llm_propose_full(forms: Sequence[Form], model: str, seed: int, *, family: st
     if not forms:
         return set(), set()
     prompt = build_prompt(forms, family)
-    res = ollama_client.generate(model, prompt, options={"temperature": 0.8, "seed": int(seed)},
-                                 timeout=timeout, host=host)
+    # Provider-agnostic dispatch (invariant #11 as amended, v2.3): local Ollama by default,
+    # or the LiteLLM proxy when $LOGOS_LLM_BACKEND selects it — the proposer is swappable and
+    # never on the verdict path (#2).
+    res = llm_backend.generate(model, prompt, options={"temperature": 0.8, "seed": int(seed)},
+                               timeout=timeout, host=host)
     try:
         ollama_client.log_call(res, model=model, prompt=prompt, log_path=log_path)
     except Exception:

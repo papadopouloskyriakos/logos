@@ -23,13 +23,14 @@ that null result — rigorously mapping what the corpus can and cannot support �
 the aim.* Do NOT write defeatist "Linear A is uncrackable" framing into any doc, prompt, or
 UI copy.
 
-## Constitution — v2.2 is authoritative (ratified 2026-07-07)
+## Constitution — v2.3 is authoritative (ratified 2026-07-07; amended 2026-07-08)
 
-The full governing document is **[`governance/CONSTITUTION.md`](./governance/CONSTITUTION.md)** (v2.2:
+The full governing document is **[`governance/CONSTITUTION.md`](./governance/CONSTITUTION.md)** (v2.3:
 Preamble + Articles I–XXIII + claim/licence matrix + status vocabulary). It **supersedes** the 12
 invariants below — which remain the day-to-day condensed form, now subsumed by the Articles. Where the two
 differ, **governance/ governs**. Amendment protocol: Article XXIII only (records: AMENDMENT-001 v1→v2.0,
-AMENDMENT-002 v2.0→v2.1 (B1–B8), AMENDMENT-003 v2.1→v2.2 (B5/B6 corrections) under `governance/`); never
+AMENDMENT-002 v2.0→v2.1 (B1–B8), AMENDMENT-003 v2.1→v2.2 (B5/B6 corrections), AMENDMENT-004 v2.2→v2.3
+(Art. XXI: LLM-provider agnosticism via the LiteLLM proxy) under `governance/`); never
 change it silently. Enforcement tooling: `scripts/{source_dependency,effective_n,info_budget,search_receipt,
 assumption_gate,licence_gate,stage_header}.py` (Articles XI/VIII/IX/VII/XVIII/XV/XXII).
 
@@ -82,8 +83,14 @@ What v2.0 adds beyond the invariants (use these in every stage):
    versioned and reproducible.
 10. **Open by default.** Corpus tooling, verdict methodology, lexicon tables: PUBLIC in this
     repo. Licensed raw vendor data is the only exception (gitignored).
-11. **LLM via the Claude Code subscription only** — `claude -p …`. Never set
-    `ANTHROPIC_API_KEY`. Local models via Ollama on the gpu host.
+11. **LLM is provider-agnostic via the approved proxy; z.ai/GLM is the default** (v2.3,
+    AMENDMENT-004) — logos's programmatic LLM calls go through the LiteLLM proxy
+    `nllei01litellm01:4000`; `$LOGOS_LLM_BACKEND` **defaults to `litellm` (z.ai)**, with `ollama`
+    as an explicit local fallback. The proxy holds all vendor keys; logos holds only a **scoped
+    virtual key** in the gitignored `runtime/secrets/litellm.env` — never a raw vendor key in the
+    repo, and `ANTHROPIC_API_KEY` still never set in-process. The proposer LLM is a capped signal
+    (#2/#4/#5), never on the verdict path, so the tests are LLM-agnostic by construction. Ollama on
+    the gpu host stays available (directly or through the proxy).
 12. **Counts are generated, not hand-written.** Any "N inscriptions / N signs / N hypotheses"
     figure comes from a script, not a hand-edit.
 
