@@ -1,0 +1,839 @@
+{
+ "regimes": [
+  150,
+  600,
+  2400
+ ],
+ "seeds": [
+  20260708,
+  20260709,
+  20260710,
+  20260711,
+  20260712
+ ],
+ "per_run": [
+  {
+   "n_stem": 150,
+   "seed": 20260708,
+   "n_docs": 248,
+   "n_train": 173,
+   "n_test": 75,
+   "n_test_words": 357,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.5165,
+    "recall": 0.7199,
+    "f1": 0.6015
+   },
+   "cut_rate_frozen": 0.3272,
+   "gold_cut_rate": 0.2348,
+   "universe_n": 30,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 30,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 30,
+    "n_gold": 4
+   },
+   "delta_f1": 0.0,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "marg_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 150,
+   "seed": 20260709,
+   "n_docs": 237,
+   "n_train": 165,
+   "n_test": 72,
+   "n_test_words": 352,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.5115,
+    "recall": 0.8714,
+    "f1": 0.6446
+   },
+   "cut_rate_frozen": 0.3655,
+   "gold_cut_rate": 0.2146,
+   "universe_n": 24,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4,
+    "tp": 1,
+    "fp": 0,
+    "fn": 3,
+    "n_universe": 24,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889,
+    "tp": 4,
+    "fp": 1,
+    "fn": 0,
+    "n_universe": 24,
+    "n_gold": 4
+   },
+   "delta_f1": 0.4889,
+   "frozen_inventory": [
+    "S2|SUF"
+   ],
+   "marg_inventory": [
+    "P1|PRE",
+    "S09|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 150,
+   "seed": 20260710,
+   "n_docs": 238,
+   "n_train": 166,
+   "n_test": 72,
+   "n_test_words": 380,
+   "boundary_rule": "MAP",
+   "boundary_test_f1": {
+    "precision": 0.5929,
+    "recall": 0.539,
+    "f1": 0.5646
+   },
+   "cut_rate_frozen": 0.1938,
+   "gold_cut_rate": 0.2131,
+   "universe_n": 27,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "tp": 2,
+    "fp": 0,
+    "fn": 2,
+    "n_universe": 27,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889,
+    "tp": 4,
+    "fp": 1,
+    "fn": 0,
+    "n_universe": 27,
+    "n_gold": 4
+   },
+   "delta_f1": 0.2222,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S3|SUF"
+   ],
+   "marg_inventory": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S35|PRE",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 150,
+   "seed": 20260711,
+   "n_docs": 248,
+   "n_train": 173,
+   "n_test": 75,
+   "n_test_words": 343,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.4826,
+    "recall": 0.7761,
+    "f1": 0.5951
+   },
+   "cut_rate_frozen": 0.3308,
+   "gold_cut_rate": 0.2057,
+   "universe_n": 29,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "tp": 2,
+    "fp": 0,
+    "fn": 2,
+    "n_universe": 29,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "n_universe": 29,
+    "n_gold": 4
+   },
+   "delta_f1": 0.3333,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF"
+   ],
+   "marg_inventory": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 150,
+   "seed": 20260712,
+   "n_docs": 244,
+   "n_train": 170,
+   "n_test": 74,
+   "n_test_words": 326,
+   "boundary_rule": "MAP",
+   "boundary_test_f1": {
+    "precision": 0.6109,
+    "recall": 0.5794,
+    "f1": 0.5947
+   },
+   "cut_rate_frozen": 0.2173,
+   "gold_cut_rate": 0.2291,
+   "universe_n": 28,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 28,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 28,
+    "n_gold": 4
+   },
+   "delta_f1": 0.0,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "marg_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 600,
+   "seed": 20260708,
+   "n_docs": 232,
+   "n_train": 162,
+   "n_test": 70,
+   "n_test_words": 381,
+   "boundary_rule": "MAP",
+   "boundary_test_f1": {
+    "precision": 0.588,
+    "recall": 0.4727,
+    "f1": 0.5241
+   },
+   "cut_rate_frozen": 0.1935,
+   "gold_cut_rate": 0.2407,
+   "universe_n": 27,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "tp": 2,
+    "fp": 0,
+    "fn": 2,
+    "n_universe": 27,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "tp": 2,
+    "fp": 0,
+    "fn": 2,
+    "n_universe": 27,
+    "n_gold": 4
+   },
+   "delta_f1": 0.0,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF"
+   ],
+   "marg_inventory": [
+    "S1|SUF",
+    "S2|SUF"
+   ]
+  },
+  {
+   "n_stem": 600,
+   "seed": 20260709,
+   "n_docs": 231,
+   "n_train": 161,
+   "n_test": 70,
+   "n_test_words": 367,
+   "boundary_rule": "MAP",
+   "boundary_test_f1": {
+    "precision": 0.5751,
+    "recall": 0.4512,
+    "f1": 0.5057
+   },
+   "cut_rate_frozen": 0.1681,
+   "gold_cut_rate": 0.2143,
+   "universe_n": 30,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 30,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889,
+    "tp": 4,
+    "fp": 1,
+    "fn": 0,
+    "n_universe": 30,
+    "n_gold": 4
+   },
+   "delta_f1": 0.0318,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "marg_inventory": [
+    "P1|PRE",
+    "S07|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 600,
+   "seed": 20260710,
+   "n_docs": 243,
+   "n_train": 170,
+   "n_test": 73,
+   "n_test_words": 358,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.4209,
+    "recall": 0.8211,
+    "f1": 0.5565
+   },
+   "cut_rate_frozen": 0.427,
+   "gold_cut_rate": 0.2189,
+   "universe_n": 31,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "n_universe": 31,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889,
+    "tp": 4,
+    "fp": 1,
+    "fn": 0,
+    "n_universe": 31,
+    "n_gold": 4
+   },
+   "delta_f1": 0.8889,
+   "frozen_inventory": [],
+   "marg_inventory": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S39|PRE",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 600,
+   "seed": 20260711,
+   "n_docs": 244,
+   "n_train": 170,
+   "n_test": 74,
+   "n_test_words": 356,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.4103,
+    "recall": 0.844,
+    "f1": 0.5522
+   },
+   "cut_rate_frozen": 0.4328,
+   "gold_cut_rate": 0.2104,
+   "universe_n": 26,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "n_universe": 26,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "n_universe": 26,
+    "n_gold": 4
+   },
+   "delta_f1": 1.0,
+   "frozen_inventory": [],
+   "marg_inventory": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 600,
+   "seed": 20260712,
+   "n_docs": 236,
+   "n_train": 165,
+   "n_test": 71,
+   "n_test_words": 350,
+   "boundary_rule": "MAP",
+   "boundary_test_f1": {
+    "precision": 0.5633,
+    "recall": 0.4624,
+    "f1": 0.5079
+   },
+   "cut_rate_frozen": 0.1936,
+   "gold_cut_rate": 0.2358,
+   "universe_n": 29,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "tp": 2,
+    "fp": 0,
+    "fn": 2,
+    "n_universe": 29,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 29,
+    "n_gold": 4
+   },
+   "delta_f1": 0.1904,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF"
+   ],
+   "marg_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 2400,
+   "seed": 20260708,
+   "n_docs": 237,
+   "n_train": 165,
+   "n_test": 72,
+   "n_test_words": 371,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.4121,
+    "recall": 0.7525,
+    "f1": 0.5325
+   },
+   "cut_rate_frozen": 0.4233,
+   "gold_cut_rate": 0.2318,
+   "universe_n": 27,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "n_universe": 27,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 27,
+    "n_gold": 4
+   },
+   "delta_f1": 0.8571,
+   "frozen_inventory": [],
+   "marg_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 2400,
+   "seed": 20260709,
+   "n_docs": 241,
+   "n_train": 168,
+   "n_test": 73,
+   "n_test_words": 357,
+   "boundary_rule": "MAP",
+   "boundary_test_f1": {
+    "precision": 0.5467,
+    "recall": 0.412,
+    "f1": 0.4699
+   },
+   "cut_rate_frozen": 0.1642,
+   "gold_cut_rate": 0.218,
+   "universe_n": 26,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "tp": 2,
+    "fp": 0,
+    "fn": 2,
+    "n_universe": 26,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "n_universe": 26,
+    "n_gold": 4
+   },
+   "delta_f1": 0.3333,
+   "frozen_inventory": [
+    "S1|SUF",
+    "S2|SUF"
+   ],
+   "marg_inventory": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 2400,
+   "seed": 20260710,
+   "n_docs": 242,
+   "n_train": 169,
+   "n_test": 73,
+   "n_test_words": 384,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.3942,
+    "recall": 0.701,
+    "f1": 0.5046
+   },
+   "cut_rate_frozen": 0.395,
+   "gold_cut_rate": 0.2221,
+   "universe_n": 31,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "n_universe": 31,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "n_universe": 31,
+    "n_gold": 4
+   },
+   "delta_f1": 0.8571,
+   "frozen_inventory": [],
+   "marg_inventory": [
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 2400,
+   "seed": 20260711,
+   "n_docs": 238,
+   "n_train": 166,
+   "n_test": 72,
+   "n_test_words": 366,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.389,
+    "recall": 0.8401,
+    "f1": 0.5318
+   },
+   "cut_rate_frozen": 0.4676,
+   "gold_cut_rate": 0.2165,
+   "universe_n": 28,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 1,
+    "fn": 4,
+    "n_universe": 28,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "n_universe": 28,
+    "n_gold": 4
+   },
+   "delta_f1": 1.0,
+   "frozen_inventory": [
+    "S55|SUF"
+   ],
+   "marg_inventory": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ]
+  },
+  {
+   "n_stem": 2400,
+   "seed": 20260712,
+   "n_docs": 252,
+   "n_train": 176,
+   "n_test": 76,
+   "n_test_words": 345,
+   "boundary_rule": "MEAN",
+   "boundary_test_f1": {
+    "precision": 0.397,
+    "recall": 0.6952,
+    "f1": 0.5054
+   },
+   "cut_rate_frozen": 0.4067,
+   "gold_cut_rate": 0.2323,
+   "universe_n": 26,
+   "gold_true_in_universe": [
+    "P1|PRE",
+    "S1|SUF",
+    "S2|SUF",
+    "S3|SUF"
+   ],
+   "frozen_recovery": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "n_universe": 26,
+    "n_gold": 4
+   },
+   "marg_recovery": {
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4,
+    "tp": 1,
+    "fp": 0,
+    "fn": 3,
+    "n_universe": 26,
+    "n_gold": 4
+   },
+   "delta_f1": 0.4,
+   "frozen_inventory": [],
+   "marg_inventory": [
+    "S1|SUF"
+   ]
+  }
+ ],
+ "by_regime": {
+  "150": {
+   "mean_frozen_f1": 0.6895,
+   "mean_marg_f1": 0.8984,
+   "mean_delta_f1": 0.2089,
+   "n_seeds_delta_positive": 3,
+   "n_seeds_delta_nonneg": 5,
+   "mean_gold_cut_rate": 0.2195,
+   "mean_frozen_cut_rate": 0.2869
+  },
+  "600": {
+   "mean_frozen_f1": 0.4381,
+   "mean_marg_f1": 0.8603,
+   "mean_delta_f1": 0.4222,
+   "n_seeds_delta_positive": 4,
+   "n_seeds_delta_nonneg": 5,
+   "mean_gold_cut_rate": 0.224,
+   "mean_frozen_cut_rate": 0.283
+  },
+  "2400": {
+   "mean_frozen_f1": 0.1333,
+   "mean_marg_f1": 0.8228,
+   "mean_delta_f1": 0.6895,
+   "n_seeds_delta_positive": 5,
+   "n_seeds_delta_nonneg": 5,
+   "mean_gold_cut_rate": 0.2241,
+   "mean_frozen_cut_rate": 0.3714
+  }
+ },
+ "most_hapax_regime": "2400",
+ "graceful": true,
+ "verdict": "GRACEFUL",
+ "runtime_s": 26.3
+}

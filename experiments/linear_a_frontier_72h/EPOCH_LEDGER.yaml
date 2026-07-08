@@ -316,3 +316,64 @@ epochs:
     verdict: DECOMPOSITION_NEUTRAL
     result: "Coverage instrument: 764/1009 failures recovered, zero attrition (usable 3744->4508); dark extraction 69/69 ceiling; dark ROBUST 21->24/69 (binding constraint = ATTESTATION not extraction: 45 dark signs have <3 SigLA instances; ~50 target arithmetically unreachable, preregistered). Cross-script agg MRR IMPROVES +44% (.171->.247, top-1 9v3, p=5e-5) — component-level structure is a stronger cross-script channel; within-script HOLD failed (bags discard gestalt -.063 + expansion noise -.072). Residual 245 failures = fragmentation beyond K=12."
     substantive: true
+
+  - epoch_id: EPOCH-016
+    frontier: F9
+    gate: A
+    name: "simulation-based inference pilot (known-script calibration only)"
+    plan_hash: a15faa74d93febf92992dc4248eef7f6e52db9478d371c46c71c314c79e83ddf
+    prereg_frozen: 2026-07-08T12:35:48Z
+    completed: 2026-07-08
+    positive_control: "PASS (PC-A ample-scale ARI_C .6846 >= .40 bar; PC-B LA-scale in-distribution .318 reported descriptive)"
+    negative_control: "PASS (structure-free painted-label leakage test ARI_C -.001, perm p .852, no leak)"
+    adversarial_control: "MISSPEC wrong-prior SBI on true-prior LA-scale held-out: ARI drop .074 < .10 bar -> ROBUST; but OOD detector flag_frac only .05 under an actively wrong prior and .00 on real LB -> low detector power, weakens (does not overturn) the ROBUST read"
+    verdicts:
+      epoch: SBI_MATCHES
+      per_budget: {b0: SBI_MATCHES, b3: SBI_MATCHES, b5: "SBI_MATCHES (b5 shortfall Holm-sig p .030 but sub-material, -.0198<.05 margin)"}
+      global_miscalibration: false
+    adversarial_findings:
+      - "raw-cosine spectral clustering (BASE_SPEC, no learning) is the single best method at every anchor budget tested, including vs SBI's trained neural pair-posterior"
+      - "BASE_M1 (E003 G-surface anchor-profile analogue) reconfirmed weakest baseline at b=3/5 under a disjoint estimator family, independently reproducing E003's anchor-geometry-bottleneck finding"
+      - "large sim-to-real gap: PC-B in-distribution ARI_C .318 vs real-LB-at-LA-scale b=0 ARI_C .071 (SBI), ~4-5x drop"
+      - "sub-prediction 'LB flagged OOD in >=50% of replicates' REFUTED (0/20 flagged) -> OOD detector has low discriminative power overall"
+      - "anchor budgets 0->3->5 do not help any method (ARI mildly declines for SPEC/SBI); non-anchor scoring pool skews harder as top-frequency signs are pulled out as anchors"
+    committed_prediction: "modal SBI_MATCHES at all 3 budgets (p=.35) CONFIRMED exactly; sub-predictions (i) PC-A pass, (ii) anchor-budget deltas <.05, (iii) BASE_M1 weakest at b3/5 all CONFIRMED; sub-prediction (iv) LB flagged OOD >=50% REFUTED (0/20)"
+    layer: L2
+    licences_changed: none
+    la_touched: false
+    reproducibility: "full script re-execution byte-identical (167.1s vs 168.5s wall, all other fields equal)"
+    artifacts: [epochs/EPOCH-016/prereg.md, epochs/EPOCH-016/plan_hash.txt, epochs/EPOCH-016/result.json, epochs/EPOCH-016/run.log, reports/EPOCH016_SBI_PILOT.md, data/sbi_pilot/E016_result.json, data/sbi_pilot/E016_run.log, data/sbi_pilot/E016_smoke_simonly.json]
+    successors_spawned: 7
+    substantive: true
+
+  - epoch_id: EPOCH-015
+    frontier: F4
+    gate: A
+    name: "segmentation-marginalized morphology (word boundaries latent; affixes induced by marginalizing over a calibrated boundary distribution, K=20)"
+    plan_hash: d35828be6ebb610541884d8cef48e55bda229d0b8d9429870c26bade13c32024
+    prereg_frozen: 2026-07-08T12:29:36Z
+    completed: 2026-07-08
+    banked_after: EPOCH-016   # append-only banking order; ID precedes E016 but recovered after the Fable-5 compute block + placeholder-return; LA app run to completion by main loop from on-disk scripts
+    positive_control: "PC-LB run FIRST -> MACHINERY_UNINFORMATIVE: frozen inventory rule R (p<=0.01) yields an EMPTY LB-TEST gold target at the 30% split (best gold JO|SUF p .0149) -> recovery test vacuous; under D1 posthoc p<=0.05 the frozen arm's wrong-structure control also fails to collapse (real F1 0.0 <= shuffle F1 .105). Per frozen rule NO LA interpretation licensed from PC-LB."
+    negative_control: "wrong-structure (within-word sign shuffle) null run in every PC-LB scoring pass; marg arm collapses to 0 on populated targets (Gfull, D1), frozen does not."
+    synthetic_control: "GRACEFUL (decisive): frozen F1 .690/.438/.133 vs marg .898/.860/.823 at N_stem 150/600/2400; deltaF1 +.209/+.422/+.690; 5/5 seeds nonneg every regime -> marginalization holds where frozen collapses under hapax load."
+    verdicts:
+      primary: MACHINERY_UNINFORMATIVE   # PC-LB target vacuous at prereg bar (under-powered LB TEST split, NOT a dead detector)
+      epoch: "MARGINALIZATION_HELPS_WHERE_TRUTH_KNOWN__PC_LB_GATE_VACUOUS__A_PREFIX_ROBUST_REPORTED__NO_NEW_LA_AFFIX"
+      posthoc_gfull: "MARGINALIZATION_IMPROVES (POSTHOC; marg recovery F1 .80 vs frozen .00 on well-powered LB target A3|PRE,JO|SUF; marg wrong-structure collapses to 0)"
+    la_findings_reported_not_licensed:
+      - "A- prefixation REPLICATES on GORILA words (obs 47, p .0005) and is ROBUST under marginalization (marg p .0005); marginalization IMPROVES detection over frozen segmentation (.0005 vs .0020)."
+      - "exploratory scan 0/71 Holm survivors (best raw TI|SUF p .0145 -> Holm 1.0) -> no NEW LA affix; A- remains the sole validated LA affix."
+      - "sensitivity robust across P_MARK in {0.7,0.9,1.0} (GORILA-agreement F1 .82/.89/.92)."
+    committed_prediction: "modal MARGINALIZATION_NEUTRAL-or-IMPROVES with A- surviving; A- ROBUST+IMPROVES CONFIRMED; MARGINALIZATION_IMPROVES CONFIRMED where truth known (synthetic + Gfull) but NOT at the preregistered PC-LB gate (target vacuous) -> characterized not licensed; no-new-affix CONFIRMED (0/71)."
+    deviations:
+      - "D1 (POSTHOC characterization: p<=0.05 pass + Gfull all-11908-word target; never the verdict)"
+      - "D2 (SUPERSEDING stream-level marginalized null replacing the anti-conservative fresh-per-sample null; applied uniformly before any LA run; reduces to E1 word-level null for a single segmentation)"
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    la_interpretation_gate_licensed: false
+    non_circular: "boundary inputs = unsupervised distributional cues + physical LA layout marks; LB gold only calibrates/grades; sign names anonymous GORILA/DAMOS identities; no phonetic value is an input."
+    artifacts: [epochs/EPOCH-015/prereg.md, epochs/EPOCH-015/plan_hash.txt, epochs/EPOCH-015/DEVIATIONS.md, epochs/EPOCH-015/result.json, reports/EPOCH015_MARGINALIZED_MORPHOLOGY.md, scripts/e015_lib.py, scripts/e015_pc_lb.py, scripts/e015_pc_lb2.py, scripts/e015_synth.py, scripts/e015_la.py, data/marginalized_morph/]
+    successors_spawned: 6
+    substantive: true

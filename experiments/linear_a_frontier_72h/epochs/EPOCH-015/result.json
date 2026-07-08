@@ -1,0 +1,203 @@
+{
+ "task_id": "EPOCH-015",
+ "epoch": "EPOCH-015",
+ "frontier": "F4",
+ "gate": "A",
+ "name": "segmentation-marginalized morphology (word boundaries latent; affixes induced by marginalizing over a calibrated boundary distribution)",
+ "plan_hash": "d35828be6ebb610541884d8cef48e55bda229d0b8d9429870c26bade13c32024",
+ "prereg_frozen": "2026-07-08T12:29:36Z",
+ "completed": "2026-07-08",
+ "claim_ceiling": "L2/L3",
+ "la_touched": true,
+ "la_interpretation_licensed_by_primary_gate": false,
+ "seed": 20260708,
+ "primary_verdict": "MACHINERY_UNINFORMATIVE",
+ "primary_verdict_basis": "PC-LB (LB TEST opaque streams, 30% split): the frozen inventory rule R (p<=0.01, n_null=200) yields an EMPTY gold target (best gold candidate JO|SUF p=0.0149) -> recovery test VACUOUS -> MACHINERY_UNINFORMATIVE. Under the D1 posthoc relaxation (p<=0.05) the target is populated (3 gold) but the FROZEN arm's wrong-structure control does not collapse (real frozen F1 0.0 <= wrong-structure frozen F1 0.105), so machinery_informative stays False at the preregistered gate. Per the frozen rule, NO LA interpretation is licensed from PC-LB; LA numbers are reported below but not claimed as gate-validated.",
+ "verdict": "MARGINALIZATION_HELPS_WHERE_TRUTH_KNOWN__PC_LB_GATE_VACUOUS__A_PREFIX_ROBUST_REPORTED__NO_NEW_LA_AFFIX",
+ "machinery_informativeness": {
+  "pc_lb_prereg": "MACHINERY_UNINFORMATIVE",
+  "pc_lb_d1_posthoc": "MACHINERY_UNINFORMATIVE",
+  "note": "PC-LB is uninformative because the 30%-TEST gold target is under-powered (empty at p<=0.01), NOT because the machinery is dead: the synthetic control (populated target, truth fully known) demonstrates the machinery works and that marginalization improves decisively under hapax load; the posthoc well-powered Gfull LB target (all 11,908 words) independently shows marginalization recovers where frozen fails."
+ },
+ "synthetic_control": {
+  "verdict": "GRACEFUL",
+  "graceful": true,
+  "most_hapax_regime": "2400",
+  "delta_f1_by_regime": {
+   "150": 0.2089,
+   "600": 0.4222,
+   "2400": 0.6895
+  },
+  "marg_f1_by_regime": {
+   "150": 0.8984,
+   "600": 0.8603,
+   "2400": 0.8228
+  },
+  "frozen_f1_by_regime": {
+   "150": 0.6895,
+   "600": 0.4381,
+   "2400": 0.1333
+  },
+  "seeds_delta_nonneg_by_regime": {
+   "150": 5,
+   "600": 5,
+   "2400": 5
+  },
+  "reading": "frozen-single-segmentation morphology COLLAPSES as the stem inventory grows hapax-heavy (F1 0.690->0.438->0.133 at N_stem 150->600->2400) while marginalized morphology holds (0.898/0.860/0.823); delta +0.209/+0.422/+0.690, all 5/5 seeds non-negative at every regime -> GRACEFUL confirmed."
+ },
+ "pc_lb_gfull_posthoc_characterization": {
+  "status": "POSTHOC_CHARACTERIZATION (D1; never the preregistered verdict)",
+  "gold_target_full_11908w": [
+   "A3|PRE",
+   "JO|SUF"
+  ],
+  "frozen_recovery_f1": 0.0,
+  "marg_recovery_f1": 0.8,
+  "marg_wrong_structure_f1": 0.0,
+  "reading": "on a well-powered LB gold target (A3|PRE, JO|SUF), marginalization recovers 2/2 (F1 0.80) where the frozen segmentation recovers 0/2 (F1 0.00); marg wrong-structure control collapses to 0.0 -> consistent with MARGINALIZATION_IMPROVES, but posthoc and therefore not the primary verdict."
+ },
+ "la_application_reported_not_licensed": {
+  "n_docs": 618,
+  "n_gorila_words": 2424,
+  "n_frozen_words_main": 2530,
+  "a_prefix_confirmatory": {
+   "gorila_anchor": {
+    "obs": 47,
+    "p": 0.0004997501249375312,
+    "null_mean": 24.947
+   },
+   "frozen_induced": {
+    "obs": 40,
+    "p": 0.001999000499750125,
+    "null_mean": 26.395
+   },
+   "marginalized": {
+    "obs": 39.6,
+    "p": 0.0004997501249375312,
+    "null_mean": 26.393
+   },
+   "robust_under_marginalization": true,
+   "direction": "IMPROVES",
+   "reading": "A- prefixation (the one relphono-validated LA affix) REPLICATES under GORILA words (obs 47, p 0.0005) and is ROBUST under segmentation-marginalization (marg p 0.0005 <= 0.05); marginalization IMPROVES detection (marg p 0.0005 <= frozen p 0.002). Reported per prereg; not licensed as gate-validated because PC-LB was vacuous."
+  },
+  "exploratory_scan": {
+   "n_candidates": 71,
+   "n_survivors_holm05": 0,
+   "survivors": [],
+   "top_raw": [
+    [
+     "TI|SUF",
+     0.014492753623188406
+    ],
+    [
+     "RA|SUF",
+     0.01699150424787606
+    ],
+    [
+     "QA|PRE",
+     0.020989505247376312
+    ],
+    [
+     "DU|PRE",
+     0.027486256871564217
+    ],
+    [
+     "*306|PRE",
+     0.02798600699650175
+    ],
+    [
+     "NE|SUF",
+     0.03498250874562719
+    ]
+   ],
+   "reading": "0/71 candidates survive Holm at alpha 0.05 (best raw TI|SUF p 0.0145 -> Holm 1.0). No NEW LA affix candidate emerges under marginalization; A- remains the sole validated LA affix."
+  },
+  "sensitivity_p_mark": {
+   "0.7": {
+    "cut_rate_frozen": 0.5172,
+    "cut_rate_gorila": 0.4058,
+    "agreement_vs_gorila_f1": {
+     "precision": 0.7281,
+     "recall": 0.928,
+     "f1": 0.816
+    },
+    "n_frozen_words": 2920
+   },
+   "0.9": {
+    "cut_rate_frozen": 0.4296,
+    "cut_rate_gorila": 0.4058,
+    "agreement_vs_gorila_f1": {
+     "precision": 0.8687,
+     "recall": 0.9197,
+     "f1": 0.8935
+    },
+    "n_frozen_words": 2530
+   },
+   "1.0": {
+    "cut_rate_frozen": 0.4026,
+    "cut_rate_gorila": 0.4058,
+    "agreement_vs_gorila_f1": {
+     "precision": 0.9191,
+     "recall": 0.912,
+     "f1": 0.9155
+    },
+    "n_frozen_words": 2410
+   }
+  }
+ },
+ "controls": {
+  "positive_control": "PC-LB run FIRST; outcome MACHINERY_UNINFORMATIVE (target vacuous at prereg bar) \u2014 see basis.",
+  "wrong_structure_null": "run in every PC-LB scoring pass (prereg/D1/Gfull); collapses for marg on populated targets, not for frozen.",
+  "synthetic_graceful_control": "GRACEFUL (5/5 seeds nonneg at every regime; decisive at N_stem=2400).",
+  "cut_rates_reported": true
+ },
+ "deviations": [
+  "D1 (posthoc p<=0.05 characterization + Gfull target; POSTHOC, never the verdict)",
+  "D2 (SUPERSEDING stream-level marginalized null, replacing the anti-conservative fresh-per-sample null; applied uniformly before any LA run)"
+ ],
+ "numbers": {
+  "lb_boundary_calib_rule": "MEAN",
+  "lb_test_frozen_boundary_f1": 0.5345,
+  "synthetic_delta_f1_hapax2400": 0.6895,
+  "gfull_marg_recovery_f1": 0.8,
+  "gfull_frozen_recovery_f1": 0.0,
+  "la_A_marg_p": 0.0004997501249375312,
+  "la_A_frozen_p": 0.001999000499750125,
+  "la_A_gorila_p": 0.0004997501249375312,
+  "la_scan_n_candidates": 71,
+  "la_scan_survivors": 0,
+  "completed_epochs_after": 16,
+  "minimum_epochs_required": 18
+ },
+ "key_findings": [
+  "PRIMARY (frozen gate): PC-LB is MACHINERY_UNINFORMATIVE \u2014 the p<=0.01 inventory rule yields an EMPTY LB-TEST gold target at the 30% split, so the marginalize-vs-frozen recovery comparison cannot be adjudicated at the preregistered bar; per the frozen rule no LA interpretation is licensed from it.",
+  "SYNTHETIC control (truth known, populated target) is DECISIVE the other way: frozen-single-segmentation morphology collapses as the corpus turns hapax-heavy (F1 0.69->0.44->0.13) while marginalized morphology holds (0.90/0.86/0.82); delta +0.21/+0.42/+0.69, 5/5 seeds non-negative at every regime -> GRACEFUL. The uninformative PC-LB is an under-powered-target artifact of the small LB TEST split, not a dead detector.",
+  "Posthoc well-powered LB target (all 11,908 words, Gfull) independently corroborates: marginalization recovers 2/2 gold affixes (A3|PRE,JO|SUF) at F1 0.80 where the frozen segmentation recovers 0/2 (F1 0.0), and the marg wrong-structure control collapses to 0 \u2014 consistent with MARGINALIZATION_IMPROVES (posthoc, not the primary verdict).",
+  "LA A- prefixation (reported, not gate-licensed): REPLICATES on GORILA words (obs 47, p 0.0005) and is ROBUST under segmentation-marginalization (marg p 0.0005); marginalization IMPROVES its detection over the frozen segmentation (0.0005 vs 0.002). The one validated LA affix survives integrating boundary uncertainty.",
+  "LA exploratory scan: 0/71 candidates survive Holm at alpha 0.05 (best raw TI|SUF p 0.0145). No NEW LA affix candidate under marginalization; A- remains the sole validated LA affix \u2014 consistent with the whole campaign's morphology finding.",
+  "SUPERSEDING null (D2): the preregistered fresh-synthetic-per-sample marginalized null was mechanically anti-conservative (shrinks null variance ~1/K while the K segmentation samples share one real stream); replaced append-only by a stream-level null that preserves cross-sample correlation and reduces exactly to the E1 word-level null for a single segmentation.",
+  "Non-circular throughout: boundary model inputs are unsupervised distributional cues + physical LA layout marks; LB gold enters only as calibration/grading; sign names are anonymous GORILA/DAMOS identities; no phonetic value is an input; claim ceiling L2/L3, no transfer licence touched."
+ ],
+ "successor_hypotheses": [
+  "H1: The LB-TEST target vacuity is a split-size artifact \u2014 re-run PC-LB with a 50/50 or LOO-tablet split (or a hierarchical partial-pooling inventory rule) so the gold target is populated at p<=0.01, then re-adjudicate marginalize-vs-frozen at the PREREGISTERED bar (would license or refute the IMPROVES direction the synthetic + Gfull characterizations point to).",
+  "H2: Boundary-boundary interaction (assumption A4 relaxed): replace independent-Bernoulli gap sampling with a first-order CRF / semi-Markov boundary model calibrated on LB; measure whether modelling adjacency raises marginalized affix-recovery on the synthetic hapax-heavy regime beyond the independent sampler.",
+  "H3: Marginalize over the SEGMENTATION MODEL too (not just samples from one calibrated map): ensemble B3 families (branching-entropy / TP / Bayesian / MDL) with per-family weights, and propagate model uncertainty into the affix null \u2014 does A-'s IMPROVES margin widen or vanish?",
+  "H4: A- direction test as a held-out prospective seal: freeze the marginalized A- productivity + null on the current silver corpus; when Anetaki II (or any new LA editio princeps) lands, test whether the A- prefix rate on the NEW documents matches the frozen prediction (out-of-sample morphology, not in-sample).",
+  "H5: Combine the marginalized boundary posterior with E013's component-decomposition channel \u2014 do affixes defined over sign COMPONENTS (rather than whole signs) survive marginalization + Holm where whole-sign affixes (this scan) do not?",
+  "H6: Port the marginalized inventory machinery to Cypriot (a second readable syllabary at LA-like scale) as a second positive control with a NON-vacuous target, to establish whether MARGINALIZATION_IMPROVES generalizes across readable scripts before any LA licence is claimed."
+ ],
+ "artifact_paths": [
+  "experiments/linear_a_frontier_72h/epochs/EPOCH-015/prereg.md",
+  "experiments/linear_a_frontier_72h/epochs/EPOCH-015/plan_hash.txt",
+  "experiments/linear_a_frontier_72h/epochs/EPOCH-015/DEVIATIONS.md",
+  "experiments/linear_a_frontier_72h/epochs/EPOCH-015/result.json",
+  "experiments/linear_a_frontier_72h/reports/EPOCH015_MARGINALIZED_MORPHOLOGY.md",
+  "experiments/linear_a_frontier_72h/scripts/e015_lib.py",
+  "experiments/linear_a_frontier_72h/scripts/e015_pc_lb.py",
+  "experiments/linear_a_frontier_72h/scripts/e015_pc_lb2.py",
+  "experiments/linear_a_frontier_72h/scripts/e015_synth.py",
+  "experiments/linear_a_frontier_72h/scripts/e015_la.py",
+  "experiments/linear_a_frontier_72h/data/marginalized_morph/"
+ ],
+ "substantive": true
+}

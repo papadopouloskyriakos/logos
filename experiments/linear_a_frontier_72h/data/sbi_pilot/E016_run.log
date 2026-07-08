@@ -1,0 +1,46 @@
+[stage T] training true-prior SBI ...
+  trained: pairs=292352 aucC=0.838 aucV=0.630
+[stage PC] positive controls ...
+  PC_A_ample: ARI_C=0.6846 ARI_V=0.3362 auc=0.9081
+  PC_B_lascale: ARI_C=0.318 ARI_V=0.2131 auc=0.8041
+[stage NEG] negative control ...
+  NEG: ARI_C=-0.001 p=0.8520147985201479 leak=False
+[stage MIS] misspecification test ...
+  MIS: drop=0.074 flags=0.05 -> ROBUST
+[stage LB] Linear B degraded benchmark ...
+{
+ "verdicts": {
+  "0": "SBI_MATCHES",
+  "3": "SBI_MATCHES",
+  "5": "SBI_MATCHES"
+ },
+ "miscal": false,
+ "summary": {
+  "0": {
+   "mean_diff_C_SBI_vs_bestbase": -0.0158,
+   "sd_diff_C": 0.0494,
+   "raw_p": 0.1765823417658234,
+   "mean_diff_V": 0.0285,
+   "n_replicates": 20,
+   "holm_p": 0.35316
+  },
+  "3": {
+   "mean_diff_C_SBI_vs_bestbase": -0.0135,
+   "sd_diff_C": 0.0463,
+   "raw_p": 0.2201779822017798,
+   "mean_diff_V": 0.0177,
+   "n_replicates": 20,
+   "holm_p": 0.35316
+  },
+  "5": {
+   "mean_diff_C_SBI_vs_bestbase": -0.0198,
+   "sd_diff_C": 0.0304,
+   "raw_p": 0.0100989901009899,
+   "mean_diff_V": 0.0076,
+   "n_replicates": 20,
+   "holm_p": 0.0303
+  }
+ },
+ "runtime_s": 167.1
+}
+wrote /home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/experiments/linear_a_frontier_72h/data/sbi_pilot/E016_result.json

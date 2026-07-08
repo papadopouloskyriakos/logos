@@ -1,0 +1,92 @@
+{
+ "epoch": "EPOCH-016",
+ "seed": 20260708,
+ "dev": true,
+ "feature_names": [
+  "cos1",
+  "cosL",
+  "cosR",
+  "cos2",
+  "mp_final",
+  "mp_nonfinal",
+  "pos_sim",
+  "freq_ratio",
+  "logfreq_absdiff",
+  "logfreq_sum",
+  "final_share_absdiff",
+  "init_share_absdiff"
+ ],
+ "config": {
+  "N_TRAIN": 12,
+  "N_HELD": 4,
+  "R_LB": 3,
+  "BUDGETS": [
+   0,
+   3,
+   5
+  ],
+  "LA_TOKEN_SCALE": 5792,
+  "AMPLE_SCALE": 28960,
+  "MIN_SIGN_FREQ": 3,
+  "ANCHOR_POOL_TOP": 30,
+  "MARGIN": 0.05,
+  "PC_A_BAR": 0.4,
+  "NEG_BAR": 0.05,
+  "MISSPEC_DROP": 0.1,
+  "OOD_FLAG_FRAC": 0.5
+ },
+ "train": {
+  "n_sims": 12,
+  "n_pairs": 16293,
+  "insample_auc_C": 0.8718,
+  "insample_auc_V": 0.6442,
+  "base_rate_sameC": 0.068,
+  "base_rate_sameV": 0.2065
+ },
+ "positive_controls": {
+  "PC_A_ample": {
+   "mean_ARI_C": 0.6636,
+   "mean_ARI_V": 0.4884,
+   "mean_pair_auc_C": 0.9163,
+   "per_sim_ARI_C": [
+    0.508,
+    0.798,
+    0.651,
+    0.698
+   ]
+  },
+  "PC_B_lascale": {
+   "mean_ARI_C": 0.2784,
+   "mean_ARI_V": 0.3714,
+   "mean_pair_auc_C": 0.7851,
+   "per_sim_ARI_C": [
+    0.216,
+    0.224,
+    0.181,
+    0.493
+   ]
+  },
+  "PC_A_pass": true
+ },
+ "negative_control": {
+  "mean_ARI_C": -0.0033,
+  "mean_ARI_V": -0.0156,
+  "perm_p_C": 1.0,
+  "leak": false
+ },
+ "misspec": {
+  "wrong_train_pairs": 12672,
+  "ood_threshold": 0.716,
+  "ood_ref_stats": [
+   0.7023,
+   0.7173,
+   0.6573,
+   0.7088
+  ],
+  "mean_ARI_C_wrongSBI_on_true": 0.2097,
+  "ari_drop": 0.0687,
+  "flag_frac": 0.0,
+  "verdict": "ROBUST"
+ },
+ "runtime_s": 13.8
+}
