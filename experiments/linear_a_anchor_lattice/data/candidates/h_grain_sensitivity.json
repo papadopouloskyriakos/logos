@@ -1,0 +1,29 @@
+{
+ "conservative": {
+  "n_signs": 163,
+  "n_pinned_signs": 38,
+  "n_A_only": 69,
+  "A_only_pinned_parseable": [],
+  "merged_pin_conflicts": []
+ },
+ "split": {
+  "n_signs": 166,
+  "n_pinned_signs": 38,
+  "n_A_only": 72,
+  "A_only_pinned_parseable": [],
+  "merged_pin_conflicts": []
+ },
+ "merged": {
+  "n_signs": 158,
+  "n_pinned_signs": 37,
+  "n_A_only": 69,
+  "A_only_pinned_parseable": [],
+  "merged_pin_conflicts": [
+   [
+    "RA",
+    "('r', 'a', 0)",
+    "('r', 'a', 2)"
+   ]
+  ]
+ }
+}

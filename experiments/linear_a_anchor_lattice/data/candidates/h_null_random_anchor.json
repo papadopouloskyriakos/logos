@@ -1,0 +1,16 @@
+{
+ "R_bits_per_pinned_sign_S2": 0.13112053407147428,
+ "real_A_only_mean_reduction": 0.0,
+ "real_A_only_signs_pinned_parseable": 0,
+ "vacuous_A_only_pin": [
+  "*49"
+ ],
+ "null_A_only_mean_reduction_mean": 0.03158294603286815,
+ "null_A_only_mean_reduction_p5_p95": [
+  0.022803571142865093,
+  0.03810096678453706
+ ],
+ "null_A_only_pinned_count_mean": 16.62,
+ "p_null_leq_real": 0.0,
+ "verdict": "REAL_BELOW_NULL"
+}

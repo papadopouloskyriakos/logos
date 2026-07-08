@@ -1,0 +1,100 @@
+{
+ "anchored_vs_unanchored": [
+  {
+   "accounting": "naive_raw",
+   "credit_slots": 147,
+   "DL_anchored_minus_unanchored_bits": -660.2037217598972,
+   "winner": "ANCHORED"
+  },
+  {
+   "accounting": "dedup_unique_signpins",
+   "credit_slots": 38,
+   "DL_anchored_minus_unanchored_bits": 1.0,
+   "winner": "UNANCHORED"
+  },
+  {
+   "accounting": "art12_discounted",
+   "credit_slots": 0,
+   "DL_anchored_minus_unanchored_bits": 231.51138923739535,
+   "winner": "UNANCHORED"
+  }
+ ],
+ "rel_channel": {
+  "rel_bits_per_edge_calibrated": 0.35931122315174574,
+  "n_edges": 30,
+  "max_data_credit_bits": 10.06071424824888,
+  "cost_to_assign_rel_subgraph_bits": 200.18094328510648,
+  "winner": "UNSTRUCTURED"
+ },
+ "tied_system_enumeration_naiveL1": {
+  "*324": {
+   "n_tied_in_beam": 67,
+   "n_equivalence_classes_in_beam": 4,
+   "beam_truncated": false,
+   "per_sign_value_diversity": {
+    "*324": 67,
+    "ZU": 1
+   }
+  },
+  "A": {
+   "n_tied_in_beam": 218,
+   "n_equivalence_classes_in_beam": 196,
+   "beam_truncated": true,
+   "per_sign_value_diversity": {
+    "A": 1,
+    "DA": 1,
+    "I": 1,
+    "JA": 1,
+    "KA": 1,
+    "KI": 1,
+    "LOGO:*21F": 29,
+    "MI": 1,
+    "NE": 1,
+    "PA": 1,
+    "PI": 1,
+    "QE": 31,
+    "RA": 1,
+    "RE": 1,
+    "RO": 1,
+    "RU": 1,
+    "SI": 1,
+    "SU": 1,
+    "TA": 1,
+    "TE": 1,
+    "TI": 1,
+    "TU": 1,
+    "U": 1,
+    "WA": 1
+   }
+  },
+  "KU": {
+   "n_tied_in_beam": 1,
+   "n_equivalence_classes_in_beam": 1,
+   "beam_truncated": false,
+   "per_sign_value_diversity": {
+    "KU": 1,
+    "MA": 1,
+    "SA": 1
+   }
+  },
+  "NA": {
+   "n_tied_in_beam": 67,
+   "n_equivalence_classes_in_beam": 4,
+   "beam_truncated": false,
+   "per_sign_value_diversity": {
+    "NA": 1,
+    "WI": 67
+   }
+  },
+  "NU": {
+   "n_tied_in_beam": 67,
+   "n_equivalence_classes_in_beam": 4,
+   "beam_truncated": false,
+   "per_sign_value_diversity": {
+    "NU": 1,
+    "PA3": 67
+   }
+  }
+ },
+ "note": "beam ties are LOWER bounds on the tie set; exact tie counts are the M2 solution counts (10^x scale)"
+}

@@ -1,0 +1,276 @@
+{
+ "hard_anchor_hard_rel_consistency": {
+  "n_rel_pairs_both_pinned": 24,
+  "n_violated": 15,
+  "violated_pairs": [
+   [
+    "A",
+    "MI"
+   ],
+   [
+    "A",
+    "SI"
+   ],
+   [
+    "DA",
+    "PI"
+   ],
+   [
+    "DA",
+    "RU"
+   ],
+   [
+    "JA",
+    "U"
+   ],
+   [
+    "KA",
+    "TI"
+   ],
+   [
+    "KI",
+    "WA"
+   ],
+   [
+    "KU",
+    "MA"
+   ],
+   [
+    "KU",
+    "SA"
+   ],
+   [
+    "NE",
+    "RA"
+   ],
+   [
+    "PA",
+    "TE"
+   ],
+   [
+    "RO",
+    "U"
+   ],
+   [
+    "RU",
+    "TA"
+   ],
+   [
+    "RU",
+    "WA"
+   ],
+   [
+    "SU",
+    "TE"
+   ]
+  ],
+  "verdict": "UNSAT"
+ },
+ "arc_consistent_domains_anchorhard": {
+  "n_pinned_singleton": 38,
+  "backbone_signs": [
+   "A",
+   "DA",
+   "DE",
+   "DI",
+   "DU",
+   "I",
+   "JA",
+   "KA",
+   "KI",
+   "KU",
+   "MA",
+   "MI",
+   "NA",
+   "NE",
+   "NI",
+   "NU",
+   "PA",
+   "PI",
+   "PU2",
+   "QA",
+   "RA",
+   "RA2",
+   "RE",
+   "RI",
+   "RO",
+   "RU",
+   "SA",
+   "SE",
+   "SI",
+   "SU",
+   "TA",
+   "TE",
+   "TI",
+   "TO",
+   "TU",
+   "U",
+   "WA",
+   "ZU"
+  ],
+  "n_signs_domain_reduced": 42,
+  "A_only_domain_reduced": {
+   "*324": 18
+  },
+  "reduced_nonpinned": {
+   "*324": 18,
+   "PA3": 18,
+   "QE": 5,
+   "WI": 18
+  }
+ },
+ "S0_model_counting": {
+  "components": [
+   {
+    "signs": [
+     "*324",
+     "ZU"
+    ],
+    "n": 2,
+    "log10_solutions_relhard": 3.0699458973239415,
+    "rel_se": 0.0002248919346887616,
+    "log10_free": 3.652149605401653
+   },
+   {
+    "signs": [
+     "A",
+     "DA",
+     "I",
+     "JA",
+     "KA",
+     "KI",
+     "LOGO:*21F",
+     "MI",
+     "NE",
+     "PA",
+     "PI",
+     "QE",
+     "RA",
+     "RE",
+     "RO",
+     "RU",
+     "SI",
+     "SU",
+     "TA",
+     "TE",
+     "TI",
+     "TU",
+     "U",
+     "WA"
+    ],
+    "n": 24,
+    "log10_solutions_relhard": 29.88124345119899,
+    "rel_se": 0.11071806210633779,
+    "log10_free": 43.82579526481983
+   },
+   {
+    "signs": [
+     "KU",
+     "MA",
+     "SA"
+    ],
+    "n": 3,
+    "log10_solutions_relhard": 4.3142560707891295,
+    "rel_se": 0.0004522751976736375,
+    "log10_free": 5.478224408102479
+   },
+   {
+    "signs": [
+     "NA",
+     "WI"
+    ],
+    "n": 2,
+    "log10_solutions_relhard": 3.0699458973239415,
+    "rel_se": 0.0002248919346887616,
+    "log10_free": 3.652149605401653
+   },
+   {
+    "signs": [
+     "NU",
+     "PA3"
+    ],
+    "n": 2,
+    "log10_solutions_relhard": 3.0699458973239415,
+    "rel_se": 0.0002248919346887616,
+    "log10_free": 3.652149605401653
+   }
+  ],
+  "log10_solutions_rel_subgraph": 43.40533721395994,
+  "log10_solutions_total": 280.7950615650674,
+  "log10_gauge_group": 10.759518210130269,
+  "log10_equivalence_classes_lower_bound": 270.0355433549371,
+  "joint_bits_removed_by_rel_hard": 55.99153412599301,
+  "note": "joint reduction only; per-sign marginals stay uniform (gauge symmetry); absolute per-sign bits earned = 0 (Art. XV)"
+ },
+ "S1_model_counting_anchorhard": {
+  "components": [
+   {
+    "signs": [
+     "*324",
+     "ZU"
+    ],
+    "log10_solutions_strict": 1.2590440935752318,
+    "log10_solutions_violated_dropped": 1.2590440935752318
+   },
+   {
+    "signs": [
+     "A",
+     "DA",
+     "I",
+     "JA",
+     "KA",
+     "KI",
+     "LOGO:*21F",
+     "MI",
+     "NE",
+     "PA",
+     "PI",
+     "QE",
+     "RA",
+     "RE",
+     "RO",
+     "RU",
+     "SI",
+     "SU",
+     "TA",
+     "TE",
+     "TI",
+     "TU",
+     "U",
+     "WA"
+    ],
+    "log10_solutions_strict": -Infinity,
+    "log10_solutions_violated_dropped": 1.9253582521771748
+   },
+   {
+    "signs": [
+     "KU",
+     "MA",
+     "SA"
+    ],
+    "log10_solutions_strict": -Infinity,
+    "log10_solutions_violated_dropped": 0.0
+   },
+   {
+    "signs": [
+     "NA",
+     "WI"
+    ],
+    "log10_solutions_strict": 1.2552725051033058,
+    "log10_solutions_violated_dropped": 1.2552725051033058
+   },
+   {
+    "signs": [
+     "NU",
+     "PA3"
+    ],
+    "log10_solutions_strict": 1.2552725051033058,
+    "log10_solutions_violated_dropped": 1.2552725051033058
+   }
+  ],
+  "log10_solutions_strict": -Infinity,
+  "strict_verdict": "UNSAT (0 solutions)",
+  "log10_solutions_violated_dropped": 5.694947355959018,
+  "note": "strict = anchors hard + ALL rel edges hard; relaxed drops the 15 benchmark-violated pinned pairs; unpinned signs outside the rel graph stay free"
+ }
+}

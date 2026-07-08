@@ -1,0 +1,33 @@
+{
+ "seed": 20260708,
+ "domain_size": 67,
+ "H0_bits": 6.066089190457772,
+ "n_signs": 163,
+ "n_A_only": 69,
+ "n_value_bearing_edges": 47,
+ "raw_pin_slots": 148,
+ "n_pinned_signs_parseable": 38,
+ "vacuous_pins": [
+  "*49"
+ ],
+ "n_rel_pairs": 30,
+ "n_rel_signs": 33,
+ "calibration": {
+  "rate_bench": 0.32142857142857145,
+  "rate_chance": 0.250565355042967,
+  "n_bench_pairs": 28,
+  "rel_binom_k_sat": 9,
+  "rel_binom_p_one_sided": 0.25213086741439283,
+  "w1_nats": 0.24905556127117792,
+  "w0_nats": -0.09932936757788013,
+  "rel_bits_per_edge": 0.35931122315174574,
+  "bridge_bits_per_sign": 0.0026862106971741588,
+  "bridge_top1_rate": 0.0392156862745098
+ },
+ "scenarios": {
+  "S0_collapse_compliant": 0.0,
+  "S2_heldout_calibrated": 0.07692307692307693,
+  "S3_truthlayer_cap": 0.75,
+  "S1_conditional_continuity": 0.999999
+ }
+}
