@@ -54,7 +54,9 @@ DISCLAIMER_HINT = re.compile(
     r"non.?circular|no phonetic|anonymous|not? (a )?(sound|value|reading)|assigned to any sign|"
     r"only a positional|positional slot|disclaim|control.?only|benchmark|"
     r"licen[cs]e|does not|structural (result|only)|\bl4\+?\b|never a (sound|value|reading|meaning)|"
-    r"no meaning|no .{0,20}is assigned|assigned to|does not (generalize|constitute)|positional|no semantic", re.I)
+    r"no meaning|no .{0,20}is assigned|assigned to|does not (generalize|constitute)|positional|no semantic|"
+    r"\bno\b.{0,40}(phonetic|meaning|value|reading|semantic)|(phonetic|meaning|value|semantic).{0,20}\bor meaning\b|"
+    r"analog|token.?type|held.?out|closest l\d", re.I)
 
 
 def _demark(s: str) -> str:
