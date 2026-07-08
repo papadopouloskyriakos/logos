@@ -1,0 +1,9 @@
+{
+ "parent_commit": "056e96d",
+ "verified_instances": 215,
+ "lineages": 14,
+ "material_errors_in_inventory": 0,
+ "reconciliation": "\u00a71 starting-state claims VERIFIED against red-team artifacts; no correction needed",
+ "highest_earned_layer": "L2/L3",
+ "all_transfer_licences": "NOT_EARNED"
+}

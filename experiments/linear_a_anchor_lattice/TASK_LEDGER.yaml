@@ -1,0 +1,18 @@
+# TASK_LEDGER — anchor-lattice campaign · branch research/linear-a-anchor-lattice · parent 056e96d · v2.2
+# status: QUEUED|RUNNING|COMPLETE|PARTIAL_SUPPORT|NULL|REFUTED|NO_POWER|SOURCE_BLOCKED|LICENSE_BLOCKED|COMPUTE_BLOCKED|INVALID
+tasks:
+  - {id: A_baseline, wp: A, objective: "reproduce verified baseline + DO_NOT_REPEAT registry", deps: [], status: COMPLETE, result_note: "§1 VERIFIED (215/14/0); registries frozen"}
+  - {id: B_sign_universe, wp: B, objective: "canonical unresolved-sign universe (conservative/merged/split)", deps: [A_baseline], status: QUEUED}
+  - {id: C_lattice, wp: C, objective: "dependency-aware all-anchor hypergraph + dependency audit", deps: [B_sign_universe], status: QUEUED}
+  - {id: D_source_expansion, wp: D, objective: "primary-source multi-slot anchor expansion + EA-13 re-read", deps: [C_lattice], status: QUEUED}
+  - {id: E_stroke, wp: E, objective: "palaeographic stroke/orientation corpus (non-circular) + known-script calib", deps: [B_sign_universe], status: QUEUED}
+  - {id: F_subst_bridge, wp: F, objective: "substitution-axis cross-script BRIDGE (no absolute-value import)", deps: [B_sign_universe], status: QUEUED}
+  - {id: G_anchor_threshold, wp: G, objective: "counterfactual identifiability: anchors x slots x lineages -> recovery surface", deps: [C_lattice], status: QUEUED}
+  - {id: H_joint_inference, wp: H, objective: "3 solvers (Bayesian/ILP/MDL) on the lattice -> posterior equivalence classes", deps: [C_lattice, D_source_expansion, E_stroke, F_subst_bridge], status: QUEUED}
+  - {id: I_all_sign, wp: I, objective: "per-unresolved-sign lattice search + retention gate", deps: [H_joint_inference], status: QUEUED}
+  - {id: J_language, wp: J, objective: "CONDITIONAL language test (only if lattice reduces entropy) else J_NOT_AUTHORIZED", deps: [H_joint_inference, I_all_sign], status: QUEUED}
+  - {id: K_acquisition, wp: K, objective: "active-acquisition ranking by expected equivalence-class reduction", deps: [I_all_sign], status: QUEUED}
+  - {id: L_3d, wp: L, objective: "3D/seal-imaging readiness or SOURCE_BLOCKED pipeline", deps: [], status: QUEUED}
+  - {id: M_seals, wp: M, objective: "held-out + prospective seal tests (SEAL_2/3/4 + Anetaki delta)", deps: [I_all_sign], status: QUEUED}
+  - {id: N_null, wp: N, objective: "full adaptive null programme + FP rate", deps: [H_joint_inference, I_all_sign, J_language], status: QUEUED}
+  - {id: O_synthesis, wp: O, objective: "synthesis + licence gates + final mechanical verdict", deps: [N_null, M_seals, K_acquisition, L_3d], status: QUEUED}

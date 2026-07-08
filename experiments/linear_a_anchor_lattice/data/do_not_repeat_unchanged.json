@@ -1,0 +1,59 @@
+{
+ "generated_from": "METHOD_LINEAGES_VERIFIED (14 lineages, red-team 056e96d)",
+ "do_not_repeat_unchanged": [
+  {
+   "method": "position-based C/V recovery",
+   "lineage": "LIN-01",
+   "status": "REFUTED (frequency artifact)",
+   "rule": "DO_NOT_REPEAT unchanged; only permissible as a null/baseline"
+  },
+  {
+   "method": "reduced-seed C/V propagation",
+   "lineage": "LIN-04",
+   "status": "REFUTED (frequency artifact + design leak)",
+   "rule": "DO_NOT_REPEAT unchanged"
+  },
+  {
+   "method": "raw distributional Linear A<->B transfer",
+   "lineage": "LIN-08",
+   "status": "NULL x4",
+   "rule": "DO_NOT_REPEAT; use substitution-BRIDGE (WP-F) not raw distribution"
+  },
+  {
+   "method": "shape-only value transfer",
+   "lineage": "LIN-08",
+   "status": "CIRCULAR (capped<=0.75)",
+   "rule": "DO_NOT_REPEAT; stroke channel (WP-E) must be non-circular + decomposed"
+  },
+  {
+   "method": "unconstrained language/root search",
+   "lineage": "LIN-10/LIN-12",
+   "status": "AT_END_TO_END_NULL",
+   "rule": "DO_NOT_REPEAT; WP-J is CONDITIONAL on lattice entropy reduction"
+  },
+  {
+   "method": "anchor-free agnostic value search",
+   "lineage": "LIN-05",
+   "status": "UNDERDETERMINED (>=10^27 twins)",
+   "rule": "DO_NOT_REPEAT; only lattice-CONSTRAINED inference (WP-H)"
+  }
+ ],
+ "durable_L2_L3_constraints": [
+  "anonymous A- initial prefix class (adaptive p 0.008)",
+  "KU-RO terminal/total ledger slot (p 0.002)",
+  "carrier-value ledger grammar",
+  "libation-formula rigid order (p 5e-5)",
+  "modest physical/layout segmentation signal"
+ ],
+ "anchor_state": {
+  "records": 115,
+  "dependency_lineages": 6,
+  "value_bearing_channels": 1,
+  "firm_toponym_equations": 5,
+  "held_out_survivable_absolute_anchors": 0,
+  "SEED_A": 0
+ },
+ "validated_relative_channel": "substitution consonant-axis on opaque LB (not recoverable on current LA under prior impl)",
+ "EA_13": "Egyptian-loanword/Hoch design power viable at multi-slot anchor strength ~La>=4; currently scarcity-limited; no licence",
+ "prospective_seal": "ANETAKI_FINAL_EDITION_DELTA_SEAL registered + unopened"
+}

@@ -1,0 +1,20 @@
+{
+ "as_of": "2026-07-08",
+ "assumptions": [
+  {
+   "id": "AL1",
+   "text": "anchor edges with different citations are NOT independent unless dependency-lineage-distinct",
+   "status": "HELD"
+  },
+  {
+   "id": "AL2",
+   "text": "relative-class reduction != absolute value",
+   "status": "HELD"
+  },
+  {
+   "id": "AL3",
+   "text": "stroke channel must be non-circular (no phonetic values as input)",
+   "status": "HELD"
+  }
+ ]
+}
