@@ -1,0 +1,10 @@
+{
+ "as_of": "2026-07-08",
+ "assumptions": [
+  {
+   "id": "FR1",
+   "text": "epoch substantive gates A-H enforced mechanically per ledger; no padding",
+   "status": "HELD"
+  }
+ ]
+}

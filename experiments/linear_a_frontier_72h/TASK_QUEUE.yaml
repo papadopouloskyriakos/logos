@@ -1,0 +1,10 @@
+# TASK_QUEUE — dynamic; re-ranked at every epoch end; duplicates of closed methods rejected
+queue:
+  - {rank: 1, frontier: F8/F1, task: "EPOCH-001: Ariadne-2025 Anetaki source-acquisition — audit what the published preliminary overview actually contains (5 inscriptions KN Zg 55-58 incl. scepter faces), extract machine-readable candidates, verify vs J1 exposure audit, integrate or source-block; measure genuinely-new information", gate: "B/H"}
+  - {rank: 2, frontier: F2, task: "GORILA-plate stroke recovery pilot: can manual stroke graphs be built for a 10-sign A-only sample from published drawings? licensing + representation + known-script calibration design", gate: "C"}
+  - {rank: 3, frontier: F3, task: "higher-order substitution motifs on opaque LB: do 3-sign context motifs recover same-C classes where flat neighborhoods failed cross-script?", gate: "A"}
+  - {rank: 4, frontier: F5, task: "ledger-role induction as anchor constraints: can transaction-role slots (giver/receiver/commodity/total) be induced blind on LB ledgers + validated, then constrain LA slot semantics as L2/L3 anchors?", gate: "A/C"}
+  - {rank: 5, frontier: F6, task: "scribal-community latent structure: site-stratified sign-variant clustering vs GORILA hand attributions (known-truth calibration where available)", gate: "A/E"}
+  - {rank: 6, frontier: F4, task: "segmentation-marginalized morphology: integrate boundary uncertainty into affix induction; does A- prefix robustness improve or degrade?", gate: "A"}
+  - {rank: 7, frontier: F9, task: "SBI/probabilistic-program pilot on synthetic syllabary: can simulation-based inference recover planted values at anchor counts where the G-surface solvers fail?", gate: "A/E"}
+  - {rank: 8, frontier: F7, task: "register-stratified language models: do libation vs ledger registers show measurably distinct phonotactics (value-free)?", gate: "A"}

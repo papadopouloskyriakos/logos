@@ -1,0 +1,13 @@
+# FRONTIER_MAP — active research frontier families (>=8 until formally closed)
+# state: ACTIVE | CLOSED_EXHAUSTED | CLOSED_SOURCE_BLOCKED | CLOSED_REFUTED | MERGED
+frontiers:
+  - {id: F1, name: "new multi-slot external anchors", state: ACTIVE, note: "beyond the exhausted toponym set: Ariadne-2025 Anetaki preliminary material (published, NOT ingested per anchor-lattice K); commodity/title/name classes; >=4 slots + >=2 lineages + >=1 held-out consequence"}
+  - {id: F2, name: "stroke/diachronic palaeography", state: ACTIVE, note: "SigLA bbox-only -> acquire facsimiles/photos/contours; manual stroke graphs for the 69 A-only signs are recoverable from published drawings (GORILA plates)"}
+  - {id: F3, name: "substitution-neighborhood bridges v2", state: ACTIVE, note: "prior flat bridge NO_POWER even on LB<->Cypriot; try higher-order motifs, context-conditioned alignment, formula-controlled substitutions, scribal error models, site-stratified geometry"}
+  - {id: F4, name: "joint segmentation+morphology", state: ACTIVE, note: "segmentation uncertainty INTEGRATED not frozen; benchmark opaque LB + synthetic admin syllabaries"}
+  - {id: F5, name: "administrative semantics without phonetics", state: ACTIVE, note: "commodity/recipient/place/title/transaction roles from ledger structure as independent anchor constraints; prior OBS L3 REFUTED word-context->channel but role-induction on DOCUMENT structure was L2 SUPPORTED"}
+  - {id: F6, name: "temporal/scribal latent structure", state: ACTIVE, note: "chronology, scribal communities, transmission, regional orthographies from sign variants + formula change"}
+  - {id: F7, name: "contact/mixed-language models", state: ACTIVE, note: "genre/site-specific linguistic strata vs one global language; libation vs ledger registers already known to differ (complementary distribution)"}
+  - {id: F8, name: "information-directed acquisition", state: ACTIVE, note: "execute the anchor-lattice K queue: Ariadne-2025 ingest #1; INSTAP/museum releases; expected-entropy-reduction ranking maintained"}
+  - {id: F9, name: "new optimization architectures", state: ACTIVE, note: "probabilistic programming, neural-symbolic factor graphs, differentiable CSP, program synthesis, SBI — ONLY after known-script calibration"}
+  - {id: F10, name: "prospective prediction systems", state: ACTIVE, note: "falsifiable predictions vs late-ingested editions/disputed readings; M_ANETAKI_LATTICE_DELTA_SEAL + relphono seals preserved"}
