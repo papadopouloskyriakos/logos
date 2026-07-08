@@ -759,3 +759,26 @@ epochs:
     artifacts: [epochs/EPOCH-032/prereg.md, epochs/EPOCH-032/plan_hash.txt, epochs/EPOCH-032/machinery.py, epochs/EPOCH-032/result.json, reports/EPOCH032_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-033
+    frontier: F8
+    gate: A
+    name: "Ledger entry-word vs non-entry-word structural contrast (length + A-rate), label-permutation null"
+    plan_hash: "see epochs/EPOCH-033/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: global entry len 1.801 (n1040) vs non-entry 1.860 (n2107), contrast -0.059 EXACT (p 0.21 n.s.); global A-rate entry 0.030 vs non 0.071 contrast -0.041 EXACT (p 0.001); per-site direction FLIP CONFIRMED — Haghia Triada entries LONGER (+0.311) vs all 7 other sites entries SHORTER (Malia -1.08, Tylissos -0.92, Khania -0.44, Phaistos -0.45, Palaikastro -0.31, Arkhalkhori -0.31, Zakros -0.18)."
+    positive_control: "PASSED (verified): label-permutation null detects a planted length difference (p=0.0005, correct direction) with false-positive rate 0.0 on same-distribution splits. Calibrated by construction (permuting entry/non-entry labels = H0)."
+    verdict: "ENTRY_CLASS_NO_CONTRAST (primary LENGTH metric): global entry-vs-non-entry length contrast is null (p 0.21) AND the per-site direction is INCONSISTENT (flips between Haghia Triada and all other sites). Entry and non-entry words do NOT differ in length in a cross-site-robust way."
+    numbers: {n_entry: 1040, n_nonentry: 2107, mean_len_entry: 1.801, mean_len_nonentry: 1.860, len_contrast: -0.059, len_perm_p: 0.211, a_rate_entry: 0.030, a_rate_nonentry: 0.071, a_contrast: -0.041, a_perm_p: 0.001, sites_testable: 8, sites_sig_len: 4, direction_consistent: false, loo_excluded: "Haghia Triada", per_site_len_contrast: {Haghia_Triada: 0.311, Khania: -0.441, Malia: -1.077, Tylissos: -0.921, Phaistos: -0.446, Palaikastro: -0.312, Arkhalkhori: -0.306, Zakros: -0.177}}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "NEGATIVE on the primary (length) metric with TWO substantive by-products: (1) SITE-STYLE HETEROGENEITY — Haghia Triada is the ONLY site where ledger entries are longer than non-entries (+0.31); all 7 other sites reverse it (entries shorter). HT's administrative register differs from the rest, reinforcing the HT-is-special theme (cf. E026/E028/E032). (2) A-PREFIX DEPLETION ON ENTRIES — A-initial words are globally LESS likely to be ledger entries (0.030 vs 0.071, p=0.001), i.e. A- words tend to be headings/labels rather than counted commodities — but this A-rate contrast is NOT cross-site-robust (n.s. at HT & Zakros), so it is reported, not certified. STRUCTURAL L2/L3; anonymous; no numeral arithmetic, no phonetics/meaning."
+    committed_prediction: "modal CONTRAST_ROBUST or NO_CONTRAST; OUTCOME = NO_CONTRAST (length null + direction flip). The A-rate sub-signal (entry depletion) is a reported-not-certified successor lead."
+    deviations: []
+    non_circular: "Entry/non-entry defined by observed numeral adjacency; length + A-initial directly observed; LB control-only; no numeral arithmetic; no phonetics; anonymous."
+    architecture_note: "Tenth gated-runner epoch; clean NEGATIVE (repairs=0) with a calibrated label-permutation PC that PASSED — contrast between the well-designed calibrated null here and the shuffle-null failures of E029/E030/E032. Coordinator verified the direction flip + extracted the HT-style and A-depletion by-products the raw verdict alone would miss."
+    artifacts: [epochs/EPOCH-033/prereg.md, epochs/EPOCH-033/plan_hash.txt, epochs/EPOCH-033/machinery.py, epochs/EPOCH-033/result.json, reports/EPOCH033_REPORT.md]
+    successors_spawned: 5
+    substantive: true

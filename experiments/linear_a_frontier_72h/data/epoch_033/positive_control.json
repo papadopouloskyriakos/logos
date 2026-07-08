@@ -1,0 +1,7 @@
+{
+  "pc_verdict": "PASSED",
+  "detect_planted_p": 0.0004997501249375312,
+  "detect_direction_correct": true,
+  "detect_contrast": 2.3425000000000002,
+  "false_pos_rate": 0.0
+}

@@ -1,0 +1,66 @@
+{
+  "task_id": "EPOCH-033",
+  "method": "Ledger entry-word vs non-entry-word structural contrast (L2/L3). Two functional word classes defined by OBSERVABLE structure only: ENTRY-word = 'word' token whose immediately-following stream token is 'num'; NON-ENTRY word = 'word' token whose following token is not 'num' (or last). Metrics: (a) mean word LENGTH (n signs); (b) A-INITIAL rate (fraction of >=1-sign words whose first sign is 'A'). Contrast = entry minus non-entry. NULL = label permutation: permute entry/non-entry labels across the SAME word-token set (preserving class counts), recompute contrast, >=2000 draws, two-sided p. LB positive control gates the verdict (detect planted length gap + false-positive rate <=0.10).",
+  "result": "ENTRY_CLASS_NO_CONTRAST",
+  "verdict": "ENTRY_CLASS_NO_CONTRAST",
+  "numbers": {
+    "global": {
+      "n_entry": 1040,
+      "n_nonentry": 2107,
+      "mean_len_entry": 1.8009615384615385,
+      "mean_len_nonentry": 1.8599905078310395,
+      "len_contrast": -0.05902896936950097,
+      "len_perm_p": 0.2108945527236382,
+      "a_rate_entry": 0.02980769230769231,
+      "a_rate_nonentry": 0.07071665875652587,
+      "a_contrast": -0.04090896644883356,
+      "a_perm_p": 0.0009995002498750624
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_planted_p": 0.0004997501249375312,
+      "detect_direction_correct": true,
+      "detect_contrast": 2.3425,
+      "false_pos_rate": 0.0
+    },
+    "cross_site": {
+      "n_sites_testable": 8,
+      "n_sites_sig_len": 4,
+      "sig_directions": [1, -1, -1, -1],
+      "direction_consistent": false,
+      "loo_excluded": "Haghia Triada",
+      "loo_len_contrast": -0.5613013140917236,
+      "loo_p": 0.0004997501249375312,
+      "per_site": {
+        "Haghia Triada": {"n_entry": 686, "n_nonentry": 1205, "len_contrast": 0.3113363899205206, "p": 0.0004997501249375312, "a_contrast": -0.005520002903354585, "a_p": 0.5342328835582209},
+        "Khania": {"n_entry": 76, "n_nonentry": 292, "len_contrast": -0.44142033165104544, "p": 0.0004997501249375312, "a_contrast": -0.08904109589041095, "a_p": 0.008995502248875561},
+        "Zakros": {"n_entry": 114, "n_nonentry": 104, "len_contrast": -0.17695681511471006, "p": 0.3278360819590205, "a_contrast": -0.02682186234817814, "a_p": 0.6596701649175413},
+        "Phaistos": {"n_entry": 29, "n_nonentry": 81, "len_contrast": -0.4461472967220095, "p": 0.09395302348825588, "a_contrast": -0.06428267347807577, "a_p": 0.4622688655672164},
+        "Palaikastro": {"n_entry": 18, "n_nonentry": 59, "len_contrast": -0.31167608286252335, "p": 0.5737131434282858, "a_contrast": -0.11393596986817325, "a_p": 0.31284357821089454},
+        "Arkhalkhori": {"n_entry": 27, "n_nonentry": 36, "len_contrast": -0.3055555555555558, "p": 0.392303848075962, "a_contrast": -0.04629629629629631, "a_p": 0.7586206896551724},
+        "Tylissos": {"n_entry": 28, "n_nonentry": 15, "len_contrast": -0.9214285714285715, "p": 0.014992503748125937, "a_contrast": -0.26666666666666666, "a_p": 0.0079960019990005},
+        "Malia": {"n_entry": 25, "n_nonentry": 16, "len_contrast": -1.0775, "p": 0.001999000499750125, "a_contrast": -0.1875, "a_p": 0.047976011994003}
+      }
+    }
+  },
+  "key_findings": [
+    "PRIMARY metric (word LENGTH): global entry-vs-nonentry contrast is -0.059 signs (entry words marginally SHORTER: 1.801 vs 1.860) and NOT significant under label permutation (two-sided p=0.211, >0.05). The frozen rule therefore yields ENTRY_CLASS_NO_CONTRAST.",
+    "POSITIVE CONTROL PASSED: the label-permutation machinery DETECTS a planted LB length gap (p=0.0005, correct positive direction, contrast=+2.34) and has a FALSE-POSITIVE rate of 0.0 (<=0.10) over 30 same-distribution splits. The null verdict is not a machinery artifact.",
+    "SECONDARY metric (A-INITIAL rate): global contrast IS significant (entry less A-initial: 0.0298 vs 0.0707, p=0.001). But A-rate is secondary/reported only and does not override the primary length verdict.",
+    "DIRECTION IS HETEROGENEOUS ACROSS SITES: of 4 sites individually significant for length, Haghia Triada shows entry words LONGER (+0.31) while Khania, Tylissos, Malia show entry words SHORTER (-0.44, -0.92, -1.08). Direction is NOT consistent (the global null is the honest summary).",
+    "LEAVE-ONE-SITE-OUT reveals Haghia Triada masks an opposite effect: excluding it, the global length contrast becomes -0.561 (p=0.0005) — i.e. outside Haghia Triada entry words are clearly shorter, but this is site-local heterogeneity, not a robust corpus-wide structural role contrast.",
+    "8 sites are testable (>=15 words in EACH class), so the verdict is NOT underpowered; the negative result reflects a genuine absence of a consistent corpus-wide length contrast between the two functional classes."
+  ],
+  "successor_hypotheses": [
+    "E034: Decompose the Haghia Triada length signal by SUPPORT/CONTEXT (tablet vs other) — does the entry-longer effect concentrate in a specific document class, suggesting a local scribal convention rather than a structural role?",
+    "E035: Test whether the A-INITIAL contrast (significant globally, entry less A-initial) is itself robust across sites — it may mark a real structural role difference that LENGTH does not capture.",
+    "E036: Refine the functional classes by POSITIONAL structure (e.g. first-word-of-line entry vs mid-line entry; non-entry words adjacent to 'div' vs 'nl') to see if finer structural roles separate.",
+    "E037: Cross-check the entry/non-entry contrast against E031's ledger-grammar regularity per site — do sites with stricter WORD-NUMERAL grammar show a different structural profile?",
+    "E038: Test sign-repetition / sign-diversity (structural complexity) rather than raw length as the role-discriminating statistic — entry words may differ in internal sign structure even if length is matched.",
+    "E039: Examine whether the entry-class is dominated by a small set of recurrent word-forms (E032 recurrence) that happen to be short, which would explain the negative length contrast outside Haghia Triada."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Tokens carry NO phonetic/sound/meaning/reading. Only L2/L3 structural statistics (word length in signs; A-initial indicator) computed on anonymous sign sequences. The entry/non-entry split is defined by OBSERVABLE stream structure (adjacency to a 'num' token), not by any reading. No numeral-value arithmetic is used. LB is a positive-control benchmark ONLY (planted length gap + same-distribution false-positive calibration); it does not inform the LA verdict. The label-permutation null is calibrated by construction (exchangeable under H0).",
+  "deviations": []
+}
