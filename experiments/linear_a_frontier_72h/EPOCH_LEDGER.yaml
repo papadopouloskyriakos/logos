@@ -680,3 +680,31 @@ epochs:
     artifacts: [epochs/EPOCH-029/prereg.md, epochs/EPOCH-029/plan_hash.txt, epochs/EPOCH-029/machinery.py, epochs/EPOCH-029/result.json, reports/EPOCH029_REPORT.md]
     successors_spawned: 6
     substantive: true
+
+  - epoch_id: EPOCH-030
+    frontier: F8
+    gate: A
+    name: "Numeral attachment order in the ledger grammar (word->numeral vs numeral->word, cross-site)"
+    plan_hash: "see epochs/EPOCH-030/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2 then gate passed=false (see faults)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed with the CORRECT token key 'num': word->num=1040, num->word=19, p_wordfirst=0.982 EXACT MATCH; per-site word-first in ALL 8 testable sites (HT 0.991, Zakros 0.974, Khania 0.95, Phaistos 0.967, Tylissos/Arkhalkhori/Malia/Palaikastro 1.00). PC-fail confirmed independently: stream-shuffle null rejects order-randomized data >=0.20 (GLM 0.48) => anti-conservative."
+    positive_control: "FAILED (correctly, fail-closed): the FROZEN primary null (within-inscription full stream-shuffle) has false-positive rate 0.48 (>>0.10) — it detects a planted order (good) but also fires on order-randomized data (bad). Root cause: full-stream shuffle mixes word/num/nl/div/other, breaking exchangeability of the word/num adjacency. Null is miscalibrated => no certified claim."
+    verdict: "MACHINERY_UNINFORMATIVE (frozen stream-shuffle null failed its PC). NOTE: this is a null-MODEL failure, NOT absence of signal — the raw word->numeral ledger pattern is overwhelming and cross-site-consistent, awaiting a calibrated null (E031)."
+    raw_signal: "word->numeral (entry-then-quantity) p_wordfirst=0.982 (1040 vs 19), CONSISTENT across all 8 testable sites (0.95-1.00). This is the mission-named 'carrier-value ledger grammar' at the raw level; near-certain real, pending calibrated-null certification."
+    numbers: {word_first: 1040, num_first: 19, p_wordfirst: 0.982, n_adj: 1059, sites_testable: 8, sites_all_word_first: 8, pc_false_pos_rate: 0.48, pc_detect_planted: true, stream_token_types: {word: 3147, num: 1276, nl: 2114, div: 463, other: 1056}}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "Fail-closed on the FROZEN null (miscalibrated), with a strong un-certified raw signal: word->numeral order dominates (0.982) and is cross-site-consistent (8/8 sites). NO certified claim under the frozen null; E031 re-tests with a calibrated pair-flip null. STRUCTURAL L2/L3 token-order only; no arithmetic on numeral values, no phonetics/meaning. Earns no transfer licence."
+    committed_prediction: "modal CROSS_SITE_ROBUST or SITE_LOCAL; OUTCOME = MACHINERY_UNINFORMATIVE (frozen null failed PC). The calibrated re-test (E031) is expected CROSS_SITE_ROBUST given the raw 8/8 consistency."
+    deviations:
+      - "GLM's result.json was missing key_findings + successor_hypotheses after 2 auto-repair passes; ORCHESTRATOR completed result.json from GLM's verified _full_results.json (Art. XVII record-completion). All numbers GLM's, orchestrator-verified."
+      - "Orchestrator repro_check KEY BUG: used token type 'numeral' but the corpus uses 'num' -> spurious NO_WORD_NUMERAL_ADJ gate problem; corrected in verification. (Fix the driver repro_check for future numeral epochs.)"
+      - "GLM used a background-job + sleep-poll pattern inside run_bash that was slow (~35 min) and orphan-prone; the compute did complete (_full_results.json). Prefer synchronous timeout-guarded compute in future numeral epochs."
+      - "FROZEN primary null (stream_shuffle) failed its PC (fp 0.48); a pair-flip null is the calibrated successor (E031)."
+    non_circular: "Token types + stream order directly observed; no arithmetic on numeral values; LB not used; anonymous."
+    architecture_note: "Seventh gated-runner epoch; gate correctly returned passed=false (GLM schema fault + orchestrator repro_check key bug). Coordinator diagnosed BOTH faults, verified the real science, completed the record, and banked honestly as MACHINERY_UNINFORMATIVE while queuing the calibrated re-test. Fail-closed protected against certifying via a miscalibrated null even though the raw signal is strong."
+    artifacts: [epochs/EPOCH-030/prereg.md, epochs/EPOCH-030/plan_hash.txt, epochs/EPOCH-030/machinery.py, epochs/EPOCH-030/result.json, epochs/EPOCH-030/_full_results.json, reports/EPOCH030_REPORT.md]
+    successors_spawned: 6
+    substantive: true

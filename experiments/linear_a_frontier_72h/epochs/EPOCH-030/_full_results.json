@@ -1,0 +1,265 @@
+{
+  "task_id": "EPOCH-030",
+  "inspections": {
+    "n_inscriptions": 1341,
+    "type_vocab": {
+      "word": 3147,
+      "div": 463,
+      "nl": 2114,
+      "num": 1276,
+      "other": 1056
+    },
+    "global_WF": 1040,
+    "global_NF": 19,
+    "global_adj": 1059,
+    "global_p_wordfirst": 0.9820585457979226
+  },
+  "primary_null_stream_shuffle": {
+    "verdict": "MACHINERY_UNINFORMATIVE",
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "detect_planted_p": 0.0,
+      "detect_planted_p_wordfirst": 0.895032802249297,
+      "detect_direction_ok": true,
+      "false_pos_rate": 0.48,
+      "fp_pvals": [
+        0.093,
+        0.016,
+        0.011,
+        0.04,
+        0.002,
+        0.736,
+        0.0,
+        0.001,
+        0.396,
+        0.212,
+        0.405,
+        0.004,
+        0.089,
+        0.109,
+        0.001,
+        1.0,
+        0.543,
+        0.404,
+        0.02,
+        0.044,
+        0.006,
+        0.385,
+        0.088,
+        0.037,
+        0.169
+      ],
+      "null_model": "stream_shuffle"
+    },
+    "global": {
+      "n_word_numeral_adj": 1059,
+      "n_word_first": 1040,
+      "n_num_first": 19,
+      "p_wordfirst": 0.9820585457979226,
+      "null_mean_p_wordfirst": 0.4993325747644327,
+      "null_p": 0.0,
+      "null_model": "stream_shuffle"
+    },
+    "cross_site": {
+      "n_sites_testable": 8,
+      "testable_sites": [
+        "Arkhalkhori",
+        "Haghia Triada",
+        "Khania",
+        "Malia",
+        "Palaikastro",
+        "Phaistos",
+        "Tylissos",
+        "Zakros"
+      ],
+      "per_site": {
+        "Arkhalkhori": {
+          "site": "Arkhalkhori",
+          "n_adj": 27,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Haghia Triada": {
+          "site": "Haghia Triada",
+          "n_adj": 692,
+          "p_wordfirst": 0.9913294797687862,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Khania": {
+          "site": "Khania",
+          "n_adj": 80,
+          "p_wordfirst": 0.95,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Malia": {
+          "site": "Malia",
+          "n_adj": 25,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Palaikastro": {
+          "site": "Palaikastro",
+          "n_adj": 18,
+          "p_wordfirst": 1.0,
+          "p": 0.004,
+          "direction": "word_first"
+        },
+        "Phaistos": {
+          "site": "Phaistos",
+          "n_adj": 30,
+          "p_wordfirst": 0.9666666666666667,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Tylissos": {
+          "site": "Tylissos",
+          "n_adj": 28,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Zakros": {
+          "site": "Zakros",
+          "n_adj": 117,
+          "p_wordfirst": 0.9743589743589743,
+          "p": 0.0,
+          "direction": "word_first"
+        }
+      },
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.0,
+      "loo_p_wordfirst": 0.9645776566757494,
+      "null_model": "stream_shuffle"
+    },
+    "null_model": "stream_shuffle"
+  },
+  "deviation_null_pair_flip": {
+    "verdict": "MACHINERY_UNINFORMATIVE",
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "detect_planted_p": 0.0,
+      "detect_planted_p_wordfirst": 0.895032802249297,
+      "detect_direction_ok": true,
+      "false_pos_rate": 0.44,
+      "fp_pvals": [
+        0.157,
+        0.013,
+        0.02,
+        0.064,
+        0.007,
+        0.675,
+        0.0,
+        0.005,
+        0.501,
+        0.184,
+        0.532,
+        0.008,
+        0.161,
+        0.211,
+        0.001,
+        0.878,
+        0.541,
+        0.542,
+        0.009,
+        0.028,
+        0.011,
+        0.394,
+        0.146,
+        0.042,
+        0.154
+      ],
+      "null_model": "pair_flip"
+    },
+    "global": {
+      "n_word_numeral_adj": 1059,
+      "n_word_first": 1040,
+      "n_num_first": 19,
+      "p_wordfirst": 0.9820585457979226,
+      "null_mean_p_wordfirst": 0.5237629553325541,
+      "null_p": 0.0,
+      "null_model": "pair_flip"
+    },
+    "cross_site": {
+      "n_sites_testable": 8,
+      "testable_sites": [
+        "Arkhalkhori",
+        "Haghia Triada",
+        "Khania",
+        "Malia",
+        "Palaikastro",
+        "Phaistos",
+        "Tylissos",
+        "Zakros"
+      ],
+      "per_site": {
+        "Arkhalkhori": {
+          "site": "Arkhalkhori",
+          "n_adj": 27,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Haghia Triada": {
+          "site": "Haghia Triada",
+          "n_adj": 692,
+          "p_wordfirst": 0.9913294797687862,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Khania": {
+          "site": "Khania",
+          "n_adj": 80,
+          "p_wordfirst": 0.95,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Malia": {
+          "site": "Malia",
+          "n_adj": 25,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Palaikastro": {
+          "site": "Palaikastro",
+          "n_adj": 18,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Phaistos": {
+          "site": "Phaistos",
+          "n_adj": 30,
+          "p_wordfirst": 0.9666666666666667,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Tylissos": {
+          "site": "Tylissos",
+          "n_adj": 28,
+          "p_wordfirst": 1.0,
+          "p": 0.0,
+          "direction": "word_first"
+        },
+        "Zakros": {
+          "site": "Zakros",
+          "n_adj": 117,
+          "p_wordfirst": 0.9743589743589743,
+          "p": 0.0,
+          "direction": "word_first"
+        }
+      },
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.0,
+      "loo_p_wordfirst": 0.9645776566757494,
+      "null_model": "pair_flip"
+    },
+    "null_model": "pair_flip"
+  },
+  "verdict": "MACHINERY_UNINFORMATIVE",
+  "verdict_null_model": "stream_shuffle (frozen primary null)"
+}

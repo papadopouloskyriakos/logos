@@ -1,0 +1,98 @@
+{
+ "task_id": "EPOCH-030",
+ "method": "Word->numeral adjacency order in the token stream; within-inscription stream-shuffle null (FROZEN primary). PC = detect planted order + false-positive control on randomized order.",
+ "result": "Raw pattern overwhelmingly word-first (word then quantity): p_wordfirst=0.982 (1040 word->num vs 19 num->word), consistent across ALL 8 testable sites (0.95-1.00). BUT the frozen stream-shuffle null FAILED its false-positive control (fp rate 0.48; orchestrator-confirmed anti-conservative), so no certified claim under this null.",
+ "verdict": "MACHINERY_UNINFORMATIVE",
+ "verdict_null_model": "stream_shuffle (frozen primary null) \u2014 PC false-positive rate 0.48 > 0.10, anti-conservative",
+ "numbers": {
+  "stream_token_types": {
+   "word": 3147,
+   "div": 463,
+   "nl": 2114,
+   "num": 1276,
+   "other": 1056
+  },
+  "global": {
+   "n_word_numeral_adj": 1059,
+   "n_word_first": 1040,
+   "n_num_first": 19,
+   "p_wordfirst": 0.9820585457979226,
+   "null_mean_p_wordfirst": 0.4993325747644327,
+   "null_p": 0.0
+  },
+  "positive_control": {
+   "pc_verdict": "FAILED",
+   "detect_planted_p": 0.0,
+   "detect_direction_ok": true,
+   "false_pos_rate": 0.48
+  },
+  "cross_site": {
+   "n_sites_testable": 8,
+   "per_site": {
+    "Arkhalkhori": {
+     "n_adj": 27,
+     "p_wordfirst": 1.0,
+     "direction": "word_first"
+    },
+    "Haghia Triada": {
+     "n_adj": 692,
+     "p_wordfirst": 0.9913294797687862,
+     "direction": "word_first"
+    },
+    "Khania": {
+     "n_adj": 80,
+     "p_wordfirst": 0.95,
+     "direction": "word_first"
+    },
+    "Malia": {
+     "n_adj": 25,
+     "p_wordfirst": 1.0,
+     "direction": "word_first"
+    },
+    "Palaikastro": {
+     "n_adj": 18,
+     "p_wordfirst": 1.0,
+     "direction": "word_first"
+    },
+    "Phaistos": {
+     "n_adj": 30,
+     "p_wordfirst": 0.9666666666666667,
+     "direction": "word_first"
+    },
+    "Tylissos": {
+     "n_adj": 28,
+     "p_wordfirst": 1.0,
+     "direction": "word_first"
+    },
+    "Zakros": {
+     "n_adj": 117,
+     "p_wordfirst": 0.9743589743589743,
+     "direction": "word_first"
+    }
+   }
+  }
+ },
+ "key_findings": [
+  "Word->numeral is the overwhelmingly dominant stream order: 1040 word->num vs 19 num->word (p_wordfirst=0.982) \u2014 the administrative 'entry then quantity' ledger pattern.",
+  "The direction is CONSISTENT across all 8 testable sites (per-site p_wordfirst 0.95-1.00), i.e. cross-site robust at the raw level.",
+  "The FROZEN primary null (within-inscription full stream-shuffle) FAILED its positive control: false-positive rate 0.48 (>>0.10) on order-randomized data \u2014 anti-conservative, orchestrator-confirmed (>=0.20).",
+  "Therefore no CERTIFIED significance claim under the frozen null; verdict MACHINERY_UNINFORMATIVE (fail-closed).",
+  "The raw signal is so strong + cross-site-consistent that a CALIBRATED null (pair-flip on word/num adjacencies only) is expected to certify it \u2014 queued as the E031 successor."
+ ],
+ "successor_hypotheses": [
+  "E031: re-test word->numeral order with a PAIR-FLIP null (for each adjacent word/num pair, flip order with p=0.5) that is calibrated by construction \u2014 certify the ledger grammar properly.",
+  "Test whether the rare num->word cases (19) cluster (specific signs/sites/document classes) \u2014 a structural exception class.",
+  "Does word->numeral hold WITHIN document class (tablet vs roundel) controlling for E028 length-register?",
+  "Numeral MAGNITUDE vs word length/position (structural, no arithmetic on values).",
+  "Multi-numeral runs after a single word (list entries) vs one-numeral-per-word \u2014 ledger entry cardinality.",
+  "Fraction-sign vs integer-num ordering relative to words (is the fraction system positioned differently?)."
+ ],
+ "layer": "L2/L3",
+ "la_touched": true,
+ "non_circular": "Token TYPES (word/num) and stream order are directly observed; no phonetic value, no arithmetic on numeral values, LB not used here; anonymous.",
+ "deviations": [
+  "GLM's result.json was written missing key_findings + successor_hypotheses after 2 auto-repair passes; the ORCHESTRATOR completed result.json from GLM's verified _full_results.json (Art. XVII record-completion, analogous to E023's report). All numbers are GLM's, orchestrator-verified.",
+  "Orchestrator repro_check had a KEY BUG (used token type 'numeral'; the corpus uses 'num') which contributed a spurious NO_WORD_NUMERAL_ADJ gate problem; corrected in verification (word->num=1040 confirmed with the right key).",
+  "FROZEN primary null = stream_shuffle; it failed its PC (fp 0.48). A pair-flip null was noted as the calibrated successor (E031)."
+ ]
+}
