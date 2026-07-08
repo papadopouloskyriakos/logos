@@ -580,3 +580,30 @@ epochs:
     artifacts: [epochs/EPOCH-025/prereg.md, epochs/EPOCH-025/plan_hash.txt, epochs/EPOCH-025/machinery.py, epochs/EPOCH-025/result.json, reports/EPOCH025_REPORT.md]
     successors_spawned: 6
     substantive: true
+
+  - epoch_id: EPOCH-026
+    frontier: F5
+    gate: A
+    name: "Word-final positional structure (terminal analog of A-): is there a cross-site-robust productive terminal sign class?"
+    plan_hash: "see epochs/EPOCH-026/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2 then a GATE FALSE-POSITIVE (see below)."
+    gate_note: "The gated runner initially returned passed=false on a FALSE-POSITIVE overclaim flag: the report disclaimer 'does **not** generalize ... No meaning is assigned to RO' tripped the scanner (markdown bold broke the 'does not' hint; 'No meaning is assigned' unrecognized). Diagnosed as a SCANNER bug, not an epoch fault; fixed in scripts/epoch_runner.py (main f17b26f: _demark markdown-strip + broadened DISCLAIMER_HINT); re-gate PASSES clean. Coordinator override is justified + recorded (append-only)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed (own code, seed 11, 2000 draws): RO word-final=78 MATCH; distinct final-types=18 MATCH; RO final-significant in exactly 1/10 sites (Haghia Triada p .0005) MATCH; HT holds 66/78=84.6% of all RO-finals MATCH; leave-one-site-out (drop HT) p .0465 borderline MATCH. Verdict follows."
+    positive_control: "PASSED (verified via gate repro-run rc=0): LB word-final sign JO (final-rate .815) significant 5/5 seeded folds; genuine low-final-rate negative control E (final-rate .104) 0/5. (GLM disclosed refining the negative-control selection so it is a TRUE negative — LB is dense with grammatical finals; prereg intent honoured, prereg/plan_hash unchanged.)"
+    verdict: "FINAL_CLASS_CONCENTRATED — RO is word-final-significant GLOBALLY (78 finals, p .001) but concentrated in ONE site: significant in only 1/10 sites (Haghia Triada), which holds 84.6% of all RO-finals; leave-one-site-out borderline (p .046); clears 1 site vs comparator median ~2. It does NOT meet the cross-site held-out standard."
+    numbers: {final_sign: RO, global_final_count: 78, n_words_ge2: 1369, global_p: 0.001, n_distinct_final_types: 18, n_sites_ge20: 10, sites_sig_raw: 1, sites_sig_holm: 1, only_sig_site: "Haghia Triada", ht_share_of_finals: 0.846, loo_excluded: "Haghia Triada", loo_p: 0.046, comparators: {RA2: 1, NE: 2, ME: 3, TE: 1, RE: 2}, comparator_median: 2, pc_final: "JO 5/5", pc_random: "E 0/5", null_draws: 1000}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "STRUCTURAL bounded/NEGATIVE result. The word-final RO terminal (the KU-RO/-RO ledger-total pattern named in prior LA work) is NOT a corpus-wide positional slot: it is a HAGHIA TRIADA administrative feature (84.6% of RO-finals there; robust nowhere else). This BOUNDS a mission-named 'durable constraint' and sharply CONTRASTS with A- prefixation (9-10/10 sites): initial-A generalises across sites, terminal-RO does not. No phonetic/semantic value; RO is a positional token only."
+    committed_prediction: "modal CROSS_SITE_ROBUST or CONCENTRATED; OUTCOME = CONCENTRATED, orchestrator-verified. A- (initial) generalises; RO (terminal) is site-local — an asymmetry worth mapping."
+    deviations:
+      - "GATE FALSE-POSITIVE (not an epoch deviation): overclaim scanner flagged a disclaimer line; scanner fixed on main (f17b26f); re-gate clean. Recorded for append-only honesty."
+      - "PC negative-control refined to a TRUE low-final-rate negative (LB is dense with finals); disclosed; prereg/plan_hash unchanged; LA computed only after PC passed."
+      - "LOO p borderline (.046, stable .0385-.0475 across 5 seeds); the CONCENTRATED verdict rests on the unambiguous <=1-site condition, not the borderline LOO."
+    non_circular: "LB control-only; anonymous sign ids; no phonetic value; no known-value model input on the LA side."
+    architecture_note: "Third gated-runner epoch; first to expose a GATE false-positive — caught by the coordinator (not auto-passed), diagnosed, the harness itself fixed, then banked. Demonstrates the division of labour: the gate enforces mechanically, the coordinator judges when the gate itself is wrong."
+    artifacts: [epochs/EPOCH-026/prereg.md, epochs/EPOCH-026/plan_hash.txt, epochs/EPOCH-026/machinery.py, epochs/EPOCH-026/result.json, reports/EPOCH026_REPORT.md]
+    successors_spawned: 7
+    substantive: true

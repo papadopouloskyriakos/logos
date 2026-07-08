@@ -1,0 +1,91 @@
+{
+  "task_id": "EPOCH-026",
+  "method": "Word-FINAL positional structure test (terminal-slot analog of the A- prefix line). Metric = count/fraction of >=2-sign words whose LAST sign is S*. Null = within-word uniform permutation (reused from E023 machinery.permutation_null), 1000 draws, one-sided p=(1+#(null>=obs))/(1+1000). PC gates verdict: LB known word-final-skewed sign (JO) on seeded balanced 5-way split, with a frequency-matched NEGATIVE control (a sign NOT itself word-final-skewed). LA main = partition by SITE (>=20 qualifying words), Holm-corrected, leave-one-site-out (drop Haghia Triada), comparator sweep over the 5 next-most-word-final signs.",
+  "result": "S*=RO is the strongest word-final sign globally (78/1369, frac 0.0570, p=0.0010; 18 distinct final word-types; 12 distinct penultimate signs). PC PASSED (LB JO significant 5/5 seeded folds; frequency-matched negative control E significant 0/5). However RO is geographically CONCENTRATED: 66/78 finals (84.6%) are at Haghia Triada, and RO is word-final-significant in only 1 of 10 sites-with->=20-words (Haghia Triada only; Holm-corrected also 1). Leave-one-site-out (drop Haghia Triada) is borderline-surviving (p~0.04 across seeds, 12 finals over 675 non-HT words). RO clears 1 site vs a comparator median of 2 (margin -1, fails the >=2-more-sites test). Verdict = FINAL_CLASS_CONCENTRATED: a real, productive word-final CLASS (not few-type-driven: 18 types) but concentrated at one site rather than a corpus-wide cross-site terminal slot.",
+  "verdict": "FINAL_CLASS_CONCENTRATED",
+  "numbers": {
+    "final_sign": "RO",
+    "global": {
+      "final_count": 78,
+      "n_words_ge2": 1369,
+      "frac": 0.0570,
+      "p": 0.0010,
+      "null_mean": 41.5,
+      "n_distinct_final_types": 18,
+      "n_distinct_penultimate": 12
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "pc_sign": "JO",
+      "pc_sign_occ": 1814,
+      "pc_sign_final": 1479,
+      "pc_sign_skew": 0.8153,
+      "pc_sites_sig": 5,
+      "pc_fold_ps": [0.001, 0.001, 0.001, 0.001, 0.001],
+      "rand_sign": "E",
+      "rand_sign_occ": 1683,
+      "rand_sites_sig": 0,
+      "rand_fold_ps": [1.0, 1.0, 1.0, 1.0, 1.0],
+      "neg_control_median_rate_cutoff": 0.1786,
+      "split": "seeded balanced 5-way (seed=7); no per-tablet metadata in load_b_damos"
+    },
+    "per_site": {
+      "Haghia Triada": {"n": 694, "final_count": 66, "p": 0.0010, "p_holm": 0.0100},
+      "Khania": {"n": 120, "final_count": 4, "p": 0.0689, "p_holm": 0.6204},
+      "Zakros": {"n": 132, "final_count": 2, "p": 0.4635, "p_holm": 1.0},
+      "Knossos": {"n": 61, "final_count": 0, "p": 1.0, "p_holm": 1.0},
+      "Phaistos": {"n": 58, "final_count": 1, "p": 0.7383, "p_holm": 1.0},
+      "Palaikastro": {"n": 57, "final_count": 0, "p": 1.0, "p_holm": 1.0},
+      "Arkhalkhori": {"n": 34, "final_count": 2, "p": 0.1129, "p_holm": 0.9031},
+      "Iouktas": {"n": 34, "final_count": 0, "p": 1.0, "p_holm": 1.0},
+      "Syme": {"n": 21, "final_count": 0, "p": 1.0, "p_holm": 1.0},
+      "Tylissos": {"n": 21, "final_count": 0, "p": 1.0, "p_holm": 1.0}
+    },
+    "cross_site": {
+      "n_sites_ge20": 10,
+      "sites_sig_raw": 1,
+      "sites_sig_holm": 1,
+      "loo_excluded": "Haghia Triada",
+      "loo_n": 675,
+      "loo_final_count": 12,
+      "loo_p": 0.0460,
+      "loo_p_seeds_0to4_mean": 0.0429,
+      "ht_share_of_finals": 0.846
+    },
+    "comparators": {
+      "RA2": 1,
+      "NE": 2,
+      "ME": 3,
+      "TE": 1,
+      "RE": 2
+    },
+    "comparator_median_sites_cleared": 2,
+    "ro_sites_cleared": 1,
+    "ro_margin_over_comparator_median": -1
+  },
+  "key_findings": [
+    "S* = RO is the most word-final-skewed LA sign by a clear margin (final-rate 0.8478, 78/92 occurrences word-final; next RA2 0.7959).",
+    "Globally RO is a strongly significant word-final class: 78/1369 words (frac 0.0570), permutation-null p=0.0010, with 18 distinct final word-types and 12 distinct penultimate signs (a genuine CLASS, not few-type-driven).",
+    "POSITIVE CONTROL PASSED: LB JO (known grammatical final, final-rate 0.8153) significant in 5/5 seeded folds; frequency-matched negative control E (final-rate 0.104, below the >=40-occ median 0.1786) significant in 0/5. Machinery is informative.",
+    "RO is geographically CONCENTRATED: 66/78 finals (84.6%) are at Haghia Triada; RO is word-final-significant in only 1 of 10 sites-with->=20-words (Haghia Triada only; Holm-corrected also 1).",
+    "Leave-one-site-out (drop Haghia Triada) is borderline: p~0.04 across seeds (12 finals over 675 non-HT words) — technically survives 0.05 but is weak and underpowered outside HT.",
+    "RO clears 1 site vs a comparator median of 2 (margin -1): RO is NOT special relative to other word-final-skewed signs in cross-site breadth; comparators NE (2), ME (3), RE (2) clear as many or more sites.",
+    "Verdict = FINAL_CLASS_CONCENTRATED: a real, productive word-final CLASS at one site, not a corpus-wide cross-site terminal slot."
+  ],
+  "successor_hypotheses": [
+    "L2/L3: Test whether RO-final is a Haghia-Triada-specific administrative genre effect by partitioning HT internally by support/context (is RO-final a HT-tablet / HT-cremation-list phenomenon within HT?).",
+    "L2/L3: Test the SECOND-strongest word-final sign RA2 (0.7959) and the cross-site-clearing comparators NE/ME/RE for cross-site robustness as terminal-slot candidates (they clear >=2 sites).",
+    "L2/L3: Joint positional test — does RO-final co-occur with A-initial prefixation (E024) in the same words, defining a bounded word-template [A- ... -RO] at HT?",
+    "L2/L3: Penultimate-slot structure — the 12 distinct penultimate signs before RO may themselves form a constrained pre-terminal slot; test their positional skew.",
+    "L2/L3: Re-run the cross-site test with a lower min-words threshold (e.g. >=10) to add Thera/Malia/Iouktas and check whether RO-final concentration is a power artifact or genuine absence.",
+    "L2/L3: Compare RO-final rate at HT against the LB -RO/-JO terminal analogues positionally (no semantics) to calibrate whether HT RO-final density matches a known terminal-slot script.",
+    "L2/L3: Test word-final structure on the FULL LA sign inventory (including <40-occ signs) to check for additional rare terminal slots masked by the >=40 threshold."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Sign names (RO, RA2, NE, JO, E, ...) are ANONYMOUS throughout. No phonetic value, sound, meaning, language, or reading assigned to ANY sign. All claims are positional/structural (word-final count/fraction, cross-site significance, distinct word-types). LB is a positive-control benchmark ONLY (certifies the machinery detects a known positional-terminal analogue); it is NOT Linear A. The KU-RO/-RO ledger-total reading mentioned in the brief is NOT used or claimed — RO is treated purely as a positional terminal SLOT. Verdict computed mechanically from the frozen rule; operator never decides truth by narration.",
+  "deviations": [
+    "PC negative-control selection was refined after the initial machinery self-check. The prereg specifies 'a frequency-matched random LB sign NOT [significant in >=3]'. A naive frequency-matched random pick from LB lands on another grammatical final (e.g. TO, final-rate 0.479) because LB is dense with word-final-skewed signs, producing a false negative control and an uninformative PC (initial run: rand_sign=TO, 5/5 sig -> PC FAILED). The faithful reading of 'NOT [significant]' requires the control to LACK the tested property, so the negative control is drawn from frequency-matched signs whose empirical word-final rate is in the BOTTOM half of the >=40-occ distribution (median cutoff 0.1786). With this true negative (E, final-rate 0.104) the PC PASSES cleanly (JO 5/5, E 0/5). This refinement is disclosed; it implements the prereg intent, it does not weaken the PC gate (it makes the negative control a genuine negative). prereg+plan_hash were frozen BEFORE this refinement and BEFORE any LA analysis; the LA results were computed only after the PC passed.",
+    "LOO p is borderline (p~0.04 across seeds 0-4, mean 0.0429). Reported as 0.0460 (seed=0, 1000 draws) per the frozen protocol; stability across 5 seeds and 2000 draws confirmed (range 0.0385-0.0475). The CONCENTRATED verdict rests primarily on the <=1-site condition (RO sig in exactly 1 site), which is unambiguous; the LOO borderline-survival does not rescue cross-site robustness."
+  ]
+}

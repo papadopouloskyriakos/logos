@@ -1,0 +1,129 @@
+{
+  "final_sign": "RO",
+  "global": {
+    "final_count": 78,
+    "n_words_ge2": 1369,
+    "frac": 0.05697589481373265,
+    "p": 0.000999000999000999,
+    "null_mean": 41.498,
+    "n_distinct_final_types": 18,
+    "n_distinct_penultimate": 12,
+    "final_types_sample": [
+      "*86RO",
+      "ADARO",
+      "AKIRO",
+      "DINARO",
+      "KAIRO",
+      "KARERO",
+      "KIDARO",
+      "KIRO",
+      "KUMARO",
+      "KURO",
+      "NURO",
+      "POTOKURO",
+      "RERO",
+      "SAMARO",
+      "SARO",
+      "SIDARO",
+      "UTARO",
+      "WITERO"
+    ]
+  },
+  "per_site_rows": [
+    {
+      "site": "Arkhalkhori",
+      "n": 34,
+      "final_count": 2,
+      "null_mean": 0.662,
+      "p": 0.11288711288711288,
+      "p_holm": 0.903096903096903
+    },
+    {
+      "site": "Haghia Triada",
+      "n": 694,
+      "final_count": 66,
+      "null_mean": 33.715,
+      "p": 0.000999000999000999,
+      "p_holm": 0.00999000999000999
+    },
+    {
+      "site": "Iouktas",
+      "n": 34,
+      "final_count": 0,
+      "null_mean": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "site": "Khania",
+      "n": 120,
+      "final_count": 4,
+      "null_mean": 1.994,
+      "p": 0.06893106893106893,
+      "p_holm": 0.6203796203796204
+    },
+    {
+      "site": "Knossos",
+      "n": 61,
+      "final_count": 0,
+      "null_mean": 0.49,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "site": "Palaikastro",
+      "n": 57,
+      "final_count": 0,
+      "null_mean": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "site": "Phaistos",
+      "n": 58,
+      "final_count": 1,
+      "null_mean": 0.992,
+      "p": 0.7382617382617382,
+      "p_holm": 1.0
+    },
+    {
+      "site": "Syme",
+      "n": 21,
+      "final_count": 0,
+      "null_mean": 0.495,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "site": "Tylissos",
+      "n": 21,
+      "final_count": 0,
+      "null_mean": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "site": "Zakros",
+      "n": 132,
+      "final_count": 2,
+      "null_mean": 1.473,
+      "p": 0.46353646353646355,
+      "p_holm": 1.0
+    }
+  ],
+  "loo": {
+    "loo_excluded": "Haghia Triada",
+    "n": 675,
+    "final_count": 12,
+    "null_mean": 7.913,
+    "p": 0.04595404595404595
+  },
+  "comparators_clear": {
+    "RA\u2082": 1,
+    "NE": 2,
+    "ME": 3,
+    "TE": 1,
+    "RE": 2
+  },
+  "comparator_median": 2
+}
