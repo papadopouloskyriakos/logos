@@ -1,0 +1,238 @@
+{
+  "task_id": "EPOCH-042",
+  "method": "SIGN POSITIONAL-ROLE SPECIALIZATION via ANALYTIC within-word null (supersedes E041; L2/L3). For each sign S with >=15 occurrences (in len>=2 words), test whether S's observed count in INITIAL (index 0) or FINAL (index L-1) within-word position exceeds the EXACT ANALYTIC within-word null: under within-word uniform permutation H0, for a word w of length L containing S exactly k_w times, the probability that a specific position p holds S is k_w/L, independently across words, so the null count of S at p is a POISSON-BINOMIAL over per-word Bernoulli probs p_w=k_w/L_w. One-sided upper-tail p = P(X>=observed) via exact DP/convolution (n_bernoulli<=4000) or normal+continuity-correction (recorded per test). Holm correction across all (sign x position) tests at family alpha 0.05. A sign is POSITION-SPECIALIZED if enriched in initial OR final after Holm. SPECIALIZED_FRACTION = #specialized / #tested. This removes the E041 permutation p-floor (1/2001) that collided with the Holm threshold across ~102 tests. POSITIVE CONTROL on Linear B (DAMOS, anonymous tokens) gates the verdict: DETECT (LB specialized fraction > 0 and > within-word-shuffled LB) AND false-positive (within-word-shuffled LB specialized fraction <=0.10 across >=20 sets). Cross-site held-out per site with >=200 word-tokens; leave-one-site-out on Haghia Triada. Pure L2/L3 statistics on ANONYMOUS sign ids; no phonetics/sound/meaning/reading. 'specialized' is a positional-distribution statistic, NOT a morpheme-with-meaning.",
+  "result": "Linear A sign POSITIONAL-ROLE SPECIALIZATION (analytic within-word null, E041 p-floor removed). POSITIVE CONTROL PASSED: on Linear B (DAMOS, anonymous tokens) the analytic machinery detects a specialized fraction of 0.526 (41/78 signs; 24 initial + 17 final) versus 0.0006 on within-word-shuffled LB (false-positive rate 0.0006 <= 0.10 across 20 sets; max shuffled frac 0.0128). The machinery is INFORMATIVE (E041's MACHINERY_UNINFORMATIVE was a permutation p-floor artifact, now fixed). LA GLOBAL: of 51 signs tested (>=15 occ in 1369 len>=2 words), 17 (0.333) are position-specialized after Holm \u2014 6 initial-specialized (word-starter tendency) and 11 final-specialized (word-ending tendency). The final-specialized signs show strong ending concentration (e.g. one sign at 0.848 final rate, holm_p~1e-13); initial-specialized signs show strong starter concentration (e.g. one at 0.906 initial, holm_p~1e-59). CROSS-SITE: only 1 site (Haghia Triada) has >=200 word-tokens (per-site fraction 0.306); leave-one-site-out excluding HT gives fraction 0.220 on 675 words. The global signal (0.333) and LOO signal (0.220) both exceed 0.20 and the per-site HT fraction (0.306) exceeds 0.15, BUT the frozen cross-site gate requires >=3 sites with >=200 tokens, which the LA corpus does not satisfy (only HT qualifies; next-largest sites Zakros=132, Khania=120 fall below 200). Verdict: SPECIALIZATION_UNDERPOWERED \u2014 the positional-specialization signal is present and the machinery is now informative, but the cross-site robustness test cannot be executed at the preregistered >=200-token threshold.",
+  "verdict": "SPECIALIZATION_UNDERPOWERED",
+  "numbers": {
+    "global": {
+      "n_signs_tested": 51,
+      "n_specialized": 17,
+      "specialized_fraction": 0.333333,
+      "n_initial_spec": 6,
+      "n_final_spec": 11,
+      "null_method": "analytic_poisson_binomial",
+      "n_words_len_ge_2": 1369,
+      "min_occ": 15,
+      "alpha": 0.05,
+      "exact_cap": 4000
+    },
+    "specialized_signs": [
+      [
+        "S11",
+        "final",
+        0.0652,
+        0.8478,
+        1.2550151730230997e-13
+      ],
+      [
+        "S07",
+        "final",
+        0.1,
+        0.7,
+        1.810353932878383e-06
+      ],
+      [
+        "S13",
+        "final",
+        0.2258,
+        0.6022,
+        1.3694235898839492e-05
+      ],
+      [
+        "S09",
+        "final",
+        0.0612,
+        0.7959,
+        1.8228166807303832e-05
+      ],
+      [
+        "S16",
+        "final",
+        0.0,
+        0.8824,
+        5.0885137170553235e-05
+      ],
+      [
+        "S06",
+        "final",
+        0.125,
+        0.65,
+        0.001124252447516623
+      ],
+      [
+        "S10",
+        "final",
+        0.1481,
+        0.537,
+        0.0015746171749419773
+      ],
+      [
+        "S14",
+        "final",
+        0.1429,
+        0.5385,
+        0.002527576165909909
+      ],
+      [
+        "S01",
+        "final",
+        0.0952,
+        0.7619,
+        0.01033026023232118
+      ],
+      [
+        "S17",
+        "final",
+        0.0556,
+        0.6111,
+        0.010499277087337682
+      ],
+      [
+        "S12",
+        "final",
+        0.1667,
+        0.5167,
+        0.02809364026805005
+      ],
+      [
+        "S03",
+        "initial",
+        0.9064,
+        0.0468,
+        3.9220057635079215e-59
+      ],
+      [
+        "S05",
+        "initial",
+        0.6642,
+        0.1045,
+        7.260366339464413e-10
+      ],
+      [
+        "S04",
+        "initial",
+        0.5333,
+        0.1467,
+        4.783988428501887e-06
+      ],
+      [
+        "S15",
+        "initial",
+        0.6094,
+        0.1875,
+        1.3328354267190265e-05
+      ],
+      [
+        "S08",
+        "initial",
+        0.7436,
+        0.1282,
+        0.00019275560407572664
+      ],
+      [
+        "S02",
+        "initial",
+        1.0,
+        0.0,
+        0.002716064453125
+      ]
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "lb_specialized_fraction": 0.525641,
+      "lb_shuffled_fraction": 0.000641,
+      "false_pos_rate": 0.000641,
+      "lb_n_tested": 78,
+      "lb_n_specialized": 41,
+      "lb_n_initial_spec": 24,
+      "lb_n_final_spec": 17,
+      "n_sets": 20,
+      "shuf_fracs_max": 0.012821,
+      "detect": true,
+      "fp_ok": true
+    },
+    "cross_site": {
+      "n_sites_testable": 1,
+      "per_site_fraction": {
+        "Haghia Triada": 0.305556
+      },
+      "loo_excluded": "Haghia Triada",
+      "loo_fraction": 0.219512,
+      "loo_n_words": 675,
+      "site_token_counts": {
+        "Haghia Triada": 694,
+        "Iouktas": 34,
+        "Kardamoutsa": 1,
+        "Kamilari": 1,
+        "Kea": 2,
+        "Khania": 120,
+        "Knossos": 61,
+        "Kophinas": 8,
+        "Kythera": 1,
+        "Larani": 3,
+        "Malia": 17,
+        "Milos": 3,
+        "Miletos": 4,
+        "Mokhilos": 1,
+        "Nerokurou": 1,
+        "Papourou": 1,
+        "Petras": 18,
+        "Phaistos": 58,
+        "Palaikastro": 57,
+        "Platanos": 5,
+        "Poros Herakleiou": 2,
+        "Prassa": 3,
+        "Psykhro": 5,
+        "Pyrgos": 4,
+        "Samothrace": 2,
+        "Selakanos": 1,
+        "Sitia": 1,
+        "Skhinia": 1,
+        "Skoteino Cave": 2,
+        "Syme": 21,
+        "Tel Haror": 1,
+        "Thera": 12,
+        "Tiryns": 1,
+        "Troullos": 6,
+        "Traostalos": 1,
+        "Troy": 2,
+        "Trypiti": 2,
+        "Tylissos": 21,
+        "Vrysinas": 4,
+        "Zakros": 132,
+        "Apodoulou": 6,
+        "Arkhalkhori": 34,
+        "Crete": 7,
+        "Fourni": 1,
+        "Gournia": 3,
+        "Haghios Stehanos": 1,
+        "": 2,
+        "Zominthos": 1
+      }
+    }
+  },
+  "key_findings": [
+    "ANALYTIC NULL FIX SUCCEEDED: replacing E041's permutation draws (p-floor 1/2001) with the exact Poisson-binomial within-word null made the positive control PASS \u2014 LB specialized fraction 0.526 vs 0.0006 shuffled (false-positive 0.0006 <= 0.10). E041's MACHINERY_UNINFORMATIVE was a p-floor artifact, not a real null result.",
+    "LA shows a SUBSTANTIAL positional-specialization signal: 17/51 signs (0.333) are Holm-specialized, split 11 final-specialized vs 6 initial-specialized. The final-heavy split is consistent with templatic/slot-like word structure (word-ending signs).",
+    "Final-specialized signs concentrate strongly at word ends (rates up to 0.848, holm_p down to ~1e-13); initial-specialized signs concentrate strongly at word starts (rates up to 0.906, holm_p down to ~1e-59). Both tails are far above the within-word null.",
+    "CROSS-SITE TEST IS UNDERPOWERED at the preregistered >=200-token threshold: only Haghia Triada (694 tokens) qualifies; the next sites (Zakros=132, Khania=120) fall short. The frozen >=3-site gate cannot be met by the current LA corpus.",
+    "Leave-one-site-out (excluding Haghia Triada) on 675 words still yields specialized fraction 0.220 (>=0.20), and the HT-only fraction is 0.306 \u2014 the signal is not an HT-only artifact, but this is a single-site + pooled-LOO check, NOT the >=3-site cross-site robustness the verdict rule demands."
+  ],
+  "successor_hypotheses": [
+    "E043: Re-run the cross-site test at a LOWER per-site token threshold (e.g. >=80 or >=100 tokens, which yields 3 sites: HT, Khania, Zakros) PREREGISTERED in advance, to test whether the positional-specialization signal is robust across sites \u2014 this directly addresses the underpowering that blocks HIGH_POSITIONAL_SPECIALIZATION_CROSS_SITE.",
+    "E044: Add a MEDIAL position to the analytic test (3 positions) and ask whether medial-specialized signs exist, completing the initial/medial/final slot picture; the analytic Poisson-binomial extends trivially to a third slot.",
+    "E045: Test whether the final-specialized LA signs CO-OCCUR with (or are mutually exclusive of) the initial-specialized signs within the same words \u2014 a templatic 'frame' (fixed starter + fixed ending) would predict complementary co-occurrence; this is an L2/L3 co-occurrence test, no meaning assigned.",
+    "E046: Compare the LA final-specialized fraction against the LB final-specialized fraction quantitatively (effect size + bootstrap CI on the difference) to ask whether LA has WEAKER or STRONGER positional templating than LB's known case-ending structure.",
+    "E047: Permute signs ACROSS words of the SAME length (a between-word null) as a stricter alternative null, and check whether the within-word analytic null and the between-word null agree on the specialized set \u2014 a robustness check on the null choice.",
+    "E048: Stratify the positional-specialization test by word LENGTH (len 2 vs 3 vs >=4) to ask whether specialization is driven by short formulaic 2-sign words or holds across the length distribution."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs carry NO phonetic/sound/meaning/reading. All statistics are pure L2/L3 positional-distribution tests on ANONYMOUS sign ids (anonymized to S01..S17 in outputs). LB is a positive-control benchmark ONLY; its deciphered values are not used in any LA inference. The Poisson-binomial null is derived purely from word lengths and per-word sign multiplicities \u2014 no external linguistic knowledge. 'specialized' is a positional-distribution statistic, NOT a morpheme-with-meaning; no sign is named as a suffix/prefix/case-ending. The verdict is a structural statistic, not a decipherment.",
+  "deviations": [
+    "DATA_DIR path in run_full.py was initially mis-resolved (EPOCH_DIR/.. instead of EPOCH_DIR/../..); corrected to the PATH CONTRACT path experiments/linear_a_frontier_72h/data/epoch_042/. No data or analysis changed; only the output location.",
+    "Medial position (defined in E041 for len>=3 words) was DROPPED for E042 per the task spec, which restricts the question to initial-vs-final slot specialization. This is a frozen scope decision, not a data-dependent choice.",
+    "Sign occurrence threshold uses total TOKEN occurrences in len>=2 words (matching E041 and the spec wording '>=15 occurrences'), not word-presence count. 51 LA signs and 78 LB signs qualify.",
+    "All LA tests used exact_convolution (n_bernoulli <= 4000 for every tested sign); no normal approximation was needed. Method recorded per test in the raw _run_full.json."
+  ]
+}

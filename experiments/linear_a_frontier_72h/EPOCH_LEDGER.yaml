@@ -982,3 +982,28 @@ epochs:
     artifacts: [epochs/EPOCH-041/prereg.md, epochs/EPOCH-041/plan_hash.txt, epochs/EPOCH-041/machinery.py, epochs/EPOCH-041/result.json, reports/EPOCH041_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-042
+    frontier: F12
+    gate: A
+    name: "Sign positional specialization via ANALYTIC Poisson-binomial null (powered re-test of E041)"
+    plan_hash: "see epochs/EPOCH-042/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed with own Poisson-binomial DP: 17/51 signs specialized = 0.333 EXACT; 6 initial + 11 final EXACT; A & *411 the strong initial prefixes (A 0.91 initial, p~4e-59). Analytic null fixes E041's Holm-floor. PC verified (LB 0.526 detected, shuffled 0.0006)."
+    positive_control: "PASSED (verified): the ANALYTIC machinery detects LB's known positional structure (specialized_fraction 0.526, 41/78 signs) and is calibrated (within-word-shuffled LB -> 0.0006, false-positive rate 0.0006). This CONFIRMS the E041 diagnosis: the analytic Poisson-binomial null removes the permutation p-floor that made E041 fail."
+    verdict: "SPECIALIZATION_UNDERPOWERED (cross-site conjunct only): global specialization is SOLID (33%, PC passed) but only 1 site (Haghia Triada) meets the >=200-token cross-site threshold, so cross-site robustness cannot be certified at that threshold. NOT a failure of the specialization test itself."
+    numbers: {n_signs_tested: 51, n_specialized: 17, specialized_fraction: 0.333, n_initial_spec: 6, n_final_spec: 11, null_method: analytic_poisson_binomial, top_initial: ["A(0.91)", "*411"], top_final: ["S11(0.85)", "S16(0.88)", "S09(0.80)", "S01(0.76)"], pc_lb_fraction: 0.526, pc_shuffled: 0.0006, cross_site_testable_ge200: 1, loo_drop_HT_fraction: 0.22}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "SOLID GLOBAL finding (cross-site UNDERPOWERED at the >=200-token threshold): 33% of the Linear A sign inventory (17/51) is POSITION-SPECIALIZED (Holm-corrected, analytic null, PC-passed). REFINES E038: initial position = a FEW VERY-STRONG prefixes (A 0.91, drives the low initial-entropy of E038) while final position = MANY MODERATE suffix-leaning signs (11 signs at 0.5-0.88 final; higher entropy but a real final-ward tendency). So LA is NOT purely prefixing — it has a strong prefix set AND a diffuse suffix layer. This is a moderately templatic inventory (a third of signs have positional roles). Cross-site certification deferred to E043 (lower token threshold). Anonymous signs; 'prefix'/'suffix' = POSITIONAL statistics, not morphemes-with-meaning; no phonetics/language-ID. No transfer licence."
+    committed_prediction: "modal HIGH/LOW specialization; OUTCOME = global 33% (moderate) but cross-site UNDERPOWERED at >=200 tokens. E043 re-tests cross-site at a feasible threshold."
+    deviations:
+      - "DATA_DIR path initially mis-resolved (EPOCH_DIR/.. vs /../..); corrected to PATH CONTRACT; no data/analysis change."
+      - "Cross-site threshold >=200 tokens admitted only Haghia Triada -> SPECIALIZATION_UNDERPOWERED; global result unaffected. E043 lowers the threshold to certify cross-site."
+    non_circular: "Signs anonymous; analytic within-word null; LB control-only; no phonetics/meaning/language-ID; no known-value model input on the LA side."
+    architecture_note: "Nineteenth gated-runner epoch (repairs=0). SUCCESSFUL method-fix: E041's underpowered permutation null replaced with an EXACT analytic Poisson-binomial null (coordinator-designed from the E041 lesson) — PC now passes cleanly. Mirrors E030->E031. Coordinator verified via independent Poisson-binomial DP + surfaced the E038-refining initial/final nuance."
+    artifacts: [epochs/EPOCH-042/prereg.md, epochs/EPOCH-042/plan_hash.txt, epochs/EPOCH-042/machinery.py, epochs/EPOCH-042/result.json, reports/EPOCH042_REPORT.md]
+    successors_spawned: 5
+    substantive: true
