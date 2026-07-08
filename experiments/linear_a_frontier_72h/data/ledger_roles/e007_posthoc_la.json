@@ -1,0 +1,47 @@
+{
+ "label": "POST-HOC exploratory; LB detector did NOT fire; NO validated constraints",
+ "la_ledger_docs": 207,
+ "la_sites": {
+  "Haghia Triada": 134,
+  "Khania": 23,
+  "Knossos": 1,
+  "Malia": 5,
+  "Petras": 2,
+  "Phaistos": 6,
+  "Palaikastro": 2,
+  "Thera": 1,
+  "Tylissos": 3,
+  "Zakros": 23,
+  "Arkhalkhori": 7
+ },
+ "predicted_role_share": {
+  "W": 1439,
+  "C": 185
+ },
+ "C1_KURO": {
+  "n_occ": 35,
+  "predicted_roles": {
+   "W": 35
+  }
+ },
+ "C2_LOGO": {
+  "n_occ": 363,
+  "predicted_roles": {
+   "C": 119,
+   "W": 244
+  }
+ },
+ "C3_KIRO": {
+  "n_occ": 15,
+  "predicted_roles": {
+   "W": 15
+  }
+ },
+ "C4_APREFIX": {
+  "n_occ": 71,
+  "predicted_roles": {
+   "W": 70,
+   "C": 1
+  }
+ }
+}

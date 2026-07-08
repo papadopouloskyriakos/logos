@@ -1,0 +1,1571 @@
+{
+ "epoch": "EPOCH-008",
+ "seed": 20260708,
+ "prereg_sha256": "67ea9ac471221ec91ebe1067d3696af725b14951d443637c4c9574fa6181e6a2",
+ "positive_control": {
+  "cases": [
+   {
+    "glyph": "+",
+    "gt": [
+     4,
+     1,
+     0
+    ],
+    "got": [
+     4,
+     1,
+     0
+    ],
+    "pass": true
+   },
+   {
+    "glyph": "O",
+    "gt": [
+     0,
+     0,
+     1
+    ],
+    "got": [
+     0,
+     0,
+     1
+    ],
+    "pass": true
+   },
+   {
+    "glyph": "T",
+    "gt": [
+     3,
+     1,
+     0
+    ],
+    "got": [
+     3,
+     1,
+     0
+    ],
+    "pass": true
+   },
+   {
+    "glyph": "X",
+    "gt": [
+     4,
+     1,
+     0
+    ],
+    "got": [
+     4,
+     1,
+     0
+    ],
+    "pass": true
+   },
+   {
+    "glyph": "L",
+    "gt": [
+     2,
+     0,
+     0
+    ],
+    "got": [
+     2,
+     0,
+     0
+    ],
+    "pass": true
+   }
+  ],
+  "n_pass": 5,
+  "PASS": true
+ },
+ "frame": {
+  "n_elig_ab": 57,
+  "n_elig_a_only": 20,
+  "pick_ab": [
+   "DA",
+   "U",
+   "RA",
+   "PI",
+   "DE"
+  ],
+  "pick_a_only": [
+   "*321",
+   "*333",
+   "*310",
+   "*301",
+   "*309B"
+  ]
+ },
+ "acquisition": {
+  "n_docs": 19,
+  "docs": [
+   "HT 10b",
+   "HT 6a",
+   "HT 80",
+   "HT 8a",
+   "HT Wa 1032",
+   "HT Wa 1813",
+   "HT Wc 3009a",
+   "HT Wc 3010",
+   "HT Zb 160",
+   "KH 47",
+   "KH 88",
+   "KH Wa 1012",
+   "KN 28a",
+   "KN Zb 40",
+   "KN Ze 16",
+   "MA 1b",
+   "PH 19",
+   "TY 2",
+   "TY 3a"
+  ],
+  "fetch_log": {
+   "HT 10b": "cached",
+   "HT 6a": "cached",
+   "HT 80": "cached",
+   "HT 8a": "cached",
+   "HT Wa 1032": "cached",
+   "HT Wa 1813": "cached",
+   "HT Wc 3009a": "cached",
+   "HT Wc 3010": "cached",
+   "HT Zb 160": "cached",
+   "KH 47": "cached",
+   "KH 88": "cached",
+   "KH Wa 1012": "cached",
+   "KN 28a": "cached",
+   "KN Zb 40": "cached",
+   "KN Ze 16": "cached",
+   "MA 1b": "cached",
+   "PH 19": "cached",
+   "TY 2": "cached",
+   "TY 3a": "cached"
+  },
+  "bbox_modes": {
+   "HT 10b": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.126496405077972,
+     "xyxy": 0.12447933834766714
+    },
+    "global_ink": 0.06466833468883668
+   },
+   "HT 6a": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.18155257103595673,
+     "xyxy": 0.2832369942196532
+    },
+    "global_ink": 0.09566937064766652
+   },
+   "HT 80": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.12572868795667988,
+     "xyxy": 0.0
+    },
+    "global_ink": 0.02639632038561903
+   },
+   "HT 8a": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.13088480009105494,
+     "xyxy": 0.0
+    },
+    "global_ink": 0.07835382494703635
+   },
+   "HT Wa 1032": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.08472186920462782,
+     "xyxy": 0.05293028805703009
+    },
+    "global_ink": 0.058042725598526704
+   },
+   "HT Wa 1813": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.1233946534380598,
+     "xyxy": 0.07334744664304847
+    },
+    "global_ink": 0.06952097996911069
+   },
+   "HT Wc 3009a": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.1805489664776733,
+     "xyxy": 0.0
+    },
+    "global_ink": 0.052544215626483266
+   },
+   "HT Wc 3010": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.13385172017209607,
+     "xyxy": 0.0
+    },
+    "global_ink": 0.04426326142322741
+   },
+   "HT Zb 160": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.09195993867342284,
+     "xyxy": 0.04692737430167598
+    },
+    "global_ink": 0.02990914582629566
+   },
+   "KH 47": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.13612368040051162,
+     "xyxy": 0.12039473684210526
+    },
+    "global_ink": 0.08097880049288486
+   },
+   "KH 88": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.17884565864179586,
+     "xyxy": 0.10137701804368471
+    },
+    "global_ink": 0.07722796861942079
+   },
+   "KH Wa 1012": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.06945454545454545,
+     "xyxy": 0.025589334920828204
+    },
+    "global_ink": 0.04348498455607184
+   },
+   "KN 28a": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.12375980409031087,
+     "xyxy": 0.08968246261409983
+    },
+    "global_ink": 0.05454510742286936
+   },
+   "KN Zb 40": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.20631020158319172,
+     "xyxy": 0.24145569620253166
+    },
+    "global_ink": 0.07135727729196817
+   },
+   "KN Ze 16": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.136145492583855,
+     "xyxy": 0.1837462233103396
+    },
+    "global_ink": 0.06771994588130371
+   },
+   "MA 1b": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.28463736413175467,
+     "xyxy": 0.45184319833852543
+    },
+    "global_ink": 0.17997107009137292
+   },
+   "PH 19": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.13363776132455618,
+     "xyxy": 0.17741481471056003
+    },
+    "global_ink": 0.07172624016919474
+   },
+   "TY 2": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.1727356866946353,
+     "xyxy": 0.0
+    },
+    "global_ink": 0.07240635318054724
+   },
+   "TY 3a": {
+    "mode": "xywh",
+    "density": {
+     "xywh": 0.17464950974665353,
+     "xyxy": 0.16874587136464683
+    },
+    "global_ink": 0.14505164644463928
+   }
+  }
+ },
+ "extraction": {
+  "per_instance": {
+   "DA": [
+    {
+     "sign": "DA",
+     "sigla": "AB01",
+     "doc": "HT Wa 1032",
+     "glyph_idx": 0,
+     "bbox": [
+      376,
+      167,
+      638,
+      666
+     ],
+     "instance_rank": 0,
+     "ok_v1": true,
+     "conf_v1": "MEDIUM",
+     "feat_v1": {
+      "n_endpoints": 7,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 5,
+      "skel_len_norm": 2.1878203365647524,
+      "orient": [
+       0.0,
+       0.4176678445229682,
+       0.0,
+       0.5823321554770318
+      ],
+      "aspect": 1.0443037974683544,
+      "ink_fraction": 0.08469362779707608
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 7,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 5,
+      "skel_len_norm": 2.1878203365647524,
+      "orient": [
+       0.0,
+       0.4176678445229682,
+       0.0,
+       0.5823321554770318
+      ],
+      "aspect": 1.0443037974683544,
+      "ink_fraction": 0.08471951575399851
+     },
+     "ok": true,
+     "crop": "AB01_HT_Wa_1032_0.png"
+    },
+    {
+     "sign": "DA",
+     "sigla": "AB01",
+     "doc": "HT Zb 160",
+     "glyph_idx": 2,
+     "bbox": [
+      1064,
+      339,
+      219,
+      748
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 25,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 13,
+      "n_strokes": 14,
+      "skel_len_norm": 2.6359681519302813,
+      "orient": [
+       0.004725897920604915,
+       0.6446124763705104,
+       0.2741020793950851,
+       0.07655954631379962
+      ],
+      "aspect": 3.365296803652968,
+      "ink_fraction": 0.08747222425707518
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 7,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 5,
+      "skel_len_norm": 2.5157693346079153,
+      "orient": [
+       0.0,
+       0.6883248730964467,
+       0.28527918781725886,
+       0.026395939086294416
+      ],
+      "aspect": 3.543269230769231,
+      "ink_fraction": 0.08122726051815496
+     },
+     "ok": false,
+     "crop": "AB01_HT_Zb_160_2.png"
+    }
+   ],
+   "U": [
+    {
+     "sign": "U",
+     "sigla": "AB10",
+     "doc": "HT 10b",
+     "glyph_idx": 0,
+     "bbox": [
+      142,
+      102,
+      363,
+      404
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 15,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 6,
+      "n_strokes": 12,
+      "skel_len_norm": 3.1132894969446787,
+      "orient": [
+       0.34038950042337,
+       0.0,
+       0.5004233700254022,
+       0.15918712955122777
+      ],
+      "aspect": 1.1284916201117319,
+      "ink_fraction": 0.09122957750320487
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 7,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 8,
+      "skel_len_norm": 3.048067062181941,
+      "orient": [
+       0.3498263888888889,
+       0.0,
+       0.4869791666666667,
+       0.16319444444444445
+      ],
+      "aspect": 1.1145251396648044,
+      "ink_fraction": 0.09040449499495404
+     },
+     "ok": false,
+     "crop": "AB10_HT_10b_0.png"
+    },
+    {
+     "sign": "U",
+     "sigla": "AB10",
+     "doc": "KN Zb 40",
+     "glyph_idx": 3,
+     "bbox": [
+      380,
+      936,
+      274,
+      518
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 48,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 29,
+      "n_strokes": 24,
+      "skel_len_norm": 2.594550687904243,
+      "orient": [
+       0.05543933054393305,
+       0.19560669456066945,
+       0.7269874476987448,
+       0.021966527196652718
+      ],
+      "aspect": 1.895910780669145,
+      "ink_fraction": 0.23412620127948594
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 7,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 5,
+      "skel_len_norm": 2.3439247136880965,
+      "orient": [
+       0.0,
+       0.19441210710128057,
+       0.8055878928987195,
+       0.0
+      ],
+      "aspect": 1.9169811320754717,
+      "ink_fraction": 0.21710396527914777
+     },
+     "ok": false,
+     "crop": "AB10_KN_Zb_40_3.png"
+    }
+   ],
+   "RA": [
+    {
+     "sign": "RA",
+     "sigla": "AB60",
+     "doc": "KH 47",
+     "glyph_idx": 3,
+     "bbox": [
+      140,
+      992,
+      379,
+      449
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 41,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 24,
+      "n_strokes": 22,
+      "skel_len_norm": 2.0642465831582157,
+      "orient": [
+       0.058402860548271755,
+       0.3837902264600715,
+       0.43504171632896305,
+       0.12276519666269368
+      ],
+      "aspect": 1.193029490616622,
+      "ink_fraction": 0.12708393322011388
+     },
+     "ok_v2": false,
+     "conf_v2": "LOW",
+     "feat_v2": {
+      "n_endpoints": 39,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 23,
+      "n_strokes": 21,
+      "skel_len_norm": 2.0298833820117057,
+      "orient": [
+       0.0583232077764277,
+       0.39003645200486026,
+       0.4264884568651276,
+       0.12515188335358446
+      ],
+      "aspect": 1.193029490616622,
+      "ink_fraction": 0.12680774044931276
+     },
+     "ok": false,
+     "crop": "AB60_KH_47_3.png"
+    },
+    {
+     "sign": "RA",
+     "sigla": "AB60",
+     "doc": "HT 80",
+     "glyph_idx": 1,
+     "bbox": [
+      1100,
+      137,
+      338,
+      479
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 11,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 4,
+      "n_strokes": 10,
+      "skel_len_norm": 3.195828745759021,
+      "orient": [
+       0.05845181674565561,
+       0.6327014218009479,
+       0.28199052132701424,
+       0.026856240126382307
+      ],
+      "aspect": 1.4174174174174174,
+      "ink_fraction": 0.11242603550295859
+     },
+     "ok_v2": true,
+     "conf_v2": "HIGH",
+     "feat_v2": {
+      "n_endpoints": 5,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 1,
+      "n_strokes": 7,
+      "skel_len_norm": 3.1580798641697516,
+      "orient": [
+       0.05425101214574899,
+       0.6445344129554655,
+       0.2736842105263158,
+       0.027530364372469637
+      ],
+      "aspect": 1.423780487804878,
+      "ink_fraction": 0.11190102654692345
+     },
+     "ok": false,
+     "crop": "AB60_HT_80_1.png"
+    }
+   ],
+   "PI": [
+    {
+     "sign": "PI",
+     "sigla": "AB39",
+     "doc": "KN Ze 16",
+     "glyph_idx": 1,
+     "bbox": [
+      963,
+      45,
+      635,
+      1412
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 69,
+      "n_junctions": 7,
+      "n_loops": 1,
+      "n_components": 44,
+      "n_strokes": 44,
+      "skel_len_norm": 4.423575429193729,
+      "orient": [
+       0.24667794153177097,
+       0.5279052911331239,
+       0.21671901425465087,
+       0.008697753080454215
+      ],
+      "aspect": 2.2492012779552715,
+      "ink_fraction": 0.1277464254645223
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 7,
+      "n_junctions": 5,
+      "n_loops": 1,
+      "n_components": 2,
+      "n_strokes": 11,
+      "skel_len_norm": 4.331148248358393,
+      "orient": [
+       0.24772223590248707,
+       0.5360748584092588,
+       0.21349421324796847,
+       0.002708692440285644
+      ],
+      "aspect": 2.241214057507987,
+      "ink_fraction": 0.12519796569338182
+     },
+     "ok": false,
+     "crop": "AB39_KN_Ze_16_1.png"
+    },
+    {
+     "sign": "PI",
+     "sigla": "AB39",
+     "doc": "PH 19",
+     "glyph_idx": 0,
+     "bbox": [
+      263,
+      281,
+      717,
+      594
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 85,
+      "n_junctions": 4,
+      "n_loops": 0,
+      "n_components": 52,
+      "n_strokes": 49,
+      "skel_len_norm": 3.304318550132339,
+      "orient": [
+       0.27452830188679245,
+       0.27311320754716983,
+       0.24339622641509434,
+       0.2089622641509434
+      ],
+      "aspect": 0.8305084745762712,
+      "ink_fraction": 0.13213257634457076
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 9,
+      "n_junctions": 4,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 11,
+      "skel_len_norm": 3.142573273924858,
+      "orient": [
+       0.2616451932606541,
+       0.2839444995044599,
+       0.24975222993062438,
+       0.20465807730426164
+      ],
+      "aspect": 0.8234463276836158,
+      "ink_fraction": 0.11663121216817172
+     },
+     "ok": false,
+     "crop": "AB39_PH_19_0.png"
+    }
+   ],
+   "DE": [
+    {
+     "sign": "DE",
+     "sigla": "AB45",
+     "doc": "KH 88",
+     "glyph_idx": 7,
+     "bbox": [
+      1011,
+      582,
+      415,
+      597
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 51,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 32,
+      "n_strokes": 30,
+      "skel_len_norm": 3.8356623099377885,
+      "orient": [
+       0.02161307327358988,
+       0.2767527675276753,
+       0.521876647337902,
+       0.17975751186083289
+      ],
+      "aspect": 1.4337349397590362,
+      "ink_fraction": 0.15768803858650682
+     },
+     "ok_v2": false,
+     "conf_v2": "LOW",
+     "feat_v2": {
+      "n_endpoints": 15,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 6,
+      "n_strokes": 12,
+      "skel_len_norm": 3.7301635877986516,
+      "orient": [
+       0.0,
+       0.2774725274725275,
+       0.5373626373626373,
+       0.18516483516483517
+      ],
+      "aspect": 1.4458128078817734,
+      "ink_fraction": 0.1450868801840528
+     },
+     "ok": false,
+     "crop": "AB45_KH_88_7.png"
+    },
+    {
+     "sign": "DE",
+     "sigla": "AB45",
+     "doc": "MA 1b",
+     "glyph_idx": 4,
+     "bbox": [
+      1422,
+      60,
+      306,
+      478
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 61,
+      "n_junctions": 9,
+      "n_loops": 1,
+      "n_components": 31,
+      "n_strokes": 44,
+      "skel_len_norm": 5.004575804306343,
+      "orient": [
+       0.0700836820083682,
+       0.3174686192468619,
+       0.48640167364016734,
+       0.1260460251046025
+      ],
+      "aspect": 1.5620915032679739,
+      "ink_fraction": 0.3034293215194027
+     },
+     "ok_v2": false,
+     "conf_v2": "LOW",
+     "feat_v2": {
+      "n_endpoints": 30,
+      "n_junctions": 10,
+      "n_loops": 1,
+      "n_components": 11,
+      "n_strokes": 30,
+      "skel_len_norm": 4.9045433223864014,
+      "orient": [
+       0.06401291016675632,
+       0.31952662721893493,
+       0.5034965034965035,
+       0.11296395911780527
+      ],
+      "aspect": 1.5326797385620916,
+      "ink_fraction": 0.2751729701643558
+     },
+     "ok": false,
+     "crop": "AB45_MA_1b_4.png"
+    }
+   ],
+   "*321": [
+    {
+     "sign": "*321",
+     "sigla": "A321",
+     "doc": "TY 3a",
+     "glyph_idx": 1,
+     "bbox": [
+      686,
+      110,
+      252,
+      272
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 42,
+      "n_junctions": 11,
+      "n_loops": 0,
+      "n_components": 13,
+      "n_strokes": 40,
+      "skel_len_norm": 5.404955374058612,
+      "orient": [
+       0.2818116462976276,
+       0.09992810927390366,
+       0.297627606038821,
+       0.32063263838964773
+      ],
+      "aspect": 1.0595238095238095,
+      "ink_fraction": 0.18443627450980393
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 24,
+      "n_junctions": 13,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 34,
+      "skel_len_norm": 5.342393690599818,
+      "orient": [
+       0.26406601650412603,
+       0.159039759939985,
+       0.25881470367591897,
+       0.31807951987997
+      ],
+      "aspect": 1.0912863070539418,
+      "ink_fraction": 0.1717436974789916
+     },
+     "ok": false,
+     "crop": "A321_TY_3a_1.png"
+    },
+    {
+     "sign": "*321",
+     "sigla": "A321",
+     "doc": "HT 6a",
+     "glyph_idx": 13,
+     "bbox": [
+      1165,
+      606,
+      155,
+      277
+     ],
+     "instance_rank": 1,
+     "ok_v1": true,
+     "conf_v1": "MEDIUM",
+     "feat_v1": {
+      "n_endpoints": 13,
+      "n_junctions": 8,
+      "n_loops": 2,
+      "n_components": 3,
+      "n_strokes": 20,
+      "skel_len_norm": 4.116409550349297,
+      "orient": [
+       0.003703703703703704,
+       0.145679012345679,
+       0.32592592592592595,
+       0.5246913580246914
+      ],
+      "aspect": 1.8827586206896552,
+      "ink_fraction": 0.19764760684756028
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 10,
+      "n_junctions": 8,
+      "n_loops": 3,
+      "n_components": 2,
+      "n_strokes": 19,
+      "skel_len_norm": 4.116663673234395,
+      "orient": [
+       0.0,
+       0.145,
+       0.335,
+       0.52
+      ],
+      "aspect": 1.8413793103448275,
+      "ink_fraction": 0.196972167229533
+     },
+     "ok": true,
+     "crop": "A321_HT_6a_13.png"
+    }
+   ],
+   "*333": [
+    {
+     "sign": "*333",
+     "sigla": "A333",
+     "doc": "HT Wc 3010",
+     "glyph_idx": 0,
+     "bbox": [
+      203,
+      619,
+      244,
+      303
+     ],
+     "instance_rank": 0,
+     "ok_v1": true,
+     "conf_v1": "MEDIUM",
+     "feat_v1": {
+      "n_endpoints": 7,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 8,
+      "skel_len_norm": 2.6466194251776143,
+      "orient": [
+       0.4442836468885673,
+       0.31982633863965265,
+       0.16063675832127353,
+       0.07525325615050651
+      ],
+      "aspect": 1.2521367521367521,
+      "ink_fraction": 0.1187983552453606
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 7,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 8,
+      "skel_len_norm": 2.6466194251776143,
+      "orient": [
+       0.4442836468885673,
+       0.31982633863965265,
+       0.16063675832127353,
+       0.07525325615050651
+      ],
+      "aspect": 1.2521367521367521,
+      "ink_fraction": 0.11883893307363523
+     },
+     "ok": true,
+     "crop": "A333_HT_Wc_3010_0.png"
+    },
+    {
+     "sign": "*333",
+     "sigla": "A333",
+     "doc": "HT Wc 3009a",
+     "glyph_idx": 0,
+     "bbox": [
+      156,
+      386,
+      222,
+      252
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 12,
+      "n_junctions": 2,
+      "n_loops": 0,
+      "n_components": 5,
+      "n_strokes": 9,
+      "skel_len_norm": 2.5225193337712595,
+      "orient": [
+       0.5859106529209622,
+       0.1013745704467354,
+       0.3127147766323024,
+       0.0
+      ],
+      "aspect": 1.1382488479262673,
+      "ink_fraction": 0.18296868296868296
+     },
+     "ok_v2": false,
+     "conf_v2": "LOW",
+     "feat_v2": {
+      "n_endpoints": 11,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 4,
+      "n_strokes": 10,
+      "skel_len_norm": 2.574351922821354,
+      "orient": [
+       0.5743243243243243,
+       0.09966216216216216,
+       0.3260135135135135,
+       0.0
+      ],
+      "aspect": 1.1382488479262673,
+      "ink_fraction": 0.1831831831831832
+     },
+     "ok": false,
+     "crop": "A333_HT_Wc_3009a_0.png"
+    }
+   ],
+   "*310": [
+    {
+     "sign": "*310",
+     "sigla": "A310",
+     "doc": "KN 28a",
+     "glyph_idx": 1,
+     "bbox": [
+      182,
+      777,
+      288,
+      569
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 29,
+      "n_junctions": 5,
+      "n_loops": 0,
+      "n_components": 18,
+      "n_strokes": 22,
+      "skel_len_norm": 3.6079007375670513,
+      "orient": [
+       0.12411847672778561,
+       0.28138222849083216,
+       0.5091678420310296,
+       0.08533145275035262
+      ],
+      "aspect": 2.0071942446043165,
+      "ink_fraction": 0.11567564928724858
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 9,
+      "n_junctions": 5,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 12,
+      "skel_len_norm": 3.5114192259361237,
+      "orient": [
+       0.10966810966810966,
+       0.2857142857142857,
+       0.5194805194805194,
+       0.08513708513708514
+      ],
+      "aspect": 2.0071942446043165,
+      "ink_fraction": 0.10475248974809608
+     },
+     "ok": false,
+     "crop": "A310_KN_28a_1.png"
+    },
+    {
+     "sign": "*310",
+     "sigla": "A310",
+     "doc": "HT 8a",
+     "glyph_idx": 13,
+     "bbox": [
+      1057,
+      905,
+      299,
+      306
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 5,
+      "n_junctions": 5,
+      "n_loops": 2,
+      "n_components": 4,
+      "n_strokes": 10,
+      "skel_len_norm": 4.175049281775636,
+      "orient": [
+       0.16049382716049382,
+       0.24444444444444444,
+       0.0,
+       0.5950617283950618
+      ],
+      "aspect": 1.0277777777777777,
+      "ink_fraction": 0.15748573676962424
+     },
+     "ok_v2": true,
+     "conf_v2": "HIGH",
+     "feat_v2": {
+      "n_endpoints": 3,
+      "n_junctions": 5,
+      "n_loops": 2,
+      "n_components": 1,
+      "n_strokes": 9,
+      "skel_len_norm": 4.1476494505580765,
+      "orient": [
+       0.16377171215880892,
+       0.2456575682382134,
+       0.0,
+       0.5905707196029777
+      ],
+      "aspect": 1.0277777777777777,
+      "ink_fraction": 0.15472052812206266
+     },
+     "ok": false,
+     "crop": "A310_HT_8a_13.png"
+    }
+   ],
+   "*301": [
+    {
+     "sign": "*301",
+     "sigla": "A301",
+     "doc": "HT Wa 1813",
+     "glyph_idx": 0,
+     "bbox": [
+      235,
+      332,
+      590,
+      984
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 34,
+      "n_junctions": 4,
+      "n_loops": 0,
+      "n_components": 24,
+      "n_strokes": 22,
+      "skel_len_norm": 2.776030601965597,
+      "orient": [
+       0.025738798856053385,
+       0.43946615824594853,
+       0.25738798856053385,
+       0.27740705433746427
+      ],
+      "aspect": 1.6791808873720135,
+      "ink_fraction": 0.12334986909191126
+     },
+     "ok_v2": true,
+     "conf_v2": "MEDIUM",
+     "feat_v2": {
+      "n_endpoints": 6,
+      "n_junctions": 2,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 6,
+      "skel_len_norm": 2.6735288420880665,
+      "orient": [
+       0.004440059200789344,
+       0.44893931919092256,
+       0.5466206216082881,
+       0.0
+      ],
+      "aspect": 1.6706484641638226,
+      "ink_fraction": 0.11632561664599697
+     },
+     "ok": false,
+     "crop": "A301_HT_Wa_1813_0.png"
+    },
+    {
+     "sign": "*301",
+     "sigla": "A301",
+     "doc": "KH Wa 1012",
+     "glyph_idx": 0,
+     "bbox": [
+      368,
+      161,
+      715,
+      800
+     ],
+     "instance_rank": 1,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 67,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 39,
+      "n_strokes": 35,
+      "skel_len_norm": 3.2030454258408514,
+      "orient": [
+       0.057724252491694356,
+       0.3222591362126246,
+       0.2653654485049834,
+       0.3546511627906977
+      ],
+      "aspect": 1.1267605633802817,
+      "ink_fraction": 0.06951748251748252
+     },
+     "ok_v2": false,
+     "conf_v2": "LOW",
+     "feat_v2": {
+      "n_endpoints": 9,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 4,
+      "n_strokes": 6,
+      "skel_len_norm": 3.1048576207405105,
+      "orient": [
+       0.04786324786324787,
+       0.3299145299145299,
+       0.2675213675213675,
+       0.3547008547008547
+      ],
+      "aspect": 1.1267605633802817,
+      "ink_fraction": 0.0609020979020979
+     },
+     "ok": false,
+     "crop": "A301_KH_Wa_1012_0.png"
+    }
+   ],
+   "*309B": [
+    {
+     "sign": "*309B",
+     "sigla": "A309",
+     "doc": "TY 2",
+     "glyph_idx": 37,
+     "bbox": [
+      971,
+      1453,
+      243,
+      276
+     ],
+     "instance_rank": 0,
+     "ok_v1": false,
+     "conf_v1": "LOW",
+     "feat_v1": {
+      "n_endpoints": 87,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 55,
+      "n_strokes": 45,
+      "skel_len_norm": 3.4446666022967176,
+      "orient": [
+       0.20509849362688296,
+       0.01738122827346466,
+       0.04055619930475087,
+       0.7369640787949016
+      ],
+      "aspect": 1.1645569620253164,
+      "ink_fraction": 0.1354297131269756
+     },
+     "ok_v2": false,
+     "conf_v2": "LOW",
+     "feat_v2": {
+      "n_endpoints": 13,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 6,
+      "n_strokes": 8,
+      "skel_len_norm": 3.016677843863886,
+      "orient": [
+       0.16753926701570682,
+       0.009162303664921465,
+       0.032722513089005235,
+       0.7905759162303665
+      ],
+      "aspect": 1.184549356223176,
+      "ink_fraction": 0.1041629391065784
+     },
+     "ok": false,
+     "crop": "A309_TY_2_37.png"
+    }
+   ]
+  },
+  "summary": {
+   "DA": {
+    "ok_v1": true,
+    "ok_v2": true,
+    "conf_v1": "MEDIUM",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "U": {
+    "ok_v1": false,
+    "ok_v2": true,
+    "conf_v1": "NONE",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "RA": {
+    "ok_v1": false,
+    "ok_v2": true,
+    "conf_v1": "NONE",
+    "conf_v2": "HIGH",
+    "n_instances": 2
+   },
+   "PI": {
+    "ok_v1": false,
+    "ok_v2": true,
+    "conf_v1": "NONE",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "DE": {
+    "ok_v1": false,
+    "ok_v2": false,
+    "conf_v1": "NONE",
+    "conf_v2": "NONE",
+    "n_instances": 2
+   },
+   "*321": {
+    "ok_v1": true,
+    "ok_v2": true,
+    "conf_v1": "MEDIUM",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "*333": {
+    "ok_v1": true,
+    "ok_v2": true,
+    "conf_v1": "MEDIUM",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "*310": {
+    "ok_v1": false,
+    "ok_v2": true,
+    "conf_v1": "NONE",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "*301": {
+    "ok_v1": false,
+    "ok_v2": true,
+    "conf_v1": "NONE",
+    "conf_v2": "MEDIUM",
+    "n_instances": 2
+   },
+   "*309B": {
+    "ok_v1": false,
+    "ok_v2": false,
+    "conf_v1": "NONE",
+    "conf_v2": "NONE",
+    "n_instances": 1
+   }
+  },
+  "n_ok_v1_frozen": 3,
+  "n_ok_v2_amended": 8,
+  "n_pilot": 10
+ },
+ "calibration": {
+  "gallery_n": 74,
+  "detail": [
+   {
+    "sign": "DA",
+    "epig_stroke_rank_v1": 43,
+    "epig_aspect_rank_v1": 63,
+    "epig_stroke_rank_v2": 43,
+    "epig_aspect_rank_v2": 63,
+    "font_stroke_rank": 1,
+    "font_aspect_rank": 3
+   },
+   {
+    "sign": "U",
+    "epig_stroke_rank_v2": 6,
+    "epig_aspect_rank_v2": 71,
+    "font_stroke_rank": 1,
+    "font_aspect_rank": 55
+   },
+   {
+    "sign": "RA",
+    "epig_stroke_rank_v2": 27,
+    "epig_aspect_rank_v2": 49,
+    "font_stroke_rank": 1,
+    "font_aspect_rank": 16
+   },
+   {
+    "sign": "PI",
+    "epig_stroke_rank_v2": 1,
+    "epig_aspect_rank_v2": 44,
+    "font_stroke_rank": 4,
+    "font_aspect_rank": 31
+   },
+   {
+    "sign": "DE",
+    "font_stroke_rank": 58,
+    "font_aspect_rank": 29
+   }
+  ],
+  "epig_stroke_v1_mrr": 0.023255813953488372,
+  "epig_aspect_v1_mrr": 0.015873015873015872,
+  "epig_stroke_v2_mrr": 0.30673987941429803,
+  "epig_aspect_v2_mrr": 0.018273239726962064,
+  "font_stroke_mrr": 0.653448275862069,
+  "font_aspect_mrr": 0.09615119493039405,
+  "epig_top5_v1": 0,
+  "epig_top5_v2": 1,
+  "epig_stroke_p_v1": 0.5882705864706764,
+  "epig_stroke_p_v2": 0.010549472526373681,
+  "font_stroke_p": 4.999750012499375e-05,
+  "chance_mrr": 0.06628352778252639
+ },
+ "degradation_nc3": {
+  "per_variant": [
+   {
+    "file": "DA__erode2.png",
+    "rank": 1
+   },
+   {
+    "file": "DA__noise3.png",
+    "rank": 1
+   },
+   {
+    "file": "DA__occlude1.png",
+    "rank": 1
+   },
+   {
+    "file": "DA__rotate0.png",
+    "rank": 1
+   },
+   {
+    "file": "DA__scale4.png",
+    "rank": 1
+   },
+   {
+    "file": "U__erode2.png",
+    "rank": 1
+   },
+   {
+    "file": "U__noise3.png",
+    "rank": 1
+   },
+   {
+    "file": "U__occlude1.png",
+    "rank": 1
+   },
+   {
+    "file": "U__rotate0.png",
+    "rank": 1
+   },
+   {
+    "file": "U__scale4.png",
+    "rank": 1
+   },
+   {
+    "file": "RA__erode2.png",
+    "rank": 1
+   },
+   {
+    "file": "RA__noise3.png",
+    "rank": 1
+   },
+   {
+    "file": "RA__occlude1.png",
+    "rank": 1
+   },
+   {
+    "file": "RA__rotate0.png",
+    "rank": 1
+   },
+   {
+    "file": "RA__scale4.png",
+    "rank": 1
+   },
+   {
+    "file": "PI__erode2.png",
+    "rank": 39
+   },
+   {
+    "file": "PI__noise3.png",
+    "rank": 1
+   },
+   {
+    "file": "PI__occlude1.png",
+    "rank": 1
+   },
+   {
+    "file": "PI__rotate0.png",
+    "rank": 1
+   },
+   {
+    "file": "PI__scale4.png",
+    "rank": 1
+   },
+   {
+    "file": "DE__erode2.png",
+    "rank": 10
+   },
+   {
+    "file": "DE__noise3.png",
+    "rank": 1
+   },
+   {
+    "file": "DE__occlude1.png",
+    "rank": 1
+   },
+   {
+    "file": "DE__rotate0.png",
+    "rank": 1
+   },
+   {
+    "file": "DE__scale4.png",
+    "rank": 1
+   }
+  ],
+  "mrr": 0.9250256410256409,
+  "n": 25,
+  "retention_vs_font": 1.415606521886205
+ },
+ "verdict_v1_frozen": "STROKE_RECOVERY_INFEASIBLE",
+ "verdict_v2_amended": "STROKE_RECOVERY_FEASIBLE",
+ "verdict": "STROKE_RECOVERY_PARTIAL",
+ "amendment_note": "AMENDMENT-A: despeckle+closing preprocessing was NOT in the frozen prereg; v2 is reported for successor planning only. Bbox-mode geometric-validity fix and RGBA-alpha ink decoding are I/O bug fixes applied to both v1 and v2.",
+ "verdict_route": "SigLA-trace raster renders (GORILA-derived); GORILA plates NOT processed",
+ "addendum1": {
+  "prereg_sha256": "197a64249b944624e38a9624781acd0a12158d3b85fab338219133799862334e",
+  "fresh_ab": [
+   "TA2",
+   "TI",
+   "WI",
+   "KA",
+   "RO"
+  ],
+  "fresh_a_only": [
+   "*309",
+   "*312",
+   "*307",
+   "*306",
+   "*305"
+  ],
+  "n_ok_v2": 7,
+  "calibration": {
+   "stroke_mrr": 0.2730124223602484,
+   "aspect_mrr": 0.15527357433095137,
+   "perm_p": 0.031248437578121093,
+   "n_queries": 4,
+   "gallery_n": 74
+  },
+  "outcome": "AMENDMENT_PARTIAL",
+  "result_file": "result_addendum1.json"
+ },
+ "verdict_basis": "Frozen v1 pipeline: INFEASIBLE (3/10). Post-hoc AMENDMENT-A (despeckle) FEASIBLE-grade on debugging signs (8/10, MRR .307, p .0105) but held-out confirmation on 10 fresh signs = AMENDMENT_PARTIAL (7/10 extraction, MRR .273, p .031, > aspect .155). Per frozen ADDENDUM-1 mapping: epoch verdict STROKE_RECOVERY_PARTIAL.",
+ "cost_estimate": {
+  "sigla_trace_route": {
+   "licence": "CC BY-NC-SA 4.0 (research use; keep gitignored; no redistribution)",
+   "acquisition": "802 full-document trace PNGs @ ~1.6 s polite spacing ~= 25-35 min once; bbox crops free from sigla_documents.json",
+   "per_sign_marginal_cost": "~0.1 s compute; zero manual",
+   "expected_yield": "~70-80% of sign instances pass current v2 extraction; remainder need multi-component-aware criteria or per-sign bbox cleanup (~30-60 s manual each)"
+  },
+  "gorila_plate_route": {
+   "licence": "EFA copyright (Etudes Cretoises 21, cefael.efa.gr) - read-online page scans; bulk download/redistribution NOT licensed",
+   "acquisition": "page-scan segmentation + manual sign labelling; ~7,000+ sign instances at ~30-60 s each ~= 60-120 h human-equivalent + permission",
+   "verdict": "dominated by the SigLA route (SigLA traces ARE GORILA-derived)"
+  }
+ }
+}

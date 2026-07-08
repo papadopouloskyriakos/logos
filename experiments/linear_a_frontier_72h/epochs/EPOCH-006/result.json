@@ -1,0 +1,88 @@
+{
+  "epoch": "EPOCH-006",
+  "frontier": "F3 substitution-neighborhood bridges v3 — seed-efficient estimators (E003 open door)",
+  "substantive_gate": "A",
+  "plan_hash": "23fc9fd26a77923466dc26a3d2c9d5dd84ea003442c9bf1ddfc4cfb20c8fd4df",
+  "prereg": "epochs/EPOCH-006/prereg.md (frozen 2026-07-08T04:13:52Z, before any corpus run)",
+  "seed": 20260708,
+  "claim_layer": "L2 relative/structural, KNOWN-script calibration only; no LA data touched; no licence change (Art. XV)",
+  "articles": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XXII"],
+  "question": "Can global-transform estimators (anchors fix a transform/coupling over unsupervised full-graph MF_A geometry) reach the signal E003 showed is available at b=5 (required Holm hit rate 0.119 < channel LOO rate 0.149, M1 delivers 0.039)?",
+  "estimators_frozen": {
+    "EST_GW": "landmark-fused entropic Gromov-Wasserstein (alpha=0.5, eps=0.01, outer=200, inner=40, anchor penalty fused per outer iteration)",
+    "EST_SPEC": "landmark orthogonal Procrustes on Laplacian eigenmaps (k=6) — at LOO mechanically == E002 M4",
+    "EST_OT": "anchor-regularized Sinkhorn (eps=0.05, 500 it) on unsupervised M2 signature cost (alpha=0.5)",
+    "EST_CCA": "ridge linear map (lambda=0.1) on the same eigenmaps, fit on anchor rows"
+  },
+  "positive_controls": {
+    "PC0_harness_identity": "PASS (KNOWN M1-LOO 7/47, CTRL 55/71, e002/e003 paths prediction-identical)",
+    "PC1_loo_b46": {
+      "EST_GW": {"exact": "47/47", "p": 0.001, "pass": true, "note": "elimination-assisted as predicted in prereg (weak gate for coupling estimators)"},
+      "EST_OT": {"exact": "47/47", "p": 0.001, "pass": true, "note": "elimination-assisted as predicted"},
+      "EST_SPEC": {"exact": "4/47", "p": 0.017, "pass": false, "note": "EXACTLY reproduces E002 M4 LOO 4/47 -> code-path check PASS, PC1 FAIL as predicted"},
+      "EST_CCA": {"exact": "2/47", "p": 0.238, "pass": false}
+    },
+    "PC2_ctrl_b5_f1_seed_efficiency_on_identity_signal": {
+      "EST_GW": {"acc": 0.419, "median_p": 0.001, "survival_rate": 1.0, "verdict": "SURVIVES_HOLM", "vs_M1": "M1 = 0.112 -> GW is 3.7x more seed-efficient on a strong signal"},
+      "EST_OT": {"acc": 0.231, "median_p": 0.001, "survival_rate": 1.0, "verdict": "SURVIVES_HOLM"},
+      "EST_SPEC": {"acc": 0.096, "median_p": 0.0015, "verdict": "SURVIVES_HOLM"},
+      "EST_CCA": {"acc": 0.036, "median_p": 0.145, "verdict": "FLOOR"}
+    },
+    "negative_control_b5_kw5_full_scramble": "FLOOR for all 4 estimators (gate PASS; no estimator detector broken)"
+  },
+  "verdict_cell_KNOWN_b5_f075": {
+    "EST_GW": {"acc": 0.051, "median_p": 0.267, "verdict": "FLOOR"},
+    "EST_SPEC": {"acc": 0.025, "median_p": 0.599, "verdict": "FLOOR"},
+    "EST_OT": {"acc": 0.071, "median_p": 0.081, "verdict": "FLOOR"},
+    "EST_CCA": {"acc": 0.023, "median_p": 0.652, "verdict": "FLOOR"},
+    "e003_m1_reference": {"acc": 0.034, "median_p": 0.599, "verdict": "FLOOR"}
+  },
+  "seed_column_KNOWN_f1": {
+    "EST_GW": {"b3": 0.067, "b5": 0.070, "b7": 0.076, "b10": 0.084, "median_p_b5": 0.083, "all": "FLOOR"},
+    "EST_OT": {"b3": 0.069, "b5": 0.071, "b7": 0.084, "b10": 0.082, "median_p_b5": 0.078, "all": "FLOOR"},
+    "EST_SPEC": {"b3": 0.033, "b5": 0.031, "b7": 0.048, "b10": 0.046, "all": "FLOOR"},
+    "EST_CCA": {"b3": 0.026, "b5": 0.026, "b7": 0.036, "b10": 0.030, "all": "FLOOR"},
+    "e003_m1_reference_b5": {"acc": 0.039, "median_p": 0.417}
+  },
+  "wrong_anchor_robustness": {
+    "all": "UNINFORMATIVE by frozen rule (clean b=5 KNOWN cells at FLOOR for every estimator)",
+    "descriptive": "EST_OT kw=1 acc 0.081 >= clean 0.071 (NOMINAL vs FLOOR, seed-stream noise); EST_GW kw=1 delta +0.002; no estimator catastrophically poisoned at kw=1, none demonstrated robustness on a live signal"
+  },
+  "estimator_verdicts": {
+    "EST_GW": "SEED_EFFICIENT_NOT_ACHIEVED",
+    "EST_SPEC": "SEED_EFFICIENT_NOT_ACHIEVED (PC1_FAIL)",
+    "EST_OT": "SEED_EFFICIENT_NOT_ACHIEVED",
+    "EST_CCA": "SEED_EFFICIENT_NOT_ACHIEVED (PC1_FAIL)"
+  },
+  "epoch_verdict": "SEED_EFFICIENCY_NOT_ACHIEVED",
+  "verdict_mechanics": "frozen rules 1-5: all NEG cells FLOOR; PC1 fails cap EST_SPEC/EST_CCA; EST_GW/EST_OT verdict cells FLOOR (median_p 0.267/0.081 > 0.05); no ANOMALY flags",
+  "open_door_status_update": {
+    "e003_claim": "required 5-seed Holm hit rate 0.119 < available LOO rate 0.149; M1 delivers 0.039 -> failure attributed to estimator geometry",
+    "e006_finding": "global-transform geometry recovers roughly HALF the shortfall (GW/OT ~0.070-0.071 at b=5, 1.8x M1) and no more; on the CTRL identity pair the SAME estimators are strongly seed-efficient (GW 0.419 at b=5), so the estimator-geometry ceiling is high — the residual gap (0.071 vs 0.119 required) now points at the KNOWN cross-script channel's own SNR, not the estimator",
+    "status": "OPEN DOOR NARROWED, NOT CLOSED: the 0.149 'available' figure was itself M1@46-anchors, i.e., estimator-relative; whether ANY estimator can reach 0.119 at b=5 on this channel is now the sharper question (channel-SNR-limited hypothesis)"
+  },
+  "committed_prediction_outcome": "CONFIRMED: P(all NOT_ACHIEVED)=0.60 was the modal committed outcome and occurred; PC1 sub-predictions all correct (EST_SPEC FAIL at exactly 4/47, EST_GW/EST_OT elimination-assisted PASS)",
+  "effective_n": {
+    "known_signs_full": 47, "ctrl_signs": 71,
+    "cells": 32, "replicates_per_cell": 20, "loo_pc1_runs": 4,
+    "primary_tests": 4, "per_test_bar": 0.0041667,
+    "info_note": "verdict rests on 4 preregistered verdict cells only; seed columns, PC2, ADV/NEG are controls/descriptive; all RNG streams replicate-paired with E003 M1 cells"
+  },
+  "search_receipt": {
+    "estimators": 4, "hyperparameters": "all frozen in prereg before run, zero tuning",
+    "endpoint": "held-out exact count only", "n_perm": 1000,
+    "pre_freeze_work": "synthetic-random-graph mechanics smoke test only (no corpus data); E002/E003 published artifacts read",
+    "no_other_variants_tried": true
+  },
+  "runtime_s": 29.7,
+  "artifacts": [
+    "data/motifs/seed_efficient/E006_result.json",
+    "data/motifs/seed_efficient/E006_pc0.json",
+    "data/motifs/seed_efficient/E006_pc1.json",
+    "data/motifs/seed_efficient/E006_cells_partial.json",
+    "scripts/e006_seed_efficient.py",
+    "reports/EPOCH006_SEED_EFFICIENT_ESTIMATORS.md"
+  ],
+  "la_application": "BLOCKED (correctly): no estimator earned SEED_EFFICIENT status; no LA alignment was run; any future LA application requires a new prereg + anchor-integrity gate",
+  "compliance": "Art XXII: prereg frozen+hashed (23fc9fd2..., 2026-07-08T04:13:52Z) before any corpus run; PC0 gated first; PC1 per-estimator gates + declared EST_SPEC=4/47 reproduction check hit exactly; negative controls FLOOR; verdict mechanical from frozen rules; append-only."
+}

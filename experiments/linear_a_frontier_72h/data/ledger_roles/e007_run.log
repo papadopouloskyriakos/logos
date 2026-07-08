@@ -1,0 +1,50 @@
+== PC1 synthetic positive control ==
+{
+ "n_docs_deriv": 75,
+ "n_docs_held": 75,
+ "n": 1261,
+ "accuracy": 1.0,
+ "macro_f1": 1.0,
+ "per_class": {
+  "W": {
+   "n_gold": 515,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "C": {
+   "n_gold": 477,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "U": {
+   "n_gold": 194,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "T": {
+   "n_gold": 75,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  }
+ },
+ "gold_dist": {
+  "W": 515,
+  "C": 477,
+  "U": 194,
+  "T": 75
+ },
+ "threshold_macro_f1": 0.8,
+ "pass": true
+}
+== LB leg ==
+{'ledger_docs': 1093, 'deriv_KN': 660, 'held_nonKN': 433, 'held_sites': {'PY': 306, 'TH': 90, 'MY': 32, 'TI': 2, 'KH': 1, 'HV': 2}}
+deriv: {"W": {"n_gold": 3343, "precision": 0.8451, "recall": 0.8911, "f1": 0.8675}, "C": {"n_gold": 2871, "precision": 0.7872, "recall": 0.8325, "f1": 0.8092}, "U": {"n_gold": 319, "precision": 0.0, "recall": 0.0, "f1": 0.0}, "T": {"n_gold": 28, "precision": 0.0, "recall": 0.0, "f1": 0.0}} 0.4192
+held : {"W": {"n_gold": 6298, "precision": 0.865, "recall": 0.7672, "f1": 0.8132}, "C": {"n_gold": 2693, "precision": 0.4254, "recall": 0.7865, "f1": 0.5521}, "U": {"n_gold": 1360, "precision": 0.0, "recall": 0.0, "f1": 0.0}, "T": {"n_gold": 214, "precision": 0.0, "recall": 0.0, "f1": 0.0}} 0.3413
+== nulls (N1 shuffle, N2 numeral-detach; 25 reps each; full refit) ==
+N1 p95 macroF1: 0.3193 N2 p95: 0.3204 N3 acc p95: 0.4422
+LB FIRES: False {'a_macro_f1_ge_.50': False, 'b_gt_N1_p95': True, 'b_gt_N2_p95': True, 'c_acc_gt_N3_p95': True, 'd_recall_T_ge_.50': False, 'd_recall_C_ge_.50': True}
+VERDICT: ROLE_INDUCTION_NO_POWER

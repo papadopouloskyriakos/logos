@@ -1,0 +1,30 @@
+{
+ "EST_GW": {
+  "exact_acc": 1.0,
+  "exact_count": 47,
+  "p": 0.000999000999000999,
+  "n_heldout": 47,
+  "pass": true
+ },
+ "EST_SPEC": {
+  "exact_acc": 0.0851063829787234,
+  "exact_count": 4,
+  "p": 0.016983016983016984,
+  "n_heldout": 47,
+  "pass": false
+ },
+ "EST_OT": {
+  "exact_acc": 1.0,
+  "exact_count": 47,
+  "p": 0.000999000999000999,
+  "n_heldout": 47,
+  "pass": true
+ },
+ "EST_CCA": {
+  "exact_acc": 0.0425531914893617,
+  "exact_count": 2,
+  "p": 0.23776223776223776,
+  "n_heldout": 47,
+  "pass": false
+ }
+}

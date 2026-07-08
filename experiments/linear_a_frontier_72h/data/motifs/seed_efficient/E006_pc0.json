@@ -1,0 +1,15 @@
+{
+ "CTRL_LBdamos_split_half": {
+  "n": 71,
+  "exact_count_e002_path": 55,
+  "exact_count_e003_path": 55,
+  "paths_identical": true
+ },
+ "KNOWN_LBcog_vs_Cypcog": {
+  "n": 47,
+  "exact_count_e002_path": 7,
+  "exact_count_e003_path": 7,
+  "paths_identical": true
+ },
+ "gate": "PASS"
+}

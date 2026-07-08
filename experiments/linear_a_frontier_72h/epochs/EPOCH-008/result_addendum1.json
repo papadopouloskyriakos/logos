@@ -1,0 +1,680 @@
+{
+ "addendum": "EPOCH-008/ADDENDUM-1",
+ "prereg_addendum_sha256": "197a64249b944624e38a9624781acd0a12158d3b85fab338219133799862334e",
+ "pipeline_script_sha256": "20c397b03607f39efe49cc5e6d54813dbd7633926cb9c99fc6d6b4699b3746a7",
+ "fresh_ab": [
+  "TA2",
+  "TI",
+  "WI",
+  "KA",
+  "RO"
+ ],
+ "fresh_a_only": [
+  "*309",
+  "*312",
+  "*307",
+  "*306",
+  "*305"
+ ],
+ "fetch_log": {
+  "HT 103": "fetched",
+  "HT 10b": "cached",
+  "HT 123b": "fetched",
+  "HT 32": "fetched",
+  "HT 41a": "fetched",
+  "HT 5": "fetched",
+  "HT 57b": "fetched",
+  "HT Wa 1002": "fetched",
+  "HT Wa 1451": "fetched",
+  "HT Zd 157": "fetched",
+  "KH 29": "fetched",
+  "KH 47": "cached",
+  "KH 97": "fetched",
+  "KH Wa 1013\u03b3": "fetched",
+  "KH Wa 1014\u03b3": "fetched",
+  "KN Zb 5": "fetched",
+  "PH 18a": "fetched",
+  "TY 2": "cached",
+  "ZA 12a": "fetched"
+ },
+ "extraction": {
+  "per_instance": {
+   "TA2": [
+    {
+     "sign": "TA2",
+     "sigla": "AB66",
+     "doc": "KH 29",
+     "bbox": [
+      714,
+      142,
+      315,
+      384
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 6,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 5,
+      "skel_len_norm": 2.7736756157880187,
+      "orient": [
+       0.6584317937701396,
+       0.05800214822771214,
+       0.26745435016111707,
+       0.01611170784103115
+      ],
+      "aspect": 1.2269736842105263,
+      "ink_fraction": 0.10599371693121692
+     },
+     "crop": "HELD_AB66_KH_29_2.png"
+    },
+    {
+     "sign": "TA2",
+     "sigla": "AB66",
+     "doc": "HT 103",
+     "bbox": [
+      571,
+      156,
+      293,
+      388
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 19,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 9,
+      "n_strokes": 11,
+      "skel_len_norm": 3.015590299647795,
+      "orient": [
+       0.0,
+       0.23857868020304568,
+       0.5258883248730964,
+       0.23553299492385787
+      ],
+      "aspect": 1.332155477031802,
+      "ink_fraction": 0.09891453502691672
+     },
+     "crop": "HELD_AB66_HT_103_1.png"
+    }
+   ],
+   "TI": [
+    {
+     "sign": "TI",
+     "sigla": "AB37",
+     "doc": "ZA 12a",
+     "bbox": [
+      1307,
+      209,
+      367,
+      469
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 60,
+      "n_junctions": 4,
+      "n_loops": 0,
+      "n_components": 30,
+      "n_strokes": 36,
+      "skel_len_norm": 2.59892777437796,
+      "orient": [
+       0.06548175865294668,
+       0.49485500467726845,
+       0.37511693171188026,
+       0.06454630495790459
+      ],
+      "aspect": 1.2561307901907357,
+      "ink_fraction": 0.0955363315768375
+     },
+     "crop": "HELD_AB37_ZA_12a_1.png"
+    },
+    {
+     "sign": "TI",
+     "sigla": "AB37",
+     "doc": "KN Zb 5",
+     "bbox": [
+      2187,
+      265,
+      284,
+      580
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 14,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 7,
+      "n_strokes": 7,
+      "skel_len_norm": 3.575855791188484,
+      "orient": [
+       0.0,
+       0.5469845722300141,
+       0.4018232819074334,
+       0.05119214586255259
+      ],
+      "aspect": 2.043010752688172,
+      "ink_fraction": 0.14323700825643515
+     },
+     "crop": "HELD_AB37_KN_Zb_5_4.png"
+    }
+   ],
+   "WI": [
+    {
+     "sign": "WI",
+     "sigla": "AB40",
+     "doc": "PH 18a",
+     "bbox": [
+      397,
+      91,
+      275,
+      472
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 4,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 2,
+      "skel_len_norm": 3.4573298334393447,
+      "orient": [
+       0.0,
+       0.0,
+       0.10231023102310231,
+       0.8976897689768977
+      ],
+      "aspect": 1.736842105263158,
+      "ink_fraction": 0.09255007704160247
+     },
+     "crop": "HELD_AB40_PH_18a_1.png"
+    },
+    {
+     "sign": "WI",
+     "sigla": "AB40",
+     "doc": "HT Zd 157",
+     "bbox": [
+      274,
+      91,
+      269,
+      440
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 8,
+      "n_junctions": 4,
+      "n_loops": 1,
+      "n_components": 3,
+      "n_strokes": 10,
+      "skel_len_norm": 4.035803753904807,
+      "orient": [
+       0.06449221645663454,
+       0.4759080800593032,
+       0.29429206819866566,
+       0.1653076352853966
+      ],
+      "aspect": 1.6576923076923078,
+      "ink_fraction": 0.1134251436296046
+     },
+     "crop": "HELD_AB40_HT_Zd_157_0.png"
+    }
+   ],
+   "KA": [
+    {
+     "sign": "KA",
+     "sigla": "AB77",
+     "doc": "HT Wa 1002",
+     "bbox": [
+      112,
+      99,
+      972,
+      712
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 5,
+      "n_junctions": 9,
+      "n_loops": 4,
+      "n_components": 2,
+      "n_strokes": 16,
+      "skel_len_norm": 5.68533977478908,
+      "orient": [
+       0.6069747539580659,
+       0.12387676508344031,
+       0.17479674796747968,
+       0.09435173299101413
+      ],
+      "aspect": 0.7315296566077003,
+      "ink_fraction": 0.11361521477782402
+     },
+     "crop": "HELD_AB77_HT_Wa_1002_1.png"
+    },
+    {
+     "sign": "KA",
+     "sigla": "AB77",
+     "doc": "HT Wa 1451",
+     "bbox": [
+      137,
+      341,
+      710,
+      652
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 12,
+      "n_junctions": 4,
+      "n_loops": 0,
+      "n_components": 4,
+      "n_strokes": 12,
+      "skel_len_norm": 4.287667204273281,
+      "orient": [
+       0.05138121546961326,
+       0.38950276243093923,
+       0.31933701657458563,
+       0.23977900552486187
+      ],
+      "aspect": 0.5427574171029669,
+      "ink_fraction": 0.19936252476108707
+     },
+     "crop": "HELD_AB77_HT_Wa_1451_0.png"
+    }
+   ],
+   "RO": [
+    {
+     "sign": "RO",
+     "sigla": "AB02",
+     "doc": "KH Wa 1014\u03b3",
+     "bbox": [
+      458,
+      146,
+      667,
+      634
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 4,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 2,
+      "skel_len_norm": 1.7651806363683853,
+      "orient": [
+       0.4225663716814159,
+       0.577433628318584,
+       0.0,
+       0.0
+      ],
+      "aspect": 1.5911330049261083,
+      "ink_fraction": 0.055906345595733
+     },
+     "crop": "HELD_AB02_KH_Wa_1014\u03b3_0.png"
+    },
+    {
+     "sign": "RO",
+     "sigla": "AB02",
+     "doc": "KH Wa 1013\u03b3",
+     "bbox": [
+      293,
+      234,
+      499,
+      436
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 8,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 4,
+      "n_strokes": 4,
+      "skel_len_norm": 1.9440628777507496,
+      "orient": [
+       0.5446428571428571,
+       0.0,
+       0.45535714285714285,
+       0.0
+      ],
+      "aspect": 0.8704453441295547,
+      "ink_fraction": 0.05357503998823335
+     },
+     "crop": "HELD_AB02_KH_Wa_1013\u03b3_0.png"
+    }
+   ],
+   "*309": [
+    {
+     "sign": "*309",
+     "sigla": "A309",
+     "doc": "TY 2",
+     "bbox": [
+      971,
+      1453,
+      243,
+      276
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 13,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 6,
+      "n_strokes": 8,
+      "skel_len_norm": 3.016677843863886,
+      "orient": [
+       0.16753926701570682,
+       0.009162303664921465,
+       0.032722513089005235,
+       0.7905759162303665
+      ],
+      "aspect": 1.184549356223176,
+      "ink_fraction": 0.1041629391065784
+     },
+     "crop": "HELD_A309_TY_2_37.png"
+    }
+   ],
+   "*312": [
+    {
+     "sign": "*312",
+     "sigla": "A312",
+     "doc": "HT 10b",
+     "bbox": [
+      1247,
+      699,
+      194,
+      427
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 7,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 8,
+      "skel_len_norm": 3.6975712547919075,
+      "orient": [
+       0.1539961013645224,
+       0.27387914230019494,
+       0.5019493177387915,
+       0.07017543859649122
+      ],
+      "aspect": 2.254054054054054,
+      "ink_fraction": 0.13775079069992033
+     },
+     "crop": "HELD_A312_HT_10b_10.png"
+    },
+    {
+     "sign": "*312",
+     "sigla": "A312",
+     "doc": "HT 123b",
+     "bbox": [
+      1206,
+      92,
+      188,
+      399
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 6,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 3,
+      "skel_len_norm": 2.7207399515316504,
+      "orient": [
+       0.8330995792426368,
+       0.0,
+       0.16690042075736325,
+       0.0
+      ],
+      "aspect": 2.1920903954802258,
+      "ink_fraction": 0.08954567269236922
+     },
+     "crop": "HELD_A312_HT_123b_2.png"
+    }
+   ],
+   "*307": [
+    {
+     "sign": "*307",
+     "sigla": "A307",
+     "doc": "HT 5",
+     "bbox": [
+      282,
+      10,
+      309,
+      275
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 29,
+      "n_junctions": 3,
+      "n_loops": 0,
+      "n_components": 13,
+      "n_strokes": 19,
+      "skel_len_norm": 2.9405828552535627,
+      "orient": [
+       0.01920768307322929,
+       0.3085234093637455,
+       0.4837935174069628,
+       0.18847539015606243
+      ],
+      "aspect": 0.8688524590163934,
+      "ink_fraction": 0.1669902912621359
+     },
+     "crop": "HELD_A307_HT_5_0.png"
+    },
+    {
+     "sign": "*307",
+     "sigla": "A307",
+     "doc": "HT 32",
+     "bbox": [
+      199,
+      117,
+      197,
+      360
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 90,
+      "n_junctions": 2,
+      "n_loops": 0,
+      "n_components": 51,
+      "n_strokes": 48,
+      "skel_len_norm": 4.061336788259715,
+      "orient": [
+       0.031044214487300093,
+       0.15051740357478832,
+       0.6660395108184384,
+       0.1523988711194732
+      ],
+      "aspect": 1.7918781725888324,
+      "ink_fraction": 0.21218274111675126
+     },
+     "crop": "HELD_A307_HT_32_0.png"
+    }
+   ],
+   "*306": [
+    {
+     "sign": "*306",
+     "sigla": "A306",
+     "doc": "KH 97",
+     "bbox": [
+      1181,
+      368,
+      677,
+      645
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 4,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 2,
+      "skel_len_norm": 2.385539893927504,
+      "orient": [
+       0.718796992481203,
+       0.0,
+       0.281203007518797,
+       0.0
+      ],
+      "aspect": 0.9208261617900172,
+      "ink_fraction": 0.055360516643193296
+     },
+     "crop": "HELD_A306_KH_97_2.png"
+    },
+    {
+     "sign": "*306",
+     "sigla": "A306",
+     "doc": "KH 47",
+     "bbox": [
+      727,
+      1093,
+      452,
+      480
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 5,
+      "n_junctions": 1,
+      "n_loops": 0,
+      "n_components": 2,
+      "n_strokes": 4,
+      "skel_len_norm": 2.0336433050663483,
+      "orient": [
+       0.0,
+       0.0,
+       0.2867231638418079,
+       0.713276836158192
+      ],
+      "aspect": 1.2292993630573248,
+      "ink_fraction": 0.09270372418879055
+     },
+     "crop": "HELD_A306_KH_47_4.png"
+    }
+   ],
+   "*305": [
+    {
+     "sign": "*305",
+     "sigla": "A305",
+     "doc": "HT 41a",
+     "bbox": [
+      101,
+      946,
+      321,
+      638
+     ],
+     "ok_v2": true,
+     "conf": "MEDIUM",
+     "feat": {
+      "n_endpoints": 6,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 3,
+      "n_strokes": 3,
+      "skel_len_norm": 2.5634949245709358,
+      "orient": [
+       0.0,
+       0.4125441696113074,
+       0.5874558303886925,
+       0.0
+      ],
+      "aspect": 2.0160771704180065,
+      "ink_fraction": 0.08826746354944873
+     },
+     "crop": "HELD_A305_HT_41a_2.png"
+    },
+    {
+     "sign": "*305",
+     "sigla": "A305",
+     "doc": "HT 57b",
+     "bbox": [
+      78,
+      186,
+      347,
+      463
+     ],
+     "ok_v2": false,
+     "conf": "LOW",
+     "feat": {
+      "n_endpoints": 48,
+      "n_junctions": 0,
+      "n_loops": 0,
+      "n_components": 31,
+      "n_strokes": 24,
+      "skel_len_norm": 1.5175597336222582,
+      "orient": [
+       0.024691358024691357,
+       0.42962962962962964,
+       0.04197530864197531,
+       0.5037037037037037
+      ],
+      "aspect": 1.0185873605947955,
+      "ink_fraction": 0.103874491699435
+     },
+     "crop": "HELD_A305_HT_57b_0.png"
+    }
+   ]
+  },
+  "summary": {
+   "TA2": true,
+   "TI": false,
+   "WI": true,
+   "KA": true,
+   "RO": true,
+   "*309": false,
+   "*312": true,
+   "*307": false,
+   "*306": true,
+   "*305": true
+  },
+  "n_ok_v2": 7
+ },
+ "calibration": {
+  "detail": [
+   {
+    "sign": "TA2",
+    "stroke_rank": 35,
+    "aspect_rank": 13
+   },
+   {
+    "sign": "TI"
+   },
+   {
+    "sign": "WI",
+    "stroke_rank": 50,
+    "aspect_rank": 36
+   },
+   {
+    "sign": "KA",
+    "stroke_rank": 1,
+    "aspect_rank": 2
+   },
+   {
+    "sign": "RO",
+    "stroke_rank": 23,
+    "aspect_rank": 61
+   }
+  ],
+  "stroke_mrr": 0.2730124223602484,
+  "aspect_mrr": 0.15527357433095137,
+  "perm_p": 0.031248437578121093,
+  "n_queries": 4,
+  "gallery_n": 74
+ },
+ "outcome": "AMENDMENT_PARTIAL"
+}

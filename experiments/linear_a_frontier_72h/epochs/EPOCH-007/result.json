@@ -1,0 +1,315 @@
+{
+ "epoch": "EPOCH-007",
+ "frontier": "F5 ledger-role induction as anchor constraints",
+ "plan_hash": "6c85277da7c4e5d30abdd12bca084db4076c4f12e334225f5a5c535dfc2be566",
+ "prereg": "epochs/EPOCH-007/prereg.md (frozen 2026-07-08T04:13:24Z, before any run)",
+ "seed": 20260708,
+ "claim_layer": "L2/L3 functional-slot only; no value/semantic claim; no licence touched (Art. XV)",
+ "articles": [
+  "V",
+  "VII",
+  "VIII",
+  "IX",
+  "XI",
+  "XII",
+  "XV",
+  "XVII",
+  "XVIII",
+  "XXII"
+ ],
+ "prior_art_differenced": {
+  "observable_channels_L3_word_to_channel": "REFUTED there; NOT re-run \u2014 this epoch induces per-occurrence slot roles from within-document geometry, not word->commodity identity",
+  "observable_channels_L2_doc_structure": "SUPPORTED there; this epoch asks the finer per-slot question"
+ },
+ "deviations": [
+  {
+   "id": "DEV-1",
+   "when": "PC1 calibration, before any real-corpus run",
+   "what": "added 2 preceding-token structural features (prev_is_group, prev_group_len)",
+   "why": "PC1 FAILED (macro-F1 0.692, recall(U)=0): unit-slot vs commodity-slot needs left context",
+   "calibrated_on": "synthetic control only"
+  },
+  {
+   "id": "DEV-2",
+   "when": "PC1 calibration, before any real-corpus run",
+   "what": "k-means k: 5 -> 12 (many-to-one decode absorbs extra clusters)",
+   "why": "k=5 never allocated a unit cluster; synthetic-only sweep {6:.71,8:.71,10:.92,12:1.00}",
+   "calibrated_on": "synthetic control only"
+  }
+ ],
+ "positive_control_PC1": {
+  "n_docs_deriv": 75,
+  "n_docs_held": 75,
+  "n": 1261,
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "per_class": {
+   "W": {
+    "n_gold": 515,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "C": {
+    "n_gold": 477,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "U": {
+    "n_gold": 194,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "T": {
+    "n_gold": 75,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "gold_dist": {
+   "W": 515,
+   "C": 477,
+   "U": 194,
+   "T": 75
+  },
+  "threshold_macro_f1": 0.8,
+  "pass": true
+ },
+ "LB_corpus": {
+  "ledger_docs": 1093,
+  "deriv_KN": 660,
+  "held_nonKN": 433,
+  "held_sites": {
+   "PY": 306,
+   "TH": 90,
+   "MY": 32,
+   "TI": 2,
+   "KH": 1,
+   "HV": 2
+  }
+ },
+ "LB_derivation": {
+  "n": 6561,
+  "accuracy": 0.8183,
+  "macro_f1": 0.4192,
+  "per_class": {
+   "W": {
+    "n_gold": 3343,
+    "precision": 0.8451,
+    "recall": 0.8911,
+    "f1": 0.8675
+   },
+   "C": {
+    "n_gold": 2871,
+    "precision": 0.7872,
+    "recall": 0.8325,
+    "f1": 0.8092
+   },
+   "U": {
+    "n_gold": 319,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "T": {
+    "n_gold": 28,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   }
+  },
+  "gold_dist": {
+   "W": 3343,
+   "C": 2871,
+   "U": 319,
+   "T": 28
+  }
+ },
+ "LB_heldout": {
+  "n": 10565,
+  "accuracy": 0.6578,
+  "macro_f1": 0.3413,
+  "per_class": {
+   "W": {
+    "n_gold": 6298,
+    "precision": 0.865,
+    "recall": 0.7672,
+    "f1": 0.8132
+   },
+   "C": {
+    "n_gold": 2693,
+    "precision": 0.4254,
+    "recall": 0.7865,
+    "f1": 0.5521
+   },
+   "U": {
+    "n_gold": 1360,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "T": {
+    "n_gold": 214,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   }
+  },
+  "gold_dist": {
+   "W": 6298,
+   "C": 2693,
+   "U": 1360,
+   "T": 214
+  }
+ },
+ "LB_cluster_mapping": {
+  "0": "W",
+  "1": "C",
+  "2": "C",
+  "3": "C",
+  "4": "W",
+  "5": "W",
+  "6": "W",
+  "7": "C",
+  "8": "C",
+  "9": "C",
+  "10": "W",
+  "11": "C"
+ },
+ "nulls": {
+  "N1_shuffled_doc": {
+   "reps": 25,
+   "macro_f1_p95": 0.3193,
+   "macro_f1_max": 0.3198,
+   "acc_p95": 0.6006
+  },
+  "N2_numeral_detach": {
+   "reps": 25,
+   "macro_f1_p95": 0.3204,
+   "macro_f1_max": 0.3217,
+   "acc_p95": 0.6104
+  },
+  "N3_label_perm": {
+   "reps": 1000,
+   "acc_p95": 0.4422,
+   "acc_p99": 0.4461,
+   "p_value_acc": 0.000999000999000999
+  }
+ },
+ "LB_fire_criteria": {
+  "a_macro_f1_ge_.50": false,
+  "b_gt_N1_p95": true,
+  "b_gt_N2_p95": true,
+  "c_acc_gt_N3_p95": true,
+  "d_recall_T_ge_.50": false,
+  "d_recall_C_ge_.50": true
+ },
+ "LB_fires": false,
+ "LA_leg": "NOT RUN for record (gated on LB firing; LB did not fire)",
+ "posthoc_nonverdict": {
+  "site_convention_divide": {
+   "PY": {
+    "W": 5372,
+    "C": 2295,
+    "U": 928,
+    "T": 210
+   },
+   "KN": {
+    "W": 3343,
+    "C": 2871,
+    "U": 319,
+    "T": 28
+   },
+   "TH": {
+    "W": 609,
+    "C": 226,
+    "U": 341
+   },
+   "MY": {
+    "W": 300,
+    "C": 166,
+    "T": 3,
+    "U": 90
+   },
+   "TI": {
+    "C": 3,
+    "W": 5,
+    "U": 1
+   },
+   "KH": {
+    "W": 7,
+    "T": 1,
+    "C": 1
+   },
+   "HV": {
+    "W": 5,
+    "C": 2
+   }
+  },
+  "alt_decode_heldout": {
+   "macro_f1": 0.2935,
+   "U": {
+    "n_gold": 1360,
+    "precision": 0.4456,
+    "recall": 0.8618,
+    "f1": 0.5875
+   },
+   "T": {
+    "n_gold": 214,
+    "precision": 0.0174,
+    "recall": 0.3832,
+    "f1": 0.0333
+   }
+  },
+  "la_exploratory_readout": {
+   "predicted_role_share": {
+    "W": 1439,
+    "C": 185
+   },
+   "C1_KURO": {
+    "n_occ": 35,
+    "predicted_roles": {
+     "W": 35
+    }
+   },
+   "C2_LOGO": {
+    "n_occ": 363,
+    "predicted_roles": {
+     "C": 119,
+     "W": 244
+    }
+   },
+   "C3_KIRO": {
+    "n_occ": 15,
+    "predicted_roles": {
+     "W": 15
+    }
+   },
+   "C4_APREFIX": {
+    "n_occ": 71,
+    "predicted_roles": {
+     "W": 70,
+     "C": 1
+    }
+   }
+  }
+ },
+ "verdict": "ROLE_INDUCTION_NO_POWER",
+ "verdict_reason": "LB detector did not fire under prereg criteria",
+ "licences_changed": "none",
+ "artifacts": [
+  "epochs/EPOCH-007/prereg.md",
+  "epochs/EPOCH-007/plan_hash.txt",
+  "reports/EPOCH007_LEDGER_ROLES.md",
+  "data/ledger_roles/e007_results.json",
+  "data/ledger_roles/e007_posthoc.json",
+  "data/ledger_roles/e007_posthoc_la.json",
+  "scripts/e007_ledger_roles.py",
+  "scripts/e007_run.py",
+  "scripts/e007_posthoc.py",
+  "scripts/e007_posthoc_la.py"
+ ]
+}

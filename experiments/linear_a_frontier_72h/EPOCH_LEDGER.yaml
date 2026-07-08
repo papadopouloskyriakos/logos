@@ -88,3 +88,72 @@ epochs:
     verdict: PROVENANCE_ESTABLISHED + ERRATUM_REQUIRED
     result: "KNZg57a chain FULLY established: lineara.xyz maintainer's photo-reading of Kanta 2024 Fig.7, committed 2025-03-23 (empty shell -> 17-slot reading same day); corpus_io letter-filter explains silver's 5 tokens deterministically; NO hand-editing; fabrication REJECTED. PUBLIC preliminary transliteration of Zg 57 exists -> J1 'no public source' finding FALSE for Zg 57 -> Art. XVII ERRATUM required on seal branches. Seal scoring targets NOT exposed (7 tokens = Face-A vessel ligatures + NI)."
     substantive: true
+  - epoch_id: EPOCH-006
+    frontier: F3
+    gate: A
+    plan_hash: 23fc9fd26a77923466dc26a3d2c9d5dd84ea003442c9bf1ddfc4cfb20c8fd4df
+    prereg_frozen: 2026-07-08T04:13:52Z
+    completed: 2026-07-08
+    positive_control: "PC0 PASS (7/47, 55/71 reproduced); PC1 EST_GW/EST_OT 47/47 PASS (elimination-assisted, declared weak), EST_SPEC 4/47 FAIL (== E002 M4 exactly -> code-path check PASS), EST_CCA 2/47 FAIL"
+    negative_control: PASS (b=5 all-wrong scramble FLOOR for all 4 estimators)
+    verdict: SEED_EFFICIENCY_NOT_ACHIEVED
+    result: "E003 open-door test: 4 global-transform estimators (landmark-fused GW, spectral Procrustes, anchor-regularized OT, ridge-CCA) at LA's seed budget on KNOWN LB<->Cyp. All 4 verdict cells (b=5,f=0.75) FLOOR. GW/OT ~double M1's 5-seed hit rate (.070/.071 vs .039, med_p .08 vs .42) but saturate at ~60% of the required .119; the SAME estimators are strongly seed-efficient on CTRL identity (GW .419 at b=5 vs M1 .112, SURVIVES). Door NARROWED not closed: residual gap now points at channel SNR, not estimator geometry; E003's 'available .149' was itself estimator-relative. LA application stays BLOCKED."
+    layer: L2
+    licences_changed: none
+    artifacts: [epochs/EPOCH-006/result.json, reports/EPOCH006_SEED_EFFICIENT_ESTIMATORS.md, data/motifs/seed_efficient/E006_result.json]
+    successors_spawned: 6
+    substantive: true
+  - epoch_id: EPOCH-008
+    frontier: F2
+    gate: C
+    plan_hash: 67ea9ac471221ec91ebe1067d3696af725b14951d443637c4c9574fa6181e6a2
+    addendum_hash: 197a64249b944624e38a9624781acd0a12158d3b85fab338219133799862334e
+    completed: 2026-07-08
+    positive_control: PASS (5/5 synthetic stroke-graph ground truths)
+    verdict: STROKE_RECOVERY_PARTIAL
+    result: "Stroke channel is NOT source-blocked: SigLA per-document trace PNGs (CC BY-NC-SA, GORILA-derived) + on-disk bboxes yield stroke graphs. Frozen v1 pipeline INFEASIBLE (3/10; alpha-channel specks); despeckle AMENDMENT-A held-out-confirmed only PARTIAL (7/10 extraction; calibration MRR .273 vs chance .066 p=.031, beats aspect .155; font upper bound .653). Binding constraints now: bbox intrusion + components-cap mis-specified for multi-stroke signs (TI,*307,*309B). GORILA/CEFAEL plate route priced 60-120h and DOMINATED - do not pursue."
+    layer: L1
+    licences_changed: none
+    artifacts: [epochs/EPOCH-008/result.json, epochs/EPOCH-008/result_addendum1.json, reports/EPOCH008_STROKE_PILOT.md, data/stroke_pilot/]
+    substantive: true
+  - id: EPOCH-007
+    frontier: F5
+    name: ledger-role induction as anchor constraints (blind slot roles W/C/U/T from document structure)
+    substantive_gate: A/C
+    plan_hash: 6c85277da7c4e5d30abdd12bca084db4076c4f12e334225f5a5c535dfc2be566
+    prereg_frozen: 2026-07-08T04:13:24Z
+    completed: 2026-07-08
+    positive_control: PASS after synthetic-only calibration (PC1 planted-ledger macro-F1 1.00; initial prereg machinery FAILED PC1 at 0.692 -> DEV-1 +2 preceding-token features, DEV-2 k 5->12, both scored on synthetic ground truth only, logged)
+    negative_control: N1 shuffled-doc + N2 numeral-detach structure nulls (25 full-refit reps each) + N3 label-perm (1000)
+    verdicts:
+      epoch: ROLE_INDUCTION_NO_POWER
+      lb_heldout_macro_f1: 0.3413   # criterion (a) >=0.50 FAIL; recall(T)=0, recall(U)=0 -> (d) FAIL
+      lb_deriv_macro_f1: 0.4192
+    adversarial_findings:
+      - KN-derivation/non-KN-heldout crosses a real convention divide -> totals words are a Pylos habit (to-so PY 261 vs KN 57; gold T = 0.4% of KN derivation tokens) -> majority decode cannot learn T/U
+      - posthoc recall-lift decode -> units ARE structurally identifiable (heldout U recall .862) but totals are a chance-level smear (T precision .017) -> flat per-occurrence geometry misses totals-line syntax; arithmetic sum-consistency feature never included (successor)
+      - posthoc LA readout (exploratory, gate never opened) -> KN-fitted decode predicts only W/C on LA; all 35 KU-RO occ -> W; transfer would have failed anyway
+    committed_prediction: verdict computed by frozen arithmetic; LA leg not run for record (gated)
+    layer: L2/L3
+    licences_changed: none
+    artifacts: [epochs/EPOCH-007/result.json, reports/EPOCH007_LEDGER_ROLES.md, data/ledger_roles/]
+    successors_spawned: 6
+
+  - epoch_id: EPOCH-006
+    frontier: F3
+    gate: A
+    verdict: SEED_EFFICIENCY_NOT_ACHIEVED
+    result: "4 global-transform estimators (prereg 23fc9fd2, RNG replicate-paired with E003): none reaches NOMINAL at (b=5,f=0.75). GW/OT double M1's 5-seed rate (.039->.070/.071) then SATURATE at ~60% of required .119, while the SAME estimators are seed-efficient on CTRL identity (GW .419, 20/20 Holm) -> E003 open door REVISED: binding constraint = the cross-script channel's own SNR, not estimator geometry; 'available 0.149' was estimator-relative. LA stays BLOCKED."
+    substantive: true
+  - epoch_id: EPOCH-007
+    frontier: F5
+    gate: A/C
+    verdict: ROLE_INDUCTION_NO_POWER
+    result: "Blind slot-role induction (prereg 6c85277d): PC1 caught broken machinery TWICE before real data (earned its keep). LB held-out macro-F1 .341 <.50, recall(T)=0 -> NO_POWER; but W-vs-C separation genuinely structural (beats both structure nulls + label-perm floor p~.001); unit-slots identifiable post-hoc (U recall .862, F1 .588); dominant obstacle = site-convention heterogeneity (totals vocab is a Pylos habit). LA leg not run (fail-closed)."
+    substantive: true
+  - epoch_id: EPOCH-008
+    frontier: F2
+    gate: C
+    verdict: STROKE_RECOVERY_PARTIAL (SOURCE UNBLOCKED)
+    result: "SigLA DOES serve per-document raster renders of hand-traced vectors (ink in ALPHA channel; CC BY-NC-SA) -> per-instance LA stroke graphs at ~0.1s/glyph, dominating GORILA/CEFAEL plates (EFA copyright, 60-120h manual). v1 frozen pipeline INFEASIBLE (alpha+despeckle amendment -> 8/10 extraction); held-out counterpart MRR 0.273 vs chance 0.066 (p .031) vs aspect adversary 0.155 — real but weak; standardized-font ceiling 0.653. SUPERSEDES anchor-lattice WP-E 'bbox-only' SOURCE_BLOCKED (erratum filed)."
+    substantive: true

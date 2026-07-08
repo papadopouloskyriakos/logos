@@ -1,0 +1,771 @@
+{
+ "plan_hash": "23fc9fd26a77923466dc26a3d2c9d5dd84ea003442c9bf1ddfc4cfb20c8fd4df",
+ "seed": 20260708,
+ "pc0": {
+  "CTRL_LBdamos_split_half": {
+   "n": 71,
+   "exact_count_e002_path": 55,
+   "exact_count_e003_path": 55,
+   "paths_identical": true
+  },
+  "KNOWN_LBcog_vs_Cypcog": {
+   "n": 47,
+   "exact_count_e002_path": 7,
+   "exact_count_e003_path": 7,
+   "paths_identical": true
+  },
+  "gate": "PASS"
+ },
+ "pc1": {
+  "EST_GW": {
+   "exact_acc": 1.0,
+   "exact_count": 47,
+   "p": 0.000999000999000999,
+   "n_heldout": 47,
+   "pass": true
+  },
+  "EST_SPEC": {
+   "exact_acc": 0.0851063829787234,
+   "exact_count": 4,
+   "p": 0.016983016983016984,
+   "n_heldout": 47,
+   "pass": false
+  },
+  "EST_OT": {
+   "exact_acc": 1.0,
+   "exact_count": 47,
+   "p": 0.000999000999000999,
+   "n_heldout": 47,
+   "pass": true
+  },
+  "EST_CCA": {
+   "exact_acc": 0.0425531914893617,
+   "exact_count": 2,
+   "p": 0.23776223776223776,
+   "n_heldout": 47,
+   "pass": false
+  }
+ },
+ "cells": [
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 0.75,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.050551684088269454,
+   "exact_acc_median": 0.04878048780487805,
+   "acc_ci95": [
+    0.0,
+    0.09523809523809523
+   ],
+   "median_p": 0.26673326673326675,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.15,
+   "n_heldout_mean": 41.4,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 3,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.06704545454545455,
+   "exact_acc_median": 0.06818181818181818,
+   "acc_ci95": [
+    0.022727272727272728,
+    0.11363636363636363
+   ],
+   "median_p": 0.07992007992007992,
+   "survival_rate": 0.1,
+   "nominal_rate": 0.35,
+   "n_heldout_mean": 44.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.07023809523809524,
+   "exact_acc_median": 0.07142857142857142,
+   "acc_ci95": [
+    0.023809523809523808,
+    0.131547619047619
+   ],
+   "median_p": 0.08341658341658342,
+   "survival_rate": 0.05,
+   "nominal_rate": 0.35,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 7,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.07625000000000001,
+   "exact_acc_median": 0.075,
+   "acc_ci95": [
+    0.036875000000000005,
+    0.11312499999999996
+   ],
+   "median_p": 0.07392607392607392,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.35,
+   "n_heldout_mean": 40.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 10,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.08378378378378379,
+   "exact_acc_median": 0.08108108108108109,
+   "acc_ci95": [
+    0.02702702702702703,
+    0.1493243243243243
+   ],
+   "median_p": 0.08041958041958042,
+   "survival_rate": 0.15,
+   "nominal_rate": 0.35,
+   "n_heldout_mean": 37.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "CTRL",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.41893939393939383,
+   "exact_acc_median": 0.4166666666666667,
+   "acc_ci95": [
+    0.3397727272727273,
+    0.5015151515151515
+   ],
+   "median_p": 0.000999000999000999,
+   "survival_rate": 1.0,
+   "nominal_rate": 1.0,
+   "n_heldout_mean": 66.0,
+   "cell_verdict": "SURVIVES_HOLM"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 1,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.07261904761904761,
+   "exact_acc_median": 0.07142857142857142,
+   "acc_ci95": [
+    0.047619047619047616,
+    0.11904761904761904
+   ],
+   "median_p": 0.08541458541458541,
+   "survival_rate": 0.1,
+   "nominal_rate": 0.25,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_GW",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 5,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.04047619047619048,
+   "exact_acc_median": 0.03571428571428571,
+   "acc_ci95": [
+    0.0,
+    0.09523809523809523
+   ],
+   "median_p": 0.4025974025974026,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.15,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 0.75,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.025406504065040646,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.08597560975609753
+   ],
+   "median_p": 0.598901098901099,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.15,
+   "n_heldout_mean": 41.4,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 3,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.032954545454545445,
+   "exact_acc_median": 0.022727272727272728,
+   "acc_ci95": [
+    0.0,
+    0.08011363636363633
+   ],
+   "median_p": 0.5819180819180819,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.05,
+   "n_heldout_mean": 44.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.030952380952380953,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.0839285714285714
+   ],
+   "median_p": 0.5844155844155845,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.1,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 7,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.04750000000000001,
+   "exact_acc_median": 0.05,
+   "acc_ci95": [
+    0.011875000000000002,
+    0.075
+   ],
+   "median_p": 0.2082917082917083,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.05,
+   "n_heldout_mean": 40.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 10,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.04594594594594594,
+   "exact_acc_median": 0.05405405405405406,
+   "acc_ci95": [
+    0.0,
+    0.09527027027027024
+   ],
+   "median_p": 0.2142857142857143,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.15,
+   "n_heldout_mean": 37.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "CTRL",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.09621212121212121,
+   "exact_acc_median": 0.09090909090909091,
+   "acc_ci95": [
+    0.0375,
+    0.15946969696969696
+   ],
+   "median_p": 0.0014985014985014985,
+   "survival_rate": 0.6,
+   "nominal_rate": 0.9,
+   "n_heldout_mean": 66.0,
+   "cell_verdict": "SURVIVES_HOLM"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 1,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.030952380952380953,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.07142857142857142
+   ],
+   "median_p": 0.5819180819180819,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.0,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_SPEC",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 5,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.03333333333333334,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.07142857142857142
+   ],
+   "median_p": 0.5714285714285714,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.0,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 0.75,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.07119628339140535,
+   "exact_acc_median": 0.07142857142857142,
+   "acc_ci95": [
+    0.024085365853658537,
+    0.131547619047619
+   ],
+   "median_p": 0.08141858141858142,
+   "survival_rate": 0.1,
+   "nominal_rate": 0.35,
+   "n_heldout_mean": 41.4,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 3,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.0693181818181818,
+   "exact_acc_median": 0.06818181818181818,
+   "acc_ci95": [
+    0.05625,
+    0.09090909090909091
+   ],
+   "median_p": 0.07792207792207792,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.1,
+   "n_heldout_mean": 44.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.07142857142857142,
+   "exact_acc_median": 0.07142857142857142,
+   "acc_ci95": [
+    0.03511904761904762,
+    0.09523809523809523
+   ],
+   "median_p": 0.07842157842157843,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.3,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 7,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.08375,
+   "exact_acc_median": 0.075,
+   "acc_ci95": [
+    0.05,
+    0.125
+   ],
+   "median_p": 0.06393606393606394,
+   "survival_rate": 0.05,
+   "nominal_rate": 0.4,
+   "n_heldout_mean": 40.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 10,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.08243243243243244,
+   "exact_acc_median": 0.08108108108108109,
+   "acc_ci95": [
+    0.05405405405405406,
+    0.12229729729729727
+   ],
+   "median_p": 0.08091908091908093,
+   "survival_rate": 0.05,
+   "nominal_rate": 0.35,
+   "n_heldout_mean": 37.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "CTRL",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.2310606060606061,
+   "exact_acc_median": 0.24242424242424243,
+   "acc_ci95": [
+    0.19696969696969696,
+    0.25037878787878787
+   ],
+   "median_p": 0.000999000999000999,
+   "survival_rate": 1.0,
+   "nominal_rate": 1.0,
+   "n_heldout_mean": 66.0,
+   "cell_verdict": "SURVIVES_HOLM"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 1,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.08095238095238094,
+   "exact_acc_median": 0.08333333333333333,
+   "acc_ci95": [
+    0.047619047619047616,
+    0.09523809523809523
+   ],
+   "median_p": 0.04045954045954046,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.5,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "NOMINAL"
+  },
+  {
+   "estimator": "EST_OT",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 5,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.07142857142857142,
+   "exact_acc_median": 0.07142857142857142,
+   "acc_ci95": [
+    0.023809523809523808,
+    0.09523809523809523
+   ],
+   "median_p": 0.06093906093906094,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.4,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 0.75,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.022851335656213702,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.0839285714285714
+   ],
+   "median_p": 0.6523476523476524,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.1,
+   "n_heldout_mean": 41.4,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 3,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.026136363636363635,
+   "exact_acc_median": 0.022727272727272728,
+   "acc_ci95": [
+    0.0,
+    0.06818181818181818
+   ],
+   "median_p": 0.7397602397602397,
+   "survival_rate": 0.05,
+   "nominal_rate": 0.1,
+   "n_heldout_mean": 44.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.02619047619047619,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.047619047619047616
+   ],
+   "median_p": 0.6998001998001998,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.0,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 7,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.03625000000000001,
+   "exact_acc_median": 0.037500000000000006,
+   "acc_ci95": [
+    0.0,
+    0.075
+   ],
+   "median_p": 0.3246753246753247,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.1,
+   "n_heldout_mean": 40.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 10,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.02972972972972973,
+   "exact_acc_median": 0.02702702702702703,
+   "acc_ci95": [
+    0.0,
+    0.05405405405405406
+   ],
+   "median_p": 0.6203796203796204,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.05,
+   "n_heldout_mean": 37.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "CTRL",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 0,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.03636363636363636,
+   "exact_acc_median": 0.03787878787878788,
+   "acc_ci95": [
+    0.007196969696969697,
+    0.06856060606060604
+   ],
+   "median_p": 0.14535464535464537,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.3,
+   "n_heldout_mean": 66.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 1,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.015476190476190477,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.03630952380952378
+   ],
+   "median_p": 0.7377622377622377,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.0,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  },
+  {
+   "estimator": "EST_CCA",
+   "pair": "KNOWN",
+   "frac": 1.0,
+   "budget": 5,
+   "k_wrong": 5,
+   "replicates": 20,
+   "invalid": 0,
+   "exact_acc_mean": 0.02857142857142857,
+   "exact_acc_median": 0.023809523809523808,
+   "acc_ci95": [
+    0.0,
+    0.047619047619047616
+   ],
+   "median_p": 0.6738261738261738,
+   "survival_rate": 0.0,
+   "nominal_rate": 0.0,
+   "n_heldout_mean": 42.0,
+   "cell_verdict": "FLOOR"
+  }
+ ],
+ "estimator_verdicts": {
+  "EST_GW": {
+   "verdict": "SEED_EFFICIENT_NOT_ACHIEVED",
+   "anomaly_flag": false,
+   "verdict_cell": "FLOOR",
+   "verdict_cell_acc": 0.050551684088269454,
+   "verdict_cell_median_p": 0.26673326673326675,
+   "pc1_pass": true,
+   "neg": "FLOOR"
+  },
+  "EST_SPEC": {
+   "verdict": "SEED_EFFICIENT_NOT_ACHIEVED (PC1_FAIL)",
+   "anomaly_flag": false,
+   "verdict_cell": "FLOOR",
+   "verdict_cell_acc": 0.025406504065040646,
+   "verdict_cell_median_p": 0.598901098901099,
+   "pc1_pass": false,
+   "neg": "FLOOR"
+  },
+  "EST_OT": {
+   "verdict": "SEED_EFFICIENT_NOT_ACHIEVED",
+   "anomaly_flag": false,
+   "verdict_cell": "FLOOR",
+   "verdict_cell_acc": 0.07119628339140535,
+   "verdict_cell_median_p": 0.08141858141858142,
+   "pc1_pass": true,
+   "neg": "FLOOR"
+  },
+  "EST_CCA": {
+   "verdict": "SEED_EFFICIENT_NOT_ACHIEVED (PC1_FAIL)",
+   "anomaly_flag": false,
+   "verdict_cell": "FLOOR",
+   "verdict_cell_acc": 0.022851335656213702,
+   "verdict_cell_median_p": 0.6523476523476524,
+   "pc1_pass": false,
+   "neg": "FLOOR"
+  }
+ },
+ "wrong_anchor_robustness": {
+  "EST_GW": {
+   "clean_b5_f1": "FLOOR",
+   "adv1_b5_f1": "FLOOR",
+   "delta_acc": 0.0023809523809523725,
+   "flag": "UNINFORMATIVE"
+  },
+  "EST_SPEC": {
+   "clean_b5_f1": "FLOOR",
+   "adv1_b5_f1": "FLOOR",
+   "delta_acc": 0.0,
+   "flag": "UNINFORMATIVE"
+  },
+  "EST_OT": {
+   "clean_b5_f1": "FLOOR",
+   "adv1_b5_f1": "NOMINAL",
+   "delta_acc": 0.009523809523809518,
+   "flag": "UNINFORMATIVE"
+  },
+  "EST_CCA": {
+   "clean_b5_f1": "FLOOR",
+   "adv1_b5_f1": "FLOOR",
+   "delta_acc": -0.010714285714285714,
+   "flag": "UNINFORMATIVE"
+  }
+ },
+ "epoch_verdict": "SEED_EFFICIENCY_NOT_ACHIEVED",
+ "e003_m1_reference": {
+  "verdict_cell_b5_f075": {
+   "acc": 0.034,
+   "median_p": 0.599,
+   "verdict": "FLOOR"
+  },
+  "b5_f1": {
+   "acc": 0.039,
+   "median_p": 0.417,
+   "verdict": "FLOOR"
+  },
+  "required_hit_rate_holm_b5": 0.119,
+  "available_loo_rate": 0.149
+ },
+ "runtime_s": 29.7
+}
