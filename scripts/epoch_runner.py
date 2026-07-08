@@ -53,7 +53,13 @@ OVERCLAIM = re.compile(
 DISCLAIMER_HINT = re.compile(
     r"non.?circular|no phonetic|anonymous|not? (a )?(sound|value|reading)|assigned to any sign|"
     r"only a positional|positional slot|disclaim|control.?only|benchmark|"
-    r"licen[cs]e|does not|structural (result|only)|\bl4\+?\b|never a (sound|value|reading|meaning)", re.I)
+    r"licen[cs]e|does not|structural (result|only)|\bl4\+?\b|never a (sound|value|reading|meaning)|"
+    r"no meaning|no .{0,20}is assigned|assigned to|does not (generalize|constitute)|positional|no semantic", re.I)
+
+
+def _demark(s: str) -> str:
+    """Strip markdown emphasis so `does **not**` / `_meaning_` still match keyword regexes."""
+    return s.replace("*", "").replace("`", "").replace("_", "")
 
 
 def _looks_like_path_or_code(line: str) -> bool:
@@ -67,7 +73,7 @@ def _looks_like_path_or_code(line: str) -> bool:
 def _scan_overclaim(rel: str, fp: str) -> List[str]:
     """Flag over-layer claims, skipping disclaimer context (this/prev-2 lines) and path/code lines."""
     out: List[str] = []
-    lines = open(fp, encoding="utf-8", errors="replace").read().splitlines()
+    lines = [_demark(l) for l in open(fp, encoding="utf-8", errors="replace").read().splitlines()]
     for i, line in enumerate(lines):
         if not OVERCLAIM.search(line):
             continue
