@@ -1,0 +1,174 @@
+{
+  "task_id": "EPOCH-024",
+  "method": "Within-word uniform-permutation null (E023 reused) for A-initial count, applied across support and context administrative partitions; Holm correction; leave-one-out; LB positive control.",
+  "result": "A_PREFIX_MULTIAXIS_ROBUST",
+  "verdict": "A_PREFIX_MULTIAXIS_ROBUST",
+  "numbers": {
+    "global": {
+      "A_initial": 155,
+      "A_total": 171,
+      "frac": 0.113221,
+      "n_words_ge2": 1369,
+      "null_mean": 55.567,
+      "p": 0.001
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "pc_sign": "AU",
+      "pc_sign_occ": 44,
+      "pc_sign_initial": 44,
+      "pc_sign_skew": 1.0,
+      "pc_partitions_significant": 5,
+      "pc_fold_ps": [
+        0.001,
+        0.001,
+        0.002,
+        0.001,
+        0.001
+      ],
+      "rand_sign": "RO2",
+      "rand_sign_occ": 49,
+      "rand_partitions_significant": 0,
+      "rand_fold_ps": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "split": "seeded balanced 5-way (seed=7); no per-tablet metadata in load_b_damos"
+    },
+    "support_axis": {
+      "n_partitions_ge20": 6,
+      "partitions_significant_raw": 5,
+      "partitions_significant_holm": 5,
+      "loo_excluded": "Tablet",
+      "loo_p": 0.001,
+      "loo_n": 525,
+      "loo_A_initial": 73,
+      "per_partition": {
+        "Clay vessel": {
+          "n": 58,
+          "A_initial": 14,
+          "null_mean": 5.44,
+          "p": 0.000999000999000999,
+          "p_holm": 0.005994005994005994
+        },
+        "Metal object": {
+          "n": 30,
+          "A_initial": 6,
+          "null_mean": 1.42,
+          "p": 0.000999000999000999,
+          "p_holm": 0.005994005994005994
+        },
+        "Nodule": {
+          "n": 35,
+          "A_initial": 0,
+          "null_mean": 0.0,
+          "p": 1.0,
+          "p_holm": 1.0
+        },
+        "Roundel": {
+          "n": 69,
+          "A_initial": 5,
+          "null_mean": 1.207,
+          "p": 0.000999000999000999,
+          "p_holm": 0.005994005994005994
+        },
+        "Stone vessel": {
+          "n": 259,
+          "A_initial": 39,
+          "null_mean": 11.166,
+          "p": 0.000999000999000999,
+          "p_holm": 0.005994005994005994
+        },
+        "Tablet": {
+          "n": 844,
+          "A_initial": 82,
+          "null_mean": 32.128,
+          "p": 0.000999000999000999,
+          "p_holm": 0.005994005994005994
+        }
+      }
+    },
+    "context_axis": {
+      "n_partitions_ge20": 4,
+      "partitions_significant_raw": 4,
+      "partitions_significant_holm": 4,
+      "loo_excluded": "LMIB",
+      "loo_p": 0.001,
+      "loo_n": 536,
+      "loo_A_initial": 84,
+      "per_partition": {
+        "": {
+          "n": 443,
+          "A_initial": 65,
+          "null_mean": 23.942,
+          "p": 0.000999000999000999,
+          "p_holm": 0.003996003996003996
+        },
+        "LMI": {
+          "n": 29,
+          "A_initial": 6,
+          "null_mean": 1.843,
+          "p": 0.001998001998001998,
+          "p_holm": 0.003996003996003996
+        },
+        "LMIA": {
+          "n": 31,
+          "A_initial": 8,
+          "null_mean": 2.458,
+          "p": 0.000999000999000999,
+          "p_holm": 0.003996003996003996
+        },
+        "LMIB": {
+          "n": 833,
+          "A_initial": 71,
+          "null_mean": 25.491,
+          "p": 0.000999000999000999,
+          "p_holm": 0.003996003996003996
+        }
+      }
+    },
+    "comparators": {
+      "KU": 1,
+      "I": 3,
+      "JA": 1,
+      "DA": 2,
+      "SA": 1
+    },
+    "comparator_median": 1,
+    "verdict_inputs": {
+      "pc_passed": true,
+      "sup_sig_raw": 5,
+      "loo_ok": true,
+      "ctx_sig_raw": 4,
+      "sup_sig_minus_comp_median": 4,
+      "comp_ok": true
+    }
+  },
+  "key_findings": [
+    "Global A-initial: 155/1369 (frac=0.113221), p=0.001 vs within-word permutation null.",
+    "Positive control PASSED: LB 'AU' (skew=1.0) significant in 5/5 folds; freq-matched 'RO2' in 0/5.",
+    "SUPPORT axis: A- significant (raw p<=0.05) in 5/6 partitions (Holm: 5); leave-one-out (drop Tablet) p=0.0010.",
+    "CONTEXT axis: A- significant in 4/4 partitions (Holm: 4); leave-one-out (drop LMIB) p=0.0010.",
+    "Adversarial: A- clears 5 support partitions vs comparator median 1 (comparators {'KU': 1, 'I': 3, 'JA': 1, 'DA': 2, 'SA': 1}).",
+    "Nodule partition: 0 A-initial / 35 words (the only non-significant support partition) \u2014 A- is absent on nodules, not just non-initial."
+  ],
+  "successor_hypotheses": [
+    "E025: Test whether A- prefixation is conditioned by word-LENGTH (2 vs 3+ signs) \u2014 is the slot stronger in short words?",
+    "E026: Test A- prefixation against a GRAPHIC/position null (does A prefer slot-1 because it is a common opener sign, independent of morphology?)",
+    "E027: Investigate the Nodule exception \u2014 is A- genuinely absent on nodules, or are nodule word-lists too short/structured differently?",
+    "E028: Test whether the A- slot co-occurs with specific second-position signs (bigram structure) without assigning phonetic values.",
+    "E029: Cross-check A- prefixation against the SITE axis (E023) jointly with SUPPORT \u2014 is the effect additive or interactive?",
+    "E030: Power-analysis: how many >=2-sign words per partition are needed to reliably detect the A- effect at the observed frac?"
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Sign names are anonymous labels; no phonetic value, sound, meaning, language, or reading assigned to ANY sign. Only positional/structural statistics (word-initial incidence under a within-word permutation null) are computed. LB is used solely as a positive-control benchmark to certify the machinery can detect a known positional-prefix analogue; it is not Linear A and no cross-script phonetic inference is drawn.",
+  "deviations": [
+    "Brief's global sanity target '~155/177' uses a denominator (177) that does not match the corpus's 1369 >=2-sign words; operator measured 155/1369 (frac 0.113) and reports the measured value. The 155 numerator matches.",
+    "LB load_b_damos exposes no per-tablet metadata, so the PC uses a seeded balanced 5-way split (stated in prereg) rather than a metadata partition.",
+    "Nodule partition has 0 A-initial occurrences (not merely non-significant) \u2014 reported as a finding, not a deviation."
+  ]
+}

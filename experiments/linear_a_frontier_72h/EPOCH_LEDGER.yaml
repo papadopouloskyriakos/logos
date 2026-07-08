@@ -529,3 +529,30 @@ epochs:
     artifacts: [epochs/EPOCH-023/prereg.md, epochs/EPOCH-023/plan_hash.txt, epochs/EPOCH-023/machinery.py, epochs/EPOCH-023/result.json, reports/EPOCH023_APREFIX_CROSS_SITE.md]
     successors_spawned: 7
     substantive: true
+
+  - epoch_id: EPOCH-024
+    frontier: F4
+    gate: A
+    name: "A- prefixation multi-axis held-out robustness (support-type + chronological-phase partitions, orthogonal to E023's site axis)"
+    plan_hash: 9906cac0dacb9b679ee0f5689ace7870b862752204ab8f0ea324976d8fb6ca72
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py, THROUGH the new scripts/epoch_runner.py gated runner"
+    gated_runner: "run_epoch(): mechanical completion gate + auto-repair. repairs=1 (worker's first pass tripped the gate; harness fed the failure back, GLM fixed it, re-gate PASSED — no orchestrator file-hunting). Gate green on: completeness, plan_hash integrity (MATCH), result schema, verdict-vocab, disclaimer-aware overclaim scan, reproducibility smoke (machinery.py re-ran rc=0), and the orchestrator numeric repro_check (support significant-count auto-matched)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed EVERY conjunct with different code + seeds (2000 draws): global 155/1369 MATCH; support 5/6 significant with Nodule=0 A-initial MATCH; support leave-one-out (drop Tablet) p .0005 MATCH; comparators KU1/I3/JA1/DA2/SA1 median=1, A- clears 5 (+4) MATCH; context 4/4 MATCH; PC AU 44/44 initial significant 5/5 folds + freq-matched MU (init .45) 0/5 MATCH. All verified."
+    positive_control: "PASSED (verified): LB AU (44/44 word-initial) significant 5/5 seeded folds; frequency-matched MU 0/5. Seeded balanced 5-way split (load_b_damos exposes no per-tablet metadata; disclosed)."
+    verdict: "A_PREFIX_MULTIAXIS_ROBUST (all 5 frozen conjuncts TRUE, orchestrator-verified): PC passed AND A- significant in >=2 SUPPORT partitions (5/6) AND survives support leave-one-out AND significant in >=2 CONTEXT partitions (4/4) AND clears >=2 more support partitions than the comparator median (5 vs 1)."
+    numbers: {global_A_initial: 155, n_words_ge2: 1369, global_frac: 0.113, global_p: 0.001, support_partitions: 6, support_sig_raw: 5, support_sig_holm: 5, support_nodule_A_initial: 0, support_loo_drop: Tablet, support_loo_p: 0.001, context_partitions: 4, context_sig_raw: 4, context_loo_p: 0.001, comparators: {KU: 1, I: 3, JA: 1, DA: 2, SA: 1}, comparator_median: 1, pc_prefix: "AU 5/5 folds", pc_random: "MU 0/5", null_draws: 1000}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "STRUCTURAL only. A- is a corpus-wide productive positional prefix SLOT, robust across 5/6 support types AND all 4 chronological phases (temporal held-out) — orthogonal to E023's site axis. Notable structural finding: A- is ABSENT on Nodules (0/35), a document-class (sealing) boundary. Does NOT license any phonetic value, sound, meaning, language, or reading (L4+). Together E022(global)+E023(site)+E024(support+phase) make A- prefixation the campaign's strongest, most-generalised genuinely-held-out LA positive."
+    committed_prediction: "modal MULTIAXIS_ROBUST or AXIS_DEPENDENT; OUTCOME = MULTIAXIS_ROBUST, orchestrator-verified."
+    deviations:
+      - "Brief's '~155/177' global sanity used A's total-occurrence denominator (171-177), not the 1369 >=2-sign-word denominator; operator/orchestrator report the measured 155/1369 (numerator 155 matches). GLM flagged this in its own prereg BEFORE running (honest)."
+      - "LB PC uses a seeded balanced 5-way split (load_b_damos has no per-tablet metadata), as pre-declared."
+      - "Nodule 0 A-initial reported as a structural FINDING, not a deviation."
+    non_circular: "LB control-only; anonymous sign ids; no phonetic value; no known-value model input on the LA side."
+    architecture_note: "FIRST epoch run through the epoch_runner gated harness (built this session to solve the GLM-worker completeness gap). Coordinator/worker split held: GLM proposed/operated; the harness enforced the contract mechanically (incl. 1 auto-repair); Claude designed the prereg, judged scientific soundness (PC fairness, null validity), and independently verified — the division the harness is built to preserve."
+    artifacts: [epochs/EPOCH-024/prereg.md, epochs/EPOCH-024/plan_hash.txt, epochs/EPOCH-024/machinery.py, epochs/EPOCH-024/result.json, epochs/EPOCH-024/run_analysis.py, reports/EPOCH024_REPORT.md]
+    successors_spawned: 6
+    substantive: true
