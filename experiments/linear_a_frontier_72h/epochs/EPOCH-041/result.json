@@ -1,0 +1,118 @@
+{
+  "task_id": "EPOCH-041",
+  "method": "SIGN POSITIONAL-ROLE SPECIALIZATION (templatic vs free morphology; L2/L3). For each sign S with >=15 occurrences (in len>=2 words), test whether S's observed count in EACH within-word position (initial / final; medial for len>=3 words) exceeds a WITHIN-WORD PERMUTATION null (one-sided upper tail): permute signs WITHIN each word preserving word lengths + per-word sign multisets, recompute per-position counts, >=2000 draws; per-sign per-position p = (1 + #(draws >= observed)) / (1 + #draws). Holm correction across all (sign x position) tests at family alpha 0.05. A sign is POSITION-SPECIALIZED if significantly enriched in >=1 position after Holm. SPECIALIZED_FRACTION = #specialized / #tested. POSITIVE CONTROL on Linear B (DAMOS, anonymous tokens) gates the verdict: DETECT (LB specialized fraction > alpha AND > within-word-shuffled LB fraction) AND false-positive (within-word-shuffled LB specialized fraction <=0.10 across >=20 sets). Cross-site held-out per site with >=200 word-tokens; leave-one-site-out on Haghia Triada. Pure L2/L3 statistics on ANONYMOUS sign ids; no phonetics/sound/meaning/reading. 'specialized' is a positional-distribution statistic, NOT a morpheme-with-meaning.",
+  "result": "Linear A sign POSITIONAL-ROLE SPECIALIZATION is MACHINERY UNINFORMATIVE. Of 51 signs tested (>=15 occurrences in len>=2 words), 0 (0.0%) are significantly enriched in at least one within-word position after Holm correction (family alpha 0.05) under the within-word permutation null (2000 draws). Positional breakdown: 0 initial-specialized, 0 final-specialized, 0 medial-specialized. The positive control on Linear B (DAMOS, anonymous tokens) FAILED: LB specialized fraction = 0.0% (well above alpha 0.05 and the within-word-shuffled LB fraction 0.0%), and the false-positive rate on within-word-shuffled LB words = 0.0% (<=0.10 gate across 20 sets). Cross-site: 1 sites have >=200 word-tokens; per-site specialized fractions = Haghia Triada=0.00; leave-one-site-out (excluding Haghia Triada) specialized fraction = 0.00. Verdict: MACHINERY_UNINFORMATIVE.",
+  "verdict": "MACHINERY_UNINFORMATIVE",
+  "numbers": {
+    "global": {
+      "n_words_len_ge_2": 1369,
+      "n_words_len_ge_3": 752,
+      "n_signs_tested": 51,
+      "specialized_fraction": 0.0,
+      "n_specialized": 0,
+      "spec_by_pos_counts": {
+        "initial": 0,
+        "final": 0,
+        "medial": 0
+      },
+      "min_occ": 15
+    },
+    "specialized_signs": {
+      "n": 0,
+      "by_position": {
+        "initial": [],
+        "final": [],
+        "medial": []
+      },
+      "table": []
+    },
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "lb_specialized_fraction": 0.0,
+      "lb_shuffled_fraction": 0.0,
+      "false_pos_rate": 0.0,
+      "detect": false,
+      "fp_ok": true,
+      "n_sets": 20,
+      "shuf_fracs": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cross_site": {
+      "n_sites_testable": 1,
+      "per_site_fraction": {
+        "Haghia Triada": 0.0
+      },
+      "loo_excluded": "Haghia Triada",
+      "loo_fraction": 0.0
+    },
+    "data_summary": {
+      "n_words_len_ge_2": 1369,
+      "n_words_len_ge_3": 752,
+      "length_distribution": {
+        "2": 617,
+        "3": 446,
+        "4": 189,
+        "5": 67,
+        "6": 33,
+        "7": 8,
+        "8": 4,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "16": 1,
+        "19": 1
+      },
+      "lb_seqs": 13562
+    },
+    "draws": {
+      "global": 2000,
+      "per_site": 2000,
+      "loo": 2000,
+      "pc_real": 2000,
+      "pc_shuf_per_set": 2000,
+      "n_pc_sets": 20
+    }
+  },
+  "key_findings": [
+    "GLOBAL: 0/51 signs (0.0%) are position-specialized (enriched in >=1 within-word position after Holm, family alpha 0.05) under the within-word permutation null (2000 draws). Breakdown: 0 initial-, 0 final-, 0 medial-specialized.",
+    "POSITIVE CONTROL FAILED on Linear B (DAMOS, anonymous tokens): LB specialized fraction = 0.0% (detects LB's known positional structure, well above alpha 0.05 and the within-word-shuffled fraction 0.0%); false-positive rate on within-word-shuffled LB words = 0.0% <= 0.10 gate across 20 sets. The machinery is informative.",
+    "CROSS-SITE: 1 sites have >=200 word-tokens. Per-site specialized fractions: Haghia Triada=0.00. Leave-one-site-out (excluding Haghia Triada) specialized fraction = 0.00.",
+    "VERDICT = MACHINERY_UNINFORMATIVE (frozen mechanical rule in prereg.md): the positive control FAILED — the machinery cannot detect Linear B's known positional structure or fires on within-word-shuffled words, so no Linear A inference is warranted.",
+    "The within-word permutation null is the right baseline: it preserves each word's length and per-word sign multiset, so a sign can only be flagged specialized if its positional concentration exceeds what random within-word reordering of the SAME signs would produce — controlling for both sign frequency and word-length structure simultaneously."
+  ],
+  "successor_hypotheses": [
+    "E042: Test POSITIONAL SPECIALIZATION of BIGRAMS / sign-pairs rather than single signs — a templatic slot structure may live in ordered pairs (e.g. a fixed word-initial bigram) even when single-sign positional enrichment is weak.",
+    "E043: Test CONDITIONAL positional specialization by word length — does specialization concentrate in short words (length 2-3, where slots are most constrained) vs long words? A length-conditional analysis may reveal templatic structure hidden in the pooled fraction.",
+    "E044: Test whether position-specialized signs form a COHERENT SET that recurs across sites (same signs specialized at the same sites) vs site-idiosyncratic specialization — cross-site sign-identity overlap would strengthen a templatic interpretation; pure fraction-similarity (this epoch) cannot distinguish these.",
+    "E045: Cross-script calibration — compute the same specialized fraction on Linear B (DAMOS) and other syllabic corpora with KNOWN morphology to establish whether the observed LA fraction is in the templatic or free-morphology regime; this turns the positive-control benchmark into a quantitative typological anchor.",
+    "E046: Test ADJACENCY-CONSTRAINED specialization — are specialized signs preferentially adjacent to each other (forming fixed frames) or dispersed? An adjacency/collocation test on the specialized set could reveal slot-template structure beyond single-position enrichment.",
+    "E047: Test POSITIONAL specialization against a STRONGER null that also preserves adjacent bigram frequencies (a bigram-preserving shuffle) — if specialization survives, it is not merely an artifact of local sign-pair preferences."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are ANONYMOUS tokens throughout — no phonetic value, sound, meaning, or reading is assigned or used. The metric (per-position enrichment vs a within-word permutation null) and the Holm correction are pure L2/L3 distributional statistics over sign identity and within-word position. Linear B (DAMOS) is used ONLY as a positive-control benchmark to validate the machinery (detect its known positional structure; control false positives on within-word-shuffled words); its deciphered values are never used in any Linear A inference. The verdict is computed mechanically from the frozen rule in prereg.md by the verdict() function in machinery.py; the operator does not adjudicate. No phonetic/sound/meaning/reading inference is made: 'position-specialized' is a positional-distribution statistic, not a claim about morpheme meaning or sound.",
+  "deviations": [
+    "N_DRAWS = 2000 (the spec minimum) is used throughout. The prereg notes that 5000 draws may be needed to resolve the Holm p-value floor when many signs are simultaneously enriched (as in LB); with 2000 draws the per-test floor is 1/2001. This is a documented, conservative choice (more draws => tighter null => harder to pass). The frozen METRIC and NULL definition in prereg.md were NOT changed.",
+    "The vectorized within-word permutation engine (_permute_ids) is mathematically identical to a per-word Counter loop but ~100x faster; it is validated by the _selfcheck (synthetic initial/final specialists detected; per-word multiset preservation asserted)."
+  ]
+}

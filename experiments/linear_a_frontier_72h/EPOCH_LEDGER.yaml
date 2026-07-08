@@ -956,3 +956,29 @@ epochs:
     artifacts: [epochs/EPOCH-040/prereg.md, epochs/EPOCH-040/plan_hash.txt, epochs/EPOCH-040/machinery.py, epochs/EPOCH-040/result.json, reports/EPOCH040_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-041
+    frontier: F12
+    gate: A
+    name: "Sign positional-role specialization (templatic vs free morphology) — UNDERPOWERED"
+    plan_hash: "see epochs/EPOCH-041/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2, gate passed=false."
+    orchestrator_verification: "Claude diagnosed the 0.0 specialized_fraction as a DRAW-COUNT/multiple-testing artifact, NOT a logic bug: with 2000 draws the p-floor is 1/2001~5.0e-4, and Holm across ~102 tests (51 signs x 2 positions) needs the top test <= 0.05/102~4.9e-4 (AT the floor), so ALL signs fail Holm on BOTH LA and LB. Confirmed the machinery gives 0 on LB (which HAS known positional structure per E038) => PC correctly FAILED. The 0.0 CONTRADICTS the verified E039 result (>=6 Holm-significant initial signs), confirming it is an artifact, not the real fraction."
+    positive_control: "FAILED (correctly given the underpowered draw count): LB specialized_fraction=0.0 == shuffled-LB 0.0 (detect=False). The machinery could not detect LB's known positional structure at 2000 draws under Holm-102 => fail-closed."
+    verdict: "MACHINERY_UNINFORMATIVE (UNDERPOWERED): the Holm-corrected per-sign positional test over the full inventory cannot resolve at 2000 draws (p-floor collides with the Holm threshold). No LA claim. SUPERSEDED BY E042 (same question, >=20000 draws)."
+    numbers: {n_signs_tested: 51, specialized_fraction: 0.0, note: "0.0 is a draw-count artifact (Holm floor collision), NOT the real fraction; E039 already shows >=6 Holm-sig initial signs exist", n_words_ge2: 1369, n_words_ge3: 752, pc_lb_fraction: 0.0, pc_failed: true, draws: 2000, holm_tests: 102, p_floor: 0.0005, holm_threshold_top: 0.00049}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "Fail-closed UNDERPOWERED result (no LA claim) + a methodological finding: a Holm-corrected per-sign positional-specialization test over the full ~51-sign inventory (102 tests) needs >>2000 permutation draws to resolve the p-floor/Holm collision. The PC-first gate correctly refused to report an artifactual specialized_fraction=0.0 (which would have FALSELY implied 'no positional structure', contradicting the verified E039 prefix inventory). Carried into E042 (>=20000 draws). Anonymous signs; no phonetics/meaning/language-ID."
+    committed_prediction: "modal HIGH/LOW specialization; OUTCOME = MACHINERY_UNINFORMATIVE (underpowered). Real fraction deferred to E042."
+    deviations:
+      - "GLM used 2000 draws (spec minimum) despite flagging in its own prereg that ~5000+ may be needed to resolve the Holm floor; this produced the underpowered PC failure. Honest, disclosed. E042 uses >=20000 draws."
+      - "GLM omitted the STEP-8 report; ORCHESTRATOR completed reports/EPOCH041_REPORT.md (Art. XVII record-completion)."
+      - "Orchestrator repro_check flagged a 0.0-vs-0.431 'mismatch' but that compared GLM's HOLM fraction to a raw-p<=0.01 recompute (incomparable; Holm is far stricter) — a repro_check design limitation, not a GLM error. Noted; E042 repro_check will compare like-for-like."
+    non_circular: "Signs anonymous; positional statistics; LB control-only; no phonetics/meaning/language-ID; no known-value model input on the LA side."
+    architecture_note: "Eighteenth gated-runner epoch; gate passed=false (missing report + repro_check limitation). Coordinator diagnosed the underpowered-Holm root cause, distinguished artifact from real signal (via E039 cross-check), completed the record, and queued the powered re-test (E042). Mirrors the E030->E031 uninformative-then-corrected pattern."
+    artifacts: [epochs/EPOCH-041/prereg.md, epochs/EPOCH-041/plan_hash.txt, epochs/EPOCH-041/machinery.py, epochs/EPOCH-041/result.json, reports/EPOCH041_REPORT.md]
+    successors_spawned: 5
+    substantive: true
