@@ -1033,3 +1033,28 @@ epochs:
     artifacts: [epochs/EPOCH-043/prereg.md, epochs/EPOCH-043/plan_hash.txt, epochs/EPOCH-043/machinery.py, epochs/EPOCH-043/result.json, reports/EPOCH043_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-044
+    frontier: F14
+    gate: A
+    name: "Numeral-group cardinality / compound-quantity structure (numeral-run lengths)"
+    plan_hash: "see epochs/EPOCH-044/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: n_runs=1276, run-length hist={1:1276} EXACT (p_compound=0.0, ALL runs length 1); 8/8 sites p_compound=0.0. CONFIRMED the num tokens carry a single integer value 'v' (197,70,52,...) with NO fraction sub-structure => silver collapses each numeral notation to one integer token."
+    positive_control: "PASSED (verified): synthetic-clustering DETECT (p=0) and synthetic-spreading deficit DETECT (p=0), false-positive rate 0.05 on token-order-shuffled streams. NOTE: LB PC could not use a real LB stream (DAMOS exposes no stream-level num tokens); a synthetic LA-multiset PC was used (disclosed)."
+    verdict: "SINGLE_NUMERAL_DOMINANT (token-level): every numeral-run is length 1 (1276/1276), significantly BELOW the ~18% chance rate for compound runs (null_p=0, deficit), cross-site-consistent (8/8 sites). BUT SEE SCOPE — this is a tokenization artifact, not a decipherment-level finding."
+    numbers: {n_runs: 1276, p_compound: 0.0, null_mean: 0.181, null_p: 0.0, direction: deficit, run_length_hist: {"1": 1276}, sites_all_p_compound_zero: 8, num_token_form: "single integer value 'v', no fraction sub-token"}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "TOKENIZATION ARTIFACT / SOURCE_BLOCKED at the silver token level. p_compound=0.0 exactly means the SILVER CORPUS represents each numeral notation as ONE integer 'num' token (value in field 'v'); it does NOT tokenize compound integer+FRACTION quantities separately. Linear A IS KNOWN to have a compound fraction system, so this result reflects the CORPUS REPRESENTATION, NOT the script: the compound-quantity question is SOURCE_BLOCKED here and would need a fraction-aware corpus (GORILA/primary editions with fraction signs) to test. NET: no LA-script claim; a corpus-representation finding + a documented data limitation for the exhaustion map. Anonymous; no numeral-value arithmetic beyond counting tokens; no phonetics/meaning."
+    committed_prediction: "modal COMPOUND_STRUCTURE / SINGLE_DOMINANT; OUTCOME = SINGLE_NUMERAL_DOMINANT but SOURCE_BLOCKED (tokenization collapses fractions). The real compound-quantity question is untestable on silver."
+    deviations:
+      - "LB positive control not buildable on a real LB stream (DAMOS lacks stream num tokens); synthetic LA-multiset PC used (disclosed). PC still validates the run-length machinery, but not against a real second-script numeral stream."
+      - "CRITICAL SCOPE: p_compound=0.0 is a silver-tokenization artifact (each numeral notation = one integer token, no fraction sub-tokens), NOT evidence about the LA script. Recorded as SOURCE_BLOCKED for the compound/fraction question."
+    non_circular: "Token counts only; no numeral-value arithmetic; anonymous; LB synthetic-PC control-only; no known-value model input on the LA side."
+    architecture_note: "Twenty-first gated-runner epoch (repairs=0). Coordinator caught that a clean-looking cross-site verdict (SINGLE_NUMERAL_DOMINANT, 8/8 sites) is a TOKENIZATION ARTIFACT and reframed it as SOURCE_BLOCKED for the real (fraction/compound) question — preventing a spurious 'LA used only simple quantities' over-read. Data-limitation datum for the §12 exhaustion map."
+    artifacts: [epochs/EPOCH-044/prereg.md, epochs/EPOCH-044/plan_hash.txt, epochs/EPOCH-044/machinery.py, epochs/EPOCH-044/result.json, reports/EPOCH044_REPORT.md]
+    successors_spawned: 5
+    substantive: true

@@ -1,0 +1,296 @@
+{
+  "Haghia Triada": {
+    "n_runs": 834,
+    "n_num": 834,
+    "hist": {
+      "1": 834
+    }
+  },
+  "Iouktas": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Kardamoutsa": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Kamilari": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Kannia": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Kea": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Khania": {
+    "n_runs": 121,
+    "n_num": 121,
+    "hist": {
+      "1": 121
+    }
+  },
+  "Knossos": {
+    "n_runs": 14,
+    "n_num": 14,
+    "hist": {
+      "1": 14
+    }
+  },
+  "Kophinas": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Kythera": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Larani": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Malia": {
+    "n_runs": 30,
+    "n_num": 30,
+    "hist": {
+      "1": 30
+    }
+  },
+  "Margiana": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Milos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Miletos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Mokhilos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Mycenae": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Nerokurou": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Papourou": {
+    "n_runs": 1,
+    "n_num": 1,
+    "hist": {
+      "1": 1
+    }
+  },
+  "Petras": {
+    "n_runs": 11,
+    "n_num": 11,
+    "hist": {
+      "1": 11
+    }
+  },
+  "Phaistos": {
+    "n_runs": 37,
+    "n_num": 37,
+    "hist": {
+      "1": 37
+    }
+  },
+  "Palaikastro": {
+    "n_runs": 20,
+    "n_num": 20,
+    "hist": {
+      "1": 20
+    }
+  },
+  "Platanos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Poros Herakleiou": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Prassa": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Psykhro": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Pyrgos": {
+    "n_runs": 1,
+    "n_num": 1,
+    "hist": {
+      "1": 1
+    }
+  },
+  "Samothrace": {
+    "n_runs": 1,
+    "n_num": 1,
+    "hist": {
+      "1": 1
+    }
+  },
+  "Selakanos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Sitia": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Skhinia": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Skoteino Cave": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Syme": {
+    "n_runs": 1,
+    "n_num": 1,
+    "hist": {
+      "1": 1
+    }
+  },
+  "Tel Haror": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Thera": {
+    "n_runs": 10,
+    "n_num": 10,
+    "hist": {
+      "1": 10
+    }
+  },
+  "Tiryns": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Troullos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Traostalos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Troy": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Trypiti": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Tylissos": {
+    "n_runs": 31,
+    "n_num": 31,
+    "hist": {
+      "1": 31
+    }
+  },
+  "Vrysinas": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Zakros": {
+    "n_runs": 126,
+    "n_num": 126,
+    "hist": {
+      "1": 126
+    }
+  },
+  "?": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Apodoulou": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Arkhalkhori": {
+    "n_runs": 33,
+    "n_num": 33,
+    "hist": {
+      "1": 33
+    }
+  },
+  "Crete": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Fourni": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Gournia": {
+    "n_runs": 4,
+    "n_num": 4,
+    "hist": {
+      "1": 4
+    }
+  },
+  "Haghios Stehanos": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  },
+  "Zominthos": {
+    "n_runs": 1,
+    "n_num": 1,
+    "hist": {
+      "1": 1
+    }
+  },
+  "Kalo Chorafi": {
+    "n_runs": 0,
+    "n_num": 0,
+    "hist": {}
+  }
+}
