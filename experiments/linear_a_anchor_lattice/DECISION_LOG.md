@@ -12,3 +12,13 @@
   exposed (no Face-B group, Face-C group, 4-sign Face-beta sequence, numeral grammar, or fraction identity is
   public) — the seal remains SEALED and scoreable. Provenance chain: frontier-72h EPOCH-005
   (reports/EPOCH005_KNZG57A_PROVENANCE.md). Supersedes the exposure claim only; no verdict changes.
+
+- **SUPERSEDING NOTE (Art. XVII, 2026-07-08, filed from frontier-72h EPOCH-008).** WP-E's factual premise
+  "SigLA carries ONLY axis-aligned bboxes — no strokes, vectors, contours, images" is FALSE: SigLA serves
+  per-document raster renders of its hand-traced vector drawings (sigla.phis.me/document/<D>/<D>.png, ink in
+  the ALPHA channel, CC BY-NC-SA 4.0). Combined with the on-disk bboxes these yield per-instance stroke
+  graphs (frontier E008: 8/10 extraction after alpha+despeckle; held-out counterpart MRR 0.273 vs chance
+  0.066). WP-E's SOURCE_BLOCKED verdict for TRUE-STROKE evidence is SUPERSEDED to PARTIALLY_UNBLOCKED; the
+  bbox-aspect no-power finding stands. The stroke channel's LA value remains UNPROVEN (weak signal; full-corpus
+  sweep pending on the frontier branch). No campaign verdict changes (the E-channel contributed nothing to the
+  UNDERDETERMINED verdict either way).
