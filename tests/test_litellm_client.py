@@ -113,10 +113,12 @@ def test_no_key_no_auth_header(monkeypatch):
 
 def test_backend_dispatch(monkeypatch):
     monkeypatch.delenv("LOGOS_LLM_BACKEND", raising=False)
-    assert llm_backend.active_backend() == "ollama"
-    monkeypatch.setenv("LOGOS_LLM_BACKEND", "litellm")
-    assert llm_backend.active_backend() == "litellm"
+    assert llm_backend.active_backend() == "litellm"  # DEFAULT is the z.ai proxy (AMENDMENT-004)
+    monkeypatch.setenv("LOGOS_LLM_BACKEND", "ollama")
+    assert llm_backend.active_backend() == "ollama"  # explicit local fallback
     monkeypatch.setenv("LOGOS_LLM_BACKEND", "zai")
+    assert llm_backend.active_backend() == "litellm"
+    monkeypatch.setenv("LOGOS_LLM_BACKEND", "litellm")
     assert llm_backend.active_backend() == "litellm"
     seen = {}
     monkeypatch.setattr(llm_backend.litellm_client, "generate",

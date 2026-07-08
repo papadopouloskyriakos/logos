@@ -819,11 +819,12 @@ Current defaults (v2.3, AMENDMENT-004):
 
 ```text
 LLM access:
-  Provider-agnostic through the approved LiteLLM proxy (nllei01litellm01:4000),
-  selectable at runtime via $LOGOS_LLM_BACKEND. The proxy holds all vendor keys;
-  logos holds only a scoped LiteLLM virtual key via env / an untracked secret file
-  (runtime/secrets/litellm.env, gitignored). Backends wired: z.ai/GLM, local Ollama,
-  Mistral/Codestral/Devstral. Claude Code (`claude -p`) remains for the agentic layer.
+  Provider-agnostic through the approved LiteLLM proxy (nllei01litellm01:4000).
+  $LOGOS_LLM_BACKEND DEFAULTS to litellm (z.ai/GLM) per the owner directive
+  ("everything must be using z.ai"); ollama is the explicit local fallback.
+  The proxy holds all vendor keys; logos holds only a scoped LiteLLM virtual key
+  via env / an untracked secret file (runtime/secrets/litellm.env, gitignored).
+  Backends wired: z.ai/GLM (default), local Ollama, Mistral/Codestral/Devstral.
 
 Prohibited:
   Setting ANTHROPIC_API_KEY in-process; committing any raw vendor key to the repo.
