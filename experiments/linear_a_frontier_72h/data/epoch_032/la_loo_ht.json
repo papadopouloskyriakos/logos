@@ -1,0 +1,16 @@
+{
+  "loo_excluded": "Haghia Triada",
+  "loo_n_shared": 93,
+  "loo_p_greater": 1.0,
+  "loo_multiplicity": {
+    "1": 43,
+    "2": 47,
+    "3": 21,
+    "4": 8,
+    "5": 7,
+    "6": 5,
+    "7": 2,
+    "8": 2,
+    "9": 1
+  }
+}

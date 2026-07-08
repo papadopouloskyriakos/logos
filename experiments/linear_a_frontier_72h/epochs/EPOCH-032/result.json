@@ -1,0 +1,82 @@
+{
+  "task_id": "EPOCH-032",
+  "method": "Cross-site recurrent administrative word-forms (L2/L3). Metric: n_shared = # word-forms (total count>=2) appearing in >=2 distinct sites. Null: site-label shuffle (permute site labels across inscriptions, preserving each site's inscription count and each inscription's word-form multiset), 2000 draws, one-sided p for 'more cross-site sharing than chance'. Positive control: Linear B (DĀMOS) seeded into 8 pseudo-sites via contiguous blocks of original sequence order (declared deviation: contiguous blocks, not round-robin, to preserve real within-site form clustering). False-positive control: 30 i.i.d. controls (tokens drawn i.i.d. by marginal form-frequency, partitioned into pseudo-sites of real site sizes).",
+  "result": "MACHINERY_UNINFORMATIVE per the frozen mechanical rule: the PC DETECT criterion (LB must show n_shared significantly ABOVE the site-shuffle null, p<=0.05) was NOT met. Both LB and LA show n_shared significantly BELOW the site-label-shuffle null (p_greater=1.0 for both; p_less~0.0005 for both). The site-label-shuffle null structurally OVER-predicts cross-site sharing when one site dominates (Haghia Triada = 845/1341 inscriptions): shuffling scatters the dominant site's concentrated forms across smaller sites, inflating null n_shared above the observed value. The machinery itself is well-calibrated (i.i.d. false-positive rate = 0.0 across 30 controls) and detects a strong, consistent, opposite-direction signal in both corpora, but the frozen DETECT criterion assumed the wrong direction for this null, so the PC gate fails by construction and the verdict is mechanically MACHINERY_UNINFORMATIVE. NOTE: this is a null-structure/direction mismatch, not a calibration failure — the i.i.d. control confirms the test does not fire spuriously.",
+  "verdict": "MACHINERY_UNINFORMATIVE",
+  "numbers": {
+    "global": {
+      "n_word_tokens": 3147,
+      "n_distinct_forms": 1165,
+      "n_shared_ge2_sites": 148,
+      "null_mean": 202.806,
+      "null_p": 1.0,
+      "null_p_less_than_supplementary": 0.0004995,
+      "multiplicity": {"1": 132, "2": 86, "3": 23, "4": 15, "5": 11, "6": 3, "7": 5, "8": 2, "9": 2, "10": 1}
+    },
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "lb_detect_p": 1.0,
+      "lb_n_shared": 1136,
+      "lb_null_mean": 1551.1815,
+      "lb_p_less_than_supplementary": 0.0004995,
+      "false_pos_rate": 0.0,
+      "n_fp_controls": 30,
+      "detect_ok": false,
+      "fp_ok": true
+    },
+    "held_out": {
+      "loo_excluded": "Haghia Triada",
+      "loo_n_shared": 93,
+      "loo_p": 1.0,
+      "loo_multiplicity": {"1": 43, "2": 47, "3": 21, "4": 8, "5": 7, "6": 5, "7": 2, "8": 2, "9": 1},
+      "n_forms_ge3_sites": 62
+    },
+    "top_cross_site_forms": [
+      ["A", 10, 25],
+      ["TE", 9, 58],
+      ["JA", 9, 11],
+      ["VIN", 8, 53],
+      ["KI", 8, 19],
+      ["SI", 7, 118],
+      ["NI", 7, 76],
+      ["I", 7, 39],
+      ["TA", 7, 29],
+      ["OLE", 7, 22],
+      ["KA", 6, 169],
+      ["NA", 6, 13],
+      ["TI", 6, 12],
+      ["KU", 5, 170],
+      ["GRA", 5, 62]
+    ],
+    "site_distribution_top": {
+      "Haghia Triada": 845, "Khania": 159, "Knossos": 51, "Phaistos": 48,
+      "Zakros": 46, "Palaikastro": 25, "Malia": 21, "Thera": 17,
+      "Iouktas": 16, "Arkhalkhori": 14, "Syme": 12, "Petras": 11
+    },
+    "n_sites_total": 52
+  },
+  "key_findings": [
+    "FROZEN MECHANICAL VERDICT = MACHINERY_UNINFORMATIVE: the positive-control DETECT gate failed because LB (like LA) shows n_shared significantly BELOW the site-label-shuffle null (p_greater=1.0), not above it as the frozen DETECT criterion assumed. The verdict follows mechanically from the frozen rule; the operator does not adjudicate.",
+    "The site-label-shuffle null structurally OVER-predicts cross-site sharing under site-size dominance: Haghia Triada holds 845 of 1341 inscriptions (63%), so shuffling its concentrated word-forms across the many small sites inflates null n_shared (LA: null mean 202.8 vs observed 148; LB: null mean 1551.2 vs observed 1136). Both corpora are affected identically.",
+    "The machinery IS calibrated: across 30 i.i.d. false-positive controls (tokens drawn i.i.d. by marginal form-frequency, partitioned into pseudo-sites of real site sizes) the false-positive rate is exactly 0.0 — the test never fires spuriously when there is no identity<->site association. The failure is a null-structure/direction mismatch, not a calibration defect.",
+    "Supplementary direction diagnostic (NOT used for the frozen verdict): the 'less sharing than chance' one-sided p is ~0.0005 for BOTH LA and LB, i.e. word-forms in both corpora are significantly MORE site-localized than the site-label-shuffle null predicts. This is a strong, consistent, opposite-direction signal.",
+    "Leave-one-site-out (Haghia Triada removed): n_shared drops to 93, p_greater=1.0 (still below null). 62 word-forms still span >=3 sites among the non-HT sites, so a non-trivial shared core exists in raw counts — but it is still below what the shuffle null predicts.",
+    "The most cross-site word-forms are dominated by single-sign tokens (A spans 10 sites; TE 9; JA 9; VIN 8; KI 8) and high-frequency commodity/logogram signs (SI 7 sites/118 count; KU 5 sites/170 count; GRA 5 sites/62 count). These are ANONYMOUS sign sequences; no phonetic/meaning claim is made. A KU-RO-type total form is NOT among the top cross-site forms."
+  ],
+  "successor_hypotheses": [
+    "H1 (NULL RE-SPECIFICATION): Re-formulate the null to test the ACTUAL operative direction — 'significantly LESS cross-site sharing than chance' (site-localization) — which both LA and LB satisfy at p~0.0005. This would re-enable the PC DETECT gate and allow a SHARED/SITE_LOCAL verdict on the site-localization hypothesis.",
+    "H2 (SITE-BALANCED NULL): Use a site-balanced resampling null that draws an EQUAL number of inscriptions per site (subsampling HT to match smaller sites) before shuffling, removing the dominance-driven inflation of null n_shared. Re-test whether specific forms then recur across sites more than this balanced null predicts.",
+    "H3 (FORM-FREQUENCY-STRATIFIED NULL): Stratify the shuffle by form-frequency class (rare vs common forms shuffled separately), since single-sign high-frequency tokens (KU, KA, SI) dominate the cross-site counts and may behave differently from multi-sign word-forms. Test whether MULTI-SIGN forms (length>=2) show cross-site sharing above a frequency-matched null.",
+    "H4 (EXCLUDE SINGLE-SIGN FORMS): Restrict the metric to multi-sign word-forms (length>=2), which are more likely to be genuine lexical/administrative items rather than commodity markers or logograms. Re-test cross-site recurrence on this restricted vocabulary.",
+    "H5 (PAIRWISE SITE-SITE SHARING): Instead of an aggregate n_shared, compute a pairwise site-site sharing matrix (Jaccard over word-form sets) and test whether specific site pairs (e.g. HT-Khania, Khania-Knossos) share more forms than a pairwise null predicts — this localizes where any shared register concentrates.",
+    "H6 (LB NATIVE PROVENANCE): If DĀMOS tablet provenance metadata can be recovered, rebuild the LB PC with REAL LB sites (Pylos, Knossos, Mycenae, Thebes) instead of a seeded pseudo-partition, giving a properly grounded positive control for cross-site administrative vocabulary."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Word tokens carry NO phonetic/sound/meaning/reading. All statistics are pure L2/L3 distributional recurrence of ANONYMOUS sign sequences (tuples of signs). LB is used ONLY as a positive-control benchmark, never to read Linear A forms. The verdict is computed mechanically from the frozen rule in prereg.md; the operator never declares a scientific verdict. The supplementary 'less-than' p-value is reported for honesty about signal direction but is NOT used for the frozen verdict.",
+  "deviations": [
+    "LB positive-control pseudo-partition uses SEEDED CONTIGUOUS BLOCKS of the original DĀMOS sequence order (chunked into tablet-sized pseudo-inscriptions), NOT round-robin. Declared in prereg.md before the LA verdict: round-robin artificially spreads every frequent form across all pseudo-sites and washes out the signal; contiguous blocks preserve real within-site form clustering. This is a PC partition-design choice only; it does not touch the LA metric, null, or verdict rule.",
+    "A supplementary 'less-than-chance' one-sided p-value (p_less) is reported in numbers for both LA and LB to honestly characterize the signal direction. It is NOT used for the frozen mechanical verdict (which tests only 'more sharing than chance')."
+  ],
+  "plan_hash": "75eba8fd3fc24964c7f3658e4b8f9effaf7a3312ab9c8f2a75336a90218f6f19"
+}

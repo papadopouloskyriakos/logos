@@ -734,3 +734,28 @@ epochs:
     artifacts: [epochs/EPOCH-031/prereg.md, epochs/EPOCH-031/plan_hash.txt, epochs/EPOCH-031/machinery.py, epochs/EPOCH-031/result.json, reports/EPOCH031_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-032
+    frontier: F9
+    gate: A
+    name: "Cross-site recurrent administrative word-forms (shared admin vocabulary?), site-label-shuffle null"
+    plan_hash: "see epochs/EPOCH-032/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: forms in >=2 sites=148 EXACT, in >=3 sites=62 EXACT; site-label-shuffle null mean=202.4 (GLM 202.8), observed 148 is BELOW null; 'less-than-chance' p~0.005 (GLM 0.0005). Direction + PC-fail logic confirmed."
+    positive_control: "FAILED (correctly, fail-closed): the frozen null tests 'MORE cross-site sharing than chance', but shuffling site labels BREAKS within-site/within-scribe form clustering, INFLATING the null. Both LA (obs 148 < null 202) AND LB (obs 1136 < null 1551) show observed BELOW null, so the null cannot detect 'above-chance' sharing (detect_ok=False) -> PC FAILED. (The false-positive leg passed, fp=0.0; it is the detect leg that fails because the test direction is inapplicable.)"
+    verdict: "MACHINERY_UNINFORMATIVE — the 'more-than-chance' site-shuffle null is inapplicable (real data is site-concentrated, so observed is below the inflated null on both LA and LB). No certified sharing claim."
+    numbers: {n_word_tokens: 3147, n_distinct_forms: 1165, n_shared_ge2_sites: 148, null_mean: 202.8, null_p_more: 1.0, p_less_than_chance: 0.0005, n_forms_ge3_sites: 62, loo_excluded: "Haghia Triada", loo_n_shared: 93, multiplicity_top: {2: 86, 3: 23, 4: 15, 5: 11, "10": 1}, top_forms: [["A", 10], ["TE", 9], ["JA", 9], ["VIN", 8], ["KI", 8], ["SI", 7]], pc_lb_obs: 1136, pc_lb_null: 1551}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "Fail-closed on the frozen 'more-sharing-than-chance' null (inapplicable), with a substantive REVERSED by-product: Linear A word-forms are SITE-CONCENTRATED, not a shared cross-site administrative lexicon — observed cross-site sharing (148 forms in >=2 sites) is significantly BELOW the site-shuffle null (forms cluster within sites/scribes). The widest-spread forms (A 10 sites, TE 9, SI, KI, VIN=commodity logogram) are short high-frequency tokens that spread by frequency, not a shared word lexicon. Reinforces the campaign theme: most Linear A structure is SITE-LOCAL (cf. RO terminals, bigrams); only A- prefixation, doc-class length (E028), and ledger word->numeral order (E031) GENERALIZE cross-site. STRUCTURAL L2/L3; anonymous forms; no phonetics/meaning."
+    committed_prediction: "modal SHARED_CROSS_SITE or SITE_LOCAL; OUTCOME = MACHINERY_UNINFORMATIVE (null inapplicable) with an underlying SITE_LOCAL/CONCENTRATED signal (obs<null, p_less 0.0005). A null is not an early stop."
+    deviations:
+      - "LB PC pseudo-partition uses seeded CONTIGUOUS blocks of DAMOS order (not round-robin), declared pre-verdict — round-robin would wash out within-site clustering. PC-design only; does not touch LA metric/null/verdict."
+      - "A supplementary 'less-than-chance' one-sided p is reported (honest direction characterization) but is NOT the frozen verdict statistic."
+    non_circular: "Word-forms are anonymous sign sequences; site labels observed; LB control-only; no phonetics; no known-value model input on the LA side."
+    architecture_note: "Ninth gated-runner epoch; fourth MACHINERY_UNINFORMATIVE. Coordinator verified the null-inapplicability (observed<null on BOTH scripts) and extracted the reversed substantive finding (site-concentration). Pattern noted: shuffle-based nulls on subtle distributional questions keep hitting exchangeability issues; E031's pair-flip (calibrated by construction) was the clean success. FUTURE epochs should favour construction-calibrated nulls or well-powered group comparisons."
+    artifacts: [epochs/EPOCH-032/prereg.md, epochs/EPOCH-032/plan_hash.txt, epochs/EPOCH-032/machinery.py, epochs/EPOCH-032/result.json, reports/EPOCH032_REPORT.md]
+    successors_spawned: 5
+    substantive: true
