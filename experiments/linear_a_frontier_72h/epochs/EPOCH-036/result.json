@@ -1,0 +1,82 @@
+{
+  "task_id": "EPOCH-036",
+  "method": "Cross-site sign-frequency concordance: mean pairwise Spearman rank correlation of per-site sign-frequency vectors over the union sign inventory; within-site sign-label shuffle null (full permutation over the union inventory per site, >=1000 draws, one-sided p). LB positive control (seeded pseudo-site partition) gates the verdict. Leave-one-site-out + per-site mean correlation for outlier structure.",
+  "result": "SIGN_FREQ_CONCORDANCE_CROSS_SITE",
+  "verdict": "SIGN_FREQ_CONCORDANCE_CROSS_SITE",
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are ANONYMOUS ids (the corpus sign tokens as written). No phonetics, no sound, no meaning, no reading, no cognacy is assigned or used. All statistics are L2/L3 distributional sign-usage only (frequency-rank concordance). LB is a positive-control benchmark ONLY and never enters the LA verdict except to gate the machinery. The verdict is a mechanical consequence of the frozen rule + the PC gate; the operator never adjudicates.",
+  "numbers": {
+    "global": {
+      "n_sites": 8,
+      "union_inventory": 234,
+      "mean_spearman": 0.6045348061289101,
+      "null_mean": -0.00032101421721609624,
+      "null_p": 0.0
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "lb_detect_p": 0.0,
+      "lb_detect_mean_spearman": 0.9783915227885265,
+      "lb_detect_null_mean": 0.0007229143290290309,
+      "false_pos_rate": 0.1,
+      "n_fp_sets": 20,
+      "n_lb_pseudo_sites": 5,
+      "lb_pseudo_site_partition": "SEEDED shuffle of DĀMOS wordforms into 5 chunks of 1200 wordforms each (DĀMOS has no site metadata)"
+    },
+    "per_site_mean_corr": {
+      "Arkhalkhori": 0.6522567620937928,
+      "Haghia Triada": 0.5623597613199561,
+      "Iouktas": 0.5582054423422238,
+      "Khania": 0.5178973709348693,
+      "Knossos": 0.6744521151149302,
+      "Palaikastro": 0.6622613789211595,
+      "Phaistos": 0.5652292287523865,
+      "Zakros": 0.6436163895519621
+    },
+    "outlier": {
+      "site": null,
+      "mean_corr": 0.5178973709348693,
+      "gap_to_next": 0.040308071407354484,
+      "note": "Lowest per-site mean correlation is Khania (0.518); it is NOT >2 SD below the across-site mean (0.593) and the gap to the next site (0.040) is well under 1 SD of the per-site values (~0.054). No site qualifies as a low outlier."
+    },
+    "leave_one_out": {
+      "Arkhalkhori": 0.5886274874739491,
+      "Haghia Triada": 0.6185931543985613,
+      "Iouktas": 0.6199779273911389,
+      "Khania": 0.6334139519635903,
+      "Knossos": 0.5812290364669034,
+      "Palaikastro": 0.5852926151981603,
+      "Phaistos": 0.6176366652542278,
+      "Zakros": 0.5915076116545593,
+      "note": "Every leave-one-out concordance (0.581-0.634) remains far above the null mean (~0.00, null std ~0.012). Concordance is NOT driven by a single pair; it survives removal of any one site."
+    },
+    "per_site_totals": {
+      "Haghia Triada": 3054,
+      "Khania": 555,
+      "Zakros": 485,
+      "Knossos": 256,
+      "Palaikastro": 228,
+      "Phaistos": 222,
+      "Iouktas": 148,
+      "Arkhalkhori": 130
+    }
+  },
+  "key_findings": [
+    "The 8 qualifying Linear A sites (>=100 sign tokens) share a strong common sign-FREQUENCY fingerprint: mean pairwise Spearman rank correlation of per-site sign-frequency vectors = 0.605 over a 234-sign union inventory, vs a within-site sign-label-shuffle null centred at ~0.00 (std ~0.012); one-sided p = 0.0 (1000 draws).",
+    "This is the symmetric counterpart to E032: WORD-FORMS are site-local, but the SIGN-INVENTORY usage profile is shared across sites — the signs that are frequent at one site are frequent everywhere. This is a writing-system-level (syllabary-usage) regularity, not a word-form regularity.",
+    "The effect is NOT driven by a single pair or a single site: every leave-one-site-out concordance stays in 0.581-0.634, far above the null, so the fingerprint is supported by all 8 sites jointly.",
+    "No site is a low outlier: per-site mean correlation to the others ranges 0.518 (Khania) to 0.674 (Knossos); the lowest (Khania) is within 2 SD of the across-site mean and shows no clear gap to the next site. There is no dialect-like divergent site in this (anonymous, frequency-only) view.",
+    "Positive control PASSED: LB (one shared script) seeded into 5 pseudo-sites gives concordance 0.978 (detect p = 0.0), and independent random-permutation pseudo-sites (no shared fingerprint) are rejected at rate 0.10 (<=0.10 across 20 sets), so the machinery is informative.",
+    "Haghia Triada dominates the token count (3054 of ~5078), yet removing it leaves concordance at 0.619 — the fingerprint is not an artefact of HT's sample size."
+  ],
+  "successor_hypotheses": [
+    "H1 (L2/L3): The shared fingerprint is dominated by a small RANK-STABLE core of high-frequency signs — test whether the top-k (e.g. k=10) signs alone reproduce the concordance, and whether low-frequency signs are noisier across sites.",
+    "H2 (L2/L3): Decompose concordance by sign RANK BAND (head vs mid vs tail of the frequency distribution) to see whether the shared fingerprint is a Zipf-shape artefact (common signs common everywhere) vs sign-IDENTITY-specific alignment.",
+    "H3 (L2/L3): Test whether the small/underpowered sites (Syme, Tylissos, Malia, 69-88 tokens) JOIN the fingerprint when pooled or when a lower token threshold is used — is the fingerprint a Crete-wide or a high-documentation-site phenomenon?",
+    "H4 (L2/L3): Cross-check the sign-frequency fingerprint against the E032 site-local WORD-FORM result: do sites share sign USAGE but diverge in sign COMBINATION (bigram/word-form) statistics? This would localise the divergence to combinatorics, not inventory.",
+    "H5 (L2/L3, outlier hunt): With more tokens per small site, re-test for a divergent site; Khania is the lowest-correlating site here and is the natural candidate to monitor for dialect-like divergence as data grows.",
+    "H6 (L2/L3): Compare the LA sign-frequency fingerprint shape (rank-frequency curve) to LB's, anonymously, to ask whether the two scripts share a usage-shape regularity beyond the shared inventory already known from the anchor work."
+  ],
+  "deviations": []
+}

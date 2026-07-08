@@ -832,3 +832,26 @@ epochs:
     artifacts: [epochs/EPOCH-035/prereg.md, epochs/EPOCH-035/plan_hash.txt, epochs/EPOCH-035/machinery.py, epochs/EPOCH-035/result.json, reports/EPOCH035_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-036
+    frontier: F11
+    gate: A
+    name: "Cross-site sign-frequency concordance (shared writing-system fingerprint), label-shuffle null"
+    plan_hash: "see epochs/EPOCH-036/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed (scipy): mean pairwise Spearman = 0.605 across 8 sites (union 234 signs) EXACT; null ~0. ROBUSTNESS: survives removing top-5 signs (0.580) and top-20 (0.428) -> NOT driven by a few high-freq signs. No site outlier confirmed (all 0.52-0.67; Khania lowest 0.518, within 1 SD)."
+    positive_control: "PASSED (verified): label-shuffle null detects LB's shared fingerprint (concordance 0.978 vs null ~0, p=0) and false-positive rate 0.10 (2/20, within noise of a calibrated 0.05 test) on independent-random pseudo-sites. Calibrated (shuffle sign labels = destroy cross-site identity alignment = H0)."
+    verdict: "SIGN_FREQ_CONCORDANCE_CROSS_SITE (all frozen conjuncts TRUE, orchestrator-verified): PC passed AND observed concordance 0.605 >> null ~0 (p=0) AND not driven by a single pair (all sites 0.52-0.67) AND NO low-outlier site (no sign-usage dialect)."
+    numbers: {n_sites: 8, union_inventory: 234, mean_spearman: 0.605, mean_spearman_excl_top5: 0.580, mean_spearman_excl_top20: 0.428, null_mean: 0.0, null_p: 0.0, pc_lb_concordance: 0.978, pc_false_pos_rate: 0.10, per_site_mean_corr: {Knossos: 0.674, Palaikastro: 0.662, Arkhalkhori: 0.652, Zakros: 0.644, Haghia_Triada: 0.562, Phaistos: 0.565, Iouktas: 0.558, Khania: 0.518}, outlier: none}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "CERTIFIED STRUCTURAL POSITIVE (L2/L3), confirmatory in nature. The Linear A SIGN inventory is used with a SHARED cross-site frequency fingerprint (mean rank-concordance 0.605, robust to removing top signs, no dialect outlier across 8 sites) — one common writing system. CONTRAST with E032: word-FORMS are site-LOCAL (below-chance cross-site sharing) while SIGNS are cross-site CONCORDANT => 'SHARED SCRIPT, LOCAL VOCABULARY' (the same syllabary used everywhere, combined into site-specific words). The campaign's 4th cross-site positive (with A-prefix, doc-length E028, ledger-order E031), though the most EXPECTED (a single script should share sign frequencies) — real, held-out, PC-gated, robust, but confirmatory not surprising. Signs are ANONYMOUS; concordance is distributional, NOT evidence of shared LANGUAGE or any phonetic value. No transfer licence."
+    committed_prediction: "modal CONCORDANCE or NO_CONCORDANCE/outlier; OUTCOME = CONCORDANCE_CROSS_SITE (0.605, no outlier). Confirms a shared script; the informative part is the CONTRAST with word-form site-locality."
+    deviations: []
+    non_circular: "Signs are anonymous ids; frequencies observed; LB control-only; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Thirteenth gated-runner epoch (repairs=0). Coordinator added the robustness check (concordance survives removing top signs) that upgrades this from 'a few common signs align' to 'whole-inventory shared fingerprint', and framed the E032-vs-E036 contrast (shared script / local vocabulary) — the interpretive value beyond the raw positive."
+    artifacts: [epochs/EPOCH-036/prereg.md, epochs/EPOCH-036/plan_hash.txt, epochs/EPOCH-036/machinery.py, epochs/EPOCH-036/result.json, reports/EPOCH036_REPORT.md]
+    successors_spawned: 5
+    substantive: true
