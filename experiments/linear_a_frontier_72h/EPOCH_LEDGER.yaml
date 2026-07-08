@@ -607,3 +607,26 @@ epochs:
     artifacts: [epochs/EPOCH-026/prereg.md, epochs/EPOCH-026/plan_hash.txt, epochs/EPOCH-026/machinery.py, epochs/EPOCH-026/result.json, reports/EPOCH026_REPORT.md]
     successors_spawned: 7
     substantive: true
+
+  - epoch_id: EPOCH-027
+    frontier: F5
+    gate: A
+    name: "Initial-vs-final cross-site generalization asymmetry (synthesis of E023 A- + E026 RO); inventory-wide"
+    plan_hash: "see epochs/EPOCH-027/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude AUDITED machinery.py PC logic (PASS iff mean_final_sig>=mean_init_sig; MACHINERY_UNINFORMATIVE otherwise — sound) AND independently recomputed LB direction (subsampled, 120 draws): mean_init 1.13 > mean_final 0.98 => init>final, reproducing GLM (1.57>1.25). PC-fail is GENUINE, not a null-construction bug. LA near-even split (14/16/12) reproduced in spirit."
+    positive_control: "FAILED (BY DESIGN, correctly): the method must detect LB's KNOWN grammatical word-FINAL dominance (require mean_final_sig>=mean_init_sig). It reports the OPPOSITE (init 1.57 > final 1.25). ROOT CAUSE (orchestrator-diagnosed): the metric counts DISTINCT signs clearing significance per position; an open syllabary admits MANY word-initial signs but concentrates final structure in FEW strong endings, so distinct-significant-count is inherently initial-favoring. The PC caught this bias and fired -> fail-closed."
+    verdict: "MACHINERY_UNINFORMATIVE — the PC failed, so NO Linear A asymmetry claim is authorized. The method is disqualified for this question."
+    numbers: {signs_tested: 42, n_sites: 10, la_mean_init: 0.714, la_mean_final: 0.619, la_diff: 0.095, la_labelswap_p: 0.836, la_wilcoxon_p: 0.599, la_n_init_gt_final: 14, la_n_final_gt_init: 16, la_n_tie: 12, pc_lb_mean_init: 1.565, pc_lb_mean_final: 1.246, pc_direction: "init>final", pc_verdict: FAILED, null_draws: 1000}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "NO-POWER / fail-closed result with a SUBSTANTIVE by-product: (1) the fail-closed PC gate WORKED — it disqualified an initial-biased metric before it could manufacture a positive; (2) EVEN IF trusted, the LA data show NO systematic inventory-wide init-vs-final asymmetry (mean_init 0.71 ~ mean_final 0.62; label-swap p .84; Wilcoxon p .60; near-even 14/16/12). => the striking A-(generalises)/RO(site-local) contrast (E023 vs E026) is a PAIR-SPECIFIC fact, NOT a general Linear-A positional law. Corrects any temptation to over-generalise from two signs. No phonetic/semantic content."
+    committed_prediction: "modal INITIAL_GENERALIZES_MORE_LA or NO_ASYMMETRY; OUTCOME = MACHINERY_UNINFORMATIVE (PC fail) with an underlying NO_ASYMMETRY signal. A null is not an early stop (mission rule)."
+    deviations: []
+    non_circular: "LB control-only (its known finals were the PC target); anonymous sign ids; no phonetic value; no known-value model input on the LA side."
+    architecture_note: "Fourth gated-runner epoch; first MACHINERY_UNINFORMATIVE — demonstrates the PC-first fail-closed discipline killing a would-be over-claim at the tool level. GLM built a legitimately hard PC and it fired against GLM's own method; coordinator verified the fail is genuine (logic audit + independent recompute) rather than rubber-stamping."
+    artifacts: [epochs/EPOCH-027/prereg.md, epochs/EPOCH-027/plan_hash.txt, epochs/EPOCH-027/machinery.py, epochs/EPOCH-027/result.json, reports/EPOCH027_REPORT.md]
+    successors_spawned: 5
+    substantive: true

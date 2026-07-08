@@ -1,0 +1,320 @@
+{
+  "task_id": "EPOCH-027",
+  "method": "Per-sign, per-site (LA) / per-fold (LB PC) within-word uniform-permutation null for INITIAL and FINAL slots (p<=0.05, 1000 draws); LA asymmetry = label-swap permutation null on D=mean(init)-mean(final), 5000 draws, two-sided, with Wilcoxon signed-rank cross-check. LB PC = seeded balanced 5-way partition (seed=7) of D\u0100MOS >=2-sign wordforms; PC PASSED iff mean(final_sig_parts)>=mean(init_sig_parts).",
+  "result": "MACHINERY_UNINFORMATIVE",
+  "verdict": "MACHINERY_UNINFORMATIVE",
+  "numbers": {
+    "signs_tested": [
+      "*301",
+      "A",
+      "DA",
+      "DE",
+      "DI",
+      "DU",
+      "I",
+      "JA",
+      "JU",
+      "KA",
+      "KI",
+      "KU",
+      "MA",
+      "ME",
+      "MI",
+      "NA",
+      "NE",
+      "NI",
+      "NU",
+      "PA",
+      "PA\u2083",
+      "PI",
+      "QA",
+      "QE",
+      "RA",
+      "RA\u2082",
+      "RE",
+      "RI",
+      "RO",
+      "RU",
+      "SA",
+      "SE",
+      "SI",
+      "SU",
+      "TA",
+      "TE",
+      "TI",
+      "TU",
+      "U",
+      "VS",
+      "WA",
+      "ZA"
+    ],
+    "n_sites": 10,
+    "sites": [
+      "Arkhalkhori",
+      "Haghia Triada",
+      "Iouktas",
+      "Khania",
+      "Knossos",
+      "Palaikastro",
+      "Phaistos",
+      "Syme",
+      "Tylissos",
+      "Zakros"
+    ],
+    "per_sign": {
+      "*301": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 31
+      },
+      "A": {
+        "init_sig_sites": 9,
+        "final_sig_sites": 0,
+        "occ": 177
+      },
+      "DA": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 129
+      },
+      "DE": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 33
+      },
+      "DI": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 93
+      },
+      "DU": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 74
+      },
+      "I": {
+        "init_sig_sites": 3,
+        "final_sig_sites": 0,
+        "occ": 153
+      },
+      "JA": {
+        "init_sig_sites": 3,
+        "final_sig_sites": 3,
+        "occ": 158
+      },
+      "JU": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 30
+      },
+      "KA": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 115
+      },
+      "KI": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 110
+      },
+      "KU": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 137
+      },
+      "MA": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 108
+      },
+      "ME": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 2,
+        "occ": 40
+      },
+      "MI": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 90
+      },
+      "NA": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 2,
+        "occ": 145
+      },
+      "NE": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 2,
+        "occ": 50
+      },
+      "NI": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 59
+      },
+      "NU": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 57
+      },
+      "PA": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 86
+      },
+      "PA\u2083": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 40
+      },
+      "PI": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 54
+      },
+      "QA": {
+        "init_sig_sites": 2,
+        "final_sig_sites": 1,
+        "occ": 43
+      },
+      "QE": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 38
+      },
+      "RA": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 107
+      },
+      "RA\u2082": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 49
+      },
+      "RE": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 2,
+        "occ": 109
+      },
+      "RI": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 76
+      },
+      "RO": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 92
+      },
+      "RU": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 85
+      },
+      "SA": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 134
+      },
+      "SE": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 60
+      },
+      "SI": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 122
+      },
+      "SU": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 47
+      },
+      "TA": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 136
+      },
+      "TE": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 98
+      },
+      "TI": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 2,
+        "occ": 99
+      },
+      "TU": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 0,
+        "occ": 62
+      },
+      "U": {
+        "init_sig_sites": 3,
+        "final_sig_sites": 0,
+        "occ": 64
+      },
+      "VS": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 1,
+        "occ": 34
+      },
+      "WA": {
+        "init_sig_sites": 1,
+        "final_sig_sites": 0,
+        "occ": 42
+      },
+      "ZA": {
+        "init_sig_sites": 0,
+        "final_sig_sites": 2,
+        "occ": 36
+      }
+    },
+    "la_asymmetry": {
+      "mean_init": 0.7143,
+      "mean_final": 0.619,
+      "diff": 0.0952,
+      "labelswap_p": 0.83563,
+      "wilcoxon_p": 0.59866,
+      "n_init_gt_final": 14,
+      "n_final_gt_init": 16,
+      "n_tie": 12
+    },
+    "positive_control": {
+      "pc_verdict": "FAILED",
+      "lb_mean_init": 1.5652,
+      "lb_mean_final": 1.2464,
+      "lb_direction": "init>final",
+      "lb_diff_final_minus_init": -0.3188,
+      "n_lb_signs": 69,
+      "split": "seeded balanced 5-way (seed=7); contiguous fold assignment after seeded shuffle",
+      "stability_across_base_seeds": "init>final stable for base_seed in {0,11,99} and partition seeds {7,42,123}"
+    }
+  },
+  "key_findings": [
+    "PC FAILED (frozen gate): on LB the machinery reports mean_init=1.565 >= mean_final=1.246 (direction init>final), stably across base seeds {0,11,99} and partition seeds {7,42,123}. LB is known to be word-FINAL dominated, so per the frozen rule the method is judged to manufacture initial-dominance -> MACHINERY_UNINFORMATIVE.",
+    "Mechanism of PC failure (honest): the within-word permutation null flags ANY positional concentration; LB has many highly position-specialized word-INITIAL syllabograms (e.g. A, DA, DI, KA, KU, ME clear all 5 folds at init, final=0) that clear the null in more folds than final-specialized signs. The null is not specific to grammatical-ending structure.",
+    "Because the PC gate fired, NO LA claim is made. The LA numbers are reported for transparency only and are NOT a valid inference under this protocol.",
+    "For-the-record LA numbers (NOT a claim): mean_init=0.714 vs mean_final=0.619, label-swap p=0.836, Wilcoxon p=0.599, 14 signs init>final vs 16 final>init vs 12 tie -> even setting the PC aside, there is NO detectable positional asymmetry in LA.",
+    "Power was adequate: 42 qualifying signs (>=30 occ) and 10 qualifying sites (>=20 words) -> not underpowered; the verdict is driven by the PC, not by power."
+  ],
+  "successor_hypotheses": [
+    "H027a: Redesign the PC to test the SPECIFIC structural claim (grammatical endings) rather than whole-inventory positional concentration -- e.g. restrict the LB PC to known inflectional-ending signs, or use a positional-concentration ratio that is symmetric by construction, then re-run the LA asymmetry test.",
+    "H027b: Replace the within-word permutation null with a position-frequency-matched null (match each sign's marginal position profile) so that initial-vs-final comparison is not biased by inventory-wide position specialization.",
+    "H027c: Test the LA init-vs-final asymmetry with a DIFFERENT, PC-passing statistic (e.g. entropy of the site-distribution of each sign's positional preference) before claiming any LA positional generalization asymmetry.",
+    "H027d: Characterize LB's strong word-INITIAL specialization directly (which signs, which folds) as a standalone L2 finding -- it is a real structural property of Mycenaean wordforms that this machinery surfaced, independent of the LA question.",
+    "H027e: Re-examine E023 (A-initial generalizes 9/10) and E026 (RO-final at 1/10) under the corrected null; the apparent init-generalizes / final-local contrast may be an artifact of the same initial-bias the PC exposed, and should be re-tested before synthesis.",
+    "H027f: Build a position-symmetric control corpus (e.g. shuffle LA word-internal positions only, preserving first AND last slots) to establish a null under which init and final are exchangeable by construction."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Sign names reported as opaque tokens; NO phonetic / sound / meaning / language / reading inference drawn. LB used as positive-control benchmark ONLY (no reading transferred to LA). Verdict is mechanical from the frozen PC gate; the operator did not adjudicate. The PC fired honestly and the LA claim was suppressed accordingly.",
+  "deviations": [
+    "Self-check assertion in machinery.py __main__ had an arithmetic error in the expected FINAL-null mean (third toy word [B,A] has P(last==A)=1/2, not 0); corrected before any data run. The prereg/plan_hash were frozen against prereg.md only (machinery.py is not part of the hash), so this fix does not alter the freeze.",
+    "Label-swap null used 5000 draws (>=2000 required by protocol).",
+    "PC stability was checked across 3 base seeds and 3 partition seeds (all init>final) to confirm the PC failure is not a seed artifact; this check is diagnostic only and does not change the frozen verdict."
+  ]
+}
