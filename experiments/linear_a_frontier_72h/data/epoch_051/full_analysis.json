@@ -1,0 +1,49 @@
+{
+ "positive_control": {
+  "pc_verdict": "PASSED",
+  "detect_p": 1.74818925270512e-20,
+  "detect_ok": true,
+  "false_pos_rate": 0.08,
+  "false_pos_ok": true,
+  "n_splits": 25
+ },
+ "analysis": {
+  "global": {
+   "n_a_headed": 61,
+   "n_non_a_headed": 404,
+   "density_a_headed": 0.19883250906059174,
+   "density_non": 0.3073501809896003,
+   "mw_p": 0.00012999794645840283,
+   "direction": "A_headed_lower_density"
+  },
+  "confound_control": {
+   "within_tablet_p": 0.07611894693924447,
+   "within_tablet_direction": "A_headed_lower_density",
+   "within_tablet_n_ah": 36,
+   "within_tablet_n_nah": 273,
+   "within_HT_p": 0.2987964949747697,
+   "within_HT_direction": "A_headed_lower_density",
+   "within_HT_n_ah": 18,
+   "within_HT_n_nah": 179
+  },
+  "cross_site": {
+   "n_sites_testable": 1,
+   "n_sites_sig": 0,
+   "direction_consistent": true,
+   "loo_p": 0.0010297261593356648,
+   "per_site": [
+    {
+     "site": "Haghia Triada",
+     "n_ah": 18,
+     "n_nah": 179,
+     "mean_ah": 0.32998610353682817,
+     "mean_nah": 0.3657993929516804,
+     "p": 0.2987964949747697,
+     "direction": "A_headed_lower_density",
+     "sig": false
+    }
+   ]
+  }
+ },
+ "verdict": "A_HEADING_FUNCTION_SITE_LOCAL"
+}

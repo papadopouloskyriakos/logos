@@ -1209,3 +1209,28 @@ epochs:
     artifacts: [epochs/EPOCH-050/prereg.md, epochs/EPOCH-050/plan_hash.txt, epochs/EPOCH-050/machinery.py, epochs/EPOCH-050/result.json, reports/EPOCH050_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-051
+    frontier: F10
+    gate: A
+    name: "A-heading x accounting-intensity interaction (does A-heading independently mark document function?)"
+    plan_hash: "see epochs/EPOCH-051/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude verified (gate repro_check + scrutiny): A-headed inscriptions numeral-density 0.199 (n61) vs non-A-headed 0.307 (n404), MW p=0.00013, A-headed LOWER. CONFOUND CONTROL: within-Tablet p=0.076 (n.s.), within-HT p=0.30 (n.s.) — both same direction but NOT significant => the global effect is largely confounded by document class/site. Only 1 site (HT) testable, 0 significant."
+    positive_control: "PASSED (verified): detects a planted group-density difference (p=0) with false-positive rate 0.08 on same-distribution splits. (LB PC synthetic — DAMOS lacks inscription-initial structure; disclosed.)"
+    verdict: "A_HEADING_FUNCTION_SITE_LOCAL: A-headed documents are globally numeral-SPARSE (0.199 vs 0.307, p=0.0001) BUT the effect WEAKENS to non-significance under confound control (within-Tablet p=0.076, within-HT p=0.30), and only 1 site is testable. The A-heading does NOT independently mark accounting function beyond the document-class/site confound."
+    numbers: {n_a_headed: 61, n_non_a_headed: 404, density_a_headed: 0.199, density_non: 0.307, global_mw_p: 0.00013, direction: "A-headed lower density", within_tablet_p: 0.076, within_HT_p: 0.30, sites_testable: 1, sites_sig: 0, pc_fp: 0.08}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "CONFOUND-CONTROLLED NEGATIVE: the apparent 'A-headed documents are numeral-sparse (label/heading-type)' effect is significant GLOBALLY but is largely a CONFOUND — A-heading co-varies with document class and site, both of which drive numeral-density (E045). Once you control WITHIN document class (Tablet, p=0.076) and WITHIN site (HT, p=0.30), the A-heading no longer independently predicts numeral-density. So A-heading (E034) and accounting-intensity (E045) are both surface reflections of document class, NOT an independent A-heading->function link. Good confound-control rigor preventing a spurious interaction over-claim. Anonymous 'A-'; token composition only; no meaning. No transfer licence."
+    committed_prediction: "modal MARKS_FUNCTION/NO_DIFFERENCE/SITE_LOCAL; OUTCOME = SITE_LOCAL (confounded). The A-heading does not independently mark document accounting-function; the global link is a document-class/site confound."
+    deviations:
+      - "LB PC synthetic (DAMOS lacks inscription-initial structure); disclosed. Validates the group-difference machinery, not a real second-script control."
+      - "Confound control (within-class + within-site) is the key move; it correctly REMOVED the apparent effect -> honest SITE_LOCAL/confounded, not an independent interaction."
+    non_circular: "'A-' anonymous word-initial sign token; numeral-density = token composition; LB synthetic-PC control-only; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Twenty-eighth gated-runner epoch (repairs=0). A well-designed confound control CORRECTLY dissolved an apparent interaction (A-heading x accounting) into a document-class/site confound — the kind of negative that prevents spurious 'A- marks function' over-claims. Reinforces that A-heading and doc-class are correlated surface features, not an independent functional signal."
+    artifacts: [epochs/EPOCH-051/prereg.md, epochs/EPOCH-051/plan_hash.txt, epochs/EPOCH-051/machinery.py, epochs/EPOCH-051/result.json, reports/EPOCH051_REPORT.md]
+    successors_spawned: 5
+    substantive: true

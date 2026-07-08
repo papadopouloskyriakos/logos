@@ -1,0 +1,74 @@
+{
+  "task_id": "EPOCH-051",
+  "method": "A-HEADING x ACCOUNTING-INTENSITY interaction (L2/L3). A-headed = first sign of first word token is the literal anonymous positional token 'A'. numeral_density = (#num)/(#word+#num) over content tokens. Eligibility: >=2 content tokens AND >=1 word. Mann-Whitney U (two-sided) on per-inscription density, global + stratified within largest document class (Tablet) and largest site (Haghia Triada) + per-site (>=15 each group) + leave-one-site-out on HT. Positive control: planted-density detect + same-distribution false-positive rate. NO phonetics, NO semantics, NO sign values.",
+  "result": "Global numeral-density differs significantly between A-headed and non-A-headed inscriptions (A-headed LOWER density: 0.199 vs 0.307, MW p=1.3e-4), direction consistent everywhere. BUT the effect VANISHES under confound control: within the largest document class (Tablet, n=36 vs 273) p=0.076 (n.s.), and within the largest site (Haghia Triada, n=18 vs 179) p=0.299 (n.s.). Only 1 site (HT itself) meets the >=15-per-group cross-site threshold, so cross-site robustness cannot be established. The global signal is therefore largely an artifact of A-heading rate and numeral-density both co-varying with document class/site (confound), not a robust within-stratum document-function marker. Leave-one-site-out on HT remains significant (p=0.001), so HT is not the sole driver, but the within-stratum tests still fail. Positive control PASSED (detect p~0, false-positive rate 0.08 <= 0.10).",
+  "verdict": "A_HEADING_FUNCTION_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "n_a_headed": 61,
+      "n_non_a_headed": 404,
+      "density_a_headed": 0.19883250906059174,
+      "density_non": 0.3073501809896003,
+      "mw_p": 0.00012999794645840283,
+      "direction": "A_headed_lower_density"
+    },
+    "confound_control": {
+      "within_tablet_p": 0.07611894693944447,
+      "within_tablet_direction": "A_headed_lower_density",
+      "within_tablet_n_ah": 36,
+      "within_tablet_n_nah": 273,
+      "within_HT_p": 0.2987964949747697,
+      "within_HT_direction": "A_headed_lower_density",
+      "within_HT_n_ah": 18,
+      "within_HT_n_nah": 179
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "false_pos_rate": 0.08,
+      "n_splits": 25
+    },
+    "cross_site": {
+      "n_sites_testable": 1,
+      "n_sites_sig": 0,
+      "direction_consistent": true,
+      "loo_p": 0.0010297261593356648,
+      "per_site": [
+        {
+          "site": "Haghia Triada",
+          "n_ah": 18,
+          "n_nah": 179,
+          "mean_ah": 0.32998610353682817,
+          "mean_nah": 0.3657993929516804,
+          "p": 0.2987964949747697,
+          "direction": "A_headed_lower_density",
+          "sig": false
+        }
+      ]
+    },
+    "eligible_inscriptions": 465,
+    "total_corpus": 1341
+  },
+  "key_findings": [
+    "GLOBAL effect is highly significant: A-headed inscriptions (first word's first sign = 'A') have LOWER numeral-density than non-A-headed (mean 0.199 vs 0.307, MW-U p=1.3e-4); direction (A-headed sparser) is consistent in every stratum examined.",
+    "CONFOUND CONTROL FAILS: the effect does NOT survive within the largest document class (Tablet: p=0.076, n.s.) nor within the largest site (Haghia Triada: p=0.299, n.s.), despite adequate power in the Tablet stratum (36 vs 273). The global signal is therefore largely driven by A-heading rate and numeral-density both co-varying with support/site, not by a within-stratum document-function distinction.",
+    "CROSS-SITE robustness cannot be established: only 1 site (Haghia Triada) has >=15 inscriptions in each group; no site reaches within-site significance. The A-heading rate itself varies markedly across supports (Tablet 0.117, Stone vessel 0.173, Nodule 0.000) and sites (HT 0.091, Khania 0.150, Zakros 0.026), confirming the confound structure.",
+    "Leave-one-site-out on HT stays significant (p=0.001), so Haghia Triada is not the sole driver of the global effect; nevertheless the within-Tablet and within-HT stratified tests still fail, so the effect remains a between-stratum (confounded) phenomenon rather than a within-stratum functional marker.",
+    "Positive control PASSED (planted-density detection p~0 in correct direction; same-distribution false-positive rate 0.08 <= 0.10 over 25 splits), so the machinery is calibrated and the verdict is informative."
+  ],
+  "successor_hypotheses": [
+    "E052: Test whether A-heading predicts numeral-density WITHIN a finer document-class x site cell (e.g. Tablet@HT, Tablet@Khania) using a regression with support+site fixed effects, to partial out the confound directly rather than via separate stratified MW-U tests.",
+    "E053: Replace the binary A-heading marker with the broader E034 'A-initial word anywhere' signal and test its interaction with accounting intensity, to see if the (also null-within-stratum) effect is specific to inscription-initial position or general to A-initial words.",
+    "E054: Lower the per-site threshold (e.g. >=8 per group) and apply a hierarchical/Bayesian shrinkage model across all sites to estimate the cross-site consistency of the A-heading effect without requiring >=15 per cell.",
+    "E055: Test whether A-headed inscriptions differ in a DIFFERENT functional proxy (e.g. word-count, sign-diversity, line-count) that does not co-vary with support, to find a functional signature of A-heading that survives confound control.",
+    "E056: Directly measure the confound: regress numeral-density on support and site alone, then test whether A-heading explains residual variance; quantify what fraction of the global A-heading effect is absorbed by support+site.",
+    "E057: Compare A-heading rate between high-accounting supports (Tablet) and low-accounting supports (Nodule/Sealing) to characterize the support->A-heading->density causal chain that produces the confounded global signal."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "'A-' is defined purely structurally as the literal first sign token 'A' of the first word token of the inscription (anonymous positional token; NO phonetic value, NO meaning, NO sign-value reading). numeral_density is a token-type fraction (#num)/(#word+#num). All comparisons are token-composition-only (L2/L3). LB is control-only and was not used as a decoding target: LB lacks the inscription-initial positional + numeral-density structure required for this design, so no LB planted/random group-difference control was constructed (stated explicitly). No phonetic, semantic, or sign-value information entered the analysis.",
+  "deviations": [
+    "LB positive control: the protocol's 'LB PC: build a planted/random group-difference control' could not be constructed because the Linear B corpus available in this repo lacks the inscription-initial positional + numeral-density stream structure that this design requires; the positive control was instead built on the LA eligible inscriptions themselves (planted-density detect + same-distribution false-positive splits), which directly calibrates the Mann-Whitney machinery used on the real LA data. This is stated plainly as a deviation.",
+    "Verdict precedence: the frozen rules for A_HEADING_FUNCTION_SITE_LOCAL and A_HEADING_FUNCTION_UNDERPOWERED overlap when the global effect is significant but confound control fails AND <2 sites are testable. Precedence was set so that confound-control failure (within-Tablet and within-HT not significant) yields SITE_LOCAL, with UNDERPOWERED reserved for the case where confound control survives but cross-site robustness cannot be assessed. This precedence is documented in machinery.py and applied mechanically."
+  ]
+}
