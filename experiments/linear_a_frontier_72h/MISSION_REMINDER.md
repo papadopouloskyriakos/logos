@@ -41,8 +41,26 @@ GLM proposes/operates, the gate enforces the contract, Claude judges soundness +
 E022 global adaptive null (p .0002) → E023 site held-out (9/10, cross-site robust) → E024 multi-axis
 (support 5/6 incl. Nodule=0, chronological phase 4/4). **Capstone still ahead: §12 frontier-exhaustion map.**
 
-## What each cron firing should do
-1. Run `python3 experiments/linear_a_frontier_72h/scripts/frontier_status.py` and print it (datetime + ETA
-   + progress). 2. Re-read this mission. 3. If a worker is idle, the clock has NOT expired, and unblocked
-   work remains → I MAY advance ONE gated epoch via `epoch_runner` (GLM), verify, bank. Else report + hold.
-**Never** finalize before `clock_check.py` authorizes it.
+## THE SELF-SUSTAIN RULE (non-negotiable — this is why the user shouldn't have to poke me)
+The campaign drives ITSELF. The mechanism: each epoch runs as a background task; when it completes it
+re-invokes me; in that SAME turn I **verify → bank → launch the next epoch**. I must **NEVER end a turn with
+the worker idle and the clock unexpired.** If I just banked an epoch, I launch the next one before replying.
+The 6-min cron (`a7f0b6be`) is only a BACKSTOP: if the chain ever breaks (worker idle, nothing running), it
+relaunches. The chain — not the cron — is the primary driver. Stop the chain ONLY when `clock_check.py`
+authorizes finalization, or a REAL blocker exists (host/proxy down, corpus missing) — and then state it.
+
+## What each cron firing / completion should do
+1. `python3 experiments/linear_a_frontier_72h/scripts/frontier_status.py` (datetime + ETA + progress).
+2. Worker running? → hold (never 2 at once). Worker idle + clock unexpired? → **close the gap**: bank any
+   unbanked result, then LAUNCH THE NEXT EPOCH. 3. **Never** finalize before `clock_check.py` authorizes it.
+
+## Next-epoch queue (so I never stall for lack of a question — pick the next unused, or a successor)
+Done so far: A- prefix line E022–E025 (positive, 4-way hardened); RO terminal E026 (concentrated); init/final
+asymmetry E027 (machinery-uninformative); doc-class length E028 (positive). Fresh axes still open:
+- **E029 sign-bigram collocation** (RUNNING): combinatorial adjacency grammar, cross-site held-out.
+- numeral/fraction attachment position (ledger grammar); logogram vs syllabic sign word-position;
+  word-length distribution shape by site (register); sign-inventory overlap across sites (Jaccard vs null);
+  first-sign vs last-sign entropy by document class; repeated-word (formula) detection cross-site;
+  bigram value-relational constraints (which sign-pairs never co-occur → equivalence-class reduction);
+  the §12 FRONTIER-EXHAUSTION MAP capstone (only once axes are mapped — needs the clock near-expired).
+Each must be a distinct, PC-gated, held-out question. A null/negative is a valid result, NOT a stop.
