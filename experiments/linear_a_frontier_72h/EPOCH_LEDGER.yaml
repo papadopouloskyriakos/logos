@@ -206,6 +206,34 @@ epochs:
     result: "Unit-slot detector: E007's 'live U channel' (recall .862) UNMASKED as a class-prior artifact (3rd frequency-artifact unmasking; no rule exceeds F1 .262 within-KN). Totals detector: LB is the WRONG analogue for integer sum-consistency (0 gold-T numeral-followed) though weak genuine signal (.053>p95 .038). EXPLORATORY: blind sum-logic on LA concentrates on KU-RO (7/13 vs 3.3% chance); LA fractions occupy post-quantity (unit) positions -> fraction-as-unit supports the E004 seal channel."
     substantive: true
 
+  - id: EPOCH-012
+    frontier: F6
+    name: scribal/site allograph structure (first productive use of the E009 stroke channel)
+    substantive_gate: A/E
+    plan_hash: a051ea371c3e6ac74f5b35d30fa52084e7023644a90f5135c29c75bf97818969
+    prereg_frozen: 2026-07-08T05:15:18Z
+    completed: 2026-07-08
+    positive_control: PASS (LOO 1-NN sign id top-1 .2048 vs chance .0441 / aspect adversary .0322, p .001)
+    negative_control: PASS (doc-level site-permutation nulls x10k both legs; N2b inventory-resample confound-preserving null; aspect adversary)
+    verdicts:
+      epoch: ALLOGRAPH_STRUCTURE_CONFOUNDED
+      leg1_spread: FIRE (T .2046 vs null p95 .0542, p_holm 2e-4; diffuse — 1/60 signs Holm-individual, AB58)
+      leg2_doc_site: FIRE_BUT_GATED_OUT (bal acc .2797, p_holm .0061, beats N2b p95 .2523 — killed by G2+G3)
+      leg3_support_HT: SUPPORT_STRUCTURE_DETECTED (Tablet vs Roundel/Wc, T .248, p3 .0028)
+      leg4_context: CHRONOLOGY_CONTEXT_NO_POWER (LMIB 177 vs all others <=2)
+    adversarial_findings:
+      - G3 FAIL is the story — pure rendering-nuisance embedding (ink/density/bbox/aspect) classifies site BETTER than allograph deviations (.3307 > .2797); G4 residualization drops leg-2 to .2242 -> the document channel is nuisance-dominated, no doc->site/hand lattice licensed
+      - G2 FAIL — cleanest contrast (HT-vs-KH tablets only, 174 docs) is null (.5431 < p95 .5725)
+      - G1 PASS + labeled posthoc — per-sign spread survives many-doc restriction (T .1766, p 1e-4) AND tablet-only medium-fixing (T .1931, p 1e-4, seed 20260709): the aggregate L1 spread channel is individually robust
+      - sign geometry co-varies with MEDIUM within one site (leg 3) -> all future site claims must be medium-stratified by design
+      - tracer/scribe inseparable at doc level (one trace per doc; same-doc dist 2.63 < within-site cross-doc 3.19) -> photograph-level replication is the only decisive de-confound
+    committed_prediction: mechanical verdict per frozen rule (LEG1 v LEG2) & ~(G1 & G2 & G3) -> CONFOUNDED
+    layer: L1
+    licences_changed: none
+    artifacts: [epochs/EPOCH-012/result.json, reports/EPOCH012_ALLOGRAPH_STRUCTURE.md, data/stroke_corpus/allograph_structure/]
+    successors_spawned: 5
+    substantive: true
+
   - id: EPOCH-014
     frontier: F7
     name: register-stratified phonotactics (value-free strata test)
@@ -235,4 +263,56 @@ epochs:
     gate: A
     verdict: REGISTER_STRATA_NO_POWER
     result: "Machinery fully validated (PC1 LB fires p=.0005; PC2 FP 2/20; PC3 power 10/10). All 3 LA register pairs Holm-significant BUT within-register SITE divergence is as large or larger (SEAL HT/nonHT xr 1.51 > every register pair) -> site-discounted by frozen rule. KEY: LA's dominant value-free stratification axis is PLACE >= document type; where unconfounded (LEDG-SEAL@HT) the vocabulary-stripped residual (xr .126) falls BELOW the LB single-language ceiling (.21) -> consistent with ONE language's document types. Libation-vs-admin is PERMANENTLY site-confounded in the extant corpus (no co-occurrence at any site). F7 mixed-language: no support gained, not refuted."
+    substantive: true
+
+  - id: EPOCH-013
+    frontier: F2/F9
+    name: component-decomposition matcher (attack the E009 coverage ceiling)
+    substantive_gate: A
+    plan_hash: 76ea706c1243e2decbd73d07f0ff6cc68b126bfee98c2177f6e57aad304b06e0
+    prereg_frozen: 2026-07-08T05:15:27Z
+    completed: 2026-07-08
+    positive_control: PASS (PC-1 ran first; 5/5 E008 singles via decomposition path; 3/3 analytic multi-component multisets; D(g,g)=0 sanity)
+    negative_control: PASS (aspect adversary + NEW component-count adversary beaten on both confirmatory legs; 20k-perm nulls; 2 p-values Holm)
+    verdicts:
+      epoch: DECOMPOSITION_NEUTRAL
+      basis: PC1 PASS + NONDEGRADE PASS (LEG1 agg MRR .2470 vs E009 .1710, bar .145) + RECOVERY_GOOD PASS (764/1009=75.7% recovered; dark usable 69/69=ceiling; dark robust 24/69 vs ceiling 25) BUT HOLD FAIL (expanded self-MRR .2649 < frozen bar .359)
+    adversarial_findings:
+      - bag-of-components LOSES within-script discrimination on the identical 116-label frame (.3366 vs E009 .3993, -16%) - unordered bags discard inter-stroke connectivity gestalt
+      - corpus expansion costs another .072 self-MRR (recovered instances are more fragmented/noisier)
+      - cross-script LEG1 IMPROVES +44% on the identical frame - the two matrices are complementary channels, not a replacement
+      - brief's "~50/69 robust" target preregistered as arithmetically unreachable (attestation ceiling 25/69); 45 dark signs have <3 SigLA instances, no matcher can fix attestation
+      - residual 245 failures all kept_share_lt_070 (fragmentation beyond K=12 cap); zero E009-ok attrition
+    committed_prediction: coverage instrument confirmed, discriminator not; E009 numbers stand unsuperseded (Art. XVII addition)
+    layer: L1
+    licences_changed: none
+    artifacts: [epochs/EPOCH-013/result.json, reports/EPOCH013_COMPONENT_MATCHER.md, data/stroke_corpus/component_matcher/]
+    successors_spawned: 5
+    substantive: true
+
+  - epoch_id: EPOCH-013
+    frontier: F2/F9
+    gate: A
+    verdict: DECOMPOSITION_NEUTRAL
+    result: "Hungarian bag-of-components matcher recovers 764/1009 (75.7%) of E009 too-many-components failures with zero ok-attrition: usable corpus 3744->4508, dark usable 65->69/69 (ceiling), dark robust 21->24/69 (ceiling 25), LEG2 frame 116->124. Cross-script calibration IMPROVES on the identical frame (agg MRR .2470 vs .1710, top1 9 vs 3, p 5e-05, beats aspect .0987 + count .0915 adversaries). But within-script self-retrieval DROPS: matcher effect -.063 on identical frame (.3366 vs .3993) + expansion effect -.072 (.2649 at n=124) -> HOLD fail -> NEUTRAL by frozen grid. Upgraded 409-name (335 epigraphic + 74 LB-font) similarity matrix emitted; complementary to (not superseding) E009's. L1 only; trace-standardization caveat on all numbers."
+    substantive: true
+
+  - epoch_id: EPOCH-012
+    frontier: F6
+    gate: A/E
+    verdict: ALLOGRAPH_STRUCTURE_CONFOUNDED
+    result: "PC PASS (instance-level 1-NN sign id .2048 vs chance .0441). BOTH confirmatory legs fire (per-sign within<cross site spread T .2046 p_holm 2e-4; doc-embedding site bal-acc .2797 p_holm .0061 beating the inventory-preserving null) BUT the document channel dies on gates: a pure rendering-NUISANCE embedding classifies site better (.3307>.2797, G3 FAIL) and HT-vs-KH tablets-only is null (G2 FAIL) -> no doc->site/hand lattice output licensed. The aggregate per-sign spread channel is individually robust (G1 PASS; tablet-only posthoc T .1931 p 1e-4) = real L1 site-coherent allography in the TRACED corpus, tracer/scribe inseparable (one trace/doc). BONUS: medium structure within HT (Tablet vs Roundel/Wc, p .0028); chronology contexts NO_POWER (LMIB 177 vs <=2). Decisive successor = photograph-level re-extraction (AB58/A704/AB73)."
+    substantive: true
+
+  - epoch_id: EPOCH-012
+    frontier: F6
+    gate: A/E
+    verdict: ALLOGRAPH_STRUCTURE_CONFOUNDED
+    result: "Doc->site channel is fool's gold: rendering-nuisance embedding beats it (.331>.280); HT-vs-KH tablets-only null; no lattice output licensed. BUT per-sign aggregate spread individually robust (within<cross site T=.205 p=1e-4, survives many-doc gate + medium-fixed posthoc). Tracer/scribe entanglement QUANTIFIED (same-doc 2.63 < within-site cross-doc 3.19; one trace/doc); decisive de-confound = photograph-level re-extraction. Bonus: sign geometry co-varies with MEDIUM within HT (p=.0028). Chronology NO_POWER."
+    substantive: true
+  - epoch_id: EPOCH-013
+    frontier: F2/F9
+    gate: A
+    verdict: DECOMPOSITION_NEUTRAL
+    result: "Coverage instrument: 764/1009 failures recovered, zero attrition (usable 3744->4508); dark extraction 69/69 ceiling; dark ROBUST 21->24/69 (binding constraint = ATTESTATION not extraction: 45 dark signs have <3 SigLA instances; ~50 target arithmetically unreachable, preregistered). Cross-script agg MRR IMPROVES +44% (.171->.247, top-1 9v3, p=5e-5) — component-level structure is a stronger cross-script channel; within-script HOLD failed (bags discard gestalt -.063 + expansion noise -.072). Residual 245 failures = fragmentation beyond K=12."
     substantive: true
