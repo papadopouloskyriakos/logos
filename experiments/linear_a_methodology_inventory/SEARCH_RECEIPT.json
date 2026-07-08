@@ -1,0 +1,28 @@
+{
+ "audit_branch": "audit/linear-a-methodology-master-inventory",
+ "parent_commit": "6fd4f20",
+ "refs_searched": 13,
+ "worktrees_searched": 12,
+ "tags": [
+  "review-fixes-2026-07-01"
+ ],
+ "note_github_main_ahead": "github/main@7c509c6 carries submission-docs commits ahead of local main@6fd4f20 (paper state, not methodology)",
+ "artifacts_indexed": 923,
+ "method_instances_catalogued": 214,
+ "lineages": 14,
+ "contradictions_flagged": 48,
+ "coverage": {
+  "directly_referenced": 635,
+  "classified_subsumed_or_inherited": 288,
+  "needs_review": 0,
+  "unmapped_breakdown": {
+   "SUBSUMED_REPORT": 99,
+   "INHERITED_FOUNDATION": 83,
+   "SUBSUMED_SUBFILE": 62,
+   "SUBSUMED_SCRIPT": 44
+  }
+ },
+ "verdict_ledger": "scripts/verdict.py (append-only, migration_2026-07-07); per-campaign TASK_LEDGER.yaml + DECISION_LOG.md are the authoritative status",
+ "method": "per-lineage forensic extraction (8 agents) -> merge -> lineages/numbers/contradictions -> reports; read-only, no experiments, no prior-work edits",
+ "completeness": "every one of the 923 indexed artifacts is either directly referenced by a catalogued method instance or classified SUBSUMED/INHERITED; 0 NEEDS_REVIEW; no method left uncatalogued"
+}

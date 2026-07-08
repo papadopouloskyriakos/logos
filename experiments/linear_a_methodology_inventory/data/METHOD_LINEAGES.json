@@ -1,0 +1,142 @@
+[
+ {
+  "lineage_id": "LIN-01",
+  "name": "Distributional C/V phonology (position\u2192vowel/consonant)",
+  "origin": "paper distributional-phonology pilot (data-limited NULL)",
+  "trajectory": "foundry WP1/WP3.1 position\u2192C/V AUC 0.744/0.835 ('symmetry broken, value layer reopened') \u2192 relative-phonology WP-A multiplicity+replication+oriented-null audit",
+  "current_authoritative": "relative-phonology WP-A: CV_ANALOGUE_REFUTED (frequency artifact; fails Bonferroni\u00d713=0.455, 2 unsupervised models, 2-sided null p=0.146, freq-band-disjoint 0.481)",
+  "obsolete": "foundry FND-02/03 position\u2192C/V 'reopening' (SUPERSEDED)",
+  "verdict_evolution": "data-limited NULL \u2192 SUPPORTED(exploratory) \u2192 REFUTED",
+  "reruns_reason": "multiplicity + independent-replication + honest-2-sided-null were missing in foundry"
+ },
+ {
+  "lineage_id": "LIN-02",
+  "name": "Segmentation (word-boundary induction)",
+  "origin": "paper segmentation DP-unigram micro-F1 0.436 vs random 0.389 (gap CI excludes 0)",
+  "trajectory": "segmentation_extension PYP 0.559 / BiLSTM 0.622 / morfessor worse-than-random \u2192 foundry WP2 packed\u2192word 0.685\u21920.760 ('helps C/V') \u2192 relative-phonology B channel-dependent",
+  "current_authoritative": "relative-phonology B: SUPPORTED_ON_LB but C/V recovery is segmentation-INVARIANT; at LA hapax regime skill over cut-everywhere ~0 (over-cut superset); signal is layout not distribution",
+  "obsolete": "foundry WP2 'segmentation cleanly helps C/V' framing (tensioned/superseded)",
+  "verdict_evolution": "STRUCTURAL_ONLY(positive gap) \u2192 'helps' \u2192 channel-dependent, C/V-invariant",
+  "reruns_reason": "foundry conflated coverage with C/V discrimination"
+ },
+ {
+  "lineage_id": "LIN-03",
+  "name": "Scribal-substitution relative channel",
+  "origin": "foundry WP3.2 substitution graph validated on LB (z=7.07, AUC 0.71)",
+  "trajectory": "relative-phonology C_AUDIT applies the WP-A battery to it",
+  "current_authoritative": "relative-phonology C_AUDIT: SUBSTITUTION_CONSONANT_AXIS_VALIDATED on LB (survives freq-band-disjoint + freq-matched null p=0.0033) but C4/C5 NOT_RECOVERED on LA (underpowered support 3 vs 98; word-INITIAL wrong signature)",
+  "obsolete": "\u2014",
+  "verdict_evolution": "validated-on-LB (foundry) \u2192 validated-on-LB + not-recoverable-on-LA (relative-phonology)",
+  "reruns_reason": "the load-bearing surviving channel after position fell; needed its own hard audit"
+ },
+ {
+  "lineage_id": "LIN-04",
+  "name": "Reduced-seed C/V propagation",
+  "origin": "foundry WP5 reduced-seed bootstrap 3-4 seeds\u2192AUC 0.87 on LB",
+  "trajectory": "relative-phonology D3 seed-propagation audit",
+  "current_authoritative": "relative-phonology D3: SEED_PROPAGATION_FREQUENCY_ARTIFACT (n=5 lucky sample, honest 0.784; kv=4 reveals 80% of 5-vowel key; pure-freq ranking 0.872>seed; clean-seed random null never run, non-sig here)",
+  "obsolete": "foundry FND WP5 '3-4 seeds\u21920.87' (REFUTED)",
+  "verdict_evolution": "SUPPORTED(exploratory) \u2192 REFUTED (frequency artifact)",
+  "reruns_reason": "design leak + missing random-seed null"
+ },
+ {
+  "lineage_id": "LIN-05",
+  "name": "Value-blindness / identifiability of the value layer",
+  "origin": "12h campaign + constraint-expansion 'internal distributional structure is sign-relabeling-invariant \u2192 value layer permanently closed'",
+  "trajectory": "foundry WP1 audits the theorem \u2192 relative-phonology WP-A/H3 measure it directly",
+  "current_authoritative": "relative-phonology: internal methods NOT universally value-blind (substitution breaks C/V on LB) BUT Linear A specifically is relabeling-invariant/underdetermined (H3 0 bits; I1 \u226510^27 twins) \u2014 the measured middle",
+  "obsolete": "constraint-expansion 'permanently closed' global theorem (SUPERSEDED by foundry WP1 as OVERSTATED); foundry 'position reopens it' (SUPERSEDED by WP-A: position was a frequency artifact)",
+  "verdict_evolution": "'proven closed' \u2192 'reopened via position' \u2192 'not closed in general, but LA underdetermined by available evidence'",
+  "reruns_reason": "both extremes were overstated; two corrections"
+ },
+ {
+  "lineage_id": "LIN-06",
+  "name": "Identifiability parameter/constraint count",
+  "origin": "12h campaign + paper headline: 259 sign-value params > 212 constraints",
+  "trajectory": "constraint-expansion Stage A cleaned inventory",
+  "current_authoritative": "constraint-expansion: real conservative syllabary V=92 (count-FAVOURABLE, 92<212); the deficit is value-informativeness not count. '259' is a category error (incl. 108 ligatures+13 damage+logograms)",
+  "obsolete": "12h/paper '259 params' headline (INVALIDATED as category error)",
+  "verdict_evolution": "'params>constraints (underdetermined by count)' \u2192 'count favourable; value-informativeness is the real deficit'",
+  "reruns_reason": "259 conflated diplomatic-stream tokens with syllabogram inventory"
+ },
+ {
+  "lineage_id": "LIN-07",
+  "name": "Morphology / affix induction",
+  "origin": "paper morphology pooled NULL (real 0.250 < L_fake bigram floor 0.375; no power) + LB positive control HAS power (0.5625)",
+  "trajectory": "stratified morphology \u2192 foundry WP3.4 (whole-wordform-recurrence artifact) \u2192 relative-phonology E",
+  "current_authoritative": "relative-phonology E: A- prefixation genuine (adaptive-null p 0.008) + 2 formula grammars (KU-RO terminal / libation order); corrects 'A-/I-/-JA' to A- only; held-out-validated L3",
+  "obsolete": "foundry 'A-/I-/-JA three affixes' (corrected to A- only)",
+  "verdict_evolution": "NULL(no power) \u2192 whole-wordform artifact \u2192 A- prefixation SUPPORTED at L3",
+  "reruns_reason": "segmentation + adaptive null + cross-site controls added"
+ },
+ {
+  "lineage_id": "LIN-08",
+  "name": "Cross-script value transfer (A\u2194B distributional + image)",
+  "origin": "paper A\u2194B distributional NULL (procrustes 0.020 vs 0.0145) + palaeo IMAGE leg (withdrawn as CIRCULAR shape-genealogy)",
+  "trajectory": "crossscript_gate one-shots (REFUTE_LOTO_FRAGILE, DOIs 21168887/21173639) \u2192 foundry WP4 NULL \u2192 relative-phonology F decomposed NULL \u2192 external-anchors",
+  "current_authoritative": "relative-phonology F: NULL, decomposed \u2014 only admin_function non-circular+calibratable, =NULL; shape circular (\u22640.75); 0/59 correspondences primary. 4th+ distributional null",
+  "obsolete": "5e82576 commit 'IMAGE alignment SUCCEEDS' (WITHDRAWN)",
+  "verdict_evolution": "NULL/circular \u2192 REFUTE_LOTO_FRAGILE \u2192 NULL (repeatedly confirmed)",
+  "reruns_reason": "multiple independent implementations, all null"
+ },
+ {
+  "lineage_id": "LIN-09",
+  "name": "Administrative / formula structure recovery",
+  "origin": "paper + admin_schema blinded LB role/schema induction (29.2% exact, not gate-validated)",
+  "trajectory": "no_human_structure (source-label route NO_POWER) \u2192 observable_channels (L3 word-context\u2192channel REFUTED; L2 doc-structure SUPPORTED, no licence) \u2192 relative-phonology E2",
+  "current_authoritative": "observable_channels + relative-phonology E2: L2 document structure (templates/closure, formula grammars) SUPPORTED but earns NO functional licence; L3 channel REFUTED",
+  "obsolete": "\u2014",
+  "verdict_evolution": "exploratory schema \u2192 NO_POWER (no-human) \u2192 L2 STRUCTURAL_ONLY / L3 REFUTED",
+  "reruns_reason": "blinding + power gates + observable-channel reframing"
+ },
+ {
+  "lineage_id": "LIN-10",
+  "name": "External anchors / candidate languages",
+  "origin": "external_anchors + toponym/name inventory (115 records)",
+  "trajectory": "la_lb_continuity (toponym continuity split H_exact NULL_PUBLISHED / H_drift NO_POWER) \u2192 la_lb_ritual (NO_POWER) \u2192 egyptian calibration \u2192 foundry candidate rounds \u2192 relative-phonology G/H",
+  "current_authoritative": "relative-phonology G: SEED_A=0 (no independently-secure value seed; value substrate=one circular toponym lineage); H1-H3 candidate rounds all AT_END_TO_END_NULL (6 families+isolate); only bilingual/\u22653 independent anchors can crack",
+  "obsolete": "\u2014",
+  "verdict_evolution": "anchor inventory \u2192 mostly circular/one-toponym-deep \u2192 SEED_A=0 + candidate NULL",
+  "reruns_reason": "decontamination + Art. XII circularity gate + end-to-end null"
+ },
+ {
+  "lineage_id": "LIN-11",
+  "name": "Egyptian phonetic-anchor calibration",
+  "origin": "egyptian-calibration-gate REQ-01",
+  "trajectory": "Cretan one-shot pre-registered test",
+  "current_authoritative": "egyptian: mechanical CONFIRM_GENERALIZES but honest interpretation TRIVIAL/NULL (fair \u0161~s baseline ties M2; edge = 1 training record, LOO flips; effective-n\u22481); channel NOT confirmed; programme CLOSED",
+  "obsolete": "STATUS.md 'READY_FOR_PREREG / first channel to pass its gate' (STALE)",
+  "verdict_evolution": "'READY/passes gate' (stale) \u2192 mechanical CONFIRM but honest NULL/TRIVIAL (effective-n\u22481)",
+  "reruns_reason": "effective-n audit exposed n\u22481"
+ },
+ {
+  "lineage_id": "LIN-12",
+  "name": "Di Mino *301=/na/ exact claim audit",
+  "origin": "docs/linear-a-claims-2026.md qualitative three-part takedown (literature/primary-source, NOT a mechanical verdict)",
+  "trajectory": "di_mino exact mechanical gate (families A-H + PC + end-to-end null)",
+  "current_authoritative": "di-mino: DI_MINO_CORE_VERDICT=REJECT (chain *301=/na/\u2192N-W-Y\u2192dwell\u2192Semitic); pipeline calibrated (PC PASS); end-to-end FP=1.0; H4 PARTIAL_SUPPORT L3-functional; H7-H12 SOURCE_BLOCKED",
+  "obsolete": "\u2014",
+  "verdict_evolution": "qualitative critique (paper \u00a74, flagged as NOT-yet-mechanical) \u2192 exact mechanical REJECT",
+  "reruns_reason": "the paper named the mechanical gate as the missing priority"
+ },
+ {
+  "lineage_id": "LIN-13",
+  "name": "Metrology / accounting / masked-quantity",
+  "origin": "paper metrology NULL (held-out fraction balance p=1.0; only J=1/2 = Bennett 1950)",
+  "trajectory": "observable_channels masked-logogram (Exp1) + masked-quantity (Exp2)",
+  "current_authoritative": "observable: masked-logogram + masked-quantity REFUTED (commodity is a document-series shortcut; word-context fails A12 + cross-site)",
+  "obsolete": "\u2014",
+  "verdict_evolution": "metrology NULL \u2192 masked-quantity REFUTED",
+  "reruns_reason": "reframed as observable-channel recovery"
+ },
+ {
+  "lineage_id": "LIN-14",
+  "name": "Falsification instruments (L_fake / gate calibration / opaque-LB positive controls)",
+  "origin": "L_fake canary + litindex decontamination + gate null calibration",
+  "trajectory": "gate_null_calibration (3/500=0.6% false graduation) \u2192 opaque-LB + Ugaritic\u2194Hebrew surrogates \u2192 di_mino PC (PC1-6)",
+  "current_authoritative": "instruments VALIDATED: L_fake CANARY_HOLDS (every eps), gate FP 0.6% (CP-upper 1.54%), LB morphology control HAS power, di_mino PC PASS (recovers real+planted, rejects fake)",
+  "obsolete": "\u2014",
+  "verdict_evolution": "SUPPORTED throughout (the discipline machinery works)",
+  "reruns_reason": "reused across campaigns as the honesty backstop"
+ }
+]
