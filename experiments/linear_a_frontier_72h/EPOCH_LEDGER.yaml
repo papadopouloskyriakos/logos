@@ -1157,3 +1157,29 @@ epochs:
     artifacts: [epochs/EPOCH-048/prereg.md, epochs/EPOCH-048/plan_hash.txt, epochs/EPOCH-048/machinery.py, epochs/EPOCH-048/result.json, reports/EPOCH048_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-049
+    frontier: F17
+    gate: A
+    name: "Inscription-level sign co-occurrence (document-topic association), degree-preserving null"
+    plan_hash: "see epochs/EPOCH-049/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude verified (gate repro_check cooc_score>0 + manual scrutiny): global cooc_score 504 vs degree-preserving null 293 (structure exists, p .0017); per-site HT 181/null 75 (p .0017, SIG), Khania 10/null 2.3 (p .003, SIG), Knossos 0, Phaistos 0, Zakros 5/null 6.7 (n.s.); held-out replication of HT top pairs on other sites = 0.05 (5%). HT carries 36% of global structure."
+    positive_control: "PASSED (verified): degree-preserving machinery detects planted topic-groups (p .0017) and false-positive rate 0.08 on degree-matched random incidence matrices. Calibrated (controls for sign frequency)."
+    verdict: "DOCUMENT_TOPIC_COOCCURRENCE_CROSS_SITE (mechanical) — COORDINATOR-DOWNGRADED. Met via >=2 sites (HT+Khania) + LOO-survives, BUT the held-out replication is 0.05, so it is NOT a shared cross-site topic system (see scope)."
+    verdict_downgrade: "HONEST READ = document co-occurrence structure is REAL but SITE-SPECIFIC + HT-DOMINATED. Signs DO cluster within documents more than a degree-preserving null (each archive's accounts associate their own signs), but: (a) HT carries 36% of the global structure (181/504) and is the only strongly-significant site; (b) only 2/5 sites reach significance (Knossos/Phaistos = ZERO co-occurrence structure); (c) the SPECIFIC co-occurring pairs replicate cross-site only 5% -> the associations are site-local, NOT a shared cross-site topic vocabulary. The mechanical CROSS_SITE label (from the lenient 2-sites-or-LOO rule) OVERSTATES; the honest status is SITE-LOCAL/HT-dominated (same as E043's specialization). NET: no NEW shared cross-site positive; reinforces the theme that content-level structure (word-forms E032, topics E049) is site-local while the SCRIPT + GRAMMAR (signs E036, ledger E031/E037/E047) generalize."
+    numbers: {n_inscriptions: 614, global_cooc_score: 504, null_mean: 293, null_p: 0.0017, ht_score: 181, ht_share: 0.36, sites_testable: 5, sites_sig: 2, heldout_replication_frac: 0.05, knossos_phaistos_score: 0, pc_fp: 0.08}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "Mechanically CROSS_SITE, HONESTLY DOWNGRADED to SITE-LOCAL/HT-dominated. Document-level sign co-occurrence structure exists (signs cluster within documents beyond a degree-preserving null) but is HT-driven and site-specific (5% cross-site pair replication). Consistent with each archive keeping topically-clustered accounts, but NO shared cross-site topic system. Reinforces the SHARED-SCRIPT-LOCAL-CONTENT dichotomy: script/grammar generalize (E036/E031/E037/E047), word-content/topics do not (E032/E049). Anonymous signs; co-occurrence is distributional, NOT a topic/meaning claim. No transfer licence."
+    committed_prediction: "modal CROSS_SITE/SITE_LOCAL/NO_STRUCTURE; OUTCOME = mechanically CROSS_SITE, coordinator-downgraded to SITE-LOCAL (5% replication, HT-dominated). Document topics are site-specific."
+    deviations:
+      - "COORDINATOR DOWNGRADE (Art. XVII): the frozen rule's '>=2 sites OR survives-LOO' passed via HT+Khania+LOO, but 5% held-out pair replication + HT-dominance + 0/5 at small sites mean the honest status is SITE-LOCAL. Same lenient-cross-site-rule lesson as E043 (require independent-of-HT replication)."
+      - "LB PC synthetic (load_b_damos has no document grouping); disclosed. Validates the degree-preserving machinery, not a real second-script document control."
+    non_circular: "Signs anonymous; degree-preserving null controls for frequency; LB synthetic-PC control-only; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Twenty-sixth gated-runner epoch (repairs=0). Second application (with E043) of the coordinator downgrade for a lenient-cross-site-rule verdict: independent scrutiny (5% replication, HT 36%, 0/5 small sites) showed document topics are site-local, not cross-site. Reinforces the shared-script/local-content dichotomy for the exhaustion map."
+    artifacts: [epochs/EPOCH-049/prereg.md, epochs/EPOCH-049/plan_hash.txt, epochs/EPOCH-049/machinery.py, epochs/EPOCH-049/result.json, reports/EPOCH049_REPORT.md]
+    successors_spawned: 5
+    substantive: true

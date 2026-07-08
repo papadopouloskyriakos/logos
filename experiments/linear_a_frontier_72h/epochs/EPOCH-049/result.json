@@ -1,0 +1,61 @@
+{
+  "task_id": "EPOCH-049",
+  "method": "Inscription-level sign co-occurrence (document-topic; L2/L3). Sign set of an inscription = set of distinct signs in its word tokens; restricted to inscriptions with >=2 distinct signs. Metric cooc_score = number of sign pairs (s,t) with co-occurrence count >=5 AND hypergeometric z>=3 (independent-placement per-pair null given sign document-frequencies). Global null = degree-preserving curveball bipartite shuffle of the sign x inscription incidence matrix (preserves each inscription's sign-set size and each sign's document frequency exactly); 600 draws; one-sided p for 'more co-occurrence structure than chance'. Cross-site: per-site with >=30 inscriptions; held-out replication of largest-site top pairs in pooled others; leave-one-site-out on Haghia Triada. Signs ANONYMOUS; no phonetics/meaning/reading.",
+  "result": "Global cooc_score=504 vs degree-preserving null mean 292.80 (one-sided p=0.0017): document-level sign co-occurrence structure exceeds chance after controlling for sign frequency and document size. PC PASSED (detect p=0.0017, false-positive rate 0.08). 2 of 5 testable sites significant (Haghia Triada p=0.0017, Khania p=0.0033); Knossos/Phaistos null (small n, cooc_score 0); Zakros not significant. Top co-occurring pairs of the largest site (HT) do NOT replicate in pooled other sites (held-out replication frac 0.05), but the structure SURVIVES leave-one-site-out (drop HT, pooled rest p=0.0017). Verdict: DOCUMENT_TOPIC_COOCCURRENCE_CROSS_SITE.",
+  "verdict": "DOCUMENT_TOPIC_COOCCURRENCE_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_inscriptions": 614,
+      "cooc_score": 504,
+      "null_mean": 292.8,
+      "null_p": 0.0016638935108153079,
+      "count_threshold": 5
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0016638935108153079,
+      "false_pos_rate": 0.08
+    },
+    "cross_site": {
+      "n_sites_testable": 5,
+      "n_sites_sig": 2,
+      "heldout_replication_frac": 0.05,
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.0016638935108153079,
+      "per_site": {
+        "Haghia Triada": {"n": 229, "cooc_score": 181, "null_mean": 75.12, "p": 0.0016638935108153079},
+        "Khania": {"n": 107, "cooc_score": 10, "null_mean": 2.29, "p": 0.0033277870216306157},
+        "Knossos": {"n": 40, "cooc_score": 0, "null_mean": 0.475, "p": 1.0},
+        "Phaistos": {"n": 39, "cooc_score": 0, "null_mean": 0.075, "p": 1.0},
+        "Zakros": {"n": 37, "cooc_score": 5, "null_mean": 6.69, "p": 0.7820299500831946}
+      }
+    },
+    "z_threshold": 3.0,
+    "n_draws_global": 600,
+    "n_fp_controls": 25,
+    "distinct_signs": 253
+  },
+  "key_findings": [
+    "Global document-level sign co-occurrence structure is real and strong: cooc_score=504 over-represented pairs (z>=3, cooc>=5) vs degree-preserving null mean 292.80, one-sided p=0.0017. The signal survives a curveball shuffle that exactly preserves each inscription's sign-set size and each sign's document frequency, so it is NOT an artefact of sign frequency or document length.",
+    "The signal is concentrated in the two largest sites: Haghia Triada (n=229, cooc_score=181 vs null 75.1, p=0.0017) and Khania (n=107, cooc_score=10 vs null 2.29, p=0.0033). The three smaller testable sites (Knossos n=40, Phaistos n=39, Zakros n=37) show no significant structure (cooc_score 0/0/5), consistent with under-powering at small n rather than absence.",
+    "Top co-occurring pairs of the largest site (HT) do NOT replicate in pooled other sites (held-out replication fraction 0.05): the specific pair-level structure is largely HT-local. However, the aggregate structure SURVIVES leave-one-site-out (drop HT, pooled rest p=0.0017), so document-level co-occurrence structure is a cross-site phenomenon even though the exact pair identities differ by site.",
+    "Positive control PASSED: planted topic blocks detected (obs 46 vs null 23.48, p=0.0017) and false-positive rate on degree-matched random matrices was 0.08 (<=0.10), confirming the machinery is informative and not inflated by the degree-preserving null.",
+    "The most over-represented pairs are dominated by high-frequency signs (e.g. pairs among the commonest signs), but the degree-preserving null already removes pure-frequency inflation; the residual over-representation is genuine document-level clustering beyond what frequency alone predicts."
+  ],
+  "successor_hypotheses": [
+    "H1 (L3): Decompose the document-level co-occurrence structure into latent sign-groups (e.g. bipartite community detection / stochastic block model on the sign co-occurrence graph) and test whether recovered communities are stable across sites and across bootstrap resamples of inscriptions.",
+    "H2 (L2/L3): Test whether document-level co-occurrence pairs correlate with administrative position in the stream (e.g. heading vs entry signs) — do co-occurring signs occupy similar stream-roles, suggesting document-section structure rather than topic structure?",
+    "H3 (L2): Quantify the within-word vs between-word (but same-document) split of co-occurrence: how much of cooc_score survives after removing pairs that ever appear in the SAME word (adjacency, E029) vs pairs that only co-occur across different words of one document?",
+    "H4 (L3): Per-site topic discovery on Haghia Triada and Khania separately; compare recovered sign-groups between the two significant sites to ask whether the same latent document-topics recur or whether each site has its own topic palette (consistent with the low held-out pair replication).",
+    "H5 (L2): Power-aware re-test of Knossos/Phaistos/Zakros with a relaxed but pre-registered threshold or with pooled small-site data, to distinguish true absence of structure from n-driven under-powering.",
+    "H6 (L3): Cross-script control — apply the identical document-cooccurrence pipeline to Linear B (synthetic documents built from wordforms) to calibrate the expected magnitude of cooc_score under a known administrative writing system, and compare to the LA result."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Signs are treated as fully anonymous integer ids; no phonetic values, sound, meaning, or reading were used at any stage. The metric and null operate only on the sign x inscription incidence matrix (L2/L3 distributional structure). The per-pair z uses a hypergeometric independent-placement null conditioned only on sign document-frequencies and document sizes; the global null is a degree-preserving curveball shuffle that exactly preserves both marginals, controlling for sign-frequency inflation. Linear B is used solely as a positive-control benchmark (no document grouping beyond wordforms; a synthetic-document control is noted as a successor). Verdict is mechanical from the frozen rule.",
+  "deviations": [
+    "LB positive control: load_b_damos returns wordforms with no native document grouping, so the LB PC was implemented as a SYNTHETIC incidence-matrix control (planted-topic detect + degree-matched random false-positive) rather than a direct LB document-cooccurrence test, as explicitly allowed by the protocol ('build a synthetic document control OR SAY SO'). A direct LB document-cooccurrence calibration is listed as successor H6.",
+    "Held-out replication used the top-20 (by z) over-represented pairs of the largest site rather than an exhaustive pair list, to keep the replication test well-defined and comparable across sites.",
+    "Leave-one-site-out was performed by dropping the largest site (Haghia Triada) and testing the pooled remainder, as specified."
+  ]
+}
