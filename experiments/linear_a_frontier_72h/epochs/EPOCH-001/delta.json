@@ -1,0 +1,83 @@
+{
+ "epoch": "EPOCH-001",
+ "generated_by": "scripts/anetaki_delta.py",
+ "inputs": {
+  "silver": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/corpus/silver/inscriptions_structured.json",
+  "candidates": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/experiments/linear_a_frontier_72h/data/anetaki_2025/sign_candidates.json",
+  "n_silver_docs": 1341,
+  "n_candidate_rows": 40
+ },
+ "silver_state": {
+  "KNZg57a_in_silver": true,
+  "KNZg57a_signs": [
+   "*401+RU",
+   "*401+RU",
+   "*418+L2",
+   "NI",
+   "VAS"
+  ],
+  "KNZg58_in_silver": false,
+  "KNZg56_in_silver": false
+ },
+ "editor_printed_syllabograms_already_in_silver_vocab": {
+  "RA": true,
+  "I": true,
+  "NE": true,
+  "SE": true,
+  "KU": true,
+  "WI": true,
+  "A": true,
+  "DI": true,
+  "KA": true
+ },
+ "special_sign_presence_in_silver": {
+  "A664_rhyton": false,
+  "CH_180_in_LA": false,
+  "CH_181_in_LA": false,
+  "hide_ideogram_CUIR": false
+ },
+ "genuinely_new_information": {
+  "new_sign_types_vs_silver": [
+   {
+    "type": "A664 (rhyton)",
+    "silver_has_verbatim": false,
+    "alias_candidate": "*418+L2 (PH8a line 3 + KNZg57a both carry it)",
+    "alias_evidence_mechanical": true,
+    "countable": false,
+    "status": "UNCERTAIN_ALIAS"
+   },
+   {
+    "type": "CH *180 (in LA use)",
+    "silver_has": false
+   },
+   {
+    "type": "CH *181 (in LA use)",
+    "silver_has": false
+   },
+   {
+    "type": "probable NEW LA sign (handle face \u03b1) \u2014 shape unpublished",
+    "silver_has": false,
+    "countable": false
+   }
+  ],
+  "n_new_countable_sign_types": 2,
+  "new_star301_contexts": 0,
+  "new_A_only_occurrences_verifiable": 0,
+  "new_formula_slots": 0,
+  "new_transliterated_multi_sign_sequences": 0,
+  "unpublished_seal_relevant_content": {
+   "face_B_sign_groups": 6,
+   "face_C_sign_groups_min": 9,
+   "handle_beta_sequence_signs": 4,
+   "face_A_metope_signs_min": 16,
+   "fraction_signs_distinct": 6,
+   "total_signs_reported": 119,
+   "transliterated_sequences_published": 0
+  }
+ },
+ "negative_control_fringe_leak": {
+  "pass": true,
+  "leaks": []
+ },
+ "note": "counts are descriptive supply metrics; no hypothesis graded; no statistical claim"
+}

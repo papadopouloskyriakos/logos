@@ -1,0 +1,93 @@
+{
+  "epoch": "EPOCH-001",
+  "title": "Ariadne-2025 Anetaki source acquisition (frontier F8/F1)",
+  "campaign": "research/linear-a-frontier-72h",
+  "date": "2026-07-08",
+  "seed": 20260708,
+  "constitution": "v2.2",
+  "plan_hash_sha256": "357337e5913679de74c569c18e03aed48beaf62652f4df1185bab590c2f270db",
+  "claim_layer": "L0/L1 (acquisition/supply only; no structural/semantic/phonetic claim)",
+  "articles_cited": ["VII", "IX", "XI", "XII", "XV", "XVII", "XVIII", "XXII"],
+
+  "verdict": "RESOLVED_PUBLISHED_PARTIAL",
+  "verdict_rule_check": {
+    "conflict_explained_with_page_citations": true,
+    "open_licensed_edition_on_disk": true,
+    "machine_readable_extraction_nonempty": true,
+    "no_new_transliterated_multi_sign_sequence_beyond_silver": true
+  },
+  "SEAL_SCOREABLE_CONTENT_ACQUIRED": false,
+
+  "resolution_of_the_contradiction": {
+    "K_epoch_claim": "'Anetaki scepter published (Ariadne Supplements 2025) and NOT in silver' — HALF-RIGHT: the PRELIMINARY overview is published (volume imprint 2024, media wave March-April 2025 explains the 2025 dating; same edition), but the ring IS partially in silver as KNZg57a (5 preliminary tokens via lineara.xyz)",
+    "J1_M_claim": "'no complete transliteration public; editio princeps unpublished' — CONFIRMED as of 2026-07-08: Kanta et al. 2024 prints ZERO transliterated sign sequences (verified against the PDF); Anetaki II (Kanta ed., INSTAP Academic Press) remains forthcoming (instappress.org checked: not listed)",
+    "both_correct": "publication-STATUS and transliteration-AVAILABILITY are different axes; the conflict was verbal, not factual"
+  },
+
+  "positive_control": {
+    "description": "phase3 extraction load-bearing items re-verified against the on-disk PDF",
+    "result": "15/15 PASS (4 initial regex fails were hyphenation/case artifacts: 'longest known Linear A inscrip-tion' line-break, 'vas+PA/vas+RU' lower-case, '16 whole' phrasing, 'two different hands of the scribe/incisor')"
+  },
+  "negative_control": {
+    "description": "no fringe (Rjabchikov) reading string in any non-quarantined candidate row",
+    "result": "PASS (0 leaks; mechanical, scripts/anetaki_delta.py)"
+  },
+
+  "search_receipt": {
+    "article": "VII",
+    "date": "2026-07-08",
+    "queries": [
+      {"q": "\"Anetaki II\" Kanta \"Ivory Repository\" Knossos publication", "hit": "INSTAP forthcoming citation only; scribd copy of kanta_etal_2024 (duplicate)"},
+      {"q": "Kanta Nakassis Palaima Perna \"Zg 57\" OR \"Zg 58\" transliteration 2025", "hit": "Civitillo academia page; no edition"},
+      {"q": "INSTAP Academic Press Kanta Anetaki Neopalatial Room 1 Ivory Repository 2026", "hit": "forthcoming-only; nothing live"},
+      {"q": "GreekReporter 2026 Minoan ivory scepter", "hit": "2026-03-30 media re-run; no new publication reported"},
+      {"q": "Ariadne issue 178 TOC (WebFetch)", "hit": "full TOC: ONLY Kanta et al. pp. 27-43 covers Anetaki; Civitillo pp. 511-526 = seals article"},
+      {"q": "Kadmos 2024 2025 Kanta ivory ring \"Zg 57\"", "hit": "NO Kadmos edition materialized (Younger's 2023 pointer dead)"},
+      {"q": "\"KN Zg 56\" Linear A Knossos", "hit": "NO public identity for KN Zg 56 anywhere"},
+      {"q": "Civitillo 1871 PDF (downloaded, grepped)", "hit": "KN Zg 55 discussed (seal, JA-SA-JA); NO Zg 56, NO Anetaki ivory"},
+      {"q": "Zenodo/arXiv Anetaki transliteration 2025 2026", "hit": "none"},
+      {"q": "Palaima/PASP \"Two Linear A Inscriptions on Ivory\" Weingarten", "hit": "phrase appears only in search-engine synthesis; NOT verifiable on Nakassis CV (fetched: only the 2024 article) or PASP pages — recorded as UNVERIFIED possible ed.pr. title",
+       "note": "negative kept honestly"},
+      {"q": "Dartmouth Aegean bibliography Linear A (WebFetch)", "hit": "no Anetaki/Kanta entry"},
+      {"q": "aegeussociety.org Anetaki / ivory scepter 2026", "hit": "media only"},
+      {"q": "SigLA browse (WebFetch)", "hit": "no Zg 57/58, no Anetaki; 802 docs unchanged"},
+      {"q": "Del Freo Zurbach \"Zg 56\"/\"Zg 55\" rapport", "hit": "no Zg 56; Recueil EFA page only"}
+    ],
+    "negatives_withheld": "none"
+  },
+
+  "acquired": {
+    "new_files_this_epoch": [
+      "data/anetaki_2025/editions.json",
+      "data/anetaki_2025/sign_candidates.json (40 rows: 35 editor-grade/placeholder, 1 preliminary, 3 fringe-quarantined, 1 prediction-registry)",
+      "data/anetaki_2025/CONTAMINATION_BOUNDARY.md",
+      "epochs/EPOCH-001/delta.json (mechanical)"
+    ],
+    "already_on_disk_confirmed": [
+      "corpus/bronze/kanta_etal_2024_anetaki/ (CC BY-NC-SA 4.0, sha256 87dad27b…57d2)",
+      "corpus/bronze/delfreo_rapport_koronowesa/",
+      "corpus/bronze/rjabchikov_2025_sceptre/ (fringe, quarantined)",
+      "corpus/bronze/prepub_prediction_2024_ivory_circle/"
+    ],
+    "corpus_silver_touched": false
+  },
+
+  "delta_vs_silver": {
+    "new_countable_sign_types": 2,
+    "detail": "CH *180 + CH *181 in Linear A use (handle face α); plus 1 probable NEW LA sign (shape unpublished, not countable); A664 rhyton = UNCERTAIN_ALIAS of *418+L2 (mechanical: *418+L2 in both PH8a.3 and KNZg57a)",
+    "new_star301_contexts": 0,
+    "new_A_only_occurrences_verifiable": 0,
+    "new_formula_slots": 0,
+    "new_transliterated_sequences": 0,
+    "held_out_inventory_unpublished": {"face_B_groups": 6, "face_C_groups_min": 9, "handle_beta_seq": 4, "face_A_metope_signs_min": 16, "fraction_signs": 6, "total_signs": 119}
+  },
+
+  "carrier_identity_resolutions": {
+    "KN_Zg_57": "ivory Ring (authoritative: Del Freo rapport p. 99 + Kanta et al.); partially in silver as KNZg57a",
+    "KN_Zg_58": "ivory bar/handle (authoritative) — COLLIDES with Younger's old 'KN Zg 58' steatite amygdaloid HM 843 (actually Hieroglyphic per Younger); recorded, resolved per A-2",
+    "KN_Zg_55": "steatite disk seal JA-SA-JA, chance find — NOT an Anetaki-deposit item",
+    "KN_Zg_56": "NOT_ESTABLISHED — no attestation in any consulted source; task enumeration unsupported for 56"
+  },
+
+  "compliance_line": "Art. VII receipt complete (14 routes, negatives included); Art. XI source-dependency: all rows carry witness + page; Art. XII: no seal opened, no target graded; Art. XV: no licence claimed or consumed; Art. XVII: append-only, prior epochs' artifacts untouched; Art. XVIII: A-1..A-3 recorded in prereg; counts generated by scripts/anetaki_delta.py (Invariant 12)."
+}

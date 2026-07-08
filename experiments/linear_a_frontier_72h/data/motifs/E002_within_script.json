@@ -1,0 +1,339 @@
+{
+ "experiment": "EPOCH-002_within_script_motifs",
+ "seed": 20260708,
+ "plan_hash": "09c55c9e42406393d278299569007d085e1bc9c558ca388ca4715f76b34cadae",
+ "corpus": {
+  "lb_word_tokens": 13562,
+  "docs": 3856,
+  "scorable_signs": 72,
+  "relation_counts": {
+   "spelling_variant": 9,
+   "cross": 1929,
+   "same_vowel": 497,
+   "same_consonant": 121
+  },
+  "n_within_band_pairs": 612
+ },
+ "positive_control": {
+  "flat_full_same_C_auc": 0.6998637584668972,
+  "window": [
+   0.68,
+   0.72
+  ],
+  "pass": true
+ },
+ "observed": {
+  "FLAT": {
+   "coverage_signs": 87,
+   "same_C_full": 0.6998637584668972,
+   "same_C_freq_disjoint": 0.7496413199426112,
+   "same_C_n_pos_fd": 41,
+   "same_V_full": 0.5704418319142434,
+   "same_V_freq_disjoint": 0.6120174632352942,
+   "same_V_n_pos_fd": 128,
+   "n_neg_fd": 442
+  },
+  "MF_A_trigram": {
+   "coverage_signs": 89,
+   "same_C_full": 0.6289945974662502,
+   "same_C_freq_disjoint": 0.6823198322480962,
+   "same_C_n_pos_fd": 41,
+   "same_V_full": 0.5778533304544738,
+   "same_V_freq_disjoint": 0.6274126838235294,
+   "same_V_n_pos_fd": 128,
+   "n_neg_fd": 442
+  },
+  "MF_B_formula": {
+   "coverage_signs": 85,
+   "same_C_full": 0.6639268408673188,
+   "same_C_freq_disjoint": 0.7533660743847257,
+   "same_C_n_pos_fd": 41,
+   "same_V_full": 0.5473916594434414,
+   "same_V_freq_disjoint": 0.583745757918552,
+   "same_V_n_pos_fd": 128,
+   "n_neg_fd": 442
+  },
+  "MF_C_site": {
+   "coverage_signs": 87,
+   "same_C_full": 0.6930045542374116,
+   "same_C_freq_disjoint": 0.7612570356472795,
+   "same_C_n_pos_fd": 41,
+   "same_V_full": 0.568546582762516,
+   "same_V_freq_disjoint": 0.5897730486425339,
+   "same_V_n_pos_fd": 128,
+   "n_neg_fd": 442
+  }
+ },
+ "label_nulls_freq_matched": {
+  "MF_A_trigram": {
+   "same_C": {
+    "obs": 0.6823198322480962,
+    "n_null": 1000,
+    "null_mean": 0.5825008001324357,
+    "null_p95": 0.6272058823529412,
+    "p_one_sided": 0.000999000999000999
+   },
+   "same_V": {
+    "obs": 0.6274126838235294,
+    "n_null": 1000,
+    "null_mean": 0.5354231652997737,
+    "null_p95": 0.5580064868495476,
+    "p_one_sided": 0.000999000999000999
+   }
+  },
+  "MF_B_formula": {
+   "same_C": {
+    "obs": 0.7533660743847257,
+    "n_null": 1000,
+    "null_mean": 0.5707571184196004,
+    "null_p95": 0.6233417945039179,
+    "p_one_sided": 0.000999000999000999
+   },
+   "same_V": {
+    "obs": 0.583745757918552,
+    "n_null": 1000,
+    "null_mean": 0.5299164751838236,
+    "null_p95": 0.5613780578337104,
+    "p_one_sided": 0.001998001998001998
+   }
+  },
+  "MF_C_site": {
+   "same_C": {
+    "obs": 0.7612570356472795,
+    "n_null": 1000,
+    "null_mean": 0.5607972629952545,
+    "null_p95": 0.6213469815693632,
+    "p_one_sided": 0.000999000999000999
+   },
+   "same_V": {
+    "obs": 0.5897730486425339,
+    "n_null": 1000,
+    "null_mean": 0.5241707526159503,
+    "null_p95": 0.5598045107466064,
+    "p_one_sided": 0.000999000999000999
+   }
+  }
+ },
+ "holm_families_x_axes": {
+  "MF_A_trigram:same_C": 0.005994005994005994,
+  "MF_A_trigram:same_V": 0.005994005994005994,
+  "MF_B_formula:same_C": 0.005994005994005994,
+  "MF_C_site:same_C": 0.005994005994005994,
+  "MF_C_site:same_V": 0.005994005994005994,
+  "MF_B_formula:same_V": 0.005994005994005994
+ },
+ "flat_label_null_same_C_fd": {
+  "obs": 0.7496413199426112,
+  "n_null": 1000,
+  "null_mean": 0.5710715704668359,
+  "null_p95": 0.6257352941176471,
+  "p_one_sided": 0.000999000999000999
+ },
+ "degree_preserving_nulls": {
+  "FLAT": {
+   "obs": 0.7496413199426112,
+   "n_null": 200,
+   "null_mean": 0.5881718353382629,
+   "null_p95": 0.624123992936762,
+   "p_one_sided": 0.004975124378109453
+  },
+  "MF_A_trigram": {
+   "obs": 0.6823198322480962,
+   "n_null": 200,
+   "null_mean": 0.6237499999999999,
+   "null_p95": 0.6554036530184306,
+   "p_one_sided": 0.004975124378109453
+  },
+  "MF_B_formula": {
+   "obs": 0.7533660743847257,
+   "n_null": 200,
+   "null_mean": 0.5834717470477873,
+   "null_p95": 0.6283660743847257,
+   "p_one_sided": 0.004975124378109453
+  },
+  "MF_C_site": {
+   "obs": 0.7612570356472795,
+   "n_null": 200,
+   "null_mean": 0.5800845657212228,
+   "null_p95": 0.6265781922525108,
+   "p_one_sided": 0.004975124378109453
+  }
+ },
+ "wrong_language_shuffled": {
+  "FLAT": {
+   "same_C_full": 0.6359416303570128,
+   "same_C_freq_disjoint": 0.6853272265754332,
+   "pass_lt_055": false
+  },
+  "MF_A_trigram": {
+   "same_C_full": 0.6314109567326024,
+   "same_C_freq_disjoint": 0.6959220836552257,
+   "pass_lt_055": false
+  },
+  "MF_B_formula": {
+   "same_C_full": 0.5954761812954942,
+   "same_C_freq_disjoint": 0.6517492550491116,
+   "pass_lt_055": false
+  },
+  "MF_C_site": {
+   "same_C_full": 0.624453213029489,
+   "same_C_freq_disjoint": 0.6737666924180554,
+   "pass_lt_055": false
+  }
+ },
+ "sign_bootstrap_delta_vs_flat": {
+  "MF_A_trigram": {
+   "full": {
+    "n_boot": 1000,
+    "delta_mean": -0.07122933509878351,
+    "ci95": [
+     -0.13335936126579517,
+     -0.015511521420109071
+    ],
+    "frac_gt0": 0.003
+   },
+   "freq_disjoint": {
+    "n_boot": 1000,
+    "delta_mean": -0.06336017962981567,
+    "ci95": [
+     -0.1705741673031377,
+     0.03111095061525848
+    ],
+    "frac_gt0": 0.093
+   }
+  },
+  "MF_B_formula": {
+   "full": {
+    "n_boot": 1000,
+    "delta_mean": -0.03591392424596403,
+    "ci95": [
+     -0.10353458399988975,
+     0.031736395650057134
+    ],
+    "frac_gt0": 0.121
+   },
+   "freq_disjoint": {
+    "n_boot": 1000,
+    "delta_mean": 0.004604293911984268,
+    "ci95": [
+     -0.10031061992765586,
+     0.11706493817485185
+    ],
+    "frac_gt0": 0.531
+   }
+  },
+  "MF_C_site": {
+   "full": {
+    "n_boot": 1000,
+    "delta_mean": -0.008078044764814302,
+    "ci95": [
+     -0.05723807189205627,
+     0.04230266669212404
+    ],
+    "frac_gt0": 0.368
+   },
+   "freq_disjoint": {
+    "n_boot": 1000,
+    "delta_mean": 0.011959841673554641,
+    "ci95": [
+     -0.07840345571166828,
+     0.11464310023898926
+    ],
+    "frac_gt0": 0.592
+   }
+  }
+ },
+ "loso": {
+  "held_series": [
+   "E",
+   "A",
+   "D",
+   "F",
+   "C",
+   "X"
+  ],
+  "folds": [
+   {
+    "held": "E",
+    "n_train_words": 11023,
+    "FLAT": 0.6827842970922287,
+    "MF_A_trigram": 0.6248066698370671,
+    "MF_B_formula": 0.6543813649002395,
+    "MF_C_site": 0.6770111692351195
+   },
+   {
+    "held": "A",
+    "n_train_words": 11484,
+    "FLAT": 0.6954123448538831,
+    "MF_A_trigram": 0.6324477633681649,
+    "MF_B_formula": 0.6665638428680984,
+    "MF_C_site": 0.6847593708897257
+   },
+   {
+    "held": "D",
+    "n_train_words": 12206,
+    "FLAT": 0.6925975433680792,
+    "MF_A_trigram": 0.6300635365388653,
+    "MF_B_formula": 0.6655977275940517,
+    "MF_C_site": 0.6868008517237981
+   },
+   {
+    "held": "F",
+    "n_train_words": 12564,
+    "FLAT": 0.6994246151605122,
+    "MF_A_trigram": 0.630286321435763,
+    "MF_B_formula": 0.6605979203886739,
+    "MF_C_site": 0.6942384398202297
+   },
+   {
+    "held": "C",
+    "n_train_words": 12701,
+    "FLAT": 0.6927067936540579,
+    "MF_A_trigram": 0.6292409461503198,
+    "MF_B_formula": 0.6637426148948841,
+    "MF_C_site": 0.692556842281146
+   },
+   {
+    "held": "X",
+    "n_train_words": 12793,
+    "FLAT": 0.6895770942851389,
+    "MF_A_trigram": 0.6277692805333128,
+    "MF_B_formula": 0.640444455869311,
+    "MF_C_site": 0.6707003585979975
+   }
+  ],
+  "MF_A_trigram_wins_vs_flat": 0,
+  "MF_B_formula_wins_vs_flat": 0,
+  "MF_C_site_wins_vs_flat": 0
+ },
+ "family_verdicts": {
+  "MF_A_trigram": {
+   "holm_p_same_C_fd": 0.005994005994005994,
+   "boot_ci95_fd": [
+    -0.1705741673031377,
+    0.03111095061525848
+   ],
+   "loso_wins": 0,
+   "verdict": "EQUIVALENT"
+  },
+  "MF_B_formula": {
+   "holm_p_same_C_fd": 0.005994005994005994,
+   "boot_ci95_fd": [
+    -0.10031061992765586,
+    0.11706493817485185
+   ],
+   "loso_wins": 0,
+   "verdict": "EQUIVALENT"
+  },
+  "MF_C_site": {
+   "holm_p_same_C_fd": 0.005994005994005994,
+   "boot_ci95_fd": [
+    -0.07840345571166828,
+    0.11464310023898926
+   ],
+   "loso_wins": 0,
+   "verdict": "EQUIVALENT"
+  }
+ },
+ "leg_verdict": "MOTIF_WITHIN_EQUIVALENT"
+}

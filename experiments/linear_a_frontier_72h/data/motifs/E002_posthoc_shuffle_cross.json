@@ -1,0 +1,23 @@
+{
+ "declared": "POST-HOC adversarial: within-word shuffle of BOTH scripts, MF_A + M1-LOO on KNOWN",
+ "seed": 20260708,
+ "KNOWN_real": {
+  "n": 47,
+  "exact": 0.14893617021276595,
+  "exact_p": 0.000999000999000999,
+  "conC": 0.23404255319148937,
+  "conC_p": 0.000999000999000999
+ },
+ "KNOWN_shuffled": {
+  "n": 47,
+  "exact": 0.0425531914893617,
+  "exact_p": 0.24875124875124874,
+  "conC": 0.14893617021276595,
+  "conC_p": 0.1108891108891109
+ },
+ "REAL_LA_shuffled": {
+  "n": 51,
+  "exact": 0.11764705882352941,
+  "exact_p": 0.000999000999000999
+ }
+}

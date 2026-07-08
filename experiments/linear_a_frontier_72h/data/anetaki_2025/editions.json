@@ -1,0 +1,81 @@
+{
+  "register": "Anetaki-sanctuary Linear A inscriptions — deduplicated edition/witness register",
+  "epoch": "EPOCH-001",
+  "as_of": "2026-07-08",
+  "carriers_resolved": {
+    "KN Zg 57": {
+      "object": "ivory Ring ('sceptre' head), elephant-tusk slice, outer diam. c. 13.5-14 cm, faces A/B/C/D",
+      "findspot": "Knossos, Bougada Metochi (Anetaki plot), Neopalatial Room 1, Ivory Repository (NW corner votive deposit), found 2016 (Kanta); Herakleion Ephorate Δ 3460/Δ 3458",
+      "numbering_authority": "Del Freo, Rapport 2016-2021, p. 99 (inedit) + Kanta et al. 2024 fn. 7 (GORILA numbering)",
+      "in_silver_corpus": "PARTIALLY — silver id KNZg57a carries a 5-token preliminary reading (*401+RU, *401+RU, *418+L2, NI, VAS + lacunae) inherited from lineara.xyz; ultimate published source of that reading NOT identified in the public record (assumption A-3, confidence <= 0.5)",
+      "aliases": ["Younger misctexts 'KN Zh no no.' ivory band/sceptre (Kanta 2018 exh. cat. no. 280, D. 13.7 cm) — same object, designation-letter discrepancy recorded"]
+    },
+    "KN Zg 58": {
+      "object": "ivory bar/handle, quadrangular section, 13.2 cm, faces α/β/γ/δ + one end",
+      "findspot": "same 2016 votive deposit as KN Zg 57",
+      "numbering_authority": "Del Freo, Rapport 2016-2021, pp. 99-100 (inedit) + Kanta et al. 2024",
+      "in_silver_corpus": false,
+      "numbering_collision": "Younger misctexts.txt line 2834 uses 'KN Zg 58' for an OLDER steatite amygdaloid (HM 843; CMS II 3, no. 23) with HIEROGLYPHIC signs — a genuine collision between Younger's site numbering and the Del Freo/Kanta numbering; the ivory bar is the authoritative KN Zg 58 (A-2)"
+    },
+    "KN Zg 55": {
+      "object": "steatite/chlorite disk seal (HM 621; CMS II 2, no. 213), chance find, MM III/LM I — NOT from the Anetaki excavation deposit",
+      "reading": "JA-SA-JA (in silver as KNZg55)",
+      "note": "in the task's target list but not an Anetaki-deposit item; Civitillo 2024 (Ariadne Suppl. 5, 511-526) discusses it as one of four LA seals"
+    },
+    "KN Zg 56": {
+      "object": "UNIDENTIFIED — no attestation found in GORILA holdings, Younger, Del Freo Rapport 2016-2021, Civitillo 2024, silver corpus, or any web route searched this epoch",
+      "status": "NOT_ESTABLISHED as an Anetaki (or any) item; the task brief's '55, 56, 57, 58' enumeration is not supported for 56"
+    }
+  },
+  "editions": [
+    {
+      "id": "kanta_etal_2024",
+      "citation": "A. Kanta, D. Nakassis, T. G. Palaima & M. Perna, 'An archaeological and epigraphical overview of some inscriptions found in the Cult Center of the city of Knossos (Anetaki plot)', in J. Bennet, A. Karnava & T. Meissner (eds), KO-RO-NO-WE-SA (Ariadne Supplement Series 5), Rethymno 2024, pp. 27-43",
+      "doi": "10.26248/ariadne.vi.1841",
+      "role": "ONLY scholarly edition/witness with epigraphic content; preliminary overview; prints NO transliterated sign sequences",
+      "licence": "CC BY-NC-SA 4.0 (journal platform statement)",
+      "accessibility": "open access; on disk at corpus/bronze/kanta_etal_2024_anetaki/ (sha256 87dad27b…57d2; frontmatter variant bc50adba…69bb)",
+      "note_on_dating": "volume imprint 2024; online/media wave March-April 2025 explains the 'Ariadne Supplements 2025' citation in the K-epoch finding — SAME edition, no separate 2025 publication exists"
+    },
+    {
+      "id": "delfreo_rapport_2016_2021",
+      "citation": "M. Del Freo, 'Rapport 2016-2021 …', same volume, pp. 87-124 (KN Zg 57/58 at pp. 99-100)",
+      "doi": "10.26248/ariadne.vi.1843",
+      "role": "authoritative numbering + physical description; both items 'inedit'; NO readings",
+      "licence": "CC BY-NC-SA 4.0",
+      "accessibility": "open access; on disk at corpus/bronze/delfreo_rapport_koronowesa/"
+    },
+    {
+      "id": "anetaki_II_editio_princeps",
+      "citation": "A. Kanta (ed.), Anetaki II: the Neopalatial Room 1 and the Ivory Repository, Philadelphia: INSTAP Academic Press, forthcoming (cited in kanta_etal_2024 fns. 6, 8, 10, 13 and bibliography)",
+      "role": "the full edition with transliterations — the target of both frozen prospective seals",
+      "status_2026_07_08": "UNPUBLISHED — not on instappress.org (site checked: no Kanta/Anetaki title live or forthcoming-listed), no Kadmos edition materialized (Younger's 2023 pointer superseded), no Zenodo/arXiv/academia.edu preprint found",
+      "accessibility": "SOURCE_BLOCKED (does not exist publicly)"
+    },
+    {
+      "id": "lineara_xyz_KNZg57a",
+      "citation": "lineara.xyz corpus (mwenge), inherited into corpus/silver as KNZg57a",
+      "role": "preliminary partial reading witness: *401+RU, *401+RU, *418+L2, NI, VAS + 6 lacuna marks; face not stated",
+      "provenance_gap": "ultimate published source NOT identified this epoch (no public transliteration exists); possibly read from exhibition/press photographs; treated at confidence <= 0.5 (assumption A-3)",
+      "consistency": "*401+RU coheres with the editors' 'vas+RU' ligature statement (kanta_etal_2024 p. 38); NI and VAS plausibly Face A vase/commodity signs"
+    },
+    {
+      "id": "rjabchikov_2025",
+      "citation": "S. V. Rjabchikov 2025, 'The Decipherment of two Records of Linear A on the Ivory Mirror from Knossos, Crete', Novaya Nauka proceedings, Petrozavodsk, pp. 100-106",
+      "role": "FRINGE photo-based readings; QUARANTINED registry object, never evidence (litindex claim_type fringe_sceptre_reading)",
+      "accessibility": "on disk at corpus/bronze/rjabchikov_2025_sceptre/"
+    },
+    {
+      "id": "chiapello_2024",
+      "citation": "D. Chiapello 2024, 'Deductions on an unknown find …' (Academia.edu self-post, 2024-02-07)",
+      "role": "pre-publication PREDICTION registry object (no readings printed in the archived abstract/page)",
+      "accessibility": "archived page at corpus/bronze/prepub_prediction_2024_ivory_circle/ (PDF login-gated, not acquired)"
+    },
+    {
+      "id": "media_echoes_2025_2026",
+      "citation": "GreekReporter 2025-04-28 + 2026-03-30 re-run; La Brujula Verde 2025-03; Biblical Archaeology Society; languagehat; World History Encyclopedia image page; diggingupthepast.net; scribd copy of kanta_etal_2024",
+      "role": "derivative media of kanta_etal_2024 ONLY; no independent epigraphic content; never reading sources",
+      "checked_2026_07_08": "the 2026-03-30 GreekReporter item reports no new publication"
+    }
+  ]
+}

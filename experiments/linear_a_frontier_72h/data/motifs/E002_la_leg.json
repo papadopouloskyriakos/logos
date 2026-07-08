@@ -1,0 +1,167 @@
+{
+ "experiment": "EPOCH-002_la_leg_motif",
+ "seed": 20260708,
+ "plan_hash": "09c55c9e42406393d278299569007d085e1bc9c558ca388ca4715f76b34cadae",
+ "family": "MF_A_trigram",
+ "trigger": "MOTIF_CROSS_SUPERIOR (prereg conditional clause)",
+ "framing": "graded vs AB shape-homomorphic PROPOSAL, not ground truth; L2 relative; capped <= 0.75; no value claim possible (Art. XV)",
+ "pair": {
+  "pair": "REAL_LAsilver_vs_LBdamos_MF_A",
+  "n_alignable_signs": 51,
+  "methods": {
+   "M2_structural_signature": {
+    "exact": 0.0196078431372549,
+    "consonant_class": 0.0784313725490196,
+    "vowel_class": 0.19607843137254902,
+    "top3_exact": 0.13725490196078433,
+    "exact_count": 1,
+    "n": 51,
+    "perm_null": {
+     "exact": {
+      "obs": 0.0196078431372549,
+      "null_mean": 0.01990196078431372,
+      "z": -0.014689125918558657,
+      "p_one_sided": 0.6363636363636364
+     },
+     "consonant_class": {
+      "obs": 0.0784313725490196,
+      "null_mean": 0.07670588235294118,
+      "z": 0.04849934498633806,
+      "p_one_sided": 0.5664335664335665
+     },
+     "vowel_class": {
+      "obs": 0.19607843137254902,
+      "null_mean": 0.22182352941176472,
+      "z": -0.454463190300423,
+      "p_one_sided": 0.7222777222777222
+     },
+     "exact_count": 1,
+     "n": 51
+    },
+    "supervised": false
+   },
+   "M3_gromov_wasserstein": {
+    "exact": 0.0392156862745098,
+    "consonant_class": 0.11764705882352941,
+    "vowel_class": 0.21568627450980393,
+    "top3_exact": 0.058823529411764705,
+    "exact_count": 2,
+    "n": 51,
+    "perm_null": {
+     "exact": {
+      "obs": 0.0392156862745098,
+      "null_mean": 0.019392156862745095,
+      "z": 1.0045518830034499,
+      "p_one_sided": 0.26573426573426573
+     },
+     "consonant_class": {
+      "obs": 0.11764705882352941,
+      "null_mean": 0.07729411764705882,
+      "z": 1.0924828885755973,
+      "p_one_sided": 0.2017982017982018
+     },
+     "vowel_class": {
+      "obs": 0.21568627450980393,
+      "null_mean": 0.2202156862745098,
+      "z": -0.08024104337079732,
+      "p_one_sided": 0.5994005994005994
+     },
+     "exact_count": 2,
+     "n": 51
+    },
+    "supervised": false
+   },
+   "M1_nn_transfer": {
+    "exact": 0.1568627450980392,
+    "consonant_class": 0.2549019607843137,
+    "vowel_class": 0.3137254901960784,
+    "exact_count": 8,
+    "n": 51,
+    "perm_null": {
+     "exact": {
+      "obs": 0.1568627450980392,
+      "null_mean": 0.018431372549019602,
+      "z": 7.440240223482102,
+      "p_one_sided": 0.000999000999000999
+     },
+     "consonant_class": {
+      "obs": 0.2549019607843137,
+      "null_mean": 0.076,
+      "z": 4.984509512128503,
+      "p_one_sided": 0.000999000999000999
+     },
+     "vowel_class": {
+      "obs": 0.3137254901960784,
+      "null_mean": 0.20680392156862742,
+      "z": 1.9122399787951887,
+      "p_one_sided": 0.03996003996003996
+     },
+     "exact_count": 8,
+     "n": 51
+    },
+    "supervised": true
+   },
+   "M4_spectral_procrustes": {
+    "exact": 0.0196078431372549,
+    "consonant_class": 0.09803921568627451,
+    "vowel_class": 0.21568627450980393,
+    "exact_count": 1,
+    "n": 51,
+    "perm_null": {
+     "exact": {
+      "obs": 0.0196078431372549,
+      "null_mean": 0.019490196078431363,
+      "z": 0.006168988289765593,
+      "p_one_sided": 0.6373626373626373
+     },
+     "consonant_class": {
+      "obs": 0.09803921568627451,
+      "null_mean": 0.08072549019607843,
+      "z": 0.45229679405202,
+      "p_one_sided": 0.3906093906093906
+     },
+     "vowel_class": {
+      "obs": 0.21568627450980393,
+      "null_mean": 0.21564705882352941,
+      "z": 0.0006856719085699083,
+      "p_one_sided": 0.5634365634365635
+     },
+     "exact_count": 1,
+     "n": 51
+    },
+    "supervised": true
+   }
+  },
+  "multiplicity": {
+   "n_tests": 12,
+   "holm_adj": {
+    "M1_nn_transfer:exact": 0.011988011988011988,
+    "M1_nn_transfer:consonant_class": 0.011988011988011988,
+    "M1_nn_transfer:vowel_class": 0.3996003996003996,
+    "M3_gromov_wasserstein:consonant_class": 1.0,
+    "M3_gromov_wasserstein:exact": 1.0,
+    "M4_spectral_procrustes:consonant_class": 1.0,
+    "M4_spectral_procrustes:vowel_class": 1.0,
+    "M2_structural_signature:consonant_class": 1.0,
+    "M3_gromov_wasserstein:vowel_class": 1.0,
+    "M2_structural_signature:exact": 1.0,
+    "M4_spectral_procrustes:exact": 1.0,
+    "M2_structural_signature:vowel_class": 1.0
+   },
+   "exact_survivors_holm05": [
+    "M1_nn_transfer:exact"
+   ],
+   "any_survivors_holm05": [
+    "M1_nn_transfer:exact",
+    "M1_nn_transfer:consonant_class"
+   ],
+   "best_exact_accuracy": 0.1568627450980392
+  }
+ },
+ "flat_baseline_from_F2": {
+  "best_exact": 0.0784313725490196,
+  "exact_survivors": [],
+  "any_survivors": []
+ },
+ "la_verdict": "LA_MOTIF_GEOMETRY_CONSISTENT_WITH_AB_HOMOMORPHY_L2"
+}

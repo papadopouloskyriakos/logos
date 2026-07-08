@@ -1,2 +1,35 @@
 # EPOCH_LEDGER — one record per epoch; substantive gate A-H per campaign §5
-epochs: []
+epochs:
+  - id: EPOCH-002
+    frontier: F3
+    name: higher-order substitution motifs (trigram-frame / formula-slot / site-stratified)
+    substantive_gate: A
+    plan_hash: 09c55c9e42406393d278299569007d085e1bc9c558ca388ca4715f76b34cadae
+    prereg_frozen: 2026-07-08T03:27:22Z
+    completed: 2026-07-08
+    positive_control: PASS (flat same-C AUC 0.6999 in [0.68,0.72])
+    verdicts:
+      within_script: MOTIF_WITHIN_EQUIVALENT
+      cross_script: MOTIF_CROSS_SUPERIOR   # first Holm survivor on KNOWN LB<->Cypriot (M1 exact 0.149 p .001; flat had zero)
+      la_leg: LA_MOTIF_GEOMETRY_CONSISTENT_WITH_AB_HOMOMORPHY_L2   # M1 exact 0.157 p .001 Holm survivor; consistency test, NOT value recovery
+    adversarial_findings:
+      - wrong-language shuffle control FAILED for ALL within-script families incl. flat -> C-axis substantially order-free (composition); constrains F1/C_AUDIT mechanism attribution
+      - KNOWN cross-script signal collapses under order destruction (0.149->0.043) = genuinely sequential; LA<->LB survives (0.157->0.118) = substantially composition-driven
+      - frequency-rank adversary cannot explain KNOWN (3/47 p .085) or LA (2/51 p .25) hits
+    layer: L2
+    licences_changed: none
+    artifacts: [epochs/EPOCH-002/result.json, reports/EPOCH002_SUBSTITUTION_MOTIFS.md, data/motifs/]
+    successors_spawned: 6
+
+  - epoch_id: EPOCH-001
+    frontier: F8/F1
+    gate: B/H
+    verdict: RESOLVED_PUBLISHED_PARTIAL
+    result: "Anetaki acquisition: K-vs-J1 contradiction resolved (preliminary 2024 published, ZERO transliterations; ed.pr. UNPUBLISHED/SOURCE_BLOCKED). 40-row quarantined register; 2 new sign types (CH *180/*181 in LA); KNZg57a provenance gap found (silver reading with no published source, conf<=0.5); KN Zg 56 NOT_ESTABLISHED; both seals SEALED+uncontaminated; plan hash 357337e5"
+    substantive: true
+  - epoch_id: EPOCH-002
+    frontier: F3
+    gate: A
+    verdict: "MOTIF_WITHIN_EQUIVALENT + MOTIF_CROSS_SUPERIOR + LA_MOTIF_GEOMETRY_CONSISTENT_WITH_AB_HOMOMORPHY_L2"
+    result: "FIRST Holm-surviving cross-script recovery on KNOWN LB<->Cypriot (trigram-frame M1-LOO 7/47=0.149 p=0.001 vs flat 0.064 zero survivors; order-dependent, not frequency). LA leg 8/51 p=0.001 but = consistency test of assumed homomorphic seeds. Bridge is anchor-SEEDED only (46 seeds; LA has ~5) -> seed-poverty curve is THE question. NEW adversarial constraint: within-script C-axis is composition-driven not order-driven."
+    substantive: true

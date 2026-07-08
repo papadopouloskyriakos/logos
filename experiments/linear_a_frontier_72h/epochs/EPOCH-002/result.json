@@ -1,0 +1,95 @@
+{
+  "epoch": "EPOCH-002",
+  "frontier": "F3 substitution-neighborhood bridges v2 — higher-order motifs",
+  "plan_hash": "09c55c9e42406393d278299569007d085e1bc9c558ca388ca4715f76b34cadae",
+  "prereg": "epochs/EPOCH-002/prereg.md (frozen 2026-07-08T03:27:22Z, before any run)",
+  "seed": 20260708,
+  "claim_layer": "L2 relative/structural only; no value claim; no licence earned (Art. XV)",
+  "articles": ["V", "VII", "VIII", "IX", "XI", "XII", "XV", "XXII"],
+  "positive_control": {
+    "flat_full_same_C_auc": 0.6999,
+    "window": [0.68, 0.72],
+    "status": "PASS (reproduces F1 0.700 / C_AUDIT 0.704)"
+  },
+  "within_script_leg": {
+    "verdict": "MOTIF_WITHIN_EQUIVALENT",
+    "corpus": {"lb_word_tokens": 13562, "scorable_signs": 72, "graded_pairs": 2556,
+               "within_band_pairs": 612},
+    "same_C_auc_freq_disjoint": {"FLAT": 0.750, "MF_A_trigram": 0.682,
+                                  "MF_B_formula": 0.753, "MF_C_site": 0.761},
+    "label_null_holm_3x2": "all 6 tests p_holm = 0.006 (SIGNIFICANT vs freq-matched label null)",
+    "superiority_vs_flat": {
+      "MF_A_trigram": {"boot_ci95_fd": [-0.1706, 0.0311], "boot_ci95_full": [-0.1334, -0.0155],
+                        "loso_wins": "0/6", "verdict": "EQUIVALENT (full-corpus CI<0: leans inferior)"},
+      "MF_B_formula": {"boot_ci95_fd": [-0.1003, 0.1171], "loso_wins": "0/6", "verdict": "EQUIVALENT"},
+      "MF_C_site": {"boot_ci95_fd": [-0.0784, 0.1146], "loso_wins": "0/6", "verdict": "EQUIVALENT"}
+    },
+    "degree_preserving_null": "PASS all 4 families (p = 0.005; obs > null p95)",
+    "wrong_language_shuffle_control": {
+      "status": "FAIL for ALL families INCLUDING FLAT",
+      "same_C_auc_on_shuffled": {"FLAT": 0.636, "MF_A": 0.631, "MF_B": 0.595, "MF_C": 0.624},
+      "interpretation": "the within-script C-axis is substantially ORDER-FREE (word-composition/co-occurrence) signal; attribution to sequential substitution structure specifically is NOT supported; new constraint on the F1/C_AUDIT interpretation (their label-null significance stands; the mechanism attribution weakens). Shuffle is also weakly destructive for short words (18% L=2, 35% L=3 types)."
+    }
+  },
+  "cross_script_leg": {
+    "verdict": "MOTIF_CROSS_SUPERIOR",
+    "family": "MF_A_trigram (MF_B/MF_C SOURCE_BLOCKED: cog lists carry no series/site metadata)",
+    "CTRL_LBdamos_split_half": {
+      "n": 71, "m1_exact": 0.775, "flat_m1_exact": 0.408,
+      "exact_holm_survivors": ["M1", "M2", "M3", "M4"],
+      "flat_exact_holm_survivors": ["M1", "M3", "M4"]
+    },
+    "KNOWN_LBcog_vs_Cypcog": {
+      "n": 47, "m1_exact": 0.149, "m1_exact_p": 0.001,
+      "exact_holm_survivors": ["M1_nn_transfer:exact"],
+      "any_holm_survivors": ["M1:exact", "M1:consonant_class", "M4:vowel_class"],
+      "flat_baseline": {"best_exact": 0.064, "holm_survivors": []},
+      "m1_hits": ["A", "E", "KE", "TE", "KA", "O", "MA"],
+      "posthoc_frequency_rank_adversary": {"exact": "3/47", "p": 0.085, "overlap_with_m1": ["KE"]},
+      "posthoc_order_destruction": {"shuffled_exact": 0.043, "shuffled_p": 0.249,
+        "reading": "cross-script signal COLLAPSES under within-word shuffle -> genuinely sequential motif geometry"}
+    },
+    "note": "only the anchor-seeded M1 (LOO) carries the cross-script recovery; unsupervised M2/M3 do not survive on KNOWN — the bridge works in SEEDED mode only"
+  },
+  "la_leg": {
+    "triggered_by": "MOTIF_CROSS_SUPERIOR (prereg conditional clause)",
+    "verdict": "LA_MOTIF_GEOMETRY_CONSISTENT_WITH_AB_HOMOMORPHY_L2",
+    "pair": "REAL_LAsilver_vs_LBdamos, GT = AB shape-homomorphic PROPOSAL (not ground truth)",
+    "n": 51, "m1_exact": 0.157, "m1_exact_p": 0.001, "m1_conC": 0.255, "m1_conC_p": 0.001,
+    "exact_holm_survivors": ["M1_nn_transfer:exact"],
+    "flat_baseline": {"best_exact": 0.078, "holm_survivors": []},
+    "m1_hits": ["SI", "MI", "SA", "DI", "QE", "PU", "TO", "AU"],
+    "posthoc_frequency_rank_adversary": {"exact": "2/51", "p": 0.253, "overlap_with_m1": []},
+    "posthoc_order_destruction": {"shuffled_exact": 0.118, "shuffled_p": 0.001,
+      "reading": "LA<->LB signal largely SURVIVES order destruction -> substantially composition/co-occurrence-driven, unlike KNOWN; the sequential-motif component is the smaller part (0.157 vs 0.118)"},
+    "caps": [
+      "first Holm-surviving REAL-pair alignment in this channel's history, but it is a CONSISTENCY test of the assumed homomorphic seed set (M1-LOO uses the 50 other proposed pairs as anchors), not independent recovery",
+      "43/51 signs still misalign; capped <= 0.75 as a signal (truth-layer); earns NO transfer licence",
+      "composition-driven component overlaps in spirit with the previously NULL raw-distribution channel; prior NULLs were unsupervised/differently graded — no contradiction, but interpretive weight shifts accordingly"
+    ]
+  },
+  "epoch_verdict": {
+    "within": "MOTIF_WITHIN_EQUIVALENT",
+    "cross": "MOTIF_CROSS_SUPERIOR",
+    "summary": "Higher-order trigram-frame motif geometry does NOT improve within-script class recovery over the flat channel, but RESTORES cross-script power the flat bridge lacked: first Holm-surviving KNOWN LB<->Cypriot recovery (order-dependent, non-frequency) and first Holm-surviving LA<->LB homomorphy-consistency signal (largely order-free). New adversarial constraint: the within-script C-axis is substantially composition-driven."
+  },
+  "search_receipt": {
+    "families_tried": ["MF_A_trigram", "MF_B_formula", "MF_C_site"],
+    "within_tests": "3 families x 2 axes Holm (label null) + 4x degree nulls + 1 shuffle control + 6 bootstrap CIs + 6 LOSO folds",
+    "cross_tests": "2 pairs x 4 methods x 3 metrics (Holm-12 per pair) + LA pair (Holm-12)",
+    "posthoc_declared": ["frequency-rank adversary x3 pairs", "order-destruction shuffle x3 pairs"],
+    "no_other_variants_tried": true
+  },
+  "effective_n": {"within_signs": 72, "cross_known_signs": 47, "la_signs": 51,
+                   "info_note": "KNOWN exact 7/47 vs chance 1/47; LA 8/51; addressable identity <= log2(47) ~ 5.6 bits/sign; channel supplies a fraction"},
+  "artifacts": [
+    "data/motifs/E002_within_script.json",
+    "data/motifs/E002_cross_script.json",
+    "data/motifs/E002_la_leg.json",
+    "data/motifs/E002_posthoc_audit.json",
+    "data/motifs/E002_posthoc_shuffle_cross.json",
+    "scripts/e002_motif_common.py", "scripts/e002_within_script.py",
+    "scripts/e002_cross_script.py", "scripts/e002_la_leg.py", "scripts/e002_posthoc_audit.py"
+  ],
+  "compliance": "Art XXII: prereg frozen+hashed before run; positive control gated first; verdicts mechanical per frozen rules; post-hoc analyses declared as such and verdict-neutral; append-only."
+}

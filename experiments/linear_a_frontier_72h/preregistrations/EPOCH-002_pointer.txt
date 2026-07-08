@@ -1,0 +1,3 @@
+EPOCH-002 prereg: epochs/EPOCH-002/prereg.md
+plan_hash: 09c55c9e42406393d278299569007d085e1bc9c558ca388ca4715f76b34cadae
+frozen: 2026-07-08T03:27:22Z
