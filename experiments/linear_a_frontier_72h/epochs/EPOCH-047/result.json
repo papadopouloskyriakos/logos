@@ -1,0 +1,69 @@
+{
+  "task_id": "EPOCH-047",
+  "method": "Held-out predictability of the document TOKEN-TYPE grammar (L2/L3, token TYPES only: word/num/nl/div/other; NO sign identities, NO numeral values, NO phonetics, NO meaning). First-order MARKOV model P(next_type|cur_type), Laplace-smoothed (add-1 over the 7-symbol vocab incl. BOS/EOS), trained on TRAIN inscriptions ([BOS]+types+[EOS]); UNIGRAM baseline = marginal type frequencies incl. BOS/EOS, Laplace-smoothed. Held-out cross-entropy xent=-mean log2 P(t_i|context) bits/token over all non-BOS tokens (EOS counted); IMPROVEMENT = unigram_xent - markov_xent (>0 => Markov grammar predictive). Two splits: (a) RANDOM 5-fold CV (seed-frozen); (b) SITE-BLOCKED (train on all-but-one site, test on held-out site, for each site with >=15 inscriptions). Significance via order-shuffle permutation null (>=200 shuffles of TEST interior types, BOS/EOS fixed): real Markov xent must beat shuffled. POSITIVE CONTROL gates verdict: (a) DETECT planted word->num->nl grammar (improvement>0, perm p<=0.05); (b) FALSE-POSITIVE on order-shuffled streams (improvement~=0, not significant across >=20 sets).",
+  "result": "PC PASSED (synthetic planted word->num->nl grammar DETECTED: mean improvement +1.501 bits/token, mean perm p=0.005; FALSE-POSITIVE control clean: order-shuffled streams show mean improvement +0.089 bits/token with 0/20 sets significant). GLOBAL LA: n=1341 inscriptions. RANDOM 5-fold CV: Markov xent ~1.53 bits/token vs unigram ~2.56 bits/token => mean IMPROVEMENT +1.014 bits/token, mean perm p=0.005 (significant). SITE-BLOCKED: 9 sites qualify (>=15 inscriptions); ALL 9/9 sites show held-out improvement>0 with perm p=0.005 (Haghia Triada +1.030, Khania +0.880, Knossos +0.769, Malia +1.127, Palaikastro +1.024, Phaistos +0.771, Thera +0.707, Zakros +0.961, Iouktas +0.970). The token-TYPE transition grammar is PREDICTIVE on held-out inscriptions AND GENERALIZES across unseen sites (>=3 required, 9 achieved). Verdict: DOC_GRAMMAR_PREDICTIVE_HELDOUT.",
+  "verdict": "DOC_GRAMMAR_PREDICTIVE_HELDOUT",
+  "numbers": {
+    "n_inscriptions": 1341,
+    "n_big_sites": 9,
+    "big_sites": ["Haghia Triada", "Iouktas", "Khania", "Knossos", "Malia", "Palaikastro", "Phaistos", "Thera", "Zakros"],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_mean_improvement_bits_per_token": 1.5006177371307043,
+      "detect_mean_perm_p": 0.004975124378109453,
+      "detect_ok": true,
+      "fp_mean_improvement_bits_per_token": 0.08916618299501919,
+      "fp_significant_sets": 0,
+      "fp_total_sets": 20,
+      "fp_ok": true
+    },
+    "cv": {
+      "n_folds": 5,
+      "mean_improvement_bits_per_token": 1.0142572596939634,
+      "mean_perm_p": 0.004975124378109453,
+      "folds": [
+        {"fold": 0, "n_train": 1072, "n_test": 269, "markov_xent": 1.5306851318979586, "unigram_xent": 2.5641436161385625, "improvement": 1.0334584842406038, "perm_p": 0.004975124378109453},
+        {"fold": 1, "n_train": 1073, "n_test": 268, "markov_xent": 1.5303591222352355, "unigram_xent": 2.5444769881678613, "improvement": 1.0141178659326258, "perm_p": 0.004975124378109453},
+        {"fold": 2, "n_train": 1073, "n_test": 268, "markov_xent": 1.5315968460543332, "unigram_xent": 2.5532552819532888, "improvement": 1.0216584358989556, "perm_p": 0.004975124378109453},
+        {"fold": 3, "n_train": 1073, "n_test": 268, "markov_xent": 1.5860017284339698, "unigram_xent": 2.5812892820371696, "improvement": 0.9952875536031998, "perm_p": 0.004975124378109453},
+        {"fold": 4, "n_train": 1073, "n_test": 268, "markov_xent": 1.5823300673750056, "unigram_xent": 2.5890940261694384, "improvement": 1.0067639587944328, "perm_p": 0.004975124378109453}
+      ]
+    },
+    "site_blocked": {
+      "n_sites_improving": 9,
+      "n_sites_total": 9,
+      "per_site": [
+        {"site": "Haghia Triada", "n_test": 845, "markov_xent": 1.5210458512902048, "unigram_xent": 2.5508868267099114, "improvement": 1.0298409754197067, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Iouktas", "n_test": 16, "markov_xent": 1.9416573796527805, "unigram_xent": 2.911983363946273, "improvement": 0.9703259842934924, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Khania", "n_test": 159, "markov_xent": 1.7594427463874371, "unigram_xent": 2.6390607894265283, "improvement": 0.8796180430390912, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Knossos", "n_test": 51, "markov_xent": 1.9522589388019687, "unigram_xent": 2.7210732894345657, "improvement": 0.7688143508920771, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Malia", "n_test": 21, "markov_xent": 1.4345038541826591, "unigram_xent": 2.561966647385413, "improvement": 1.1274627932027537, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Palaikastro", "n_test": 25, "markov_xent": 1.6093327613326127, "unigram_xent": 2.633816739806372, "improvement": 1.0244839784737594, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Phaistos", "n_test": 48, "markov_xent": 1.7804808482521324, "unigram_xent": 2.551258657068212, "improvement": 0.7707778088167797, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Thera", "n_test": 17, "markov_xent": 1.797425475621645, "unigram_xent": 2.503973322586686, "improvement": 0.706547846965041, "perm_p": 0.004975124378109453, "improves": true},
+        {"site": "Zakros", "n_test": 46, "markov_xent": 1.5974684088725406, "unigram_xent": 2.558525733739045, "improvement": 0.9610573248665044, "perm_p": 0.004975124378109453, "improves": true}
+      ]
+    }
+  },
+  "key_findings": [
+    "The Linear A document TOKEN-TYPE stream has a PREDICTABLE first-order grammar that GENERALIZES to held-out inscriptions: random 5-fold CV gives a mean improvement of +1.014 bits/token of Markov over unigram (Markov xent ~1.53 vs unigram ~2.56 bits/token), significant by the order-shuffle permutation null (mean p=0.005). Shuffling the interior token order destroys the predictability, confirming the gain is genuinely sequential.",
+    "The grammar GENERALIZES ACROSS UNSEEN SITES: in the site-blocked split (train on all-but-one site, test on the held-out site), ALL 9 qualifying sites (>=15 inscriptions) show held-out improvement>0 with perm p=0.005 — Haghia Triada +1.030, Khania +0.880, Knossos +0.769, Malia +1.127, Palaikastro +1.024, Phaistos +0.771, Thera +0.707, Zakros +0.961, Iouktas +0.970 bits/token. The token-type transition structure is shared across the Linear A scribal tradition, not site-local.",
+    "POSITIVE CONTROL PASSED on both gates: the machinery DETECTS a planted word->num->nl transition grammar (mean improvement +1.501 bits/token, perm p=0.005) and produces NO false positives on order-shuffled streams (mean improvement +0.089 bits/token, 0/20 sets significant). The ~1 bit/token LA improvement is far above the shuffled null, so the result is not a machinery artifact.",
+    "The magnitude (~1 bit/token, roughly 40% reduction in per-token uncertainty vs the unigram baseline) is large and remarkably uniform across folds and sites, indicating a strong, stable document-level regularity in the ordering of token TYPES (e.g. word/numeral/newline structure) — consistent with the certified E031 (word->numeral) and E037 (numeral-line-final) findings, now consolidated into a single predictive held-out test.",
+    "This is the closest L2/L3 analog to 'predicts held-out material': a model trained on one set of inscriptions predicts the token-TYPE ordering of unseen inscriptions and unseen sites significantly better than a context-free baseline. No sign identities, numeral values, phonetics, or meaning were used."
+  ],
+  "successor_hypotheses": [
+    "H1 (L2/L3): Fit a SECOND-ORDER Markov model over token types and test whether it beats the first-order model on held-out cross-entropy — this would quantify how much additional structure lives in 2-step dependencies (e.g. word->num->nl chains) beyond the first-order transitions, still using token TYPES only.",
+    "H2 (L2/L3): Extract and rank the highest-information token-TYPE transitions (e.g. the strongest P(num|word), P(nl|num), P(EOS|nl)) from the trained matrix and characterize the implied document 'skeleton' (token-type grammar only, no sign identities).",
+    "H3 (L2/L3): Test whether the token-type grammar DIFFERS by inscription class/support (tablet vs seal vs other) — train a per-class Markov model and compare held-out cross-entropy against the pooled model (token types only).",
+    "H4 (L2/L3): Build the synthetic LB token-type control stream and compare its Markov-vs-unigram improvement to LA's, to test whether the document token-type grammar strength is distinctive to LA or a generic administrative-text property (LB control-only, synthetic stream explicitly labelled).",
+    "H5 (L2/L3): Quantify the CONTRIBUTION of each token TYPE to the predictability gain via leave-one-type-out ablation (collapse one type into 'other', retrain, re-evaluate held-out xent) — identifies which token classes carry the sequential structure (token types only).",
+    "H6 (L2/L3): Test predictability of token-type grammar as a function of inscription LENGTH — do short inscriptions obey the same transition grammar as long ones, or is the grammar length-conditional? (token types only, length-binned held-out evaluation)."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Pure L2/L3 token-TYPE sequence statistics on the ORDERED per-inscription stream of token TYPES (word/num/nl/div/other). NO sign identities, NO numeral values, NO phonetics, NO sound, NO meaning, NO reading. Only the TYPE label of each token and its position. LB has no native token-type stream; a synthetic LB control is specified in the machinery but the verdict rests entirely on LA held-out cross-entropy. Verdict is mechanical from the frozen rule (PC passed AND global CV improvement>0 significant AND site-blocked held-out improvement>0 in >=3 sites). L2/L3 only.",
+  "deviations": [
+    "No deviations from the frozen prereg/plan. The machinery was run exactly as specified (frozen seeds, Laplace add-1 smoothing, 5-fold CV, site-blocked with MIN_SITE_N=15, order-shuffle permutation null with 200 shuffles, 20 false-positive control sets). result.json and EPOCH047_REPORT.md were generated in this repair pass because they were missing from the initial epoch output; prereg.md and plan_hash.txt were NOT modified."
+  ]
+}
