@@ -1,0 +1,137 @@
+{
+ "Haghia Triada": {
+  "Tablet": 178,
+  "Nodule": 4,
+  "Roundel": 12,
+  "Graffito": 2,
+  "Metal object": 1
+ },
+ "Iouktas": {
+  "Stone vessel": 11
+ },
+ "Kannia": {
+  "Stone vessel": 1
+ },
+ "Khania": {
+  "Tablet": 78,
+  "Nodule": 2
+ },
+ "Knossos": {
+  "Tablet": 8,
+  "Lames (short thin tablet)": 3,
+  "Sealing": 1,
+  "Roundel": 2,
+  "Stone vessel": 3,
+  "Clay vessel": 4,
+  "Inked inscription": 2,
+  "Metal object": 1,
+  "ivory object": 1
+ },
+ "Kophinas": {
+  "Stone vessel": 1
+ },
+ "Malia": {
+  "3-sided bar": 5,
+  "Tablet": 6,
+  "4-sided bar": 3,
+  "Roundel": 1
+ },
+ "Milos": {
+  "Tablet": 1
+ },
+ "Papourou": {
+  "Tablet": 1
+ },
+ "Petras": {
+  "Tablet": 4,
+  "Clay vessel": 1,
+  "Inked inscription": 1,
+  "Stone object": 2
+ },
+ "Phaistos": {
+  "Tablet": 15,
+  "Label": 2,
+  "Lames (short thin tablet)": 5,
+  "Roundel": 4,
+  "Clay vessel": 1
+ },
+ "Palaikastro": {
+  "Tablet": 1,
+  "4-sided bar": 1,
+  "Stone vessel": 10,
+  "Clay vessel": 1
+ },
+ "Platanos": {
+  "Metal object": 1
+ },
+ "Prassa": {
+  "Stone vessel": 1
+ },
+ "Psykhro": {
+  "Stone vessel": 1
+ },
+ "Pyrgos": {
+  "Tablet": 1,
+  "Roundel": 1
+ },
+ "Samothrace": {
+  "Nodule": 1
+ },
+ "Sitia": {
+  "Stone object": 1
+ },
+ "Skoteino Cave": {
+  "Inked inscription": 1
+ },
+ "Syme": {
+  "Stone vessel": 6
+ },
+ "Tel Haror": {
+  "Clay vessel": 1
+ },
+ "Thera": {
+  "Tablet": 1,
+  "Stone object": 1,
+  "Clay vessel": 2,
+  "Triton": 1
+ },
+ "Troullos": {
+  "Stone vessel": 1
+ },
+ "Trypiti": {
+  "Clay vessel": 1
+ },
+ "Tylissos": {
+  "Tablet": 3
+ },
+ "Vrysinas": {
+  "Stone vessel": 1
+ },
+ "Zakros": {
+  "Stone vessel": 37,
+  "Roundel": 1,
+  "Label": 1
+ },
+ "Apodoulou": {
+  "Stone vessel": 1
+ },
+ "Arkhalkhori": {
+  "Stone object": 1,
+  "Tablet": 9,
+  "Metal object": 1
+ },
+ "Crete": {
+  "Metal object": 1,
+  "Stone object": 2
+ },
+ "Gournia": {
+  "Tablet": 2,
+  "Roundel": 1
+ },
+ "Zominthos": {
+  "Tablet": 1
+ },
+ "Larani": {
+  "Stone vessel": 1
+ }
+}

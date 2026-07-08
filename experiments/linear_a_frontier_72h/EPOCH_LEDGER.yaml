@@ -1058,3 +1058,28 @@ epochs:
     artifacts: [epochs/EPOCH-044/prereg.md, epochs/EPOCH-044/plan_hash.txt, epochs/EPOCH-044/machinery.py, epochs/EPOCH-044/result.json, reports/EPOCH044_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-045
+    frontier: F14
+    gate: A
+    name: "Accounting-intensity: numeral-density as a document-class discriminant (site-controlled)"
+    plan_hash: "see epochs/EPOCH-045/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude verified (gate repro_check + scrutiny): support mean numeral-density Tablet 0.36 (n309) > Stone vessel 0.18 (n75) > Roundel 0.06 (n22); global Kruskal H=64.4 p=1.1e-14 (side-confirmed); within-HT Tablet-vs-Roundel p=3.4e-8 (Tablet denser). PC passed (detect 1e-50, fp 0.04)."
+    positive_control: "PASSED (verified): planted density-difference detected (p=1e-50); false-positive rate 0.04 on same-distribution splits. (LB PC built on LA corpus itself — DAMOS lacks support metadata; disclosed.)"
+    verdict: "ACCOUNTING_UNDERPOWERED (cross-site conjunct): global numeral-density differs strongly by document class (Kruskal p=1e-14) AND survives within-Haghia-Triada control (p=3e-8), BUT only 1 site (HT) has >=2 support classes with >=10 inscriptions, so within-site cross-site robustness cannot be certified (>=2 sites needed)."
+    numbers: {support_mean_density: {Tablet: 0.36, Stone_vessel: 0.18, Roundel: 0.06}, kruskal_H: 64.4, kruskal_p: 1.1e-14, within_site_testable: 1, within_HT_tablet_vs_roundel_p: 3.4e-8, within_HT_denser: Tablet, pc_detect_p: 1e-50, pc_fp: 0.04}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "SOLID within-HT finding (cross-site UNDERPOWERED by data availability): document classes differ sharply in ACCOUNTING INTENSITY (numeral-density) — Tablets are numeral-dense (accounting documents, ~36%), Stone vessels sparse (~18%), Roundels sparsest (~6%, near-pure-word), confound-free within Haghia Triada (p=3e-8). Consistent with the mainstream functional reading (tablets=accounts, stone vessels=dedicatory/libation) but stated STRUCTURALLY (numeral token-density), no semantic claim. Cross-site certification blocked because ONLY Haghia Triada has document-class diversity at scale — the SAME power limit as E028 (length) and E042/E045 (specialization): HT is the only multi-support site. This RECURRING limit is itself an exhaustion-map datum. Token composition only; no numeral values; no phonetics/meaning; no transfer licence."
+    committed_prediction: "modal ROBUST/SITE_CONFOUNDED/UNDERPOWERED; OUTCOME = UNDERPOWERED cross-site (strong within-HT). Document-class accounting-intensity is real but cross-site-uncertifiable on this corpus."
+    deviations:
+      - "LB PC built on the LA corpus (DAMOS lacks support metadata); disclosed. Validates the density-difference machinery, not a second-script control."
+      - "Cross-site within-site test needs >=2 sites with >=2 supports (>=10 insc each); only HT qualifies -> UNDERPOWERED. Global + within-HT unaffected."
+    non_circular: "Token composition only; no numeral-value arithmetic; anonymous; LB synthetic-PC control-only; no known-value model input on the LA side."
+    architecture_note: "Twenty-second gated-runner epoch (repairs=0). Third instance (with E028, E042) of the 'document-class predicts structure, confound-free within HT, cross-site-underpowered because only HT has doc-class diversity' pattern -> a saturated structural axis. Coordinator notes: readily-testable NEW cross-site structure is being exhausted (last new cross-site positive = E037/epoch-37; 8 epochs since have been negative/HT-local/underpowered/source-blocked). This saturation is a key §12 exhaustion-map finding."
+    artifacts: [epochs/EPOCH-045/prereg.md, epochs/EPOCH-045/plan_hash.txt, epochs/EPOCH-045/machinery.py, epochs/EPOCH-045/result.json, reports/EPOCH045_REPORT.md]
+    successors_spawned: 5
+    substantive: true

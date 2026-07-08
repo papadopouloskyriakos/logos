@@ -1,0 +1,76 @@
+{
+  "task_id": "EPOCH-045",
+  "method": "Per-inscription numeral_density = #num/(#word+#num) (content tokens only; nl/div/other ignored). Qualifying inscriptions: >=2 content tokens. Supports kept: >=20 qualifying. GLOBAL: Kruskal-Wallis across supports. PC: planted-density detect test + same-distribution false-positive test (>=20 splits). WITHIN-SITE: per site with >=2 supports each >=10 inscriptions, Mann-Whitney between two largest supports; pooled within-site permutation (stratified by site). Token-composition structure only (L2/L3); no numeral-value arithmetic, no phonetics.",
+  "result": "Global Kruskal-Wallis across the 3 qualifying support classes (Tablet n=309, Stone vessel n=75, Roundel n=22) is highly significant (H=64.36, p=1.06e-14): document classes DO differ in accounting intensity in the pooled corpus. Tablet is most numeral-dense (mean 0.360), Stone vessel intermediate (0.177), Roundel sparsest (0.061). PC PASSED (detect_p=1.0e-50, false-positive rate=0.040). HOWEVER the site-controlled test is underpowered: only 1 site (Haghia Triada) has >=2 support classes each with >=10 qualifying inscriptions (Tablet=178, Roundel=12). Within that single site Tablet is significantly denser than Roundel (p=3.4e-8, pooled within-site p=5.0e-4), direction consistent with the global pattern, but the frozen rule requires >=2 testable sites for a ROBUST verdict. Verdict: ACCOUNTING_UNDERPOWERED.",
+  "verdict": "ACCOUNTING_UNDERPOWERED",
+  "numbers": {
+    "support_density": {
+      "Tablet": {
+        "n_insc": 309,
+        "mean_density": 0.35992074118537193,
+        "median_density": 0.4
+      },
+      "Stone vessel": {
+        "n_insc": 75,
+        "mean_density": 0.1774630836426502,
+        "median_density": 0.0
+      },
+      "Roundel": {
+        "n_insc": 22,
+        "mean_density": 0.0606060606060606,
+        "median_density": 0.0
+      }
+    },
+    "global": {
+      "kruskal_H": 64.35990789160907,
+      "kruskal_p": 1.057848740804782e-14,
+      "n_supports": 3
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 1.0058678612083449e-50,
+      "false_pos_rate": 0.04,
+      "n_splits": 25
+    },
+    "within_site": {
+      "n_sites_testable": 1,
+      "n_sites_sig": 1,
+      "direction_consistent": true,
+      "pooled_p": 0.0004997501249375312,
+      "per_site": {
+        "Haghia Triada": {
+          "supports": [
+            "Tablet",
+            "Roundel"
+          ],
+          "p": 3.404724866540183e-08,
+          "denser": "Tablet"
+        }
+      }
+    },
+    "n_qualifying_inscriptions": 465,
+    "n_total_inscriptions": 1341
+  },
+  "key_findings": [
+    "Document classes differ sharply in accounting intensity in the pooled corpus: Tablet mean numeral_density=0.360 vs Stone vessel=0.177 vs Roundel=0.061 (Kruskal-Wallis H=64.36, p=1.06e-14).",
+    "The ordering is consistent with the accounting-vs-dedicatory hypothesis: tablets are most numeral-dense, roundels and stone vessels are numeral-sparse.",
+    "POSITIVE CONTROL PASSED: the test detects a planted density difference (p=1.0e-50) and is well-calibrated under the null (false-positive rate=0.040 <= 0.10 over 25 random splits).",
+    "The site-controlled test is UNDERPOWERED: only 1 of 53 sites (Haghia Triada) has >=2 support classes each with >=10 qualifying inscriptions, because most sites are dominated by a single support class.",
+    "In the single testable site (Haghia Triada), Tablet is significantly denser than Roundel (Mann-Whitney p=3.4e-8; pooled within-site permutation p=5.0e-4), direction consistent with the global pattern \u2014 suggestive but not sufficient for a ROBUST verdict under the frozen >=2-sites rule."
+  ],
+  "successor_hypotheses": [
+    "E046: Relax the within-site support-count threshold (e.g. >=5 inscriptions per support) to test more sites (Malia, Phaistos become testable) and re-evaluate site-controlled robustness.",
+    "E047: Use a hierarchical/mixed-effects model (support as fixed effect, site as random effect) to estimate the support effect while borrowing strength across sites, instead of requiring per-site significance.",
+    "E048: Test accounting intensity against a finer support typology by pooling rare but related classes (e.g. all vessel types, all tablet-like) to increase per-class n within sites.",
+    "E049: Cross-check the density ordering against Linear B accounting tablets (control): does the same word/num token-composition signature characterize LB accounting texts vs non-accounting, validating numeral-density as an accounting proxy?",
+    "E050: Decompose numeral density by position (does density concentrate at line-ends / after specific word types) to test whether the accounting structure is positional rather than just bulk composition.",
+    "E051: Test whether the support effect interacts with site (does the Tablet-vs-vessel density gap vary by site) once more sites are made testable via relaxed thresholds."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "No phonetic, sound, meaning, or reading claims were made. No numeral-value arithmetic was performed (the token \"v\" field was never read; only the token TYPE \"num\" was counted). Analysis is pure L2/L3 token-composition structure (counts of word vs num token types per inscription). Linear B was used only as a control reference (LB DAMOS lacks per-inscription support metadata, so the planted/random doc-class density positive control was built on the LA corpus itself, as stated). The verdict is decided mechanically by the frozen rule, not by the operator.",
+  "deviations": [
+    "LB positive control: LB DAMOS lacks per-inscription support/doc-class metadata, so the planted-density and same-distribution false-positive controls were constructed on the LA corpus itself (stated in prereg).",
+    "Within-site test used Mann-Whitney between the two largest supports (no site had >2 qualifying supports at the >=10 threshold), as specified in the protocol."
+  ]
+}
