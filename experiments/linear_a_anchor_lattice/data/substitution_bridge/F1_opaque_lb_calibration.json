@@ -1,0 +1,175 @@
+{
+ "experiment": "F1_opaque_lb_calibration",
+ "seed": 20260708,
+ "corpus": {
+  "lb_wordform_tokens": 13562,
+  "scorable_signs": 72,
+  "relation_counts": {
+   "spelling_variant": 9,
+   "cross": 1929,
+   "same_vowel": 497,
+   "same_consonant": 121
+  }
+ },
+ "non_circular": "neighborhoods use sign identity only; values GRADE only",
+ "full_corpus": {
+  "jaccard": {
+   "same_consonant": {
+    "auc": 0.6998637584668972,
+    "n_pos": 121,
+    "n_neg": 1929
+   },
+   "same_vowel": {
+    "auc": 0.5704418319142434,
+    "n_pos": 497,
+    "n_neg": 1929
+   },
+   "spelling_variant": {
+    "auc": 0.5682276366568746,
+    "n_pos": 9,
+    "n_neg": 1929
+   },
+   "axis_is_consonant": true
+  },
+  "cosine": {
+   "same_consonant": {
+    "auc": 0.7384355359047852,
+    "n_pos": 121,
+    "n_neg": 1929
+   },
+   "same_vowel": {
+    "auc": 0.6454762791367177,
+    "n_pos": 497,
+    "n_neg": 1929
+   },
+   "spelling_variant": {
+    "auc": 0.7277230574275675,
+    "n_pos": 9,
+    "n_neg": 1929
+   },
+   "axis_is_consonant": true
+  },
+  "jaccard_wordfinal_morphophono": {
+   "same_consonant": {
+    "auc": 0.6957807967987524,
+    "n_pos": 121,
+    "n_neg": 1929
+   },
+   "same_vowel": {
+    "auc": 0.5397908446010433,
+    "n_pos": 497,
+    "n_neg": 1929
+   },
+   "spelling_variant": {
+    "auc": 0.4614653533782616,
+    "n_pos": 9,
+    "n_neg": 1929
+   }
+  }
+ },
+ "independent_replication_axis_consonant": 2,
+ "frequency_disjoint": {
+  "n_within_band_pairs": 612,
+  "by_impl": {
+   "jaccard": {
+    "same_consonant": {
+     "auc": 0.7496413199426112,
+     "n_pos": 41,
+     "n_neg": 442
+    },
+    "same_vowel": {
+     "auc": 0.6120174632352942,
+     "n_pos": 128,
+     "n_neg": 442
+    },
+    "spelling_variant": {
+     "auc": 0.08597285067873303,
+     "n_pos": 1,
+     "n_neg": 442
+    }
+   },
+   "cosine": {
+    "same_consonant": {
+     "auc": 0.7875786337048891,
+     "n_pos": 41,
+     "n_neg": 442
+    },
+    "same_vowel": {
+     "auc": 0.6965674490950227,
+     "n_pos": 128,
+     "n_neg": 442
+    },
+    "spelling_variant": {
+     "auc": 0.22624434389140272,
+     "n_pos": 1,
+     "n_neg": 442
+    }
+   }
+  }
+ },
+ "formula_disjoint_loso": {
+  "folds": [
+   {
+    "held_series": "E",
+    "n_train_words": 11023,
+    "same_consonant_auc": 0.6827842970922287,
+    "same_vowel_auc": 0.5660990306796716,
+    "axis_consonant": true
+   },
+   {
+    "held_series": "A",
+    "n_train_words": 11484,
+    "same_consonant_auc": 0.6954123448538831,
+    "same_vowel_auc": 0.5626125858312133,
+    "axis_consonant": true
+   },
+   {
+    "held_series": "D",
+    "n_train_words": 12206,
+    "same_consonant_auc": 0.6925975433680792,
+    "same_vowel_auc": 0.5651639228841165,
+    "axis_consonant": true
+   },
+   {
+    "held_series": "F",
+    "n_train_words": 12564,
+    "same_consonant_auc": 0.6994246151605122,
+    "same_vowel_auc": 0.5671822537088784,
+    "axis_consonant": true
+   },
+   {
+    "held_series": "C",
+    "n_train_words": 12701,
+    "same_consonant_auc": 0.6927067936540579,
+    "same_vowel_auc": 0.5693747763929351,
+    "axis_consonant": true
+   },
+   {
+    "held_series": "X",
+    "n_train_words": 12793,
+    "same_consonant_auc": 0.6895770942851389,
+    "same_vowel_auc": 0.5673600962957632,
+    "axis_consonant": true
+   }
+  ],
+  "min_same_consonant_auc": 0.6827842970922287,
+  "median_same_consonant_auc": 0.6926521685110685,
+  "all_folds_axis_consonant": true
+ },
+ "perm_null_label_shuffle": {
+  "obs_auc": 0.6998637584668972,
+  "null_mean": 0.49857990337419156,
+  "null_p95": 0.5433179526067975,
+  "p_one_sided": 0.0033222591362126247,
+  "n_null": 300
+ },
+ "decision": {
+  "independent_replication_ge2": true,
+  "freq_disjoint_consonant_auc": 0.7496413199426112,
+  "freq_disjoint_axis_consonant": true,
+  "loso_all_axis_consonant": true,
+  "perm_p": 0.0033222591362126247,
+  "morphophono_final_consonant_auc": 0.6957807967987524
+ },
+ "verdict": "OPAQUE_LB_CONSONANT_AXIS_RECOVERED_UNDER_HOLDOUTS"
+}

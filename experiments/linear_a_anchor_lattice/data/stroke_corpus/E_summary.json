@@ -1,0 +1,77 @@
+{
+ "seed": 20260708,
+ "E1_source_audit": {
+  "sigla_docs": 802,
+  "named_glyph_instances_with_bbox": 4756,
+  "distinct_signs_with_geometry": 340,
+  "signs_ge5_instances": 113,
+  "signs_ge10_instances": 89,
+  "raw_db_vars": [
+   "signs",
+   "data"
+  ],
+  "geometry_in_snapshot": "bbox=[x,y,w,h] axis-aligned pixel coords ONLY",
+  "strokes_vectors_images_present": false,
+  "document_drawings_scraped": false,
+  "allograph_families_total": 156,
+  "allograph_families_multi_member": 9,
+  "facsimile_vs_font": "facsimile-derived bbox metadata only; NO modern-font glyphs used as evidence"
+ },
+ "E2_representations": {
+  "rep_a_rule_based": "built (per-sign aspect_mean/sd, logrel_mean/sd)",
+  "rep_b_learned_contour": "SOURCE_BLOCKED (no raster/vector glyph in snapshot)",
+  "channel_availability": {
+   "aspect_ratio": {
+    "available": true,
+    "source": "bbox w/h (scale-invariant)"
+   },
+   "relative_size": {
+    "available": true,
+    "source": "bbox area / within-doc median (scale-confounded across docs)"
+   },
+   "stroke_count": {
+    "available": false,
+    "source": "SOURCE_BLOCKED: requires glyph tracings; not in snapshot"
+   },
+   "endpoints_junctions": {
+    "available": false,
+    "source": "SOURCE_BLOCKED: requires skeleton; no image/vector"
+   },
+   "curves_loops": {
+    "available": false,
+    "source": "SOURCE_BLOCKED: requires contour; no image/vector"
+   },
+   "orientation": {
+    "available": false,
+    "source": "SOURCE_BLOCKED: bbox is axis-aligned; no rotation angle"
+   },
+   "contour_embedding": {
+    "available": false,
+    "source": "SOURCE_BLOCKED (E2b): requires raster/vector glyph; drawings not scraped"
+   }
+  }
+ },
+ "E3_calibration": {
+  "cross_script_stroke_to_identity": "SOURCE_BLOCKED (no LB / Cypriot glyph geometry in any input)",
+  "within_LA_identity_discrimination_AUC_geom": 0.6011,
+  "aspect_only_generic_baseline_AUC": 0.5683,
+  "beats_generic_visual_similarity": true,
+  "n_pairs_each_class": 40000,
+  "interpretation": "channel does not exceed generic aspect/size similarity; it IS that similarity"
+ },
+ "E5_leave_one_sign_out": {
+  "n_signs": 113,
+  "n_instances": 4405,
+  "top1_acc": 0.0468,
+  "top5_acc": 0.1637,
+  "chance_top1_uniform": 0.0088,
+  "majority_baseline_top1": 0.0402,
+  "chance_top5_uniform": 0.0442
+ },
+ "E4_correspondences": {
+  "n_ranked": 60,
+  "file": "E4_ranked_correspondences.json",
+  "allograph_family_pairs": []
+ },
+ "verdict": "SHAPE_CHANNEL_SOURCE_BLOCKED_FOR_STROKES; bbox-aspect channel has NO sign-identity power"
+}

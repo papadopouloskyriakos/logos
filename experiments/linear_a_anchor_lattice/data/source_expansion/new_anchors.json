@@ -1,0 +1,361 @@
+{
+ "experiment": "D_source_expansion",
+ "seed": 20260708,
+ "generated_by": "scripts/d_source_expansion.py",
+ "corpus": {
+  "path": "corpus/silver/inscriptions_structured.json",
+  "n_inscriptions": 1341,
+  "n_distinct_word_forms": 1165
+ },
+ "criteria_for_new_independent_anchor": {
+  "min_constrained_slots": 4,
+  "min_independent_source_lineages": 2,
+  "min_la_contexts_sites": 2,
+  "min_out_of_derivation_predictions": 1
+ },
+ "external_source_register": [
+  {
+   "id": "SRC-EG-KEH",
+   "source": "Amenhotep III 'Aegean List', mortuary temple at Kom el-Hetan (statue-base N)",
+   "edition": "Edel 1966 (Die Ortsnamenlisten aus dem Totentempel Amenophis III.); re-collated Edel & Gorg 2005; discussion Cline 2011 (JAEI); Kelder 2010",
+   "underlying_edition": "Edel 1966 hieroglyphic copy of the statue base",
+   "license": "public-domain primary inscription; modern editions in copyright (cite, do not redistribute)",
+   "dependency_cluster": "EGYPTIAN_EPIGRAPHIC (distinct from LA-LB continuity and from Cypriot/Salgarella)",
+   "new_info": "Egyptian consonant-skeleton renderings of Cretan toponyms, independent of the LA and LB scripts",
+   "ocr_verification": "name list cross-checked against Cline 2011 and Keftiu literature via web audit 2026-07-08; no OCR-load-bearing numeric claim"
+  },
+  {
+   "id": "SRC-EG-BM5647",
+   "source": "BM EA 5647 writing-board ('Keftiu names' school tablet)",
+   "edition": "Peet 1927; Duhoux 2003; recent reassessment 2024 (BM EA 5647)",
+   "underlying_edition": "British Museum hieratic writing-board",
+   "license": "public-domain primary object; modern editions in copyright",
+   "dependency_cluster": "EGYPTIAN_EPIGRAPHIC (onomastic)",
+   "new_info": "Egyptian renderings of ~7-9 Cretan/Aegean PERSONAL names",
+   "ocr_verification": "not load-bearing: no securely-matched LA personal-name attestation exists to anchor against"
+  },
+  {
+   "id": "SRC-LALB-SM17",
+   "source": "LA<->LB toponym continuity (already in inventory)",
+   "edition": "Steele & Meissner 2017, Understanding Relations Between Scripts, 93-110; GORILA (Godart & Olivier 1976-1985)",
+   "underlying_edition": "GORILA + KN/PY LB tablets",
+   "license": "open (repo) + acquired chapter",
+   "dependency_cluster": "LA_LB_CONTINUITY (value-bearing via LB transfer; NOT independent of LB sign values)",
+   "new_info": "none new here; baseline lineage already counted in wp5_anchor_inventory (115 records)",
+   "ocr_verification": "n/a"
+  },
+  {
+   "id": "SRC-SEM-KAPTARA",
+   "source": "Akkadian/Ugaritic Caphtor/Kaptara (kptr / kap-ta-ra)",
+   "edition": "Mari archives (ARM); Ugaritic KTU; Hoch 1994 for Egyptian Semitic-loan phonology",
+   "underlying_edition": "cuneiform tablets",
+   "license": "public-domain primary; editions in copyright",
+   "dependency_cluster": "NEAR_EASTERN_ETHNONYM",
+   "new_info": "ethnonym for Crete only; NO multi-slot Aegean toponym or LA-attested lexeme",
+   "ocr_verification": "n/a (ethnonym, single morpheme)"
+  }
+ ],
+ "kom_el_hetan_toponym_table": [
+  {
+   "toponym": "Amnisos",
+   "egyptian_rendering": "i-m-n-y-s3 (im[nš]; Edel 1966)",
+   "egyptian_skeleton_slots": 4,
+   "lb_reflex": "a-mi-ni-so",
+   "la_probe_hits": [],
+   "la_attested_as_toponym": false,
+   "la_best_slotcount_any_hit": 0,
+   "la_best_sitespread_any_hit": 0
+  },
+  {
+   "toponym": "Phaistos",
+   "egyptian_rendering": "b3-y-š3-ti (byšt; Edel 1966)",
+   "egyptian_skeleton_slots": 4,
+   "lb_reflex": "pa-i-to",
+   "la_probe_hits": [
+    {
+     "form": "PA-I-TO",
+     "n_tokens": 2,
+     "n_sites": 1,
+     "sites": [
+      "Haghia Triada"
+     ],
+     "docs": [
+      "HT120",
+      "HT97a"
+     ]
+    }
+   ],
+   "la_attested_as_toponym": true,
+   "la_best_slotcount_any_hit": 3,
+   "la_best_sitespread_any_hit": 1
+  },
+  {
+   "toponym": "Kydonia",
+   "egyptian_rendering": "k3-tw-n3-y (ktny; Edel 1966)",
+   "egyptian_skeleton_slots": 3,
+   "lb_reflex": "ku-do-ni-ja",
+   "la_probe_hits": [],
+   "la_attested_as_toponym": false,
+   "la_best_slotcount_any_hit": 0,
+   "la_best_sitespread_any_hit": 0
+  },
+  {
+   "toponym": "Knossos",
+   "egyptian_rendering": "k-n-š (Kenesch; Edel 1966)",
+   "egyptian_skeleton_slots": 3,
+   "lb_reflex": "ko-no-so",
+   "la_probe_hits": [
+    {
+     "form": "KU-NI-SU",
+     "n_tokens": 5,
+     "n_sites": 1,
+     "sites": [
+      "Haghia Triada"
+     ],
+     "docs": [
+      "HT10a",
+      "HT86a",
+      "HT86b",
+      "HT95a",
+      "HT95b"
+     ]
+    }
+   ],
+   "la_attested_as_toponym": false,
+   "la_best_slotcount_any_hit": 3,
+   "la_best_sitespread_any_hit": 1
+  },
+  {
+   "toponym": "Lyktos",
+   "egyptian_rendering": "r-k-t (Leket; Edel 1966)",
+   "egyptian_skeleton_slots": 3,
+   "lb_reflex": "ru-ki-to",
+   "la_probe_hits": [
+    {
+     "form": "U-DI-RI-KI",
+     "n_tokens": 1,
+     "n_sites": 1,
+     "sites": [
+      "Phaistos"
+     ],
+     "docs": [
+      "PH7a"
+     ]
+    }
+   ],
+   "la_attested_as_toponym": false,
+   "la_best_slotcount_any_hit": 4,
+   "la_best_sitespread_any_hit": 1
+  }
+ ],
+ "la_lb_continuity_toponym_table": [
+  {
+   "toponym": "Setoija",
+   "lb_reflex": "se-to-i-ja",
+   "la_forms": [
+    {
+     "form": "SE-TO-I-JA",
+     "n_tokens": 1,
+     "n_sites": 1,
+     "sites": [
+      "Prassa"
+     ],
+     "docs": [
+      "PRZa1"
+     ]
+    }
+   ],
+   "la_slotcount": 4,
+   "la_n_sites": 1,
+   "la_sites": [
+    "Prassa"
+   ]
+  },
+  {
+   "toponym": "Sybrita",
+   "lb_reflex": "su-ki-ri-ta",
+   "la_forms": [
+    {
+     "form": "SU-KI-RI-TA",
+     "n_tokens": 1,
+     "n_sites": 1,
+     "sites": [
+      "Phaistos"
+     ],
+     "docs": [
+      "PHWa32"
+     ]
+    }
+   ],
+   "la_slotcount": 4,
+   "la_n_sites": 1,
+   "la_sites": [
+    "Phaistos"
+   ]
+  },
+  {
+   "toponym": "Tylissos",
+   "lb_reflex": "tu-ri-so",
+   "la_forms": [
+    {
+     "form": "A-TU-RI-SI-TI",
+     "n_tokens": 1,
+     "n_sites": 1,
+     "sites": [
+      "Knossos"
+     ],
+     "docs": [
+      "KNZb5"
+     ]
+    },
+    {
+     "form": "TU-RU-SA",
+     "n_tokens": 1,
+     "n_sites": 1,
+     "sites": [
+      "Kophinas"
+     ],
+     "docs": [
+      "KOZa1"
+     ]
+    }
+   ],
+   "la_slotcount": 5,
+   "la_n_sites": 2,
+   "la_sites": [
+    "Knossos",
+    "Kophinas"
+   ]
+  },
+  {
+   "toponym": "Dikte",
+   "lb_reflex": "di-ka-ta",
+   "la_forms": [
+    {
+     "form": "A-DI-KI-TE",
+     "n_tokens": 1,
+     "n_sites": 1,
+     "sites": [
+      "Palaikastro"
+     ],
+     "docs": [
+      "PKZa12"
+     ]
+    }
+   ],
+   "la_slotcount": 4,
+   "la_n_sites": 1,
+   "la_sites": [
+    "Palaikastro"
+   ]
+  }
+ ],
+ "la_multislot_crosssite_inventory": [
+  {
+   "form": "A-TA-I-*301-WA-JA",
+   "n_signs": 6,
+   "n_sites": 5,
+   "n_tokens": 11,
+   "sites": [
+    "Iouktas",
+    "Kophinas",
+    "Palaikastro",
+    "Syme",
+    "Troullos"
+   ]
+  },
+  {
+   "form": "JA-SA-SA-RA-ME",
+   "n_signs": 5,
+   "n_sites": 5,
+   "n_tokens": 7,
+   "sites": [
+    "Iouktas",
+    "Palaikastro",
+    "Platanos",
+    "Psykhro",
+    "Troullos"
+   ]
+  },
+  {
+   "form": "I-PI-NA-MA",
+   "n_signs": 4,
+   "n_sites": 5,
+   "n_tokens": 6,
+   "sites": [
+    "Apodoulou",
+    "Iouktas",
+    "Kophinas",
+    "Troullos",
+    "Vrysinas"
+   ]
+  },
+  {
+   "form": "U-NA-KA-NA-SI",
+   "n_signs": 5,
+   "n_sites": 3,
+   "n_tokens": 4,
+   "sites": [
+    "Iouktas",
+    "Kophinas",
+    "Palaikastro"
+   ]
+  },
+  {
+   "form": "A-RI-NI-TA",
+   "n_signs": 4,
+   "n_sites": 2,
+   "n_tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ]
+  },
+  {
+   "form": "SA-SA-RA-ME",
+   "n_signs": 4,
+   "n_sites": 2,
+   "n_tokens": 2,
+   "sites": [
+    "Knossos",
+    "Palaikastro"
+   ]
+  },
+  {
+   "form": "MA-KA-I-TA",
+   "n_signs": 4,
+   "n_sites": 2,
+   "n_tokens": 2,
+   "sites": [
+    "Palaikastro",
+    "Zakros"
+   ]
+  }
+ ],
+ "ea13_reassessment": {
+  "externally_rendered_toponyms": [
+   "Amnisos",
+   "Knossos",
+   "Kydonia",
+   "Lyktos",
+   "Phaistos"
+  ],
+  "la_attested_toponyms_ge4_slots": [
+   "Dikte",
+   "Setoija",
+   "Sybrita",
+   "Tylissos"
+  ],
+  "overlap_externally_rendered_AND_la_attested_at_any_slotcount": [
+   "Phaistos"
+  ],
+  "ea13_eligible_anchors_la_ge4_AND_externally_rendered": [],
+  "n_ea13_eligible": 0,
+  "ea13_min_anchors_required": 3,
+  "ea13_La_ge4_regime_reachable": false,
+  "explanation": "EA-13 frozen La>=4 regime (FP~0.04) needs >=3 anchors each LA-attested at >=4 distinctive slots AND rendered in the independent Egyptian record. The intersection is measured here."
+ },
+ "new_independent_anchors": [],
+ "n_new_independent_anchors": 0,
+ "verdict": "SOURCE_EXPANSION_NULL"
+}

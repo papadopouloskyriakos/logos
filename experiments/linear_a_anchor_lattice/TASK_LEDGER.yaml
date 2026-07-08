@@ -2,11 +2,11 @@
 # status: QUEUED|RUNNING|COMPLETE|PARTIAL_SUPPORT|NULL|REFUTED|NO_POWER|SOURCE_BLOCKED|LICENSE_BLOCKED|COMPUTE_BLOCKED|INVALID
 tasks:
   - {id: A_baseline, wp: A, objective: "reproduce verified baseline + DO_NOT_REPEAT registry", deps: [], status: COMPLETE, result_note: "§1 VERIFIED (215/14/0); registries frozen"}
-  - {id: B_sign_universe, wp: B, objective: "canonical unresolved-sign universe (conservative/merged/split)", deps: [A_baseline], status: QUEUED}
+  - {id: B_sign_universe, wp: B, objective: "canonical unresolved-sign universe (conservative/merged/split)", deps: [A_baseline], status: COMPLETE, result_note: "3 inventories (166/163/158); A-only unknowns relationally DARK (1/69 anchor, 1/69 subst) but 57/69 stroke; 12 free variables"}
   - {id: C_lattice, wp: C, objective: "dependency-aware all-anchor hypergraph + dependency audit", deps: [B_sign_universe], status: QUEUED}
-  - {id: D_source_expansion, wp: D, objective: "primary-source multi-slot anchor expansion + EA-13 re-read", deps: [C_lattice], status: QUEUED}
-  - {id: E_stroke, wp: E, objective: "palaeographic stroke/orientation corpus (non-circular) + known-script calib", deps: [B_sign_universe], status: QUEUED}
-  - {id: F_subst_bridge, wp: F, objective: "substitution-axis cross-script BRIDGE (no absolute-value import)", deps: [B_sign_universe], status: QUEUED}
+  - {id: D_source_expansion, wp: D, objective: "primary-source multi-slot anchor expansion + EA-13 re-read", deps: [C_lattice], status: NULL, result_note: "SOURCE_EXPANSION_NULL: 0 new independent anchors clear 4 bars (>=4 slots/>=2 lineages/>=2 sites/>=1 prediction). Kom el-Hetan(Edel1966) x LA-attested-toponyms intersection at La>=4 = EMPTY; only overlap=Phaistos(3 slots/1 site). EA-13 La>=4 regime UNREACHABLE_WITH_PRESENT_ANCHORS (0/3 eligible). Reports D_SOURCE_EXPANSION.md + D_EA13_POWER_REASSESSMENT.md; data/source_expansion/new_anchors.json; scripts/d_source_expansion.py"}
+  - {id: E_stroke, wp: E, objective: "palaeographic stroke/orientation corpus (non-circular) + known-script calib", deps: [B_sign_universe], status: SOURCE_BLOCKED, result_note: "SigLA bbox-only; aspect channel no identity power (AUC 0.57-0.60); true-stroke+cross-script SOURCE_BLOCKED; pipeline built"}
+  - {id: F_subst_bridge, wp: F, objective: "substitution-axis cross-script BRIDGE (no absolute-value import)", deps: [B_sign_universe], status: NO_POWER, result_note: "F1 calibration SOLID (LB consonant axis 0.75 freq-disjoint) but cross-script bridge fails even on known LB<->Cypriot; LA underdetermined; no licence"}
   - {id: G_anchor_threshold, wp: G, objective: "counterfactual identifiability: anchors x slots x lineages -> recovery surface", deps: [C_lattice], status: QUEUED}
   - {id: H_joint_inference, wp: H, objective: "3 solvers (Bayesian/ILP/MDL) on the lattice -> posterior equivalence classes", deps: [C_lattice, D_source_expansion, E_stroke, F_subst_bridge], status: QUEUED}
   - {id: I_all_sign, wp: I, objective: "per-unresolved-sign lattice search + retention gate", deps: [H_joint_inference], status: QUEUED}

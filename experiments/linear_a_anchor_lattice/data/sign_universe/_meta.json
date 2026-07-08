@@ -1,0 +1,108 @@
+{
+ "seed": 20260708,
+ "corpus": {
+  "inscriptions": 1341,
+  "distinct_corpus_word_tokens": 166
+ },
+ "sigla_alignment": {
+  "shared_docs_aligned_equal_length": 366,
+  "induced_xref_signs": 77
+ },
+ "grain_counts": {
+  "SIGN_UNIVERSE_ALLOGRAPH_SPLIT": 166,
+  "SIGN_UNIVERSE_CONSERVATIVE": 163,
+  "SIGN_UNIVERSE_ALLOGRAPH_MERGED": 158
+ },
+ "summaries": {
+  "SIGN_UNIVERSE_ALLOGRAPH_SPLIT": {
+   "grain": "split",
+   "n_variables_total": 166,
+   "by_class": {
+    "A-only": 72,
+    "numeral": 12,
+    "AB-shared": 59,
+    "logogram": 20,
+    "uncertain": 3
+   },
+   "n_syllabic_variables": 134,
+   "n_unresolved_value_variables": 154,
+   "n_attested_in_corpus": 166,
+   "coverage": {
+    "stroke_image": 122,
+    "anchor": 60,
+    "substitution": 33
+   },
+   "coverage_syllabic_only": {
+    "n": 134,
+    "stroke_image": 114,
+    "anchor": 60,
+    "substitution": 32,
+    "any_of_three": 119,
+    "all_three": 31,
+    "none_of_three": 15,
+    "robust_anchor": 51,
+    "independent_multichannel": 26
+   }
+  },
+  "SIGN_UNIVERSE_CONSERVATIVE": {
+   "grain": "conservative",
+   "n_variables_total": 163,
+   "by_class": {
+    "A-only": 69,
+    "numeral": 12,
+    "AB-shared": 59,
+    "logogram": 20,
+    "uncertain": 3
+   },
+   "n_syllabic_variables": 131,
+   "n_unresolved_value_variables": 151,
+   "n_attested_in_corpus": 163,
+   "coverage": {
+    "stroke_image": 120,
+    "anchor": 60,
+    "substitution": 33
+   },
+   "coverage_syllabic_only": {
+    "n": 131,
+    "stroke_image": 112,
+    "anchor": 60,
+    "substitution": 32,
+    "any_of_three": 117,
+    "all_three": 31,
+    "none_of_three": 14,
+    "robust_anchor": 51,
+    "independent_multichannel": 26
+   }
+  },
+  "SIGN_UNIVERSE_ALLOGRAPH_MERGED": {
+   "grain": "merged",
+   "n_variables_total": 158,
+   "by_class": {
+    "A-only": 69,
+    "numeral": 12,
+    "AB-shared": 55,
+    "logogram": 20,
+    "uncertain": 2
+   },
+   "n_syllabic_variables": 126,
+   "n_unresolved_value_variables": 146,
+   "n_attested_in_corpus": 158,
+   "coverage": {
+    "stroke_image": 116,
+    "anchor": 56,
+    "substitution": 32
+   },
+   "coverage_syllabic_only": {
+    "n": 126,
+    "stroke_image": 108,
+    "anchor": 56,
+    "substitution": 31,
+    "any_of_three": 113,
+    "all_three": 30,
+    "none_of_three": 13,
+    "robust_anchor": 48,
+    "independent_multichannel": 26
+   }
+  }
+ }
+}

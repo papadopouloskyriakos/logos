@@ -1,0 +1,1858 @@
+{
+ "experiment": "F4_la_relative_only_output",
+ "seed": 20260708,
+ "channel_verdict": "CROSS_SCRIPT_SUBSTITUTION_BRIDGE_NO_POWER (from F2)",
+ "n_la_ab_signs": 51,
+ "geometry_top1_equals_homomorph_count": 2,
+ "geometry_top1_equals_homomorph_rate": 0.0392156862745098,
+ "mean_normalized_uncertainty": 0.9995264440631244,
+ "relative_compatibility_per_sign": [
+  {
+   "la_sign": "A",
+   "homomorphic_lb_partner": "A",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.671456256854839,
+   "normalized_uncertainty": 0.9998291585947398,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.020791136001887013,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020619295570020305,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020570587285906,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.020556882759272997,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020554512405780732,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "AU",
+   "homomorphic_lb_partner": "AU",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6567777063163796,
+   "normalized_uncertainty": 0.997241455865565,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.027075608956409453,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.02673353905220381,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02633649522870417,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.02582561718712127,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.02437465780652102,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "DA",
+   "homomorphic_lb_partner": "DA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.671305295022355,
+   "normalized_uncertainty": 0.9998025453167533,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02089317239360215,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020704106895197305,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.02065046241327039,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.020635115447646676,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020632392973829045,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "DE",
+   "homomorphic_lb_partner": "DE",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672028665015809,
+   "normalized_uncertainty": 0.999930069250493,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02030611905179299,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020216866250665474,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020189461599593728,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02017916376661418,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020177398650807008,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "DI",
+   "homomorphic_lb_partner": "DI",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668159127006052,
+   "normalized_uncertainty": 0.9992479028443307,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02233249002772951,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021885283018499967,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.0217644291102953,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02173604083746146,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.021730905835848198,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "DU",
+   "homomorphic_lb_partner": "DU",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6723675261223026,
+   "normalized_uncertainty": 0.9999898075610154,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.019780235805875884,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.019777202283521342,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.019773016743501664,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "RA",
+     "compat": 0.019769875900093496,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.01976804955849203,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "E",
+   "homomorphic_lb_partner": "E",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668501160079373,
+   "normalized_uncertainty": 0.9993082003454349,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.023074946415644886,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.022937699732561757,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.022768189018438387,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.022569855766922074,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.021944230962983778,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "I",
+   "homomorphic_lb_partner": "I",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6678119134221365,
+   "normalized_uncertainty": 0.9991866920635829,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.022455466622238855,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021983137217527905,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021858447000705047,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021833322948725028,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.021829142918871405,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "JA",
+   "homomorphic_lb_partner": "JA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.666641873527366,
+   "normalized_uncertainty": 0.9989804240522416,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02283812772396361,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.022290953356673356,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.022150856449001315,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.022128624524689267,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.022125594247103666,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "JE",
+   "homomorphic_lb_partner": "JE",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672072548929015,
+   "normalized_uncertainty": 0.9999378056084988,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.020513326932019363,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.02048633272385662,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02046303295205333,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.020406431033263596,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.020279518394996324,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "KA",
+   "homomorphic_lb_partner": "KA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": true,
+   "coupling_entropy_bits": 5.668810032980506,
+   "normalized_uncertainty": 0.9993626519922195,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02209177882572214,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021685394040113267,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021580119866728312,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021562186060445566,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.02155976776837787,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "KE",
+   "homomorphic_lb_partner": "KE",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.667264291914204,
+   "normalized_uncertainty": 0.9990901510824474,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.023633368510255066,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.02346962046378875,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.023274215195066863,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.02302961068733612,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.022297577897913954,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "KI",
+   "homomorphic_lb_partner": "KI",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.670784316322333,
+   "normalized_uncertainty": 0.9997107012344403,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.021202014564001517,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020954199632712587,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020892474929290028,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020886517279126784,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02088631360101094,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "KO",
+   "homomorphic_lb_partner": "KO",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668756762781871,
+   "normalized_uncertainty": 0.9993532609124919,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.022947134460509964,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.0228154362413028,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02265839412779039,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.022459909984739304,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.021864504829371682,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "KU",
+   "homomorphic_lb_partner": "KU",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.67166668782653,
+   "normalized_uncertainty": 0.999866255772579,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.020632597622204152,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02048730548553197,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020447004316114726,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02043699523206336,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020435647727460347,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "MA",
+   "homomorphic_lb_partner": "MA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.66998378871361,
+   "normalized_uncertainty": 0.9995695750740307,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.021600640582562506,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021283978087440383,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021201781378092074,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021187759654694348,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.02118615608562159,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "ME",
+   "homomorphic_lb_partner": "ME",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6672857893934605,
+   "normalized_uncertainty": 0.9990939409039012,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.023626015696883454,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.023462000939855114,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.023271238733749224,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.023019410578927306,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.02229213727765702,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "MI",
+   "homomorphic_lb_partner": "MI",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.670212706765196,
+   "normalized_uncertainty": 0.9996099313657022,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.021493868027941083,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02119899963818035,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021118680973350096,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021099552517901837,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.0210963715980455,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "MU",
+   "homomorphic_lb_partner": "MU",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.666047017159418,
+   "normalized_uncertainty": 0.9988755559698806,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.024134674713460483,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.023946665942226133,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.023720549507143772,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.023443582860517426,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.022607724649855696,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "NA",
+   "homomorphic_lb_partner": "NA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668025694884115,
+   "normalized_uncertainty": 0.9992243799041608,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02237777131730985,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021924249916476804,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021799442829881135,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02176676035381918,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.0217605664679915,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "NE",
+   "homomorphic_lb_partner": "NE",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668363844469971,
+   "normalized_uncertainty": 0.9992839927796894,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.022257245660246217,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02181952664759377,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.02170756562200599,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02169043020849185,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.021688451189675596,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "NI",
+   "homomorphic_lb_partner": "NI",
+   "top1_geometry_partner": "DU",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672418998527281,
+   "normalized_uncertainty": 0.9999988817051205,
+   "candidates": [
+    {
+     "lb_sign": "DU",
+     "compat": 0.019667403525292976,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MI",
+     "compat": 0.01966693219044697,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "WI",
+     "compat": 0.01966531209253312,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "NI",
+     "compat": 0.019664973102258367,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "DE",
+     "compat": 0.01966454866379458,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "NU",
+   "homomorphic_lb_partner": "NU",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672315480417641,
+   "normalized_uncertainty": 0.9999806323490869,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.020047923623683562,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.020040507686686485,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.020030852267451,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.02001723520896194,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.01996700314362366,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "O",
+   "homomorphic_lb_partner": "O",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6702586969299995,
+   "normalized_uncertainty": 0.9996180390378232,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.022111658178844536,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.022017891496670473,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.021903605070187935,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.02176391841619697,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.0213292293521717,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "PA",
+   "homomorphic_lb_partner": "PA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.66888813443205,
+   "normalized_uncertainty": 0.9993764206091401,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.022059875815435826,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021659793417482864,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021556034349310832,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021538169729646086,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.021535826555460578,
+     "relative_class_vs_candidate": "spelling_variant"
+    }
+   ]
+  },
+  {
+   "la_sign": "PI",
+   "homomorphic_lb_partner": "PI",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6715824019046375,
+   "normalized_uncertainty": 0.9998513968865098,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.020699122788324736,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020541013710795857,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020498887698597656,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.020490829021509116,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020490013631322652,
+     "relative_class_vs_candidate": "same_consonant"
+    }
+   ]
+  },
+  {
+   "la_sign": "PO",
+   "homomorphic_lb_partner": "PO",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668929350479049,
+   "normalized_uncertainty": 0.9993836866451853,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.022861384004639586,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.022733675100465794,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02257997961128472,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.022389253984960028,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.021809409958968885,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "PU",
+   "homomorphic_lb_partner": "PU",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672091486921091,
+   "normalized_uncertainty": 0.9999411442142863,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.020486628766797164,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.020461338589984095,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02043251466275144,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.020388982210008785,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.020260921771746022,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "PU2",
+   "homomorphic_lb_partner": "PU2",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.666291031484542,
+   "normalized_uncertainty": 0.9989185736052683,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.024037848606630108,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.023854034045436883,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02363879962384337,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.02335974394022775,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.022548172803166896,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "QA",
+   "homomorphic_lb_partner": "QA",
+   "top1_geometry_partner": "AU",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672384571969696,
+   "normalized_uncertainty": 0.9999928125979027,
+   "candidates": [
+    {
+     "lb_sign": "AU",
+     "compat": 0.019823456138461266,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.019819391388115164,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "RA2",
+     "compat": 0.019817387620135303,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.01981617774827568,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.01981038210295401,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "QE",
+   "homomorphic_lb_partner": "QE",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.671185619785412,
+   "normalized_uncertainty": 0.9997814475975716,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.021448818278837278,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.021383836909763306,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.0213057223785395,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.021205810223959346,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.02089893155366099,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "RA",
+   "homomorphic_lb_partner": "RA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.67114308071886,
+   "normalized_uncertainty": 0.9997739483245116,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.020995052264497775,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020784722592949598,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.02073068916440052,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.020722954947265778,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020722506718801315,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "RA2",
+   "homomorphic_lb_partner": "RA2",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.671862377891036,
+   "normalized_uncertainty": 0.9999007542547463,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.020470359681614893,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02035101108152233,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020318955770092302,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.020312686146929562,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.02031215687747791,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "RE",
+   "homomorphic_lb_partner": "RE",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668933018154131,
+   "normalized_uncertainty": 0.9993843332248864,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02204332994081283,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021644254987635125,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.02154323888894318,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02152965486178537,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.02152845389546186,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "RI",
+   "homomorphic_lb_partner": "RI",
+   "top1_geometry_partner": "RI",
+   "top1_is_homomorph": true,
+   "coupling_entropy_bits": 5.6724110557085075,
+   "normalized_uncertainty": 0.9999974814542059,
+   "candidates": [
+    {
+     "lb_sign": "RI",
+     "compat": 0.0196618879384903,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "TI",
+     "compat": 0.019661848351694978,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "WA",
+     "compat": 0.01966150321169813,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "RE",
+     "compat": 0.019661386731847346,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "A",
+     "compat": 0.019661382020250754,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "RO",
+   "homomorphic_lb_partner": "RO",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.670575997853243,
+   "normalized_uncertainty": 0.9996739764727147,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.02190141717932048,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.021816858759815403,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.021715766954948368,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.021586490541477783,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.02119424594206727,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "RU",
+   "homomorphic_lb_partner": "RU",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668241239098262,
+   "normalized_uncertainty": 0.9992623785028472,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.022303535481108874,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02185643975024543,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021742611898272465,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021726100505389912,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.02172420890631436,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "SA",
+   "homomorphic_lb_partner": "SA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.670711858010213,
+   "normalized_uncertainty": 0.9996979274546632,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02124413165046618,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.020987168781252227,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.02092464044883724,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020921638022954984,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02092088589213258,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "SE",
+   "homomorphic_lb_partner": "SE",
+   "top1_geometry_partner": "DE",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672420278947891,
+   "normalized_uncertainty": 0.9999991074323065,
+   "candidates": [
+    {
+     "lb_sign": "DE",
+     "compat": 0.019665719686090672,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "JA",
+     "compat": 0.01966222396595851,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "DI",
+     "compat": 0.01966100683601221,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "QA",
+     "compat": 0.01965768762217795,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "NI",
+     "compat": 0.019657146739605832,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "SI",
+   "homomorphic_lb_partner": "SI",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668429629859837,
+   "normalized_uncertainty": 0.9992955901804307,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.022232068602830446,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.021799590396861208,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021688548048183817,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021670847608420595,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.02166874233597137,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "SU",
+   "homomorphic_lb_partner": "SU",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672266869608583,
+   "normalized_uncertainty": 0.9999720626798312,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.02016612423763677,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.020154147749680128,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.020137707658635484,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.020119099350645635,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.020046688223317018,
+     "relative_class_vs_candidate": "spelling_variant"
+    }
+   ]
+  },
+  {
+   "la_sign": "TA",
+   "homomorphic_lb_partner": "TA",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.668269706656518,
+   "normalized_uncertainty": 0.9992673970895255,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.022290952485216925,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02184783242074512,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.021733437683531368,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.021714347236506913,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.021711846351790184,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "TA2",
+   "homomorphic_lb_partner": "TA2",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.664921891159685,
+   "normalized_uncertainty": 0.9986772058935196,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.024557665715682395,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.024348584157017093,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.024101378590804533,
+     "relative_class_vs_candidate": "spelling_variant"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.023788861440849317,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.022869502877256195,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "TE",
+   "homomorphic_lb_partner": "TE",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672337483717049,
+   "normalized_uncertainty": 0.9999845113423008,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.019981675156208776,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.01997748340853439,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.019967824748121577,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.0199644607142226,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.01992397845979872,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "TI",
+   "homomorphic_lb_partner": "TI",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.671956035141224,
+   "normalized_uncertainty": 0.999917265225723,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.02038312108148736,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.02027830011891063,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.020249893532609437,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.02024425869265737,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.020243712555705846,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "TO",
+   "homomorphic_lb_partner": "TO",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.6651142262949445,
+   "normalized_uncertainty": 0.9987111129303978,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.024487348955425942,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.02428174565067506,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02403860747579503,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.0237310928077529,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.02282614180697253,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "TU",
+   "homomorphic_lb_partner": "TU",
+   "top1_geometry_partner": "KA",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672251913070685,
+   "normalized_uncertainty": 0.9999694259703117,
+   "candidates": [
+    {
+     "lb_sign": "KA",
+     "compat": 0.020019559024994193,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "KO",
+     "compat": 0.019975149640828724,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TO",
+     "compat": 0.01996293276946869,
+     "relative_class_vs_candidate": "same_consonant"
+    },
+    {
+     "lb_sign": "PA",
+     "compat": 0.01996087844473285,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "MA",
+     "compat": 0.019960713199882702,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "U",
+   "homomorphic_lb_partner": "U",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.671716471610416,
+   "normalized_uncertainty": 0.9998750322272495,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.0209578123331289,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.020913402255099304,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.020860482860973077,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.020790188234241894,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.020575103982937517,
+     "relative_class_vs_candidate": "same_vowel"
+    }
+   ]
+  },
+  {
+   "la_sign": "WA",
+   "homomorphic_lb_partner": "WA",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.669733208688245,
+   "normalized_uncertainty": 0.9995253999619298,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.02242675039310711,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.02231849658854259,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.0221922812592284,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.022023916145969172,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.021532564319873975,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "WI",
+   "homomorphic_lb_partner": "WI",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.672280417809773,
+   "normalized_uncertainty": 0.9999744511116524,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.02013458875487659,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.020124183434155157,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.02010693135197451,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.020094407403896064,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.020025814535796764,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  },
+  {
+   "la_sign": "ZA",
+   "homomorphic_lb_partner": "ZA",
+   "top1_geometry_partner": "RA2",
+   "top1_is_homomorph": false,
+   "coupling_entropy_bits": 5.670450156632961,
+   "normalized_uncertainty": 0.9996517917434858,
+   "candidates": [
+    {
+     "lb_sign": "RA2",
+     "compat": 0.021989347144998835,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "PU2",
+     "compat": 0.02190047155682403,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "TA2",
+     "compat": 0.021796000525695768,
+     "relative_class_vs_candidate": "same_vowel"
+    },
+    {
+     "lb_sign": "AU",
+     "compat": 0.02165802835447636,
+     "relative_class_vs_candidate": "cross"
+    },
+    {
+     "lb_sign": "SU",
+     "compat": 0.021249442777344477,
+     "relative_class_vs_candidate": "cross"
+    }
+   ]
+  }
+ ],
+ "within_la_equivalence_classes": [
+  {
+   "rel_class": "REL_CLASS_01",
+   "signs": [
+    "A",
+    "DA",
+    "JA",
+    "KA",
+    "MI",
+    "RU",
+    "SI",
+    "TA"
+   ],
+   "n_signs": 8,
+   "interpretation": "within-LA substitution-neighborhood class (vowel-alternation / shared-consonant axis); RELATIVE only"
+  },
+  {
+   "rel_class": "REL_CLASS_02",
+   "signs": [
+    "KU",
+    "MA",
+    "SA"
+   ],
+   "n_signs": 3,
+   "interpretation": "within-LA substitution-neighborhood class (vowel-alternation / shared-consonant axis); RELATIVE only"
+  },
+  {
+   "rel_class": "REL_CLASS_03",
+   "signs": [
+    "RA",
+    "RE"
+   ],
+   "n_signs": 2,
+   "interpretation": "within-LA substitution-neighborhood class (vowel-alternation / shared-consonant axis); RELATIVE only"
+  },
+  {
+   "rel_class": "REL_CLASS_04",
+   "signs": [
+    "PA",
+    "TE"
+   ],
+   "n_signs": 2,
+   "interpretation": "within-LA substitution-neighborhood class (vowel-alternation / shared-consonant axis); RELATIVE only"
+  },
+  {
+   "rel_class": "REL_CLASS_05",
+   "signs": [
+    "KI",
+    "WA"
+   ],
+   "n_signs": 2,
+   "interpretation": "within-LA substitution-neighborhood class (vowel-alternation / shared-consonant axis); RELATIVE only"
+  }
+ ],
+ "absolute_value_claim": "NONE \u2014 no absolute phonetic value follows from this channel.",
+ "licence_state": {
+  "PHONETIC": "NOT_EARNED",
+  "LEXICAL": "NOT_EARNED",
+  "SEMANTIC": "NOT_EARNED",
+  "reason": "channel at chance floor on a KNOWN cross-script pair; relative-class residual does not survive multiplicity for LA<->LB (Art. XV: a relative reduction earns no value)."
+ },
+ "what_this_channel_DOES_license": "relative-compatibility SETS with high per-sign uncertainty and value-free within-LA equivalence classes only; it CANNOT pin any LA sign to an LB/GORILA value, and it does not narrow the value lattice enough to change SEED_A (=0)."
+}
