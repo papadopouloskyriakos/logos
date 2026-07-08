@@ -1,0 +1,314 @@
+{
+  "": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Apodoulou": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Arkhalkhori": {
+    "n_qualifying_lines": 30,
+    "p_num_last": 0.9,
+    "p_num_first": 0.0,
+    "testable_min15": true
+  },
+  "Crete": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Fourni": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Gournia": {
+    "n_qualifying_lines": 3,
+    "p_num_last": 0.6666666666666666,
+    "p_num_first": 0.3333333333333333,
+    "testable_min15": false
+  },
+  "Haghia Triada": {
+    "n_qualifying_lines": 772,
+    "p_num_last": 0.8652849740932642,
+    "p_num_first": 0.015544041450777202,
+    "testable_min15": true
+  },
+  "Haghios Stehanos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Iouktas": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kalo Chorafi": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kamilari": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kannia": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kardamoutsa": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kea": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Khania": {
+    "n_qualifying_lines": 93,
+    "p_num_last": 0.8279569892473119,
+    "p_num_first": 0.053763440860215055,
+    "testable_min15": true
+  },
+  "Knossos": {
+    "n_qualifying_lines": 13,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kophinas": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Kythera": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Larani": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Malia": {
+    "n_qualifying_lines": 28,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": true
+  },
+  "Margiana": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Miletos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Milos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Mokhilos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Mycenae": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Nerokurou": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Palaikastro": {
+    "n_qualifying_lines": 18,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": true
+  },
+  "Papourou": {
+    "n_qualifying_lines": 1,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Petras": {
+    "n_qualifying_lines": 11,
+    "p_num_last": 0.5454545454545454,
+    "p_num_first": 0.09090909090909091,
+    "testable_min15": false
+  },
+  "Phaistos": {
+    "n_qualifying_lines": 34,
+    "p_num_last": 0.8235294117647058,
+    "p_num_first": 0.0,
+    "testable_min15": true
+  },
+  "Platanos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Poros Herakleiou": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Prassa": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Psykhro": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Pyrgos": {
+    "n_qualifying_lines": 1,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Samothrace": {
+    "n_qualifying_lines": 1,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Selakanos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Sitia": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Skhinia": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Skoteino Cave": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Syme": {
+    "n_qualifying_lines": 1,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Tel Haror": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Thera": {
+    "n_qualifying_lines": 6,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Tiryns": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Traostalos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Troullos": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Troy": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Trypiti": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Tylissos": {
+    "n_qualifying_lines": 30,
+    "p_num_last": 0.8,
+    "p_num_first": 0.0,
+    "testable_min15": true
+  },
+  "Vrysinas": {
+    "n_qualifying_lines": 0,
+    "p_num_last": 0.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  },
+  "Zakros": {
+    "n_qualifying_lines": 115,
+    "p_num_last": 0.8956521739130435,
+    "p_num_first": 0.0,
+    "testable_min15": true
+  },
+  "Zominthos": {
+    "n_qualifying_lines": 1,
+    "p_num_last": 1.0,
+    "p_num_first": 0.0,
+    "testable_min15": false
+  }
+}

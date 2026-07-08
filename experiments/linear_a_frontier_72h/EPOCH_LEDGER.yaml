@@ -855,3 +855,29 @@ epochs:
     artifacts: [epochs/EPOCH-036/prereg.md, epochs/EPOCH-036/plan_hash.txt, epochs/EPOCH-036/machinery.py, epochs/EPOCH-036/result.json, reports/EPOCH036_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-037
+    frontier: F8
+    gate: A
+    name: "Line-final numeral / ledger line template (num line-final), within-line position-permutation null"
+    plan_hash: "see epochs/EPOCH-037/plan_hash.txt"
+    completed: 2026-07-08
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: global p_num_last=0.867 over 1158 lines EXACT; control p_num_first=0.016 EXACT (numerals almost never line-initial); per-site 8/8 line-final 0.80-1.00 (HT 0.865, Zakros 0.896, Khania 0.828, Malia/Palaikastro 1.00); LOO drop HT ~0.87. All match."
+    positive_control: "PASSED (verified): within-line position-permutation null detects a planted line-final bias (p=0.0005, obs 0.80 vs null 0.34) with false-positive rate 0.033 on position-randomized lines. Calibrated by construction (permute within-line order = H0)."
+    verdict: "LINE_FINAL_NUMERAL_CROSS_SITE_ROBUST (all frozen conjuncts TRUE, orchestrator-verified): PC passed AND global p_num_last 0.867 >> null 0.451 (p=0.0002) AND all 8 testable sites individually significant same direction AND survives leave-one-site-out."
+    numbers: {n_lines: 1158, p_num_last: 0.867, null_mean: 0.451, null_p: 0.0002, p_num_first: 0.016, line_delim: nl, sites_testable: 8, sites_sig: 8, direction_consistent: true, loo_excluded: "Haghia Triada", loo_p: 0.0002, per_site_p_num_last: {Haghia_Triada: 0.865, Zakros: 0.896, Khania: 0.828, Phaistos: 0.824, Tylissos: 0.800, Arkhalkhori: 0.900, Malia: 1.0, Palaikastro: 1.0}}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "CERTIFIED STRUCTURAL POSITIVE (L2/L3). Linear A ledger LINES end with a numeral in 86.7% of cases (vs 45% chance), cross-site-robust across all 8 sites, calibrated null, survives LOO; numerals are almost never line-INITIAL (0.016). TOGETHER WITH E031 (word->numeral) this CERTIFIES the full ledger ENTRY TEMPLATE cross-site: ITEM-WORD -> NUMERAL -> LINE-BREAK (one entry per line, quantity last). The campaign's 5th cross-site positive and 2nd ledger-grammar certification. STRICTLY POSITIONAL L2/L3 — no numeral-value arithmetic, no phonetics, no meaning; earns no transfer licence."
+    committed_prediction: "modal CROSS_SITE_ROBUST or SITE_LOCAL; OUTCOME = CROSS_SITE_ROBUST (8/8 sites). Completes the ledger entry template with E031."
+    deviations:
+      - "Line delimiter frozen to 'nl' only (div is mostly intra-line); sensitivity check nl-only vs nl+div near-identical (0.867 vs 0.866), does not affect verdict."
+      - "machinery.py ROOT path corrected 3->4 dir-ups; LB loader hardened via importlib to avoid 'data' module shadowing. No metric/null/verdict change."
+      - "Permutation p reported as (ge+1)/(N+1)=0.0002 (ge=0 over 5000 draws), literal not rounded to 0."
+    non_circular: "Token types + line structure directly observed; no numeral arithmetic; LB control-only; anonymous."
+    architecture_note: "Fourteenth gated-runner epoch (repairs=2, both mechanical path/loader fixes; science clean). Second ledger-grammar certification (E031 order + E037 line layout). Coordinator verified + framed the combined entry-template result."
+    artifacts: [epochs/EPOCH-037/prereg.md, epochs/EPOCH-037/plan_hash.txt, epochs/EPOCH-037/machinery.py, epochs/EPOCH-037/result.json, reports/EPOCH037_REPORT.md]
+    successors_spawned: 5
+    substantive: true

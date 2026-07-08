@@ -1,0 +1,84 @@
+{
+  "task_id": "EPOCH-037",
+  "method": "LINE-FINAL NUMERAL / LEDGER LINE TEMPLATE (L2/L3 token-position structure). Split each inscription's ordered stream into LINES at 'nl' breaks (line delimiter FROZEN = 'nl' only; 'div' is an intra-line/heading separator, not a line break). A line = run of content tokens (word/num/other) between breaks. Qualifying line: >=2 content tokens AND >=1 'num'. Metric p_num_last = fraction of qualifying lines whose LAST content token is 'num'. NULL = within-line position permutation (calibrated by construction): permute the ORDER of each line's content tokens (multiset fixed -> per-line num-count fixed), recompute p_num_last, 5000 draws; one-sided p = P(permuted >= observed). Control p_num_first = fraction whose FIRST content token is 'num' (expected NOT elevated). Positive control: LB benchmark via load_b_damos (DAMOS wordforms -> pseudo-lines) with PLANTED line-final-numeral bias; gates verdict (detect planted p<=0.05 correct direction AND false-positive rate <=0.10 on position-randomized pseudo-lines across 30 sets). Cross-site: per site with >=15 qualifying lines, p_num_last + permutation p; count significant same direction; leave-one-site-out on Haghia Triada.",
+  "result": "LINE_FINAL_NUMERAL_CROSS_SITE_ROBUST",
+  "verdict": "LINE_FINAL_NUMERAL_CROSS_SITE_ROBUST",
+  "numbers": {
+    "global": {
+      "n_lines": 1158,
+      "p_num_last": 0.8670120898100173,
+      "null_mean": 0.45109879101899825,
+      "null_p": 0.0001999600079984003,
+      "p_num_first": 0.016407599309153715,
+      "line_delim": "nl"
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_planted_p": 0.0004997501249375312,
+      "false_pos_rate": 0.03333333333333333,
+      "detect_planted_obs": 0.8000294941749004,
+      "detect_planted_null_mean": 0.34089691785872295,
+      "n_sets": 30,
+      "planted_bias": 0.8,
+      "n_draws": 2000,
+      "lb_source": "load_b_damos (DAMOS wordforms, n=13562 pseudo-lines) -- BENCHMARK ONLY"
+    },
+    "cross_site": {
+      "n_sites_testable": 8,
+      "n_sites_sig": 8,
+      "direction_consistent": true,
+      "loo_excluded": "Haghia Triada",
+      "loo_p": 0.0001999600079984003,
+      "loo_n_lines": 348,
+      "loo_p_num_last": 0.8764367816091954,
+      "loo_survives": true,
+      "per_site": {
+        "Haghia Triada": {"n_lines": 772, "p_num_last": 0.8652849740932642, "p": 0.0001999600079984003},
+        "Zakros": {"n_lines": 115, "p_num_last": 0.8956521739130435, "p": 0.0001999600079984003},
+        "Khania": {"n_lines": 93, "p_num_last": 0.8279569892473119, "p": 0.0001999600079984003},
+        "Phaistos": {"n_lines": 34, "p_num_last": 0.8235294117647058, "p": 0.0001999600079984003},
+        "Tylissos": {"n_lines": 30, "p_num_last": 0.8, "p": 0.0001999600079984003},
+        "Arkhalkhori": {"n_lines": 30, "p_num_last": 0.9, "p": 0.0001999600079984003},
+        "Malia": {"n_lines": 28, "p_num_last": 1.0, "p": 0.0001999600079984003},
+        "Palaikastro": {"n_lines": 18, "p_num_last": 1.0, "p": 0.0001999600079984003}
+      }
+    },
+    "control_p_num_first": {
+      "p_num_first": 0.016407599309153715,
+      "null_mean": 0.45126286701208984,
+      "p": 1.0,
+      "note": "numerals are NOT line-initial; final-bias is position-specific, not a generic num-anywhere effect"
+    },
+    "line_delim_sensitivity": {
+      "nl_only_qualifying_lines": 1158,
+      "nl_only_p_num_last": 0.8670120898100173,
+      "nl_plus_div_qualifying_lines": 1147,
+      "nl_plus_div_p_num_last": 0.8657,
+      "note": "robust to delimiter choice; 'div' is mostly intra-line (341/463 divs followed by content)"
+    }
+  },
+  "key_findings": [
+    "GLOBAL: among 1158 qualifying ledger lines (>=2 content tokens, >=1 num), 86.7% have the numeral as the LAST content token, vs a within-line permutation null mean of 45.1% (one-sided p=0.0002). Numerals are strongly line-final.",
+    "CONTROL: p_num_first is only 1.6% (null mean 45.1%, p=1.0) -- numerals are NOT line-initial. The effect is position-specific to line-FINAL, not a generic 'numeral anywhere' artifact.",
+    "CROSS-SITE ROBUST: all 8 sites with >=15 qualifying lines are individually significant (p=0.0002 each) in the SAME direction (num line-final > chance): Haghia Triada, Zakros, Khania, Phaistos, Tylissos, Arkhalkhori, Malia, Palaikastro. Per-site p_num_last ranges 0.80-1.00.",
+    "LEAVE-ONE-SITE-OUT: dropping the dominant site (Haghia Triada, 772 lines) leaves 348 lines across 7 sites with p_num_last=0.876 (p=0.0002) -- the signal is NOT driven by a single site.",
+    "POSITIVE CONTROL PASSED: the within-line permutation null DETECTS a planted line-final-numeral bias (obs 0.800 vs null 0.341, p=0.0005) AND has a low false-positive rate (0.033 <= 0.10) on position-randomized pseudo-lines across 30 sets. Machinery is informative.",
+    "Together with E031 (WORD->NUMERAL entry-then-quantity, certified), this maps the full positional entry template: WORD first, NUMERAL last, within each ledger line -- the canonical 'entry ... quantity [line break]' one-entry-per-line layout."
+  ],
+  "successor_hypotheses": [
+    "E038: Does the line-final numeral co-occur with a line-INITIAL word token at above-chance rates (testing the strict [word ... num] bracketing template as a joint positional rule, beyond the two marginal effects)?",
+    "E039: Is the line-final-numeral layout MORE pronounced on Tablet supports (formal ledgers) than on roundels/seals/other supports (testing support-type modulation of the ledger template)?",
+    "E040: Among multi-numeral lines (>=2 nums), is there a fixed positional order (e.g. quantity-then-unit, or unit-then-quantity) -- extending the template into multi-quantity lines (still pure L2/L3 position, no arithmetic)?",
+    "E041: Is the line-final numeral position STABLE across the LMIB vs pre-LMIB contexts (temporal robustness of the ledger template)?",
+    "E042: Does the line-final numeral predict a subsequent line-break (nl) more strongly than a within-line divider (div) -- i.e. is 'num -> nl' the dominant transition, quantifying the line-closing role of the numeral (bigram transition L2)?",
+    "E043: Cross-script check (benchmark ONLY): does Linear B (DAMOS) show the same line-final numeral/quantity layout in its ledger series, as a comparative anchor for the LA finding (no LA evidence drawn from LB)?"
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Tokens carry NO phonetic/sound/meaning/reading. Only token TYPE ('word','num','nl','div','other') and within-line POSITION are used. The null is within-line position permutation calibrated BY CONSTRUCTION (per-line token multiset fixed), so it cannot inherit any LA-side structure beyond the per-line multiset. Linear B (load_b_damos / DAMOS) is used ONLY as a positive-control benchmark to validate the machinery (detect planted bias + false-positive rate on randomized positions); it is NEVER used as evidence for the LA claim. No numeral-value arithmetic, no phonetics, no meaning.",
+  "deviations": [
+    "Line delimiter FROZEN to 'nl' only (not nl+div): inspection showed 'div' is mostly an intra-line/heading separator (341/463 divs followed by content, only 96 by nl). Sensitivity check confirmed near-identical results for nl-only vs nl+div (1158 vs 1147 qualifying lines; p_num_last 0.867 vs 0.866), so the choice does not affect the verdict. Documented in prereg section 3.",
+    "machinery.py ROOT path was corrected from 3 to 4 directory-ups (file is 4 levels deep: experiments/linear_a_frontier_72h/epochs/EPOCH-037/machinery.py); LB loader made robust via importlib.spec_from_file_location to avoid sys.path shadowing of the 'data' module. Self-check passes; no change to metric, null, or verdict rule.",
+    "Permutation p-values reported as 0.0002 are the +1-smoothed minimum over 5000 draws (ge=0 observed); reported as the literal (ge+1)/(N+1) value, not rounded to 0."
+  ]
+}
