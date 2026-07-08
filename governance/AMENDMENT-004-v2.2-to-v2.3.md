@@ -39,7 +39,17 @@ matching update to the operational default.
 
 | id | article | old default | new default |
 |---|---|---|---|
-| **T1** | XXI | `LLM access: Claude Code subscription through claude -p`; `Prohibited: ANTHROPIC_API_KEY`; `Local models: Ollama on the approved GPU host` | LLM access is **provider-agnostic through the approved LiteLLM proxy** (`nllei01litellm01:4000`), selected at runtime by `$LOGOS_LLM_BACKEND` which **defaults to `litellm` (z.ai/GLM)** per the owner directive "z.ai is default for logos … everything must be using z.ai" — `ollama` is the explicit local fallback. The proxy holds all vendor keys; logos holds only a **scoped LiteLLM virtual key**, supplied via env / an untracked secret file (`runtime/secrets/litellm.env`, gitignored) — **never committed, never a raw vendor key in the repo, and `ANTHROPIC_API_KEY` still never set in-process.** Backends wired through the proxy: z.ai/GLM (`glm-4.6`/`4.5`/`air` via the Anthropic-compatible endpoint), local Ollama, Mistral/Codestral/Devstral. Note: because z.ai/GLM is now the default proposer, a re-run of the LLM-ablation (§C.4) proposes with GLM unless `LOGOS_LLM_BACKEND=ollama` is set — a deliberate owner choice, recorded here (the proposer remains a ≤0.75 signal, never on the verdict path, so no verdict moves). |
+| **T1** | XXI | `LLM access: Claude Code subscription through claude -p`; `Prohibited: ANTHROPIC_API_KEY`; `Local models: Ollama on the approved GPU host` | LLM access is **provider-agnostic through the approved LiteLLM proxy** (`nllei01litellm01:4000`), selected at runtime by `$LOGOS_LLM_BACKEND` which **defaults to `litellm` (z.ai/GLM)** per the owner directive "z.ai is default for logos … everything must be using z.ai" — `ollama` is the explicit local fallback. The proxy holds all vendor keys; logos holds only a **scoped LiteLLM virtual key**, supplied via env / an untracked secret file (`runtime/secrets/litellm.env`, gitignored) — **never committed, never a raw vendor key in the repo, and `ANTHROPIC_API_KEY` still never set in-process.** Backends wired through the proxy: z.ai/GLM (**default model `glm-5.2`**; full series `glm-4.5`…`glm-4.7`,`glm-5`…`glm-5.2` via the Anthropic-compatible endpoint), local Ollama, Mistral/Codestral/Devstral. Note: because z.ai/GLM is now the default proposer, a re-run of the LLM-ablation (§C.4) proposes with GLM unless `LOGOS_LLM_BACKEND=ollama` is set — a deliberate owner choice, recorded here (the proposer remains a ≤0.75 signal, never on the verdict path, so no verdict moves). |
+
+## Worker architecture (owner directive 2026-07-08)
+
+Division of labour, recorded so it is not re-litigated: the **Claude Code session remains the
+coordinator / scientific-overview / discipline-enforcement layer**; **token-intensive, repetitive
+worker labour** (brute-force search, epoch execution, fan-out) is **handed to z.ai/GLM via
+`scripts/zai_agent.py`** — a self-contained tool-use loop that calls GLM through the proxy with NO
+claude-code / anthropic dependency. Workers PROPOSE and EXECUTE; the mechanical gates
+(`scripts/verdict.py`, controls, nulls) remain the sole adjudicator (invariants #2/#4/#5), so moving
+the worker LLM to GLM changes cost/vendor, never a verdict.
 
 ## Compatibility & reproducibility note (required by Article XXI)
 

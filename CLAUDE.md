@@ -83,14 +83,17 @@ What v2.0 adds beyond the invariants (use these in every stage):
    versioned and reproducible.
 10. **Open by default.** Corpus tooling, verdict methodology, lexicon tables: PUBLIC in this
     repo. Licensed raw vendor data is the only exception (gitignored).
-11. **LLM is provider-agnostic via the approved proxy; z.ai/GLM is the default** (v2.3,
+11. **LLM is provider-agnostic via the approved proxy; z.ai/GLM (`glm-5.2`) is the default** (v2.3,
     AMENDMENT-004) — logos's programmatic LLM calls go through the LiteLLM proxy
-    `nllei01litellm01:4000`; `$LOGOS_LLM_BACKEND` **defaults to `litellm` (z.ai)**, with `ollama`
-    as an explicit local fallback. The proxy holds all vendor keys; logos holds only a **scoped
-    virtual key** in the gitignored `runtime/secrets/litellm.env` — never a raw vendor key in the
-    repo, and `ANTHROPIC_API_KEY` still never set in-process. The proposer LLM is a capped signal
-    (#2/#4/#5), never on the verdict path, so the tests are LLM-agnostic by construction. Ollama on
-    the gpu host stays available (directly or through the proxy).
+    `nllei01litellm01:4000`; `$LOGOS_LLM_BACKEND` **defaults to `litellm` (z.ai)** and
+    `LOGOS_LLM_MODEL` defaults to **`glm-5.2`**, with `ollama` as an explicit local fallback. The
+    proxy holds all vendor keys; logos holds only a **scoped virtual key** in the gitignored
+    `runtime/secrets/litellm.env` — never a raw vendor key in the repo, and `ANTHROPIC_API_KEY`
+    still never set in-process. The proposer LLM is a capped signal (#2/#4/#5), never on the verdict
+    path, so the tests are LLM-agnostic by construction. **Worker split:** this Claude Code session
+    is the coordinator/overview; token-intensive repetitive labour is handed to GLM via
+    `scripts/zai_agent.py` (a claude-code-free tool-use loop) — NOT via Claude Code subagents.
+    Ollama on the gpu host stays available (directly or through the proxy).
 12. **Counts are generated, not hand-written.** Any "N inscriptions / N signs / N hypotheses"
     figure comes from a script, not a hand-edit.
 
