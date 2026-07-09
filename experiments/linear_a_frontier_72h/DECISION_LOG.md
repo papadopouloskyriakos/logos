@@ -126,3 +126,13 @@
 - F12 CROSS_DISCIPLINARY launch gate OPENED: launch_gate.py MORPH_TERMINAL=True (all F11 terminal). F12
   E097-E102 flipped WAITING_ON_MORPHOGENESIS -> ACTIVE. LAUNCHING EPOCH-097 (error-correcting-code +
   belief-propagation decoding). Finalization remains BLOCKED (clock 2026-07-11T03:20Z).
+
+- EPOCH-097 BANKED (96 epochs). FIRST F12 cross-disciplinary epoch: error-correcting-code + belief-propagation
+  masked-sign decoding. VERDICT ECC_BP_SUPPORTED (LB calibration) but LA_TRANSFER_NEGATIVE (LA objective NULL).
+  PC detects (synthetic HMM bp_bidir 0.490 vs unigram 0.065, rises with redundancy). On blinded LB, BP beats
+  local+unigram (bp_loopy 0.307 vs local 0.158 vs unigram 0.044) and survives degrade-to-LA-scale (0.214 vs
+  0.157). On REAL LA it REVERSES: forward-bigram best (0.121), bp_bidir worse (0.087), loopy BP HARMFUL (0.038
+  < unigram 0.058) -- LA's longer sparser words break higher-order estimates. Net LA: plain forward-bigram is
+  best masked-sign predictor (top-1 0.121); BP adds nothing. Calibration-positive/transfer-negative (S15: LB
+  success != LA evidence). bounded-neg 24->25. Establishes F12 discipline: the LA-TRANSFER bar is the gate, not
+  LB calibration. E098 (Potts spin-glass identifiability) queued next. Finalization BLOCKED (2026-07-11T03:20Z).
