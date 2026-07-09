@@ -1,0 +1,215 @@
+{
+ "generated": "2026-07-10 preflight scout",
+ "nodes": [
+  {
+   "theme": "(a) toponym/onomastic",
+   "branch": "research/la-lb-toponym-continuity",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-la-lb-continuity/experiments/la_lb_continuity/reports/FINAL_CHANNEL_VERDICT.md (+ ADMINISTRATIVE_CHANNEL_CLOSURE.md, KNOWN_PERSISTENCE_PAIR_AUDIT.md, STATUS.md)",
+   "what_was_done": "Full pre-frozen LA-LB administrative toponym record-linkage design: blind A<->B tier-A sign map (77 signs, hash 77de6684), 11 PRIMARY internal-only LA candidates (hash eb2bb293) vs 33 independent LB toponym targets (29e25d49), no-free-mapping matchers A1-A5, positive controls PC1-PC4 (exact implant 100% recovery / 0 FP), Monte-Carlo nulls (FP 1.25%), 66 effective units, ARKH ambiguity quarantined. Five known pairs (pa-i-to, tu-ru-sa, di-ki-ta, i-da, se-to-i-ja) source-audited and demoted to DEVELOPMENT_BENCHMARK; di-de-ru~di-de-ro, pa-je-re~pa-je-ro held as SPECULATIVE.",
+   "channel": "administrative toponym continuity (lexical record linkage, no free mapping search)",
+   "outcome": "Split verdict: H_exact = NULL_PUBLISHED (fully powered, min detectable 1 pair, observed 0 exact continuities) / H_drift = NO_POWER (genuine drift e.g. tu-ru-sa->tu-ri-so unrecoverable without the forbidden flexible mapping). CIRCULARITY_LOW. Named next step: a drift-tolerant redesign with pre-registered null-calibrated edit operations = a materially different design requiring a new input-freeze review.",
+   "relevance_to": "E206 (this IS the direct predecessor of gated onomastic record linkage: reusable frozen packets, sign map, known-pair quarantine ledger, PC battery; E206 must be the drift-tolerant redesign the verdict names, or it re-runs a closed NO_POWER)"
+  },
+  {
+   "theme": "(a) toponym/onomastic",
+   "branch": "research/la-lb-ritual-feasibility (fork of continuity)",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-la-lb-ritual-feasibility/experiments/la_lb_ritual/STATUS.md",
+   "what_was_done": "Feasibility+power-only audit of the ritual (libation-formula) continuity channel, forked after the administrative closure; no real matching run.",
+   "channel": "ritual toponym/onomastic continuity (EXPLORATORY_POSTHOC_CHANNEL)",
+   "outcome": "COMPLETE / NO_POWER \u2014 drift inadmissible, permissive matching FP ~1, no in-domain exemplar; the ritual channel is closed at feasibility stage.",
+   "relevance_to": "E206 (ritual-genre linkage already priced as NO_POWER; E206 designs must not silently reopen it)"
+  },
+  {
+   "theme": "(a) toponym/onomastic",
+   "branch": "main",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos/experiments/crossscript_gate/PHASE1_REPORT.md + phase2/PHASE2_REPORT.md + ANCHORS.md + toponym_anchors.csv",
+   "what_was_done": "Pre-registered, Zenodo-timestamped one-shot cross-script value-recovery gates: PPMI-SVD + Procrustes distributional channel plus toponym-pin word completion over the 5 Steele&Meissner Table 6.4 equations (pa-i-to, se-to-i-ja, tu-ru-sa, di-ki-te, su-ki-ri-ta) and Younger anchors (ku-ta, ku-ni-su, sa-ra2). Phase 1: h=20 held-out anchors (DOI 10.5281/zenodo.21168887). Phase 2: quota-certified 8-anchor redesign (DOI 10.5281/zenodo.21173639), corrected two-attempt bar.",
+   "channel": "toponym pins (I+RI) + distributional co-occurrence alignment",
+   "outcome": "Phase 1: REFUTE_LOTO_FRAGILE \u2014 full stat clears (p=0.0305) on exactly 2 pins, I (via se-to-i-ja) and RI (via su-ki-ri-ta), each one-toponym-deep; LOTO kills it. Distributional channel = 0.0000 (third independent null). Phase 2: REFUTE (missed corrected bar by 0.0002); hits SU (ku-ni-su) + TO (pa-i-to), again one-identification-deep; fourth distributional null. Census verdict: more anchors of the same kind will not move it.",
+   "relevance_to": "E206 (the one-deep-pin bound is the exact obstacle gated record linkage must overcome; any retry needs a NEW prereg+timestamp), E210 (distributional-alignment nulls are the baseline OT must beat), E208"
+  },
+  {
+   "theme": "(a) toponym/onomastic",
+   "branch": "main",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos/experiments/crossscript_gate/phase3/GAP_DELTA.md (+ phase3/sweep/, anetaki_extraction.md)",
+   "what_was_done": "Mechanical scan of the published Ariadne-2025 Kanta et al. Anetaki overview against the frozen anchor census.",
+   "channel": "prospective toponym/anchor supply",
+   "outcome": "New LOTO legs = 0; new candidate anchor words = 0 transliterated; ~16 well-preserved but UNPUBLISHED sign-groups from a Knossos cult context; supply verdict PENDING-FULL-EDITION (Anetaki II). Also: a six-fraction sequence with a new relative-value ordering and a probable new LA sign.",
+   "relevance_to": "E206 (the only live anchor-supply route), E205 (new carriers), E203 (delta seals)"
+  },
+  {
+   "theme": "(a) toponym/onomastic",
+   "branch": "research/external-minoan-anchors + research/egyptian-calibration-gate",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-external-anchors/experiments/external_anchors/STATUS.md; anchor-lattice reports/D_SOURCE_EXPANSION.md",
+   "what_was_done": "External (Egyptian/Near-Eastern) onomastic anchor acquisition: Kom el-Hetan toponym group-writings (Knossos/Amnisos/Lyktos via Cline&Stannish 2011), Hoch calibration corpus; Egyptian phonetic-anchor one-shot gate; anchor-lattice WP-D re-census.",
+   "channel": "external bilingual-adjacent toponym anchors",
+   "outcome": "Egyptian channel one-shot: mechanical CONFIRM but honest interpretation TRIVIAL/NULL (edge = 1 training record, LOO flips it) \u2014 channel NOT confirmed, programme CLOSED. WP-D: {Egyptian-rendered Cretan toponyms} intersect {LA >=4-slot attested} = {Phaistos} only (3 slots, sub-threshold) -> SOURCE_EXPANSION_NULL, 0 new independent multi-slot anchors.",
+   "relevance_to": "E206 (external-lineage anchors are the dependency-distinct kind E206 needs; the census says none currently exist)"
+  },
+  {
+   "theme": "(b) palaeography/SigLA",
+   "branch": "main",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos/scripts/sigla_decode.py",
+   "what_was_done": "Decoder for the SigLA database shipped in corpus/bronze/sigla_browse_2026/database.js (OCaml Marshal blobs) -> 802 docs / 376 signs / per-glyph bounding boxes, validated against silver (575 matched; 730 silver + 143 SigLA docs genuinely absent from the other side \u2014 see la-lb-continuity SIGLA_SILVER_CROSSWALK.md).",
+   "channel": "palaeographic data ingestion (bbox-level)",
+   "outcome": "Working, validated; JSON gitignored (CC BY-NC-SA). SigLA is the ONLY in-repo glyph-geometry source and it carries bboxes only.",
+   "relevance_to": "E205 (the data substrate; do not re-acquire)"
+  },
+  {
+   "theme": "(b) palaeography/SigLA",
+   "branch": "research/linear-a-frontier-72h",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/experiments/linear_a_frontier_72h/final/EPOCHS_001_TO_FINAL_MASTER_TABLE.csv rows EPOCH-076..090 (+ epochs/EPOCH-0xx/, reports/EPOCH0xx_REPORT.md)",
+   "what_was_done": "15 preregistered F23_SPATIAL epochs on SigLA per-glyph bboxes, all L2, all with permutation nulls + positive controls: glyph size (E076-E078), 2D spacing/ruling (E079-E084), layout registers (E081, E085-E087), mechanism tests (E088-E090).",
+   "channel": "spatial/layout palaeography (bbox geometry, opaque sign IDs)",
+   "outcome": "Banked findings: glyph SIZE is a shared cross-site per-sign convention (E076, r 0.70-0.85) with a cross-site frequency->smaller economy-of-effort law (E078, r=-0.351, p=0.0004); VERTICAL line spacing is deliberate ruled layout cross-site (E080+E084) while HORIZONTAL pitch regularity is glyph-WIDTH-driven, not deliberate (E083 qualifying E079); left-justification (E081), heading-size salience (E085) and longer header rows (E086) are Haghia-Triada-local registers with a size<->length tradeoff (E087) explained by a doc-wide bounded writing width (E089/E090), not an ink budget (E088). E082 = MACHINERY_UNINFORMATIVE (PC uncalibratable).",
+   "relevance_to": "E205 (this is the measured state of the art for channels A-D: bbox geometry is largely exhausted at L2; new value must come from finer measurement or new axes, and HT-register vs cross-site confounds must be controlled)"
+  },
+  {
+   "theme": "(b) palaeography/SigLA",
+   "branch": "research/linear-a-anchor-lattice",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-anchor-lattice/experiments/linear_a_anchor_lattice/reports/E_STROKE_CORPUS.md + L_3D_CHANNEL.md",
+   "what_was_done": "WP-E attempted to build the stroke/orientation corpus (the one non-circular shape channel, flagged never-built by the methodology inventory); WP-L built a fail-closed 3D ingestion+validation pipeline.",
+   "channel": "stroke-level palaeography / 3D seal imaging",
+   "outcome": "Both SOURCE_BLOCKED: SigLA has only axis-aligned bboxes (no strokes/contours/orientation; document drawings never scraped); bbox aspect has no sign-identity power (AUC 0.57-0.60, LOSO ~ majority). 3D: MUSINT II 43 models not downloadable/no licence, CMS Arachne 2D-only. Pipelines delivered and tested; no font substituted for evidence.",
+   "relevance_to": "E205 (hard data ceiling: any stroke/contour leg of E205 is blocked without new acquisition; the ingestion pipelines are ready if data arrives)"
+  },
+  {
+   "theme": "(b) palaeography/SigLA",
+   "branch": "main",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos/experiments/crossscript_gate/salgarella_2020_grades.json (source PDFs: corpus/bronze/salgarella_2020/)",
+   "what_was_done": "Salgarella 2020 (Aegean Linear Script(s), CUP) WAS ACQUIRED (per-chapter PDFs with text layers) and the homomorphy grades extracted programmatically from Tables 2-3 (pp. 35-36) cell-fill colours, cross-checked against rendered pages.",
+   "channel": "primary-sourced LA/LB sign homomorphy grading",
+   "outcome": "57 signs graded: 32 'homomorphic', 25 'homomorphic and also likely homophone'. NOTE: this supersedes the stale memory/ANCHORS.md note that Salgarella homomorphy is 'still pending' \u2014 the grades exist and are unused downstream. Caution: shape-based grades are circular for value transfer (the paper's image leg was capped <=0.75 as a circular demonstration).",
+   "relevance_to": "E205 (a ready, primary-sourced palaeographic feature set; usable for measurement-channel validation but NOT as an independent value anchor)"
+  },
+  {
+   "theme": "(c) morphology/segmentation",
+   "branch": "main",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos/experiments/segmentation_extension/GATE_RESULTS.md (+ PREREG.md, models_pyp.py, models_morfessor.py, models_neural.py, results/)",
+   "what_was_done": "Gate-verified bootstrap reconstruction of the published segmentation positive (DP-unigram micro-F1 0.4361 vs random 0.3888, 4-decimal exact; site-clustered bootstrap CI [0.0204,0.0991] reproduced, P(gap>0)=0.9985), then preregistered model classes (PYP/DP, Morfessor-MDL, neural) run under the frozen metric.",
+   "channel": "unsupervised word segmentation on LA sign sequences",
+   "outcome": "Published 0.436 stands; micro-F1 has a 0.577 all-boundaries ceiling (check cut-rate before reading gains as structure); supervised headroom estimated 0.62-0.66.",
+   "relevance_to": "E207 (baseline + frozen metric + the cut-rate trap), E208 (any joint segmentation leg starts from this)"
+  },
+  {
+   "theme": "(c) morphology/segmentation",
+   "branch": "research/linear-a-relative-phonology-seals",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-relative-phonology-seals/experiments/linear_a_relative_phonology/reports/B_LINEAR_A_SEGMENTATION_ENSEMBLE.md (+ B1-B4 reports, data/segmentations/la_ensemble.json)",
+   "what_was_done": "B-series: known-script boundary-recovery validation (B3), synthetic controls, then the B3-validated unsupervised families applied to LA producing a per-gap probabilistic boundary ensemble with 6 attributes (boundary prob, cross-model agreement, source representation, site stability, encoding sensitivity, damage sensitivity).",
+   "channel": "segmentation (ensemble, channel-dependence audit)",
+   "outcome": "LA segmentation is an over-cut SUPERSET with ~0 skill over cut-everywhere at LA's hapax regime (B4); the ensemble artifact exists as a reusable probabilistic input rather than a claimed segmentation.",
+   "relevance_to": "E207/E208 (the la_ensemble.json artifact is a ready-made soft-segmentation input; any 'joint segmentation' gain must beat the cut-everywhere degenerate solution)"
+  },
+  {
+   "theme": "(c) morphology/segmentation",
+   "branch": "research/linear-a-relative-phonology-seals + research/linear-a-frontier-72h",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-relative-phonology-seals/experiments/linear_a_relative_phonology/reports/E_MORPHOLOGY_MODELS.md; /home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/experiments/linear_a_frontier_72h/final/GRADUATED_FINDINGS.md (E103)",
+   "what_was_done": "Three independent anonymous morphology-induction families on LA (GORILA_WORD primary) with LB positive control, deflated against frequency-matched nulls; the A- prefixation finding characterized and later independently replicated as frontier epoch E103.",
+   "channel": "morphology induction (relative/structural)",
+   "outcome": "A- prefixation = the single graduated morphological finding: REPLICATED_RELATIVE_CONSTRAINT, L2/L3, no phonetic value; ledger KU-RO-terminal and libation order are the other K1-adaptive-validated L2/L3 positives. LB morphology positive control FIRES (0.562 vs ~0.30 floor) so LA's null is short-word, not detector failure.",
+   "relevance_to": "E207 (the constraints any MDL/adaptor-grammar/subregular model must recover to be credible, and the deflation discipline it must match)"
+  },
+  {
+   "theme": "(d) CSP/SAT/anchor-lattice",
+   "branch": "research/linear-a-anchor-lattice",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-anchor-lattice/experiments/linear_a_anchor_lattice/reports/O_FINAL_VERDICT.md + CAMPAIGN.md (WP list) + TASK_LEDGER.yaml",
+   "what_was_done": "15-WP campaign: A baseline+exclusions, B sign universe (166/163/158 inventories; 69 A-only signs image-rich but relationally dark), C anchor lattice (562 nodes/208 hyperedges; dependency-collapsed independent anchors = 0 \u2014 everything descends from one META_CONTINUITY_LA_eq_LB lineage), D source expansion, E stroke corpus, F substitution bridge, G anchor-threshold identifiability lab, H joint inference, I all-unresolved-sign search (0/151 retained; random-hyperedge null retains 0 in 200/200), J conditional language gate, K active acquisition ranking, L 3D readiness, M held-out/seals, N adaptive null (13,000 component nulls + 120 full-adaptive replicates), O synthesis.",
+   "channel": "anchor-lattice identifiability / joint constraint inference",
+   "outcome": "ANCHOR_LATTICE_UNDERDETERMINED, established 4 independent ways. THE PRICING: absolute-value recovery (abs>=0.90, FP<=0.05) requires 12 anchors x 8 slots x 12 DISTINCT lineages; foothold abs>=0.75 = exactly 3 independent 8-slot anchors; abs>=0.50 at 2x8-slot. LA operating point: abs 0.000, residual ambiguity ~10^63.4 (G, operational) to >=10^270 equivalence classes (H, gauge-quotient lower bound). Clones add exactly zero; wrong anchors net-poisonous (f_wrong 0.1 -> FP 0.31); the 3 one-toponym-deep pins price at abs 0.012 / FP 0.23 = worse than silence. Discipline proven load-bearing: naive pipeline fabricates a decipherment 120/120 under null (and fires on real data); gated pipeline 0/120 with planted-positive 20/20.",
+   "relevance_to": "E203 (the quantitative target to reproduce/extend with an exact engine; the G-surface and N-null protocols are the acceptance bar), E206 (anchor independence is THE bottleneck), E210 (depends on E203)"
+  },
+  {
+   "theme": "(d) CSP/SAT/anchor-lattice \u2014 solver formalism",
+   "branch": "research/linear-a-anchor-lattice",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-anchor-lattice/experiments/linear_a_anchor_lattice/scripts/h_joint_inference.py + reports/H_JOINT_INFERENCE_SPEC.md + H_JOINT_INFERENCE_RESULTS.md",
+   "what_was_done": "WP-H ran THREE genuinely-different custom solvers over a 67-cell CV domain (13 consonants x 5 vowels + 2 series cells): H_MODEL_1 Bayesian factor graph with Gibbs sampling; H_MODEL_2 CP/exact arc-consistency + model counting via sequential importance sampling + backbone extraction + gauge quotient; H_MODEL_3 MDL-penalized beam search with naive/dedup/Art.-XII-discounted evidence accounting. All hand-rolled numpy \u2014 NO industrial solver (no OR-Tools/Z3/pysat anywhere in the repo).",
+   "channel": "joint inference over the anchor lattice",
+   "outcome": "JOINT_INFERENCE_NULL, 3/3 solvers agree (Jaccard 0.905-1.0); A-only signs get 0.000 absolute bits in every solver x scenario x inventory, strictly BELOW the random-anchor null (p=0.000). The candidate UNSAT discovery (continuity pins x LA substitution constraints jointly unsatisfiable, 15/24 violations) was self-downgraded by WP-N to UNSAT_GENERIC: every matched random 38-pin set is also UNSAT (P=1.000), observed violations FEWER than null mean. MDL preference for the anchored system flips sign under honest dependency dedup (9 citations of one 7.7%-reliable channel = 5.92 false bits).",
+   "relevance_to": "E203 (E203's 'exact identifiability engine (CP-SAT/SMT/counting)' would be the first industrial-solver formalization \u2014 it must reproduce the gauge quotient, the SIS count, and the UNSAT_GENERIC matched-null adjudication or it will rediscover generic UNSAT as fake signal), E210, E207 (MDL dedup lesson)"
+  },
+  {
+   "theme": "(d) CSP/SAT \u2014 second instance",
+   "branch": "research/linear-a-relative-phonology-seals",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-relative-phonology-seals/experiments/linear_a_relative_phonology/scripts/h3_candidate_round3.py + reports/H_ROUND_3.md",
+   "what_was_done": "H3: morphology-first JOINT decipherment via three inference paradigms \u2014 Bayesian-joint, MDL commit (derivation-backbone-fitted), and constraint-satisfaction/integer-program \u2014 reusing the audited Foundry null machinery, single documented addition (prefix-aware matcher applied identically to real corpus and nulls).",
+   "channel": "joint morphology+value inference (paradigm sweep)",
+   "outcome": "AT_JOINT_INFERENCE_NULL \u2014 all paradigms at the end-to-end null; mechanical reason: LA internal structure is value-blind (relabeling-invariant, 0 exploitable bits, >=10^27 twins).",
+   "relevance_to": "E203 (CSP/IP precedent + the relabeling-invariance obstruction any exact engine must quantify), E207"
+  },
+  {
+   "theme": "(e) language-family tests",
+   "branch": "research/linear-a-decipherment-foundry",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-decipherment-foundry/experiments/linear_a_foundry/FINAL_CAMPAIGN_REPORT.md sections 5-6 (+ prereg/candidate_round{1,2,3}_prereg.json)",
+   "what_was_done": "THE SIX FAMILIES, exactly: Round 1 = West Semitic + Pre-Greek/Anatolian; Round 2 = Hurrian + Luwian; Round 3 = Etruscan + Aegean-isolate substrate (Pre-Greek reconstructed only from Greek loanwords); each round also ran a same-structure random control. METHOD: each family = a bounded, preregistered phoneme->value correspondence + a small cited 6-entry lexicon (never fitted to LA), scored on 973 held-out multi-sign GORILA word tokens against the multi-family end-to-end null battery \u2014 order-shuffle S + wrong-language opaque LB W + random-prior R \u2014 Holm-adjusted, with leave-one-lexeme-out and a 300-draw random-lexicon false-clear calibration.",
+   "channel": "candidate-language lexical fit (held-out, null-batteried)",
+   "outcome": "Every round AT_END_TO_END_NULL. Round 1: WS decisive 0.030 but the random control ALSO clears (same-structure artifact); only KU-RO='total' survives. Round 2: Hurrian 1.0, Luwian 0.284 (single TA-TI hit fails the random-prior null). Round 3: random control's bare match rate 0.054 EXCEEDS Etruscan's 0.033; isolate model predicts zero held-out forms. Mechanism isolated: nonzero LA match rates are generic word-shape typicality, not language-specific fit. Wrong-language opaque LB scores HIGHER than every LA hypothesis.",
+   "relevance_to": "E208 (the tournament E208 proposes was already run 3 ways at fixed segmentation; E208's only new degrees of freedom are JOINT segmentation + phonetic priors \u2014 it must show why those clear a null battery this design should reuse verbatim)"
+  },
+  {
+   "theme": "(e) language-family tests \u2014 extensions",
+   "branch": "research/linear-a-relative-phonology-seals + research/linear-a-anchor-lattice",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-relative-phonology-seals/experiments/linear_a_relative_phonology/reports/H_MODEL_COMPARISON.md; anchor-lattice reports/J_LANGUAGE_CONDITIONAL_GATE.md",
+   "what_was_done": "R1 re-ran languages (SEM/ANA/TYR + Finnish negative control + CTRL) with relative-class admission; R2 added the 6 WP-G SEED_B toponym anchors; R3 varied inference paradigm. Anchor-lattice WP-J then built an authorization gate for any further language tournament.",
+   "channel": "language-family testing under added constraints",
+   "outcome": "R1 AT_END_TO_END_NULL, R2 AT_ANCHOR_CONSTRAINED_NULL, R3 AT_JOINT_INFERENCE_NULL \u2014 design space exhausted along language/anchor/paradigm axes. WP-J: J_NOT_AUTHORIZED (0/3 gate criteria) \u2014 the lattice constrains A-only signs by 0 bits, and a tournament scored on the unearned continuity licence would test Linear B, not Linear A. The 6-family null 'stands uncontested'.",
+   "relevance_to": "E208/E209 (an authorization-gate precedent: E208 must pass a J-style licence-clean scoring check before running, and E209's sound-correspondence inference sits above both)"
+  },
+  {
+   "theme": "(f) optimal transport",
+   "branch": "research/linear-a-frontier-72h",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/experiments/linear_a_frontier_72h/scripts/e006_seed_efficient.py + reports/EPOCH006_SEED_EFFICIENT_ESTIMATORS.md",
+   "what_was_done": "E006 tested four seed-efficient cross-script estimators where anchors only fix a global transform/coupling: EST_GW landmark-fused entropic Gromov-Wasserstein (alpha=0.5, eps=0.01), EST_SPEC orthogonal Procrustes on Laplacian eigenmaps, EST_OT anchor-regularized Sinkhorn on the unsupervised M2-signature cost, EST_CCA ridge map. Known-script calibration only, replicate-paired with E003, frozen hyperparameters.",
+   "channel": "OT/graph-alignment cross-script bridging (balanced entropic)",
+   "outcome": "SEED_EFFICIENCY_NOT_ACHIEVED \u2014 all four estimators fail to reach the required Holm-surviving hit rate at the LA operating point (b=5 seeds) even on a KNOWN script; the 3x shortfall is estimator-independent, i.e. an information problem, not geometry.",
+   "relevance_to": "E210 (balanced entropic OT/GW is tried-and-null at LA anchor budgets; E210's partial/UNBALANCED variant is the genuinely untried delta, and it must first pass exactly this known-script bar)"
+  },
+  {
+   "theme": "(f) Bayesian/SBI",
+   "branch": "research/linear-a-frontier-72h",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/experiments/linear_a_frontier_72h/scripts/e016_sbi_pilot.py + reports/EPOCH016_SBI_PILOT.md",
+   "what_was_done": "E016: amortized simulation-based inference \u2014 a neural pair-posterior trained purely on a generative admin-syllabary simulator (prior matched to LA/LB aggregate stats; no sign identities), evaluated on an opaque known script degraded to LA token scale (LA_TOKEN_SCALE=5792) at anchor budgets 0/3/5, against the E006-best entropic Gromov-Wasserstein coupling; gauge-invariant value-CLASS scoring (ARI). LA never loaded.",
+   "channel": "Bayesian amortized inference / neural posterior (calibration-only)",
+   "outcome": "SBI_MATCHES (bounded negative): SBI matches but does not beat the anchor-geometry solvers at the floor \u2014 new architecture, same information wall. An LA application would need its own prereg.",
+   "relevance_to": "E210 + E203 (the simulator and the gauge-invariant ARI scoring are reusable; also a warning that model capacity does not substitute for anchors)"
+  },
+  {
+   "theme": "(f) optimal transport \u2014 cross-script bridge",
+   "branch": "research/linear-a-anchor-lattice",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-linear-a-anchor-lattice/experiments/linear_a_anchor_lattice/scripts/f2_cross_script_bridge.py + reports/F_CROSS_SCRIPT_SUBSTITUTION_BRIDGE.md + F_SUBSTITUTION_BRIDGE_CALIBRATION.md",
+   "what_was_done": "WP-F substitution-axis cross-script bridge with method M3 = fully-unsupervised entropic Gromov-Wasserstein between intra-script distance matrices (plus supervised variants), calibrated first on the KNOWN LB<->Cypriot pair. The LB consonant-axis calibration itself is solid (strengthens to 0.75 under frequency-disjoint holdout).",
+   "channel": "OT-based substitution-graph alignment",
+   "outcome": "NO_POWER \u2014 the bridge fails even on the known LB<->Cypriot pair (zero Holm survivors), so LA<->LB is underdetermined a fortiori; relative compatibility only, no absolute value.",
+   "relevance_to": "E210 (the known-pair calibration gate E210 inherits: if partial/unbalanced OT cannot align LB<->Cypriot substitution graphs, it never touches LA)"
+  },
+  {
+   "theme": "(f) MDL \u2014 prior instances",
+   "branch": "multiple",
+   "pointer": "anchor-lattice scripts/h_joint_inference.py (H_MODEL_3); relative-phonology scripts/h3_candidate_round3.py (mdl_commit); main experiments/segmentation_extension/models_morfessor.py; frontier EPOCH_LEDGER.yaml (E09x deviations)",
+   "what_was_done": "MDL used three ways: MDL-penalized beam over lattice-consistent value systems (with dependency-discounted accounting); MDL commit over a derivation backbone in the H3 paradigm sweep; Morfessor (MDL) as a segmentation baseline. Frontier epochs explicitly deferred heavier Bayesian/MDL segmenters when nulls were already decisive.",
+   "channel": "minimum description length model selection",
+   "outcome": "All null on LA: the decisive anchor-lattice lesson is that MDL preference FLIPS SIGN under honest dependency dedup \u2014 naive MDL rewards clone-stacking (5.92 false bits from 9 citations of one weak channel). Morfessor scores 0.156 on the frozen segmentation metric (far below DP-unigram 0.436). NO adaptor-grammar implementation exists anywhere in any worktree (grep: zero hits; nearest kin = PYP/DP segmenters in models_pyp.py).",
+   "relevance_to": "E207 (its MDL leg has direct prior art + the dedup trap; its adaptor-grammar and subregular legs are genuinely first-time methods per the OPEN_AND_UNTESTED inventory)"
+  },
+  {
+   "theme": "context \u2014 planned-campaign map",
+   "branch": "research/logos2-anchor-identifiability (untracked scaffold)",
+   "pointer": "/home/claude-runner/gitlab/n8n/logos-logos2/research/logos2/EXPERIMENT_DAG.json (+ CLAIM_LADDER.md)",
+   "what_was_done": "The logos2 DAG defines the target epochs this scout maps onto: E203 exact identifiability engine (CP-SAT/SMT/counting, L0-L2), E205 palaeographic measurement channel A-D (L1-L2), E206 gated onomastic record linkage (<=L3, L4 only with 2nd channel; depends on E200/E201/SLOT_FREEZE), E207 MDL/adaptor-grammar/subregular morphology (<=L2), E208 joint segmentation + phonetic-prior language tournament (<=L5), E210 partial/unbalanced OT-graph alignment (<=L2 aux; depends on E201+E203).",
+   "channel": "campaign planning",
+   "outcome": "Dependencies confirmed; every one of the six epochs has substantial prior art catalogued in the rows above, most of it closed-negative with named reopening conditions.",
+   "relevance_to": "E203/E205/E206/E207/E208/E210 (the mapping key)"
+  }
+ ],
+ "narrative": "Scouted all 18 worktrees of the logos repo (git worktree list) for the six requested themes. Headline per theme: (a) TOPONYM/ONOMASTIC \u2014 the LA-LB administrative toponym channel is CLOSED with a split verdict (H_exact=NULL_PUBLISHED: fully powered, observed 0 exact continuities; H_drift=NO_POWER: drift needs the forbidden free mapping), with the five known pairs (pa-i-to, tu-ru-sa, di-ki-ta, i-da, se-to-i-ja) demoted to development benchmarks and the ritual fork also closed NO_POWER; the cross-script gate's two externally-timestamped one-shots delivered pins I+RI (Phase 1) and SU+TO (Phase 2), every recovery exactly one place-name identification deep, with the distributional channel at 0.0000 four times over; Anetaki (phase 3) currently supplies 0 new anchor legs (PENDING-FULL-EDITION); Egyptian external anchors reduce to {Phaistos} only (SOURCE_EXPANSION_NULL). E206's non-negotiable design constraints are therefore drift-tolerant pre-registered edit operations + dependency-distinct lineages + a new input freeze. (b) PALAEOGRAPHY/SIGLA \u2014 scripts/sigla_decode.py gives 802 docs/376 signs of bbox geometry; frontier epochs E076-E090 already mined that geometry at L2 (cross-site: shared glyph-size convention, frequency-size economy law, deliberate vertical ruling; HT-local: justification/heading/header registers under a doc-wide bounded writing width; horizontal 'ruling' refuted as width-driven); strokes/contours/3D are SOURCE_BLOCKED. Important correction to stale memory: Salgarella 2020 IS acquired (corpus/bronze/salgarella_2020/) and 57 homomorphy grades are extracted in experiments/crossscript_gate/salgarella_2020_grades.json (32 homomorphic, 25 also likely homophone) \u2014 available to E205, though shape-circular for value claims. (c) MORPHOLOGY/SEGMENTATION \u2014 the published 0.436 segmentation positive is gate-verified with a 0.577 all-boundaries ceiling; the relative-phonology B-series shows LA segmentation has ~0 skill over cut-everywhere at the hapax regime but left a reusable probabilistic boundary ensemble; the only graduated morphology finding is A- prefixation (E103, L2/L3, replicated, no value). (d) CSP/SAT \u2014 the anchor-lattice campaign (WPs A-O) closed ANCHOR_LATTICE_UNDERDETERMINED four independent ways; the pricing result: 12 anchors x 8 slots x 12 distinct lineages for recovery, foothold at 2-3 independent 8-slot anchors, LA at abs 0.000 with residual ambiguity ~10^63.4 (operational G-surface) to >=10^270 equivalence classes (H gauge quotient); solver formalism was three CUSTOM numpy solvers (Bayesian factor graph/Gibbs, CP arc-consistency + SIS model counting + backbone + gauge quotient, MDL beam) \u2014 no industrial CP-SAT/SMT anywhere, so E203's engine is genuinely new formalism but must reproduce the gauge quotient and the UNSAT_GENERIC adjudication (the campaign's own UNSAT find was refuted as generic: all matched random pin-sets also UNSAT). (e) LANGUAGE FAMILIES \u2014 the exact six: West Semitic, Pre-Greek/Anatolian (R1), Hurrian, Luwian (R2), Etruscan, Aegean-isolate substrate (R3), each a bounded preregistered phoneme->value map + 6-entry cited lexicon scored on 973 held-out GORILA tokens against the S/W/R null battery with Holm + LOO-lexeme + random-lexicon calibration \u2014 all AT_END_TO_END_NULL, with random lexicons matching as well as real languages (word-shape typicality), and the follow-up rounds (anchors added, paradigms varied) equally null; anchor-lattice WP-J then formally de-authorized further tournaments (J_NOT_AUTHORIZED). (f) OT/BAYESIAN/MDL \u2014 balanced entropic OT is well-trodden and null: Sinkhorn + entropic GW estimators (E006 SEED_EFFICIENCY_NOT_ACHIEVED on known script), GW substitution-bridge (WP-F NO_POWER even on the known LB<->Cypriot pair), amortized neural SBI (E016 matches-but-doesn't-beat); MDL appears as lattice beam / H3 commit / Morfessor, with the key trap that naive MDL rewards citation-clone stacking; NO adaptor-grammar, subregular-morphology, or partial/unbalanced-OT code exists anywhere \u2014 those E207/E210 legs are genuinely first-time. All paths above are absolute; all worktree branches and their gitignored (git add -f) experiment trees were readable.",
+ "gaps": [
+  "No adaptor-grammar or subregular-morphology implementation exists in any worktree (grep across all experiments/ + scripts/: zero hits) \u2014 E207's two novel legs have no in-repo prior art; nearest kin are the PYP/DP segmenters (main experiments/segmentation_extension/models_pyp.py) and Morfessor-MDL. The methodology inventory's OPEN_AND_UNTESTED_METHODS.md does not list them either \u2014 check its lineage map before claiming novelty in prose.",
+  "No partial/unbalanced optimal transport anywhere \u2014 every prior OT use is BALANCED entropic (Sinkhorn/GW: E006, E016, anchor-lattice F2-M3), and all of it is null/no-power on KNOWN-script calibration at LA anchor budgets. E210 therefore has a real methodological delta but inherits a hard prior: it should be gated on first passing the LB<->Cypriot known-pair bar that killed F2.",
+  "No industrial CP-SAT/SMT/model-counting solver was ever used (no OR-Tools/Z3/pysat imports found) \u2014 E203 is new formalism, but the acceptance bar is already set: reproduce the gauge quotient (~10^63.4 operational / >=10^270 classes), the 12x8x12 threshold surface, and the WP-N matched-null adjudication that downgraded the campaign's own UNSAT to UNSAT_GENERIC.",
+  "Drift-tolerant onomastic matching was never designed: la-lb-continuity's H_drift=NO_POWER exists precisely because no pre-registered null-calibrated edit-operation model exists. FINAL_CHANNEL_VERDICT item 14 explicitly requires a new input-freeze review for it \u2014 this is E206's opening move, not an optional refinement.",
+  "Palaeographic data ceiling: stroke/contour/orientation and 3D channels are SOURCE_BLOCKED (SigLA bbox-only; MUSINT II inaccessible; Anetaki 2D photos only) \u2014 E205 channels A-D are confined to bbox geometry already heavily mined by E076-E090 unless new data is acquired. Conversely, the acquired Salgarella 2020 grades (57 signs) are an UNUSED primary source (memory notes claiming it 'pending' are stale).",
+  "Ariadne-2025 Anetaki preliminary material is published but NOT ingested into silver; phase3 GAP_DELTA = PENDING-FULL-EDITION; multiple frozen prospective seals exist (foundry SEAL_5, M_ANETAKI_LATTICE_DELTA_SEAL, frontier FRACTION_ORDER) that E213-type work must score, not re-derive.",
+  "Anchor supply is census-exhausted: crossscript Phase-2 census + anchor-lattice WP-D/WP-K agree no accessible acquisition currently supplies even one dependency-distinct multi-slot anchor (best route: Egyptian-attested toponym on a new >=4-slot LA text, worth ~9 of 63.4 log10 units). E206 cannot manufacture independence from the existing single continuity meta-lineage.",
+  "Not exhaustively scouted (out of scope): foundry WP1-WP5 detailed reports, the frontier campaign's ~90 non-spatial epochs, E204's fraction/metrology lineage, the admin-schema/observable-channels branches, and logos-linear-a_frontier_72h (a stray duplicate directory name alongside the real frontier worktree \u2014 worth confirming it is not a divergent copy).",
+  "E205/E206/E207/E208/E203/E210 definitions were read from the UNTRACKED logos2 scaffold (/home/claude-runner/gitlab/n8n/logos-logos2/research/logos2/EXPERIMENT_DAG.json) \u2014 uncommitted, so the mapping is to the DAG as of today; if the DAG changes, re-map."
+ ]
+}

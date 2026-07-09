@@ -1,0 +1,29 @@
+{
+  "campaign": "LOGOS-2 Anchor-to-Identifiability",
+  "branch": "research/logos2-anchor-identifiability",
+  "nodes": {
+    "PREFLIGHT": {"level": "L0", "status_field": "research/logos2/PRECHECK.md"},
+    "E200": {"name": "repository/evidence-channel/prior-overlap audit", "level": "L0", "depends_on": ["PREFLIGHT"]},
+    "E201": {"name": "historical decipherment replay benchmark", "level": "L0", "depends_on": ["E200"]},
+    "E202": {"name": "anchor-ablation / value-of-information", "level": "L0", "depends_on": ["E201"]},
+    "E203": {"name": "exact identifiability engine (CP-SAT/SMT/counting)", "level": "L0-L2", "depends_on": ["E200"]},
+    "E204": {"name": "fraction/metrology replication+adversarial audit", "level": "<=L3", "depends_on": ["E200"]},
+    "E205": {"name": "palaeographic measurement channel (A-D)", "level": "L1-L2", "depends_on": ["E200"]},
+    "E206": {"name": "gated onomastic record linkage", "level": "<=L3 (L4 only w/ 2nd channel)", "depends_on": ["E200", "E201", "SLOT_FREEZE"], "gate": "candidate slots frozen BEFORE any external name form is consulted"},
+    "E207": {"name": "MDL/adaptor-grammar/subregular morphology", "level": "<=L2", "depends_on": ["E200"], "gate": "corpus interfaces frozen"},
+    "E208": {"name": "joint segmentation + phonetic-prior language tournament", "level": "<=L5", "depends_on": ["E201"], "gate": "E201 qualification threshold passed"},
+    "E209": {"name": "recurrent sound-correspondence inference", "level": "<=L5", "depends_on": ["E206", "E208"], "gate": "non-null upstream leads only"},
+    "E210": {"name": "partial/unbalanced OT-graph alignment", "level": "<=L2 aux", "depends_on": ["E201", "E203"], "gate": "stable units/classes/anchors exist"},
+    "E211": {"name": "formula-profile + restoration auxiliaries", "level": "L1-L2", "depends_on": ["E201"]},
+    "E212": {"name": "multiview triangulation + causal independence audit", "level": "meta", "depends_on": ["ALL_TERMINAL"]},
+    "E213": {"name": "prospective prediction seals", "level": "meta", "depends_on": ["E212"]},
+    "E214": {"name": "adversarial red-team + closure", "level": "meta", "depends_on": ["E213"]}
+  },
+  "scheduling_notes": [
+    "E201+E203 in parallel after preflight; E204+E205 data audits in parallel;",
+    "E207 after corpus interface freeze; E206 only after SLOT_FREEZE commit;",
+    "E208 only after E201 qualification; E209/E210 gated; E211 auxiliary;",
+    "compute-heavy promotion runs deferred while the CSA sweep occupies the host (until ~2026-07-13)."
+  ],
+  "gate_discipline": "gates are mechanical fields in each experiment's decision_rule.json; a failed gate produces BLOCKED.json or GATE_FAILED status, never a bypass"
+}

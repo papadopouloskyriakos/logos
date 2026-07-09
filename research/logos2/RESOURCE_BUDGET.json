@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-07-10T01:10+02:00",
+  "host": "nllei01claude01",
+  "hardware": {
+    "logical_cpus": 32,
+    "ram_gib_total": 32,
+    "ram_gib_available_at_preflight": 17,
+    "disk_free_gib": 352,
+    "gpu": "none on this host (nllei01gpu01 exists but hosts interactive services; do not monopolize)"
+  },
+  "standing_load_constraint": {
+    "what": "CSA sufficiency sweep (operator-sanctioned, resumed 2026-07-10 00:04, scheduler PID 1567604)",
+    "footprint": "~20 nice-10 workers, load ~31/32; ~14 GiB RAM in use host-wide",
+    "projected_end": "2026-07-13T19:00 (+91h projection)",
+    "policy": "LOGOS-2 must NOT starve the sweep. Until it completes: LOGOS-2 compute capped at 6 workers, all nice >= 15, RAM <= 8 GiB. After sweep completion: cap rises to 24 workers (75% of 32), RAM <= 20 GiB."
+  },
+  "policy": {
+    "cpu_max_fraction": 0.75,
+    "cpu_max_workers_while_sweep_runs": 6,
+    "cpu_max_workers_after_sweep": 24,
+    "ram_max_gib_while_sweep_runs": 8,
+    "ram_max_gib_after_sweep": 20,
+    "disk_min_free": "max(20 GiB, 15%) = 87 GiB on this 584 GiB filesystem",
+    "nice_level": 15,
+    "per_cell_timeout_s": 3600,
+    "per_experiment_timeout_h": 24,
+    "checkpointing": "every long job checkpoints per cell; a failed/timed-out cell never terminates unrelated experiments",
+    "pilots_first": "every experiment runs a pilot (recovery + leakage + calibration gates) before full promotion"
+  },
+  "environments": {
+    "system_python": "3.11.2 (numpy 2.4.4, scipy 1.17.1, torch 2.12.1+cpu, networkx 3.6.1, pandas 2.3.3, sklearn 1.8.0)",
+    "solvers_at_preflight": "NONE (ortools/z3/pysat/pulp/cvxpy absent)",
+    "campaign_venv": "research/logos2/.venv (gitignored) - created at preflight; ortools + z3-solver + python-sat installed there; frozen to environment.txt per experiment",
+    "R": "not required; not probed"
+  },
+  "network": {
+    "available": true,
+    "policy": "downloads only from citable, licence-checked sources; every download recorded in DATA_INVENTORY.csv with URL, date, licence; no scraping behind auth walls; licensed raw vendor data never committed"
+  },
+  "seed_policy": {
+    "master_seed_derivation": "int(sha256('LOGOS2-anchor-identifiability')[:16], 16) % 2**31 = 1336530913 (verified by execution at preflight)",
+    "per_run_seed": "sha256(master_seed || experiment_id || cell_id || fold || replicate) -> lowest 31 bits; no fork-inherited module-global RNG (each worker constructs its own numpy Generator from the derived seed)"
+  }
+}
