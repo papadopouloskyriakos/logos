@@ -2,17 +2,17 @@
 
 > **STATUS: DRAFT. NOT FINALIZED.** Finalization is mechanically gated by `scripts/clock_check.py`
 > (`finalization_authorized = now ≥ 2026-07-11T03:20Z AND completed_substantive_epochs ≥ 18`).
-> As of last edit: **75 distinct epochs banked** (82 ledger rows; 7 early epochs carry superseding duplicates, deduped by `epoch_id`, last-wins), gate **BLOCKED** (time_gate open ~43h to 2026-07-11T03:20Z).
+> As of last edit: **78 distinct epochs banked** (85 ledger rows; 7 early epochs carry superseding duplicates, deduped by `epoch_id`, last-wins), gate **BLOCKED** (time_gate open ~42h to 2026-07-11T03:20Z).
 > This document accretes as epochs bank; it becomes the §12 capstone **only** when the clock authorizes.
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 75 distinct epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 78 distinct epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
-| **Load-bearing cross-site positives** | **29** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
-| Bounded negatives | 18 | Well-powered PC-passed tests returning informative *absence* (§B) |
+| **Load-bearing cross-site positives** | **31** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| Bounded negatives | 19 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | Genre-/site-local structural findings | 4 | Well-powered PC-passed *detections* that landed on the site-local / genre-graded side of the dichotomy (§B) |
 | Positive-hardening / qualification | 1 | Robustness pass that *qualified* a positive's breadth without overturning it (`E075` on `E072`; §A7) |
 | No-power | 3 | Detector had no power for the question (§C) |
@@ -20,16 +20,19 @@
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*29 positives / 18 bounded-negatives + 4 genre-/site-local findings / 1 positive-qualification / 14 no-inference
-(no-power + underpowered + machinery-uninf) / 9 setup. Zero of the 29 positives rises above L2/L3. The honest
-denominator is on-screen: this is a structural map, not a reading. Two positives carry breadth caveats, flagged
+*31 positives / 19 bounded-negatives + 4 genre-/site-local findings / 1 positive-qualification / 14 no-inference
+(no-power + underpowered + machinery-uninf) / 9 setup. Zero of the 31 positives rises above L2/L3. The honest
+denominator is on-screen: this is a structural map, not a reading. Three positives carry breadth caveats, flagged
 in §A: `E067` depth-2 concentration is global + only partial cross-site (2/6 sites); `E072` libation-formula
-canonical order is real but **narrow** (hardened by `E075`: effective-n 8 inscriptions / 6 sites, hub-dominated).*
+canonical order is real but **narrow** (hardened by `E075`: effective-n 8 inscriptions / 6 sites, hub-dominated);
+`E078` glyph-size economy replicates in 2/5 sites (the powered ones) + corpus-wide + within-class. The last two
+of the 31 positives are on a GENUINELY NEW data modality — SigLA per-glyph BOUNDING BOXES (§A8), untouched by the
+first 75 linear-token epochs.*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 75 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
-worded above L3** (layers: L1×7, L2×13, L2/L3×35, L3×8, early-pre-convention-unlabelled×12; **zero L4+**);
-**every `licences_changed` field is `none`** (0/75 non-none — 63 explicit `none` + 12 early entries predating the
+Scanned all 78 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
+worded above L3** (layers: L1×7, L2×16, L2/L3×35, L3×8, early-pre-convention-unlabelled×12; **zero L4+**);
+**every `licences_changed` field is `none`** (0/78 non-none — 66 explicit `none` + 12 early entries predating the
 field; no result silently earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
@@ -155,18 +158,43 @@ spread) is fully **frequency-explained** — so "the formula" = frequency/site-l
 canonical order (E072). And the ORDER rigidity is **genre-graded** (`E073`, §B) but genre↔site **confounded**
 (`E074`, §B) — see the genre-site-confound note.*
 
+**A8. Graphic conventions on a NEW data modality (SigLA per-glyph BOUNDING BOXES).** All 75 linear-token epochs
+used the silver stream; `E076`–`E078` opened the untouched **spatial** modality (glyph bbox positions + sizes,
+decoded via `scripts/sigla_decode.py`; licensed-derived JSON gitignored). Two cross-site positives + one bounded
+negative map the glyph-SIZE vein:
+- `E076` **glyph SIZE is a shared cross-site graphic convention** — per-sign within-document-normalized size
+  correlates strongly across all 5 testable site-pairs (r 0.70–0.85, median 0.79; perm p ≤ 1.6e-3 vs a
+  sign-label-shuffle null; PC power 1.0). Size patterns with the **shared** sign-frequency fingerprint (E036/A4),
+  NOT with site-local allograph SHAPE (E017/E020/A6) — the graphic realization SPLITS: *size shared, shape local.*
+  *(Honest: substantially intrinsic-form-driven — the spatial analog of the E036 frequency fingerprint, not an
+  independent size-marking system.)*
+- `E078` **glyph size shows ECONOMY OF EFFORT** — more frequent signs are drawn SMALLER (r_all=−0.351, freq-shuffle
+  perm p=4e-4), a spatial **Zipf's-law-of-abbreviation** analog. It **survives the sign-class control** (within
+  the AB syllabary r_AB=−0.317, p=5e-3; the AB/A classes have ~equal mean size, so it is NOT the logogram-
+  complexity confound) and replicates in the 2 powered sites (HT p=7e-4, Khania p=3e-3). A genuine functional-
+  adaptive graphic property, recovered blind. Breadth caveat: 2/5 sites powered; corpus-wide + within-class primary.
+- (Bounded negative `E077`, §B: glyph size carries NO cross-site *positional* information — it is not a spatial
+  heading marker.)
+The spatial modality is L2 (opaque sign catalog IDs; NO value/reading) and joins the SHARED cross-site layer. It
+also **vindicates 'inspect before saturation' a THIRD time** (after the `other` channel and the libation register):
+the frontier was not exhausted — it had an untouched modality with more distinct, powered questions
+(glyph spacing, row/line structure, 2D layout remain as pre-checkable successors; reading-direction was pre-checked
+and DECLINED as trivially circular, geometric order = transcription order, median agreement 1.000).
+
 ### The organizing finding (the through-line of Section A)
 > **Shared script + shared positional grammar/ORDER generalize cross-site; vocabulary, scribal
 > register, and metrological realization are site-local.** *Cross-site:* the sign fingerprint (A4), the ledger
 > syntax skeleton (A2: word→num, line-final numeral, divider, entry template, entry-head length E069), the
 > positional/prefix morphology (A1: A-prefix, initial-concentration typology E064, and even the A-marked
-> sub-lexicon E068), positional specialization (A3), the document-marker system (A5: E061–E063), and now the
-> **libation formula's canonical ORDER** (A7: E072, real but narrow per E075) all travel across sites — and the
-> token-class grammar is held-out **predictable** on unseen sites (E047, 9/9).
+> sub-lexicon E068), positional specialization (A3), the document-marker system (A5: E061–E063), the
+> **libation formula's canonical ORDER** (A7: E072, real but narrow per E075), and — on the NEW spatial modality —
+> the **graphic size conventions** (A8: glyph size shared E076, size-economy E078) all travel across sites — and
+> the token-class grammar is held-out **predictable** on unseen sites (E047, 9/9).
 > *Site-local:* the counted vocabulary (§B: E032/E034/E035/E053), the **libation formula's vocabulary** (E071 —
 > frequency-explained, like admin), document typology (E058), sub-lexical structure (E059), **scribal register**
-> (word-length E065, accounting-scale E066), and the **metrological realization** of the entry template (fraction
-> attachment E070) do not. **The order/grammar-vs-vocabulary split now holds within a single register:** the
+> (word-length E065, accounting-scale E066), the **metrological realization** of the entry template (fraction
+> attachment E070), and **glyph SHAPE** (allograph E017/E020 — note the split: glyph *size* is shared A8/E076 while
+> *shape* is local) do not. **The order/grammar-vs-vocabulary split now holds within a single register:** the
 > libation "formula" is cross-site in ORDER (E072) but site-local/frequency-explained in VOCABULARY (E071) — a
 > clean one-corpus microcosm of the whole through-line.
 > ⇒ Linear A behaves as a **concatenative / prefixing administrative script with a genuine shared positional
@@ -226,6 +254,12 @@ Each is a well-powered, PC-passed test that returned a *bounded absence* — inf
   the structural confound, not a power failure. **This downgraded a p≈0 apparent positive to underdetermined at
   design time** (invariant #3), and records a campaign-wide limit: *any* genre-phrased claim is confounded with
   site (see the through-line caveat).
+- **Glyph size is NOT a spatial positional marker (new modality).** `E077` glyph SIZE does not mark document-
+  initial prominence cross-site (global D_init=−0.057, p=0.81; only Haghia Triada trends initial-larger at a
+  borderline 1/5-site p=0.048 ≈ chance; the other 4 sites trend initial-smaller). PC-passed (planted prominence
+  detected power 1.0, false-pos 0.04). So glyph size is a shared per-SIGN convention (A8/E076) that carries no
+  positional/heading information — unlike the campaign's positional findings which live in sign identity (E022),
+  marker position (E062), and word length (E069). Insurance value: size won't flag document structure.
 - Earlier bounded/marginal: `E002` motif within-equivalent, `E010` door marginal, `E012` allograph-structure
   confounded, `E013` decomposition neutral, `E046` word-length shape inconclusive.
 
@@ -311,7 +345,13 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
   underdetermined → §B; records a campaign-wide confound), `E075` (hardened E072 to real-but-narrow → §A7). Net: one
   new cross-site positive (E072, narrow), two bounded negatives (E071, E074), one genre-graded finding (E073), one
   positive-qualification (E075), plus a structural limit (the genre↔site confound). The vein is now mapped.
-- **Saturation status (as of 75 epochs): genuinely narrowing, genre vein now mapped.** Probed-and-declined earlier:
+- **The SPATIAL modality (SigLA bounding boxes) was the next untouched vein (E076–E078) — the lesson holds a third
+  time.** All 75 prior epochs used the linear silver token-stream; the SigLA per-glyph bboxes (positions + sizes)
+  were untouched. Opening them gave 2 cross-site positives (E076 glyph size shared; E078 size-economy-of-effort) +
+  1 bounded negative (E077 size not positional), all L2, all coordinator-verified. Reading-direction was pre-checked
+  and DECLINED as trivially circular; AB/A class-size as intrinsic-form. Remaining spatial successors (glyph
+  spacing, row/line structure, 2D layout) need a feasibility pre-check before launch.
+- **Saturation status (as of 78 epochs): genuinely narrowing; genre + glyph-size-spatial veins now mapped.** Probed-and-declined earlier:
   commodity-logogram cross-site (underpowered, 2 sites), word-vs-logogram magnitude register (underpowered),
   cross-site grammar prediction (covered by E047). Scouted after E075 (E072/E073/E074 successors): admin-order-by-
   support (confound/underpowered), matched-form rigidity contrast (n small), a site+genre factorial (redundant with
@@ -356,10 +396,12 @@ finding *does* contradict the paper, it is filed as an ERRATUM against the froze
 ## I. Completeness & limitations (completeness-critic pass)
 Mechanical audit of the record's completeness:
 - **All map sections present** (A–F, H, tally, discipline-compliance certificate). No structural gap.
-- **All 29 load-bearing positives** have full artifacts (prereg + plan_hash + machinery + result + report) and are
+- **All 31 load-bearing positives** have full artifacts (prereg + plan_hash + machinery + result + report) and are
   coordinator-verified on *both* observed statistics and (where simulated-null-dependent) reconstructed nulls
   (`VERIFICATION_AUDIT.md`). The E071–075 genre arc extends this: E072 (positive) and E075 (its hardening) both had
-  their cross-site/leave-out nulls reconstructed from scratch; E074's site-stratified confound null likewise.
+  their cross-site/leave-out nulls reconstructed from scratch; E074's site-stratified confound null likewise. The
+  E076–078 spatial modality was independently re-decoded from SigLA and its cross-site correlations / frequency-
+  shuffle / position-shuffle nulls reconstructed from scratch by the coordinator.
 - **Documented limitation (not backfilled):** three *early, non-positive* epochs — E008/E009 (stroke channel, §D
   SOURCE_BLOCKED) and E013 (decomposition-neutral, §B, superseded by E018) — carry `prereg.md` + `result.json`
   but no separate `plan_hash.txt` (an early-phase convention before the hash file was standardized). They were
@@ -372,9 +414,12 @@ Mechanical audit of the record's completeness:
 E058/E059-era assessments twice declared saturation while the corpus `other` token class (logograms + fractions)
 sat UNEXAMINED — `E060` then found a strong cross-site positive there; and the 70-epoch assessment predated the
 libation/religious register, which `E071–E075` then mapped (one narrow positive + confound + hardening). Lesson
-re-confirmed twice: **do not declare a channel absent without inspecting it.** Current state (75 distinct epochs):
-**29 verified positives / 18 bounded-negatives + 4 genre-/site-local findings / 1 positive-qualification**, all
-L2/L3, no licence, no decipherment. The genre vein is now mapped and the genre↔site confound (E074) bounds all
-genre claims. Remaining structural questions need new data (SigLA spatial; images SOURCE_BLOCKED) or L4+ (barred);
-any remaining untested *observed* channel should still be inspected before a completeness claim. The clock-gated
-§12 finalization remains blocked until 2026-07-11T03:20Z.
+re-confirmed THREE times: **do not declare a channel absent without inspecting it.** After the genre vein, the
+SigLA **spatial modality** (per-glyph bounding boxes) — flagged here as "needs new data" — was itself opened
+(E076–078: 2 cross-site positives + 1 bounded negative). Current state (78 distinct epochs): **31 verified
+positives / 19 bounded-negatives + 4 genre-/site-local findings / 1 positive-qualification**, all L2/L3, no
+licence, no decipherment. The genre vein is mapped (genre↔site confound E074 bounds all genre claims) and the
+glyph-SIZE spatial vein is mapped (shared E076 / not-positional E077 / economy E078). Remaining untested channels:
+spatial glyph-spacing / row-structure / 2D-layout (pre-checkable successors); deeper spatial or L4+ questions need
+image data (SOURCE_BLOCKED) or are barred. Any remaining untested *observed* channel should still be inspected
+before a completeness claim. The clock-gated §12 finalization remains blocked until 2026-07-11T03:20Z.

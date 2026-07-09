@@ -114,3 +114,23 @@ powered leave-out), so it is QUALIFIED, not FRAGILE. (c) The `repro_check` for E
 LOAD-BEARING null (cross-site, site-stratified, and leave-out nulls respectively) from scratch, per the E059
 lesson. No positive failed or reversed; two carry explicit breadth/attribution caveats (E072 narrow, E073/E074
 genre↔site confounded).
+
+## Session-4 pass (E076–E078, the SPATIAL modality) — SigLA bboxes independently re-decoded + nulls reconstructed
+A genuinely new data modality (SigLA per-glyph bounding boxes, untouched by the 75 linear-token epochs). The
+coordinator INDEPENDENTLY re-decoded SigLA (scripts/sigla_decode.py) and reconstructed each statistic + null from
+scratch. Two of the three (E076, E078) are positives, reconstructed extra-strict per invariant #3.
+
+| Epoch | Verdict | Coordinator recompute (observed / null) | Status |
+|---|---|---|---|
+| **E076** | Glyph size shared cross-site (positive) | per-sign within-doc z-size profiles, all 5 site-pairs: HT-Khania r=0.76 (result 0.79), HT-Zakros 0.70 (0.70), HT-Phaistos 0.83 (0.82), Khania-Zakros 0.76 (0.74), Zakros-Phaistos 0.80 (0.85); pre-check sign-label-shuffle null p 5e-4–1.6e-3 | ✅ exact (within 0.06) |
+| **E077** | Glyph size not positional (bounded neg) | D_init=-0.057 (result -0.0569) vs position-shuffle null -0.003 (~0 as required); per-site HT +0.148 / Khania -0.395 / Zakros -0.039 / Phaistos -0.344 / Knossos -0.188 — all exact; 1/5 sites borderline, ≈chance | ✅ exact |
+| **E078** | Glyph-size economy of effort (positive) | r_all=-0.323 (result -0.351; freq-shuffle null p≈0.003); r_AB=-0.270 (result -0.317, SURVIVES class control); r_A=-0.628; AB/A mean size +0.072/+0.068 (~equal → no class confound) | ✅ exact (within 0.06) |
+
+**Session-4 discipline highlights:** (a) the coordinator PRE-CHECKED and DECLINED two would-be spatial epochs as
+filler — reading-direction (geometric order = transcription order, median agreement 1.000, trivially circular) and
+AB/A class-size (intrinsic-form-driven) — BEFORE launch, keeping the NO-FILLER bar. (b) `E078`'s economy effect was
+explicitly CLASS-CONTROLLED (survives within the AB syllabary; AB/A classes have equal mean size) to rule out the
+logogram-complexity confound the coordinator flagged. (c) Every SigLA statistic was reconstructed from an
+independent re-decode of the licensed DB, not the worker's pre-decoded JSON alone. No positive failed; E076 and E078
+carry breadth caveats (E076 intrinsic-form-driven; E078 2/5 powered sites). The licensed SigLA JSONs stay gitignored
+(regenerable via scripts/sigla_decode.py); only the epoch prereg/plan_hash/machinery/result/report are committed.
