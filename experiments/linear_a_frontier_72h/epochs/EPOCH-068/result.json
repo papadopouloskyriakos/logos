@@ -1,0 +1,71 @@
+{
+  "task_id": "EPOCH-068",
+  "question": "Is the A-prefixed vocabulary more cross-site-shared than frequency-matched non-A vocabulary?",
+  "method": "Frequency-matched stratified permutation test. D = share_rate(A) - share_rate(nonA) over count>=2 (informative) multi-sign types; share_rate = (#types at >=2 sites)/(#types). Null: within each token-count stratum, permute A/non-A labels preserving per-stratum A-count; one-sided perm p = frac(null D >= D_obs). Anonymous word-forms only; 'A' = anonymous word-initial slot label (no phonetic value).",
+  "result": "A-prefixed multi-sign types recur across >=2 sites at a significantly higher rate than frequency-matched non-A types (share_rate A=0.6875 vs nonA=0.3169; D_obs=+0.3706; stratified perm p=0.0072, one-sided, n_draws=5000). The effect is driven by 11 of 16 informative A-types being shared, and is broad across the count=2,3,4 strata (not a single-stratum artifact). Positive control passed (detect p=0.0002; false-positive rate=0.00 over 20 draws; power to detect +0.3 gap=1.0).",
+  "verdict": "A_MARKED_VOCAB_MORE_SHARED",
+  "numbers": {
+    "global": {
+      "n_A_types_informative": 16,
+      "n_nonA_types_informative": 142,
+      "share_A": 0.6875,
+      "share_nonA": 0.3169,
+      "D_obs": 0.3706,
+      "null_mean": 0.0435,
+      "perm_p": 0.0072
+    },
+    "per_stratum": {
+      "2": {"A_shared": 4, "A_total": 8, "nonA_shared": 27, "nonA_total": 81},
+      "3": {"A_shared": 4, "A_total": 5, "nonA_shared": 3, "nonA_total": 25},
+      "4": {"A_shared": 1, "A_total": 1, "nonA_shared": 5, "nonA_total": 17},
+      "5": {"A_shared": 0, "A_total": 0, "nonA_shared": 2, "nonA_total": 4},
+      "6": {"A_shared": 0, "A_total": 0, "nonA_shared": 3, "nonA_total": 6},
+      "7": {"A_shared": 0, "A_total": 0, "nonA_shared": 3, "nonA_total": 3},
+      "8": {"A_shared": 0, "A_total": 0, "nonA_shared": 1, "nonA_total": 2},
+      "10": {"A_shared": 1, "A_total": 1, "nonA_shared": 0, "nonA_total": 0},
+      "11": {"A_shared": 1, "A_total": 1, "nonA_shared": 0, "nonA_total": 0},
+      "15": {"A_shared": 0, "A_total": 0, "nonA_shared": 0, "nonA_total": 1},
+      "16": {"A_shared": 0, "A_total": 0, "nonA_shared": 0, "nonA_total": 1},
+      "20": {"A_shared": 0, "A_total": 0, "nonA_shared": 0, "nonA_total": 1},
+      "37": {"A_shared": 0, "A_total": 0, "nonA_shared": 1, "nonA_total": 1}
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0002,
+      "false_pos_rate": 0.0,
+      "power_est": 1.0,
+      "pc_is_synthetic": true
+    },
+    "corpus_summary": {
+      "total_multi_sign_types": 983,
+      "n_A_types_total": 115,
+      "n_A_types_hapax_count1": 99,
+      "n_A_types_informative_count_ge2": 16,
+      "n_nonA_types_total": 868,
+      "n_nonA_types_hapax_count1": 726,
+      "n_nonA_types_informative_count_ge2": 142
+    },
+    "perm_draws_global": 5000,
+    "perm_seed_global": 20240608
+  },
+  "key_findings": [
+    "A-prefixed multi-sign types are cross-site-shared at 0.6875 (11/16) vs 0.3169 (45/142) for frequency-matched non-A types; D_obs=+0.3706, stratified perm p=0.0072 (one-sided, A more shared).",
+    "The frequency confound is controlled exactly: A/non-A labels are permuted only WITHIN each token-count stratum, so the gap cannot be explained by A-types simply having more tokens.",
+    "The sharing advantage is BROAD across strata, not a single-stratum artifact: A leads non-A in share-rate at count=2 (0.50 vs 0.33), count=3 (0.80 vs 0.12), and count=4 (1.00 vs 0.29).",
+    "Only 16 informative A-types drive the result (99 of 115 A-types are count-1 hapax and cannot be shared by construction); the effect rests on a small but consistent base.",
+    "Positive control passed on all three gates (detect p=0.0002; false-positive rate 0.00/20; power to detect a +0.3 gap = 1.0), so the machinery is calibrated and adequately powered.",
+    "This is structural word-form recurrence only (L2/L3): no reading, no phonetic value, no meaning was assigned to 'A' or to any sign."
+  ],
+  "successor_hypotheses": [
+    "E069: Is the A-prefix sharing advantage driven by SHORT A-stems (A+1 sign) vs longer A-words? Test whether the effect concentrates in 2-sign A-types, which would suggest a closed functional/administrative particle class rather than open vocabulary.",
+    "E070: Decompose the A-advantage by SITE PAIR — do A-types recur across the SAME site-pairs as the cross-site-robust A-prefix itself (E023), implying A-words travel along the same administrative network as the prefix?",
+    "E071: Test whether A-types are over-represented in administrative contexts (tablet vs non-tablet supports) relative to frequency-matched non-A types, to localize the shared sub-vocabulary functionally.",
+    "E072: Positional control — replace 'first sign == A' with 'second sign == A' or 'first sign == <other high-frequency sign>' (frequency-matched) to confirm the sharing advantage is specific to the word-INITIAL A slot, not to any high-frequency sign anywhere.",
+    "E073: Within shared A-types, test whether the POST-A stem is itself site-local (low cross-site recurrence of the stem minus A) — this would refine the model: A- marks a shared administrative FRAME attached to site-local stems.",
+    "E074: Power-sensitivity — re-run with a bootstrap over the 16 informative A-types to get a confidence interval on D_obs, since the verdict rests on a small informative A-base."
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous word-forms only. 'A' is the anonymous word-initial slot label from E022-E025 (no phonetic value, no reading, no meaning). Sharing = pure structural recurrence across >=2 sites. The frequency confound is controlled by permuting A/non-A labels strictly within token-count strata. No semantic, phonetic, or reading-based circularity is invoked.",
+  "deviations": []
+}
