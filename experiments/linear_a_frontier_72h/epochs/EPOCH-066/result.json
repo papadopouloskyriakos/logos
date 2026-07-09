@@ -1,0 +1,95 @@
+{
+  "task_id": "EPOCH-066",
+  "method": "tie-corrected Kruskal-Wallis H on numeral magnitude (num token v) grouped by SITE within the Tablet class; site-permutation null (preserve per-site n + magnitude multiset), 5000 draws; leave-one-site-out robustness; synthetic positive control (detect + false-positive arms).",
+  "result": "ACCOUNTING_SCALE_SITE_LOCAL",
+  "verdict": "ACCOUNTING_SCALE_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "obs_H": 45.07067538119207,
+      "null_mean": 4.085349081646625,
+      "perm_p": 0.0001999600079984003,
+      "n_sites": 5,
+      "n_numerals": 1047
+    },
+    "per_site": {
+      "Arkhalkhori": {
+        "n": 33,
+        "median": 4.0,
+        "mean": 6.909090909090909
+      },
+      "Haghia Triada": {
+        "n": 829,
+        "median": 5.0,
+        "mean": 28.49577804583836
+      },
+      "Khania": {
+        "n": 121,
+        "median": 2.0,
+        "mean": 15.760330578512397
+      },
+      "Phaistos": {
+        "n": 33,
+        "median": 1.0,
+        "mean": 7.696969696969697
+      },
+      "Tylissos": {
+        "n": 31,
+        "median": 10.0,
+        "mean": 60.903225806451616
+      }
+    },
+    "loo": {
+      "Arkhalkhori": {
+        "obs_H": 44.1178391059742,
+        "perm_p": 0.0001999600079984003,
+        "sig": true
+      },
+      "Haghia Triada": {
+        "obs_H": 33.73871536989164,
+        "perm_p": 0.0001999600079984003,
+        "sig": true
+      },
+      "Khania": {
+        "obs_H": 26.80855468321912,
+        "perm_p": 0.0001999600079984003,
+        "sig": true
+      },
+      "Phaistos": {
+        "obs_H": 28.464092450812142,
+        "perm_p": 0.0001999600079984003,
+        "sig": true
+      },
+      "Tylissos": {
+        "obs_H": 35.38478171631653,
+        "perm_p": 0.0001999600079984003,
+        "sig": true
+      }
+    },
+    "loo_all_sig": true,
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0004997501249375312,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "Within the Tablet class, numeral magnitude (accounting scale) differs strongly by SITE: obs_H=45.07 vs null mean 4.09, perm_p=0.0002 (5000 draws).",
+    "The effect is GENERAL, not one-site-driven: it stays significant (perm_p=0.0002) under every single-site drop, including the magnitude-outlier Tylissos and the dominant site Haghia Triada (n=829, 79% of Tablet numerals).",
+    "Per-site medians span an order of magnitude (Phaistos 1, Khania 2, Arkhalkhori 4, Haghia Triada 5, Tylissos 10), confirming a real cross-site register on accounting scale rather than a single outlier.",
+    "Crucially, dropping Haghia Triada (which contributes 829/1047 = 79% of numerals) still yields obs_H=33.74, perm_p=0.0002 over the remaining 4 sites \u2014 the effect is not an artefact of HT's dominance.",
+    "Single-class scope (Tablet only) is honest: only the Tablet class has >=2 sites with >=30 numerals, so this is a within-class site register, not a cross-class effect."
+  ],
+  "successor_hypotheses": [
+    "E067: Is the site register on accounting scale driven by a specific magnitude BAND (small counts 1-10 vs large >10), or is it uniform across the magnitude range? (per-band site test)",
+    "E068: Does the accounting-scale site register interact with document sub-structure (e.g. position of the numeral within the tablet's word stream)? (positional site test)",
+    "E069: Are the per-site magnitude distributions better described by different SHAPES (e.g. Tylissos heavy-tailed vs Phaistos concentrated at 1) than by a pure location shift? (distributional site test)",
+    "E070: Does the site register on accounting scale replicate on the non-Tablet classes if the >=30 threshold is relaxed (permutation with smaller-site pooling)? (cross-class robustness)",
+    "E071: Is the accounting-scale site register INDEPENDENT of the word-length site register found in E065, or do the two share a common site-level factor? (joint site-factor test)",
+    "E072: Within Haghia Triada alone (n=829), does accounting scale vary by sub-context (e.g. findspot/context field), decomposing the dominant site internally? (within-site sub-register)"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "magnitude = corpus num token integer v (given); site = site field; class fixed = Tablet (support); null permutes SITE labels among Tablet numerals preserving per-site n and the Tablet magnitude multiset. L2 only: no sign values, no commodity identities, no reading, no metrological arithmetic. Single-class (Tablet) scope is explicit and honest.",
+  "deviations": []
+}
