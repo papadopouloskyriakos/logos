@@ -1,0 +1,77 @@
+{
+  "task_id": "EPOCH-083",
+  "method": "width-preserving random-gap permutation test on horizontal pitch-CV (E079 qualification). Observed center-to-center pitch-CV is compared against a null that preserves each glyph's actual width and the row's center-span, randomizing ONLY the inter-glyph gap allocation. Deliberate even spacing = observed pitch-CV significantly BELOW the width-preserving null.",
+  "result": {
+    "global_S_obs": 0.33773182098952326,
+    "global_null_median": 0.270587576874777,
+    "global_perm_p": 1.0,
+    "global_ratio": 1.24814237553049,
+    "n_docs": 237,
+    "n_qualifying_sites": 3,
+    "n_significant_sites": 0,
+    "pc_verdict": "PASSED"
+  },
+  "verdict": "HORIZONTAL_REGULARITY_WIDTH_DRIVEN",
+  "numbers": {
+    "global": {
+      "S_obs": 0.33773182098952326,
+      "null_median": 0.270587576874777,
+      "perm_p": 1.0,
+      "ratio": 1.24814237553049,
+      "n_docs": 237
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.3805231548492781,
+        "null_median": 0.29208618439078593,
+        "perm_p": 1.0,
+        "deliberate": false,
+        "n_docs": 138
+      },
+      {
+        "site": "Khania",
+        "S_obs": 0.29085636085236716,
+        "null_median": 0.22987134767419382,
+        "perm_p": 1.0,
+        "deliberate": false,
+        "n_docs": 29
+      },
+      {
+        "site": "Zakros",
+        "S_obs": 0.3455847553202678,
+        "null_median": 0.2719790868048768,
+        "perm_p": 1.0,
+        "deliberate": false,
+        "n_docs": 21
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.004975124378109453,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "E079's horizontal pitch-regularity is WIDTH-DRIVEN, not deliberate even spacing. Observed median pitch-CV (0.338) is ABOVE the width-preserving random-gap null (0.271), perm_p=1.0, ratio 1.25 — the test fails to reject the null of deliberate spacing; no deliberate gap regularity was detected once widths were held fixed. This does NOT establish that observed gaps are less regular than random, only that no deliberate regularity was detected.",
+    "The result is uniform across all three qualifying sites: Haghia Triada (S_obs 0.381 vs null 0.292, p=1.0), Khania (0.291 vs 0.230, p=1.0), Zakros (0.346 vs 0.272, p=1.0). Zero sites show observed pitch-CV below the width-preserving null.",
+    "Positive control PASSED cleanly: the machinery detects synthetic deliberate even-spacing with detect_p=0.005 and power_est=1.0 over 15 reps, and produces zero false positives (rate 0.0) on width-only random-gap synthetic docs. The negative result is therefore a genuine property of the corpus, not a machinery failure.",
+    "E079's original pitch-CV (0.329) vs random-composition null (0.743) is fully explained by the combination of (i) fairly uniform glyph widths (E076) and (ii) the row center-span constraint: once widths and span are held fixed, even RANDOM gap allocation yields pitch-CV ~0.27, which is already at or below the observed 0.338.",
+    "The inter-glyph GAPS themselves carry no detectable deliberate regularity; any apparent evenness of pitch is a geometric consequence of uniform glyph widths filling a bounded row span.",
+    "E082's MACHINERY_UNINFORMATIVE outcome is now resolved: the width-preserving null that E082's PC could not separate IS separable by this machinery (PC power 1.0), and the data fall decisively on the width-driven side."
+  ],
+  "successor_hypotheses": [
+    "E084 (L2): Test whether glyph WIDTHS themselves are more uniform within rows than a corpus-shuffled null — i.e., is the width-uniformity that drives the pitch-regularity itself a deliberate scribal normalization, or an intrinsic property of the sign inventory?",
+    "E085 (L2): Quantify the row center-span constraint — does the bounded writing surface (line length) mechanically force pitch-CV down regardless of gap intent? Decompose pitch-CV into width-CV and gap-CV contributions per row.",
+    "E086 (L2): Re-examine VERTICAL spacing (between rows) with the same width/height-preserving null to test whether vertical regularity is deliberate where horizontal is not.",
+    "E087 (L2): Per-sign width analysis — do specific high-frequency signs have especially uniform widths that would disproportionately regularize pitch? (L2 geometry only, aggregated over sign classes, not semantics.)",
+    "E088 (L2): Test for deliberate spacing at the level of word/divider groups rather than individual glyphs — dividers were excluded here; grouping by divider-delimited units may reveal intentional spacing at a coarser granularity.",
+    "E089 (L2): Cross-script comparison — apply the identical width-preserving null to an external corpus (e.g., later Greek epigraphy or a non-script geometric baseline) to DESCRIBE how width-driven pitch-CV behaves elsewhere. NOTE: no ground-truth label of deliberateness is available for any corpus, so this is exploratory description only — it cannot establish a reference distribution or validate against known-deliberate vs known-casual writing, and any cross-corpus numeric differences are uninterpretable as evidence of deliberateness."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Width-preserving null reuses each glyph's actual width and the row center-span; only gap allocation is randomized, isolating gap-regularity from width-regularity. No sign identities used; bbox geometry only (left, width, y-center, height). E079's original random-composition null is replaced by a stricter width-matched null, so any signal here is NOT explainable by E079's mechanism.",
+  "deviations": []
+}

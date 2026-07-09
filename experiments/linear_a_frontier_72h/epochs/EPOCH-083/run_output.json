@@ -1,0 +1,63 @@
+{
+  "task_id": "EPOCH-083",
+  "method": "width-preserving random-gap permutation test on horizontal pitch-CV (E079 qualification)",
+  "result": {
+    "global_S_obs": 0.33773182098952326,
+    "global_null_median": 0.270587576874777,
+    "global_perm_p": 1.0,
+    "global_ratio": 1.24814237553049,
+    "n_docs": 237,
+    "n_qualifying_sites": 3,
+    "n_significant_sites": 0,
+    "pc_verdict": "PASSED"
+  },
+  "verdict": "HORIZONTAL_REGULARITY_WIDTH_DRIVEN",
+  "numbers": {
+    "global": {
+      "S_obs": 0.33773182098952326,
+      "null_median": 0.270587576874777,
+      "perm_p": 1.0,
+      "ratio": 1.24814237553049,
+      "n_docs": 237
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.3805231548492781,
+        "null_median": 0.29208618439078593,
+        "perm_p": 1.0,
+        "deliberate": false,
+        "n_docs": 138
+      },
+      {
+        "site": "Khania",
+        "S_obs": 0.29085636085236716,
+        "null_median": 0.22987134767419382,
+        "perm_p": 1.0,
+        "deliberate": false,
+        "n_docs": 29
+      },
+      {
+        "site": "Zakros",
+        "S_obs": 0.3455847553202678,
+        "null_median": 0.2719790868048768,
+        "perm_p": 1.0,
+        "deliberate": false,
+        "n_docs": 21
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.004975124378109453,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [],
+  "successor_hypotheses": [],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Width-preserving null reuses each glyph's actual width and the row center-span; only gap allocation is randomized, isolating gap-regularity from width-regularity. No sign identities used; bbox geometry only.",
+  "deviations": []
+}
