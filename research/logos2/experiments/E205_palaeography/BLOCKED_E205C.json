@@ -1,0 +1,5 @@
+{
+ "blocked": "E205C_scribal_hand",
+ "reason": "SOURCE_BLOCKED: SigLA is bbox-only normalized drawings; no raw imagery or reliable hand labels accessible (E200 audit)",
+ "emitted": "2026-07-10"
+}

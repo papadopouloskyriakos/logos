@@ -1,0 +1,6 @@
+{
+ "E205_I": "PRIOR_CONTRACTS_DOMAINS iff contraction under GRADED > 200 grade-permutation nulls (plus-one p<.05, Holm over 2 baselines); else PRIOR_GENERIC/PRIOR_INERT",
+ "E205_A3": "L2 iff merge/split shifts a preregistered statistic beyond its 95% bootstrap band, >=2/3 sites",
+ "E205_B": "site claim only if accuracy beats permutation null AFTER sign-identity control",
+ "vocabulary": "shape-continuity != identity != allography != genealogy != value-continuity"
+}

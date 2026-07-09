@@ -1,0 +1,17 @@
+{
+ "experiment": "E205_palaeography",
+ "prereg": "prereg.md",
+ "cells": [
+  "I_three_conditions",
+  "A1_cluster_stability",
+  "A2_grade_agreement",
+  "A3_merge_split_counterfactuals",
+  "B_site_attribution",
+  "C_BLOCKED",
+  "D_deferred"
+ ],
+ "workers_max": 4,
+ "nice": 15,
+ "seed_master": 1336530913,
+ "exploratory": true
+}
