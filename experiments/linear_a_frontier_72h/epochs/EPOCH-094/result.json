@@ -1,0 +1,65 @@
+{
+ "positive_control": {
+  "random": {
+   "f1_mean": 0.34214285714285714,
+   "f1_sd": 0.011383841036078002
+  },
+  "surprisal": {
+   "f1_mean": 0.8703571428571429,
+   "f1_sd": 0.014751340305759515
+  },
+  "branching_entropy": {
+   "f1_mean": 0.2367857142857143,
+   "f1_sd": 0.006738557951469015
+  },
+  "morphogenesis_rd": {
+   "f1_mean": 0.36321428571428577,
+   "f1_sd": 0.008571428571428577
+  }
+ },
+ "pc_detects": true,
+ "linear_b": {
+  "random": {
+   "f1_mean": 0.3037640056022409,
+   "f1_sd": 0.003820940962110583
+  },
+  "surprisal": {
+   "f1_mean": 0.6500700280112046,
+   "f1_sd": 0.0059329370181529974
+  },
+  "branching_entropy": {
+   "f1_mean": 0.3686274509803921,
+   "f1_sd": 0.0024166006150029206
+  },
+  "morphogenesis_rd": {
+   "f1_mean": 0.3101190476190476,
+   "f1_sd": 0.0030925514659315982
+  }
+ },
+ "verdict": "SEGMENTATION_MORPHOGENESIS_NULL",
+ "rationale": "The RD/morphogenesis boundary cue does not beat random on blinded LB (morphogenesis 0.310 vs random 0.304); generic cues do (best surprisal 0.650). Morphogenesis carries no word-boundary signal.",
+ "config": {
+  "words_per_stream": 15,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "split": "0.7 train / 0.3 test",
+  "boundary_pred": "top-k at true boundary rate",
+  "cue_morphogenesis": "|u(a)-u(b)| RD activator"
+ },
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": false,
+ "runtime_sec": 2.1,
+ "plan_hash": "d6618319780925724af1bed6cf70e9819e8b52d6a7b69a2b8345e22c45c4b963",
+ "epoch_id": "EPOCH-094",
+ "code_manifest": {
+  "e094_segmentation.py": "3c61326ea0fcdab3",
+  "rd.py": "83e8aceb138d579f",
+  "graphs.py": "4da0747b23dc21cd"
+ }
+}

@@ -2233,12 +2233,28 @@ epochs:
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS
     priority: IMMEDIATE
-    status: RESERVED_ACTIVE
+    status: BANKED
     gate: A
-    name: "Sequence/segmentation/formula morphogenesis: RD over position graphs; recover word/morpheme/formula/entry boundaries in blinded LB vs DP/Bayesian/MDL/finite-state/random; freeze before LA."
-    prereg: morphogenesis/PREREGISTRATION.md
-    reserved: 2026-07-09
-    substantive: pending
+    name: "Sequence/segmentation morphogenesis: does an RD activator-domain boundary cue recover blinded-LB word boundaries vs transition-surprisal / branching-entropy / random, held-out?"
+    plan_hash: "d6618319780925724af1bed6cf70e9819e8b52d6a7b69a2b8345e22c45c4b963"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (morphogenesis/scripts/e094_segmentation.py; frozen copy + rd/graphs in the epoch dir). NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "Held-out by construction: bigram/branching stats estimated on a 70% TRAIN word split, boundary-F1 evaluated on 30% TEST streams (5 seeds). Boundaries predicted at the TRUE rate (top-k) so all cues are compared at matched precision=recall. PC (synthetic planted-boundary corpus) DETECTS (surprisal 0.87 vs random 0.342) -> task is detectable, so the LB morphogenesis null is interpretable. Coordinator authored + ran all cues + the PC."
+    positive_control: "PASSED (detects=True): on a synthetic lexicon-generated corpus with planted boundaries the generic transition-surprisal cue recovers boundaries far above random (0.87 vs 0.342). CRUCIAL: even on this fully-detectable PC the morphogenesis cue reaches only 0.363 (~random 0.342) -> the failure is intrinsic to a STATIC morphogenetic field, not a data-scarcity issue. The task detector fires; the morphogenesis cue specifically does not."
+    verdict: "SEGMENTATION_MORPHOGENESIS_NULL (mechanical) -- an RD/morphogenesis boundary cue (activator-domain differences |u(a)-u(b)| over the G_POSITION sign-type graph) carries NO word-boundary signal on blinded LB: morphogenesis boundary-F1 0.310 ~ random 0.304, while a generic transition-surprisal cue recovers boundaries well (0.650) and branching entropy partially (0.369). The result is architectural: a STATIC morphogenetic field is a type-level quantity and cannot encode a SEQUENTIAL/transition property like a word boundary -- confirmed on the PC (surprisal 0.87 but morphogenesis only 0.363 even where boundaries are trivially detectable). L2, opaque IDs, LA not touched, no licence. Consistent with E091/E092 (morphogenesis ties/loses to generic methods). Byproduct (generic, not morphogenesis): transition surprisal is a strong unsupervised LB boundary cue (0.650 boundary-precision-at-true-rate)."
+    numbers: {pc_detects: true, pc_surprisal: 0.870, pc_random: 0.342, pc_morphogenesis: 0.363, pc_branching: 0.237, lb_random: 0.304, lb_surprisal: 0.650, lb_branching_entropy: 0.369, lb_morphogenesis: 0.310, metric: "boundary-F1 at true rate (top-k)", split: "0.7 train / 0.3 test", words_per_stream: 15, seeds: 5}
+    layer: L2
+    licences_changed: none
+    la_touched: false
+    dichotomy_side: BOUNDED_NEGATIVE
+    scope: "Bounded negative on blinded LINEAR B (LA not touched). Establishes that the morphogenesis channel does not extend to SEGMENTATION: a static RD activator field cannot recover word boundaries (sequential structure), even though the task is well-detectable by a generic transition cue. Adds a distinct data-channel/task result to the F11 map (the class-recovery nulls E091/E092 + the data-sufficiency qualification E093 + this segmentation null). Increments the bounded-negative bucket (22 -> 23). A frozen-LA segmentation application is NOT triggered (verdict is NULL, not SUPPORTED). Distinct from the published segmentation_extension work (micro-F1 0.436, a different metric/task) -- here the finding is specifically that MORPHOGENESIS adds nothing to segmentation, while the generic surprisal cue is strong."
+    committed_prediction: "modal SEGMENTATION_MORPHOGENESIS_GENERIC / _NULL per the E091/E092 prior. OUTCOME = _NULL (morphogenesis ~ random; does not even reach the GENERIC tier). Prediction earned, and slightly stronger-negative than expected: the static field is architecturally unsuited to sequential boundaries."
+    deviations: ["The morphogenesis boundary cue is the type-level activator difference |u(a)-u(b)|; a static field is intrinsically a weak boundary detector (boundaries are a transition/sequential property). This is disclosed as the CORE finding, not hidden -- the PC demonstrates the mismatch cleanly (surprisal 0.87 vs morphogenesis 0.363 on trivially-detectable planted boundaries). Heavier DP-unigram/Bayesian/MDL segmenters from the parent menu were not run: the null is already decisive (morphogenesis ~ random) and adding stronger generic baselines would only widen the gap, not change the morphogenesis verdict.", "DAMOS LB licensed-derived; scripts committed, no raw corpus redistributed."]
+    non_circular: "Blinded (opaque sign IDs; word identities used only to define truth boundaries). Held-out train/test split for the transition stats. All cues compared at the same matched boundary rate. The RD field is built unsupervised (coarsest-mode selection, no boundary labels). PC is fully synthetic. Coordinator reconstructed all cues + the PC from scratch."
+    architecture_note: "Fourth TURING_MORPHOGENESIS epoch, the segmentation leg. A clean bounded negative: morphogenesis does not transfer to boundary recovery (static field vs sequential task). With E091 (mechanism null) + E092 (specificity null) + E093 (data-sufficiency qualification), the F11 family is now: Turing/morphogenesis provides NO advantage for class recovery OR segmentation, and LA is not data-limited for the weak generic signal. One reserved F11 epoch remains (E095 geographic/scribal); E096 DE_AUTHORIZED. This BANKING advances the F12 launch gate (E094 now terminal; only E095 blocks). Finalization remains BLOCKED (clock 2026-07-11T03:20Z)."
+    artifacts: [epochs/EPOCH-094/prereg.md, epochs/EPOCH-094/plan_hash.txt, epochs/EPOCH-094/e094_segmentation.py, epochs/EPOCH-094/rd.py, epochs/EPOCH-094/graphs.py, epochs/EPOCH-094/result.json, reports/EPOCH094_REPORT.md]
+    successors_spawned: 5
+    substantive: true
   - epoch_id: EPOCH-095
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS

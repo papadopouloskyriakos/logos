@@ -101,3 +101,12 @@
   E091+E092; append-only, entry retained). launch_gate.py mechanically confirms MORPH_TERMINAL=False
   (blocking: E094, E095 still RESERVED_ACTIVE) -> F12 launches E097 automatically once E094+E095 are
   banked/terminated. Finalization remains BLOCKED (clock 2026-07-11T03:20Z).
+
+- EPOCH-094 BANKED (94 epochs). Segmentation morphogenesis. VERDICT SEGMENTATION_MORPHOGENESIS_NULL. PC
+  detects (synthetic surprisal 0.87 vs random 0.342). On blinded LB the RD/morphogenesis boundary cue
+  |u(a)-u(b)| is indistinguishable from random (0.310 vs 0.304), while generic transition-surprisal recovers
+  boundaries well (0.650). Architectural, not data-limited: a STATIC morphogenetic field cannot encode a
+  SEQUENTIAL boundary property (PC proves it -- surprisal 0.87 but morphogenesis 0.363 even on trivially-
+  detectable planted boundaries). Consistent with E091/E092. L2, LA untouched, no licence. bounded-neg 22->23.
+  F11 now: no morphogenesis advantage for class recovery OR segmentation; LA not data-limited (E093). E094
+  terminal -> F12 launch gate now blocks only on E095. E095 (geographic/scribal) queued next. 5 successors.
