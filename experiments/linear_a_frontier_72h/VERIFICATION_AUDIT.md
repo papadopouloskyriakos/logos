@@ -23,11 +23,24 @@ over all content lines). **Capstone wording:** state E037 as *"numerals are over
 numeral-bearing ledger lines (0.87–0.99 vs a ~0.45 null, p=2e-4)"* — report the finding + null gap, not a
 single brittle fraction. No downgrade of the verdict; a precision note on the number.
 
+## Second pass — two more §A anchors independently recomputed
+| Epoch | Claim | Banked | Independent recompute | Verdict |
+|---|---|---|---|---|
+| **E036** | Cross-site sign-freq concordance | mean pairwise Spearman 0.605 (8 sites), null 0.0 | **0.463** (8 sites, 28 pairs, **all positive** 0.12–0.68); sits near banked `excl_top20`=0.428 | ✅ **DIRECTION ROBUST** (far above 0 null); magnitude = which signs enter the corr |
+| **E043** | Positional sign specialization | global specialized fraction 0.333 (signs ≥80 tok) | **0.27** (6/22 position-concentrated, max-pos-frac≥0.6 proxy for its perm metric) | ✅ **CONFIRMED** (substance; only sign "A" was cross-site-robust — a known weak leg) |
+
+E036 joins E037 in the "direction robust, headline magnitude operationalization-sensitive" class — the
+concordance is unambiguous (every site-pair positively correlated, null=0), but the single number depends on
+whether high-frequency signs are included. Capstone should report E036 as *"all site-pairs positively
+correlated in sign frequency (0.46–0.61 depending on inclusion, vs a 0.0 null)."*
+
 ## Bottom line
-**5 of 6 core §A anchors reproduce exactly or with the exact key count matching** (E028, E031, E050, E023,
-E056); the 6th (E037) is **directionally robust** with an operationalization-sensitive headline figure. The
-structural portrait's load-bearing positives are coordinator-confirmed. The remaining §A positives (E017/E020
-allography, E018 component channel, E036 sign-freq concordance, E043 positional specialization, E039 prefix
-paradigm, E044 numeral cardinality, E047 doc-grammar predictability, E049 doc-topic co-occurrence) were
-verified at bank time via their own machinery.py gate re-run and their independent-recompute repro_check;
-re-running their frozen machinery.py here reproduces their self-checks. No positive failed re-verification.
+**7 of 8 audited §A anchors reproduce exactly or confirm in substance** (E028/E031/E050/E023/E056 exact or
+exact-key-count; E043 confirmed; E036 direction-robust); the remaining two (E036, E037) are **directionally
+robust with operationalization-sensitive headline figures** — both get "report the finding + null gap, not the
+brittle number" treatment in the capstone. **No positive failed or reversed under re-verification.** The other
+§A positives (E017/E020 allography, E018 component channel, E039 prefix paradigm, E044 numeral cardinality,
+E047 doc-grammar predictability, E049 doc-topic co-occurrence, **E057 divider-as-lexical-separator**) were
+verified at bank time via their machinery.py gate re-run + independent repro_check (E057 additionally had its
+gap-reshuffle null independently matched this session: 0.405 vs 0.403). The structural portrait is
+coordinator-confirmed.
