@@ -67,3 +67,27 @@ E047 doc-grammar predictability, E049 doc-topic co-occurrence, **E057 divider-as
 verified at bank time via their machinery.py gate re-run + independent repro_check (E057 additionally had its
 gap-reshuffle null independently matched this session: 0.405 vs 0.403). The structural portrait is
 coordinator-confirmed.
+
+## Session-2 pass (E062–E070) — every load-bearing null reconstructed from scratch
+Each epoch this session had its observed statistic AND its null (and any LOO / contrast leg) independently
+recomputed by the coordinator from `corpus/silver/inscriptions_structured.json` — an independent
+re-implementation, not GLM's machinery. All matched; none downgraded.
+
+| Epoch | Verdict | Coordinator recompute (observed / null) | Status |
+|---|---|---|---|
+| **E062** | Marker document-peripheral | peripheral 0.691 / line-shuffle null 0.382 (analytic 2/L 0.381); heading 0.286/0.191, colophon 0.405/0.191; 6/6 sites | ✅ exact |
+| **E063** | Marker system differentiated | M2 peripheral 0.115 / null 0.297; heading 0.0/0.150; contrast d=0.576 relabel-null ≈0, p=0 | ✅ exact |
+| **E064** | Initial-concentration cross-site | A=+0.223 / within-word-shuffle null ≈0, p→0; 5–6/10 sites; drop-HT LOO 0.332 (strengthens) | ✅ exact |
+| **E065** | Word-length site register | per-class KW-H 45.25/14.41/29.93, stratified null p→0 (3/3 classes) | ✅ exact |
+| **E066** | Accounting-scale site-local | within-Tablet KW-H 45.07 / site-perm null 4.01, p=2e-4; LOO drop-HT 33.74, drop-Tylissos 35.39 all p=2e-4 | ✅ exact |
+| **E067** | Concentration depth-2 | A0 0.376/A1 0.232/A2 0.129 (null ≈0) p≈5e-4; **2/6 sites** on A1; drop-HT LOO strengthens A1 → not a dominant-site artifact | ✅ exact (partial cross-site flagged) |
+| **E068** | A-vocab more shared | share_A 0.688/share_nonA 0.322, D=0.366; **frequency-matched** stratified label-perm null 0.044, p=7e-3 | ✅ exact |
+| **E069** | Entry-initial word longer | diff 0.789 / within-line word-order shuffle null **−0.117** (correctly non-zero, asymmetric pooling); A-excluded 0.716 p=3e-4 | ✅ exact |
+| **E070** | Fraction attachment site-local | R_num 0.387/null 0.130; HT 0.479 vs Khania 0.055; site-contrast \|Δ\|=0.425 perm p=2e-4 | ✅ exact |
+
+**One fabricated-null catch remains the sole downgrade of the whole campaign (E059).** Every session-2 epoch's
+null reconstructed to matching values — including the two subtle cases where the null is *not* zero-centered
+(E069 asymmetric pooling → −0.12) and the frequency-matched permutation (E068). The `repro_check` upgrade from
+the E059 lesson (recompute the NULL, not just the observed statistic, and anchor it to a closed form where one
+exists) is now standard in every driver. The verification layer continues to discriminate real structure from
+artifacts.

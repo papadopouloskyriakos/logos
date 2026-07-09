@@ -2,29 +2,32 @@
 
 > **STATUS: DRAFT. NOT FINALIZED.** Finalization is mechanically gated by `scripts/clock_check.py`
 > (`finalization_authorized = now ≥ 2026-07-11T03:20Z AND completed_substantive_epochs ≥ 18`).
-> As of last edit: **61 substantive epochs banked**, gate **BLOCKED** (time_gate open ~48h to 2026-07-11T03:20Z).
+> As of last edit: **70 substantive epochs banked**, gate **BLOCKED** (time_gate open ~45h to 2026-07-11T03:20Z).
 > This document accretes as epochs bank; it becomes the §12 capstone **only** when the clock authorizes.
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 61 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 70 substantive epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
-| **Load-bearing cross-site positives** | **22** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| **Load-bearing cross-site positives** | **28** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
 | Bounded negatives | 16 | Well-powered PC-passed tests returning informative *absence* (§B) |
+| Site-local structural findings | 3 | Well-powered PC-passed *detections* that landed on the site-local side of the dichotomy (§B) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*22 positives / 16 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
-Zero of the 22 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
-reading.*
+*28 positives / 16 bounded-negatives + 3 site-local findings / 14 no-inference (no-power + underpowered +
+machinery-uninf) / 9 setup. Zero of the 28 positives rises above L2/L3. The honest denominator is on-screen:
+this is a structural map, not a reading. (One positive, `E067` depth-2 concentration, is global + only partial
+cross-site — 2/6 sites — and is flagged as such in §A1.)*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 61 ledger entries: **no epoch is worded above L3** (layers: L1×9, L2×10, L2/L3×36, older-unlabelled×14;
-zero L4+); **every `licences_changed` field is `none`** (no result silently earned a licence); the 7 transfer
+Scanned all 70 ledger entries (layer counts script-generated): **no epoch is worded above L3** (layers: L1×9,
+L2×16, L2/L3×36, L3×3, older-unlabelled×6; zero L4+); **every `licences_changed` field is `none`** (0/70
+non-none; no result silently earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
 not a claim. The positives are **direct structural observations of Linear A's own distribution** (Linear B is
@@ -46,12 +49,22 @@ where the load-bearing structure is and where the walls are.
 These survived a calibrated/adaptive null, a positive control, AND cross-site / held-out robustness, and were
 independently recomputed by the coordinator.
 
-**A1. A-prefixation** — the strongest held-out LA positive. A word-initial `A-` sign functions as a
-**productive, positional (heading/initial), selectional prefix**.
+**A1. A-prefixation + prefixing morphology** — the strongest held-out LA positive. A word-initial `A-` sign
+functions as a **productive, positional (heading/initial), selectional prefix**.
 `E022` (survives LA-structure-matched adaptive null) → `E023` (cross-site robust, 9/10 sites) →
 `E024` (multi-axis robust: support-type + chronological phase) → `E025` (productive slot, not a few frozen
 forms) → `E050` (selectional — constrains what follows). Reinforced by `E039` (the initial-concentration
 extends to a **small prefix inventory**, not `A-` alone).
+**The underlying positional-entropy typology is itself cross-site robust:** `E064` word-**initial** sign
+entropy is significantly lower (more concentrated) than word-final, globally (A=+0.223 bits vs ~0 within-word-
+shuffle null, p=5e-4) and in 5–6/10 sites, LOO-robust (drop-HT strengthens it) — the prefixing signature
+generalizes beyond the single `A-` slot. `E067` the concentration extends to a **second slot** (a decaying
+prefix-*zone*, A0=0.375 > A1=0.233 > A2=0.128, all p≤5e-4) — *global + partial cross-site only* (pos1 sig in
+2/6 sites; interpretively ambiguous between true prefix-stacking and prefix→continuation selection, E050).
+**And the A-marked vocabulary is itself more cross-site-shared:** `E068` A-prefixed word-forms recur across
+sites at 0.69 vs 0.32 for *frequency-matched* non-A forms (D=+0.37, stratified perm p=7e-3, power=1.0) — so the
+`A-` prefix marks a **pan-administrative sub-lexicon** that partially bucks the site-local-vocabulary trend
+(small informative base, 16 A-types; prime for prospective replication).
 
 **A2. Administrative ledger grammar** — the corpus has a real, cross-site accounting syntax.
 `E031` **word → numeral** order (entry then quantity), certified under a *calibrated pair-flip* null
@@ -71,6 +84,15 @@ fractional remainder closes the entry, 0.99 vs 0.46 null, p=0, 3/3 sites). Both 
 within-line permutation nulls independently reconstructed. ⇒ the **complete Linear A ledger entry template**:
 `[commodity-logogram | word] → integer-numeral → fraction → line-end`. L2 strict: token *classes* by position;
 logogram identity and fraction value unused.
+**`E069` adds a positional word-length facet:** entries **open with a longer "head" word** (entry-initial words
+2.55 signs vs 1.76 internal, ~11σ above a within-line word-order shuffle null, p=5e-4), cross-site (3/3 sites),
+LOO-robust, and **not** the `A-`-prefix confound (survives excluding all A-initial words: 0.72, p=5e-4) — a
+name-then-modifiers layout, orthogonal to the E028/E065 length axes.
+*Nuance (from `E070`, a site-local finding — see §B): the template's positional **skeleton** (frac→nl, numeral
+line-final, word→num) is cross-site, but the **fraction's metrological attachment is NOT uniform** — Haghia
+Triada realizes num→frac (0.48, "N and a fraction"), Khania attaches fractions to words (num→frac 0.055);
+site-contrast p=2e-4. So E060's "complete template" is cross-site in skeleton, site-local in metrological
+realization.*
 
 **A3. Positional sign specialization** (`E043`, cross-site robust after the `E041`/`E042` power+calibration
 repairs) — signs carry **position-dependent roles** within the word (templatic organization), stable across
@@ -95,6 +117,13 @@ lexicon). `E026` word-**final** positional class is concentrated (a terminal ana
 marker** — it occupies its own content-line 91% of the time vs a ~20% position-shuffle null (p=5e-4), in
 **5/5 sites**, LOO-robust; observed and null both independently reconstructed. A standalone section/entry/
 separator-type structural element (L2: position only, no reading).
+`E062` sharpens U+1076B's role: it is **document-peripheral** — it sits on the first or last content-line 69%
+vs a 38% line-shuffle null (p=5e-4), both poles enriched (heading + colophon), interior *depleted*, **6/6
+sites**, LOO-robust. `E063` shows the standalone-marker inventory is **position-differentiated**: a second
+line-isolated token (the em-dash U+2014) occupies the **complementary interior** niche (peripheral 0.12 vs
+U+1076B's 0.69; never a heading; contrast relabel p=0) — LA documents deploy ≥2 line-isolated markers with
+complementary structural roles (U+2014 is HT-anchored → cross-site not certified, and may be a transcription
+ruling-mark; the complementarity holds either way; L2 position only).
 
 **A6. Allographic / scribal-shape structure is real** — `E017`/`E020` site-level **allograph** variation
 survives an adaptive null (sign *shape* varies by site, distinct from the shared frequency fingerprint);
@@ -143,6 +172,24 @@ Each is a well-powered, PC-passed test that returned a *bounded absence* — inf
 - Earlier bounded/marginal: `E002` motif within-equivalent, `E010` door marginal, `E012` allograph-structure
   confounded, `E013` decomposition neutral, `E046` word-length shape inconclusive.
 
+**Site-local structural findings (well-powered *detections* that landed site-local — they populate the
+site-local side of the through-line, distinct from bounded *absences* above):**
+- **Word-length is a site register.** `E065` controlling for document class (stratified permutation), word-
+  length still carries a significant residual **site** effect (combined KW H=89.6, perm p=0; all 3 testable
+  classes) — raw site H=223 → ~40% survives class-control. Sites differ systematically in how long their words
+  are, within the same class.
+- **Accounting scale is a site register.** `E066` within the Tablet class, numeral magnitude differs by site
+  (KW H=45.1 vs ~4 null, p=2e-4), **general and LOO-robust** across all 5 sites (survives dropping the 79%-
+  dominant HT and the outlier Tylissos); per-site medians span 1→10. (Single-class scope: only Tablets have
+  cross-site numeral power.)
+- **Fractional attachment is a site convention.** `E070` what a fraction attaches to is site-local — Haghia
+  Triada realizes num→frac (0.48, metrological remainder), Khania attaches fractions to words (num→frac 0.055);
+  site-contrast perm p=2e-4. (Nuances E060's entry template — see §A2.)
+> These three refine the through-line: not only is *vocabulary* site-local, but **scribal register** (word-
+> length, accounting scale) and the **metrological realization** of the shared entry template are site-local
+> too. The shared cross-site layer is the positional *grammar + script*; the quantitative/graphic *magnitudes*
+> and lexicon are local.
+
 ---
 
 ## C. NO-POWER / MACHINERY-UNINFORMATIVE — honest "instrument gave no reading" (NOT LA evidence)
@@ -181,12 +228,22 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
   strong new positive that **corrected a premature saturation call** (the `div` token was an untested observed
   channel). Lesson recorded: "saturation" claims must be checked against *all* observed token channels, not
   just the dimensions recently probed.
-- **Saturation status: re-opened, then narrowing.** After E057, the remaining observed channels are largely
-  exhausted (word, sign, numeral, div, nl all tested); `other` (n=1056) is a heterogeneous grab-bag (damaged/
-  uncertain marks) unlikely to yield clean structure. Candidate successors: whether the `div`/`nl` delimiters
-  interact (nested entry vs line structure), or whether the E056 logogram class aligns with E057's entry-word
-  slot (risk: circular). Each must clear the distinct + well-powered + non-circular bar before launch; if none
-  does, the productive work is capstone assembly.
+- **The `other` channel was NOT a grab-bag — it was the richest untested vein (lesson re-confirmed).** The
+  earlier dismissal of `other` (n=1056) as "unlikely to yield clean structure" was **wrong**: inspecting it
+  produced FOUR positives — `E060` (metrological entry template: logogram→num, fraction→terminal), `E061`
+  (U+1076B line-isolated marker), `E062` (that marker is document-peripheral), `E063` (marker-system
+  position-differentiation). The `div`/`nl` interaction candidate was examined and **declined as foregone**
+  (div←word, num-terminal→nl already banked in pieces → would be trivial-recovery, not a distinct test).
+- **Successors mined this session (E064–E070):** initial-concentration typology cross-site (`E064`), its depth
+  (`E067`, partial), A-vocab cross-site sharing (`E068`), entry-head word-length (`E069`) on the shared side;
+  word-length register (`E065`), accounting-scale register (`E066`), fractional attachment (`E070`) on the
+  site-local side. The cross-site held-out grammar-prediction synthesis is already banked (`E047`).
+- **Saturation status (as of 70 epochs): genuinely narrowing.** Probed-and-declined this session: commodity-
+  logogram cross-site (underpowered, 2 sites), word-vs-logogram magnitude register (underpowered), cross-site
+  grammar prediction (covered by E047), further register tests (pattern-repeat, not distinct). The remaining
+  candidates are refinements or underpowered; each must still clear the **distinct + well-powered + non-circular
+  + PC-gated** bar before launch, else the productive work is capstone assembly. **Do not declare hard
+  saturation** — the `other`-channel lesson stands: inspect a channel before calling it empty.
 
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.
