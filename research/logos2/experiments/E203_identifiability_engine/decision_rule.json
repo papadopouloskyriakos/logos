@@ -1,0 +1,9 @@
+{
+ "gates": {
+  "G1_synthetic_recovery": "planted 67-domain assignment: with >=8 correct 8-slot anchors engine returns backbone containing >=90% of planted values; with 0 anchors engine reports ambiguity (backbone <=5% of cells) and NEVER a unique wrong solution",
+  "G2_comparability": "on the WP-H domain with WP-H-equivalent modules, |log10(count_engine) - log10(count_WPH)| explained: within 2 orders -> AMBIGUITY_CONSISTENT_WITH_PRIOR; else AMBIGUITY_DIVERGES and the divergence must be mechanically attributed (module diff, counting method) before any further cell runs"
+ },
+ "verdict_rule": "ENGINE_VALIDATED iff G1 passes on 5/5 planted replicates AND counting methods agree within declared bands on the calibration cells. UNSAT in any LA cell -> run 200 matched random pin-set nulls; UNSAT_SPECIFIC only if matched-null UNSAT rate < 5% (CP95). No verdict may assert values.",
+ "multiplicity": "module-subset grid is one declared family; counts (not p-values) reported per cell; any p-value computed anywhere uses plus-one MC correction",
+ "exploratory_flag_mechanics": "STATUS.json carries exploratory:true for P1; only an F1 run under unchanged prereg flips confirmatory:true"
+}

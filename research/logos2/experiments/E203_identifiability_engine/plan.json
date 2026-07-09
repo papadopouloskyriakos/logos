@@ -1,0 +1,32 @@
+{
+ "experiment": "E203_identifiability_engine",
+ "prereg": "prereg.md",
+ "pilot_cells": [
+  "GATE_synthetic_recovery",
+  "COMPARE_wph_domain",
+  "PATH_empty",
+  "PATH_structure",
+  "PATH_structure_numeral",
+  "PATH_structure_numeral_homomorphy",
+  "PATH_all_plus_pins"
+ ],
+ "counting_methods": [
+  "exact_if_small",
+  "domain_product_bound",
+  "SIS",
+  "xor_hash_approx(2 smallest)"
+ ],
+ "solver": "ortools CP-SAT (primary) + z3 (unsat cores)",
+ "timeout_per_solve_s": 300,
+ "workers_max": 2,
+ "nice": 15,
+ "seed_master": 1336530913,
+ "inputs": {
+  "inventory": "corpus/silver/inventory_syllabograms_conservative.json",
+  "silver": "corpus/silver/inscriptions_structured.json",
+  "salgarella_grades": "/home/claude-runner/gitlab/n8n/logos/experiments/crossscript_gate/salgarella_2020_grades.json",
+  "pins": "declared inline from crossscript gate records (I,RI,SU,TO)"
+ },
+ "exploratory": true,
+ "confirmatory_requires": "amendment-free full-grid run under this prereg's F1 section"
+}
