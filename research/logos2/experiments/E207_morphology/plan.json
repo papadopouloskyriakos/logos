@@ -1,0 +1,18 @@
+{
+ "experiment": "E207_morphology",
+ "prereg": "prereg.md",
+ "models": [
+  "M0_unigram",
+  "M1_indep",
+  "M2_positional",
+  "M3_stem_affix",
+  "M4_clitic",
+  "M5_subregular",
+  "M6_adaptor_pyp"
+ ],
+ "n_synthetics": 200,
+ "workers_max": 4,
+ "nice": 15,
+ "seed_master": 1336530913,
+ "exploratory": true
+}

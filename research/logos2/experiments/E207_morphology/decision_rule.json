@@ -1,0 +1,10 @@
+{
+ "verdicts": [
+  "POSITIONAL_ONLY",
+  "PREDICTIVE_FUNCTIONAL_CLASS",
+  "CLITIC_COMPATIBLE",
+  "AFFIX_COMPATIBLE",
+  "PARADIGMATIC_MORPHOLOGY_SUPPORTED"
+ ],
+ "rule": "see prereg.md; Holm over {M3vsM2, M6vsM2}; synthetic 95th percentile band with plus-one p; banned words unless final category reached"
+}
