@@ -180,3 +180,29 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.
 Finalization remains mechanically blocked until the clock authorizes.*
+
+---
+
+## H. Reconciliation with the frozen TACL paper (append-only integrity — Art. XVII)
+The paper (`paper/tacl/body.tex`, byte-frozen, SUBMITTED) is checked for consistency with this campaign's
+findings. **No contradiction found; no erratum required.** The one apparent tension resolves cleanly:
+
+- **Paper §6 reports morphology `NO POWER`** (LA 4/16 affixes vs the `L_fake` bigram floor 6/16; the same test
+  recovers LB inflection 9/16 — a real detector, LA's null is short-form-limited). This is a **supervised
+  multi-affix paradigm-recovery** test: can a full inflectional/affixal *system* be recovered? On LA, no.
+- **This campaign's headline is A-prefixation `A_PREFIX_*_ROBUST`** (§A1). This is a **single-slot distributional
+  positional-enrichment** test: is the sign `A` over-represented word-initially, cross-site? It is.
+- **These do not conflict.** A corpus can fail to yield a recoverable multi-affix paradigm (paper's NO POWER)
+  while exhibiting *one* robust positional prefix-slot (this campaign). The frontier result is narrower,
+  distributional, and strictly **L2/L3** — it never claims the recoverable morphological *system* the paper
+  correctly found absent. Indeed the paper's own typology discussion already characterizes LA as
+  *"agglutinative and prefixing … [prefix A]"* (§ rebuttal), which the A-prefix finding **corroborates and
+  quantifies**, not contradicts.
+- **Other probes are consistent:** the paper's metrology null + the campaign's small-bounded-numeral findings
+  (E054/E055) agree; the paper's segmentation-supported result stands; the campaign touches no phonology (all
+  L2/L3), so the paper's phonology data-limited null is untouched. The campaign's transfer-licence state matches
+  the paper's ("no decipherment; methods paper").
+
+**Bottom line:** the frontier campaign *extends and corroborates* the frozen paper (adds a shared-grammar /
+site-local-content structural portrait at L2/L3) without contradicting any published claim. If any future
+finding *does* contradict the paper, it is filed as an ERRATUM against the frozen record — never a silent rebuild.
