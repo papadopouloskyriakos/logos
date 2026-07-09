@@ -1282,3 +1282,27 @@ epochs:
     artifacts: [epochs/EPOCH-053/prereg.md, epochs/EPOCH-053/plan_hash.txt, epochs/EPOCH-053/machinery.py, epochs/EPOCH-053/result.json, reports/EPOCH053_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-054
+    frontier: F14
+    gate: A
+    name: "Benford's law on LA numeral magnitudes (are these genuine accounting quantities?)"
+    plan_hash: "see epochs/EPOCH-054/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: n=1276 numerals (v>=1), Benford MAD=0.0251 (result 0.025) EXACT, P(first-digit=1)=0.400 (Benford 0.301) — digit 1 over-represented, high digits under; chi2 p=1.2e-19. CRITICAL CONTEXT (orchestrator): magnitudes are SMALL BOUNDED counts — min 1, max 3000, MEDIAN 4, 71% <=10, 840/1276 single-digit -> spans only ~1-2 orders of magnitude. PC passed (Benford-synth MAD 0.006 conformant; uniform-synth MAD 0.064 nonconformant)."
+    positive_control: "PASSED (verified): the Benford machinery classifies synthetic Benford data CONSISTENT (MAD 0.006) and synthetic uniform data DEVIANT (MAD 0.064), false-deviant rate 0.0 on true-Benford samples. Valid, calibrated detector."
+    verdict: "NUMERALS_BENFORD_DEVIANT (mechanical) — but INTERPRETED as EXPECTED for small bounded counts, NOT evidence of fabrication (see scope). Deviance is corpus-wide (DEVIANT at HT/Zakros/Khania/Phaistos; the 2 CONSISTENT sites are underpowered n~31-33)."
+    numbers: {n_numerals: 1276, benford_mad: 0.025, nigrini_band: nonconformant, chi2_p: 1.2e-19, P_first_digit_1: 0.400, benford_expected_1: 0.301, magnitude_min: 1, magnitude_max: 3000, magnitude_median: 4, frac_le_10: 0.71, single_digit_count: 840, pc_benford_synth_mad: 0.006, pc_uniform_synth_mad: 0.064}
+    layer: L2/L3
+    licished_changed: none
+    licences_changed: none
+    la_touched: true
+    scope: "Benford-DEVIANT, but the deviance is EXPECTED and does NOT indicate fabrication. Linear A numeral magnitudes are SMALL BOUNDED ADMINISTRATIVE COUNTS (median 4, 71% <=10, max 3000, mostly 1-2 digits), spanning too few orders of magnitude for Benford's law to apply (Benford requires multi-order-of-magnitude, multiplicatively-generated data). Small ration/inventory tallies routinely deviate from Benford. So: (1) the numerals behave like REAL small administrative counts, not naturally-spanning economic data; (2) Benford is INAPPLICABLE as an authenticity test at this magnitude scale (necessary-not-sufficient, and here not even applicable) -> this bounds the 'Benford validates the substrate' approach as UNUSABLE for LA. SUBSTANTIVE DESCRIPTIVE finding: LA administrative quantities are SMALL (median 4) — modest-scale tallies. Magnitudes only; NO sign values/readings; no phonetics/meaning. No transfer licence."
+    committed_prediction: "modal CONSISTENT/DEVIANT/INCONCLUSIVE; OUTCOME = DEVIANT, but expected for bounded small counts (median 4). Benford is inapplicable to LA's magnitude range; the descriptive finding is that LA quantities are small tallies."
+    deviations: []
+    non_circular: "Magnitudes ('v') only; no sign values, no readings; Benford is a magnitude-distribution property; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Thirty-first gated-runner epoch (repairs=0). Coordinator supplied the load-bearing interpretation the mechanical DEVIANT verdict lacked: the deviance is EXPECTED for small bounded counts (median 4), NOT fabrication, and Benford is INAPPLICABLE at this magnitude scale -> a bounded-substrate datum for the exhaustion map, plus the descriptive finding that LA quantities are small tallies."
+    artifacts: [epochs/EPOCH-054/prereg.md, epochs/EPOCH-054/plan_hash.txt, epochs/EPOCH-054/machinery.py, epochs/EPOCH-054/result.json, reports/EPOCH054_REPORT.md]
+    successors_spawned: 5
+    substantive: true

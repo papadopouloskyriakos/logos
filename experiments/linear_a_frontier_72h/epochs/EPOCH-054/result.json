@@ -1,0 +1,140 @@
+{
+  "task_id": "EPOCH-054",
+  "method": "Benford first-digit goodness-of-fit (chi-square df=8 + Nigrini MAD) on Linear A numeral magnitudes (v field). Magnitudes only; L2/L3; no sign values/readings.",
+  "result": "DEVIANT",
+  "verdict": "NUMERALS_BENFORD_DEVIANT",
+  "numbers": {
+    "global": {
+      "n_numerals": 1276,
+      "first_digit_hist": {
+        "1": 511,
+        "2": 241,
+        "3": 142,
+        "4": 114,
+        "5": 102,
+        "6": 77,
+        "7": 40,
+        "8": 29,
+        "9": 20
+      },
+      "chi2": 107.6091,
+      "chi2_p": 1.1795793144251188e-19,
+      "benford_mad": 0.025106,
+      "nigrini_band": "nonconformant",
+      "classification": "DEVIANT",
+      "observed_proportions": {
+        "1": 0.4005,
+        "2": 0.1889,
+        "3": 0.1113,
+        "4": 0.0893,
+        "5": 0.0799,
+        "6": 0.0603,
+        "7": 0.0313,
+        "8": 0.0227,
+        "9": 0.0157
+      },
+      "benford_expected_proportions": {
+        "1": 0.301,
+        "2": 0.1761,
+        "3": 0.1249,
+        "4": 0.0969,
+        "5": 0.0792,
+        "6": 0.0669,
+        "7": 0.058,
+        "8": 0.0512,
+        "9": 0.0458
+      }
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "benford_synth_conformant": true,
+      "uniform_synth_nonconformant": true,
+      "false_deviant_rate": 0.0,
+      "ben_synth_detail": {
+        "mad": 0.00572,
+        "classification": "CONSISTENT"
+      },
+      "uni_synth_detail": {
+        "mad": 0.064123,
+        "classification": "DEVIANT"
+      },
+      "n_draws": 20
+    },
+    "robustness": {
+      "n_excluded_lt1": 0,
+      "magnitude_max": 3000,
+      "largest_site": "Haghia Triada",
+      "largest_site_n": 834,
+      "largest_site_mad": 0.024269,
+      "per_site": [
+        {
+          "site": "Haghia Triada",
+          "n": 834,
+          "mad": 0.024269,
+          "band": "nonconformant",
+          "chi2_p": 1.5675926926851935e-12,
+          "classification": "DEVIANT"
+        },
+        {
+          "site": "Zakros",
+          "n": 126,
+          "mad": 0.035732,
+          "band": "nonconformant",
+          "chi2_p": 0.006547154716992224,
+          "classification": "DEVIANT"
+        },
+        {
+          "site": "Khania",
+          "n": 121,
+          "mad": 0.043236,
+          "band": "nonconformant",
+          "chi2_p": 0.004464919979654961,
+          "classification": "DEVIANT"
+        },
+        {
+          "site": "Phaistos",
+          "n": 37,
+          "mad": 0.092402,
+          "band": "nonconformant",
+          "chi2_p": 9.992991575895296e-05,
+          "classification": "DEVIANT"
+        },
+        {
+          "site": "Arkhalkhori",
+          "n": 33,
+          "mad": 0.040712,
+          "band": "nonconformant",
+          "chi2_p": 0.7772884550548983,
+          "classification": "CONSISTENT"
+        },
+        {
+          "site": "Tylissos",
+          "n": 31,
+          "mad": 0.037913,
+          "band": "nonconformant",
+          "chi2_p": 0.5826859571079525,
+          "classification": "CONSISTENT"
+        }
+      ]
+    }
+  },
+  "key_findings": [
+    "LA numeral magnitudes (n=1276, all v>=1, 0 excluded) are DEVIANT from Benford: MAD=0.0251 (Nigrini nonconformant) and chi-square GoF p~1.2e-19 (chi2=107.6, df=8).",
+    "The deviation is NOT uniform-random-like; it is a SUPER-Benford / heavy-small-magnitude pattern: leading 1s are OVER-represented (511/1276=40.0% vs Benford 30.1%) and high digits 7-9 are UNDER-represented (89/1276=7.0% vs Benford 18.0%).",
+    "Positive control PASSED cleanly: synthetic Benford classified CONSISTENT (MAD=0.0057, close), synthetic uniform classified DEVIANT (MAD=0.064, nonconformant), false-deviant rate on true-Benford = 0.0/20. The fitter is calibrated and discriminative.",
+    "Deviation is corpus-wide, not HT-only: Haghia Triada (n=834, MAD=0.0243), Zakros (n=126, MAD=0.0357), and Khania (n=121, MAD=0.0432) are all individually DEVIANT. Small sites (Arkhalkori, Tylissos, n<35) are too small to reject and read CONSISTENT by the OR rule.",
+    "Magnitudes span 1..3000 with a strong concentration at small values, consistent with administrative tallies of small lots rather than a single scale-invariant quantity."
+  ],
+  "successor_hypotheses": [
+    "H1 (L2): Test whether the deviation is a MIXTURE-of-scales effect (Benford holds per commodity/transaction-type but the aggregate mixes scales) by partitioning numerals by preceding word/sign-cluster and re-fitting Benford per partition.",
+    "H2 (L2): Fit alternative first-digit models (e.g. truncated power law P(d)~d^(-k), log-normal magnitudes) and compare AIC; the super-Benford shape suggests a steeper power-law tail than Benford.",
+    "H3 (L2): Examine the magnitude RANK/FREQUENCY distribution (are magnitudes rounded? clustering at 10, 20, 100?) to test whether scribes used conventional round numbers, which would break Benford.",
+    "H4 (L3): Compare LA first-digit profile to published Benford analyses of Mycenaean Linear B accounting tablets (same script family, known language) to see if the deviation is script-specific or a general Aegean-administration signature.",
+    "H5 (L2): Restrict to magnitudes >= 10 (Benford is most reliable above small integers where rounding dominates) and re-test; small-integer dominance may be driving the super-Benford excess of 1s.",
+    "H6 (L3): Test second-digit and first-two-digit (FTD) Benford distributions for a finer-grained conformity check that is less sensitive to small-magnitude rounding."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Magnitudes only (integer v field of num tokens). No sign assigned any phonetic/semantic value. No readings used. Pure structural first-digit statistics of the quantities. L2/L3 only.",
+  "deviations": []
+}
