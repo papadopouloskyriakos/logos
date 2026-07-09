@@ -1,0 +1,73 @@
+{
+  "task_id": "EPOCH-071",
+  "method": "Cross-site word-form recurrence mass S = sum over multi-sign word-TYPES of max(0, n_distinct_sites - 1), tested against a token->site reassignment null that preserves BOTH word-form frequencies AND per-site token totals (sequential hypergeometric contingency sampling, exact marginal-preserving). perm p = frac(null S >= observed S), one-sided, 2000 draws. Computed for libation (Stone vessel) and admin (Tablet+Nodule+Roundel) corpora separately. L2/L3 structural recurrence only; anonymous sign-tuples; no reading/phonetic/meaning.",
+  "result": "Libation (stone-vessel) cross-site word-form recurrence is NOT enriched beyond the frequency+site-size reassignment null (S_obs=20 vs null_mean=32.94, perm_p=1.0, ratio=0.607; observed below the entire null range [24,43]). The famous recurring libation forms (A-TA-I-*301-WA-JA at 5 sites, SI-RU-TE at 5, I-PI-NA-MA at 5, JA-SA-SA-RA-ME at 4, U-NA-KA-NA-SI at 3) recur cross-site, but that recurrence is fully explained by their frequencies and per-site token totals. Admin corpus likewise NOT enriched (S_obs=23 vs null_mean=97.08, perm_p=1.0, ratio=0.237). PC passed (detect power=1.0, false-positive rate=0.0). Both corpora behave alike: cross-site recurrence is a frequency+site-size artifact, not a genuine cross-site formula. Genre-dependent lexicon sharing is NOT observed at the structural word-form level.",
+  "verdict": "LIBATION_FORMULA_SITE_LOCAL_LIKE_ADMIN",
+  "numbers": {
+    "libation": {
+      "n_inscriptions": 99,
+      "n_sites": 14,
+      "S_obs": 20.0,
+      "null_mean": 32.942,
+      "perm_p": 1.0,
+      "ratio": 0.607,
+      "n_multisite_forms": 7,
+      "total_tokens": 259,
+      "n_forms": 211,
+      "null_S_min": 24.0,
+      "null_S_max": 43.0,
+      "sites_ge20_tokens": 4
+    },
+    "admin": {
+      "n_inscriptions": 1081,
+      "S_obs": 23.0,
+      "null_mean": 97.084,
+      "perm_p": 1.0,
+      "ratio": 0.237,
+      "n_sites": 18,
+      "total_tokens": 948,
+      "n_forms": 651,
+      "n_multisite_forms": 20
+    },
+    "top_forms": [
+      "A-TA-I-*301-WA-JA: 5 sites, count 11",
+      "SI-RU-TE: 5 sites, count 7",
+      "I-PI-NA-MA: 5 sites, count 6",
+      "JA-SA-SA-RA-ME: 4 sites, count 6",
+      "I-DA: 3 sites, count 5",
+      "U-NA-KA-NA-SI: 3 sites, count 4",
+      "JA-JA: 2 sites, count 2"
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.002,
+      "false_pos_rate": 0.0,
+      "power_est": 1.0,
+      "pc_is_synthetic": true,
+      "n_detect_draws": 25,
+      "n_falsepos_draws": 25
+    }
+  },
+  "key_findings": [
+    "Libation (stone-vessel) cross-site word-form recurrence S_obs=20 is BELOW the reassignment-null mean of 32.94 (perm_p=1.0, ratio=0.607); the observed S lies below the entire null range [24,43]. The libation corpus does NOT have a genuine cross-site formula beyond word-form frequency + per-site token totals.",
+    "The famous recurring libation forms (A-TA-I-*301-WA-JA at 5 sites, SI-RU-TE at 5, I-PI-NA-MA at 5, JA-SA-SA-RA-ME at 4, U-NA-KA-NA-SI at 3) recur cross-site, but this recurrence is fully explained by their high frequencies and the site-size distribution (Zakros 128 tokens, Palaikastro 36, Iouktas 33, Syme 20).",
+    "Admin corpus is likewise NOT enriched (S_obs=23 vs null_mean=97.08, perm_p=1.0, ratio=0.237) — consistent with prior E032/E053 findings that administrative vocabulary is site-local.",
+    "Both genres behave alike at the structural word-form level: cross-site recurrence is a frequency+site-size artifact in BOTH corpora. There is NO genre-dependent contrast in lexicon sharing detectable by this metric.",
+    "Positive control passed cleanly: detect power=1.0 (planted formula at all sites, median p=0.002), false-positive rate=0.0 over 25 frequency-only draws (all p>0.05). The machinery is informative.",
+    "The reassignment null preserves both marginals exactly (validated by self-check over 2000+ draws), so the negative is not a power artifact: 4 libation sites have >=20 tokens, and the null range is tight."
+  ],
+  "successor_hypotheses": [
+    "E072: Test whether libation cross-site recurrence becomes enriched under a NULL that preserves only site totals (not form frequencies) — i.e. is the recurrence driven by a restricted form-set (formulaic vocabulary) even if not by cross-site co-occurrence beyond frequency? This separates 'restricted dedicatory lexicon' from 'cross-site formula beyond frequency'.",
+    "E073: Apply the same S + reassignment null to a POSITIONAL/sequential formula metric (fixed sign-sequence at a fixed position in the text, e.g. opening word) rather than bag-of-words recurrence — the libation formula may be positional rather than frequency-anomalous.",
+    "E074: Test genre-dependent sharing with a DIFFERENT null: permute forms WITHIN site (preserving site vocabularies) vs ACROSS sites — to detect whether the libation corpus uses a shared vocabulary SET across sites even if per-form frequencies match the null.",
+    "E075: Restrict the libation analysis to the 4 high-token sites (Zakros, Palaikastro, Iouktas, Syme, each >=20 tokens) and recompute S + null — confirm the negative is not driven by the many 1-2 token sites.",
+    "E076: Compare the libation corpus against other religious/dedicatory supports (Metal object, Stone object, Architecture) pooled, to test whether a broader religious genre shows cross-site formulaic recurrence that the stone-vessel subset alone does not.",
+    "E077: Test a BIGRAM/adjacency recurrence metric (fixed sign-pair sequences across sites) rather than whole-word-form recurrence — formulaic structure may live in sign-pair collocations rather than full word-forms."
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous word-forms (sign tuples, len>=2); genre = physical support field (given, not inferred from text). The token->site reassignment null preserves BOTH each word-form's total count (frequency) AND each site's total token count (site size), breaking only the form<->site association. Therefore any cross-site recurrence in S is beyond frequency + site-size. L2/L3 structural recurrence only: no reading, no phonetic value, no meaning. PC is fully synthetic (stated).",
+  "deviations": [
+    "None. Prereg + plan_hash frozen before global computation. PC synthetic (stated). Machinery self-check passed (marginal preservation + S correctness + detect/false-positive calibration). Used 2000 null draws (>=1000 required)."
+  ]
+}
