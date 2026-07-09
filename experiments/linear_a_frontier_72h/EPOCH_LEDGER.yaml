@@ -2151,3 +2151,79 @@ epochs:
     artifacts: [epochs/EPOCH-090/prereg.md, epochs/EPOCH-090/plan_hash.txt, epochs/EPOCH-090/machinery.py, epochs/EPOCH-090/result.json, epochs/EPOCH-090/COORDINATOR_NOTE.md, reports/EPOCH090_REPORT.md]
     successors_spawned: 5
     substantive: true
+  - epoch_id: EPOCH-091
+    frontier: F11_TURING_MORPHOGENESIS
+    frontier_family: TURING_MORPHOGENESIS
+    priority: IMMEDIATE
+    status: BANKED
+    gate: A
+    name: "Blinded Linear B Turing reaction-diffusion calibration: does graph RD (Schnakenberg/GM, mechanically-verified Turing instability) recover vowel/consonant/role classes from blinded LB co-occurrence graphs, above negative controls?"
+    plan_hash: "a0a843961c89f3eed3714ed4413a715543ca5fc929a5e8776af98b1685ecc71e"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (morphogenesis/scripts/{rd,graphs,evaluate,e091_calibration}.py; frozen copies in the epoch dir). Not GLM/epoch_runner: this is a numpy RD/eigen experiment, not token-labour -- the coordinator authored + independently ran + verified it, which is the more rigorous placement (I am the verifier of the Turing math + the PC). NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "Turing math self-verified two ways: (1) rd.py ring-graph self-test -- Schnakenberg + Gierer-Meinhardt both satisfy cond1-3 and form genuine diffusion-driven patterns (std~0.8); Gray-Scott correctly reports NO nontrivial Turing state on these substrates (honest TURING_MODEL_INVALID, not forced). (2) Planted-Turing positive control fires 5/5 (mean ARI 0.587) on a fresh seed set. The PC INITIALLY FAILED (1/5) and caught a real mode-selection bug in find_Du (band-width-maximization placed instability at high frequency, skipping the community-scale low modes); fixed to an UNSUPERVISED coarsest-mode selection rule (no truth labels) -> PC then fired. See COORDINATOR_NOTE.md. Verdict rests on a calibration-independent fact (equal-diffusion >= full-Turing, same view)."
+    positive_control: "PASSED (5/5, mean ARI 0.587). Planted-Turing block graph (k=3, p_in=0.45, p_out=0.03): the pipeline recovers the planted blocks under the SAME frozen unsupervised selection + low-mode clustering used on real data. detect-power real. The PC's initial 1/5 failure was a genuine detector bug (caught + fixed pre-banking), not a data result -- the discipline working as designed (3rd pre-banking PC catch after E080, E090)."
+    verdict: "TURING_LINEAR_B_RECOVERY_NULL (mechanical) -- a graph reaction-diffusion (Turing) system on blinded Linear B sign graphs does NOT recover phonetic class structure via its diffusion-driven instability above negative controls. Turing conditions verified on Schnakenberg + Gierer-Meinhardt across all 4 graph views; PC fires 5/5. But: best blinded-LB role recovery (FORMULA/GM macro-F1 0.765) is MATCHED/BEATEN by equal-diffusion with the Turing mechanism OFF (0.779, same MULTILAYER machinery) and by degree-preserving rewiring (p95 0.739); vowel recovery is weak (best 0.453, SUBSTITUTION) and consonant ~chance (best 0.195, 8-class). Condition 4 largely FAILS on real LB: |corr(pattern,degree)| = 0.5-0.7 across views -- the emergent pattern tracks node degree, not a morphogenetic class field. So whatever structure is recoverable is GENERIC graph structure, not a diffusion-driven Turing mechanism. L2, opaque sign IDs, no licence earned. Directly consistent with the EPOCH-016 SBI prior (generic clustering ties/beats fancy methods on this corpus)."
+    numbers: {pc_recovered: "5/5", pc_mean_ari: 0.587, best_role_f1: 0.765, best_role_view: "FORMULA/GiererMeinhardt", best_vowel_f1: 0.453, best_vowel_view: "SUBSTITUTION/Schnakenberg", best_consonant_f1: 0.195, equal_diffusion_role_f1: 0.779, reaction_only_role_f1: 0.494, rewire_role_p95: 0.739, perm_role_p95: 0.579, perm_role_p: 0.930, deg_corr_range: "0.19-0.71", n_nodes: 88, n_views: 4, reactions_valid: "Schnakenberg,GiererMeinhardt", gray_scott: "TURING_MODEL_INVALID_on_substrate"}
+    layer: L2
+    licences_changed: none
+    la_touched: false
+    dichotomy_side: BOUNDED_NEGATIVE
+    scope: "Calibration NULL on blinded LINEAR B (LA not touched). Establishes that the Turing/graph-RD morphogenesis channel, as a MECHANISM, buys nothing over equal-diffusion / degree-preserving nulls even on the readable control script -- a bounded negative that PRE-GATES the whole F11 family: E092 (specificity) is now strongly pre-informed toward GENERIC_GRAPH_CLUSTERING, and E096 (frozen LA) is only reached if a downstream epoch finds a genuinely Turing-specific advantage. Increments the bounded-negative bucket (20 -> 21). Also a PROCESS finding: the PC caught a detector bug pre-banking (find_Du band-maximization), the 3rd calibration lesson (E080 conditional null, E090 anti-conservative bootstrap, E091 wrong-wavelength mode selection)."
+    committed_prediction: "modal TURING_LINEAR_B_RECOVERY_SUPPORTED / _PARTIAL / _NULL / _NO_POWER / TURING_MODEL_INVALID; EPOCH-016 SBI prior pre-registered a _NULL/GENERIC outcome as the live expectation. OUTCOME = _NULL, as the prior predicted: the diffusion-driven instability does not beat equal-diffusion. Prediction earned: fancy dynamics do not add recovery power over generic graph structure on this corpus."
+    deviations: ["PRE-BANKING PC FIX: the positive control initially failed 1/5 and caught a real find_Du mode-selection bug (band-width-maximization -> high-frequency instability skipping the community-scale low modes). Fixed to an UNSUPERVISED coarsest-unstable-mode selection (minimize smallest nonzero unstable lambda, narrowest band; no truth labels). PC then fired 5/5. Documented in COORDINATOR_NOTE.md; NOT a result revision (the detector was broken, so the pre-fix real-data arm was uninterpretable by construction).", "Gray-Scott kept in the registry but reports no valid Turing state on these substrates (honest TURING_MODEL_INVALID); >=2 valid families (Schnakenberg, GM) satisfy the prereg requirement.", "DĀMOS LB is licensed-derived; scripts committed, no raw corpus redistributed."]
+    non_circular: "Blinded: signs mapped to opaque integer IDs before any graph is built; phonetic values used ONLY to build held-out truth labels (vowel/consonant/role from CV structure), never seen by the model. Model selection is UNSUPERVISED (frozen spectral rule, no truth). Model and every negative control use identical k, identical selection, identical clustering. The verdict rests on a calibration-independent same-view fact (equal-diffusion >= full-Turing) + a mechanism ablation (reaction-only, degree-rewiring, label-permutation). Coordinator authored + ran + verified the Turing conditions and the PC from scratch."
+    architecture_note: "First TURING_MORPHOGENESIS epoch (F11 family E091-E096), inserted as an IMMEDIATE priority into the live 72h campaign. A rigorously-built graph reaction-diffusion harness (verified Turing instability conditions, not generic clustering relabeled as morphogenesis) that returns a clean bounded NEGATIVE on blinded LB: the Turing mechanism adds nothing over equal-diffusion. The PC discipline caught + fixed a detector bug pre-banking (3rd such catch). This pre-gates the family: E092 formalizes the specificity NULL vs baselines; E093 (degradation surface) + E094 (segmentation) + E095 (geographic) remain worth running as DISTINCT channels (different graphs/tasks), but E096 (frozen LA) is gated on a downstream Turing-specific positive that E091 makes unlikely. Finalization remains BLOCKED (clock, not epoch count)."
+    artifacts: [epochs/EPOCH-091/prereg.md, epochs/EPOCH-091/plan_hash.txt, epochs/EPOCH-091/rd.py, epochs/EPOCH-091/graphs.py, epochs/EPOCH-091/evaluate.py, epochs/EPOCH-091/e091_calibration.py, epochs/EPOCH-091/result.json, epochs/EPOCH-091/COORDINATOR_NOTE.md, morphogenesis/PREREGISTRATION.md]
+    successors_spawned: 5
+    substantive: true
+  - epoch_id: EPOCH-092
+    frontier: F11_TURING_MORPHOGENESIS
+    frontier_family: TURING_MORPHOGENESIS
+    priority: IMMEDIATE
+    status: RESERVED_ACTIVE
+    gate: A
+    name: "Turing-specificity: is any LB recovery due to diffusion-driven morphogenesis vs generic graph clustering (spectral/SBM/community/GMM/GNN/linear-diffusion/equal-diffusion/reaction-only), search-adjusted?"
+    prereg: morphogenesis/PREREGISTRATION.md
+    reserved: 2026-07-09
+    substantive: pending
+  - epoch_id: EPOCH-093
+    frontier: F11_TURING_MORPHOGENESIS
+    frontier_family: TURING_MORPHOGENESIS
+    priority: IMMEDIATE
+    status: RESERVED_ACTIVE
+    gate: A
+    name: "LB->LA degradation surface: >=100-cell factorial degradation of LB toward Linear-A-like conditions; locate the LA operating point vs the Turing detection threshold."
+    prereg: morphogenesis/PREREGISTRATION.md
+    reserved: 2026-07-09
+    substantive: pending
+  - epoch_id: EPOCH-094
+    frontier: F11_TURING_MORPHOGENESIS
+    frontier_family: TURING_MORPHOGENESIS
+    priority: IMMEDIATE
+    status: RESERVED_ACTIVE
+    gate: A
+    name: "Sequence/segmentation/formula morphogenesis: RD over position graphs; recover word/morpheme/formula/entry boundaries in blinded LB vs DP/Bayesian/MDL/finite-state/random; freeze before LA."
+    prereg: morphogenesis/PREREGISTRATION.md
+    reserved: 2026-07-09
+    substantive: pending
+  - epoch_id: EPOCH-095
+    frontier: F11_TURING_MORPHOGENESIS
+    frontier_family: TURING_MORPHOGENESIS
+    priority: IMMEDIATE
+    status: RESERVED_ACTIVE
+    gate: A/E
+    name: "Geographic/scribal/regional morphogenesis: RD over site/phase/scribe/genre/allograph graphs; LB calibration with provenance/font/site-doc/genre/freq controls, then frozen LA."
+    prereg: morphogenesis/PREREGISTRATION.md
+    reserved: 2026-07-09
+    substantive: pending
+  - epoch_id: EPOCH-096
+    frontier: F11_TURING_MORPHOGENESIS
+    frontier_family: TURING_MORPHOGENESIS
+    priority: IMMEDIATE
+    status: RESERVED_ACTIVE
+    gate: A/C
+    name: "Frozen Linear A application: only families/params that passed E091 calibration + E092 specificity gate; anonymous classes / segmentation / regional classes at L2/L3; held-out LOSO/formula/frequency-band; NO sound values."
+    prereg: morphogenesis/PREREGISTRATION.md
+    reserved: 2026-07-09
+    substantive: pending

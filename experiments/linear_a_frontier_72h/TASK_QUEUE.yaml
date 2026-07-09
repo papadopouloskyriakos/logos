@@ -1,5 +1,7 @@
 # TASK_QUEUE — dynamic; re-ranked at every epoch end; duplicates of closed methods rejected
 queue:
+  - {rank: 0, frontier: F11, family: TURING_MORPHOGENESIS, priority: IMMEDIATE, status: ACTIVE, task: "EPOCH-091: blinded Linear B Turing RD calibration — verify Turing instability, recover vowel/consonant/role classes from G_POSITION/G_SUBSTITUTION/G_FORMULA/G_MULTILAYER, PC (planted-Turing) + negatives (rewiring/label-perm/equal-diffusion/reaction-only), mechanical verdict", gate: "A"}
+  - {rank: 0, frontier: F11, family: TURING_MORPHOGENESIS, priority: IMMEDIATE, status: RESERVED, task: "EPOCH-092..096: specificity vs baselines / degradation surface / segmentation / geographic / frozen LA (see morphogenesis/PREREGISTRATION.md)", gate: "A"}
   - {rank: 1, frontier: F8/F1, task: "EPOCH-001: Ariadne-2025 Anetaki source-acquisition — audit what the published preliminary overview actually contains (5 inscriptions KN Zg 55-58 incl. scepter faces), extract machine-readable candidates, verify vs J1 exposure audit, integrate or source-block; measure genuinely-new information", gate: "B/H"}
   - {rank: 2, frontier: F2, task: "GORILA-plate stroke recovery pilot: can manual stroke graphs be built for a 10-sign A-only sample from published drawings? licensing + representation + known-script calibration design", gate: "C"}
   - {rank: 3, frontier: F3, task: "higher-order substitution motifs on opaque LB: do 3-sign context motifs recover same-C classes where flat neighborhoods failed cross-script?", gate: "A"}

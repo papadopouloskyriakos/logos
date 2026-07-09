@@ -1,0 +1,413 @@
+{
+ "views": {
+  "POSITION": {
+   "n": 88,
+   "reactions": {
+    "Schnakenberg": {
+     "ratio": 20,
+     "Du": 1.4206056814261467,
+     "Dv": 28.412113628522935,
+     "min_unstable_lam": 0.46353562299751505,
+     "n_unstable": 1,
+     "low_modes": [
+      1
+     ],
+     "deg_corr": 0.5697161399194792,
+     "metrics": {
+      "role": {
+       "ari": 0.024158757549611776,
+       "nmi": 0.04627438100651559,
+       "macro_f1": 0.568627450980392,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.012595085667467244,
+       "nmi": 0.12948363555376796,
+       "macro_f1": 0.30134057971014494,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.05839707349517793,
+       "nmi": 0.44393250852140054,
+       "macro_f1": 0.17023254523254525,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    },
+    "GiererMeinhardt": {
+     "ratio": 10,
+     "Du": 1.0802201676641956,
+     "Dv": 10.802201676641957,
+     "min_unstable_lam": 0.46353562299751505,
+     "n_unstable": 1,
+     "low_modes": [
+      1
+     ],
+     "deg_corr": 0.25426539193169495,
+     "metrics": {
+      "role": {
+       "ari": -0.013568843087999638,
+       "nmi": 0.0002655519325437766,
+       "macro_f1": 0.48942541643271564,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.07134858422652372,
+       "nmi": 0.1635092838012626,
+       "macro_f1": 0.3037724746649232,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.03328450043949604,
+       "nmi": 0.41183131009871965,
+       "macro_f1": 0.18635191968525303,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    }
+   }
+  },
+  "SUBSTITUTION": {
+   "n": 88,
+   "reactions": {
+    "Schnakenberg": {
+     "ratio": 40,
+     "Du": 0.9419582372840183,
+     "Dv": 37.67832949136073,
+     "min_unstable_lam": 0.7742690019689151,
+     "n_unstable": 1,
+     "low_modes": [
+      1
+     ],
+     "deg_corr": 0.19144974999280467,
+     "metrics": {
+      "role": {
+       "ari": -0.002376323179952539,
+       "nmi": 0.020525096770080378,
+       "macro_f1": 0.5256064690026954,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.0874204417821041,
+       "nmi": 0.2161304642120104,
+       "macro_f1": 0.4526705102677643,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.014620298083747336,
+       "nmi": 0.3871863098986054,
+       "macro_f1": 0.1557030932030932,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    },
+    "GiererMeinhardt": {
+     "ratio": 40,
+     "Du": 0.9419582372840183,
+     "Dv": 37.67832949136073,
+     "min_unstable_lam": 0.7742690019689151,
+     "n_unstable": 2,
+     "low_modes": [
+      1,
+      2
+     ],
+     "deg_corr": 0.46782015705144236,
+     "metrics": {
+      "role": {
+       "ari": 0.14692058346839548,
+       "nmi": 0.056684970212148376,
+       "macro_f1": 0.6158730158730159,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.06175861419694971,
+       "nmi": 0.19033279503350367,
+       "macro_f1": 0.3391222570532916,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.03358778625954198,
+       "nmi": 0.3874252619939472,
+       "macro_f1": 0.19454064454064454,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    }
+   }
+  },
+  "FORMULA": {
+   "n": 88,
+   "reactions": {
+    "Schnakenberg": {
+     "ratio": 40,
+     "Du": 1.0802201676641956,
+     "Dv": 43.20880670656783,
+     "min_unstable_lam": 0.6801954518334953,
+     "n_unstable": 1,
+     "low_modes": [
+      1
+     ],
+     "deg_corr": 0.7121624665385781,
+     "metrics": {
+      "role": {
+       "ari": -0.03006773500743439,
+       "nmi": 0.03793263632090496,
+       "macro_f1": 0.3925448688449149,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": -0.03898364079359556,
+       "nmi": 0.03214941402393928,
+       "macro_f1": 0.19770601752025901,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.05978378378378378,
+       "nmi": 0.42363870034993917,
+       "macro_f1": 0.161903117458673,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    },
+    "GiererMeinhardt": {
+     "ratio": 40,
+     "Du": 1.0802201676641956,
+     "Dv": 43.20880670656783,
+     "min_unstable_lam": 0.6801954518334953,
+     "n_unstable": 2,
+     "low_modes": [
+      1,
+      2
+     ],
+     "deg_corr": 0.6262355629567334,
+     "metrics": {
+      "role": {
+       "ari": 0.3679909194097617,
+       "nmi": 0.227951794455577,
+       "macro_f1": 0.7645484949832775,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.023998647963495,
+       "nmi": 0.11695771315910973,
+       "macro_f1": 0.27610898905016545,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.030094043887147332,
+       "nmi": 0.36435204085908746,
+       "macro_f1": 0.14794513765102002,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    }
+   }
+  },
+  "MULTILAYER": {
+   "n": 88,
+   "reactions": {
+    "Schnakenberg": {
+     "ratio": 20,
+     "Du": 0.9419582372840183,
+     "Dv": 18.839164745680364,
+     "min_unstable_lam": 0.7007318906181627,
+     "n_unstable": 2,
+     "low_modes": [
+      1,
+      2
+     ],
+     "deg_corr": 0.5567290820172391,
+     "metrics": {
+      "role": {
+       "ari": -0.014425945007863709,
+       "nmi": 0.0118151055271613,
+       "macro_f1": 0.42633637548891784,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.06769186317158131,
+       "nmi": 0.15477259484371095,
+       "macro_f1": 0.4207674705157543,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.005614035087719294,
+       "nmi": 0.3625660071826762,
+       "macro_f1": 0.13771428517805331,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    },
+    "GiererMeinhardt": {
+     "ratio": 40,
+     "Du": 1.0802201676641956,
+     "Dv": 43.20880670656783,
+     "min_unstable_lam": 0.7007318906181627,
+     "n_unstable": 1,
+     "low_modes": [
+      1
+     ],
+     "deg_corr": 0.5783849525215613,
+     "metrics": {
+      "role": {
+       "ari": 0.23615213067325652,
+       "nmi": 0.1164303615283908,
+       "macro_f1": 0.6748979195022361,
+       "n": 88,
+       "n_classes": 2
+      },
+      "vowel": {
+       "ari": 0.010130555753727588,
+       "nmi": 0.12386460033106489,
+       "macro_f1": 0.2815373864430468,
+       "n": 66,
+       "n_classes": 5
+      },
+      "consonant": {
+       "ari": 0.025940212150433944,
+       "nmi": 0.38948780988559606,
+       "macro_f1": 0.19353351327035537,
+       "n": 66,
+       "n_classes": 18
+      }
+     }
+    }
+   }
+  }
+ },
+ "positive_control": {
+  "runs": [
+   {
+    "recovered": true,
+    "ari": 0.4849220488216486,
+    "turing_ok": true
+   },
+   {
+    "recovered": true,
+    "ari": 0.45870587709725386,
+    "turing_ok": true
+   },
+   {
+    "recovered": true,
+    "ari": 0.9370800815030084,
+    "turing_ok": true
+   },
+   {
+    "recovered": true,
+    "ari": 0.5664096001569803,
+    "turing_ok": true
+   },
+   {
+    "recovered": true,
+    "ari": 0.488847270093862,
+    "turing_ok": true
+   }
+  ],
+  "n_recovered": 5,
+  "mean_ari": 0.5871929755345506
+ },
+ "negative_controls": {
+  "equal_diffusion": {
+   "role_f1": 0.7794486215538847,
+   "vowel_f1": 0.3494284484121145,
+   "cond3": false
+  },
+  "reaction_only": {
+   "role_f1": 0.49425287356321834,
+   "vowel_f1": 0.2464896214896215
+  },
+  "label_permutation_role": {
+   "real_f1": 0.42633637548891784,
+   "null_p95": 0.5793133420252065,
+   "null_mean": 0.4891266486290167,
+   "p_value": 0.93
+  },
+  "label_permutation_vowel": {
+   "real_f1": 0.4207674705157543,
+   "null_p95": 0.34994017632930674,
+   "null_mean": 0.28566969262055336,
+   "p_value": 0.0
+  },
+  "degree_rewiring_role": {
+   "mean_f1": 0.5946696878676299,
+   "p95_f1": 0.7388062973576909,
+   "n": 20
+  }
+ },
+ "config": {
+  "reactions": [
+   "Schnakenberg",
+   "GiererMeinhardt"
+  ],
+  "ratios": [
+   10,
+   20,
+   40
+  ],
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "k_for": {
+   "role": 2,
+   "vowel": 5,
+   "consonant": 8
+  },
+  "min_count": 3
+ },
+ "best_real": {
+  "role": {
+   "macro_f1": 0.7645484949832775,
+   "ari": 0.3679909194097617,
+   "view": "FORMULA",
+   "reaction": "GiererMeinhardt"
+  },
+  "vowel": {
+   "macro_f1": 0.4526705102677643,
+   "ari": 0.0874204417821041,
+   "view": "SUBSTITUTION",
+   "reaction": "Schnakenberg"
+  },
+  "consonant": {
+   "macro_f1": 0.19454064454064454,
+   "ari": 0.03358778625954198,
+   "view": "SUBSTITUTION",
+   "reaction": "GiererMeinhardt"
+  }
+ },
+ "verdict": "TURING_LINEAR_B_RECOVERY_NULL",
+ "rationale": "Blinded LB recovery (role macro-F1 0.765) does not separate from the negative controls (perm p95 0.579 p=0.930, rewire p95 0.739, equal-diffusion 0.779). Consistent with the EPOCH-016 prior that generic structure, not a Turing mechanism, drives any apparent recovery.",
+ "runtime_sec": 27.1,
+ "layer": "L2",
+ "licences_changed": "none",
+ "plan_hash": "a0a843961c89f3eed3714ed4413a715543ca5fc929a5e8776af98b1685ecc71e",
+ "epoch_id": "EPOCH-091",
+ "code_manifest": {
+  "rd.py": "83e8aceb138d579f",
+  "graphs.py": "4da0747b23dc21cd",
+  "evaluate.py": "19121219000b01fd",
+  "e091_calibration.py": "f3ff145ea875e285"
+ }
+}

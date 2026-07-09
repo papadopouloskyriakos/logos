@@ -46,3 +46,22 @@
   (does not overturn) the MISSPEC ROBUST read. No support gained for SBI as an F9 architecture upgrade
   at LA's operating scale; F9 stays ACTIVE. LA never loaded (grep-verified); L2 ceiling; no licences
   touched. Report: reports/EPOCH016_SBI_PILOT.md · 7 ranked successors.
+
+- PRIORITY INSERTION — TURING_MORPHOGENESIS family (F11, E091-E096) inserted as IMMEDIATE into the live 72h
+  campaign (finalization gate untouched, BLOCKED by clock). Reserved E091-E096 in the ledger/FRONTIER_MAP/
+  TASK_QUEUE BEFORE running; parent prereg morphogenesis/PREREGISTRATION.md frozen (graph reaction-diffusion
+  activator-inhibitor du/dt=f-Du.L.u, Schnakenberg + Gierer-Meinhardt; Gray-Scott honestly reports no valid
+  Turing state on these substrates; Turing instability conditions 1-4 verified mechanically per run, else
+  TURING_MODEL_INVALID). Hard gate: no absolute sound values / translations / language-ID from internal
+  morphogenesis patterns (L2 ceiling, brief §11).
+- EPOCH-091 BANKED (91 epochs; min 18 already met, but finalization stays BLOCKED on the clock, not the count).
+  Blinded LB Turing calibration. VERDICT TURING_LINEAR_B_RECOVERY_NULL. Positive control fires 5/5 (mean ARI
+  0.587) AFTER it initially failed 1/5 and caught a real find_Du mode-selection bug (band-width-maximization
+  put the instability at high frequency, skipping the community-scale low modes) -> fixed to an UNSUPERVISED
+  coarsest-mode selection (no truth labels); 3rd pre-banking PC catch (E080, E090, E091). On blinded LB the
+  Turing MECHANISM buys nothing: best role macro-F1 0.765 (FORMULA/GM) is matched/beaten by equal-diffusion
+  0.779 (mechanism OFF, same view) + degree-rewiring p95 0.739; vowel weak (0.453), consonant ~chance (0.195);
+  |corr(pattern,degree)| 0.5-0.7 (condition 4 fails on real LB) -> recovery is generic graph structure, not
+  morphogenesis. Consistent with the EPOCH-016 SBI prior. L2, LA not touched, no licence. Pre-gates the family:
+  E092 (specificity vs baselines) next; E096 (frozen LA) only if a downstream epoch finds a Turing-specific
+  advantage. Coordinator ran it directly (numpy RD/eigen experiment, not GLM token-labour). 5 successors.
