@@ -1,14 +1,19 @@
 # Strong Leads and Failed Replications (§12.5)
 
-Machine-readable: `STRONG_LEADS.json`. Triage classes: A STRONG_LEAD · B COMPLETION_REQUIRED ·
-C INTERESTING_BUT_NONDECISIVE · D CLOSED_OR_DUPLICATIVE.
+Machine-readable: `STRONG_LEADS.json` (narrative lead entry labelled `"source": "curated"`; counts generated).
+Triage classes: A STRONG_LEAD · B COMPLETION_REQUIRED · C INTERESTING_BUT_NONDECISIVE · D CLOSED_OR_DUPLICATIVE.
+Reflects the terminal audit remediation (E103R/E104R).
 
 ## A — STRONG_LEAD (adjudicated)
 
-### LEAD-A-PREFIX — A- positional prefix slot → **GRADUATED (REPLICATED_RELATIVE_CONSTRAINT)**
-Originating epochs E022/E023/E024, adjudicated E103. Survives held-out (site/support/chronology/segmentation) +
-matched adaptive null + campaign-wide null (E104). Dependency-adjusted independent channels = 1. **Does NOT graduate
-to a value** (E102 gate fails). Final verdict: the campaign's one graduated relative finding. See
+### LEAD-A-INITIAL — recurrent A-initial positional enrichment → **GRADUATED (REPLICATED_RELATIVE_CONSTRAINT)**
+Originating epochs E022/E023/E024, adjudicated E103 (verdict class unchanged under the corrected categorical joint
+null, E103R). Survives held-out (site/support/chronology/segmentation-variant) + matched adaptive null +
+campaign-wide null (pilot E104; bound-based certification E104R: 1/400 false graduation, CP95 upper 1.18%).
+The segmentation axis is robustness across three overlapping variants of a single corpus lineage, not independent
+replication. Dependency-adjusted independent channels = 1. **Does NOT graduate to a value** (E102 gate fails);
+compatible with a recurrent initial functional or morphological slot — prefixhood, productivity, sound, and
+meaning are not established. Final verdict: the campaign's one graduated relative finding. See
 `GRADUATED_FINDINGS.md`.
 
 *This was the only lead meeting the A bar. All others below are C/D — real, informative, but non-decisive or closed.*
@@ -17,10 +22,10 @@ to a value** (E102 gate fails). Final verdict: the campaign's one graduated rela
 
 | lead | originating | verdict | why it did not graduate |
 |---|---|---|---|
-| **Vowel-class signal** | E017/E091/E098/E099/E100/E102 | `DEPENDENCY_ARTIFACT` (as *multi-channel*) / `CONDITIONAL_SIGNAL_ONLY` (as LB-only) | 5 "methods" share one context-co-occurrence lineage (agree ARI 0.979); the independent positional channel is null (0.044). Real but single-channel; **LA-untestable**. E099 proves it is frequency-*invariant* (not an artifact) — but only on LB. |
+| **Vowel-class signal** | E017/E091/E098/E099/E100/E102 | `DEPENDENCY_ARTIFACT` (as *multi-channel*) / `CONDITIONAL_SIGNAL_ONLY` (as LB-only) | 5 "methods" share one context-co-occurrence lineage (recorded pair eigenmap\|ICA ARI 0.979; the others recover the same lineage in their own epochs); the independent positional channel is null (ARI 0.043–0.046). Real but single-channel; **LA-untestable**. E099 proves it is frequency-*invariant* (not an artifact) — but only on LB. |
 | **Cross-script substitution bridge** | E002/E003 | `FAILED_REPLICATION` at LA scale | C-axis largely order-free; no finite anchor budget 3–30 Holm-survives at f_LA; anchor *geometry* is the bottleneck, not corpus. CTRL power survives → detector fine. |
 | **SBI / new architectures** | E016 | `GENERIC_UNDER_NULL` | matches but never beats raw-cosine spectral clustering at any anchor budget; large sim-to-real gap; OOD detector low-power. |
-| **Turing morphogenesis** | E091–E096 | `GENERIC_UNDER_NULL` | equal-diffusion control ties full Turing; generic clustering matches/beats it on every channel; segmentation + geographic NULL. |
+| **Turing morphogenesis** | E091–E095 (+ E096 de-authorized) | `GENERIC_UNDER_NULL` | equal-diffusion control ties full Turing; generic clustering matches/beats it on every channel; segmentation + geographic NULL. E096 (frozen-LA application) is terminal `DE_AUTHORIZED` — its calibration-gate precondition failed, so it carries no verdict of its own. |
 | **Belief propagation / ECC** | E097 | `FAILED_REPLICATION` (LA) | calibrates on LB but forward-bigram beats BP on real LA; loopy BP actively harmful. |
 | **Potts spin-glass identifiability** | E098 | `CONFOUND_EXPLAINED` | near-unique energy landscape but *orthogonal* to vowel classes; true anchors conflict with couplings (determined-but-wrong). |
 | **Topological persistence** | E100 | `GENERIC_UNDER_NULL` | persistent communities exist + inventory-stable but not linguistic; vowel signal is diffuse, not cluster-separated. |

@@ -6,21 +6,29 @@
   "end_utc": "2026-07-09",
   "planned_deadline_utc": "2026-07-11T03:20Z (waived by closure instruction)",
   "final_epoch": "EPOCH-105",
-  "completed_epochs": 105,
+  "final_commit": "92f91a6",
+  "epochs_unique": 105,
+  "ledger_rows_append_only": 120,
+  "terminal_epochs": 105,
+  "completed_epochs": 101,
+  "de_authorized_epochs": [
+    "EPOCH-096"
+  ],
   "blocked_epochs": 0,
   "cancelled_epochs": 0,
   "reserved_unexecuted_epochs": 0,
   "graduated_findings_count": 1,
   "strong_leads_adjudicated": 1,
-  "highest_licence": "none (all LA transfer licences NOT_EARNED)",
+  "highest_licence": "none (all LA transfer licences NOT_EARNED, LICENCE_STATE.json as_of 2026-07-08)",
   "highest_claim_layer": "L3",
   "bucket_tally_generated": {
-    "OTHER": 11,
-    "POSITIVE_RELATIVE": 31,
-    "BOUNDED_NEGATIVE": 40,
+    "OTHER": 21,
+    "POSITIVE_RELATIVE": 33,
+    "BOUNDED_NEGATIVE": 27,
     "PROSPECTIVE_SEAL": 1,
-    "QUALIFICATION": 5,
-    "SITE_LOCAL": 15,
+    "SITE_LOCAL": 16,
+    "QUALIFICATION": 4,
+    "DE_AUTHORIZED": 1,
     "METHODOLOGY": 2
   },
   "layer_tally_generated": {
@@ -30,6 +38,11 @@
     "L1": 9,
     "L3": 8,
     "NA": 2
+  },
+  "status_tally_generated": {
+    "BANKED(implicit)": 90,
+    "BANKED": 14,
+    "DE_AUTHORIZED": 1
   },
   "duplicate_ledger_entries_append_only": {
     "EPOCH-003": 2,
@@ -42,8 +55,10 @@
     "EPOCH-009": 2,
     "EPOCH-012": 3,
     "EPOCH-014": 2,
-    "EPOCH-013": 3
+    "EPOCH-013": 3,
+    "EPOCH-103": 2,
+    "EPOCH-104": 2
   },
-  "review_bundle_path": "experiments/linear_a_frontier_72h/final/review_bundle/",
-  "final_commit": "cd98259e2a1a1c021d36b9bc1a9759cdfe8381e1"
+  "remediation": "terminal audit remediation pass 2026-07-09: E103R (corrected categorical joint maxT; verdict class unchanged) + E104R (bound-based certification, CAMPAIGN_NULL_GATES_CERTIFIED); closure layer regenerated under the corrected generator.",
+  "review_bundle_path": "experiments/linear_a_frontier_72h/final/review_bundle/"
 }

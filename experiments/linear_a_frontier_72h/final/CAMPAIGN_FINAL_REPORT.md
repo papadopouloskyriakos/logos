@@ -79,7 +79,7 @@ What the campaign *did* produce is durable and honest:
 - **Final epoch count:** 105 (E001–E105; append-only ERRATUM/SUPERSEDING duplicates for 11 epochs in the
   E002–E014 range — E005 and E011 have none — plus the E103R/E104R remediation records, all preserved in the
   ledger: 120 rows for 105 unique epochs).
-- **Branch:** `research/linear-a-frontier-72h` · **commit range:** `c1f089e` (scaffold) … `8924463` (the
+- **Branch:** `research/linear-a-frontier-72h` · **commit range:** `c1f089e` (scaffold) … `92f91a6` (the
   remediation content close; also stamped as `final_commit` in `CAMPAIGN_FINAL_STATE.json`; original pre-remediation
   closure commit `cd98259` is recorded in the `CAMPAIGN_COMPLETE` marker; a packaging stamp commit follows).
 

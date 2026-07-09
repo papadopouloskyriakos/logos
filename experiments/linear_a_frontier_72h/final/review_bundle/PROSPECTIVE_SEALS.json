@@ -4,16 +4,18 @@
     {
       "seal_id": "FRACTION_ORDER_ANETAKI_SEAL",
       "epoch": "E004",
+      "frozen_prediction_source": "curated summary; authoritative content is the hashed seal JSON",
       "frozen_prediction": "25-claim pairwise fraction-value ordering (Corpus-derived, Corazza-independent); sharpest: H>K and A>B (anti-frequency, contra Corazza uncertain-tier).",
       "opening_event": "publication of the UNPUBLISHED Anetaki II face-delta six-fraction sequence",
       "success_criterion": "mechanical scorer beats the Corazza comparator on the held-out ordering",
       "status": "FROZEN_UNOPENED",
-      "plan_hash": "da6e0248...",
+      "plan_hash": "da6e024832d2dc75f1c2ecf91ce36179fa425671def15220736cfe724a4ba4ef",
       "manifest": "experiments/linear_a_frontier_72h/data/seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256"
     },
     {
       "seal_id": "CROSS_BRANCH_IMPORTED",
       "epoch": "(other branches)",
+      "frozen_prediction_source": "curated cross-reference",
       "frozen_prediction": "M_ANETAKI_LATTICE_DELTA_SEAL + relphono SEAL_2/SEAL_3 (anchor-lattice / relative-phonology branches) \u2014 referenced, not re-frozen here.",
       "opening_event": "Ariadne-2025 Anetaki full edition ingest",
       "status": "FROZEN_ELSEWHERE"

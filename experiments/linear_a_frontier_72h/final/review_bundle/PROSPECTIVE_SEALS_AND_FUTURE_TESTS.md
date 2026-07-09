@@ -1,7 +1,8 @@
 # Prospective Seals and Future Tests (§8.4 / §12.8)
 
-Machine-readable: `PROSPECTIVE_SEALS.json`. A prospective seal is a *frozen, hashed* prediction that can only be
-scored against evidence not available at freeze time — the Linear-B-new-tablet standard.
+Machine-readable: `PROSPECTIVE_SEALS.json` (curated summary fields labelled; the authoritative seal content is the
+hashed seal JSON). A prospective seal is a *frozen, hashed* prediction that can only be scored against evidence not
+available at freeze time — the Linear-B-new-tablet standard.
 
 ## SEAL-1 — FRACTION_ORDER_ANETAKI_SEAL (E004) · **FROZEN, UNOPENED**
 - **seal_id:** FRACTION_ORDER_ANETAKI_SEAL · **plan_hash:** da6e0248… · **manifest:**
@@ -23,10 +24,13 @@ scored against evidence not available at freeze time — the Linear-B-new-tablet
 ## Future tests defined but not yet runnable
 | test | opening condition | expected equivalence-class reduction |
 |---|---|---|
-| A- slot vs newly-excavated inscriptions | any new LA admin inscription | confirms/refutes the graduated finding prospectively (highest-value) |
-| second-channel independence (stroke/palaeography) | GORILA-plate contour acquisition | could raise n_independent_channels 1→2 → re-opens the absolute-value gate |
+| A-initial enrichment vs newly-excavated inscriptions | any new LA admin inscription | confirms/refutes the graduated finding prospectively (highest-value) |
+| second-channel independence (stroke/palaeography) | GORILA-plate contour acquisition | could raise n_independent_channels 1→2 → re-opens the absolute-value gate (necessary, not sufficient, for value assignment) |
 | FRACTION_ORDER scoring | Anetaki II publication | tests a committed relative fraction ordering against unseen data |
 
 ## Verification for reviewers
-All seal hashes are in `data/seals/*.manifest.sha256` and are reproduced in `INTEGRITY_AND_REPRODUCIBILITY.md`.
-None may be opened by the campaign; opening is an external event.
+The seal hash manifest is `data/seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256` in the branch; the review
+bundle carries a byte-identical copy at `seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256` together with the five
+files it references, so from the bundle root run
+`sha256sum -c seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256`. None of the seals may be
+opened by the campaign; opening is an external event.

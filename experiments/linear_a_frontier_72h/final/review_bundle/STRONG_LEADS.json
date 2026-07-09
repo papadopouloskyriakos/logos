@@ -2,23 +2,25 @@
   "count": 1,
   "leads": [
     {
-      "lead_id": "LEAD-A-PREFIX",
+      "source": "curated",
+      "lead_id": "LEAD-A-INITIAL",
       "originating_epochs": [
         "E022",
         "E023",
         "E024",
-        "E103"
+        "E103",
+        "E103R"
       ],
-      "exact_claim": "A- is a productive corpus-wide word-initial positional prefix SLOT in LA administrative words (len>=2).",
+      "exact_claim": "In Linear A administrative units of >=2 signs, the sign A occupies initial position far above its within-unit multiset expectation \u2014 a recurrent A-initial positional enrichment (anonymous slot). Prefixhood, productivity, sound, and meaning are not established.",
       "claim_layer": "L2/L3",
       "classification": "A_STRONG_LEAD",
-      "adjudication_verdict": "REPLICATED_RELATIVE_CONSTRAINT",
+      "adjudication_verdict": "REPLICATED_RELATIVE_CONSTRAINT (E103; verdict class unchanged under the corrected categorical maxT, E103R)",
       "held_out": "cross-site 9/10 (E023) + support 5/6 + chronological 4/4 (E024)",
-      "adaptive_null": "p=.0002 best-of-72 maxT (E022); campaign-wide null 0.5% false-grad (E104)",
-      "segmentation_robust": "3/3 schemes, z~17 dominant (E103)",
+      "adaptive_null": "p=.0002 best-of-72 maxT (E022); campaign-wide null CERTIFIED: 1/400 false graduation, one-sided exact CP95 upper bound 1.18% (E104R; the original E104 1/200 run is a pilot)",
+      "segmentation_robust": "3/3 overlapping segmentation/selection variants from a single corpus lineage, z~17 dominant (E103R); robustness, not independent replication",
       "dependency_adjusted_independent_channels": 1,
       "graduates_to_value": false,
-      "note": "Graduates as a RELATIVE structural constraint only; NO phonetic value (E102 absolute-value gate fails: single independent channel)."
+      "note": "Graduates as a RELATIVE structural constraint only; NO phonetic value (E102 absolute-value gate fails: single independent channel). Compatible with a recurrent initial functional or morphological slot; prefixhood, productivity, sound, and meaning are not established."
     }
   ]
 }

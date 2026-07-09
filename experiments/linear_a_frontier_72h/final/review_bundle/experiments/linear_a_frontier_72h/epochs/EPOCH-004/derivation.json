@@ -1,0 +1,652 @@
+{
+ "extraction": {
+  "n_sequence_tokens_all": 26,
+  "n_sequence_tokens_primary_LMI": 20,
+  "n_docs_primary": 18,
+  "sequence_tokens_primary": [
+   {
+    "doc": "HT27a",
+    "letters": [
+     "JE",
+     "B"
+    ]
+   },
+   {
+    "doc": "HT32",
+    "letters": [
+     "J",
+     "K"
+    ]
+   },
+   {
+    "doc": "HT33",
+    "letters": [
+     "E",
+     "L2"
+    ]
+   },
+   {
+    "doc": "HT34",
+    "letters": [
+     "H",
+     "K"
+    ]
+   },
+   {
+    "doc": "HT93a",
+    "letters": [
+     "J",
+     "H"
+    ]
+   },
+   {
+    "doc": "HT115a",
+    "letters": [
+     "D",
+     "D",
+     "D",
+     "D"
+    ]
+   },
+   {
+    "doc": "HT120",
+    "letters": [
+     "J",
+     "A"
+    ]
+   },
+   {
+    "doc": "HT129",
+    "letters": [
+     "J",
+     "B"
+    ]
+   },
+   {
+    "doc": "KH5",
+    "letters": [
+     "J",
+     "B"
+    ]
+   },
+   {
+    "doc": "KH6",
+    "letters": [
+     "J",
+     "B"
+    ]
+   },
+   {
+    "doc": "KH9",
+    "letters": [
+     "E",
+     "B"
+    ]
+   },
+   {
+    "doc": "KH11",
+    "letters": [
+     "K",
+     "L2"
+    ]
+   },
+   {
+    "doc": "KH11",
+    "letters": [
+     "K",
+     "L2"
+    ]
+   },
+   {
+    "doc": "KH11",
+    "letters": [
+     "K",
+     "L2"
+    ]
+   },
+   {
+    "doc": "KH17",
+    "letters": [
+     "J",
+     "B"
+    ]
+   },
+   {
+    "doc": "KH26",
+    "letters": [
+     "E",
+     "L4"
+    ]
+   },
+   {
+    "doc": "KH75",
+    "letters": [
+     "K",
+     "L2"
+    ]
+   },
+   {
+    "doc": "KH76",
+    "letters": [
+     "E",
+     "L6"
+    ]
+   },
+   {
+    "doc": "KH86",
+    "letters": [
+     "A",
+     "B",
+     "B"
+    ]
+   },
+   {
+    "doc": "ZA8",
+    "letters": [
+     "E",
+     "J"
+    ]
+   }
+  ],
+  "letter_frequency_census": {
+   "L2": 25,
+   "E": 12,
+   "J": 10,
+   "B": 9,
+   "K": 8,
+   "DD": 6,
+   "W": 6,
+   "L": 6,
+   "L4": 4,
+   "D": 4,
+   "JE": 2,
+   "H": 2,
+   "A": 2,
+   "L6": 2,
+   "L3": 2,
+   "F": 2
+  }
+ },
+ "p_desc_posterior": {
+  "prior": [
+   8,
+   2
+  ],
+  "successes": 0,
+  "failures": 1,
+  "posterior": [
+   8,
+   3
+  ],
+  "posterior_mean": 0.7273,
+  "consumed_votes": [
+   {
+    "doc": "ZA8",
+    "first": "E",
+    "second": "J"
+   }
+  ],
+  "sensitivity": {
+   "Beta(4, 1)": {
+    "posterior": [
+     4,
+     2
+    ],
+    "q_k1": 0.6667,
+    "q_k2": 0.7692,
+    "q_k4": 0.875
+   },
+   "Beta(16, 4)": {
+    "posterior": [
+     16,
+     5
+    ],
+    "q_k1": 0.7619,
+    "q_k2": 0.9007,
+    "q_k4": 0.9823
+   }
+  }
+ },
+ "primary_matrix": [
+  {
+   "pair": "J>E",
+   "q": 0.99,
+   "tier": "arithmetic",
+   "basis": "J=1/2 Bennett 1950 (HT104,HTZd156,PE1,HT123a); E=1/4 via JE=3/4 additive"
+  },
+  {
+   "pair": "JE>J",
+   "q": 0.99,
+   "tier": "arithmetic",
+   "basis": "J=1/2 Bennett 1950 (HT104,HTZd156,PE1,HT123a); E=1/4 via JE=3/4 additive"
+  },
+  {
+   "pair": "JE>E",
+   "q": 0.99,
+   "tier": "arithmetic",
+   "basis": "J=1/2 Bennett 1950 (HT104,HTZd156,PE1,HT123a); E=1/4 via JE=3/4 additive"
+  },
+  {
+   "pair": "J>B",
+   "q": 0.9565,
+   "tier": "sequence_vote",
+   "s": 4,
+   "f": 0,
+   "docs_for": [
+    "HT129",
+    "KH17",
+    "KH5",
+    "KH6"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "K>L2",
+   "q": 0.8571,
+   "tier": "sequence_vote",
+   "s": 2,
+   "f": 0,
+   "docs_for": [
+    "KH11",
+    "KH75"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "A>B",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "KH86"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "J>A",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "HT120"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "E>B",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "KH9"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "JE>B",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "HT27a"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "E>L2",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "HT33"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "E>L4",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "KH26"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "E>L6",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "KH76"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "J>H",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "HT93a"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "H>K",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "HT34"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "J>K",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "HT32"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "J>L2",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "J>L4",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "J>L6",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "JE>A",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "JE>H",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "JE>K",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "JE>L2",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "JE>L4",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "JE>L6",
+   "q": 0.72,
+   "tier": "transitive"
+  },
+  {
+   "pair": "H>L2",
+   "q": 0.6234,
+   "tier": "transitive"
+  }
+ ],
+ "n_claims_primary": 25,
+ "map_orders": {
+  "letters": [
+   "A",
+   "B",
+   "E",
+   "H",
+   "J",
+   "JE",
+   "K",
+   "L2",
+   "L4",
+   "L6"
+  ],
+  "n_permutations": 3628800,
+  "n_tied_maximum_likelihood": 972,
+  "top": [
+   {
+    "order": [
+     "JE",
+     "J",
+     "A",
+     "E",
+     "B",
+     "H",
+     "K",
+     "L2",
+     "L4",
+     "L6"
+    ],
+    "loglik": -6.8421,
+    "prob_normalized": 0.000209
+   },
+   {
+    "order": [
+     "JE",
+     "J",
+     "A",
+     "E",
+     "B",
+     "H",
+     "K",
+     "L2",
+     "L6",
+     "L4"
+    ],
+    "loglik": -6.8421,
+    "prob_normalized": 0.000209
+   },
+   {
+    "order": [
+     "JE",
+     "J",
+     "A",
+     "E",
+     "B",
+     "H",
+     "K",
+     "L4",
+     "L2",
+     "L6"
+    ],
+    "loglik": -6.8421,
+    "prob_normalized": 0.000209
+   },
+   {
+    "order": [
+     "JE",
+     "J",
+     "A",
+     "E",
+     "B",
+     "H",
+     "K",
+     "L4",
+     "L6",
+     "L2"
+    ],
+    "loglik": -6.8421,
+    "prob_normalized": 0.000209
+   },
+   {
+    "order": [
+     "JE",
+     "J",
+     "A",
+     "E",
+     "B",
+     "H",
+     "K",
+     "L6",
+     "L2",
+     "L4"
+    ],
+    "loglik": -6.8421,
+    "prob_normalized": 0.000209
+   }
+  ],
+  "p_all_claims_correct": 0.001068
+ },
+ "divergence_registry_vs_corazza": [
+  {
+   "pair": [
+    "A",
+    "B"
+   ],
+   "ours": "A>B",
+   "ours_q": 0.7273,
+   "ours_tier": "sequence_vote",
+   "corazza": "B>A",
+   "corazza_involves_tier2_value": true
+  },
+  {
+   "pair": [
+    "H",
+    "K"
+   ],
+   "ours": "H>K",
+   "ours_q": 0.7273,
+   "ours_tier": "sequence_vote",
+   "corazza": "K>H",
+   "corazza_involves_tier2_value": true
+  }
+ ],
+ "secondary_tier_additional_claims": [
+  {
+   "pair": "L>E",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "PH7b"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "F>K",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "PH1b"
+   ],
+   "docs_against": []
+  },
+  {
+   "pair": "L>L2",
+   "q": 0.7273,
+   "tier": "sequence_vote",
+   "s": 1,
+   "f": 0,
+   "docs_for": [
+    "ZA11a"
+   ],
+   "docs_against": []
+  }
+ ],
+ "controls": {
+  "NC1": {
+   "pass": true,
+   "W_real": 16,
+   "p_shuffle": 0.04415,
+   "n_reps": 20000
+  },
+  "NC2": {
+   "pass": true,
+   "claims_contradicting_frequency_rank": [
+    {
+     "pair": "A>B",
+     "freq_first": 2,
+     "freq_second": 9
+    },
+    {
+     "pair": "JE>B",
+     "freq_first": 2,
+     "freq_second": 9
+    },
+    {
+     "pair": "E>L2",
+     "freq_first": 12,
+     "freq_second": 25
+    },
+    {
+     "pair": "H>K",
+     "freq_first": 2,
+     "freq_second": 8
+    },
+    {
+     "pair": "K>L2",
+     "freq_first": 8,
+     "freq_second": 25
+    }
+   ],
+   "flag": null
+  },
+  "NC3": {
+   "pass": true
+  }
+ },
+ "contamination": {
+  "C1": {
+   "pass": true,
+   "aegean_glyphs_in_pdf_text": 0,
+   "identity_patterns_near_fraction": [],
+   "public_passage": "This sequence of fractions is a most important aspect of this document."
+  },
+  "C2": {
+   "pass": true,
+   "row35_quarantine": "unpublished_content",
+   "fringe_rows_fraction_pattern": [
+    false,
+    false,
+    false
+   ]
+  },
+  "C3": {
+   "pass": true,
+   "blind_pattern_counts_content_never_displayed": {
+    "KOF-1370_novaya_nauka_2025_proceedings.pdf": 1,
+    "PROVENANCE.md": 0,
+    "academia_page_wayback_20260206.html": 5
+   },
+   "note": "counts only; fringe content not read into any session context"
+  },
+  "C4": {
+   "pass": true,
+   "value_bearing_input": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/corpus/silver/inscriptions_structured.json",
+   "assertion": "this module opens only corpus/silver + register/PDF for contamination checks; no anetaki content enters the derivation functions"
+  },
+  "C5": {
+   "pass": true,
+   "search_receipt": "EPOCH-001 result.json search_receipt (14 routes, 2026-07-08); no new search run"
+  }
+ }
+}

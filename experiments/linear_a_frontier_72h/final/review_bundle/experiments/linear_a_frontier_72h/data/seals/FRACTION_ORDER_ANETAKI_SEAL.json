@@ -1,0 +1,623 @@
+{
+ "seal_id": "FRACTION_ORDER_ANETAKI_SEAL",
+ "name": "Fraction relative-value order — prospective prediction vs Anetaki II face-δ six-fraction sequence",
+ "type": "PROSPECTIVE_PREDICTION",
+ "ordinal": "third Anetaki-targeting seal (after ANETAKI_FINAL_EDITION_DELTA_SEAL and M_ANETAKI_LATTICE_DELTA_SEAL; overlap: none — those seals score sign-groups/lattice deltas, this one scores ONLY the face-δ fraction ordering)",
+ "campaign": "research/linear-a-frontier-72h",
+ "epoch": "EPOCH-004",
+ "as_of": "2026-07-08",
+ "seed": 20260708,
+ "constitution": "v2.2",
+ "claim_layer": "L2/L3 numeral-notation structure (klasmatogram relative-value order); no semantic/lexical/phonetic content; no transfer licence claimed or consumed",
+ "plan_hash_sha256": "da6e024832d2dc75f1c2ecf91ce36179fa425671def15220736cfe724a4ba4ef",
+ "status": "SEALED_PROSPECTIVE",
+ "held_out_target": "Anetaki II (Kanta ed., INSTAP Academic Press, forthcoming) editio princeps reading of KN Zg 58 Face δ: six different fraction signs in sequence (existence public via Kanta et al. 2024 pp. 41-42; identities and order UNPUBLISHED)",
+ "public_surface_at_freeze": "This sequence of fractions is a most important aspect of this document.",
+ "known_leak_discounted": "Kanta et al. 2024 p.42 publicly implies >=1 discordance with Corazza 2021; predictions of the form 'Corazza has an error' earn zero credit; only pair-level directions committed here are scoreable",
+ "our_prediction": {
+  "channel": "corpus/silver multi-sign fraction sequence tokens (descending-order convention A-FD1) + arithmetic anchors J=1/2 (Bennett 1950), E=1/4 (JE additive); Corazza-independent",
+  "p_desc_posterior": {
+   "prior": [
+    8,
+    2
+   ],
+   "successes": 0,
+   "failures": 1,
+   "posterior": [
+    8,
+    3
+   ],
+   "posterior_mean": 0.7273,
+   "consumed_votes": [
+    {
+     "doc": "ZA8",
+     "first": "E",
+     "second": "J"
+    }
+   ],
+   "sensitivity": {
+    "Beta(4, 1)": {
+     "posterior": [
+      4,
+      2
+     ],
+     "q_k1": 0.6667,
+     "q_k2": 0.7692,
+     "q_k4": 0.875
+    },
+    "Beta(16, 4)": {
+     "posterior": [
+      16,
+      5
+     ],
+     "q_k1": 0.7619,
+     "q_k2": 0.9007,
+     "q_k4": 0.9823
+    }
+   }
+  },
+  "pairwise_matrix_primary": [
+   {
+    "pair": "J>E",
+    "q": 0.99,
+    "tier": "arithmetic",
+    "basis": "J=1/2 Bennett 1950 (HT104,HTZd156,PE1,HT123a); E=1/4 via JE=3/4 additive"
+   },
+   {
+    "pair": "JE>J",
+    "q": 0.99,
+    "tier": "arithmetic",
+    "basis": "J=1/2 Bennett 1950 (HT104,HTZd156,PE1,HT123a); E=1/4 via JE=3/4 additive"
+   },
+   {
+    "pair": "JE>E",
+    "q": 0.99,
+    "tier": "arithmetic",
+    "basis": "J=1/2 Bennett 1950 (HT104,HTZd156,PE1,HT123a); E=1/4 via JE=3/4 additive"
+   },
+   {
+    "pair": "J>B",
+    "q": 0.9565,
+    "tier": "sequence_vote",
+    "s": 4,
+    "f": 0,
+    "docs_for": [
+     "HT129",
+     "KH17",
+     "KH5",
+     "KH6"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "K>L2",
+    "q": 0.8571,
+    "tier": "sequence_vote",
+    "s": 2,
+    "f": 0,
+    "docs_for": [
+     "KH11",
+     "KH75"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "A>B",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "KH86"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "J>A",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "HT120"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "E>B",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "KH9"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "JE>B",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "HT27a"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "E>L2",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "HT33"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "E>L4",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "KH26"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "E>L6",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "KH76"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "J>H",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "HT93a"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "H>K",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "HT34"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "J>K",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "HT32"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "J>L2",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "J>L4",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "J>L6",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "JE>A",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "JE>H",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "JE>K",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "JE>L2",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "JE>L4",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "JE>L6",
+    "q": 0.72,
+    "tier": "transitive"
+   },
+   {
+    "pair": "H>L2",
+    "q": 0.6234,
+    "tier": "transitive"
+   }
+  ],
+  "ranked_orderings": {
+   "letters": [
+    "A",
+    "B",
+    "E",
+    "H",
+    "J",
+    "JE",
+    "K",
+    "L2",
+    "L4",
+    "L6"
+   ],
+   "n_permutations": 3628800,
+   "n_tied_maximum_likelihood": 972,
+   "top": [
+    {
+     "order": [
+      "JE",
+      "J",
+      "A",
+      "E",
+      "B",
+      "H",
+      "K",
+      "L2",
+      "L4",
+      "L6"
+     ],
+     "loglik": -6.8421,
+     "prob_normalized": 0.000209
+    },
+    {
+     "order": [
+      "JE",
+      "J",
+      "A",
+      "E",
+      "B",
+      "H",
+      "K",
+      "L2",
+      "L6",
+      "L4"
+     ],
+     "loglik": -6.8421,
+     "prob_normalized": 0.000209
+    },
+    {
+     "order": [
+      "JE",
+      "J",
+      "A",
+      "E",
+      "B",
+      "H",
+      "K",
+      "L4",
+      "L2",
+      "L6"
+     ],
+     "loglik": -6.8421,
+     "prob_normalized": 0.000209
+    },
+    {
+     "order": [
+      "JE",
+      "J",
+      "A",
+      "E",
+      "B",
+      "H",
+      "K",
+      "L4",
+      "L6",
+      "L2"
+     ],
+     "loglik": -6.8421,
+     "prob_normalized": 0.000209
+    },
+    {
+     "order": [
+      "JE",
+      "J",
+      "A",
+      "E",
+      "B",
+      "H",
+      "K",
+      "L6",
+      "L2",
+      "L4"
+     ],
+     "loglik": -6.8421,
+     "prob_normalized": 0.000209
+    }
+   ],
+   "p_all_claims_correct": 0.001068
+  },
+  "secondary_tier_non_primary": [
+   {
+    "pair": "L>E",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "PH7b"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "F>K",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "PH1b"
+    ],
+    "docs_against": []
+   },
+   {
+    "pair": "L>L2",
+    "q": 0.7273,
+    "tier": "sequence_vote",
+    "s": 1,
+    "f": 0,
+    "docs_for": [
+     "ZA11a"
+    ],
+    "docs_against": []
+   }
+  ],
+  "abstention": "pairs absent from the matrix are ABSTAIN; they never score"
+ },
+ "corazza_prediction": {
+  "citation": "Corazza, Ferrara, Montecchi, Tamburini & Valério (2021), 'The mathematical values of fraction signs in the Linear A script: a computational, statistical and typological approach', J. Archaeol. Sci. 125:105214, doi:10.1016/j.jas.2020.105214. Tier-2 values flagged uncertain/composite by the authors (H?, A?, W=BB?, X=AA?).",
+  "tier1_values": {
+   "J": "1/2",
+   "E": "1/4",
+   "B": "1/5",
+   "D": "1/6",
+   "F": "1/8",
+   "K": "1/10",
+   "L2": "1/20",
+   "L3": "1/30",
+   "L4": "1/40",
+   "L6": "1/60"
+  },
+  "tier2_uncertain_values": {
+   "H": "1/16",
+   "A": "1/24",
+   "W": "2/5",
+   "X": "1/12"
+  },
+  "composites": {
+   "JE": "3/4",
+   "DD": "1/3"
+  },
+  "implied_total_order_tier1": [
+   "J",
+   "E",
+   "B",
+   "D",
+   "F",
+   "K",
+   "L2",
+   "L3",
+   "L4",
+   "L6"
+  ],
+  "implied_total_order_with_tier2": [
+   "J",
+   "W",
+   "E",
+   "B",
+   "D",
+   "F",
+   "K",
+   "X",
+   "H",
+   "L2",
+   "A",
+   "L3",
+   "L4",
+   "L6"
+  ],
+  "verified": "2026-07-08 against a secondary source reproducing the paper's table; identical to repo scripts/comparison/metrology.py::CORAZZA_2021"
+ },
+ "divergence_registry": [
+  {
+   "pair": [
+    "A",
+    "B"
+   ],
+   "ours": "A>B",
+   "ours_q": 0.7273,
+   "ours_tier": "sequence_vote",
+   "corazza": "B>A",
+   "corazza_involves_tier2_value": true
+  },
+  {
+   "pair": [
+    "H",
+    "K"
+   ],
+   "ours": "H>K",
+   "ours_q": 0.7273,
+   "ours_tier": "sequence_vote",
+   "corazza": "K>H",
+   "corazza_involves_tier2_value": true
+  }
+ ],
+ "scoring_rule": {
+  "scorer": "experiments/linear_a_frontier_72h/scripts/fraction_order_seal.py::score_sequence (sha256 in manifest)",
+  "ground_truth_hierarchy": [
+   "G1: ed.pr. explicitly printed relative-value ordering",
+   "G2: written sequence order under descending convention (editors' stated reading direction)"
+  ],
+  "sub1_primary": "pairs claimed by our matrix among published signs: OURS_SUPPORTED iff n>=4 & acc>=0.75; OURS_REFUTED iff n>=4 & acc<=0.5; OURS_MIXED else; NO_POWER iff n<4; exact binomial p, Brier, log-score reported",
+  "sub2_head_to_head": "shared pairs with Corazza tier-1: accuracy comparison, n>=4 required",
+  "sub3_divergent_pairs": "frozen divergence_registry pairs present in the sequence: per-pair winner",
+  "multiplicity": "one prediction system; sub-test 1 is the headline; sub-tests 2-3 Holm-corrected family of 2; Corazza tier-2 pairs reported outside gates",
+  "void_conditions": [
+   "V1 ed.pr. never publishes identities",
+   "V2 fewer than 2 scoreable pairs after mapping",
+   "V3 ed.pr. asserts non-value-ordered and prints no ordering",
+   "V4 contamination: any repo session reads ed.pr. face-δ content before a scoring plan freeze -> verdict capped DESCRIPTIVE, session id recorded"
+  ],
+  "failure_is_real": "OURS_REFUTED is a publishable negative for the sequence-order channel (Art. XVII: cannot be amended into a success)"
+ },
+ "calibration_estimates_non_binding": {
+  "p_no_power_sub1": "~0.3-0.4 (six signs may fall outside our claimed-letter set {J,JE,E,B,K,L2,L4,L6,H,A})",
+  "expected_acc_if_corazza_tier12_true": "13/15 direct claims concordant with Corazza; the 2 divergent pairs (H>K, A>B) would fail",
+  "expected_acc_if_our_channel_true": "per-pair q values as listed (0.727-0.99)"
+ },
+ "controls_at_freeze": {
+  "PC1": {
+   "pass": true,
+   "n_synth_docs": 20,
+   "n_claims_checked": 12,
+   "wrong_direction_pairs": [],
+   "q_monotone_in_k": true,
+   "noisy_variant_mean_direction_accuracy": 0.7992
+  },
+  "PC2": {
+   "pass": true,
+   "forward_verdict": "OURS_SUPPORTED",
+   "reverse_verdict": "OURS_REFUTED",
+   "forward": {
+    "verdict": "OURS_SUPPORTED",
+    "n_claimed": 9,
+    "n_correct": 9,
+    "accuracy": 1.0,
+    "binomial_p_one_sided": 0.00195,
+    "brier": 0.0228,
+    "log_score": -1.2986
+   },
+   "reverse": {
+    "verdict": "OURS_REFUTED",
+    "n_claimed": 9,
+    "n_correct": 0,
+    "accuracy": 0.0,
+    "binomial_p_one_sided": 1.0,
+    "brier": 0.7603,
+    "log_score": -22.1679
+   }
+  },
+  "NC1": {
+   "pass": true,
+   "W_real": 16,
+   "p_shuffle": 0.04415,
+   "n_reps": 20000
+  },
+  "NC2": {
+   "pass": true,
+   "claims_contradicting_frequency_rank": [
+    {
+     "pair": "A>B",
+     "freq_first": 2,
+     "freq_second": 9
+    },
+    {
+     "pair": "JE>B",
+     "freq_first": 2,
+     "freq_second": 9
+    },
+    {
+     "pair": "E>L2",
+     "freq_first": 12,
+     "freq_second": 25
+    },
+    {
+     "pair": "H>K",
+     "freq_first": 2,
+     "freq_second": 8
+    },
+    {
+     "pair": "K>L2",
+     "freq_first": 8,
+     "freq_second": 25
+    }
+   ],
+   "flag": null
+  },
+  "NC3": {
+   "pass": true
+  }
+ },
+ "contamination_audit": {
+  "C1": {
+   "pass": true,
+   "aegean_glyphs_in_pdf_text": 0,
+   "identity_patterns_near_fraction": [],
+   "public_passage": "This sequence of fractions is a most important aspect of this document."
+  },
+  "C2": {
+   "pass": true,
+   "row35_quarantine": "unpublished_content",
+   "fringe_rows_fraction_pattern": [
+    false,
+    false,
+    false
+   ]
+  },
+  "C3": {
+   "pass": true,
+   "blind_pattern_counts_content_never_displayed": {
+    "KOF-1370_novaya_nauka_2025_proceedings.pdf": 1,
+    "PROVENANCE.md": 0,
+    "academia_page_wayback_20260206.html": 5
+   },
+   "note": "counts only; fringe content not read into any session context"
+  },
+  "C4": {
+   "pass": true,
+   "value_bearing_input": "/home/claude-runner/gitlab/n8n/logos-linear-a-frontier-72h/corpus/silver/inscriptions_structured.json",
+   "assertion": "this module opens only corpus/silver + register/PDF for contamination checks; no anetaki content enters the derivation functions"
+  },
+  "C5": {
+   "pass": true,
+   "search_receipt": "EPOCH-001 result.json search_receipt (14 routes, 2026-07-08); no new search run"
+  }
+ },
+ "trigger_protocol": "identical to CONTAMINATION_BOUNDARY.md: on Anetaki II publication, freeze a scoring session plan FIRST, then ingest mechanically, then run score_sequence; never read face-δ content in an analysis session before that",
+ "source_dependency": {
+  "value_bearing": [
+   "corpus/silver/inscriptions_structured.json (lineara.xyz-derived, pre-2024)"
+  ],
+  "anchors": [
+   "Bennett 1950 J=1/2 (via audited metrology finding 2026-06-30)",
+   "Schrijver 2014 additivity-except-D (audited 2026-07-01)"
+  ],
+  "comparator_only": [
+   "Corazza et al. 2021 (never enters derivation)"
+  ]
+ }
+}

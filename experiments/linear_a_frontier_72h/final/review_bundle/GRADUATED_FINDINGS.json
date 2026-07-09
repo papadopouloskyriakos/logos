@@ -3,8 +3,9 @@
   "findings": [
     {
       "epoch": "EPOCH-103",
-      "claim": "A- prefixation strong-lead adjudication: segmentation/inventory robustness (>=2 schemes) + best-of-universe maxT + LOMO + matched adaptive null for the campaign's strongest LA positive.",
-      "verdict": "REPLICATED_RELATIVE_CONSTRAINT -- A- is the TOP best-of-universe maxT survivor at family-adjusted p<=.01 under ALL 3/3 independent segmentation schemes, including the harder function-restricted numeral-anchored ledger-head scheme (n=467, A-initial=28, A z=7.49 still rank-1). PC power+calibration cle",
+      "claim": "Recurrent A-initial positional enrichment in Linear A administrative units (anonymous initial slot; relative constraint). Prefixhood, productivity, sound, and meaning are not established.",
+      "claim_source": "curated (corrected wording; ledger name/verdict verbatim in the master table)",
+      "verdict": "REPLICATED_RELATIVE_CONSTRAINT \u2014 under the corrected categorical joint null (M=10000), A is the top best-of-universe maxT survivor at p<=.01 under 3/3 overlapping segmentation/selection variants derived from a single corpus lineage (A_editor / B_divider_strict / C_numeral_anchored; B shares 87.6% of unit realizations with A_editor, C is a function-restricted subset of A_editor \u2014 robustness across variants, NOT independent replication); PC power+cal clean; LOMO evaluated MECHANICALLY from the frozen E022/E023/E024 artifacts (sha256-recorded; 3/3 independently significant; dropping any one leaves 2). Verdict class UNCHANGED from the original run. Survivor-set diff vs original: A_editor and B_divider_strict unchanged {A,KU,U,I,QA,*411,*306}; C_numeral_anchored gains boundary sign DA -> {A,KU,PA,DA}. No phonetic value, morphological prefixhood, or productivity asserted (L2/L3).",
       "layer": "L2",
       "highest_licence": "none (L2/L3 structural; no transfer licence)"
     }

@@ -25,7 +25,7 @@
     }
   },
   "F10": {
-    "status": "SUPPORTED_RELATIVE_ONLY",
+    "status": "PROSPECTIVE_FROZEN",
     "n_epochs": 4,
     "epochs": [
       "EPOCH-004",
@@ -35,8 +35,7 @@
     ],
     "buckets": {
       "PROSPECTIVE_SEAL": 1,
-      "POSITIVE_RELATIVE": 2,
-      "SITE_LOCAL": 1
+      "SITE_LOCAL": 3
     }
   },
   "F8": {
@@ -67,7 +66,7 @@
     ],
     "buckets": {
       "BOUNDED_NEGATIVE": 3,
-      "SITE_LOCAL": 1
+      "OTHER": 1
     }
   },
   "F2": {
@@ -91,7 +90,7 @@
     ],
     "buckets": {
       "OTHER": 1,
-      "QUALIFICATION": 1,
+      "SITE_LOCAL": 1,
       "POSITIVE_RELATIVE": 1
     }
   },
@@ -127,8 +126,7 @@
       "EPOCH-050"
     ],
     "buckets": {
-      "POSITIVE_RELATIVE": 4,
-      "BOUNDED_NEGATIVE": 1
+      "POSITIVE_RELATIVE": 5
     }
   },
   "F9": {
@@ -143,13 +141,13 @@
     }
   },
   "\u00a712 (dedicated adaptive-null family 1 of 3)": {
-    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "status": "SUPPORTED_RELATIVE_ONLY",
     "n_epochs": 1,
     "epochs": [
       "EPOCH-018"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1
+      "POSITIVE_RELATIVE": 1
     }
   },
   "\u00a712 (third power surface \u2014 ATTEMPT 1)": {
@@ -163,47 +161,47 @@
     }
   },
   "\u00a712 (dedicated adaptive-null family 2 of 3)": {
-    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "status": "SUPPORTED_RELATIVE_ONLY",
     "n_epochs": 1,
     "epochs": [
       "EPOCH-020"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1
+      "POSITIVE_RELATIVE": 1
     }
   },
   "\u00a712 (third power surface \u2014 ATTEMPT 2)": {
-    "status": "SUPPORTED_RELATIVE_ONLY",
+    "status": "MIXED_SEE_EPOCHS",
     "n_epochs": 1,
     "epochs": [
       "EPOCH-021"
     ],
     "buckets": {
-      "POSITIVE_RELATIVE": 1
+      "OTHER": 1
     }
   },
   "\u00a712 (dedicated adaptive-null family 3 of 3)": {
-    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "status": "SUPPORTED_RELATIVE_ONLY",
     "n_epochs": 1,
     "epochs": [
       "EPOCH-022"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1
+      "POSITIVE_RELATIVE": 1
     }
   },
   "F11": {
-    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "status": "SUPPORTED_RELATIVE_ONLY",
     "n_epochs": 1,
     "epochs": [
       "EPOCH-036"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1
+      "POSITIVE_RELATIVE": 1
     }
   },
   "F12": {
-    "status": "SUPPORTED_RELATIVE_ONLY",
+    "status": "CLOSED_UNDER_CURRENT_DATA",
     "n_epochs": 5,
     "epochs": [
       "EPOCH-038",
@@ -214,7 +212,8 @@
     ],
     "buckets": {
       "BOUNDED_NEGATIVE": 2,
-      "POSITIVE_RELATIVE": 3
+      "OTHER": 2,
+      "POSITIVE_RELATIVE": 1
     }
   },
   "F13": {
@@ -228,7 +227,7 @@
     }
   },
   "F14": {
-    "status": "SUPPORTED_RELATIVE_ONLY",
+    "status": "MIXED_SEE_EPOCHS",
     "n_epochs": 4,
     "epochs": [
       "EPOCH-044",
@@ -237,9 +236,7 @@
       "EPOCH-055"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1,
-      "POSITIVE_RELATIVE": 2,
-      "SITE_LOCAL": 1
+      "OTHER": 4
     }
   },
   "F15": {
@@ -250,7 +247,7 @@
       "EPOCH-056"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1,
+      "OTHER": 1,
       "POSITIVE_RELATIVE": 1
     }
   },
@@ -263,8 +260,7 @@
       "EPOCH-057"
     ],
     "buckets": {
-      "SITE_LOCAL": 1,
-      "OTHER": 1,
+      "OTHER": 2,
       "POSITIVE_RELATIVE": 1
     }
   },
@@ -277,7 +273,7 @@
     ],
     "buckets": {
       "POSITIVE_RELATIVE": 1,
-      "BOUNDED_NEGATIVE": 1
+      "SITE_LOCAL": 1
     }
   },
   "F18": {
@@ -292,7 +288,7 @@
     }
   },
   "F19": {
-    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "status": "SUPPORTED_RELATIVE_ONLY",
     "n_epochs": 6,
     "epochs": [
       "EPOCH-060",
@@ -303,8 +299,8 @@
       "EPOCH-070"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 4,
-      "POSITIVE_RELATIVE": 1,
+      "POSITIVE_RELATIVE": 4,
+      "OTHER": 1,
       "SITE_LOCAL": 1
     }
   },
@@ -317,8 +313,7 @@
       "EPOCH-068"
     ],
     "buckets": {
-      "BOUNDED_NEGATIVE": 1,
-      "POSITIVE_RELATIVE": 2
+      "POSITIVE_RELATIVE": 3
     }
   },
   "F21": {
@@ -388,7 +383,7 @@
     "buckets": {
       "BOUNDED_NEGATIVE": 4,
       "QUALIFICATION": 1,
-      "OTHER": 1
+      "DE_AUTHORIZED": 1
     }
   },
   "CROSS_DISCIPLINARY_DECIPHERMENT": {

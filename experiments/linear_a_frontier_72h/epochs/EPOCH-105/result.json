@@ -1,0 +1,25 @@
+{
+  "task_id": "EPOCH-105",
+  "verdict": "CLOSURE_SYNTHESIS_COMPLETE",
+  "verdict_rule": "mechanical: all closure artifacts emitted AND 0 RUNNING/BLOCKED/RESERVED epochs AND 0 missing-verdict epochs (DE_AUTHORIZED is terminal) AND licence line derived from LICENCE_STATE.json",
+  "epochs_unique": 105,
+  "non_terminal_epochs": 0,
+  "missing_verdict_epochs": [],
+  "plan_hash": "46234581f3bb6564c2fbab534f9ada71e5d2477928ebb41e23812a57642c5313",
+  "code_manifest": {
+    "final/generate_closure.py (this, remediation revision)": "cd65ed634496c9134a559cd0d79b3baedeef068f35dc12935317344ccdecd185",
+    "epochs/EPOCH-105/machinery.py (frozen copy of the ORIGINAL generator, superseded by the remediation revision under audit items C1-C12)": "7964a55f306d51b039962f29f648b19c127f3afe31521bf49ef3401a9e5668d7"
+  },
+  "emitted_artifacts_sha256": {
+    "final/ARTIFACT_MANIFEST.json": "72aaacc316bbcb72ed36a73abf89be293409d30c623cc8a43f60b572b76f2898",
+    "final/CAMPAIGN_FINAL_STATE.json": "62cbca715f8c246d9550b1a0be7391136bc9a6e82639f18476085a594d0a6f27",
+    "final/EPOCHS_001_TO_FINAL_MASTER_TABLE.csv": "89e46bfac6723f6dc1adfd2ad143ce415a0fa40d105815e362c503dc906feaa9",
+    "final/FINAL_VERDICTS.json": "9c9e2ccb427c4dcc08f9acba2414580ab395e0363a4e08e13294cc0fd73e88fd",
+    "final/GRADUATED_FINDINGS.json": "979f8c99f07400e1f0cbbbeb2383805ef4cbd1d858fe4ce8dee278eda7a0e535",
+    "final/METHOD_EXHAUSTION_MAP.json": "2f74a6e33edc1d1c09bd947ed400388cb5bf68a176a4506962971a77efc94917",
+    "final/PROSPECTIVE_SEALS.json": "771e8476d96e86dd77215f6129b12c7e02bbd830ace627ddc00d1a063668b971",
+    "final/RECONCILIATION_TABLE.csv": "52a2bf15b5f9b1a692a258db8998cd98d067019cfa8e135784d2a24e1ac6a223",
+    "final/STRONG_LEADS.json": "102893191ae2d844e691599db41d41df45e1722f09de7a3af317dd398230a510"
+  },
+  "note": "Emitted by the remediation-revision generator (terminal audit pass 2026-07-09). The ORIGINAL E105 run predates this file; its generator is frozen at epochs/EPOCH-105/machinery.py. Counts generated (invariant #12)."
+}
