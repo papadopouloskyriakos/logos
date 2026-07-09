@@ -75,3 +75,13 @@
   specifically needed. Consistent with EPOCH-016 (SBI). L2, LA untouched, no licence. E096 (frozen-LA
   phonetic application) DE-AUTHORIZED (its calibration gate failed). E093 (LB->LA degradation surface,
   reframed to the generic-best method) queued next as a distinct load-bearing question. 5 successors.
+
+- EPOCH-093 BANKED (93 epochs). LB->LA degradation surface (108 cells; generic-best method, Turing retired
+  per E092). VERDICT LINEAR_A_ABOVE_THRESHOLD (data-sufficiency QUALIFICATION, NOT a decipherment positive).
+  Blinded-LB vowel-class recovery beats permutation floor + frequency-only (+0.13, STABLE across 2000-43868
+  tokens) + degree-only at LA's ~4000-token scale (detected 100%). So LA data VOLUME is NOT the binding
+  constraint for the weak phonetic-class co-occurrence signal; adding 10x data barely helps (flat surface).
+  Refines the underdetermination story: constraint = intrinsic signal weakness (~0.44) + no licensed LB->LA
+  transfer, NOT corpus size. WEAK + blinded-LB: licenses NO LA sound values (L2). Frequency-artifact guard was
+  decisive (caught a single-seed over-claim; same discipline that refuted position->C/V). Role/degree channel
+  is frequency-confounded (detected 0%). qualification bucket 4->5. E094 (segmentation) queued next.

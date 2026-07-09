@@ -1,0 +1,291 @@
+{
+ "surface": [
+  {
+   "budget": 2000,
+   "min_count": 2,
+   "role_f1_mean": 0.5216803377430675,
+   "role_f1_sd": 0.06371267885583612,
+   "vowel_f1_mean": 0.4155114527400623,
+   "vowel_f1_sd": 0.05715542125120539,
+   "vowel_freq_only_mean": 0.31610555433412335,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 0.8333333333333334,
+   "vowel_above_floor_frac": 0.8333333333333334
+  },
+  {
+   "budget": 2000,
+   "min_count": 3,
+   "role_f1_mean": 0.4994354188744962,
+   "role_f1_sd": 0.048954449868124965,
+   "vowel_f1_mean": 0.460314530121974,
+   "vowel_f1_sd": 0.050896383289096805,
+   "vowel_freq_only_mean": 0.33146059490806573,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 2000,
+   "min_count": 5,
+   "role_f1_mean": 0.4667766221353536,
+   "role_f1_sd": 0.05863593717831009,
+   "vowel_f1_mean": 0.4612449160746374,
+   "vowel_f1_sd": 0.08058184479591576,
+   "vowel_freq_only_mean": 0.33257490514861293,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 0.8333333333333334,
+   "vowel_above_floor_frac": 0.8333333333333334
+  },
+  {
+   "budget": 4000,
+   "min_count": 2,
+   "role_f1_mean": 0.5158424881951151,
+   "role_f1_sd": 0.035384007883885536,
+   "vowel_f1_mean": 0.3980399477742092,
+   "vowel_f1_sd": 0.03398344202723202,
+   "vowel_freq_only_mean": 0.29268374995976526,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 0.8333333333333334,
+   "vowel_above_floor_frac": 0.8333333333333334
+  },
+  {
+   "budget": 4000,
+   "min_count": 3,
+   "role_f1_mean": 0.5392427339855891,
+   "role_f1_sd": 0.06487136503805546,
+   "vowel_f1_mean": 0.44015305906079977,
+   "vowel_f1_sd": 0.015276652332984862,
+   "vowel_freq_only_mean": 0.3110337489773417,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 4000,
+   "min_count": 5,
+   "role_f1_mean": 0.5259645332352827,
+   "role_f1_sd": 0.08323906997611569,
+   "vowel_f1_mean": 0.45744554963081513,
+   "vowel_f1_sd": 0.02044967681309738,
+   "vowel_freq_only_mean": 0.3133159396269261,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 6000,
+   "min_count": 2,
+   "role_f1_mean": 0.5271756297554312,
+   "role_f1_sd": 0.0448228357479765,
+   "vowel_f1_mean": 0.42069401783716853,
+   "vowel_f1_sd": 0.031125827999943796,
+   "vowel_freq_only_mean": 0.27507857531239216,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 6000,
+   "min_count": 3,
+   "role_f1_mean": 0.5450382502302432,
+   "role_f1_sd": 0.03148740080991675,
+   "vowel_f1_mean": 0.4356283570561097,
+   "vowel_f1_sd": 0.014712832676011705,
+   "vowel_freq_only_mean": 0.2851604742120997,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 6000,
+   "min_count": 5,
+   "role_f1_mean": 0.5048438298336073,
+   "role_f1_sd": 0.02221710954105551,
+   "vowel_f1_mean": 0.4638743169666675,
+   "vowel_f1_sd": 0.04615619121185033,
+   "vowel_freq_only_mean": 0.31088077510606066,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 10000,
+   "min_count": 2,
+   "role_f1_mean": 0.5722404038832315,
+   "role_f1_sd": 0.049856692431705166,
+   "vowel_f1_mean": 0.41808287028754765,
+   "vowel_f1_sd": 0.04662762678453088,
+   "vowel_freq_only_mean": 0.2912769725036604,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 10000,
+   "min_count": 3,
+   "role_f1_mean": 0.5090063500276096,
+   "role_f1_sd": 0.01574773516213414,
+   "vowel_f1_mean": 0.4351042384282469,
+   "vowel_f1_sd": 0.033933540588782916,
+   "vowel_freq_only_mean": 0.2966300264993648,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 10000,
+   "min_count": 5,
+   "role_f1_mean": 0.49996983059470385,
+   "role_f1_sd": 0.027476102527920376,
+   "vowel_f1_mean": 0.46306522087593666,
+   "vowel_f1_sd": 0.021868449249262876,
+   "vowel_freq_only_mean": 0.3042382733915276,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 20000,
+   "min_count": 2,
+   "role_f1_mean": 0.5669588778063895,
+   "role_f1_sd": 0.03134130309233623,
+   "vowel_f1_mean": 0.4349208806016587,
+   "vowel_f1_sd": 0.029884067329377227,
+   "vowel_freq_only_mean": 0.32085050512295094,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 20000,
+   "min_count": 3,
+   "role_f1_mean": 0.5193466738923661,
+   "role_f1_sd": 0.03279913470620708,
+   "vowel_f1_mean": 0.41625346146675096,
+   "vowel_f1_sd": 0.023840639660932906,
+   "vowel_freq_only_mean": 0.3100267590520316,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 20000,
+   "min_count": 5,
+   "role_f1_mean": 0.5093058968989278,
+   "role_f1_sd": 0.03801038835360245,
+   "vowel_f1_mean": 0.44706792441764365,
+   "vowel_f1_sd": 0.033464026273299266,
+   "vowel_freq_only_mean": 0.2995628790776186,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 43868,
+   "min_count": 2,
+   "role_f1_mean": 0.6362081254454739,
+   "role_f1_sd": 0.0,
+   "vowel_f1_mean": 0.489554659918002,
+   "vowel_f1_sd": 5.551115123125783e-17,
+   "vowel_freq_only_mean": 0.3611408199643494,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 43868,
+   "min_count": 3,
+   "role_f1_mean": 0.6362081254454739,
+   "role_f1_sd": 0.0,
+   "vowel_f1_mean": 0.489554659918002,
+   "vowel_f1_sd": 5.551115123125783e-17,
+   "vowel_freq_only_mean": 0.3611408199643494,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  {
+   "budget": 43868,
+   "min_count": 5,
+   "role_f1_mean": 0.5589743589743589,
+   "role_f1_sd": 1.1102230246251565e-16,
+   "vowel_f1_mean": 0.42769083399172275,
+   "vowel_f1_sd": 0.0,
+   "vowel_freq_only_mean": 0.3416963755199049,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  }
+ ],
+ "la_operating_point": {
+  "la_tokens": 4245,
+  "la_vocab": 85,
+  "nearest_budget": 4000,
+  "la_cell": {
+   "budget": 4000,
+   "min_count": 3,
+   "role_f1_mean": 0.5392427339855891,
+   "role_f1_sd": 0.06487136503805546,
+   "vowel_f1_mean": 0.44015305906079977,
+   "vowel_f1_sd": 0.015276652332984862,
+   "vowel_freq_only_mean": 0.3110337489773417,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  },
+  "full_budget_cell": {
+   "budget": 43868,
+   "min_count": 3,
+   "role_f1_mean": 0.6362081254454739,
+   "role_f1_sd": 0.0,
+   "vowel_f1_mean": 0.489554659918002,
+   "vowel_f1_sd": 5.551115123125783e-17,
+   "vowel_freq_only_mean": 0.3611408199643494,
+   "role_detected_frac": 0.0,
+   "vowel_detected_frac": 1.0,
+   "vowel_above_floor_frac": 1.0
+  }
+ },
+ "verdict": "LINEAR_A_ABOVE_THRESHOLD",
+ "rationale": "At LA's data scale (~4245 tokens) the graph method's vowel recovery beats BOTH its permutation floor and a frequency-only baseline in 100% of subsamples -- a non-frequency-artifact phonetic-class signal survives at LA's data volume. WEAK in absolute terms (vowel macro-F1 0.440) and blinded-LB only: this licenses NO LA sound values (L2).",
+ "config": {
+  "token_budgets": [
+   2000,
+   4000,
+   6000,
+   10000,
+   20000,
+   43868
+  ],
+  "min_counts": [
+   2,
+   3,
+   5
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "method": "eigenmap_kmeans (generic-best, E092)",
+  "k_for": {
+   "role": 2,
+   "vowel": 5
+  },
+  "n_cells": 108
+ },
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 21.1,
+ "plan_hash": "7114e97fb49b2ac21d2e459f428232e5cb82a2c48c35dd2e5ba27ebcb7e5bd8e",
+ "epoch_id": "EPOCH-093",
+ "code_manifest": {
+  "e093_degradation.py": "bdc7565e73212316",
+  "graphs.py": "4da0747b23dc21cd",
+  "evaluate.py": "19121219000b01fd"
+ }
+}
