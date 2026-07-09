@@ -2574,3 +2574,6 @@ epochs:
     la_touched: true
     dichotomy_side: METHODOLOGY_VALIDATION
     substantive: true
+  - epoch_id: EPOCH-103
+    note_type: "APPEND_ONLY_NOTE (E103R follow-up, 2026-07-09; no result change, no regeneration)"
+    note_da_reversal: "Scheme C deterministic inputs IDENTICAL between original and R runs: n_units 467, A_initial_obs 28, signs_tested 25. obs_z(DA) 3.475 (R) vs 3.449 (original) is NOT a second methodological delta: both runs standardize empirically (mean/sd estimated from their own null draws; the marginal law of each sign's null count is identical under both couplings), so the 0.026 shift is MC re-estimation of the same constants (M=10000 vs 5000, fresh draws) — no exact / Poisson-binomial standardization was introduced; the coupling fix remains the ONLY methodological delta of E103R. DA reversal (p .0120 -> .0100) = MC fluctuation stack (obs_z re-estimation + resolution floor + boundary-hugging p), direction-anomalous relative to the (small) conservative shift of the corrected coupling but triple-confirmed: machinery_R p=.0100 at M=10^4; independent Generator.choice reconstruction p=.0070 (obs_z 3.486) at M=2x10^4; original .0120 within ~2 MC SE of both."
