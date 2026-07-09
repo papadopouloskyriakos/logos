@@ -1,0 +1,162 @@
+{
+ "cell": "F1_soft_weighted",
+ "bands": {
+  "0.25": {
+   "status": "OPTIMAL",
+   "optimum_weight": 8.5,
+   "n_unary": 41,
+   "one_optimal_violated_set": [
+    "KU",
+    "MI",
+    "PI",
+    "RA",
+    "RU",
+    "SI",
+    "TE",
+    "TI",
+    "U",
+    "WA"
+   ],
+   "n_optimal_violation_patterns_found": 1,
+   "patterns_capped": false,
+   "always_violated_across_patterns": [
+    "A",
+    "DA",
+    "KA",
+    "KI",
+    "KU",
+    "NE",
+    "PA",
+    "RU",
+    "TE",
+    "U"
+   ]
+  },
+  "0.5": {
+   "status": "OPTIMAL",
+   "optimum_weight": 17.0,
+   "n_unary": 41,
+   "one_optimal_violated_set": [
+    "A",
+    "DA",
+    "JA",
+    "KU",
+    "RA",
+    "RU",
+    "TE",
+    "TI",
+    "U",
+    "WA"
+   ],
+   "n_optimal_violation_patterns_found": 1,
+   "patterns_capped": false,
+   "always_violated_across_patterns": [
+    "A",
+    "DA",
+    "KA",
+    "KI",
+    "KU",
+    "NE",
+    "PA",
+    "RU",
+    "TE",
+    "U"
+   ]
+  },
+  "1.0": {
+   "status": "OPTIMAL",
+   "optimum_weight": 34.0,
+   "n_unary": 41,
+   "one_optimal_violated_set": [
+    "DA",
+    "KU",
+    "MI",
+    "NE",
+    "RU",
+    "SI",
+    "TE",
+    "TI",
+    "U",
+    "WA"
+   ],
+   "n_optimal_violation_patterns_found": 1,
+   "patterns_capped": false,
+   "always_violated_across_patterns": [
+    "A",
+    "DA",
+    "KA",
+    "KI",
+    "KU",
+    "NE",
+    "PA",
+    "RU",
+    "TE",
+    "U"
+   ]
+  },
+  "2.0": {
+   "status": "OPTIMAL",
+   "optimum_weight": 68.0,
+   "n_unary": 41,
+   "one_optimal_violated_set": [
+    "A",
+    "DA",
+    "JA",
+    "KU",
+    "RA",
+    "RU",
+    "TE",
+    "TI",
+    "U",
+    "WA"
+   ],
+   "n_optimal_violation_patterns_found": 1,
+   "patterns_capped": false,
+   "always_violated_across_patterns": [
+    "A",
+    "DA",
+    "KA",
+    "KI",
+    "KU",
+    "NE",
+    "PA",
+    "RU",
+    "TE",
+    "U"
+   ]
+  },
+  "4.0": {
+   "status": "OPTIMAL",
+   "optimum_weight": 136.0,
+   "n_unary": 41,
+   "one_optimal_violated_set": [
+    "A",
+    "DA",
+    "JA",
+    "KU",
+    "RA",
+    "RU",
+    "TE",
+    "TI",
+    "U",
+    "WA"
+   ],
+   "n_optimal_violation_patterns_found": 1,
+   "patterns_capped": false,
+   "always_violated_across_patterns": [
+    "A",
+    "DA",
+    "KA",
+    "KI",
+    "KU",
+    "NE",
+    "PA",
+    "RU",
+    "TE",
+    "U"
+   ]
+  }
+ },
+ "always_violated_stable_across_bands": true,
+ "note": "weights scale ALL constraints equally within a band, so the optimal violated set is expected band-stable; the informative structure is WHICH constraints are always violated across optimal patterns"
+}

@@ -1,5 +1,13 @@
 {
  "experiment": "E207",
- "status": "PREREGISTERED",
- "exploratory": true
+ "status": "COMPLETE",
+ "exploratory": true,
+ "verdict": "POSITIONAL_ONLY",
+ "completed": "2026-07-10",
+ "amendments": [
+  "amendment_R1.md (sign-error defect repair; as-run results_asrun_R0/ INVALID)"
+ ],
+ "finding": "A-initial enrichment shows NO predictive paradigm under the M0-M6 battery: no stem/clitic/adaptor model beats the positional null (M2) after MDL charge on held-out unseen types (M3 11.6 vs M2 6.8 bits/sign); recurring-stem and alternant counts recorded in results/primary.json",
+ "design_disclosure": "M3/M4/M6 mixture wastes lexicon mass on unseen stems by construction (LAM=0.5 fixed, untuned); the battery tests PREDICTION, and prediction is what a paradigm claim requires",
+ "wording": "A remains: strongly enriched in initial position across overlapping segmentation variants. Nothing more."
 }

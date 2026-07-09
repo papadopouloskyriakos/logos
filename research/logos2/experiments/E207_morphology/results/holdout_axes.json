@@ -1,6 +1,6 @@
 {
- "LOSO_HT": 7.112075738958797,
- "LMIB_only": 8.081461723070435,
- "Tablet_only": 7.52239357196426,
+ "LOSO_HT": -4.516714904377775,
+ "LMIB_only": -3.568184415819238,
+ "Tablet_only": -3.9910958166523773,
  "segmentation_variant": "SKIPPED (frontier machinery not in this worktree path; B_divider variant deferred with reason)"
 }

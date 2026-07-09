@@ -1,0 +1,13 @@
+{
+ "cell": "F1_extended_nulls",
+ "systems": {
+  "WPH38": {
+   "value_permutation_null_unsat": "200/200",
+   "frequency_preserving_null_unsat": "200/200"
+  },
+  "SALGARELLA": {
+   "value_permutation_null_unsat": "200/200",
+   "frequency_preserving_null_unsat": "200/200"
+  }
+ }
+}

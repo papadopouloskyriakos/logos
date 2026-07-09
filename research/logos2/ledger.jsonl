@@ -5,3 +5,4 @@
 {"ts": "2026-07-10", "event": "MILESTONE2_CONTROL_ADDENDUM_FROZEN", "note": "committed before any confirmatory inspection; F1a/F1b split; 200-null calibration; import boundary"}
 {"ts": "2026-07-10", "event": "E206_STAGE1_SLOT_FREEZE", "n_candidates": 151, "n_contaminated": 4, "external_data_loaded": false, "note": "two pre-freeze extractor repairs documented (formula-head len filter; S2 word-position window); freeze committed after repairs"}
 {"ts": "2026-07-10", "event": "E204_BLOCKED_DATA", "reason": "12 fraction tokens/10 docs/1 multi-fraction doc in accessible corpus", "seal_touched": false, "unblock": "GORILA klasmatogram silver-ingestion task"}
+{"ts": "2026-07-10", "event": "E207_COMPLETE", "verdict": "POSITIONAL_ONLY", "note": "amendment R1 defect repair exercised; as-run preserved INVALID"}

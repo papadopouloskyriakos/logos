@@ -1,0 +1,40 @@
+{
+ "cell": "F1_voi_primitives",
+ "baseline_log10": 224.8343130920273,
+ "observations": {
+  "secure_proper_name": {
+   "k_signs_pinned": 3,
+   "mean_delta_log10_consistent": 5.449684293222573,
+   "sd": 0.12440347659841872,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.05
+  },
+  "secure_toponym": {
+   "k_signs_pinned": 4,
+   "mean_delta_log10_consistent": 7.248448987230242,
+   "sd": 0.24344548052896076,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.05
+  },
+  "bilingual_fragment": {
+   "k_signs_pinned": 10,
+   "mean_delta_log10_consistent": 17.946564443834188,
+   "sd": 0.45888775404187565,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.2
+  },
+  "new_sparse_site_inscription_with_1_pin": {
+   "k_signs_pinned": 1,
+   "mean_delta_log10_consistent": 1.8260748027008162,
+   "sd": 0.0,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.0
+  }
+ },
+ "value_space_zero_observations": {
+  "fraction_relation": "0 on the syllabary value domain (metrology constrains fraction signs; L3 value lives in E204)",
+  "commodity_class_label": "0 in value space (L3 semantic class channel)",
+  "allograph_split": "+log10(67)=1.83 RAW AMBIGUITY (adds a sign) but a MEASUREMENT gain (E205 channel); not a value-space anchor",
+  "palaeographic_grade_correction": "acts on soft weights only; quantified under E205 conditions"
+ }
+}
