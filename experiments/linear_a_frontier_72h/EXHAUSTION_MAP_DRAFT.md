@@ -2,7 +2,7 @@
 
 > **STATUS: DRAFT. NOT FINALIZED.** Finalization is mechanically gated by `scripts/clock_check.py`
 > (`finalization_authorized = now ≥ 2026-07-11T03:20Z AND completed_substantive_epochs ≥ 18`).
-> As of last edit: **55 substantive epochs banked**, gate **BLOCKED** (time_gate open ~51h).
+> As of last edit: **59 substantive epochs banked**, gate **BLOCKED** (time_gate open ~48.8h to 2026-07-11T03:20Z).
 > This document accretes as epochs bank; it becomes the §12 capstone **only** when the clock authorizes.
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
@@ -23,7 +23,7 @@ Zero of the 20 positives rises above L2/L3. The honest denominator is on-screen:
 reading.*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 58 ledger entries: **no epoch is worded above L3** (layers: L1×9, L2×7, L2/L3×36, older-unlabelled×14;
+Scanned all 59 ledger entries: **no epoch is worded above L3** (layers: L1×9, L2×7, L2/L3×36, older-unlabelled×14;
 zero L4+); **every `licences_changed` field is `none`** (no result silently earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
