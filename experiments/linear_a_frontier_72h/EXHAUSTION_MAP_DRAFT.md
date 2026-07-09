@@ -7,19 +7,19 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 56 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 57 substantive epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
-| **Load-bearing cross-site positives** | **19** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| **Load-bearing cross-site positives** | **20** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
 | Bounded negatives | 14 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*19 positives / 14 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
-Zero of the 19 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
+*20 positives / 14 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
+Zero of the 20 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
 reading.*
 
 ## What this campaign is
@@ -49,7 +49,12 @@ extends to a **small prefix inventory**, not `A-` alone).
 (independently reproduced: word_first=1040, P=0.99); `E037` **line-final numeral** template — numerals are
 overwhelmingly line-final within numeral-bearing ledger lines (0.87–0.99 vs a ~0.45 null, p=2e-4; the exact
 fraction is line-definition-sensitive — see `VERIFICATION_AUDIT.md`); `E044` numeral groups are
-**single-numeral-dominant** (simple quantity slots, not compound numerals).
+**single-numeral-dominant** (simple quantity slots, not compound numerals); `E057` the explicit **divider
+(`div`) is a lexical word-separator that respects `word+numeral` as a bound entry unit** — divs sit at
+word|word boundaries far above a gap-reshuffle null (0.749 vs 0.403, p=1e-3) and are massively depleted at the
+word|quantity boundary (13 observed vs ~142 expected, p=1e-3), significant on both statistics in 3/6 sites
+(HT, Khania, Zakros; non-sig sites are ceiling-limited), LOO-robust. Independent gap-reshuffle null *matched*
+the epoch's null (0.405 vs 0.403), S2 count exact.
 
 **A3. Positional sign specialization** (`E043`, cross-site robust after the `E041`/`E042` power+calibration
 repairs) — signs carry **position-dependent roles** within the word (templatic organization), stable across
@@ -137,14 +142,18 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
 ---
 
 ## F. Open at the saturation boundary (candidate successors — run only if genuinely distinct & powered)
-- **`E056` (BANKED → §A4):** dual sign-class induction returned `DUAL_SIGN_CLASS_CROSS_SITE_ROBUST` — a
-  genuine distributional logo-syllabic partition (strong global, weak cross-site). The last big genuinely-
-  distinct structural question is now answered.
-- Remaining genuinely-distinct candidates are thin: most are derivative variants of banked tests, published
-  nulls (metrology/fractions), or SOURCE_BLOCKED (stroke, 3D, ligatures). **Saturation confirmed** — `E056`
-  was the last big open structural question; a natural high-value successor is a *cross-site-strengthening*
-  re-test of the E056 partition (thin per-site counts capped the ARI), but only if it can be powered. Absent
-  that, the productive work is capstone assembly, not look-alike epochs.
+- **`E056` (BANKED → §A4):** dual sign-class induction → `DUAL_SIGN_CLASS_CROSS_SITE_ROBUST` (logo-syllabic
+  partition, strong global, weak cross-site).
+- **`E057` (BANKED → §A2):** divider-token structural role → `DIV_LEXICAL_SEPARATOR_CROSS_SITE` — a genuinely
+  strong new positive that **corrected a premature saturation call** (the `div` token was an untested observed
+  channel). Lesson recorded: "saturation" claims must be checked against *all* observed token channels, not
+  just the dimensions recently probed.
+- **Saturation status: re-opened, then narrowing.** After E057, the remaining observed channels are largely
+  exhausted (word, sign, numeral, div, nl all tested); `other` (n=1056) is a heterogeneous grab-bag (damaged/
+  uncertain marks) unlikely to yield clean structure. Candidate successors: whether the `div`/`nl` delimiters
+  interact (nested entry vs line structure), or whether the E056 logogram class aligns with E057's entry-word
+  slot (risk: circular). Each must clear the distinct + well-powered + non-circular bar before launch; if none
+  does, the productive work is capstone assembly.
 
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.

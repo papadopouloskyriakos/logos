@@ -1353,3 +1353,26 @@ epochs:
     artifacts: [epochs/EPOCH-056/prereg.md, epochs/EPOCH-056/plan_hash.txt, epochs/EPOCH-056/machinery.py, epochs/EPOCH-056/result.json, reports/EPOCH056_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-057
+    frontier: F16
+    gate: A
+    name: "The explicit divider ('div') token's structural role (lexical separator vs entry boundary)"
+    plan_hash: "see epochs/EPOCH-057/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=1 (repro_check flagged GLM's initial S2 count 28 vs true 13 -> auto-repair recomputed to 13; the gate's error-catch working as designed)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed: n_div=463 (EXACT); word>div>num count = 13 (EXACT match to final S2). Ran an INDEPENDENT 500x per-inscription gap-reshuffle null: word|word null-mean=0.405 (result 0.403, MATCH) and word|num null-mean=143.9 (result 141.7, MATCH). Confirmed BOTH directions: word|word ENRICHED (obs 0.749 among content-flanked divs = 235/~314, above null 0.40) and word|num DEPLETED (13 observed vs ~142 expected). Confirmed the S1 denominator is content-flanked divs (my first quick 0.508 used all-463 denominator — wrong; the null match confirms the method)."
+    positive_control: "PASSED (verified from result): SYNTHETIC PC (LB stream lacks div structure). Detect: planted word|word-only div placement flags S1-enrichment + S2-depletion. False-positive: uniform-random div placement not flagged (<=0.10). Calibrated both directions."
+    verdict: "DIV_LEXICAL_SEPARATOR_CROSS_SITE (mechanical, all frozen conditions met, independently verified) — a genuinely strong positive: the divider is a systematic lexical WORD-separator that AVOIDS splitting a word from its numeral."
+    numbers: {n_div: 463, s1_wordword_obs: 0.749, s1_null_mean: 0.403, s1_perm_p: 0.001, s2_wordnum_obs_count: 13, s2_null_mean_count: 141.7, s2_perm_p: 0.001, s2_direction: depleted, n_sites_testable: 6, n_sites_sig_both: 3, sig_sites: "HT+Khania+Zakros", loo_survives: true, loo_p: 0.002, pc_verdict: PASSED}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    scope: "STRONG, VERIFIED positive on a NEW channel no prior epoch tested (the explicit 'div' word-divider token). The divider is a systematic LEXICAL WORD-SEPARATOR: it sits at word|word boundaries far above a gap-reshuffle null (0.749 vs 0.403, p=0.001) and is MASSIVELY DEPLETED at the word|numeral boundary (13 observed vs ~142 expected under the null, p=0.001) — i.e. the divider separates counted ENTRIES/words but essentially NEVER splits a word from its quantity. This is independent structural corroboration that 'word + numeral' is a BOUND ENTRY UNIT in the ledger grammar (connecting E031 word->num order + E037 line-final numeral into a coherent entry structure). Cross-site: significant on BOTH statistics in 3 of 6 testable sites (HT, Khania, Zakros — the sites with enough divs AND numerals to test depletion); the 3 non-significant sites (Iouktas, Knossos, Palaikastro) are CEILING-LIMITED (their baseline word|word rate is already 0.80-1.0, leaving no room for enrichment, and they carry ~0 word|num gaps to deplete) — NOT contradictory (direction consistent, LOO survives p=0.002). LAYER L2: token TYPES only; 'div' is an observed token; NO sign values, NO readings, NO phonetics/meaning; no transfer licence."
+    committed_prediction: "modal LEXICAL_SEPARATOR/SITE_LOCAL/NO_SYSTEMATIC/UNDERPOWERED; OUTCOME = LEXICAL_SEPARATOR_CROSS_SITE. Prediction earned: the divider marks word/entry boundaries and respects the word+numeral unit, cross-site."
+    deviations: ["PC is SYNTHETIC (protocol-specified; LB lacks div structure).", "1 auto-repair: repro_check caught GLM's initial S2 count error (28) and forced recompute to the correct 13 — a genuine gate error-catch, not a deviation in the finding.", "S1 denominator is content-flanked divs (both neighbors word/num/other); stated in method."]
+    non_circular: "Token TYPES only (word/num/div/nl/other); 'div' is an observed token; no sign values, no readings, no phonetics/meaning; null is a within-inscription gap-reshuffle (calibrated by construction); verdict from a frozen mechanical rule; PC first. Builds on E031 but tests a distinct object (the divider's placement)."
+    architecture_note: "Thirty-fourth gated-runner epoch (repairs=1). Corrected a PREMATURE saturation call: the 'div' token was an untested observed structural channel. Coordinator role load-bearing: independent gap-reshuffle null MATCHED the result's null (0.405 vs 0.403; 143.9 vs 141.7) confirming the method, S2=13 EXACT, and the repro_check auto-repair fixed GLM's S2 miscount. Strongest cross-site positive since E043/the A-prefix family; folds into exhaustion-map §A2 (ledger grammar / bound entry unit)."
+    artifacts: [epochs/EPOCH-057/prereg.md, epochs/EPOCH-057/plan_hash.txt, epochs/EPOCH-057/machinery.py, epochs/EPOCH-057/result.json, reports/EPOCH057_REPORT.md]
+    successors_spawned: 5
+    substantive: true

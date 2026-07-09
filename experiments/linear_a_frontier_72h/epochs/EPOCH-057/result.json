@@ -1,0 +1,259 @@
+{
+  "task_id": "EPOCH-057",
+  "method": "L2 token-type placement analysis of 'div': flanking content-gap classification (word|word enrichment S1, word|num avoidance S2) vs per-inscription gap-reshuffle null (>=500/1000 perm); positive control (synthetic word|word-only detect + uniform false-positive); cross-site (>=15 div) + leave-one-site-out.",
+  "result": "DIV_LEXICAL_SEPARATOR_CROSS_SITE",
+  "verdict": "DIV_LEXICAL_SEPARATOR_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_div": 463,
+      "s1_wordword_obs": 0.7494089834515366,
+      "s1_null_mean": 0.4026453900709232,
+      "s1_perm_p": 0.000999000999000999,
+      "s2_wordnum_obs_count": 13,
+      "s2_null_mean_count": 141.747,
+      "s2_perm_p": 0.000999000999000999,
+      "s2_direction": "depleted"
+    },
+    "flanking": {
+      "before_hist": {
+        "word": 382,
+        "nl": 24,
+        "other": 34,
+        "START": 17,
+        "div": 6
+      },
+      "after_hist": {
+        "nl": 96,
+        "word": 283,
+        "num": 16,
+        "other": 42,
+        "div": 6,
+        "END": 20
+      },
+      "top_transitions": [
+        {
+          "before": "word",
+          "after": "word",
+          "count": 235
+        },
+        {
+          "before": "word",
+          "after": "nl",
+          "count": 79
+        },
+        {
+          "before": "word",
+          "after": "other",
+          "count": 33
+        },
+        {
+          "before": "nl",
+          "after": "word",
+          "count": 18
+        },
+        {
+          "before": "word",
+          "after": "END",
+          "count": 18
+        },
+        {
+          "before": "START",
+          "after": "word",
+          "count": 16
+        },
+        {
+          "before": "other",
+          "after": "nl",
+          "count": 14
+        },
+        {
+          "before": "word",
+          "after": "num",
+          "count": 13
+        },
+        {
+          "before": "other",
+          "after": "word",
+          "count": 11
+        },
+        {
+          "before": "other",
+          "after": "other",
+          "count": 9
+        },
+        {
+          "before": "word",
+          "after": "div",
+          "count": 4
+        },
+        {
+          "before": "nl",
+          "after": "num",
+          "count": 3
+        },
+        {
+          "before": "div",
+          "after": "word",
+          "count": 3
+        },
+        {
+          "before": "nl",
+          "after": "nl",
+          "count": 2
+        },
+        {
+          "before": "div",
+          "after": "END",
+          "count": 2
+        }
+      ]
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_s1_p": 0.001996007984031936,
+      "detect_s2_p": 0.001996007984031936,
+      "false_pos_rate": 0.06666666666666667,
+      "pc_is_synthetic": true,
+      "pc_synthetic_note": "Linear B corpus lacks this div structure; PC is fully synthetic (planted word|word-only and uniform-placement corpora built from the real content-token skeletons).",
+      "n_fp_draws": 30
+    },
+    "cross_site": {
+      "n_sites_testable": 6,
+      "n_sites_sig_both": 3,
+      "direction_consistent": true,
+      "loo_p": 0.001996007984031936,
+      "loo_survives": true,
+      "testable_sites": [
+        "Haghia Triada",
+        "Iouktas",
+        "Khania",
+        "Knossos",
+        "Palaikastro",
+        "Zakros"
+      ],
+      "site_results": {
+        "Haghia Triada": {
+          "n_div": 229,
+          "s1_wordword_obs": 0.6768558951965066,
+          "s1_null_mean": 0.19574672489082984,
+          "s1_perm_p": 0.001996007984031936,
+          "s2_wordnum_obs_count": 23,
+          "s2_null_mean_count": 114.45,
+          "s2_perm_p": 0.001996007984031936,
+          "s2_direction": "depleted",
+          "sig_s1": true,
+          "sig_s2": true
+        },
+        "Iouktas": {
+          "n_div": 21,
+          "s1_wordword_obs": 1.0,
+          "s1_null_mean": 1.0,
+          "s1_perm_p": 1.0,
+          "s2_wordnum_obs_count": 0,
+          "s2_null_mean_count": 0.0,
+          "s2_perm_p": 1.0,
+          "s2_direction": "enriched",
+          "sig_s1": false,
+          "sig_s2": false
+        },
+        "Khania": {
+          "n_div": 35,
+          "s1_wordword_obs": 0.8,
+          "s1_null_mean": 0.27240000000000075,
+          "s1_perm_p": 0.001996007984031936,
+          "s2_wordnum_obs_count": 1,
+          "s2_null_mean_count": 9.968,
+          "s2_perm_p": 0.001996007984031936,
+          "s2_direction": "depleted",
+          "sig_s1": true,
+          "sig_s2": true
+        },
+        "Knossos": {
+          "n_div": 27,
+          "s1_wordword_obs": 0.8148148148148148,
+          "s1_null_mean": 0.796740740740741,
+          "s1_perm_p": 0.4930139720558882,
+          "s2_wordnum_obs_count": 0,
+          "s2_null_mean_count": 0.508,
+          "s2_perm_p": 0.4930139720558882,
+          "s2_direction": "depleted",
+          "sig_s1": false,
+          "sig_s2": false
+        },
+        "Palaikastro": {
+          "n_div": 25,
+          "s1_wordword_obs": 0.92,
+          "s1_null_mean": 0.8663199999999982,
+          "s1_perm_p": 0.2874251497005988,
+          "s2_wordnum_obs_count": 0,
+          "s2_null_mean_count": 0.57,
+          "s2_perm_p": 0.4311377245508982,
+          "s2_direction": "depleted",
+          "sig_s1": false,
+          "sig_s2": false
+        },
+        "Zakros": {
+          "n_div": 29,
+          "s1_wordword_obs": 0.6551724137931034,
+          "s1_null_mean": 0.3397931034482758,
+          "s1_perm_p": 0.001996007984031936,
+          "s2_wordnum_obs_count": 4,
+          "s2_null_mean_count": 11.276,
+          "s2_perm_p": 0.003992015968063872,
+          "s2_direction": "depleted",
+          "sig_s1": true,
+          "sig_s2": true
+        }
+      },
+      "loo_details": {
+        "Haghia Triada": {
+          "s1_p": 0.001996007984031936,
+          "s2_p": 0.001996007984031936
+        },
+        "Iouktas": {
+          "s1_p": 0.001996007984031936,
+          "s2_p": 0.001996007984031936
+        },
+        "Khania": {
+          "s1_p": 0.001996007984031936,
+          "s2_p": 0.001996007984031936
+        },
+        "Knossos": {
+          "s1_p": 0.001996007984031936,
+          "s2_p": 0.001996007984031936
+        },
+        "Palaikastro": {
+          "s1_p": 0.001996007984031936,
+          "s2_p": 0.001996007984031936
+        },
+        "Zakros": {
+          "s1_p": 0.001996007984031936,
+          "s2_p": 0.001996007984031936
+        }
+      }
+    }
+  },
+  "key_findings": [
+    "Global S1 word|word enrichment: observed 0.749 vs null mean 0.403, perm p=0.0010 (ENRICHED).",
+    "Global S2 word|num avoidance: observed count 13 vs null mean 141.747, perm p=0.0010, direction=depleted.",
+    "Positive control PASSED: detect word|word-only synthetic (S1 p=0.0020, S2 p=0.0020); uniform-placement false-positive rate=0.067 over 30 draws (synthetic; LB corpus lacks this div structure).",
+    "Cross-site: 6 sites with >=15 div; 3 sites significant on BOTH S1 and S2 same-direction; direction_consistent=True; leave-one-site-out survives=True (max LOO p=0.0020).",
+    "Flanking structure: before-hist word=382/463; after-hist word=283/463; top transition word>div>word=235."
+  ],
+  "successor_hypotheses": [
+    "E058: Does 'div' placement correlate with entry-length (does the divider preferentially separate long word|word pairs vs short ones)? L2 token-count structure.",
+    "E059: Is the word|numeral 'bound unit' (the avoided boundary) itself positionally regular — do word+numeral pairs behave as a single counted-entry token in the larger stream grammar?",
+    "E060: Cross-token-type: does 'nl' (line break) co-occur with 'div' at entry termini, suggesting a two-level (within-line div, between-line nl) separator hierarchy?",
+    "E061: Per-site variation in div density: do sites with fewer divs compensate with longer word runs, or do they use a different separator strategy?",
+    "E062: Does the div-avoided word|num boundary align with the E031 word->num order regularity, i.e. is the bound unit directionally constrained (word precedes its numeral)?",
+    "E063: Entropy of (before>div>after) transitions vs null — is div placement predictable from local context beyond the word|word/word|num dichotomy?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Only token TYPES (word/num/div/nl/other) used; 'div' is the observed token type; no sign values, readings, phonetics, or semantics. Distinct object from E031 (word->num order) and E037 (nl line breaks): this tests the divider's PLACEMENT pattern. Null is calibrated by construction (gap-reshuffle preserves content-token sequence and div count per inscription).",
+  "deviations": [
+    "n_div in the gap-based global analysis = 423, not the raw 463: 40 divs sit at stream start/end with no bracketing content token on one side and are excluded from the gap-based S1/S2 statistics (pre-registered in the gap definition: a div needs both a preceding and following content token to map to a content gap). This is consistent for observed and null (both use the same gap space).",
+    "Positive control is fully synthetic (Linear B corpus lacks this div structure, as stated in the task spec); PC corpora were built from the real content-token skeletons with planted div placements.",
+    "Leave-one-site-out recomputed global p with 500 permutations per leave-one-out (vs 1000 for the main global); all LOO p-values remained <=0.002."
+  ]
+}
