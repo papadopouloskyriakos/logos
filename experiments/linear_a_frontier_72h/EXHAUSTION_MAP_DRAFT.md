@@ -23,7 +23,7 @@ Zero of the 22 positives rises above L2/L3. The honest denominator is on-screen:
 reading.*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 59 ledger entries: **no epoch is worded above L3** (layers: L1×9, L2×7, L2/L3×36, older-unlabelled×14;
+Scanned all 61 ledger entries: **no epoch is worded above L3** (layers: L1×9, L2×10, L2/L3×36, older-unlabelled×14;
 zero L4+); **every `licences_changed` field is `none`** (no result silently earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
