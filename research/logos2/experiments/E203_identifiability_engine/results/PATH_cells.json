@@ -1,0 +1,45 @@
+{
+ "cell": "PATH_marginal_modules",
+ "cells": [
+  {
+   "path_cell": "EMPTY",
+   "log10_upper": 297.6501928402347,
+   "note": "unconstrained baseline 163*log10(67)"
+  },
+  {
+   "path_cell": "+M_STRUCTURE",
+   "log10_upper": 297.6501928402347,
+   "relabeling_invariance_witness": true,
+   "note": "graduated relative constraints are value-blind (0 bits); mechanical witness recorded \u2014 reproduces the prior relabeling-invariance result in the new formalism"
+  },
+  {
+   "path_cell": "+M_NUMERAL",
+   "log10_upper": 297.6501928402347,
+   "note": "NO_OP on the WP-H lattice sign set (logograms/numerals excluded upstream); module retained for the full 92-sign inventory run"
+  },
+  {
+   "path_cell": "+M_REL(65 substitution edges)",
+   "log10_upper": 297.65019284023384,
+   "consistent": true,
+   "n_reduced": 0,
+   "rel_dropped": 0,
+   "note": "COMPAT edges alone (no pins): coupled bound, upper only"
+  },
+  {
+   "path_cell": "+M_HOM_CONT(conditional)",
+   "log10_upper": null,
+   "consistent": false,
+   "n_reduced": null,
+   "rel_dropped": 6,
+   "note": "CONDITIONAL on the UNLICENSED continuity hypothesis; Salgarella homophone-grade equalities hard"
+  },
+  {
+   "path_cell": "+M_PINS(I,RI,SU,TO)",
+   "log10_upper": null,
+   "consistent": false,
+   "n_reduced": null,
+   "rel_dropped": 6,
+   "note": "adds the four one-toponym-deep pins on top of the conditional map"
+  }
+ ]
+}

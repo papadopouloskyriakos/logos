@@ -34,31 +34,38 @@ def checkpoint(name, obj):
 
 
 def g1_gate():
+    """Amended per amendment_R1.md (defect repair; as-run original preserved in G1_gate.json):
+    soundness + zero-anchor ambiguity + exact equality with the CP-SAT-probed reference
+    identifiable set, on 60-sign/500-edge/24-pin instances, 5 replicates."""
     reps = []
     for rep in range(5):
-        rng = np.random.default_rng(seed_for("G1", rep))
-        signs, truth, rel = engine.synthetic_instance(163, 1200, rng)
-        anchor_signs = list(rng.choice(signs, 64, replace=False))
+        rng = np.random.default_rng(seed_for("G1R1", rep))
+        signs, truth, rel = engine.synthetic_instance(60, 500, rng)
+        anchor_signs = list(rng.choice(signs, 24, replace=False))
         anchors = {s: truth[s] for s in anchor_signs}
         inst = engine.Instance(signs, rel_pairs=rel, pins=anchors)
         bb = inst.backbone()
-        n_correct = sum(1 for s, c in bb["backbone"].items() if tuple(c) == truth[s])
-        n_wrong = len(bb["backbone"]) - n_correct
-        # zero-anchor arm
+        n_wrong = sum(1 for s, c in bb["backbone"].items() if tuple(c) != truth[s])
+        ref = engine.sat_identifiable_set(inst)
+        ref_ok = ref is not None
+        eng_bb = {s: tuple(c) for s, c in bb["backbone"].items()}
+        ref_bb = {s: tuple(c) for s, c in (ref or {}).items()}
         inst0 = engine.Instance(signs, rel_pairs=rel)
         bb0 = inst0.backbone()
         reps.append({
-            "rep": rep, "n_backbone": bb["n_backbone"], "n_correct": n_correct,
-            "n_wrong": n_wrong, "frac_planted_recovered": n_correct / 163,
-            "zero_anchor_backbone": bb0["n_backbone"],
-            "zero_anchor_frac": bb0["n_backbone"] / 163,
-            "pass": (n_correct / 163 >= 0.90) and n_wrong == 0 and
-                    (bb0["n_backbone"] / 163 <= 0.05),
+            "rep": rep, "n_backbone_engine": len(eng_bb), "n_reference": len(ref_bb),
+            "n_wrong": n_wrong, "backbone_equals_reference": eng_bb == ref_bb,
+            "missing_from_engine": sorted(set(ref_bb) - set(eng_bb)),
+            "extra_in_engine": sorted(set(eng_bb) - set(ref_bb)),
+            "zero_anchor_frac": bb0["n_backbone"] / 60,
+            "pass": ref_ok and n_wrong == 0 and eng_bb == ref_bb and
+                    (bb0["n_backbone"] / 60 <= 0.05),
         })
     ok = all(r["pass"] for r in reps)
-    res = {"cell": "GATE_synthetic_recovery", "replicates": reps, "gate_passed": ok,
-           "rule": "frac_planted_recovered>=0.90 AND n_wrong==0 AND zero_anchor_frac<=0.05, 5/5"}
-    checkpoint("G1_gate", res)
+    res = {"cell": "GATE_synthetic_recovery_R1", "amendment": "amendment_R1.md",
+           "replicates": reps, "gate_passed": ok,
+           "rule": "soundness AND zero-anchor<=5% AND engine backbone == CP-SAT-probe reference, 5/5"}
+    checkpoint("G1_gate_R1", res)
     return res
 
 

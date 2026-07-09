@@ -1,0 +1,63 @@
+{
+ "cell": "GATE_synthetic_recovery_R1",
+ "amendment": "amendment_R1.md",
+ "replicates": [
+  {
+   "rep": 0,
+   "n_backbone_engine": 53,
+   "n_reference": 53,
+   "n_wrong": 0,
+   "backbone_equals_reference": true,
+   "missing_from_engine": [],
+   "extra_in_engine": [],
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 1,
+   "n_backbone_engine": 45,
+   "n_reference": 45,
+   "n_wrong": 0,
+   "backbone_equals_reference": true,
+   "missing_from_engine": [],
+   "extra_in_engine": [],
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 2,
+   "n_backbone_engine": 53,
+   "n_reference": 53,
+   "n_wrong": 0,
+   "backbone_equals_reference": true,
+   "missing_from_engine": [],
+   "extra_in_engine": [],
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 3,
+   "n_backbone_engine": 51,
+   "n_reference": 51,
+   "n_wrong": 0,
+   "backbone_equals_reference": true,
+   "missing_from_engine": [],
+   "extra_in_engine": [],
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 4,
+   "n_backbone_engine": 48,
+   "n_reference": 48,
+   "n_wrong": 0,
+   "backbone_equals_reference": true,
+   "missing_from_engine": [],
+   "extra_in_engine": [],
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  }
+ ],
+ "gate_passed": true,
+ "rule": "soundness AND zero-anchor<=5% AND engine backbone == CP-SAT-probe reference, 5/5"
+}

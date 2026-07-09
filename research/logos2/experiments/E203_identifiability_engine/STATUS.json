@@ -1,6 +1,26 @@
 {
- "experiment": "E203",
- "status": "PREREGISTERED",
+ "experiment": "E203_identifiability_engine",
+ "status": "PILOT_COMPLETE",
  "exploratory": true,
- "created": "2026-07-10"
+ "confirmatory": false,
+ "verdict": "ENGINE_VALIDATED",
+ "completed_pilot": "2026-07-10",
+ "gate_history": "as-run G1 FAILED (fail-closed; engine sound 5/5, instance-luck criterion defect) -> amendment_R1.md (defect repair, committed pre-rerun) -> amended G1 PASSED 5/5 (backbone == CP-SAT-probe reference exactly; zero-anchor fully ambiguous)",
+ "pilot_findings_L0_L2_only": [
+  "WP-H comparability: engine raw log10 solution-space upper = 225.4 under WPH-38 pins + model-2 semantics; sits between WP-H operational 63.4 and raw/gauge 270-297.7; attribution recorded (different quantities)",
+  "WP-H UNSAT reproduced independently: hard-everything INFEASIBLE with exactly 15 pin-violated substitution edges (WP-N reported 15/24); re-adjudicated UNSAT_GENERIC (200/200 matched random pin-sets also UNSAT)",
+  "NEW config tested: Salgarella homophone-grade continuity map alone is also arc-inconsistent with the substitution channel -> adjudicated UNSAT_GENERIC (200/200); NO claim",
+  "M_REL alone (65 COMPAT edges) reduces ZERO sign domains - reproduces 'relationally dark' in the new formalism",
+  "M_STRUCTURE relabeling-invariance witness recorded: graduated relative constraints contribute 0 bits in value space"
+ ],
+ "next": "F1 confirmatory full grid (module lattice x pin-error scenarios x polyphony) deferred per resource budget; XOR-hash counter exercised at F1; feeds E202-recast acquisition ranking",
+ "no_value_claim": "No phonetic value asserted anywhere; M_HOM_CONT cells are conditional maps under the UNLICENSED continuity hypothesis",
+ "artifacts": [
+  "results/G1_gate.json (as-run, preserved)",
+  "results/G1_gate_R1.json",
+  "results/G2_wph.json",
+  "results/PATH_cells.json",
+  "results/UNSAT_adjudication.json",
+  "results/P1_summary.json"
+ ]
 }

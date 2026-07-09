@@ -1,0 +1,32 @@
+{
+ "cell": "UNSAT_adjudication",
+ "protocol": "WP-N matched random pin-sets, n=200",
+ "results": [
+  {
+   "config": "WPH38_hard_everything",
+   "observed_unsat": true,
+   "n_null": 200,
+   "null_unsat_count": 200,
+   "null_unsat_rate": 1.0,
+   "null_rate_cp90_band": [
+    0.9851,
+    1.0
+   ],
+   "p_null_ge_observed_plus1": 1.0,
+   "verdict": "UNSAT_GENERIC"
+  },
+  {
+   "config": "SALGARELLA_HOM_CONT_only",
+   "observed_unsat": true,
+   "n_null": 200,
+   "null_unsat_count": 200,
+   "null_unsat_rate": 1.0,
+   "null_rate_cp90_band": [
+    0.9851,
+    1.0
+   ],
+   "p_null_ge_observed_plus1": 1.0,
+   "verdict": "UNSAT_GENERIC"
+  }
+ ]
+}

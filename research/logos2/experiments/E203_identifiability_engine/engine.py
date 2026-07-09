@@ -239,3 +239,32 @@ def synthetic_instance(n_signs, n_rel, rng):
         if COMPAT[D_IDX[ca], D_IDX[cb]]:
             rel.append((signs[a], signs[b]))
     return signs, truth, rel
+
+
+def sat_identifiable_set(inst, timeout_s=20):
+    """Amendment R1 reference: a sign is reference-identifiable iff exactly ONE of its
+    arc-consistent candidate values admits a full satisfying assignment (CP-SAT probe per
+    candidate — a search-based path, distinct from AC propagation)."""
+    dom, ok = inst.propagate()
+    if not ok:
+        return None
+    ident = {}
+    for s in inst.signs:
+        cand = list(np.flatnonzero(dom[s]))
+        if len(cand) == 1:
+            ident[s] = DOM[int(cand[0])]
+            continue
+        feas_vals = []
+        for v in cand:
+            m, var = inst.build_model()
+            m.add(var[s] == int(v))
+            sv = cp_model.CpSolver(); sv.parameters.max_time_in_seconds = timeout_s
+            sv.parameters.num_workers = 1
+            st = sv.solve(m)
+            if st in (cp_model.OPTIMAL, cp_model.FEASIBLE):
+                feas_vals.append(v)
+                if len(feas_vals) > 1:
+                    break
+        if len(feas_vals) == 1:
+            ident[s] = DOM[int(feas_vals[0])]
+    return ident

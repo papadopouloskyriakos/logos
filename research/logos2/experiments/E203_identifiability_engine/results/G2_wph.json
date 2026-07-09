@@ -1,0 +1,89 @@
+{
+ "cell": "COMPARE_wph_domain",
+ "n_signs": 163,
+ "n_rel_pairs": 30,
+ "n_wph_pins": 38,
+ "hard_everything": {
+  "status": "INFEASIBLE",
+  "feasible": false
+ },
+ "model2_semantics": {
+  "rel_dropped_pin_violated": 15,
+  "dropped_pairs": [
+   [
+    "A",
+    "MI"
+   ],
+   [
+    "A",
+    "SI"
+   ],
+   [
+    "DA",
+    "PI"
+   ],
+   [
+    "DA",
+    "RU"
+   ],
+   [
+    "JA",
+    "U"
+   ],
+   [
+    "KA",
+    "TI"
+   ],
+   [
+    "KI",
+    "WA"
+   ],
+   [
+    "KU",
+    "MA"
+   ],
+   [
+    "KU",
+    "SA"
+   ],
+   [
+    "NE",
+    "RA"
+   ],
+   [
+    "PA",
+    "TE"
+   ],
+   [
+    "RO",
+    "U"
+   ],
+   [
+    "RU",
+    "TA"
+   ],
+   [
+    "RU",
+    "WA"
+   ],
+   [
+    "SU",
+    "TE"
+   ]
+  ],
+  "feasible": {
+   "status": "OPTIMAL",
+   "feasible": true
+  },
+  "log10_count_upper": 225.4198386464455,
+  "bound_exact_if_uncoupled": false,
+  "n_signs_reduced": 42,
+  "n_backbone": 38
+ },
+ "comparability_statement": {
+  "engine_raw_log10_solution_upper": 225.4198386464455,
+  "wph_operational_log10": 63.4,
+  "wph_gauge_quotient_log10_lower": 270.0,
+  "attribution": "Three DIFFERENT quantities: the engine's raw CSP solution-space upper bound (hard pins + surviving COMPAT edges only); WP-H's operational ambiguity (channel-quality-weighted G-surface, many soft channels); WP-H's gauge-quotient equivalence-class lower bound. The engine bound sits between them by construction: soft channels absent -> larger than operational; hard pins fix 38 signs -> smaller than the unpinned gauge count 163*log10(67)=297.7."
+ }
+}
