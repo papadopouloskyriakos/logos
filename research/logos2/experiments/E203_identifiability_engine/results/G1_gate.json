@@ -1,0 +1,57 @@
+{
+ "cell": "GATE_synthetic_recovery",
+ "replicates": [
+  {
+   "rep": 0,
+   "n_backbone": 153,
+   "n_correct": 153,
+   "n_wrong": 0,
+   "frac_planted_recovered": 0.9386503067484663,
+   "zero_anchor_backbone": 0,
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 1,
+   "n_backbone": 140,
+   "n_correct": 140,
+   "n_wrong": 0,
+   "frac_planted_recovered": 0.8588957055214724,
+   "zero_anchor_backbone": 0,
+   "zero_anchor_frac": 0.0,
+   "pass": false
+  },
+  {
+   "rep": 2,
+   "n_backbone": 153,
+   "n_correct": 153,
+   "n_wrong": 0,
+   "frac_planted_recovered": 0.9386503067484663,
+   "zero_anchor_backbone": 0,
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 3,
+   "n_backbone": 155,
+   "n_correct": 155,
+   "n_wrong": 0,
+   "frac_planted_recovered": 0.950920245398773,
+   "zero_anchor_backbone": 0,
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  },
+  {
+   "rep": 4,
+   "n_backbone": 150,
+   "n_correct": 150,
+   "n_wrong": 0,
+   "frac_planted_recovered": 0.9202453987730062,
+   "zero_anchor_backbone": 0,
+   "zero_anchor_frac": 0.0,
+   "pass": true
+  }
+ ],
+ "gate_passed": false,
+ "rule": "frac_planted_recovered>=0.90 AND n_wrong==0 AND zero_anchor_frac<=0.05, 5/5"
+}
