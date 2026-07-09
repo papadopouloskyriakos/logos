@@ -1,0 +1,72 @@
+{
+  "task_id": "EPOCH-065",
+  "method": "Stratified site-register permutation test on structural word-length (L2). For each testable document class (support classes with >=2 sites having >=30 words), compute tie-corrected Kruskal-Wallis H on word-length grouped by SITE; combined statistic = sum of per-class H. STRATIFIED null permutes SITE labels WITHIN each class (preserves class word-length multiset and each site's n-in-class), >=2000 draws. Contrast: raw (uncontrolled) site KW over all words to quantify class-confounding. PC synthetic (planted residual site-register effect + class-only false-positive).",
+  "result": "STRATIFIED combined site effect on word-length is highly significant (combined perm p=0.0000) and ALL THREE testable classes individually show a significant within-class site effect (Roundel p=0.0000, Stone vessel p=0.0000, Tablet p=0.0000). PC passed. Word-length carries a GENERAL residual site register BEYOND document class. The raw (uncontrolled) site H=223.0 is much larger than the stratified combined H=89.6, indicating substantial class-confounding (~60% of raw site effect is class), but a large residual (~40%) survives as genuine within-class site variation.",
+  "verdict": "WORDLEN_SITE_REGISTER",
+  "numbers": {
+    "per_class": {
+      "Tablet": {
+        "sites": ["Arkhalkhori", "Haghia Triada", "Khania", "Phaistos", "Tylissos"],
+        "obs_H": 45.2529,
+        "perm_p": 0.0,
+        "site_means": {"Arkhalkhori": 1.9107, "Haghia Triada": 1.8589, "Khania": 1.5, "Phaistos": 2.0526, "Tylissos": 1.925}
+      },
+      "Roundel": {
+        "sites": ["Haghia Triada", "Khania"],
+        "obs_H": 14.4108,
+        "perm_p": 0.0,
+        "site_means": {"Haghia Triada": 2.4706, "Khania": 1.6182}
+      },
+      "Stone vessel": {
+        "sites": ["Iouktas", "Palaikastro", "Zakros"],
+        "obs_H": 29.9323,
+        "perm_p": 0.0,
+        "site_means": {"Iouktas": 3.7632, "Palaikastro": 3.2083, "Zakros": 2.1745}
+      }
+    },
+    "combined": {
+      "obs_sum_H": 89.596,
+      "perm_p": 0.0,
+      "n_classes_testable": 3,
+      "n_classes_sig": 3
+    },
+    "raw_site": {
+      "obs_H": 223.0265,
+      "perm_p": 0.0,
+      "note": "uncontrolled; class-confounded"
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    },
+    "n_perm_draws": 2000,
+    "contrast_raw_vs_stratified": {
+      "raw_site_H": 223.0265,
+      "stratified_combined_H": 89.596,
+      "fraction_class_confounded": 0.599,
+      "fraction_residual_site": 0.401,
+      "interpretation": "Raw site effect is ~2.5x the stratified combined H; majority class-confounded but large residual site register survives within class."
+    }
+  },
+  "key_findings": [
+    "CONTROLLING for document class, word-length still carries a significant residual SITE effect: the stratified combined KW H=89.6 (perm p=0.0000 over 2000 draws), so word-length is NOT fully determined by document function.",
+    "The residual site register is GENERAL, not class-specific: all 3 testable classes individually show a significant within-class site effect (Tablet p=0.0000, Stone vessel p=0.0000, Roundel p=0.0000), satisfying the >=2-class criterion for WORDLEN_SITE_REGISTER.",
+    "Substantial class-confounding exists: the raw (uncontrolled) site H=223.0 is ~2.5x the stratified combined H=89.6, so ~60% of the apparent raw site effect is actually document-class composition (e.g., Iouktas/Palaikastro are Stone-vessel-heavy with long words; Haghia Triada/Khania are Tablet-heavy with short words). The stratified null removes this and a ~40% residual remains.",
+    "Within Tablet (the largest class), Khania has markedly shorter words (mean 1.50) than Phaistos (2.05) or Tylissos (1.93); within Stone vessel, Zakros is much shorter (2.17) than Iouktas (3.76) or Palaikastro (3.21); within Roundel, Haghia Triada (2.47) is longer than Khania (1.62). Site-specific scribal register is consistent across classes.",
+    "Positive control PASSED: the machinery detects a planted +1 residual site-register shift (combined p=0.0) and does NOT fire on class-only data (0/20 false positives), so the verdict is machinery-informative."
+  ],
+  "successor_hypotheses": [
+    "E066: Is the residual within-class site register driven by a few high-frequency sign-sequences (formulaic word-shapes) that differ in rate across sites, or by a broad shift of the whole word-length distribution? Decompose via per-site word-length histograms within class.",
+    "E067: Does the site register survive when controlling for inscription sub-context (e.g., administrative vs votive within Tablet) in addition to support class, or is part of the 'site' effect actually sub-context confounding?",
+    "E068: Is the site word-length register correlated with the site vocabulary/typology register (site-local side of the dichotomy), i.e., do sites with longer words also have distinct vocabularies — a unified site-local scribal profile?",
+    "E069: Per-site rank-shift analysis: rank sites by mean word-length within each class and test whether the site ranking is concordant across classes (e.g., is Khania always shortest?), which would indicate a stable cross-class site register rather than class-specific noise.",
+    "E070: Power/robustness: re-run with a higher per-site word threshold (>=50, >=100) and leave-one-site-out to confirm the residual site effect is not dominated by a single outlier site per class.",
+    "E071: Decompose the raw-vs-stratified gap: quantify how much of the 223->89.6 reduction is attributable to each (class, site) cell to map exactly where class-confounding is largest."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "word-length = len(signs) (structural count only; no sign values, no readings, no meaning). document class = corpus 'support' field (physical, given). site = corpus 'site' field (findspot, given). The stratified null permutes site labels WITHIN each class, preserving the class word-length multiset and each site's n-in-class, so any detected effect is site variation BEYOND class. No derived/semantic feature is used. L2 only.",
+  "deviations": []
+}
