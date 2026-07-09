@@ -34,8 +34,9 @@ established.
 ## The collapse (why nothing reaches L4+)
 `shares_lineage` edges collapse the apparent multi-method vowel signal to one node:
 eigenmap → ICA → morphogenesis(E091) → Potts(E098) → persistence(E100) all `share_data_with` the context
-co-occurrence matrix (pairwise agreement ARI 0.979, E102). The genuinely independent positional channel
-`fails_to_replicate` the vowel signal (ARI 0.044 ≈ chance). → **n_independent_channels = 1** → absolute-value gate
+co-occurrence matrix (recorded pairwise agreement eigenmap|ICA ARI 0.979, E102; the other three methods recover
+the same lineage's structure in their own epochs rather than an independent channel). The genuinely independent
+positional channel `fails_to_replicate` the vowel signal (ARI 0.043–0.046 ≈ chance). → **n_independent_channels = 1** → absolute-value gate
 `FAILS` → no phonetic value, translation, or language-ID node can be created.
 
 ## Contradictions resolved append-only (Art. XVII)

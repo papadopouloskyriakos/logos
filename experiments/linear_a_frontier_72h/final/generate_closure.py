@@ -76,7 +76,7 @@ def verdict_text(e):
     if not v and e.get("de_authorized"):
         return "DE_AUTHORIZED (terminal)"
     if isinstance(v, dict):
-        return v.get("epoch") or " / ".join(f"{k}:{x}" for k, x in list(v.items())[:2])
+        return v.get("epoch") or " / ".join(f"{k}:{x}" for k, x in v.items())
     return str(v or "")
 
 

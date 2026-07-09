@@ -9,7 +9,7 @@ Reflects the terminal audit remediation (E103R/E104R).
    accounts: any correct account of LA administrative words must place a recurrent, cross-site, cross-period
    initial A-enrichment (compatible with a recurrent initial functional or morphological slot; prefixhood,
    productivity, sound, and meaning are not established). *Absolute reduction* (held-out, robust across
-   overlapping segmentation variants). Constrains ~155 word-initial-A word types.
+   overlapping segmentation variants). Constrains ~155 word-initial-A units (token occurrences; editor variant).
 2. **The LA vowel signal is frequency-invariant** (E099) — reduces uncertainty about the *nature* of the weak signal
    (structural, not a frequency artifact). *Conditional* reduction: established on LB, LA-untestable.
 3. **LA is data-sufficient for the weak signal** (E093) — reduces the hypothesis "more corpus will crack it": at

@@ -33,7 +33,8 @@ What the campaign *did* produce is durable and honest:
   (significant in 9/10 sites + leave-one-site-out, E023), multi-axis held-out (5/6 support types + 4/4
   chronological phases, E024), and the closure adjudication under **three overlapping segmentation/selection
   variants derived from a single corpus lineage** (editor / divider-strict / numeral-anchored ledger-heads; A is
-  rank-1 by best-of-universe maxT with z≈17, ~2.4× the next sign; verdict class unchanged under the corrected
+  rank-1 by best-of-universe maxT in every variant, z 16.6/16.8/7.5 — ~2.4× the next sign in the editor baseline
+  (2.2× divider, 1.1× numeral-anchored); verdict class unchanged under the corrected
   categorical joint null, E103R). This is segmentation **robustness**, not independent replication. It is a
   **RELATIVE positional constraint (L2/L3), NOT a phonetic value** — compatible with a recurrent initial functional
   or morphological slot; prefixhood, productivity, sound, and meaning are not established.
@@ -63,17 +64,24 @@ What the campaign *did* produce is durable and honest:
 - **E104R** replaced the point-estimate criterion with a blind-committed bound-based rule and n=400; verdict
   `CAMPAIGN_NULL_GATES_CERTIFIED` (above).
 - The closure generator was corrected (bucket classification, terminal-record dedup, derived counts, no
-  truncation); the regenerated bucket tally is below. Full details: `epochs/EPOCH-103/prereg_addendum_R.md`,
-  `epochs/EPOCH-104/prereg_addendum_R.md`, and the remediation report.
+  truncation). Regenerated bucket tally (105 epochs): **POSITIVE_RELATIVE 33 · BOUNDED_NEGATIVE 27 · SITE_LOCAL 16
+  · OTHER 21 · QUALIFICATION 4 · METHODOLOGY 2 · PROSPECTIVE_SEAL 1 · DE_AUTHORIZED 1** (machine-readable:
+  `CAMPAIGN_FINAL_STATE.json`; OTHER = headlines carrying no status keyword — partial/marginal/underpowered
+  outcomes). Full details: `epochs/EPOCH-103/prereg_addendum_R.md`, `epochs/EPOCH-104/prereg_addendum_R.md`, and
+  the remediation report. One noted nit in the FROZEN E104 addendum (not edited, per Art. XVII): its illustrative
+  parenthetical says the k=4/400 CP95 upper is ≈0.0229; the exact value is 0.02274 — either way > 2%, so the
+  committed tolerance (k ≤ 3) is unaffected.
 
 ## Actual duration and scale
 
 - **Planned:** 2026-07-08T03:20Z → 2026-07-11T03:20Z (72 h, ≥18 epochs). **Actual close:** 2026-07-09 under the
   user closure instruction (deadline waived; the ≥18-epoch floor was exceeded ~6×).
-- **Final epoch count:** 105 (E001–E105; append-only ERRATUM/SUPERSEDING duplicates for E002–E014 and the
-  E103R/E104R remediation records preserved in the ledger).
-- **Branch:** `research/linear-a-frontier-72h` · **commit range:** `c1f089e` (scaffold) … the closing commit
-  recorded in `CAMPAIGN_FINAL_STATE.json` (`final_commit`).
+- **Final epoch count:** 105 (E001–E105; append-only ERRATUM/SUPERSEDING duplicates for 11 epochs in the
+  E002–E014 range — E005 and E011 have none — plus the E103R/E104R remediation records, all preserved in the
+  ledger: 120 rows for 105 unique epochs).
+- **Branch:** `research/linear-a-frontier-72h` · **commit range:** `c1f089e` (scaffold) … `8924463` (the
+  remediation content close; also stamped as `final_commit` in `CAMPAIGN_FINAL_STATE.json`; original pre-remediation
+  closure commit `cd98259` is recorded in the `CAMPAIGN_COMPLETE` marker; a packaging stamp commit follows).
 
 ## Method families (34) — closure status
 
@@ -101,8 +109,10 @@ relative/structural constraint survived held-out testing, never a value.
 ## Strong leads that failed to reach a value
 
 - **The vowel-class signal (E099/E102):** real but weak, and — critically — **one independent channel seen five
-  ways** (eigenmap ≡ ICA ≡ morphogenesis ≡ Potts ≡ persistence agree at ARI 0.979). The one genuinely independent
-  channel (positional profile) does not carry it. Fails the ≥2-independent-channel bar.
+  ways**: eigenmap and ICA agree at pairwise ARI 0.979 (E102's recorded pair), and morphogenesis (E091), Potts
+  (E098), and persistence (E100) each recover the same context-co-occurrence-lineage structure rather than an
+  independent channel. The one genuinely independent channel (positional profile, ARI 0.043–0.046 ≈ chance) does
+  not carry it. Fails the ≥2-independent-channel bar.
 - **Cross-script substitution bridge (E002/E003):** the C-axis is largely order-free; no finite anchor budget
   (3–30) Holm-survives at Linear-A scale — the anchor *geometry*, not corpus size, is the bottleneck.
 - **SBI / new architectures (E016):** match but never beat raw-cosine spectral clustering at any anchor budget.

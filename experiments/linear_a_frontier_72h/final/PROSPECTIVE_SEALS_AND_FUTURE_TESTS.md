@@ -29,6 +29,8 @@ available at freeze time — the Linear-B-new-tablet standard.
 | FRACTION_ORDER scoring | Anetaki II publication | tests a committed relative fraction ordering against unseen data |
 
 ## Verification for reviewers
-The seal hash manifest is `data/seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256` (copied into the review bundle
-with the five files it references, so `sha256sum -c` succeeds from the bundle root). None of the seals may be
+The seal hash manifest is `data/seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256` in the branch; the review
+bundle carries a byte-identical copy at `seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256` together with the five
+files it references, so from the bundle root run
+`sha256sum -c seals/FRACTION_ORDER_ANETAKI_SEAL.manifest.sha256`. None of the seals may be
 opened by the campaign; opening is an external event.

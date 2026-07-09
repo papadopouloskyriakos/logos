@@ -19,7 +19,7 @@ Machine-readable: `GRADUATED_FINDINGS.json` (count = 1). Reflects the terminal a
   - **Segmentation robustness (E103, corrected E103R):** rank-1 best-of-universe maxT survivor at p ≤ .01 under
     **three overlapping segmentation/selection variants derived from a single corpus lineage** (editor /
     divider-strict / numeral-anchored ledger-heads), z ≈ 17 (editor & divider) / 7.5 (numeral), dominating the
-    next sign (KU, z ≈ 7) by ~2.4×; PC power+calibration clean; leave-one-method-out evaluated mechanically from
+    next sign KU by ~2.4× in the editor baseline (2.2× divider, 1.1× numeral-anchored); PC power+calibration clean; leave-one-method-out evaluated mechanically from
     the frozen E022/E023/E024 artifacts and invariant. **Variant overlap quantified:** B_divider_strict shares
     87.6% of unit realizations with A_editor (1199/1369 identical; 170 editor units participate in merges
     yielding 166 divider-bounded units), and C_numeral_anchored is a function-restricted **subset** of A_editor
