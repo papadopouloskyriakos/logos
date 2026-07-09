@@ -1,0 +1,86 @@
+{
+  "task_id": "EPOCH-073",
+  "method": "GENRE CONTRAST of within-inscription word-order rigidity (ADMIN vs LIBATION), L3. Anonymous word-forms (sign tuples, len>=2). For each inscription every unordered pair of distinct forms yields one observation (site, sign); sign=+1 if (lex-key fa<fb) fa precedes fb in stream (first-occurrence pos), else -1. Testable pairs: total occurrences>=2. consistency(pair)=max(n_plus,n_minus)/(n_plus+n_minus). C_glob=mean consistency over testable pairs. NULL: within-inscription word-order shuffle (preserves each inscription's word multiset -> invariant testable/cross-site pair sets; destroys only order), 2000 draws, one-sided perm p=frac(null>=obs) add-one smoothed. GENRE CONTRAST: bootstrap over admin testable pairs' consistency values (5000 resamples), 95% CI; admin significantly less rigid than libation iff bootstrap upper bound < libation C_glob. PC synthetic.",
+  "result": {
+    "admin": {
+      "n_multiword_inscriptions": 174,
+      "n_sites": 11,
+      "n_testable_pairs": 77,
+      "n_cross_pairs": 3,
+      "C_glob": 0.8394,
+      "C_glob_null_mean": 0.7453,
+      "C_glob_p": 0.0020,
+      "bootstrap_CI": [0.7879, 0.8874]
+    },
+    "libation_ref": {
+      "C_glob": 1.0000,
+      "n_testable_pairs": 13,
+      "n_cross_pairs": 10
+    },
+    "contrast": {
+      "delta": 0.1606,
+      "admin_significantly_less_rigid": true,
+      "admin_cross_site_underpowered": true
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_power": 1.000,
+      "false_pos_rate": 0.050,
+      "discrimination_separated": true,
+      "rigid_Cglob": 1.0000,
+      "weak_Cglob": 0.7203,
+      "pc_is_synthetic": true
+    }
+  },
+  "verdict": "ADMIN_ORDER_WEAKER_THAN_LIBATION",
+  "numbers": {
+    "admin": {
+      "n_multiword_inscriptions": 174,
+      "n_sites": 11,
+      "n_testable_pairs": 77,
+      "n_cross_pairs": 3,
+      "C_glob": 0.8394,
+      "C_glob_null": 0.7453,
+      "C_glob_p": 0.0020,
+      "boot_lo": 0.7879,
+      "boot_hi": 0.8874
+    },
+    "libation_ref": {
+      "C_glob": 1.0000,
+      "n_testable_pairs": 13,
+      "n_cross_pairs": 10
+    },
+    "contrast": {
+      "delta": 0.1606,
+      "admin_significantly_less_rigid": true,
+      "admin_cross_site_underpowered": true
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.001,
+      "false_pos_rate": 0.050,
+      "power_est": 1.000,
+      "discrimination_ok": true,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "ADMIN within-inscription word-order is significantly more consistent than the within-inscription shuffle null (C_glob=0.8394 vs null 0.7453, perm p=0.0020): administrative texts DO have a weak within-document word-order preference, they are NOT a pure bag-of-words.",
+    "ADMIN order is significantly LESS rigid than LIBATION's: admin C_glob=0.8394 with bootstrap 95% CI (0.7879, 0.8874), whose upper bound is well below libation C_glob=1.0000 (delta=0.1606). The PERFECTLY rigid canonical order is LIBATION-SPECIFIC, not a general LA feature.",
+    "ADMIN cross-site order test is structurally UNDERPOWERED: only 3 cross-site co-occurring pairs (vs 10 for libation). This is the predicted consequence of E071's finding that admin vocabulary is site-local — site-local forms do not co-occur across sites, so cross-site order cannot be tested at scale. The well-powered signal is the GLOBAL within-inscription rigidity and the genre contrast.",
+    "The genre contrast is sharp and graded: libation C_glob=1.000 (perfectly rigid, liturgical formula) > admin C_glob=0.839 (weakly preferred, administrative). This is consistent with libation being a fixed liturgical formula and admin being practical record-keeping with only loose ordering conventions.",
+    "PC calibration passed on all three gates: DETECT power=1.000 (rigid canonical order always flagged), FALSE-POSITIVE rate=0.050 (<=0.10; random-order co-occurrences not flagged), DISCRIMINATION separates rigid (C=1.0) from weak-order (C=0.72) corpora via bootstrap. Machinery is informative."
+  ],
+  "successor_hypotheses": [
+    "E074: Is the weak admin within-inscription order preference driven by a SMALL set of high-frequency formulaic pairs (e.g. commodity+numeral adjacency), or distributed across many pairs? Decompose admin C_glob by pair frequency.",
+    "E075: Does admin order rigidity vary by SUPPORT (Tablet vs Nodule vs Roundel)? Tablets may be more rigid (longer lists) than nodules (short tags).",
+    "E076: Is the admin order preference POSITIONAL (forms prefer specific stream positions, e.g. sign-of-quantity first) rather than RELATIONAL (pairwise order)? Test positional entropy vs pairwise consistency.",
+    "E077: Does the libation perfect rigidity (C=1.000) hold when restricted to the 3 admin cross-site pairs' forms, i.e. is the contrast driven by form identity or by genre? Matched-form contrast.",
+    "E078: Is admin order preference stronger for pairs that DO co-occur cross-site (the 3 pairs) than for site-local pairs? A within-admin rigidity gradient by cross-site status.",
+    "E079: Temporal/contextual stability — does admin C_glob differ across the LMIB vs other contexts, or is the weak order preference stable across the administrative tradition?"
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous word-forms (sign tuples, len>=2); genre = physical support field; within-inscription word-order shuffle null preserves each inscription's word multiset (which pairs co-occur, at which sites, how often) and destroys ONLY order; testable pairs restricted to >=2 co-occurrences (single-occ pairs trivially consistent); null mean of consistency is EMPIRICAL (~0.745, >0.5), validated against closed-form E[max(H,T)/k], never naive-0.5; genre contrast via bootstrap over admin pairs. L3 ONLY: no reading, no phonetic value, no meaning.",
+  "deviations": []
+}
