@@ -45,8 +45,10 @@ forms) → `E050` (selectional — constrains what follows). Reinforced by `E039
 extends to a **small prefix inventory**, not `A-` alone).
 
 **A2. Administrative ledger grammar** — the corpus has a real, cross-site accounting syntax.
-`E031` **word → numeral** order (entry then quantity), certified under a *calibrated pair-flip* null;
-`E037` **line-final numeral** template (the quantity closes the ledger line); `E044` numeral groups are
+`E031` **word → numeral** order (entry then quantity), certified under a *calibrated pair-flip* null
+(independently reproduced: word_first=1040, P=0.99); `E037` **line-final numeral** template — numerals are
+overwhelmingly line-final within numeral-bearing ledger lines (0.87–0.99 vs a ~0.45 null, p=2e-4; the exact
+fraction is line-definition-sensitive — see `VERIFICATION_AUDIT.md`); `E044` numeral groups are
 **single-numeral-dominant** (simple quantity slots, not compound numerals).
 
 **A3. Positional sign specialization** (`E043`, cross-site robust after the `E041`/`E042` power+calibration
