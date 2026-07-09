@@ -1,0 +1,95 @@
+{
+  "task_id": "EPOCH-081",
+  "method": "Row left-anchoring (left-justified layout) test, L2 spatial. Per doc: cluster non-divider glyphs into y-band rows (tol=0.6*median glyph height); row LEFT-edge=min glyph-left-x, RIGHT-edge=max glyph-right-x; medw=median glyph width; lsd=pstdev(LEFT-edges)/medw, rsd=pstdev(RIGHT-edges)/medw; doc asymmetry a=rsd-lsd (positive=>left tighter=>left-anchored). Usable doc: >=6 non-divider bbox glyphs AND >=3 rows. S_obs=median(a) over usable docs. NULL=edge-exchangeability (sign-symmetric): per doc sample s in {+1,-1} uniformly, contribute s*(rsd-lsd), S=median(contributions); one-sided perm p=frac(null S>=S_obs); >=5000 draws. Positive control SYNTHETIC, three arms (left-justified detect / centered false-positive / right-justified direction).",
+  "result": "Global rows are significantly left-anchored (S_obs=+0.459, perm_p=0.0002): row LEFT edges align tightly (median lsd=0.664) while RIGHT edges are ragged (median rsd=1.248), 65.5% of docs left-tighter-than-right. The edge-swap sign-symmetric null (median~0) is rejected. However the cross-site pattern is heterogeneous: Haghia Triada strongly left-anchored (S_site=+0.518, p=0.0002), Zakros directionally left-anchored but NOT significant at 0.05 (S_site=+0.440, p=0.10), and Khania at chance (S_site=-0.029, p=0.55, frac=0.50). Only 1 of 3 testable sites is significant => SITE_LOCAL, not cross-site.",
+  "verdict": "LEFT_MARGIN_ANCHORED_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "n_docs": 197,
+      "S_obs": 0.4587191676990603,
+      "null_median": -0.026197327930086667,
+      "perm_p": 0.0001999600079984003,
+      "median_lsd": 0.6644327823340395,
+      "median_rsd": 1.2479593078992817,
+      "frac_left_tighter": 0.6548223350253807
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "n_docs": 124,
+        "S_site": 0.5179578725397034,
+        "perm_p": 0.0001999600079984003,
+        "sig_left_anchored": true
+      },
+      {
+        "site": "Khania",
+        "n_docs": 26,
+        "S_site": -0.0294019906307747,
+        "perm_p": 0.5462907418516296,
+        "sig_left_anchored": false
+      },
+      {
+        "site": "Zakros",
+        "n_docs": 21,
+        "S_site": 0.4399397919861172,
+        "perm_p": 0.11417716456708658,
+        "sig_left_anchored": false
+      }
+    ],
+    "cross_site": {
+      "n_sites_testable": 3,
+      "n_sites_sig_left_anchored": 1
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0004997501249375312,
+      "power_est": 1.0,
+      "centered_false_pos_rate": 0.05,
+      "right_just_flagged_left": false,
+      "pc_is_synthetic": true
+    },
+    "per_site_detail": {
+      "Haghia Triada": {
+        "median_lsd": 0.67156052642413,
+        "median_rsd": 1.2957225954017995,
+        "frac_left_tighter": 0.6451612903225806,
+        "null_median": -0.002855898958438352
+      },
+      "Khania": {
+        "median_lsd": 0.6754277776671055,
+        "median_rsd": 0.9070323628961079,
+        "frac_left_tighter": 0.5,
+        "null_median": 0.0294019906307747
+      },
+      "Zakros": {
+        "median_lsd": 0.51713459656413,
+        "median_rsd": 1.3090239597871796,
+        "frac_left_tighter": 0.6666666666666666,
+        "null_median": 0.08027693745086406
+      }
+    }
+  },
+  "key_findings": [
+    "GLOBAL rows are significantly left-anchored: S_obs=+0.459 (median asymmetry rsd-lsd), perm_p=0.0002 vs the edge-exchangeability sign-swap null (null median ~0). Row LEFT edges are tight (median lsd=0.664) while RIGHT edges are ragged (median rsd=1.248) \u2014 a left-justified layout signature.",
+    "65.5% of usable docs (129/197) have left-edge spread smaller than right-edge spread (frac_left_tighter=0.655), consistent with a left margin that rows align to.",
+    "Haghia Triada (the largest site, n=124) drives the global signal strongly: S_site=+0.518, perm_p=0.0002, frac=0.645 \u2014 clearly left-anchored.",
+    "Cross-site heterogeneity blocks a cross-site verdict: Khania is at chance (S_site=-0.029, p=0.55, frac=0.50 \u2014 edges exchangeable) and Zakros is directionally left-anchored but NOT significant at 0.05 (S_site=+0.440, p=0.10). Only 1 of 3 testable sites is significant.",
+    "Positive control (SYNTHETIC) passed all three arms: left-justified detected with power_est=1.0, centered false-positive rate=0.05 (<=0.10), right-justified correctly NOT flagged as left-anchored (S_obs<0).",
+    "Combined with E079 (regular horizontal glyph spacing) and E080 (regular vertical line spacing), the global result completes a left-justified 2D ruled grid at the corpus level \u2014 but the anchoring is site-local, not uniform across all sites."
+  ],
+  "successor_hypotheses": [
+    "E082: Why is Khania NOT left-anchored (edges exchangeable, frac=0.50)? Test whether Khania docs use a different layout convention (centered or right-anchored) or whether its smaller/different tablet corpus has distinct scribal practice \u2014 a possible regional layout variant.",
+    "E083: Re-test Zakros left-anchoring with a larger Zakros sample (currently n=21, p=0.10 borderline) to determine if its directional S_site=+0.44 reaches significance, or if Zakros is genuinely intermediate between HT and Khania.",
+    "E084: Test whether the left margin position itself is consistent ACROSS documents within a site (a shared physical margin x-coordinate), beyond per-doc left-edge alignment \u2014 i.e. is there a site-standardized left margin line?",
+    "E085: Decompose left-anchoring by document SUPPORT (tablet vs other) and row length \u2014 are short rows (few glyphs) more or less left-anchored than long rows, and does support type modulate the anchoring strength?",
+    "E086: Test for a TOP-anchoring analogue in the vertical axis (do columns/blocks share a common top edge with ragged bottoms), completing the 2D anchoring picture orthogonal to E081's horizontal left-anchoring.",
+    "E087: Quantify the left-margin alignment strength as a continuous per-site score and correlate with E079/E080 spacing regularity to test whether the most regularly-spaced docs are also the most strongly left-anchored (a unified grid-quality factor)."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "NON-CIRCULAR. Signs treated as OPAQUE IDs (no value, no reading, no meaning); only glyph bbox positions (row left/right x-edges) enter the metric. Reading DIRECTION is a corpus assumption, but left-ANCHORING (physical margin alignment) is a separate geometric fact tested by an edge-swap sign-symmetric null on geometry only \u2014 swapping which edge is 'left' vs 'right' per doc is a pure geometry operation independent of any reading. The null (edge-exchangeability) makes no use of linguistic content. DISTINCT from E079 (horizontal glyph SPACING) and E080 (vertical line SPACING): E081 tests edge ALIGNMENT/anchoring, orthogonal to spacing.",
+  "deviations": [
+    "Centered positive-control arm was constructed with mirror-symmetric left/right edges around each row's center (draw one half-width deviation d; left=center-d, right=center+d) so that edges are genuinely exchangeable by construction; a naive centered placement biases rsd>lsd because per-glyph width jitter accumulates only on the right edge. This makes the false-positive target fair; it does not affect the real-data analysis or the left/right detect arms. Documented in machinery.py make_synthetic().",
+    "perm_p uses an add-one correction (ge+1)/(n_draws+1) for finite-sample safety; verified stable across seeds (global p<=0.00005 at 20k draws; Zakros p~0.10 stable)."
+  ]
+}
