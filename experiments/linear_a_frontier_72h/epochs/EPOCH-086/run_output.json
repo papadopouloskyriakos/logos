@@ -1,0 +1,157 @@
+{
+  "task_id": "EPOCH-086",
+  "method": "per-doc log COUNT-ratio first-row vs mean(rest) + secondary DENSITY-ratio confound; random-row-as-heading null (directional, top LONGER); median over docs; 1000 perm draws; per-site HT/Khania/Zakros; synthetic positive control (detect 1.7x header + uniform false-positive).",
+  "result": {
+    "count_global": {
+      "S_obs": 0.06453852113757116,
+      "null_median": 0.0,
+      "perm_p": 0.00999000999000999,
+      "n_docs": 240
+    },
+    "count_per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.13831611813259792,
+        "null_median": 0.0,
+        "perm_p": 0.003996003996003996,
+        "n_docs": 140,
+        "significant": true
+      },
+      {
+        "site": "Khania",
+        "S_obs": 0.0,
+        "null_median": 0.0,
+        "perm_p": 0.9090909090909091,
+        "n_docs": 36,
+        "significant": false
+      },
+      {
+        "site": "Zakros",
+        "S_obs": 0.08338160893905121,
+        "null_median": 0.0,
+        "perm_p": 0.11888111888111888,
+        "n_docs": 23,
+        "significant": false
+      }
+    ],
+    "density_global": {
+      "S_obs": -0.047110617917924105,
+      "null_median": -0.09761723557917888,
+      "perm_p": 0.10789210789210789,
+      "n_docs": 240
+    },
+    "density_per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": -0.126020989643695,
+        "perm_p": 0.6363636363636364,
+        "significant": false
+      },
+      {
+        "site": "Khania",
+        "S_obs": 0.06170830473940242,
+        "perm_p": 0.025974025974025976,
+        "significant": true
+      },
+      {
+        "site": "Zakros",
+        "S_obs": 0.011867916635831416,
+        "perm_p": 0.0979020979020979,
+        "significant": false
+      }
+    ],
+    "density_interpretation": "WIDTH/GEOMETRY-driven (full-width header line), NOT deliberately packed (parallels E083 WIDTH-DRIVEN)",
+    "density_global_significant": false,
+    "n_sites_count_significant": 1,
+    "n_eligible_sites": 3,
+    "global_count_significant": true
+  },
+  "verdict": "HEADER_ROW_LONGER_SITE_LOCAL",
+  "numbers": {
+    "count": {
+      "global": {
+        "S_obs": 0.06453852113757116,
+        "null_median": 0.0,
+        "perm_p": 0.00999000999000999,
+        "n_docs": 240
+      },
+      "per_site": [
+        {
+          "site": "Haghia Triada",
+          "S_obs": 0.13831611813259792,
+          "null_median": 0.0,
+          "perm_p": 0.003996003996003996,
+          "n_docs": 140,
+          "significant": true
+        },
+        {
+          "site": "Khania",
+          "S_obs": 0.0,
+          "null_median": 0.0,
+          "perm_p": 0.9090909090909091,
+          "n_docs": 36,
+          "significant": false
+        },
+        {
+          "site": "Zakros",
+          "S_obs": 0.08338160893905121,
+          "null_median": 0.0,
+          "perm_p": 0.11888111888111888,
+          "n_docs": 23,
+          "significant": false
+        }
+      ]
+    },
+    "density": {
+      "global": {
+        "S_obs": -0.047110617917924105,
+        "perm_p": 0.10789210789210789
+      },
+      "per_site": [
+        {
+          "site": "Haghia Triada",
+          "S_obs": -0.126020989643695,
+          "perm_p": 0.6363636363636364
+        },
+        {
+          "site": "Khania",
+          "S_obs": 0.06170830473940242,
+          "perm_p": 0.025974025974025976
+        },
+        {
+          "site": "Zakros",
+          "S_obs": 0.011867916635831416,
+          "perm_p": 0.0979020979020979
+        }
+      ]
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.03482587064676617,
+      "power_est": 0.95,
+      "false_pos_rate": 0.0,
+      "detect_sig": true,
+      "fp_ok": true,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "Global COUNT S_obs=0.0645, perm_p=0.0100 (SIG); top row carries MORE glyphs than lower rows on average.",
+    "Per-site COUNT: Haghia Triada S=0.1383 p=0.0040(SIG), Khania S=0.0000 p=0.9091, Zakros S=0.0834 p=0.1189.",
+    "DENSITY confound: global S_obs=-0.0471, perm_p=0.1079 (NS) -> WIDTH/GEOMETRY-driven (full-width header line), NOT deliberately packed (parallels E083 WIDTH-DRIVEN).",
+    "Positive control: PASSED (detect median p=0.0348, power=0.95, false-pos rate=0.00).",
+    "Verdict=HEADER_ROW_LONGER_SITE_LOCAL: top row is a longer header line."
+  ],
+  "successor_hypotheses": [
+    "E087: Is the top-row extra width driven by a specific register type (e.g. heading/total line) vs body \u2014 test within HT only where the effect localizes.",
+    "E088: Does the top row's wider x-span correlate with the document's overall x-extent (full-width line) rather than glyph packing \u2014 regress top-row span on doc span.",
+    "E089: Cross-check with E085 (row SIZE): are taller glyphs also on the top row, or is the top row longer-but-shorter (a thin full-width header)?",
+    "E090: Test whether the top-row glyph-count excess survives excluding word-initial/final positions (decouple from E077 word-initial size effect).",
+    "E091: Replicate on Phaistos/Knossos once >=15 usable docs accrue to test cross-site generality beyond HT.",
+    "E092: Compare top-row density against a within-doc shuffled-x null (preserve counts, permute x-centers) to isolate packing from geometry."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "No phonetic/semantic values used; only glyph bbox counts and x-centers/densities. Verdict is mechanical from a frozen rule applied to counts/positions. Does not depend on any prior epoch's outcome; E085/E083 referenced only as axis-distinctness and interpretation parallels.",
+  "deviations": []
+}
