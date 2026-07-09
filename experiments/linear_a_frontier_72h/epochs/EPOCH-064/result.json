@@ -1,0 +1,66 @@
+{
+  "task_id": "EPOCH-064",
+  "method": "Positional entropy asymmetry A = H(word-final sign) - H(word-initial sign) over multi-sign words (len>=2), tested against a within-word position-shuffle null (uniform permutation of each word's sign list; preserves sign multiset + word length + per-site sample size; makes initial/final exchangeable, E[A]=0). One-sided perm p for initial-concentration (A>0) and reversed p for final-concentration (A<0). Anonymous sign IDs only; positional entropy only; no phonetic/semantic content.",
+  "result": "Word-initial entropy concentration (prefix-consistent asymmetry A>0) is GLOBALLY significant and CROSS-SITE ROBUST. Global A=+0.2227 vs null mean +0.0015 (perm p=0.0005, one-sided initial-concentration). 6 of 10 testable sites are individually significant in the SAME direction (A>0): Haghia Triada, Knossos, Palaikastro, Iouktas, Arkhalkhori, Tylissos. The asymmetry survives leave-one-site-out on the dominant site Haghia Triada (pooled-minus-HT A=+0.3322, perm p=0.0005), so it is NOT globally-driven by a single site. Positive control (synthetic) PASSED: detects planted prefix (A>0, p=0.001), correctly flags reversed direction on planted suffix (A<0, reversed p=0.001), false-positive rate 0.067 on symmetric words (<=0.10).",
+  "verdict": "INITIAL_CONCENTRATION_CROSS_SITE_ROBUST",
+  "numbers": {
+    "global": {
+      "n_words": 1369,
+      "A_obs": 0.22269,
+      "A_null_mean": 0.00147,
+      "perm_p": 0.0004998,
+      "reversed_p": 1.0
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_prefix_p": 0.000999,
+      "detect_suffix_A_sign": "neg",
+      "false_pos_rate": 0.06667,
+      "pc_is_synthetic": true,
+      "detect_prefix_A": 3.24988,
+      "detect_suffix_A": -3.25105,
+      "detect_suffix_reversed_p": 0.000999,
+      "detect_suffix_perm_p": 1.0,
+      "n_draws_false_pos": 30
+    },
+    "cross_site": {
+      "n_sites_testable": 10,
+      "n_sites_sig": 6,
+      "direction_consistent": true,
+      "loo_p": 0.0004998,
+      "loo_A_obs": 0.33223,
+      "loo_n_words": 675,
+      "per_site": [
+        {"site": "Haghia Triada", "n": 694, "A_obs": 0.2214, "perm_p": 0.0010, "sig": true},
+        {"site": "Zakros", "n": 132, "A_obs": 0.0963, "perm_p": 0.2254, "sig": false},
+        {"site": "Khania", "n": 120, "A_obs": -0.0045, "perm_p": 0.5047, "sig": false},
+        {"site": "Knossos", "n": 61, "A_obs": 0.5191, "perm_p": 0.0115, "sig": true},
+        {"site": "Phaistos", "n": 58, "A_obs": 0.3128, "perm_p": 0.0555, "sig": false},
+        {"site": "Palaikastro", "n": 57, "A_obs": 0.3094, "perm_p": 0.0490, "sig": true},
+        {"site": "Iouktas", "n": 34, "A_obs": 0.8951, "perm_p": 0.0010, "sig": true},
+        {"site": "Arkhalkhori", "n": 34, "A_obs": 0.4340, "perm_p": 0.0450, "sig": true},
+        {"site": "Syme", "n": 21, "A_obs": -0.0419, "perm_p": 0.5692, "sig": false},
+        {"site": "Tylissos", "n": 21, "A_obs": 0.5121, "perm_p": 0.0380, "sig": true}
+      ]
+    }
+  },
+  "key_findings": [
+    "Global positional entropy asymmetry A = H(final) - H(initial) = +0.2227 bits over 1369 multi-sign words, vs within-word-shuffle null mean +0.0015 (perm p=0.0005, one-sided initial-concentration): the word-INITIAL sign slot is significantly MORE concentrated (lower entropy) than the word-FINAL slot, replicating E027's global prefix-consistent signature.",
+    "The asymmetry is CROSS-SITE ROBUST, not globally-driven: 6 of 10 testable sites (>=20 multi-sign words) are individually significant in the SAME direction (A>0) — Haghia Triada, Knossos, Palaikastro, Iouktas, Arkhalkhori, Tylissos — spanning both large (HT) and small (n=21-34) assemblages.",
+    "Leave-one-site-out on the dominant site Haghia Triada (which holds ~51% of multi-sign words) leaves the asymmetry intact and even slightly stronger: pooled-minus-HT A=+0.3322, perm p=0.0005. The global result is NOT an artifact of one site's sample size.",
+    "All 10 testable sites have observed A>=0 except Khania (A=-0.0045) and Syme (A=-0.0419), both essentially null (perm p>0.5); no site shows a significant REVERSED (final-concentration / suffixing) outcome. The reversed_p at global level is 1.0.",
+    "Positive control (synthetic) PASSED on all three arms: detects a planted restricted-initial prefix (A=+3.25, p=0.001), correctly flags the REVERSED direction on a planted restricted-final suffix (A=-3.25, reversed p=0.001, initial-concentration p=1.0), and false-positives on symmetric words at rate 0.067 (<=0.10 over 30 draws). The within-word-shuffle null has mean(A)~=0 on symmetric synthetics (self-check)."
+  ],
+  "successor_hypotheses": [
+    "E065: Is the initial-concentration asymmetry driven by a SMALL set of high-frequency initial signs (a few productive prefixes), or by a broadly restricted initial inventory? Decompose H(initial) into effective-number-of-types and frequency-rank contributions per site.",
+    "E066: Does the asymmetry strengthen when restricted to words of a FIXED length (e.g., 2-sign vs 3-sign vs 4-sign words), isolating the morphological slot from word-length confounds? Run A by word-length stratum, cross-site.",
+    "E067: Are the SPECIFIC initial signs that concentrate the initial slot the SAME across sites (a shared prefix inventory, e.g. the A-prefix family E022-E025), or site-specific? Cross-site overlap test on top-k initial signs.",
+    "E068: Does the initial-concentration asymmetry interact with document/genre (Tablet vs other supports) rather than site? Re-run the cross-site test controlling for support type.",
+    "E069: Test the analogous MEDIAL positional entropy structure (second position, penultimate position) to determine whether concentration is specific to the initial slot or part of a broader positional-template (fixed-order) typology of Linear A words.",
+    "E070: Quantify the asymmetry's effect size per site (Cliff's delta / normalized A by log2(inventory)) to compare sites fairly independent of sample-size-driven entropy bias, and check whether the 4 non-significant sites (Zakros, Khania, Phaistos, Syme) are underpowered vs genuinely flat."
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous sign IDs only; positional Shannon entropy of the sign distribution at word-initial vs word-final position only; no phonetic value, reading, or meaning used. The null is a within-word uniform permutation of each word's sign list, which preserves each word's sign multiset, the word-length distribution, and the per-site sample size, while making initial and final positions exchangeable (E[A]=0 confirmed on symmetric synthetics). This controls sign-frequency, word-length, and sample-size confounds. Positive control is fully synthetic and gates the verdict.",
+  "deviations": []
+}
