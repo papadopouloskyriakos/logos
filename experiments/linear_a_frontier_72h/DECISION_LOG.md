@@ -156,3 +156,12 @@
   E093. Scope: LA has NO vowel truth -> LA invariance NOT tested; exports confound-adjusted LA embedding to E102,
   no LA reading. First F12 non-negative (vs E097/E098 LA-transfer-negatives), but LB-calibration positive not LA
   positive. qualification bucket 5->6. L2, no values. E100 (TDA) next. Finalization BLOCKED (2026-07-11T03:20Z).
+
+- EPOCH-100 BANKED (99 epochs). F12 #4: topological data analysis (H0 persistence). VERDICT
+  PERSISTENT_STRUCTURE_GENERIC. PC recovers planted clusters (ARI 1.0). Persistent communities EXIST + are
+  inventory-stable (LA 0.729) but do NOT align with linguistic classes on LB (vowel ARI -0.002 ~0, below
+  metric-perm p95 0.023 + freq-matched p95 0.024; consonant 0.019). Persistent topology is generic (degree/
+  single-linkage chaining), not linguistic. SHARPENS E099: the real frequency-invariant vowel signal is
+  centroid-separable but NOT topological-cluster-separated (diffuse geometry, single-linkage chains through it).
+  LA communities exported anonymous+stable for E102, no semantics. L2, no values. bounded-neg 26->27. Clock
+  98->99. E101 (global network-flow) next. Finalization BLOCKED (2026-07-11T03:20Z).

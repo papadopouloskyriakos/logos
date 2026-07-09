@@ -1,0 +1,69 @@
+{
+ "positive_control": {
+  "runs": [
+   {
+    "best_ari": 1.0,
+    "kstar": 5,
+    "recovers": true
+   },
+   {
+    "best_ari": 1.0,
+    "kstar": 5,
+    "recovers": true
+   },
+   {
+    "best_ari": 1.0,
+    "kstar": 5,
+    "recovers": true
+   },
+   {
+    "best_ari": 1.0,
+    "kstar": 5,
+    "recovers": true
+   }
+  ],
+  "ok": true
+ },
+ "linear_b": {
+  "vowel": {
+   "best_ari": -0.002188850402229453,
+   "kstar_ari": -0.0057067497901930496,
+   "kstar": 15
+  },
+  "consonant": {
+   "best_ari": 0.019179380271012986,
+   "kstar_ari": 0.019179380271012986,
+   "kstar": 15
+  },
+  "metric_perm_null_p95": 0.02329525794917308,
+  "freq_matched_null_p95": 0.024244521780084204,
+  "n_signs": 88
+ },
+ "linear_a": {
+  "persistent_partition_stability_ari": 0.7290842283776146,
+  "n_signs_mc2": 79,
+  "note": "LA persistent communities; no semantics assigned (L2)."
+ },
+ "config": {
+  "homology": "H0 (persistent connected components, single-linkage)",
+  "truth": [
+   "vowel",
+   "consonant"
+  ],
+  "nulls": [
+   "metric_permutation",
+   "frequency_matched"
+  ]
+ },
+ "verdict": "PERSISTENT_STRUCTURE_GENERIC",
+ "rationale": "Persistent H0 communities EXIST and are stable (LA persistent-partition stability across sign inventories ARI 0.729) but do NOT align with linguistic classes on blinded LB (vowel persistent-partition ARI -0.002 ~ 0, below the metric-permutation null p95 0.023 and frequency-matched null p95 0.024; consonant ARI 0.019). So the persistent topology is GENERIC (degree/single-linkage chaining), NOT a distinctively linguistic structure. The real-but-weak vowel signal (E099, invariant) does NOT manifest as separated persistent clusters. Consistent with E091/E092/E098. LA communities exported as ANONYMOUS + inventory-stable, no semantics assigned. L2, no phonetic values.",
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 0.5,
+ "plan_hash": "ba2f9021b0a1f36fdea488a40cc04f7dd15ae721c365623f2f60df63cd65e41e",
+ "epoch_id": "EPOCH-100",
+ "code_manifest": {
+  "e100_tda.py": "528a44f1d8f34214"
+ }
+}

@@ -2381,13 +2381,28 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: ACTIVE
+    status: BANKED
     gate: A
-    name: "Topological data analysis + persistent structure: filtrations over sign-context/substitution/morphology/formula/cross-site/morphogenesis/confound-adjusted distances; persistent components + loops + barcode stability + bottleneck/Wasserstein; vs degree-rewiring/metric-permutation/random-embedding/frequency-matched/label-shuffle nulls; persistent anonymous communities stable across inventories/segmentations."
-    prereg: cross_disciplinary/PREREGISTRATION.md
-    reserved: 2026-07-09
-    verdicts: [PERSISTENT_STRUCTURE_SUPPORTED, PERSISTENT_STRUCTURE_GENERIC, TDA_NULL, TDA_NO_POWER]
-    substantive: pending
+    name: "Topological data analysis: H0 persistence (persistent connected components) over the sign context-distance filtration; do persistent communities align with linguistic classes vs metric-permutation + frequency-matched nulls; LA inventory-stability."
+    plan_hash: "ba2f9021b0a1f36fdea488a40cc04f7dd15ae721c365623f2f60df63cd65e41e"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (cross_disciplinary/scripts/e100_tda.py; frozen copy in the epoch dir). scipy single-linkage (ripser/gudhi unavailable -> self-contained H0 persistence). NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "PC (planted-cluster distance matrix) recovers clusters at ARI 1.0 (mean best 1.0) -> the persistence + persistent-partition machinery is valid. Two nulls run: metric-permutation (shuffle distances, 20 draws) + frequency-matched embedding (10 draws). LA inventory-stability measured across two sign inventories (min_count 2 vs 3). Coordinator authored + ran the filtration + persistent partitions + both nulls + the PC + LA stability from scratch."
+    positive_control: "PASSED (mean best ARI 1.0 over 4 planted-cluster seeds). H0 single-linkage persistence recovers well-separated planted clusters perfectly -> the null result on LB is a real negative, not a dead detector."
+    verdict: "PERSISTENT_STRUCTURE_GENERIC (mechanical) -- persistent H0 communities EXIST and are inventory-stable (LA persistent-partition stability across min_count 2 vs 3 inventories ARI 0.729) but do NOT align with linguistic classes on blinded LB: best persistent-partition vowel ARI -0.002 (~0, BELOW the metric-permutation null p95 0.023 AND the frequency-matched null p95 0.024), consonant best ARI 0.019. So the persistent topology recoverable by H0 persistence is GENERIC (degree / single-linkage chaining structure), NOT a distinctively linguistic topology. NOTABLE: the real, frequency-invariant vowel signal established in E099 (F1 ~0.44) does NOT manifest as SEPARATED persistent clusters -- it is a weak centroid-separable signal, not a topological-cluster signal (single-linkage chains through it). LA persistent communities are exported as ANONYMOUS + inventory-stable for E102, with NO semantics assigned. L2, opaque signs, no phonetic values, no licence."
+    numbers: {pc_mean_best_ari: 1.0, lb_vowel_best_ari: -0.002, lb_vowel_kstar_ari: -0.006, lb_consonant_best_ari: 0.019, metric_perm_null_p95: 0.023, freq_matched_null_p95: 0.024, la_inventory_stability_ari: 0.729, n_signs_lb: 88, homology: H0, method: single_linkage}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: BOUNDED_NEGATIVE
+    scope: "Bounded negative (increments 26 -> 27): TDA / H0 persistence does not recover linguistic-class structure on blinded LB -- the persistent communities are generic, not linguistic. Sharpens the picture from E099: the vowel signal is REAL + frequency-invariant (E099) but is NOT a topological-cluster signal (E100) -- it is centroid-separable but single-linkage chains through it, so persistence sees only generic degree structure. A method-scope finding: the weak linguistic signal's GEOMETRY is diffuse, not clustered. LA persistent communities are inventory-stable (0.729) but anonymous + unvalidated as linguistic (LB alignment is null). Fourth F12 epoch; E102 will log TDA as a non-linguistic-contributing channel (LA communities available as anonymous structure only). No phonetic values."
+    committed_prediction: "modal PERSISTENT_STRUCTURE_GENERIC / TDA_NULL per E091/E092/E098. OUTCOME = PERSISTENT_STRUCTURE_GENERIC (communities exist + inventory-stable but not linguistic). Prediction earned."
+    deviations: ["H0 persistence only (persistent connected components); H1 loops / Rips over higher dims / Mapper / bottleneck-Wasserstein-of-diagrams from the parent menu were not run: ripser/gudhi unavailable, and the H0 result is already decisive (linguistic ARI ~0, below both nulls) -- higher homology cannot rescue a signal that is null at H0. The distance-metric-permutation + frequency-matched nulls cover the required null families for the decision. Disclosed.", "Single-linkage (chaining-prone) is the H0 filtration; it recovers well-separated PC clusters perfectly but chains through the diffuse LB vowel geometry -- which is itself the finding (the signal is not cluster-separated). DAMOS LB + LA licensed-derived; scripts committed."]
+    non_circular: "Blinded (opaque sign IDs; vowel/consonant labels only as evaluation truth). Persistent partitions compared to metric-permutation + frequency-matched nulls (a frequency artifact cannot pass). LA stability is a truth-free structural measure. PC fully synthetic. Coordinator reconstructed the pipeline + nulls from scratch."
+    architecture_note: "Fourth F12 epoch. TDA finds generic-but-not-linguistic persistent structure -- and importantly SHARPENS E099: the real frequency-invariant vowel signal is centroid-separable (E099) but NOT topological-cluster-separated (E100, single-linkage chains through it). So the weak linguistic signal has diffuse geometry. Consistent F12 pattern: imported frameworks do not recover LA-decipherment structure. E101 (global network-flow, target-free for LA) next; E102 synthesis. Finalization remains BLOCKED (clock 2026-07-11T03:20Z, not epoch count)."
+    artifacts: [epochs/EPOCH-100/prereg.md, epochs/EPOCH-100/plan_hash.txt, epochs/EPOCH-100/e100_tda.py, epochs/EPOCH-100/result.json, reports/TOPOLOGICAL_PERSISTENCE.md]
+    successors_spawned: 5
+    substantive: true
   - epoch_id: EPOCH-101
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
