@@ -1,0 +1,56 @@
+{
+  "task_id": "EPOCH-089",
+  "method": "CV of first-row x-extent vs assembly null (pooled widths+gaps at actual counts); perm_p=frac(null CV<=obs CV); positive control fixed-extent detect + random-assembly false-positive.",
+  "result": "HEADER_WIDTH_CONSTRAINED",
+  "verdict": "HEADER_WIDTH_CONSTRAINED",
+  "numbers": {
+    "width": {
+      "obs_cv": 0.406523495507602,
+      "null_median": 0.5444905044147593,
+      "perm_p": 0.0004997501249375312,
+      "ratio": 0.746612644686155,
+      "n_docs": 140,
+      "extent_over_doc": 0.8420292348020537
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0004997501249375312,
+      "power_est": 1.0,
+      "false_pos_rate": 0.1,
+      "pc_is_synthetic": true
+    },
+    "pool_sizes": {
+      "n_widths": 628,
+      "n_gaps": 488
+    },
+    "count_stats": {
+      "min": 1,
+      "max": 16,
+      "median": 4.0
+    }
+  },
+  "key_findings": [
+    "obs first-row x-extent CV=0.4065 vs assembly-null median 0.5445 (ratio 0.747), perm_p=0.00050 -> the real header writing extent is significantly MORE constant than random width+gap assembly at the actual per-doc counts.",
+    "extent/doc-x-extent median ratio = 0.842 -> the header row occupies ~84% of the document writing width (near-full-width), consistent with a bounded writing area (per E086).",
+    "Positive control PASSED: fixed-extent detect power_est=1.00 (detect_p=0.0005); random-assembly false-positive rate=0.100 (<=0.10 gate; stable 0.067-0.100 across seeds).",
+    "n_docs=140 usable HT docs (>=6 non-divider bbox glyphs, >=2 rows); pools of 628 first-row widths and 488 inter-glyph gaps.",
+    "Mechanism: a bounded writing WIDTH (not a bounded ink/area budget, which E088 rejected) is the likely driver of E087's heading-size<->header-length tradeoff: bigger first-row glyphs mechanically leave room for fewer within a near-fixed horizontal extent."
+  ],
+  "successor_hypotheses": [
+    "E090: Does the constrained extent scale with TABLET support width (compare Tablet vs other supports) to separate tablet-dimension from scribal-convention explanations.",
+    "E091: Within fixed-extent docs, is per-glyph width the free variable (count*width ~ const) or is count fixed and width absorbs slack.",
+    "E092: Does the same width constraint hold for non-header (body) rows, or is it header-specific.",
+    "E093: Combine width-constraint with E087 size<->count: predict header count from (target_extent / mean_glyph_width) and test residual structure.",
+    "E094: Test whether inter-glyph gaps shrink as glyph count rises (compression to fit fixed width) vs gaps staying constant.",
+    "E095: Cross-site replication of the extent-CV-below-null signature on non-HT Linear A corpora."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Geometry-only (bbox positions/widths); opaque doc IDs; no semantic sign values used; metric and null derived from spatial extent, independent of E087's size<->count correlation.",
+  "deviations": [
+    "Doc x-extent computed from all non-divider glyph bboxes (no doc-level width field present in source JSON); used for extent/doc ratio only, not for the verdict metric.",
+    "PC false-positive arm draws random counts uniformly in [min,max] of observed counts (random-assembly definition per protocol).",
+    "PC used 30 reps per arm (protocol floor is >=15) for a stable fire-rate estimate; independent RNG seeds per PC arm to avoid cross-arm RNG-state coupling (math unchanged)."
+  ],
+  "honest_caveat": "A constrained extent may reflect the TABLET physical dimension OR a scribal writing-area convention. The finding is reported as 'writing extent is constrained', NOT 'scribes deliberately targeted a width'."
+}
