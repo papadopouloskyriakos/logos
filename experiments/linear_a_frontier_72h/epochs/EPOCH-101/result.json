@@ -1,0 +1,38 @@
+{
+ "positive_control": {
+  "global": 0.6618181818181819,
+  "local": 0.5527272727272727,
+  "detects": true
+ },
+ "stageA_linear_b": {
+  "local": 0.46590909090909094,
+  "global": 0.48484848484848486,
+  "random": 0.16666666666666669,
+  "n_signs": 66
+ },
+ "stageB_linear_a": {
+  "target_free": true,
+  "class_label_symmetry_factorial": 120,
+  "n_signs": 79,
+  "note": "Target-free: with no known cognate target and no external anchors, global assignment on LA produces equivalence CLASSES only; the class LABELS are unidentifiable up to the full symmetric group S_5 (120 equivalent relabelings). Global optimization selects ONE representative of this equivalence class; it adds NO information the local/anchor-lattice null does not already have."
+ },
+ "config": {
+  "global_solver": "capacity-constrained Hungarian (class-marginal)",
+  "target": "vowel (Stage A)",
+  "baselines": [
+   "local_nn",
+   "random"
+  ]
+ },
+ "verdict": "GLOBAL_ASSIGNMENT_SELECTS_ARBITRARY_REPRESENTATIVE",
+ "rationale": "Even on blinded LB (known target) global assignment does NOT beat local nearest-neighbor (global 0.485 ~ local 0.466, random 0.167): the global marginal constraint merely reshuffles within the same equivalence class without adding recovery. For LA (target-free) global optimization is strictly a representative-selector -- class labels are unidentifiable up to S_5 (120 equivalent relabelings) and no external target exists to break the symmetry. Global assignment CANNOT manufacture the constraints the anchor-lattice showed are absent (~10^63-10^270 degeneracy). NO ambiguity reduction beyond the anchor-lattice null. L2, no phonetic values.",
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 0.5,
+ "plan_hash": "6103a3682489f4be638dfa59e879a00558c30adc9dababa8c99ee32ece92d7a2",
+ "epoch_id": "EPOCH-101",
+ "code_manifest": {
+  "e101_networkflow.py": "949a67a27684d8e7"
+ }
+}

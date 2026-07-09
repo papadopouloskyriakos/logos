@@ -165,3 +165,13 @@
   centroid-separable but NOT topological-cluster-separated (diffuse geometry, single-linkage chains through it).
   LA communities exported anonymous+stable for E102, no semantics. L2, no values. bounded-neg 26->27. Clock
   98->99. E101 (global network-flow) next. Finalization BLOCKED (2026-07-11T03:20Z).
+
+- EPOCH-101 BANKED (100 epochs). F12 #5: global network-flow constrained decipherment. VERDICT
+  GLOBAL_ASSIGNMENT_SELECTS_ARBITRARY_REPRESENTATIVE. PC (hardened to confusable+imbalanced) fires: global
+  0.662 > local 0.553 (+0.11) -> global CAN add info with a known target. Stage A blinded LB (known target):
+  global 0.485 ~ local 0.466 (+0.019, << PC's +0.11) -> even WITH a target global barely helps. Stage B LA
+  (target-free): class labels unidentifiable up to S_5 (120 relabelings); global optimization is a
+  representative-selector, cannot manufacture absent constraints (anchor-lattice ~10^63-10^270). Mechanically
+  distinguishes LA from Ugaritic-style successes (which had a KNOWN target). No ambiguity reduction beyond
+  anchor-lattice null. L2, no values. bounded-neg 27->28. Clock 99->100. E102 (synthesis, LAST F12) next.
+  Finalization BLOCKED (2026-07-11T03:20Z).
