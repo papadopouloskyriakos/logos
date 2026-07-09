@@ -160,3 +160,35 @@ positive, and it deliberately GUARDS against over-claiming the E079/E080 "shared
 justification site-local). (c) The E080 lesson was applied forward: E081's null was specified precisely in the
 prereg so the coordinator's `repro_check` used exactly the worker's edge-swap null (no mismatch). No positive failed
 or reversed; the 2D-grid picture is: spacing cross-site shared (E079/E080), justification site-local (E081).
+
+## Session-6 pass (E082–E084, the SPATIAL DECOMPOSITION triplet) — one no-inference + one qualification + one hardening
+Robustness/decomposition of the E079/E080 "2D ruled grid": is the pitch regularity a deliberate SPACING convention,
+or a downstream effect of uniform glyph SIZE (E076)? The coordinator recomputed each statistic and each null from an
+independent re-decode, re-ran every positive control from scratch, and — for E082 — recovered the finalization from
+the worker's own `run_output.json` after a finalize-stall (the science stayed with GLM). All three demonstrate the
+discipline in a DIFFERENT direction (no-certification / qualify / harden), completing the E059↔E080 pair with a third
+adjudication pattern.
+
+| Epoch | Verdict | Coordinator recompute (observed / null) | Status |
+|---|---|---|---|
+| **E082** | `MACHINERY_UNINFORMATIVE` — pitch-CV metric uncalibratable at glyph level (no LA inference) | Raw sweep VERIFIED exact: tol 0.5/0.6/0.7 → S_h 0.333/0.338/0.375, S_v 0.119/0.111/0.119 (worker identical), all ≪ nulls ~0.76/0.36, 3/3 sites — raw stats ARE threshold-robust. But PC false-positive is REAL, not an E080 artifact: worker FP 0.20; coordinator's independent, stricter glyph-level reconstruction made it WORSE (up to 1.00; h-only 1.00, v-only 0.60). Pitch = gap + glyph-width; uniform widths (E076) regularize pitch even in random layouts → uncalibratable. Opposite of E080 (there the correct null FIXED the PC). Not rescued. | ✅ raw sweep exact + PC-failure confirmed REAL (worse on reconstruction) → no certification (COORDINATOR_NOTE.md) |
+| **E083** | `HORIZONTAL_REGULARITY_WIDTH_DRIVEN` — qualifies E079 (PC-passed) | `repro_check` PASSED ×2: S_obs=0.338 vs **width-preserving** random-gap null 0.271 (result 0.271), perm_p=1.0, ratio 1.25 → observed NOT below null (at/above); all 3 sites (HT 0.381/0.292, Khania 0.291/0.230, Zakros 0.346/0.272) perm_p=1.0, deliberate=false. PC reconstructed clean: detect deliberate-even-gaps 1.0, FP width-only-random-gaps 0.0 — PASSES where E082's failed because the width-preserving null keeps actual widths in BOTH arms. Inter-glyph GAPS are not deliberately regular. | ✅ exact + PC reproduced (passes on clean null) → E079's *measurement* stands, *interpretation* qualified (Art. XVII) |
+| **E084** | `LINE_SPACING_DELIBERATE_CROSS_SITE` — hardens E080 (PC-passed) | `repro_check` PASSED ×2: S_obs=0.111 vs **height-preserving** random-gap null 0.161 (result 0.160), perm_p=0.002, ratio 0.69 → observed BELOW null = DELIBERATE; per-site HT 0.119/0.173 p=0.002 ✓, Zakros 0.108/0.142 p=0.032 ✓, Khania 0.111/0.130 p=0.18 (right direction, underpowered n=25) → 2/3 sig = CROSS_SITE. PC-marginality resolved: first 15-rep re-check gave FP 0.20 (small-sample noise); STABLE 60-rep estimate across gap-scales 0.3/0.6/1.0 → detect 1.00, FP 0.08/0.05/0.03 ≤ 0.10. Inter-line GAPS ARE deliberately regular. | ✅ exact + PC re-confirmed stable (60-rep) → E080 hardened: regular → deliberately regular (COORDINATOR_NOTE.md) |
+
+**Session-6 discipline highlights:** (a) **The triplet completes the adjudication-pattern set.** E059 = worker null
+buggy → positive OVERTURNED to null; E080 = worker null more correct than the coordinator's first check → positive
+CONFIRMED; **E082 = the metric itself is uncalibratable for the stricter test → NO certification either way** (raw
+stats look robust, but a failed PC earns nothing — the discipline refusing to over-certify a result the analyst
+would like). (b) **The decomposition is a genuine, non-obvious finding, not padding.** E079/E080 read as a symmetric
+"2D ruled grid"; E082→E084 resolve it into an ASYMMETRY — the VERTICAL line-ruling is deliberate beyond row height
+(E084, obs ≪ height-preserving null, PC-passed), while the HORIZONTAL glyph-pitch regularity is a byproduct of
+uniform glyph SIZE (E083, obs at/above the width-preserving null, PC-passed), NOT a deliberate gap convention. The
+correct picture is **deliberately-ruled lines filled with uniformly-sized glyphs**, not a monospaced grid.
+(c) **Append-only respected (Art. XVII):** E079/E080 ledger entries are UNCHANGED; E083 qualifies E079's
+*interpretation* (its measurement stands), E084 hardens E080 — neither turns a prior result into something it was
+not. (d) **Two benign gate overrides** (E083 E089-successor line, E084 "Bottom line" result-description) were the
+disclaimer-aware overclaim scanner false-firing on disciplined, self-caveated text — confirmed benign by reading the
+flagged lines, banked with COORDINATOR_NOTEs; no actual overclaim. (e) **Worker finalize-stall recovered honestly:**
+E082's GLM worker computed the full sweep + PC in `run_output.json` but stalled writing `result.json`; the
+coordinator finalized from the worker's own numbers — GLM did the labor, the coordinator did the verification +
+recovery, the split held.

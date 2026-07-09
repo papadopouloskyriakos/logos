@@ -7,20 +7,20 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 81 distinct epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 84 distinct epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
 | **Load-bearing cross-site positives** | **33** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
 | Bounded negatives | 19 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | Genre-/site-local structural findings | 5 | Well-powered PC-passed *detections* that landed on the site-local / genre-graded side of the dichotomy (§B) |
-| Positive-hardening / qualification | 1 | Robustness pass that *qualified* a positive's breadth without overturning it (`E075` on `E072`; §A7) |
+| Positive-hardening / qualification | 3 | Robustness passes that *qualified* or *hardened* a positive without overturning it (`E075` on `E072`, §A7; `E083` qualifying `E079`, `E084` hardening `E080`, §A8) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
-| Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
+| Machinery-uninformative | 9 | Instrument failed its own calibration → **no LA inference drawn** (§C; `E082` added — the pitch metric is uncalibratable at glyph level) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*33 positives / 19 bounded-negatives + 5 genre-/site-local findings / 1 positive-qualification / 14 no-inference
+*33 positives / 19 bounded-negatives + 5 genre-/site-local findings / 3 positive-hardening-or-qualification / 15 no-inference
 (no-power + underpowered + machinery-uninf) / 9 setup. Zero of the 33 positives rises above L2/L3. The honest
 denominator is on-screen: this is a structural map, not a reading. Three positives carry breadth caveats, flagged
 in §A: `E067` depth-2 concentration is global + only partial cross-site (2/6 sites); `E072` libation-formula
@@ -32,10 +32,11 @@ linear-token epochs; a fifth spatial test (`E081` left-margin justification) lan
 spatial modality has its OWN shared-vs-site-local split (spacing shared cross-site, justification a site register).*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 81 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
-worded above L3** (layers: L1×7, L2×20, L2/L3×35, L3×8, early-pre-convention-unlabelled×12; **zero L4+** — E079/
-E080/E081 are all L2, positions-only); **every `licences_changed` field is `none`** (0/81 non-none — 69 explicit
-`none` + 12 early entries predating the field; no result silently earned a licence); the 7 transfer
+Scanned all 84 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
+worded above L3** (layers: L1×5, L2×22, L2/L3×35, L3×8, early-pre-convention-unlabelled×14; **zero L4+** — E079/
+E080/E081 and the E082–E084 spatial-decomposition arc are all L2, positions-only); **every `licences_changed`
+field is `none`** (0/84 non-none — 70 explicit `none` + 14 early entries predating the field; no result silently
+earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
 not a claim. The positives are **direct structural observations of Linear A's own distribution** (Linear B is
@@ -193,10 +194,30 @@ veins — glyph SIZE and glyph PLACEMENT (a 2D ruled grid) — plus one bounded 
   unconditional null has PC false-positive rate 1.00 vs conditional 0.05; verdict robust under both, perm p=0. The
   inverse of E059 — see `epochs/EPOCH-080/COORDINATOR_NOTE.md`. A methodology datapoint: the gate + independent
   null-reconstruction catch null issues in BOTH directions.)*
-- **Synthesis (E079 + E080):** Linear A documents are laid out on a **full 2D ruled grid** — evenly spaced along
-  the line AND down the page — and this grid is **cross-site shared** (both axes significant at all 3 testable
-  sites). A scribe could have one axis regular without the other; both being regular everywhere is a genuine shared
-  layout convention.
+- **DECOMPOSITION of the "2D grid" (`E082`→`E083`→`E084`) — the grid is NOT symmetric; it decomposes into a
+  deliberate VERTICAL ruling + a horizontal SIZE byproduct.** E079/E080's pitch-CV metric conflates deliberate
+  spacing with glyph SIZE (pitch = gap + glyph-width/height; uniform sizes E076 regularize pitch even with random
+  gaps). Three epochs separated them with *size-preserving* nulls (keep each glyph's actual width/height, randomize
+  only the gaps):
+  - `E082` (hardening) first flagged the confound but its glyph-level PC could not calibrate (glyph-size
+    regularization) → `MACHINERY_UNINFORMATIVE`; the raw threshold-sweep was verified robust, but a failed PC earns
+    no certification (the third PC-adjudication pattern after E059-overturn / E080-confirm: uncalibratable → no
+    certification; `epochs/EPOCH-082/COORDINATOR_NOTE.md`).
+  - `E083` **HORIZONTAL = WIDTH-DRIVEN** — against a width-preserving random-gap null, observed pitch-CV is NOT below
+    the null (0.338 vs 0.271, perm p=1.0, all 3 sites; PC passed). The inter-glyph GAPS are not deliberately regular
+    → **E079's "ruled" horizontal spacing is a downstream byproduct of uniform glyph size, NOT deliberate even
+    spacing.** (Append-only qualification of E079 — its measurement stands, its "deliberate spacing" reading is
+    refuted.)
+  - `E084` **VERTICAL = DELIBERATE** — against a height-preserving random-gap null, observed line-pitch-CV IS
+    significantly below the null (0.111 vs 0.161, perm p=0.002, ratio 0.69, HT + Zakros significant / Khania
+    underpowered; PC passed, coordinator-stabilized). The inter-line GAPS **are** deliberately regular → **E080's
+    vertical line spacing is a genuine deliberate scribal convention** (confirmed + hardened).
+- **Revised synthesis (E079/E080 as decomposed by E083/E084):** the Linear A "page" is **deliberately ruled in the
+  VERTICAL** (line spacing genuinely controlled, cross-site — E084/E080) and shares glyph-SIZE conventions
+  (E076/E078); the **HORIZONTAL** within-line glyph-pitch regularity (E079) is a *byproduct* of that uniform glyph
+  size, **not** a deliberate spacing convention (E083). So it is not a symmetric "monospaced grid" — it is
+  **ruled lines filled with uniformly-sized glyphs.** A genuine, non-obvious refinement earned by adversarial
+  hardening (invariant #3).
 - **Qualifier (`E081`, §B — site-local):** the grid is evenly *spaced* cross-site but left-*justified*/anchored only
   at Haghia Triada (rows left-aligned, right ragged: HT perm p=2e-4; Khania NOT, p=0.55; Zakros underpowered,
   p=0.11). So the "shared 2D grid" is qualified — **spacing conventions are shared, margin justification is a site
@@ -219,9 +240,12 @@ sign_class has N=1, Linear A numerals are not cataloged as SigLA signs).
 > positional/prefix morphology (A1: A-prefix, initial-concentration typology E064, and even the A-marked
 > sub-lexicon E068), positional specialization (A3), the document-marker system (A5: E061–E063), the
 > **libation formula's canonical ORDER** (A7: E072, real but narrow per E075), and — on the NEW spatial modality —
-> the **graphic size conventions** (A8: glyph size shared E076, size-economy E078) AND the **2D ruled-grid layout**
-> (A8: horizontal glyph spacing E079 + vertical line spacing E080, both regular at 3/3 sites) all travel across
-> sites — and the token-class grammar is held-out **predictable** on unseen sites (E047, 9/9).
+> the **graphic size conventions** (A8: glyph size shared E076, size-economy E078) AND the **deliberate VERTICAL
+> line-ruling** (A8: E080 regular / E084 deliberate-beyond-height, 2/3 sites) all travel across sites — and the
+> token-class grammar is held-out **predictable** on unseen sites (E047, 9/9). *(NB after the E082→E084
+> decomposition: the horizontal glyph-pitch regularity E079 is NOT an independent deliberate convention — it is a
+> byproduct of uniform glyph SIZE E076, per E083 WIDTH-DRIVEN — so the shared spatial layer is deliberate LINE
+> spacing + glyph SIZE, not a symmetric monospaced grid.)*
 > *Site-local:* the counted vocabulary (§B: E032/E034/E035/E053), the **libation formula's vocabulary** (E071 —
 > frequency-explained, like admin), document typology (E058), sub-lexical structure (E059), **scribal register**
 > (word-length E065, accounting-scale E066), the **metrological realization** of the entry template (fraction
@@ -399,17 +423,23 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
   (intrinsic-form); columnar structure (mechanically implied by E079∩E081); numeral spatial zoning (INFEASIBLE —
   SigLA sign_class N=1, numerals not cataloged). The spatial vein's high-value, distinct, powered questions are
   now exhausted.
-- **Saturation status (as of 81 epochs): genuinely narrowing; genre + FULL glyph-spatial vein now mapped.** Probed-and-declined earlier:
+- **Saturation status (as of 84 epochs): genuinely narrowing; genre + FULL glyph-spatial vein now mapped AND
+  internally decomposed.** Probed-and-declined earlier:
   commodity-logogram cross-site (underpowered, 2 sites), word-vs-logogram magnitude register (underpowered),
   cross-site grammar prediction (covered by E047). Scouted after E075 (E072/E073/E074 successors): admin-order-by-
   support (confound/underpowered), matched-form rigidity contrast (n small), a site+genre factorial (redundant with
   E074's confound), Palaikastro-only genre test (n=49, underpowered), within-genre cross-site spread (covered by
   E032/E071) — none clears the **distinct + well-powered + non-circular + PC-gated** bar. The SigLA **spatial
-  layout** channel (once flagged as the next "new data") has now been mined to exhaustion (E076–E081; remaining
-  spatial candidates declined as derivative/infeasible, §A8). Remaining structural questions need genuinely new data
-  (glyph images / strokes — SOURCE_BLOCKED) or **L4+** (barred). The productive work is now capstone assembly; launch
-  only if a genuinely-distinct powered channel appears. **Do not declare hard saturation** — the `other`- and
-  libation-channel lessons both stand: inspect a channel before calling it empty.
+  layout** channel (once flagged as the next "new data") has now been mined to exhaustion (E076–E081) AND its
+  central positive **decomposed by a robustness triplet** (E082→E084, §A8): the E079/E080 "2D ruled grid" resolves
+  into a **deliberately-ruled VERTICAL line convention** (E084: obs << height-preserving null, 2/3 sites, PC-passed
+  — hardens E080) plus a **HORIZONTAL glyph-pitch regularity that is a byproduct of uniform glyph SIZE (E076), NOT
+  a deliberate gap convention** (E083: obs at/above a width-preserving null, PC-passed — qualifies E079's
+  interpretation); the calibration limit that surfaced this (E082 MACHINERY_UNINFORMATIVE — the pitch metric
+  conflates spacing with glyph width) is itself an honest, banked no-inference. Remaining structural questions need
+  genuinely new data (glyph images / strokes — SOURCE_BLOCKED) or **L4+** (barred). The productive work is now
+  capstone assembly; launch only if a genuinely-distinct powered channel appears. **Do not declare hard
+  saturation** — the `other`- and libation-channel lessons both stand: inspect a channel before calling it empty.
 
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.
@@ -466,12 +496,18 @@ sat UNEXAMINED — `E060` then found a strong cross-site positive there; and the
 libation/religious register, which `E071–E075` then mapped (one narrow positive + confound + hardening). Lesson
 re-confirmed THREE times: **do not declare a channel absent without inspecting it.** After the genre vein, the
 SigLA **spatial modality** (per-glyph bounding boxes) — flagged here as "needs new data" — was itself opened
-(E076–081: 4 cross-site positives + 1 bounded negative + 1 site-local finding). Current state (81 distinct epochs):
-**33 verified positives / 19 bounded-negatives + 5 genre-/site-local findings / 1 positive-qualification**, all
-L2/L3, no licence, no decipherment. The genre vein is mapped (genre↔site confound E074 bounds all genre claims) and
+(E076–081: 4 cross-site positives + 1 bounded negative + 1 site-local finding), then internally **decomposed** by a
+robustness triplet (E082–E084). Current state (84 distinct epochs):
+**33 verified positives / 19 bounded-negatives + 5 genre-/site-local findings / 3 positive-hardening-or-qualification**,
+all L2/L3, no licence, no decipherment. The genre vein is mapped (genre↔site confound E074 bounds all genre claims) and
 the FULL glyph-spatial vein is now mapped: glyph SIZE (shared E076 / not-positional E077 / economy E078) AND glyph
-PLACEMENT (a cross-site 2D ruled grid — horizontal spacing E079 + vertical line-spacing E080 — whose left-margin
-JUSTIFICATION is site-local E081). Remaining spatial candidates were assessed and DECLINED as derivative
-(columnar ≈ E079∩E081) or infeasible (numeral zoning — sign_class N=1); deeper spatial or L4+ questions need image
-data (SOURCE_BLOCKED) or are barred. Any remaining untested *observed* channel should still be inspected before a
+PLACEMENT (a cross-site ruled layout — horizontal spacing E079 + vertical line-spacing E080 — whose left-margin
+JUSTIFICATION is site-local E081). The placement positive was then **resolved into its two axes** (E082–E084): the
+VERTICAL line-ruling is **deliberate beyond row height** (E084 hardens E080, PC-passed, 2/3 sites), while the
+HORIZONTAL glyph-pitch regularity is a **byproduct of uniform glyph SIZE (E076), not a deliberate spacing
+convention** (E083 qualifies E079, PC-passed) — surfaced by the honest E082 calibration limit
+(MACHINERY_UNINFORMATIVE). So the "2D grid" is more precisely **deliberately-ruled lines filled with
+uniformly-sized glyphs**, not a symmetric monospaced grid. Remaining spatial candidates were assessed and DECLINED
+as derivative (columnar ≈ E079∩E081) or infeasible (numeral zoning — sign_class N=1); deeper spatial or L4+
+questions need image data (SOURCE_BLOCKED) or are barred. Any remaining untested *observed* channel should still be inspected before a
 completeness claim. The clock-gated §12 finalization remains blocked until 2026-07-11T03:20Z.
