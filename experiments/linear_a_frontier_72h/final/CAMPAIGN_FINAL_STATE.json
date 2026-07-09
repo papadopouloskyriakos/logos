@@ -44,5 +44,6 @@
     "EPOCH-014": 2,
     "EPOCH-013": 3
   },
-  "review_bundle_path": "experiments/linear_a_frontier_72h/final/review_bundle/"
+  "review_bundle_path": "experiments/linear_a_frontier_72h/final/review_bundle/",
+  "final_commit": "cd98259e2a1a1c021d36b9bc1a9759cdfe8381e1"
 }
