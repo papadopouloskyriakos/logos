@@ -22,6 +22,15 @@
 Zero of the 20 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
 reading.*
 
+### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
+Scanned all 58 ledger entries: **no epoch is worded above L3** (layers: L1×9, L2×7, L2/L3×36, older-unlabelled×14;
+zero L4+); **every `licences_changed` field is `none`** (no result silently earned a licence); the 7 transfer
+licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
+`NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
+not a claim. The positives are **direct structural observations of Linear A's own distribution** (Linear B is
+control-only in every `non_circular` field) — licence-*independent* L2 descriptions, not cross-script transfers.
+**No decipherment; no licence; no layer breach.**
+
 ## What this campaign is
 A time-boxed, pre-registered, positive-control-gated sweep of the **structural** questions the Linear A
 corpus can answer at L2/L3 (writing-system + administrative-grammar structure), each epoch a mechanical
