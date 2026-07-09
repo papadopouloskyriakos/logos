@@ -1,0 +1,66 @@
+{
+  "task_id": "EPOCH-087",
+  "method": "Per-doc HT register scores (justif, h_size, h_len); coherence C = mean|pairwise Spearman|; independence null = permute each column independently (1000 draws, tie-aware); size-controlled via OLS residualization on log(n_glyphs); synthetic positive control (coherent-template DETECT arm + independent FALSE-POSITIVE arm, 15 reps each).",
+  "result": {
+    "C_obs": 0.16027056599646014,
+    "perm_p": 0.006993006993006993,
+    "n_docs": 128,
+    "pairwise_signed": {
+      "justif_hsize": -0.14324871818348286,
+      "justif_hlen": 0.14862608324142587,
+      "hsize_hlen": -0.18893689656447166
+    },
+    "size_controlled": {"C_obs": 0.15573246831437104, "perm_p": 0.01098901098901099},
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.000999000999000999,
+      "power_est": 1.0,
+      "false_pos_rate": 0.06666666666666667,
+      "pc_is_synthetic": true
+    },
+    "verdict": "LAYOUT_REGISTERS_DEPENDENT_HT"
+  },
+  "verdict": "LAYOUT_REGISTERS_DEPENDENT_HT",
+  "numbers": {
+    "coherence": {
+      "C_obs": 0.16027056599646014,
+      "perm_p": 0.006993006993006993,
+      "n_docs": 128,
+      "pairwise": {
+        "justif_hsize": -0.14324871818348286,
+        "justif_hlen": 0.14862608324142587,
+        "hsize_hlen": -0.18893689656447166
+      },
+      "size_controlled": {"C_obs": 0.15573246831437104, "perm_p": 0.01098901098901099}
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.000999000999000999,
+      "power_est": 1.0,
+      "false_pos_rate": 0.06666666666666667,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "The three HT layout registers (justif, h_size, h_len) are NOT statistically independent: observed coherence C_obs=0.160 exceeds the per-column-independence null (perm_p=0.007, 1000 draws, tie-aware).",
+    "The dependence is MIXED-SIGN, not a coherent all-positive formal template: signed pairwise Spearman r are -0.143 (justif~h_size), +0.149 (justif~h_len), -0.189 (h_size~h_len). Two of three pairs are negative.",
+    "The dominant structure is a heading-size <-> header-length TRADEOFF (r=-0.189): documents whose first row has larger glyphs have SHORTER first rows (fewer glyphs). This is the opposite of an all-positive template in which 'formal' docs would show large AND long headers.",
+    "Size control (residualizing each score on log(n_glyphs)) leaves the dependence intact: C_sc=0.156, perm_p_sc=0.011. The co-occurrence is not an artifact of document size.",
+    "Positive control PASSED: the machinery DETECTS a synthetic coherent template (power=1.0 over 15 reps, median detect_p=0.001) and does NOT fire on synthetic independent columns (false-positive rate=0.067 <= 0.10). The dependence finding is calibrated, not a machinery artifact."
+  ],
+  "successor_hypotheses": [
+    "E088: Characterize the h_size<->h_len tradeoff curve within HT — is it a continuous negative slope or a bimodal split (a class of 'big-glyph short-header' docs vs 'small-glyph long-header' docs)? Cluster the per-doc (h_size,h_len) plane.",
+    "E089: Test whether the h_size<->h_len tradeoff reflects a fixed ink/area budget per header row (large glyphs cost area, so fewer fit) — predict h_len from total first-row ink area and compare to the empirical slope.",
+    "E090: Replicate the three-register coherence test at OTHER Linear A sites (e.g., Knossos, Phaistos) to see whether the same mixed-sign dependence is HT-specific or a pan-Line-A scribal regularity.",
+    "E091: Add a FOURTH register (e.g., inter-row spacing regularity or column-block alignment) and re-test coherence; does adding registers raise C (more dependence) or dilute it?",
+    "E092: Within HT, test whether the tradeoff class correlates with support type (tablet vs other) or document length tier — i.e., is the big-glyph-short-header pattern a genre marker rather than a layout template?",
+    "E093: Permute the THREE columns JOINTLY (same permutation) vs independently to decompose how much of C comes from a single shared axis vs pairwise-specific structure."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "All scores are pure geometry of bbox glyphs (left/right edges, glyph heights/areas, row counts) under opaque doc IDs; no phonetic or semantic sign values are read. The independence null permutes each register column separately, preserving each register's marginal distribution while destroying cross-register co-occurrence, so significance cannot arise from a single register's internal structure. The positive control is fully synthetic (no Linear A data), gating the verdict on calibrated machinery. Prior epochs E081/E085/E086 each measured ONE register independently; this epoch tests their joint co-occurrence, so it does not re-use their per-register conclusions as inputs.",
+  "deviations": [
+    "Data path resolved to experiments/linear_a_frontier_72h/data/sigla_glyphs_bbox.json (the PATH CONTRACT referenced BASE/data/... which does not exist in the working tree); same file, same schema.",
+    "Positive-control n_target set to max(n_docs, 128) = 128 to match the real-doc sample size; matches the preregistered ~128."
+  ]
+}
