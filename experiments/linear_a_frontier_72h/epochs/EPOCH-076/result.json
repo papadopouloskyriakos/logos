@@ -1,0 +1,103 @@
+{
+  "task_id": "EPOCH-076",
+  "method": "cross-site Pearson correlation of per-sign mean within-document-z-scored log glyph-bbox-area size profiles; sign-label-shuffle permutation null (>=2000 draws, one-sided); synthetic positive control (detect-shared + false-positive-idiosyncratic)",
+  "result": "Normalized glyph size is a SHARED cross-site graphic convention: 5/5 testable site-pairs show significant positive size-profile correlation (r in [0.70,0.85], perm_p<=0.0016), far above the sign-label-shuffle null. Positive control passed (detect power=1.0, false-positive rate=0.0).",
+  "verdict": "GLYPH_SIZE_SHARED_CROSS_SITE",
+  "numbers": {
+    "coverage": {
+      "n_docs_usable": 322,
+      "n_glyphs": 4130,
+      "sites_ge15": [
+        "Haghia Triada",
+        "Khania",
+        "Knossos",
+        "Phaistos",
+        "Zakros"
+      ],
+      "per_site_signs_ge5": {
+        "Haghia Triada": 89,
+        "Khania": 28,
+        "Knossos": 7,
+        "Phaistos": 11,
+        "Zakros": 34
+      }
+    },
+    "pairs": [
+      {
+        "site_a": "Haghia Triada",
+        "site_b": "Khania",
+        "n_common": 25,
+        "r": 0.7937,
+        "perm_p": 0.0,
+        "sig": true
+      },
+      {
+        "site_a": "Haghia Triada",
+        "site_b": "Phaistos",
+        "n_common": 11,
+        "r": 0.8158,
+        "perm_p": 0.0016,
+        "sig": true
+      },
+      {
+        "site_a": "Haghia Triada",
+        "site_b": "Zakros",
+        "n_common": 34,
+        "r": 0.698,
+        "perm_p": 0.0,
+        "sig": true
+      },
+      {
+        "site_a": "Khania",
+        "site_b": "Zakros",
+        "n_common": 18,
+        "r": 0.7403,
+        "perm_p": 0.0008,
+        "sig": true
+      },
+      {
+        "site_a": "Phaistos",
+        "site_b": "Zakros",
+        "n_common": 9,
+        "r": 0.8541,
+        "perm_p": 0.0012,
+        "sig": true
+      }
+    ],
+    "summary": {
+      "n_pairs_testable": 5,
+      "n_pairs_sig": 5,
+      "median_r": 0.7937
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_r": 0.9105,
+      "detect_power": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "5 of 5 testable site-pairs (>=8 common signs with >=5 obs each) show significant positive cross-site correlation of per-sign mean normalized glyph size (perm_p<=0.0016, sign-label-shuffle null, 5000 draws).",
+    "Observed correlations are large and tightly positive: r=0.79 (Haghia Triada-Khania, n=25), r=0.82 (HT-Phaistos, n=11), r=0.70 (HT-Zakros, n=34), r=0.74 (Khania-Zakros, n=18), r=0.85 (Phaistos-Zakros, n=9); median r=0.79.",
+    "Anchor pairs (Haghia Triada vs each other big site) are all significant: HT-Khania, HT-Phaistos, HT-Zakros (HT-Knossos untestable, only 7 common signs).",
+    "Pattern matches the SHARED sign-frequency fingerprint (E036), NOT the site-local allograph-shape pattern (E017/E020): glyph size is a shared cross-site graphic convention.",
+    "Positive control calibrated: synthetic shared-convention data detected with power=1.0 (mean r=0.91); synthetic site-idiosyncratic data gave false-positive rate=0.0 (mean r=0.007), never reaching the >=2-significant-pairs gate."
+  ],
+  "successor_hypotheses": [
+    "E077: Is the shared size convention driven by a small set of high-frequency signs, or is it uniform across the sign inventory? (per-sign contribution / leave-one-out).",
+    "E078: Does normalized glyph size correlate with a sign GRAPHIC COMPLEXITY proxy (e.g. stroke count / component count) cross-site \u2014 i.e. is the convention complexity-graded?",
+    "E079: Is the within-document size RANK of signs shared cross-site (ordinal convention) in addition to the z-scored magnitude?",
+    "E080: Do the underpowered sites (Knossos, Phaistos) join the shared convention once more docs are available (replicate with relaxed min-obs / pooled periods)?",
+    "E081: Is glyph size shared across PERIODS within a site, or is the convention period-locked (LM I vs LM III)?",
+    "E082: Cross-modal: does the shared size convention align with the shared sign-frequency fingerprint (E036) \u2014 are frequent signs drawn at a characteristic relative size?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Within-document z-scoring of log bbox-area removes per-photo/per-tablet absolute pixel scale (no scale leak). The metric is the cross-site correlation of per-sign MEAN normalized size; the sign-label-shuffle null destroys the sign->size association, so any correlation is beyond chance sign-size pairing. Sign identity is an OPAQUE catalog ID (e.g. AB59) \u2014 no phonetic value, reading, or meaning is used or implied. L2 structural graphic property only.",
+  "deviations": [
+    "Initial PC runs showed an inflated false-positive rate (up to 1.0) due to (a) a stale bytecode cache and (b) seed-coupling between data-generation and permutation RNG when both derived from the same base offset; resolved by clearing __pycache__ and fully decoupling the two RNG streams (data seed 1000+rep*7 / 2000+rep*7; perm RNG 9000+rep*13 / 8000+rep*13). Canonical PC with decoupled seeds: power=1.0, false_pos_rate=0.0. No change to the frozen metric, null, or verdict rule.",
+    "Glyphs with sign=None or non-string sign labels (a handful) were excluded from profile construction; this does not affect any testable pair (>=8 common signs threshold met regardless).",
+    "Knossos has only 7 signs with >=5 observations, so all Knossos pairs are untestable (<8 common signs); 5 of 10 site-pairs remain testable, all significant."
+  ]
+}
