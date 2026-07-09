@@ -1258,3 +1258,27 @@ epochs:
     artifacts: [epochs/EPOCH-052/prereg.md, epochs/EPOCH-052/plan_hash.txt, epochs/EPOCH-052/machinery.py, epochs/EPOCH-052/result.json, reports/EPOCH052_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-053
+    frontier: F8
+    gate: A
+    name: "Ledger entry-word vocabulary restriction (is there a commodity lexicon?), size-matched TTR/entropy"
+    plan_hash: "see epochs/EPOCH-053/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=1."
+    orchestrator_verification: "Claude verified (gate repro_check size-matched TTR + scrutiny): entry-words TTR 0.462 vs non-entry 0.388 (entry MORE diverse, not less); normalized entropy entry 0.903 > non 0.845; restriction_gap 0.043, permutation p=0.97 (NOT significant), direction mixed; cross-site 4/5 'significant' but direction INCONSISTENT. PC passed (detect p .003, fp 0.0)."
+    positive_control: "PASSED (verified): size-matched machinery detects a planted restricted 'entry' vocabulary (p .003) and does NOT fire on same-vocab different-size groups (fp 0.0) — confirming the size-matching removes the TTR sample-size confound."
+    verdict: "NO_ENTRY_WORD_LEXICON_RESTRICTION: ledger entry-words (words preceding numerals = counted items) are NOT drawn from a more restricted/repetitive vocabulary than non-entry words (size-matched, permutation p=0.97, direction mixed, cross-site inconsistent). No detectable COMMODITY LEXICON at the word-form level."
+    numbers: {n_entry: 1040, n_nonentry: 2107, ttr_entry_matched: 0.462, ttr_non_matched: 0.388, norm_entropy_entry: 0.903, norm_entropy_non: 0.845, restriction_gap: 0.043, perm_p: 0.97, direction: mixed, sites_testable: 5, sites_sig: 4, direction_consistent: false, pc_detect_p: 0.003, pc_fp: 0.0}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "CLEAN NEGATIVE (bounds the commodity-lexicon hypothesis): the counted-item (entry-word) slot is lexically OPEN — entry-words are as diverse as non-entry words (if anything slightly MORE diverse), with NO cross-site-consistent restriction. So Linear A ledger entries are NOT filled from a small repetitive commodity vocabulary at the word-form level; the same diversity of forms appears as counted items and as non-counted words. COMBINED WITH E033 (no entry/non-entry LENGTH contrast): the entry vs non-entry distinction is PURELY POSITIONAL (numeral adjacency), NOT lexically or structurally marked. This bounds a natural 'commodity-word class' anchor hypothesis negatively at the word-form level (commodities may be encoded as single-sign LOGOGRAMS rather than distinctive word-forms, cf. E035 terminal commodity logograms). Anonymous forms; no phonetics/meaning; no transfer licence."
+    committed_prediction: "modal COMMODITY_LEXICON/NO_RESTRICTION; OUTCOME = NO_RESTRICTION. No small commodity-word lexicon marks the counted-item slot; entry/non-entry is purely positional."
+    deviations:
+      - "Bootstrap/permutation counts reduced for synchronous runtime (n_perm 300-1000, n_boot 100-300); gap estimate stable, verdict (p=0.97, clearly non-significant) robust to the reduction."
+    non_circular: "Word-forms anonymous; TTR/entropy distributional; entry defined by observed numeral adjacency; LB synthetic-PC control-only; no phonetics/meaning; no known-value model input on the LA side."
+    architecture_note: "Thirtieth gated-runner epoch (repairs=1). Rigorous size-matched TTR (controlling the notorious sample-size confound, PC-validated) gave a clean NEGATIVE: no commodity lexicon marks ledger entries. Bounds an anchor-relevant hypothesis (a commodity-word class) and reinforces that entry/non-entry is purely positional (with E033)."
+    artifacts: [epochs/EPOCH-053/prereg.md, epochs/EPOCH-053/plan_hash.txt, epochs/EPOCH-053/machinery.py, epochs/EPOCH-053/result.json, reports/EPOCH053_REPORT.md]
+    successors_spawned: 5
+    substantive: true

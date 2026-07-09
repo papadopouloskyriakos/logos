@@ -1,0 +1,13 @@
+{
+  "n_entry": 1040,
+  "n_nonentry": 2107,
+  "n_match": 1040,
+  "ttr_entry_matched": 0.32923846153846237,
+  "ttr_non_matched": 0.37220961538461506,
+  "norm_entropy_entry": 0.9033419399984769,
+  "norm_entropy_non": 0.8450163928581726,
+  "gap_ttr": 0.04297115384615269,
+  "gap_entropy": -0.058325547140304246,
+  "perm_p_entry_more_restricted": 0.9700598802395209,
+  "direction": "mixed"
+}

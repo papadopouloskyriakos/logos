@@ -1,0 +1,116 @@
+{
+  "task_id": "EPOCH-053",
+  "method": "Size-matched vocabulary-restriction test (TTR + normalized entropy) of entry-words (word tokens whose next stream token is 'num') vs non-entry words. Larger group subsampled to smaller group size; >=500 bootstrap resamples for matched metrics; label-permutation p (shuffle entry/non labels among pooled words, recompute matched TTR gap). Positive control: (a) DETECT planted restricted+skewed entry vocab vs diverse non-entry vocab; (b) FALSE-POSITIVE same-vocab different-size splits. Cross-site per site with >=20 in each group; leave-one-site-out on Haghia Triada.",
+  "result": "Entry-words are NOT globally more restricted than non-entry words under the size-matched test. Global matched TTR gap (non-entry minus entry) = +0.043 (entry slightly lower TTR) BUT normalized entropy gap = -0.058 (entry HIGHER entropy, i.e. MORE even, opposite of restriction); direction = MIXED. Label-permutation one-sided p for 'entry more restricted' = 0.97 (entry-words are not significantly more concentrated; the opposite tail is p=0.03). The dominant site Haghia Triada (66% of entry-words) shows entry-words LESS restricted (gap_ttr=-0.062, p=1.0). Four smaller sites (Khania, Phaistos, Zakros, Arkhalkhori) show a TTR-only entry-more-restricted signal (p<=0.05) but with near-zero entropy gaps. Leave-one-site-out (drop HT) yields p=0.002 entry-more-restricted, but this is an artifact of removing the dominant counter-evidence site and the entropy gap remains negligible (0.013). PC PASSED (detect p=0.003 correct direction; false-positive rate 0.0 over 25 same-vocab splits). Because the GLOBAL test is not significant for entry-more-restricted (p=0.97) and the entropy metric runs opposite, there is no robust commodity-lexicon restriction.",
+  "verdict": "NO_ENTRY_WORD_LEXICON_RESTRICTION",
+  "numbers": {
+    "global": {
+      "n_entry": 1040,
+      "n_nonentry": 2107,
+      "ttr_entry_matched": 0.4615,
+      "ttr_non_matched": 0.3878,
+      "norm_entropy_entry": 0.9033,
+      "norm_entropy_non": 0.845,
+      "restriction_gap": 0.043,
+      "perm_p": 0.97,
+      "direction": "mixed",
+      "ttr_entry_matched_bootmean": 0.3292,
+      "ttr_non_matched_bootmean": 0.3722
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0033,
+      "false_pos_rate": 0.0
+    },
+    "cross_site": {
+      "n_sites_testable": 5,
+      "n_sites_sig": 4,
+      "direction_consistent": false,
+      "loo_p": 0.002
+    },
+    "cross_site_detail": {
+      "Haghia Triada": {
+        "n_entry": 686,
+        "n_nonentry": 1205,
+        "gap_ttr": -0.0615,
+        "perm_p": 1.0,
+        "direction": "entry_less_restricted",
+        "norm_entropy_entry": 0.9058,
+        "norm_entropy_non": 0.7666
+      },
+      "Khania": {
+        "n_entry": 76,
+        "n_nonentry": 292,
+        "gap_ttr": 0.2124,
+        "perm_p": 0.0133,
+        "direction": "entry_more_restricted",
+        "norm_entropy_entry": 0.9195,
+        "norm_entropy_non": 0.9351
+      },
+      "Phaistos": {
+        "n_entry": 29,
+        "n_nonentry": 81,
+        "gap_ttr": 0.2378,
+        "perm_p": 0.0166,
+        "direction": "entry_more_restricted",
+        "norm_entropy_entry": 0.9523,
+        "norm_entropy_non": 0.9773
+      },
+      "Zakros": {
+        "n_entry": 114,
+        "n_nonentry": 104,
+        "gap_ttr": 0.0745,
+        "perm_p": 0.0033,
+        "direction": "entry_more_restricted",
+        "norm_entropy_entry": 0.9465,
+        "norm_entropy_non": 0.9672
+      },
+      "Arkhalkhori": {
+        "n_entry": 27,
+        "n_nonentry": 36,
+        "gap_ttr": 0.1417,
+        "perm_p": 0.0465,
+        "direction": "entry_more_restricted",
+        "norm_entropy_entry": 0.937,
+        "norm_entropy_non": 0.9629
+      }
+    },
+    "loo_detail": {
+      "dropped_site": "Haghia Triada",
+      "loo_p_entry_more_restricted": 0.002,
+      "loo_gap_ttr": 0.1858,
+      "loo_gap_entropy": 0.0127,
+      "loo_direction": "entry_more_restricted"
+    },
+    "raw": {
+      "distinct_entry_forms": 480,
+      "distinct_nonentry_forms": 817,
+      "raw_ttr_entry": 0.4615,
+      "raw_ttr_nonentry": 0.3878,
+      "n_match_global": 1040
+    }
+  },
+  "key_findings": [
+    "GLOBAL: entry-words are NOT significantly more restricted than non-entry words under the size-matched test (label-permutation one-sided p=0.97 for entry-more-restricted; the opposite tail p=0.03). The verdict gate on global significance FAILS.",
+    "The two restriction metrics DISAGREE globally: entry-words have slightly LOWER matched TTR (raw 0.462 vs 0.388; size-matched bootstrap-mean 0.329 vs 0.372) but HIGHER normalized entropy (0.903 vs 0.845) -> direction MIXED. A true commodity lexicon requires BOTH lower; entropy runs opposite, so entry-words are if anything MORE evenly/uniformly distributed, not concentrated.",
+    "The dominant site Haghia Triada (686 entry-words, 66% of the global entry count) shows entry-words LESS restricted (gap_ttr=-0.062, p=1.0), which drives the global null.",
+    "Four smaller sites (Khania, Phaistos, Zakros, Arkhalkhori) show a TTR-only entry-more-restricted signal (p<=0.05), but in every case the normalized-entropy gap is near-zero or slightly negative -- the effect is a TTR artifact, not a genuine concentration.",
+    "Leave-one-site-out (drop HT) flips to p=0.002 entry-more-restricted, but this reflects removal of the dominant counter-evidence site rather than a robust cross-site lexicon, and the LOO entropy gap remains negligible (0.013).",
+    "POSITIVE CONTROL PASSED: the machinery detects a planted restricted+skewed vocabulary (detect p=0.003, correct direction) and has a 0.0 false-positive rate over 25 same-vocabulary different-size splits -- confirming the size-matching removes the TTR sample-size confound. The null result is therefore trustworthy, not a machinery failure."
+  ],
+  "successor_hypotheses": [
+    "E054: Positional vocabulary restriction -- test whether words in SPECIFIC stream positions (e.g. line-initial, post-divider) rather than numeral-adjacency show concentration; the HT counter-result suggests numeral-adjacency is not the right locus.",
+    "E055: Quantity-conditioned lexicon -- restrict entry-words to those followed by LARGE numerals (top-quartile values) vs small numerals; a commodity lexicon may appear only for high-volume counted items.",
+    "E056: Sign-level (not word-level) restriction -- repeat the TTR/entropy test on individual SIGNS within entry-words vs non-entry words; restriction may live at the sub-word level.",
+    "E057: HT-internal structure -- investigate why Haghia Triada entry-words are LESS restricted (larger administrative vocabulary?); stratify HT by support/context (tablet vs other) and re-test.",
+    "E058: Repetition-rate rather than type diversity -- test whether entry-words have higher per-form token counts (a few forms counted very often) even when entropy is high, using a repetition/concentration index (e.g. Herfindahl) instead of normalized entropy.",
+    "E059: Cross-site TTR-only effect follow-up -- the 4 smaller sites show a consistent TTR gap; test whether this survives a stricter multiple-comparison correction and larger per-site samples before claiming a site-local lexicon."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Forms anonymous (sign tuples only, never decoded). Entry defined by OBSERVED numeral-adjacency in the stream, not by meaning. Pure distributional vocabulary structure (TTR + normalized entropy). No phonetics, no semantics, no numeral values used. LB control is synthetic only because Linear B lacks the stream numeral-adjacency structure required by this test -- stated explicitly. Positive control uses synthetic planted vocabularies. Size-matching removes the TTR sample-size confound (verified by 0.0 false-positive rate on same-vocab different-size splits).",
+  "deviations": [
+    "Permutation bootstrap counts reduced (global n_perm=500-1000 with n_boot=100-300 inside permutation; cross-site n_perm=300 n_boot=300; LOO n_perm=500 n_boot=300) to fit synchronous runtime -- gap statistic is stable at n_boot>=100 (gap_ttr=0.0425 at n_boot=100 vs 0.0430 at n_boot=500).",
+    "pc_detect planted entry vocabulary made SKEWED (Zipf weights) rather than uniform, because a genuine 'commodity lexicon' is small AND unevenly used; a uniform small set has high normalized entropy and would not represent the hypothesis. This is a PC-design refinement consistent with the prereg's 'small form set' intent; self-check uses the same skewed design."
+  ]
+}

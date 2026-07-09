@@ -1,0 +1,57 @@
+{
+  "Haghia Triada": {
+    "n_entry": 686,
+    "n_nonentry": 1205,
+    "gap_ttr": -0.06100097181729863,
+    "perm_p": 1.0,
+    "direction": "entry_less_restricted",
+    "ttr_entry_matched": 0.3330612244897959,
+    "ttr_non_matched": 0.2720602526724973,
+    "norm_entropy_entry": 0.905560999067973,
+    "norm_entropy_non": 0.766933386484828
+  },
+  "Khania": {
+    "n_entry": 76,
+    "n_nonentry": 292,
+    "gap_ttr": 0.20517543859649123,
+    "perm_p": 0.023255813953488372,
+    "direction": "entry_more_restricted",
+    "ttr_entry_matched": 0.39201754385964926,
+    "ttr_non_matched": 0.5971929824561405,
+    "norm_entropy_entry": 0.9176375712178215,
+    "norm_entropy_non": 0.9357409218022282
+  },
+  "Phaistos": {
+    "n_entry": 29,
+    "n_nonentry": 81,
+    "gap_ttr": 0.24597701149425233,
+    "perm_p": 0.03322259136212625,
+    "direction": "entry_more_restricted",
+    "ttr_entry_matched": 0.5570114942528739,
+    "ttr_non_matched": 0.8029885057471262,
+    "norm_entropy_entry": 0.9521214366698154,
+    "norm_entropy_non": 0.9778896639358491
+  },
+  "Zakros": {
+    "n_entry": 114,
+    "n_nonentry": 104,
+    "gap_ttr": 0.07650641025640914,
+    "perm_p": 0.0033222591362126247,
+    "direction": "entry_more_restricted",
+    "ttr_entry_matched": 0.5027884615384618,
+    "ttr_non_matched": 0.5792948717948709,
+    "norm_entropy_entry": 0.9466727474971461,
+    "norm_entropy_non": 0.9672275722533408
+  },
+  "Arkhalkhori": {
+    "n_entry": 27,
+    "n_nonentry": 36,
+    "gap_ttr": 0.13419753086419572,
+    "perm_p": 0.036544850498338874,
+    "direction": "entry_more_restricted",
+    "ttr_entry_matched": 0.531234567901234,
+    "ttr_non_matched": 0.6654320987654297,
+    "norm_entropy_entry": 0.9389413555410647,
+    "norm_entropy_non": 0.9608730996079078
+  }
+}

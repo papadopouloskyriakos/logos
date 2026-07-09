@@ -1,0 +1,8 @@
+{
+  "pc_verdict": "PASSED",
+  "detect_p": 0.0033222591362126247,
+  "detect_direction": "entry_more_restricted",
+  "detect_ok": true,
+  "false_pos_rate": 0.0,
+  "fp_splits": 25
+}
