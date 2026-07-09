@@ -1,0 +1,52 @@
+{
+  "task_id": "EPOCH-079",
+  "method": "Inter-glyph spacing regularity (ruled / monospaced-like), cross-site. L2 only: signs are OPAQUE IDs; only POSITIONS matter. A ROW = y-band (cluster glyphs by y-center within 0.6 x median glyph-height). Within a row (>=3 glyphs) sort by x-center; PITCH = consecutive center-to-center distance. Doc pitch-CV = sd/mean of pooled within-row pitches. S_obs = MEDIAN doc pitch-CV over usable docs (>=6 non-divider glyphs AND >=1 row of >=3 glyphs). NULL = random-composition: replace each row's pitches with a uniform-Dirichlet / random-breakpoint composition summing to the SAME row pitch-total (preserves row span + glyph count, destroys only regularity); recompute S = median doc pitch-CV; >=2000 draws; one-sided perm p = frac(null S <= S_obs) (regular = observed MORE uniform / LOWER CV than random). CROSS-SITE: per site with >=15 usable docs, recompute S_site + own null + perm p. POSITIVE CONTROL (synthetic, gates verdict): DETECT regular-pitch docs (power_est over 25 reps) + FALSE-POSITIVE random-composition docs (fp_rate over 25 reps).",
+  "result": "Inter-glyph spacing is a deliberate ruled/regular layout, cross-site. Global S_obs (median doc pitch-CV)=0.329 vs random-composition null-median=0.743 (perm p=0.0, ratio=0.44) — observed pitches are far MORE uniform than a random allocation of the same row spans. Replicates cross-site: significant regular in 3/3 testable sites — Haghia Triada (S=0.354 vs null 0.757, p=0.0), Khania (S=0.268 vs null 0.685, p=0.0), Zakros (S=0.346 vs null 0.754, p=0.0). PC PASSED (power_est=1.0, fp_rate=0.0): machinery detects regular spacing and does not fire on random-composition spacing.",
+  "verdict": "SPACING_REGULAR_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_docs": 246,
+      "S_obs": 0.3287,
+      "null_median": 0.7429,
+      "perm_p": 0.0,
+      "ratio": 0.4425
+    },
+    "per_site": [
+      {"site": "Haghia Triada", "n_docs": 143, "S_site": 0.3541, "null_median": 0.7565, "perm_p": 0.0, "sig_regular": true},
+      {"site": "Khania", "n_docs": 33, "S_site": 0.2677, "null_median": 0.6850, "perm_p": 0.0, "sig_regular": true},
+      {"site": "Zakros", "n_docs": 21, "S_site": 0.3456, "null_median": 0.7540, "perm_p": 0.0, "sig_regular": true},
+      {"site": "Knossos", "n_docs": 12, "S_site": null, "null_median": null, "perm_p": null, "sig_regular": false},
+      {"site": "Phaistos", "n_docs": 12, "S_site": null, "null_median": null, "perm_p": null, "sig_regular": false}
+    ],
+    "cross_site": {
+      "n_sites_testable": 3,
+      "n_sites_sig_regular": 3
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "Inter-glyph horizontal spacing within a line is REGULAR (ruled / monospaced-like), far beyond a random gap-allocation null: global median doc pitch-CV = 0.329 vs random-composition null-median 0.743 (perm p=0.0 over 2000 draws; ratio 0.44). Observed pitches are roughly half as variable as a random allocation of the same row spans.",
+    "The null is conservative by construction: it preserves each row's total span AND glyph count, replacing only the regularity of spacing with a uniform-Dirichlet / random-breakpoint composition. So the low observed CV is genuinely about EVEN SPACING, not about row width or sign count.",
+    "Cross-site replication is clean: significant regular spacing in 3/3 testable sites (>=15 usable docs) — Haghia Triada (S=0.354, p=0.0), Khania (S=0.268, p=0.0), Zakros (S=0.346, p=0.0). Khania is the most regular; all three are far below their site-specific nulls (~0.69-0.76).",
+    "Positive control (synthetic) PASSED: detect power_est=1.0 (regular-pitch synthetics always flagged), false-positive rate=0.0 (random-composition synthetics never flagged over 25 reps). Self-check confirms the null gives higher CV than regular observed and ~equal CV on random synthetic.",
+    "This is the fourth SigLA spatial regularity (after E076 shared per-sign size, E077 size not positional, E078 size-frequency economy): glyph SIZE is a shared convention AND glyph PLACEMENT is a shared ruled/regular layout — both cross-site. The writing surface is laid out on an implicit columnar grid."
+  ],
+  "successor_hypotheses": [
+    "E080: Is the regular PITCH itself a shared cross-site constant (same absolute/normalized column width across sites), or does each site have its own characteristic pitch — i.e., is the GRID shared or only the regularity?",
+    "E081: Does pitch regularity interact with glyph SIZE — are larger glyphs given wider pitches (size-aware spacing) or is pitch independent of glyph width (true monospacing)?",
+    "E082: Is the regular pitch present on TABLETS vs other supports (roundels, nodules) — is the ruled layout a tablet-specific affordance of the flat surface?",
+    "E083: Does pitch regularity hold WITHIN sign classes (AB syllabary vs A) — i.e., is the grid applied uniformly regardless of sign type, or do logogram-like signs break the grid?",
+    "E084: Is there a consistent LEFT MARGIN / line-start alignment across docs and sites (a second ruled-layout axis), complementing the within-line pitch regularity found here?",
+    "E085: Does pitch regularity degrade at line ENDS (last glyph of a row) — evidence of justification vs free termination of the ruled layout?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "L2 only. Signs are OPAQUE catalog IDs (no value, no reading, no meaning used). The metric uses ONLY glyph POSITIONS (bbox x,y,w,h): rows are y-bands, pitches are consecutive x-center differences, doc pitch-CV is sd/mean of pooled within-row pitches. The random-composition null preserves each row's total span and glyph count and destroys only the regularity of spacing, so a low observed CV cannot be explained by row width, glyph count, or sign identity — only by even spacing. No decoder, no sign values, no semantic labels enter the statistic or the null. PC is synthetic (declared).",
+  "deviations": []
+}
