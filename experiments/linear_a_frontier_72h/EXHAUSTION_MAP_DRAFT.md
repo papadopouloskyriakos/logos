@@ -7,6 +7,21 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 56 substantive epochs, each classified once)
+
+| Bucket | N | What it means |
+|---|---|---|
+| **Load-bearing cross-site positives** | **19** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| Bounded negatives | 14 | Well-powered PC-passed tests returning informative *absence* (§B) |
+| No-power | 3 | Detector had no power for the question (§C) |
+| Underpowered | 3 | Real data limit, stated (§C) |
+| Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
+| Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
+
+*19 positives / 14 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
+Zero of the 19 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
+reading.*
+
 ## What this campaign is
 A time-boxed, pre-registered, positive-control-gated sweep of the **structural** questions the Linear A
 corpus can answer at L2/L3 (writing-system + administrative-grammar structure), each epoch a mechanical
