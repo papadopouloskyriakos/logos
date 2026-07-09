@@ -206,3 +206,24 @@ findings. **No contradiction found; no erratum required.** The one apparent tens
 **Bottom line:** the frontier campaign *extends and corroborates* the frozen paper (adds a shared-grammar /
 site-local-content structural portrait at L2/L3) without contradicting any published claim. If any future
 finding *does* contradict the paper, it is filed as an ERRATUM against the frozen record — never a silent rebuild.
+
+---
+
+## I. Completeness & limitations (completeness-critic pass)
+Mechanical audit of the record's completeness:
+- **All map sections present** (A–F, H, tally, discipline-compliance certificate). No structural gap.
+- **All 20 load-bearing positives** have full artifacts (prereg + plan_hash + machinery + result + report) and are
+  coordinator-verified on *both* observed statistics and (where simulated-null-dependent) reconstructed nulls
+  (`VERIFICATION_AUDIT.md`).
+- **Documented limitation (not backfilled):** three *early, non-positive* epochs — E008/E009 (stroke channel, §D
+  SOURCE_BLOCKED) and E013 (decomposition-neutral, §B, superseded by E018) — carry `prereg.md` + `result.json`
+  but no separate `plan_hash.txt` (an early-phase convention before the hash file was standardized). They were
+  pre-registered; only the separate frozen-hash file is absent. **A post-hoc hash is deliberately NOT added** —
+  backfilling would fake the freeze. None is load-bearing.
+- **Worker scratch files** (`_run.*`, `run_analysis.py`, `_pc_tmp.json`) remain untracked: intermediate GLM
+  working files, non-canonical; the frozen record is the committed prereg/plan_hash/machinery/result/report.
+
+**Assessment: the frontier is mapped and the capstone material is complete and integrity-verified.** The
+campaign's substantive scientific work is done (frontier saturated: shared script+grammar vs site-local
+everything-else, 20 verified positives / 16 bounded-negatives, all L2/L3, no licence, no decipherment). The
+only remaining step is the **clock-gated §12 finalization** — mechanically blocked until 2026-07-11T03:20Z.
