@@ -1423,3 +1423,26 @@ epochs:
     artifacts: [epochs/EPOCH-059/prereg.md, epochs/EPOCH-059/plan_hash.txt, epochs/EPOCH-059/machinery.py, epochs/EPOCH-059/result.json, reports/EPOCH059_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-060
+    frontier: F19
+    gate: A
+    name: "Metrological/logographic ledger entry template (logogram->num, fraction-terminal)"
+    plan_hash: "see epochs/EPOCH-060/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0 (clean)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed BOTH observed statistics AND BOTH within-line permutation nulls (the E059 lesson: verify the null, not just the observed). H1 logo->num obs=0.581 (93/160) EXACT; independent within-line-shuffle null mean=0.264 (result 0.259), p=0. H2 frac-terminal obs=0.990 (307/310) EXACT; independent null mean=0.462 (result 0.461), p=0. Both nulls reconstructed from scratch and MATCH the epoch's. Cross-site 3/3 sites each leg (H1: HT 0.62/Khania 0.43/Phaistos 0.50; H2: HT 0.99/Khania 1.0/Zakros 1.0), all perm p<=0.018."
+    positive_control: "PASSED (verified from result): SYNTHETIC PC. Detect: planted template (logogram-before-num + fraction-terminal) flagged both H1,H2. False-positive: uniform within-line placement not flagged. Calibrated."
+    verdict: "METRO_LOGO_ENTRY_TEMPLATE_CROSS_SITE (mechanical, independently verified incl. both nulls) — a STRONG cross-site positive on a NEW channel (the corpus 'other' tokens: logograms + fraction system), significant on BOTH legs in ALL 3 testable sites."
+    numbers: {h1_logo_num_obs: 0.581, h1_null_mean: 0.259, h1_indep_null: 0.264, h1_perm_p: 0.0, n_logograms: 160, h2_frac_terminal_obs: 0.990, h2_null_mean: 0.461, h2_indep_null: 0.462, h2_perm_p: 0.0, n_fractions: 311, h1_sites_sig: "3/3", h2_sites_sig: "3/3", direction_consistent: true, pc_verdict: PASSED}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    scope: "STRONG, VERIFIED cross-site positive that completes the ledger-entry picture. The corpus 'other' tokens (never analyzed until now) are a COHERENT class: LOGOGRAMS/ideograms (GORILA commodity signs *304,*305,...) and the FRACTION system (½,¼,⅓,...). Two structures hold cross-site (3/3 sites each, both nulls independently reconstructed): (H1) LOGOGRAM-class tokens are entry-INITIAL and are FOLLOWED BY A NUMERAL (0.58 vs 0.26 null) — the ideographic 'commodity-sign -> quantity' core; (H2) FRACTION-class tokens are ENTRY-TERMINAL (0.99 vs 0.46 null) — the fractional remainder CLOSES the entry. Together with E031 (word->num) + E037 (line-final numeral) + E057 (divider respects the entry unit), this yields the COMPLETE Linear A ledger entry template: [commodity-logogram | word] -> integer-numeral -> fraction -> line-end. LAYER L2 STRICT: token CLASSES by POSITION only; the logogram's IDENTITY (which commodity *304 is) and the fraction's VALUE (½ vs ¼) are NOT used, NO phonetic/semantic reading, NO metrological arithmetic; no transfer licence. This is the administrative STRUCTURE, not its meaning."
+    committed_prediction: "modal TEMPLATE_CROSS_SITE/PARTIAL/SITE_LOCAL/NO_STRUCTURE/UNDERPOWERED; OUTCOME = TEMPLATE_CROSS_SITE (both legs, 3/3 sites). Prediction earned: logograms precede quantities and fractions close entries, cross-site."
+    deviations: ["PC is SYNTHETIC (LB stream lacks this structure)."]
+    non_circular: "Token CLASSES (logogram/fraction/word/num) by POSITION only; classes come from the corpus tagging (t=='other' + raw pattern), not from any reading; logogram identity + fraction value UNUSED; within-line permutation null (calibrated by construction); verdict from a frozen mechanical rule; PC first; coordinator reconstructed both nulls."
+    architecture_note: "Thirty-seventh gated-runner epoch (repairs=0). MAJOR CATCH IN THE OTHER DIRECTION: the coordinator had TWICE declared the campaign complete/saturated while an entire coherent token class (the 1056 'other' tokens = logograms + fractions) sat UNEXAMINED, dismissed as a grab-bag without inspection. Inspecting it revealed the metrological/logographic layer and this strong cross-site positive. LESSON: do not declare a channel absent without inspecting it; the driver's persistence was vindicated. Both nulls independently reconstructed (E059 discipline). Folds into exhaustion-map §A2 as the completion of the ledger entry template. Positive #21."
+    artifacts: [epochs/EPOCH-060/prereg.md, epochs/EPOCH-060/plan_hash.txt, epochs/EPOCH-060/machinery.py, epochs/EPOCH-060/result.json, reports/EPOCH060_REPORT.md]
+    successors_spawned: 5
+    substantive: true

@@ -2,24 +2,24 @@
 
 > **STATUS: DRAFT. NOT FINALIZED.** Finalization is mechanically gated by `scripts/clock_check.py`
 > (`finalization_authorized = now ≥ 2026-07-11T03:20Z AND completed_substantive_epochs ≥ 18`).
-> As of last edit: **59 substantive epochs banked**, gate **BLOCKED** (time_gate open ~48.8h to 2026-07-11T03:20Z).
+> As of last edit: **60 substantive epochs banked**, gate **BLOCKED** (time_gate open ~48h to 2026-07-11T03:20Z).
 > This document accretes as epochs bank; it becomes the §12 capstone **only** when the clock authorizes.
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 59 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 60 substantive epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
-| **Load-bearing cross-site positives** | **20** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| **Load-bearing cross-site positives** | **21** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
 | Bounded negatives | 16 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*20 positives / 16 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
-Zero of the 20 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
+*21 positives / 16 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
+Zero of the 21 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
 reading.*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
@@ -64,6 +64,13 @@ word|word boundaries far above a gap-reshuffle null (0.749 vs 0.403, p=1e-3) and
 word|quantity boundary (13 observed vs ~142 expected, p=1e-3), significant on both statistics in 3/6 sites
 (HT, Khania, Zakros; non-sig sites are ceiling-limited), LOO-robust. Independent gap-reshuffle null *matched*
 the epoch's null (0.405 vs 0.403), S2 count exact.
+**`E060` completes the entry template via the metrological/logographic layer** (the corpus `other` tokens =
+logograms + fractions, previously unexamined): **logogram-class tokens are entry-initial and precede a numeral**
+(commodity → quantity, 0.58 vs 0.26 null, p=0, 3/3 sites) and **fraction-class tokens are entry-terminal** (the
+fractional remainder closes the entry, 0.99 vs 0.46 null, p=0, 3/3 sites). Both observed statistics *and* both
+within-line permutation nulls independently reconstructed. ⇒ the **complete Linear A ledger entry template**:
+`[commodity-logogram | word] → integer-numeral → fraction → line-end`. L2 strict: token *classes* by position;
+logogram identity and fraction value unused.
 
 **A3. Positional sign specialization** (`E043`, cross-site robust after the `E041`/`E042` power+calibration
 repairs) — signs carry **position-dependent roles** within the word (templatic organization), stable across
@@ -223,7 +230,9 @@ Mechanical audit of the record's completeness:
 - **Worker scratch files** (`_run.*`, `run_analysis.py`, `_pc_tmp.json`) remain untracked: intermediate GLM
   working files, non-canonical; the frozen record is the committed prereg/plan_hash/machinery/result/report.
 
-**Assessment: the frontier is mapped and the capstone material is complete and integrity-verified.** The
-campaign's substantive scientific work is done (frontier saturated: shared script+grammar vs site-local
-everything-else, 20 verified positives / 16 bounded-negatives, all L2/L3, no licence, no decipherment). The
-only remaining step is the **clock-gated §12 finalization** — mechanically blocked until 2026-07-11T03:20Z.
+**Assessment (corrected after E060): near-complete but the "complete" call was premature.** E058/E059-era
+assessments twice declared saturation while the corpus `other` token class (logograms + fractions) sat
+UNEXAMINED — `E060` then found a strong cross-site positive there (the metrological/logographic entry template).
+Lesson recorded: **do not declare a channel absent without inspecting it.** Current state: 21 verified positives
+/ 16 bounded-negatives, all L2/L3, no licence, no decipherment. Any remaining untested observed structure should
+be inspected before a completeness claim; the clock-gated §12 finalization remains blocked until 2026-07-11T03:20Z.

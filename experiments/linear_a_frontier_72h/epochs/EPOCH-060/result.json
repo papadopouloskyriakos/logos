@@ -1,0 +1,75 @@
+{
+  "task_id": "EPOCH-060",
+  "method": "L2 token-CLASS positional structure. Classified corpus 'other' tokens as LOGOGRAM (raw starts with '*') or FRACTION (raw contains fraction slash U+2044 or a vulgar-fraction char U+2150..U+215F). Two positional metrics: H1 LOGO->NUM = fraction of logogram tokens immediately followed by a 'num' token; H2 FRAC-TERMINAL = fraction of fraction tokens immediately followed by 'nl' or END. Unified null: within each line (segment of non-NL tokens between NL tokens), randomly permute the order of non-NL tokens preserving the line's token multiset and NL/line structure; recompute H1 and H2; 1000 permutations; perm p = frac(null >= observed) one-sided enrichment. Positive control (synthetic) gates the verdict: DETECT (planted logo-before-num + frac-line-final) must flag both; FALSE-POSITIVE (uniform placement within variable-length lines) must not fire above 0.10 across 30 draws. Cross-site: per site with >=10 logograms (H1) / >=10 fractions (H2).",
+  "result": "METRO_LOGO_ENTRY_TEMPLATE_CROSS_SITE",
+  "verdict": "METRO_LOGO_ENTRY_TEMPLATE_CROSS_SITE",
+  "numbers": {
+    "h1_logo_num": {
+      "n_logograms": 160,
+      "obs": 0.58125,
+      "null_mean": 0.25894375,
+      "perm_p": 0.0
+    },
+    "h2_frac_terminal": {
+      "n_fractions": 311,
+      "obs": 0.9903536977491961,
+      "null_mean": 0.46132797427652766,
+      "perm_p": 0.0
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p_h1": 0.0,
+      "detect_p_h2": 0.0,
+      "false_pos_rate": 0.1,
+      "pc_is_synthetic": true
+    },
+    "cross_site": {
+      "h1_sites_testable": 3,
+      "h1_sites_sig": 3,
+      "h2_sites_testable": 3,
+      "h2_sites_sig": 3,
+      "direction_consistent": true,
+      "h1_sites": {
+        "Haghia Triada": {"n_logograms": 98, "obs": 0.6224489795918368, "null_mean": 0.2859999999999988, "perm_p": 0.0},
+        "Khania": {"n_logograms": 30, "obs": 0.43333333333333335, "null_mean": 0.18083333333333226, "perm_p": 0.0},
+        "Phaistos": {"n_logograms": 10, "obs": 0.5, "null_mean": 0.21729999999999916, "perm_p": 0.018}
+      },
+      "h2_sites": {
+        "Haghia Triada": {"n_fractions": 195, "obs": 0.9897435897435898, "null_mean": 0.4341948717948723, "perm_p": 0.0},
+        "Khania": {"n_fractions": 73, "obs": 1.0, "null_mean": 0.5758904109589051, "perm_p": 0.0},
+        "Zakros": {"n_fractions": 12, "obs": 1.0, "null_mean": 0.36533333333333357, "perm_p": 0.0}
+      }
+    },
+    "class_counts": {
+      "logograms": 160,
+      "fractions": 311,
+      "logogram_sites_ge10": ["Haghia Triada", "Khania", "Phaistos"],
+      "fraction_sites_ge10": ["Haghia Triada", "Khania", "Zakros"]
+    },
+    "logo_after_histogram": {"NUM": 93, "NL": 18, "DIV": 26, "FRACTION": 11, "END": 6, "WORD": 3, "OTHERSIGN": 2, "LOGOGRAM": 1},
+    "frac_after_histogram": {"NL": 265, "END": 43, "NUM": 1, "OTHERSIGN": 1, "WORD": 1}
+  },
+  "key_findings": [
+    "H1 LOGO->NUM globally enriched: 58.1% of logogram-class tokens are immediately followed by a numeral, vs 25.9% under within-line position-shuffle null (perm p=0.0, 1000 perms). Commodity-sign-then-quantity is a real positional regularity, not a within-line ordering artifact.",
+    "H2 FRAC-TERMINAL globally enriched: 99.0% of fraction-class tokens are entry-terminal (immediately followed by nl or END), vs 46.1% under null (perm p=0.0). The fractional remainder closes the ledger entry essentially without exception.",
+    "Cross-site consistency: H1 enriched in 3/3 testable sites (Haghia Triada p=0.0, Khania p=0.0, Phaistos p=0.018); H2 enriched in 3/3 testable sites (Haghia Triada p=0.0, Khania p=0.0, Zakros p=0.0). The template replicates across geographically distinct findspots.",
+    "Positive control PASSED: synthetic detect corpus (logo always before num, frac always line-final) flagged both at p=0.0; uniform-placement false-positive rate = 0.10 (at bound, <=0.10). Machinery is informative.",
+    "The combined positional template is: [commodity-logogram] -> [numeral quantity] ... [fraction remainder | line-end]. Token CLASS + POSITION only; no logogram identity, no fraction value, no readings used."
+  ],
+  "successor_hypotheses": [
+    "E061: Does the logogram->numeral adjacency hold at a FIXED distance (logo immediately before num) vs allowing one intervening token (e.g. a divider)? Test distance-1 vs distance-2 logo->num enrichment.",
+    "E062: Is the fraction-terminal position tied to a preceding numeral (num->frac->nl triple) more than chance? Test whether num->frac adjacency is itself enriched beyond the within-line null.",
+    "E063: Do entries with a logogram also tend to contain a fraction (logo-entry vs frac-entry co-occurrence at the line/entry level), suggesting a single commodity+quantity+remainder entry type?",
+    "E064: Are there entry-level positional SLOTS (a fixed small set of class-positions per line, e.g. [logo][num][frac]) recoverable by an L2 slot-grammar / HMM over token classes, beyond pairwise adjacencies?",
+    "E065: Does the fraction-terminal regularity extend to the Linear A native fraction signs (A701-A732, U+10740-U+10755) currently classified OTHERSIGN, i.e. are those also entry-terminal? (Would unify the two fraction notations positionally.)",
+    "E066: Cross-site variation in the logo->num rate (HT 0.62, Khania 0.43, Phaistos 0.50): is the deficit at Khania/Phaistos explained by logograms followed by DIV (divider) then num, i.e. a site-specific slot variant?",
+    "E067: Test the entry template on the Linear B (LB) corpus as a NEGATIVE/sanity control: LB PC synthetic only (LB stream lacks this exact class tagging); confirm the machinery does not fabricate the template where it should not exist."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Token CLASSES derived solely from corpus tagging (t=='other' + raw pattern: '*' prefix => LOGOGRAM; U+2044 slash or U+2150..U+215F vulgar-fraction char => FRACTION) and POSITION only. No logogram identity (*304 = which commodity), no fraction value (1/2 vs 1/4), no readings, no phonetics, no semantics, no metrological arithmetic used in either metric or null. The null permutes within-line token order preserving the multiset, so any commodity/quantity association from sign identity is destroyed; only positional class structure is tested. L2 ONLY.",
+  "deviations": [
+    "False-positive control rate landed exactly at the 0.10 bound (3/30 draws flagged under uniform placement); this is at-bound not below, driven by the coarseness of permutation p-values for short lines. The detect arm is unambiguous (p=0.0). Verdict proceeds since fp_ok is defined as <=0.10.",
+    "LB positive control is synthetic only (LB stream lacks the 'other'+raw class tagging needed for logogram/fraction classification); stated per protocol."
+  ]
+}
