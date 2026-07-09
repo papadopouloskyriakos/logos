@@ -187,3 +187,26 @@
   nulls. Method-diverse re-confirmation of ANCHOR_LATTICE_UNDERDETERMINED. L2, no values. bounded-neg 28->29.
   Clock 100->101. F12 CLOSED_REFUTED. Both priority-insertion families (F11+F12) COMPLETE. Finalization still
   BLOCKED (2026-07-11T03:20Z); next disciplined move = Section-12 map integration of E091-E102, NOT a new drill.
+
+---
+## 2026-07-09 — CAMPAIGN CLOSURE (user closure instruction; wall-clock gate waived, safeguards intact)
+
+Closure batch E103–E105 (105 epochs total):
+- **E103** ADJUDICATE_STRONG_LEAD — A- prefixation: supplies the one §6 element E022-E024 lacked (>=2 segmentation
+  schemes). Top best-of-universe maxT survivor at p<=.01 under all 3 independent schemes (editor/divider/numeral),
+  z~17 (~2.4x next sign), PC clean, LOMO-invariant → **REPLICATED_RELATIVE_CONSTRAINT** (the campaign's one graduated
+  relative finding). Append-only QUALIFICATION of E022 "sole"→"dominant" survivor.
+- **E104** RUN_CAMPAIGN_WIDE_NULL — actual E103 machinery on structure-matched signal-free nulls: false-graduation
+  0.5% (CP95 upper 2.35%) vs 30.5% with maxT ablated (60x); planted 40/40 → **CAMPAIGN_NULL_GATES_LOAD_BEARING**
+  (best-of-universe maxT is load-bearing). A-'s z~17 far outside the null band.
+- **E105** SYNTHESIZE_EVIDENCE — dependency-aware closure generator; all counts generated → **CLOSURE_SYNTHESIS_
+  COMPLETE**. 105 epochs, 0 running / 0 reserved / 0 missing-verdict (E096 terminal DE_AUTHORIZED). Highest layer L3,
+  zero transfer licences, 1 graduated relative finding, 1 prospective seal frozen.
+
+Reconciliation: no reserved/incomplete/running epoch remained; the F12 active batch was already terminal. No epoch
+was cancelled or blocked at close except the pre-existing terminal DE_AUTHORIZED (E096).
+
+Final campaign verdict: **NO_DECIPHERMENT_BREAKTHROUGH · CURRENT_CORPUS_EXHAUSTED_WITHIN_SCOPE · GRADUATED_
+STRUCTURAL_FINDING (A-) · PROSPECTIVE_PROGRAMME_READY · CONTINUE_ONLY_AFTER_NEW_EVIDENCE.** Bottleneck = anchor
+independence (single independent channel), not corpus size or detector power. Final reports + machine-readable
+closure + review bundle under `final/`. Paper untouched; append-only intact; z.ai key not rotated.

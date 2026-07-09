@@ -1,0 +1,440 @@
+{
+  "F8/F1": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-001"
+    ],
+    "buckets": {
+      "OTHER": 1
+    }
+  },
+  "F3": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 4,
+    "epochs": [
+      "EPOCH-002",
+      "EPOCH-003",
+      "EPOCH-006",
+      "EPOCH-010"
+    ],
+    "buckets": {
+      "POSITIVE_RELATIVE": 1,
+      "BOUNDED_NEGATIVE": 1,
+      "OTHER": 2
+    }
+  },
+  "F10": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 4,
+    "epochs": [
+      "EPOCH-004",
+      "EPOCH-034",
+      "EPOCH-035",
+      "EPOCH-051"
+    ],
+    "buckets": {
+      "PROSPECTIVE_SEAL": 1,
+      "POSITIVE_RELATIVE": 2,
+      "SITE_LOCAL": 1
+    }
+  },
+  "F8": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 6,
+    "epochs": [
+      "EPOCH-005",
+      "EPOCH-030",
+      "EPOCH-031",
+      "EPOCH-033",
+      "EPOCH-037",
+      "EPOCH-053"
+    ],
+    "buckets": {
+      "OTHER": 1,
+      "BOUNDED_NEGATIVE": 3,
+      "POSITIVE_RELATIVE": 2
+    }
+  },
+  "F5": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 4,
+    "epochs": [
+      "EPOCH-007",
+      "EPOCH-011",
+      "EPOCH-026",
+      "EPOCH-027"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 3,
+      "SITE_LOCAL": 1
+    }
+  },
+  "F2": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-008",
+      "EPOCH-009"
+    ],
+    "buckets": {
+      "OTHER": 2
+    }
+  },
+  "F6": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 3,
+    "epochs": [
+      "EPOCH-012",
+      "EPOCH-017",
+      "EPOCH-028"
+    ],
+    "buckets": {
+      "OTHER": 1,
+      "QUALIFICATION": 1,
+      "POSITIVE_RELATIVE": 1
+    }
+  },
+  "F2/F9": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-013"
+    ],
+    "buckets": {
+      "OTHER": 1
+    }
+  },
+  "F7": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-014",
+      "EPOCH-029"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 2
+    }
+  },
+  "F4": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 5,
+    "epochs": [
+      "EPOCH-015",
+      "EPOCH-023",
+      "EPOCH-024",
+      "EPOCH-025",
+      "EPOCH-050"
+    ],
+    "buckets": {
+      "POSITIVE_RELATIVE": 4,
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "F9": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-016",
+      "EPOCH-032"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 2
+    }
+  },
+  "\u00a712 (dedicated adaptive-null family 1 of 3)": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-018"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "\u00a712 (third power surface \u2014 ATTEMPT 1)": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-019"
+    ],
+    "buckets": {
+      "OTHER": 1
+    }
+  },
+  "\u00a712 (dedicated adaptive-null family 2 of 3)": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-020"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "\u00a712 (third power surface \u2014 ATTEMPT 2)": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-021"
+    ],
+    "buckets": {
+      "POSITIVE_RELATIVE": 1
+    }
+  },
+  "\u00a712 (dedicated adaptive-null family 3 of 3)": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-022"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "F11": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-036"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "F12": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 5,
+    "epochs": [
+      "EPOCH-038",
+      "EPOCH-039",
+      "EPOCH-041",
+      "EPOCH-042",
+      "EPOCH-043"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 2,
+      "POSITIVE_RELATIVE": 3
+    }
+  },
+  "F13": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-040"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "F14": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 4,
+    "epochs": [
+      "EPOCH-044",
+      "EPOCH-045",
+      "EPOCH-054",
+      "EPOCH-055"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1,
+      "POSITIVE_RELATIVE": 2,
+      "SITE_LOCAL": 1
+    }
+  },
+  "F15": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-046",
+      "EPOCH-056"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1,
+      "POSITIVE_RELATIVE": 1
+    }
+  },
+  "F16": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 3,
+    "epochs": [
+      "EPOCH-047",
+      "EPOCH-048",
+      "EPOCH-057"
+    ],
+    "buckets": {
+      "SITE_LOCAL": 1,
+      "OTHER": 1,
+      "POSITIVE_RELATIVE": 1
+    }
+  },
+  "F17": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-049",
+      "EPOCH-058"
+    ],
+    "buckets": {
+      "POSITIVE_RELATIVE": 1,
+      "BOUNDED_NEGATIVE": 1
+    }
+  },
+  "F18": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-052",
+      "EPOCH-059"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 2
+    }
+  },
+  "F19": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 6,
+    "epochs": [
+      "EPOCH-060",
+      "EPOCH-061",
+      "EPOCH-062",
+      "EPOCH-063",
+      "EPOCH-069",
+      "EPOCH-070"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 4,
+      "POSITIVE_RELATIVE": 1,
+      "SITE_LOCAL": 1
+    }
+  },
+  "F20": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 3,
+    "epochs": [
+      "EPOCH-064",
+      "EPOCH-067",
+      "EPOCH-068"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 1,
+      "POSITIVE_RELATIVE": 2
+    }
+  },
+  "F21": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 2,
+    "epochs": [
+      "EPOCH-065",
+      "EPOCH-066"
+    ],
+    "buckets": {
+      "SITE_LOCAL": 2
+    }
+  },
+  "F22": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 5,
+    "epochs": [
+      "EPOCH-071",
+      "EPOCH-072",
+      "EPOCH-073",
+      "EPOCH-074",
+      "EPOCH-075"
+    ],
+    "buckets": {
+      "SITE_LOCAL": 2,
+      "POSITIVE_RELATIVE": 3
+    }
+  },
+  "F23_SPATIAL": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 15,
+    "epochs": [
+      "EPOCH-076",
+      "EPOCH-077",
+      "EPOCH-078",
+      "EPOCH-079",
+      "EPOCH-080",
+      "EPOCH-081",
+      "EPOCH-082",
+      "EPOCH-083",
+      "EPOCH-084",
+      "EPOCH-085",
+      "EPOCH-086",
+      "EPOCH-087",
+      "EPOCH-088",
+      "EPOCH-089",
+      "EPOCH-090"
+    ],
+    "buckets": {
+      "POSITIVE_RELATIVE": 5,
+      "SITE_LOCAL": 6,
+      "BOUNDED_NEGATIVE": 2,
+      "QUALIFICATION": 2
+    }
+  },
+  "TURING_MORPHOGENESIS": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 6,
+    "epochs": [
+      "EPOCH-091",
+      "EPOCH-092",
+      "EPOCH-093",
+      "EPOCH-094",
+      "EPOCH-095",
+      "EPOCH-096"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 4,
+      "QUALIFICATION": 1,
+      "OTHER": 1
+    }
+  },
+  "CROSS_DISCIPLINARY_DECIPHERMENT": {
+    "status": "CLOSED_UNDER_CURRENT_DATA",
+    "n_epochs": 6,
+    "epochs": [
+      "EPOCH-097",
+      "EPOCH-098",
+      "EPOCH-099",
+      "EPOCH-100",
+      "EPOCH-101",
+      "EPOCH-102"
+    ],
+    "buckets": {
+      "BOUNDED_NEGATIVE": 5,
+      "QUALIFICATION": 1
+    }
+  },
+  "STRONG_LEAD_ADJUDICATION": {
+    "status": "SUPPORTED_RELATIVE_ONLY",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-103"
+    ],
+    "buckets": {
+      "POSITIVE_RELATIVE": 1
+    }
+  },
+  "CAMPAIGN_WIDE_NULL": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-104"
+    ],
+    "buckets": {
+      "METHODOLOGY": 1
+    }
+  },
+  "CROSS_EPOCH_SYNTHESIS_CLOSURE": {
+    "status": "MIXED_SEE_EPOCHS",
+    "n_epochs": 1,
+    "epochs": [
+      "EPOCH-105"
+    ],
+    "buckets": {
+      "METHODOLOGY": 1
+    }
+  }
+}

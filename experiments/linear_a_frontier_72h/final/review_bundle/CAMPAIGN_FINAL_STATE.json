@@ -1,0 +1,48 @@
+{
+  "campaign": "linear-a-frontier-72h",
+  "campaign_status": "CLOSED",
+  "closure_authority": "user campaign-closure instruction (supersedes wall-clock gate only)",
+  "start_utc": "2026-07-08T03:20Z",
+  "end_utc": "2026-07-09",
+  "planned_deadline_utc": "2026-07-11T03:20Z (waived by closure instruction)",
+  "final_epoch": "EPOCH-105",
+  "completed_epochs": 105,
+  "blocked_epochs": 0,
+  "cancelled_epochs": 0,
+  "reserved_unexecuted_epochs": 0,
+  "graduated_findings_count": 1,
+  "strong_leads_adjudicated": 1,
+  "highest_licence": "none (all LA transfer licences NOT_EARNED)",
+  "highest_claim_layer": "L3",
+  "bucket_tally_generated": {
+    "OTHER": 11,
+    "POSITIVE_RELATIVE": 31,
+    "BOUNDED_NEGATIVE": 40,
+    "PROSPECTIVE_SEAL": 1,
+    "QUALIFICATION": 5,
+    "SITE_LOCAL": 15,
+    "METHODOLOGY": 2
+  },
+  "layer_tally_generated": {
+    "?": 4,
+    "L2": 45,
+    "L2/L3": 37,
+    "L1": 9,
+    "L3": 8,
+    "NA": 2
+  },
+  "duplicate_ledger_entries_append_only": {
+    "EPOCH-003": 2,
+    "EPOCH-002": 2,
+    "EPOCH-004": 2,
+    "EPOCH-006": 2,
+    "EPOCH-008": 2,
+    "EPOCH-007": 2,
+    "EPOCH-010": 2,
+    "EPOCH-009": 2,
+    "EPOCH-012": 3,
+    "EPOCH-014": 2,
+    "EPOCH-013": 3
+  },
+  "review_bundle_path": "experiments/linear_a_frontier_72h/final/review_bundle/"
+}

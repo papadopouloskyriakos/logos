@@ -1,0 +1,24 @@
+{
+  "count": 1,
+  "leads": [
+    {
+      "lead_id": "LEAD-A-PREFIX",
+      "originating_epochs": [
+        "E022",
+        "E023",
+        "E024",
+        "E103"
+      ],
+      "exact_claim": "A- is a productive corpus-wide word-initial positional prefix SLOT in LA administrative words (len>=2).",
+      "claim_layer": "L2/L3",
+      "classification": "A_STRONG_LEAD",
+      "adjudication_verdict": "REPLICATED_RELATIVE_CONSTRAINT",
+      "held_out": "cross-site 9/10 (E023) + support 5/6 + chronological 4/4 (E024)",
+      "adaptive_null": "p=.0002 best-of-72 maxT (E022); campaign-wide null 0.5% false-grad (E104)",
+      "segmentation_robust": "3/3 schemes, z~17 dominant (E103)",
+      "dependency_adjusted_independent_channels": 1,
+      "graduates_to_value": false,
+      "note": "Graduates as a RELATIVE structural constraint only; NO phonetic value (E102 absolute-value gate fails: single independent channel)."
+    }
+  ]
+}

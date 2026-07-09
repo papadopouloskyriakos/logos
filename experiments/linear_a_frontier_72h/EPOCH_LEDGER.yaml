@@ -2510,3 +2510,29 @@ epochs:
     artifacts: [epochs/EPOCH-104/prereg.md, epochs/EPOCH-104/plan_hash.txt, epochs/EPOCH-104/machinery.py, epochs/EPOCH-104/result.json]
     successors_spawned: 1
     substantive: true
+  - epoch_id: EPOCH-105
+    frontier: campaign_wide
+    frontier_family: CROSS_EPOCH_SYNTHESIS_CLOSURE
+    reason: SYNTHESIZE_EVIDENCE
+    status: BANKED
+    gate: A
+    name: "Cross-epoch dependency-aware synthesis + campaign closure: generate the master epoch table, reconciliation table, and all machine-readable closure JSON from the append-only ledger (invariant #12)."
+    plan_hash: "46234581f3bb6564c2fbab534f9ada71e5d2477928ebb41e23812a57642c5313"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) — final/generate_closure.py (frozen copy epochs/EPOCH-105/machinery.py). Parses EPOCH_LEDGER.yaml, all counts generated. NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "104 unique epochs (1..105 minus none; append-only duplicates for E002-E014 preserved as ERRATUM/SUPERSEDING history), 0 running, 0 reserved-unexecuted, 0 missing-verdict except E096 (terminal DE_AUTHORIZED). Generated tallies: layers 45 L2 / 37 L2-L3 / 9 L1 / 8 L3 -> highest earned layer L3, ZERO L4+. Licences: all LA transfer NOT_EARNED. Graduated findings = 1 (E103 A-, after excluding E104's false 'graduated' keyword match). Strong leads adjudicated = 1. Bucket tally (heuristic where dichotomy_side absent, labelled): POSITIVE_RELATIVE 31 / BOUNDED_NEGATIVE 40 / SITE_LOCAL 15 / QUALIFICATION 5 / PROSPECTIVE_SEAL 1 / METHODOLOGY 1 / OTHER 11."
+    positive_control: "N/A (deterministic aggregation). Validity check: the graduated-finding detector was corrected to exclude a false keyword match (E104 'does NOT fabricate graduated findings') -> 1 genuine graduation (E103), verified by hand."
+    verdict: "CLOSURE_SYNTHESIS_COMPLETE -- the campaign is scientifically closeable: all epochs terminal, one graduated RELATIVE finding (A- prefixation, E103), one adjudicated strong lead (same), the discipline machinery certified load-bearing (E104), the single prospective seal frozen (E004 FRACTION_ORDER_ANETAKI_SEAL). Dependency-adjusted independent-channel count for the durable structure = 1 (context co-occurrence, per E102); A- lives in the orthogonal positional channel and is validated in its own right. NO decipherment breakthrough; highest layer L3; zero transfer licences. Bottleneck = anchor independence (no 2nd independent linguistic channel; stroke/palaeography SOURCE_BLOCKED), NOT corpus size (E093) or detector power (gates fire)."
+    numbers: {unique_epochs: 104, running: 0, reserved_unexecuted: 0, graduated_findings: 1, strong_leads: 1, highest_layer: L3, transfer_licences_earned: 0, prospective_seals_frozen: 1, independent_channels_durable: 1}
+    layer: NA
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: METHODOLOGY_VALIDATION
+    scope: "Campaign-closure synthesis. Aggregates terminal verdicts only; creates no new claim; combines no dependent p-values. Emits the §12.2/§13 machine-readable closure files consumed by the §12.1-12.10 narrative reports + the review bundle. Final campaign epoch."
+    committed_prediction: "modal CLOSURE_SYNTHESIS_COMPLETE (all artifacts emit; 0 running/reserved/missing-verdict); OUTCOME = CLOSURE_SYNTHESIS_COMPLETE. CONFIRMED."
+    deviations: ["Bucket classification is heuristic for the 65 pre-field-schema epochs (no dichotomy_side); flagged per-row in the CSV (bucket_source=heuristic). The curated narrative tally in EXHAUSTION_MAP_DRAFT.md (33 positive / 29 bounded-neg / 9 site-local / 6 qualification) remains the human-audited classification; the generated CSV is the machine-readable ground truth and the two are reconciled in the final report. Disclosed."]
+    non_circular: "Pure deterministic aggregation of the append-only ledger; no model, no tuning. Counts generated (invariant #12)."
+    architecture_note: "FINAL campaign epoch (105). Closes the frontier-72h campaign under the user closure instruction (wall-clock gate waived; all scientific safeguards intact). Followed by the §12 narrative reports + review bundle + CAMPAIGN_COMPLETE marker."
+    artifacts: [epochs/EPOCH-105/prereg.md, epochs/EPOCH-105/plan_hash.txt, epochs/EPOCH-105/machinery.py, final/CAMPAIGN_FINAL_STATE.json, final/EPOCHS_001_TO_FINAL_MASTER_TABLE.csv]
+    successors_spawned: 0
+    substantive: true

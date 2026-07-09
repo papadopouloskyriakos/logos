@@ -1,0 +1,12 @@
+{
+  "count": 1,
+  "findings": [
+    {
+      "epoch": "EPOCH-103",
+      "claim": "A- prefixation strong-lead adjudication: segmentation/inventory robustness (>=2 schemes) + best-of-universe maxT + LOMO + matched adaptive null for the campaign's strongest LA positive.",
+      "verdict": "REPLICATED_RELATIVE_CONSTRAINT -- A- is the TOP best-of-universe maxT survivor at family-adjusted p<=.01 under ALL 3/3 independent segmentation schemes, including the harder function-restricted numeral-anchored ledger-head scheme (n=467, A-initial=28, A z=7.49 still rank-1). PC power+calibration cle",
+      "layer": "L2",
+      "highest_licence": "none (L2/L3 structural; no transfer licence)"
+    }
+  ]
+}

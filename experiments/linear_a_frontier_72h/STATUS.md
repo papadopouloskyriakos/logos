@@ -1,3 +1,12 @@
+# STATUS — frontier 72h  ·  **CLOSED 2026-07-09**
+
+> **CAMPAIGN CLOSED** by user closure instruction (wall-clock deadline waived; all scientific safeguards intact).
+> 105 epochs. **1 graduated relative finding (A- prefixation, E103).** Highest layer L3; zero transfer licences;
+> NO decipherment. Discipline certified load-bearing (E104). Final reports + review bundle: `final/`.
+> Machine-readable closure: `final/CAMPAIGN_FINAL_STATE.json`. Marker: `CAMPAIGN_COMPLETE`.
+
+---
+
 # STATUS — frontier 72h
 Clock: started 2026-07-08T03:20Z, ends 2026-07-11T03:20Z. Epochs 0/18 minimum. All licences NOT_EARNED.
 Anchor-lattice parent: 13/15 WPs closed (N running on its own branch; O pending — its verdict will be imported at the first checkpoint).

@@ -1,0 +1,16 @@
+{
+  "by_layer": {
+    "L0_L1_physical_signid": "COMPLETE (inventory/structure established)",
+    "L2_structure": "GRADUATED_STRUCTURAL_FINDING (A- positional slot, E103) + many bounded negatives",
+    "L3_functional": "REPLICATED_RELATIVE_CONSTRAINT (A-, register/ledger structure); no functional transfer licence earned",
+    "L4_plus_semantic_phonetic_translation": "NOT_REACHED / NOT_AUTHORIZED (absolute-value gate fails, E102: single independent channel)"
+  },
+  "campaign_level": [
+    "CURRENT_CORPUS_EXHAUSTED_WITHIN_SCOPE",
+    "GRADUATED_STRUCTURAL_FINDING (A- prefixation, relative)",
+    "PROSPECTIVE_PROGRAMME_READY (FRACTION_ORDER_ANETAKI_SEAL frozen)",
+    "CONTINUE_ONLY_AFTER_NEW_EVIDENCE (anchor independence is the bottleneck)",
+    "NO_DECIPHERMENT_BREAKTHROUGH"
+  ],
+  "bottleneck": "anchor independence (a single context-co-occurrence channel; no 2nd independent linguistic channel \u2014 stroke/palaeography SOURCE_BLOCKED), NOT corpus size (E093 LA data-sufficient) and NOT detector power (gates fire)."
+}

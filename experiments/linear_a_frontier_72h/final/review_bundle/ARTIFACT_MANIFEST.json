@@ -1,0 +1,14 @@
+{
+  "generated_from": "EPOCH_LEDGER.yaml",
+  "n_epochs": 105,
+  "files": {
+    "final/CAMPAIGN_FINAL_STATE.json": "d4ea4951ca8428e8461b0cedb94eade2476d7a9337c5115059f1f1a30c74a6a9",
+    "final/EPOCHS_001_TO_FINAL_MASTER_TABLE.csv": "bb0ef06fc3b908dd3623a759566d7c5645d1de1c85171480a1533d98313a8dc6",
+    "final/FINAL_VERDICTS.json": "282bc0ed2a64e00ceb61626efc6555fbad32a76bcdcbdff4e178b371ea3fe88d",
+    "final/GRADUATED_FINDINGS.json": "1f1dc52b72686c0205aba5ccd3eea8155c380a0feef4e75c079fb5e791e96165",
+    "final/METHOD_EXHAUSTION_MAP.json": "56eb4395a62dae720153d245d7bc94c185b6a780377c4dc121feb0389aeefe77",
+    "final/PROSPECTIVE_SEALS.json": "05e45e2e70bac469cee26da0d76dffaa4583fc40da97d0c4800a827fe0cc27bd",
+    "final/RECONCILIATION_TABLE.csv": "8ea313b76e12d07cdb447bb97b18752569c48b599046ffddc6de878aba85bb0c",
+    "final/STRONG_LEADS.json": "d9bd92527518cb6b721e5086868155ee1f35a105031ca41c43c0c93965fa35e7"
+  }
+}
