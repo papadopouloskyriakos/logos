@@ -1,0 +1,84 @@
+{
+ "positive_control": {
+  "runs": [
+   {
+    "mean_overlap": 0.9599999999999999,
+    "recovers_planted": 1.0,
+    "identifiable": true
+   },
+   {
+    "mean_overlap": 0.965,
+    "recovers_planted": 1.0,
+    "identifiable": true
+   },
+   {
+    "mean_overlap": 0.9055555555555556,
+    "recovers_planted": 0.75,
+    "identifiable": false
+   },
+   {
+    "mean_overlap": 1.0,
+    "recovers_planted": 1.0,
+    "identifiable": true
+   }
+  ],
+  "pc_ok": true
+ },
+ "linear_b": {
+  "degeneracy_overlap_mean": 0.9974747474747474,
+  "degeneracy_overlap_std": 0.005646636306817646,
+  "states_used": 5.0,
+  "q": 5,
+  "anchor_sweep": [
+   {
+    "f": 0.0,
+    "free_recovery": 0.2878787878787879,
+    "inter_run_overlap": 1.0
+   },
+   {
+    "f": 0.1,
+    "free_recovery": 0.29583333333333334,
+    "inter_run_overlap": 0.8268398268398267
+   },
+   {
+    "f": 0.2,
+    "free_recovery": 0.2971698113207547,
+    "inter_run_overlap": 0.6964285714285713
+   },
+   {
+    "f": 0.3,
+    "free_recovery": 0.3271276595744681,
+    "inter_run_overlap": 0.5946969696969696
+   },
+   {
+    "f": 0.5,
+    "free_recovery": 0.3787878787878788,
+    "inter_run_overlap": 0.545995670995671
+   }
+  ],
+  "n_valid_signs": 66
+ },
+ "linear_a": {
+  "degeneracy_overlap_mean": 0.9171461449942463,
+  "degeneracy_overlap_std": 0.0435818106247349,
+  "states_used": 5.0,
+  "n_signs": 79
+ },
+ "config": {
+  "q": 5,
+  "couplings": "SUBSTITUTION context similarity (ferromagnetic)",
+  "solver": "simulated annealing, 12 restarts",
+  "overlap": "permutation-invariant"
+ },
+ "verdict": "POTTS_NULL",
+ "rationale": "The context-similarity Potts landscape does NOT identify the linguistic (vowel) class system, and anchor injection produces NO identifiability transition: free-spin vowel recovery stays near chance (0.29->0.38 as anchor fraction 0->0.5, 1/q=0.20) while injecting TRUE-vowel anchors DROPS inter-run overlap 1.00->0.55 -- i.e. the truth-anchors CONFLICT with the couplings (frustration), proving the evidence is ORTHOGONAL to the target classes. The landscape is not classically glassy (near-unique minimum, 5.0/5 states used on LB, 5.0/5 on LA) but its minimum is uninformative about the linguistic classes. This is a mechanism-level confirmation that the available structural evidence does NOT make LA (or blinded LB) class assignment identifiable -- consistent with E091/E092 (context graph orthogonal to vowel) and the anchor-lattice underdetermination. NO value assigned from any minimum. L2.",
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 7.1,
+ "plan_hash": "217d1217af299cc6e9fbc41e25e0e3b790b11fe23be65eba6f1da3da762da15f",
+ "epoch_id": "EPOCH-098",
+ "code_manifest": {
+  "e098_potts.py": "555569bdcdf5c88d"
+ }
+}

@@ -136,3 +136,13 @@
   best masked-sign predictor (top-1 0.121); BP adds nothing. Calibration-positive/transfer-negative (S15: LB
   success != LA evidence). bounded-neg 24->25. Establishes F12 discipline: the LA-TRANSFER bar is the gate, not
   LB calibration. E098 (Potts spin-glass identifiability) queued next. Finalization BLOCKED (2026-07-11T03:20Z).
+
+- EPOCH-098 BANKED (97 epochs). F12 #2: spin-glass/Potts energy-landscape identifiability. VERDICT POTTS_NULL.
+  PC caught+fixed 2 bugs pre-banking (ferromagnetic->signed couplings for nontrivial ground state; sweep
+  annealing) -> PC recovers planted signed-block GS (0.91-1.0). Finding: context-similarity landscape is
+  NEAR-UNIQUE (overlap 0.997, uses all 5/5 states, NOT trivial collapse) but ORTHOGONAL to vowel classes
+  (free recovery 0.29 ~ chance 0.20); injecting TRUE-vowel anchors DROPS overlap 1.00->0.55 while recovery
+  barely moves -> anchors CONFLICT with couplings = evidence orthogonal to target. NO identifiability
+  transition. Mechanism-level confirmation of underdetermination (determined-but-wrong landscape, sharper than
+  'too little data'); consistent with E091/E092 + anchor-lattice. NO value from any minimum. L2. bounded-neg
+  25->26. E099 (causal source separation) next. Finalization BLOCKED (2026-07-11T03:20Z).
