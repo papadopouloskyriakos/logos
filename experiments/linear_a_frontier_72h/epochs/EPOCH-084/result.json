@@ -1,0 +1,81 @@
+{
+  "task_id": "EPOCH-084",
+  "method": "vertical line-pitch-CV vs HEIGHT-PRESERVING random-gap null (per-doc median, 500-draw permutation); deliberate = observed BELOW null",
+  "result": "LINE_SPACING_DELIBERATE_CROSS_SITE",
+  "verdict": "LINE_SPACING_DELIBERATE_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "S_obs": 0.11051954342357666,
+      "null_median": 0.1602859571356469,
+      "perm_p": 0.001996007984031936,
+      "ratio": 0.6895148233731175,
+      "n_docs": 193
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "n_docs": 121,
+        "S_obs": 0.11928261339546736,
+        "null_median": 0.17317023812897064,
+        "perm_p": 0.001996007984031936,
+        "deliberate": true,
+        "skipped": false
+      },
+      {
+        "site": "Khania",
+        "n_docs": 25,
+        "S_obs": 0.11051954342357666,
+        "null_median": 0.1303646939252583,
+        "perm_p": 0.18163672654690619,
+        "deliberate": false,
+        "skipped": false
+      },
+      {
+        "site": "Zakros",
+        "n_docs": 21,
+        "S_obs": 0.10809982236505804,
+        "null_median": 0.14249389050584593,
+        "perm_p": 0.031936127744510975,
+        "deliberate": true,
+        "skipped": false
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.001996007984031936,
+      "power_est": 1.0,
+      "false_pos_rate": 0.06666666666666667,
+      "pc_is_synthetic": true
+    },
+    "site_counts": {
+      "Arkhanes": 7,
+      "GOURNIA": 1,
+      "Gournia": 1,
+      "Haghia Triada": 121,
+      "Khania": 25,
+      "Knossos": 4,
+      "Petras": 2,
+      "Phaistos": 7,
+      "Palaiokastro": 1,
+      "Tylissos": 3,
+      "Zakros": 21
+    }
+  },
+  "key_findings": [
+    "Global observed line-pitch-CV 0.1105 vs height-preserving null median 0.1603 (perm_p=0.0020, ratio=0.690).",
+    "Per-site significance: 2/3 usable sites show deliberate line-spacing (observed below null).",
+    "Positive control: power_est=1.00, false_pos_rate=0.07 -> PASSED.",
+    "Verdict: LINE_SPACING_DELIBERATE_CROSS_SITE."
+  ],
+  "successor_hypotheses": [
+    "E085: If deliberate, test whether inter-line gaps follow a fixed module (integer multiple of a base unit) cross-site.",
+    "E086: Compare vertical line-spacing regularity against horizontal column-spacing regularity within the same docs (E083 vs E084 contrast).",
+    "E087: Test whether deliberate line-spacing correlates with document support type (tablet vs other) or period.",
+    "E088: If height-driven, decompose pitch variance into height-variance vs gap-variance contributions per site.",
+    "E089: Examine whether row-height uniformity itself is deliberate (test row-height-CV against a glyph-height null)."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Opaque IDs; geometry only (positions, heights); null preserves row heights so any deliberate signal must come from the gaps; no semantic/phonetic content used.",
+  "deviations": []
+}
