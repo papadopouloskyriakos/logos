@@ -1306,3 +1306,26 @@ epochs:
     artifacts: [epochs/EPOCH-054/prereg.md, epochs/EPOCH-054/plan_hash.txt, epochs/EPOCH-054/machinery.py, epochs/EPOCH-054/result.json, reports/EPOCH054_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-055
+    frontier: F14
+    gate: A
+    name: "Numeral magnitude (accounting scale) by document class, site-controlled"
+    plan_hash: "see epochs/EPOCH-055/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed the global Kruskal-Wallis: qualifying supports (>=30 numerals) = Tablet (n=1099, median 5, mean 28.66) and Stone vessel (n=127, median 4, mean 14.87); H=0.0284, p=0.866172 — EXACT match to result. Confirmed the support x site geography: Stone-vessel numerals are 126/127 at Zakros; Tablet numerals at HT(829)/Khania(121)/Phaistos(33)/Arkhalkhori(33)/Tylissos(31) — NO site has both supports at >=15 numerals, so the site-controlled test is structurally impossible (0 testable sites). PC passed."
+    positive_control: "PASSED (verified): planted magnitude-scale difference detected (detect p=2.1e-12); false-positive rate on same-distribution splits = 0.04 (<=0.10). Kruskal machinery calibrated."
+    verdict: "SCALE_UNDERPOWERED (mechanical) — frozen-rule precedence places UNDERPOWERED ahead of NO_DIFFERENCE because the site-controlled test cannot be performed (0 testable sites); the raw global comparison is itself non-significant (p=0.866)."
+    numbers: {tablet_n: 1099, tablet_median: 5.0, tablet_mean: 28.661, stonevessel_n: 127, stonevessel_median: 4.0, stonevessel_mean: 14.874, kruskal_H: 0.0284, kruskal_p: 0.866172, n_supports_qualifying: 2, n_sites_testable: 0, pc_detect_p: 2.1e-12, pc_false_pos_rate: 0.04}
+    layer: L2/L3
+    licences_changed: none
+    la_touched: true
+    scope: "SCALE_UNDERPOWERED — two things are true and both are honestly bounded: (1) Only two support classes clear the >=30-numeral bar (Tablet, Stone vessel); all others (Nodule, Roundel, Clay vessel) are too numeral-sparse. (2) The two that qualify are GEOGRAPHICALLY SEGREGATED (Stone vessel ~ Zakros; Tablet ~ HT/Khania/Phaistos), so support and site are perfectly confounded and no within-site test can separate them. The raw two-support Kruskal is non-significant (median 5 vs 4, p=0.866), but that CANNOT be read as 'document classes record the same-scale quantities' because the comparison is not site-controlled. DESCRIPTIVE datum (consistent with E054): LA administrative magnitudes are SMALL corpus-wide (Tablet median 5, Stone-vessel median 4) — modest tallies, not large-scale ledgers. Magnitudes only; NO sign values/readings; no phonetics/meaning. No transfer licence."
+    committed_prediction: "modal ROBUST/SITE_CONFOUNDED/NO_DIFFERENCE/UNDERPOWERED; OUTCOME = UNDERPOWERED — the corpus cannot separate document-class scale from site because the numeral-bearing supports are geographically segregated. Bounds the 'accounting scale by document type' question as UNANSWERABLE on this corpus."
+    deviations: ["Only 2 support classes met the >=30-numeral threshold (corpus property, not a protocol change).", "Verdict precedence: global p=0.866 (no difference) but SCALE_UNDERPOWERED wins because 0 sites are testable — reported honestly in result.json deviations."]
+    non_circular: "Magnitudes ('v') and inscription-level support/site labels only; no sign values, no readings, no phonetics/meaning; verdict from a frozen mechanical rule; PC first."
+    architecture_note: "Thirty-second gated-runner epoch (repairs=0). Coordinator confirmed the UNDERPOWERED precedence is correct (not a hidden negative): the support classes are geographically segregated, so the site confound is unbreakable on this corpus — a genuine data-limitation datum for the exhaustion map, reinforcing E054's small-magnitude descriptive finding."
+    artifacts: [epochs/EPOCH-055/prereg.md, epochs/EPOCH-055/plan_hash.txt, epochs/EPOCH-055/machinery.py, epochs/EPOCH-055/result.json, reports/EPOCH055_REPORT.md]
+    successors_spawned: 5
+    substantive: true

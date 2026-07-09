@@ -1,0 +1,54 @@
+{
+  "task_id": "EPOCH-055",
+  "method": "Numeral MAGNITUDE (accounting scale) by document class (support). L2/L3 only: integer magnitudes 'v' from 'num' tokens, assigned each numeral its inscription's support+site. Kept support classes with >=30 numerals. Per-support median+mean magnitude; GLOBAL = Kruskal-Wallis across supports on magnitude (rank-based, heavy-tailed). Positive control FIRST (detect planted scale diff + false-positive rate on same-distribution splits). LA MAIN = within-site support-magnitude effect among sites with >=2 supports each >=15 numerals. Frozen mechanical verdict.",
+  "result": "SCALE_UNDERPOWERED. Only 2 support classes qualify (Tablet n=1099, Stone vessel n=127). The within-site test is structurally impossible: Stone vessel numerals are concentrated entirely at Zakros (126/127) while Tablet numerals are at Haghia Triada/Khania/Phaistos/etc. — NO site contains both support classes with >=15 numerals each (0 testable sites). Global Kruskal-Wallis across the 2 supports is non-significant (p=0.866), but the frozen verdict precedence places SCALE_UNDERPOWERED ahead of NO_DOCCLASS_SCALE_DIFFERENCE because the site-controlled test cannot be performed. PC passed (detect p=2.1e-12, false-pos rate=0.04).",
+  "verdict": "SCALE_UNDERPOWERED",
+  "numbers": {
+    "support_magnitude": {
+      "Tablet": {"n": 1099, "median": 5.0, "mean": 28.661},
+      "Stone vessel": {"n": 127, "median": 4.0, "mean": 14.874}
+    },
+    "global": {"kruskal_H": 0.0284, "kruskal_p": 0.866172, "n_supports": 2},
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 2.1170731726348602e-12,
+      "false_pos_rate": 0.04
+    },
+    "within_site": {
+      "n_sites_testable": 0,
+      "n_sites_sig": 0,
+      "direction_consistent": false,
+      "per_site": {}
+    },
+    "support_site_cells_ge15": {
+      "Tablet|Haghia Triada": 829,
+      "Tablet|Khania": 121,
+      "Stone vessel|Zakros": 126,
+      "Tablet|Phaistos": 33,
+      "Tablet|Arkhalkhori": 33,
+      "Tablet|Tylissos": 31
+    }
+  },
+  "key_findings": [
+    "Only 2 support classes meet the >=30-numeral threshold: Tablet (n=1099, median magnitude 5) and Stone vessel (n=127, median magnitude 4). All other supports (Nodule, Roundel, Clay vessel, etc.) carry <30 numerals total and were excluded.",
+    "The two qualifying supports have nearly identical median magnitudes (5 vs 4); the global Kruskal-Wallis across them is non-significant (H=0.028, p=0.866) — no global magnitude-scale difference between Tablet and Stone vessel.",
+    "The within-site (site-controlled) test is structurally impossible: Stone vessel numerals are concentrated entirely at Zakros (126 of 127), while Tablet numerals occur at Haghia Triada (829), Khania (121), Phaistos (33), Arkhalkhori (33), Tylissos (31). NO site contains both support classes with >=15 numerals each (0 testable sites).",
+    "Positive control PASSED: planted magnitude-scale difference detected (p=2.1e-12) and false-positive rate on same-distribution splits = 0.04 (<=0.10). Machinery is calibrated.",
+    "The verdict is SCALE_UNDERPOWERED (not NO_DIFFERENCE) because the frozen rule requires the site-controlled test to be performable to distinguish a robust docclass effect from a site confound, and it cannot be — the support classes are geographically segregated in the corpus."
+  ],
+  "successor_hypotheses": [
+    "E055-S1: Test magnitude differences WITHIN the Tablet class across sites (HT vs Khania vs Phaistos vs Arkhalkhori vs Tylissos) — does accounting scale vary by site within a single document class? (Tablet is the only class with >=2 sites at >=15 numerals.)",
+    "E055-S2: Lower the per-class threshold (e.g. >=10 numerals) to admit more support classes (Roundel, Clay vessel, Nodule) and re-run the global Kruskal-Wallis; document the sensitivity of the global result to the threshold.",
+    "E055-S3: Compare Tablet magnitudes at Haghia Triada against Stone vessel magnitudes at Zakros directly (Mann-Whitney) as a BETWEEN-site, BETWEEN-support contrast — acknowledging it cannot separate support from site, but quantifying the raw magnitude gap.",
+    "E055-S4: Test whether the magnitude DISTRIBUTION SHAPE (e.g. Gini / tail index / fraction >100) differs by support, rather than the median — accounting tablets may have heavier tails (max 3000) even if medians match.",
+    "E055-S5: Re-examine whether 'Stone vessel' at Zakros is a single archival context; if so, treat Zakros as a site-level case study and compare its vessel-magnitude profile against HT tablet-magnitude profile as a contextual (not class-general) contrast."
+  ],
+  "layer": "L2/L3",
+  "la_touched": true,
+  "non_circular": "Magnitudes ('v') only; L2/L3 ONLY. No sign values, no readings, no phonetics, no semantic content used. Prereg + plan_hash frozen before running; PC run first and passed; verdict from frozen mechanical rule. The only inputs are integer numeral magnitudes and the inscription-level support/site labels.",
+  "deviations": [
+    "LB PC synthetic note: the real corpus DOES carry support metadata, so no synthetic-only fallback was needed; the positive control used synthetic lognormal groups to validate the Kruskal-Wallis machinery (detect + false-positive calibration), not to substitute for missing metadata.",
+    "Only 2 support classes met the >=30-numeral threshold (Tablet, Stone vessel); the global Kruskal-Wallis is therefore a 2-group comparison. This is a property of the corpus, not a protocol deviation.",
+    "Verdict precedence: although the global Kruskal p=0.866 (no difference), the frozen rule places SCALE_UNDERPOWERED ahead of NO_DOCCLASS_SCALE_DIFFERENCE because the site-controlled test cannot be performed (0 testable sites). Reported honestly."
+  ]
+}
