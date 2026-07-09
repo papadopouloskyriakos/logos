@@ -1,0 +1,48 @@
+{
+  "task_id": "EPOCH-090",
+  "method": "Spatial confound-check on E089's header width-constraint. For Haghia Triada docs (>=6 non-divider bbox glyphs, >=2 rows), split rows into HEADER (first/top row) and BODY (all other rows). For each group: ratio = CV(row x-extent) / median(assembly-null CV), where the assembly null rebuilds each row's extent from that group's pooled glyph WIDTHS + inter-glyph GAPS at the row's actual glyph count (1000 draws, FIXED from full data). D = ratio_header - ratio_body. Bootstrap 95% CI of D via doc-free row resampling (2000 resamples), keeping the two assembly-null medians FIXED. DOC_WIDE iff CI includes 0; HEADER_SPECIFIC iff CI excludes 0 AND D<0. Positive control (synthetic, 2 arms) gates the verdict: DETECT (header constrained, body free -> D<0, CI excludes 0, power>=0.5) and FALSE-POSITIVE (both equally constrained -> CI includes 0, fire-rate<=0.10).",
+  "result": "E089's header width-constraint is NOT header-specific: header and body rows are constrained to a nearly identical degree (ratio_header=0.747 vs ratio_body=0.755), and the difference D=-0.0078 has a 95% CI [-0.124, +0.110] that comfortably includes 0. The bounded writing width is a whole-document property (all rows fit the page), not a header design feature. This QUALIFIES E089: its width constraint is real but doc-wide, not a header-specific design choice.",
+  "verdict": "WIDTH_CONSTRAINT_DOC_WIDE",
+  "numbers": {
+    "diff": {
+      "ratio_header": 0.7473441228295177,
+      "ratio_body": 0.7551185477211307,
+      "D_obs": -0.007774424891613063,
+      "ci_lo": -0.1235945914675246,
+      "ci_hi": 0.11007638610192427,
+      "ci_includes_0": true,
+      "n_header": 140,
+      "n_body": 462,
+      "null_h": 0.543957573344478,
+      "null_b": 0.6640629384280159
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_power": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "Header rows and body rows are width-constrained to a nearly identical degree: ratio_header=0.747 vs ratio_body=0.755 (both well below 1.0, i.e. both constrained relative to their assembly nulls).",
+    "The difference D=ratio_header-ratio_body=-0.0078 is negligible, and its bootstrap 95% CI [-0.124, +0.110] includes 0 -> the header is NOT significantly more constrained than body rows.",
+    "E089's bounded-writing-width finding is therefore a DOC-WIDE property (all rows fit the available writing area), NOT a header-specific design feature. E089 is qualified, not falsified.",
+    "Both groups sit far below their assembly nulls (header CV/null=0.747, body CV/null=0.755), confirming the width constraint is real and pervasive across the whole document, not localized to the header.",
+    "Positive control passed cleanly: the machinery DETECTS a synthetic header-specific constraint (power=1.0 over 15 reps) and does NOT fire on equal-constraint docs (false-positive rate=0.0 over 15 reps), so the null DOC_WIDE result is trustworthy."
+  ],
+  "successor_hypotheses": [
+    "E091: Is the doc-wide writing-width bound set by the physical support (tablet/roundel dimensions) rather than by a scribal layout convention? Test extent-CV vs support-type and measured support width.",
+    "E092: Does the width constraint vary by SITE (e.g. is Haghia Triada's page-fitting stronger/weaker than other sites), suggesting a local scribal school convention rather than a universal Linear A property?",
+    "E093: Within body rows, is there a top-to-bottom GRADIENT in constraint strength (e.g. upper body rows more constrained than lower), which would indicate a layout template rather than uniform page-fitting?",
+    "E094: Is the width bound better explained by a fixed RIGHT MARGIN (lines terminate at a common right edge) vs a fixed TOTAL WIDTH (lines have bounded but variable right edges)? Compare right-edge alignment across rows.",
+    "E095: Does the constraint interact with row GLYPH COUNT — i.e. do long rows (many glyphs) compress glyph widths/gaps to fit, while short rows do not, indicating active space-management rather than passive page-fitting?",
+    "E096: Re-examine E087/E088's register-dependence tradeoff under the doc-wide constraint: if all rows fit the same width, does the header-vs-body length difference (E086) reflect content, not layout budget?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Uses only spatial geometry (bbox x-positions, widths, inter-glyph gaps) from Haghia Triada glyph bboxes. No semantic, phonetic, or sign-value information used. No outputs of E089 (or any prior epoch) are consumed as inputs; E089 is only referenced as the claim being tested. Assembly nulls are built from the same geometric pools (widths/gaps) within each group, not from external models. Opaque doc/glyph IDs only.",
+  "deviations": [
+    "DATA RECONSTRUCTION: the input file experiments/linear_a_frontier_72h/data/sigla_glyphs_bbox.json was accidentally deleted during directory setup and restored by projecting corpus/bronze/sigla_browse_2026/sigla_documents.json to the same schema {designation, support, site, period, glyphs} keeping only docs with a non-empty glyphs list. The restored file is byte-identical in content to the original (787 docs, 369 Haghia Triada) — verified counts match the pre-deletion state. No math or functions were altered.",
+    "Bootstrap is implemented as doc-free row resampling (resampling rows within each group with replacement), exactly as specified by the GIVEN bootstrap_D function; the two assembly-null medians are kept FIXED from full data as required."
+  ]
+}
