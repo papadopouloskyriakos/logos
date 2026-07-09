@@ -1,0 +1,95 @@
+{
+  "task_id": "EPOCH-085",
+  "method": "per-doc log area-ratio (first/top row median area vs all remaining rows); random-row-as-heading null; directional perm_p (frac null median-R >= S_obs); per-site + global + synthetic positive control.",
+  "result": {
+    "global": {
+      "S_obs": 0.047738235908974955,
+      "null_median": 0.006346542454009717,
+      "perm_p": 0.1258741258741259,
+      "n_docs": 215
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.091982155078831,
+        "null_median": 0.008524463149664194,
+        "perm_p": 0.01998001998001998,
+        "n_docs": 128,
+        "significant": true
+      },
+      {
+        "site": "Khania",
+        "S_obs": -0.14068557682370342,
+        "null_median": -0.007439294683395636,
+        "perm_p": 0.977022977022977,
+        "n_docs": 29,
+        "significant": false
+      },
+      {
+        "site": "Zakros",
+        "S_obs": -0.01727763484098573,
+        "null_median": -0.013599379808902919,
+        "perm_p": 0.5394605394605395,
+        "n_docs": 20,
+        "significant": false
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.000999000999000999,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    },
+    "sites_with_15_usable": 3,
+    "site_sig_count": 1
+  },
+  "verdict": "HEADING_SIZE_HIERARCHY_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "S_obs": 0.047738235908974955,
+      "null_median": 0.006346542454009717,
+      "perm_p": 0.1258741258741259,
+      "n_docs": 215
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.091982155078831,
+        "null_median": 0.008524463149664194,
+        "perm_p": 0.01998001998001998,
+        "n_docs": 128,
+        "significant": true
+      },
+      {
+        "site": "Khania",
+        "S_obs": -0.14068557682370342,
+        "null_median": -0.007439294683395636,
+        "perm_p": 0.977022977022977,
+        "n_docs": 29,
+        "significant": false
+      },
+      {
+        "site": "Zakros",
+        "S_obs": -0.01727763484098573,
+        "null_median": -0.013599379808902919,
+        "perm_p": 0.5394605394605395,
+        "n_docs": 20,
+        "significant": false
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.000999000999000999,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [],
+  "successor_hypotheses": [],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Geometry only (bbox areas, row y-positions). No sign/phonetic/semantic labels. Verdict mechanically derived from frozen rule on S_obs and perm_p.",
+  "deviations": []
+}

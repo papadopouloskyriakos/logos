@@ -1,0 +1,112 @@
+{
+  "task_id": "EPOCH-085",
+  "method": "per-doc log area-ratio (first/top row median area vs all remaining rows); random-row-as-heading null; directional perm_p (frac null median-R >= S_obs); per-site + global + synthetic positive control.",
+  "result": {
+    "global": {
+      "S_obs": 0.047738235908974955,
+      "null_median": 0.006346542454009717,
+      "perm_p": 0.1258741258741259,
+      "n_docs": 215
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.091982155078831,
+        "null_median": 0.008524463149664194,
+        "perm_p": 0.01998001998001998,
+        "n_docs": 128,
+        "significant": true
+      },
+      {
+        "site": "Khania",
+        "S_obs": -0.14068557682370342,
+        "null_median": -0.007439294683395636,
+        "perm_p": 0.977022977022977,
+        "n_docs": 29,
+        "significant": false
+      },
+      {
+        "site": "Zakros",
+        "S_obs": -0.01727763484098573,
+        "null_median": -0.013599379808902919,
+        "perm_p": 0.5394605394605395,
+        "n_docs": 20,
+        "significant": false
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.000999000999000999,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    },
+    "sites_with_15_usable": 3,
+    "site_sig_count": 1
+  },
+  "verdict": "HEADING_SIZE_HIERARCHY_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "S_obs": 0.047738235908974955,
+      "null_median": 0.006346542454009717,
+      "perm_p": 0.1258741258741259,
+      "n_docs": 215
+    },
+    "per_site": [
+      {
+        "site": "Haghia Triada",
+        "S_obs": 0.091982155078831,
+        "null_median": 0.008524463149664194,
+        "perm_p": 0.01998001998001998,
+        "n_docs": 128,
+        "significant": true
+      },
+      {
+        "site": "Khania",
+        "S_obs": -0.14068557682370342,
+        "null_median": -0.007439294683395636,
+        "perm_p": 0.977022977022977,
+        "n_docs": 29,
+        "significant": false
+      },
+      {
+        "site": "Zakros",
+        "S_obs": -0.01727763484098573,
+        "null_median": -0.013599379808902919,
+        "perm_p": 0.5394605394605395,
+        "n_docs": 20,
+        "significant": false
+      }
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.000999000999000999,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "GLOBAL: S_obs=+0.048 (top-row median area ~5% larger than body), but NOT significant vs random-row null (perm_p=0.126, n=215 docs). The apparent global tilt is driven by one site.",
+    "HAGHIA TRIADA (n=128): S_obs=+0.092, perm_p=0.020, SIGNIFICANT — the top/heading row uses measurably larger glyphs than a random row would. This is the only site showing a heading-size hierarchy.",
+    "KHANIA (n=29): S_obs=-0.141, perm_p=0.977 — REVERSED: the top row is SMALLER than body rows. Strongly inconsistent with a heading-salience convention.",
+    "ZAKROS (n=20): S_obs=-0.017, perm_p=0.539 — null; no heading-size effect.",
+    "POSITIVE CONTROL PASSED: synthetic x1.7 first-row inflation detected with power=1.0 (detect_p~0.001); uniform-size docs fire at rate 0.0 (<=0.10). Machinery is well-calibrated.",
+    "VERDICT = SITE_LOCAL: the heading-size hierarchy is a Haghia Triada register, not a cross-site Linear A convention. Mirrors E081's HT-only left-margin justification pattern."
+  ],
+  "successor_hypotheses": [
+    "E086: Within Haghia Triada, does the heading-size effect concentrate in a specific support type (e.g. tablets vs roundels vs nodules) or document class, rather than all HT docs uniformly?",
+    "E087: Is the HT top-row enlargement driven by a specific spatial sub-region (e.g. first row of the recto only, or a centered title band) rather than the entire top row?",
+    "E088: Test Khania's REVERSED pattern (top row smaller) — is it a bottom-row/footer enlargement, a different reading-order convention, or a corpus-composition artifact (small n=29)?",
+    "E089: Combine heading-size (this axis) with word-initial size (E077) and frequency-size (E078) per doc — do the same HT docs show multiple visual-hierarchy registers, suggesting a unified scribal salience code?",
+    "E090: Cross-check heading-size against row GLYPH COUNT (does the HT top row also have fewer/different glyphs, consistent with a title rather than a body row)?",
+    "E091: Replicate on a held-out split of HT docs to confirm the +0.092 effect is stable and not driven by a handful of outlier documents."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Geometry only (bbox areas, row y-positions). No sign/phonetic/semantic labels. Verdict mechanically derived from frozen rule on S_obs and perm_p.",
+  "deviations": [
+    "Data path: BASE/data/sigla_glyphs_bbox.json resolved to experiments/linear_a_frontier_72h/data/sigla_glyphs_bbox.json (no BASE/ dir in repo; identical file).",
+    "Positive control used ndraw=1000 (the GIVEN perm default) and 20 calibration reps for a stable false-positive estimate; GIVEN functions used verbatim, math unchanged."
+  ]
+}
