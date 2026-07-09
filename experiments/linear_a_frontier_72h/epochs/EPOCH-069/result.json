@@ -1,0 +1,79 @@
+{
+  "task_id": "EPOCH-069",
+  "method": "Structural word-length by in-line position (L2). diff = mean(len FIRST words) - mean(len LATER words), pooled over target lines (lines with >=2 word tokens). FIRST pool = one first-word length per line (unweighted per-line); LATER pool = all word[1:] lengths across lines (count-weighted), exactly as the frozen prereg metric states. Null: within each line uniformly shuffle the order of its word tokens; recompute diff; >=1000 shuffles; one-sided perm p = frac(null diff >= observed). A-exclusion robustness: drop all A-initial words, re-derive each line's first word among remaining words, recompute diff + null. Cross-site: per site with >=20 first-words. Leave-one-site-out on Haghia Triada.",
+  "result": "Entry-initial words are systematically longer than entry-internal words, cross-site, and the effect survives exclusion of all A-initial words (it is NOT the A-prefix confound). Global diff=0.789 (first_mean=2.55 vs later_mean=1.76), perm_p=0.0005; null mean=-0.119 (observed is ~11 null-SDs above). All 3 testable sites (Haghia Triada, Khania, Zakros) significant same direction (diff 1.11-1.23). LOO excluding Haghia Triada: diff=0.542, perm_p=0.0005. A-exclusion: diff_noA=0.716, perm_p_noA=0.0005 (322/363 lines survive). Positive control PASSED (detect p=0.001; false-positive rate=0.000).",
+  "verdict": "ENTRY_INITIAL_WORD_LONGER_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_lines": 363,
+      "first_mean": 2.551,
+      "later_mean": 1.7622,
+      "diff": 0.7887,
+      "null_mean": -0.1191,
+      "null_sd": 0.0858,
+      "perm_p": 0.0005
+    },
+    "a_robustness": {
+      "diff_noA": 0.7161,
+      "perm_p_noA": 0.0005,
+      "n_lines_noA": 322,
+      "first_mean_noA": 2.3913,
+      "later_mean_noA": 1.6752,
+      "n_A_words_dropped": 63,
+      "per_site_noA": [
+        {"site": "Haghia Triada", "n_lines": 164, "diff": 1.1347, "perm_p": 0.0005},
+        {"site": "Khania", "n_lines": 33, "diff": 0.8990, "perm_p": 0.0005},
+        {"site": "Zakros", "n_lines": 29, "diff": 1.1924, "perm_p": 0.0010}
+      ]
+    },
+    "cross_site": {
+      "n_sites_testable": 3,
+      "n_sites_sig": 3,
+      "direction_consistent": true,
+      "loo_p": 0.0005,
+      "loo_diff": 0.5418,
+      "loo_n_lines": 186,
+      "per_site": [
+        {"site": "Haghia Triada", "n_first": 177, "diff": 1.1078, "perm_p": 0.0005, "sig": true},
+        {"site": "Khania", "n_first": 40, "diff": 1.2273, "perm_p": 0.0005, "sig": true},
+        {"site": "Zakros", "n_first": 33, "diff": 1.1532, "perm_p": 0.0005, "sig": true}
+      ]
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.001,
+      "detect_observed": 3.4806,
+      "false_pos_rate": 0.0,
+      "false_pos_n_draws": 30,
+      "pc_is_synthetic": true
+    },
+    "self_check": {
+      "empirical_null_mean": -0.1191,
+      "analytical_E_diff": -0.118,
+      "match": true,
+      "note": "Under the within-line shuffle null, the pooled first-word mean (one per line, unweighted) and the count-weighted later-word mean coincide only if per-line mean is uncorrelated with line length, so the closed-form E[diff] is -0.118 (not exactly 0). The null is still the true shuffle distribution and is valid. The self-check validates the empirical null mean (-0.119) against the closed-form analytical E[diff]=-0.118 (match <0.03), confirming the shuffle machinery is correct. Observed diff is ~11 null-SDs above the null mean."
+    }
+  },
+  "key_findings": [
+    "Entry-initial words are systematically LONGER than entry-internal words: global diff=0.789 signs (first_mean=2.55 vs later_mean=1.76), perm_p=0.0005 under a within-line word-order shuffle null (observed ~11 null-SDs above the null mean of -0.119).",
+    "The effect is NOT the A-prefix confound: excluding ALL A-initial words (63 words dropped, 322/363 lines survive) leaves diff_noA=0.716, perm_p_noA=0.0005. Non-A first words (mean 2.39) remain far longer than non-A later words (mean 1.68). The A-prefix contributes marginally (A-initial first words mean 3.75) but is not the driver.",
+    "Cross-site consistent: all 3 testable sites (Haghia Triada diff=1.11, Khania diff=1.23, Zakros diff=1.15) are significant same direction (first longer), each perm_p<=0.0005. The effect replicates across geographically distinct find-spots.",
+    "Survives leave-one-site-out: excluding Haghia Triada (the dominant site), diff=0.542, perm_p=0.0005 over 186 lines — the effect is not an artifact of the HT-heavy corpus.",
+    "Positive control PASSED (synthetic): detect condition flagged (p=0.001); false-positive rate=0.000 over 30 position-independent draws (calibrated).",
+    "Structural interpretation (L2, no reading): the ledger entry opens with a longer 'head' token (more signs) followed by shorter internal tokens — consistent with a name-then-modifiers/qualifier layout where the initial slot carries more graphic substance and later slots are abbreviated/short."
+  ],
+  "successor_hypotheses": [
+    "E070: Is the first-word length advantage driven by a specific sign-count mode (e.g., first words cluster at 3-4 signs while later cluster at 1-2), or is it a smooth distributional shift? Test the full length distribution by position, not just the mean.",
+    "E071: Does the first-word length correlate with the presence/value of the following numeral (E031 word->numeral order)? Longer heads might precede larger or more 'important' quantities — test len(first) vs num value.",
+    "E072: Is the head-then-modifier length gradient steeper on one document class (E028 word-length document-class signature)? Compare the positional length gradient across tablet vs other supports.",
+    "E073: Does the second word (word[1]) also differ from word[2+] (a graded decay), or is it a sharp first-vs-rest step? Test position index as a continuous predictor of length.",
+    "E074: Are the short later words disproportionately single-sign (length-1) abbreviations/logograms, while first words are predominantly phonetic multi-sign sequences? Cross with sign-type composition (L3, requires sign classification).",
+    "E075: Does the head-length effect hold within entries that span multiple lines (cross-nl entries), or only within single-line entries? Test whether the first word of each nl-delimited line is longer, or only the first word of the whole entry."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "word-length = len(signs) only; position = order within a line between consecutive 'nl'; the within-line word-order shuffle null makes first/later positions exchangeable while controlling each line's word-length multiset and word count; A-word exclusion controls the prefix confound by dropping all words whose first sign is 'A' from both pools. No sign values, no readings, no meanings used. L2 only.",
+  "deviations": [
+    "Metric conforms exactly to the frozen prereg: diff = mean(len FIRST words) - mean(len LATER words), pooled over target lines, with FIRST pool one-per-line and LATER pool count-weighted over all word[1:] tokens. Under the within-line shuffle null the closed-form E[diff] = -0.118 (not exactly 0) because the unweighted first pool and the (len-1)-weighted later pool coincide only if per-line mean is uncorrelated with line length; the null remains the true, valid shuffle distribution. The self-check validates the empirical null mean (-0.119) against this closed-form E[diff] (-0.118), matching to <0.03 and confirming the machinery is correct. This does not change the verdict: all gates (PC, global, cross-site, LOO, A-exclusion) remain significant. The frozen prereg and plan_hash were NOT modified."
+  ]
+}
