@@ -175,3 +175,15 @@
   distinguishes LA from Ugaritic-style successes (which had a KNOWN target). No ambiguity reduction beyond
   anchor-lattice null. L2, no values. bounded-neg 27->28. Clock 99->100. E102 (synthesis, LAST F12) next.
   Finalization BLOCKED (2026-07-11T03:20Z).
+
+- EPOCH-102 BANKED (101 epochs). F12 CAPSTONE: cross-method synthesis + frozen LA application. VERDICT
+  SYNTHESIS_NO_INDEPENDENT_CHANNELS. Independence audit: eigenmap|ica agree 0.979 (share context embedding =
+  ONE lineage); eigenmap/ica|positional agree 0.04 (independent but positional does NOT recover vowel, ARI
+  0.044). => the multi-method vowel signal collapses to ONE independent channel (context co-occurrence);
+  positional independent channel is null. No relation clears >=2-independent-channel bar; absolute-value gate
+  FAILS every criterion. Frozen LA = RELATIVE anonymous classes + per-sign uncertainty + ranked acquisition
+  targets ONLY; NO values/translations/language-ID (withheld in code). Net F12: one real-but-weak single-channel
+  LA-untestable signal (E099) + wall of LA-transfer/identify negatives (E097/E098/E100/E101) + morphogenesis
+  nulls. Method-diverse re-confirmation of ANCHOR_LATTICE_UNDERDETERMINED. L2, no values. bounded-neg 28->29.
+  Clock 100->101. F12 CLOSED_REFUTED. Both priority-insertion families (F11+F12) COMPLETE. Finalization still
+  BLOCKED (2026-07-11T03:20Z); next disciplined move = Section-12 map integration of E091-E102, NOT a new drill.

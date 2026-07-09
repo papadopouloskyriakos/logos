@@ -1,0 +1,68 @@
+{
+ "cross_method_vowel_agreement_ari": {
+  "eigenmap|ica": 0.9788459943136826,
+  "eigenmap|positional": 0.04341196519867255,
+  "ica|positional": 0.04598301404502103
+ },
+ "vowel_recovery_ari_vs_truth": {
+  "eigenmap": 0.17414450531953982,
+  "ica": 0.1761941160207517,
+  "positional": 0.04445326453661442
+ },
+ "independence_audit": {
+  "lineages": {
+   "eigenmap": "context_cooccurrence",
+   "ica": "context_cooccurrence",
+   "positional": "positional_profile"
+  },
+  "supporting_channels": [
+   "context_cooccurrence"
+  ],
+  "n_independent_channels": 1
+ },
+ "absolute_value_gate": {
+  "ge2_independent_channels": false,
+  "loo_anchor": false,
+  "loo_method": false,
+  "held_out_form_prediction": false,
+  "full_adaptive_null_rejects_chance": true
+ },
+ "absolute_value_gate_pass": false,
+ "frozen_linear_a": {
+  "n_anonymous_classes": 5,
+  "n_signs": 79,
+  "ranked_acquisition_targets_top10_anonymous_ids": [
+   "LA_sign_4",
+   "LA_sign_67",
+   "LA_sign_74",
+   "LA_sign_20",
+   "LA_sign_0",
+   "LA_sign_70",
+   "LA_sign_26",
+   "LA_sign_49",
+   "LA_sign_9",
+   "LA_sign_62"
+  ],
+  "authorized_outputs": [
+   "anonymous relative classes",
+   "per-sign class-margin (uncertainty)",
+   "ranked evidence-acquisition targets"
+  ],
+  "forbidden_and_withheld": [
+   "absolute sound values",
+   "translations",
+   "language-family ID"
+  ]
+ },
+ "verdict": "SYNTHESIS_NO_INDEPENDENT_CHANNELS",
+ "rationale": "The only above-null structure (vowel-class co-occurrence communities; best ARI 0.176) rests on a SINGLE independent channel (context co-occurrence) -- eigenmap + ICA + morphogenesis + Potts + persistence all share that ONE lineage, and the positional channel does NOT independently recover vowel (ARI 0.044). Under the dependency-adjusted independence audit the campaign's apparent multi-method vowel signal collapses to ONE channel, so it does NOT clear the >=2-independent-channel bar for a robust cross-method relation, and the absolute-value gate fails on every criterion. FROZEN LA APPLICATION is therefore restricted to RELATIVE ANONYMOUS classes + per-sign uncertainty + ranked evidence-acquisition targets -- NO sound values, NO translations, NO language-family ID. This is the honest terminal state of the cross-disciplinary batch: one real but weak, single-channel, LA-untestable linguistic signal (E099) + a wall of LA-transfer/identify negatives (E097/E098/E100/E101) + the morphogenesis nulls -- consistent with the anchor-lattice underdetermination. L2, no phonetic values.",
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 2.1,
+ "plan_hash": "203d26982a0b3764847b8a459edeb7c1d3bff0e6f4c5d4870d4a85c863c534df",
+ "epoch_id": "EPOCH-102",
+ "code_manifest": {
+  "e102_synthesis.py": "b733f3cd7d7570a3"
+ }
+}
