@@ -1,0 +1,15 @@
+{
+ "experiment": "E207",
+ "verdict": "PREDICTIVE_FUNCTIONAL_CLASS",
+ "inputs": {
+  "beats_M2_after_MDL": true,
+  "beats_synthetic_band": true,
+  "recurring_stems": 0,
+  "alternant_stems": 0,
+  "holdout_axes_positive": "3/3",
+  "stability_flips": 0,
+  "clitic_specific": false
+ },
+ "runtime_s": 1.7,
+ "wording_note": "verdict vocabulary restricted per prereg; 'A' remains an anonymous sign; no value/meaning asserted"
+}

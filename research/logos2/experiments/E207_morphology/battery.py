@@ -115,8 +115,8 @@ class Battery:
         return -sum(math.log(self.p_pos(s, i, len(w))) for i, s in enumerate(w))
 
     def _p_stem(self, stem):
-        comp = math.exp(-sum(math.log(self.p_pos(s, i, len(stem)))
-                             for i, s in enumerate(stem)))
+        comp = math.exp(sum(math.log(self.p_pos(s, i, len(stem)))
+                            for i, s in enumerate(stem)))
         lex = self.stem_count[stem] / self.N_stem if self.N_stem else 0.0
         return LAM * lex + (1 - LAM) * comp
 
