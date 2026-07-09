@@ -1,3 +1,16 @@
+# ⛔ FRONTIER-72h — CAMPAIGN CLOSED 2026-07-09 (this reminder is RETIRED)
+
+**STOP. Do NOT relaunch anything. The campaign is CLOSED (105 epochs, HEAD 151fa92, marker `CAMPAIGN_COMPLETE`).**
+The self-sustain rule below is VOID — there is no worker to keep busy, no clock to run out, no next epoch to launch.
+If a cron/reminder loaded you into this file: acknowledge closure and END THE TURN. Do not bank, do not launch.
+Final state: 1 graduated relative finding (A- prefixation), highest layer L3, zero transfer licences, NO
+decipherment. See `final/CAMPAIGN_FINAL_REPORT.md` + `final/CAMPAIGN_FINAL_STATE.json`. Reopen ONLY on explicit
+new user instruction backed by NEW evidence (`final/NEXT_STEPS_AFTER_CAMPAIGN.md`).
+
+*(Historical reminder content preserved below for the record — it is NO LONGER OPERATIVE.)*
+
+---
+
 # FRONTIER-72h — MISSION REMINDER (self, coordinator)
 
 *Loaded by the 10-minute cron reminder. Keeps the objectives + architecture in front of me across
