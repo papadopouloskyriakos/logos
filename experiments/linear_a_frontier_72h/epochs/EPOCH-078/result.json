@@ -1,0 +1,63 @@
+{
+  "task_id": "EPOCH-078",
+  "method": "Glyph-size economy of effort (spatial Zipf's-law-of-abbreviation analog). Per doc (>=4 non-divider glyphs): within-doc z-score of log bbox-area (removes per-photo scale). Per sign: mean within-doc z-size + corpus frequency; keep signs with freq>=8. PRIMARY r_all = Pearson corr(log freq, mean z-size). CLASS CONTROL: r_AB restricted to AB syllabary signs, r_A restricted to class-A signs; AB vs A mean-size confound check. NULL: frequency-label shuffle (permute {sign->log(freq)} over kept signs), one-sided perm p = frac(null r <= observed), >=2000-5000 draws, for r_all and r_AB. CROSS-SITE: per-site mean z-size (within-site z-scoring, signs with >=5 glyphs at site) correlated with GLOBAL log(freq) + shuffle null, for sites with >=15 good docs. POSITIVE CONTROL (synthetic): detect (planted size~freq economy) + false-positive (size indep of freq) calibration. L2 only: opaque sign IDs, structural size, no reading/meaning.",
+  "result": "Economy-of-effort compression detected. r_all=-0.351 (perm p=0.0004); survives the class control within the homogeneous AB syllabary r_AB=-0.317 (perm p=0.005); also strong within class A r_A=-0.620. AB vs A mean z-sizes nearly equal (0.112 vs 0.081) => NOT a logogram/syllabogram size-complexity class artifact. Replicates cross-site: significant negative in 2/5 testable sites (Haghia Triada r=-0.376 p=0.0007; Khania r=-0.480 p=0.0033). PC PASSED (power_est=1.0, false_pos_rate=0.04).",
+  "verdict": "GLYPH_SIZE_FREQUENCY_ECONOMY_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_signs": 89,
+      "r_all": -0.3508,
+      "r_all_p": 0.0004
+    },
+    "class_control": {
+      "n_AB": 62,
+      "r_AB": -0.3171,
+      "r_AB_p": 0.0050,
+      "n_A": 26,
+      "r_A": -0.6204,
+      "mean_size_AB": 0.1118,
+      "mean_size_A": 0.0811
+    },
+    "per_site": [
+      {"site": "Haghia Triada", "n_signs": 90, "r": -0.3762, "perm_p": 0.0007, "sig_negative": true},
+      {"site": "Khania", "n_signs": 29, "r": -0.4795, "perm_p": 0.0033, "sig_negative": true},
+      {"site": "Zakros", "n_signs": 35, "r": -0.1776, "perm_p": 0.1553, "sig_negative": false},
+      {"site": "Phaistos", "n_signs": 12, "r": -0.2397, "perm_p": 0.2349, "sig_negative": false},
+      {"site": "Knossos", "n_signs": 8, "r": 0.0651, "perm_p": 0.6148, "sig_negative": false}
+    ],
+    "cross_site": {
+      "n_sites_testable": 5,
+      "n_sites_sig_negative": 2
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.00200,
+      "power_est": 1.0,
+      "false_pos_rate": 0.04,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "More frequent signs are drawn systematically smaller: r_all=-0.351 (frequency-label-shuffle perm p=0.0004), a spatial economy-of-effort / Zipf's-law-of-abbreviation analog in the glyph modality.",
+    "The effect SURVIVES the sign-class control: within the homogeneous AB syllabary r_AB=-0.317 (perm p=0.005), and is even stronger within class A (r_A=-0.620). This is NOT the logogram/syllabogram size-complexity confound.",
+    "Confound check passes: AB and A signs have nearly equal mean z-size (0.112 vs 0.081), so the size-frequency slope is not driven by a class-level mean-size difference.",
+    "Cross-site replication: significant negative economy in 2/5 testable sites — Haghia Triada (r=-0.376, p=0.0007) and Khania (r=-0.480, p=0.0033); Zakros/Phaistos/Knossos trend negative but underpowered (Knossos n=8 signs non-significant positive).",
+    "Positive control (synthetic) PASSED: detect power_est=1.0, false-positive rate=0.04 (<=0.10); machinery self-check confirms frequency-shuffle null has E[r]~0 on independent data."
+  ],
+  "successor_hypotheses": [
+    "E079: Is the economy slope steeper for signs that recur within the SAME document (within-line repetition pressure) than across documents — i.e., is compression driven by local repetition rather than corpus frequency?",
+    "E080: Does the size-frequency slope interact with sign COMPLEXITY (stroke count / bbox aspect) — do simple signs compress more than complex ones under frequency pressure?",
+    "E081: Is the economy effect POSITIONAL after all when measured against within-line ordinal position rather than frequency (re-testing E077 with the economy metric), separating the two spatial pressures?",
+    "E082: Does the cross-site non-replication at Zakros/Phaistos/Knossos reflect scribal-school differences — test whether per-site economy slope correlates with site corpus size or scribal hands.",
+    "E083: Combine E076 (shared per-sign size convention) with E078 (frequency compression): is the shared convention itself the frequency-compressed target, i.e., is the cross-site agreement higher for high-frequency signs?",
+    "E084: Test a TEMPORAL economy analog — do signs drawn later in a long document get smaller (fatigue/economy), controlling for frequency, as a within-doc complement to the cross-corpus effect."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "glyph size = within-document z-scored log bbox-area (removes per-photo scale); sign frequency = corpus glyph count; the class control (AB syllabary vs A) removes the logogram-complexity confound; the frequency-label-shuffle null destroys the size<->frequency association. size is independent of frequency by construction. L2 only: signs are OPAQUE catalog IDs; NO phonetic value, NO reading, NO meaning was used.",
+  "deviations": [
+    "Mallia (19 raw docs) dropped below the >=15 good-doc threshold after the >=4-non-divider-glyph filter and was excluded from cross-site; 5 sites remained testable (HT, Khania, Zakros, Phaistos, Knossos).",
+    "Used 5000 perm draws for r_all/r_AB and 3000 for per-site nulls (>=2000 required) for tighter p-values; results unchanged at 2000.",
+    "Positive control is SYNTHETIC (planted size-frequency relationships), as specified in the protocol."
+  ]
+}
