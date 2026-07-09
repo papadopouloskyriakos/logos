@@ -130,11 +130,18 @@ survives an adaptive null (sign *shape* varies by site, distinct from the shared
 `E018` the `E013` component-composition channel survives its adaptive null.
 
 ### The organizing finding (the through-line of Section A)
-> **Shared script + shared administrative grammar generalize cross-site; word-content / topic / lexicon is
-> site-local.** The fingerprint (A4), the ledger syntax (A2), and the positional/prefix morphology (A1, A3)
-> travel across sites; the specific counted vocabulary does not (see §B: `E032`, `E034`, `E035`, `E053`).
-> ⇒ Linear A behaves as a **concatenative / prefixing administrative script with a genuine shared grammar but
-> site-local vocabulary.** All L2/L3 — structure, not sound or meaning. No transfer licence follows.
+> **Shared script + shared positional administrative grammar generalize cross-site; vocabulary, scribal
+> register, and metrological realization are site-local.** *Cross-site:* the sign fingerprint (A4), the ledger
+> syntax skeleton (A2: word→num, line-final numeral, divider, entry template, entry-head length E069), the
+> positional/prefix morphology (A1: A-prefix, initial-concentration typology E064, and even the A-marked
+> sub-lexicon E068), positional specialization (A3), and the document-marker system (A5: E061–E063) all travel
+> across sites — and the token-class grammar is held-out **predictable** on unseen sites (E047, 9/9).
+> *Site-local:* the counted vocabulary (§B: E032/E034/E035/E053), document typology (E058), sub-lexical
+> structure (E059), **scribal register** (word-length E065, accounting-scale E066), and the **metrological
+> realization** of the entry template (fraction attachment E070) do not.
+> ⇒ Linear A behaves as a **concatenative / prefixing administrative script with a genuine shared positional
+> grammar but site-local lexicon, register, and quantitative habits.** All L2/L3 — structure, not sound or
+> meaning. No transfer licence follows.
 
 ---
 
