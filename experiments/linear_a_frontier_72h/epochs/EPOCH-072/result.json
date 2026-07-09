@@ -1,0 +1,71 @@
+{
+  "task_id": "EPOCH-072",
+  "method": "Within-inscription word-order shuffle null. Anonymous word-forms (sign tuples, len>=2). For each inscription every unordered pair of distinct forms yields one observation (site, sign=+1 if lex-smaller form precedes in stream else -1, first-occurrence position). Testable pairs: total occurrences>=2. Cross-site pairs: observed at >=2 distinct sites. consistency=max(n_plus,n_minus)/(n_plus+n_minus). C_glob=mean consistency over testable pairs; C_cross=mean over cross-site pairs; A_cross=# cross-site pairs whose dominant order is identical in EVERY site with >=1 occurrence. Null: independently shuffle each inscription's word-form order (preserves word multiset -> invariant testable/cross-site sets; destroys only order). 2000 draws. One-sided perm p=frac(null>=obs), add-one smoothed. L3 ONLY: no reading, no phonetic value, no meaning.",
+  "result": "LIBATION_FORMULA_ORDERED_SEQUENCE_CROSS_SITE",
+  "verdict": "LIBATION_FORMULA_ORDERED_SEQUENCE_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_lib_inscriptions": 99,
+      "n_multiword_inscriptions": 56,
+      "n_testable_pairs": 13,
+      "C_glob": 1.0,
+      "C_glob_null": 0.7404634615384618,
+      "C_glob_p": 0.0004997501249375312
+    },
+    "cross_site": {
+      "n_cross_pairs": 10,
+      "n_sites": 15,
+      "C_cross": 1.0,
+      "C_cross_null": 0.7367358333333356,
+      "C_cross_p": 0.0004997501249375312,
+      "A_cross": 10,
+      "A_cross_null": 3.6785,
+      "A_cross_p": 0.0004997501249375312,
+      "agree_frac": 1.0
+    },
+    "top_pairs": [
+      "n_sites=4, n_occ=5, consistency=1.000, dominant=+",
+      "n_sites=4, n_occ=4, consistency=1.000, dominant=+",
+      "n_sites=3, n_occ=3, consistency=1.000, dominant=+",
+      "n_sites=2, n_occ=3, consistency=1.000, dominant=+",
+      "n_sites=2, n_occ=2, consistency=1.000, dominant=+",
+      "n_sites=2, n_occ=2, consistency=1.000, dominant=+",
+      "n_sites=2, n_occ=2, consistency=1.000, dominant=-",
+      "n_sites=2, n_occ=2, consistency=1.000, dominant=+",
+      "n_sites=2, n_occ=2, consistency=1.000, dominant=-",
+      "n_sites=2, n_occ=2, consistency=1.000, dominant=-"
+    ],
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.001996007984031936,
+      "detect_flag_frac": 1.0,
+      "false_pos_rate": 0.0,
+      "power_est": 1.0,
+      "pc_is_synthetic": true,
+      "power_scale": {"obs_n_cross_pairs": 10, "obs_n_sites": 15, "n_canon_forms": 5, "n_canon_insc": 40}
+    }
+  },
+  "key_findings": [
+    "The libation (stone-vessel) word-forms recur as an ORDERED sequence: all 13 testable form-pairs (>=2 co-occurrences) have consistency 1.0, giving C_glob=1.000 vs shuffle-null mean 0.740 (perm p=0.00050). Word order in the libation corpus is NOT free / bag-of-words.",
+    "The canonical order is SHARED ACROSS SITES: all 10 cross-site form-pairs (observed at >=2 distinct sites) have consistency 1.0 (C_cross=1.000 vs null 0.737, p=0.00050), and ALL 10 agree on a single dominant order in every site that contains them (A_cross=10/10, agree_frac=1.0, vs null mean 3.68, p=0.00050). This is the defining feature of a formula-as-sequence, not merely shared vocabulary.",
+    "This DIRECTLY EXTENDS EPOCH-071: E071 found individual libation word-FORMS do NOT spread cross-site beyond frequency+site-size. E072 shows that although the FORMS' recurrence is frequency-driven, their fixed relative ORDER is a genuine cross-site structural signal beyond a within-inscription shuffle null. The formula is real as an ORDERED sequence even though its vocabulary is not frequency-independent.",
+    "The strongest cross-site pairs span up to 4 sites (e.g. the A-TA-I-*301-WA-JA / SI-RU-TE pair at 4 sites, 4 occ; the I-PI-NA-MA / SI-RU-TE pair at 4 sites, 5 occ), all with perfect consistency and unanimous cross-site agreement.",
+    "Positive control PASSED (synthetic): planted canonical order detected in 20/20 replicates (detect p<=0.002), false-positive rate 0.00 on random-order co-occurrences over 20 draws, power_est=1.0 at the observed corpus's pair/site scale. The machinery is informative."
+  ],
+  "successor_hypotheses": [
+    "E073: Is the shared canonical order a SINGLE total order over the libation form-set (a linear sequence / 'liturgy'), or a partial order (a DAG of precedence constraints with free regions)? Test by checking transitivity of pairwise precedence and counting linear extensions.",
+    "E074: Does the same ordered-sequence structure appear in OTHER religious supports (e.g. libation tables, altars, cult objects) beyond 'Stone vessel', or is it specific to stone vessels?",
+    "E075: Does the administrative corpus (Tablet/Nodule/Roundel) show ANY cross-site ordered-sequence signal, or is ordered-formula structure exclusive to the libation genre? (genre contrast for ORDER, complementing E071's frequency contrast.)",
+    "E076: Is the canonical order stable across TIME / find-context strata within sites, or does it drift? Requires a dated/stratified subset; test order-consistency within vs across time bins.",
+    "E077: Are the precedence CONSTRAINTS (which form must precede which) themselves shared cross-site even when the full linear order is not — i.e. a partial-order formula? Decompose A_cross into transitive-chain vs independent-precedence contributions.",
+    "E078: Does the ordered formula survive a stricter null that also permutes WHICH forms co-occur (not just their order), to confirm the order signal is not an artifact of a few high-frequency inscriptions dominating the pair set?"
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous word-forms only (sign tuples, len>=2); no reading, no phonetic value, no meaning invoked. Order = pure stream position (first occurrence). The within-inscription word-order shuffle null preserves each inscription's word multiset exactly, so the set of testable pairs, the cross-site pair set, the per-pair occurrence counts, and the site structure are ALL invariant under the null — only the ORDER signal changes. This isolates order from frequency, site-size, and co-occurrence structure (the very confounds E071 controlled for). Pairs seen only once are excluded (trivially consistent under both obs and null). The null mean of consistency is empirical (validated against closed-form E[max(H,T)/k]=0.75,0.75,0.6875 for k=2,3,4), NOT a naive 0.5 baseline. PC is fully synthetic. L3 only.",
+  "deviations": [
+    "Used 2000 permutation draws (>=1000 required).",
+    "Self-check validated the empirical null mean of pair consistency against the closed-form E[max(H,T)/k] for k=2,3,4 (matches to <0.03), confirming the null is empirical not naive-0.5; this was a machinery-correctness check, not a deviation from the frozen metric.",
+    "PC power arm scaled the synthetic planted corpus to the observed n_cross_pairs (10) and n_sites (15) using 5 canonical forms / 40 canon inscriptions, matching the observed cross-site pair count rather than the raw inscription count, to estimate power at the relevant signal scale."
+  ]
+}
