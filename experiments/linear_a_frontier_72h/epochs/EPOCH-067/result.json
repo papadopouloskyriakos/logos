@@ -1,0 +1,74 @@
+{
+  "task_id": "EPOCH-067",
+  "method": "Within-word-shuffle null for per-position sign concentration. Over >=3-sign words (n=752), for position k in {0,1,2}: H_k = Shannon entropy (bits) of the anonymous sign distribution at position k; A_k = E_null[H] - H_k where E_null[H] is the expected per-position entropy under within-word uniform permutation of sign order (positions exchangeable => E[A_k]=0, controls sign-frequency + word-length + sample size); perm p_k = frac(null A_k >= observed A_k), one-sided (concentration), 2000 shuffles. Anonymous sign IDs only; positional entropy only; L2/L3 typology.",
+  "result": "Position 1 (the second word-initial slot) is significantly concentrated beyond the within-word-shuffle null globally (A1=0.2331 bits, p=0.0000), and replicates in 2 of 6 testable sites (Zakros p=0.0015, Palaikastro p=0.0040). A concentration GRADIENT is present: A0=0.3751 > A1=0.2331 > A2=0.1278, all significant (p0=p1=0.0000, p2=0.0005). PC passed (depth-2 detectable, single-slot correctly NOT flagged at pos1, false-positive rate 0.10). Mechanical verdict: CONCENTRATION_DEPTH_2. CAVEAT: a significant pos1 concentration is structurally ambiguous between (a) a genuine second prefix morpheme (true prefix-stacking) and (b) the first prefix's selectional restriction on the following sign (E050 found A- has a weak generic continuation restriction). At L2/L3 we report only the structural fact; we do NOT adjudicate stacking-vs-selection.",
+  "verdict": "CONCENTRATION_DEPTH_2",
+  "numbers": {
+    "global": {
+      "n_words": 752,
+      "H0": 5.2722,
+      "H1": 5.4166,
+      "H2": 5.5201,
+      "null_expected_H": 5.6483,
+      "A0": 0.3751,
+      "A0_p": 0.0,
+      "A1": 0.2331,
+      "A1_p": 0.0,
+      "A2": 0.1278,
+      "A2_p": 0.0005
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_depth2_A1_p": 0.0,
+      "detect_single_A1_p": 1.0,
+      "false_pos_rate": 0.1,
+      "pc_is_synthetic": true,
+      "detect_depth2_A0_p": 0.0,
+      "detect_single_A0_p": 0.0,
+      "detect_depth2_A0": 3.1633,
+      "detect_depth2_A1": 3.1624,
+      "detect_single_A0": 3.5652,
+      "detect_single_A1": -0.2312,
+      "false_pos_n_draws": 20,
+      "false_pos_n_rejected": 2,
+      "self_check_mean_A_exchangeable": [-0.0027, -0.001, -0.0017],
+      "self_check_pass": true
+    },
+    "cross_site_pos1": {
+      "n_sites_testable": 6,
+      "n_sites_A1_sig": 2,
+      "per_site": [
+        {"site": "Haghia Triada", "n": 353, "A1": 0.0726, "p": 0.0785, "sig": false},
+        {"site": "Zakros", "n": 76, "A1": 0.3312, "p": 0.0015, "sig": true},
+        {"site": "Khania", "n": 46, "A1": 0.1478, "p": 0.171, "sig": false},
+        {"site": "Knossos", "n": 41, "A1": 0.1071, "p": 0.2215, "sig": false},
+        {"site": "Palaikastro", "n": 39, "A1": 0.4813, "p": 0.004, "sig": true},
+        {"site": "Phaistos", "n": 34, "A1": -0.0996, "p": 0.777, "sig": false}
+      ]
+    },
+    "gradient": {"A0": 0.3751, "A1": 0.2331, "A2": 0.1278, "monotone_decreasing": true},
+    "n_shuffles_global": 2000,
+    "n_shuffles_cross_site": 2000
+  },
+  "key_findings": [
+    "Position 1 (the SECOND word-initial slot) is significantly concentrated beyond the within-word-shuffle null GLOBALLY: A1=0.2331 bits, perm p=0.0000 (2000 shuffles). This is the structural signature of a depth-2 initial concentration, not a single prefix slot.",
+    "A monotone concentration GRADIENT exists across the first three positions: A0=0.3751 > A1=0.2331 > A2=0.1278 bits, all significant (p0=p1=0.0000, p2=0.0005). Concentration is strongest at the word edge and decays inward, consistent with prefix-zone structure rather than a single isolated slot.",
+    "The pos1 concentration REPLICATES in 2 of 6 testable sites (Zakros A1=0.331 p=0.0015; Palaikastro A1=0.481 p=0.0040), meeting the frozen >=2-site replication bar. The largest site (Haghia Triada, n=353) shows a weak same-direction effect (A1=0.073) that does not reach significance, so the depth-2 signal is site-heterogeneous rather than universal.",
+    "Positive control PASSED on all three gates: depth-2 plants were detected at BOTH pos0 and pos1 (p=0); single-slot plants were flagged at pos0 (p=0) but correctly NOT at pos1 (p=1.0); uniform plants had a 0.10 false-positive rate (<=0.10). The test discriminates depth-2 from single-slot.",
+    "INTERPRETIVE CAVEAT (frozen): a significant pos1 concentration is structurally AMBIGUOUS between (a) a genuine second prefix morpheme (true prefix-stacking) and (b) the first prefix's selectional restriction on the following sign (E050 found A- has a weak generic continuation restriction). L2/L3 reports only the structural fact; it does NOT adjudicate stacking-vs-selection."
+  ],
+  "successor_hypotheses": [
+    "E068: Adjudicate stacking-vs-selection at L3. If pos1 concentration is true prefix-stacking, the pos0->pos1 bigram should show a CONCENTRATED, low-entropy transition matrix (few legal prefix-prefix pairs); if it is selectional restriction, the pos0->pos1 transition should be CONDITIONAL on pos0 identity (per-prefix continuation entropy low) but the marginal pos1 inventory still broad. Compare conditional vs marginal structure.",
+    "E069: Test whether the depth-2 signature is driven by a SMALL set of high-frequency prefix pairs (e.g. A- followed by a restricted set) vs a broad productive pattern, by jackknifing over the top-K pos0 signs and re-testing pos1 concentration.",
+    "E070: Extend the positional profile to positions 3,4,5 to map the full concentration decay curve and locate where concentration crosses zero (the prefix-zone boundary); compare the decay length to a typological null.",
+    "E071: Cross-check the site heterogeneity (Haghia Triada weak, Zakros/Palaikastro strong) against register/support (tablet vs seal vs other) to test whether depth-2 is a register-level phenomenon rather than a uniform grammatical property.",
+    "E072: Pair the positional-concentration profile with the suffix-side profile (word-FINAL positions) to test for an asymmetry prefix-zone vs suffix-zone depth, characterizing LA as prefixing-vs-suffixing at the depth-2 level.",
+    "E073: Validate the depth-2 finding against a stronger null that preserves not only within-word exchangeability but also the pos0 marginal (conditional permutation fixing pos0), to confirm pos1 concentration is not an artifact of the pos0 concentration leaking into pos1 via word-length structure."
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous sign IDs only (no readings, no values, no meaning). Metric uses positional Shannon entropy exclusively — no n-gram models, no sign identities in the test statistic. The within-word-shuffle null permutes sign order within each word, making all positions exchangeable and holding sign-frequency, word-length, and sample size fixed simultaneously, so E[A_k]=0 under the null by construction (validated by self-check: mean A over exchangeable synthetic = [-0.0027,-0.001,-0.0017]). L2/L3-typology only; no phonology, no semantics. Positive control is synthetic and stated as such.",
+  "deviations": [
+    "No deviations from the frozen protocol. All steps (0-6) executed as specified: prereg+plan_hash frozen before running; PC run first and gated the verdict; global + cross-site computed with 2000 shuffles (>=1000 required); mechanical verdict applied exactly as frozen."
+  ]
+}
