@@ -2455,3 +2455,58 @@ epochs:
     artifacts: [epochs/EPOCH-102/prereg.md, epochs/EPOCH-102/plan_hash.txt, epochs/EPOCH-102/e102_synthesis.py, epochs/EPOCH-102/result.json, reports/CROSS_METHOD_SYNTHESIS.md]
     successors_spawned: 5
     substantive: true
+  - epoch_id: EPOCH-103
+    frontier: F4
+    frontier_family: STRONG_LEAD_ADJUDICATION
+    reason: ADJUDICATE_STRONG_LEAD
+    status: BANKED
+    gate: A
+    name: "A- prefixation strong-lead adjudication: segmentation/inventory robustness (>=2 schemes) + best-of-universe maxT + LOMO + matched adaptive null for the campaign's strongest LA positive."
+    plan_hash: "1f8c82a3bdfa74b47d490d3b99c1fb8228c4514316bb52281096bcc04dae9747"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (epochs/EPOCH-103/machinery.py). Reuses the frozen E023 within-word permutation null; adds two orthogonal segmentation schemes + correlation-aware best-of-universe maxT + PC. NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "Load-bearing computation reproduced from scratch: three INDEPENDENT segmentations of the same silver stream (A_editor 1369 units / B_divider_strict 1365 / C_numeral_anchored 467 ledger-heads). Under each, A- is rank-1 by best-of-universe maxT z (16.74 / 16.99 / 7.49) at family-adjusted maxT p<=.01, dominating the next sign (KU z~6.9-7.6) by ~2.4x. PC: planted 'ZZ' initial detected p=.0005 (power); mid-freq 'MU' on order-scrambled words p=.44 (calibration clean)."
+    positive_control: "PASS -- power: synthetic initial sign 'ZZ' planted at 15% detected p_permute=.0005 (<.01); calibration: mid-frequency sign 'MU' on order-scrambled words p=.44 (>.01, not flagged)."
+    negative_control: "PASS -- within-word permutation null (per-word uniform sign order) preserves each unit's sign multiset + length; order-scrambled calibration sign is null."
+    verdict: "REPLICATED_RELATIVE_CONSTRAINT -- A- is the TOP best-of-universe maxT survivor at family-adjusted p<=.01 under ALL 3/3 independent segmentation schemes, including the harder function-restricted numeral-anchored ledger-head scheme (n=467, A-initial=28, A z=7.49 still rank-1). PC power+calibration clean; conclusion invariant to leave-one-method-out (E022/E023/E024 each independently p<.01). A- graduates as a REPLICATED RELATIVE positional-slot constraint (L2/L3). NO phonetic value, sound, meaning, language, or reading is licensed (L4+ withheld)."
+    qualification: "QUALIFICATION of E022 (append-only, Art. XVII, NOT a downgrade): E022 called A- 'the SOLE survivor in the 72-member GORILA universe'; under E103's maxT over the ~51-sign initial universe a small SECONDARY set {KU,U,I,QA} also clears p<=.01 (z 4.8-7.6). Word-initial positional enrichment is real but not A-unique; A- DOMINATES (z~17 vs next ~7, ~2.4x) and is rank-1 in all schemes. The lead is CONFIRMED + strengthened (replicated 3/3); only the 'sole' wording is narrowed to 'dominant'."
+    numbers: {schemes: 3, A_z_editor: 16.74, A_z_divider: 16.99, A_z_numeral: 7.49, A_maxT_p_all: 0.0002, next_sign: KU, next_z_editor: 6.89, A_initial_editor: 155, A_initial_numeral: 28, pc_power_p: 0.0005, pc_cal_p: 0.44, secondary_survivors: [KU, U, I, QA]}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: LA_POSITIVE
+    scope: "STRONG-LEAD adjudication of the campaign headline (A- prefixation). Supplies the ONE §6 element E022-E024 lacked (>=2 segmentation schemes). A- is the campaign's single GRADUATED relative/structural finding: a cross-scheme-robust productive word-initial positional SLOT. Does NOT graduate to any value/phonetic layer (no L4+). Increments LA-positive count and is the anchor of GRADUATED_FINDINGS.md."
+    committed_prediction: "modal REPLICATED_RELATIVE_CONSTRAINT (top maxT survivor >=2/3 schemes); OUTCOME = REPLICATED_RELATIVE_CONSTRAINT at 3/3. Prediction CONFIRMED."
+    deviations: ["Alternate SIGN INVENTORY (SigLA-derived) as a leave-one-source-lineage-out test was scoped but not run this epoch: SigLA overlaps the same inscriptions (different edition, not an independent lineage), and the 3 segmentation schemes already supply the >=2-scheme requirement; SigLA cross-check is logged as a documented future test (low expected information gain). Disclosed."]
+    non_circular: "Blinded to any phonetic interpretation; A- is an opaque sign. The three schemes are defined by physical/structural stream markers, not tuned to the outcome. maxT is correlation-aware (shared draws). Verdict rule pre-registered + all-or-nothing. Coordinator reconstructed the machinery from scratch (reusing only the frozen E023 permutation kernel)."
+    architecture_note: "The campaign's single graduated relative finding, now segmentation-robust. Confirms + refines the A- lead and closes the strong-lead adjudication queue: no other surviving lead reaches the graduation bar (E099 is LB-only/LA-untestable; all value-layer routes fail the absolute-value gate per E102). Next: E104 campaign-wide adaptive null (verify/reuse existing gate calibration), then E105 cross-epoch synthesis + closure."
+    artifacts: [epochs/EPOCH-103/prereg.md, epochs/EPOCH-103/plan_hash.txt, epochs/EPOCH-103/machinery.py, epochs/EPOCH-103/result.json]
+    successors_spawned: 2
+    substantive: true
+  - epoch_id: EPOCH-104
+    frontier: campaign_wide
+    frontier_family: CAMPAIGN_WIDE_NULL
+    reason: RUN_CAMPAIGN_WIDE_NULL
+    status: BANKED
+    gate: A
+    name: "Campaign-wide adaptive null: run the actual E103 graduation machinery end-to-end on structure-matched signal-free nulls; measure false-graduated-finding rate + maxT-ablation + planted power; identify the load-bearing gate."
+    plan_hash: "a06fe20ab706fc5be9653a4003fa3de11a8be1959d1454e67678bb303be4f474"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (epochs/EPOCH-104/machinery.py; imports the frozen E103 machinery so the null runs the SAME code path that graduated A-). 200 nulls + 40 planted. NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "Reproduced the campaign's adaptive-choice stack (best-of-51-sign maxT x 3 segmentations x >=2/3 replication) on within-word-shuffled nulls that preserve LA marginals. False graduated-finding rate WITH the full machinery = 1/200 = 0.005 (CP95 upper 0.0235); ABLATING the maxT deflation (naive best-of raw p) = 61/200 = 0.305 (60x inflation). Planted real prefix recovered 40/40 (full power). The single false maxT graduation was a different sign (TA2), not A."
+    positive_control: "PASS -- planted real prefix 'PX' at 12% recovered 40/40 through the full graduation machinery (power retained despite the deflation)."
+    negative_control: "PASS -- within-word order shuffle is the null; under it the adaptive machinery graduates 1/200 (~0.5%, within nominal .01-.05 family bar)."
+    verdict: "CAMPAIGN_NULL_GATES_LOAD_BEARING -- the campaign's discipline machinery does NOT fabricate graduated findings on signal-free data: full-machinery false-graduation 0.5% (CP95 upper 2.35%) vs 30.5% when the correlation-aware best-of-universe maxT deflation is ablated. The maxT deflation is the load-bearing gate (60x false-positive suppression); multi-scheme replication retains full power (40/40). The absolute-value gate cannot fire on a positional-only null by construction. E103's A- graduation (z~17, ~2.4x the next sign, 3/3 schemes) sits far outside the entire null band -> not an artifact of the adaptive search. This is the 'English is Semitic' multiplicity defense, quantified campaign-wide."
+    numbers: {n_null: 200, false_grad_rate_full: 0.005, false_grad_cp95_upper: 0.0235, false_grad_rate_maxT_ablated: 0.305, ablation_inflation_x: 61, planted_recovery: "40/40", abs_value_gate_false_fire: 0, load_bearing_gate: best_of_universe_maxT_deflation}
+    layer: NA
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: METHODOLOGY_VALIDATION
+    scope: "Campaign-wide adaptive-search null specific to the frontier-72h graduation rule. Complements E022 in-epoch calibration (0/300) and the anchor-lattice gate calibration (naive fabricates 120/120 vs gated 0/120). Certifies that the ONE graduated finding (E103 A-) is outside the adaptive-search null band and that the maxT deflation is the load-bearing safeguard. No LA values."
+    committed_prediction: "modal CAMPAIGN_NULL_GATES_LOAD_BEARING (false-grad <=2% + planted >=0.8 + maxT load-bearing); OUTCOME = CAMPAIGN_NULL_GATES_LOAD_BEARING. CONFIRMED."
+    deviations: ["Absolute-value gate false-fire is asserted structurally (0) rather than Monte-Carlo'd: a positional-shuffle null has a single axis and cannot satisfy the >=2-independent-channel requirement E102 pre-registered. Disclosed. The null is the strongest tractable structure-match (per-word multiset+length+content preserved); a fully generative LA language model was out of scope and unnecessary for the adaptive-search question."]
+    non_circular: "Runs the SAME E103 code path that produced the graduation, on nulls that preserve everything except the tested signal -> any false graduation is purely adaptive-search inflation. The ablation isolates the deflation gate. Coordinator authored the null + harness from scratch."
+    architecture_note: "Penultimate epoch. Quantifies which gate is load-bearing (maxT deflation, 60x) and certifies E103 is not a search artifact. Next: E105 cross-epoch dependency-aware synthesis + closure, then the §12 final reports + review bundle + CAMPAIGN_COMPLETE."
+    artifacts: [epochs/EPOCH-104/prereg.md, epochs/EPOCH-104/plan_hash.txt, epochs/EPOCH-104/machinery.py, epochs/EPOCH-104/result.json]
+    successors_spawned: 1
+    substantive: true

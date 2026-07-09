@@ -7,7 +7,48 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 90 distinct epochs, each classified once)
+## Session-8 addendum — priority-insertion families F11 + F12 (E091–E102), 90 → 101 epochs
+
+> **The tally table below is STALE at 90 epochs; regenerate from `EPOCH_LEDGER.yaml` (now 101 distinct) before
+> finalization (invariant #12 — counts are script-generated, never hand-edited here).** Session-8 banked TWO
+> complete priority-insertion families, both **CLOSED_REFUTED**, all L2, no licence, no LA values:
+
+**F11 TURING_MORPHOGENESIS (E091–E096) — graph reaction-diffusion, Turing instability verified mechanically.**
+Central hypothesis (a diffusion-driven morphogenetic mechanism recovers linguistic structure) **REFUTED**:
+`E091` TURING_LINEAR_B_RECOVERY_NULL (equal-diffusion ties full Turing; the mechanism adds nothing) → `E092`
+GENERIC_GRAPH_CLUSTERING (all 6 methods recover the planted PC 5/5; generic clustering matches/beats Turing on
+every channel — Turing NOT needed) → `E093` LINEAR_A_ABOVE_THRESHOLD (data-sufficiency *qualification*: LA's ~4245
+tokens suffice for the weak vowel signal, frequency+degree+permutation-guarded +0.13 stable margin — the binding
+constraint is signal-weakness + no-transfer, NOT corpus size) → `E094` SEGMENTATION_MORPHOGENESIS_NULL (a static
+field cannot encode sequential boundaries; generic transition-surprisal recovers them, morphogenesis ≈ random) →
+`E095` GEOGRAPHIC_MORPHOGENESIS_NULL (no method recovers balanced LA site communities from blinded sign-content) →
+`E096` DE_AUTHORIZED (its gate was a Turing-specific positive, refuted by E091/E092).
+
+**F12 CROSS_DISCIPLINARY (E097–E102) — imported math frameworks as falsifiable models on the 5-stage ladder.**
+Every framework calibrates on blinded LB but delivers **no LA decipherment**: `E097` ECC/belief-propagation
+SUPPORTED(LB) but **LA-transfer NEGATIVE** (forward-bigram beats BP on real LA; loopy BP actively harmful) → `E098`
+POTTS_NULL (the context-similarity energy landscape is near-unique but *orthogonal* to vowel classes; true-anchors
+*conflict* with the couplings — determined-but-wrong, no identifiability transition) → `E099`
+CAUSAL_INVARIANT_STRUCTURE_SUPPORTED (**the one F12 positive**: the weak LB vowel signal is frequency-INVARIANT
+linguistic structure — survives leave-one-frequency-band-out + deconfounding — NOT a frequency artifact;
+corroborates E093; **LB-only, LA-untestable**) → `E100` PERSISTENT_STRUCTURE_GENERIC (persistent communities exist +
+inventory-stable but not linguistic; sharpens E099 — the vowel signal is centroid-separable but NOT
+topological-cluster-separated, i.e. diffuse geometry) → `E101` GLOBAL_ASSIGNMENT_SELECTS_ARBITRARY_REPRESENTATIVE
+(global optimization needs a known target LA lacks — Ugaritic had one; global assignment cannot beat the
+anchor-lattice null) → `E102` SYNTHESIS_NO_INDEPENDENT_CHANNELS (**capstone**: the "multi-method vowel signal" is
+ONE context-co-occurrence channel seen many ways — eigenmap|ica agree ARI 0.979 — the one *independent* channel
+tested, positional, is null; absolute-value gate FAILS every criterion; frozen LA restricted to relative anonymous
+classes + per-sign uncertainty + ranked acquisition targets, NO values).
+
+**Net Session-8:** a method-diverse **re-confirmation of `ANCHOR_LATTICE_UNDERDETERMINED`** — two whole
+disciplines' worth of imported machinery, rigorously calibrated (Turing conditions verified; PCs firing and
+catching real bugs pre-banking: find_Du wrong-wavelength E091, ferromagnetic-collapse E098, frequency-artifact-guard
+E093, easy-PC E101), converge on: **one real but weak, single-channel, LA-untestable linguistic signal (E099) and
+otherwise no LA decipherment.** Bucket deltas to fold into the regenerated tally: bounded-negatives 20 → 29
+(+E088-adjacent already counted; +E091, E092, E094, E095, E097, E098, E100, E101, E102), qualification 4 → 6
+(+E093, E099). Zero positives rise above L2; zero licences.
+
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 90 distinct epochs, each classified once) [STALE — see Session-8 addendum above; regenerate to 101]
 
 | Bucket | N | What it means |
 |---|---|---|
