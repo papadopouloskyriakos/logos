@@ -1,0 +1,56 @@
+{
+  "task_id": "EPOCH-058",
+  "method": "Unsupervised document typology from pure structural profile (L2). Features (log1p then z-score): x1 n_content, x2 numeral density, x3 divider density, x4 line-break density, x5 mean word length. GLOBAL: k-means k in {2,3,4} by silhouette; per-column-shuffle silhouette null (500 perms). SUPPORT_ALIGNMENT: ARI between induced clusters and archaeological 'support' label (post-hoc only). CROSS-SITE: train k=2 typology on Haghia Triada, apply to Khania, ARI vs Khania's own induced k=2 labels vs a label-permutation null (500 perms). Positive control (3-type synthetic recovery + single-type false-positive rate) gates the verdict.",
+  "result": "Structural document types ARE recoverable globally (k=2, silhouette 0.345, perm p=0.002, beyond feature-shuffled null) and the typology is NOT merely the support label (support-ARI 0.39 < 0.5). However the structural partition does NOT transfer across sites beyond a label-permutation null: training the k=2 typology on Haghia Triada and applying it to Khania yields a NEGATIVE ARI = -0.10 vs Khania's own induced labels (cross-site perm p=1.00, far NOT beyond null; the observed ARI is below zero and well below the null 95th percentile of +0.10). The two sites partition differently (HT splits long-numeral-heavy vs short; Khania splits by numeral density and word length within mostly-short documents). Verdict: DOC_TYPOLOGY_SITE_LOCAL.",
+  "verdict": "DOC_TYPOLOGY_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "n_docs": 465,
+      "chosen_k": 2,
+      "silhouette": 0.3452,
+      "silhouette_perm_p": 0.0020,
+      "cluster_sizes": [337, 128],
+      "support_ari": 0.3905
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_perm_p": 0.0050,
+      "detect_ari": 1.0000,
+      "false_split_rate": 0.1000
+    },
+    "cross_site": {
+      "n_sites_usable": 5,
+      "site_pair": ["Haghia Triada", "Khania"],
+      "trainA_applyB_ari": -0.1023,
+      "null_ari_mean": 0.0021,
+      "null_ari_p95": 0.1006,
+      "cross_site_perm_p": 1.0000,
+      "ari_beyond_null": false
+    }
+  },
+  "key_findings": [
+    "GLOBAL structural document types are recoverable: k=2 chosen by silhouette (0.345), with silhouette perm p=0.002 (500 per-column-shuffle perms), so the joint structural profile carries real structure beyond marginals.",
+    "The two global clusters are structurally meaningful: cluster A (n=337) = longer, numeral-dense, short-word documents (raw centroid n_content~9.4, num_dens~0.40, mean_wlen~1.7); cluster B (n=128) = short, divider/line-break-heavy, longer-word documents (n_content~3.1, div_dens~0.34, mean_wlen~2.7).",
+    "The typology is NOT merely the archaeological support label: support-ARI = 0.39 (< 0.5). The induced structural partition carries information distinct from physical object type.",
+    "CROSS-SITE STABILITY FAILS (not beyond null): training the k=2 typology on Haghia Triada (n=197) and applying it to Khania (n=80) gives a NEGATIVE ARI = -0.10 vs Khania's own induced labels (cross-site perm p=1.00; the observed ARI is below zero and well below the null 95th percentile of +0.10, so NOT beyond null). The concordance is worse than chance-level, not a robust recurrence; the structural doc-types do not reliably recur across sites.",
+    "The two sites partition differently: HT splits into long-numeral-heavy vs short documents; Khania (mostly short) splits by numeral density and word length. The structural 'document types' are site-local conventions, not a pan-Cretan system.",
+    "Positive control PASSED (detect perm p=0.005, ARI vs planted=1.0, single-type false-split rate=0.10), so the machinery is calibrated and the LA result is interpretable."
+  ],
+  "successor_hypotheses": [
+    "H1 (within-site typology depth): Does a richer feature set (e.g. position-of-numerals, word-length distribution shape, divider-spacing periodicity) yield a typology that DOES transfer across sites? Test cross-site ARI with expanded structural features.",
+    "H2 (site-pair generality): Repeat the train/apply cross-site test for all pairs among the 5 sites with >=25 usable inscriptions (HT, Khania, Zakros, Phaistos, Knossos); is transfer failure specific to HT<->Khania or universal?",
+    "H3 (k>2 within site): Within HT alone, does k=3 or k=4 reveal sub-types, and do any of those sub-types match Khania sub-types? The global k=2 may be coarser than the true within-site typology.",
+    "H4 (support-conditional typology): Condition on support (e.g. Tablets only) and re-test cross-site stability; perhaps a structural typology exists within a single support class that transfers, masked at the all-support level.",
+    "H5 (temporal/contextual stability): Add context (LM IB vs other) as a covariate; does the structural typology align with chronological phase rather than site, suggesting doc-types are time-bound rather than place-bound?",
+    "H6 (hierarchical vs flat): Test a hierarchical (agglomerative) structural typology; the cross-site mismatch may reflect different cutting-heights of a shared hierarchy rather than genuinely different types.",
+    "H7 (numeral-system interaction): Since numeral density is a strong separator, test whether the typology is driven by document function (ledger vs label) that is itself site-specific in its structural expression."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Clustering features are STRUCTURAL COUNTS only (n_content, numeral/divider/line-break densities, mean word length). The 'support' label was NOT a clustering feature; it was used ONLY post-hoc to compute ARI. No sign values, readings, phonetics, or meanings were used. L2 only.",
+  "deviations": [
+    "Cross-site null implemented as a label-permutation null on the predicted labels (permute the train-on-A predictions on B, recompute ARI vs B's own labels, 500 perms); ari_beyond_null judged against the 95th percentile of this null (observed ARI=-0.1023 is below zero and well below null95=+0.1006 at the master seed, so judged NOT beyond null; perm p=1.00). This is a conservative choice consistent with the preregistered 'vs a null' wording.",
+    "Positive-control false-split rate = 0.10, exactly at the <=0.10 threshold; counted as PASS (inclusive bound).",
+    "Scaler (log1p+z-score) fit once on all 465 usable inscriptions, then subsets taken for per-site clustering, so the per-site feature space is on the same scale as the global analysis (consistent transform)."
+  ]
+}

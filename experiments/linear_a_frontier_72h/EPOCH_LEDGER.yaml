@@ -1376,3 +1376,27 @@ epochs:
     artifacts: [epochs/EPOCH-057/prereg.md, epochs/EPOCH-057/plan_hash.txt, epochs/EPOCH-057/machinery.py, epochs/EPOCH-057/result.json, reports/EPOCH057_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-058
+    frontier: F17
+    gate: B
+    name: "Unsupervised document typology (is a doc-type system recoverable from structure, cross-site?)"
+    plan_hash: "see epochs/EPOCH-058/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=2 (hit max on 1 overclaim-scanner false-positive on the 'method' field; see gate_override)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed EXACT: n_docs=465, k=2 silhouette=0.345, support-ARI=0.391, and the load-bearing cross-site test — train k=2 typology on Haghia Triada (n=197), apply to Khania (n=80), ARI vs Khania's own induced labels = -0.102 (result -0.10). NEGATIVE cross-site ARI => the structural document typology does NOT transfer across sites."
+    positive_control: "PASSED (verified): planted 3-type synthetic recovered (detect perm p=0.005, recovered-vs-planted ARI=1.0); single-type false-split rate=0.10 (AT the <=0.10 boundary — noted). Calibrated; FP margin thin."
+    gate_override: "epoch_runner reported passed=false on 1 POSSIBLE_OVERCLAIM flag on the 'method' field ('Unsupervised document typology from pure structural profile...') — coordinator-reviewed and confirmed a scanner FALSE-POSITIVE on methodology text (same class as E056/E026/E047). Content is L2-disciplined (structural counts only; support used ONLY post-hoc for ARI; no sign values/readings). Banked on coordinator verification (numbers recomputed EXACT)."
+    verdict: "DOC_TYPOLOGY_SITE_LOCAL (mechanical, independently verified) — structural document types exist globally (silhouette 0.345, perm p=0.002) and are NOT merely the support label (support-ARI 0.39<0.5), BUT the typology does NOT transfer across sites (train-HT/apply-Khania ARI -0.10, not beyond null)."
+    numbers: {n_docs: 465, chosen_k: 2, silhouette: 0.345, silhouette_perm_p: 0.002, cluster_sizes: "[337,128]", support_ari: 0.391, n_sites_usable: 5, site_pair: "HT+Khania", trainA_applyB_ari: -0.102, null_ari_mean: 0.002, ari_beyond_null: false, pc_detect_ari: 1.0, pc_false_split_rate: 0.10}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    scope: "BOUNDED NEGATIVE (site-local), VERIFIED. Two findings: (1) Linear A inscriptions DO carry recoverable structural document-type variation (a k=2 partition beyond a feature-shuffled null, silhouette 0.345, perm p=0.002) that is NOT merely a restatement of the archaeological support label (support-ARI 0.39, well below the 0.5 tracks-support threshold). (2) BUT this typology is SITE-LOCAL: a typology trained on Haghia Triada does NOT transfer to Khania (cross-site train/apply ARI = -0.10, i.e. NEGATIVE, worse than the ~0 null) — the same structural document-types do not recur across sites. This ADDS document TYPOLOGY to the SITE-LOCAL side of the campaign's organizing dichotomy (shared script E036 + shared administrative grammar E031/E037/E057 generalize CROSS-SITE; document content/typology E032/E034/E035/E049-topic/E058 is SITE-LOCAL). LAYER L2: structural counts only; support label used ONLY post-hoc for ARI; NO sign values, NO readings, NO phonetics/meaning; no transfer licence."
+    committed_prediction: "modal CROSS_SITE_STABLE/TRACKS_SUPPORT_ONLY/SITE_LOCAL/NO_TYPOLOGY/UNDERPOWERED; OUTCOME = SITE_LOCAL. Prediction earned: structural doc-types exist and are not just the support label, but they do not generalize across sites (the typology is a local, not shared, administrative property)."
+    deviations: ["Gate passed=false on 1 overclaim-scanner false-positive on the 'method' field; coordinator-overridden after EXACT independent recompute.", "PC false-split rate 0.10 sits AT the <=0.10 boundary (thin margin, noted); detect leg strong (p=0.005, ARI=1.0)."]
+    non_circular: "Clustering features are STRUCTURAL COUNTS only (length, numeral/divider/line-break density, mean word length); the 'support' label is NOT a clustering input (used only for post-hoc ARI); null is a per-feature-column shuffle; verdict from a frozen mechanical rule; PC first."
+    architecture_note: "Thirty-fifth gated-runner epoch (repairs=2). Coordinator role: independent recompute EXACT on all load-bearing numbers (n_docs/silhouette/support-ARI/cross-site-ARI) + overrode the scanner false-positive. A clean bounded-negative that STRENGTHENS the exhaustion map's central through-line: document typology joins content/vocabulary on the SITE-LOCAL side, opposite the cross-site-shared script+grammar. Folds into §B."
+    artifacts: [epochs/EPOCH-058/prereg.md, epochs/EPOCH-058/plan_hash.txt, epochs/EPOCH-058/machinery.py, epochs/EPOCH-058/result.json, reports/EPOCH058_REPORT.md]
+    successors_spawned: 5
+    substantive: true

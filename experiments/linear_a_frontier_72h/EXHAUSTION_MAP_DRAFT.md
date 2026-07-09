@@ -7,18 +7,18 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 57 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 58 substantive epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
 | **Load-bearing cross-site positives** | **20** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
-| Bounded negatives | 14 | Well-powered PC-passed tests returning informative *absence* (§B) |
+| Bounded negatives | 15 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*20 positives / 14 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
+*20 positives / 15 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
 Zero of the 20 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
 reading.*
 
@@ -99,6 +99,11 @@ Each is a well-powered, PC-passed test that returned a *bounded absence* — inf
 - **No recoverable commodity lexicon.** `E053` entry-words (counted items) are **not** drawn from a
   restricted, repetitive closed set beyond a size-matched null; `E033` no entry-vs-non-entry structural
   contrast; `E032` recurrent cross-site admin word-forms not recoverable (machinery-uninformative).
+- **Document typology is site-local.** `E058` structural document types *do* exist globally (k=2, silhouette
+  0.345, perm p=0.002) and are not merely the archaeological support label (support-ARI 0.39), **but they do
+  not transfer across sites** — a typology trained on Haghia Triada applied to Khania gives ARI −0.10 (worse
+  than the ~0 null). Independently recomputed exact. This places document *typology* on the **site-local** side
+  of the through-line, opposite the cross-site-shared script + grammar.
 - **Administrative quantities are small bounded tallies.** `E054` numeral magnitudes are Benford-**deviant**
   *because they are small* (median 4, 71% ≤ 10) — Benford is inapplicable, not a fabrication signal;
   `E055` document-class accounting *scale* is **site-confounded / unanswerable** (numeral-bearing supports are
