@@ -1,0 +1,119 @@
+{
+  "task_id": "EPOCH-062",
+  "method": "Document content-line position test for anonymous token type U+1076B (t=='other', '\\U0001076b' in raw). Content-lines = maximal runs of content tokens (word/num/other) bounded by nl/START/END (div does not flush). Testable inscriptions: L>=3 content-lines AND >=1 marker-bearing line. Primary metric = PERIPHERAL rate (li==0 OR li==L-1). Null: per-inscription uniform re-placement of each marker's li in {0..L-1}, independent, preserving marker count and L; >=500 reshuffles; one-sided perm p (enrichment). Heading (li==0) and colophon (li==L-1) tested separately vs uniform 1/L.",
+  "result": "U+1076B is strongly enriched at the document periphery (first OR last content-line) of multi-line Linear A inscriptions, cross-site. Peripheral rate 0.691 vs null 0.382 (perm p=0.0). Both heading (0.286 vs 0.191, p=0.0) and colophon (0.405 vs 0.191, p=0.0) positions are enriched, with colophon slightly stronger. All 6 sites with >=10 testable markers show significant same-direction (enriched) enrichment; survives leave-one-site-out on Haghia Triada (p=0.0). Upgrades structural read from 'standalone marker' to 'document-peripheral element (heading and/or colophon / section boundary)'.",
+  "verdict": "MARKER_DOCUMENT_PERIPHERAL_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_target": 440,
+      "peripheral_obs": 0.690909,
+      "peripheral_null_mean": 0.382102,
+      "perm_p": 0.0,
+      "heading_obs": 0.286364,
+      "heading_p": 0.0,
+      "colophon_obs": 0.404545,
+      "colophon_p": 0.0,
+      "interior_obs": 0.309091,
+      "peripheral_p_deplete": 1.0,
+      "expected_peripheral_weighted_2_over_L": 0.381493,
+      "n_perm": 2000
+    },
+    "breakdown": {
+      "first": 126,
+      "interior": 136,
+      "last": 178
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "false_pos_rate": 0.05,
+      "pc_is_synthetic": true,
+      "n_fp_draws": 20
+    },
+    "cross_site": {
+      "n_sites_testable": 6,
+      "n_sites_sig": 6,
+      "direction_consistent": true,
+      "loo_p": 0.0,
+      "loo_exclude": "Haghia Triada",
+      "loo_obs": 0.705426,
+      "loo_null_mean": 0.401897,
+      "per_site": [
+        {
+          "site": "Haghia Triada",
+          "n": 182,
+          "peripheral_obs": 0.67033,
+          "peripheral_null_mean": 0.352376,
+          "perm_p": 0.0,
+          "direction": "enriched",
+          "sig": true
+        },
+        {
+          "site": "Khania",
+          "n": 150,
+          "peripheral_obs": 0.7,
+          "peripheral_null_mean": 0.411047,
+          "perm_p": 0.0,
+          "direction": "enriched",
+          "sig": true
+        },
+        {
+          "site": "Knossos",
+          "n": 15,
+          "peripheral_obs": 0.733333,
+          "peripheral_null_mean": 0.3898,
+          "perm_p": 0.005,
+          "direction": "enriched",
+          "sig": true
+        },
+        {
+          "site": "Phaistos",
+          "n": 18,
+          "peripheral_obs": 0.888889,
+          "peripheral_null_mean": 0.41,
+          "perm_p": 0.0,
+          "direction": "enriched",
+          "sig": true
+        },
+        {
+          "site": "Zakros",
+          "n": 49,
+          "peripheral_obs": 0.673469,
+          "peripheral_null_mean": 0.420837,
+          "perm_p": 0.0,
+          "direction": "enriched",
+          "sig": true
+        },
+        {
+          "site": "Arkhalkhori",
+          "n": 14,
+          "peripheral_obs": 0.571429,
+          "peripheral_null_mean": 0.288821,
+          "perm_p": 0.0205,
+          "direction": "enriched",
+          "sig": true
+        }
+      ]
+    },
+    "n_testable_inscriptions": 252
+  },
+  "key_findings": [
+    "U+1076B is strongly document-peripheral: 69.1% of target markers sit on the FIRST or LAST content-line vs 38.2% expected under the within-inscription line-shuffle null (perm p=0.0, 2000 reshuffles).",
+    "Both heading (li==0: 28.6% vs 19.1% null, p=0.0) and colophon (li==L-1: 40.5% vs 19.1% null, p=0.0) positions are independently enriched; the colophon/last-line signal is the stronger of the two.",
+    "Cross-site robust: all 6 sites with >=10 testable markers (Haghia Triada, Khania, Zakros, Phaistos, Knossos, Arkhalkhori) are significantly enriched in the same direction; survives leave-one-site-out on the largest site (Haghia Triada, p=0.0).",
+    "Interior placement is DEPLETED (30.9% observed vs ~61.8% expected), ruling out an interior-separator read at the document level.",
+    "Positive control (synthetic) PASSED: detect p=0.0 (planted peripheral corpus flagged), false-positive rate 0.05<=0.10 (uniform placement not flagged across 20 draws); null mean validated against marker-weighted 2/L."
+  ],
+  "successor_hypotheses": [
+    "E063: Does the colophon (last-line) enrichment concentrate on inscriptions ending in a numeric total (administrative summation colophon) vs non-numeric endings? (L2/L3 boundary).",
+    "E064: Is the heading (first-line) marker co-occurring with a specific following token class (e.g., a toponym or commodity word) that would mark it as a section header? (L2 bigram).",
+    "E065: On single-line (L<3) inscriptions, does the marker still appear, and does its line-isolation (E061) plus periphery here imply it is a one-line document boundary in those cases?",
+    "E066: Does the marker's peripheral position interact with support type (tablet vs seal vs other) \u2014 i.e., is the heading/colophon role support-dependent?",
+    "E067: Is the marker a section boundary WITHIN long inscriptions (recurring at internal major divisions marked by 'div') rather than only at document ends? (L2 internal segmentation).",
+    "E068: Compare the document-position profile of U+1076B against other frequent 'other' tokens to test whether periphery is a unique signature of this marker or generic to the 'other' class."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Target is the anonymous token TYPE defined only by t=='other' AND '\\U0001076b' in raw. Metric is pure document content-line index (li) within the inscription; no sign value, reading, phonetics, or meaning used. Null re-places line indices uniformly within each inscription, preserving marker count and L, so any enrichment is attributable to document position beyond within-inscription line geometry. Positive control is synthetic and stated as such. Verdict is mechanical from the frozen rule.",
+  "deviations": []
+}
