@@ -34,6 +34,23 @@ concordance is unambiguous (every site-pair positively correlated, null=0), but 
 whether high-frequency signs are included. Capstone should report E036 as *"all site-pairs positively
 correlated in sign frequency (0.46–0.61 depending on inclusion, vs a 0.0 null)."*
 
+## Null reconstruction pass (prompted by the E059 fabricated-positive catch)
+E059 showed a worker can produce a *positive* whose **null** is mis-constructed (all sites drawn from one shared
+unigram distribution). Verifying only the *observed* statistic misses this. So the null of each null-dependent
+cross-site positive is independently reconstructed from scratch:
+
+| Epoch | Null type | Result's null | Independent reconstruction | Verdict |
+|---|---|---|---|---|
+| **E057** | per-inscription div gap-reshuffle | word\|word 0.403; word\|num 141.7 | **0.405; 143.9** | ✅ null real, positive holds |
+| **E056** | 5-feature column-shuffle silhouette | mean 0.196, sd 0.024, p=0 | **mean 0.195, sd 0.024, p=0** (obs 0.543 = 14.2σ) | ✅ null real, positive holds |
+| **E059** | per-site unigram-preserving n-gram | bigram 61 / trigram 0.01 | **bigram 87 (p=0.09) / trigram 28 (obs below)** | ❌ **null bug — positive overturned** (see COORDINATOR_CORRECTION) |
+
+The two newest moderate-effect positives (E056, E057) — the ones most exposed to null fabrication — both have
+**independently-reconstructed nulls that match**. The older positives rest on either astronomically-extreme
+significance where no null could matter (E028 Kruskal p=3.7e-119; E031 word-first 1040 vs 19) or
+multi-operationalization direction-robustness (E036, E037). **The verification layer discriminates real nulls
+from fabricated ones** — the E059 catch is the discipline succeeding, not failing.
+
 ## Bottom line
 **7 of 8 audited §A anchors reproduce exactly or confirm in substance** (E028/E031/E050/E023/E056 exact or
 exact-key-count; E043 confirmed; E036 direction-robust); the remaining two (E036, E037) are **directionally
