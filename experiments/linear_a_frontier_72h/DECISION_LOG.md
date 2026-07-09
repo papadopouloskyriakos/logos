@@ -65,3 +65,13 @@
   morphogenesis. Consistent with the EPOCH-016 SBI prior. L2, LA not touched, no licence. Pre-gates the family:
   E092 (specificity vs baselines) next; E096 (frozen LA) only if a downstream epoch finds a Turing-specific
   advantage. Coordinator ran it directly (numpy RD/eigen experiment, not GLM token-labour). 5 successors.
+
+- EPOCH-092 BANKED (92 epochs). Turing-specificity vs generic graph clustering. VERDICT
+  GENERIC_GRAPH_CLUSTERING (TURING_NOT_NEEDED). Fairness gate: all 6 methods (Turing + spectral +
+  eigenmap-kmeans + eigenmap-GMM + Louvain + linear-diffusion) recover the planted-Turing PC 5/5 -> strong
+  baselines, not strawmen. On blinded LB a generic baseline matches/beats Turing on EVERY channel: role
+  linear-diffusion 0.798 > Turing 0.675; vowel Louvain 0.491 > Turing 0.453; consonant all ~chance. With
+  E091 (equal-diffusion ties Turing) this REFUTES the F11 central hypothesis: Turing morphogenesis is not
+  specifically needed. Consistent with EPOCH-016 (SBI). L2, LA untouched, no licence. E096 (frozen-LA
+  phonetic application) DE-AUTHORIZED (its calibration gate failed). E093 (LB->LA degradation surface,
+  reframed to the generic-best method) queued next as a distinct load-bearing question. 5 successors.

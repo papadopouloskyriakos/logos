@@ -2181,12 +2181,28 @@ epochs:
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS
     priority: IMMEDIATE
-    status: RESERVED_ACTIVE
+    status: BANKED
     gate: A
-    name: "Turing-specificity: is any LB recovery due to diffusion-driven morphogenesis vs generic graph clustering (spectral/SBM/community/GMM/GNN/linear-diffusion/equal-diffusion/reaction-only), search-adjusted?"
-    prereg: morphogenesis/PREREGISTRATION.md
-    reserved: 2026-07-09
-    substantive: pending
+    name: "Turing-specificity: is any blinded-LB class recovery due to diffusion-driven morphogenesis vs generic graph clustering (spectral/eigenmap-kmeans/eigenmap-GMM/Louvain/linear-diffusion/equal-diffusion/reaction-only), best-of-view?"
+    plan_hash: "16b9f7b4b2007ac2f59f8f05400b50e8fbde95ad3ac49884f4b0ded4550becfd"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (morphogenesis/scripts/e092_specificity.py; frozen copy + rd/graphs/evaluate in the epoch dir). sklearn SpectralClustering/GMM + networkx Louvain baselines. NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "FAIRNESS GATE verified: all 6 methods (Turing + spectral + eigenmap-kmeans + eigenmap-GMM + Louvain + linear-diffusion) recover the planted-Turing block PC 5/5 -> the generic baselines are STRONG, not strawmen, so 'Turing does not beat them' is a real result. Best-of-view charged equally to every method (same view multiplicity). Same frozen k per truth key for all methods. Coordinator authored + ran the full panel."
+    positive_control: "PASSED for the WHOLE PANEL (5/5 each): turing, spectral, eigenmap_kmeans, eigenmap_gmm, louvain, linear_diffusion all recover the planted k=3 blocks. This is the load-bearing fairness check -- it certifies the baselines are genuine detectors, making the GENERIC verdict meaningful."
+    verdict: "GENERIC_GRAPH_CLUSTERING (TURING_NOT_NEEDED) (mechanical) -- graph reaction-diffusion (Turing) morphogenesis is NOT specifically required on blinded Linear B: a generic graph-clustering baseline matches or beats Turing on EVERY channel. role: linear-diffusion 0.798 > Turing 0.675 (eigenmap-kmeans 0.636 ~ Turing); vowel: Louvain 0.491 and eigenmap-kmeans 0.490 > Turing 0.453; consonant: linear-diffusion 0.200 ~ Turing 0.194 (all ~chance, 8-class). All 6 methods pass the planted PC 5/5, so the baselines are fair. The diffusion-driven Turing instability confers no recovery advantage over generic spectral/community/heat-kernel clustering. L2, opaque IDs, LA not touched, no licence. Directly consistent with EPOCH-016 (SBI: raw-cosine spectral ties/beats fancy methods) and EPOCH-091 (equal-diffusion ties full Turing). Together E091+E092 REFUTE the F11 central hypothesis (that a Turing mechanism recovers linguistic structure better than generic clustering)."
+    numbers: {pc_recovered_all: "5/5 for turing,spectral,eigenmap_kmeans,eigenmap_gmm,louvain,linear_diffusion", role_turing: 0.675, role_best_generic: 0.798, role_best_generic_method: "linear_diffusion", vowel_turing: 0.453, vowel_best_generic: 0.491, vowel_best_generic_method: "louvain", consonant_turing: 0.194, consonant_best_generic: 0.200, n_generic_baselines: 5, n_nodes: 88, n_views: 4}
+    layer: L2
+    licences_changed: none
+    la_touched: false
+    dichotomy_side: BOUNDED_NEGATIVE
+    scope: "Specificity NULL on blinded LINEAR B (LA not touched). With E091 (equal-diffusion ties Turing) this pair REFUTES the F11 central hypothesis: Turing morphogenesis is not needed; generic graph clustering does the same or better, and even that only recovers trivial degree-driven role structure + weak vowel (best 0.49) + chance consonant. Increments the bounded-negative bucket (21 -> 22). CLOSES the core specificity question of the family. Downstream: E093 (LB->LA degradation surface) + E094 (segmentation) + E095 (geographic) remain DISTINCT questions (different graphs/tasks) but must now be run with the generic-best method as the reference, not Turing; E096 (frozen LA phonetic-class application) is NOT reached -- it was gated on a Turing-specific positive that E092 refutes."
+    committed_prediction: "modal GENERIC_GRAPH_CLUSTERING per the EPOCH-016 SBI + EPOCH-091 priors; a TURING_SPECIFIC_SUPPORTED would have been the surprise. OUTCOME = GENERIC_GRAPH_CLUSTERING, as predicted: no generic baseline is beaten by Turing on any channel. Prediction earned."
+    deviations: ["SBM/GNN from the parent prereg's baseline menu were substituted by Louvain community detection (networkx) + eigenmap-GMM + linear-diffusion heat-kernel -- graph_tool/igraph unavailable; the substitutes are fair (all pass the planted PC 5/5) and span the same generic-clustering space. Documented, not silent.", "DĀMOS LB licensed-derived; scripts committed, no raw corpus redistributed."]
+    non_circular: "Blinded (opaque sign IDs; phonetic values only in held-out truth). Every method uses identical graphs, identical k, identical best-of-view accounting. The fairness PC certifies the baselines are real detectors (all 5/5 on planted blocks). Turing is compared to STRONG baselines, so the NULL is not a strawman win. Coordinator built + ran the full panel + the PC from scratch."
+    architecture_note: "Second TURING_MORPHOGENESIS epoch. The formal specificity gate: with a fair strong-baseline panel (all recover the planted PC), Turing morphogenesis provides NO advantage over generic graph clustering on blinded LB. E091 (mechanism ablation: equal-diffusion ties Turing) + E092 (baseline panel: generic ties/beats Turing) jointly REFUTE the F11 central hypothesis. The disciplined consequence: E096 (frozen-LA phonetic-class application) is de-authorized (its gate -- a Turing-specific calibration positive -- failed). E093/E094/E095 ask genuinely DISTINCT questions (degradation surface, segmentation, regional structure) and are worth running as generic-graph-method studies, NOT as Turing-specific tests. Finalization remains BLOCKED (clock, not count)."
+    artifacts: [epochs/EPOCH-092/prereg.md, epochs/EPOCH-092/plan_hash.txt, epochs/EPOCH-092/e092_specificity.py, epochs/EPOCH-092/rd.py, epochs/EPOCH-092/graphs.py, epochs/EPOCH-092/evaluate.py, epochs/EPOCH-092/result.json, reports/EPOCH092_REPORT.md]
+    successors_spawned: 5
+    substantive: true
   - epoch_id: EPOCH-093
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS

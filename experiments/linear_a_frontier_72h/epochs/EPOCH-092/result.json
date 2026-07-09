@@ -1,0 +1,204 @@
+{
+ "positive_control": {
+  "mean_ari": {
+   "turing": 0.5871929755345506,
+   "equal_diffusion": -0.002557937519181327,
+   "reaction_only": 0.006348017289628009,
+   "spectral": 1.0,
+   "eigenmap_kmeans": 0.9232910471107253,
+   "eigenmap_gmm": 1.0,
+   "louvain": 1.0,
+   "linear_diffusion": 1.0
+  },
+  "n_recovered": {
+   "turing": 5,
+   "equal_diffusion": 0,
+   "reaction_only": 0,
+   "spectral": 5,
+   "eigenmap_kmeans": 5,
+   "eigenmap_gmm": 5,
+   "louvain": 5,
+   "linear_diffusion": 5
+  }
+ },
+ "best_of_view": {
+  "role": {
+   "turing": {
+    "f1": 0.6748979195022361,
+    "view": "MULTILAYER",
+    "mean_f1": 0.5404191770825596
+   },
+   "equal_diffusion": {
+    "f1": 0.8313430635412059,
+    "view": "FORMULA",
+    "mean_f1": 0.757191548756642
+   },
+   "reaction_only": {
+    "f1": 0.49425287356321834,
+    "view": "POSITION",
+    "mean_f1": 0.49425287356321834
+   },
+   "spectral": {
+    "f1": 0.6180555555555556,
+    "view": "FORMULA",
+    "mean_f1": 0.5127775401842345
+   },
+   "eigenmap_kmeans": {
+    "f1": 0.6362081254454739,
+    "view": "SUBSTITUTION",
+    "mean_f1": 0.5322751403652102
+   },
+   "eigenmap_gmm": {
+    "f1": 0.553817180935825,
+    "view": "SUBSTITUTION",
+    "mean_f1": 0.490311798300401
+   },
+   "louvain": {
+    "f1": 0.40572289156626506,
+    "view": "FORMULA",
+    "mean_f1": 0.3340374609807605
+   },
+   "linear_diffusion": {
+    "f1": 0.7977011494252874,
+    "view": "FORMULA",
+    "mean_f1": 0.7278920551984909
+   }
+  },
+  "vowel": {
+   "turing": {
+    "f1": 0.4526705102677643,
+    "view": "SUBSTITUTION",
+    "mean_f1": 0.3083136234853038
+   },
+   "equal_diffusion": {
+    "f1": 0.3494284484121145,
+    "view": "MULTILAYER",
+    "mean_f1": 0.2800489309030744
+   },
+   "reaction_only": {
+    "f1": 0.2464896214896215,
+    "view": "POSITION",
+    "mean_f1": 0.2464896214896215
+   },
+   "spectral": {
+    "f1": 0.39595735874805643,
+    "view": "MULTILAYER",
+    "mean_f1": 0.2845385927215613
+   },
+   "eigenmap_kmeans": {
+    "f1": 0.48955465991800196,
+    "view": "MULTILAYER",
+    "mean_f1": 0.3621284927634516
+   },
+   "eigenmap_gmm": {
+    "f1": 0.436676134781398,
+    "view": "MULTILAYER",
+    "mean_f1": 0.36837215624110997
+   },
+   "louvain": {
+    "f1": 0.490721549165572,
+    "view": "SUBSTITUTION",
+    "mean_f1": 0.4292235454616521
+   },
+   "linear_diffusion": {
+    "f1": 0.37197868797868805,
+    "view": "POSITION",
+    "mean_f1": 0.2990366594551516
+   }
+  },
+  "consonant": {
+   "turing": {
+    "f1": 0.19353351327035537,
+    "view": "MULTILAYER",
+    "mean_f1": 0.17034306729116672
+   },
+   "equal_diffusion": {
+    "f1": 0.19568702902036236,
+    "view": "FORMULA",
+    "mean_f1": 0.17898873775099267
+   },
+   "reaction_only": {
+    "f1": 0.1267093854813153,
+    "view": "POSITION",
+    "mean_f1": 0.1267093854813153
+   },
+   "spectral": {
+    "f1": 0.16929128376496796,
+    "view": "SUBSTITUTION",
+    "mean_f1": 0.15520837139774188
+   },
+   "eigenmap_kmeans": {
+    "f1": 0.16356737804106222,
+    "view": "SUBSTITUTION",
+    "mean_f1": 0.14168697444626238
+   },
+   "eigenmap_gmm": {
+    "f1": 0.14109460498349388,
+    "view": "FORMULA",
+    "mean_f1": 0.13243641192987599
+   },
+   "louvain": {
+    "f1": 0.10941134029369323,
+    "view": "MULTILAYER",
+    "mean_f1": 0.10375314244960787
+   },
+   "linear_diffusion": {
+    "f1": 0.19987849840791017,
+    "view": "FORMULA",
+    "mean_f1": 0.1769205581092836
+   }
+  }
+ },
+ "summary": {
+  "vowel": {
+   "turing_f1": 0.4526705102677643,
+   "best_generic_f1": 0.490721549165572,
+   "best_generic": "louvain",
+   "turing_minus_generic": -0.0380510388978077
+  },
+  "role": {
+   "turing_f1": 0.6748979195022361,
+   "best_generic_f1": 0.7977011494252874,
+   "best_generic": "linear_diffusion",
+   "turing_minus_generic": -0.12280322992305126
+  }
+ },
+ "verdict": "GENERIC_GRAPH_CLUSTERING",
+ "rationale": "TURING_NOT_NEEDED: generic graph clustering matches or beats Turing on blinded LB. Vowel: Turing 0.453 vs best generic 0.491 (louvain); role: Turing 0.675 vs generic 0.798. The diffusion-driven instability is not specifically required -- consistent with EPOCH-016 (SBI) and EPOCH-091 (equal-diffusion ties Turing).",
+ "config": {
+  "methods": [
+   "turing",
+   "equal_diffusion",
+   "reaction_only",
+   "spectral",
+   "eigenmap_kmeans",
+   "eigenmap_gmm",
+   "louvain",
+   "linear_diffusion"
+  ],
+  "generic_baselines": [
+   "spectral",
+   "eigenmap_kmeans",
+   "eigenmap_gmm",
+   "louvain",
+   "linear_diffusion"
+  ],
+  "k_for": {
+   "role": 2,
+   "vowel": 5,
+   "consonant": 8
+  }
+ },
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": false,
+ "runtime_sec": 28.9,
+ "plan_hash": "16b9f7b4b2007ac2f59f8f05400b50e8fbde95ad3ac49884f4b0ded4550becfd",
+ "epoch_id": "EPOCH-092",
+ "code_manifest": {
+  "e092_specificity.py": "8820e1aa82431ec7",
+  "rd.py": "83e8aceb138d579f",
+  "graphs.py": "4da0747b23dc21cd",
+  "evaluate.py": "19121219000b01fd"
+ }
+}
