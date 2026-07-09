@@ -1,0 +1,9 @@
+{
+ "blocked": "E204_metrology_arithmetic_leg",
+ "classification": "BLOCKED_DATA",
+ "reason": "accessible corpus carries 12 fraction-sign tokens / 10 docs / 1 multi-fraction doc; arithmetic constraint system unpowered; seal-side extraction unreadable under 0.6 until E204 freeze exists",
+ "missing_input": "per-document fraction-sign sequences with quantities (GORILA klasmatogram apparatus, not ingested into silver)",
+ "unblock_path": "silver ingestion task (L0/L1 measurement); no licence barrier",
+ "seal_touched": false,
+ "emitted": "2026-07-10"
+}
