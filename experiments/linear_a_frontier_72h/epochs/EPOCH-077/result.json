@@ -1,0 +1,59 @@
+{
+  "task_id": "EPOCH-077",
+  "method": "Within-document position-shuffle null test of glyph-size initial-prominence (L2 structural). Per doc (>=4 non-divider bbox glyphs): log-area per glyph z-scored within the doc. PRIMARY D_init = mean over docs of (z-size of glyph 0) - (mean z-size of glyphs 1..n-1). NULL: permute each doc's glyph order preserving its size multiset, recompute D_init (4000 draws); p_init = frac(null D_init >= observed) one-sided initial-larger. SECONDARY rho = mean within-doc Pearson corr of z-size with position index. Cross-site: per site (>=15 docs) recompute D_init + null + p_init + direction. Positive control synthetic (detect planted prominence; false-positive on position-independent size).",
+  "result": "PC PASSED (power_est=1.0, false_pos_rate=0.04, synthetic). Global D_init = -0.0569 (initial glyph NOT larger; slightly smaller), null mean ~0.0004, p_init = 0.814 (one-sided initial-larger) -> global NOT significant. rho(pos,size) = -0.0414 (weak negative context). Per-site directions are INCONSISTENT: Haghia Triada D_init=+0.148 p=0.0478 SIG initial-larger; Khania -0.395 p=0.99; Zakros -0.039 p=0.582; Phaistos -0.344 p=0.899; Knossos -0.188 p=0.755 (all smaller-direction, n.s.). 1 of 5 sites significant initial-larger. Verdict: SITE_LOCAL (>=1 site significant but not >=2 same-direction; global not significant).",
+  "verdict": "SPATIAL_SIZE_POSITION_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "n_docs": 322,
+      "D_init": -0.0569,
+      "D_init_null": 0.00036,
+      "p_init": 0.814,
+      "rho_pos_size": -0.04144
+    },
+    "per_site": [
+      {"site": "Haghia Triada", "n_docs": 169, "D_init": 0.1482, "p_init": 0.0478, "sig": true, "direction": "larger"},
+      {"site": "Khania", "n_docs": 52, "D_init": -0.3951, "p_init": 0.99, "sig": false, "direction": "smaller"},
+      {"site": "Zakros", "n_docs": 28, "D_init": -0.0388, "p_init": 0.582, "sig": false, "direction": "smaller"},
+      {"site": "Phaistos", "n_docs": 20, "D_init": -0.3443, "p_init": 0.899, "sig": false, "direction": "smaller"},
+      {"site": "Knossos", "n_docs": 19, "D_init": -0.1875, "p_init": 0.755, "sig": false, "direction": "smaller"}
+    ],
+    "cross_site": {
+      "n_sites_testable": 5,
+      "n_sites_sig_initial_larger": 1
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 1.0,
+      "power_est": 1.0,
+      "false_pos_rate": 0.04,
+      "pc_is_synthetic": true,
+      "effect_planted": 0.35
+    },
+    "null_draws": 4000,
+    "rho_context": "mean within-doc Pearson(z-size, position) = -0.0414 (weak; early glyphs marginally larger on a monotonic trend, but global D_init is negative and n.s.)"
+  },
+  "key_findings": [
+    "Glyph size does NOT mark document-initial prominence CROSS-SITE: global D_init = -0.0569 (initial glyph slightly SMALLER, not larger), p_init = 0.814 one-sided initial-larger -> not significant. The coordinator prior (no global initial-prominence) is confirmed.",
+    "The positional size effect is SITE-LOCAL and direction-INCONSISTENT: only Haghia Triada shows a significant initial-larger glyph (D_init=+0.148, p=0.0478), while Khania, Phaistos, Knossos trend initial-SMALLER (n.s.) and Zakros is flat. 1 of 5 sites significant same-direction -> not a shared convention.",
+    "Positive control PASSED (synthetic): planted initial-prominence detected with power_est=1.0 (25/25 replicates), false-positive rate 0.04 on position-independent size (<=0.10). The null is well-calibrated (E[D_init]~0.0004 under shuffle), so the negative global result is a well-powered bounded negative, not a machinery failure.",
+    "Secondary rho(pos,size) = -0.0414 (weak negative): a faint monotonic tendency for earlier glyphs to be marginally larger, but it does not survive as a cross-site initial-prominence signal and is dominated by site scatter.",
+    "Consistent with E076: normalized glyph SIZE is primarily a per-SIGN convention; positional/heading use of size is at most a local Haghia Triada habit, not a pan-Cretan spatial marker (contrast the campaign's positional findings E022/E062/E069 which were about sign identity and word length, not glyph size)."
+  ],
+  "successor_hypotheses": [
+    "E078: Is the Haghia Triada initial-larger effect driven by a specific sign class (e.g. logograms/ideograms vs syllabograms) sitting at document-initial position, rather than by size per se? (deconfound sign-identity from position at HT.)",
+    "E079: Does glyph size mark position at a FINER granularity than document-initial — e.g. line-initial vs line-internal, or entry/clause-initial — using the bbox x-coordinate to segment lines, which the order-index metric here cannot see?",
+    "E080: Cross-check the negative global result against a per-SIGN conditional model: controlling for which sign occupies position 0 (sign-frequency confound), does any residual positional size effect remain? Tests whether HT's effect is a sign-composition artifact.",
+    "E081: Test whether glyph size marks PERIPHERY (first OR last glyph, or document margins via bbox coordinate) rather than strictly initial — a bidirectional prominence marker, paralleling E062 document-peripheral markers.",
+    "E082: Replicate the position-shuffle test on the secondary rho (monotonic size-by-position trend) with its own one-sided null; the weak global rho=-0.041 may or may not survive a dedicated test and would clarify whether any positional size gradient exists below the initial-prominence signal.",
+    "E083: Compare initial-glyph size against a per-sign baseline (E076's per-sign size convention): is the HT initial glyph larger than its OWN sign's typical size, or just a large sign that happens to sit first? Separates positional prominence from sign-selection."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "glyph size = within-document z-scored log bbox-area (removes per-photo scale); position = glyph index in transcription order (0=first). size and position are independent measurements. The within-doc position-shuffle null permutes which glyph sits at which position while preserving each doc's size multiset exactly, so any position->size effect is beyond chance; under it E[D_init]~0 (verified: null mean 0.0004). Signs are opaque catalog IDs (e.g. AB59); no phonetic value, reading, or meaning used. L2 only.",
+  "deviations": [
+    "Used 4000 null draws (>=2000 required) for the global and per-site tests; PC used 1000 draws per replicate over 25 replicates (>=20 required).",
+    "PC calibration effect planted = 0.35 z-units (a modest, clearly-detectable prominence) to verify the machinery can flag a real initial-prominence signal at the observed doc/size scale; this is a synthetic calibration choice, not derived from the data.",
+    "Verdict rule has a documented overlap between SITE_LOCAL and NO_POSITION when exactly 1 site is significant and global is not; resolved by the prereg's listed precedence (SITE_LOCAL condition 'global sig OR >=1 site sig' is checked before NO_POSITION), implemented faithfully in machinery.verdict."
+  ]
+}
