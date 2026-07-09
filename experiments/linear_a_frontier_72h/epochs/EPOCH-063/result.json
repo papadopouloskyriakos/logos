@@ -1,0 +1,65 @@
+{
+  "task_id": "EPOCH-063",
+  "method": "Document content-line position-differentiation test for two anonymous line-isolated token TYPES: M1=U+1076B ('\\U0001076b' in raw) and M2=U+2014 em-dash ('—' in raw), both t=='other'. Content-lines = maximal runs of content tokens (word/num/other) bounded by nl/START/END (div does not flush). Testable inscriptions: L>=3 content-lines AND >=1 target marker. H1: M2 peripheral rate vs within-inscription line-shuffle null (re-place each M2 marker's li uniformly in {0..L-1}, preserving count+L; 2000 draws); p_deplete=frac(null_periph<=obs) (M2 interior = peripheral BELOW null). H2: contrast d=periph(M1)-periph(M2); null = pool all M1+M2 (li,L) records, relabel which are M1 vs M2 preserving counts, recompute d (2000 draws); perm p=frac(null d>=obs d). M1 periphery is E062-established (0.691, cross-site 6/6) and is NOT re-litigated. PC synthetic (detect + false-positive). Layer L2: anonymous token TYPES by document content-line index only; no sign value, no reading, no phonetics/meaning.",
+  "result": "The standalone-marker inventory IS position-differentiated. M1 (U+1076B) is document-PERIPHERAL (0.691, E062); M2 (em-dash U+2014) is document-INTERIOR: peripheral rate 0.115 vs line-shuffle null 0.298 (p_deplete=0.0005; M2 is interior-enriched, 88.5% interior, 0% heading). The contrast d=periph(M1)-periph(M2)=0.576 is highly significant (relabel perm p=0.0). PC PASSED (synthetic: detect flagged, false-positive rate 0.0 over 20 draws). The two line-isolated tokens occupy COMPLEMENTARY structural niches: M1 brackets document ENDS (heading/colophon), M2 marks the INTERIOR. CAVEAT: M2 is HT-anchored (only Haghia Triada has >=10 M2 markers, n=21; all other sites <10), so M2's cross-site robustness is NOT certified — the M2 leg is HT-anchored + global. M2 (em-dash) MAY be a transcription ruling/divider mark rather than an inscribed syllabogram; the complementary-position finding is robust either way (inscribed interior sign OR ruled interior divider).",
+  "verdict": "MARKER_SYSTEM_POSITION_DIFFERENTIATED",
+  "numbers": {
+    "m1": {"n": 440, "peripheral": 0.690909091},
+    "m2": {
+      "n": 52,
+      "peripheral": 0.115384615,
+      "peripheral_null_mean": 0.297778846,
+      "p_deplete": 0.0005,
+      "heading": 0.0,
+      "interior": 0.884615385,
+      "first": 0,
+      "interior_ct": 46,
+      "last": 6,
+      "expected_2_over_L": 0.297250849,
+      "heading_null_mean": 0.147913462,
+      "heading_p_deplete": 0.0
+    },
+    "contrast": {"d_periph": 0.575524476, "perm_p": 0.0, "null_mean": -0.001457343},
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_ok": true,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true,
+      "n_fp_draws": 20,
+      "pc_detect_m2_p_deplete": 0.0,
+      "pc_detect_d_p": 0.0
+    },
+    "m2_cross_site": {
+      "n_sites_ge10": 1,
+      "note": "HT-anchored; cross-site NOT certified",
+      "per_site": [
+        {"site": "Haghia Triada", "n": 21, "periph_obs": 0.0, "null_mean": 0.276857143, "p_deplete": 0.0}
+      ],
+      "m2_per_site_all": {
+        "Haghia Triada": 21, "Palaikastro": 6, "Tylissos": 6, "Khania": 5, "Phaistos": 5,
+        "Zakros": 3, "Milos": 2, "Petras": 2, "Knossos": 1, "Arkhalkhori": 1
+      }
+    }
+  },
+  "key_findings": [
+    "M2 (em-dash U+2014) is document-INTERIOR, not peripheral: peripheral rate 0.115 vs line-shuffle null 0.298 (p_deplete=0.0005); 88.5% of M2 markers sit on interior content-lines (46/52), 0% on the heading line, only 6 on the last line.",
+    "The two line-isolated tokens are positionally COMPLEMENTARY: M1 (U+1076B) brackets document ENDS (periph 0.691, E062) while M2 (em-dash) marks the INTERIOR (periph 0.115). Contrast d=periph(M1)-periph(M2)=0.576, relabel-permutation p=0.0.",
+    "M2 is NEVER a heading marker: heading rate 0.000 vs null 0.148 (p_deplete=0.0) — M2 is excluded from the first content-line, the opposite of M1's heading enrichment (E062: 0.286).",
+    "PC PASSED (synthetic): the machinery DETECTS a planted differentiated corpus (M2 depleted p=0.0, contrast p=0.0) and does NOT flag a planted redundant corpus (false-positive rate 0.0 over 20 draws).",
+    "M2 is HT-anchored: only Haghia Triada has >=10 M2 markers (n=21, periph 0.000, p_deplete=0.0); all 9 other sites have <10. M2's cross-site robustness is NOT certified — the M2 leg is HT-anchored + global, not cross-site-certified (honest scope)."
+  ],
+  "successor_hypotheses": [
+    "E064: Is M2 (em-dash) line-isolated at L1 (stands alone on its content-line), confirming it is a true standalone interior marker rather than co-occurring with word/num tokens? (Mirrors E061 for M1.)",
+    "E065: Does M2's interior position correlate with a SECTION/ENTRY boundary — i.e., does the content-line BEFORE or AFTER an M2 line show a numeric-reset or topic-shift signature (L2/L3)?",
+    "E066: Are M1 and M2 MUTUALLY EXCLUSIVE within an inscription (a document uses either the peripheral marker OR the interior marker system), or do they CO-OCCUR (a single document deploying both niches)? Test co-occurrence vs chance.",
+    "E067: Does the M2 interior niche replicate at Haghia Triada across SUB-CORPORA (e.g., by support type Tablet vs other) to begin building within-site robustness for the HT-anchored M2 leg?",
+    "E068: Is there a THIRD line-isolated 'other' token (e.g., '*304', n=23) occupying yet another document niche, extending the marker SYSTEM beyond two roles? Test its document-position profile vs M1/M2.",
+    "E069: Does the M1-peripheral / M2-interior differentiation hold when 'peripheral' is refined to heading-only vs colophon-only (M1 colophon-strong per E062; is M2 mid-document or pre-colophon)?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Targets are anonymous token TYPES selected by raw substring ('\\U0001076b' for M1, '—' for M2) with t=='other'. The metric uses ONLY document content-line index (li in {0..L-1}) computed from the ordered stream; no sign value, no reading, no phonetics, no meaning is used anywhere. Nulls are purely structural (within-inscription uniform line-shuffle for H1; pooled (li,L) relabel for H2). M1's periphery is cited from E062, not recomputed for verdict purposes (only reported for the contrast, which is itself a structural relabel). PC is SYNTHETIC (stated plainly). Layer L2 throughout.",
+  "deviations": [
+    "machinery.py self-check had a variable-shadowing bug in the false-positive loop (the FP loop reused the name 'd_p', overwriting the DETECT value reported in the PC dict); fixed to 'fp_d_p'. This is a reporting bug in the self-check only — the frozen metric, nulls, and verdict logic are unchanged; the fix was applied and PC re-run cleanly (PASSED). The plan_hash was frozen against prereg.md only (per protocol: plan_hash = sha256 of prereg.md), so this machinery fix does not invalidate the frozen plan."
+  ]
+}
