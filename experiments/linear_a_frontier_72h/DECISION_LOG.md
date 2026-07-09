@@ -146,3 +146,13 @@
   transition. Mechanism-level confirmation of underdetermination (determined-but-wrong landscape, sharper than
   'too little data'); consistent with E091/E092 + anchor-lattice. NO value from any minimum. L2. bounded-neg
   25->26. E099 (causal source separation) next. Finalization BLOCKED (2026-07-11T03:20Z).
+
+- EPOCH-099 BANKED (98 epochs). F12 #3: causal source separation + confound disentanglement. VERDICT
+  CAUSAL_INVARIANT_STRUCTURE_SUPPORTED (blinded LB; LB-calibration positive, NOT an LA claim). Controls
+  validate both ways: PC (linguistic indep of confound) LOFO 0.996~within 1.000; NEG (label=freq band) LOFO
+  0.218~chance (collapses OOD). On LB the vowel signal survives BOTH interventions: leave-one-frequency-band-out
+  F1 0.437 (>within 0.388, >>chance 0.20) AND deconfounded-LOFO 0.467; freq component separable (corr 0.429).
+  => weak vowel structure is FREQUENCY-INVARIANT LINGUISTIC, not a frequency artifact -- CORROBORATES+STRENGTHENS
+  E093. Scope: LA has NO vowel truth -> LA invariance NOT tested; exports confound-adjusted LA embedding to E102,
+  no LA reading. First F12 non-negative (vs E097/E098 LA-transfer-negatives), but LB-calibration positive not LA
+  positive. qualification bucket 5->6. L2, no values. E100 (TDA) next. Finalization BLOCKED (2026-07-11T03:20Z).

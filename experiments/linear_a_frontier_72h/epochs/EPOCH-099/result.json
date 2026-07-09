@@ -1,0 +1,46 @@
+{
+ "positive_control": {
+  "lofo_f1": 0.9958214624881291,
+  "within_f1": 1.0
+ },
+ "negative_control": {
+  "lofo_f1": 0.21799745650519642,
+  "within_f1": 1.0
+ },
+ "pc_detects": true,
+ "linear_b": {
+  "within_band_f1": 0.38818070818070816,
+  "lofo_f1": 0.43677877677877675,
+  "deconfounded_lofo_f1": 0.4667943167943167,
+  "max_component_freq_corr": 0.4291847598813214
+ },
+ "linear_a": {
+  "n_signs": 79,
+  "note": "LA has no vowel ground truth; invariance is validated on LB and only the (confound-adjusted) embedding is exported for E102. No LA linguistic recovery is claimed here (L2)."
+ },
+ "config": {
+  "methods": [
+   "pca",
+   "ica",
+   "nmf"
+  ],
+  "k_components": 8,
+  "target": "vowel",
+  "nuisance": "log-frequency",
+  "interventions": [
+   "freq-band-out",
+   "deconfound-residual"
+  ]
+ },
+ "verdict": "CAUSAL_INVARIANT_STRUCTURE_SUPPORTED",
+ "rationale": "The vowel-class signal survives BOTH nuisance interventions on blinded LB: leave-one-frequency-band-out F1 0.437 (vs within-band 0.388, chance 0.200) AND deconfounded (frequency-residualized) LOFO F1 0.467 -- a frequency-INVARIANT linguistic structure, not a frequency artifact. WEAK in absolute terms; L2, no phonetic values. The confound-adjusted embedding is exported to E102.",
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 4.1,
+ "plan_hash": "71c147b73a5daed8aaf2ef9104ccf3c2e182d58ea926ba6a20264377060b155e",
+ "epoch_id": "EPOCH-099",
+ "code_manifest": {
+  "e099_causal.py": "89940327f3a8bcad"
+ }
+}
