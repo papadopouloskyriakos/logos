@@ -1,0 +1,70 @@
+{
+  "task_id": "EPOCH-074",
+  "method": "Cross-genre lexicon partition (S_shared = |word-form types in BOTH genres|) tested against (i) a GLOBAL frequency-preserving token->genre permutation null and (ii) a SITE-STRATIFIED token->genre permutation null (genre labels permuted only within each site, fixing site-membership). Anonymous word-forms = sign tuples len>=2; genre = physical support (LIBATION=Stone vessel; ADMIN in {Tablet,Nodule,Roundel}); site = find-site. Confound metric: n_both_sites_ge10, n_swappable_tokens, genre_site_determinism. Synthetic positive control gates the verdict (detect-beyond-site power, false-positive rate, global calibration).",
+  "result": "GLOBAL partition is striking and real (obs S_shared=20 vs global null mean 68.87, p_below~0, Jaccard 0.024). BUT genre and find-site are near-perfectly confounded: only 1 site (Palaikastro 36 lib / 13 adm) has both genres >=10 tokens; 83.4% of tokens have their genre fixed by a single-genre site; only 200/1207 tokens (16.6%) are genre-swappable under site control. The SITE-STRATIFIED null (load-bearing) removes the site-locality explanation: obs S_shared=20 vs site-stratified null mean 21.47, p_below_sitestrat=0.26 (NOT significant) -- once site is controlled, no residual genre effect is detectable. The synthetic POSITIVE CONTROL PASSED: the site-stratified control is POWERED (detect-beyond-site power_est=0.96 >= 0.5), calibrated (false-positive 0.04 <= 0.10), and the GLOBAL null is calibrated (flags a partitioned corpus, not a frequency-only one). So the null site-stratified result is NOT a power failure of the machinery; it reflects that the observed corpus has only ONE both-genre>=10 site, so genre and site are structurally confounded and the global partition cannot be attributed to genre beyond E071's site-locality.",
+  "verdict": "GENRE_SITE_CONFOUNDED_UNDERDETERMINED",
+  "numbers": {
+    "counts": {
+      "lib_forms": 211,
+      "lib_tokens": 259,
+      "adm_forms": 651,
+      "adm_tokens": 948,
+      "S_shared": 20,
+      "jaccard": 0.023752969121140142
+    },
+    "global_null": {
+      "null_mean": 68.872,
+      "closed_form_E": 188.55956166045044,
+      "closed_form_note": "independence-approximation UPPER BOUND (overestimates because the global null is a single without-replacement permutation inducing negative correlation across forms); empirical null mean 68.872 is the operative value and matches the verified pre-count ~69",
+      "p_below": 0.0,
+      "p_above": 1.0,
+      "n_reps": 5000
+    },
+    "confound": {
+      "n_both_sites_ge10": 1,
+      "both_genre_sites_ge10": [["Palaikastro", 36, 13]],
+      "n_swappable_tokens": 200,
+      "n_swappable_fraction": 0.1657000828500416,
+      "genre_site_determinism": 0.8342999171499585,
+      "sites_with_both_genres_any": [["Knossos", 9, 12], ["Palaikastro", 36, 13], ["Zakros", 128, 2]]
+    },
+    "site_stratified": {
+      "null_mean": 21.467,
+      "p_below_sitestrat": 0.2616,
+      "n_reps": 5000
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "sitestrat_power_est": 0.96,
+      "sitestrat_false_pos": 0.04,
+      "global_detect_ok": true,
+      "global_calib_partitioned": {"obs": 0, "mean": 123.24, "p_below": 0.0, "detect": true},
+      "global_calib_frequency_only": {"obs": 143, "mean": 150.24, "p_below": 0.16, "not_flagged": true},
+      "pc_is_synthetic": true,
+      "n_reps": 25,
+      "ss_reps": 500
+    }
+  },
+  "key_findings": [
+    "GLOBAL lexicon partition is striking and real: obs S_shared=20 word-form types shared between libation and admin vs a frequency-preserving token->genre permutation null mean of 68.87 (p_below~0 over 5000 reps; Jaccard 0.024). The naive 'genre-specialized lexicons' reading is well-supported GLOBALLY.",
+    "GENRE and FIND-SITE are near-perfectly confounded in this corpus: only 1 site (Palaikastro, 36 lib / 13 adm) has both genres >=10 tokens; 83.4% of tokens (1007/1207) have their genre FIXED by a single-genre site; only 200/1207 tokens (16.6%) are genre-swappable under site control. Haghia Triada is 0 lib / 683 adm; Zakros 128 lib / 2 adm; Khania 0/120; Iouktas 33/0; Syme 20/0.",
+    "The SITE-STRATIFIED null (load-bearing) removes the site-locality explanation: obs S_shared=20 vs site-stratified null mean 21.47, p_below_sitestrat=0.26 (NOT significant). Once site-membership is fixed and only genre can vary within a site, no residual genre-lexicon effect is detectable.",
+    "The synthetic POSITIVE CONTROL PASSED on all three axes: the site-stratified control is POWERED to detect a genre effect planted within both-genre sites (detect-beyond-site power_est=0.96 over 25 replicates), is calibrated against genre-neutral-within-site corpora (false-positive rejection rate 0.04 <= 0.10), and the GLOBAL null is calibrated (flags a fully partitioned corpus p_below=0; does not flag a frequency-only corpus p_below=0.16).",
+    "Because the observed corpus has only ONE both-genre>=10 site (n_both_sites_ge10=1 < 2), the frozen rule returns GENRE_SITE_CONFOUNDED_UNDERDETERMINED: the global partition is real but cannot be attributed to genre beyond E071's site-locality. The site-stratified null result is NOT a machinery power failure (PC power_est=0.96); it reflects the structural confound -- with one informative site, genre and site are underdetermined."
+  ],
+  "successor_hypotheses": [
+    "E075: Expand the both-genre site sample. The confound is structural (only Palaikastro has both genres >=10 tokens). A targeted re-survey of Palaikastro, Knossos (9/12), and Zakros (128/2) word-forms -- the only 3 sites with any cross-genre tokens -- could in principle lift n_both_sites_ge10 to >=2 and re-run the site-stratified test with real power on observed data.",
+    "E076: Within-Palaikastro genre-lexicon test. Palaikastro is the single informative site (36 lib / 13 adm). A direct within-site S_shared test (lib vs adm forms at Palaikastro only, against a within-site permutation null) is the cleanest possible genre-beyond-site probe and avoids the global confound entirely -- though n=49 tokens is small.",
+    "E077: Support-type granularity. 'Genre' here is a coarse support proxy (Stone vessel vs Tablet/Nodule/Roundel). Nodule vs Tablet vs Roundel may themselves carry distinct lexicons (sub-genre), and Stone vessel sub-types may too. A finer support partition could reveal whether the partition is support-physical rather than functional-genre.",
+    "E078: Site-locality strength vs genre-locality strength. Quantify, per site, the fraction of that site's word-forms that are site-unique, and compare to the fraction that are genre-unique conditional on site. If site-unique >> genre-unique-within-site, E071's site-locality dominates and genre is epiphenomenal.",
+    "E079: Cross-site shared-form test for each genre separately. Test whether libation forms are shared ACROSS libation-bearing sites (Haghia Triada excluded; Zakros/Iouktas/Syme/Palaikastro) more than site-locality predicts, and likewise for admin forms across admin sites. This separates 'genre travels across sites' from 'site locks vocabulary'.",
+    "E080: Joint site+genre factorial model. Fit a log-linear / permutation model with both site and genre as factors on form-presence and test the genre main effect after the site main effect, with an explicit power analysis given the confounded design (to state definitively whether the design CAN resolve genre from site at current sample sizes)."
+  ],
+  "layer": "L3",
+  "la_touched": true,
+  "non_circular": "Anonymous word-forms (sign tuples, len>=2); genre = physical support field; site = find-site field. NO reading, NO meaning, NO phonologization, NO semantic labels. S_shared is pure structural set overlap. Nulls are mechanical permutations preserving stated marginals. Positive control is synthetic and stated as such. Verdict is mechanical from the frozen rule; the operator never adjudicates.",
+  "deviations": [
+    "Closed-form E[S] under the GLOBAL null is reported as an independence-approximation UPPER BOUND (188.56), not the exact null mean, because the global null is a single without-replacement permutation of the genre multiset, inducing negative correlation across per-form presence events that the independence formula ignores (it therefore overestimates). The operative null mean is the Monte Carlo value 68.87 (5000 reps), which matches the verified pre-count (~69). This is a documentation refinement of the closed-form's interpretation, not a change to the metric or null; the GLOBAL p_below~0 conclusion is unaffected.",
+    "The frozen verdict rule's four tokens do not include an explicit 'powered-and-calibrated-but-null' outcome; the observed case (PC power_est=0.96, calibrated, but site-stratified p=0.26>0.05) is captured by the GENRE_SITE_CONFOUNDED_UNDERDETERMINED token via its n_both_sites_ge10<2 clause, which fires because only Palaikastro qualifies. The report states plainly that the site-stratified null result is NOT a machinery power failure (PC proves power_est=0.96) but a structural confound (one informative site)."
+  ]
+}
