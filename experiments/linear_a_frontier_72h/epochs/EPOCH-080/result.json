@@ -1,0 +1,56 @@
+{
+  "task_id": "EPOCH-080",
+  "method": "Vertical row-to-row spacing (line pitch) regularity (ruled horizontal lines / page grid), cross-site. L2 only: signs are OPAQUE IDs; only POSITIONS (row y-positions) matter. A ROW = y-band (cluster glyphs by y-center within 0.6 x median glyph-height). Each row's y-position = MEDIAN y-center of its glyphs. Sort rows top-to-bottom; VERTICAL PITCH = consecutive row-position difference. Doc line-pitch-CV = sd/mean of the doc's vertical pitches. S_obs = MEDIAN doc line-pitch-CV over usable docs (>=6 non-divider glyphs AND >=3 rows). NULL = random row-allocation: replace the doc's vertical pitches with a uniform-Dirichlet / random-breakpoint composition summing to the SAME total row-span (preserves row count + column height, destroys only regularity), CONDITIONED on every pitch exceeding the row-clustering tolerance (so null rows would be recovered as distinct by the same clustering — keeps the null exchangeable with the observed, whose pitches all exceed tol by construction); recompute S = median doc line-pitch-CV; 2000 draws; one-sided perm p = frac(null S <= S_obs) (regular = observed MORE uniform / LOWER CV than random). CROSS-SITE: per site with >=15 usable docs, recompute S_site + own null + perm p. POSITIVE CONTROL (synthetic, gates verdict): DETECT evenly-spaced-rows docs (power_est over 25 reps) + FALSE-POSITIVE random-composition-rows docs (fp_rate over 25 reps). DISTINCT from E079 (horizontal within-row glyph pitch).",
+  "result": "Vertical LINE spacing (row-to-row pitch) is a deliberate ruled/regular layout, cross-site. Global S_obs (median doc line-pitch-CV)=0.118 vs random row-allocation null-median=0.354 (perm p=0.0 over 2000 draws; ratio=0.33) — observed vertical pitches are far MORE uniform than a random partition of the same column height. Replicates cross-site: significant regular in 3/3 testable sites — Haghia Triada (S=0.121 vs null 0.363, p=0.0), Khania (S=0.118 vs null 0.313, p=0.0), Zakros (S=0.108 vs null 0.351, p=0.0). PC PASSED (power_est=1.0, fp_rate=0.080): machinery detects evenly-spaced rows and is calibrated on random-composition rows. Combined with E079 (horizontal within-row glyph pitch regular, cross-site 3/3), this establishes a full 2D ruled grid.",
+  "verdict": "LINE_SPACING_REGULAR_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_docs": 197,
+      "S_obs": 0.1181,
+      "null_median": 0.3541,
+      "perm_p": 0.0,
+      "ratio": 0.3335
+    },
+    "per_site": [
+      {"site": "Haghia Triada", "n_docs": 124, "S_site": 0.1213, "null_median": 0.3632, "perm_p": 0.0, "sig_regular": true},
+      {"site": "Khania", "n_docs": 26, "S_site": 0.1177, "null_median": 0.3125, "perm_p": 0.0, "sig_regular": true},
+      {"site": "Zakros", "n_docs": 21, "S_site": 0.1081, "null_median": 0.3514, "perm_p": 0.0, "sig_regular": true},
+      {"site": "Phaistos", "n_docs": 7, "S_site": null, "null_median": null, "perm_p": null, "sig_regular": false},
+      {"site": "Arkhanes", "n_docs": 7, "S_site": null, "null_median": null, "perm_p": null, "sig_regular": false},
+      {"site": "Knossos", "n_docs": 4, "S_site": null, "null_median": null, "perm_p": null, "sig_regular": false}
+    ],
+    "cross_site": {
+      "n_sites_testable": 3,
+      "n_sites_sig_regular": 3
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "power_est": 1.0,
+      "false_pos_rate": 0.08,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "Vertical LINE spacing (row-to-row pitch) is REGULAR (ruled horizontal lines / page grid), far beyond a random row-allocation null: global median doc line-pitch-CV = 0.118 vs random-composition null-median 0.354 (perm p=0.0 over 2000 draws; ratio 0.33). Observed vertical pitches are roughly one-third as variable as a random partition of the same column height — lines are laid out at near-equal vertical intervals.",
+    "The null is conservative by construction: it preserves each doc's row count AND total column span (top-to-bottom extent), replacing only the regularity of line spacing with a uniform-Dirichlet / random-breakpoint composition conditioned on pitches exceeding the row-clustering tolerance (so the null is exchangeable with the observed given the clustering). So the low observed CV is genuinely about EVEN line spacing, not about column height or row count.",
+    "Cross-site replication is clean: significant regular line spacing in 3/3 testable sites (>=15 usable docs) — Haghia Triada (S=0.121, p=0.0), Khania (S=0.118, p=0.0), Zakros (S=0.108, p=0.0). All three are far below their site-specific nulls (~0.31-0.36) and remarkably consistent with each other (S_site 0.108-0.121).",
+    "Positive control (synthetic) PASSED: detect power_est=1.0 (evenly-spaced-rows synthetics always flagged), false-positive rate=0.080 (random-composition-rows synthetics flagged at nominal rate, <=0.10 over 25 reps). Self-check confirms the null gives higher CV than regular observed and ~equal CV on random-rows synthetic. NOTE: the null was made clustering-conditional (reject compositions with pitches below the 0.6x glyph-height row tolerance) because the unconditional null was not exchangeable with the observed — the clustering merges rows closer than tol, so the observed pitches all exceed tol, and the null must match that constraint to be calibrated (unconditional fp_rate was 0.72; conditional fp_rate 0.08).",
+    "This is the ORTHOGONAL partner to E079: E079 found HORIZONTAL within-row glyph pitch regular (CV 0.329 vs null 0.743, cross-site 3/3); E080 finds VERTICAL between-row line pitch regular (CV 0.118 vs null 0.354, cross-site 3/3). Together they establish a full 2D ruled GRID — both axes of the writing surface are laid out at regular intervals. The vertical regularity (CV 0.118) is even tighter than the horizontal (CV 0.329), suggesting line spacing is more rigidly controlled than within-line glyph spacing."
+  ],
+  "successor_hypotheses": [
+    "E081: Is the regular vertical LINE PITCH itself a shared cross-site constant (same absolute/normalized row height across sites), or does each site have its own characteristic line pitch — i.e., is the grid spacing shared or only the regularity?",
+    "E082: Does the 2D ruled grid (E079 horizontal + E080 vertical) imply a consistent CELL / MODULE size — is the product or ratio of horizontal pitch to vertical pitch a shared constant (square-ish vs rectangular cells)?",
+    "E083: Is the ruled grid present on TABLETS vs other supports (roundels, nodules) — is the 2D grid a tablet-specific affordance of the flat rectangular surface, or does it extend to curved/irregular supports?",
+    "E084: Does line-pitch regularity interact with line LENGTH — are longer lines (more glyphs) given the same vertical pitch as short lines, or does pitch stretch/compress with line content (evidence of pre-ruled lines vs content-driven spacing)?",
+    "E085: Is there a consistent TOP MARGIN / first-line offset across docs and sites (a third ruled-layout axis), complementing the within-line pitch (E079) and between-line pitch (E080) regularity?",
+    "E086: Does line-pitch regularity degrade at the BOTTOM of the document (last lines) — evidence of a pre-ruled full-page grid vs lines drawn incrementally as needed?",
+    "E087: Are docs with MORE rows (taller columns) more or less regular in line pitch than short docs — does the grid hold over long columns or drift?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "L2 only. Signs are OPAQUE catalog IDs (no value, no reading, no meaning used). The metric uses ONLY glyph POSITIONS (bbox x,y,w,h): rows are y-bands (cluster by y-center within 0.6 x median glyph-height), row y-positions are median y-centers, vertical pitches are consecutive row-position differences, doc line-pitch-CV is sd/mean of those pitches. The random row-allocation null preserves each doc's row count and total column span and destroys only the regularity of line spacing (conditioned on pitches exceeding the clustering tolerance for exchangeability), so a low observed CV cannot be explained by column height, row count, or sign identity — only by even line spacing. No decoder, no sign values, no semantic labels enter the statistic or the null. PC is synthetic (declared).",
+  "deviations": [
+    "NULL REFINEMENT (justified, pre-data, documented in machinery docstring + self-check): the preregistered random row-allocation null was made clustering-CONDITIONAL — null compositions are rejected if any pitch falls below the 0.6 x median-glyph-height row-clustering tolerance, because the observed pitches all exceed that tolerance by construction (the clustering merges any closer rows). The unconditional null was not exchangeable with the observed on random-rows synthetic (false-positive rate 0.72, far above 0.10), because random compositions frequently produce sub-tolerance pitches that the clustering would have merged, making the observed systematically more regular than an unconditional null. The conditional null restores exchangeability (fp_rate 0.080 <= 0.10) while preserving the prereg's intent (same row count, same column span, destroys only regularity). This refinement was made BEFORE running on real data, is documented in the machinery docstring and self-check, and does not change the metric, the corpus statistic, or the verdict rule. The verdict is robust to it: even the unconditional null gives perm_p=0.0 on the real data (S_obs 0.118 << unconditional null ~0.64), so the regularity finding does not depend on this refinement — only the PC calibration does."
+  ]
+}
