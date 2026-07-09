@@ -7,20 +7,20 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 84 distinct epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 90 distinct epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
 | **Load-bearing cross-site positives** | **33** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
-| Bounded negatives | 19 | Well-powered PC-passed tests returning informative *absence* (§B) |
-| Genre-/site-local structural findings | 5 | Well-powered PC-passed *detections* that landed on the site-local / genre-graded side of the dichotomy (§B) |
-| Positive-hardening / qualification | 3 | Robustness passes that *qualified* or *hardened* a positive without overturning it (`E075` on `E072`, §A7; `E083` qualifying `E079`, `E084` hardening `E080`, §A8) |
+| Bounded negatives | 20 | Well-powered PC-passed tests returning informative *absence* (§B; `E088` added — the header size↔count tradeoff is **not** a fixed ink budget) |
+| Genre-/site-local structural findings | 9 | Well-powered PC-passed *detections* that landed on the site-local / genre-graded side of the dichotomy (§B; +`E085` heading-size, `E086` header-length, `E087` HT register-dependence, `E089` header/doc width-constraint) |
+| Positive-hardening / qualification | 4 | Robustness passes that *qualified* or *hardened* a positive without overturning it (`E075` on `E072`, §A7; `E083` qualifying `E079`, `E084` hardening `E080`, `E090` qualifying `E089` to doc-wide, §A8) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
-| Machinery-uninformative | 9 | Instrument failed its own calibration → **no LA inference drawn** (§C; `E082` added — the pitch metric is uncalibratable at glyph level) |
+| Machinery-uninformative | 9 | Instrument failed its own calibration → **no LA inference drawn** (§C; `E082` — the pitch metric is uncalibratable at glyph level) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*33 positives / 19 bounded-negatives + 5 genre-/site-local findings / 3 positive-hardening-or-qualification / 15 no-inference
+*33 positives / 20 bounded-negatives + 9 genre-/site-local findings / 4 positive-hardening-or-qualification / 15 no-inference
 (no-power + underpowered + machinery-uninf) / 9 setup. Zero of the 33 positives rises above L2/L3. The honest
 denominator is on-screen: this is a structural map, not a reading. Three positives carry breadth caveats, flagged
 in §A: `E067` depth-2 concentration is global + only partial cross-site (2/6 sites); `E072` libation-formula
@@ -28,15 +28,19 @@ canonical order is real but **narrow** (hardened by `E075`: effective-n 8 inscri
 `E078` glyph-size economy replicates in 2/5 sites (the powered ones) + corpus-wide + within-class. **Four** of the
 33 positives are on a GENUINELY NEW data modality — SigLA per-glyph BOUNDING BOXES (§A8: glyph size E076,
 size-economy E078, horizontal glyph-spacing E079, vertical line-spacing E080), untouched by the first 75
-linear-token epochs; a fifth spatial test (`E081` left-margin justification) landed **site-local** (§B) — the
-spatial modality has its OWN shared-vs-site-local split (spacing shared cross-site, justification a site register).*
+linear-token epochs. The SigLA spatial modality has been mined to exhaustion across **fifteen** epochs (E076–E090):
+its shared-vs-site-local split is now sharp — glyph SPACING (E079/E080/E084) + SIZE (E076/E078) are **cross-site
+shared**, while a cluster of **document-LAYOUT registers is site-local to Haghia Triada** (§B: left-margin
+justification E081, heading-size salience E085, full-width header line E086), related-but-not-templated (E087, a
+heading size↔length tradeoff), whose mechanism is a **doc-wide bounded writing width** (E089 constrained → E088 not
+an ink budget → E090 the width bound is whole-document, not header-specific).*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 84 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
-worded above L3** (layers: L1×5, L2×22, L2/L3×35, L3×8, early-pre-convention-unlabelled×14; **zero L4+** — E079/
-E080/E081 and the E082–E084 spatial-decomposition arc are all L2, positions-only); **every `licences_changed`
-field is `none`** (0/84 non-none — 70 explicit `none` + 14 early entries predating the field; no result silently
-earned a licence); the 7 transfer
+Scanned all 90 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
+worded above L3** (layers: L1×5, L2×28, L2/L3×35, L3×8, early-pre-convention-unlabelled×14; **zero L4+** — E079/
+E080/E081, the E082–E084 spatial-decomposition arc, and the E085–E090 HT-layout / header-mechanism arc are all L2,
+positions/sizes/widths-only); **every `licences_changed` field is `none`** (0/90 non-none — 76 explicit `none` + 14
+early entries predating the field; no result silently earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
 not a claim. The positives are **direct structural observations of Linear A's own distribution** (Linear B is
@@ -223,15 +227,53 @@ veins — glyph SIZE and glyph PLACEMENT (a 2D ruled grid) — plus one bounded 
   p=0.11). So the "shared 2D grid" is qualified — **spacing conventions are shared, margin justification is a site
   register** (the spatial modality's own microcosm of the through-line).
 
+**A8b. The Haghia Triada document-LAYOUT register cluster + the header-mechanism arc (`E085`–`E090`).** Extending the
+spatial modality to document *layout* (not just glyph geometry), a cluster of registers is **site-local to Haghia
+Triada** — the same shared-vs-site-local split as `E081`, now three registers deep:
+- `E085` **HEADING-SIZE salience (site-local):** the top/heading row uses larger glyphs than the body — but only at
+  HT (S_obs +0.092, perm p=0.020, n=128); Khania is *reversed* (−0.141, top row smaller) and Zakros null. 1/3 sites
+  → site-local, mirroring E081. (random-row-as-heading null; PC detect 1.0 / false-pos 0.03.)
+- `E086` **HEADER-LENGTH, full-width (site-local, width-driven):** the top row carries more glyphs than lower rows —
+  HT +0.138 (p=0.004), Khania null, Zakros marginal → site-local; and a span-normalized DENSITY check shows it is
+  **width-driven** (HT density −0.126, *not* denser) — the header is longer because it spans the full document width
+  (~84%), not because it is packed. A third HT layout register.
+- `E087` **register DEPENDENCE, not a template (site-local synthesis):** the three HT registers (justification E081,
+  heading-size E085, header-length E086) are jointly **dependent** (coherence C=0.160 vs per-column-independence null
+  0.068, perm p=0.007, size-controlled p=0.011) — but via a **mixed-sign** structure dominated by a heading
+  size↔length **tradeoff** (r=−0.189: big-glyph headers are shorter), **not** an all-positive "formal template." HT's
+  layout registers are neither random-independent nor one bundle: separately-motivated, with one geometric tradeoff.
+- **Header-mechanism arc (`E087`→`E088`→`E089`→`E090`) — the tradeoff's mechanism, run to ground:** the heading
+  size↔length tradeoff EXISTS (E087) → is **not** a fixed ink/area budget (`E088` bounded negative: first-row total-
+  ink CV 0.639 vs independence null 0.714, perm p=0.145, budget rejected) → **is** driven by a **bounded writing
+  WIDTH** (`E089`: first-row x-extent CV 0.407 ≪ assembly null 0.545, perm p=5e-4; header spans ~84% of doc width) →
+  and that width bound is **doc-wide, not header-specific** (`E090` qualifying E089: ratio_header 0.747 ≈ ratio_body
+  0.757, doc-level clustered bootstrap CI [−0.102,+0.088] includes 0). So within a bounded writing area that applies
+  to **all rows**, bigger header glyphs mechanically leave room for fewer — the tradeoff is a consequence of the
+  doc-wide writing width applied to the near-full-width header row, **not** a header-specific budget or convention.
+- **Process note (`E090` PC-calibration lesson):** E090's worker positive-control reported false-positive 0.0, but a
+  coordinator reconstruction with a genuinely-equal no-FP arm exposed its row-resampling difference-CI as
+  **anti-conservative** (false-pos 0.60 on truly-equal synthetics — it ignores within-doc clustering + null-median
+  uncertainty). DOC_WIDE was re-certified on a proper doc-level clustered bootstrap + calibration-independent
+  near-identical ratios (not MACHINERY_UNINFORMATIVE, because the conclusion rests on calibration-independent facts —
+  contrast E082). Third PC-calibration catch of the campaign (E080 conditional null · E082 uncalibratable metric ·
+  E090 anti-conservative bootstrap) — the discipline catching a *too-optimistic* worker PC.
+
 The spatial modality is L2 (opaque sign catalog IDs; positions only; NO value/reading) and joins the SHARED
-cross-site layer (spacing + size), with justification on the site-local side. It also **vindicates 'inspect before
-saturation' a THIRD time** (after the `other` channel and the libation register): the frontier was not exhausted —
-it had an untouched modality with a whole family of distinct, powered questions. **Spatial vein now mapped:** glyph
-size (shared/economy/not-positional), 2D spacing (cross-site), margin justification (site-local). Remaining spatial
-candidates were assessed and DECLINED as derivative or infeasible: reading-direction (trivially circular, geometric
-order = transcription, median agreement 1.000); AB/A class-size (intrinsic-form); columnar structure (mechanically
-implied by E079∩E081); glyph aspect-ratio (trivially intrinsic-form); numeral spatial zoning (INFEASIBLE — SigLA
-sign_class has N=1, Linear A numerals are not cataloged as SigLA signs).
+cross-site layer (spacing + size), with justification + the HT layout-register cluster on the site-local side. It
+also **vindicates 'inspect before saturation' a THIRD time** (after the `other` channel and the libation register):
+the frontier was not exhausted — it had an untouched modality with a whole family of distinct, powered questions.
+**Spatial vein now comprehensively mapped AND confound-checked (15 epochs, E076–E090):** glyph size
+(shared/economy/not-positional), 2D spacing (cross-site, vertical deliberate / horizontal size-byproduct), margin
+justification (site-local HT), and the HT document-LAYOUT register cluster (heading-size E085 / header-length E086 /
+their dependence E087) whose header size↔length tradeoff resolves to a **doc-wide bounded writing width** (E089
+constrained → E088 not an ink budget → E090 doc-wide not header-specific). Remaining spatial candidates were assessed
+and DECLINED as derivative, infeasible, or lower-value: reading-direction (trivially circular, geometric order =
+transcription, median agreement 1.000); AB/A class-size + glyph aspect-ratio (intrinsic-form); columnar structure
+(mechanically implied by E079∩E081); numeral spatial zoning (INFEASIBLE — SigLA sign_class has N=1, Linear A numerals
+not cataloged); divider spatial rhythm (underpowered — 10 docs with ≥3 dividers); line-final size compression
+(≈chance 0.528, entailed by E081's ragged-right edge); tablet-dimension-vs-scribal-convention for the writing width
+(SOURCE_BLOCKED — no doc-level tablet-dimension field in SigLA); cross-site replication of the layout registers
+(the registers are HT-local by construction — Khania/Zakros lack them).
 
 ### The organizing finding (the through-line of Section A)
 > **Shared script + shared positional grammar/ORDER generalize cross-site; vocabulary, scribal
@@ -250,8 +292,11 @@ sign_class has N=1, Linear A numerals are not cataloged as SigLA signs).
 > frequency-explained, like admin), document typology (E058), sub-lexical structure (E059), **scribal register**
 > (word-length E065, accounting-scale E066), the **metrological realization** of the entry template (fraction
 > attachment E070), **glyph SHAPE** (allograph E017/E020 — note the split: glyph *size* is shared A8/E076 while
-> *shape* is local), and — newly — the **left-margin JUSTIFICATION** of the 2D grid (E081: HT left-justifies, Khania
-> does not; the grid's SPACING is shared but its ANCHORING is a site register) do not. **The order/grammar-vs-
+> *shape* is local), and — on the spatial modality — the **Haghia Triada document-LAYOUT register cluster**: the 2D
+> grid's SPACING is shared cross-site (E079/E080) but its ANCHORING and page design are an HT register — left-margin
+> justification (E081), heading-size salience (E085), and a full-width header line (E086), jointly dependent via a
+> size↔length tradeoff (E087) whose mechanism is a doc-wide bounded writing width (E089/E090, not an ink budget per
+> E088). Khania/Zakros share the spacing but none of the layout registers. **The order/grammar-vs-
 > vocabulary split now holds within a single register:** the
 > libation "formula" is cross-site in ORDER (E072) but site-local/frequency-explained in VOCABULARY (E071) — a
 > clean one-corpus microcosm of the whole through-line.
@@ -423,23 +468,25 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
   (intrinsic-form); columnar structure (mechanically implied by E079∩E081); numeral spatial zoning (INFEASIBLE —
   SigLA sign_class N=1, numerals not cataloged). The spatial vein's high-value, distinct, powered questions are
   now exhausted.
-- **Saturation status (as of 84 epochs): genuinely narrowing; genre + FULL glyph-spatial vein now mapped AND
-  internally decomposed.** Probed-and-declined earlier:
+- **Saturation status (as of 90 epochs): the SigLA spatial modality is now comprehensively mapped, internally
+  decomposed, AND confound-checked (E076–E090, 15 epochs).** Probed-and-declined earlier:
   commodity-logogram cross-site (underpowered, 2 sites), word-vs-logogram magnitude register (underpowered),
   cross-site grammar prediction (covered by E047). Scouted after E075 (E072/E073/E074 successors): admin-order-by-
   support (confound/underpowered), matched-form rigidity contrast (n small), a site+genre factorial (redundant with
   E074's confound), Palaikastro-only genre test (n=49, underpowered), within-genre cross-site spread (covered by
   E032/E071) — none clears the **distinct + well-powered + non-circular + PC-gated** bar. The SigLA **spatial
-  layout** channel (once flagged as the next "new data") has now been mined to exhaustion (E076–E081) AND its
-  central positive **decomposed by a robustness triplet** (E082→E084, §A8): the E079/E080 "2D ruled grid" resolves
-  into a **deliberately-ruled VERTICAL line convention** (E084: obs << height-preserving null, 2/3 sites, PC-passed
-  — hardens E080) plus a **HORIZONTAL glyph-pitch regularity that is a byproduct of uniform glyph SIZE (E076), NOT
-  a deliberate gap convention** (E083: obs at/above a width-preserving null, PC-passed — qualifies E079's
-  interpretation); the calibration limit that surfaced this (E082 MACHINERY_UNINFORMATIVE — the pitch metric
-  conflates spacing with glyph width) is itself an honest, banked no-inference. Remaining structural questions need
-  genuinely new data (glyph images / strokes — SOURCE_BLOCKED) or **L4+** (barred). The productive work is now
-  capstone assembly; launch only if a genuinely-distinct powered channel appears. **Do not declare hard
-  saturation** — the `other`- and libation-channel lessons both stand: inspect a channel before calling it empty.
+  layout** channel has been mined to exhaustion in three passes: (1) glyph geometry + 2D grid (E076–E081), (2) the
+  robustness triplet decomposing the grid into deliberate VERTICAL line-ruling + a horizontal glyph-SIZE byproduct
+  (E082→E084, §A8), (3) the Haghia Triada document-LAYOUT register cluster + header-mechanism arc (E085–E090, §A8b):
+  heading-size (E085) + header-length (E086) are HT-local registers, jointly dependent via a size↔length tradeoff
+  (E087) whose mechanism is a **doc-wide bounded writing width** (E089 constrained → E088 not an ink budget → E090
+  doc-wide, not header-specific). Remaining spatial candidates were assessed and DECLINED as derivative, infeasible,
+  underpowered, or SOURCE_BLOCKED (§A8 list: divider rhythm, line-final compression, tablet-vs-convention width,
+  cross-site register replication). Remaining structural questions need genuinely new data (glyph images / strokes —
+  SOURCE_BLOCKED) or **L4+** (barred). The productive work is now capstone assembly; launch only if a
+  genuinely-distinct powered channel appears. **Do not declare hard saturation** — the `other`- and libation-channel
+  lessons both stand: inspect a channel before calling it empty; but three exhaustive spatial passes with no
+  remaining distinct-powered question is a strong signal the vein is worked out.
 
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.
@@ -496,18 +543,23 @@ sat UNEXAMINED — `E060` then found a strong cross-site positive there; and the
 libation/religious register, which `E071–E075` then mapped (one narrow positive + confound + hardening). Lesson
 re-confirmed THREE times: **do not declare a channel absent without inspecting it.** After the genre vein, the
 SigLA **spatial modality** (per-glyph bounding boxes) — flagged here as "needs new data" — was itself opened
-(E076–081: 4 cross-site positives + 1 bounded negative + 1 site-local finding), then internally **decomposed** by a
-robustness triplet (E082–E084). Current state (84 distinct epochs):
-**33 verified positives / 19 bounded-negatives + 5 genre-/site-local findings / 3 positive-hardening-or-qualification**,
+(E076–081: 4 cross-site positives + 1 bounded negative + 1 site-local finding), internally **decomposed** by a
+robustness triplet (E082–E084), then extended to document LAYOUT + the header mechanism (E085–E090). Current state
+(90 distinct epochs):
+**33 verified positives / 20 bounded-negatives + 9 genre-/site-local findings / 4 positive-hardening-or-qualification**,
 all L2/L3, no licence, no decipherment. The genre vein is mapped (genre↔site confound E074 bounds all genre claims) and
 the FULL glyph-spatial vein is now mapped: glyph SIZE (shared E076 / not-positional E077 / economy E078) AND glyph
 PLACEMENT (a cross-site ruled layout — horizontal spacing E079 + vertical line-spacing E080 — whose left-margin
-JUSTIFICATION is site-local E081). The placement positive was then **resolved into its two axes** (E082–E084): the
+JUSTIFICATION is site-local E081). The placement positive was **resolved into its two axes** (E082–E084): the
 VERTICAL line-ruling is **deliberate beyond row height** (E084 hardens E080, PC-passed, 2/3 sites), while the
 HORIZONTAL glyph-pitch regularity is a **byproduct of uniform glyph SIZE (E076), not a deliberate spacing
 convention** (E083 qualifies E079, PC-passed) — surfaced by the honest E082 calibration limit
-(MACHINERY_UNINFORMATIVE). So the "2D grid" is more precisely **deliberately-ruled lines filled with
-uniformly-sized glyphs**, not a symmetric monospaced grid. Remaining spatial candidates were assessed and DECLINED
-as derivative (columnar ≈ E079∩E081) or infeasible (numeral zoning — sign_class N=1); deeper spatial or L4+
-questions need image data (SOURCE_BLOCKED) or are barred. Any remaining untested *observed* channel should still be inspected before a
+(MACHINERY_UNINFORMATIVE). So the "2D grid" is **deliberately-ruled lines filled with uniformly-sized glyphs**, not a
+symmetric monospaced grid. Document LAYOUT was then mapped (E085–E090, §A8b): a **Haghia-Triada-local register
+cluster** — heading-size salience (E085), full-width header line (E086), jointly dependent via a size↔length tradeoff
+(E087) — whose mechanism was run to ground as a **doc-wide bounded writing width** (E089 constrained → E088 not an
+ink budget → E090 doc-wide, not header-specific), with E090 also catching an anti-conservative worker PC (the
+campaign's third calibration lesson). Remaining spatial candidates were assessed and DECLINED as derivative,
+infeasible, underpowered, or SOURCE_BLOCKED (§A8); deeper spatial or L4+ questions need image data (SOURCE_BLOCKED)
+or are barred. Any remaining untested *observed* channel should still be inspected before a
 completeness claim. The clock-gated §12 finalization remains blocked until 2026-07-11T03:20Z.
