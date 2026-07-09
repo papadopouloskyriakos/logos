@@ -1,0 +1,35 @@
+{
+ "experiment": "E201_replay_benchmark",
+ "prereg": "prereg.md",
+ "datasets_available": [
+  "linear_b-greek.cog",
+  "linear_b-greek.names.cog",
+  "csyl-greek.cog",
+  "uga-heb.no_speNL.cog",
+  "uga-heb.no_speNoisy.cog",
+  "StarlingDB_Ph-Ug.cog",
+  "RWT2002_Luv-Hit.cog"
+ ],
+ "datasets_blocked": {
+  "old_persian": "BLOCKED_DATA",
+  "carian": "BLOCKED_DATA",
+  "meroitic": "BLOCKED_DATA",
+  "iberian": "BLOCKED_DATA"
+ },
+ "pilot_cells": [
+  "UGA_ladder_7rungs",
+  "CSYL_small_ladder",
+  "CONTROL_battery_5x8",
+  "PROCESS_REPLAY_encoding_only"
+ ],
+ "thresholds": {
+  "lb_greek_full": 0.5,
+  "uga_heb_full": 0.6,
+  "false_grad_controls": "0/40"
+ },
+ "workers_max": 4,
+ "nice": 15,
+ "timeout_per_cell_s": 600,
+ "seed_master": 1336530913,
+ "exploratory": true
+}
