@@ -1,0 +1,52 @@
+{
+ "positive_control": {
+  "spectral_ari": 0.781746845499588,
+  "morphogenesis_ari": 0.31651360925903727,
+  "detects": true
+ },
+ "linear_a_site_recovery": {
+  "morphogenesis": {
+   "ari": 0.018736318211696128,
+   "nmi": 0.08449531245792538
+  },
+  "spectral": {
+   "ari": 0.011433966836556559,
+   "nmi": 0.178289672927974
+  },
+  "louvain": {
+   "ari": 0.04338058048252362,
+   "nmi": 0.11320773978468597
+  },
+  "length_only": {
+   "ari": 0.05878459052523758,
+   "nmi": 0.09675107202910352
+  },
+  "random": {
+   "ari": -0.00037258382277280925,
+   "nmi": 0.023671652403024098
+  }
+ },
+ "sites": [
+  "Haghia Triada",
+  "Khania",
+  "Knossos",
+  "Phaistos",
+  "Zakros",
+  "Palaikastro"
+ ],
+ "n_sites": 6,
+ "cap": 80,
+ "verdict": "GEOGRAPHIC_MORPHOGENESIS_NULL",
+ "rationale": "Morphogenesis does not recover LA site structure beyond the confound floor (morphogenesis ARI 0.019 vs length-only 0.059, random -0.000); generic clustering louvain reaches 0.043. No morphogenetic geographic signal.",
+ "layer": "L2",
+ "licences_changed": "none",
+ "la_touched": true,
+ "runtime_sec": 27.5,
+ "plan_hash": "d04b895422a278bcec2a6196df7347d914b067bd8509a85074a2d0a95a1b7d29",
+ "epoch_id": "EPOCH-095",
+ "code_manifest": {
+  "e095_geographic.py": "66c5d91a51e3145b",
+  "rd.py": "83e8aceb138d579f",
+  "evaluate.py": "19121219000b01fd"
+ }
+}

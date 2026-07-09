@@ -2259,12 +2259,28 @@ epochs:
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS
     priority: IMMEDIATE
-    status: RESERVED_ACTIVE
+    status: BANKED
     gate: A/E
-    name: "Geographic/scribal/regional morphogenesis: RD over site/phase/scribe/genre/allograph graphs; LB calibration with provenance/font/site-doc/genre/freq controls, then frozen LA."
-    prereg: morphogenesis/PREREGISTRATION.md
-    reserved: 2026-07-09
-    substantive: pending
+    name: "Geographic/scribal morphogenesis: does an RD document-community process recover LA site structure vs spectral/Louvain/length-confound/random, balanced across sites?"
+    plan_hash: "d04b895422a278bcec2a6196df7347d914b067bd8509a85074a2d0a95a1b7d29"
+    completed: 2026-07-09
+    executed_by: "Claude (COORDINATOR) direct numerical experiment (morphogenesis/scripts/e095_geographic.py; frozen copy + rd/evaluate in the epoch dir). NO ANTHROPIC_API_KEY in-process."
+    orchestrator_verification: "PC (synthetic planted-site Dirichlet corpus) DETECTS via generic clustering (spectral ARI 0.782) -> the site-recovery harness has power, so the LA null is interpretable. Sites BALANCED by subsampling to CAP=80 (HT dominates 63% -> imbalance would make site recovery trivially = predict-HT), averaged over 5 subsample seeds. LENGTH-ONLY confound baseline included (site recovery must not reduce to document length). Coordinator authored + ran all methods + the PC + the confound. LA site labels used only as L2 structural truth (opaque signs, no phonetic values)."
+    positive_control: "PASSED (detects=True): on a synthetic corpus with site-specific sign distributions, generic clustering recovers planted sites (spectral ARI 0.782); morphogenesis weaker but positive (0.317). Confirms the harness detects genuine geographic structure when present -> the LA at-chance result is a real negative, not a dead detector."
+    verdict: "GEOGRAPHIC_MORPHOGENESIS_NULL (mechanical) -- morphogenesis does not recover LA site/regional structure from blinded document sign-content beyond the confound floor (morphogenesis ARI 0.019 vs length-only 0.059, random 0.000). BROADER FINDING: once site imbalance is controlled (balanced to 80 docs/site), NO method recovers site communities from document sign-content -- spectral 0.011, Louvain 0.043, all ~chance; the length-only confound (0.059) is nominally the 'best', i.e. what little separates balanced sites is document LENGTH, not sign content. LA sites share one syllabary, so blinded doc-level sign-content does not cluster by site. Consistent with the campaign's E012 (doc->site NO_POWER/confounded); orthogonal to the SPECIFIC cross-site signals that ARE real (A-prefix E023, site registers E065) which are feature-level, not whole-document-community. L2, site = structural metadata, opaque signs, no phonetic values, no licence, no dialect claim."
+    numbers: {pc_detects: true, pc_spectral_ari: 0.782, pc_morphogenesis_ari: 0.317, la_morphogenesis_ari: 0.019, la_spectral_ari: 0.011, la_louvain_ari: 0.043, la_length_only_ari: 0.059, la_random_ari: -0.0, n_sites: 6, cap_per_site: 80, seeds: 5, metric: "site-recovery ARI, balanced"}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: BOUNDED_NEGATIVE
+    scope: "Bounded negative. The geographic/regional channel is the LAST reserved F11 leg: morphogenesis recovers NO site structure, AND (broader) no document-level clustering method recovers balanced LA site communities from blinded sign-content -- regional signal at the whole-document level is at chance once imbalance is removed. Does NOT contradict the real feature-level cross-site findings (A-prefix, registers) which are not whole-document community structure. Increments the bounded-negative bucket (23 -> 24). CLOSES the F11 morphogenesis family: class recovery (E091 mechanism-null + E092 specificity-null), data-scale (E093 sufficiency qualification), segmentation (E094 null), geographic (E095 null); E096 DE_AUTHORIZED. Net F11: a graph reaction-diffusion / Turing morphogenesis process provides NO decipherment advantage over generic methods on ANY tested channel, and the recoverable structure is thin + generic. BANKING E095 makes the morphogenesis block TERMINAL -> the F12 CROSS_DISCIPLINARY launch gate opens (E097)."
+    committed_prediction: "modal GEOGRAPHIC_MORPHOGENESIS_GENERIC / _NULL per E091/E092/E094 + the E012 doc->site prior. OUTCOME = _NULL (all methods at chance on balanced LA site recovery). Prediction earned; the regional channel is at chance at the document level once imbalance is controlled."
+    deviations: ["LB doc-site metadata not loadable via load_b_damos -> the detector was calibrated on a synthetic planted-site corpus (Stage-1 PC) and applied to LA (Stage-4), rather than LB->LA. Disclosed in prereg + report; the synthetic PC is a valid power check (generic clustering recovers planted sites at 0.782).", "Site imbalance handled by balanced subsampling (CAP=80) -> the verdict is about BALANCED site recovery; the raw-imbalance task would be dominated by predict-HT and is not the scientific question.", "LA silver inscriptions are the source (site labels = structural metadata); no phonetic values read; scripts committed."]
+    non_circular: "Blinded document sign-content (opaque signs); site labels used only as evaluation truth. Balanced subsampling removes the HT-frequency confound; the length-only baseline guards the document-length confound; random is the floor. All methods share k and the same balanced docs. PC fully synthetic. Coordinator reconstructed every method + the PC from scratch."
+    architecture_note: "Fifth and final TURING_MORPHOGENESIS calibration epoch (E096 DE_AUTHORIZED). Closes F11: morphogenesis buys nothing over generic methods for class recovery, segmentation, OR geographic structure, and LA is not data-limited for the weak generic signal (E093). A rigorously-built family (Turing conditions verified mechanically throughout, PCs firing, frequency/degree/length/permutation guards) returning an honest, comprehensive negative. BANKING E095 flips the F12 launch gate (cross_disciplinary/scripts/launch_gate.py) to MORPH_TERMINAL=True -> E097 (error-correcting-code / belief-propagation) is now authorized to launch. Finalization remains BLOCKED (clock 2026-07-11T03:20Z, not epoch count)."
+    artifacts: [epochs/EPOCH-095/prereg.md, epochs/EPOCH-095/plan_hash.txt, epochs/EPOCH-095/e095_geographic.py, epochs/EPOCH-095/rd.py, epochs/EPOCH-095/evaluate.py, epochs/EPOCH-095/result.json, reports/EPOCH095_REPORT.md]
+    successors_spawned: 5
+    substantive: true
   - epoch_id: EPOCH-096
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS
@@ -2287,7 +2303,7 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: WAITING_ON_MORPHOGENESIS
+    status: ACTIVE
     gate: A
     name: "Error-correcting-code + belief-propagation decoding: factor graph over sign/form/formula-slot/morphology/ledger/anchor/damage variables; sum-product + max-product + damped loopy BP; recover missing signs / classes / morpho relations / same-vowel-consonant constraints in blinded LB, degrade to LA, vs marginals/frequency/plain-FG/Bayesian-morph/MDL/random."
     prereg: cross_disciplinary/PREREGISTRATION.md
@@ -2298,7 +2314,7 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: WAITING_ON_MORPHOGENESIS
+    status: ACTIVE
     gate: A
     name: "Spin-glass / Potts energy-landscape identifiability: Potts variables per unresolved sign, couplings from substitution/morphology/formula/anchor/admin; simulated annealing + parallel tempering + BP/cavity; measure ground-state degeneracy, overlap distribution, frustration, anchor-injection phase transition; classify LA as paramagnetic/glassy/ferromagnetic regime."
     prereg: cross_disciplinary/PREREGISTRATION.md
@@ -2309,7 +2325,7 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: WAITING_ON_MORPHOGENESIS
+    status: ACTIVE
     gate: A
     name: "Causal source separation + confound disentanglement: ICA + NMF + causal/invariant-risk representation (>=3 methods) to separate phonological/morphological signal from site/genre/scribe/rendering/edition/frequency/damage nuisance; LOSO/LOGO/LO-renderer/LO-edition interventions; a relation advances only if it survives >=2 independent nuisance interventions."
     prereg: cross_disciplinary/PREREGISTRATION.md
@@ -2320,7 +2336,7 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: WAITING_ON_MORPHOGENESIS
+    status: ACTIVE
     gate: A
     name: "Topological data analysis + persistent structure: filtrations over sign-context/substitution/morphology/formula/cross-site/morphogenesis/confound-adjusted distances; persistent components + loops + barcode stability + bottleneck/Wasserstein; vs degree-rewiring/metric-permutation/random-embedding/frequency-matched/label-shuffle nulls; persistent anonymous communities stable across inventories/segmentations."
     prereg: cross_disciplinary/PREREGISTRATION.md
@@ -2331,7 +2347,7 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: WAITING_ON_MORPHOGENESIS
+    status: ACTIVE
     gate: A
     name: "Global graph/network-flow constrained decipherment benchmark: Stage-A min-cost-flow/bipartite-matching/optimal-transport on blinded LB with known targets (calibration only); Stage-B TARGET-FREE constrained mode for LA (relative classes/formula/morphology/anchors only, outputs equivalence classes NOT a lexicon); vs local-NN/greedy/random/Bayesian-FG/MDL/anchor-lattice; does global assignment ADD information beyond the anchor-lattice null or just pick an arbitrary representative?"
     prereg: cross_disciplinary/PREREGISTRATION.md
@@ -2342,7 +2358,7 @@ epochs:
     frontier: F12_CROSS_DISCIPLINARY
     frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
     priority: NEXT_AFTER_MORPHOGENESIS
-    status: WAITING_ON_MORPHOGENESIS
+    status: ACTIVE
     gate: A/C
     name: "Cross-method synthesis + frozen LA application: intersect ONLY independently-validated outputs of E097-E101 + morphogenesis (dependency-adjusted independent-channel count); retain a relation only if held-out + >=2 genuinely-independent method families + beats adaptive nulls + stable across >=2 inventories/segmentations; absolute-value gate = >=2 independent channels + LOO-anchor + LOO-method + held-out-form prediction + full adaptive null, else relative constraints only."
     prereg: cross_disciplinary/PREREGISTRATION.md

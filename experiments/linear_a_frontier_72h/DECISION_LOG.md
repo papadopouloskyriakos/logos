@@ -110,3 +110,19 @@
   detectable planted boundaries). Consistent with E091/E092. L2, LA untouched, no licence. bounded-neg 22->23.
   F11 now: no morphogenesis advantage for class recovery OR segmentation; LA not data-limited (E093). E094
   terminal -> F12 launch gate now blocks only on E095. E095 (geographic/scribal) queued next. 5 successors.
+
+- EPOCH-095 BANKED (95 epochs). Geographic/scribal morphogenesis. VERDICT GEOGRAPHIC_MORPHOGENESIS_NULL. PC
+  detects (synthetic spectral ARI 0.782). On BALANCED LA (80 docs/site x 6 sites), NO method recovers site
+  communities from blinded document sign-content: morphogenesis 0.019, spectral 0.011, Louvain 0.043,
+  length-only 0.059, random 0.000 -- all ~chance. LA sites share one syllabary; doc-level sign-content doesn't
+  cluster by site once HT-imbalance removed (consistent with E012 doc->site null). Orthogonal to real
+  FEATURE-level cross-site signals (A-prefix E023, registers E065). L2, site=structural metadata, no values.
+  bounded-neg 23->24.
+- F11 TURING_MORPHOGENESIS FAMILY CLOSED (E091-095 banked, E096 de-authorized). Net: graph reaction-diffusion/
+  Turing morphogenesis provides NO decipherment advantage over generic methods on ANY channel (class recovery
+  E091/E092, segmentation E094, geographic E095); LA not data-limited (E093 sufficiency). Built rigorously
+  (Turing conditions verified mechanically, PCs firing, freq/degree/length/permutation guards). Comprehensive
+  honest negative.
+- F12 CROSS_DISCIPLINARY launch gate OPENED: launch_gate.py MORPH_TERMINAL=True (all F11 terminal). F12
+  E097-E102 flipped WAITING_ON_MORPHOGENESIS -> ACTIVE. LAUNCHING EPOCH-097 (error-correcting-code +
+  belief-propagation decoding). Finalization remains BLOCKED (clock 2026-07-11T03:20Z).
