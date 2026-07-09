@@ -1,0 +1,51 @@
+{
+  "task_id": "EPOCH-059",
+  "method": "Cross-site recurrence of word-internal sign bigrams beyond a unigram-preserving null. Observed S = number of distinct bigram types recurring across >=3 of 9 qualifying sites (>=50 word-internal bigrams). Null: per site, regenerate the same number of bigram pairs by two INDEPENDENT draws from THAT SITE'S OWN unigram (single-sign) frequency distribution (preserves per-site sign frequencies, destroys sequence structure). >=500 null realizations; permutation p = frac(null S >= observed S). Trigram version as robustness. Anonymous sign IDs; L2 only.",
+  "result": "Observed cross-site bigram recurrence (S=96 across >=3 sites) EXCEEDS the unigram-preserving null (mean=61.08, perm p=0.0000, ratio=1.57). The null preserves each site's single-sign frequencies, so the excess is BEYOND shared signs. Trigram robustness confirms (obs=6 vs null=0.01, p=0.0000). Positive control PASSED (DETECT rate=1.000, false-positive rate=0.040).",
+  "verdict": "SHARED_SUBLEXICAL_INVENTORY_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_sites": 9,
+      "n_distinct_bigrams": 1045,
+      "obs_S_ge3sites": 96,
+      "obs_S_ge2sites": 255,
+      "null_mean_S": 61.078,
+      "perm_p": 0.0,
+      "obs_null_ratio": 1.572,
+      "mean_pairwise_jaccard": 0.0597
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0,
+      "detect_rate": 1.0,
+      "false_pos_rate": 0.04
+    },
+    "robustness": {
+      "trigram_obs_S": 6,
+      "trigram_null_mean": 0.01,
+      "trigram_perm_p": 0.0,
+      "trigram_n_sites": 7
+    }
+  },
+  "key_findings": [
+    "Observed cross-site bigram recurrence (96 distinct bigram types across >=3 of 9 sites) EXCEEDS the unigram-preserving null (mean 61.08, perm p=0.0000, ratio 1.57). Because the null preserves each site's single-sign frequencies, this excess is BEYOND shared signs: there is a shared sub-lexical inventory of recurrent multi-sign sequences (candidate shared affixes/formulae) cross-site.",
+    "The null S is substantial (mean ~61, range 41-82 across 500 realizations) precisely because shared single-sign frequencies already produce many shared bigrams by chance — confirming the null correctly absorbs the shared-signs confound. The SIGNAL is the observed EXCESS over this substantial baseline (96 vs 61).",
+    "Trigram robustness strongly confirms: 6 distinct trigram types recur across >=3 of 7 qualifying sites, vs a null mean of 0.01 (null max=1 across 500 realizations), perm p=0.0000. Longer sub-lexical sequences are even more concentrated beyond the unigram null.",
+    "Mean pairwise Jaccard of site bigram-sets is 0.0597 — low in absolute terms (consistent with E032 site-local vocabulary at the word level), but the recurrence statistic detects a shared sub-lexical layer beneath site-local word forms.",
+    "Positive control PASSED: the machinery DETECTS planted shared sub-lexical inventory (detection rate 1.000 across 20 trials) and does NOT fire on shared-unigrams-only with independently assembled bigrams (false-positive rate 0.040 <= 0.10), proving the unigram-preserving null removes the shared-signs confound."
+  ],
+  "successor_hypotheses": [
+    "E060: Characterize the shared sub-lexical inventory — enumerate the recurrent cross-site bigrams/trigrams (anonymous) and test whether they cluster at word-initial (prefix-like), word-final (suffix-like), or word-internal (stem-like) positions, to infer the positional role of shared morphology.",
+    "E061: Test whether the shared sub-lexical bigrams are preferentially attached to a restricted set of single signs (e.g., the A-prefix from E039), i.e., whether shared morphology is anchored to the shared positional grammar.",
+    "E062: Quantify the site-local vs shared partition of the sub-lexical inventory — what fraction of each site's distinct bigram types are shared (>=3 sites) vs site-local (1 site)? This bounds how much morphology is pan-Cretan vs site-specific.",
+    "E063: Test for a shared sub-lexical inventory at the TRIGRAM and 4-gram level with higher statistical power (more sites / a pooled-site bootstrap), since the trigram signal here (6 types) is strong but small in absolute count.",
+    "E064: Cross-check the shared sub-lexical bigrams against the site-local word-forms (E032): do the shared bigrams predominantly occur INSIDE site-local word-forms (shared morphology assembling into site-local vocabulary), supporting a shared-grammar/site-local-lexicon split?",
+    "E065: Test whether the shared sub-lexical inventory's cross-site recurrence scales with geographic/administrative proximity (a network test) or is uniform across all sites (a pan-script phenomenon)."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Anonymous sign IDs only; no sign values, readings, phonetics, or meanings used. The null preserves each site's single-sign (unigram) frequencies by construction (per-site independent draws from each site's own unigram distribution), so any detected cross-site bigram sharing is BEYOND shared single-sign frequencies — the shared-signs confound (E036) is explicitly absorbed by the null. The null S is substantial (~61) precisely because shared signs produce shared bigrams; the signal is the observed excess (96). L2 distributional statistics only; no L1/L3 interpretation invoked. Positive control confirms the null removes the shared-unigrams confound (false-positive rate 0.040).",
+  "deviations": [
+    "Positive-control DETECT model uses a shared sub-lexical inventory (60% of each synthetic site's bigrams drawn from a fixed set of 30 shared bigram types) plus 40% site-local noise, with the TRUE per-site unigram (including all mass) fed to the null — this mirrors the real corpus structure (ratio 1.56 in synthetic vs 1.57 in real) and is the minimal model that produces obs>null under a unigram-preserving null. No change to the frozen metric or null definition."
+  ]
+}

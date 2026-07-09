@@ -7,18 +7,18 @@
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 58 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 59 substantive epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
 | **Load-bearing cross-site positives** | **20** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
-| Bounded negatives | 15 | Well-powered PC-passed tests returning informative *absence* (§B) |
+| Bounded negatives | 16 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*20 positives / 15 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
+*20 positives / 16 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
 Zero of the 20 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
 reading.*
 
@@ -113,6 +113,14 @@ Each is a well-powered, PC-passed test that returned a *bounded absence* — inf
   not transfer across sites** — a typology trained on Haghia Triada applied to Khania gives ARI −0.10 (worse
   than the ~0 null). Independently recomputed exact. This places document *typology* on the **site-local** side
   of the through-line, opposite the cross-site-shared script + grammar.
+- **Sub-lexical structure is site-local too (coordinator-corrected).** `E059` cross-site sign-bigram/trigram
+  recurrence does **not** exceed a per-site unigram-preserving null (bigram obs 96 vs null 87, p=0.09; trigram
+  obs *below* null) — the overlap is fully explained by shared single-sign frequencies. So there is **no
+  shared multi-sign morphology beyond signs + the A-prefix**; candidate shared affixes/formulae do not exist
+  above chance. *(GLM initially reported this as a cross-site positive via a null-construction bug — all sites
+  drawn from one shared unigram distribution; the coordinator caught and overturned it on independent
+  recomputation. See `epochs/EPOCH-059/COORDINATOR_CORRECTION.md`. Invariant #2/#3 firing on a real fabricated
+  positive.)*
 - **Administrative quantities are small bounded tallies.** `E054` numeral magnitudes are Benford-**deviant**
   *because they are small* (median 4, 71% ≤ 10) — Benford is inapplicable, not a fabrication signal;
   `E055` document-class accounting *scale* is **site-confounded / unanswerable** (numeral-bearing supports are
