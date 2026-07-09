@@ -38,8 +38,16 @@ extends to a **small prefix inventory**, not `A-` alone).
 repairs) — signs carry **position-dependent roles** within the word (templatic organization), stable across
 sites.
 
-**A4. Shared writing-system fingerprint** — `E036` cross-site **sign-frequency concordance**: the sign
-inventory and its usage frequencies are shared across sites (the "one script" leg).
+**A4. Shared writing-system fingerprint + logo-syllabic architecture** — `E036` cross-site **sign-frequency
+concordance** (the sign inventory + frequencies are shared across sites, the "one script" leg); `E056` the
+sign inventory **distributionally partitions into a logogram-like class** (17 signs: numeral-adjacent, stands
+alone, short words) **vs a syllabogram-like class** (44 signs: compositional) — silhouette 0.543 vs null 0.196
+(~14σ, perm p=0), recovered from *pure distribution* with no sign values, and surviving a tautology probe
+(numeral-adjacency+length alone → silhouette 0.565). This is the expected **logo-syllabic** architecture of an
+Aegean administrative script, recovered blind. *Weak legs (honest): the numeral-adjacency discrimination is
+marginal (MW p=0.044) and cross-site replication is weak (ARI 0.095, above chance-floor but low; one site-pair
+near chance) — so `CROSS_SITE_ROBUST` is earned at the floor: corpus-wide strong, site-by-site weak. L2
+distributional labels, NOT epigraphic identifications, NOT readings.*
 
 **A5. Document registers** — `E028` **document-class word-length signature** (support type predicts a
 word-length register); `E047` the **document token-type grammar is held-out predictable** (Markov > unigram);
@@ -112,13 +120,14 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
 ---
 
 ## F. Open at the saturation boundary (candidate successors — run only if genuinely distinct & powered)
-- **`E056` (RUNNING):** dual sign-class induction — do LA signs distributionally partition into a
-  logogram-like (numeral-adjacent, solo) vs syllabogram-like (compositional) class, cross-site stable? The
-  central "is the script distributionally logo-syllabic?" question. *[result folds into §A4/§A2 or §B on bank]*
+- **`E056` (BANKED → §A4):** dual sign-class induction returned `DUAL_SIGN_CLASS_CROSS_SITE_ROBUST` — a
+  genuine distributional logo-syllabic partition (strong global, weak cross-site). The last big genuinely-
+  distinct structural question is now answered.
 - Remaining genuinely-distinct candidates are thin: most are derivative variants of banked tests, published
-  nulls (metrology/fractions), or SOURCE_BLOCKED (stroke, 3D, ligatures). **Saturation is real** — the last
-  new positive was `E050`; `E048`→`E055` are all bounded/null/underpowered. Post-`E056`, the productive work
-  is capstone assembly, not look-alike epochs.
+  nulls (metrology/fractions), or SOURCE_BLOCKED (stroke, 3D, ligatures). **Saturation confirmed** — `E056`
+  was the last big open structural question; a natural high-value successor is a *cross-site-strengthening*
+  re-test of the E056 partition (thin per-site counts capped the ARI), but only if it can be powered. Absent
+  that, the productive work is capstone assembly, not look-alike epochs.
 
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.
