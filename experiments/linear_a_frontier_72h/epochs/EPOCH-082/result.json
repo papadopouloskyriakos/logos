@@ -1,0 +1,128 @@
+{
+ "task_id": "EPOCH-082",
+ "method": "HARDENING/robustness of the 2D-ruled-grid finding (E079 horizontal glyph-spacing + E080 vertical line-spacing). Re-ran BOTH E079/E080 metrics + nulls across a row-clustering threshold sweep {0.5,0.6,0.7}x median-glyph-height + an independent relative-gap row-detection method, globally + per-site (HT/Khania/Zakros), with a 2-arm synthetic PC (detect regular grid / reject random layout). Frozen verdict from the sweep + PC. L2, opaque IDs, positions only.",
+ "result": "The raw threshold-sweep is ROBUST (both S_h and S_v stay significant + regular at all 4 row-detection settings, 3/3 sites; verified independently by the coordinator), BUT the epoch's false-positive positive-control FAILED (random-layout synthetics flagged as regular 0.20 of the time, worker; the coordinator's independent stricter reconstruction gives up to 1.00), because the pitch-CV metric conflates deliberate ruled-grid spacing with fixed-glyph-width regularization (pitch = gap + glyph-width; uniform widths regularize pitch even in a random layout). Per the FROZEN rule (PC-fail -> MACHINERY_UNINFORMATIVE), this epoch does NOT certify robustness. E079/E080 are UNAFFECTED \u2014 they rest on their own passed PITCH-LEVEL PCs, not on this glyph-level one. E082 surfaces an honest interpretive CAVEAT on E079: part of the horizontal-spacing regularity may reflect uniform glyph widths (E076) rather than purely deliberate even spacing.",
+ "verdict": "MACHINERY_UNINFORMATIVE",
+ "numbers": {
+  "canonical": {
+   "S_h": 0.33773182098952326,
+   "null_h": 0.7634225277855906,
+   "perm_p_h": 0.001996007984031936,
+   "S_v": 0.11051954342357666,
+   "null_v": 0.36200563868100843,
+   "perm_p_v": 0.001996007984031936
+  },
+  "sweep": [
+   {
+    "S_h": 0.33336788797787253,
+    "null_h": 0.7580920027151923,
+    "perm_p_h": 0.001996007984031936,
+    "S_v": 0.1186813166827708,
+    "null_v": 0.409987321919088,
+    "perm_p_v": 0.001996007984031936,
+    "n_h": 236,
+    "n_v": 197,
+    "setting": "tol=0.5"
+   },
+   {
+    "S_h": 0.33773182098952326,
+    "null_h": 0.7634225277855906,
+    "perm_p_h": 0.001996007984031936,
+    "S_v": 0.11051954342357666,
+    "null_v": 0.36200563868100843,
+    "perm_p_v": 0.001996007984031936,
+    "n_h": 237,
+    "n_v": 193,
+    "setting": "tol=0.6"
+   },
+   {
+    "S_h": 0.37474301486496736,
+    "null_h": 0.7825938040190938,
+    "perm_p_h": 0.001996007984031936,
+    "S_v": 0.1186813166827708,
+    "null_v": 0.3185401055001527,
+    "perm_p_v": 0.001996007984031936,
+    "n_h": 237,
+    "n_v": 183,
+    "setting": "tol=0.7"
+   },
+   {
+    "S_h": 0.3668672327409481,
+    "null_h": 0.7183463004450374,
+    "perm_p_h": 0.001996007984031936,
+    "S_v": 0.5109831486421386,
+    "null_v": 0.5715914463521594,
+    "perm_p_v": 0.001996007984031936,
+    "n_h": 225,
+    "n_v": 236,
+    "setting": "alt_gap"
+   }
+  ],
+  "per_site_canonical": [
+   {
+    "site": "Haghia Triada",
+    "perm_p_h": 0.001996007984031936,
+    "perm_p_v": 0.001996007984031936,
+    "S_h": 0.3805231548492781,
+    "S_v": 0.11928261339546736,
+    "n_docs": 147
+   },
+   {
+    "site": "Khania",
+    "perm_p_h": 0.001996007984031936,
+    "perm_p_v": 0.001996007984031936,
+    "S_h": 0.29085636085236716,
+    "S_v": 0.11051954342357666,
+    "n_docs": 36
+   },
+   {
+    "site": "Zakros",
+    "perm_p_h": 0.001996007984031936,
+    "perm_p_v": 0.001996007984031936,
+    "S_h": 0.3455847553202678,
+    "S_v": 0.10809982236505804,
+    "n_docs": 24
+   }
+  ],
+  "robustness": {
+   "h_sig_all4": true,
+   "v_sig_all4": true,
+   "n_settings": 4,
+   "h_sites_sig_at_0.6": 3,
+   "v_sites_sig_at_0.6": 3
+  },
+  "positive_control": {
+   "pc_verdict": "FAILED",
+   "power_est": 1.0,
+   "false_pos_rate": 0.2,
+   "pc_is_synthetic": true
+  },
+  "coordinator_fp_reconstruction": {
+   "fp_either_metric": 1.0,
+   "fp_h_only": 1.0,
+   "fp_v_only": 0.6,
+   "note": "stricter glyph-level random-layout synthetic; confirms the metric is anti-conservative for width-regularized random layouts -> PC genuinely uncalibratable at the glyph level; NOT an E080-style artifact (which would have IMPROVED under the correct construction)."
+  }
+ },
+ "key_findings": [
+  "Raw threshold-robustness CONFIRMED + coordinator-verified: S_h = 0.333/0.338/0.375 and S_v = 0.119/0.111/0.119 at tol 0.5/0.6/0.7 (alt-gap: S_h 0.367, S_v 0.511), all perm_p ~ 0.002, all << the E079/E080 nulls (~0.76 h, ~0.36 v); per-site HT/Khania/Zakros all significant for both metrics. The 2D-grid's raw statistics are NOT an artifact of the 0.6 row-clustering threshold.",
+  "The false-positive PC FAILED (0.20 worker; up to 1.00 on the coordinator's stricter reconstruction) -> MACHINERY_UNINFORMATIVE. The pitch-CV metric conflates ruled-grid regularity with fixed-glyph-width regularization, so a glyph-level random-layout null cannot be cleanly rejected. This is a REAL calibration limit, NOT an E080-style construction artifact (independent reconstruction made it worse, not better).",
+  "E079/E080 are UNAFFECTED: their own PCs used PITCH-LEVEL random synthetics (proper) and passed; the E082 failure is specific to the GLYPH-LEVEL construction. But E082 surfaces an honest CAVEAT on E079's interpretation: some of the horizontal spacing regularity may reflect uniform glyph widths (E076 shared-size) rather than purely deliberate even spacing.",
+  "alt-gap row-detection weakens v-regularity (S_v 0.511 vs ~0.11 under thresholds) though still significant -> the vertical-line regularity is somewhat row-detection-method-dependent, a secondary caveat."
+ ],
+ "successor_hypotheses": [
+  "Re-test E079 with a WIDTH-CONTROLLED metric: gap-only spacing (edge-to-edge, removing glyph width) vs a random-gap null, to separate deliberate even spacing from width-regularization.",
+  "Build a PC whose random-layout synthetic uses REAL LA glyph-width distributions (variable widths) to see if the false-positive rate drops below 0.10 (fair calibration).",
+  "Test whether the vertical-line regularity (E080) survives the relative-gap row-detection with its OWN null (S_v 0.511 there needs its matched null to interpret).",
+  "Quantify how much of E079's pitch-CV is width-driven vs gap-driven (decompose pitch = gap + width variance).",
+  "Apply the width-controlled spacing metric cross-site to re-confirm or qualify the E079 horizontal-grid claim."
+ ],
+ "layer": "L2",
+ "la_touched": true,
+ "non_circular": "SigLA per-glyph bbox positions only; reused the E079 (random-composition) + E080 (clustering-conditional) nulls verbatim; opaque sign IDs, no value/reading; the PC failure was independently reconstructed by the coordinator (made worse, confirming a real calibration limit, not an artifact).",
+ "deviations": [
+  "WORKER FINALIZATION FAILURE + COORDINATOR RECOVERY: the GLM worker computed the full analysis (run_output.json) but STALLED writing result.json (~20 min, same failure mode as the v1 attempt which thrashed 58 steps/932K tokens). The coordinator killed the stalled worker, independently VERIFIED the sweep (exact match) and ADJUDICATED the PC failure (reconstruction made FP worse, 0.20->1.00, confirming a genuine calibration limit), and finalized result.json from the worker's own computed run_output.json. GLM did the labor; the coordinator verified + recovered the finalization. See epochs/EPOCH-082/COORDINATOR_NOTE.md.",
+  "v1 of this epoch (6 settings x 2000-draw nulls) was too heavy and thrashed; v2 (scaffolded, 4 settings, 500-draw nulls) completed the computation but the worker still could not finalize result.json.",
+  "SigLA bbox JSON is licensed-derived + gitignored (regenerable via scripts/sigla_decode.py); epoch prereg/plan_hash/machinery/result/report/COORDINATOR_NOTE ARE committed."
+ ]
+}
