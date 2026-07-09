@@ -1,0 +1,24 @@
+{
+  "experiment": "E200_prior_overlap_audit",
+  "level_ceiling": "L0",
+  "status": "COMPLETE",
+  "completed": "2026-07-10",
+  "method": "4 parallel read-only inventory scouts over all 18 worktrees + the methodology master inventory; outputs compiled mechanically from the workflow journal",
+  "outputs": {
+    "prior_overlap": "../../PRIOR_METHOD_OVERLAP.csv",
+    "evidence_channel_graph": "../../E200_PRIOR_EVIDENCE_CHANNELS.json",
+    "data_inventory": "../../DATA_INVENTORY.csv",
+    "licences": "../../DATA_LICENSES.md",
+    "seals_register": "../../SEALS_REGISTER.md"
+  },
+  "key_findings": [
+    "dependency-collapsed independent anchors in ALL prior work = 0 (everything descends from the META_CONTINUITY_LA_eq_LB lineage)",
+    "identifiability already priced: 12 anchors x 8 slots x 12 distinct lineages for recovery; foothold 2-3; LA at abs 0.000, ambiguity 10^63.4 (operational) to >=10^270 (gauge quotient)",
+    "named open defect in the published sufficiency curve: LB/Cypriot 600-700-word cells were endpoint clamps, never measured; the RUNNING CSA sweep delivers them ~2026-07-13",
+    "genuinely first-time methods available to LOGOS-2: industrial CP-SAT/SMT engine (E203), adaptor-grammar + subregular morphology (E207), partial/unbalanced OT (E210), drift-tolerant onomastic edit model (E206), transcription-uncertainty propagation (E205D), sequential acquisition policy (E202-recast), process-replay of historical acceptance (E201)",
+    "formal de-authorization on record for further language tournaments absent a licence-clean gate (WP-J) - binds E208",
+    "Salgarella 2020 homomorphy grades (57 signs) acquired but never used - available to E205A"
+  ],
+  "graduation": "L0 only (tooling/audit); no claim",
+  "exploratory_or_confirmatory": "n/a (audit)"
+}
