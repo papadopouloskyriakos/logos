@@ -1,0 +1,50 @@
+{
+  "task_id": "EPOCH-088",
+  "method": "CV of first-row total ink (sum of glyph areas) across HT docs vs independence null (random median-area * random count, 2000 draws). Budget = obs CV significantly BELOW null. Positive control: synthetic fixed-budget docs (detect) + independent size*count docs (false-positive).",
+  "result": {
+    "obs_cv": 0.6394089782128848,
+    "null_median": 0.7137843053972264,
+    "perm_p": 0.14492753623188406,
+    "ratio": 0.8958013973942014,
+    "n_docs": 140
+  },
+  "verdict": "HEADER_INK_NOT_BUDGETED",
+  "numbers": {
+    "budget": {
+      "obs_cv": 0.6394089782128848,
+      "null_median": 0.7137843053972264,
+      "perm_p": 0.14492753623188406,
+      "ratio": 0.8958013973942014,
+      "n_docs": 140
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0004997501249375312,
+      "power_est": 1.0,
+      "false_pos_rate": 0.0,
+      "pc_is_synthetic": true
+    }
+  },
+  "key_findings": [
+    "Observed first-row total-ink CV = 0.639 across 140 HT docs; the independence null (random median-area * random count) median CV = 0.714. The real total ink is only marginally more concentrated than independent size*count (ratio 0.896).",
+    "perm_p = 0.145 (frac null CV <= obs CV): obs CV is NOT significantly below the independence null. A fixed first-row ink budget is rejected at alpha=0.05.",
+    "Positive control PASSED: synthetic fixed-budget docs detected with power_est=1.0 (median detect perm_p=0.0005) and false-positive rate 0.0 on independent size*count docs -> the machinery is calibrated and informative.",
+    "Conclusion: E087's heading-size <-> header-length tradeoff (Spearman -0.189) is a SOFT tendency, NOT the byproduct of a fixed header ink budget. Total header ink varies freely across HT docs.",
+    "The obs CV remains high (~0.64), indicating substantial between-document variation in total first-row ink; scribes do not allocate a constant glyph-area budget to the header row."
+  ],
+  "successor_hypotheses": [
+    "H089a: The size<->length tradeoff is driven by a LINE-WIDTH / row-extent constraint (header row fits a roughly fixed horizontal extent) rather than a total-area budget; test CV of first-row total WIDTH vs an independence null.",
+    "H089b: The tradeoff is a per-glyph HEIGHT preference (scribes prefer a target glyph height band) that incidentally correlates with count via row crowding; test whether median glyph height is more constant than count.",
+    "H089c: The tradeoff is site-specific to Haghia Triada; replicate the CV-vs-null test at Phaistos / Malia / other sites to test generality of the soft tendency.",
+    "H089d: A fixed budget may hold only for a SUBSET of docs (e.g., a specific support type or period); test for a bimodal / mixture structure in total first-row ink.",
+    "H089e: The tradeoff may emerge at the level of individual SCRIBES / hands rather than the document population; if hand-attribution becomes available, test within-hand CV of total header ink.",
+    "H089f: Test whether the tradeoff strengthens when measured against a NORMALIZED ink (area / row bounding-box area) rather than raw area, in case a fixed FRACTION of the row is budgeted rather than a fixed absolute area.",
+    "H089g: Test a 'soft budget' model explicitly: is the size<->count partial correlation (controlling for total ink) substantially weaker than the marginal correlation, quantifying how much of the tradeoff the (rejected) budget would have explained."
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "This epoch tests a spatial mechanism on raw bbox geometry (areas, counts) only; it does not consume E087's correlation as evidence and uses opaque doc IDs with no sign values. The verdict is produced mechanically by the frozen rule from perm_p and the positive-control calibration.",
+  "deviations": [
+    "Data file located at experiments/linear_a_frontier_72h/data/sigla_glyphs_bbox.json (the BASE/data/ path in the task brief did not exist); content is the same sigla_glyphs_bbox.json corpus."
+  ]
+}
