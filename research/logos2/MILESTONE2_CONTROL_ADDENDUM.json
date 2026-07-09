@@ -1,0 +1,91 @@
+{
+ "milestone": 2,
+ "committed_before_confirmatory_inspection": true,
+ "csa_sweep_inspection_state_at_commit": "scheduler launch/finish lines only; zero cell JSONs, curves, or locator outputs read by human or model",
+ "E201_F1": {
+  "split": {
+   "F1a": "EM qualification + null calibration + process-replay scoring (no sweep dependency)",
+   "F1b": "sufficiency-curve integration via imports/ boundary only"
+  },
+  "partitions": {
+   "fit": 0.7,
+   "holdout": 0.3,
+   "seed": "sha256(1336530913|E201F1|<dataset>|split)"
+  },
+  "hyperparameters_frozen_at": "harness.py @ 26ccd27 (sub=1.0, indel=1.0, max_len_delta=2, iters=25, freq-init EM, SOFT anchors)",
+  "qualification_rung": "R_full = 10 fit-anchors + 10% fit-bilingual; single rung, no search",
+  "thresholds_holdout_cognate_acc": {
+   "linear_b-greek": 0.5,
+   "csyl-greek": 0.35,
+   "uga-heb": 0.6
+  },
+  "syllabic_qualification": [
+   "LB or Cypriot >= threshold at R_full on holdout",
+   "abstains on unrelated/shuffled-anchor/synthetic-isolate controls",
+   "no leakage detector fires",
+   "two-dataset Bonferroni",
+   "no post-hoc segmentation or mapping"
+  ],
+  "failure_marking": "NOT_QUALIFIED_FOR_LINEAR_A_POSITIVE_INFERENCE",
+  "abstention": {
+   "confidence": "frac chars with top1-top2 count margin >= 2",
+   "abstain_below": 0.5,
+   "control_abstention_target": 0.8
+  },
+  "effect_size": "acc-chance with 1000-bootstrap 95% CI; qualification needs CI lower > 2x chance",
+  "missing_cells": "fail closed; one logged rerun allowed for pure infrastructure failure",
+  "disqualifiers": [
+   "dataset hash mismatch",
+   "partition leak",
+   "env drift",
+   "seed deviation",
+   "post-freeze semantic edits without amendment",
+   "pre-freeze F1b inspection"
+  ]
+ },
+ "false_graduation_calibration": {
+  "n_null": 200,
+  "composition": {
+   "synthetic_isolate": 67,
+   "shuffled_inventory": 67,
+   "unrelated_target": 66
+  },
+  "preserves": [
+   "corpus size",
+   "alphabet size",
+   "frequency profile",
+   "segmentation regime",
+   "anchor-count regime",
+   "model-selection procedure inside null"
+  ],
+  "bound": "one-sided exact Clopper-Pearson 95% upper",
+  "target_upper": 0.02,
+  "zero_failure_minimum_n": 149,
+  "escalation": "if >=1 failure continue to N=400; bound>0.02 -> arm FAILS",
+  "mc_pvalues": "plus-one correction"
+ },
+ "import_boundary": {
+  "dir": "research/logos2/imports/<import_id>/",
+  "files": [
+   "IMPORT_RECORD.json",
+   "IMPORT_MANIFEST.sha256",
+   "README.md"
+  ],
+  "fail_closed_on_incomplete_provenance": true
+ },
+ "E203_F1_scope": [
+  "MUS cores + composition vs matched random pin sets",
+  "CP-SAT soft penalties, weight bands {0.25,0.5,1,2,4}x grade base",
+  "near-optimal multiplicity + marginals + stability + contracting domains",
+  "counting bounds + CP-SAT/Z3 backbone cross-check + synthetic validation",
+  "extended nulls: degree/domain-size/frequency/edge-class/grade-preserving",
+  "E202 acquisition policy -> VALUE_OF_INFORMATION.csv + SEQUENTIAL_ACQUISITION_POLICY.json + EVIDENCE_ACQUISITION_PRIORITIES.md"
+ ],
+ "standing": {
+  "E204": "no seal opening (opening rule unsatisfied); component separation + ablations; <=L3",
+  "E205": "3 conditions; palaeographic evidence only; E205C BLOCKED_DATA",
+  "E206": "internal-only slot freeze before external contact; contamination classified",
+  "E207": "battery + matched synthetics; restricted vocabulary",
+  "E208": "DE_AUTHORIZED_PENDING_LICENSE_CLEAN_GATE"
+ }
+}
