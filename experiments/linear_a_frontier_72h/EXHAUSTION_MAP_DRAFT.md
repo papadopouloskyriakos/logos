@@ -2,32 +2,35 @@
 
 > **STATUS: DRAFT. NOT FINALIZED.** Finalization is mechanically gated by `scripts/clock_check.py`
 > (`finalization_authorized = now ≥ 2026-07-11T03:20Z AND completed_substantive_epochs ≥ 18`).
-> As of last edit: **70 substantive epochs banked**, gate **BLOCKED** (time_gate open ~45h to 2026-07-11T03:20Z).
+> As of last edit: **75 distinct epochs banked** (82 ledger rows; 7 early epochs carry superseding duplicates, deduped by `epoch_id`, last-wins), gate **BLOCKED** (time_gate open ~43h to 2026-07-11T03:20Z).
 > This document accretes as epochs bank; it becomes the §12 capstone **only** when the clock authorizes.
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 70 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 75 distinct epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
-| **Load-bearing cross-site positives** | **28** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
-| Bounded negatives | 16 | Well-powered PC-passed tests returning informative *absence* (§B) |
-| Site-local structural findings | 3 | Well-powered PC-passed *detections* that landed on the site-local side of the dichotomy (§B) |
+| **Load-bearing cross-site positives** | **29** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| Bounded negatives | 18 | Well-powered PC-passed tests returning informative *absence* (§B) |
+| Genre-/site-local structural findings | 4 | Well-powered PC-passed *detections* that landed on the site-local / genre-graded side of the dichotomy (§B) |
+| Positive-hardening / qualification | 1 | Robustness pass that *qualified* a positive's breadth without overturning it (`E075` on `E072`; §A7) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*28 positives / 16 bounded-negatives + 3 site-local findings / 14 no-inference (no-power + underpowered +
-machinery-uninf) / 9 setup. Zero of the 28 positives rises above L2/L3. The honest denominator is on-screen:
-this is a structural map, not a reading. (One positive, `E067` depth-2 concentration, is global + only partial
-cross-site — 2/6 sites — and is flagged as such in §A1.)*
+*29 positives / 18 bounded-negatives + 4 genre-/site-local findings / 1 positive-qualification / 14 no-inference
+(no-power + underpowered + machinery-uninf) / 9 setup. Zero of the 29 positives rises above L2/L3. The honest
+denominator is on-screen: this is a structural map, not a reading. Two positives carry breadth caveats, flagged
+in §A: `E067` depth-2 concentration is global + only partial cross-site (2/6 sites); `E072` libation-formula
+canonical order is real but **narrow** (hardened by `E075`: effective-n 8 inscriptions / 6 sites, hub-dominated).*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
-Scanned all 70 ledger entries (layer counts script-generated): **no epoch is worded above L3** (layers: L1×9,
-L2×16, L2/L3×36, L3×3, older-unlabelled×6; zero L4+); **every `licences_changed` field is `none`** (0/70
-non-none; no result silently earned a licence); the 7 transfer
+Scanned all 75 distinct ledger entries (layer counts script-generated, deduped by `epoch_id`): **no epoch is
+worded above L3** (layers: L1×7, L2×13, L2/L3×35, L3×8, early-pre-convention-unlabelled×12; **zero L4+**);
+**every `licences_changed` field is `none`** (0/75 non-none — 63 explicit `none` + 12 early entries predating the
+field; no result silently earned a licence); the 7 transfer
 licences remain exactly as of 2026-07-07 (STRUCTURAL `NOT_EARNED`, FUNCTIONAL `NOT_YET_EARNED`, SEMANTIC+
 `NOT_AUTHORIZED`). Every mention of "phonetic value / meaning / language" across the positives is a **disclaimer**,
 not a claim. The positives are **direct structural observations of Linear A's own distribution** (Linear B is
@@ -129,19 +132,50 @@ ruling-mark; the complementarity holds either way; L2 position only).
 survives an adaptive null (sign *shape* varies by site, distinct from the shared frequency fingerprint);
 `E018` the `E013` component-composition channel survives its adaptive null.
 
+**A7. The libation formula has a cross-site canonical ORDER (but narrow breadth) — and it decomposes cleanly.**
+The Linear A libation (stone-vessel/dedicatory) corpus is the classic "religious formula" register. This session
+decomposed the word "formula" into its two parts on one corpus:
+`E072` **the ORDER is a cross-site canonical sequence** — when two libation word-forms co-occur, their relative
+order is perfectly consistent (all 13 testable pairs and all 10 cross-site pairs order-consistency 1.000 vs a
+within-inscription order-shuffle null ~0.74; A_cross 10/10 vs null ~3.7–4.3; every perm p=5e-4), PC-passed
+(planted order detected 20/20, false-pos 0.0, power 1.0; empirical null ~0.74, not naive-0.5). **`E075` hardens
+this positive and QUALIFIES it to NARROW breadth** (invariant #3 + Art. VIII effective-n): the order signal is
+genuine and robust — it survives *every* leave-one-site-out (incl. the hub site Iouktas at the power floor,
+p=0.044) and the leave-the-hub-inscription-out (drop `IOZa2` alone → n_cross=4, p=0.008); C_cross stays exactly
+1.0 in every powered leave-out (it never collapses toward the null). BUT its cross-site *breadth* rests on a small
+effective-n — 10 raw pairs but only **8 carrier inscriptions across 6 sites**, with the hub inscription `IOZa2`
+(Iouktas) an endpoint of all 10 and ~3 inscriptions carrying most weight (dropping the top-2 carriers → a
+powerless n_cross=3). So `E072` reads as *"a canonical order shared across a small set of libation inscriptions
+spanning several sites,"* **not** a broad corpus-wide formula. *Honest framing:* the canonical libation-formula
+order is a **mainstream-known** structure (Davis, Duhoux, Schoep); `E072`'s value is mechanical confirmation under
+a proper held-out null + the machinery-detects-real-order demonstration, not a novel discovery. L3: anonymous
+sign-tuples, structural ORDER only — no reading, no meaning, no licence.
+*The complement is `E071` (§B): the libation formula's **vocabulary** (which forms recur, and their cross-site
+spread) is fully **frequency-explained** — so "the formula" = frequency/site-local vocabulary (E071) + cross-site
+canonical order (E072). And the ORDER rigidity is **genre-graded** (`E073`, §B) but genre↔site **confounded**
+(`E074`, §B) — see the genre-site-confound note.*
+
 ### The organizing finding (the through-line of Section A)
-> **Shared script + shared positional administrative grammar generalize cross-site; vocabulary, scribal
+> **Shared script + shared positional grammar/ORDER generalize cross-site; vocabulary, scribal
 > register, and metrological realization are site-local.** *Cross-site:* the sign fingerprint (A4), the ledger
 > syntax skeleton (A2: word→num, line-final numeral, divider, entry template, entry-head length E069), the
 > positional/prefix morphology (A1: A-prefix, initial-concentration typology E064, and even the A-marked
-> sub-lexicon E068), positional specialization (A3), and the document-marker system (A5: E061–E063) all travel
-> across sites — and the token-class grammar is held-out **predictable** on unseen sites (E047, 9/9).
-> *Site-local:* the counted vocabulary (§B: E032/E034/E035/E053), document typology (E058), sub-lexical
-> structure (E059), **scribal register** (word-length E065, accounting-scale E066), and the **metrological
-> realization** of the entry template (fraction attachment E070) do not.
+> sub-lexicon E068), positional specialization (A3), the document-marker system (A5: E061–E063), and now the
+> **libation formula's canonical ORDER** (A7: E072, real but narrow per E075) all travel across sites — and the
+> token-class grammar is held-out **predictable** on unseen sites (E047, 9/9).
+> *Site-local:* the counted vocabulary (§B: E032/E034/E035/E053), the **libation formula's vocabulary** (E071 —
+> frequency-explained, like admin), document typology (E058), sub-lexical structure (E059), **scribal register**
+> (word-length E065, accounting-scale E066), and the **metrological realization** of the entry template (fraction
+> attachment E070) do not. **The order/grammar-vs-vocabulary split now holds within a single register:** the
+> libation "formula" is cross-site in ORDER (E072) but site-local/frequency-explained in VOCABULARY (E071) — a
+> clean one-corpus microcosm of the whole through-line.
 > ⇒ Linear A behaves as a **concatenative / prefixing administrative script with a genuine shared positional
-> grammar but site-local lexicon, register, and quantitative habits.** All L2/L3 — structure, not sound or
-> meaning. No transfer licence follows.
+> grammar and ordering but site-local lexicon, register, and quantitative habits.** All L2/L3 — structure, not
+> sound or meaning. No transfer licence follows.
+> **Load-bearing caveat (E074):** *genre* and *find-site* are ~83% confounded in this corpus (administrative texts
+> at palatial sites, libation texts at cult sites; only Palaikastro mixes both at scale). Any claim phrased as a
+> **genre** effect (e.g. E073 "order rigidity is libation-specific") is confounded with **site** and cannot be
+> attributed to genre beyond the established site-locality — see the genre-site-confound note in §B.
 
 ---
 
@@ -176,6 +210,22 @@ Each is a well-powered, PC-passed test that returned a *bounded absence* — inf
   limited sign-to-sign predictability).
 - **`A-` heading is positional, not an independent document-function marker.** `E051` the A-heading × accounting-
   intensity interaction is **site-local**; `E034` A-heading role site-local; `E035` terminal total-slot site-local.
+- **The libation formula's VOCABULARY is frequency-explained, not a cross-site shared lexicon.** `E071` the
+  famous recurring dedicatory forms (A-TA-I-*301-WA-JA at 5 sites, SI-RU-TE 5, I-PI-NA-MA 5, JA-SA-SA-RA-ME 4)
+  appear at many sites **because they are frequent** — the cross-site recurrence mass sits *below* a token→site
+  reassignment null (S_obs=20 vs null ~25–33, ratio<1, perm p≈1), exactly like the administrative corpus
+  (S_obs=23 vs null ~92–97). PC-passed (planted formula detected p=0.002, power 1.0). A guilty-until-proven-
+  innocent catch: a literature-famous "cross-site formula" fails the frequency-controlled test at the word-form
+  level. (Its cross-site signal lives in ORDER, not vocabulary breadth — see §A7/E072.)
+- **Genre and find-site are confounded — cross-genre lexicon partition is UNDERDETERMINED.** `E074` the libation
+  and administrative genres share almost no vocabulary (20 shared forms, Jaccard 0.024; global token→genre
+  permutation null ~69, p≈0 — a striking apparent "genre-specialized lexicons" effect), **but it COLLAPSES under
+  site control** (site-stratified null 21.5 ≈ observed 20, p=0.26): once each form's find-site is fixed, no
+  residual genre effect is detectable. ~83% of tokens are genre-determined by a single-genre site; only Palaikastro
+  mixes both at scale. PC-passed with the site-stratified control **powered** (0.96) — so `UNDERDETERMINED` reflects
+  the structural confound, not a power failure. **This downgraded a p≈0 apparent positive to underdetermined at
+  design time** (invariant #3), and records a campaign-wide limit: *any* genre-phrased claim is confounded with
+  site (see the through-line caveat).
 - Earlier bounded/marginal: `E002` motif within-equivalent, `E010` door marginal, `E012` allograph-structure
   confounded, `E013` decomposition neutral, `E046` word-length shape inconclusive.
 
@@ -192,10 +242,18 @@ site-local side of the through-line, distinct from bounded *absences* above):**
 - **Fractional attachment is a site convention.** `E070` what a fraction attaches to is site-local — Haghia
   Triada realizes num→frac (0.48, metrological remainder), Khania attaches fractions to words (num→frac 0.055);
   site-contrast perm p=2e-4. (Nuances E060's entry template — see §A2.)
-> These three refine the through-line: not only is *vocabulary* site-local, but **scribal register** (word-
-> length, accounting scale) and the **metrological realization** of the shared entry template are site-local
-> too. The shared cross-site layer is the positional *grammar + script*; the quantitative/graphic *magnitudes*
-> and lexicon are local.
+- **Word-ORDER rigidity is genre-graded (but genre↔site confounded).** `E073` administrative texts have a
+  weak-but-real within-inscription word-order preference (C_glob=0.839 vs shuffle null 0.745, perm p=1.5e-3; **not**
+  bag-of-words) that is significantly **less rigid** than the libation formula's perfect order (admin bootstrap
+  upper 0.887 ≪ libation 1.000, Δ=0.161); PC-passed with a discrimination gate (separates rigid C≈1.0 from
+  weak-order C≈0.72). So the *perfectly rigid* canonical order is a property of the libation register, while admin
+  ordering is only loosely preferred. **Caveat (E074):** "libation-specific" is confounded with "cult-site-specific"
+  — the mechanical rigidity contrast stands; its *genre* attribution does not (genre↔site ~83% confounded).
+> These four refine the through-line: not only is *vocabulary* site-local, but **scribal register** (word-
+> length, accounting scale), the **metrological realization** of the shared entry template (fraction attachment),
+> and the **rigidity of word-order** (loose in admin, rigid in libation) are genre-/site-graded too. The shared
+> cross-site layer is the positional *grammar + ordering + script*; the quantitative/graphic *magnitudes*,
+> lexicon, and order-*rigidity* are local/register-bound.
 
 ---
 
@@ -245,12 +303,23 @@ earned or implied, and no specific family is claimed. Recorded as a successor-hy
   (`E067`, partial), A-vocab cross-site sharing (`E068`), entry-head word-length (`E069`) on the shared side;
   word-length register (`E065`), accounting-scale register (`E066`), fractional attachment (`E070`) on the
   site-local side. The cross-site held-out grammar-prediction synthesis is already banked (`E047`).
-- **Saturation status (as of 70 epochs): genuinely narrowing.** Probed-and-declined this session: commodity-
-  logogram cross-site (underpowered, 2 sites), word-vs-logogram magnitude register (underpowered), cross-site
-  grammar prediction (covered by E047), further register tests (pattern-repeat, not distinct). The remaining
-  candidates are refinements or underpowered; each must still clear the **distinct + well-powered + non-circular
-  + PC-gated** bar before launch, else the productive work is capstone assembly. **Do not declare hard
-  saturation** — the `other`-channel lesson stands: inspect a channel before calling it empty.
+- **The LIBATION/religious register was the next untested vein (E071–E075) — same lesson re-confirmed.** After the
+  `other`-channel and administrative dimensions were mapped, the libation (stone-vessel) corpus remained a distinct
+  functional register that had not been probed as a genre. Inspecting it produced a coherent five-epoch arc:
+  `E071` (formula vocabulary frequency-explained → §B), `E072` (formula canonical ORDER cross-site, a POSITIVE →
+  §A7), `E073` (order rigidity genre-graded → §B), `E074` (cross-genre lexicon partition = genre-site confounded /
+  underdetermined → §B; records a campaign-wide confound), `E075` (hardened E072 to real-but-narrow → §A7). Net: one
+  new cross-site positive (E072, narrow), two bounded negatives (E071, E074), one genre-graded finding (E073), one
+  positive-qualification (E075), plus a structural limit (the genre↔site confound). The vein is now mapped.
+- **Saturation status (as of 75 epochs): genuinely narrowing, genre vein now mapped.** Probed-and-declined earlier:
+  commodity-logogram cross-site (underpowered, 2 sites), word-vs-logogram magnitude register (underpowered),
+  cross-site grammar prediction (covered by E047). Scouted after E075 (E072/E073/E074 successors): admin-order-by-
+  support (confound/underpowered), matched-form rigidity contrast (n small), a site+genre factorial (redundant with
+  E074's confound), Palaikastro-only genre test (n=49, underpowered), within-genre cross-site spread (covered by
+  E032/E071) — none clears the **distinct + well-powered + non-circular + PC-gated** bar. Remaining structural
+  questions need **new data** (SigLA spatial layout; images — SOURCE_BLOCKED) or **L4+** (barred). The productive
+  work is now capstone assembly; launch only if a genuinely-distinct powered channel appears. **Do not declare hard
+  saturation** — the `other`- and libation-channel lessons both stand: inspect a channel before calling it empty.
 
 ---
 *Draft assembled by the coordinator from `EPOCH_LEDGER.yaml`; every count/verdict is ledger-derived.
@@ -287,9 +356,10 @@ finding *does* contradict the paper, it is filed as an ERRATUM against the froze
 ## I. Completeness & limitations (completeness-critic pass)
 Mechanical audit of the record's completeness:
 - **All map sections present** (A–F, H, tally, discipline-compliance certificate). No structural gap.
-- **All 20 load-bearing positives** have full artifacts (prereg + plan_hash + machinery + result + report) and are
+- **All 29 load-bearing positives** have full artifacts (prereg + plan_hash + machinery + result + report) and are
   coordinator-verified on *both* observed statistics and (where simulated-null-dependent) reconstructed nulls
-  (`VERIFICATION_AUDIT.md`).
+  (`VERIFICATION_AUDIT.md`). The E071–075 genre arc extends this: E072 (positive) and E075 (its hardening) both had
+  their cross-site/leave-out nulls reconstructed from scratch; E074's site-stratified confound null likewise.
 - **Documented limitation (not backfilled):** three *early, non-positive* epochs — E008/E009 (stroke channel, §D
   SOURCE_BLOCKED) and E013 (decomposition-neutral, §B, superseded by E018) — carry `prereg.md` + `result.json`
   but no separate `plan_hash.txt` (an early-phase convention before the hash file was standardized). They were
@@ -298,9 +368,13 @@ Mechanical audit of the record's completeness:
 - **Worker scratch files** (`_run.*`, `run_analysis.py`, `_pc_tmp.json`) remain untracked: intermediate GLM
   working files, non-canonical; the frozen record is the committed prereg/plan_hash/machinery/result/report.
 
-**Assessment (corrected after E060): near-complete but the "complete" call was premature.** E058/E059-era
-assessments twice declared saturation while the corpus `other` token class (logograms + fractions) sat
-UNEXAMINED — `E060` then found a strong cross-site positive there (the metrological/logographic entry template).
-Lesson recorded: **do not declare a channel absent without inspecting it.** Current state: 21 verified positives
-/ 16 bounded-negatives, all L2/L3, no licence, no decipherment. Any remaining untested observed structure should
-be inspected before a completeness claim; the clock-gated §12 finalization remains blocked until 2026-07-11T03:20Z.
+**Assessment (updated after E075): near-complete; saturation calls have twice been premature, so held loosely.**
+E058/E059-era assessments twice declared saturation while the corpus `other` token class (logograms + fractions)
+sat UNEXAMINED — `E060` then found a strong cross-site positive there; and the 70-epoch assessment predated the
+libation/religious register, which `E071–E075` then mapped (one narrow positive + confound + hardening). Lesson
+re-confirmed twice: **do not declare a channel absent without inspecting it.** Current state (75 distinct epochs):
+**29 verified positives / 18 bounded-negatives + 4 genre-/site-local findings / 1 positive-qualification**, all
+L2/L3, no licence, no decipherment. The genre vein is now mapped and the genre↔site confound (E074) bounds all
+genre claims. Remaining structural questions need new data (SigLA spatial; images SOURCE_BLOCKED) or L4+ (barred);
+any remaining untested *observed* channel should still be inspected before a completeness claim. The clock-gated
+§12 finalization remains blocked until 2026-07-11T03:20Z.

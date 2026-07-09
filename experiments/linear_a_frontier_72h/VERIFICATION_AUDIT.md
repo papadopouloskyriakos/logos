@@ -91,3 +91,26 @@ null reconstructed to matching values — including the two subtle cases where t
 the E059 lesson (recompute the NULL, not just the observed statistic, and anchor it to a closed form where one
 exists) is now standard in every driver. The verification layer continues to discriminate real structure from
 artifacts.
+
+## Session-3 pass (E071–E075, the libation/genre arc) — every load-bearing null reconstructed from scratch
+Each epoch had its observed statistic AND its null (and leave-out / contrast / confound legs) independently
+recomputed by the coordinator from `corpus/silver/inscriptions_structured.json` — independent re-implementations,
+not GLM's machinery. For the two positives (E072, E075) the reconstruction was extra-strict per invariant #3.
+
+| Epoch | Verdict | Coordinator recompute (observed / null) | Status |
+|---|---|---|---|
+| **E071** | Libation formula vocab site-local | token→site reassignment null: LIB S_obs=20 / null 25.3 (result 32.9), perm_p 0.98, ratio<1; ADMIN S_obs=23 / null 91.5, perm_p 1.0 — direction (below null, not enriched) robust across both reconstructions; magnitude operationalization-sensitive | ✅ direction exact |
+| **E072** | Libation ORDER cross-site (positive) | order-consistency + within-inscription shuffle null reconstructed for global AND cross-site sets: C_glob 1.000/null 0.744; C_cross 1.000/null 0.737 (exact); A_cross 10/null 4.30 (result 3.68); all perm_p 5e-4. Subtlety caught: A_cross mechanically follows from C=1.0 (one load-bearing fact) | ✅ exact |
+| **E073** | Admin order weaker than libation | both positive claims reconstructed: admin C_glob 0.8394 (exact)/shuffle null 0.7454, perm_p 0.0015; bootstrap 95% CI (0.787, 0.887) (result 0.788, 0.887) upper<1.0 → less rigid; libation ref 1.000 | ✅ exact |
+| **E074** | Genre-site confounded / underdetermined | S_shared=20, global perm null 69.0 (obs far below), **site-stratified null reconstructed from scratch = 21.5 ≈ obs 20** (partition collapses); 1 both-genre site, 200 swappable tokens. Worker's aux closed_form_E=188.56 mislabeled → correct independence approx ~68.8 (coordinator-recomputed), not load-bearing | ✅ exact (+ aux-number correction) |
+| **E075** | E072 real-but-narrow (QUALIFIED) | every LOSO/LHIO perm_p reconstructed: LOSO-Iouktas C=1.0 n=3 p=0.044 (result 0.046); LHIO-top1 C=1.0 n=4 p=0.0085 (result 0.008); LHIO-top2 C=1.0 n=3 p=0.0645 (result 0.060). Key claim verified: C_cross stays 1.0 in every powered leave-out (power-loss, not signal-loss) | ✅ exact |
+
+**Session-3 discipline highlights:** (a) `E074` is a **design-time confound catch** — the coordinator pre-check
+found genre↔site ~83% confounded BEFORE launch and built the site-stratified control into the prereg, so a p≈0
+apparent positive was mechanically downgraded to underdetermined rather than banked as an overclaim. (b) `E075`
+applied invariant #3 + Art. VIII (effective-n) to the campaign's newest positive and found it real-but-narrow
+(effective-n 8 inscriptions / 6 sites, hub-dominated) — the signal never collapses (C_cross=1.0 under every
+powered leave-out), so it is QUALIFIED, not FRAGILE. (c) The `repro_check` for E072/E074/E075 reconstructed the
+LOAD-BEARING null (cross-site, site-stratified, and leave-out nulls respectively) from scratch, per the E059
+lesson. No positive failed or reversed; two carry explicit breadth/attribution caveats (E072 narrow, E073/E074
+genre↔site confounded).
