@@ -1,0 +1,238 @@
+{
+ "cell": "CONTROL_battery",
+ "rows": [
+  {
+   "rep": 0,
+   "control": "shuffled_inventory",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 0,
+   "control": "unrelated_target",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.013302601903933765
+  },
+  {
+   "rep": 0,
+   "control": "synthetic_isolate",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 0,
+   "control": "corrupted_anchors_0.1",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.5633333333333334,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 0,
+   "control": "corrupted_anchors_0.3",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.4066666666666667,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 0,
+   "control": "leaked_names_detector",
+   "fired": true,
+   "pass": true
+  },
+  {
+   "rep": 1,
+   "control": "shuffled_inventory",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 1,
+   "control": "unrelated_target",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.013302601903933765
+  },
+  {
+   "rep": 1,
+   "control": "synthetic_isolate",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 1,
+   "control": "corrupted_anchors_0.1",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.5533333333333333,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 1,
+   "control": "corrupted_anchors_0.3",
+   "counted_for_false_grad": false,
+   "graduated": false,
+   "cognate_accuracy": 0.13,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 1,
+   "control": "leaked_names_detector",
+   "fired": true,
+   "pass": true
+  },
+  {
+   "rep": 2,
+   "control": "shuffled_inventory",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0033333333333333335,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 2,
+   "control": "unrelated_target",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.013302601903933765
+  },
+  {
+   "rep": 2,
+   "control": "synthetic_isolate",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 2,
+   "control": "corrupted_anchors_0.1",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.5533333333333333,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 2,
+   "control": "corrupted_anchors_0.3",
+   "counted_for_false_grad": false,
+   "graduated": false,
+   "cognate_accuracy": 0.16333333333333333,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 2,
+   "control": "leaked_names_detector",
+   "fired": true,
+   "pass": true
+  },
+  {
+   "rep": 3,
+   "control": "shuffled_inventory",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.013333333333333334,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 3,
+   "control": "unrelated_target",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.013302601903933765
+  },
+  {
+   "rep": 3,
+   "control": "synthetic_isolate",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 3,
+   "control": "corrupted_anchors_0.1",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.39666666666666667,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 3,
+   "control": "corrupted_anchors_0.3",
+   "counted_for_false_grad": false,
+   "graduated": false,
+   "cognate_accuracy": 0.21666666666666667,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 3,
+   "control": "leaked_names_detector",
+   "fired": true,
+   "pass": true
+  },
+  {
+   "rep": 4,
+   "control": "shuffled_inventory",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0033333333333333335,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 4,
+   "control": "unrelated_target",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.013302601903933765
+  },
+  {
+   "rep": 4,
+   "control": "synthetic_isolate",
+   "counted_for_false_grad": true,
+   "graduated": false,
+   "cognate_accuracy": 0.0,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 4,
+   "control": "corrupted_anchors_0.1",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.5533333333333333,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 4,
+   "control": "corrupted_anchors_0.3",
+   "counted_for_false_grad": false,
+   "graduated": true,
+   "cognate_accuracy": 0.5533333333333333,
+   "chance": 0.004640512349845461
+  },
+  {
+   "rep": 4,
+   "control": "leaked_names_detector",
+   "fired": true,
+   "pass": true
+  }
+ ],
+ "false_graduations": 0,
+ "n_counted_cells": 15,
+ "detector_fired_all": true
+}

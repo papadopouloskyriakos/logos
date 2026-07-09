@@ -1,6 +1,22 @@
 {
- "experiment": "E201",
- "status": "PREREGISTERED",
+ "experiment": "E201_replay_benchmark",
+ "status": "PILOT_COMPLETE",
  "exploratory": true,
- "created": "2026-07-10"
+ "confirmatory": false,
+ "verdict": "HARNESS_OPERATIONAL",
+ "completed_pilot": "2026-07-10",
+ "pilot_findings_L0_only": [
+  "UGA (alphabetic) evidence ladder: 0.037 (distribution-only) -> 0.104 (+1 name) -> 0.591 (+5 names) -> 0.611 (+10% bilingual); chance 0.005 - the anchor marginal-value curve in ladder form",
+  "CSYL (syllabic, n=200) FLAT at chance (~0.01 vs chance 0.020) at every rung incl. bilingual-10% - the syllabic small-corpus wall, consistent with the CSA sufficiency record",
+  "Control battery: 0/15 false graduations (shuffled/unrelated/synthetic); leak detector fired 5/5; corrupted-anchor cells legitimately degrade",
+  "Process-replay cases ENCODED (Ventris-1952, Ugaritic, 2 failure cases); scoring deferred to F1"
+ ],
+ "promotion_decisions": "NONE at pilot (confirmatory F1 waits for the CSA sweep's at-scale LB/Cypriot cells, ~2026-07-13)",
+ "artifacts": [
+  "results/UGA_ladder.json",
+  "results/CSYL_ladder.json",
+  "results/CONTROL_battery.json",
+  "results/PROCESS_REPLAY_encoding.json",
+  "results/P1_summary.json"
+ ]
 }

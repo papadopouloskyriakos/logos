@@ -1,0 +1,8 @@
+{
+ "pilot": "P1",
+ "exploratory": true,
+ "harness_verdict": "HARNESS_OPERATIONAL",
+ "false_graduations": "0/15",
+ "runtime_s": 20.4,
+ "promotion_decisions": "NONE at pilot (promotion gate is a confirmatory F1 decision)"
+}

@@ -1,0 +1,77 @@
+{
+ "dataset": "uga-heb.no_speNL.cog",
+ "n": 300,
+ "rungs": [
+  {
+   "mean_edit_distance": 2.1812080536912752,
+   "n_cipher_words": 300,
+   "n_alignments": 298,
+   "n_mapped": 26,
+   "cognate_accuracy": 0.03691275167785235,
+   "cognate_correct": 11,
+   "cognate_evaluated": 298,
+   "chance_cognate_accuracy": 0.00489446394966707,
+   "ambiguous_chars": 5,
+   "n_chars": 30,
+   "rung": "R1_distribution_only"
+  },
+  {
+   "rung": "R2_formula_boundaries",
+   "status": "NOT_APPLICABLE",
+   "note": "cognate pair lists carry no document structure (prereg disclosure)"
+  },
+  {
+   "rung": "R3_semantic_classes",
+   "status": "NOT_APPLICABLE",
+   "note": "no semantic labels in .cog data (prereg disclosure)"
+  },
+  {
+   "mean_edit_distance": 2.0436241610738257,
+   "n_cipher_words": 300,
+   "n_alignments": 298,
+   "n_mapped": 26,
+   "cognate_accuracy": 0.1040268456375839,
+   "cognate_correct": 31,
+   "cognate_evaluated": 298,
+   "chance_cognate_accuracy": 0.00489446394966707,
+   "ambiguous_chars": 4,
+   "n_chars": 30,
+   "rung": "R4_one_name"
+  },
+  {
+   "mean_edit_distance": 1.0067114093959733,
+   "n_cipher_words": 300,
+   "n_alignments": 298,
+   "n_mapped": 27,
+   "cognate_accuracy": 0.5906040268456376,
+   "cognate_correct": 176,
+   "cognate_evaluated": 298,
+   "chance_cognate_accuracy": 0.00489446394966707,
+   "ambiguous_chars": 3,
+   "n_chars": 30,
+   "rung": "R5_five_names"
+  },
+  {
+   "rung": "R6_related_corpus",
+   "status": "INHERENT_BASELINE",
+   "note": "the plain column IS the related-language lexicon; identical to R1"
+  },
+  {
+   "mean_edit_distance": 0.9765100671140939,
+   "n_cipher_words": 300,
+   "n_alignments": 298,
+   "n_mapped": 27,
+   "cognate_accuracy": 0.610738255033557,
+   "cognate_correct": 182,
+   "cognate_evaluated": 298,
+   "chance_cognate_accuracy": 0.00489446394966707,
+   "ambiguous_chars": 2,
+   "n_chars": 30,
+   "rung": "R7_bilingual_10pct"
+  }
+ ],
+ "leak_check": {
+  "identical_frac": 0.33666666666666667,
+  "fired": true
+ }
+}

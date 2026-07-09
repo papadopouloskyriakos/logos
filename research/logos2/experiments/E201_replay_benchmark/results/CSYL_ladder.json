@@ -1,0 +1,77 @@
+{
+ "dataset": "csyl-greek.cog",
+ "n": 200,
+ "rungs": [
+  {
+   "mean_edit_distance": 3.285,
+   "n_cipher_words": 200,
+   "n_alignments": 200,
+   "n_mapped": 28,
+   "cognate_accuracy": 0.01,
+   "cognate_correct": 2,
+   "cognate_evaluated": 200,
+   "chance_cognate_accuracy": 0.019768436725303113,
+   "ambiguous_chars": 19,
+   "n_chars": 50,
+   "rung": "R1_distribution_only"
+  },
+  {
+   "rung": "R2_formula_boundaries",
+   "status": "NOT_APPLICABLE",
+   "note": "cognate pair lists carry no document structure (prereg disclosure)"
+  },
+  {
+   "rung": "R3_semantic_classes",
+   "status": "NOT_APPLICABLE",
+   "note": "no semantic labels in .cog data (prereg disclosure)"
+  },
+  {
+   "mean_edit_distance": 3.16,
+   "n_cipher_words": 200,
+   "n_alignments": 200,
+   "n_mapped": 29,
+   "cognate_accuracy": 0.01,
+   "cognate_correct": 2,
+   "cognate_evaluated": 200,
+   "chance_cognate_accuracy": 0.019768436725303113,
+   "ambiguous_chars": 12,
+   "n_chars": 49,
+   "rung": "R4_one_name"
+  },
+  {
+   "mean_edit_distance": 3.12,
+   "n_cipher_words": 200,
+   "n_alignments": 200,
+   "n_mapped": 31,
+   "cognate_accuracy": 0.01,
+   "cognate_correct": 2,
+   "cognate_evaluated": 200,
+   "chance_cognate_accuracy": 0.019768436725303113,
+   "ambiguous_chars": 14,
+   "n_chars": 49,
+   "rung": "R5_five_names"
+  },
+  {
+   "rung": "R6_related_corpus",
+   "status": "INHERENT_BASELINE",
+   "note": "the plain column IS the related-language lexicon; identical to R1"
+  },
+  {
+   "mean_edit_distance": 2.845,
+   "n_cipher_words": 200,
+   "n_alignments": 200,
+   "n_mapped": 39,
+   "cognate_accuracy": 0.015,
+   "cognate_correct": 3,
+   "cognate_evaluated": 200,
+   "chance_cognate_accuracy": 0.019768436725303113,
+   "ambiguous_chars": 10,
+   "n_chars": 49,
+   "rung": "R7_bilingual_10pct"
+  }
+ ],
+ "leak_check": {
+  "identical_frac": 0.0,
+  "fired": false
+ }
+}

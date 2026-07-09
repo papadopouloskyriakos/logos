@@ -1,0 +1,39 @@
+{
+ "cell": "PROCESS_REPLAY_encoding",
+ "cases": {
+  "ventris_1952_analogue": {
+   "dataset": "linear_b-greek.cog + linear_b-greek.names.cog",
+   "evidence": {
+    "anchors": "5 toponym name pairs (SOFT)",
+    "distribution": true,
+    "related_corpus": true,
+    "bilingual": false
+   },
+   "gate_question": "does the L4-L6 graduation rule graduate this configuration?",
+   "approximation": "cognate lists approximate the tablet corpus; grid/triplet structure not represented - DISCLOSED"
+  },
+  "ugaritic_analogue": {
+   "dataset": "uga-heb.no_speNL.cog",
+   "evidence": {
+    "anchors": "axe-head-style few names",
+    "related_corpus": true
+   },
+   "gate_question": "same"
+  },
+  "failure_case_random_map": {
+   "dataset": "uga-heb.no_speNL.cog vs synthetic isolate target",
+   "evidence": {
+    "anchors": "10 fabricated name pairs"
+   },
+   "gate_question": "gate must REFUSE"
+  },
+  "failure_case_wrong_language": {
+   "dataset": "uga source vs greek target",
+   "evidence": {
+    "anchors": "5 coincidental resemblances (best-of search)"
+   },
+   "gate_question": "gate must REFUSE; multiplicity charged for the search"
+  }
+ },
+ "scoring": "DEFERRED to F1 (after CSA-sweep at-scale cells land)"
+}
