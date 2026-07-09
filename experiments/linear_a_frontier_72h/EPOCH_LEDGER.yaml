@@ -2253,9 +2253,83 @@ epochs:
     frontier: F11_TURING_MORPHOGENESIS
     frontier_family: TURING_MORPHOGENESIS
     priority: IMMEDIATE
-    status: RESERVED_ACTIVE
+    status: DE_AUTHORIZED
     gate: A/C
     name: "Frozen Linear A application: only families/params that passed E091 calibration + E092 specificity gate; anonymous classes / segmentation / regional classes at L2/L3; held-out LOSO/formula/frequency-band; NO sound values."
     prereg: morphogenesis/PREREGISTRATION.md
     reserved: 2026-07-09
+    de_authorized: 2026-07-09
+    de_authorization_reason: "Gate FAILED. E096's precondition was a Turing-specific calibration positive (E091 + E092 specificity gate). E091=TURING_LINEAR_B_RECOVERY_NULL (mechanism adds nothing over equal-diffusion) and E092=GENERIC_GRAPH_CLUSTERING (Turing not needed) jointly REFUTE that precondition, so no Turing-specific frozen-LA phonetic application is authorized. Per the substantive gate, forcing a frozen-LA run here would be padding. Any residual LA-structural question is subsumed by E093 (data-sufficiency) + the reserved E094/E095 (segmentation/geographic, generic-method) + the successor CROSS_DISCIPLINARY family. Append-only (Art. XVII): entry retained, not deleted."
+    substantive: false
+  # ===== CROSS_DISCIPLINARY_DECIPHERMENT family (E097-E102) -- reserved 2026-07-09, WAITING_ON_MORPHOGENESIS =====
+  # Successor to F11 morphogenesis (MORPH_START=E091, MORPH_END=E096). Imports morphogenesis outputs as OPTIONAL
+  # ablatable channels only (never ground truth). Launches when the morphogenesis block reaches a terminal state
+  # (E094+E095 banked or terminated; E096 de-authorized). Shared 5-stage ladder: synthetic -> blinded LB ->
+  # LB-degraded-to-LA -> frozen LA -> adaptive-null adjudication. L2 ceiling; absolute values gated (>=2 independent
+  # channels + LOO-anchor + LOO-method + held-out prediction + full adaptive null). See cross_disciplinary/.
+  - epoch_id: EPOCH-097
+    frontier: F12_CROSS_DISCIPLINARY
+    frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
+    priority: NEXT_AFTER_MORPHOGENESIS
+    status: WAITING_ON_MORPHOGENESIS
+    gate: A
+    name: "Error-correcting-code + belief-propagation decoding: factor graph over sign/form/formula-slot/morphology/ledger/anchor/damage variables; sum-product + max-product + damped loopy BP; recover missing signs / classes / morpho relations / same-vowel-consonant constraints in blinded LB, degrade to LA, vs marginals/frequency/plain-FG/Bayesian-morph/MDL/random."
+    prereg: cross_disciplinary/PREREGISTRATION.md
+    reserved: 2026-07-09
+    verdicts: [ECC_BP_SUPPORTED, ECC_BP_PARTIAL, ECC_BP_NULL, ECC_BP_NO_POWER, ECC_BP_MODEL_INVALID]
+    substantive: pending
+  - epoch_id: EPOCH-098
+    frontier: F12_CROSS_DISCIPLINARY
+    frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
+    priority: NEXT_AFTER_MORPHOGENESIS
+    status: WAITING_ON_MORPHOGENESIS
+    gate: A
+    name: "Spin-glass / Potts energy-landscape identifiability: Potts variables per unresolved sign, couplings from substitution/morphology/formula/anchor/admin; simulated annealing + parallel tempering + BP/cavity; measure ground-state degeneracy, overlap distribution, frustration, anchor-injection phase transition; classify LA as paramagnetic/glassy/ferromagnetic regime."
+    prereg: cross_disciplinary/PREREGISTRATION.md
+    reserved: 2026-07-09
+    verdicts: [POTTS_IDENTIFIABILITY_SUPPORTED, POTTS_GLASSY_UNDERDETERMINED, POTTS_PHASE_TRANSITION_FOUND, POTTS_NULL, POTTS_MODEL_INVALID]
+    substantive: pending
+  - epoch_id: EPOCH-099
+    frontier: F12_CROSS_DISCIPLINARY
+    frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
+    priority: NEXT_AFTER_MORPHOGENESIS
+    status: WAITING_ON_MORPHOGENESIS
+    gate: A
+    name: "Causal source separation + confound disentanglement: ICA + NMF + causal/invariant-risk representation (>=3 methods) to separate phonological/morphological signal from site/genre/scribe/rendering/edition/frequency/damage nuisance; LOSO/LOGO/LO-renderer/LO-edition interventions; a relation advances only if it survives >=2 independent nuisance interventions."
+    prereg: cross_disciplinary/PREREGISTRATION.md
+    reserved: 2026-07-09
+    verdicts: [CAUSAL_INVARIANT_STRUCTURE_SUPPORTED, CONFOUND_EXPLAINED_SIGNAL, PARTIAL_INVARIANCE, CAUSAL_NULL, CAUSAL_NO_POWER]
+    substantive: pending
+  - epoch_id: EPOCH-100
+    frontier: F12_CROSS_DISCIPLINARY
+    frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
+    priority: NEXT_AFTER_MORPHOGENESIS
+    status: WAITING_ON_MORPHOGENESIS
+    gate: A
+    name: "Topological data analysis + persistent structure: filtrations over sign-context/substitution/morphology/formula/cross-site/morphogenesis/confound-adjusted distances; persistent components + loops + barcode stability + bottleneck/Wasserstein; vs degree-rewiring/metric-permutation/random-embedding/frequency-matched/label-shuffle nulls; persistent anonymous communities stable across inventories/segmentations."
+    prereg: cross_disciplinary/PREREGISTRATION.md
+    reserved: 2026-07-09
+    verdicts: [PERSISTENT_STRUCTURE_SUPPORTED, PERSISTENT_STRUCTURE_GENERIC, TDA_NULL, TDA_NO_POWER]
+    substantive: pending
+  - epoch_id: EPOCH-101
+    frontier: F12_CROSS_DISCIPLINARY
+    frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
+    priority: NEXT_AFTER_MORPHOGENESIS
+    status: WAITING_ON_MORPHOGENESIS
+    gate: A
+    name: "Global graph/network-flow constrained decipherment benchmark: Stage-A min-cost-flow/bipartite-matching/optimal-transport on blinded LB with known targets (calibration only); Stage-B TARGET-FREE constrained mode for LA (relative classes/formula/morphology/anchors only, outputs equivalence classes NOT a lexicon); vs local-NN/greedy/random/Bayesian-FG/MDL/anchor-lattice; does global assignment ADD information beyond the anchor-lattice null or just pick an arbitrary representative?"
+    prereg: cross_disciplinary/PREREGISTRATION.md
+    reserved: 2026-07-09
+    verdicts: [GLOBAL_ASSIGNMENT_ADDS_INFORMATION, GLOBAL_ASSIGNMENT_SELECTS_ARBITRARY_REPRESENTATIVE, GLOBAL_ASSIGNMENT_NULL, GLOBAL_ASSIGNMENT_NO_POWER]
+    substantive: pending
+  - epoch_id: EPOCH-102
+    frontier: F12_CROSS_DISCIPLINARY
+    frontier_family: CROSS_DISCIPLINARY_DECIPHERMENT
+    priority: NEXT_AFTER_MORPHOGENESIS
+    status: WAITING_ON_MORPHOGENESIS
+    gate: A/C
+    name: "Cross-method synthesis + frozen LA application: intersect ONLY independently-validated outputs of E097-E101 + morphogenesis (dependency-adjusted independent-channel count); retain a relation only if held-out + >=2 genuinely-independent method families + beats adaptive nulls + stable across >=2 inventories/segmentations; absolute-value gate = >=2 independent channels + LOO-anchor + LOO-method + held-out-form prediction + full adaptive null, else relative constraints only."
+    prereg: cross_disciplinary/PREREGISTRATION.md
+    reserved: 2026-07-09
+    verdicts: [SYNTHESIS_ABSOLUTE_VALUE_SUPPORTED, SYNTHESIS_RELATIVE_CONSTRAINTS_ONLY, SYNTHESIS_NULL, SYNTHESIS_NO_INDEPENDENT_CHANNELS]
     substantive: pending

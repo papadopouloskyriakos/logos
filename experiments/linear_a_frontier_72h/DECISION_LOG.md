@@ -85,3 +85,19 @@
   transfer, NOT corpus size. WEAK + blinded-LB: licenses NO LA sound values (L2). Frequency-artifact guard was
   decisive (caught a single-seed over-claim; same discipline that refuted position->C/V). Role/degree channel
   is frequency-confounded (detected 0%). qualification bucket 4->5. E094 (segmentation) queued next.
+
+- PRIORITY INSERTION #2 — CROSS_DISCIPLINARY_DECIPHERMENT family (F12, E097-E102) reserved as
+  NEXT_AFTER_MORPHOGENESIS / WAITING_ON_MORPHOGENESIS. Successor to F11 (MORPH_START=E091, MORPH_END=E096);
+  N = E097 (first available after E096). Six epochs: E097 error-correcting-code + belief-propagation,
+  E098 spin-glass/Potts identifiability, E099 causal source separation, E100 topological data analysis,
+  E101 global network-flow assignment (target-free for LA), E102 cross-method synthesis + absolute-value gate.
+  Reserved in EPOCH_LEDGER/FRONTIER_MAP(F12)/TASK_QUEUE BEFORE any compute. Full scaffolding written:
+  cross_disciplinary/{PREREGISTRATION,README,THEORY_AND_PRIOR_ART,SEARCH_RECEIPT,DEPENDENCY_REGISTER,
+  PARAMETER_SPACES}.md + data/MANIFEST.md + scripts/launch_gate.py + {models,tests,controls,results,reports}/.
+  Shared 5-stage ladder (synthetic->blinded LB->LB-degraded-to-LA->frozen LA->adaptive null); morphogenesis
+  outputs imported as OPTIONAL ABLATABLE channels (never ground truth); L2 ceiling; absolute-value gate
+  (>=2 independent channels + LOO-anchor + LOO-method + held-out prediction + full adaptive null).
+  Also: E096 flipped RESERVED_ACTIVE -> DE_AUTHORIZED (its gate = a Turing-specific positive, refuted by
+  E091+E092; append-only, entry retained). launch_gate.py mechanically confirms MORPH_TERMINAL=False
+  (blocking: E094, E095 still RESERVED_ACTIVE) -> F12 launches E097 automatically once E094+E095 are
+  banked/terminated. Finalization remains BLOCKED (clock 2026-07-11T03:20Z).
