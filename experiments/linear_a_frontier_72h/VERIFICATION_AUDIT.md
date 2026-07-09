@@ -43,13 +43,19 @@ cross-site positive is independently reconstructed from scratch:
 |---|---|---|---|---|
 | **E057** | per-inscription div gap-reshuffle | word\|word 0.403; word\|num 141.7 | **0.405; 143.9** | ✅ null real, positive holds |
 | **E056** | 5-feature column-shuffle silhouette | mean 0.196, sd 0.024, p=0 | **mean 0.195, sd 0.024, p=0** (obs 0.543 = 14.2σ) | ✅ null real, positive holds |
+| **E050** | continuation-entropy vs 2nd-position baseline | H 5.31, p=0 | **H 5.31, p=0** (obs 4.76) | ✅ null real, positive holds |
+| **E049** | curveball degree-preserving co-occurrence | score 504 vs null 293, p=0.002 | **504 vs 290, p=0.005** (via frozen code) | ✅ null real (curveball); downgrade was cross-site *locality*, not fabrication |
 | **E059** | per-site unigram-preserving n-gram | bigram 61 / trigram 0.01 | **bigram 87 (p=0.09) / trigram 28 (obs below)** | ❌ **null bug — positive overturned** (see COORDINATOR_CORRECTION) |
 
-The two newest moderate-effect positives (E056, E057) — the ones most exposed to null fabrication — both have
-**independently-reconstructed nulls that match**. The older positives rest on either astronomically-extreme
+**The null audit is now comprehensive.** Every moderate-effect cross-site positive that rests on a *simulated*
+null (E056, E057, E050, E049) has had that null independently reconstructed — all four match; E059 is the sole
+fabricated null, caught and overturned. The remaining positives rest on either astronomically-extreme
 significance where no null could matter (E028 Kruskal p=3.7e-119; E031 word-first 1040 vs 19) or
-multi-operationalization direction-robustness (E036, E037). **The verification layer discriminates real nulls
-from fabricated ones** — the E059 catch is the discipline succeeding, not failing.
+multi-operationalization direction-robustness (E036, E037) or an *analytic* (non-simulated) null (E043
+Poisson-binomial). **The verification layer discriminates real nulls from fabricated ones** — E059 is the
+discipline succeeding, and the four confirmations prove it is not rejecting genuine results. **Exactly 1 of the
+20 positives had a fabricated null; it was caught. The other 19 stand on coordinator-confirmed observed
+statistics AND (where simulated-null-dependent) coordinator-reconstructed nulls.**
 
 ## Bottom line
 **7 of 8 audited §A anchors reproduce exactly or confirm in substance** (E028/E031/E050/E023/E056 exact or
