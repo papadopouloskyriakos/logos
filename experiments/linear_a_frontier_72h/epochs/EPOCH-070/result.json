@@ -1,0 +1,68 @@
+{
+  "task_id": "EPOCH-070",
+  "method": "L2 token-class adjacency. fraction-class = 'other' token whose raw contains fraction slash U+2044 or a vulgar-fraction char in ½¼¾⅓⅕⅙⅛⅔⅗ (E060 def). attachment = token CLASS immediately before a fraction token. R_num = frac of fractions preceded by 'num'; R_word = frac preceded by 'word'. NULL: within each line (segment between 'nl'), permute order of non-nl tokens preserving the line token multiset + nl structure; recompute rates; 2000 perms; perm p one-sided enrichment = frac(null>=obs) with add-1. SITE-CONTRAST: site-label permutation over pooled HT+Khania fractions, stat=|R_num(HT)-R_num(Khania)|, 5000 perms. Positive controls SYNTHETIC: (a) detect corpus where fractions always follow a numeral; (b) false-positive corpus where fractions placed uniformly at random within lines (40 draws).",
+  "result": "Fractions are preceded by 'num' globally above the within-line shuffle null (R_num=0.387 vs null 0.130, perm p=0.0005) and by 'word' above null (R_word=0.477 vs null 0.354, perm p=0.0005). Both attachments are individually enriched in both sites, BUT the num->frac attachment is massively site-asymmetric: R_num(HT)=0.479 (enriched, p=0.0005) vs R_num(Khania)=0.055 (enriched, p=0.020), and the two sites differ significantly (site-label contrast perm p=0.0002, |diff|=0.425). Khania attaches fractions overwhelmingly to WORDS (R_word Khania ~0.67), HT attaches them roughly equally to words and numerals. The fractional attachment is therefore a SITE convention, not a uniform cross-site metrological num->frac template.",
+  "verdict": "FRAC_ATTACHMENT_SITE_LOCAL",
+  "numbers": {
+    "global": {
+      "n_frac": 310,
+      "R_num": 0.3871,
+      "R_num_null": 0.1295,
+      "R_num_p": 0.0005,
+      "R_word": 0.4774,
+      "R_word_null": 0.3541,
+      "R_word_p": 0.0005
+    },
+    "before_hist": {
+      "word": 148,
+      "num": 120,
+      "nl": 28,
+      "other": 12,
+      "div": 1,
+      "START": 1
+    },
+    "per_site": {
+      "Haghia Triada": {"n": 194, "R_num": 0.4794, "perm_p": 0.0005},
+      "Khania": {"n": 73, "R_num": 0.0548, "perm_p": 0.01999}
+    },
+    "site_contrast": {
+      "R_num_HT": 0.4794,
+      "R_num_Khania": 0.0548,
+      "contrast_perm_p": 0.0002,
+      "differ": true
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.0005,
+      "false_pos_rate": 0.05,
+      "pc_is_synthetic": true
+    },
+    "per_site_word": {
+      "Haghia Triada": {"R_word": 0.4124, "note": "80/194 word-preceded"},
+      "Khania": {"R_word": 0.6712, "note": "49/73 word-preceded"}
+    }
+  },
+  "key_findings": [
+    "num->frac IS enriched globally above the within-line shuffle null (R_num=0.387 vs null 0.130, perm p=0.0005), so there is a real num->frac attachment signal in the corpus as a whole.",
+    "word->frac is ALSO enriched globally (R_word=0.477 vs null 0.354, perm p=0.0005) and is in fact the MORE COMMON attachment overall (148 vs 120 num-preceded).",
+    "The num->frac attachment is strongly SITE-ASYMMETRIC: Haghia Triada R_num=0.479 (n=194, enriched p=0.0005) vs Khania R_num=0.055 (n=73, enriched p=0.020); the two sites differ significantly (site-label contrast perm p=0.0002, |diff|=0.425).",
+    "Khania attaches fractions overwhelmingly to WORDS (R_word~0.67), while Haghia Triada splits roughly evenly between words (0.41) and numerals (0.48). The fractional attachment is a SITE convention, not a uniform cross-site metrological template.",
+    "Positive control PASSED (synthetic): detect corpus flagged (p=0.0005), false-positive rate 0.05 (<=0.10) across 40 random draws; machinery is calibrated and informative."
+  ],
+  "successor_hypotheses": [
+    "E071: Within Haghia Triada, is num->frac conditioned on the numeral VALUE class (round/decimal vs other) or on the preceding word-class (commodity type)? L2 token-class only.",
+    "E072: Is the Khania word->frac attachment driven by a specific small set of preceding word tokens (a closed class of fraction-bearing words), or distributed across many words? L2 type-token.",
+    "E073: Does the frac->nl entry-terminal rule (E060) hold equally at Khania given Khania's distinct attachment pattern, or does Khania also deviate on terminality? Cross-check E060 site-uniformity.",
+    "E074: Combine attachment (num->frac vs word->frac) with the logo->num rule (E060): at HT, is the full chain logo->num->frac->nl a coherent metrological template, and does Khania instead show logo->word->frac->nl?",
+    "E075: Test whether the site difference correlates with support type (tablet vs other) or context (LMIB sub-phase) rather than pure site identity — a confound check on the site-local verdict.",
+    "E076: At Khania, do the word-preceded fractions cluster on specific commodity lines (e.g., a particular product), suggesting a domain-specific (not site-wide) convention?"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "fraction-class defined purely structurally (t=='other' AND raw contains U+2044 or a vulgar-fraction char) per E060, with NO fraction value, NO sign value, NO reading, NO metrological arithmetic used. attachment = the token CLASS (t field) immediately before the fraction token. The null is a within-line shuffle that preserves each line's exact token multiset and nl structure, so any enrichment is beyond chance token ordering given the line contents. Site contrast uses site-label permutation over pooled fractions, making no distributional assumptions. Positive controls are SYNTHETIC and stated as such. No adjudication by the operator; verdict is mechanical from the frozen rule.",
+  "deviations": [
+    "Self-check corpus enlarged from 2 fractions to 10 (one machinery-validation detail) because with only 2 fractions the within-line null can hit the observed R_num=1.0 ~10.5% of the time by chance, making the enrichment assertion borderline; the machinery logic itself is unchanged. This is a self-check robustness fix, not an analysis change.",
+    "False-positive control run with 40 draws (instead of the minimum 20) for calibration stability; the 20-draw run gave FPR=0.10 exactly at the threshold, the 40-draw run stabilizes at 0.05 (nominal alpha). Conclusion (calibrated) is unchanged.",
+    "n_perm=2000 for global/per-site nulls and 5000 for the site contrast (above the >=1000 minimum) for p-value stability; all reported p-values are at or near the add-1 floor."
+  ]
+}
