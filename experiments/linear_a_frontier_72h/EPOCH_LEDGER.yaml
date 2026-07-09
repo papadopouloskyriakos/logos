@@ -1446,3 +1446,26 @@ epochs:
     artifacts: [epochs/EPOCH-060/prereg.md, epochs/EPOCH-060/plan_hash.txt, epochs/EPOCH-060/machinery.py, epochs/EPOCH-060/result.json, reports/EPOCH060_REPORT.md]
     successors_spawned: 5
     substantive: true
+
+  - epoch_id: EPOCH-061
+    frontier: F19
+    gate: A
+    name: "Is the frequent standalone sign (U+1076B) a systematic line-isolated document marker?"
+    plan_hash: "see epochs/EPOCH-061/plan_hash.txt"
+    completed: 2026-07-09
+    executed_by: "GLM-5.2 via scripts/zai_agent.py THROUGH scripts/epoch_runner.py (gated). repairs=0 (clean)."
+    orchestrator_verification: "Claude INDEPENDENTLY recomputed observed AND reconstructed the null (E059 discipline). Observed line-isolation = 0.911 (432/474) EXACT. PROPER null (re-insert target tokens at random positions preserving the nl line structure): my independent null mean=0.183 (result 0.223 — same magnitude), p=0. Observed 0.911 >> null ~0.2, unambiguous. Cross-site 5/5 sites significant (HT 0.947, Khania 0.929, Zakros 0.962, Phaistos 0.909, Knossos 0.571 — all enriched vs their own nulls ~0.18-0.26), LOO-robust (loo_obs 0.889 vs null 0.236, p=0.0005)."
+    positive_control: "PASSED (verified from result): SYNTHETIC PC. Detect: planted always-isolated marker flagged (perm p<=0.05). False-positive: uniform-random placement not flagged. Calibrated."
+    verdict: "STANDALONE_MARKER_CROSS_SITE (mechanical, independently verified incl. null) — the most frequent 'other' sign U+1076B is a systematic LINE-ISOLATED document marker (occupies its own line 91% vs ~20% null), across ALL 5 testable sites, LOO-robust."
+    numbers: {n_target: 474, isolation_obs: 0.911, isolation_null_mean: 0.223, isolation_indep_null: 0.183, perm_p: 0.0005, n_sites_sig: "5/5", loo_obs: 0.889, loo_null: 0.236, loo_p: 0.0005, direction_consistent: true, pc_verdict: PASSED}
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    scope: "STRONG, VERIFIED cross-site positive continuing the 'other'-token investigation E060 opened. The single most frequent corpus 'other' token (the Linear A sign U+1076B, n=474, 5 sites) is neither a logogram nor a fraction; it is a SYSTEMATIC LINE-ISOLATED MARKER: it occupies its OWN content-line (both neighbours are line-boundaries nl/div/START/END) in 91% of occurrences vs a ~20% within-inscription position-shuffle null (p=0.0005), significant same-direction in ALL 5 testable sites and LOO-robust. STRUCTURAL INTERPRETATION (L2): LA administrative documents deploy a recurring STANDALONE document-structural marker (a section / entry / separator / heading-type element that stands on its own line) — a real cross-site feature of the document apparatus. LAYER L2 STRICT: an anonymous token TYPE by POSITION only; NO sign value, NO reading, NO phonetics/meaning (we do NOT claim what U+1076B 'means' — only that it is systematically line-isolated); no transfer licence."
+    committed_prediction: "modal STANDALONE_MARKER_CROSS_SITE/SITE_LOCAL/NOT_ISOLATED/UNDERPOWERED; OUTCOME = STANDALONE_MARKER_CROSS_SITE (5/5 sites, LOO-robust). Prediction earned: U+1076B is systematically line-isolated cross-site — a document-structural marker."
+    deviations: ["PC is SYNTHETIC (LB stream lacks this structure).", "My first quick null was too crude (dropped nl structure -> degenerate ~0); the PROPER nl-preserving null (0.183) matches the result's (0.223) and confirms the finding."]
+    non_circular: "Anonymous token TYPE (raw contains U+1076B) by POSITION only; within-inscription position-shuffle null preserving nl structure (calibrated by construction); no value/reading; verdict from a frozen mechanical rule; PC first; coordinator reconstructed the null."
+    architecture_note: "Thirty-eighth gated-runner epoch (repairs=0). Second finding from the 'other'-token channel (after E060) that the coordinator had wrongly dismissed — reinforces the lesson: inspect a channel before declaring it absent. Both observed and null independently verified. Positive #22. Folds into exhaustion-map §A5 (document structure): LA has a standalone line-isolated document marker."
+    artifacts: [epochs/EPOCH-061/prereg.md, epochs/EPOCH-061/plan_hash.txt, epochs/EPOCH-061/machinery.py, epochs/EPOCH-061/result.json, reports/EPOCH061_REPORT.md]
+    successors_spawned: 5
+    substantive: true

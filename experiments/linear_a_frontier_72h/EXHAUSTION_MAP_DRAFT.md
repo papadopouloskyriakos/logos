@@ -2,24 +2,24 @@
 
 > **STATUS: DRAFT. NOT FINALIZED.** Finalization is mechanically gated by `scripts/clock_check.py`
 > (`finalization_authorized = now ≥ 2026-07-11T03:20Z AND completed_substantive_epochs ≥ 18`).
-> As of last edit: **60 substantive epochs banked**, gate **BLOCKED** (time_gate open ~48h to 2026-07-11T03:20Z).
+> As of last edit: **61 substantive epochs banked**, gate **BLOCKED** (time_gate open ~48h to 2026-07-11T03:20Z).
 > This document accretes as epochs bank; it becomes the §12 capstone **only** when the clock authorizes.
 > A null/negative here is a **result**, never an early stop. Counts are read from `EPOCH_LEDGER.yaml`.
 > Layer ceiling across the entire campaign: **L2/L3**. Transfer licences earned: **none**. No decipherment.
 
-## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 60 substantive epochs, each classified once)
+## Outcome tally (generated from `EPOCH_LEDGER.yaml` — 61 substantive epochs, each classified once)
 
 | Bucket | N | What it means |
 |---|---|---|
-| **Load-bearing cross-site positives** | **21** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
+| **Load-bearing cross-site positives** | **22** | Survived calibrated/adaptive null + PC + cross-site/held-out, coordinator-reverified (§A) |
 | Bounded negatives | 16 | Well-powered PC-passed tests returning informative *absence* (§B) |
 | No-power | 3 | Detector had no power for the question (§C) |
 | Underpowered | 3 | Real data limit, stated (§C) |
 | Machinery-uninformative | 8 | Instrument failed its own calibration → **no LA inference drawn** (§C) |
 | Prospective / provenance / other | 9 | Frozen-prospective, provenance, source-blocked channels (§D) |
 
-*21 positives / 16 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
-Zero of the 21 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
+*22 positives / 16 bounded-negatives / 14 no-inference (no-power + underpowered + machinery-uninf) / 9 setup.
+Zero of the 22 positives rises above L2/L3. The honest denominator is on-screen: this is a structural map, not a
 reading.*
 
 ### Discipline-compliance certificate (Art. V layer ceiling + Art. XV transfer licences) — mechanically audited
@@ -91,6 +91,10 @@ distributional labels, NOT epigraphic identifications, NOT readings.*
 word-length register); `E047` the **document token-type grammar is held-out predictable** (Markov > unigram);
 `E049` document-level **sign co-occurrence / topic association** is cross-site (caveated: association, not a
 lexicon). `E026` word-**final** positional class is concentrated (a terminal analog of the `A-` initial slot).
+`E061` the corpus's most frequent `other` sign (**U+1076B**, n=474) is a **systematic line-isolated document
+marker** — it occupies its own content-line 91% of the time vs a ~20% position-shuffle null (p=5e-4), in
+**5/5 sites**, LOO-robust; observed and null both independently reconstructed. A standalone section/entry/
+separator-type structural element (L2: position only, no reading).
 
 **A6. Allographic / scribal-shape structure is real** — `E017`/`E020` site-level **allograph** variation
 survives an adaptive null (sign *shape* varies by site, distinct from the shared frequency fingerprint);

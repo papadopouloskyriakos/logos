@@ -1,0 +1,62 @@
+{
+  "task_id": "EPOCH-061",
+  "method": "LINE-ISOLATION permutation test (L2 token-position structure). Metric: fraction of target tokens (anonymous TYPE by raw substring '\\U0001076b') whose immediately-preceding token-type is in {nl,div,START} AND immediately-following token-type is in {nl,div,END}. Null: within each inscription, re-place the same number of target tokens uniformly at random among the inter-content-token gaps of the non-target skeleton (preserving nl structure + target count); >=500/2000 reshuffles; perm p = frac(null>=obs), one-sided enrichment. Positive control synthetic (DETECT always-isolated; FALSE-POSITIVE uniform-random). Cross-site per site with >=15 targets; leave-one-site-out on Haghia Triada.",
+  "result": "STANDALONE_MARKER_CROSS_SITE",
+  "verdict": "STANDALONE_MARKER_CROSS_SITE",
+  "numbers": {
+    "global": {
+      "n_target": 474,
+      "isolation_obs": 0.9113924050632911,
+      "isolation_null_mean": 0.22263999999999998,
+      "perm_p": 0.0004997501249375312
+    },
+    "flanking": {
+      "before": {"START": 132, "nl": 297, "word": 20, "div": 11, "num": 5, "other": 9},
+      "after": {"nl": 260, "END": 188, "num": 2, "div": 8, "word": 7, "other": 9}
+    },
+    "positive_control": {
+      "pc_verdict": "PASSED",
+      "detect_p": 0.001996007984031936,
+      "detect_obs": 1.0,
+      "detect_null_mean": 0.29788461538461536,
+      "false_pos_rate": 0.0,
+      "fp_draws": 25,
+      "pc_is_synthetic": true
+    },
+    "cross_site": {
+      "n_sites_testable": 5,
+      "n_sites_sig": 5,
+      "direction_consistent": true,
+      "loo_p": 0.0004997501249375312,
+      "loo_obs": 0.8885345238220934,
+      "loo_null_mean": 0.2361111111111111,
+      "loo_n_target": 287,
+      "per_site": {
+        "Haghia Triada": {"n_target": 187, "isolation_obs": 0.9470, "isolation_null_mean": 0.2030, "perm_p": 0.0004998, "direction": "enriched"},
+        "Khania": {"n_target": 154, "isolation_obs": 0.9286, "isolation_null_mean": 0.2640, "perm_p": 0.0004998, "direction": "enriched"},
+        "Zakros": {"n_target": 52, "isolation_obs": 0.9615, "isolation_null_mean": 0.2440, "perm_p": 0.0004998, "direction": "enriched"},
+        "Knossos": {"n_target": 28, "isolation_obs": 0.5714, "isolation_null_mean": 0.1870, "perm_p": 0.0004998, "direction": "enriched"},
+        "Phaistos": {"n_target": 22, "isolation_obs": 0.9091, "isolation_null_mean": 0.1750, "perm_p": 0.0004998, "direction": "enriched"}
+      }
+    }
+  },
+  "key_findings": [
+    "The anonymous token TYPE whose raw contains U+1076B is line-isolated in 432/474 = 91.1% of occurrences, vs a within-inscription uniform re-placement null of 22.3% (perm p=0.0005, 2000 reshuffles) — a ~4x enrichment far beyond position-shuffle chance.",
+    "Flanking structure is dominated by line/document boundaries: preceding token is nl/START in 429/474 cases (90.5%) and following token is nl/END in 448/474 (94.5%); content tokens (word/num/other) flank on at least one side in only ~9% of cases.",
+    "The effect is CROSS-SITE: all 5 sites with >=15 target tokens (Haghia Triada 94.7%, Khania 92.9%, Zakros 96.2%, Knossos 57.1%, Phaistos 90.9%) are individually significant and enriched (perm p=0.0005 each), so it is not an HT-only artefact.",
+    "Leave-one-site-out dropping Haghia Triada (the largest site) leaves the global signal intact: obs=88.9% vs null=23.6%, p=0.0005 over 287 targets — the marker behaviour survives removal of the dominant site.",
+    "Positive control (synthetic) PASSED: the test flags a planted always-isolated corpus (detect p=0.002) and rejects a uniform-random-placement corpus in 0/25 draws (false-positive rate 0.0 <= 0.10), so the machinery is calibrated and the enrichment is not a null-model artefact."
+  ],
+  "successor_hypotheses": [
+    "E062: Does the U+1076B line-isolated marker preferentially occupy the FIRST or LAST content-line of an inscription (heading/colophon position) rather than interior lines? (L2 position-in-document)",
+    "E063: Is the marker's per-line frequency capped at 1 (one marker per content-line), or can multiple markers share a line — testing separator vs heading semantics? (L2)",
+    "E064: Do lines immediately adjacent to the marker carry systematically different token-type compositions (e.g. more num, more div) than non-adjacent lines? (L2)",
+    "E065: Are there OTHER frequent 'other' token TYPEs (beyond U+1076B) that show comparable line-isolation, suggesting a CLASS of structural markers? (L2, comparative)",
+    "E066: Does the marker co-occur with inscription-level metadata fields (support=Tablet vs other, context LMIB) at above-chance rates — i.e. is it a document-class indicator? (L2/L3 boundary, metadata only)",
+    "E067: Within multi-line inscriptions, does the marker predict the start of a new 'section' as defined by a div token or a numeric cluster on the following line? (L2)"
+  ],
+  "layer": "L2",
+  "la_touched": true,
+  "non_circular": "Target = anonymous token TYPE selected purely by raw substring match ('\\U0001076b' in raw) on the 'other' token class; metric = pure token-position structure (line-isolation by adjacent token-type); null = within-inscription uniform re-placement among skeleton gaps preserving nl structure and target count. No sign value, reading, phonetics, or meaning used at any step. Positive control is synthetic and declared. Layer L2 only.",
+  "deviations": []
+}
