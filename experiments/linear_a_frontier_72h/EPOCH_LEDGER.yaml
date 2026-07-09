@@ -2536,3 +2536,41 @@ epochs:
     artifacts: [epochs/EPOCH-105/prereg.md, epochs/EPOCH-105/plan_hash.txt, epochs/EPOCH-105/machinery.py, final/CAMPAIGN_FINAL_STATE.json, final/EPOCHS_001_TO_FINAL_MASTER_TABLE.csv]
     successors_spawned: 0
     substantive: true
+  - epoch_id: EPOCH-103
+    record_type: "SUPERSEDING (Art. XVII; terminal-audit remediation item A1+A3; 2026-07-09)"
+    supersedes: "EPOCH-103 terminal record of 2026-07-09 (original comonotone joint maxT null; original prereg.md + result.json remain frozen and untouched)"
+    status: BANKED
+    completed: 2026-07-09
+    name: "A-initial positional enrichment — strong-lead adjudication E103R: corrected categorical joint maxT null (M=10000) across three overlapping segmentation/selection variants from a single corpus lineage + LOMO mechanized from frozen artifacts."
+    plan_hash_addendum_R: "1b480d066c91aa8dce42ad225ffca4e29fd0ff58608b6fe67ae981dd331035b7"
+    executed_by: "Claude (COORDINATOR) — epochs/EPOCH-103/machinery_R.py under prereg_addendum_R.md, hashed+committed BEFORE execution (freeze-before-run). Fixes the audit-confirmed comonotone defect: the joint null now draws ONE categorical first sign per (draw, word); marginals (and every single-permute p) unchanged."
+    orchestrator_verification: "Corrected null independently reconstructed with a distinct algorithm (Generator.choice, different seed, M=20000): survivor sets identical in all three variants; marginal means match theory (A_editor A: 55.89 emp vs 55.88 theory); comonotone anti-conservatism confirmed real but small (C variant null max-z p95 2.926 categorical vs 2.880 comonotone; A_editor 3.157 vs 3.154). Boundary sign DA (C variant, original p=.0120) independently confirmed IN at p=.0070 (M=20000)."
+    positive_control: "PASS — unchanged design (frozen machinery.py PC): planted 'ZZ' at 15% p=.0005; calibration sign 'MU' on order-scrambled words p=.44."
+    verdict: "REPLICATED_RELATIVE_CONSTRAINT — under the corrected categorical joint null (M=10000), A is the top best-of-universe maxT survivor at p<=.01 under 3/3 overlapping segmentation/selection variants derived from a single corpus lineage (A_editor / B_divider_strict / C_numeral_anchored; B shares 87.6% of unit realizations with A_editor, C is a function-restricted subset of A_editor — robustness across variants, NOT independent replication); PC power+cal clean; LOMO evaluated MECHANICALLY from the frozen E022/E023/E024 artifacts (sha256-recorded; 3/3 independently significant; dropping any one leaves 2). Verdict class UNCHANGED from the original run. Survivor-set diff vs original: A_editor and B_divider_strict unchanged {A,KU,U,I,QA,*411,*306}; C_numeral_anchored gains boundary sign DA -> {A,KU,PA,DA}. No phonetic value, morphological prefixhood, or productivity asserted (L2/L3)."
+    qualification: "CORRECTED QUALIFICATION of E022 (supersedes the secondary-set wording in the frozen E103 result.json note): under the corrected null the p<=.01 survivor sets are exactly A_editor {A,KU,U,I,QA,*411,*306} / B_divider_strict {A,KU,I,U,QA,*411,*306} / C_numeral_anchored {A,KU,PA,DA}; secondary union (excl. A) exactly {*306,*411,DA,I,KU,PA,QA,U} — stated as measured, neither omitting the starred signs nor retaining any sign by expectation. A remains the dominant survivor, rank-1 in all variants (z 16.6/16.8/7.5, ~2.4x next sign KU)."
+    numbers: {maxT_draws: 10000, A_maxT_p_all_schemes: 0.0001, A_z_editor: 16.58, A_z_divider: 16.755, A_z_numeral: 7.467, next_sign: KU, schemes_replicated: 3, A_B_identical_unit_frac: 0.876, C_subset_of_A: true, null_max_z_p95_editor: 3.143, lomo_mechanical: true, lomo_holds: true}
+    artifacts: [epochs/EPOCH-103/prereg.md, epochs/EPOCH-103/plan_hash.txt, epochs/EPOCH-103/machinery.py, epochs/EPOCH-103/result.json, epochs/EPOCH-103/prereg_addendum_R.md, epochs/EPOCH-103/plan_hash_R.txt, epochs/EPOCH-103/machinery_R.py, epochs/EPOCH-103/result_R.json]
+    layer: L2
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: LA_POSITIVE
+    substantive: true
+  - epoch_id: EPOCH-104
+    record_type: "SUPERSEDING (Art. XVII; terminal-audit remediation item A2; 2026-07-09)"
+    supersedes: "EPOCH-104 terminal record of 2026-07-09 (original run, henceforth PILOT; original prereg.md + result.json remain frozen and untouched)"
+    status: BANKED
+    completed: 2026-07-09
+    name: "Campaign-wide adaptive null E104R: corrected categorical maxT (M=5000, aligned with E103's original prereg commitment), n=400 nulls, bound-based certification criterion committed blind BEFORE any corrected-machinery null ran; naive ablation arm on the SAME 400 nulls."
+    plan_hash_addendum_R: "f9b1fc7699698a1409f46ce5f3ac3c47f5a147bae012653dd7fa7b900572e335"
+    executed_by: "Claude (COORDINATOR) — epochs/EPOCH-104/machinery_R.py under prereg_addendum_R.md, hashed+committed BEFORE execution. Imports the E103R corrected universe_maxT_categorical; null construction semantically identical to the frozen E104 design with identical seeds (first 200 coincide with the pilot's)."
+    orchestrator_verification: "Committed blind rule: CAMPAIGN_NULL_GATES_CERTIFIED iff one-sided exact Clopper-Pearson 95% upper bound on false-graduation <= 2% AND planted recovery >= 0.8 (at n=400 this tolerates k<=3; k=4 fails at 2.29%). Observed k=1 -> upper bound 1.18%. The single false graduation is TA2 (as in the pilot), not A. Ablation arm run on the SAME 400 nulls."
+    positive_control: "PASS — planted 'PX' at 12% recovered 40/40 through the corrected graduation rule. Scope: the 12% plant establishes power only for effects of that general magnitude."
+    negative_control: "PASS — 1/400 false graduation (0.25%) under the corrected categorical maxT."
+    verdict: "CAMPAIGN_NULL_GATES_CERTIFIED — the graduation decision rule (corrected categorical best-of-universe maxT x 3 overlapping segmentation/selection variants x >=2/3 same-top-sign agreement) falsely graduates 1/400 on structure-matched signal-free nulls: one-sided exact CP95 upper bound 1.18% <= 2%. Naive best-of raw-p ablation on the SAME 400 nulls: 121/400 (CP95 upper 34.25%) -> suppression factor 121x; the correlation-aware maxT deflation is the load-bearing gate. Planted 12% prefix recovered 40/40. The ORIGINAL E104 run (1/200, CP95 upper 2.35%) is henceforth characterized as a PILOT: a valid empirical calibration of the rule-as-implemented, not a certification of rate <= 2% at 95% confidence. Scope notes (committed): 'end-to-end' means the graduation DECISION RULE end-to-end (PC and LOMO are not re-executed per null); the absolute-value-gate zero is structural (a positional-shuffle null has a single axis, by construction). E103R's A graduation (z~17, ~2.4x next sign, 3/3 variants) sits far outside this certified null band."
+    numbers: {n_null: 400, false_grad_count_maxT: 1, false_grad_rate_maxT: 0.0025, false_grad_cp95_upper_maxT: 0.0118, false_grad_count_naive_ablation: 121, false_grad_rate_naive_ablation: 0.3025, false_grad_cp95_upper_naive_ablation: 0.3425, suppression_factor: 121, planted_recovery: "40/40", maxT_draws: 5000, n_plant: 40}
+    artifacts: [epochs/EPOCH-104/prereg.md, epochs/EPOCH-104/plan_hash.txt, epochs/EPOCH-104/machinery.py, epochs/EPOCH-104/result.json, epochs/EPOCH-104/prereg_addendum_R.md, epochs/EPOCH-104/plan_hash_R.txt, epochs/EPOCH-104/machinery_R.py, epochs/EPOCH-104/result_R.json]
+    layer: NA
+    licences_changed: none
+    la_touched: true
+    dichotomy_side: METHODOLOGY_VALIDATION
+    substantive: true
