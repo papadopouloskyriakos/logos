@@ -134,3 +134,29 @@ logogram-complexity confound the coordinator flagged. (c) Every SigLA statistic 
 independent re-decode of the licensed DB, not the worker's pre-decoded JSON alone. No positive failed; E076 and E078
 carry breadth caveats (E076 intrinsic-form-driven; E078 2/5 powered sites). The licensed SigLA JSONs stay gitignored
 (regenerable via scripts/sigla_decode.py); only the epoch prereg/plan_hash/machinery/result/report are committed.
+
+## Session-5 pass (E079–E081, the SPATIAL 2D-LAYOUT axis) — spacing + anchoring; one coordinator null-adjudication
+Continuing the SigLA bbox modality onto glyph PLACEMENT (a 2D ruled grid) and its ANCHORING. The coordinator
+independently reconstructed each statistic + its null (using the SAME null the worker used — the E080 lesson) and,
+for the site-local E081, all three PC arms from scratch.
+
+| Epoch | Verdict | Coordinator recompute (observed / null) | Status |
+|---|---|---|---|
+| **E079** | Horizontal glyph-spacing regular, cross-site (positive) | median doc pitch-CV S_obs=0.338 (result 0.329) vs random-composition null 0.764 (result 0.743) → REGULAR; per-site HT 0.381 / Khania 0.291 / Zakros 0.346 all ≪ ~0.69-0.76 nulls (result HT 0.354 / Khania 0.268 / Zakros 0.346, all p=0); PC reconstructed: regular-synth S=0.20≪null 0.855 p=0 (detect), random-synth S=0.864≈null 0.86 p=0.62 (no FP) | ✅ exact (within 0.02) + PC reproduced |
+| **E080** | Vertical line-spacing regular, cross-site (positive) — **coordinator-adjudicated null** | median doc line-pitch-CV S_obs=0.111 (result 0.118); gate flagged NULL mismatch (my naive UNCONDITIONAL null 0.658 vs worker CLUSTERING-CONDITIONAL 0.354). Coordinator reproduced BOTH (conditional 0.368≈0.354, unconditional 0.659) and the exchangeability: **PC false-positive rate 1.00 under unconditional vs 0.05 under conditional** → the worker's conditional null is the CORRECT/exchangeable one. Verdict robust under both (perm p=0). Inverse of E059 | ✅ exact + null adjudicated in worker's favor (COORDINATOR_NOTE.md) |
+| **E081** | Left-margin justification SITE-LOCAL (HT register) | median asymmetry S_obs=0.413 (result 0.459) vs edge-swap null −0.010 (result −0.026), perm p=0; med left-edge spread 0.581 (0.664) vs right-edge 1.152 (1.248); per-site HT 0.489 sig / Khania 0.041 ns / Zakros 0.413 ns — 1/3 sig → SITE_LOCAL; 3-arm PC reconstructed: left-synth S=+1.74 flagged 1.0, centered S≈−0.1 flagged 0.0, right-synth S=−1.15 flagged 0.0 | ✅ exact (within 0.05) + 3-arm PC reproduced |
+
+**Session-5 discipline highlights:** (a) **E080 is the INVERSE of E059** — the campaign's second null-definition
+catch, resolved the opposite way. E059: the worker's null was buggy → coordinator overturned a false positive to
+null. E080: the worker's null was MORE correct than the coordinator's first-pass `repro_check` (a naive
+unconditional null that itself fails the PC with false-positive 1.00) → coordinator independently reproduced the
+worker's clustering-conditional null + its exchangeability and CONFIRMED the positive, banking with a documented
+override (`epochs/EPOCH-080/COORDINATOR_NOTE.md`). The gate + independent-null-reconstruction rule catches null
+issues in BOTH directions. **Process lesson recorded:** a `repro_check` for a composition/permutation null must
+reconstruct the SAME exchangeability conditioning the worker used (read the machinery docstring first), or it raises
+false mismatches on legitimate, more-careful nulls. (b) E081 was PRE-CHECKED to have genuine cross-site uncertainty
+(HT strong, Khania near-chance) BEFORE launch — the SITE_LOCAL outcome was a real held-out result, not a foregone
+positive, and it deliberately GUARDS against over-claiming the E079/E080 "shared 2D grid" (spacing shared, margin
+justification site-local). (c) The E080 lesson was applied forward: E081's null was specified precisely in the
+prereg so the coordinator's `repro_check` used exactly the worker's edge-swap null (no mismatch). No positive failed
+or reversed; the 2D-grid picture is: spacing cross-site shared (E079/E080), justification site-local (E081).
