@@ -1,0 +1,55 @@
+{
+ "cell": "F1_exact_counts",
+ "configs": {
+  "EMPTY": {
+   "consistent": true,
+   "log10_count": 295.90385762385245,
+   "exact": false,
+   "n_components": 135,
+   "largest_component": 24,
+   "coupled_components": [
+    {
+     "n": 24,
+     "exact": false,
+     "note": "product too large",
+     "log10_upper": 43.82579526481982
+    },
+    {
+     "n": 3,
+     "exact": false,
+     "note": "product too large",
+     "log10_upper": 5.478224408102479
+    }
+   ]
+  },
+  "WPH38_model2": {
+   "consistent": true,
+   "log10_count": 224.8343130920273,
+   "exact": true,
+   "n_components": 148,
+   "largest_component": 6,
+   "coupled_components": []
+  },
+  "PINS4": {
+   "consistent": true,
+   "log10_count": 286.83750435280655,
+   "exact": false,
+   "n_components": 135,
+   "largest_component": 24,
+   "coupled_components": [
+    {
+     "n": 24,
+     "exact": false,
+     "note": "product too large",
+     "log10_upper": 38.41159159917556
+    },
+    {
+     "n": 3,
+     "exact": false,
+     "note": "product too large",
+     "log10_upper": 5.478224408102479
+    }
+   ]
+  }
+ }
+}

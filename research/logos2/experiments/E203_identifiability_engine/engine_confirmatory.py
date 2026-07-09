@@ -46,10 +46,7 @@ def solve_with_assumptions(m, lits, timeout_s=60):
     sv = cp_model.CpSolver()
     sv.parameters.max_time_in_seconds = timeout_s
     sv.parameters.num_workers = 1
-    m2 = cp_model.CpModel()
-    m2.CopyFrom(m.Proto())  # keep original clean
-    st = None
-    mm = m  # assumptions API operates on the model proto
+    mm = m  # assumptions live on the model; cleared after each solve
     mm.clear_assumptions()
     mm.add_assumptions(lits)
     st = sv.solve(mm)

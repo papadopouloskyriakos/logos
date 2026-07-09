@@ -5,7 +5,7 @@ import json
 import os
 from collections import Counter, defaultdict
 
-SILVER = "corpus/silver/inscriptions_structured.json"
+SILVER = "/home/claude-runner/gitlab/n8n/logos-logos2/corpus/silver/inscriptions_structured.json"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # contamination references (published/prior-exposed sequences; frozen in prereg)
@@ -30,12 +30,13 @@ def main():
     for ins in d:
         if ins.get("support") == "Tablet":
             continue
-        ws = ins.get("words") or []
+        ws = [tuple(w) for w in (ins.get("words") or []) if len(w) >= 3]
         if ws:
-            init_counter[tuple(ws[0])] += 1
+            init_counter[ws[0]] += 1
     formula_head = None
     for w, c in init_counter.most_common():
-        hit_sites = {i["site"] for i in d if (i.get("words") or [None])[0] == list(w)}
+        hit_sites = {i["site"] for i in d
+                     if [tuple(x) for x in (i.get("words") or []) if len(x) >= 3][:1] == [w]}
         if c >= 3 and len(hit_sites) >= 2:
             formula_head = w
             break
@@ -56,10 +57,12 @@ def main():
             nxt = st[i + 1]["t"] if i + 1 < len(st) else None
             if nxt == "num":
                 s1.add(w)                                 # S1 ledger-entry head
-            window = [t.get("signs") for t in st[max(0, i - 2):i + 3]
-                      if t.get("t") == "word"]
-            if ["KU", "RO"] in window and w != ("KU", "RO"):
-                s2.add(w)                                 # S2 totals-adjacent
+        # S2 totals-adjacent: within +-2 WORD positions of KU-RO in this document
+        kr = [k for k, w in enumerate(words_seq) if w == ("KU", "RO")]
+        for k in kr:
+            for j in range(max(0, k - 2), min(len(words_seq), k + 3)):
+                if words_seq[j] != ("KU", "RO"):
+                    s2.add(words_seq[j])
         if formula_head and formula_head in words_seq:
             j = words_seq.index(formula_head)
             if j + 1 < len(words_seq):
@@ -93,8 +96,8 @@ def main():
         "silver_sha256": sha,
         "derived_formula_head_internal": list(formula_head) if formula_head else None,
         "criteria": {"S1": "word len>=2 immediately preceding a numeral, >=2 tokens",
-                     "S2": "word within +-2 word-positions of KU-RO",
-                     "S3": "word immediately after the internally-derived formula head on its documents",
+                     "S2": "word within +-2 WORD positions of KU-RO (word-position window, pre-freeze repair from stream-token window)",
+                     "S3": "word immediately after the internally-derived formula head (doc-initial word len>=3, >=3 tokens, >=2 sites, non-Tablet) on its documents",
                      "S4": "word len>=3 attested at >=2 sites, excl. S3",
                      "S5": "word len>=3, single-site, >=3 tokens"},
         "class_sizes": {k: len(v) for k, v in classes.items()},

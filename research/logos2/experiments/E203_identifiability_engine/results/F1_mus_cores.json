@@ -1,0 +1,81 @@
+{
+ "cell": "F1_mus_cores",
+ "systems": {
+  "WPH38": {
+   "empirical_mus_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "empirical_distinct_muses_in_5_orderings": 1,
+   "example_mus": [
+    "PA",
+    "TE"
+   ],
+   "matched_random_mus_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "random_mean_size": 2.0,
+   "verdict": "CORES_TYPICAL_OF_RANDOM"
+  },
+  "SALGARELLA": {
+   "empirical_mus_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "empirical_distinct_muses_in_5_orderings": 1,
+   "example_mus": [
+    "DA",
+    "RU"
+   ],
+   "matched_random_mus_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "random_mean_size": 2.0,
+   "verdict": "CORES_TYPICAL_OF_RANDOM"
+  }
+ }
+}

@@ -1,0 +1,3220 @@
+{
+ "experiment": "E206_stage1_slot_freeze",
+ "frozen": "2026-07-10",
+ "silver_sha256": "aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500",
+ "derived_formula_head_internal": [
+  "A",
+  "TA",
+  "I",
+  "*301",
+  "WA",
+  "JA"
+ ],
+ "criteria": {
+  "S1": "word len>=2 immediately preceding a numeral, >=2 tokens",
+  "S2": "word within +-2 WORD positions of KU-RO (word-position window, pre-freeze repair from stream-token window)",
+  "S3": "word immediately after the internally-derived formula head (doc-initial word len>=3, >=3 tokens, >=2 sites, non-Tablet) on its documents",
+  "S4": "word len>=3 attested at >=2 sites, excl. S3",
+  "S5": "word len>=3, single-site, >=3 tokens"
+ },
+ "class_sizes": {
+  "S1_entry_head": 87,
+  "S2_totals_adjacent": 60,
+  "S3_formula_slot2": 10,
+  "S4_cross_site_recurrent": 14,
+  "S5_site_local_recurrent": 25
+ },
+ "n_candidates_union": 151,
+ "n_contaminated": 4,
+ "candidates": {
+  "KU-RA": {
+   "signs": [
+    "KU",
+    "RA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Arkhalkhori",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "ARKH2",
+    "ZA20"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-RU": {
+   "signs": [
+    "SI",
+    "RU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Palaikastro"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT55a",
+    "PKZa11"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KI-RE-TA₂": {
+   "signs": [
+    "KI",
+    "RE",
+    "TA₂"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT129",
+    "HT85b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MA-RU-ME": {
+   "signs": [
+    "MA",
+    "RU",
+    "ME"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT24a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "QE-RA₂-U": {
+   "signs": [
+    "QE",
+    "RA₂",
+    "U"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT1",
+    "HT95a",
+    "HT95b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-KA": {
+   "signs": [
+    "I",
+    "KA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT102",
+    "HT91"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-PA₃-NA-TU": {
+   "signs": [
+    "KU",
+    "PA₃",
+    "NA",
+    "TU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT119",
+    "HT47a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-RI-DA": {
+   "signs": [
+    "DA",
+    "RI",
+    "DA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT10a",
+    "HT122a",
+    "HT85a",
+    "HT93a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DI-NA-U": {
+   "signs": [
+    "DI",
+    "NA",
+    "U"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent",
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 6,
+   "sites": [
+    "Haghia Triada",
+    "Knossos"
+   ],
+   "n_docs": 5,
+   "docs": [
+    "HT16",
+    "HT25a",
+    "HT9a",
+    "HT9b",
+    "KNZb<27>"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*324-DI-RA": {
+   "signs": [
+    "*324",
+    "DI",
+    "RA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT122a",
+    "HT9a",
+    "HT9b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*409-VS": {
+   "signs": [
+    "*409",
+    "VS"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 5,
+   "sites": [
+    "Khania",
+    "Zominthos"
+   ],
+   "n_docs": 5,
+   "docs": [
+    "KHWc2010",
+    "KHWc2020",
+    "KHWc2021",
+    "KHWc2025",
+    "ZO1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "U-*325-ZA": {
+   "signs": [
+    "U",
+    "*325",
+    "ZA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT10a",
+    "HT85a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-RO": {
+   "signs": [
+    "KU",
+    "RO"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 37,
+   "sites": [
+    "Haghia Triada",
+    "Phaistos",
+    "Zakros"
+   ],
+   "n_docs": 34,
+   "docs": [
+    "HT100",
+    "HT102",
+    "HT104",
+    "HT109",
+    "HT110a",
+    "HT116b",
+    "HT117a",
+    "HT118",
+    "HT119",
+    "HT11a",
+    "HT11b",
+    "HT122a",
+    "HT122b",
+    "HT123+124a",
+    "HT123+124b",
+    "HT127b",
+    "HT13",
+    "HT130",
+    "HT25b",
+    "HT27a"
+   ],
+   "contaminated_prior_exposure": true
+  },
+  "PA-SE-JA": {
+   "signs": [
+    "PA",
+    "SE",
+    "JA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT93a",
+    "HTWc3001",
+    "HTWc3002"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-I-PI-TA": {
+   "signs": [
+    "DA",
+    "I",
+    "PI",
+    "TA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "ZA10a",
+    "ZA8"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-I": {
+   "signs": [
+    "DA",
+    "I"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Khania"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT12",
+    "KH13"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "QA-*310-I": {
+   "signs": [
+    "QA",
+    "*310",
+    "I"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT122a",
+    "HT85b",
+    "HT8a",
+    "HT8b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TE-TU": {
+   "signs": [
+    "TE",
+    "TU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT13",
+    "HT7a",
+    "HT85b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "AU-SI-RE": {
+   "signs": [
+    "AU",
+    "SI",
+    "RE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Phaistos"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "PH(?)31a",
+    "PH(?)31b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PI-SA": {
+   "signs": [
+    "PI",
+    "SA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Khania"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT123+124b",
+    "KH6"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-GRA+PA": {
+   "signs": [
+    "I",
+    "GRA+PA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT120",
+    "HT93a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*304+PA-CYP+D": {
+   "signs": [
+    "*304+PA",
+    "CYP+D"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HTWa1021bis",
+    "HTWc3016",
+    "HTWeWc3020"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MA-DI": {
+   "signs": [
+    "MA",
+    "DI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 6,
+   "sites": [
+    "Haghia Triada",
+    "Phaistos"
+   ],
+   "n_docs": 6,
+   "docs": [
+    "HT118",
+    "HT3",
+    "HT69",
+    "HT85b",
+    "HT97a",
+    "PH(?)31a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MI-NU-TE": {
+   "signs": [
+    "MI",
+    "NU",
+    "TE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT106",
+    "HT86a",
+    "HT95a",
+    "HT95b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-RA-NE": {
+   "signs": [
+    "PA",
+    "RA",
+    "NE"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT115a",
+    "HT115b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "RE-TI": {
+   "signs": [
+    "RE",
+    "TI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Malia",
+    "Milos"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "MA2b",
+    "MIZb3"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-MA": {
+   "signs": [
+    "SA",
+    "MA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT10a",
+    "HT52a",
+    "HT6b",
+    "ZA10b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-RA₂": {
+   "signs": [
+    "SA",
+    "RA₂"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 20,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 20,
+   "docs": [
+    "HT100",
+    "HT101",
+    "HT102",
+    "HT105",
+    "HT114a",
+    "HT121",
+    "HT125a",
+    "HT130",
+    "HT18",
+    "HT28a",
+    "HT28b",
+    "HT30",
+    "HT32",
+    "HT33",
+    "HT34",
+    "HT90",
+    "HT93a",
+    "HT94a",
+    "HT97b",
+    "HT99a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "QE-PU": {
+   "signs": [
+    "QE",
+    "PU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT9a",
+    "HT9b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DI-RI-NA": {
+   "signs": [
+    "DI",
+    "RI",
+    "NA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT102",
+    "HT93a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-DE": {
+   "signs": [
+    "PA",
+    "DE"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT122a",
+    "HT9a",
+    "HT9b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-TA-NE": {
+   "signs": [
+    "PA",
+    "TA",
+    "NE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT122a",
+    "HT94b",
+    "HTWa1019"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-RU": {
+   "signs": [
+    "SA",
+    "RU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 6,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 6,
+   "docs": [
+    "HT123+124a",
+    "HT86a",
+    "HT86b",
+    "HT94b",
+    "HT95a",
+    "HT95b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KI-RA": {
+   "signs": [
+    "KI",
+    "RA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT103",
+    "ZA8"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TA-NA-TI": {
+   "signs": [
+    "TA",
+    "NA",
+    "TI"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT10b",
+    "HT49a",
+    "HT7a",
+    "HT98a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "U-*49": {
+   "signs": [
+    "U",
+    "*49"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT126a",
+    "ZA10b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "QA-QA-RU": {
+   "signs": [
+    "QA",
+    "QA",
+    "RU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT118",
+    "HT122b",
+    "HT93a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-PA₃-NU": {
+   "signs": [
+    "KU",
+    "PA₃",
+    "NU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent",
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 8,
+   "sites": [
+    "Haghia Triada",
+    "Phaistos"
+   ],
+   "n_docs": 7,
+   "docs": [
+    "HT1",
+    "HT117a",
+    "HT122a",
+    "HT3",
+    "HT49a",
+    "HT88",
+    "PH(?)31a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-SI-*118": {
+   "signs": [
+    "DA",
+    "SI",
+    "*118"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT122a",
+    "HT13",
+    "HT85a",
+    "HT99b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-RE": {
+   "signs": [
+    "DA",
+    "RE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 7,
+   "sites": [
+    "Haghia Triada",
+    "Khania",
+    "Palaikastro"
+   ],
+   "n_docs": 7,
+   "docs": [
+    "HT10a",
+    "HT10b",
+    "HT122b",
+    "HT7a",
+    "HT85a",
+    "KH104",
+    "PK3"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "ME-ZA": {
+   "signs": [
+    "ME",
+    "ZA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT10a",
+    "HT85b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "QE-SI-ZU-E": {
+   "signs": [
+    "QE",
+    "SI",
+    "ZU",
+    "E"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "ZA15a",
+    "ZA4a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TE-KI": {
+   "signs": [
+    "TE",
+    "KI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT122a",
+    "HT13"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-PI-KI": {
+   "signs": [
+    "SI",
+    "PI",
+    "KI"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "ZA15a",
+    "ZA4a",
+    "ZA5b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MA-KA-I-TA": {
+   "signs": [
+    "MA",
+    "KA",
+    "I",
+    "TA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Palaikastro",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "PK1",
+    "ZA5b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-ME": {
+   "signs": [
+    "DA",
+    "ME"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT120",
+    "HT86a",
+    "HT95a",
+    "HT95b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-JA-RE": {
+   "signs": [
+    "PA",
+    "JA",
+    "RE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT29",
+    "HT88",
+    "HT8b",
+    "ZA10b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-ZU-NI": {
+   "signs": [
+    "KU",
+    "ZU",
+    "NI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT13",
+    "HT85a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-TU": {
+   "signs": [
+    "SI",
+    "TU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HTWa1019",
+    "ZA20"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "RU-MA-TA": {
+   "signs": [
+    "RU",
+    "MA",
+    "TA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT29",
+    "HT99b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DI-NA": {
+   "signs": [
+    "DI",
+    "NA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Khania"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT3",
+    "KH59"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DI-KI-SE": {
+   "signs": [
+    "DI",
+    "KI",
+    "SE"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT117b",
+    "HT87"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-RE-JU": {
+   "signs": [
+    "KU",
+    "RE",
+    "JU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT117b",
+    "HT39"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KI-DA-RO": {
+   "signs": [
+    "KI",
+    "DA",
+    "RO"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT117a",
+    "HT47a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KA-DI": {
+   "signs": [
+    "KA",
+    "DI"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "ZA15b",
+    "ZA4a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-MI-DA-E": {
+   "signs": [
+    "SA",
+    "MI",
+    "DA",
+    "E"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "ZA15a",
+    "ZA5a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TE-*301": {
+   "signs": [
+    "TE",
+    "*301"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT8a",
+    "HT98a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-CYP": {
+   "signs": [
+    "SI",
+    "CYP"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Khania"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT130",
+    "KH11"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TA-TI": {
+   "signs": [
+    "TA",
+    "TI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT26a",
+    "HT97a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*21F-TU-NE": {
+   "signs": [
+    "*21F",
+    "TU",
+    "NE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT117b",
+    "HT7b",
+    "HT87"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MI-TU": {
+   "signs": [
+    "MI",
+    "TU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT117a",
+    "HT135a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "RE-ZA": {
+   "signs": [
+    "RE",
+    "ZA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada",
+    "Khania"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT13",
+    "HT88",
+    "KH86"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "WA-DU-NI-MI": {
+   "signs": [
+    "WA",
+    "DU",
+    "NI",
+    "MI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT6b",
+    "HT85b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-NI-SU": {
+   "signs": [
+    "KU",
+    "NI",
+    "SU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 5,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 5,
+   "docs": [
+    "HT10a",
+    "HT86a",
+    "HT86b",
+    "HT95a",
+    "HT95b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA₃-NI-NA": {
+   "signs": [
+    "PA₃",
+    "NI",
+    "NA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT6b",
+    "HT93a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KI-RO": {
+   "signs": [
+    "KI",
+    "RO"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 16,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 12,
+   "docs": [
+    "HT1",
+    "HT117a",
+    "HT123+124a",
+    "HT123+124b",
+    "HT15",
+    "HT30",
+    "HT34",
+    "HT37",
+    "HT55a",
+    "HT88",
+    "HT93b",
+    "HT94b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MU-RU": {
+   "signs": [
+    "MU",
+    "RU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT3",
+    "HT46a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "VIR+[?]-I": {
+   "signs": [
+    "VIR+[?]",
+    "I"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT11a",
+    "HT93a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KA-KI": {
+   "signs": [
+    "KA",
+    "KI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT37"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*21F-*118": {
+   "signs": [
+    "*21F",
+    "*118"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Khania",
+    "Zakros"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "KH88",
+    "ZA14",
+    "ZA5a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-RO": {
+   "signs": [
+    "SA",
+    "RO"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT17",
+    "HT19",
+    "HT42+59",
+    "HT9a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-KU-SE-NE": {
+   "signs": [
+    "DA",
+    "KU",
+    "SE",
+    "NE"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT103"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-PA": {
+   "signs": [
+    "KU",
+    "PA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada",
+    "Khania",
+    "Zakros"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT110a",
+    "KH29",
+    "ZA11a",
+    "ZA11b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-I-TO": {
+   "signs": [
+    "PA",
+    "I",
+    "TO"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT120",
+    "HT97a"
+   ],
+   "contaminated_prior_exposure": true
+  },
+  "TA-I-AROM": {
+   "signs": [
+    "TA",
+    "I",
+    "AROM"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT39",
+    "HT9a",
+    "HT9b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*28B-NU-MA-RE": {
+   "signs": [
+    "*28B",
+    "NU",
+    "MA",
+    "RE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "ZA15a",
+    "ZA4a",
+    "ZA5b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA₃-NI": {
+   "signs": [
+    "PA₃",
+    "NI"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT102",
+    "HT85a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "ZU-DU": {
+   "signs": [
+    "ZU",
+    "DU"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT51b",
+    "HT99b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-VIN": {
+   "signs": [
+    "SA",
+    "VIN"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT114b",
+    "ZA15a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DI-DE-RU": {
+   "signs": [
+    "DI",
+    "DE",
+    "RU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT86a",
+    "HT95a",
+    "HT95b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DU-RE-ZA-SE": {
+   "signs": [
+    "DU",
+    "RE",
+    "ZA",
+    "SE"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Zakros"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "ZA10a",
+    "ZA10b",
+    "ZA20"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-RI-NI-TA": {
+   "signs": [
+    "A",
+    "RI",
+    "NI",
+    "TA"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT25a",
+    "ZA8"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PO-TO-KU-RO": {
+   "signs": [
+    "PO",
+    "TO",
+    "KU",
+    "RO"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT122b",
+    "HT131b"
+   ],
+   "contaminated_prior_exposure": true
+  },
+  "A-RU": {
+   "signs": [
+    "A",
+    "RU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT49a",
+    "HT9a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*306-TU": {
+   "signs": [
+    "*306",
+    "TU"
+   ],
+   "classes": [
+    "S1_entry_head",
+    "S2_totals_adjacent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT119",
+    "HT122a",
+    "HT9a",
+    "HT9b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-DA-RE": {
+   "signs": [
+    "SI",
+    "DA",
+    "RE"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT122a",
+    "HT17"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "QE-KA": {
+   "signs": [
+    "QE",
+    "KA"
+   ],
+   "classes": [
+    "S1_entry_head"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT111a",
+    "HT85b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DU-MA-I-NA": {
+   "signs": [
+    "DU",
+    "MA",
+    "I",
+    "NA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT123+124b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-TA": {
+   "signs": [
+    "SA",
+    "TA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT117a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-RA-JU": {
+   "signs": [
+    "A",
+    "RA",
+    "JU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT109"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-TA-DA": {
+   "signs": [
+    "PA",
+    "TA",
+    "DA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Phaistos"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "PH(?)31a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-MA-TI": {
+   "signs": [
+    "SA",
+    "MA",
+    "TI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT39"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-DU-NE-SI": {
+   "signs": [
+    "I",
+    "DU",
+    "NE",
+    "SI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT13"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-QE-RI": {
+   "signs": [
+    "SA",
+    "QE",
+    "RI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT11b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TE-KE": {
+   "signs": [
+    "TE",
+    "KE"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT85a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-MA-RO": {
+   "signs": [
+    "SA",
+    "MA",
+    "RO"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT88"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TA-RA": {
+   "signs": [
+    "TA",
+    "RA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT89"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "RU-ZU-NA": {
+   "signs": [
+    "RU",
+    "ZU",
+    "NA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT11b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-RA-DI": {
+   "signs": [
+    "SA",
+    "RA",
+    "DI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT27a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-TI": {
+   "signs": [
+    "I",
+    "TI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Iouktas"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT25b",
+    "IOZa12"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KA-RO-NA": {
+   "signs": [
+    "KA",
+    "RO",
+    "NA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT11a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-DU-TI": {
+   "signs": [
+    "I",
+    "DU",
+    "TI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT104"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "PA-DA-SU-TI": {
+   "signs": [
+    "PA",
+    "DA",
+    "SU",
+    "TI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT104"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KI-DA-TA": {
+   "signs": [
+    "KI",
+    "DA",
+    "TA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT40"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "WI-TE-RO": {
+   "signs": [
+    "WI",
+    "TE",
+    "RO"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT25b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "NU-DU-*331": {
+   "signs": [
+    "NU",
+    "DU",
+    "*331"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT40"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-DU-*34-KU-MI": {
+   "signs": [
+    "SI",
+    "DU",
+    "*34",
+    "KU",
+    "MI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT110a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*21F-TU": {
+   "signs": [
+    "*21F",
+    "TU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT94b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DE-ME-TE": {
+   "signs": [
+    "DE",
+    "ME",
+    "TE"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT94b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-DU": {
+   "signs": [
+    "SI",
+    "DU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT123+124b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-SU-JA": {
+   "signs": [
+    "A",
+    "SU",
+    "JA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT11a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*327-JU": {
+   "signs": [
+    "*327",
+    "JU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT119"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-*305": {
+   "signs": [
+    "KU",
+    "*305"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT27a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MA-ZU": {
+   "signs": [
+    "MA",
+    "ZU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT102"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KA-PA": {
+   "signs": [
+    "KA",
+    "PA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 6,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 6,
+   "docs": [
+    "HT102",
+    "HT105",
+    "HT140",
+    "HT6a",
+    "HT8b",
+    "HT94a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-TU": {
+   "signs": [
+    "DA",
+    "TU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT123+124a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-TA-RE": {
+   "signs": [
+    "DA",
+    "TA",
+    "RE"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT88"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-RE": {
+   "signs": [
+    "KU",
+    "RE"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT39",
+    "HT53b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "RI-RU-MA": {
+   "signs": [
+    "RI",
+    "RU",
+    "MA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT118"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "NA-DA-RE": {
+   "signs": [
+    "NA",
+    "DA",
+    "RE"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT117a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KE-KI-RU": {
+   "signs": [
+    "KE",
+    "KI",
+    "RU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT94b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*322-RI": {
+   "signs": [
+    "*322",
+    "RI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT11a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-RI-SU": {
+   "signs": [
+    "A",
+    "RI",
+    "SU"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT118"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "MA-I-MI": {
+   "signs": [
+    "MA",
+    "I",
+    "MI"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT89"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-DA": {
+   "signs": [
+    "KU",
+    "DA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT122a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TE-JA-RE": {
+   "signs": [
+    "TE",
+    "JA",
+    "RE"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT117a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KU-KU-DA-RA": {
+   "signs": [
+    "KU",
+    "KU",
+    "DA",
+    "RA"
+   ],
+   "classes": [
+    "S2_totals_adjacent"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "HT117a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "O-SU-QA-RE": {
+   "signs": [
+    "O",
+    "SU",
+    "QA",
+    "RE"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Troullos"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "TLZa1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "JA-SU-MA-TU-OLIV": {
+   "signs": [
+    "JA",
+    "SU",
+    "MA",
+    "TU",
+    "OLIV"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Syme"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "SYZa2"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-DI-KI-TE": {
+   "signs": [
+    "A",
+    "DI",
+    "KI",
+    "TE"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Palaikastro"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "PKZa12"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "JA-I-NWA-ZA": {
+   "signs": [
+    "JA",
+    "I",
+    "NWA",
+    "ZA"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Syme"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "SYZa4"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "JA-DI-KI-TU": {
+   "signs": [
+    "JA",
+    "DI",
+    "KI",
+    "TU"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Iouktas"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "IOZa2"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "JA-JA": {
+   "signs": [
+    "JA",
+    "JA"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Palaikastro",
+    "Syme"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "PKZa18",
+    "SYZa8"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-DA-MI": {
+   "signs": [
+    "I",
+    "DA",
+    "MI"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Syme"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "SYZa1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TU-RU-SA": {
+   "signs": [
+    "TU",
+    "RU",
+    "SA"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Kophinas"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "KOZa1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "JA-TI-*321": {
+   "signs": [
+    "JA",
+    "TI",
+    "*321"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Iouktas"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "IOZa7"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SE-KA-NA-SI": {
+   "signs": [
+    "SE",
+    "KA",
+    "NA",
+    "SI"
+   ],
+   "classes": [
+    "S3_formula_slot2"
+   ],
+   "tokens": 1,
+   "sites": [
+    "Syme"
+   ],
+   "n_docs": 1,
+   "docs": [
+    "SYZa3"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "TI-TI-KU": {
+   "signs": [
+    "TI",
+    "TI",
+    "KU"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Zakros"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT35",
+    "ZAZb3"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-TA-I-*301-WA-JA": {
+   "signs": [
+    "A",
+    "TA",
+    "I",
+    "*301",
+    "WA",
+    "JA"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 11,
+   "sites": [
+    "Iouktas",
+    "Kophinas",
+    "Palaikastro",
+    "Syme",
+    "Troullos"
+   ],
+   "n_docs": 11,
+   "docs": [
+    "IOZa2",
+    "IOZa3",
+    "IOZa7",
+    "KOZa1",
+    "PKZa12",
+    "SYZa1",
+    "SYZa2",
+    "SYZa3",
+    "SYZa4",
+    "SYZa8",
+    "TLZa1"
+   ],
+   "contaminated_prior_exposure": true
+  },
+  "QA-NU-MA": {
+   "signs": [
+    "QA",
+    "NU",
+    "MA"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Haghia Triada",
+    "Khania"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT116a",
+    "KH88"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SI-RU-TE": {
+   "signs": [
+    "SI",
+    "RU",
+    "TE"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 7,
+   "sites": [
+    "Iouktas",
+    "Kophinas",
+    "Syme",
+    "Troullos",
+    "Vrysinas"
+   ],
+   "n_docs": 7,
+   "docs": [
+    "IOZa14",
+    "IOZa15",
+    "IOZa2",
+    "KOZa1",
+    "SYZa3",
+    "TLZa1",
+    "VRYZa1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "JA-SA-SA-RA-ME": {
+   "signs": [
+    "JA",
+    "SA",
+    "SA",
+    "RA",
+    "ME"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 7,
+   "sites": [
+    "Iouktas",
+    "Palaikastro",
+    "Platanos",
+    "Psykhro",
+    "Troullos"
+   ],
+   "n_docs": 7,
+   "docs": [
+    "IOZa2",
+    "IOZa6",
+    "IOZa9",
+    "PKZa27",
+    "PLZf1",
+    "PSZa2",
+    "TLZa1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "*306-TA-JE": {
+   "signs": [
+    "*306",
+    "TA",
+    "JE"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Arkhalkhori",
+    "Fourni"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "ARKHZc8",
+    "FOZc1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "SA-SA-RA-ME": {
+   "signs": [
+    "SA",
+    "SA",
+    "RA",
+    "ME"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 2,
+   "sites": [
+    "Knossos",
+    "Palaikastro"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "KHZc106",
+    "PKZa11"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "U-NA-KA-NA-SI": {
+   "signs": [
+    "U",
+    "NA",
+    "KA",
+    "NA",
+    "SI"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Iouktas",
+    "Kophinas",
+    "Palaikastro"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "IOZa2",
+    "IOZa9",
+    "KOZa1",
+    "PKZa27"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "I-PI-NA-MA": {
+   "signs": [
+    "I",
+    "PI",
+    "NA",
+    "MA"
+   ],
+   "classes": [
+    "S4_cross_site_recurrent"
+   ],
+   "tokens": 6,
+   "sites": [
+    "Apodoulou",
+    "Iouktas",
+    "Kophinas",
+    "Troullos",
+    "Vrysinas"
+   ],
+   "n_docs": 6,
+   "docs": [
+    "APZa2",
+    "IOZa15",
+    "IOZa2",
+    "KOZa1",
+    "TLZa1",
+    "VRYZa1"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "DA-QE-RA": {
+   "signs": [
+    "DA",
+    "QE",
+    "RA"
+   ],
+   "classes": [
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT120",
+    "HT57a",
+    "HT6a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "U-*34-SI": {
+   "signs": [
+    "U",
+    "*34",
+    "SI"
+   ],
+   "classes": [
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 2,
+   "docs": [
+    "HT140",
+    "HT15"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "A-KA-RU": {
+   "signs": [
+    "A",
+    "KA",
+    "RU"
+   ],
+   "classes": [
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT2",
+    "HT86a",
+    "HT86b"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KI-RE-TA-NA": {
+   "signs": [
+    "KI",
+    "RE",
+    "TA",
+    "NA"
+   ],
+   "classes": [
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 4,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 4,
+   "docs": [
+    "HT108",
+    "HT120",
+    "HT2",
+    "HT8a"
+   ],
+   "contaminated_prior_exposure": false
+  },
+  "KA-KU-PA": {
+   "signs": [
+    "KA",
+    "KU",
+    "PA"
+   ],
+   "classes": [
+    "S5_site_local_recurrent"
+   ],
+   "tokens": 3,
+   "sites": [
+    "Haghia Triada"
+   ],
+   "n_docs": 3,
+   "docs": [
+    "HT16",
+    "HTWc3015",
+    "HTWc3016"
+   ],
+   "contaminated_prior_exposure": false
+  }
+ },
+ "external_data_loaded": false,
+ "note": "SLOT candidates are L2 structural objects; no name/place/person wording until Stage-2 evidence under its own prereg."
+}
