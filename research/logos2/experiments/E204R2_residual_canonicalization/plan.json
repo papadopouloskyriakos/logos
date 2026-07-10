@@ -1,0 +1,11 @@
+{
+ "experiment": "E204R2",
+ "one_pass": true,
+ "rules": [
+  "RC1 damaged-initial hyphen retained + damaged=1",
+  "RC2 unterminated numeric entities decode as terminated",
+  "RC3 anomaly flag, no silent exclusion"
+ ],
+ "gate": "identical to E204R",
+ "seed_master": 1336530913
+}
