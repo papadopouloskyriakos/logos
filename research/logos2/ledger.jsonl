@@ -14,3 +14,4 @@
 {"ts": "2026-07-10", "event": "MILESTONE2_REPORT_COMMITTED", "graduated_above_L0": 0, "ten_questions": "answered"}
 {"ts": "2026-07-10", "event": "E204_ACQUISITION_PROTOCOL_FROZEN", "source": "Younger archived web corpus (provenance-tracked)", "hazard": "commentary decimal glosses codified as HARD EXCLUSION", "next": "dual-parser extraction -> quality gate >=98% agreement, >=30 multi-fraction docs, >=10 arithmetic-complete docs"}
 {"ts": "2026-07-10", "event": "E204_GATE_FAILED", "status": "E204_BLOCKED_DATA_QUALITY", "measured": "86.3% overall vs 98% gate", "localized": "statement-field extraction divergence (27%); numeric core near-gate", "seal_touched": false}
+{"ts": "2026-07-10", "event": "CLOSURE_WAVE_CHECKPOINT", "done": ["F1a scored", "M2 report", "E204 gate failed->blocked-quality"], "next": ["E206-S2 prereg+run", "E212 graph", "E213 seal", "E214 red-team", "final bundle"], "f1b": "PENDING external sweep"}
