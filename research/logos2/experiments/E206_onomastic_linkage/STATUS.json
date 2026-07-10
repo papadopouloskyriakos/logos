@@ -1,10 +1,6 @@
 {
  "experiment": "E206",
- "status": "STAGE1_SLOT_FREEZE_COMMITTED",
- "exploratory": true,
- "stage2": "NOT_STARTED (own prereg required before ANY external inventory contact)",
- "frozen": "2026-07-10",
- "n_candidates": 151,
- "n_contaminated": 4,
- "internal_formula_head_derived": "A-TA-I-*301-WA-JA (mechanically, from doc-initial position on non-Tablet multi-site docs)"
+ "status": "NO_MATCH_BEYOND_CANARIES",
+ "prior": "STAGE1_SLOT_FREEZE_COMMITTED (frozen slots verified by hash in stage 2)",
+ "stage2": "stage2/STAGE2_RESULT.json"
 }

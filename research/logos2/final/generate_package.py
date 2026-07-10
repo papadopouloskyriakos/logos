@@ -54,7 +54,7 @@ def main():
         "E204_soft_optimum": soft.get("soft_optimum"),
         "E204_loo_stable_relations": soft.get("loo_stable_relations"),
         "E206_S2_verdict": s2.get("verdict"), "E206_S2_replay_qualification": s2.get("replay_qualification"),
-        "E211_RAG": {"verdict": "RAG_USEFUL_FOR_AUDIT_ONLY", "recall_at_5": rag.get("bm25", {}).get("recall_at_5", rag.get("recall_at_5"))},
+        "E211_RAG": {"verdict": rag.get("verdict"), "recall_at_5": rag.get("systems", {}).get("bm25", {}).get("recall@5")},
         "independence_verdict": g.get("independence_verdict"),
         "seal": {"sha256": e213.get("sealed_sha256"), "n_predictions": e213.get("n_predictions")},
         "pending_external": ["E201_F1b (CSA sweep ~2026-07-13; cannot alter closed conclusions)"]}

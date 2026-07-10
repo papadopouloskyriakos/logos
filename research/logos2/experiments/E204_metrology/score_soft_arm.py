@@ -59,6 +59,10 @@ def main():
     final = a["status"] if v["valid"] else "E204_INVALID"
     out["E204_TERMINAL_STATUS"] = final
     json.dump(out, open(os.path.join(HERE, "E204_FINAL_STATUS.json"), "w"), indent=1)
+    json.dump({"experiment": "E204", "status": final,
+               "prior": "METROLOGY_STACK_FROZEN; strict arm = data-completeness INFEASIBLE (separate)",
+               "detail": "E204_FINAL_STATUS.json"},
+              open(os.path.join(HERE, "STATUS.json"), "w"), indent=1)
     print("E204 TERMINAL STATUS:", final, "| consistent with run:", a["consistency_with_run_verdict"])
     return 0
 
