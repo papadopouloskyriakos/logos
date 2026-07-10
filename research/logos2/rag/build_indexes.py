@@ -24,7 +24,14 @@ def mk(conn, table):
                  + ",".join(FIELDS) + ")")
 
 
+def fold(t):
+    for u, a in zip("\u2080\u2081\u2082\u2083\u2084\u2085\u2086\u2087\u2088\u2089", "0123456789"):
+        t = t.replace(u, a)
+    return t
+
+
 def add(conn, table, **kw):
+    kw["text"] = fold(str(kw.get("text", "")))
     row = {f: str(kw.get(f, "")) for f in FIELDS}
     row["chunk_id"] = h(table + row["source_id"] + row["locator"] + row["text"])[:24]
     row["content_hash"] = h(row["text"])

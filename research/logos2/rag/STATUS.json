@@ -1,0 +1,15 @@
+{
+ "experiment": "E211_RAG",
+ "status": "RAG_USEFUL_FOR_AUDIT_ONLY",
+ "completed": "2026-07-10",
+ "stack": "SQLite FTS5; 12928 chunks; 5 separated indexes; PIT cutoffs enforced",
+ "contracts": {
+  "index_D_flag": true,
+  "temporal_cutoff": true
+ },
+ "deferred": [
+  "dense arm (Ollama)",
+  "hybrid+rerank",
+  "GraphRAG"
+ ]
+}

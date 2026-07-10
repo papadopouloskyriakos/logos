@@ -21,3 +21,4 @@
 {"ts": "2026-07-10", "event": "E204R2_QUALITY_GATE_PASSED", "detail": "single pass; overall .9995, statement .9957, full-record .995, numeric fields 1.000, 0 anomalies; canonical dataset frozen; seal still closed; E204 metrology unlocked"}
 {"ts": "2026-07-10", "event": "E204_METROLOGY_RUNNING", "note": "first gate-qualified fraction data in programme history; loader site-derivation fix (pre-science crash)"}
 {"ts": "2026-07-10", "event": "E206_S2_COMPLETE", "verdict": "NO_MATCH_BEYOND_CANARIES", "detail": "replay qualification 0.905>=0.60 (well-powered detector); 147 confirmatory candidates, 0 Holm survivors vs 3-family canary battery; conditional on unlicensed A/B convention (labelled); first drift-tolerant onomastic test in programme"}
+{"ts": "2026-07-10", "event": "E211_RAG_COMPLETE", "verdict": "RAG_USEFUL_FOR_AUDIT_ONLY", "detail": "BM25 .714/.643 vs random .571; both contracts PASS; dense arms deferred; never-evidence rule binding"}

@@ -1,0 +1,142 @@
+{
+ "per_query": [
+  {
+   "qid": "q1",
+   "class": "exact_inscription",
+   "n_results": 5,
+   "hit@5": false,
+   "random_hit@5": false,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q2",
+   "class": "formula_parallel",
+   "n_results": 5,
+   "hit@5": null,
+   "random_hit@5": null,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q3",
+   "class": "fraction_apparatus",
+   "n_results": 5,
+   "hit@5": false,
+   "random_hit@5": true,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q4",
+   "class": "onomastic_context",
+   "n_results": 10,
+   "hit@5": null,
+   "random_hit@5": null,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q5",
+   "class": "prior_art_detection",
+   "n_results": 6,
+   "hit@5": true,
+   "random_hit@5": false,
+   "rr": 1.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q6",
+   "class": "contradictory_evidence",
+   "n_results": 10,
+   "hit@5": null,
+   "random_hit@5": null,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q7",
+   "class": "historical_replay",
+   "n_results": 2,
+   "hit@5": true,
+   "random_hit@5": false,
+   "rr": 0.5,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q8",
+   "class": "wrong_hypothesis_falsification",
+   "n_results": 4,
+   "hit@5": true,
+   "random_hit@5": true,
+   "rr": 1.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q9",
+   "class": "palaeographic_variant",
+   "n_results": 5,
+   "hit@5": true,
+   "random_hit@5": true,
+   "rr": 1.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q10",
+   "class": "voi_acquisition",
+   "n_results": 5,
+   "hit@5": null,
+   "random_hit@5": null,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q11",
+   "class": "adversarial_null",
+   "n_results": 5,
+   "hit@5": true,
+   "random_hit@5": true,
+   "rr": 1.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  },
+  {
+   "qid": "q12",
+   "class": "temporal_cutoff",
+   "n_results": 0,
+   "hit@5": null,
+   "random_hit@5": null,
+   "rr": 0.0,
+   "flag_contract_ok": true,
+   "cutoff_ok": true
+  }
+ ],
+ "systems": {
+  "bm25": {
+   "recall@5": 0.714,
+   "mrr@5": 0.643
+  },
+  "random": {
+   "recall@5": 0.571
+  },
+  "no_retrieval": {
+   "recall@5": 0.0
+  }
+ },
+ "contract_checks": {
+  "index_D_flag": true,
+  "temporal_cutoff": true
+ },
+ "dense_arm": "NOT RUN this pass (Ollama gpu01 optional; recorded as deferred arm, not a failure)",
+ "verdict": "RAG_USEFUL_FOR_AUDIT_ONLY"
+}

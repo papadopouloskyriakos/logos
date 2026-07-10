@@ -1,0 +1,12 @@
+{"qid": "q1", "class": "exact_inscription", "query": "QE-RA2-U KI-RO", "allowed": ["A_OBS"], "forbidden": ["D_CLAIMS"], "gold_locator_contains": "HT 1"}
+{"qid": "q2", "class": "formula_parallel", "query": "A-TA-I-*301-WA-JA", "allowed": ["A_OBS"], "forbidden": ["D_CLAIMS"], "gold_locator_contains": ""}
+{"qid": "q3", "class": "fraction_apparatus", "query": "KU-RO 31 J E", "allowed": ["A_OBS"], "forbidden": ["D_CLAIMS"], "gold_locator_contains": "HT 9"}
+{"qid": "q4", "class": "onomastic_context", "query": "SU-KI-RI-TA", "allowed": ["A_OBS", "B_SCHOL"], "forbidden": ["D_CLAIMS"], "gold_locator_contains": ""}
+{"qid": "q5", "class": "prior_art_detection", "query": "PA-I-TO toponym equation", "allowed": ["B_SCHOL", "D_CLAIMS"], "forbidden": [], "gold_source": "SM2017_META"}
+{"qid": "q6", "class": "contradictory_evidence", "query": "KU-RO total does not balance missing entry", "allowed": ["A_OBS", "B_SCHOL"], "forbidden": ["D_CLAIMS"], "gold_locator_contains": ""}
+{"qid": "q7", "class": "historical_replay", "query": "linb name inventory \ud800\udc00\ud800\udc05\ud800\udc14\ud800\udc03", "allowed": ["C_COMP"], "forbidden": ["D_CLAIMS"], "gold_source": "COG_CORPORA", "gold_locator_contains": "linear_b-greek.names.cog"}
+{"qid": "q8", "class": "wrong_hypothesis_falsification", "query": "sceptre reading value proposal", "allowed": ["D_CLAIMS"], "forbidden": [], "gold_source": "RJAB2025", "must_be_flagged": "INTERPRETIVE_CLAIM_ONLY"}
+{"qid": "q9", "class": "palaeographic_variant", "query": "sign variant allograph form", "allowed": ["B_SCHOL"], "forbidden": ["D_CLAIMS"], "gold_source": "YOUNGER_WEB"}
+{"qid": "q10", "class": "voi_acquisition", "query": "unpublished Anetaki fraction apparatus edition", "allowed": ["B_SCHOL"], "forbidden": ["D_CLAIMS"], "gold_locator_contains": ""}
+{"qid": "q11", "class": "adversarial_null", "query": "fabricated candidate", "allowed": ["E_ADV"], "forbidden": ["A_OBS"], "gold_source": "E206_CANARIES", "gold_locator_contains": "fab#"}
+{"qid": "q12", "class": "temporal_cutoff", "query": "toponym equation", "allowed": ["B_SCHOL"], "forbidden": [], "cutoff": "2016-01-01", "expect": "ZERO results (SM2017 published 2017 > cutoff)"}
