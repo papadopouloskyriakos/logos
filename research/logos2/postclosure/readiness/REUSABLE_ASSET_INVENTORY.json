@@ -1,0 +1,95 @@
+{
+ "generated": "2026-07-10",
+ "campaign": "LOGOS-2 (closed)",
+ "n_assets": 11,
+ "assets": [
+  {
+   "path": "experiments/E204R2_residual_canonicalization/CANONICAL_FRACTION_DATASET.csv",
+   "kind": "dataset",
+   "sha256": "f97fc7e4e8054075b7f020a2956f3da6b6ce41767dfa410c31535ee04b2f36bc",
+   "bytes": 60857,
+   "description": "1,385 dual-parser-agreed Linear A fraction records (doc, locus, context word, logogram, integer, fraction sequence, restoration flag)",
+   "licence": "campaign-derived from archived scholarly web corpus; internal factual use"
+  },
+  {
+   "path": "corpus/silver/inscriptions_structured.json",
+   "kind": "dataset",
+   "sha256": "aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500",
+   "bytes": 724963,
+   "description": "silver Linear A corpus: 1,341 inscriptions / 52 sites, structured words+context",
+   "licence": "in-repo derivative"
+  },
+  {
+   "path": "experiments/E201_replay_benchmark/harness.py",
+   "kind": "instrument",
+   "sha256": "2a3943297b1666544f86b9c1cba1aa6d54bc3f3dd9adf44963d29c6b923f668d",
+   "bytes": 5590,
+   "description": "calibrated historical-replay harness (anchor ladders, abstention, leak detector); calibration certificate 0/200",
+   "licence": "in-repo, open"
+  },
+  {
+   "path": "experiments/E203_identifiability_engine/engine.py",
+   "kind": "instrument",
+   "sha256": "2de40bf80b761c69a33705fb6feac620f4938f5c9d03f579a2c2499a0fdb90cb",
+   "bytes": 11650,
+   "description": "exact identifiability engine: CP-SAT constraint compilation + component-decomposition exact counting + MUS extraction",
+   "licence": "in-repo, open"
+  },
+  {
+   "path": "experiments/E204_metrology/run_metrology_soft.py",
+   "kind": "instrument",
+   "sha256": "c174a4ba98995c32108c7d91dcd3e05f5fae1ba04dea1782b90b3b040cd51604",
+   "bytes": 7040,
+   "description": "soft metrological satisfiability pipeline w/ selection-aware whole-pipeline nulls",
+   "licence": "in-repo, open"
+  },
+  {
+   "path": "experiments/E206_onomastic_linkage/stage2/run_stage2.py",
+   "kind": "instrument",
+   "sha256": "806c6dfbb073d72a1c41c02e1f9ff4eb155f44d44ebd615235e3f79759c3bd2a",
+   "bytes": 7817,
+   "description": "qualified drift-matcher + canary battery + Holm framework for onomastic candidates",
+   "licence": "in-repo, open"
+  },
+  {
+   "path": "rag/build_indexes.py",
+   "kind": "instrument",
+   "sha256": "e4b47057a87aae06615d39bb5cbdd9ebb047852f7b124c12676d18498491c40d",
+   "bytes": 8138,
+   "description": "provenance-separated audit retrieval builder (5 epistemically separated FTS5 indexes; PIT cutoffs)",
+   "licence": "in-repo, open"
+  },
+  {
+   "path": "verifiers/run_battery.py",
+   "kind": "instrument",
+   "sha256": "5ce017aed3251626f669a8388b17a1f6f6192fc141f14d672e9d3d01cd9ff0d2",
+   "bytes": 6603,
+   "description": "closure verifier battery: wording/vocabulary/freeze/graph/append-only/seal checks",
+   "licence": "in-repo, open"
+  },
+  {
+   "path": "experiments/E213_prospective_seal/SEALED_PREDICTIONS.json",
+   "kind": "sealed-prediction",
+   "sha256": "5b50f21dd1e0c4e85e51659144048af9fd2a89210a7f91b62ce00ab04288da19",
+   "bytes": 2177,
+   "description": "2 sealed prospective predictions (sha256 5b50f21d\u2026) scoreable on newly published inscriptions",
+   "licence": "sealed; verify by hash only"
+  },
+  {
+   "path": "final/IDENTIFIABILITY_MAP.json",
+   "kind": "result",
+   "sha256": "10ea85eeed087484e0c28513b20601859b34a206986e0637aa8073681e763b6e",
+   "bytes": 1485,
+   "description": "exact ambiguity by configuration + null adjudication + MUS core map",
+   "licence": "open"
+  },
+  {
+   "path": "final/VALUE_OF_INFORMATION.csv",
+   "kind": "result",
+   "sha256": "8a82ce9a84214021045da9c76e43fa696e25a098a0564e8a042945a8ec78d080",
+   "bytes": 1918,
+   "description": "priced acquisition ranking (VOI per candidate evidence item)",
+   "licence": "open"
+  }
+ ]
+}
