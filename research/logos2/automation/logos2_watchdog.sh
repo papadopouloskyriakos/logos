@@ -162,6 +162,10 @@ set -e
 if [[ $RC -eq 0 ]]; then
   event "continuation_ok" "rc=0 log=$(basename "$LOG")"
   reset_fail_and_stamp "last_claude_continuation"
+elif grep -qiE "session limit|usage limit|rate.?limit.*resets|resets [0-9]{1,2}:[0-9]{2}" "$LOG"; then
+  # AMENDMENT_W1: transient quota window with a published reset — never breaker-eligible.
+  # Do not bump, do not reset; the next cycle after the reset resumes normally.
+  event "session_limit_transient" "rc=$RC log=$(basename "$LOG"); breaker not counted"
 else
   fail_exit "claude_rc_$RC log=$(basename "$LOG")"
 fi

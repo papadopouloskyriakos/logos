@@ -1,0 +1,3 @@
+# W1 test intent (documented; full harness integration deferred to avoid touching the frozen fixture set):
+# a continuation log containing "You've hit your session limit · resets 6:20am" must produce
+# event=session_limit_transient and leave the consecutive-failure counter unchanged.
