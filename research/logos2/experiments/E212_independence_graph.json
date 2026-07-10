@@ -1,0 +1,82 @@
+{
+ "experiment": "E212_evidence_independence",
+ "built": "2026-07-10",
+ "status": "SKELETON_PENDING_E204_SOFT (finalize when soft arm terminates; F1b = PENDING_EXTERNAL, cannot alter conclusions by frozen rule)",
+ "claims": {
+  "A_initial_positional_enrichment": {
+   "level": "L2 (inherited from prior campaign; LOGOS-2 E207 adds POSITIONAL_ONLY)",
+   "decisive_inputs": [
+    "silver corpus (single lineage)",
+    "initial-position operationalization"
+   ],
+   "channels": [
+    "positional-distribution channel only"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E204R2_canonical_apparatus": {
+   "level": "L1 measurement",
+   "decisive_inputs": [
+    "Younger archived web corpus (single source edition)",
+    "frozen semantic spec"
+   ],
+   "channels": [
+    "dual-parser IMPLEMENTATION redundancy over ONE source"
+   ],
+   "classification": "SINGLE_CHANNEL",
+   "note": "dual parsing is quality control, not evidential independence"
+  },
+  "E201_F1a_calibration_certificate": {
+   "level": "L0",
+   "decisive_inputs": [
+    "cog benchmark datasets",
+    "frozen null construction"
+   ],
+   "channels": [
+    "self-contained calibration"
+   ],
+   "classification": "CONDITIONALLY_INDEPENDENT (of LA data entirely)"
+  },
+  "E206_S2_negative": {
+   "level": "L0 negative",
+   "decisive_inputs": [
+    "frozen slot set (silver corpus)",
+    "LB names inventory (single family)",
+    "unlicensed A/B convention"
+   ],
+   "channels": [
+    "one inventory family; one matcher"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E203_identifiability_map": {
+   "level": "L0 model-conditional",
+   "decisive_inputs": [
+    "WPH lattice (single continuity meta-lineage)",
+    "encoded constraint families"
+   ],
+   "channels": [
+    "constraint-satisfaction over one lineage"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E204_metrology_outcome": {
+   "level": "pending soft arm",
+   "classification": "TBD",
+   "decisive_inputs": [
+    "E204R2 canonical apparatus (itself single-source)"
+   ],
+   "note": "any metrology relation inherits the Younger-source dependence -> at best PARTIALLY_DEPENDENT vs anything else Younger-derived"
+  },
+  "RAG_layer": {
+   "level": "L0 audit infrastructure",
+   "classification": "NOT_A_CHANNEL (retrieval over the same corpora; never evidence)"
+  }
+ },
+ "global_findings": [
+  "No claim in LOGOS-2 has two genuinely independent channels",
+  "All LA-positive-adjacent structure descends from the silver corpus lineage",
+  "Dual-parser and dual-solver redundancy improves RELIABILITY, never INDEPENDENCE",
+  "Algorithmic agreement on shared decisive observations found at every audit point (E203 MUS/nulls; E205-I; E207 battery)"
+ ]
+}
