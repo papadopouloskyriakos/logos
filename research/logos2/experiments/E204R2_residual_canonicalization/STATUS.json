@@ -1,4 +1,19 @@
 {
  "experiment": "E204R2",
- "status": "PREREGISTERED"
+ "status": "E204R2_QUALITY_GATE_PASSED",
+ "completed": "2026-07-10",
+ "gate_detail": {
+  "overall>=.98": true,
+  "statement>=.98": true,
+  "fraction>=.98": true,
+  "classification>=.98": true,
+  "flags>=.98": true,
+  "full_record>=.95": true,
+  "multi>=30": true,
+  "arith>=10": true,
+  "dec==0": true,
+  "dup_inflation==0": true,
+  "PASSES": true
+ },
+ "one_pass_honored": true
 }

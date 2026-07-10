@@ -1,0 +1,1386 @@
+source_file,doc_id,locus,context_word,logogram,integer,fraction_seq,uncertain,restored,damaged,anomaly,is_kuro
+misctexts,ARKH 2,.1-2,KU-RA,VINb,5,,0,0,0,0,0
+misctexts,ARKH 2,.2-3,A-SI-DA-TO-I,,12,,0,0,0,0,0
+misctexts,ARKH 2,.3-4,ZU-*301-SE-DE-QIf-*118,,6,,0,0,0,0,0
+misctexts,ARKH 2,.5-6,A-SU-PU-WA,,4,,0,0,0,0,0
+misctexts,ARKH 3,a.2,,,,D,0,1,0,0,0
+misctexts,ARKH 3,a.2,OLIV,,3,D,0,0,0,0,0
+misctexts,ARKH 3,a.2,VINb,,2,,0,1,0,0,0
+misctexts,ARKH 3,a.3,,,2,,0,1,0,0,0
+misctexts,ARKH 3,a.3,*317,,2,,0,1,0,0,0
+misctexts,ARKH 3,a.4,KI-NU,GRA,13,,0,1,0,0,0
+misctexts,ARKH 3,a.5,TE,,2,,0,1,0,0,0
+misctexts,ARKH 3,a.5,*317,,2,,0,0,0,0,0
+misctexts,ARKH 3,a.5,*312,,2,,0,1,0,0,0
+misctexts,ARKH 3,a.6,KU,,3,,0,1,0,0,0
+misctexts,ARKH 3,b.1,-JA-PI,GRA,6,,0,1,1,0,0
+misctexts,ARKH 3,b.2,PI-PU3,GRA,1,,0,1,0,0,0
+misctexts,ARKH 3,b.4,,,2,,0,1,0,0,0
+misctexts,ARKH 3,b.4,OLE,,4,,0,0,0,0,0
+misctexts,ARKH 3,b.5,VINa,,1,,0,1,0,0,0
+misctexts,ARKH 4,a.2,TA,RE,5,,0,1,0,0,0
+misctexts,ARKH 4,a.2-3,A-•-•-JU,,4,,0,1,0,0,0
+misctexts,ARKH 4,a.3-4,DE-SU-•-*47-TE,,5,,0,1,0,0,0
+misctexts,ARKH 4,b.2,-RE,,10,,0,1,1,0,0
+misctexts,ARKH 4,b.3,DE-MI,,10,,0,1,0,0,0
+misctexts,ARKH 4,b.3,I-*47,,9,,0,1,0,0,0
+misctexts,ARKH 4,b.4,A-KI-RO,,3,,0,0,0,0,0
+misctexts,ARKH 4,b.5,ZA-SI-ZU,,3,,0,1,0,0,0
+misctexts,ARKH 5,.1,A-DU-NI-TA-NA,,41,,0,1,0,0,0
+misctexts,ARKH 5,.2,,,7,,0,1,0,0,0
+misctexts,ARKH 5,.2,A-DA-RO,GRA,40,,0,1,0,0,0
+misctexts,ARKH 5,.3,VINb,,6,,0,0,0,0,0
+misctexts,ARKH 7,.3,*308,,,D,0,0,0,0,0
+misctexts,ARKH Zb 10,a.5,NE,,2,J,0,1,0,0,0
+misctexts,ARKH Zb 10,b.1,PA-RE,,3,,0,1,0,0,0
+misctexts,ARKH Zb 10,b.4,NA,,8,,0,1,0,0,0
+HTtexts,HT 1.4,a.2,TA-NA-TI,,1,,0,1,0,0,0
+HTtexts,HT 1.4,a.3,-RI,,1,,0,1,1,0,0
+HTtexts,HT 1.4,a.4,vesst.,,1,,0,1,0,0,0
+HTtexts,HT 1.4,a.4,TI-DU-NI,,1,,0,1,0,0,0
+HTtexts,HT 1.4,a.5,SI-RA,,1,,0,1,0,0,0
+HTtexts,HT 1.4,a.6,A-RU,,1,,0,0,0,0,0
+HTtexts,HT 1.4,a.6,,,1,,0,1,0,0,0
+HTtexts,HT 1.4,a.6,*312,,1,,0,0,0,0,0
+HTtexts,HT 1.4,a.6-7,KU-PA3-NU,,1,,0,0,0,0,0
+HTtexts,HT 1.4,a.7,TU-SU-PU2,,1,,0,0,0,0,0
+HTtexts,HT 1.4,a.8,vest.,,5,,0,1,1,0,0
+HTtexts,HT 1.4,a.8,TU,,4,,0,0,0,0,0
+HTtexts,HT 1.4,a.8,KI,,1,,0,1,0,0,0
+HTtexts,HT 100,.1,VIR+KA *568,,58,,0,1,0,0,0
+HTtexts,HT 100,.2,TI+A *523,,12,,0,0,0,0,0
+HTtexts,HT 100,.2,KI,,2,,0,0,0,0,0
+HTtexts,HT 100,.2,*305,,5,,0,0,0,0,0
+HTtexts,HT 100,.2-3,VIR+*313a *570,,16,,0,0,0,0,0
+HTtexts,HT 100,.3,KU-RO,,97,,0,0,0,0,1
+HTtexts,HT 100,.4,SA-RA2,*303,5,E,0,0,0,0,0
+HTtexts,HT 100,.4,FIC,,2,DD,0,0,0,0,0
+HTtexts,HT 100,.4,VINa,,2,J,0,0,0,0,0
+HTtexts,HT 100,.5,OLE+U *610,,2,H,0,0,0,0,0
+HTtexts,HT 100,.5,OLE+MI *622,,3,,0,0,0,0,0
+HTtexts,HT 100,.5,OLE+NE *612,,,JE,0,0,0,0,0
+HTtexts,HT 101,.1,ZU-*22f-DI,GRA+QE *578,40,,0,0,0,0,0
+HTtexts,HT 101,.2,OLE+U *610,,8,,0,0,0,0,0
+HTtexts,HT 101,.2,OLE+MI *622,,8,,0,0,0,0,0
+HTtexts,HT 101,.2,OLE+KI *618,,2,,0,0,0,0,0
+HTtexts,HT 101,.3,SA-RA2,GRA,41,,0,0,0,0,0
+HTtexts,HT 101,.3,OLE,,10,,0,0,0,0,0
+HTtexts,HT 101,.3,DI+QE 506,,3,,0,0,0,0,0
+HTtexts,HT 101,.5,,,20,,0,1,0,0,0
+HTtexts,HT 101,.5,*304,,3,,0,0,0,0,0
+HTtexts,HT 101,.5,OLE+KI *618,,2,,0,1,0,0,0
+HTtexts,HT 101,.6,,,3,,0,1,0,0,0
+HTtexts,HT 101,.6,OLIV,,1,E,0,0,0,0,0
+HTtexts,HT 101,.6,OLIV+TU *587,,1,,0,0,0,0,0
+HTtexts,HT 102,.1-2,SA-RA2,GRA,976,,0,0,0,0,0
+HTtexts,HT 102,.2,PA3-NI,GRA+PA *574,33,,0,1,0,0,0
+HTtexts,HT 102,.3,VIR GRA+PA *574,,33,,0,1,0,0,0
+HTtexts,HT 102,.3,DI-RI-NA,,10,,0,0,0,0,0
+HTtexts,HT 102,.3-4,MA-ZU,,3,,0,0,0,0,0
+HTtexts,HT 102,.4,I-KA,,5,,0,0,0,0,0
+HTtexts,HT 102,.5,KU-RO,,1060,,0,0,0,0,1
+HTtexts,HT 103,.1,U-TA2,FIC,40,,0,0,0,0,0
+HTtexts,HT 103,.2,DA-KU-SE-NE,,6,J,0,1,0,0,0
+HTtexts,HT 103,.3,*188,,13,,0,0,0,0,0
+HTtexts,HT 103,.4,DA-KU-NA,,1,,0,0,0,0,0
+HTtexts,HT 103,.4-5,DA-KU-SE-NE,,1,,0,0,0,0,0
+HTtexts,HT 103,.5,KI-RA,,5,J,0,0,0,0,0
+HTtexts,HT 104,.1-2,DA-KU-SE-NE-TI,,45,J,0,0,0,0,0
+HTtexts,HT 104,.2-3,I-DU-TI,,20,J,0,0,0,0,0
+HTtexts,HT 104,.3-4,PA-DA-SU-TI,,29,,0,0,0,0,0
+HTtexts,HT 104,.5,KU-RO,,95,,0,0,0,0,1
+HTtexts,HT 105,.2,VIR,,234,,0,1,0,0,0
+HTtexts,HT 105,.3,SA-RA2,VIR,235,,0,0,0,0,0
+HTtexts,HT 106,.1,MI-NU-TE,*303,6,,0,1,0,0,0
+HTtexts,HT 106,.2,SI,,5,J,0,0,0,0,0
+HTtexts,HT 106,.2,SI,,1,,0,0,0,0,0
+HTtexts,HT 106,.3,DA-,,8,,0,1,0,0,0
+HTtexts,HT 106,.4,SI,,3,,0,1,0,0,0
+HTtexts,HT 107,.1,,,3,,0,1,0,0,0
+HTtexts,HT 107,.3,TE,,86,,0,0,0,0,0
+HTtexts,HT 107,.3,*332,,7,,0,0,0,0,0
+HTtexts,HT 108,.1,KI-RE-TA-NA,VIR,1,,0,0,0,0,0
+HTtexts,HT 108,.1,GRA+H *583,,70,,0,0,0,0,0
+HTtexts,HT 108,.2,DI-NA-RO,,2,,0,0,0,0,0
+HTtexts,HT 108,.2,DU-SU-NI,,5,,0,1,0,0,0
+misctexts,HT 108,.2,,,3,B,0,0,0,0,0
+HTtexts,HT 108,.3,-RA2-TI,,10,,0,1,0,0,0
+misctexts,HT 108,.3,A-*325-ZA,,,E,0,0,0,0,0
+misctexts,HT 108,.3,A-RI-PA,,,E,0,0,0,0,0
+misctexts,HT 108,.3-4,QA-QA-DA,,,J,0,0,0,0,0
+misctexts,HT 108,.4,TO-ME,,1,B,0,0,0,0,0
+HTtexts,HT 109,.1,RE,,4,,0,1,0,0,0
+HTtexts,HT 109,.2,TA,,4,,0,1,0,0,0
+HTtexts,HT 109,.3,KU-RO,,129,,0,0,0,0,1
+HTtexts,HT 109,.4,A-RA-JU,,123,,0,0,0,0,0
+HTtexts,HT 10a.1,a.2,I-RU-JA,,3,,0,0,0,0,0
+HTtexts,HT 10a.1,a.3,DU-JA,,4,,0,0,0,0,0
+HTtexts,HT 10a.1,a.4,TA-NA-TI,,1,,0,0,0,0,0
+HTtexts,HT 10a.1,a.4-5,DA-RE,,1,,0,0,0,0,0
+HTtexts,HT 10a.1,a.5,TE-TU,,1,,0,0,0,0,0
+HTtexts,HT 10a.1,b.1,QIf-TU-NE,,1,,0,0,0,0,0
+HTtexts,HT 10a.1,b.2,DA-RU-*329,,2,,0,0,0,0,0
+HTtexts,HT 110,a.1,SI-DU-*34-KU-MI,*303+E *626,20,,0,0,0,0,0
+HTtexts,HT 110,a.2,KU-PA,,1,,0,0,0,0,0
+HTtexts,HT 110,a.3,KU-RO,,100,,0,1,0,0,1
+HTtexts,HT 110,a.4,FIC,,15,,0,1,0,0,0
+HTtexts,HT 110,a.5,,,60,,0,1,0,0,0
+HTtexts,HT 110,b.1,-RO,,20,,0,1,1,0,0
+HTtexts,HT 110,b.1-2,*400VAS+RI *648,,3,,0,1,0,0,0
+HTtexts,HT 110,b.2,,,1,,0,1,0,0,0
+HTtexts,HT 110,b.2,MA,,5,J,0,0,0,0,0
+HTtexts,HT 110,b.4,,,2,,0,1,0,0,0
+HTtexts,HT 110,b.4,FIC,,1,J,0,1,0,0,0
+HTtexts,HT 110,b.5,,,1,,0,1,0,0,0
+HTtexts,HT 110,b.5,MA,,2,,0,0,0,0,0
+HTtexts,HT 110,b.5,*301,,,JE,0,0,0,0,0
+HTtexts,HT 111,a.2,QE-KA,,8,,0,1,0,0,0
+HTtexts,HT 111,a.3,QA-QA-RU,,8,,0,1,0,0,0
+HTtexts,HT 111,a.3,DI,,14,,0,1,0,0,0
+HTtexts,HT 111,b.1,,,18,,0,1,0,0,0
+HTtexts,HT 111,b.1,SA-DI,,4,,0,1,0,0,0
+HTtexts,HT 111,b.2,,,3,,0,1,0,0,0
+HTtexts,HT 111,b.3,FIC,,1,,0,1,0,0,0
+HTtexts,HT 112,b.1,*303,,6,,0,1,0,0,0
+HTtexts,HT 113,.2-3,WI-SA,,2,,0,1,0,0,0
+HTtexts,HT 113,.3,O,,2,J,0,0,0,0,0
+HTtexts,HT 114,a.1-2,SA-RA2,GRA,10,,0,0,0,0,0
+HTtexts,HT 114,a.2,OLE,,7,,0,0,0,0,0
+HTtexts,HT 114,a.3,FIC,,1,,0,0,0,0,0
+HTtexts,HT 114,a.3,VINa,,1,,0,0,0,0,0
+HTtexts,HT 114,a.3-4,BOSm,,3,,0,0,0,0,0
+HTtexts,HT 114,b.1,SA VINa *522,,9,,0,0,0,0,0
+HTtexts,HT 115,a.1-2,RI-TA-MA-NU-WI,,2,,0,0,0,0,0
+HTtexts,HT 115,a.2-3,NA-QIf-NE-MI-NA,,1,,0,0,0,0,0
+HTtexts,HT 115,a.3,SE-KU-TU,,,J,0,0,0,0,0
+HTtexts,HT 115,a.4,PA-RA-NE,,1,,0,0,0,0,0
+HTtexts,HT 115,a.4,A-SE-JA,,,DDDD,0,0,0,0,0
+HTtexts,HT 115,a.5,KA-PO-RU,,1,,0,0,0,0,0
+HTtexts,HT 115,a.7,SU,D vest.,2,,0,1,1,0,0
+HTtexts,HT 115,b.1,RU PA-RA-NE,,,J,0,1,0,0,0
+HTtexts,HT 115,b.2,TI-NU-JA NU-WI,GRA,,J,0,0,0,0,0
+HTtexts,HT 115,b.2,DU-PA3-NA,,1,,0,0,0,0,0
+HTtexts,HT 115,b.3,KU-RU-MA,I,,J,0,0,0,0,0
+HTtexts,HT 115,b.3,*306-TU-JA,,1,,0,0,0,0,0
+HTtexts,HT 115,b.4,A-I-,,1,,0,1,0,0,0
+HTtexts,HT 115,b.4,*634 *306+MI,,1,,0,0,0,0,0
+HTtexts,HT 116,a.1-2,KU-PA-JA,GRA,16,,0,0,0,0,0
+HTtexts,HT 116,a.2,PU-RA2,GRA OLE+DI *608,405,,0,0,0,0,0
+HTtexts,HT 116,a.3-4,SI+SE *529,GRA OLE+KI *618 OLE+MI *622 OLIV,16163,,0,0,0,0,0
+HTtexts,HT 116,a.4,PI-*34-TE,GRA OLE+ OLE+MI *622 OLIV+TU *587,5512,,0,1,0,0,0
+HTtexts,HT 116,a.5-6,SI-KI-NE,GRA *304,1212,,0,0,0,0,0
+HTtexts,HT 116,a.6-7,QA-NU-MA,GRA *304,203,,0,0,0,0,0
+HTtexts,HT 116,b.1,KU-RO,GRA *304,10015,,0,1,0,0,1
+HTtexts,HT 116,b.2,OLE,,17,,0,0,0,0,0
+HTtexts,HT 117,.1,A-DU,VIR+KA *568,20,,0,0,0,0,0
+HTtexts,HT 117,.1-2,RE-ZA,,6,,0,0,0,0,0
+HTtexts,HT 117,.2,FIC KI-KI-NA,,7,,0,0,0,0,0
+HTtexts,HT 117,.4,KU-PA3-PA3,,1,,0,0,0,0,0
+HTtexts,HT 117,.4,KA-JU,,1,,0,0,0,0,0
+HTtexts,HT 117,.5,KU-PA3-NU,,1,,0,0,0,0,0
+HTtexts,HT 117,.5,PA-JA-RE,,1,,0,0,0,0,0
+HTtexts,HT 117,.5-6,SA-MA-RO,,1,,0,0,0,0,0
+HTtexts,HT 117,.6,DA-TA-RE,,1,,0,0,0,0,0
+HTtexts,HT 117,.6,KU-RO,,6,,0,0,0,0,1
+HTtexts,HT 117,a.2,U-SU,,1,,0,0,0,0,0
+HTtexts,HT 117,a.2,MI-TU,,1,,0,0,0,0,0
+HTtexts,HT 117,a.2-3,KU-RA-MU,,1,,0,0,0,0,0
+HTtexts,HT 117,a.3,MA-RU,,1,,0,0,0,0,0
+HTtexts,HT 117,a.3,KU-PA3-NU,,1,,0,0,0,0,0
+HTtexts,HT 117,a.3-4,TU-JU-MA,,1,,0,0,0,0,0
+HTtexts,HT 117,a.4,U-DI-MI,,1,,0,0,0,0,0
+HTtexts,HT 117,a.4-5,MI-RU-TA-RA-RE,,1,,0,0,0,0,0
+HTtexts,HT 117,a.5,TE-JA-RE,,1,,0,0,0,0,0
+HTtexts,HT 117,a.5,NA-DA-RE,,1,,0,0,0,0,0
+HTtexts,HT 117,a.6,KU-RO,,10,,0,0,0,0,1
+HTtexts,HT 117,a.7,KU-KU-DA-RA,,1,,0,0,0,0,0
+HTtexts,HT 117,a.7-8,KO-SA-I-TI,,1,,0,0,0,0,0
+HTtexts,HT 117,a.8,DA-MI-NU,,1,,0,0,0,0,0
+HTtexts,HT 117,a.8-9,DA-NE-KU-TI,,1,,0,0,0,0,0
+HTtexts,HT 117,a.9,KI-DA-RO,,1,,0,0,0,0,0
+HTtexts,HT 117,b.1,KU-RE-JU,,1,,0,0,0,0,0
+HTtexts,HT 117,b.2,DI-KI-SE,,1,,0,0,0,0,0
+HTtexts,HT 118,.1,MA-DI,KI 10,15,,0,0,0,0,0
+HTtexts,HT 118,.2-3,QA-QA-RU,KI 4,6,,0,0,0,0,0
+HTtexts,HT 118,.3-4,A-RI-SU,KI 1,4,,0,0,0,0,0
+HTtexts,HT 118,.4,RI-RU-MA,,10,,0,0,0,0,0
+HTtexts,HT 118,.5,KU-RO,KI 15,30,,0,1,0,0,1
+HTtexts,HT 119,.1,*327,,34,,0,0,0,0,0
+HTtexts,HT 119,.1,VIR,,68,,0,0,0,0,0
+HTtexts,HT 119,.2,RI-MI-SI,,13,,0,0,0,0,0
+HTtexts,HT 119,.2,KO-JA,,10,,0,0,0,0,0
+HTtexts,HT 119,.3,KU-PA3-NA-TU,,7,,0,0,0,0,0
+HTtexts,HT 119,.3,TI,,7,,0,0,0,0,0
+HTtexts,HT 119,.4,JA-*345,,10,,0,0,0,0,0
+HTtexts,HT 119,.4,*306-TU,,2,,0,0,0,0,0
+HTtexts,HT 119,.4,*327-JU,,8,,0,0,0,0,0
+HTtexts,HT 119,.5,KU-RO,,160,,0,0,0,0,1
+HTtexts,HT 12,.1-2,QA-TI-DA-TE,OLE+DI *608,5,,0,0,0,0,0
+HTtexts,HT 12,.2,*304,,5,,0,0,0,0,0
+HTtexts,HT 12,.3,QE-TU-NE,QA++PU *510,1,,1,1,0,0,0
+HTtexts,HT 12,.4,,,30,E,0,0,0,0,0
+HTtexts,HT 12,.4-5,MA+RU *559 *118 Talent,,5,,0,0,0,0,0
+HTtexts,HT 12,.5,*303+E *626,,3,,0,0,0,0,0
+HTtexts,HT 12,.5,FIC,,1,,0,0,0,0,0
+HTtexts,HT 12,.6,QA++PU+RE *511,,,K,1,1,0,0,0
+HTtexts,HT 12,.6,DA-I,,50,,0,0,0,0,0
+HTtexts,HT 120,.1-2,DA-ME,GRA+K+L2 *584,74,,0,0,0,0,0
+HTtexts,HT 120,.2-3,GRA+PA *574,J A,62,,0,0,0,0,0
+HTtexts,HT 120,.3-4,DA-U-*49,I GRA+PA *574,20,,0,0,0,0,0
+HTtexts,HT 120,.4-5,KI-RE-TA-NA,GRA+B *580,60,,0,0,0,0,0
+HTtexts,HT 120,.6,GRA+PA *574,,48,,0,0,0,0,0
+HTtexts,HT 120,.6,PA-I-TO,,3,D,0,0,0,0,0
+HTtexts,HT 121,.1,KI-RI-TA2,OLE+QE+DI *623,10,,0,0,0,0,0
+HTtexts,HT 121,.2,SA-RA2,GRA,5,,0,0,0,0,0
+HTtexts,HT 121,.2,OLE,,4,,0,0,0,0,0
+HTtexts,HT 121,.3,FIC,,2,,0,0,0,0,0
+HTtexts,HT 121,.3,VINa,,3,,0,0,0,0,0
+HTtexts,HT 121,.3-4,BOSm,,3,,0,0,0,0,0
+HTtexts,HT 122,a.1,RA-RI U-DE-ZA,,2,,0,1,0,0,0
+HTtexts,HT 122,a.2,,,2,,0,1,0,0,0
+HTtexts,HT 122,a.2,DA-SI-*118,,2,,0,0,0,0,0
+HTtexts,HT 122,a.3,-DI,,1,,0,1,1,0,0
+HTtexts,HT 122,a.3,TE-KI,,2,,0,0,0,0,0
+HTtexts,HT 122,a.4,QA-*310-I,,3,,0,0,0,0,0
+HTtexts,HT 122,a.4,JA-MI-DA-RE,,1,,0,0,0,0,0
+HTtexts,HT 122,a.5,SI-DA-RE,,1,,0,0,0,0,0
+HTtexts,HT 122,a.5,*324-DI-RA,,1,,0,0,0,0,0
+HTtexts,HT 122,a.5,PA-DE,,1,,0,0,0,0,0
+HTtexts,HT 122,a.6,KU-PA3-NU,,1,,0,0,0,0,0
+HTtexts,HT 122,a.6,PA-TA-NE,,1,,0,0,0,0,0
+HTtexts,HT 122,a.6,*306-TU,,1,,0,0,0,0,0
+HTtexts,HT 122,a.7,DU,,1,,0,1,0,0,0
+HTtexts,HT 122,a.7,KU-PA3-NU,,1,,0,0,0,0,0
+HTtexts,HT 122,a.7,DA-RI-DA,,1,,0,0,0,0,0
+HTtexts,HT 122,a.8,KU-RO,,31,,0,0,0,0,1
+HTtexts,HT 122,a.8,KU-DA,,1,,0,0,0,0,0
+HTtexts,HT 122,b.2,*306-KI-TA2,,7,,0,1,0,0,0
+HTtexts,HT 122,b.3,A-RA-JU-U-DE-ZA,,2,,0,1,0,0,0
+HTtexts,HT 122,b.3-4,QA-QA-RU,,2,,0,0,0,0,0
+HTtexts,HT 122,b.4,DI,,2,,0,0,0,0,0
+HTtexts,HT 122,b.4,DA-RE,,2,,0,0,0,0,0
+HTtexts,HT 122,b.5,KU-RO,,65,,0,0,0,0,1
+HTtexts,HT 122,b.6,PO-TO-KU-RO,,97,,0,0,0,0,1
+HTtexts,HT 123+124,a.1-2,KI-TA-I,OLIV *308 8 E KI-RO 1 X,31,,0,0,0,0,0
+HTtexts,HT 123+124,a.3-4,PU-VINa,OLIV 31 J *308 8 J E KI-RO,,X,0,0,0,0,0
+HTtexts,HT 123+124,a.4-5,SA-RU,OLIV *308 4 A KI-RO,16,JE,0,1,0,0,0
+HTtexts,HT 123+124,a.6-7,DA-TU,OLIV *308 4 E KI-RO,15,JE,0,0,0,0,0
+HTtexts,HT 123+124,a.8-9,KU-RO,25H KI-RO,6,,0,1,0,0,1
+HTtexts,HT 123+124,b.1,*188 *308,,11,,0,0,0,0,0
+HTtexts,HT 123+124,b.1,*312,,1,JE,0,0,0,0,0
+HTtexts,HT 123+124,b.2,PI-SA,,4,,0,0,0,0,0
+HTtexts,HT 123+124,b.2-3,*188,,1,,0,0,0,0,0
+HTtexts,HT 123+124,b.3,*188-DU,,10,,0,0,0,0,0
+HTtexts,HT 123+124,b.5,DU-MA-I-NA,,,EF,0,0,0,0,0
+HTtexts,HT 123+124,b.6,KU-RO,,20,,0,0,0,0,1
+HTtexts,HT 123+124,b.6,KI-RO,,5,,0,1,0,0,0
+HTtexts,HT 124+123,a.2,OLE+KI *618,,1,D,0,1,0,0,0
+HTtexts,HT 124+123,a.3,OLE+MI *622,,1,J,0,1,0,0,0
+HTtexts,HT 124+123,a.4,SA-RA2,GRA,2,,0,1,0,0,0
+HTtexts,HT 124+123,a.4,OLE,,1,,0,1,0,0,0
+HTtexts,HT 124+123,b.2,,,20,,0,1,0,0,0
+HTtexts,HT 124+123,b.3,RE-TA2,GRA+PA *574,20,,0,1,0,0,0
+HTtexts,HT 124+123,b.4,GRA+F *582,,7,J,0,0,0,0,0
+HTtexts,HT 124+123,b.4,*304,,10,,0,0,0,0,0
+HTtexts,HT 124+123,b.4,FIC,,23,,0,0,0,0,0
+HTtexts,HT 127,a.2,DU-NE-MI,,1,,0,1,0,0,0
+HTtexts,HT 127,a.3,*304+PA-DA-*47-KU *629-DA-*47-KU,,1,,0,1,0,0,0
+HTtexts,HT 127,b.2,NE,,13,,0,1,0,0,0
+HTtexts,HT 127,b.4,KU-RO,*307,156,,0,0,0,0,1
+HTtexts,HT 127,b.4-5,KU,,72,,0,0,0,0,0
+HTtexts,HT 127,b.5,VIR+*313c *572,,24,,0,0,0,0,0
+HTtexts,HT 127,b.5,KI+ME *545,,15,,0,0,0,0,0
+HTtexts,HT 127,b.6,*301,,11,,0,0,0,0,0
+HTtexts,HT 127,b.6,KI+ME *545,,14,,0,1,0,0,0
+HTtexts,HT 127,b.7,KU-RO,,292,,0,0,0,0,1
+HTtexts,HT 129,.1,KI-RE-TA2,GRA,33,JB,0,0,0,0,0
+HTtexts,HT 129,.2,*304,,10,,0,0,0,0,0
+HTtexts,HT 129,.2,FIC,,22,,0,0,0,0,0
+HTtexts,HT 129,.2-3,TU-QIf-RI-NA,GRA,40,J,0,0,0,0,0
+HTtexts,HT 129,.3,OLE+DI *608,,1,,0,1,0,0,0
+HTtexts,HT 129,.4,OLE+KI *618,,6,,0,1,0,0,0
+HTtexts,HT 129.1,a.2,A-NA-,,1,,0,1,0,0,0
+HTtexts,HT 129.1,a.3,,,,J,0,1,0,0,0
+HTtexts,HT 129.1,a.3,SI-DI-JA,,1,,0,1,0,0,0
+HTtexts,HT 129.1,a.4,U-*49,,1,,0,1,0,0,0
+HTtexts,HT 129.1,a.5,,,62,,0,1,0,0,0
+HTtexts,HT 129.1,a.6,,,2,,0,1,0,0,0
+HTtexts,HT 129.1,b.1,*305,,3,,0,1,0,0,0
+HTtexts,HT 129.1,b.2,,,6,,0,1,0,0,0
+HTtexts,HT 129.1,b.2,TWE,,4,,0,0,0,0,0
+HTtexts,HT 129.1,b.4,TU,,6,,0,1,0,0,0
+HTtexts,HT 13,.2,RE-ZA,,5,J,0,1,0,0,0
+HTtexts,HT 13,.3,TE-TU,,56,,0,0,0,0,0
+HTtexts,HT 13,.3-4,TE-KI,,27,J,0,0,0,0,0
+HTtexts,HT 13,.4,KU-ZU-NI,,18,,0,0,0,0,0
+HTtexts,HT 13,.5,DA-SI-*118,,19,,0,0,0,0,0
+HTtexts,HT 13,.5-6,I-DU-NE-SI,,5,,0,0,0,0,0
+HTtexts,HT 13,.7,KU-RO,,130,J,0,0,0,0,1
+HTtexts,HT 130,.1,SI,,3,,0,1,0,0,0
+HTtexts,HT 130,.5,SI *303,,8,,0,0,0,0,0
+HTtexts,HT 130,.5-6,FIC,,6,,0,0,0,0,0
+HTtexts,HT 130,.6,VINa,,3,,0,0,0,0,0
+HTtexts,HT 131,a.1,FIC,,62,,0,1,0,0,0
+HTtexts,HT 131,a.2,,,353,,0,1,0,0,0
+HTtexts,HT 131,a.2-3,I-QA-*118,GRA,58,,0,1,0,0,0
+HTtexts,HT 131,a.4,OLE,,12,J,0,1,0,0,0
+HTtexts,HT 131,a.4,*304,,12,JE,0,0,0,0,0
+HTtexts,HT 131,b.2,FIC,,30,,0,1,0,0,0
+HTtexts,HT 131,b.2,OLIV,,2,,0,1,0,0,0
+HTtexts,HT 131,b.4,PO-TO-KU-RO,,452,J,0,1,0,0,1
+misctexts,HT 131a.2-3),.1,A-DU-•-ZA,*303,,K,0,1,0,0,0
+misctexts,HT 131a.2-3),.2,SU,,3,,0,0,0,0,0
+misctexts,HT 131a.2-3),.3,*306,,4,,0,0,0,0,0
+misctexts,HT 131a.2-3),.3,*303,,,B,0,0,0,0,0
+misctexts,HT 131a.2-3),.4-5,A-TO-*349-TO-I,*303+E *626,3,,0,0,0,0,0
+misctexts,HT 131a.2-3),.5,FIC,,1,,0,0,0,0,0
+misctexts,HT 131a.2-3),.5,VINa,,3,,0,0,0,0,0
+misctexts,HT 131a.2-3),.5-6,A-TE-*350,*301,1,,0,0,0,0,0
+HTtexts,HT 132,.1,A-SE,*319,5,,0,0,0,0,0
+HTtexts,HT 132,.1-2,QA-RE-TO,OVISf,27,,0,0,0,0,0
+HTtexts,HT 132,.2,PA3 *305,,1,,0,1,0,0,0
+HTtexts,HT 134+128,a.1,NE-MI-NA,,10,,0,1,0,0,0
+HTtexts,HT 134+128,a.3,,,1,,0,1,0,0,0
+HTtexts,HT 134+128,a.4,MI,,2,,0,1,0,0,0
+HTtexts,HT 134+128,b.2,,,2,,0,0,0,0,0
+HTtexts,HT 136,a.2,OVISf,,30,,0,1,0,0,0
+HTtexts,HT 136,a.3,,,23,,0,1,0,0,0
+HTtexts,HT 136,b.1,,,24,,0,1,0,0,0
+HTtexts,HT 137+138,.2,TA2,GRA,3,,0,1,0,0,0
+HTtexts,HT 137+138,.2,OLE+MI *622,,6,,0,1,0,0,0
+HTtexts,HT 137+138,.2,OLE,,2,,0,1,0,0,0
+HTtexts,HT 138+137,.2,GRA,,1,,0,1,0,0,0
+HTtexts,HT 138+137,.2,OLE,,,J,0,0,0,0,0
+HTtexts,HT 14,.1-2,PU-VINa,TE GRA OLE+MI *622 OLE+DI *608 *304 OLIV,3033913,,0,0,0,0,0
+HTtexts,HT 14,.3-5,A-PU2-NA-DU,GRA OLE+MI *622 OLE+DI *608 *304 OLIV,4554614,,0,0,0,0,0
+HTtexts,HT 140+132+145,.1,*86-SI-NI,,1,,0,1,0,0,0
+HTtexts,HT 140+132+145,.1-2,JE-DI,OLE+KI *618,1,J,0,0,0,0,0
+HTtexts,HT 140+132+145,.2,*86-SI-*118-KA,,3,,0,0,0,0,0
+HTtexts,HT 140+132+145,.3,,,4,,0,1,0,0,0
+HTtexts,HT 140+132+145,.4,OLE+U *610,,3,,0,0,0,0,0
+HTtexts,HT 140+132+145,.4,KA,,1,,0,0,0,0,0
+HTtexts,HT 140+132+145,.4,OLE+U *610,,1,,0,0,0,0,0
+HTtexts,HT 140+132+145,.5,KA,,1,,0,1,0,0,0
+HTtexts,HT 140+132+145,.5,OLE+U *610,,2,,0,0,0,0,0
+HTtexts,HT 140+132+145,.5,KA-PA,,,J,0,1,0,0,0
+HTtexts,HT 140+132+145,.6,OLE+U *610,,6,J,0,1,0,0,0
+HTtexts,HT 141,.1,,,1,,0,1,0,0,0
+HTtexts,HT 145+140,.2,QE,,30,,0,1,0,0,0
+HTtexts,HT 145+140,.3,RI-*305,,30,,0,0,0,0,0
+HTtexts,HT 145+140,.3,MA,,30,,0,0,0,0,0
+HTtexts,HT 145+140,.4,RI-KA-TA,,30,,0,0,0,0,0
+HTtexts,HT 147,.2,RA,,,H,0,1,0,0,0
+HTtexts,HT 147,.3,,,,J,0,1,0,0,0
+HTtexts,HT 148,.1,,,100,,0,1,0,0,0
+HTtexts,HT 148,.2,,,7,,0,1,0,0,0
+HTtexts,HT 148,.2,,,40,,0,1,0,0,0
+HTtexts,HT 15,.1-2,DU-*123-A,,684,,0,0,0,0,0
+HTtexts,HT 15,.2-3,GRA+L3L3 *586,,570,,0,0,0,0,0
+HTtexts,HT 15,.4,*188 KI-RO,,400,,0,0,0,0,0
+HTtexts,HT 154A,.4,KU,,6,,0,1,0,0,0
+HTtexts,HT 154A,.4,TA,,6,,0,1,0,0,0
+HTtexts,HT 154C,.2,,,2,J,0,1,0,0,0
+HTtexts,HT 154K,.2,,,2,,0,1,0,0,0
+HTtexts,HT 154N,.2,,,6,,0,1,0,0,0
+HTtexts,HT 16,.1-2,KA-KU-PA DI-NA-U,,,F,0,0,0,0,0
+HTtexts,HT 16,.2-3,WA,,,B,0,0,0,0,0
+HTtexts,HT 16,.3,*188+KU *684,,,EF,0,0,0,0,0
+HTtexts,HT 16,.4,SA-PO,ZE,,K,0,0,0,0,0
+HTtexts,HT 17,.1,RA-*164a-TI,TE VIN,38,,0,0,0,0,0
+HTtexts,HT 17,.1-2,KU-MA-JU,,,E,0,0,0,0,0
+HTtexts,HT 17,.2,SA-*315/RO,,10,,0,0,0,0,0
+HTtexts,HT 17,.2-3,QE-KU-RE,DI,,J,0,0,0,0,0
+HTtexts,HT 17,.3,SI-DA-RE,,5,,0,0,0,0,0
+HTtexts,HT 17,.4,CAPm,,,F,0,0,0,0,0
+HTtexts,HT 17,.4-5,SA-RE-JU,,,F,0,0,0,0,0
+HTtexts,HT 17,.5,*188+KU *684,,,J,0,0,0,0,0
+HTtexts,HT 19,.1,PA-SE,GRA+QE *578,20,,0,0,0,0,0
+HTtexts,HT 19,.1,OLE+KI *618,,2,,0,0,0,0,0
+HTtexts,HT 19,.1-2,RA-*164a-TI,TE VINa,30,,0,0,0,0,0
+HTtexts,HT 19,.2,*304,,3,,0,0,0,0,0
+HTtexts,HT 19,.2,SA-RA2,GRA,10,,0,0,0,0,0
+HTtexts,HT 19,.2-3,FIC,,10,,0,0,0,0,0
+HTtexts,HT 19,.2-3,SA-*315/RO,,5,J,0,0,0,0,0
+HTtexts,HT 19,.3-4,DU-ME-DI,,43,J,0,0,0,0,0
+HTtexts,HT 2.1,a.1,,,1,-DE,0,1,0,0,0
+HTtexts,HT 2.1,a.2,TU,,1,,0,1,0,0,0
+HTtexts,HT 2.1,a.2,TA-NA-TI,,,JE,0,0,0,0,0
+HTtexts,HT 2.1,a.2-3,DI-RE-DI-NA,,,J,0,0,0,0,0
+HTtexts,HT 2.1,a.3,TE-*301,,,JE,0,0,0,0,0
+HTtexts,HT 2.1,a.4,RO-KE,,,J,0,0,0,0,0
+HTtexts,HT 2.1,a.4-5,KA-RI-*310-I,,,E,0,0,0,0,0
+HTtexts,HT 2.1,b.2,VINa,,,JE,0,1,0,0,0
+HTtexts,HT 21,.1-2,PI-TA-KA-SE,TE GRA,161,,0,0,0,0,0
+HTtexts,HT 21,.2-3,OLE+U *610,,11,,0,0,0,0,0
+HTtexts,HT 21,.3,OLE+E *613,,3,JE,0,0,0,0,0
+HTtexts,HT 21,.3,*304,,7,JE,0,0,0,0,0
+HTtexts,HT 21,.4,OLIV,,1,E,0,0,0,0,0
+HTtexts,HT 22,.1,GRA+L2 *585,,230,,0,0,0,0,0
+HTtexts,HT 22,.2,*330+DA *643,,113,,0,0,0,0,0
+HTtexts,HT 23+150,a.1,KA-NA,*303,,B,0,0,0,0,0
+HTtexts,HT 23+150,a.1,*308,,,H,0,0,0,0,0
+HTtexts,HT 23+150,a.1,OLE+NE *612,,,H,0,0,0,0,0
+HTtexts,HT 23+150,a.2,OLE+TU *621,,,H,0,0,0,0,0
+HTtexts,HT 23+150,a.2,OLE+RI *614,,,H,0,0,0,0,0
+HTtexts,HT 23+150,a.2,MI+JA+RU *550,,,H,0,0,0,0,0
+HTtexts,HT 23+150,a.2-3,VINa,,10,,0,0,0,0,0
+HTtexts,HT 23+150,a.3,QA++PU *508,,10,,1,1,0,0,0
+HTtexts,HT 23+150,a.3,QA++RE *509,,10,,1,1,0,0,0
+HTtexts,HT 23+150,a.3,,,17,E,0,0,0,0,0
+HTtexts,HT 23+150,a.4,QIf-RI-TU-QA,,,K,0,0,0,0,0
+HTtexts,HT 23+150,a.4-5,SA-SA-ME,,,K,0,0,0,0,0
+HTtexts,HT 23+150,a.5,SI+ME *530,,10,,0,0,0,0,0
+HTtexts,HT 23+150,a.5,KO-RU,,1,,0,0,0,0,0
+HTtexts,HT 23+150,b.1,NI-RA,*303,,B,0,0,0,0,0
+HTtexts,HT 23+150,b.1,OLE,,,B,0,1,0,0,0
+HTtexts,HT 23+150,b.2,QA++RE *508,,1,,1,1,0,0,0
+HTtexts,HT 23+150,b.3,,,7,E,0,1,0,0,0
+misctexts,HT 23a.1,a.2,QA-QA-RU,CAPm+KU *513,1,,0,1,0,0,0
+misctexts,HT 23a.1,a.2,MA-DI,OVISm,1,,0,0,0,0,0
+misctexts,HT 23a.1,a.2,OVISf,,1,,0,1,0,0,0
+misctexts,HT 23a.1,a.3,OVISm,,1,,0,0,0,0,0
+misctexts,HT 23a.1,a.3,KU-PA3-NU,SI+AU+RE,1,,0,0,0,0,0
+misctexts,HT 23a.1,a.3-4,PA-TA-DA,OVISm,1,,0,1,0,0,0
+misctexts,HT 23a.1,a.4,KU-RO,CAPm+KU *513,1,,0,0,0,0,1
+misctexts,HT 23a.1,a.4,OVISm,,5,,0,0,0,0,0
+misctexts,HT 23a.1,a.4,OVISf,,3,,0,1,0,0,0
+misctexts,HT 23a.1,a.5,CAPm,,2,,0,1,0,0,0
+misctexts,HT 23a.1,a.5,CAPf,,8,,0,1,0,0,0
+misctexts,HT 23a.1,b.1,CAPf,,2,,0,1,0,0,0
+misctexts,HT 23a.1,b.1,OVISf,,1,,0,1,0,0,0
+misctexts,HT 23a.1,b.2,-DU-RI,CAPm,1,,0,1,1,0,0
+misctexts,HT 23a.1,b.2,TU-JU-MA,CAPf,1,,0,1,0,0,0
+misctexts,HT 23a.1,b.3,PA-TA-NE,CAPm,1,,0,1,0,0,0
+misctexts,HT 23a.1,b.3,CAPf,,5,,0,0,0,0,0
+misctexts,HT 23a.1,b.3,TE-RI,OVISm,1,,0,1,0,0,0
+misctexts,HT 23a.1,b.4,OVISf,,1,,0,1,0,0,0
+misctexts,HT 23a.1,b.4,RI-RU-MA-TI,OVISm SI+AU+RE,1,,0,1,0,0,0
+misctexts,HT 23a.1,b.5,A-MI-DA-O,OVISm,1,,0,1,0,0,0
+HTtexts,HT 24,a.2,,,6,,0,1,0,0,0
+HTtexts,HT 24,a.2,MA+RU ME *561,,10,,0,0,0,0,0
+HTtexts,HT 24,a.3,,,9,J,0,1,0,0,0
+HTtexts,HT 24,a.3,MA+RU ME *561,,6,,0,0,0,0,0
+HTtexts,HT 24,b.1,*118,,1,JE,0,1,0,0,0
+HTtexts,HT 24,b.1-2,SI+ME KI *531 *118,,1,JE,0,0,0,0,0
+HTtexts,HT 24,b.2,JA+KA *539 *118,,1,,0,0,0,0,0
+HTtexts,HT 25,a.1,,,1,,0,1,0,0,0
+HTtexts,HT 25,a.2,RU-NI,,1,,0,1,0,0,0
+HTtexts,HT 25,a.2,U-RE-WI,,1,,0,0,0,0,0
+HTtexts,HT 25,a.2-3,DI-NA-U,,1,,0,0,0,0,0
+HTtexts,HT 25,a.3,A-RI-NI-TA,,1,,0,0,0,0,0
+HTtexts,HT 25,a.4,ZU-JU-PU2,,1,,0,1,0,0,0
+HTtexts,HT 25,a.5,I-KI-RA,,1,,0,1,0,0,0
+HTtexts,HT 25,a.5,PA,,1,,0,0,0,0,0
+HTtexts,HT 25,b.2,KU-RO,,16,,0,0,0,0,1
+HTtexts,HT 25,b.2,WI-TE-RO I-TI,VIR,28,,0,0,0,0,0
+HTtexts,HT 25,b.3,VIR,,24,,0,0,0,0,0
+HTtexts,HT 25,b.4,KU-RO,,52,,0,0,0,0,1
+HTtexts,HT 26,a.2,TA-TI,,21,,0,0,0,0,0
+HTtexts,HT 26,a.2-3,MI-KI-SE-NA,,15,,0,0,0,0,0
+HTtexts,HT 26,a.3-4,U-NU-QIf,,5,,0,1,0,0,0
+HTtexts,HT 26,b.1,*406VAS+KE *656 VIR,,9,,0,0,0,0,0
+HTtexts,HT 26,b.2,-RO-NI,,3,,0,1,1,0,0
+HTtexts,HT 26,b.2-3,KA-U-ZU-NI,,4,,0,0,0,0,0
+HTtexts,HT 26,b.3,KI+ME *545,,12,,0,0,0,0,0
+HTtexts,HT 26,b.4,I-*308,,2,,0,1,0,0,0
+HTtexts,HT 26,b.4,*188-*86 *565,,7,,0,1,0,0,0
+HTtexts,HT 27+48,a.1,VIR,,90,,0,0,0,0,0
+HTtexts,HT 27+48,a.2,,,50,,0,1,0,0,0
+HTtexts,HT 27+48,a.2,*86,,51,,0,0,0,0,0
+HTtexts,HT 27+48,a.2,RE,,20,,0,0,0,0,0
+HTtexts,HT 27+48,a.3,I-MI-SA-RA,,43,,0,1,0,0,0
+HTtexts,HT 27+48,a.4,QE,,21,,0,1,0,0,0
+HTtexts,HT 27+48,a.5,SA-RA-DI,,5,,0,1,0,0,0
+HTtexts,HT 27+48,a.6,VIR,,42,,0,0,0,0,0
+HTtexts,HT 27+48,a.7,KU-RO,,335,,0,0,0,0,1
+HTtexts,HT 27+48,a.8,*303,,9,JEB,0,0,0,0,0
+HTtexts,HT 27+48,a.8,FIC,,10,B,0,0,0,0,0
+HTtexts,HT 27+48,a.8,VINa,,7,,0,0,0,0,0
+HTtexts,HT 27+48,b.2,VINa GRA SA,,1,,0,1,0,0,0
+HTtexts,HT 27+48,b.5,PA-SE,"VINa+WA *591, variant of the preceding SA",4,,0,0,0,0,0
+HTtexts,HT 27+48,b.5,RE,,70,,0,0,0,0,0
+HTtexts,HT 27+48,b.6,VINa GRA SA,,4,,0,1,0,0,0
+HTtexts,HT 27+48,b.6,RE,,40,,0,1,0,0,0
+HTtexts,HT 28,a.1-2,JA-QIf,GRA+QE *578),5,,0,0,0,0,0
+HTtexts,HT 28,a.2,OLE+U *610,,2,,0,0,0,0,0
+HTtexts,HT 28,a.2,OLE+KI *618,,,J,0,0,0,0,0
+HTtexts,HT 28,a.2,OLE+MI *622,,1,,0,0,0,0,0
+HTtexts,HT 28,a.3,SA-RA2,OLE+DI *608,1,,0,0,0,0,0
+HTtexts,HT 28,a.3,FIC,,2,,0,0,0,0,0
+HTtexts,HT 28,a.4,VINa,,3,,0,0,0,0,0
+HTtexts,HT 28,a.4,VIR+KA *568 VINa,,6,,0,0,0,0,0
+HTtexts,HT 28,a.5,A-RU-DA-RA,GRA,5,,0,0,0,0,0
+HTtexts,HT 28,a.5,*304,,2,,0,0,0,0,0
+HTtexts,HT 28,a.6,OLE+DI *608,,3,,0,0,0,0,0
+HTtexts,HT 28,a.6,I-TA-JA,OLE+DI,10,,0,0,0,0,0
+HTtexts,HT 28,b.2,SA-RA2,GRA,20,,0,0,0,0,0
+HTtexts,HT 28,b.2-3,OLE+DI *608,,5,,0,0,0,0,0
+HTtexts,HT 28,b.3,FIC,,2,,0,0,0,0,0
+HTtexts,HT 28,b.3,VINa,,4,,0,0,0,0,0
+HTtexts,HT 28,b.3-4,PU-RA2,FIC,6,,0,0,0,0,0
+HTtexts,HT 28,b.4,JA-QIf,VINa,6,,0,0,0,0,0
+HTtexts,HT 28,b.5,WI-DI-NA,OLE+DI *608,3,,0,0,0,0,0
+HTtexts,HT 28,b.5,VINa,,3,,0,0,0,0,0
+HTtexts,HT 28,b.6,,,,E,0,0,0,0,0
+HTtexts,HT 29,.1,RU-MA-TA,,2,,0,1,0,0,0
+HTtexts,HT 29,.2,,,1,,0,1,0,0,0
+HTtexts,HT 29,.2,PA-JA-RE,,2,,0,1,0,0,0
+HTtexts,HT 29,.3,DI-JA-I,,2,,0,1,0,0,0
+HTtexts,HT 29,.4,SA-*323-MI,,1,,0,0,0,0,0
+HTtexts,HT 29,.4-5,-KI-TA,,2,,0,1,0,0,0
+HTtexts,HT 29,.5,A-RE-DA-I,,2,,0,0,0,0,0
+HTtexts,HT 29,.6,KA-DU-MA-NE,,1,,0,0,0,0,0
+HTtexts,HT 3,.1,MA-DI,,2,,0,1,0,0,0
+HTtexts,HT 3,.3,,,2,,0,1,0,0,0
+HTtexts,HT 3,.3,DI,,2,,0,1,0,0,0
+HTtexts,HT 3,.4,,,4,,0,1,0,0,0
+HTtexts,HT 3,.4,MU-RU,,1,,0,0,0,0,0
+HTtexts,HT 3,.5,SI-TU-RA2-RE,,5,,0,1,0,0,0
+HTtexts,HT 3,.6,KU-PA3-NU,,3,,0,1,0,0,0
+HTtexts,HT 3,.7,MA-DI,,2,,0,1,0,0,0
+HTtexts,HT 31,.2,,,5,,0,1,0,0,0
+HTtexts,HT 31,.2,*402VAS+QA-PA3,,10,,0,0,0,0,0
+HTtexts,HT 31,.2,*415VAS+SU-PU,,10,,0,0,0,0,0
+HTtexts,HT 31,.3,*416VAS+KA-RO-PA3,,10,,0,1,0,0,0
+HTtexts,HT 31,.3,SA-JA-MA,,30,,0,1,0,0,0
+HTtexts,HT 31,.4,,,10,,0,1,0,0,0
+HTtexts,HT 31,.4-5,KI-DE-MA-*323-NA,vest. *402VAS+,400,,0,1,1,0,0
+HTtexts,HT 31,.5,*402VAS+SU-PA3-RA,,300,,0,0,0,0,0
+HTtexts,HT 31,.6,*402VAS+PA-TA-QE,,3000,,0,0,0,0,0
+HTtexts,HT 33,.2,QA++RE+PU *509,,1,E,1,1,0,0,0
+HTtexts,HT 33,.3,,,3,,0,1,0,0,0
+HTtexts,HT 33,.3,MI+JA+KA *552,,,D,0,0,0,0,0
+HTtexts,HT 33,.4,*305,,90,,0,0,0,0,0
+HTtexts,HT 33,.4,*341+PI *646,,100,,0,0,0,0,0
+HTtexts,HT 33,.4,PA3+QE *537,,100,,0,0,0,0,0
+HTtexts,HT 34,.2,,,,B,0,1,0,0,0
+HTtexts,HT 34,.3,E GRA,,200,,0,1,0,0,0
+HTtexts,HT 34,.3,E+ *525,,2,HK,0,1,0,0,0
+HTtexts,HT 34,.4,QA++RE *508,,,E,1,1,0,0,0
+HTtexts,HT 34,.5,MI+JA+RU *550,,245,,0,0,0,0,0
+HTtexts,HT 34,.6,SA+MU+KU *521,,100,,0,0,0,0,0
+HTtexts,HT 34,.6,PA3,,70,,0,0,0,0,0
+HTtexts,HT 34,.6,KI-RO,,307,,0,1,0,0,0
+HTtexts,HT 34,.7,E+KA *526,,,K,0,0,0,0,0
+HTtexts,HT 34,.7,PU,,,F,0,0,0,0,0
+HTtexts,HT 35,.1-2,I-KU-TA,*303,1,,0,0,0,0,0
+HTtexts,HT 35,.2,MI+JA+RU *550,,,B,0,0,0,0,0
+HTtexts,HT 35,.2,OLE+RI *614,,,B,0,0,0,0,0
+HTtexts,HT 35,.2,*308,,,B,0,0,0,0,0
+HTtexts,HT 35,.3,,,5,E,0,0,0,0,0
+HTtexts,HT 35,.3,QA++PU *510,,,K,1,1,0,0,0
+HTtexts,HT 35,.4,VINa,,,D,0,0,0,0,0
+HTtexts,HT 36,.1-2,JE-DI,*307+*307 *638 GRA+QE *578,2044,J,0,1,0,0,0
+HTtexts,HT 36,.2-3,DU-ZU-WA,,7,J,0,0,0,0,0
+HTtexts,HT 36,.5,,,6,,0,1,0,0,0
+HTtexts,HT 37,.3,,,6,,0,1,0,0,0
+HTtexts,HT 37,.4,KI-*310-RE,,1,,0,0,0,0,0
+HTtexts,HT 37,.5,KA-KI,,11,,0,0,0,0,0
+HTtexts,HT 37,.5,A,,15,,0,0,0,0,0
+HTtexts,HT 37,.6,-QE,,17,,0,1,0,0,0
+HTtexts,HT 38,.2,DA-RO-PA,*403VAS,1,,0,0,0,0,0
+HTtexts,HT 38,.2,SUS,,1,,0,0,0,0,0
+HTtexts,HT 38,.2,OVIS,,3,,0,0,0,0,0
+HTtexts,HT 38,.2-3,KA+A *554 *118,,3,,0,0,0,0,0
+HTtexts,HT 38,.3,TELA+KU *535: 54+81,,2,,0,0,0,0,0
+HTtexts,HT 38,.3,TELA+*312 *536: 54+312,,1,,0,0,0,0,0
+HTtexts,HT 39,.1,TA-I-*123,,10,,0,1,0,0,0
+HTtexts,HT 39,.2,KU-RE-JU,,8,,0,1,0,0,0
+HTtexts,HT 39,.3,SA-MA-TI,,10,,0,1,0,0,0
+HTtexts,HT 39,.5,KU-RO,*407VAS+A *657,100,,0,1,0,0,1
+HTtexts,HT 39,.6,KU+ *564,,2,,0,1,0,0,0
+HTtexts,HT 39.1,a.1,SA-MA,,4,,0,0,0,0,0
+HTtexts,HT 39.1,a.2,DA-RE,,16,J,0,0,0,0,0
+HTtexts,HT 39.1,a.2-3,*301,,6,,0,0,0,0,0
+HTtexts,HT 39.1,a.3,U-*325-ZA,,104,,0,1,0,0,0
+HTtexts,HT 39.1,a.3-4,*305-RU,,2,J,0,0,0,0,0
+HTtexts,HT 39.1,a.4,DA-RI-DA,,8,,0,0,0,0,0
+HTtexts,HT 39.1,a.4,ME-ZA,,3,,0,0,0,0,0
+HTtexts,HT 39.1,b.1,U-TI,,1,,0,0,0,0,0
+HTtexts,HT 39.1,b.1,DA-RE,,2,,0,0,0,0,0
+HTtexts,HT 39.1,b.1-2,TA-RI-NA,,15,,0,0,0,0,0
+HTtexts,HT 39.1,b.2,*312-TA,,6,J,0,0,0,0,0
+HTtexts,HT 39.1,b.3,KA-SA-RU,,6,,0,0,0,0,0
+HTtexts,HT 39.1,b.4,TA-NA-TI,,9,E,0,0,0,0,0
+misctexts,HT 39.5,a.1-2:,b: GRA+E *581 4,"""two birds"" like Levi, HT 20 (not published in CMS II 6).",1,,0,0,0,0,0
+HTtexts,HT 4,.2,-DU-RI-TE,,2,,0,1,1,0,0
+HTtexts,HT 4,.4,TA-PI-SI-DI,,2,,0,1,0,0,0
+HTtexts,HT 40+76,.1,NU-DU-*331,TE GRA,207,,0,0,0,0,0
+HTtexts,HT 40+76,.2,KI-DA-TA,GRA,134,,0,1,0,0,0
+HTtexts,HT 42,.1-2,-TA,SI+SE *529 TE OLE+KI *618 OLE+U *610,87,,0,1,1,0,0
+HTtexts,HT 42,.2-3,SA-*315/RO,OLE+KI *618 OLE+U *610,822,,0,1,0,0,0
+HTtexts,HT 42,.6-7,-RE-TU,OLE+KI *618,,JE,0,1,1,0,0
+HTtexts,HT 44,a.2,OLE+KI *617,,3,,0,1,0,0,0
+HTtexts,HT 44,a.2,OLE+U *610,,5,,0,1,0,0,0
+HTtexts,HT 44,a.3,OLE+RA *616,,5,,0,0,0,0,0
+HTtexts,HT 44,a.3,OLIV,,1,,0,1,0,0,0
+HTtexts,HT 44,a.4,FIC,,1,,0,1,0,0,0
+HTtexts,HT 44,b.2,,,5,,0,1,0,0,0
+HTtexts,HT 44,b.3,VINa,,75,,0,1,0,0,0
+HTtexts,HT 44,b.4,,,18,,0,1,0,0,0
+HTtexts,HT 44,b.5,,,10,,0,1,0,0,0
+HTtexts,HT 45+71,a.2,*86 *305,,2,,0,1,0,0,0
+HTtexts,HT 45+71,a.3,*318 *305,,2,,0,1,0,0,0
+HTtexts,HT 45+71,b.1,,,8,DD,0,1,0,0,0
+HTtexts,HT 45+71,b.2,KU,,,E,0,1,0,0,0
+HTtexts,HT 45+71,b.3,*318 *305,,7,,0,0,0,0,0
+HTtexts,HT 45+71,b.3-4,PA-•-A,,20,B,0,1,0,0,0
+HTtexts,HT 45+71,b.4,KU,,,E,0,0,0,0,0
+HTtexts,HT 45+71,b.5,KU,,,E,0,0,0,0,0
+HTtexts,HT 46,a.1,MU-RU,,1,,0,1,0,0,0
+HTtexts,HT 46,a.2,KU-RO,,43,J,0,1,0,0,1
+HTtexts,HT 46,b.2,,,16,J,0,1,0,0,0
+HTtexts,HT 46,b.3,,,24,,0,1,0,0,0
+HTtexts,HT 47,a.1-2,KU-PA3-NA-TU,,20,,0,1,0,0,0
+HTtexts,HT 47,a.3,DU,,20,,0,1,0,0,0
+HTtexts,HT 47,a.3-4,PI,,10,,0,1,0,0,0
+HTtexts,HT 47,a.5,,,5,,0,1,0,0,0
+misctexts,HT 49a.7),a.1,-QE,,3,,0,1,1,0,0
+misctexts,HT 49a.7),a.1,JA,,20,,0,0,0,0,0
+misctexts,HT 49a.7),a.2,,,31,,0,1,0,0,0
+misctexts,HT 49a.7),a.2,DA-RE,,72,,0,0,0,0,0
+HTtexts,HT 5,.2,MA-SI,,30,,0,1,0,0,0
+HTtexts,HT 5,.3,-WI-DU,,10,,0,1,1,0,0
+HTtexts,HT 50,a.2,,,,E,0,1,0,0,0
+HTtexts,HT 50,a.2,OLE+KI *618,,,E,0,0,0,0,0
+HTtexts,HT 50,a.2,OLE+MI *622,,,J,0,0,0,0,0
+HTtexts,HT 50,a.3,*304,,1,J,0,1,0,0,0
+HTtexts,HT 50,a.4,OLIV,,3,,0,1,0,0,0
+HTtexts,HT 50,a.4,OLIV+TU *587,,,EF,0,0,0,0,0
+HTtexts,HT 50,b.3,vest.,OLE+DI *608,1,,0,1,1,0,0
+HTtexts,HT 51,a.1,,,5,,0,1,0,0,0
+HTtexts,HT 51,a.2,SE,,64,,0,1,0,0,0
+HTtexts,HT 51,b.1,KU-ME-TA,,12,,0,1,0,0,0
+HTtexts,HT 51,b.2,ZU-DU,,,JF,0,1,0,0,0
+HTtexts,HT 52,a.2,,,4,,0,1,0,0,0
+HTtexts,HT 52,b.1,NE,GRA,201,,0,1,0,0,0
+misctexts,HT 52a.1,a.2-3,-RA-MA-SI,VINa,,J,0,1,1,0,0
+misctexts,HT 52a.1,a.3-4,E-KU-RU,,2,E,0,1,0,0,0
+misctexts,HT 52a.1,a.4,VINa,,,J,0,0,0,0,0
+misctexts,HT 52a.1,a.4,QE+GRA+PA QE+*574,,4,,0,0,0,0,0
+misctexts,HT 52a.1,a.5,KU-PA,GRA+PA *574,1,,0,1,0,0,0
+misctexts,HT 52a.1,a.6,OLIV,,2,,0,1,0,0,0
+misctexts,HT 52a.1,b.1,SA-*301-RI,GRA+PA *574,1,,0,1,0,0,0
+misctexts,HT 52a.1,b.3,RA,,2,,0,1,0,0,0
+misctexts,HT 52a.1,b.3,KU-PA,GRA+PA *574,3,,0,0,0,0,0
+HTtexts,HT 54,b.1,,,4,,0,1,0,0,0
+HTtexts,HT 56,a.2,,,11,J,0,1,0,0,0
+HTtexts,HT 56,b.1,OLE+KI *618,,20,,0,1,0,0,0
+HTtexts,HT 57,a.1,,,1,,0,1,0,0,0
+HTtexts,HT 57,a.3,,,,F,0,1,0,0,0
+HTtexts,HT 57,b.1,*305,,8,,0,1,0,0,0
+HTtexts,HT 58,.2,OLE+U *610,,19,,0,0,0,0,0
+HTtexts,HT 58,.3,OLE+E *613,,3,,0,1,0,0,0
+HTtexts,HT 58,.3,OLIV,,41,,0,0,0,0,0
+HTtexts,HT 59,.1,OLE+RI *614,,,K,0,1,0,0,0
+HTtexts,HT 59,.2,,,,K,0,1,0,0,0
+HTtexts,HT 59,.2,VINa,,,K,0,0,0,0,0
+HTtexts,HT 59,.2,OLE,,5,,0,0,0,0,0
+HTtexts,HT 6,a.1-2,DA-TA-RA,TE FIC,15,,0,0,0,0,0
+HTtexts,HT 6,a.2-3,PI-TA-JA,,24,,0,0,0,0,0
+HTtexts,HT 6,a.3,JA+RU *538,,,DD,0,0,0,0,0
+HTtexts,HT 6,a.3-4,MA-*321,,10,,0,0,0,0,0
+HTtexts,HT 6,a.4,O-RA2-DI-NE,,2,,0,0,0,0,0
+HTtexts,HT 6,a.4-5,KA-PA-QE,,5,JE,0,0,0,0,0
+HTtexts,HT 6,a.6-7,QE-PI-TA,,22,JE,0,0,0,0,0
+HTtexts,HT 6,a.7,FIC,,15,J,0,0,0,0,0
+HTtexts,HT 6,b.1-2,WA-DU-NI-MI,,3,H,0,0,0,0,0
+HTtexts,HT 6,b.2,RA-TI-SE,,1,,0,0,0,0,0
+HTtexts,HT 6,b.2-3,MA-RI-•-I,,3,,0,1,0,0,0
+HTtexts,HT 6,b.4,DU-DA-MA,,66,,0,0,0,0,0
+HTtexts,HT 6,b.5,DA-KI,,3,E,0,0,0,0,0
+HTtexts,HT 6,b.5-6,SA-MA,,35,,0,0,0,0,0
+HTtexts,HT 6,b.6,PA3-NI-NA,,17,J,0,0,0,0,0
+HTtexts,HT 61,.1,MI-TI,GRA+KU *579,6,,0,1,0,0,0
+HTtexts,HT 62,.2,-NA,GRA,15,E,0,1,0,0,0
+HTtexts,HT 62,.2,KA-KU,,4,,0,1,0,0,0
+HTtexts,HT 62,.2,,,1,,0,1,0,0,0
+HTtexts,HT 62,.3,,,18,,0,1,0,0,0
+HTtexts,HT 62,.3,Ib-TI-,,6,,0,1,0,0,0
+HTtexts,HT 62,.3,,,8,,0,1,0,0,0
+HTtexts,HT 62,.4,,,4,E,0,1,0,0,0
+HTtexts,HT 62,.4,,,28,,0,1,0,0,0
+HTtexts,HT 62,.5,VIR,,4,,0,1,0,0,0
+HTtexts,HT 62,.6,NU,,17,,0,1,0,0,0
+HTtexts,HT 62,.7,,,25,,0,1,0,0,0
+HTtexts,HT 63,.1,*305 TE,,1,,0,0,0,0,0
+HTtexts,HT 63,.1,KA-TI,,1,,0,0,0,0,0
+HTtexts,HT 63,.2,ZU,,2,,0,1,0,0,0
+HTtexts,HT 66,.2,DI,,2,,0,1,0,0,0
+HTtexts,HT 66,.4,RE,,1,,0,1,0,0,0
+HTtexts,HT 67,.2,KU-RO,,420,,0,1,0,0,1
+HTtexts,HT 67,.3,FIC TE,,400,,0,1,0,0,0
+HTtexts,HT 68,.2,,,4,,0,1,0,0,0
+HTtexts,HT 69,.1,,,5,,0,1,0,0,0
+HTtexts,HT 69,.1,DI,,8,,0,1,0,0,0
+HTtexts,HT 69,.2,MA-DI,,4,,0,1,0,0,0
+HTtexts,HT 69,.3,DI,,12,,0,1,0,0,0
+HTtexts,HT 6b.2;,.1,SA-RA2,*308,,J,0,0,0,0,0
+HTtexts,HT 6b.2;,.1,OLE+NE *612,,,JK,0,0,0,0,0
+HTtexts,HT 6b.2;,.1,QA++PU *510,,1,K,1,1,0,0,0
+HTtexts,HT 6b.2;,.2,QA++RE *508,,1,,1,1,0,0,0
+HTtexts,HT 6b.2;,.2,MI+JA+RU *550,,1,,0,0,0,0,0
+HTtexts,HT 6b.2;,.3,SU-RE,,108,,0,0,0,0,0
+HTtexts,HT 6b.2;,.3,DI,,65,,0,0,0,0,0
+HTtexts,HT 6b.2;,.4,RE,,104,,0,1,0,0,0
+HTtexts,HT 6b.2;,.4,DI,,53,,0,0,0,0,0
+HTtexts,HT 6b.5-6,a.1-2,A-RU-RA-,,3,,0,1,0,0,0
+HTtexts,HT 6b.5-6,a.2,KA-RO-NA,,2,,0,0,0,0,0
+HTtexts,HT 6b.5-6,a.3,*322-RI,,1,,0,0,0,0,0
+HTtexts,HT 6b.5-6,a.3,KU-RO,,10,,0,0,0,0,1
+HTtexts,HT 6b.5-6,a.3,,,40,,0,1,0,0,0
+HTtexts,HT 6b.5-6,a.3,,,100,,0,1,0,0,0
+HTtexts,HT 6b.5-6,a.3-4,A-SU-JA,,1,,0,0,0,0,0
+HTtexts,HT 6b.5-6,a.4,VIR-I,,3,,0,0,0,0,0
+HTtexts,HT 6b.5-6,a.5,TA2,,15,,0,0,0,0,0
+HTtexts,HT 6b.5-6,b.2,*86 KA,,40,,0,0,0,0,0
+HTtexts,HT 6b.5-6,b.2,KA,,30,,0,0,0,0,0
+HTtexts,HT 6b.5-6,b.2,,,18,,0,1,0,0,0
+HTtexts,HT 6b.5-6,b.3,KA,,50,,0,0,0,0,0
+HTtexts,HT 6b.5-6,b.3-4,RU-ZU-NA,KA,30,,0,0,0,0,0
+HTtexts,HT 6b.5-6,b.4-5,SA-QE-RI,KA,30,,0,0,0,0,0
+HTtexts,HT 6b.5-6,b.5-6,KU-RO,,180,,0,0,0,0,1
+HTtexts,HT 70+151,.1,FIC TE,,30,,0,1,0,0,0
+HTtexts,HT 70+151,.2,QA-*118-SA,,2,E,0,1,0,0,0
+HTtexts,HT 70+151,.3,I,,3,,0,1,0,0,0
+HTtexts,HT 73,.2,KU-RO,,20,,0,1,0,0,1
+HTtexts,HT 79,.2,TU-PA-RI,,1,,0,1,0,0,0
+HTtexts,HT 79,.2,TU-,,3,,0,1,0,0,0
+HTtexts,HT 79,.3,ZU,,3,,0,1,0,0,0
+HTtexts,HT 8,a.1,JE-DI,OLE+KI *618,10,,0,0,0,0,0
+HTtexts,HT 8,a.1-2,PA3-KA-RA-TI,,1,J,0,0,0,0,0
+HTtexts,HT 8,a.2,PA,,3,J,0,0,0,0,0
+HTtexts,HT 8,a.3,TE-*301,,2,,0,0,0,0,0
+HTtexts,HT 8,a.3-4,QA-*310-I,,,JE,0,0,0,0,0
+HTtexts,HT 8,a.4,SI-KI-RA,,,E,0,0,0,0,0
+HTtexts,HT 8,a.5,KI-RE-TA-NA,,,J,0,0,0,0,0
+HTtexts,HT 8,b.1,SU-PU2,*188,1,,0,0,0,0,0
+HTtexts,HT 8,b.3,,,5,,0,0,0,0,0
+HTtexts,HT 8,b.3,PA3,,1,,0,0,0,0,0
+HTtexts,HT 8,b.3,*188,,2,,0,0,0,0,0
+HTtexts,HT 8,b.3-4,QA-*310-I,,1,EF,0,0,0,0,0
+HTtexts,HT 8,b.4,KA-PA,,,J,0,0,0,0,0
+HTtexts,HT 8,b.4,PA-JA-RE,,1,F,0,0,0,0,0
+HTtexts,HT 8,b.5,*86+*188 *565,,,J,0,0,0,0,0
+HTtexts,HT 8,b.5,,,,J,0,0,0,0,0
+HTtexts,HT 81,.1,A-SE,MI+JA+RU *550,,H,0,1,0,0,0
+HTtexts,HT 86,a.1-2,KU-NI-SU,GRA+K+L2 *584,20,,0,0,0,0,0
+HTtexts,HT 86,a.2,SA-RU,,20,,0,0,0,0,0
+HTtexts,HT 86,a.3,DI-DE-RU,,20,,0,0,0,0,0
+HTtexts,HT 86,a.3,QA-RA2-WA,,10,,0,0,0,0,0
+HTtexts,HT 86,a.4,DA-ME,GRA+B *580,20,,0,0,0,0,0
+HTtexts,HT 86,a.5,MI-NU-TE,,20,,0,0,0,0,0
+HTtexts,HT 86,b.1-2,KU-NI-SU,GRA+K+L2 *584,20,,0,1,0,0,0
+HTtexts,HT 86,b.2,SA-RU,,20,,0,1,0,0,0
+HTtexts,HT 87,.2,PI-TA-KE-SI,,1,,0,0,0,0,0
+HTtexts,HT 87,.3,JA-RE-MI,,1,,0,0,0,0,0
+HTtexts,HT 87,.3,DI-KI-SE,,1,,0,0,0,0,0
+HTtexts,HT 87,.4,QE-SU-PU,,1,,0,0,0,0,0
+HTtexts,HT 87,.4,KU-RU-KU,,1,,0,0,0,0,0
+HTtexts,HT 87,.5,A-RA-•-A-TU,,1,,0,1,0,0,0
+HTtexts,HT 88.5,.1,SI,,4,,0,0,0,0,0
+HTtexts,HT 88.5,.2,,,14,J,0,1,0,0,0
+HTtexts,HT 88.5,.2,FIC,,7,D,0,0,0,0,0
+HTtexts,HT 88.5,.2,VINa,,8,J,0,0,0,0,0
+HTtexts,HT 88.5,.3,OLE+TA *615,,,DD,0,0,0,0,0
+HTtexts,HT 88.5,.3,QA++PU *510,,,D,1,1,0,0,0
+HTtexts,HT 88.5,.3,SA-RA-RA,,,J,0,0,0,0,0
+HTtexts,HT 88.5,.3-4,BOSm,,1,,0,0,0,0,0
+HTtexts,HT 88.5,.4,KI-RO,*303,8,,0,0,0,0,0
+HTtexts,HT 88.5,.4,FIC,,,DD,0,0,0,0,0
+HTtexts,HT 88.5,.5,VINa,,,J,0,0,0,0,0
+HTtexts,HT 88.5,.5,BOSm,,1,,0,1,0,0,0
+HTtexts,HT 88.5,.5,,,,D,0,1,0,0,0
+HTtexts,HT 88.5,.5,OLE+TA *615,,,D,0,0,0,0,0
+HTtexts,HT 90,.1-2,SA-RA2,GRA,20,,0,0,0,0,0
+HTtexts,HT 90,.2,FIC,,10,,0,0,0,0,0
+HTtexts,HT 90,.2,OLE+DI *608,,3,,0,0,0,0,0
+HTtexts,HT 90,.2-3,SI-RU-MA-RI-TA2,GRA,1,,0,0,0,0,0
+HTtexts,HT 90,.3-4,FIC,,1,,0,0,0,0,0
+HTtexts,HT 90,.4,OLE+MI *622,,1,,0,0,0,0,0
+HTtexts,HT 90,.4,*304,,1,,0,0,0,0,0
+HTtexts,HT 91,.1,I-KA,*326 GRA,,X,0,0,0,0,0
+HTtexts,HT 91,.4,,,5,E,0,0,0,0,0
+HTtexts,HT 91,.5,,,3,E,0,1,0,0,0
+HTtexts,HT 92,.1-2,A-DU,GRA,680,,0,0,0,0,0
+HTtexts,HT 92,.2,*304,,12,,0,0,0,0,0
+HTtexts,HT 93,a.1,PA3-NI-NA,GRA PA3 RE+SE *515,12,,0,0,0,0,0
+HTtexts,HT 93,a.1-2,DI-RI-NA,DA+RE+SE *502,43,J,0,0,0,0,0
+HTtexts,HT 93,a.2-3,KI-DI-NI,,5,JH,0,0,0,0,0
+HTtexts,HT 93,a.3-4,A-SE,I GRA+PA *574,26,JE,0,0,0,0,0
+HTtexts,HT 93,a.4,SA-RA2,,20,,0,0,0,0,0
+HTtexts,HT 93,a.4-5,QA-QA-RU,I GRA+PA *574,5,,0,0,0,0,0
+HTtexts,HT 93,a.5-6,VIR-I,,6,,0,0,0,0,0
+HTtexts,HT 93,a.6,DE-JU-KU,,1,J,0,0,0,0,0
+HTtexts,HT 93,a.6-7,O-TI-,,3,,0,1,0,0,0
+HTtexts,HT 93,a.7,DA-RI-DA,*406VAS,2,,0,0,0,0,0
+HTtexts,HT 93,a.7,*343,,2,,0,0,0,0,0
+HTtexts,HT 93,a.8,PA-SE-JA,,20,,0,1,0,0,0
+HTtexts,HT 93,a.9,VIR,,10,F,0,1,0,0,0
+HTtexts,HT 93,a.9,-KA,,4,,0,1,1,0,0
+HTtexts,HT 93,b.1,,,165,H,0,1,0,0,0
+HTtexts,HT 94,a.1,KA-PA,VIR,62,,0,0,0,0,0
+HTtexts,HT 94,a.1,*86,,20,,0,0,0,0,0
+HTtexts,HT 94,a.2,TI+A *523,,7,,0,0,0,0,0
+HTtexts,HT 94,a.2,VIR+*313b *571,,18,,0,0,0,0,0
+HTtexts,HT 94,a.2,TA,,4,,0,0,0,0,0
+HTtexts,HT 94,a.3,KU-RO,,110,,0,0,0,0,1
+HTtexts,HT 94,a.3,SA-RA2,*303,5,,0,0,0,0,0
+HTtexts,HT 94,a.3,FIC,,3,H,0,0,0,0,0
+HTtexts,HT 94,a.4,,,2,,0,1,0,0,0
+HTtexts,HT 94,a.4,*318-*306,,11,,0,0,0,0,0
+HTtexts,HT 94,a.4,*303,,,DD,0,0,0,0,0
+HTtexts,HT 94,a.4,FIC,,,DD,0,0,0,0,0
+HTtexts,HT 94,a.4,NAME,LOGOGRAM,2,,0,1,0,0,0
+HTtexts,HT 94,a.5,,,14,J,0,1,0,0,0
+HTtexts,HT 94,a.5,FIC,,,D,0,0,0,0,0
+HTtexts,HT 94,a.5,NAME,LOGOGRAM (*303),14,J,1,1,0,0,0
+HTtexts,HT 94,b.1,TU-MA,,1,,0,0,0,0,0
+HTtexts,HT 94,b.1,PA-TA-NE,,1,,0,0,0,0,0
+HTtexts,HT 94,b.2,DE-DI,,1,,0,0,0,0,0
+HTtexts,HT 94,b.2,KE-KI-RU,,1,,0,0,0,0,0
+HTtexts,HT 94,b.2,SA-RU,,1,,0,0,0,0,0
+HTtexts,HT 94,b.3,KU-RO,vacat,5,,0,0,0,0,1
+HTtexts,HT 94,b.4,RA-•-DE-ME-TE,,1,,0,1,0,0,0
+HTtexts,HT 94,b.5,QIf-TU-,,1,,0,1,0,0,0
+HTtexts,HT 95a.4-5,.1,A-KA-RU,OLE+U *610,20,,0,1,0,0,0
+HTtexts,HT 95a.4-5,.2,OLE+A *609,,17,,0,1,0,0,0
+HTtexts,HT 95a.4-5,.2,OLE+E *613,,3,,0,1,0,0,0
+HTtexts,HT 95a.4-5,.3,KI-RE-TA-NA,OLE+U *610,54,,0,1,0,0,0
+HTtexts,HT 95a.4-5,.4,OLE+A *609,,47,,0,1,0,0,0
+HTtexts,HT 95a.4-5,.6,,,1,,0,0,0,0,0
+HTtexts,HT 96,a.2-3,SI-MI-TA,GRA,5,,0,0,0,0,0
+HTtexts,HT 96,a.3,RU-SA,,4,,0,0,0,0,0
+HTtexts,HT 96,a.3,*323 *317,,1,,0,0,0,0,0
+HTtexts,HT 96,a.4,PI-TA-RA,,1,,0,0,0,0,0
+HTtexts,HT 96,a.4,*323 *344,,1,,0,0,0,0,0
+HTtexts,HT 96,a.5,KU-MA-RO,TE FIC,20,,0,1,0,0,0
+HTtexts,HT 96,a.6,FIC,,2,,0,1,0,0,0
+HTtexts,HT 96,b.1-2,QA-*118-RA-RE,I+ *516 GRA,40,JE,1,1,0,0,0
+HTtexts,HT 96,b.3,OLE+U *610,,4,,0,0,0,0,0
+HTtexts,HT 96,b.3,FIC,,2,K,0,0,0,0,0
+HTtexts,HT 99,a.1,SA-RA2,*303,4,,0,1,0,0,0
+HTtexts,HT 99,a.2,FIC,,4,,0,1,0,0,0
+HTtexts,HT 99,a.2,VINa,,1,H,0,0,0,0,0
+HTtexts,HT 99,b.1,SI+SE *529 FIC,,6,,0,0,0,0,0
+HTtexts,HT 99,b.1,DA-SI-*118,,2,,0,0,0,0,0
+HTtexts,HT 99,b.1,ZU-DU,,1,,0,0,0,0,0
+HTtexts,HT 99,b.2-3,RU-MA-TA,,1,,0,0,0,0,0
+HTtexts,HT Wc 3016,a.1-2,TU-RU-NU-SE-ME,GRA+,10,,0,1,0,0,0
+HTtexts,HT Wc 3016,a.2,WA-TU-MA-RE,GRA+KU *579,12,,0,1,0,0,0
+HTtexts,HT Wc 3016,a.3,MI-TA,GRA+PA *574,,J,0,1,0,0,0
+HTtexts,HT Wc 3016,a.3,GRA+KU *579,,6,,0,0,0,0,0
+HTtexts,HT Wc 3016,a.4,GRA+,,1,,0,1,0,0,0
+HTtexts,HT Wc 3016,a.4,GRA+KU *579,,4,,0,0,0,0,0
+HTtexts,HT Wc 3016,b.1,VIR-*329,GRA+KU *579,6,,0,0,0,0,0
+HTtexts,HT Wc 3016,b.1,GRA+KU *579,,1,,0,0,0,0,0
+HTtexts,HT Wc 3016,b.2,RU-,GRA+KU *579,6,,0,1,0,0,0
+HTtexts,HT Wc 3017,a.1,KA-PA,VIR b: *304+PA *629,62,,0,0,0,0,0
+HTtexts,HT Wc 3017,a.3,SA-RA2,*303 b: *303+D *624,55,,0,0,0,0,0
+HTtexts,HT Wc 3017,a.4,*318-*306,a. DI-*306,11,,0,0,0,0,0
+HTtexts,HT Wc 3017,b.3,KU-RO,,55,,0,0,0,0,1
+misctexts,HT Zb 160),a.2,RU,CAPm+KU *513,1,,0,1,0,0,0
+misctexts,HT Zb 160),a.2,MA-DI,OVISm,1,,0,0,0,0,0
+misctexts,HT Zb 160),a.3,+NE,,1,,0,1,0,0,0
+misctexts,HT Zb 160),a.3,KU-PA3-NU,SI+AU-RE,1,,0,0,0,0,0
+misctexts,HT Zb 160),a.3-4,PA-TA-DA,,1,,0,1,0,0,0
+misctexts,HT Zb 160),a.4,KU-RO,CAPm+KU *513,1,,0,0,0,0,1
+misctexts,HT Zb 160),a.4,OVISm,,5,,0,0,0,0,0
+misctexts,HT Zb 160),a.4,OVISf,,3,,0,1,0,0,0
+misctexts,HT Zb 160),b.1,CAPf,,2,,0,1,0,0,0
+misctexts,HT Zb 160),b.1,OVISf,,1,,0,1,0,0,0
+misctexts,HT Zb 160),b.2,-DU-RI,CAPm,1,,0,1,1,0,0
+misctexts,HT Zb 160),b.3,NE,CAPm,1,,0,1,0,0,0
+misctexts,HT Zb 160),b.3,CAPf,,5,,0,0,0,0,0
+misctexts,HT Zb 160),b.4,,,1,,0,1,0,0,0
+misctexts,HT Zb 160),b.4,RI-RU-MA-TI,OVISm SI+AU-RE,1,,0,1,0,0,0
+misctexts,HT Zb 160),b.4,CAPm+KU,,1,,0,0,0,0,0
+misctexts,HT Zb 160),b.5,A-MI-DA-O,OVISm,1,,0,1,0,0,0
+HTtexts,HT Zd 155-157),.1-2,A-DU,TE GRA+DA *573,55,,0,0,0,0,0
+misctexts,IO Za 16a,.1,*303+E *626,,1,,0,1,0,0,0
+misctexts,IO Za 16a,.1,GRA+,,1,,0,1,0,0,0
+misctexts,IO Za 16a,a.2,PI-MU,,40,,0,1,0,0,0
+misctexts,IO Za 16a,a.4,TE,,2,,0,1,0,0,0
+misctexts,IO Za 16a,a.6,PA+,,5,,1,1,0,0,0
+misctexts,IO Za 16a,a.7,,,3,,0,1,0,0,0
+misctexts,IO Za 16a,a.7,*118-MI,,2,,0,1,0,0,0
+misctexts,IO Za 16a,b.3,,,2,,0,1,0,0,0
+misctexts,KE Zb 3,.1,JE,GRA+F *582,70,,0,1,0,0,0
+misctexts,KE Zb 3,.2,,,3,J,0,0,0,0,0
+misctexts,KH 10,.1,,,2,,0,1,0,0,0
+misctexts,KH 10,.2,vest.,,,J,0,1,1,0,0
+misctexts,KH 10,.2,GRA,,10,,0,0,0,0,0
+misctexts,KH 10,.3-4,A-KI-PI-E-TE,GRA,90,,0,0,0,0,0
+misctexts,KH 100,.3,,,,KEE,0,1,0,0,0
+misctexts,KH 12,.1,*303+,,2,,0,1,0,0,0
+misctexts,KH 12,.1,*308,,,J,0,0,0,0,0
+misctexts,KH 12,.1,MI+JA+RU *550,,,J,0,0,0,0,0
+misctexts,KH 12,.2,,,,B,0,1,0,0,0
+misctexts,KH 12,.2,*335,,,B,0,1,0,0,0
+misctexts,KH 12,.3,,,,K,0,1,0,0,0
+misctexts,KH 12,.3,*401VAS+*304 *653,,,D,0,0,0,0,0
+misctexts,KH 12,.3,*401VAS+RU *651,,,W,0,1,0,0,0
+misctexts,KH 12,.4,*401VAS+RU *651,,,W,0,1,0,0,0
+misctexts,KH 13,.1,,,2,J,0,1,0,0,0
+misctexts,KH 13,.3,*304 *303,,,B,0,1,0,0,0
+misctexts,KH 13,.5,,,3,,0,1,0,0,0
+misctexts,KH 14,.1,A-MA-JA,*303,6,,0,1,0,0,0
+misctexts,KH 14,.2,*303,,,E,0,1,0,0,0
+misctexts,KH 14,.2,*336,,2,,0,0,0,0,0
+misctexts,KH 14,.2,*303,,,K,0,1,0,0,0
+misctexts,KH 14,.3,FIC,,,E,0,1,0,0,0
+misctexts,KH 14,.3,VIR+*307 *569,,2,,0,1,0,0,0
+misctexts,KH 15,.1,*303+,,,J,0,1,0,0,0
+misctexts,KH 15,.1,FIC,,,J,0,0,0,0,0
+misctexts,KH 15,.2,FIC,,,E,0,1,0,0,0
+misctexts,KH 16,.1,,,22,,0,1,0,0,0
+misctexts,KH 16,.3,,,,J,0,1,0,0,0
+misctexts,KH 17,.3,,,4,JB,0,1,0,0,0
+misctexts,KH 17,.4,FIC,,1,,0,1,0,0,0
+misctexts,KH 18,.2,,,5,,0,1,0,0,0
+misctexts,KH 18,.3,VINc,,1,,0,1,0,0,0
+misctexts,KH 18,.3,KU,,22,,0,0,0,0,0
+misctexts,KH 18,.4,DA+*301 *503,VINc,1,,0,1,0,0,0
+misctexts,KH 19,.1,*306 VIR+*307 *569,,13,,0,1,0,0,0
+misctexts,KH 19,.2,,,2,,0,1,0,0,0
+misctexts,KH 19,.2,OLE+TA *615,,,B,0,1,0,0,0
+misctexts,KH 2,.1,,,20,,0,1,0,0,0
+misctexts,KH 2,.2,*303+,,,E,0,1,0,0,0
+misctexts,KH 20,.2,,,,B,0,1,0,0,0
+misctexts,KH 20,.4,DU-RE-ZA,*303+E *626,,J,0,1,0,0,0
+misctexts,KH 20,.4,FIC,,,E,0,0,0,0,0
+misctexts,KH 21,.1,*303,,,W,0,1,0,0,0
+misctexts,KH 21,.2,,,,D,0,1,0,0,0
+misctexts,KH 21,.2,FIC,,2,,0,1,0,0,0
+misctexts,KH 22,.1,-ZA,SU,7,,0,1,1,0,0
+misctexts,KH 22,.2,SI,,4,,0,1,0,0,0
+misctexts,KH 24,.1,SU,,12,,0,1,0,0,0
+misctexts,KH 25,.1,VIR,,140,,0,1,0,0,0
+misctexts,KH 25,.2,VIR,,10,,0,1,0,0,0
+misctexts,KH 26,.1,VIR,,60,,0,1,0,0,0
+misctexts,KH 26,.2,FIC,E L4,2,,0,1,0,0,0
+misctexts,KH 27,.2,GRA+PA *574,,4,,0,1,0,0,0
+misctexts,KH 29,.2,,,1,,0,1,0,0,0
+misctexts,KH 29,.3,,,2,,0,1,0,0,0
+misctexts,KH 29,.3,*303,,,J,0,1,0,0,0
+misctexts,KH 3,.1,NU,,1,,0,1,0,0,0
+misctexts,KH 30,.2,FIC,,9,,0,1,0,0,0
+misctexts,KH 31,.3,,,,J,0,1,0,0,0
+misctexts,KH 31,.3,,,1,,0,1,0,0,0
+misctexts,KH 32,.2,,,5,,0,1,0,0,0
+HTtexts,KH 32.1,a.2,QE-TU,,10,,0,1,0,0,0
+HTtexts,KH 32.1,a.3,*305 *304,,10,,0,0,0,0,0
+HTtexts,KH 32.1,a.3,RE *304,,10,,0,0,0,0,0
+HTtexts,KH 32.1,a.4,MI-DA-NI PA-JA,,2,DD,0,0,0,0,0
+misctexts,KH 33,.2,,,1,,0,1,0,0,0
+misctexts,KH 34,.1,*303+E *626,,2,,0,1,0,0,0
+misctexts,KH 35,.2,,,1,,0,1,0,0,0
+misctexts,KH 36,.1,KA MI+JA+RU *550,,4,,0,1,0,0,0
+misctexts,KH 37,.1,*304+ *625,,2,,0,1,0,0,0
+misctexts,KH 38,.2,*303+D *624,,,J,0,1,0,0,0
+misctexts,KH 4,.2,*306,,4,,0,1,0,0,0
+misctexts,KH 4,.2,*303,,,B,0,1,0,0,0
+misctexts,KH 41,.1,,,3,,0,1,0,0,0
+misctexts,KH 43,.1,MA+RU-RE *562,,2,,0,1,0,0,0
+misctexts,KH 47,.2,,,6,,0,1,0,0,0
+misctexts,KH 5,.2,WI-SA-SA-NE,*303+E *626,2,,0,0,0,0,0
+misctexts,KH 5,.2,VINb+WI *598,,2,,0,0,0,0,0
+misctexts,KH 5,.3-4,KU-PA-ZU,*303+ A,3,,0,1,0,0,0
+misctexts,KH 5,.4,FIC,,2,JB,0,0,0,0,0
+misctexts,KH 50,.1,-TA,,2,,0,1,1,0,0
+misctexts,KH 50,.2,,,2,-JE,0,1,0,0,0
+misctexts,KH 50,.2,QE-,,1,,0,1,0,0,0
+misctexts,KH 51,.1,SI-I-SI,,3,,0,1,0,0,0
+misctexts,KH 51,.2,,,4,,0,1,0,0,0
+misctexts,KH 55,.2,OLE+TA *615,,,B,0,1,0,0,0
+misctexts,KH 55,.3,,,3,,0,1,0,0,0
+misctexts,KH 57,.2,ZO,,1,,0,1,0,0,0
+misctexts,KH 57,.3,*303+,,,E,0,1,0,0,0
+misctexts,KH 58,.2,*303+,,4,,0,1,0,0,0
+misctexts,KH 58,.3,*303+E *626,,4,,0,1,0,0,0
+misctexts,KH 58,.4,*303+E *626,,1,E,0,1,0,0,0
+misctexts,KH 58,.5,*303+,,,J,0,1,0,0,0
+misctexts,KH 59,.1,,,1,,0,1,0,0,0
+misctexts,KH 59,.2,-I,,5,,0,1,1,0,0
+misctexts,KH 59,.3,-DI-NA,,5,,0,1,1,0,0
+misctexts,KH 6,.1,*303+D *624,,,J,0,1,0,0,0
+misctexts,KH 6,.3,KI-SA-NE,*303+D *624,,J,0,1,0,0,0
+misctexts,KH 6,.4,*303+,,,J,0,1,0,0,0
+misctexts,KH 6,.5,CAPm,,1,,0,1,0,0,0
+misctexts,KH 6,.5,*303+D *624,,,J,0,0,0,0,0
+misctexts,KH 6,.5,BOS,,1,,0,0,0,0,0
+misctexts,KH 6,.6,-RE,*334,1,,0,1,1,0,0
+misctexts,KH 6,.6,*303+D *624,,,J,0,0,0,0,0
+misctexts,KH 6,.6-7,PI-SA,*303+D *624,,J,0,1,0,0,0
+misctexts,KH 6,.7,AU-RE-TE,*306,1,,0,0,0,0,0
+misctexts,KH 6,.8,,,8,,0,1,0,0,0
+misctexts,KH 6,.8,*303,,2,JB,0,0,0,0,0
+misctexts,KH 60,.2,*131c,,,W,0,1,0,0,0
+misctexts,KH 60,.3,,,,D,0,1,0,0,0
+misctexts,KH 60,.3,MI+JA+RU *550,,,D,0,1,0,0,0
+misctexts,KH 63,.1,SU,,10,,0,1,0,0,0
+misctexts,KH 67,.2,,,1,,0,1,0,0,0
+misctexts,KH 7,a.1,NE-•-KI,*334,4,,0,1,0,0,0
+misctexts,KH 7,a.1,*303+D *624,,1,,0,1,0,0,0
+misctexts,KH 7,a.2,I,*303+E *626,,K,0,1,0,0,0
+misctexts,KH 7,a.2-3,E-NA-SI,VIR+*313b *571,10,,0,0,0,0,0
+misctexts,KH 7,a.3,*303+D *624,,,J,0,0,0,0,0
+misctexts,KH 7,a.4,QA-TI-KI,VIR+*313b *571,4,,0,0,0,0,0
+misctexts,KH 7,a.4,*303+D *624,,,B,0,0,0,0,0
+misctexts,KH 7,a.4-5,KU-•-KO-E,VIR+*313b *571,18,,0,1,0,0,0
+misctexts,KH 7,a.5,*303+D *624,J E L2,1,,0,1,0,0,0
+misctexts,KH 7,b.2,U-TA-I-SE,*303+D *624,,J,0,1,0,0,0
+misctexts,KH 7,b.2-3,PA-NA-TU,*303+D *624,,J,0,1,0,0,0
+misctexts,KH 7,b.3,*304+PA *629,,1,,0,0,0,0,0
+misctexts,KH 7,b.3,SI,,14,,0,0,0,0,0
+misctexts,KH 7,b.3,*303+K *627,,2,,0,0,0,0,0
+misctexts,KH 73,.2,,,1,,0,1,0,0,0
+misctexts,KH 73,.2,FIC,,1,,0,0,0,0,0
+misctexts,KH 73,.2,*304+PA *629,,1,,0,1,0,0,0
+misctexts,KH 73,.3,,,,K,0,1,0,0,0
+misctexts,KH 76,.1,SI,,4,,0,1,0,0,0
+misctexts,KH 8,.2,-TA,,2,,0,1,1,0,0
+misctexts,KH 8,.2,*303+D *624,,,J,0,0,0,0,0
+misctexts,KH 8,.2,FIC,,,J,0,1,0,0,0
+misctexts,KH 8,.3,GRA,,,J,0,1,0,0,0
+misctexts,KH 8,.3,*304,,,E,0,0,0,0,0
+misctexts,KH 8,.3,*303,,,E,0,0,0,0,0
+misctexts,KH 8,.4,FIC,,,E,0,1,0,0,0
+misctexts,KH 8,.4,*312,,1,,0,0,0,0,0
+misctexts,KH 8,.4,QA++PU *510,,1,,1,1,0,0,0
+misctexts,KH 81,.2,,,5,,0,1,0,0,0
+misctexts,KH 81,.2,MI+JA+I *551,,1000,,0,1,0,0,0
+misctexts,KH 81,.3,,,3,,0,1,0,0,0
+misctexts,KH 81.2,b.1,*412VAS+E *658,,3,,0,0,0,0,0
+misctexts,KH 81.2,b.2,,,4,,0,1,0,0,0
+misctexts,KH 81.2,b.2,*404VAS+A *654,,2,,0,0,0,0,0
+misctexts,KH 81.2,b.2,*404VAS+TI *524,,2,,0,0,0,0,0
+misctexts,KH 83,.2,*401VAS+A *650,,15,,0,1,0,0,0
+misctexts,KH 84,.1,*303,,,J,0,1,0,0,0
+misctexts,KH 84,.2,*301,,1,,0,1,0,0,0
+misctexts,KH 85,.1,OLE+TA *615,,,J,0,1,0,0,0
+misctexts,KH 85,.2,*401VAS+RU *651,,,K,0,1,0,0,0
+misctexts,KH 85,.3,*303,,,D,0,1,0,0,0
+misctexts,KH 86,.3,,,3,,0,1,0,0,0
+misctexts,KH 86,.3,*303+,,,JE,0,1,0,0,0
+misctexts,KH 87,.3,,,,J,0,1,0,0,0
+misctexts,KH 87,.3,BOSm,,1,,0,0,0,0,0
+misctexts,KH 88,.1-2,QA-NU-MA QIf-*118,FIC,10,,0,0,0,0,0
+misctexts,KH 88,.2-3,PU-DE,,8,,0,0,0,0,0
+misctexts,KH 9,.2,,,,K,0,1,0,0,0
+misctexts,KH 9,.2,FIC,,,EB,0,0,0,0,0
+misctexts,KH 9,.3,I-SI,*303+D *624,,J,0,1,0,0,0
+misctexts,KH 9,.4,,,2,,0,1,0,0,0
+misctexts,KH 9,.4,*303,,,E,0,0,0,0,0
+misctexts,KH 9,.6,,,,X,0,1,0,0,0
+misctexts,KH 9,.6,SI+TA2 *532 *304,,1,,0,1,0,0,0
+misctexts,KH 91,.1,GRA,,1,,0,0,0,0,0
+misctexts,KH 91,.2,*316,J L2,1,,0,1,0,0,0
+misctexts,KH 91,.3,TU,,,K,0,0,0,0,0
+misctexts,KH 91,.4,*401VAS+RU *651,,,K,0,0,0,0,0
+misctexts,KH 92,.1,KU-NI-TE,,10,,0,1,0,0,0
+misctexts,KH 92,.2,NA-KI,vest.,1,,0,1,1,0,0
+misctexts,KH 94,.2,,,17,,0,1,0,0,0
+misctexts,KH 95,.1,SE,,7,,0,0,0,0,0
+misctexts,KH Wc 2001-2003,a.1-2,JA-KU-TI,,240,E,0,0,0,0,0
+misctexts,KH Wc 2001-2003,b.1-3,JA-DU-RA-TI,,105,E,0,0,0,0,0
+misctexts,KH Wc 2054,.1,,,,J,0,1,0,0,0
+misctexts,KH Wc 2054,.2,FIC,,,B,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.2,PA-DE,,5,JE,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.2-3,*306-TU,,10,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.3,DI-NA-U,,4,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.3-4,QE-PU,,2,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.4,*324-DI-RA,,2,J,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.4-5,TA-I-*123,,2,J,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.5-6,A-RU,,4,E,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,a.6,KU-RO,,31,JE,0,0,0,0,1
+HTtexts,KH Wc 2058-2062,b.2,PA-DE,,3,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.2-3,A-SI,,3,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.3,*306-TU,,8,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.3,*324-DI-RA,,2,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.4,QE-PU,,2,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.4,TA-I-*123,,2,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.5,DI-NA-U,,4,,0,0,0,0,0
+HTtexts,KH Wc 2058-2062,b.6,KU-RO,,24,,0,0,0,0,1
+misctexts,KN 2,.1,RU-NA,,2,,0,1,0,0,0
+misctexts,KN 2,.2,*118,,3,,0,0,0,0,0
+misctexts,KN 2,.2,I+*301 *520,,5,,0,1,0,0,0
+misctexts,KN 22,a.1,SU-JU-TA,,20,,0,1,0,0,0
+misctexts,KN 32,.1,,,,L,0,1,0,0,0
+misctexts,KN 54,.2,VINc,,,K,0,1,0,0,0
+HTtexts,KN Wb 33,.1-2,QE-RA2-U KI-RO,,197,,0,0,0,0,0
+HTtexts,KN Wb 33,.2,ZU-SU,,70,,0,0,0,0,0
+HTtexts,KN Wb 33,.2-3,DI-DI-ZA-KE,,52,,0,0,0,0,0
+HTtexts,KN Wb 33,.3-4,KU-PA3-NU,,109,,0,0,0,0,0
+HTtexts,KN Wb 33,.4,A-RA-NA-RE,,105,,0,0,0,0,0
+misctexts,KN Za 19,.2,OVISm,,1,,0,1,0,0,0
+misctexts,KN Za 19,.3,,,1,,0,1,0,0,0
+misctexts,KN Za 19,.3,RA-,OVISf,1,,0,1,0,0,0
+misctexts,KN Za 19,.4,DU-JU,,7,,0,1,0,0,0
+misctexts,KN Za 19,.5,OVISf,,100,,0,1,0,0,0
+HTtexts,KN Za 19:,.1,A-SA-RA2,*307 *305,23,,0,0,0,0,0
+HTtexts,KN Za 19:,.2,JU+*317-QE *542,,22,,0,0,0,0,0
+HTtexts,KN Za 19:,.2,MA-I-MI,,24,,0,0,0,0,0
+HTtexts,KN Za 19:,.3,VIR+*313a *570,,13,,0,0,0,0,0
+HTtexts,KN Za 19:,.3,TA-RA,,5,,0,0,0,0,0
+HTtexts,KN Za 19:,.4,KU-RO,,87,,0,0,0,0,1
+HTtexts,KN Za 19:,.5,*303,,2,JE,0,0,0,0,0
+HTtexts,KN Za 19:,.5,FIC,,2,E,0,0,0,0,0
+HTtexts,KN Za 19:,.5,VINa,,6,,0,1,0,0,0
+misctexts,KN Zb 40,a.1,MI* RI-DA-U,SE,,JE,0,1,0,0,0
+misctexts,MA 2,a.1,DU-RA,,5,,0,1,0,0,0
+misctexts,MA 2,b.1,-RE-TI,,4,,0,1,1,0,0
+misctexts,MA 2,b.2,TI,,1,,0,1,0,0,0
+misctexts,MA 2,b.2,JA-KU,,2,,0,0,0,0,0
+misctexts,MA 4,a.1,TA *180B,,15,,0,0,0,0,0
+misctexts,MA 4,a.1,*180L,,120,,0,0,0,0,0
+misctexts,MA 4,a.1,*180+SA+L *601,,53,,0,0,0,0,0
+misctexts,MA 4,a.1,*180+SA+B *600,,30,,0,0,0,0,0
+misctexts,MA 4,b.1,A-...-JA,*180,137,,0,1,0,0,0
+misctexts,MA 4,b.1,,,160,,0,1,0,0,0
+misctexts,MA 6,a.1,*180+,,941,,0,1,0,0,0
+misctexts,MA 6,a.1,*180+B *602,,45,,0,0,0,0,0
+misctexts,MA 9,.3,*315/RO,,1,,0,1,0,0,0
+misctexts,MI Zb 1,.1,SI-•-NE-TI,,1,,0,1,0,0,0
+misctexts,MI Zb 1,.1,KA-QA,,2,,0,0,0,0,0
+misctexts,MI Zb 1,.2,A-DU-ZA,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.2,TA2-TA-RE,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.3,TA2-TI-TE,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.3-4,O-KA-MI-ZA-SI-I-NA,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.5,O-TE-JA,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.6,RA-NA-TU-SU,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.6,NI-MI,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.6-7,TU-SU,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.7,MA-TI-ZA-I-TE,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.8,MA-TE-TI,,1,,0,0,0,0,0
+misctexts,MI Zb 1,.8,MA-KA-I-TA,,1,,0,0,0,0,0
+misctexts,PE 1,.2,KU-PA-RI,VIR,50,,0,1,0,0,0
+misctexts,PE 1,.3,GRA+PA *574,,26,J,0,0,0,0,0
+misctexts,PE 1,.3-4,E-KA,VIR,72,,0,1,0,0,0
+misctexts,PE 1,.4-5,GRA+PA *574,,36,,0,0,0,0,0
+misctexts,PE 6,a.2,JA,*316,1,,0,1,0,0,0
+misctexts,PE 6,a.2,*303,,,H,0,0,0,0,0
+misctexts,PE 6,b.1,-NA,,1,,0,1,0,0,0
+misctexts,PE 6,b.2,FIC,,2,FK,0,1,0,0,0
+misctexts,PE Zb 3),.1,,,20,,0,1,0,0,0
+misctexts,PE Zb 3),.2,,,1,,0,1,0,0,0
+misctexts,PE Zb 3),.3,,,,B,0,1,0,0,0
+misctexts,PE Zb 3),.4,*303+,,2,,0,1,0,0,0
+misctexts,PE Zb 3),.4,GRA,,1,W,0,0,0,0,0
+misctexts,PH 12,b.1,,,,E,0,1,0,0,0
+misctexts,PH 12,b.2,,,,EE,0,1,0,0,0
+misctexts,PH 2,.1,A-SE-TU-QIf,,1,,0,0,0,0,0
+misctexts,PH 2,.1-2,RA-O-DI-KI,,60,,0,0,0,0,0
+misctexts,PH 2,.3,PI-RU-E-JU,,60,,0,0,0,0,0
+misctexts,PH 2,.4,SE-SA-PA3,,60,,0,0,0,0,0
+misctexts,PH 25,.1,VINa,,2,,0,1,0,0,0
+misctexts,PH 28,b.1,vest.,,102,,0,1,1,0,0
+misctexts,PH 28,b.2,,,2,,0,1,0,0,0
+misctexts,PH 28,b.2,*304,,6,,0,0,0,0,0
+misctexts,PH 28,b.3,,,6,,0,1,0,0,0
+misctexts,PH 3,a.1,MA+ *556,,1,,0,1,0,0,0
+misctexts,PH 3,a.2,MA+A *557,,1,,0,1,0,0,0
+misctexts,PH 3,a.2,MA+MA *563,,,DD,0,0,0,0,0
+misctexts,PH 3,a.3,MA+RU *558,,,DD,0,1,0,0,0
+misctexts,PH 3,a.3,PA-RA,,,DD,0,0,0,0,0
+misctexts,PH 3,a.4,,,1,,0,1,0,0,0
+misctexts,PH 3,b.1,MI+JA *548,,,JE,0,1,0,0,0
+misctexts,PH 3,b.2,SI,,,E,0,1,0,0,0
+misctexts,PH 3,b.4,SI,,1,E,0,1,0,0,0
+misctexts,PH 30,.1,-TI,,,E,0,1,1,0,0
+misctexts,PH 30,a.2,RU,CAPm+KU *513,1,,0,1,0,0,0
+misctexts,PH 30,a.2,MA-DI,OVISm,1,,0,0,0,0,0
+misctexts,PH 30,a.3,+NE,,1,,0,1,0,0,0
+misctexts,PH 30,a.3,KU-PA3-NU,SUS+SI+RE,1,,0,0,0,0,0
+misctexts,PH 30,a.3-4,PA-TA-DA,,1,,0,1,0,0,0
+misctexts,PH 30,a.4,KU-RO,CAPm+KU *513,1,,0,0,0,0,1
+misctexts,PH 30,a.4,OVISm,,5,,0,0,0,0,0
+misctexts,PH 30,a.4,OVISf,,3,,0,1,0,0,0
+misctexts,PH 30,b.1,CAPf,,2,,0,1,0,0,0
+misctexts,PH 30,b.1,OVISf,,1,,0,1,0,0,0
+misctexts,PH 30,b.2,-DU-RI,CAPm,1,,0,1,1,0,0
+misctexts,PH 30,b.3,NE,CAPm,1,,0,1,0,0,0
+misctexts,PH 30,b.3,CAPf,,5,,0,0,0,0,0
+misctexts,PH 30,b.4,,,1,,0,1,0,0,0
+misctexts,PH 30,b.5,A-MI-DA-O,OVISm,1,,0,1,0,0,0
+misctexts,PH 6),.1,,,,D,0,1,0,0,0
+misctexts,PH 7,b.1,TA,,1,L,0,1,0,0,0
+misctexts,PH 7,b.2,DA-RA,,,L,0,1,0,0,0
+misctexts,PH 7,b.3,VINc,,,LE,0,1,0,0,0
+misctexts,PH 8,a.1,*417VAS+L2 *663,,7,,0,1,0,0,0
+misctexts,PH 8,a.2,VIR,,11,,0,1,0,0,0
+misctexts,PH 8,a.2,*304,,2,,0,0,0,0,0
+misctexts,PH 8,a.3,,,16,,0,1,0,0,0
+misctexts,PH 8,a.4,*418VAS+L2 *664,,1,,0,0,0,0,0
+misctexts,PH 8,b.1,*316,,1,,0,1,0,0,0
+misctexts,PH 9,a1-2,|*317-QE-*353,,,Y,0,1,0,0,0
+misctexts,PH 9,b1-2,VAS VINa,,1,JJ,0,1,0,0,0
+misctexts,PH Wg 45,1-2,TI-MA-RU-WI-TE,*316+RO *639 VINa,90,,0,0,0,0,0
+misctexts,PK 1.8,a.1,*305-WA-NA,*171,19,,0,0,0,0,0
+misctexts,PK 1.8,a.2,,,180,,0,1,0,0,0
+misctexts,PK 1.8,a.3-4,OLIV,,15,,0,1,0,0,0
+misctexts,PK 1.8,a.4,OLIV,,10,,0,1,0,0,0
+misctexts,PK 1.8,a.5,,,2,,0,1,0,0,0
+misctexts,PK 1.8,a.7,,,20,,0,1,0,0,0
+misctexts,PK 1.8,a.8,,,25,,0,1,0,0,0
+misctexts,PK 1.8,a.9,,,20,,0,1,0,0,0
+misctexts,PK 1.8,b.1,I-KU-JU-TI-Ib,GRA+PA *574,50,E,0,0,0,0,0
+misctexts,PK 1.8,b.2,VINa+RA *594,,40,,0,0,0,0,0
+misctexts,PK 1.8,b.2,VINa+KA *596,,10,,0,0,0,0,0
+misctexts,PK 1.8,b.2-3,*312-TA2,GRA+PA *574,40,,0,1,0,0,0
+misctexts,PK 1.8,b.3,,,20,,0,1,0,0,0
+misctexts,PK Za 4,.1-2,A-KU-JU-PA-*118,,35,,0,0,0,0,0
+misctexts,PK Zb 25),a.2,OVISf,,1,,0,1,0,0,0
+misctexts,PK Zb 25),a.3,*310,,9,,0,1,0,0,0
+misctexts,PK Zb 25),a.4,GRA,,5,,0,1,0,0,0
+misctexts,PK Zb 25),b.3,,,3,,0,1,0,0,0
+misctexts,SA Wc 1,a.1,,,10,,0,1,0,0,0
+misctexts,SA Wc 1,a.2,TELA+SE,,200,,0,1,0,0,0
+misctexts,SA Wc 1,a.3,OVIS,,7,,0,1,0,0,0
+misctexts,SA Wc 1,a.4,OVIS,,46,,0,1,0,0,0
+HTtexts,THE Zb 1,.1,U-*34-SI *86-SI-NI,,1,,0,1,0,0,0
+misctexts,THE Zb 1,.1,*309a,,290,,0,1,0,0,0
+HTtexts,THE Zb 1,.1-2,JE-DI,OLE+KI *618 J,1,,0,0,0,0,0
+HTtexts,THE Zb 1,.2,U-*34-SI -SI-*118,KA,3,,0,1,0,0,0
+misctexts,THE Zb 1,.2,*309b+•+KI+PU,,50,,0,1,0,0,0
+misctexts,THE Zb 1,.2,*309a+DA+PU,,10,,0,1,0,0,0
+misctexts,THE Zb 1,.2-3,PA-DA-RU,*309a+JU-KI,100,,0,0,0,0,0
+HTtexts,THE Zb 1,.3,KA,,1,,0,0,0,0,0
+HTtexts,THE Zb 1,.3,KA,vacat,4,,0,1,0,0,0
+misctexts,THE Zb 1,.3,*309a+,,6,,0,1,0,0,0
+misctexts,THE Zb 1,.3-4,VIR,,84,,0,0,0,0,0
+HTtexts,THE Zb 1,.4,OLE+U *610,KA,31,,0,0,0,0,0
+misctexts,THE Zb 1,.4,*309c+DA-•-JU,,17,,0,1,0,0,0
+HTtexts,THE Zb 1,.4-.5,OLE+U *610,vacat,1,,0,0,0,0,0
+HTtexts,THE Zb 1,.5,KA,,1,,0,1,0,0,0
+HTtexts,THE Zb 1,.5,OLE+U *610,,2,,0,0,0,0,0
+HTtexts,THE Zb 1,.5,KA-PA,,,J,0,1,0,0,0
+HTtexts,THE Zb 1,.6,OLE+U *610,,6,J,0,1,0,0,0
+misctexts,THE Zb 1,.6,*309b+RI-JU,,250,,0,1,0,0,0
+misctexts,TY 3,a.1,ZA-*321,OLE+KI *618,15,E,0,1,0,0,0
+misctexts,TY 3,a.1,OLE+U *610,,22,,0,0,0,0,0
+misctexts,TY 3,a.1-2,NE KI+,,5,,0,1,0,0,0
+misctexts,TY 3,a.2,OLE+OVISf *611,,3,J,0,0,0,0,0
+misctexts,TY 3,a.2,OLE+U,,7,J,0,0,0,0,0
+misctexts,TY 3,a.3,A-DU-,OLE+KI *618,51,,0,1,0,0,0
+misctexts,TY 3,a.3,OLE+KI+U *619,,2,D,0,0,0,0,0
+misctexts,TY 3,a.4,OLE+KI+ME *620,,1,,0,0,0,0,0
+misctexts,TY 3,a.4,OLE+OVISf *611,,4,J,0,0,0,0,0
+misctexts,TY 3,a.4,OLIV,,4,,0,1,0,0,0
+misctexts,TY 3,a.5,A-DA,OLE+U *610,21,,0,0,0,0,0
+misctexts,TY 3,a.5,OLE+MI *622,,2,,0,1,0,0,0
+misctexts,TY 3,a.6,KO-A-DU-WA,OLE+,7,D,0,1,0,0,0
+misctexts,TY 3,a.7,KI+,,5,,0,1,0,0,0
+misctexts,TY 3,a.7,OLE+TU *621,,1,,0,0,0,0,0
+misctexts,TY 3,b.1,KI-RI-SI,OLE+MI *622,6,,0,1,0,0,0
+misctexts,TY 3,b.2,PI-KU-ZU,OLE+KI *618,4,,0,0,0,0,0
+misctexts,TY 3,b.2,OLE+MI *622,,11,,0,1,0,0,0
+misctexts,TY 3,b.3,OLE+NE *612,,2,,0,1,0,0,0
+misctexts,TY 3,b.4,,,220,,0,1,0,0,0
+misctexts,TY Zb 4,a.1-2,KI-RE-ZA,FIC,42,J,0,0,0,0,0
+misctexts,TY Zb 4,a.2,ZA,,5,,0,0,0,0,0
+misctexts,TY Zb 4,b.1-2,RO,GRA,47,,0,1,0,0,0
+misctexts,ZA 10,a.1,TA-NA-TE,,2,,0,0,0,0,0
+misctexts,ZA 10,a.1,PA+,,1,,1,1,0,0,0
+misctexts,ZA 10,a.1-2,A-KU-MI-NA,,1,,0,0,0,0,0
+misctexts,ZA 10,a.2,A-TA-NA-TE,,1,,0,0,0,0,0
+misctexts,ZA 10,a.3,A-MI-DA-U,,1,,0,0,0,0,0
+misctexts,ZA 10,a.3-4,A-DU-KU-MI-NA,,1,,0,0,0,0,0
+misctexts,ZA 10,a.4-5,DA-I-PI-TA,,1,,0,0,0,0,0
+misctexts,ZA 10,a.5,DU-RE-ZA-SE,,2,,0,0,0,0,0
+misctexts,ZA 10,b.1,WA-*362,,2,,0,0,0,0,0
+misctexts,ZA 10,b.1-2,DU-RE-ZA-SE,VINb,5,,0,0,0,0,0
+misctexts,ZA 10,b.2,U-*49,,6,,0,0,0,0,0
+misctexts,ZA 10,b.2-3,MA-ZA,,5,,0,0,0,0,0
+misctexts,ZA 10,b.3,MA-KI-DE-TE,,5,,0,0,0,0,0
+misctexts,ZA 10,b.3-4,SA-MA,,5,,0,0,0,0,0
+misctexts,ZA 10,b.4,A-DE,,4,,0,0,0,0,0
+misctexts,ZA 10,b.4-5,A-MI-TA,,3,,0,0,0,0,0
+misctexts,ZA 10,b.5,RA2-RO-RE,,2,,0,0,0,0,0
+misctexts,ZA 10,b.5-6,PA-JA-RE,,1,,0,0,0,0,0
+misctexts,ZA 10,b.6,KA-KU-NE-TE,,,J,0,0,0,0,0
+misctexts,ZA 10,b.6-7,TA,,2,,0,0,0,0,0
+misctexts,ZA 10,b.7,DU,,1,,0,1,0,0,0
+misctexts,ZA 14,.1,ME-KI-DI,,1,,0,0,0,0,0
+misctexts,ZA 14,.1,QIf-*118,,1,,0,0,0,0,0
+misctexts,ZA 14,.2,PU-NI-KA-SO,,3,,0,0,0,0,0
+misctexts,ZA 14,.2,QA-TI-JU,,8,,0,0,0,0,0
+misctexts,ZA 14,.3,KU-PI,,1,,0,0,0,0,0
+misctexts,ZA 14,.3-4,TU-MI-TI-ZA-SE,,45,,0,1,0,0,0
+misctexts,ZA 14,.4,PA-NU-QE,,2,,0,0,0,0,0
+misctexts,ZA 15,a.2,QE-SI-ZU-E,,57,,0,0,0,0,0
+misctexts,ZA 15,a.3,I-TI-NI-SA,,10,,0,0,0,0,0
+misctexts,ZA 15,a.4,MI-ZA-SE,,3,,0,0,0,0,0
+misctexts,ZA 15,a.4-5,Ib-NU-MA-RE,,6,,0,0,0,0,0
+misctexts,ZA 15,a.5,SI-PI-KI,,2,J,0,0,0,0,0
+misctexts,ZA 15,a.6,JA-SA-MU,,5,,0,0,0,0,0
+misctexts,ZA 15,a.6-7,SA-MI-DA-E,,4,,0,0,0,0,0
+misctexts,ZA 15,a.7,SO-KE-MA-SE,,5,,0,0,0,0,0
+misctexts,ZA 15,b.1,KA-DI,VINa,3,,0,0,0,0,0
+misctexts,ZA 15,b.2,KU-RO,VINa,78,,0,0,0,0,1
+misctexts,ZA 15,b.3,VINa+RA *594,,17,,0,0,0,0,0
+misctexts,ZA 16,.4,PA,,6,,0,1,0,0,0
+misctexts,ZA 16,.4,SU,,4,,0,1,0,0,0
+misctexts,ZA 18,a.1,KU-*321,GRA+PA *574,2,DD,0,0,0,0,0
+misctexts,ZA 18,a.2,GRA+,,2,DD,0,1,0,0,0
+misctexts,ZA 18,a.2,OLE+KI *618,,,BB,0,0,0,0,0
+misctexts,ZA 18,a.2,OLIV,,,E,0,0,0,0,0
+misctexts,ZA 20,.2,,,4,,0,1,0,0,0
+misctexts,ZA 20,.2,SI-TE-TU,,1,,0,0,0,0,0
+misctexts,ZA 20,.3,SI-TU,,6,,0,0,0,0,0
+misctexts,ZA 20,.3,TE-*123,,12,,0,0,0,0,0
+misctexts,ZA 20,.3,RU-MA-TA-SE,,3,,0,0,0,0,0
+misctexts,ZA 20,.4,KU-RA,,130,,0,0,0,0,0
+misctexts,ZA 26,a.2,OVISf,,13,,0,1,0,0,0
+misctexts,ZA 26,b.1,OVISf,,7,,0,1,0,0,0
+misctexts,ZA 27,.2,DI-KI,,2,,0,1,0,0,0
+misctexts,ZA 29,a.1,MA,,100,,0,1,0,0,0
+misctexts,ZA 30,.2,,,7,,0,1,0,0,0
+misctexts,ZA 4,a.1,,,,E,0,1,0,0,0
+misctexts,ZA 4,a.2,PI-•-SE,,5,,0,1,0,0,0
+misctexts,ZA 4,a.2-3,JA-TO-JA,,3,,0,1,0,0,0
+misctexts,ZA 4,a.3,A-TI-RU,,4,,0,0,0,0,0
+misctexts,ZA 4,a.3-4,JA-PA,,1,,0,1,0,0,0
+misctexts,ZA 4,a.4,-TU-ME-SE,,18,,0,1,0,0,0
+misctexts,ZA 4,a.5,QE-SI-ZU-E,,4,,0,0,0,0,0
+misctexts,ZA 4,a.5-6,Ib-NU-MA-RE,,13,,0,0,0,0,0
+misctexts,ZA 4,a.6-7,SI-PI-KI,,5,,0,0,0,0,0
+misctexts,ZA 4,a.7,E-*82,,50,,0,0,0,0,0
+misctexts,ZA 4,a.8,KA-DI,,3,,0,0,0,0,0
+misctexts,ZA 4,b.1,VINa,,104,,0,1,0,0,0
+misctexts,ZA 6,a.1,PA+,,64,,1,1,0,0,0
+misctexts,ZA 6,a.1,TI,,13,,0,1,0,0,0
+misctexts,ZA 6,a.2,RU,,28,,0,0,0,0,0
+misctexts,ZA 6,a.3,,,6,,0,0,0,0,0
+misctexts,ZA 6,b.1,TU,,6,,0,1,0,0,0
+misctexts,ZA 6,b.1,PA+,,40,,1,1,0,0,0
+misctexts,ZA 6,b.2,TI,,13,,0,0,0,0,0
+misctexts,ZA 6,b.2,RU,,26,,0,0,0,0,0
+misctexts,ZA 7,a.1,U-JU,,5,,0,0,0,0,0
+misctexts,ZA 7,a.1-2,A-RA-TU,,4,,0,0,0,0,0
+misctexts,ZA 8,.1,A-TA-RE,FIC,,J,0,0,0,0,0
+misctexts,ZA 8,.2,KU-TU-KO-RE,,,DD,0,0,0,0,0
+misctexts,ZA 8,.2-3,A-RI-NI-TA,,1,BB,0,1,0,0,0
+misctexts,ZA 8,.3-4,TA-I-NU-MA-PA,,,J,0,0,0,0,0
+misctexts,ZA 8,.4,MA-KA-I-SE,,2,EJ,0,0,0,0,0
+misctexts,ZA 8,.5,DA-I-PI-TA,,2,J,0,0,0,0,0
+misctexts,ZA 8,.6,KA-I-RO,,4,BB,0,0,0,0,0
+misctexts,ZA 9,.2,-RA,OVIS+SI *512,5,,0,1,1,0,0
+misctexts,ZA 9,.3-4,RO-SI-RA,OVIS+SI *512,4,,0,1,0,0,0
+misctexts,ZA 9,.4-5,A-TA-NA-,OVIS+SI *512,2,,0,1,0,0,0
+misctexts,ZA 9,.5,-MA-JU,OVISf,2,,0,1,0,0,0
+misctexts,ZA 9,.6,WI-RA-RE-MI-TE,OVISf,1,,0,0,0,0,0
+religioustexts,ZA Zb 3,1,VINa,,32,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.1,KA-RU,*307+*307 *638 VIR+KA *568,82,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.1-2,*327,,33,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.3,KA-NU-TI,,25,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.3,PA-I-TO,,6,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.4,DI,,4,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.4,NA-TI,,4,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.4,MA-DI,,5,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.4-5,JU,,15,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.5,KI,,3,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.5,ZU,,5,,0,1,0,0,0
+HTtexts,ZA Zb 3,a.5,TA-TI,,2,,0,0,0,0,0
+HTtexts,ZA Zb 3,a.6,DE-,,3,,0,1,0,0,0
+HTtexts,ZA Zb 3,a.6,A,,5,,0,1,0,0,0
