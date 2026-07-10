@@ -1,0 +1,86 @@
+{
+ "run": "E201_F1a",
+ "scored": "2026-07-10",
+ "frozen_rules": "MILESTONE2_CONTROL_ADDENDUM @ 5deec1e",
+ "status_class": "ALPHABETIC_REPLAY_ONLY_NOT_QUALIFIED_FOR_LINEAR_A",
+ "per_dataset_R_full_holdout": {
+  "linear_b-greek.cog": {
+   "acc": 0.0,
+   "threshold": 0.5,
+   "chance": 0.019091106703023494,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "abstained": false,
+   "qualifies": false
+  },
+  "csyl-greek.cog": {
+   "acc": 0.004807692307692308,
+   "threshold": 0.35,
+   "chance": 0.005447983894957752,
+   "ci95": [
+    0.0,
+    0.014423076923076924
+   ],
+   "abstained": false,
+   "qualifies": false
+  },
+  "uga-heb.no_speNL.cog": {
+   "acc": 0.48575712143928035,
+   "threshold": 0.6,
+   "chance": 0.0006487470122182886,
+   "ci95": [
+    0.4482758620689655,
+    0.5217391304347826
+   ],
+   "abstained": false,
+   "qualifies": false
+  }
+ },
+ "syllabic_qualification": false,
+ "false_graduation_calibration": {
+  "n_null": 200,
+  "false": 0,
+  "cp95_upper_exact": 0.014867039231272054,
+  "target": 0.02,
+  "certified": true,
+  "note": "0/200 with the full frozen pipeline (incl. abstention) inside every null; composition 67/67/66"
+ },
+ "leakage": {
+  "linear_b-greek.cog": {
+   "identical_frac": 0.0,
+   "fired": false,
+   "partition_overlap": false
+  },
+  "csyl-greek.cog": {
+   "identical_frac": 0.0,
+   "fired": false,
+   "partition_overlap": false
+  },
+  "uga-heb.no_speNL.cog": {
+   "identical_frac": 0.34417344173441733,
+   "fired": true,
+   "partition_overlap": false
+  }
+ },
+ "leakage_clean": false,
+ "output_hashes": {
+  "F1a_qualification.json": "e6c8eec2c79564abcc86f0b441354d4ac1bfe096c7775a25195c33a5d7ed4131",
+  "F1a_null_calibration.json": "33ae707ce38c2a5424d075fd46d922b3d6355b81508e774da1f5394b80a820c2",
+  "F1a_summary.json": "9fbca21cb60d68a502aa10a47d58c83fba65874b609a1e5f50bf6474535e91a8"
+ },
+ "interpretation_rules_applied": [
+  "Ugaritic 0.486 (chance 0.0006; 810x) demonstrates alphabetic recovery capability but is BELOW its own preregistered 0.60 threshold -> nothing is promoted",
+  "Linear B 0.000 and Cypriot 0.005 (=chance) -> no syllabic benchmark passes -> the EM implementation is NOT qualified for Linear A positive inference",
+  "calibration certificate (CP95 upper 1.49% <= 2%) attaches to the FALSE-GRADUATION arm only, never to recovery capability",
+  "no rerun: negative result under frozen rules stands"
+ ],
+ "leak_adjudication": {
+  "finding": "detector fired ONLY on uga-heb (34.4% byte-identical cipher/plain words)",
+  "cause": "DATASET-INHERENT: Ugaritic and Hebrew are closely related Semitic languages sharing the file's romanization; identical strings are true cognate identity, not a data-handling defect",
+  "syllabic_datasets": "0.0% identical; leak-clean; partition overlaps zero everywhere",
+  "consequence": "qualification unaffected (UGA is alphabetic and sub-threshold anyway); UGA's above-chance recovery (0.486) is additionally DISCOUNTED as partially trivial retrieval; calibration arm ran at the leak-clean LB regime so the CP95 certificate stands"
+ },
+ "leakage_clean_syllabic": true
+}

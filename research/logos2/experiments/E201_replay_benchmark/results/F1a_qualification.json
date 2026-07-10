@@ -1,0 +1,146 @@
+{
+ "linear_b-greek.cog": {
+  "dataset": "linear_b-greek.cog",
+  "threshold": 0.5,
+  "R_full": {
+   "holdout_acc": 0.0,
+   "chance": 0.019091106703023494,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "confidence": 0.6376811594202898,
+   "abstained": false,
+   "n_holdout": 276
+  },
+  "ladder": {
+   "0_names": {
+    "holdout_acc": 0.0,
+    "chance": 0.019091106703023494,
+    "abstained": false
+   },
+   "1_names": {
+    "holdout_acc": 0.0,
+    "chance": 0.019091106703023494,
+    "abstained": false
+   },
+   "3_names": {
+    "holdout_acc": 0.0,
+    "chance": 0.019091106703023494,
+    "abstained": false
+   },
+   "5_names": {
+    "holdout_acc": 0.0,
+    "chance": 0.019091106703023494,
+    "abstained": false
+   },
+   "10_names": {
+    "holdout_acc": 0.0,
+    "chance": 0.019091106703023494,
+    "abstained": false
+   }
+  },
+  "partition_overlap": false,
+  "leak": {
+   "identical_frac": 0.0,
+   "fired": false
+  },
+  "qualifies": false
+ },
+ "csyl-greek.cog": {
+  "dataset": "csyl-greek.cog",
+  "threshold": 0.35,
+  "R_full": {
+   "holdout_acc": 0.004807692307692308,
+   "chance": 0.005447983894957752,
+   "ci95": [
+    0.0,
+    0.014423076923076924
+   ],
+   "confidence": 0.8113207547169812,
+   "abstained": false,
+   "n_holdout": 208
+  },
+  "ladder": {
+   "0_names": {
+    "holdout_acc": 0.004807692307692308,
+    "chance": 0.005447983894957752,
+    "abstained": false
+   },
+   "1_names": {
+    "holdout_acc": 0.0,
+    "chance": 0.005447983894957752,
+    "abstained": false
+   },
+   "3_names": {
+    "holdout_acc": 0.004807692307692308,
+    "chance": 0.005447983894957752,
+    "abstained": false
+   },
+   "5_names": {
+    "holdout_acc": 0.004807692307692308,
+    "chance": 0.005447983894957752,
+    "abstained": false
+   },
+   "10_names": {
+    "holdout_acc": 0.004807692307692308,
+    "chance": 0.005447983894957752,
+    "abstained": false
+   }
+  },
+  "partition_overlap": false,
+  "leak": {
+   "identical_frac": 0.0,
+   "fired": false
+  },
+  "qualifies": false
+ },
+ "uga-heb.no_speNL.cog": {
+  "dataset": "uga-heb.no_speNL.cog",
+  "threshold": 0.6,
+  "R_full": {
+   "holdout_acc": 0.48575712143928035,
+   "chance": 0.0006487470122182886,
+   "ci95": [
+    0.4482758620689655,
+    0.5217391304347826
+   ],
+   "confidence": 0.9666666666666667,
+   "abstained": false,
+   "n_holdout": 667
+  },
+  "ladder": {
+   "0_names": {
+    "holdout_acc": 0.0029985007496251873,
+    "chance": 0.0006487470122182886,
+    "abstained": false
+   },
+   "1_names": {
+    "holdout_acc": 0.013493253373313344,
+    "chance": 0.0006487470122182886,
+    "abstained": false
+   },
+   "3_names": {
+    "holdout_acc": 0.06746626686656672,
+    "chance": 0.0006487470122182886,
+    "abstained": false
+   },
+   "5_names": {
+    "holdout_acc": 0.12593703148425786,
+    "chance": 0.0006487470122182886,
+    "abstained": false
+   },
+   "10_names": {
+    "holdout_acc": 0.3568215892053973,
+    "chance": 0.0006487470122182886,
+    "abstained": false
+   }
+  },
+  "partition_overlap": false,
+  "leak": {
+   "identical_frac": 0.34417344173441733,
+   "fired": true
+  },
+  "qualifies": false
+ }
+}

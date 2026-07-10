@@ -10,3 +10,4 @@
 {"ts": "2026-07-10", "event": "E202_COMPLETE", "outputs": ["VALUE_OF_INFORMATION.csv", "SEQUENTIAL_ACQUISITION_POLICY.json", "EVIDENCE_ACQUISITION_PRIORITIES.md"]}
 {"ts": "2026-07-10", "event": "E205_I_COMPLETE", "verdict": "PRIOR_GENERIC", "note": "A/B cells deferred with reason; C blocked"}
 {"ts": "2026-07-10", "event": "PROTECTED_ASSETS_REVERIFIED", "result": "ALL OK (36-entry baseline; 5 frontier-path entries re-verified from their worktree root; content intact)", "tests": "E203 10/10 green", "note": "F1a running"}
+{"ts": "2026-07-10", "event": "E201_F1a_SCORED", "status_class": "ALPHABETIC_REPLAY_ONLY_NOT_QUALIFIED_FOR_LINEAR_A", "false_grad": "0/200 CP95 1.49% CERTIFIED", "syllabic": "LB 0.000, CSYL at chance", "leak": "uga-heb dataset-inherent cognate identity; syllabic clean"}

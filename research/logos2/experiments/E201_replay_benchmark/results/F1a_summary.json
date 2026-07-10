@@ -1,0 +1,20 @@
+{
+ "run": "E201_F1a",
+ "confirmatory": true,
+ "qualification": {
+  "linear_b-greek.cog": false,
+  "csyl-greek.cog": false,
+  "uga-heb.no_speNL.cog": false
+ },
+ "calibration": {
+  "n_null": 200,
+  "false_graduations": 0,
+  "rate": 0.0,
+  "cp95_upper": 0.014867039231272054,
+  "target": 0.02,
+  "passes": true
+ },
+ "verdict": "NOT_QUALIFIED_FOR_LINEAR_A_POSITIVE_INFERENCE",
+ "runtime_s": 386.1,
+ "note": "F1b (sufficiency-curve integration) remains PENDING the CSA sweep import under the 2.3 boundary"
+}
