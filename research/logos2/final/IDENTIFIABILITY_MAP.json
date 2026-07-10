@@ -1,0 +1,60 @@
+{
+ "generated_from": [
+  "F1_exact_counts.json",
+  "F1_extended_nulls.json",
+  "F1_mus_cores.json"
+ ],
+ "ambiguity_log10_by_configuration": {
+  "EMPTY": {
+   "log10_count": 295.90385762385245,
+   "exact": false,
+   "n_components": 135,
+   "largest_component": 24
+  },
+  "WPH38_model2": {
+   "log10_count": 224.8343130920273,
+   "exact": true,
+   "n_components": 148,
+   "largest_component": 6
+  },
+  "PINS4": {
+   "log10_count": 286.83750435280655,
+   "exact": false,
+   "n_components": 135,
+   "largest_component": 24
+  }
+ },
+ "null_adjudication": {
+  "WPH38": {
+   "value_permutation_null_unsat": "200/200",
+   "frequency_preserving_null_unsat": "200/200"
+  },
+  "SALGARELLA": {
+   "value_permutation_null_unsat": "200/200",
+   "frequency_preserving_null_unsat": "200/200"
+  }
+ },
+ "mus_cores": {
+  "WPH38": {
+   "sizes": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "verdict": "CORES_TYPICAL_OF_RANDOM"
+  },
+  "SALGARELLA": {
+   "sizes": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "verdict": "CORES_TYPICAL_OF_RANDOM"
+  }
+ },
+ "reading": "Ambiguity remains astronomically underdetermined under every configuration; hard-pin UNSAT is generic (matched nulls UNSAT 200/200); MUS cores are typical of random instances. No non-generic domain contraction exists at current evidence. Identifiability threshold as priced by the anchor-lattice campaign stands: 12 anchors x 8 slots across 12 distinct lineages; foothold 2-3; Linear A holds zero dependency-collapsed independent anchors."
+}

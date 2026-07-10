@@ -60,6 +60,17 @@ def main():
         "pending_external": ["E201_F1b (CSA sweep ~2026-07-13; cannot alter closed conclusions)"]}
     json.dump(summary, open(os.path.join(FIN, "MACHINE_READABLE_SUMMARY.json"), "w"), indent=1)
 
+    # carried deliverables (generated elsewhere; copied with provenance, never rewritten)
+    import shutil, subprocess
+    E202 = os.path.join(ROOT, "experiments", "E202_acquisition_policy")
+    shutil.copy(os.path.join(E202, "VALUE_OF_INFORMATION.csv"), os.path.join(FIN, "VALUE_OF_INFORMATION.csv"))
+    shutil.copy(os.path.join(E202, "EVIDENCE_ACQUISITION_PRIORITIES.md"),
+                os.path.join(FIN, "ANCHOR_ACQUISITION_PRIORITIES.md"))
+    shutil.copy(os.path.join(ROOT, "experiments", "E212_independence_graph.json"),
+                os.path.join(FIN, "EVIDENCE_INDEPENDENCE_GRAPH.json"))
+    subprocess.run([os.path.join(ROOT, ".venv", "bin", "python"),
+                    os.path.join(FIN, "gen_identifiability_map.py")], check=True)
+
     # ARTIFACT_MANIFEST.json + BUNDLE_MANIFEST.sha256 over research/logos2 (code+results, no .venv/db)
     arts = []
     for dp, dns, fns in os.walk(ROOT):
@@ -76,6 +87,15 @@ def main():
     with open(os.path.join(FIN, "BUNDLE_MANIFEST.sha256"), "w") as f:
         f.write(man_h + "  ARTIFACT_MANIFEST.json\n")
     print(f"package: {len(rows)} experiments | {len(g['claims'])} claims | {len(arts)} artifacts hashed")
+    if "--zip" in os.sys.argv:
+        z = os.path.join(ROOT, "LOGOS2_REVIEW_BUNDLE.zip")
+        if os.path.exists(z): os.remove(z)
+        subprocess.run(["zip", "-qr", z, ".", "-x", ".venv/*", "*__pycache__*", "*.sqlite",
+                        "automation/logs/*", "LOGOS2_REVIEW_BUNDLE.zip"], cwd=ROOT, check=True)
+        zh = hashlib.sha256(open(z, "rb").read()).hexdigest()
+        with open(os.path.join(FIN, "REVIEW_BUNDLE.zip.sha256"), "w") as f:
+            f.write(zh + "  LOGOS2_REVIEW_BUNDLE.zip\n")
+        print("review zip:", zh[:16], "…")
     return 0
 
 if __name__ == "__main__":

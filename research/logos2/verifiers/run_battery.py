@@ -112,7 +112,7 @@ def check_asrun():
 
 def check_seal():
     sd = os.path.join(ROOT, "experiments", "E213_prospective_seal")
-    if not os.path.isdir(sd):
+    if not os.path.exists(os.path.join(sd, "SEAL_MANIFEST.json")):
         print("  (E213 seal not present yet — skipped)"); return
     man = json.load(open(os.path.join(sd, "SEAL_MANIFEST.json")))
     blob = os.path.join(sd, man["sealed_file"])
