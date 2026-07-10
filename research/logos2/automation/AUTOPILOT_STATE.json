@@ -1,6 +1,6 @@
 {
  "installed": null,
- "last_watchdog": "2026-07-10T01:15:02Z",
+ "last_watchdog": "2026-07-10T01:30:02Z",
  "last_claude_continuation": null,
  "last_commit": null,
  "last_push": null,
@@ -9,5 +9,6 @@
  "consecutive_failures": 0,
  "last_failure_reason": null,
  "mission_wave": 3,
- "mission_extended": "2026-07-10"
+ "mission_extended": "2026-07-10",
+ "latest_handoff": "state/LATEST_HANDOFF.json (2026-07-10 wave-4)"
 }

@@ -1,0 +1,60 @@
+{
+ "written": "2026-07-10",
+ "branch": "research/logos2-anchor-identifiability",
+ "commit": "9eb1120",
+ "active_jobs": [
+  {
+   "what": "E204 metrology SOFT arm",
+   "script": "research/logos2/experiments/E204_metrology/run_metrology_soft.py",
+   "pids": "1923860 1923942 1930494 1930501",
+   "output": "results_metrology/METROLOGY_SOFT_RESULTS.json",
+   "on_completion": "score under frozen vocabulary (L3_METROLOGICAL_CLASS_SUPPORTED|METROLOGICAL_RELATIONS_PARTIAL|UNDERDETERMINED_AFTER_ABLATION|NULL_NOT_DISTINCTIVE|E204_INVALID); strict-arm INFEASIBLE result stays separate; seal stays closed"
+  },
+  {
+   "what": "E206 Stage-2 scorer",
+   "script": "research/logos2/experiments/E206_onomastic_linkage/stage2/run_stage2.py",
+   "pids": "1930053 1930149 1930494 1930505",
+   "output": "experiments/E206_onomastic_linkage/stage2/STAGE2_RESULT.json",
+   "on_completion": "verdict from frozen vocabulary; conditional-map labelling mandatory"
+  },
+  {
+   "what": "external CSA sweep (operator job, do not touch)",
+   "eta": "~2026-07-13",
+   "on_completion": "F1b import ONLY via imports/E201_F1B boundary"
+  }
+ ],
+ "completed": [
+  "preflight",
+  "E200",
+  "E201 pilot+F1a(scored)",
+  "E202",
+  "E203 pilot+F1",
+  "E204(blocked)",
+  "E204R(blocked)",
+  "E204R2(PASSED)",
+  "E204 strict arm(INFEASIBLE=data-completeness)",
+  "E205-I",
+  "E206-S1+S2 freeze",
+  "E207",
+  "M2 report",
+  "autopilot(live)",
+  "E204 metrology stack freeze"
+ ],
+ "next_dag_nodes": [
+  "E204 soft-arm scoring (when process ends)",
+  "E206-S2 scoring (when process ends)",
+  "E211-RAG: smallest local stack (sqlite FTS5 BM25 + optional Ollama dense via gpu01); indexes A-E; source register; benchmarks; NO production-KB mixing",
+  "E201-F1b (pending sweep)",
+  "E212 independence graph",
+  "E213 seal (hard index cutoff first)",
+  "E214 red-team",
+  "final/ 15 deliverables + review zip"
+ ],
+ "frozen_gates": "see prompt section 1 of wave-4 + CLAIM_LADDER.md; E204R2 canonical dataset sha f97fc7e4...; seal unopened",
+ "blockers": [
+  "E204/E204R blocked-quality (historical, preserved)",
+  "E205 A/B deferred",
+  "E205C/E208 blocked/de-authorized"
+ ],
+ "continuation_instruction": "Resume per automation/WATCHDOG_PROMPT.md (wave-3 extension). Score any finished background job FIRST (results before interpretation), then continue next_dag_nodes in order. Never weaken a frozen gate; never open a seal; ledger+STATUS+commit+push at every milestone."
+}
