@@ -1,0 +1,57 @@
+{
+ "arithmetic_docs": 20,
+ "fraction_constrained_docs": 9,
+ "letters": [
+  "B",
+  "D",
+  "E",
+  "H",
+  "J"
+ ],
+ "bases": {
+  "60": {
+   "n_solutions": 0,
+   "hit_cap": false,
+   "status": "INFEASIBLE",
+   "relations": {
+    "feasible": false
+   }
+  },
+  "120": {
+   "n_solutions": 0,
+   "hit_cap": false,
+   "status": "INFEASIBLE",
+   "relations": {
+    "feasible": false
+   }
+  },
+  "240": {
+   "n_solutions": 0,
+   "hit_cap": false,
+   "status": "INFEASIBLE",
+   "relations": {
+    "feasible": false
+   }
+  }
+ },
+ "atomic_arm_base120": {
+  "n_solutions": 0,
+  "relations": {
+   "feasible": false
+  }
+ },
+ "ablations": {
+  "loo_doc_stable_relations": [],
+  "loo_site_stable_relations": []
+ },
+ "null_battery": {
+  "n_null": 200,
+  "null_feasible": 0,
+  "null_with_ge_observed_relations": 0,
+  "p_plus1_relations": 0.00498,
+  "cp95_upper_ge_rate": 0.0149
+ },
+ "verdict": "E204_INVALID",
+ "runtime_s": 0.9,
+ "no_phonetic_value": "no phonetic value can graduate from E204 (frozen ceiling L3)"
+}

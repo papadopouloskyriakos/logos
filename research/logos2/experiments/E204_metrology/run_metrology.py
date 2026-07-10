@@ -11,6 +11,10 @@ from collections import defaultdict
 import numpy as np
 from ortools.sat.python import cp_model
 
+SITEMAP = json.load(open(os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..",
+    "E204R2_residual_canonicalization", "SCHEMA.json")))["site_prefix"]
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "E204R2_residual_canonicalization",
                     "CANONICAL_FRACTION_DATASET.csv")
@@ -35,7 +39,7 @@ def load_docs():
         if not clean or not r["integer"]:
             continue
         d = docs[r["doc_id"]]
-        d["site"] = r["site"]
+        d["site"] = SITEMAP.get(r["doc_id"].split()[0], "?")
         item = (int(r["integer"]), r["fraction_seq"])
         if r["is_kuro"] == "1":
             if d["kuro"] is None:
