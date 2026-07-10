@@ -16,7 +16,7 @@ PROSEW = frozenset(["according", "perhaps", "sometimes", "found", "distribute", 
                     "record", "records", "note", "cf.", "see", "comments", "update",
                     "bibliography"])
 ENTMAP = {"amp": "&", "lt": "<", "gt": ">", "nbsp": " ", "bull": "•", "#8226": "•",
-          "quot": '"'}
+          "#149": "•", "#183": "•", "quot": '"'}
 
 
 def squash(s):
@@ -233,7 +233,10 @@ def main():
                 elif kind2 == "frac":
                     frac += "".join(stripped.split())
                 elif kind2 == "content":
-                    content.append(hyphen_norm(stripped))
+                    hn = hyphen_norm(stripped)
+                    kept = [t.strip("•") for t in hn.split() if t.strip("•")]
+                    if kept:
+                        content.append(" ".join(kept))
             if not integer and not frac:
                 continue
             statement = content[0] if content else ""

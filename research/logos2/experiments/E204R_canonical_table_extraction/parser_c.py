@@ -101,9 +101,9 @@ def is_locus(tok):
     if tok in ("side.", "edge.", "lat."):
         return True
     s = tok
-    if s[:1] in "ab":
+    if s[:1] and s[:1] in "ab":
         s = s[1:]
-    while s[:1] in "iv":
+    while s[:1] and s[:1] in "iv":
         s = s[1:]
     if s[:1] == ".":
         s = s[1:]
@@ -120,7 +120,23 @@ def cell_class(cell):
     return "content" if toks else "empty"
 
 
+def coalesce(stream):
+    """Merge consecutive text events (inline tags fragment designations across nodes)."""
+    out, buf = [], []
+    for kind, payload in stream:
+        if kind == "text":
+            buf.append(payload)
+        else:
+            if buf:
+                out.append(("text", " ".join(buf))); buf = []
+            out.append((kind, payload))
+    if buf:
+        out.append(("text", " ".join(buf)))
+    return out
+
+
 def records(stream):
+    stream = coalesce(stream)
     doc_id = site = support = None
     out, dup_log = [], []
     seen = set()
@@ -177,8 +193,12 @@ def records(stream):
             elif k == "frac":
                 frac += "".join(cc.split())
             else:
-                content.append(" ".join(cc.replace(" - ", "-").replace("- ", "-")
-                                        .replace(" -", "-").split()))
+                txt = " ".join(cc.replace(" - ", "-").replace("- ", "-")
+                               .replace(" -", "-").split())
+                toks2 = [t for t in txt.split() if t.strip("•")]
+                txt = " ".join(t.strip("•") for t in toks2 if t.strip("•"))
+                if txt:
+                    content.append(txt)
         if not integer and not frac:
             continue
         statement = content[0] if content else ""
