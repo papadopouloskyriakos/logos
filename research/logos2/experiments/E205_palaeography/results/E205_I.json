@@ -1,0 +1,31 @@
+{
+ "cell": "E205_I",
+ "conditions": {
+  "1_NO_HOMOMORPHY_PRIOR": {
+   "empty_log10": 295.90385762385245,
+   "pins4_log10_upper": 286.84
+  },
+  "2_GRADED_PALAEOGRAPHIC_PRIOR": {
+   "n_graded_equalities": 25,
+   "real_contraction_log10": null,
+   "real_rel_edges_dropped": 6,
+   "null_contraction_mean": 54.24988796277965,
+   "null_contraction_band_5_95": [
+    52.990210852865026,
+    55.261245959503086
+   ],
+   "null_inconsistent_rate": 0.34,
+   "null_edges_dropped_mean": 6.34,
+   "p_plus1": null
+  },
+  "3_HARD_IDENTITY_SENSITIVITY_ONLY": {
+   "reference": "pilot UNSAT_adjudication.json + F1_extended_nulls.json",
+   "result": "UNSAT_GENERIC 200/200 under all matched-null families",
+   "label": "aggressive sensitivity arm; never the default model"
+  }
+ },
+ "verdict": "PRIOR_GENERIC",
+ "verdict_detail": "real grade assignment inconsistent after model-2 edge dropping",
+ "vocabulary_note": "palaeographic evidence only: sign-shape continuity, never phonetic-value identity; condition-2 equalities exist only under the UNLICENSED continuity hypothesis (conditional map)",
+ "runtime_s": 19.7
+}

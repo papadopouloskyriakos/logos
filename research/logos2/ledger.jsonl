@@ -8,3 +8,4 @@
 {"ts": "2026-07-10", "event": "E207_COMPLETE", "verdict": "POSITIONAL_ONLY", "note": "amendment R1 defect repair exercised; as-run preserved INVALID"}
 {"ts": "2026-07-10", "event": "E203_F1_COMPLETE", "confirmatory": true, "highlights": ["MUS size-2 typical-of-random", "WPH38 exact 10^224.83", "value-permutation nulls UNSAT 200/200", "VOI measured"]}
 {"ts": "2026-07-10", "event": "E202_COMPLETE", "outputs": ["VALUE_OF_INFORMATION.csv", "SEQUENTIAL_ACQUISITION_POLICY.json", "EVIDENCE_ACQUISITION_PRIORITIES.md"]}
+{"ts": "2026-07-10", "event": "E205_I_COMPLETE", "verdict": "PRIOR_GENERIC", "note": "A/B cells deferred with reason; C blocked"}

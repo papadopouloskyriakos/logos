@@ -1,5 +1,15 @@
 {
  "experiment": "E205",
- "status": "PREREGISTERED",
- "exploratory": true
+ "status": "I_COMPLETE_A_B_DEFERRED",
+ "exploratory": true,
+ "verdict_I": "PRIOR_GENERIC",
+ "detail": "real Salgarella grade assignment inconsistent after model-2 edge dropping; grade-permutation nulls establish contraction is pin-count-generic; HARD condition already UNSAT_GENERIC 200/200 (pilot/F1)",
+ "deferred": [
+  "A1 cluster stability",
+  "A2 grade agreement",
+  "A3 merge-split counterfactuals",
+  "B site attribution"
+ ],
+ "deferred_reason": "milestone-2 report deadline ordering; preregs frozen (8c3ef82), machinery pattern established; bbox data confirmed available (787 docs)",
+ "E205C": "BLOCKED_DATA (BLOCKED_E205C.json)"
 }
