@@ -1,0 +1,1044 @@
+{
+ "experiment": "E206_S2",
+ "freeze": "6e6af04",
+ "conditional_on": "UNLICENSED A/B same-sign convention (conditional map)",
+ "replay_qualification": 0.905,
+ "n_confirmatory": 147,
+ "n_exploratory_flagged": 4,
+ "holm_family_size": 147,
+ "survivors": [],
+ "correspondence": {},
+ "n_matched_raw": 31,
+ "verdict": "NO_MATCH_BEYOND_CANARIES",
+ "per_candidate": {
+  "KU-RA": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "ke-ra",
+   "p_plus1_vs_fabricated": 0.28856,
+   "beats_shuffled_median": false
+  },
+  "SI-RU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "su-ro",
+   "p_plus1_vs_fabricated": 0.95522,
+   "beats_shuffled_median": false
+  },
+  "KI-RE-TA\u2082": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ki-ri-ta",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "MA-RU-ME": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ma-re-u",
+   "p_plus1_vs_fabricated": 0.87562,
+   "beats_shuffled_median": false
+  },
+  "QE-RA\u2082-U": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "qe-ta-ra-je-u",
+   "p_plus1_vs_fabricated": 0.87065,
+   "beats_shuffled_median": false
+  },
+  "I-KA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "i-ke-u",
+   "p_plus1_vs_fabricated": 0.9204,
+   "beats_shuffled_median": false
+  },
+  "KU-PA\u2083-NA-TU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-na-ja",
+   "p_plus1_vs_fabricated": 0.77612,
+   "beats_shuffled_median": false
+  },
+  "DA-RI-DA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "da-ro",
+   "p_plus1_vs_fabricated": 0.88557,
+   "beats_shuffled_median": false
+  },
+  "DI-NA-U": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "we-da-ne-u",
+   "p_plus1_vs_fabricated": 0.84577,
+   "beats_shuffled_median": false
+  },
+  "*324-DI-RA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "pe-di-ra",
+   "p_plus1_vs_fabricated": 0.32836,
+   "beats_shuffled_median": true
+  },
+  "*409-VS": {
+   "score": 1.0,
+   "matched": false,
+   "best_name": "wa-na-ta-jo",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "U-*325-ZA": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "o-u-wo-ze",
+   "p_plus1_vs_fabricated": 0.9403,
+   "beats_shuffled_median": false
+  },
+  "PA-SE-JA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "pa-ta-ja",
+   "p_plus1_vs_fabricated": 0.31343,
+   "beats_shuffled_median": true
+  },
+  "DA-I-PI-TA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "do-po-ta",
+   "p_plus1_vs_fabricated": 0.78109,
+   "beats_shuffled_median": false
+  },
+  "DA-I": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "da-mo",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "QA-*310-I": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "qa-ra-i-so",
+   "p_plus1_vs_fabricated": 0.8209,
+   "beats_shuffled_median": false
+  },
+  "TE-TU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "to-to",
+   "p_plus1_vs_fabricated": 0.9602,
+   "beats_shuffled_median": false
+  },
+  "AU-SI-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "a-ke-re",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "PI-SA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "pi-pi",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "I-GRA+PA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "i-qo",
+   "p_plus1_vs_fabricated": 0.94527,
+   "beats_shuffled_median": false
+  },
+  "*304+PA-CYP+D": {
+   "score": 1.0,
+   "matched": false,
+   "best_name": "wa-na-ta-jo",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "MA-DI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ma-te",
+   "p_plus1_vs_fabricated": 0.9403,
+   "beats_shuffled_median": false
+  },
+  "MI-NU-TE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ma-te",
+   "p_plus1_vs_fabricated": 0.8209,
+   "beats_shuffled_median": false
+  },
+  "PA-RA-NE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-ra-no",
+   "p_plus1_vs_fabricated": 0.85572,
+   "beats_shuffled_median": false
+  },
+  "RE-TI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ke-re-ti-wo",
+   "p_plus1_vs_fabricated": 0.9602,
+   "beats_shuffled_median": false
+  },
+  "SA-MA": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "si-ma",
+   "p_plus1_vs_fabricated": 0.16418,
+   "beats_shuffled_median": false
+  },
+  "SA-RA\u2082": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "ka-sa-to",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "QE-PU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "qe-to",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "DI-RI-NA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "di-ro",
+   "p_plus1_vs_fabricated": 0.85572,
+   "beats_shuffled_median": false
+  },
+  "PA-DE": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "po-de",
+   "p_plus1_vs_fabricated": 0.20398,
+   "beats_shuffled_median": false
+  },
+  "PA-TA-NE": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "pa-ta-ja",
+   "p_plus1_vs_fabricated": 0.35323,
+   "beats_shuffled_median": true
+  },
+  "SA-RU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "su-ro",
+   "p_plus1_vs_fabricated": 0.94527,
+   "beats_shuffled_median": false
+  },
+  "KI-RA": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "ke-ra",
+   "p_plus1_vs_fabricated": 0.20398,
+   "beats_shuffled_median": false
+  },
+  "TA-NA-TI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ta-ni-ko",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "U-*49": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "u-po",
+   "p_plus1_vs_fabricated": 0.93532,
+   "beats_shuffled_median": false
+  },
+  "QA-QA-RU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "e-qa-ro",
+   "p_plus1_vs_fabricated": 0.8607,
+   "beats_shuffled_median": false
+  },
+  "KU-PA\u2083-NU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-ra-no",
+   "p_plus1_vs_fabricated": 0.8408,
+   "beats_shuffled_median": false
+  },
+  "DA-SI-*118": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "di-pi-si-ja",
+   "p_plus1_vs_fabricated": 0.95522,
+   "beats_shuffled_median": false
+  },
+  "DA-RE": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "da-ro",
+   "p_plus1_vs_fabricated": 0.18408,
+   "beats_shuffled_median": false
+  },
+  "ME-ZA": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "me-zo",
+   "p_plus1_vs_fabricated": 0.16915,
+   "beats_shuffled_median": false
+  },
+  "QE-SI-ZU-E": {
+   "score": 0.375,
+   "matched": false,
+   "best_name": "qi-si-pe-e",
+   "p_plus1_vs_fabricated": 0.12935,
+   "beats_shuffled_median": true
+  },
+  "TE-KI": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "te-ke",
+   "p_plus1_vs_fabricated": 0.20398,
+   "beats_shuffled_median": false
+  },
+  "SI-PI-KI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "si-ma-ko",
+   "p_plus1_vs_fabricated": 0.85572,
+   "beats_shuffled_median": false
+  },
+  "MA-KA-I-TA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ma-ri-ta",
+   "p_plus1_vs_fabricated": 0.76617,
+   "beats_shuffled_median": false
+  },
+  "DA-ME": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "da-mo",
+   "p_plus1_vs_fabricated": 0.21891,
+   "beats_shuffled_median": false
+  },
+  "PA-JA-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "pa-ro",
+   "p_plus1_vs_fabricated": 0.8607,
+   "beats_shuffled_median": false
+  },
+  "KU-ZU-NI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-ra-no",
+   "p_plus1_vs_fabricated": 0.84577,
+   "beats_shuffled_median": false
+  },
+  "SI-TU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "si-ma",
+   "p_plus1_vs_fabricated": 0.97512,
+   "beats_shuffled_median": false
+  },
+  "RU-MA-TA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ma-te",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "DI-NA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "di-ro",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "DI-KI-SE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "do-se",
+   "p_plus1_vs_fabricated": 0.83085,
+   "beats_shuffled_median": false
+  },
+  "KU-RE-JU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-ra-no",
+   "p_plus1_vs_fabricated": 0.8209,
+   "beats_shuffled_median": false
+  },
+  "KI-DA-RO": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "da-ro",
+   "p_plus1_vs_fabricated": 0.28358,
+   "beats_shuffled_median": true
+  },
+  "KA-DI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ka-ti",
+   "p_plus1_vs_fabricated": 0.98507,
+   "beats_shuffled_median": false
+  },
+  "SA-MI-DA-E": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "po-si-da-e-ja",
+   "p_plus1_vs_fabricated": 0.85572,
+   "beats_shuffled_median": false
+  },
+  "TE-*301": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "te-ke",
+   "p_plus1_vs_fabricated": 0.95522,
+   "beats_shuffled_median": false
+  },
+  "SI-CYP": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "si-ma",
+   "p_plus1_vs_fabricated": 0.94527,
+   "beats_shuffled_median": false
+  },
+  "TA-TI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ta-su",
+   "p_plus1_vs_fabricated": 0.9602,
+   "beats_shuffled_median": false
+  },
+  "*21F-TU-NE": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "te-ko-to-ne",
+   "p_plus1_vs_fabricated": 0.9602,
+   "beats_shuffled_median": false
+  },
+  "MI-TU": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "mi-ta",
+   "p_plus1_vs_fabricated": 0.18905,
+   "beats_shuffled_median": false
+  },
+  "RE-ZA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "re-wo",
+   "p_plus1_vs_fabricated": 0.9602,
+   "beats_shuffled_median": false
+  },
+  "WA-DU-NI-MI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "wa-ni-ko",
+   "p_plus1_vs_fabricated": 0.80597,
+   "beats_shuffled_median": false
+  },
+  "KU-NI-SU": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "ku-su",
+   "p_plus1_vs_fabricated": 0.32338,
+   "beats_shuffled_median": true
+  },
+  "PA\u2083-NI-NA": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "wa-ni-ko",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "KI-RO": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "su-ro",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "MU-RU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "me-ri",
+   "p_plus1_vs_fabricated": 0.9403,
+   "beats_shuffled_median": false
+  },
+  "VIR+[?]-I": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "pe-i",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "KA-KI": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "ka-ko",
+   "p_plus1_vs_fabricated": 0.23383,
+   "beats_shuffled_median": false
+  },
+  "*21F-*118": {
+   "score": 1.0,
+   "matched": false,
+   "best_name": "wa-na-ta-jo",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "SA-RO": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "su-ro",
+   "p_plus1_vs_fabricated": 0.21891,
+   "beats_shuffled_median": false
+  },
+  "DA-KU-SE-NE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "a-ko-so-ne",
+   "p_plus1_vs_fabricated": 0.77612,
+   "beats_shuffled_median": false
+  },
+  "KU-PA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-su",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "TA-I-AROM": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-ta-i-to",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "*28B-NU-MA-RE": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "sa-ma-ra",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "PA\u2083-NI": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "wa-ni-ko",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "ZU-DU": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "wi-du-ro",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "SA-VIN": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "ka-sa-to",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "DI-DE-RU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "di-ro",
+   "p_plus1_vs_fabricated": 0.81592,
+   "beats_shuffled_median": false
+  },
+  "DU-RE-ZA-SE": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "a-re-ke-se-u",
+   "p_plus1_vs_fabricated": 0.82587,
+   "beats_shuffled_median": false
+  },
+  "A-RI-NI-TA": {
+   "score": 0.4,
+   "matched": false,
+   "best_name": "a-e-ri-qo-ta",
+   "p_plus1_vs_fabricated": 0.14925,
+   "beats_shuffled_median": true
+  },
+  "A-RU": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "a-ru-ra",
+   "p_plus1_vs_fabricated": 0.32836,
+   "beats_shuffled_median": false
+  },
+  "*306-TU": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "ko-tu-we",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "SI-DA-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "da-ro",
+   "p_plus1_vs_fabricated": 0.83582,
+   "beats_shuffled_median": false
+  },
+  "QE-KA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "qe-to",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "DU-MA-I-NA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ko-to-i-na",
+   "p_plus1_vs_fabricated": 0.76617,
+   "beats_shuffled_median": false
+  },
+  "SA-TA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ka-sa-to",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "A-RA-JU": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "a-re-ja",
+   "p_plus1_vs_fabricated": 0.37313,
+   "beats_shuffled_median": true
+  },
+  "PA-TA-DA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "pa-ta-ja",
+   "p_plus1_vs_fabricated": 0.31343,
+   "beats_shuffled_median": true
+  },
+  "SA-MA-TI": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "sa-ma-ra",
+   "p_plus1_vs_fabricated": 0.31343,
+   "beats_shuffled_median": true
+  },
+  "I-DU-NE-SI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "i-do-me-ne-ja",
+   "p_plus1_vs_fabricated": 0.77612,
+   "beats_shuffled_median": false
+  },
+  "SA-QE-RI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "sa-ma-ra",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "TE-KE": {
+   "score": 0.0,
+   "matched": true,
+   "best_name": "te-ke",
+   "p_plus1_vs_fabricated": 0.03483,
+   "beats_shuffled_median": false
+  },
+  "SA-MA-RO": {
+   "score": 0.1667,
+   "matched": true,
+   "best_name": "sa-ma-ra",
+   "p_plus1_vs_fabricated": 0.01493,
+   "beats_shuffled_median": true
+  },
+  "TA-RA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "ta-ra-nu",
+   "p_plus1_vs_fabricated": 0.38806,
+   "beats_shuffled_median": false
+  },
+  "RU-ZU-NA": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "wo-zo-me-na",
+   "p_plus1_vs_fabricated": 0.96517,
+   "beats_shuffled_median": false
+  },
+  "SA-RA-DI": {
+   "score": 0.375,
+   "matched": false,
+   "best_name": "sa-ra-pe-da",
+   "p_plus1_vs_fabricated": 0.34826,
+   "beats_shuffled_median": true
+  },
+  "I-TI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "i-qo",
+   "p_plus1_vs_fabricated": 0.9403,
+   "beats_shuffled_median": false
+  },
+  "KA-RO-NA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "ka-ro-qo",
+   "p_plus1_vs_fabricated": 0.27861,
+   "beats_shuffled_median": true
+  },
+  "I-DU-TI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "i-ja-te",
+   "p_plus1_vs_fabricated": 0.8209,
+   "beats_shuffled_median": false
+  },
+  "PA-DA-SU-TI": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "po-da-ko",
+   "p_plus1_vs_fabricated": 0.9602,
+   "beats_shuffled_median": false
+  },
+  "KI-DA-TA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "ki-ti-ta",
+   "p_plus1_vs_fabricated": 0.30846,
+   "beats_shuffled_median": true
+  },
+  "WI-TE-RO": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "wi-du-ro",
+   "p_plus1_vs_fabricated": 0.29851,
+   "beats_shuffled_median": true
+  },
+  "NU-DU-*331": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "wi-du-ro",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "SI-DU-*34-KU-MI": {
+   "score": 0.7,
+   "matched": false,
+   "best_name": "wi-du-wa-ko",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "*21F-TU": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "ko-tu-we",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "DE-ME-TE": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "de-me-o-te",
+   "p_plus1_vs_fabricated": 0.03483,
+   "beats_shuffled_median": true
+  },
+  "SI-DU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "si-ma",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "A-SU-JA": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "a-re-ja",
+   "p_plus1_vs_fabricated": 0.36816,
+   "beats_shuffled_median": true
+  },
+  "*327-JU": {
+   "score": 0.75,
+   "matched": false,
+   "best_name": "to-jo",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "KU-*305": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-su",
+   "p_plus1_vs_fabricated": 0.95522,
+   "beats_shuffled_median": false
+  },
+  "MA-ZU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ma-te",
+   "p_plus1_vs_fabricated": 0.95522,
+   "beats_shuffled_median": false
+  },
+  "KA-PA": {
+   "score": 0.25,
+   "matched": true,
+   "best_name": "ka-po",
+   "p_plus1_vs_fabricated": 0.13433,
+   "beats_shuffled_median": false
+  },
+  "DA-TU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "da-mo",
+   "p_plus1_vs_fabricated": 0.96517,
+   "beats_shuffled_median": false
+  },
+  "DA-TA-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "da-i-ta-ra-ro",
+   "p_plus1_vs_fabricated": 0.85075,
+   "beats_shuffled_median": false
+  },
+  "KU-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-ra-no",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "RI-RU-MA": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "me-ri-da-ma-te",
+   "p_plus1_vs_fabricated": 0.9005,
+   "beats_shuffled_median": false
+  },
+  "NA-DA-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "da-ro",
+   "p_plus1_vs_fabricated": 0.82587,
+   "beats_shuffled_median": false
+  },
+  "KE-KI-RU": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "ke-ki-jo",
+   "p_plus1_vs_fabricated": 0.36318,
+   "beats_shuffled_median": true
+  },
+  "*322-RI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "me-ri",
+   "p_plus1_vs_fabricated": 0.97512,
+   "beats_shuffled_median": false
+  },
+  "A-RI-SU": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "a-re-pa",
+   "p_plus1_vs_fabricated": 0.8806,
+   "beats_shuffled_median": false
+  },
+  "MA-I-MI": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "me-de-i-jo",
+   "p_plus1_vs_fabricated": 0.9801,
+   "beats_shuffled_median": false
+  },
+  "KU-DA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ku-su",
+   "p_plus1_vs_fabricated": 0.9204,
+   "beats_shuffled_median": false
+  },
+  "TE-JA-RE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ne-ti-ja-no-re",
+   "p_plus1_vs_fabricated": 0.87562,
+   "beats_shuffled_median": false
+  },
+  "KU-KU-DA-RA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ko-ki-da",
+   "p_plus1_vs_fabricated": 0.74627,
+   "beats_shuffled_median": false
+  },
+  "O-SU-QA-RE": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "su-ro",
+   "p_plus1_vs_fabricated": 0.96517,
+   "beats_shuffled_median": false
+  },
+  "JA-SU-MA-TU-OLIV": {
+   "score": 0.7,
+   "matched": false,
+   "best_name": "ma-te",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "A-DI-KI-TE": {
+   "score": 0.375,
+   "matched": false,
+   "best_name": "a-di-nwa-ta",
+   "p_plus1_vs_fabricated": 0.13433,
+   "beats_shuffled_median": true
+  },
+  "JA-I-NWA-ZA": {
+   "score": 0.75,
+   "matched": false,
+   "best_name": "i-je-we",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "JA-DI-KI-TU": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "a-di-nwa-ta",
+   "p_plus1_vs_fabricated": 0.9801,
+   "beats_shuffled_median": false
+  },
+  "JA-JA": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "pa-ki-ja-ni-ja",
+   "p_plus1_vs_fabricated": 0.95522,
+   "beats_shuffled_median": false
+  },
+  "I-DA-MI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ka-da-mi-ja",
+   "p_plus1_vs_fabricated": 0.89552,
+   "beats_shuffled_median": false
+  },
+  "TU-RU-SA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "tu-ri-si-ja",
+   "p_plus1_vs_fabricated": 0.83582,
+   "beats_shuffled_median": false
+  },
+  "JA-TI-*321": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "a-si-ja-ti-ja",
+   "p_plus1_vs_fabricated": 0.88557,
+   "beats_shuffled_median": false
+  },
+  "SE-KA-NA-SI": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "pa-ka-na",
+   "p_plus1_vs_fabricated": 0.8209,
+   "beats_shuffled_median": false
+  },
+  "TI-TI-KU": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "te-tu-ku-wo-a",
+   "p_plus1_vs_fabricated": 0.8806,
+   "beats_shuffled_median": false
+  },
+  "QA-NU-MA": {
+   "score": 0.6667,
+   "matched": false,
+   "best_name": "a-nu-ko",
+   "p_plus1_vs_fabricated": 1.0,
+   "beats_shuffled_median": false
+  },
+  "SI-RU-TE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "u-ru-to",
+   "p_plus1_vs_fabricated": 0.79104,
+   "beats_shuffled_median": false
+  },
+  "JA-SA-SA-RA-ME": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "sa-ma-ra",
+   "p_plus1_vs_fabricated": 0.96517,
+   "beats_shuffled_median": false
+  },
+  "*306-TA-JE": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "pa-ta-ja",
+   "p_plus1_vs_fabricated": 0.84577,
+   "beats_shuffled_median": false
+  },
+  "SA-SA-RA-ME": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "sa-ma-ra",
+   "p_plus1_vs_fabricated": 0.76617,
+   "beats_shuffled_median": false
+  },
+  "U-NA-KA-NA-SI": {
+   "score": 0.6,
+   "matched": false,
+   "best_name": "pa-ka-na",
+   "p_plus1_vs_fabricated": 0.95025,
+   "beats_shuffled_median": false
+  },
+  "I-PI-NA-MA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "i-po-no",
+   "p_plus1_vs_fabricated": 0.68159,
+   "beats_shuffled_median": false
+  },
+  "DA-QE-RA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "do-e-ra",
+   "p_plus1_vs_fabricated": 0.83582,
+   "beats_shuffled_median": false
+  },
+  "U-*34-SI": {
+   "score": 0.625,
+   "matched": false,
+   "best_name": "re-u-ka-so",
+   "p_plus1_vs_fabricated": 0.97015,
+   "beats_shuffled_median": false
+  },
+  "A-KA-RU": {
+   "score": 0.3333,
+   "matched": true,
+   "best_name": "a-ke-re",
+   "p_plus1_vs_fabricated": 0.36816,
+   "beats_shuffled_median": true
+  },
+  "KI-RE-TA-NA": {
+   "score": 0.375,
+   "matched": false,
+   "best_name": "ki-ri-ta",
+   "p_plus1_vs_fabricated": 0.14428,
+   "beats_shuffled_median": true
+  },
+  "KA-KU-PA": {
+   "score": 0.5,
+   "matched": false,
+   "best_name": "ka-ki-ja",
+   "p_plus1_vs_fabricated": 0.8408,
+   "beats_shuffled_median": false
+  }
+ }
+}
