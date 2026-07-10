@@ -182,6 +182,12 @@ def main():
                 for k, w in enumerate(words[:-1]):
                     pref = w.strip(",")
                     nxt = words[k + 1].strip(",.")
+                    third = words[k + 2].strip(",.") if k + 2 < len(words) else ""
+                    supp_codes = ("za", "zb", "zc", "zd", "ze", "zf", "zg",
+                                  "wa", "wb", "wc", "wd", "we", "wg", "wy")
+                    if pref in SITEMAP and nxt.lower() in supp_codes and third[:1].isdigit():
+                        doc, site, supp = f"{pref} {nxt} {third}", SITEMAP[pref], nxt.lower()
+                        break
                     if pref in SITEMAP and nxt[:1].isdigit():
                         window = [x.strip("(),:").lower() for x in words[k + 2:k + 14]]
                         hit = [x for x in window if x in SUPP]

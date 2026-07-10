@@ -34,6 +34,15 @@ class TreeBuilder(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         if tag in self.STRUCTURAL:
+            if tag in ("tr", "td", "th"):          # table recovery: auto-close (amendment R1)
+                close = {"tr": ("tr", "td", "th"), "td": ("td", "th"), "th": ("td", "th")}[tag]
+                p = self.cur
+                while p is not self.root and p.tag in close:
+                    p = p.parent
+                    self.cur = p
+                if tag == "tr":
+                    while self.cur is not self.root and self.cur.tag == "tr":
+                        self.cur = self.cur.parent
             n = Node(tag, self.cur)
             self.cur.children.append(n)
             self.cur = n
@@ -79,10 +88,7 @@ def walk(node, out):
         elif ch.tag == "tr":
             cells = [text_of(c) for c in ch.children
                      if isinstance(c, Node) and c.tag in ("td", "th")]
-            out.append(("row", cells))
-            for c in ch.children:  # nested tables inside cells
-                if isinstance(c, Node):
-                    walk(c, out)
+            out.append(("row", cells))  # cell subtrees are NOT re-walked (amendment R1)
         elif ch.tag in ("sub", "sup"):
             s = text_of(ch)
             if s:
@@ -124,6 +130,14 @@ def records(stream):
             for k in range(len(toks) - 1):
                 p = toks[k].strip(",")
                 num = toks[k + 1].strip(",.")
+                num2 = toks[k + 2].strip(",.") if k + 2 < len(toks) else ""
+                if p in SITES and not num[:1].isdigit() and num.lower() in \
+                        ("za", "zb", "zc", "zd", "ze", "zf", "zg", "wa", "wb", "wc",
+                         "wd", "we", "wg", "wy") and num2[:1].isdigit():
+                    win = [w.strip("(),:").lower() for w in toks[k + 1:k + 14]]
+                    doc_id, site = f"{p} {num} {num2}", SITES[p]
+                    support = num.lower()
+                    break
                 if p in SITES and num[:1].isdigit():
                     win = [w.strip("(),:").lower() for w in toks[k + 2:k + 14]]
                     if any(w in SUPPORT for w in win):
