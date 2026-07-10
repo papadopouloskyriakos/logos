@@ -1,8 +1,8 @@
 {
  "experiment": "E203_identifiability_engine",
- "status": "PILOT_COMPLETE",
+ "status": "F1_COMPLETE",
  "exploratory": true,
- "confirmatory": false,
+ "confirmatory": true,
  "verdict": "ENGINE_VALIDATED",
  "completed_pilot": "2026-07-10",
  "gate_history": "as-run G1 FAILED (fail-closed; engine sound 5/5, instance-luck criterion defect) -> amendment_R1.md (defect repair, committed pre-rerun) -> amended G1 PASSED 5/5 (backbone == CP-SAT-probe reference exactly; zero-anchor fully ambiguous)",
@@ -22,5 +22,13 @@
   "results/PATH_cells.json",
   "results/UNSAT_adjudication.json",
   "results/P1_summary.json"
+ ],
+ "f1_completed": "2026-07-10",
+ "f1_findings": [
+  "MUS cores: ALL size-2 (single pin-pair COMPAT collisions), 1 distinct MUS per system, CORES_TYPICAL_OF_RANDOM both systems",
+  "Exact counts: WPH38_model2 = 10^224.83 EXACT (component-wise; largest coupled component 6 signs); EMPTY 10^295.9 upper; PINS4 10^286.8 upper",
+  "Soft-weighted: always-violated constraint set STABLE across weight bands x0.25..x4",
+  "Extended nulls: value-permutation AND frequency-preserving nulls UNSAT 200/200 in both systems - infeasibility is generic pin-density collision, zero value-specific information",
+  "VOI: bilingual fragment dLog10 17.95 (fragility 0.20) > toponym 7.25 > name 5.45 > 1-pin inscription 1.83; per-sign ceiling log10(67)=1.83"
  ]
 }

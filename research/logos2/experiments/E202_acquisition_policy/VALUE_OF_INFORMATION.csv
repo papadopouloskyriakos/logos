@@ -1,0 +1,9 @@
+rank,item,channel,d_log10_value_space,unblocks,cost,availability,wrong_obs_risk,source
+1,GORILA klasmatogram (fraction apparatus) silver ingestion,measurement/metrology,0.0,E204 (L3 metrology class potential),in-house transcription task,IMMEDIATE (licensed material already held),low (transcription QC),curated+E204 census
+2,Anetaki II full edition ingest,external anchors + seals,7.25,FRACTION_ORDER seal opening event + prospective A-initial test + multi-slot anchor candidates,ingest on publication,PENDING external publication,low (published edition),curated+VOI(toponym-class)
+3,"one secure toponym (distinct lineage, >=4 slots)",value anchors,7.25,-,new find / archival,rare (census-exhausted; Egyptian-attested route priced ~9 log10 by anchor-lattice),fragility 0.05 (measured); wrong anchors net-poisonous (prior: f_wrong 0.1 -> FP 0.31),VOI measured
+4,one secure proper name,value anchors,5.45,E206 Stage-2 calibration,new find / archival,rare,fragility 0.05,VOI measured
+5,bilingual/digraphic fragment (~10 signs),value anchors,17.95,everything (largest single reduction),excavation luck,none known; highest-value lowest-availability,fragility 0.20 (measured) - HIGHEST; a wrong bilingual is the most poisonous observation,VOI measured
+6,new sparse-site inscription (>=1 pinnable slot),value anchors + prospective replication,1.83,prospective test of the A-initial finding (acceptance standard),excavation,ongoing digs,fragility 0.00 (measured),VOI measured
+7,stroke/contour or raw-imagery palaeographic corpus,measurement,0.0,E205C (hand attribution) + candidate 2nd channel (necessary-not-sufficient),imaging campaign / archive access,SOURCE_BLOCKED historically,low,curated+E200
+8,allograph merge/split adjudications (Salgarella-informed),measurement,-1.83,inventory correctness (E205-A3 tests textual-pattern impact),in-house analysis,IMMEDIATE,moderate (wrong merge corrupts inventory),curated

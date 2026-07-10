@@ -1,0 +1,11 @@
+{
+ "experiment": "E202",
+ "status": "COMPLETE",
+ "derived": "2026-07-10",
+ "exploratory": false,
+ "outputs": [
+  "VALUE_OF_INFORMATION.csv",
+  "SEQUENTIAL_ACQUISITION_POLICY.json",
+  "EVIDENCE_ACQUISITION_PRIORITIES.md"
+ ]
+}

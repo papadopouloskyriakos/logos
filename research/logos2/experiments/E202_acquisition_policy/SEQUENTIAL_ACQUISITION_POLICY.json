@@ -1,0 +1,47 @@
+{
+ "experiment": "E202_acquisition_policy",
+ "derived_from": "E203-F1 VOI cell (measured deltas) + E200 availability audit (curated fields marked)",
+ "baseline": "WPH38_model2 exact 10^224.83",
+ "policy": "greedy by (measured dLog10 or channel-unblock) x availability, penalized by wrong-observation fragility",
+ "ordered_actions": [
+  "GORILA klasmatogram (fraction apparatus) silver ingestion",
+  "Anetaki II full edition ingest",
+  "one secure toponym (distinct lineage, >=4 slots)",
+  "one secure proper name",
+  "bilingual/digraphic fragment (~10 signs)",
+  "new sparse-site inscription (>=1 pinnable slot)",
+  "stroke/contour or raw-imagery palaeographic corpus",
+  "allograph merge/split adjudications (Salgarella-informed)"
+ ],
+ "voi_measured": {
+  "secure_proper_name": {
+   "k_signs_pinned": 3,
+   "mean_delta_log10_consistent": 5.449684293222573,
+   "sd": 0.12440347659841872,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.05
+  },
+  "secure_toponym": {
+   "k_signs_pinned": 4,
+   "mean_delta_log10_consistent": 7.248448987230242,
+   "sd": 0.24344548052896076,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.05
+  },
+  "bilingual_fragment": {
+   "k_signs_pinned": 10,
+   "mean_delta_log10_consistent": 17.946564443834188,
+   "sd": 0.45888775404187565,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.2
+  },
+  "new_sparse_site_inscription_with_1_pin": {
+   "k_signs_pinned": 1,
+   "mean_delta_log10_consistent": 1.8260748027008162,
+   "sd": 0.0,
+   "per_sign_theoretical_max": 1.8260748027008264,
+   "random_value_unsat_rate": 0.0
+  }
+ },
+ "note": "ranks 1-2 are MEASUREMENT/ENABLEMENT actions with dLog10=0 in value space but immediate availability and channel-unblocking value; the value-space giants (bilingual) are availability-gated and fragility-penalized"
+}
