@@ -1,7 +1,7 @@
 {
- "written": "2026-07-10 (wave-4 update 2)",
+ "written": "2026-07-10 (wave-5: closure cascade mechanized)",
  "branch": "research/logos2-anchor-identifiability",
- "commit": "9eb1120",
+ "commit": "wave-5 head",
  "active_jobs": [
   {
    "what": "E204 metrology SOFT arm",
@@ -56,5 +56,14 @@
   "E205 A/B deferred",
   "E205C/E208 blocked/de-authorized"
  ],
- "continuation_instruction": "Resume per automation/WATCHDOG_PROMPT.md (wave-3 extension). Score any finished background job FIRST (results before interpretation), then continue next_dag_nodes in order. Never weaken a frozen gate; never open a seal; ledger+STATUS+commit+push at every milestone."
+ "continuation_instruction": "Resume per automation/WATCHDOG_PROMPT.md (wave-3 extension). Score any finished background job FIRST (results before interpretation), then continue next_dag_nodes in order. Never weaken a frozen gate; never open a seal; ledger+STATUS+commit+push at every milestone.",
+ "closure_cascade": [
+  "1. monitor baeqkq4h0 fires when METROLOGY_SOFT_RESULTS.json lands (or worker dies)",
+  "2. experiments/E204_metrology/score_soft_arm.py  -> E204_FINAL_STATUS.json (frozen 5-status rule)",
+  "3. verifiers/finalize_e212.py                    -> E212 graph FINAL (LOCO + dependency table + verdict)",
+  "4. experiments/E213_prospective_seal/build_seal.py -> SEALED_PREDICTIONS.json + SEAL_MANIFEST.json",
+  "5. verifiers/run_battery.py                      -> must PASS (E214)",
+  "6. final/generate_package.py                     -> mechanical deliverables; then author prose finals",
+  "7. commit+push at each step; fraction seal (72h Anetaki) stays closed throughout"
+ ]
 }
