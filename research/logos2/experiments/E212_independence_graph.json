@@ -1,7 +1,7 @@
 {
  "experiment": "E212_evidence_independence",
  "built": "2026-07-10",
- "status": "SKELETON_PENDING_E204_SOFT (finalize when soft arm terminates; F1b = PENDING_EXTERNAL, cannot alter conclusions by frozen rule)",
+ "status": "FINAL",
  "claims": {
   "A_initial_positional_enrichment": {
    "level": "L2 (inherited from prior campaign; LOGOS-2 E207 adds POSITIONAL_ONLY)",
@@ -61,12 +61,17 @@
    "classification": "SINGLE_CHANNEL"
   },
   "E204_metrology_outcome": {
-   "level": "pending soft arm",
-   "classification": "TBD",
+   "level": "L1/L2 (structural at most; no value claim)",
+   "terminal_status": "UNDERDETERMINED_AFTER_ABLATION",
    "decisive_inputs": [
-    "E204R2 canonical apparatus (itself single-source)"
+    "E204R2 canonical apparatus (single source edition)",
+    "CP-SAT soft-satisfiability pipeline"
    ],
-   "note": "any metrology relation inherits the Younger-source dependence -> at best PARTIALLY_DEPENDENT vs anything else Younger-derived"
+   "channels": [
+    "arithmetic-consistency channel over ONE extraction lineage"
+   ],
+   "classification": "SINGLE_CHANNEL",
+   "note": "strict-arm infeasibility = data-completeness property, kept separate"
   },
   "RAG_layer": {
    "level": "L0 audit infrastructure",
@@ -78,5 +83,135 @@
   "All LA-positive-adjacent structure descends from the silver corpus lineage",
   "Dual-parser and dual-solver redundancy improves RELIABILITY, never INDEPENDENCE",
   "Algorithmic agreement on shared decisive observations found at every audit point (E203 MUS/nulls; E205-I; E207 battery)"
- ]
+ ],
+ "leave_one_channel_out": {
+  "CP-SAT soft-satisfiability pipeline": {
+   "claims_lost": [
+    "E204_metrology_outcome"
+   ],
+   "claims_surviving": 6
+  },
+  "E204R2 canonical apparatus (single source edition)": {
+   "claims_lost": [
+    "E204_metrology_outcome"
+   ],
+   "claims_surviving": 6
+  },
+  "LB names inventory (single family)": {
+   "claims_lost": [
+    "E206_S2_negative"
+   ],
+   "claims_surviving": 6
+  },
+  "WPH lattice (single continuity meta-lineage)": {
+   "claims_lost": [
+    "E203_identifiability_map"
+   ],
+   "claims_surviving": 6
+  },
+  "Younger archived web corpus (single source edition)": {
+   "claims_lost": [
+    "E204R2_canonical_apparatus"
+   ],
+   "claims_surviving": 6
+  },
+  "cog benchmark datasets": {
+   "claims_lost": [
+    "E201_F1a_calibration_certificate"
+   ],
+   "claims_surviving": 6
+  },
+  "encoded constraint families": {
+   "claims_lost": [
+    "E203_identifiability_map"
+   ],
+   "claims_surviving": 6
+  },
+  "frozen null construction": {
+   "claims_lost": [
+    "E201_F1a_calibration_certificate"
+   ],
+   "claims_surviving": 6
+  },
+  "frozen semantic spec": {
+   "claims_lost": [
+    "E204R2_canonical_apparatus"
+   ],
+   "claims_surviving": 6
+  },
+  "frozen slot set (silver corpus)": {
+   "claims_lost": [
+    "E206_S2_negative"
+   ],
+   "claims_surviving": 6
+  },
+  "initial-position operationalization": {
+   "claims_lost": [
+    "A_initial_positional_enrichment"
+   ],
+   "claims_surviving": 6
+  },
+  "silver corpus (single lineage)": {
+   "claims_lost": [
+    "A_initial_positional_enrichment"
+   ],
+   "claims_surviving": 6
+  },
+  "unlicensed A/B convention": {
+   "claims_lost": [
+    "E206_S2_negative"
+   ],
+   "claims_surviving": 6
+  }
+ },
+ "claim_dependency_table": {
+  "A_initial_positional_enrichment": {
+   "depends_on": [
+    "silver corpus (single lineage)",
+    "initial-position operationalization"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E204R2_canonical_apparatus": {
+   "depends_on": [
+    "Younger archived web corpus (single source edition)",
+    "frozen semantic spec"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E201_F1a_calibration_certificate": {
+   "depends_on": [
+    "cog benchmark datasets",
+    "frozen null construction"
+   ],
+   "classification": "CONDITIONALLY_INDEPENDENT (of LA data entirely)"
+  },
+  "E206_S2_negative": {
+   "depends_on": [
+    "frozen slot set (silver corpus)",
+    "LB names inventory (single family)",
+    "unlicensed A/B convention"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E203_identifiability_map": {
+   "depends_on": [
+    "WPH lattice (single continuity meta-lineage)",
+    "encoded constraint families"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "E204_metrology_outcome": {
+   "depends_on": [
+    "E204R2 canonical apparatus (single source edition)",
+    "CP-SAT soft-satisfiability pipeline"
+   ],
+   "classification": "SINGLE_CHANNEL"
+  },
+  "RAG_layer": {
+   "depends_on": [],
+   "classification": "NOT_A_CHANNEL (retrieval over the same corpora; never evidence)"
+  }
+ },
+ "independence_verdict": "NO_MULTI_CHANNEL_INDEPENDENT_CLAIM: every LA-substantive claim is SINGLE_CHANNEL; removing the silver-corpus lineage kills 1 claim(s) outright; the only CONDITIONALLY_INDEPENDENT item (E201-F1a) is a calibration certificate about the HARNESS, not about Linear A; RAG is NOT_A_CHANNEL. Anchor independence remains the binding bottleneck (consistent with the 72h campaign conclusion)."
 }
