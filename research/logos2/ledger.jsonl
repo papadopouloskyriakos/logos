@@ -13,3 +13,4 @@
 {"ts": "2026-07-10", "event": "E201_F1a_SCORED", "status_class": "ALPHABETIC_REPLAY_ONLY_NOT_QUALIFIED_FOR_LINEAR_A", "false_grad": "0/200 CP95 1.49% CERTIFIED", "syllabic": "LB 0.000, CSYL at chance", "leak": "uga-heb dataset-inherent cognate identity; syllabic clean"}
 {"ts": "2026-07-10", "event": "MILESTONE2_REPORT_COMMITTED", "graduated_above_L0": 0, "ten_questions": "answered"}
 {"ts": "2026-07-10", "event": "E204_ACQUISITION_PROTOCOL_FROZEN", "source": "Younger archived web corpus (provenance-tracked)", "hazard": "commentary decimal glosses codified as HARD EXCLUSION", "next": "dual-parser extraction -> quality gate >=98% agreement, >=30 multi-fraction docs, >=10 arithmetic-complete docs"}
+{"ts": "2026-07-10", "event": "E204_GATE_FAILED", "status": "E204_BLOCKED_DATA_QUALITY", "measured": "86.3% overall vs 98% gate", "localized": "statement-field extraction divergence (27%); numeric core near-gate", "seal_touched": false}

@@ -1,0 +1,55 @@
+{
+ "rules": {
+  "W1": "comparison-normalization of sign words (space/hyphen/subscript unification)",
+  "I1": "subscript sign-numeral reattachment (digit 2/3 belongs to the preceding sign when the other parser's context ends with it)"
+ },
+ "post_adjudication_overall": 0.8627450980392157,
+ "per_field": {
+  "context_word": 0.2737,
+  "integer": 0.9501,
+  "fraction_seq": 0.9757,
+  "uncertain": 0.9987,
+  "restored": 0.9795,
+  "is_kuro": 0.9987
+ },
+ "fully_agreed_records": 212,
+ "n_pairs": 782,
+ "log_sample": [
+  [
+   "I1:subscript_reattached_B",
+   "HT 8",
+   "b.3",
+   "31",
+   "1"
+  ],
+  [
+   "I1:subscript_reattached_B",
+   "PH 2",
+   ".4",
+   "360",
+   "60"
+  ],
+  [
+   "I1:subscript_reattached_B",
+   "HT 25",
+   "a.4",
+   "21",
+   "1"
+  ],
+  [
+   "I1:subscript_reattached_B",
+   "HT 122",
+   "b.2",
+   "27",
+   "7"
+  ],
+  [
+   "I1:subscript_reattached_B",
+   "HT 93",
+   "a.4",
+   "220",
+   "20"
+  ]
+ ],
+ "n_log": 5
+}

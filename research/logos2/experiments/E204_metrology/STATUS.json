@@ -1,6 +1,10 @@
 {
  "experiment": "E204",
- "status": "BLOCKED_DATA",
- "seal": "UNOPENED; contents unread",
- "exploratory": null
+ "status": "E204_BLOCKED_DATA_QUALITY",
+ "gate": "FAILED (86.3% < 98%)",
+ "seal": "UNOPENED; unread",
+ "numeric_core": "near-gate (integer .95, fraction .976)",
+ "statement_channel": "27% - defect localized",
+ "unblock": "statement-field extraction redesign; gate rerun unchanged",
+ "completed": "2026-07-10"
 }

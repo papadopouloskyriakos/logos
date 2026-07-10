@@ -1,0 +1,63 @@
+{
+ "aligned_record_pairs": 782,
+ "keys_only_A": 316,
+ "keys_only_B": 461,
+ "overall_field_agreement": 0.8617,
+ "per_field": {
+  "context_word": 0.2737,
+  "integer": 0.9437,
+  "fraction_seq": 0.9757,
+  "uncertain": 0.9987,
+  "restored": 0.9795,
+  "is_kuro": 0.9987
+ },
+ "fraction_vs_integer_classification_agreement": 0.9821,
+ "per_fraction_sign_agreement": {
+  "B": "19/21",
+  "D": "23/26",
+  "E": "46/54",
+  "F": "7/7",
+  "H": "8/8",
+  "J": "92/100",
+  "K": "11/11",
+  "L": "3/4",
+  "W": "3/4",
+  "X": "1/1",
+  "Y": "1/1"
+ },
+ "rare_sign_agreement": {
+  "K": "11/11",
+  "L": "3/4",
+  "F": "7/7",
+  "X": "1/1",
+  "H": "8/8",
+  "W": "3/4",
+  "Y": "1/1"
+ },
+ "decimal_gloss_contamination_records": 0,
+ "within_parser_duplicates_A": 0,
+ "docs_with_2plus_AGREED_fraction_records": 39,
+ "arithmetic_complete_docs_AGREED": 12,
+ "worst_documents": [
+  [
+   "ZA 6",
+   0.4583333333333333
+  ],
+  [
+   "ZA 18",
+   0.6111111111111112
+  ],
+  [
+   "MA 2",
+   0.6666666666666666
+  ],
+  [
+   "KH 85",
+   0.6666666666666666
+  ],
+  [
+   "HT 116",
+   0.6944444444444444
+  ]
+ ]
+}
