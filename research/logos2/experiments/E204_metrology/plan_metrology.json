@@ -1,0 +1,12 @@
+{
+ "experiment": "E204_metrology_run",
+ "depends": "E204R2 PASSED",
+ "bases": [
+  60,
+  120,
+  240
+ ],
+ "n_null": 200,
+ "seed_master": 1336530913,
+ "seal": "CLOSED (event not occurred)"
+}
