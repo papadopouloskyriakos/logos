@@ -1,0 +1,12 @@
+source_id,what,author,provenance,index_class,licence,path
+SILVER_LA,LA silver transcriptions (1341 inscriptions),logos silver corpus,internal normalization of licensed editions,A OBSERVATIONAL,in-repo derivative; licensed raw gitignored,corpus/silver/inscriptions_structured.json
+E204R2_CANON,canonical fraction apparatus (1385 dual-agreed records),E204R2 output,dual-parser gate-passed extraction,A OBSERVATIONAL,campaign-derived; redistributable,experiments/E204R2_residual_canonicalization/CANONICAL_FRACTION_DATASET.csv
+YOUNGER_WEB,Younger LA web corpus (archived),J.G. Younger,"Wayback captures, provenance-tracked",B PRIMARY_SCHOLARSHIP,UNSTATED personal scholarly site; internal factual use; NO redistribution,corpus/bronze/younger_lineara/*
+SM2017_META,Steele & Meissner 2017 ch.6 (toponym equations),Steele/Meissner,published chapter (local copy),B PRIMARY_SCHOLARSHIP,"copyright; METADATA+citations indexed only, no full text",corpus/bronze/steele_meissner_2017/ + toponym_anchors.csv
+COG_CORPORA,known-answer cognate corpora (LB/CSYL/UGA/PHUG/LUVHIT),Tamburini/NeuroDecipher lineage,"fetched, hash-manifested",C COMPARATIVE,research-use per source repos,corpus/bronze/code/CSA_OptMatcher/data/*.cog
+DAMOS_LB,DAMOS LB wordforms (13562),DAMOS,via scripts/cross_script/data.py,C COMPARATIVE,academic use; gitignored raw,corpus/bronze/linearb/damos
+RJAB2025,Rjabchikov 2025 sceptre reading (proposed decipherment),Rjabchikov,in-repo record,D INTERPRETIVE_CLAIMS_NOT_EVIDENCE,indexed as claims-only,corpus/bronze/rjabchikov_2025_sceptre/*
+DIMINO_AUDIT,Di Mino *301 audit records (proposed chain + REJECT verdicts),campaign record,research branch artifacts,D INTERPRETIVE,campaign-derived,memory/di-mino audit pointers
+CAMPAIGN_HYP,"prior internal hypotheses (epoch ledgers, campaign reports)",logos campaigns,append-only records,D INTERPRETIVE,campaign-derived,frontier/anchor-lattice/foundry ledgers
+E201_CONTROLS,"synthetic isolates, shuffled inventories, corrupted anchors",E201 harness,"generated, seeded",E ADVERSARIAL_AND_NULL,campaign-derived,experiments/E201_replay_benchmark/harness.py generators
+E206_CANARIES,fabricated + shuffled name canaries,E206-S2,"generated, seeded",E ADVERSARIAL_AND_NULL,campaign-derived,experiments/E206_onomastic_linkage/stage2/

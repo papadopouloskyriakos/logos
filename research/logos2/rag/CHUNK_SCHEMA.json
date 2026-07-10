@@ -1,0 +1,35 @@
+{
+ "fields": [
+  "chunk_id",
+  "index_class",
+  "source_id",
+  "title",
+  "author_editor",
+  "edition",
+  "locator",
+  "publication_date",
+  "acquisition_date",
+  "availability_ts",
+  "licence",
+  "content_hash",
+  "source_file_hash",
+  "source_class",
+  "obs_restoration_inference",
+  "contamination_flag",
+  "seal_contamination_flag",
+  "language_script",
+  "site",
+  "chronology",
+  "doc_type",
+  "sign_word_ids",
+  "text"
+ ],
+ "index_classes": [
+  "OBSERVATIONAL_EVIDENCE",
+  "PRIMARY_SCHOLARSHIP",
+  "COMPARATIVE_CORPORA",
+  "INTERPRETIVE_CLAIMS_NOT_EVIDENCE",
+  "ADVERSARIAL_AND_NULL"
+ ],
+ "retrieval_contract": "every query declares allowed/forbidden indexes + time cutoff; Index D results always carry INTERPRETIVE_CLAIM_ONLY and never count as support"
+}
