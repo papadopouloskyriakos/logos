@@ -1,0 +1,15 @@
+experiment,terminal_status,note
+E200_prior_overlap_audit,COMPLETE,
+E201_replay_benchmark,F1a_COMPLETE,
+E202_acquisition_policy,COMPLETE,
+E203_identifiability_engine,F1_COMPLETE,
+E204R2_residual_canonicalization,E204R2_QUALITY_GATE_PASSED,
+E204R_canonical_table_extraction,E204R_BLOCKED_DATA_QUALITY,
+E204_metrology,UNDERDETERMINED_AFTER_ABLATION,METROLOGY_STACK_FROZEN; strict arm = data-completeness INFEASIBLE (separate)
+E205_palaeography,I_COMPLETE_A_B_DEFERRED,
+E206_onomastic_linkage,NO_MATCH_BEYOND_CANARIES,STAGE1_SLOT_FREEZE_COMMITTED (frozen slots verified by hash in stage 2)
+E207_morphology,COMPLETE,
+E211_RAG,RAG_USEFUL_FOR_AUDIT_ONLY,
+E212,FINAL,
+E213,SEALED_PROSPECTIVE,2 predictions sealed
+E201_F1b,PENDING_EXTERNAL,import boundary armed; not closure-blocking

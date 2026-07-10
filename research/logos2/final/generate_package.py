@@ -77,7 +77,9 @@ def main():
     for dp, dns, fns in os.walk(ROOT):
         dns[:] = [d for d in dns if d not in (".venv", "__pycache__", "logs")]
         for fn in sorted(fns):
-            if fn.endswith((".sqlite", ".pyc")) or fn == "BUNDLE_MANIFEST.sha256":
+            if fn.endswith((".sqlite", ".pyc")) or fn in (
+                    "BUNDLE_MANIFEST.sha256", "ARTIFACT_MANIFEST.json", "LOGOS2_REVIEW_BUNDLE.zip",
+                    "REVIEW_BUNDLE.zip.sha256"):
                 continue
             p = os.path.join(dp, fn)
             arts.append({"file": os.path.relpath(p, ROOT),

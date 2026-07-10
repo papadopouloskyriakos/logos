@@ -15,12 +15,14 @@ detect a real advance, and arms sealed predictions at closure for the next evide
   reusable measurement asset independent of any value hypothesis.
 - **Metrology split cleanly**: strict-arm infeasibility is a *data-completeness* property
   (identical across all 200 nulls) — the accessible apparatus cannot discriminate values.
-  <!-- E204_SLOT_EXEC: soft-arm terminal status, one sentence -->
+  The soft arm closed **UNDERDETERMINED_AFTER_ABLATION**: 1/9 documents satisfiable, ≥10^6
+  value solutions at the optimum, zero LOO-stable relations, nulls at ceiling (p⁺¹ = 1.0).
 - **Onomastics**: qualified detector; 151 frozen candidates (147 uncontaminated
   confirmatory = the Holm family), 0 survivors beyond canaries.
 - **RAG**: audit utility only; mechanically prevented from ever being an evidential
   channel.
-- **Independence**: <!-- E204_SLOT_EXEC_E212: one-line final independence verdict -->
+- **Independence**: NO_MULTI_CHANNEL_INDEPENDENT_CLAIM — every LA-substantive claim is
+  single-channel; anchor independence remains the binding bottleneck.
 - **Sealed and closed**: 72h FRACTION_ORDER seal untouched; E213 prospective predictions
   sealed at closure with a hard RAG-index cutoff.
 

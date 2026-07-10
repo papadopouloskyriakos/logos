@@ -1,0 +1,31 @@
+{
+ "campaign": "LOGOS-2 Anchor-to-Identifiability",
+ "closed": "2026-07-10",
+ "campaign_closed": true,
+ "headline": "NO_DECIPHERMENT_ADVANCE_BEYOND_L3; identifiability threshold mapped; all substantive claims SINGLE_CHANNEL; prospective seal armed",
+ "E203_exact_ambiguity_log10": 224.83,
+ "E204_terminal_status": "UNDERDETERMINED_AFTER_ABLATION",
+ "E204_soft_optimum": {
+  "n_satisfied": 1,
+  "n_docs": 9,
+  "satisfied_docs": [
+   "HT 104"
+  ],
+  "n_value_solutions_at_opt": 1000000
+ },
+ "E204_loo_stable_relations": [],
+ "E206_S2_verdict": "NO_MATCH_BEYOND_CANARIES",
+ "E206_S2_replay_qualification": 0.905,
+ "E211_RAG": {
+  "verdict": "RAG_USEFUL_FOR_AUDIT_ONLY",
+  "recall_at_5": 0.714
+ },
+ "independence_verdict": "NO_MULTI_CHANNEL_INDEPENDENT_CLAIM: every LA-substantive claim is SINGLE_CHANNEL; removing the silver-corpus lineage kills 1 claim(s) outright; the only CONDITIONALLY_INDEPENDENT item (E201-F1a) is a calibration certificate about the HARNESS, not about Linear A; RAG is NOT_A_CHANNEL. Anchor independence remains the binding bottleneck (consistent with the 72h campaign conclusion).",
+ "seal": {
+  "sha256": "5b50f21dd1e0c4e85e51659144048af9fd2a89210a7f91b62ce00ab04288da19",
+  "n_predictions": 2
+ },
+ "pending_external": [
+  "E201_F1b (CSA sweep ~2026-07-13; cannot alter closed conclusions)"
+ ]
+}

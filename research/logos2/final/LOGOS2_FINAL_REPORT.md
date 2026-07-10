@@ -49,7 +49,12 @@ anchor independence, not solver power.
 The strict arm is a data-completeness result, not a value result: joint infeasibility for
 every base {60,120,240} AND for all 200 permuted-notation nulls — the accessible apparatus
 is arithmetically incomplete, so exact balancing cannot discriminate values.
-<!-- E204_SLOT_Q4: soft-arm terminal status + LOO-stable relations + null count, from E204_FINAL_STATUS.json -->
+The soft arm is terminal at **`UNDERDETERMINED_AFTER_ABLATION`**: only 1 of 9
+fraction-bearing arithmetic documents is even individually satisfiable (HT 104); the
+soft optimum satisfies that same 1/9 with ≥10^6 distinct value solutions at the optimum;
+the four relations present at the optimum ({J>B, J>D, J>E, J>H}) have **zero LOO-stable
+survivors**; and all 200 selection-aware nulls produced at least as many relations
+(p⁺¹ = 1.0). So: no relation beyond matched nulls, and no exact value was ever forced.
 
 **5. Did E206 find anything beyond canaries?**
 No. `NO_MATCH_BEYOND_CANARIES`: the drift detector qualified on replay (0.905 ≥ 0.60), the
@@ -81,10 +86,16 @@ under the F1a-frozen harness with zero re-tuning, and by frozen rule cannot alte
 closed conclusion (append-only addendum; an ERRATUM if contradiction arises).
 
 **11. Does any result have two genuinely independent channels?**
-<!-- E204_SLOT_Q11: final E212 independence verdict, quoted verbatim from the FINAL graph -->
+No. The FINAL E212 graph's verdict, verbatim: "NO_MULTI_CHANNEL_INDEPENDENT_CLAIM: every LA-substantive claim is SINGLE_CHANNEL; removing the silver-corpus lineage kills 1 claim(s) outright; the only CONDITIONALLY_INDEPENDENT item (E201-F1a) is a calibration certificate about the HARNESS, not about Linear A; RAG is NOT_A_CHANNEL. Anchor independence remains the binding bottleneck (consistent with the 72h campaign conclusion)."
 
 **12. Did any result graduate above L0?**
-<!-- E204_SLOT_Q12: enumerate final claim layers from CLAIM_LEDGER.csv; expected: structural L1/L2 items only (canonical apparatus L1; A-initial positional enrichment L2 inherited; E204 per its terminal status); explicitly: no L4+ anywhere -->
+Only structural measurement layers, per the generated `CLAIM_LEDGER.csv`: the E204R2
+canonical apparatus is an L1 measurement; A-initial positional enrichment stands at L2
+(inherited from the prior campaign; LOGOS-2's E207 adds only POSITIONAL_ONLY); the E204
+metrology outcome is L1/L2 structural at most with no value claim. Everything else is
+L0 (calibration certificate, negatives, model-conditional identifiability map, audit
+infrastructure). **Nothing reached L4 or above; no transfer licence was earned or
+claimed.**
 
 **13. What evidence has the highest expected value?**
 E202's generated ranking (carried verbatim in `VALUE_OF_INFORMATION.csv`): (1) GORILA
@@ -109,7 +120,8 @@ re-analysis without new evidence does not qualify (stop-list).
 **16. Which prospective seals remain closed?**
 The 72h `FRACTION_ORDER_ANETAKI` seal — closed, unread, hash-verified against the
 protected-asset baseline — and the new E213 seal built at closure
-<!-- E204_SLOT_Q16: n_predictions + sealed sha256 prefix from SEAL_MANIFEST.json -->.
+(2 predictions — P1 A-initial, P2 KU-RO-terminal; P3 excluded because E204 did not
+qualify — sealed sha256 `5b50f21dd1e0c4e8…`).
 Neither is opened at any point; the E214 battery verifies both by hash
 without reading contents.
 

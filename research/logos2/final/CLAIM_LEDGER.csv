@@ -1,0 +1,8 @@
+claim,layer,classification,decisive_inputs
+A_initial_positional_enrichment,L2 (inherited from prior campaign; LOGOS-2 E207 adds POSITIONAL_ONLY),SINGLE_CHANNEL,silver corpus (single lineage); initial-position operationalization
+E204R2_canonical_apparatus,L1 measurement,SINGLE_CHANNEL,Younger archived web corpus (single source edition); frozen semantic spec
+E201_F1a_calibration_certificate,L0,CONDITIONALLY_INDEPENDENT (of LA data entirely),cog benchmark datasets; frozen null construction
+E206_S2_negative,L0 negative,SINGLE_CHANNEL,frozen slot set (silver corpus); LB names inventory (single family); unlicensed A/B convention
+E203_identifiability_map,L0 model-conditional,SINGLE_CHANNEL,WPH lattice (single continuity meta-lineage); encoded constraint families
+E204_metrology_outcome,L1/L2 (structural at most; no value claim),SINGLE_CHANNEL,E204R2 canonical apparatus (single source edition); CP-SAT soft-satisfiability pipeline
+RAG_layer,L0 audit infrastructure,NOT_A_CHANNEL (retrieval over the same corpora; never evidence),

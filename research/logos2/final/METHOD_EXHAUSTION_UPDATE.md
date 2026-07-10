@@ -12,7 +12,7 @@ of *methods at current evidence*, per the constitution's mission clause.
 | Exact identifiability / model counting (E203) | ambiguity 10^224.83 EXACT for WPH38/model-2; MUS cores size-2 CORES_TYPICAL_OF_RANDOM; value-permutation + frequency-preserving nulls UNSAT 200/200 → no non-generic contraction | new anchors or new constraint types; not new orderings/encodings of the same lattice |
 | Alphabetic historical replay as LA qualification (E201-F1a) | ALPHABETIC_REPLAY_ONLY_NOT_QUALIFIED_FOR_LINEAR_A (LB 0.000, CSYL at chance, UGA 0.486 < 0.60 with the 34.4% cognate-identity leak adjudicated); calibration CERTIFIED 0/200, exact CP95 upper 1.49% | a *syllabic* replay that qualifies (none did), or new bilingual material |
 | Strict visible-entry metrology (E204 strict arm) | INFEASIBLE for all bases {60,120,240} AND all 200 matched nulls — a data-completeness property of the accessible apparatus, never value evidence (artifact verdict string: E204_INVALID under the strict-arm prereg vocabulary) | GORILA klasmatogram ingestion (E202 rank 1) |
-| Soft metrology at the optimum (E204 soft arm) | <!-- E204_SLOT: terminal status + one-line basis --> | ≥5 new fraction-bearing arithmetic documents (sealed as E213-P3 iff qualified) |
+| Soft metrology at the optimum (E204 soft arm) | UNDERDETERMINED_AFTER_ABLATION — 1/9 docs satisfiable; ≥10^6 value solutions at the optimum; 0 LOO-stable relations; 200/200 nulls ≥ observed (p⁺¹ = 1.0) | ≥5 new fraction-bearing arithmetic documents (sealed as E213-P3 iff qualified) |
 | Palaeographic graded prior (E205-I) | PRIOR_GENERIC — the real grade assignment is inconsistent after model-2 edge dropping (no real contraction value exists to report), while matched nulls contract 54.25 log10 on average (band [52.99, 55.26]) | stroke/3D data (SOURCE_BLOCKED) or a licence-clean continuity gate |
 | A-sign morphology on this corpus (E207) | POSITIONAL_ONLY — fails MDL vs M2, 0 recurring stems, 0/3 hold-out axes; positional enrichment stands (L2, inherited) but participates in no predictive paradigm | new corpus mass, not new operationalizations |
 | Onomastic drift-matching vs LB name inventory (E206-S2) | NO_MATCH_BEYOND_CANARIES — detector qualified (replay 0.905 ≥ 0.60), 147 confirmatory candidates, 0 Holm survivors against the canary battery; conditional on the labelled unlicensed A/B convention | a different name inventory of independent lineage, or anchor-grounded sign values |
@@ -29,4 +29,4 @@ re-operationalizations. See the methodology master inventory
 A new find or dataset supplying **anchor independence**: one secure ≥4-slot identification
 from a lineage distinct from META_CONTINUITY_LA_eq_LB — or Anetaki II publication, which
 simultaneously arms the prospective tests (the closed 72h FRACTION_ORDER seal; E213
-P1/P2<!-- E204_SLOT_P3 -->, sealed at campaign closure).
+P1/P2, sealed at campaign closure; P3 was not sealed — E204 did not qualify it).

@@ -1,19 +1,19 @@
 {
- "updated": "2026-07-10T04:45+02:00",
+ "updated": "2026-07-10 closure",
  "campaign": "LOGOS-2",
- "phase": "closure \u2014 blocked ONLY on E204 soft arm",
+ "phase": "CLOSED",
  "e204_soft_worker": {
   "pid": 1923942,
   "health": "RUNNING, ~100% CPU accrual verified twice, 63 threads, 42:37 cumulative CPU",
   "result_file": "research/logos2/experiments/E204_metrology/results_metrology/METROLOGY_SOFT_RESULTS.json"
  },
  "latest_commit": "89a3ecd (prose finals pre-drafted; E204 slots marked)",
- "next_cascade_action": "score_soft_arm.py the moment METROLOGY_SOFT_RESULTS.json exists",
+ "next_cascade_action": "none \u2014 campaign closed; only the F1b post-closure addendum remains (external)",
  "continuation_instruction": "If this session is idle and the result file exists: run the 7-step cascade in automation/state/LATEST_HANDOFF.json['closure_cascade'] verbatim (score -> finalize_e212 -> build_seal -> run_battery must PASS -> generate_package -> author prose finals -> final marker + commit/push each step). If the worker died without the result file: preserve as-run artifacts, record failure class, amendment policy, never silently rerun. Fraction seal stays closed. F1b stays PENDING_EXTERNAL.",
  "hard_stops": [
   "STOP file",
   "WATCHDOG_HALTED.json",
   "final campaign-state marker present"
  ],
- "in_flight": "workflow wf_f945aa2d-05e adversarially fact-checking final/ docs vs artifacts"
+ "in_flight": null
 }
