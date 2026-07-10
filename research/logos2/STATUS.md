@@ -1,25 +1,28 @@
 # LOGOS-2 campaign status
 
-**Updated:** 2026-07-10 (early hours) · branch `research/logos2-anchor-identifiability` ·
-governance: Constitution v2.3 + `CLAIM_LADDER.md`.
+**Updated:** 2026-07-10 (milestone 2 in progress) · branch `research/logos2-anchor-identifiability` ·
+governance: Constitution v2.3 + `CLAIM_LADDER.md` + `MILESTONE2_CONTROL_ADDENDUM.md` (@5deec1e,
+frozen before any confirmatory inspection).
 
 | item | state |
 |---|---|
-| PREFLIGHT | COMPLETE (`PRECHECK.md`, protected-asset baseline verified, solvers installed) |
-| E200 prior-overlap audit | COMPLETE (L0) — 24 overlap rows, 22 evidence channels, 11 seals registered |
-| E201 replay benchmark | prereg FROZEN (`46d8da5`); pilot P1 RUNNING (UGA/CSYL ladders + control battery + process-replay encoding) |
-| E202 (recast: acquisition policy) | PENDING (depends on E203 F1) |
-| E203 identifiability engine | **PILOT_COMPLETE — ENGINE_VALIDATED** (amended G1 5/5 after fail-closed defect repair R1); WP-H UNSAT reproduced → UNSAT_GENERIC 200/200; Salgarella conditional map UNSAT_GENERIC 200/200 (no claim); rel channel relationally dark; F1 confirmatory grid deferred per resource budget |
-| E204 metrology | PENDING prereg (classification: EXTENSION; FRACTION seal stays closed — opening event not occurred) |
-| E205 palaeography | PENDING prereg (A/B EXTENSION, C BLOCKED_DATA, D NEW; Salgarella grades available) |
-| E206 onomastics | PENDING (SLOT_FREEZE must precede any external name contact) |
-| E207 morphology | PENDING prereg (adaptor-grammar + subregular = first-time methods) |
-| E208 tournament | GATED (WP-J de-authorization stands; requires licence-clean gate pass first) |
-| E209/E210/E211 | gated / auxiliary, not started |
-| E212–E214 | closure phase, not started |
+| PREFLIGHT + E200 | COMPLETE (L0) |
+| M2 control addendum | FROZEN @5deec1e (E201-F1 rules, 200-null calibration, import boundary) |
+| E201 pilot | COMPLETE — HARNESS_OPERATIONAL (UGA ladder 0.037→0.591@5names; CSYL flat at chance; 0/15) |
+| **E201-F1a** | RUNNING (qualification LB/CSYL/UGA @ R_full + 200-null CP-bound calibration) |
+| E201-F1b | PENDING CSA-sweep import (§2.3 boundary; sweep ETA ~2026-07-13) |
+| E202 acquisition policy | **COMPLETE** — VOI measured off E203-F1; top actionable = GORILA fraction-apparatus ingestion; value-space max = bilingual (+17.95 log10) but fragility 0.20 |
+| E203 pilot + F1 | **COMPLETE (confirmatory)** — ENGINE_VALIDATED; WPH38 exact count 10^224.83; MUS cores size-2 CORES_TYPICAL_OF_RANDOM; value-permutation nulls UNSAT 200/200; soft always-violated set band-stable |
+| E204 metrology | **BLOCKED_DATA (fail closed)** — 12 fraction tokens/10 docs accessible; seal UNOPENED & unread; unblock = klasmatogram silver ingestion (data request filed) |
+| E205 palaeography | **I COMPLETE: PRIOR_GENERIC** (grade prior ≡ pin-count; hard arm UNSAT_GENERIC); A/B deferred w/ reason; C BLOCKED_DATA |
+| E206 onomastics | **Stage-1 SLOT FREEZE COMMITTED** (151 candidates, 4 contaminated-flagged, formula head derived internally; zero external contact); Stage 2 not started |
+| E207 morphology | **COMPLETE: POSITIONAL_ONLY** (corrected battery after amendment R1; no predictive paradigm; A-initial enrichment stays exactly that) |
+| E208 | DE_AUTHORIZED_PENDING_LICENSE_CLEAN_GATE |
+| E209/E210/E211 | not started (gated/auxiliary) |
+| E212–E214 + M2 report | report follows F1a completion |
 
-**Standing constraints:** CSA sufficiency sweep occupies the host until ~2026-07-13 19:00
-(LOGOS-2 capped at 6 nice-15 workers; its LB/Cypriot at-scale cells are E201-F1 inputs).
-Paper/governance/corpus/72h-campaign untouched (baseline `PROTECTED_ASSET_HASHES.sha256`).
+**Amendment discipline exercised twice** (E203 G1 gate criterion; E207 probability sign error) —
+both defect repairs with as-run artifacts preserved; no result-driven adaptation.
 
-**Ledger:** `ledger.jsonl` (append-only, one record per milestone).
+**Standing:** CSA sweep runs until ~2026-07-13 (its at-scale cells enter only via `imports/`);
+paper/governance/corpus/72h campaign untouched; all seals unread; ledger.jsonl append-only.
