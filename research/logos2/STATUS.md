@@ -20,6 +20,8 @@ frozen before any confirmatory inspection).
 | E208 | DE_AUTHORIZED_PENDING_LICENSE_CLEAN_GATE |
 | E209/E210/E211 | not started (gated/auxiliary) |
 | M2 report | **DELIVERED** (reports/MILESTONE2_*) |
+| E204R remediation | **E204R_BLOCKED_DATA_QUALITY** — gate failed on statement 0.9763<0.98 alone (33 rows, 2 named classes); NUMERIC apparatus at 1.000 dual-parse agreement (326 fraction records, 72 multi-frac, 23 arith-complete docs); 2 amendments (R1 hang/grammar/trap, R2 bullets/entities); seal untouched |
+| Autopilot | **LIVE** — 15-min cron watchdog installed+tested (8/8), resumes this session when idle; STOP file + 8-failure breaker + final-state exit |
 | E206 Stage-2 | NEXT (prereg freeze: DAMOS/toponym inventories, drift model, canary battery, hierarchy) |
 | E212–E214 + final/ | queued after E206-S2; F1b import boundary armed for sweep (~07-13) |
 
