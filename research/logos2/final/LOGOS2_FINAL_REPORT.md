@@ -1,8 +1,9 @@
 # LOGOS-2 — Anchor-to-Identifiability Programme: final report
 
 Branch `research/logos2-anchor-identifiability` · closed 2026-07-10 · Constitution v2.3
-governs · master seed 1336530913 · all counts script-generated (see
-`MACHINE_READABLE_SUMMARY.json`, `EXPERIMENT_STATUS.csv`, `CLAIM_LEDGER.csv`).
+governs · master seed 1336530913 · all counts script-generated at closure by
+`final/generate_package.py` (`MACHINE_READABLE_SUMMARY.json`, `EXPERIMENT_STATUS.csv`,
+`CLAIM_LEDGER.csv`).
 
 **Headline: NO decipherment advance. No claim above the structural layer graduated.** The
 campaign's product is an *exact* identifiability map, a certified-calibration replay
@@ -24,7 +25,8 @@ blocked attempts (E204R2: overall .9995; 1,385 dual-agreed records). (d) A soft
 (max-satisfiability) metrology arm distinguishing data-completeness failure from value
 failure. (e) A frozen-slot onomastic test with a qualified detector and full canary
 battery. (f) A provenance-constrained audit RAG with epistemically separated indexes.
-(g) An evidence-independence graph over every claim the programme touches.
+(g) An evidence-independence graph over every claim the programme touches (finalized at
+closure once E204's terminal status classifies its node).
 
 **2. What did the historical replay establish?**
 The harness works and the transfer is not licensed: Linear B→Greek scored 0.000 (its
@@ -106,9 +108,9 @@ re-analysis without new evidence does not qualify (stop-list).
 
 **16. Which prospective seals remain closed?**
 The 72h `FRACTION_ORDER_ANETAKI` seal — closed, unread, hash-verified against the
-protected-asset baseline — and the new E213 seal
+protected-asset baseline — and the new E213 seal built at closure
 <!-- E204_SLOT_Q16: n_predictions + sealed sha256 prefix from SEAL_MANIFEST.json -->.
-Neither was opened at any point in this campaign; the E214 battery verifies both by hash
+Neither is opened at any point; the E214 battery verifies both by hash
 without reading contents.
 
 ---

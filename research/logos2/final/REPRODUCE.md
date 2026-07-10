@@ -8,7 +8,7 @@ Branch `research/logos2-anchor-identifiability`; all paths below relative to
 ```bash
 python3 -m venv .venv && .venv/bin/pip install ortools z3-solver python-sat scipy numpy pytest
 ```
-(The committed `.venv` used OR-Tools CP-SAT for E203/E204, exact model counting via
+(The campaign venv is gitignored — rebuild it with the line above; it used OR-Tools CP-SAT for E203/E204, exact model counting via
 component decomposition, scipy for Clopper–Pearson bounds.)
 
 ## One-command verifier
@@ -51,7 +51,7 @@ rag: .venv/bin/python build_indexes.py && .venv/bin/python eval_rag.py
 
 ## Closure cascade (mechanical, fail-closed at every step)
 ```bash
-experiments/E204_metrology/score_soft_arm.py   # refuses without the soft-arm result
+experiments/E204_metrology/score_soft_arm.py   # fails closed (nonzero exit, no status written) without the soft-arm result
 verifiers/finalize_e212.py                     # refuses without E204_FINAL_STATUS.json
 experiments/E213_prospective_seal/build_seal.py# refuses without terminal E204; append-only
 verifiers/run_battery.py                       # must exit 0
@@ -59,6 +59,6 @@ final/generate_package.py                      # refuses until E212 FINAL + seal
 ```
 
 ## What cannot be reproduced from this repo alone
-Licensed raw sources (gitignored; hashes in `DATA_INVENTORY.csv`), the gitignored RAG
+Licensed raw sources (gitignored; inventory in `DATA_INVENTORY.csv`, hashes in `PROTECTED_ASSET_HASHES.sha256`), the gitignored RAG
 sqlite (rebuildable via `build_indexes.py`; snapshot hash pinned), and E201-F1b (external
 CSA sweep; enters only via `imports/E201_F1B/import_f1b.py`).

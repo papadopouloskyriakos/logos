@@ -2,8 +2,8 @@
 
 ## What was built
 The smallest reproducible stack: SQLite FTS5 (BM25), no external services, database
-gitignored, snapshot pinned by `rag/INDEX_MANIFEST.sha256` (embedded in the E213 seal as the
-hard scholarship cutoff). Five epistemically separated indexes, 12,928 chunks total:
+gitignored, snapshot pinned by `rag/INDEX_MANIFEST.sha256` (embedded at closure in the E213 seal as
+the hard scholarship cutoff). Five epistemically separated indexes, 12,928 chunks total:
 
 | index | content | chunks | contamination handling |
 |---|---|---|---|

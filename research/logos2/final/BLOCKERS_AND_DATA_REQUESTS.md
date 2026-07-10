@@ -1,7 +1,7 @@
 # Blockers and data requests at LOGOS-2 closure
 
 Ordered by E202's generated value-of-information ranking (`VALUE_OF_INFORMATION.csv`,
-carried into this package verbatim; counts are script-generated).
+copied verbatim into this package at closure by `generate_package.py`; counts are script-generated).
 
 ## 1. GORILA klasmatogram (fraction apparatus) silver ingestion — IMMEDIATE, in-house
 E202 rank 1. Licensed material already held; the blocker is transcription labour + QC, not
