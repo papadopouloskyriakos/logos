@@ -47,6 +47,7 @@ def main():
     rag = j(os.path.join(ROOT, "rag", "EVALUATION_RESULTS.json"))
     summary = {
         "campaign": "LOGOS-2 Anchor-to-Identifiability", "closed": "2026-07-10",
+        "campaign_closed": True,  # watchdog clean-exit marker (logos2_watchdog.sh reads this key)
         "headline": "NO_DECIPHERMENT_ADVANCE_BEYOND_L3; identifiability threshold mapped; "
                     "all substantive claims SINGLE_CHANNEL; prospective seal armed",
         "E203_exact_ambiguity_log10": 224.83,
