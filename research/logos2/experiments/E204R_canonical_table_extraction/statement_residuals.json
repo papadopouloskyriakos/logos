@@ -1,0 +1,200 @@
+[
+ {
+  "doc": "KH 59",
+  "locus": ".3",
+  "C": "-DI-NA",
+  "D": "DI-NA"
+ },
+ {
+  "doc": "HT 42",
+  "locus": ".1-2",
+  "C": "-TA",
+  "D": "TA"
+ },
+ {
+  "doc": "KN 32",
+  "locus": ".1",
+  "C": "",
+  "D": "&#149"
+ },
+ {
+  "doc": "KH 6",
+  "locus": ".6",
+  "C": "-RE",
+  "D": "RE"
+ },
+ {
+  "doc": "KH 7",
+  "locus": "a.1",
+  "C": "NE-\u2022-KI",
+  "D": "NE-&#149-KI"
+ },
+ {
+  "doc": "KH 8",
+  "locus": ".2",
+  "C": "-TA",
+  "D": "TA"
+ },
+ {
+  "doc": "HT 26",
+  "locus": "b.2",
+  "C": "-RO-NI",
+  "D": "RO-NI"
+ },
+ {
+  "doc": "HT 49a.7)",
+  "locus": "a.1",
+  "C": "-QE",
+  "D": "QE"
+ },
+ {
+  "doc": "ZA 9",
+  "locus": ".2",
+  "C": "-RA",
+  "D": "RA"
+ },
+ {
+  "doc": "THE Zb 1",
+  "locus": ".5",
+  "C": "*309c+-RU-KA",
+  "D": "*309c+RU-KA"
+ },
+ {
+  "doc": "THE Zb 1",
+  "locus": ".5",
+  "C": "*309a+RI+-WA-JU",
+  "D": "*309a+RI+WA-JU"
+ },
+ {
+  "doc": "KH 59",
+  "locus": ".2",
+  "C": "-I",
+  "D": "I"
+ },
+ {
+  "doc": "HT 42",
+  "locus": ".6-7",
+  "C": "-RE-TU",
+  "D": "RE-TU"
+ },
+ {
+  "doc": "THE Zb 1",
+  "locus": ".1",
+  "C": "*309b+-34-PU-PI",
+  "D": "*309b+34-PU-PI"
+ },
+ {
+  "doc": "HT 4",
+  "locus": ".2",
+  "C": "-DU-RI-TE",
+  "D": "DU-RI-TE"
+ },
+ {
+  "doc": "PH 30",
+  "locus": "b.2",
+  "C": "-DU-RI",
+  "D": "DU-RI"
+ },
+ {
+  "doc": "ARKH 3",
+  "locus": "b.1",
+  "C": "-JA-PI",
+  "D": "JA-PI"
+ },
+ {
+  "doc": "HT 101",
+  "locus": ".4",
+  "C": "KU-PA3-",
+  "D": "KU-PA3"
+ },
+ {
+  "doc": "MA 2",
+  "locus": "b.1",
+  "C": "-RE-TI",
+  "D": "RE-TI"
+ },
+ {
+  "doc": "HT 1.4",
+  "locus": "a.3",
+  "C": "-RI",
+  "D": "RI"
+ },
+ {
+  "doc": "KH 22",
+  "locus": ".1",
+  "C": "-ZA",
+  "D": "ZA"
+ },
+ {
+  "doc": "ARKH 4",
+  "locus": "b.2",
+  "C": "-RE",
+  "D": "RE"
+ },
+ {
+  "doc": "HT 108",
+  "locus": ".2",
+  "C": "RU-PI-*305-MI",
+  "D": "RU-PI*305-MI"
+ },
+ {
+  "doc": "HT 110",
+  "locus": "b.1",
+  "C": "-RO",
+  "D": "RO"
+ },
+ {
+  "doc": "HT 52a.1",
+  "locus": "a.2-3",
+  "C": "-RA-MA-SI",
+  "D": "RA-MA-SI"
+ },
+ {
+  "doc": "HT 122",
+  "locus": "a.3",
+  "C": "-DI",
+  "D": "DI"
+ },
+ {
+  "doc": "HT 23a.1",
+  "locus": "b.2",
+  "C": "-DU-RI",
+  "D": "DU-RI"
+ },
+ {
+  "doc": "HT 42",
+  "locus": ".3-5",
+  "C": "KU-",
+  "D": "KU"
+ },
+ {
+  "doc": "HT 5",
+  "locus": ".3",
+  "C": "-WI-DU",
+  "D": "WI-DU"
+ },
+ {
+  "doc": "HT Zb 160)",
+  "locus": "b.2",
+  "C": "-DU-RI",
+  "D": "DU-RI"
+ },
+ {
+  "doc": "PH 30",
+  "locus": ".1",
+  "C": "-TI",
+  "D": "TI"
+ },
+ {
+  "doc": "HT 93",
+  "locus": "a.9",
+  "C": "-KA",
+  "D": "KA"
+ },
+ {
+  "doc": "KH 50",
+  "locus": ".1",
+  "C": "-TA",
+  "D": "TA"
+ }
+]

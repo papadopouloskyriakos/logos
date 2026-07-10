@@ -2,30 +2,28 @@
  "pairs": 1392,
  "only_C": 40,
  "only_D": 36,
- "overall": 0.9854,
+ "overall": 0.9972,
  "per_field": {
   "doc_id": 1.0,
   "locus": 1.0,
-  "context_word": 0.8894,
-  "logogram": 0.9813,
+  "context_word": 0.9763,
+  "logogram": 0.9986,
   "integer": 1.0,
-  "fraction_seq": 0.9978,
+  "fraction_seq": 1.0,
   "uncertain": 1.0,
   "restored": 1.0,
   "is_kuro": 1.0
  },
- "full_record_exact": 0.8743,
- "frac_int_classification": 0.9978,
- "flags_agreement": 1.0,
+ "full_record_exact": 0.9756,
+ "classification": 1.0,
  "multi_fraction_docs": 72,
  "arithmetic_complete_docs": 23,
- "decimal_contamination": 0,
  "rare_signs": {
-  "F": "14/14",
-  "H": "15/15",
   "L": "4/4",
+  "H": "15/15",
+  "F": "14/14",
+  "-": "2/2",
   "W": "5/5",
-  "-": "2/3",
   "X": "3/3",
   "Y": "1/1"
  },
@@ -38,7 +36,7 @@
   "multi>=30": true,
   "arith>=10": true,
   "dec==0": true,
-  "full_record>=.95": false,
+  "full_record>=.95": true,
   "PASSES": false
  }
 }

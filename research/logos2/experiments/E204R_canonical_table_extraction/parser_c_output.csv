@@ -1,10 +1,10 @@
 source_file,doc_id,site,support,locus,seq,context_word,logogram,integer,fraction_seq,uncertain,restored,damaged,is_kuro,parser
-HTtexts,KN Wb 33,Knossos,wb,.1-2,0,QE-RA2-U • KI-RO,,197,,0,0,0,0,C
+HTtexts,KN Wb 33,Knossos,wb,.1-2,0,QE-RA2-U KI-RO,,197,,0,0,0,0,C
 HTtexts,KN Wb 33,Knossos,wb,.2,1,ZU-SU,,70,,0,0,0,0,C
 HTtexts,KN Wb 33,Knossos,wb,.2-3,2,DI-DI-ZA-KE,,52,,0,0,0,0,C
 HTtexts,KN Wb 33,Knossos,wb,.3-4,3,KU-PA3-NU,,109,,0,0,0,0,C
 HTtexts,KN Wb 33,Knossos,wb,.4,4,A-RA-NA-RE,,105,,0,0,0,0,C
-HTtexts,HT 95a.4-5,Haghia Triada,tablet,.1,5,A-KA-RU •,OLE+U *610,20,,0,1,0,0,C
+HTtexts,HT 95a.4-5,Haghia Triada,tablet,.1,5,A-KA-RU,OLE+U *610,20,,0,1,0,0,C
 HTtexts,HT 95a.4-5,Haghia Triada,tablet,.2,6,OLE+A *609,,17,,0,1,0,0,C
 HTtexts,HT 95a.4-5,Haghia Triada,tablet,.2,7,OLE+E *613,,3,,0,1,0,0,C
 HTtexts,HT 95a.4-5,Haghia Triada,tablet,.3,8,KI-RE-TA-NA,OLE+U *610,54,,0,1,0,0,C
@@ -22,7 +22,7 @@ HTtexts,HT 4,Haghia Triada,tablet,.2,19,-DU-RI-TE,,2,,0,1,0,0,C
 HTtexts,HT 4,Haghia Triada,tablet,.4,20,TA-PI-SI-DI,,2,,0,1,0,0,C
 HTtexts,HT 5,Haghia Triada,tablet,.2,21,MA-SI,,30,,0,1,0,0,C
 HTtexts,HT 5,Haghia Triada,tablet,.3,22,-WI-DU,,10,,0,1,0,0,C
-HTtexts,HT 6,Haghia Triada,tablet,a.1-2,23,DA-TA-RA,• TE • FIC,15,,0,0,0,0,C
+HTtexts,HT 6,Haghia Triada,tablet,a.1-2,23,DA-TA-RA,TE FIC,15,,0,0,0,0,C
 HTtexts,HT 6,Haghia Triada,tablet,a.2-3,24,PI-TA-JA,,24,,0,0,0,0,C
 HTtexts,HT 6,Haghia Triada,tablet,a.3,25,JA+RU *538,,,DD,0,0,0,0,C
 HTtexts,HT 6,Haghia Triada,tablet,a.3-4,26,MA-*321,,10,,0,0,0,0,C
@@ -60,7 +60,7 @@ HTtexts,HT 8,Haghia Triada,tablet,b.4,57,KA-PA,,,J,0,0,0,0,C
 HTtexts,HT 8,Haghia Triada,tablet,b.4,58,PA-JA-RE,,1,F,0,0,0,0,C
 HTtexts,HT 8,Haghia Triada,tablet,b.5,59,*86+*188 *565,,,J,0,0,0,0,C
 HTtexts,HT 8,Haghia Triada,tablet,b.5,60,,,,J,0,0,0,0,C
-HTtexts,KH Wc 2058-2062,Khania,wc,a.2,61,PA-DE •,,5,JE,0,0,0,0,C
+HTtexts,KH Wc 2058-2062,Khania,wc,a.2,61,PA-DE,,5,JE,0,0,0,0,C
 HTtexts,KH Wc 2058-2062,Khania,wc,a.2-3,62,*306-TU,,10,,0,0,0,0,C
 HTtexts,KH Wc 2058-2062,Khania,wc,a.3,63,DI-NA-U,,4,,0,0,0,0,C
 HTtexts,KH Wc 2058-2062,Khania,wc,a.3-4,64,QE-PU,,2,,0,0,0,0,C
@@ -89,7 +89,7 @@ HTtexts,HT 39.1,Haghia Triada,zb,b.1-2,86,TA-RI-NA,,15,,0,0,0,0,C
 HTtexts,HT 39.1,Haghia Triada,zb,b.2,87,*312-TA,,6,J,0,0,0,0,C
 HTtexts,HT 39.1,Haghia Triada,zb,b.3,88,KA-SA-RU,,6,,0,0,0,0,C
 HTtexts,HT 39.1,Haghia Triada,zb,b.4,89,TA-NA-TI,,9,E,0,0,0,0,C
-HTtexts,HT 6b.5-6,Haghia Triada,za,a.1-2,90,A-RU-RA-•,,3,,0,1,0,0,C
+HTtexts,HT 6b.5-6,Haghia Triada,za,a.1-2,90,A-RU-RA-,,3,,0,1,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,a.2,91,KA-RO-NA,,2,,0,0,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,a.3,92,*322-RI,,1,,0,0,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,a.3,93,KU-RO,,10,,0,0,0,1,C
@@ -100,13 +100,13 @@ HTtexts,HT 6b.5-6,Haghia Triada,za,b.2,97,*86 KA,,40,,0,0,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,b.2,98,KA,,30,,0,0,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,b.3,99,KA,,50,,0,0,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,b.3-4,100,RU-ZU-NA,KA,30,,0,0,0,0,C
-HTtexts,HT 6b.5-6,Haghia Triada,za,b.4-5,101,SA-QE-RI •,KA,30,,0,0,0,0,C
+HTtexts,HT 6b.5-6,Haghia Triada,za,b.4-5,101,SA-QE-RI,KA,30,,0,0,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,b.5-6,102,KU-RO,,180,,0,0,0,1,C
-HTtexts,HT 12,Haghia Triada,tablet,.1-2,103,QA-TI-DA-TE •,OLE+DI *608,5,,0,0,0,0,C
+HTtexts,HT 12,Haghia Triada,tablet,.1-2,103,QA-TI-DA-TE,OLE+DI *608,5,,0,0,0,0,C
 HTtexts,HT 12,Haghia Triada,tablet,.2,104,*304,,5,,0,0,0,0,C
-HTtexts,HT 12,Haghia Triada,tablet,.3,105,QE-TU-NE •,QA++PU *510,1,,1,1,0,0,C
+HTtexts,HT 12,Haghia Triada,tablet,.3,105,QE-TU-NE,QA++PU *510,1,,1,1,0,0,C
 HTtexts,HT 12,Haghia Triada,tablet,.4,106,,,30,E,0,0,0,0,C
-HTtexts,HT 12,Haghia Triada,tablet,.4-5,107,MA+RU *559 • *118 Talent,,5,,0,0,0,0,C
+HTtexts,HT 12,Haghia Triada,tablet,.4-5,107,MA+RU *559 *118 Talent,,5,,0,0,0,0,C
 HTtexts,HT 12,Haghia Triada,tablet,.5,108,*303+E *626,,3,,0,0,0,0,C
 HTtexts,HT 12,Haghia Triada,tablet,.5,109,FIC,,1,,0,0,0,0,C
 HTtexts,HT 12,Haghia Triada,tablet,.6,110,QA++PU+RE *511,,,K,1,1,0,0,C
@@ -118,16 +118,16 @@ HTtexts,HT 13,Haghia Triada,tablet,.4,115,KU-ZU-NI,,18,,0,0,0,0,C
 HTtexts,HT 13,Haghia Triada,tablet,.5,116,DA-SI-*118,,19,,0,0,0,0,C
 HTtexts,HT 13,Haghia Triada,tablet,.5-6,117,I-DU-NE-SI,,5,,0,0,0,0,C
 HTtexts,HT 13,Haghia Triada,tablet,.7,118,KU-RO,,130,J,0,0,0,1,C
-HTtexts,HT 14,Haghia Triada,tablet,.1-2,119,PU-VINa,• TE • GRA OLE+MI *622 OLE+DI *608 *304 OLIV,3033913,,0,0,0,0,C
+HTtexts,HT 14,Haghia Triada,tablet,.1-2,119,PU-VINa,TE GRA OLE+MI *622 OLE+DI *608 *304 OLIV,3033913,,0,0,0,0,C
 HTtexts,HT 14,Haghia Triada,tablet,.3-5,120,A-PU2-NA-DU,GRA OLE+MI *622 OLE+DI *608 *304 OLIV,4554614,,0,0,0,0,C
 HTtexts,HT 15,Haghia Triada,tablet,.1-2,121,DU-*123-A,,684,,0,0,0,0,C
 HTtexts,HT 15,Haghia Triada,tablet,.2-3,122,GRA+L3L3 *586,,570,,0,0,0,0,C
-HTtexts,HT 15,Haghia Triada,tablet,.4,123,*188 • KI-RO,,400,,0,0,0,0,C
-HTtexts,HT 16,Haghia Triada,tablet,.1-2,124,KA-KU-PA • DI-NA-U,,,F,0,0,0,0,C
-HTtexts,HT 16,Haghia Triada,tablet,.2-3,125,• WA,,,B,0,0,0,0,C
+HTtexts,HT 15,Haghia Triada,tablet,.4,123,*188 KI-RO,,400,,0,0,0,0,C
+HTtexts,HT 16,Haghia Triada,tablet,.1-2,124,KA-KU-PA DI-NA-U,,,F,0,0,0,0,C
+HTtexts,HT 16,Haghia Triada,tablet,.2-3,125,WA,,,B,0,0,0,0,C
 HTtexts,HT 16,Haghia Triada,tablet,.3,126,*188+KU *684,,,EF,0,0,0,0,C
 HTtexts,HT 16,Haghia Triada,tablet,.4,127,SA-PO,ZE,,K,0,0,0,0,C
-HTtexts,HT 17,Haghia Triada,tablet,.1,128,RA-*164a-TI,• TE • VIN,38,,0,0,0,0,C
+HTtexts,HT 17,Haghia Triada,tablet,.1,128,RA-*164a-TI,TE VIN,38,,0,0,0,0,C
 HTtexts,HT 17,Haghia Triada,tablet,.2,129,SA-*315/RO,,10,,0,0,0,0,C
 HTtexts,HT 17,Haghia Triada,tablet,.3,130,SI-DA-RE,,5,,0,0,0,0,C
 HTtexts,HT 19,Haghia Triada,tablet,.1,131,PA-SE,GRA+QE *578,20,,0,0,0,0,C
@@ -135,22 +135,22 @@ HTtexts,HT 19,Haghia Triada,tablet,.1,132,OLE+KI *618,,2,,0,0,0,0,C
 HTtexts,HT 19,Haghia Triada,tablet,.2,133,*304,,3,,0,0,0,0,C
 HTtexts,HT 19,Haghia Triada,tablet,.2,134,SA-RA2,GRA,10,,0,0,0,0,C
 HTtexts,HT 19,Haghia Triada,tablet,.2-3,135,FIC,,10,,0,0,0,0,C
-HTtexts,HT 19,Haghia Triada,tablet,.1-2,136,RA-*164a-TI,• TE • VINa,30,,0,0,0,0,C
+HTtexts,HT 19,Haghia Triada,tablet,.1-2,136,RA-*164a-TI,TE VINa,30,,0,0,0,0,C
 HTtexts,HT 19,Haghia Triada,tablet,.2-3,137,SA-*315/RO,,5,J,0,0,0,0,C
 HTtexts,HT 19,Haghia Triada,tablet,.3-4,138,DU-ME-DI,,43,J,0,0,0,0,C
 HTtexts,HT 17,Haghia Triada,tablet,.1-2,139,KU-MA-JU,,,E,0,0,0,0,C
-HTtexts,HT 17,Haghia Triada,tablet,.2-3,140,QE-KU-RE •,DI,,J,0,0,0,0,C
+HTtexts,HT 17,Haghia Triada,tablet,.2-3,140,QE-KU-RE,DI,,J,0,0,0,0,C
 HTtexts,HT 17,Haghia Triada,tablet,.4,141,CAPm,,,F,0,0,0,0,C
 HTtexts,HT 17,Haghia Triada,tablet,.4-5,142,SA-RE-JU,,,F,0,0,0,0,C
 HTtexts,HT 17,Haghia Triada,tablet,.5,143,*188+KU *684,,,J,0,0,0,0,C
-HTtexts,HT 21,Haghia Triada,tablet,.1-2,144,PI-TA-KA-SE,• TE • GRA,161,,0,0,0,0,C
+HTtexts,HT 21,Haghia Triada,tablet,.1-2,144,PI-TA-KA-SE,TE GRA,161,,0,0,0,0,C
 HTtexts,HT 21,Haghia Triada,tablet,.2-3,145,OLE+U *610,,11,,0,0,0,0,C
 HTtexts,HT 21,Haghia Triada,tablet,.3,146,OLE+E *613,,3,JE,0,0,0,0,C
 HTtexts,HT 21,Haghia Triada,tablet,.3,147,*304,,7,JE,0,0,0,0,C
 HTtexts,HT 21,Haghia Triada,tablet,.4,148,OLIV,,1,E,0,0,0,0,C
 HTtexts,HT 22,Haghia Triada,tablet,.1,149,GRA+L2 *585,,230,,0,0,0,0,C
 HTtexts,HT 22,Haghia Triada,tablet,.2,150,*330+DA *643,,113,,0,0,0,0,C
-HTtexts,HT 23+150,Haghia Triada,tablet,a.1,151,KA-NA •,*303,,B,0,0,0,0,C
+HTtexts,HT 23+150,Haghia Triada,tablet,a.1,151,KA-NA,*303,,B,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,a.1,152,*308,,,H,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,a.1,153,OLE+NE *612,,,H,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,a.2,154,OLE+TU *621,,,H,0,0,0,0,C
@@ -164,7 +164,7 @@ HTtexts,HT 23+150,Haghia Triada,tablet,a.4,161,QIf-RI-TU-QA,,,K,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,a.4-5,162,SA-SA-ME,,,K,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,a.5,163,SI+ME *530,,10,,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,a.5,164,KO-RU,,1,,0,0,0,0,C
-HTtexts,HT 23+150,Haghia Triada,tablet,b.1,165,NI-RA •,*303,,B,0,0,0,0,C
+HTtexts,HT 23+150,Haghia Triada,tablet,b.1,165,NI-RA,*303,,B,0,0,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,b.1,166,OLE,,,B,0,1,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,b.2,167,QA++RE *508,,1,,1,1,0,0,C
 HTtexts,HT 23+150,Haghia Triada,tablet,b.3,168,,,7,E,0,1,0,0,C
@@ -184,13 +184,13 @@ HTtexts,HT 25,Haghia Triada,tablet,a.4,181,ZU-JU-PU2,,1,,0,1,0,0,C
 HTtexts,HT 25,Haghia Triada,tablet,a.5,182,I-KI-RA,,1,,0,1,0,0,C
 HTtexts,HT 25,Haghia Triada,tablet,a.5,183,PA,,1,,0,0,0,0,C
 HTtexts,HT 25,Haghia Triada,tablet,b.2,184,KU-RO,,16,,0,0,0,1,C
-HTtexts,HT 25,Haghia Triada,tablet,b.2,185,WI-TE-RO • I-TI,VIR,28,,0,0,0,0,C
+HTtexts,HT 25,Haghia Triada,tablet,b.2,185,WI-TE-RO I-TI,VIR,28,,0,0,0,0,C
 HTtexts,HT 25,Haghia Triada,tablet,b.3,186,VIR,,24,,0,0,0,0,C
 HTtexts,HT 25,Haghia Triada,tablet,b.4,187,KU-RO,,52,,0,0,0,1,C
 HTtexts,HT 26,Haghia Triada,tablet,a.2,188,TA-TI,,21,,0,0,0,0,C
 HTtexts,HT 26,Haghia Triada,tablet,a.2-3,189,MI-KI-SE-NA,,15,,0,0,0,0,C
 HTtexts,HT 26,Haghia Triada,tablet,a.3-4,190,U-NU-QIf,,5,,0,1,0,0,C
-HTtexts,HT 26,Haghia Triada,tablet,b.1,191,• *406VAS+KE *656 • VIR,,9,,0,0,0,0,C
+HTtexts,HT 26,Haghia Triada,tablet,b.1,191,*406VAS+KE *656 VIR,,9,,0,0,0,0,C
 HTtexts,HT 26,Haghia Triada,tablet,b.2,192,-RO-NI,,3,,0,1,0,0,C
 HTtexts,HT 26,Haghia Triada,tablet,b.2-3,193,KA-U-ZU-NI,,4,,0,0,0,0,C
 HTtexts,HT 26,Haghia Triada,tablet,b.3,194,KI+ME *545,,12,,0,0,0,0,C
@@ -208,14 +208,14 @@ HTtexts,HT 27+48,Haghia Triada,tablet,a.7,205,KU-RO,,335,,0,0,0,1,C
 HTtexts,HT 27+48,Haghia Triada,tablet,a.8,206,*303,,9,JEB,0,0,0,0,C
 HTtexts,HT 27+48,Haghia Triada,tablet,a.8,207,FIC,,10,B,0,0,0,0,C
 HTtexts,HT 27+48,Haghia Triada,tablet,a.8,208,VINa,,7,,0,0,0,0,C
-HTtexts,HT 27+48,Haghia Triada,tablet,b.1,209,MI-DA,• VINa+WA *592 • SA,7,,0,1,0,0,C
-HTtexts,HT 27+48,Haghia Triada,tablet,b.2,210,VINa • GRA • SA,,1,,0,1,0,0,C
+HTtexts,HT 27+48,Haghia Triada,tablet,b.1,209,MI-DA,VINa+WA *592 SA,7,,0,1,0,0,C
+HTtexts,HT 27+48,Haghia Triada,tablet,b.2,210,VINa GRA SA,,1,,0,1,0,0,C
 HTtexts,HT 27+48,Haghia Triada,tablet,b.2,211,RE,,14,,0,0,0,0,C
-HTtexts,HT 27+48,Haghia Triada,tablet,b.5,212,PA-SE,"• VINa+WA *591, variant of the preceding • SA",4,,0,0,0,0,C
+HTtexts,HT 27+48,Haghia Triada,tablet,b.5,212,PA-SE,"VINa+WA *591, variant of the preceding SA",4,,0,0,0,0,C
 HTtexts,HT 27+48,Haghia Triada,tablet,b.5,213,RE,,70,,0,0,0,0,C
-HTtexts,HT 27+48,Haghia Triada,tablet,b.6,214,VINa • GRA • SA,,4,,0,1,0,0,C
+HTtexts,HT 27+48,Haghia Triada,tablet,b.6,214,VINa GRA SA,,4,,0,1,0,0,C
 HTtexts,HT 27+48,Haghia Triada,tablet,b.6,215,RE,,40,,0,1,0,0,C
-HTtexts,HT 28,Haghia Triada,tablet,a.1-2,216,JA-QIf •,GRA+QE *578),5,,0,0,0,0,C
+HTtexts,HT 28,Haghia Triada,tablet,a.1-2,216,JA-QIf,GRA+QE *578),5,,0,0,0,0,C
 HTtexts,HT 28,Haghia Triada,tablet,a.2,217,OLE+U *610,,2,,0,0,0,0,C
 HTtexts,HT 28,Haghia Triada,tablet,a.2,218,OLE+KI *618,,,J,0,0,0,0,C
 HTtexts,HT 28,Haghia Triada,tablet,a.2,219,OLE+MI *622,,1,,0,0,0,0,C
@@ -235,13 +235,13 @@ HTtexts,HT 28,Haghia Triada,tablet,b.3-4,232,PU-RA2,FIC,6,,0,0,0,0,C
 HTtexts,HT 28,Haghia Triada,tablet,b.4,233,JA-QIf,VINa,6,,0,0,0,0,C
 HTtexts,HT 28,Haghia Triada,tablet,b.5,234,WI-DI-NA,OLE+DI *608,3,,0,0,0,0,C
 HTtexts,HT 28,Haghia Triada,tablet,b.5,235,VINa,,3,,0,0,0,0,C
-HTtexts,HT 28,Haghia Triada,tablet,b.6,236,•,,,E,0,0,0,0,C
+HTtexts,HT 28,Haghia Triada,tablet,b.6,236,,,,E,0,0,0,0,C
 HTtexts,HT 29,Haghia Triada,tablet,.1,237,RU-MA-TA,,2,,0,1,0,0,C
-HTtexts,HT 29,Haghia Triada,tablet,.2,238,•,,1,,0,1,0,0,C
+HTtexts,HT 29,Haghia Triada,tablet,.2,238,,,1,,0,1,0,0,C
 HTtexts,HT 29,Haghia Triada,tablet,.2,239,PA-JA-RE,,2,,0,1,0,0,C
 HTtexts,HT 29,Haghia Triada,tablet,.3,240,DI-JA-I,,2,,0,1,0,0,C
 HTtexts,HT 29,Haghia Triada,tablet,.4,241,SA-*323-MI,,1,,0,0,0,0,C
-HTtexts,HT 29,Haghia Triada,tablet,.4-5,242,•-KI-TA,,2,,0,1,0,0,C
+HTtexts,HT 29,Haghia Triada,tablet,.4-5,242,-KI-TA,,2,,0,1,0,0,C
 HTtexts,HT 29,Haghia Triada,tablet,.5,243,A-RE-DA-I,,2,,0,0,0,0,C
 HTtexts,HT 29,Haghia Triada,tablet,.6,244,KA-DU-MA-NE,,1,,0,0,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.1,245,SI,,4,,0,0,0,0,C
@@ -252,7 +252,7 @@ HTtexts,HT 88.5,Haghia Triada,za,.3,249,OLE+TA *615,,,DD,0,0,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.3,250,QA++PU *510,,,D,1,1,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.3,251,SA-RA-RA,,,J,0,0,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.3-4,252,BOSm,,1,,0,0,0,0,C
-HTtexts,HT 88.5,Haghia Triada,za,.4,253,KI-RO •,*303,8,,0,0,0,0,C
+HTtexts,HT 88.5,Haghia Triada,za,.4,253,KI-RO,*303,8,,0,0,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.4,254,FIC,,,DD,0,0,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.5,255,VINa,,,J,0,0,0,0,C
 HTtexts,HT 88.5,Haghia Triada,za,.5,256,BOSm,,1,,0,1,0,0,C
@@ -267,12 +267,12 @@ HTtexts,HT 31,Haghia Triada,gorila,.4,264,,,10,,0,1,0,0,C
 HTtexts,HT 31,Haghia Triada,gorila,.4-5,265,KI-DE-MA-*323-NA,vest. *402VAS+,400,,0,1,1,0,C
 HTtexts,HT 31,Haghia Triada,gorila,.5,266,*402VAS+SU-PA3-RA,,300,,0,0,0,0,C
 HTtexts,HT 31,Haghia Triada,gorila,.6,267,*402VAS+PA-TA-QE,,3000,,0,0,0,0,C
-HTtexts,HT 6b.2;,Haghia Triada,za,.1,268,SA-RA2 •,*308,,J,0,0,0,0,C
+HTtexts,HT 6b.2;,Haghia Triada,za,.1,268,SA-RA2,*308,,J,0,0,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.1,269,OLE+NE *612,,,JK,0,0,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.1,270,QA++PU *510,,1,K,1,1,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.2,271,QA++RE *508,,1,,1,1,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.2,272,MI+JA+RU *550,,1,,0,0,0,0,C
-HTtexts,HT 6b.2;,Haghia Triada,za,.3,273,SU-RE •,,108,,0,0,0,0,C
+HTtexts,HT 6b.2;,Haghia Triada,za,.3,273,SU-RE,,108,,0,0,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.3,274,DI,,65,,0,0,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.4,275,RE,,104,,0,1,0,0,C
 HTtexts,HT 6b.2;,Haghia Triada,za,.4,276,DI,,53,,0,0,0,0,C
@@ -283,8 +283,8 @@ HTtexts,HT 33,Haghia Triada,tablet,.4,280,*305,,90,,0,0,0,0,C
 HTtexts,HT 33,Haghia Triada,tablet,.4,281,*341+PI *646,,100,,0,0,0,0,C
 HTtexts,HT 33,Haghia Triada,tablet,.4,282,PA3+QE *537,,100,,0,0,0,0,C
 HTtexts,HT 34,Haghia Triada,tablet,.2,283,,,,B,0,1,0,0,C
-HTtexts,HT 34,Haghia Triada,tablet,.3,284,E • GRA,,200,,0,1,0,0,C
-HTtexts,HT 34,Haghia Triada,tablet,.3,285,E+• *525,,2,HK,0,1,0,0,C
+HTtexts,HT 34,Haghia Triada,tablet,.3,284,E GRA,,200,,0,1,0,0,C
+HTtexts,HT 34,Haghia Triada,tablet,.3,285,E+ *525,,2,HK,0,1,0,0,C
 HTtexts,HT 34,Haghia Triada,tablet,.4,286,QA++RE *508,,,E,1,1,0,0,C
 HTtexts,HT 34,Haghia Triada,tablet,.5,287,MI+JA+RU *550,,245,,0,0,0,0,C
 HTtexts,HT 34,Haghia Triada,tablet,.6,288,SA+MU+KU *521,,100,,0,0,0,0,C
@@ -306,7 +306,7 @@ HTtexts,HT 37,Haghia Triada,tablet,.3,303,,,6,,0,1,0,0,C
 HTtexts,HT 37,Haghia Triada,tablet,.4,304,KI-*310-RE,,1,,0,0,0,0,C
 HTtexts,HT 37,Haghia Triada,tablet,.5,305,KA-KI,,11,,0,0,0,0,C
 HTtexts,HT 37,Haghia Triada,tablet,.5,306,A,,15,,0,0,0,0,C
-HTtexts,HT 37,Haghia Triada,tablet,.6,307,•-QE,,17,,0,1,0,0,C
+HTtexts,HT 37,Haghia Triada,tablet,.6,307,-QE,,17,,0,1,0,0,C
 HTtexts,HT 38,Haghia Triada,tablet,.2,308,DA-RO-PA,*403VAS,1,,0,0,0,0,C
 HTtexts,HT 38,Haghia Triada,tablet,.2,309,SUS,,1,,0,0,0,0,C
 HTtexts,HT 38,Haghia Triada,tablet,.2,310,OVIS,,3,,0,0,0,0,C
@@ -317,18 +317,18 @@ HTtexts,HT 39,Haghia Triada,tablet,.1,314,TA-I-*123,,10,,0,1,0,0,C
 HTtexts,HT 39,Haghia Triada,tablet,.2,315,KU-RE-JU,,8,,0,1,0,0,C
 HTtexts,HT 39,Haghia Triada,tablet,.3,316,SA-MA-TI,,10,,0,1,0,0,C
 HTtexts,HT 39,Haghia Triada,tablet,.5,317,KU-RO,*407VAS+A *657,100,,0,1,0,1,C
-HTtexts,HT 39,Haghia Triada,tablet,.6,318,KU+• *564,,2,,0,1,0,0,C
-HTtexts,HT 40+76,Haghia Triada,tablet,.1,319,NU-DU-*331,• TE • GRA,207,,0,0,0,0,C
-HTtexts,HT 40+76,Haghia Triada,tablet,.2,320,KI-DA-TA •,GRA,134,,0,1,0,0,C
+HTtexts,HT 39,Haghia Triada,tablet,.6,318,KU+ *564,,2,,0,1,0,0,C
+HTtexts,HT 40+76,Haghia Triada,tablet,.1,319,NU-DU-*331,TE GRA,207,,0,0,0,0,C
+HTtexts,HT 40+76,Haghia Triada,tablet,.2,320,KI-DA-TA,GRA,134,,0,1,0,0,C
 HTtexts,KH 32.1,Khania,gorila,a.2,321,QE-TU,,10,,0,1,0,0,C
-HTtexts,KH 32.1,Khania,gorila,a.3,322,*305 • *304,,10,,0,0,0,0,C
-HTtexts,KH 32.1,Khania,gorila,a.3,323,RE • *304,,10,,0,0,0,0,C
-HTtexts,KH 32.1,Khania,gorila,a.4,324,MI-DA-NI • PA-JA,,2,DD,0,0,0,0,C
-HTtexts,HT 42,Haghia Triada,tablet,.1-2,325,-TA,• SI+SE *529 • TE • OLE+KI *618 OLE+U *610,87,,0,1,0,0,C
+HTtexts,KH 32.1,Khania,gorila,a.3,322,*305 *304,,10,,0,0,0,0,C
+HTtexts,KH 32.1,Khania,gorila,a.3,323,RE *304,,10,,0,0,0,0,C
+HTtexts,KH 32.1,Khania,gorila,a.4,324,MI-DA-NI PA-JA,,2,DD,0,0,0,0,C
+HTtexts,HT 42,Haghia Triada,tablet,.1-2,325,-TA,SI+SE *529 TE OLE+KI *618 OLE+U *610,87,,0,1,0,0,C
 HTtexts,HT 42,Haghia Triada,tablet,.2-3,326,SA-*315/RO,OLE+KI *618 OLE+U *610,822,,0,1,0,0,C
-HTtexts,HT 42,Haghia Triada,tablet,.3-5,327,KU-,OLE+• vest. OLE+MI *622,2,,0,1,1,0,C
+HTtexts,HT 42,Haghia Triada,tablet,.3-5,327,KU-,OLE+ vest. OLE+MI *622,2,,0,1,1,0,C
 HTtexts,HT 42,Haghia Triada,tablet,.6-7,328,-RE-TU,OLE+KI *618,,JE,0,1,0,0,C
-HTtexts,HT 43,Haghia Triada,tablet,.1-2,329,MA-SI-DU • PA-*342-I,• I • GRA+PA *574,5,,0,1,0,0,C
+HTtexts,HT 43,Haghia Triada,tablet,.1-2,329,MA-SI-DU PA-*342-I,I GRA+PA *574,5,,0,1,0,0,C
 HTtexts,HT 44,Haghia Triada,tablet,a.2,330,OLE+KI *617,,3,,0,1,0,0,C
 HTtexts,HT 44,Haghia Triada,tablet,a.2,331,OLE+U *610,,5,,0,1,0,0,C
 HTtexts,HT 44,Haghia Triada,tablet,a.3,332,OLE+RA *616,,5,,0,0,0,0,C
@@ -338,13 +338,13 @@ HTtexts,HT 44,Haghia Triada,tablet,b.2,335,,,5,,0,1,0,0,C
 HTtexts,HT 44,Haghia Triada,tablet,b.3,336,VINa,,75,,0,1,0,0,C
 HTtexts,HT 44,Haghia Triada,tablet,b.4,337,,,18,,0,1,0,0,C
 HTtexts,HT 44,Haghia Triada,tablet,b.5,338,,,10,,0,1,0,0,C
-HTtexts,HT 45+71,Haghia Triada,tablet,a.2,339,*86 • *305,,2,,0,1,0,0,C
-HTtexts,HT 45+71,Haghia Triada,tablet,a.3,340,*318 • *305,,2,,0,1,0,0,C
+HTtexts,HT 45+71,Haghia Triada,tablet,a.2,339,*86 *305,,2,,0,1,0,0,C
+HTtexts,HT 45+71,Haghia Triada,tablet,a.3,340,*318 *305,,2,,0,1,0,0,C
 HTtexts,HT 45+71,Haghia Triada,tablet,b.1,341,,,8,DD,0,1,0,0,C
 HTtexts,HT 45+71,Haghia Triada,tablet,b.2,342,KU,,,E,0,1,0,0,C
-HTtexts,HT 45+71,Haghia Triada,tablet,b.3,343,*318 • *305,,7,,0,0,0,0,C
+HTtexts,HT 45+71,Haghia Triada,tablet,b.3,343,*318 *305,,7,,0,0,0,0,C
 HTtexts,HT 45+71,Haghia Triada,tablet,b.3-4,344,PA-•-A,,20,B,0,1,0,0,C
-HTtexts,HT 45+71,Haghia Triada,tablet,b.4,345,• KU,,,E,0,0,0,0,C
+HTtexts,HT 45+71,Haghia Triada,tablet,b.4,345,KU,,,E,0,0,0,0,C
 HTtexts,HT 45+71,Haghia Triada,tablet,b.5,346,KU,,,E,0,0,0,0,C
 HTtexts,HT 46,Haghia Triada,tablet,a.1,347,MU-RU,,1,,0,1,0,0,C
 HTtexts,HT 46,Haghia Triada,tablet,a.2,348,KU-RO,,43,J,0,1,0,1,C
@@ -354,13 +354,13 @@ HTtexts,HT 47,Haghia Triada,tablet,a.1-2,351,KU-PA3-NA-TU,,20,,0,1,0,0,C
 HTtexts,HT 47,Haghia Triada,tablet,a.3,352,DU,,20,,0,1,0,0,C
 HTtexts,HT 47,Haghia Triada,tablet,a.3-4,353,PI,,10,,0,1,0,0,C
 HTtexts,HT 47,Haghia Triada,tablet,a.5,354,,,5,,0,1,0,0,C
-HTtexts,HT 1.4,Haghia Triada,tablet,a.2,355,TA-NA-TI •,,1,,0,1,0,0,C
+HTtexts,HT 1.4,Haghia Triada,tablet,a.2,355,TA-NA-TI,,1,,0,1,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.3,356,-RI,,1,,0,1,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.4,357,vesst.,,1,,0,1,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.4,358,TI-DU-NI,,1,,0,1,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.5,359,SI-RA,,1,,0,1,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.6,360,A-RU,,1,,0,0,0,0,C
-HTtexts,HT 1.4,Haghia Triada,tablet,a.6,361,•,,1,,0,1,0,0,C
+HTtexts,HT 1.4,Haghia Triada,tablet,a.6,361,,,1,,0,1,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.6,362,*312,,1,,0,0,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.6-7,363,KU-PA3-NU,,1,,0,0,0,0,C
 HTtexts,HT 1.4,Haghia Triada,tablet,a.7,364,TU-SU-PU2,,1,,0,0,0,0,C
@@ -379,7 +379,7 @@ HTtexts,HT 51,Haghia Triada,tablet,a.2,376,SE,,64,,0,1,0,0,C
 HTtexts,HT 51,Haghia Triada,tablet,b.1,377,KU-ME-TA,,12,,0,1,0,0,C
 HTtexts,HT 51,Haghia Triada,tablet,b.2,378,ZU-DU,,,JF,0,1,0,0,C
 HTtexts,HT 52,Haghia Triada,tablet,a.2,379,,,4,,0,1,0,0,C
-HTtexts,HT 52,Haghia Triada,tablet,b.1,380,NE •,GRA,201,,0,1,0,0,C
+HTtexts,HT 52,Haghia Triada,tablet,b.1,380,NE,GRA,201,,0,1,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,a.3,381,,,40,,0,1,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,a.3,382,,,100,,0,1,0,0,C
 HTtexts,HT 6b.5-6,Haghia Triada,za,b.2,383,,,18,,0,1,0,0,C
@@ -402,19 +402,19 @@ HTtexts,HT 59,Haghia Triada,tablet,.1,399,OLE+RI *614,,,K,0,1,0,0,C
 HTtexts,HT 59,Haghia Triada,tablet,.2,400,,,,K,0,1,0,0,C
 HTtexts,HT 59,Haghia Triada,tablet,.2,401,VINa,,,K,0,0,0,0,C
 HTtexts,HT 59,Haghia Triada,tablet,.2,402,OLE,,5,,0,0,0,0,C
-HTtexts,HT 61,Haghia Triada,tablet,.1,403,MI-TI •,GRA+KU *579,6,,0,1,0,0,C
-HTtexts,HT 62,Haghia Triada,tablet,.2,404,•-NA,GRA,15,E,0,1,0,0,C
+HTtexts,HT 61,Haghia Triada,tablet,.1,403,MI-TI,GRA+KU *579,6,,0,1,0,0,C
+HTtexts,HT 62,Haghia Triada,tablet,.2,404,-NA,GRA,15,E,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.2,405,KA-KU,,4,,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.3,406,,,18,,0,1,0,0,C
-HTtexts,HT 62,Haghia Triada,tablet,.3,407,Ib-TI-•,,6,,0,1,0,0,C
+HTtexts,HT 62,Haghia Triada,tablet,.3,407,Ib-TI-,,6,,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.4,408,,,4,E,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.5,409,VIR,,4,,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.6,410,NU,,17,,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.7,411,,,25,,0,1,0,0,C
-HTtexts,HT 62,Haghia Triada,tablet,.2,412,•,,1,,0,1,0,0,C
+HTtexts,HT 62,Haghia Triada,tablet,.2,412,,,1,,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.3,413,,,8,,0,1,0,0,C
 HTtexts,HT 62,Haghia Triada,tablet,.4,414,,,28,,0,1,0,0,C
-HTtexts,HT 63,Haghia Triada,tablet,.1,415,*305 • TE,,1,,0,0,0,0,C
+HTtexts,HT 63,Haghia Triada,tablet,.1,415,*305 TE,,1,,0,0,0,0,C
 HTtexts,HT 63,Haghia Triada,tablet,.1,416,KA-TI,,1,,0,0,0,0,C
 HTtexts,HT 63,Haghia Triada,tablet,.2,417,ZU,,2,,0,1,0,0,C
 HTtexts,HT 64,Haghia Triada,tablet,.2,418,NA,,2,,0,1,0,0,C
@@ -423,20 +423,20 @@ HTtexts,HT 64,Haghia Triada,tablet,.4,420,CAPm,,6,,0,0,0,0,C
 HTtexts,HT 66,Haghia Triada,tablet,.2,421,DI,,2,,0,1,0,0,C
 HTtexts,HT 66,Haghia Triada,tablet,.4,422,RE,,1,,0,1,0,0,C
 HTtexts,HT 67,Haghia Triada,tablet,.2,423,KU-RO,,420,,0,1,0,1,C
-HTtexts,HT 67,Haghia Triada,tablet,.3,424,FIC • TE,,400,,0,1,0,0,C
+HTtexts,HT 67,Haghia Triada,tablet,.3,424,FIC TE,,400,,0,1,0,0,C
 HTtexts,HT 68,Haghia Triada,tablet,.2,425,,,4,,0,1,0,0,C
 HTtexts,HT 69,Haghia Triada,tablet,.1,426,,,5,,0,1,0,0,C
 HTtexts,HT 69,Haghia Triada,tablet,.1,427,DI,,8,,0,1,0,0,C
 HTtexts,HT 69,Haghia Triada,tablet,.2,428,MA-DI,,4,,0,1,0,0,C
 HTtexts,HT 69,Haghia Triada,tablet,.3,429,DI,,12,,0,1,0,0,C
-HTtexts,HT 70+151,Haghia Triada,tablet,.1,430,FIC • TE,,30,,0,1,0,0,C
+HTtexts,HT 70+151,Haghia Triada,tablet,.1,430,FIC TE,,30,,0,1,0,0,C
 HTtexts,HT 70+151,Haghia Triada,tablet,.2,431,QA-*118-SA,,2,E,0,1,0,0,C
 HTtexts,HT 70+151,Haghia Triada,tablet,.3,432,I,,3,,0,1,0,0,C
 HTtexts,HT 73,Haghia Triada,tablet,.2,433,KU-RO,,20,,0,1,0,1,C
 HTtexts,HT 79,Haghia Triada,tablet,.2,434,TU-PA-RI,,1,,0,1,0,0,C
-HTtexts,HT 79,Haghia Triada,tablet,.2,435,TU-•,,3,,0,1,0,0,C
+HTtexts,HT 79,Haghia Triada,tablet,.2,435,TU-,,3,,0,1,0,0,C
 HTtexts,HT 79,Haghia Triada,tablet,.3,436,ZU,,3,,0,1,0,0,C
-HTtexts,HT 81,Haghia Triada,tablet,.1,437,A-SE,• MI+JA+RU *550 •,,H,0,1,0,0,C
+HTtexts,HT 81,Haghia Triada,tablet,.1,437,A-SE,MI+JA+RU *550,,H,0,1,0,0,C
 HTtexts,HT 85,Haghia Triada,tablet,a.2,438,DA-RI-DA,,12,,0,0,0,0,C
 HTtexts,HT 85,Haghia Triada,tablet,a.2,439,PA3-NI,,12,,0,0,0,0,C
 HTtexts,HT 85,Haghia Triada,tablet,a.3,440,U-*325-ZA,,6,,0,0,0,0,C
@@ -472,7 +472,7 @@ HTtexts,HT 87,Haghia Triada,tablet,.4,469,KU-RU-KU,,1,,0,0,0,0,C
 HTtexts,HT 87,Haghia Triada,tablet,.5,470,A-RA-•-A-TU,,1,,0,1,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.1,471,A-DU,VIR+KA *568,20,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.1-2,472,RE-ZA,,6,,0,0,0,0,C
-HTtexts,HT 117,Haghia Triada,tablet,.2,473,FIC • KI-KI-NA,,7,,0,0,0,0,C
+HTtexts,HT 117,Haghia Triada,tablet,.2,473,FIC KI-KI-NA,,7,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.4,474,KU-PA3-PA3,,1,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.4,475,KA-JU,,1,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.5,476,KU-PA3-NU,,1,,0,0,0,0,C
@@ -480,7 +480,7 @@ HTtexts,HT 117,Haghia Triada,tablet,.5,477,PA-JA-RE,,1,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.5-6,478,SA-MA-RO,,1,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.6,479,DA-TA-RE,,1,,0,0,0,0,C
 HTtexts,HT 117,Haghia Triada,tablet,.6,480,KU-RO,,6,,0,0,0,1,C
-HTtexts,KN Za 19:,Knossos,za,.1,481,A-SA-RA2,• *307 • *305,23,,0,0,0,0,C
+HTtexts,KN Za 19:,Knossos,za,.1,481,A-SA-RA2,*307 *305,23,,0,0,0,0,C
 HTtexts,KN Za 19:,Knossos,za,.2,482,JU+*317-QE *542,,22,,0,0,0,0,C
 HTtexts,KN Za 19:,Knossos,za,.2,483,MA-I-MI,,24,,0,0,0,0,C
 HTtexts,KN Za 19:,Knossos,za,.3,484,VIR+*313a *570,,13,,0,0,0,0,C
@@ -496,20 +496,20 @@ HTtexts,HT 90,Haghia Triada,tablet,.2-3,493,SI-RU-MA-RI-TA2,GRA,1,,0,0,0,0,C
 HTtexts,HT 90,Haghia Triada,tablet,.3-4,494,FIC,,1,,0,0,0,0,C
 HTtexts,HT 90,Haghia Triada,tablet,.4,495,OLE+MI *622,,1,,0,0,0,0,C
 HTtexts,HT 90,Haghia Triada,tablet,.4,496,*304,,1,,0,0,0,0,C
-HTtexts,HT 91,Haghia Triada,tablet,.1,497,I-KA,• *326 • GRA,,X,0,0,0,0,C
+HTtexts,HT 91,Haghia Triada,tablet,.1,497,I-KA,*326 GRA,,X,0,0,0,0,C
 HTtexts,HT 91,Haghia Triada,tablet,.4,498,,,5,E,0,0,0,0,C
 HTtexts,HT 91,Haghia Triada,tablet,.5,499,,,3,E,0,1,0,0,C
-HTtexts,HT 92,Haghia Triada,tablet,.1-2,500,A-DU •,GRA,680,,0,0,0,0,C
+HTtexts,HT 92,Haghia Triada,tablet,.1-2,500,A-DU,GRA,680,,0,0,0,0,C
 HTtexts,HT 92,Haghia Triada,tablet,.2,501,*304,,12,,0,0,0,0,C
-HTtexts,HT 93,Haghia Triada,tablet,a.1,502,PA3-NI-NA,• GRA PA3 • RE+SE *515,12,,0,0,0,0,C
-HTtexts,HT 93,Haghia Triada,tablet,a.1-2,503,DI-RI-NA •,DA+RE+SE *502,43,J,0,0,0,0,C
+HTtexts,HT 93,Haghia Triada,tablet,a.1,502,PA3-NI-NA,GRA PA3 RE+SE *515,12,,0,0,0,0,C
+HTtexts,HT 93,Haghia Triada,tablet,a.1-2,503,DI-RI-NA,DA+RE+SE *502,43,J,0,0,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.2-3,504,KI-DI-NI,,5,JH,0,0,0,0,C
-HTtexts,HT 93,Haghia Triada,tablet,a.3-4,505,A-SE,• I GRA+PA *574,26,JE,0,0,0,0,C
+HTtexts,HT 93,Haghia Triada,tablet,a.3-4,505,A-SE,I GRA+PA *574,26,JE,0,0,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.4,506,SA-RA2,,20,,0,0,0,0,C
-HTtexts,HT 93,Haghia Triada,tablet,a.4-5,507,QA-QA-RU,• I GRA+PA *574,5,,0,0,0,0,C
+HTtexts,HT 93,Haghia Triada,tablet,a.4-5,507,QA-QA-RU,I GRA+PA *574,5,,0,0,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.5-6,508,VIR-I,,6,,0,0,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.6,509,DE-JU-KU,,1,J,0,0,0,0,C
-HTtexts,HT 93,Haghia Triada,tablet,a.6-7,510,O-TI-•,,3,,0,1,0,0,C
+HTtexts,HT 93,Haghia Triada,tablet,a.6-7,510,O-TI-,,3,,0,1,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.7,511,DA-RI-DA,*406VAS,2,,0,0,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.7,512,*343,,2,,0,0,0,0,C
 HTtexts,HT 93,Haghia Triada,tablet,a.8,513,PA-SE-JA,,20,,0,1,0,0,C
@@ -537,12 +537,12 @@ HTtexts,HT 94,Haghia Triada,tablet,b.2,534,KE-KI-RU,,1,,0,0,0,0,C
 HTtexts,HT 94,Haghia Triada,tablet,b.2,535,SA-RU,,1,,0,0,0,0,C
 HTtexts,HT 94,Haghia Triada,tablet,b.3,536,KU-RO,vacat,5,,0,0,0,1,C
 HTtexts,HT 94,Haghia Triada,tablet,b.4,537,RA-•-DE-ME-TE,,1,,0,1,0,0,C
-HTtexts,HT 94,Haghia Triada,tablet,b.5,538,QIf-TU-•,,1,,0,1,0,0,C
+HTtexts,HT 94,Haghia Triada,tablet,b.5,538,QIf-TU-,,1,,0,1,0,0,C
 HTtexts,HT 94,Haghia Triada,tablet,a.4,539,NAME,LOGOGRAM,2,,0,1,0,0,C
 HTtexts,HT 94,Haghia Triada,tablet,a.5,540,NAME,LOGOGRAM (*303),14,J,1,1,0,0,C
 HTtexts,HT Wc 3017,Haghia Triada,wc,a.1,541,KA-PA,VIR b: *304+PA *629,62,,0,0,0,0,C
 HTtexts,HT Wc 3017,Haghia Triada,wc,a.3,542,SA-RA2,*303 b: *303+D *624,55,,0,0,0,0,C
-HTtexts,HT Wc 3017,Haghia Triada,wc,a.4,543,*318-*306,a. DI-*306 •,11,,0,0,0,0,C
+HTtexts,HT Wc 3017,Haghia Triada,wc,a.4,543,*318-*306,a. DI-*306,11,,0,0,0,0,C
 HTtexts,HT Wc 3017,Haghia Triada,wc,b.3,544,KU-RO,,55,,0,0,0,1,C
 HTtexts,HT 95+113,Haghia Triada,tablet,a.2,545,DA-ME,,10,,0,0,0,0,C
 HTtexts,HT 95+113,Haghia Triada,tablet,a.2,546,MI-NU-TE,,10,,0,0,0,0,C
@@ -559,14 +559,14 @@ HTtexts,HT 95+113,Haghia Triada,tablet,b.4-5,556,QE-RA2-U,,10,,0,0,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,a.2-3,557,SI-MI-TA,GRA,5,,0,0,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,a.3,558,RU-SA,,4,,0,0,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,a.3,559,*323 *317,,1,,0,0,0,0,C
-HTtexts,HT 96,Haghia Triada,tablet,a.4,560,PI-TA-RA •,,1,,0,0,0,0,C
+HTtexts,HT 96,Haghia Triada,tablet,a.4,560,PI-TA-RA,,1,,0,0,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,a.4,561,*323 *344,,1,,0,0,0,0,C
-HTtexts,HT 96,Haghia Triada,tablet,a.5,562,KU-MA-RO •,• TE FIC,20,,0,1,0,0,C
+HTtexts,HT 96,Haghia Triada,tablet,a.5,562,KU-MA-RO,TE FIC,20,,0,1,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,a.6,563,FIC,,2,,0,1,0,0,C
-HTtexts,HT 96,Haghia Triada,tablet,b.1-2,564,QA-*118-RA-RE,• I+ *516 • GRA •,40,JE,1,1,0,0,C
+HTtexts,HT 96,Haghia Triada,tablet,b.1-2,564,QA-*118-RA-RE,I+ *516 GRA,40,JE,1,1,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,b.3,565,OLE+U *610,,4,,0,0,0,0,C
 HTtexts,HT 96,Haghia Triada,tablet,b.3,566,FIC,,2,K,0,0,0,0,C
-HTtexts,ZA Zb 3,Zakros,zb,a.1,567,KA-RU,• *307+*307 *638 • VIR+KA *568,82,,0,0,0,0,C
+HTtexts,ZA Zb 3,Zakros,zb,a.1,567,KA-RU,*307+*307 *638 VIR+KA *568,82,,0,0,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.1-2,568,*327,,33,,0,0,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.3,569,KA-NU-TI,,25,,0,0,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.3,570,PA-I-TO,,6,,0,0,0,0,C
@@ -577,7 +577,7 @@ HTtexts,ZA Zb 3,Zakros,zb,a.4-5,574,JU,,15,,0,0,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.5,575,KI,,3,,0,0,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.5,576,ZU,,5,,0,1,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.5,577,TA-TI,,2,,0,0,0,0,C
-HTtexts,ZA Zb 3,Zakros,zb,a.6,578,DE-•,,3,,0,1,0,0,C
+HTtexts,ZA Zb 3,Zakros,zb,a.6,578,DE-,,3,,0,1,0,0,C
 HTtexts,ZA Zb 3,Zakros,zb,a.6,579,A,,5,,0,1,0,0,C
 HTtexts,HT 2.1,Haghia Triada,wc,a.1,580,,,1,-DE,0,1,0,0,C
 HTtexts,HT 2.1,Haghia Triada,wc,a.2,581,TU,,1,,0,1,0,0,C
@@ -627,7 +627,7 @@ HTtexts,HT 102,Haghia Triada,tablet,.3,624,DI-RI-NA,,10,,0,0,0,0,C
 HTtexts,HT 102,Haghia Triada,tablet,.3-4,625,MA-ZU,,3,,0,0,0,0,C
 HTtexts,HT 102,Haghia Triada,tablet,.4,626,I-KA,,5,,0,0,0,0,C
 HTtexts,HT 102,Haghia Triada,tablet,.5,627,KU-RO,,1060,,0,0,0,1,C
-HTtexts,HT 103,Haghia Triada,tablet,.1,628,U-TA2 •,FIC,40,,0,0,0,0,C
+HTtexts,HT 103,Haghia Triada,tablet,.1,628,U-TA2,FIC,40,,0,0,0,0,C
 HTtexts,HT 103,Haghia Triada,tablet,.2,629,DA-KU-SE-NE,,6,J,0,1,0,0,C
 HTtexts,HT 103,Haghia Triada,tablet,.3,630,*188,,13,,0,0,0,0,C
 HTtexts,HT 103,Haghia Triada,tablet,.4,631,DA-KU-NA,,1,,0,0,0,0,C
@@ -638,11 +638,11 @@ HTtexts,HT 104,Haghia Triada,tablet,.2-3,635,I-DU-TI,,20,J,0,0,0,0,C
 HTtexts,HT 104,Haghia Triada,tablet,.3-4,636,PA-DA-SU-TI,,29,,0,0,0,0,C
 HTtexts,HT 104,Haghia Triada,tablet,.5,637,KU-RO,,95,,0,0,0,1,C
 HTtexts,HT 105,Haghia Triada,tablet,.2,638,VIR,,234,,0,1,0,0,C
-HTtexts,HT 105,Haghia Triada,tablet,.3,639,SA-RA2 •,VIR,235,,0,0,0,0,C
+HTtexts,HT 105,Haghia Triada,tablet,.3,639,SA-RA2,VIR,235,,0,0,0,0,C
 HTtexts,HT 106,Haghia Triada,tablet,.1,640,MI-NU-TE,*303,6,,0,1,0,0,C
 HTtexts,HT 106,Haghia Triada,tablet,.2,641,SI,,5,J,0,0,0,0,C
 HTtexts,HT 106,Haghia Triada,tablet,.2,642,SI,,1,,0,0,0,0,C
-HTtexts,HT 106,Haghia Triada,tablet,.3,643,DA-•,,8,,0,1,0,0,C
+HTtexts,HT 106,Haghia Triada,tablet,.3,643,DA-,,8,,0,1,0,0,C
 HTtexts,HT 106,Haghia Triada,tablet,.4,644,SI,,3,,0,1,0,0,C
 HTtexts,HT 107,Haghia Triada,tablet,.1,645,,,3,,0,1,0,0,C
 HTtexts,HT 107,Haghia Triada,tablet,.3,646,TE,,86,,0,0,0,0,C
@@ -651,7 +651,7 @@ HTtexts,HT 108,Haghia Triada,tablet,.1,648,KI-RE-TA-NA,VIR,1,,0,0,0,0,C
 HTtexts,HT 108,Haghia Triada,tablet,.1,649,GRA+H *583,,70,,0,0,0,0,C
 HTtexts,HT 108,Haghia Triada,tablet,.2,650,DI-NA-RO,,2,,0,0,0,0,C
 HTtexts,HT 108,Haghia Triada,tablet,.2,651,DU-SU-NI,,5,,0,1,0,0,C
-HTtexts,HT 108,Haghia Triada,tablet,.3,652,•-RA2-TI,,10,,0,1,0,0,C
+HTtexts,HT 108,Haghia Triada,tablet,.3,652,-RA2-TI,,10,,0,1,0,0,C
 HTtexts,HT 109,Haghia Triada,tablet,.1,653,RE,,4,,0,1,0,0,C
 HTtexts,HT 109,Haghia Triada,tablet,.2,654,TA,,4,,0,1,0,0,C
 HTtexts,HT 109,Haghia Triada,tablet,.3,655,KU-RO,,129,,0,0,0,1,C
@@ -678,7 +678,7 @@ HTtexts,HT 111,Haghia Triada,tablet,b.1,675,SA-DI,,4,,0,1,0,0,C
 HTtexts,HT 111,Haghia Triada,tablet,b.2,676,,,3,,0,1,0,0,C
 HTtexts,HT 111,Haghia Triada,tablet,b.3,677,FIC,,1,,0,1,0,0,C
 HTtexts,HT 112,Haghia Triada,tablet,b.1,678,*303,,6,,0,1,0,0,C
-HTtexts,HT 113,Haghia Triada,tablet,.2-3,679,WI-SA •,,2,,0,1,0,0,C
+HTtexts,HT 113,Haghia Triada,tablet,.2-3,679,WI-SA,,2,,0,1,0,0,C
 HTtexts,HT 113,Haghia Triada,tablet,.3,680,O,,2,J,0,0,0,0,C
 HTtexts,HT 113,Haghia Triada,tablet,.2,681,,,4,,0,1,0,0,C
 HTtexts,HT 114,Haghia Triada,tablet,a.1-2,682,SA-RA2,GRA,10,,0,0,0,0,C
@@ -694,15 +694,15 @@ HTtexts,HT 115,Haghia Triada,tablet,a.4,691,PA-RA-NE,,1,,0,0,0,0,C
 HTtexts,HT 115,Haghia Triada,tablet,a.4,692,A-SE-JA,,,DDDD,0,0,0,0,C
 HTtexts,HT 115,Haghia Triada,tablet,a.5,693,KA-PO-RU,,1,,0,0,0,0,C
 HTtexts,HT 115,Haghia Triada,tablet,a.7,694,SU,D vest.,2,,0,1,1,0,C
-HTtexts,HT 115,Haghia Triada,tablet,b.1,695,RU • PA-RA-NE,,,J,0,1,0,0,C
-HTtexts,HT 115,Haghia Triada,tablet,b.2,696,TI-NU-JA • NU-WI •,GRA,,J,0,0,0,0,C
+HTtexts,HT 115,Haghia Triada,tablet,b.1,695,RU PA-RA-NE,,,J,0,1,0,0,C
+HTtexts,HT 115,Haghia Triada,tablet,b.2,696,TI-NU-JA NU-WI,GRA,,J,0,0,0,0,C
 HTtexts,HT 115,Haghia Triada,tablet,b.2,697,DU-PA3-NA,,1,,0,0,0,0,C
-HTtexts,HT 115,Haghia Triada,tablet,b.3,698,KU-RU-MA,• I,,J,0,0,0,0,C
+HTtexts,HT 115,Haghia Triada,tablet,b.3,698,KU-RU-MA,I,,J,0,0,0,0,C
 HTtexts,HT 115,Haghia Triada,tablet,b.3,699,*306-TU-JA,,1,,0,0,0,0,C
-HTtexts,HT 115,Haghia Triada,tablet,b.4,700,A-I-••,,1,,0,1,0,0,C
+HTtexts,HT 115,Haghia Triada,tablet,b.4,700,A-I-,,1,,0,1,0,0,C
 HTtexts,HT 115,Haghia Triada,tablet,b.4,701,*634 *306+MI,,1,,0,0,0,0,C
 HTtexts,HT 116,Haghia Triada,tablet,a.1-2,702,KU-PA-JA,GRA,16,,0,0,0,0,C
-HTtexts,HT 116,Haghia Triada,tablet,a.2,703,PU-RA2 •,GRA OLE+DI *608,405,,0,0,0,0,C
+HTtexts,HT 116,Haghia Triada,tablet,a.2,703,PU-RA2,GRA OLE+DI *608,405,,0,0,0,0,C
 HTtexts,HT 116,Haghia Triada,tablet,a.3-4,704,SI+SE *529,GRA OLE+KI *618 OLE+MI *622 OLIV,16163,,0,0,0,0,C
 HTtexts,HT 116,Haghia Triada,tablet,a.4,705,PI-*34-TE,GRA OLE+ OLE+MI *622 OLIV+TU *587,5512,,0,1,0,0,C
 HTtexts,HT 116,Haghia Triada,tablet,a.5-6,706,SI-KI-NE,GRA *304,1212,,0,0,0,0,C
@@ -744,7 +744,7 @@ HTtexts,HT 119,Haghia Triada,tablet,.4,741,*327-JU,,8,,0,0,0,0,C
 HTtexts,HT 119,Haghia Triada,tablet,.5,742,KU-RO,,160,,0,0,0,1,C
 HTtexts,HT 120,Haghia Triada,tablet,.1-2,743,DA-ME,GRA+K+L2 *584,74,,0,0,0,0,C
 HTtexts,HT 120,Haghia Triada,tablet,.2-3,744,GRA+PA *574,J A,62,,0,0,0,0,C
-HTtexts,HT 120,Haghia Triada,tablet,.3-4,745,DA-U-*49,• I GRA+PA *574,20,,0,0,0,0,C
+HTtexts,HT 120,Haghia Triada,tablet,.3-4,745,DA-U-*49,I GRA+PA *574,20,,0,0,0,0,C
 HTtexts,HT 120,Haghia Triada,tablet,.4-5,746,KI-RE-TA-NA,GRA+B *580,60,,0,0,0,0,C
 HTtexts,HT 120,Haghia Triada,tablet,.6,747,GRA+PA *574,,48,,0,0,0,0,C
 HTtexts,HT 120,Haghia Triada,tablet,.6,748,PA-I-TO,,3,D,0,0,0,0,C
@@ -754,7 +754,7 @@ HTtexts,HT 121,Haghia Triada,tablet,.2,751,OLE,,4,,0,0,0,0,C
 HTtexts,HT 121,Haghia Triada,tablet,.3,752,FIC,,2,,0,0,0,0,C
 HTtexts,HT 121,Haghia Triada,tablet,.3,753,VINa,,3,,0,0,0,0,C
 HTtexts,HT 121,Haghia Triada,tablet,.3-4,754,BOSm,,3,,0,0,0,0,C
-HTtexts,HT 122,Haghia Triada,tablet,a.1,755,RA-RI • U-DE-ZA,,2,,0,1,0,0,C
+HTtexts,HT 122,Haghia Triada,tablet,a.1,755,RA-RI U-DE-ZA,,2,,0,1,0,0,C
 HTtexts,HT 122,Haghia Triada,tablet,a.2,756,,,2,,0,1,0,0,C
 HTtexts,HT 122,Haghia Triada,tablet,a.2,757,DA-SI-*118,,2,,0,0,0,0,C
 HTtexts,HT 122,Haghia Triada,tablet,a.3,758,-DI,,1,,0,1,0,0,C
@@ -779,7 +779,7 @@ HTtexts,HT 122,Haghia Triada,tablet,b.4,776,DI,,2,,0,0,0,0,C
 HTtexts,HT 122,Haghia Triada,tablet,b.4,777,DA-RE,,2,,0,0,0,0,C
 HTtexts,HT 122,Haghia Triada,tablet,b.5,778,KU-RO,,65,,0,0,0,1,C
 HTtexts,HT 122,Haghia Triada,tablet,b.6,779,PO-TO-KU-RO,,97,,0,0,0,1,C
-HTtexts,HT 123+124,Haghia Triada,tablet,a.1-2,780,KI-TA-I •,OLIV *308 8 E KI-RO 1 X,31,,0,0,0,0,C
+HTtexts,HT 123+124,Haghia Triada,tablet,a.1-2,780,KI-TA-I,OLIV *308 8 E KI-RO 1 X,31,,0,0,0,0,C
 HTtexts,HT 123+124,Haghia Triada,tablet,a.3-4,781,PU-VINa,OLIV 31 J *308 8 J E KI-RO,,X,0,0,0,0,C
 HTtexts,HT 123+124,Haghia Triada,tablet,a.4-5,782,SA-RU,OLIV *308 4 A KI-RO,16,JE,0,1,0,0,C
 HTtexts,HT 123+124,Haghia Triada,tablet,a.6-7,783,DA-TU,OLIV *308 4 E KI-RO,15,JE,0,0,0,0,C
@@ -801,7 +801,7 @@ HTtexts,HT 124+123,Haghia Triada,tablet,b.3,798,RE-TA2,GRA+PA *574,20,,0,1,0,0,C
 HTtexts,HT 124+123,Haghia Triada,tablet,b.4,799,GRA+F *582,,7,J,0,0,0,0,C
 HTtexts,HT 124+123,Haghia Triada,tablet,b.4,800,*304,,10,,0,0,0,0,C
 HTtexts,HT 124+123,Haghia Triada,tablet,b.4,801,FIC,,23,,0,0,0,0,C
-HTtexts,HT 129.1,Haghia Triada,tablet,a.2,802,A-NA-•,,1,,0,1,0,0,C
+HTtexts,HT 129.1,Haghia Triada,tablet,a.2,802,A-NA-,,1,,0,1,0,0,C
 HTtexts,HT 129.1,Haghia Triada,tablet,a.3,803,,,,J,0,1,0,0,C
 HTtexts,HT 129.1,Haghia Triada,tablet,a.3,804,SI-DI-JA,,1,,0,1,0,0,C
 HTtexts,HT 129.1,Haghia Triada,tablet,a.4,805,U-*49,,1,,0,1,0,0,C
@@ -821,15 +821,15 @@ HTtexts,HT 127,Haghia Triada,tablet,b.5,818,KI+ME *545,,15,,0,0,0,0,C
 HTtexts,HT 127,Haghia Triada,tablet,b.6,819,*301,,11,,0,0,0,0,C
 HTtexts,HT 127,Haghia Triada,tablet,b.6,820,KI+ME *545,,14,,0,1,0,0,C
 HTtexts,HT 127,Haghia Triada,tablet,b.7,821,KU-RO,,292,,0,0,0,1,C
-HTtexts,HT Wc 3016,Haghia Triada,wc,a.1-2,822,TU-RU-NU-SE-ME,GRA+ •,10,,0,1,0,0,C
+HTtexts,HT Wc 3016,Haghia Triada,wc,a.1-2,822,TU-RU-NU-SE-ME,GRA+,10,,0,1,0,0,C
 HTtexts,HT Wc 3016,Haghia Triada,wc,a.2,823,WA-TU-MA-RE,GRA+KU *579,12,,0,1,0,0,C
 HTtexts,HT Wc 3016,Haghia Triada,wc,a.3,824,MI-TA,GRA+PA *574,,J,0,1,0,0,C
 HTtexts,HT Wc 3016,Haghia Triada,wc,a.3,825,GRA+KU *579,,6,,0,0,0,0,C
-HTtexts,HT Wc 3016,Haghia Triada,wc,a.4,826,GRA+ •,,1,,0,1,0,0,C
+HTtexts,HT Wc 3016,Haghia Triada,wc,a.4,826,GRA+,,1,,0,1,0,0,C
 HTtexts,HT Wc 3016,Haghia Triada,wc,a.4,827,GRA+KU *579,,4,,0,0,0,0,C
 HTtexts,HT Wc 3016,Haghia Triada,wc,b.1,828,VIR-*329,GRA+KU *579,6,,0,0,0,0,C
 HTtexts,HT Wc 3016,Haghia Triada,wc,b.1,829,GRA+KU *579,,1,,0,0,0,0,C
-HTtexts,HT Wc 3016,Haghia Triada,wc,b.2,830,RU-••,GRA+KU *579,6,,0,1,0,0,C
+HTtexts,HT Wc 3016,Haghia Triada,wc,b.2,830,RU-,GRA+KU *579,6,,0,1,0,0,C
 HTtexts,HT 129,Haghia Triada,tablet,.1,831,KI-RE-TA2,GRA,33,JB,0,0,0,0,C
 HTtexts,HT 129,Haghia Triada,tablet,.2,832,*304,,10,,0,0,0,0,C
 HTtexts,HT 129,Haghia Triada,tablet,.2,833,FIC,,22,,0,0,0,0,C
@@ -848,10 +848,10 @@ HTtexts,HT 131,Haghia Triada,tablet,a.4,845,*304,,12,JE,0,0,0,0,C
 HTtexts,HT 131,Haghia Triada,tablet,b.2,846,FIC,,30,,0,1,0,0,C
 HTtexts,HT 131,Haghia Triada,tablet,b.2,847,OLIV,,2,,0,1,0,0,C
 HTtexts,HT 131,Haghia Triada,tablet,b.4,848,PO-TO-KU-RO,,452,J,0,1,0,1,C
-HTtexts,HT 132,Haghia Triada,tablet,.1,849,A-SE •,*319,5,,0,0,0,0,C
-HTtexts,HT 132,Haghia Triada,tablet,.1-2,850,QA-RE-TO •,OVISf,27,,0,0,0,0,C
-HTtexts,HT 132,Haghia Triada,tablet,.2,851,PA3 • *305,,1,,0,1,0,0,C
-HTtexts,HT Zd 155-157),Haghia Triada,zd,.1-2,852,A-DU •,TE GRA+DA *573,55,,0,0,0,0,C
+HTtexts,HT 132,Haghia Triada,tablet,.1,849,A-SE,*319,5,,0,0,0,0,C
+HTtexts,HT 132,Haghia Triada,tablet,.1-2,850,QA-RE-TO,OVISf,27,,0,0,0,0,C
+HTtexts,HT 132,Haghia Triada,tablet,.2,851,PA3 *305,,1,,0,1,0,0,C
+HTtexts,HT Zd 155-157),Haghia Triada,zd,.1-2,852,A-DU,TE GRA+DA *573,55,,0,0,0,0,C
 HTtexts,HT 134+128,Haghia Triada,tablet,a.1,853,NE-MI-NA,,10,,0,1,0,0,C
 HTtexts,HT 134+128,Haghia Triada,tablet,a.3,854,,,1,,0,1,0,0,C
 HTtexts,HT 134+128,Haghia Triada,tablet,a.4,855,MI,,2,,0,1,0,0,C
@@ -864,8 +864,8 @@ HTtexts,HT 137+138,Haghia Triada,tablet,.2,861,OLE+MI *622,,6,,0,1,0,0,C
 HTtexts,HT 137+138,Haghia Triada,tablet,.2,862,OLE,,2,,0,1,0,0,C
 HTtexts,HT 138+137,Haghia Triada,tablet,.2,863,GRA,,1,,0,1,0,0,C
 HTtexts,HT 138+137,Haghia Triada,tablet,.2,864,OLE,,,J,0,0,0,0,C
-HTtexts,HT 140+132+145,Haghia Triada,tablet,.1,865,*86-SI-NI •,,1,,0,1,0,0,C
-HTtexts,HT 140+132+145,Haghia Triada,tablet,.1-2,866,JE-DI,• OLE+KI *618,1,J,0,0,0,0,C
+HTtexts,HT 140+132+145,Haghia Triada,tablet,.1,865,*86-SI-NI,,1,,0,1,0,0,C
+HTtexts,HT 140+132+145,Haghia Triada,tablet,.1-2,866,JE-DI,OLE+KI *618,1,J,0,0,0,0,C
 HTtexts,HT 140+132+145,Haghia Triada,tablet,.2,867,*86-SI-*118-KA,,3,,0,0,0,0,C
 HTtexts,HT 140+132+145,Haghia Triada,tablet,.3,868,,,4,,0,1,0,0,C
 HTtexts,HT 140+132+145,Haghia Triada,tablet,.4,869,OLE+U *610,,3,,0,0,0,0,C
@@ -875,9 +875,9 @@ HTtexts,HT 140+132+145,Haghia Triada,tablet,.5,872,KA,,1,,0,1,0,0,C
 HTtexts,HT 140+132+145,Haghia Triada,tablet,.5,873,OLE+U *610,,2,,0,0,0,0,C
 HTtexts,HT 140+132+145,Haghia Triada,tablet,.5,874,KA-PA,,,J,0,1,0,0,C
 HTtexts,HT 140+132+145,Haghia Triada,tablet,.6,875,OLE+U *610,,6,J,0,1,0,0,C
-HTtexts,THE Zb 1,Thera,zb,.1,876,U-*34-SI • *86-SI-NI •,,1,,0,1,0,0,C
-HTtexts,THE Zb 1,Thera,zb,.1-2,877,JE-DI,• OLE+KI *618 J •,1,,0,0,0,0,C
-HTtexts,THE Zb 1,Thera,zb,.2,878,U-*34-SI • •-SI-*118,KA,3,,0,1,0,0,C
+HTtexts,THE Zb 1,Thera,zb,.1,876,U-*34-SI *86-SI-NI,,1,,0,1,0,0,C
+HTtexts,THE Zb 1,Thera,zb,.1-2,877,JE-DI,OLE+KI *618 J,1,,0,0,0,0,C
+HTtexts,THE Zb 1,Thera,zb,.2,878,U-*34-SI -SI-*118,KA,3,,0,1,0,0,C
 HTtexts,THE Zb 1,Thera,zb,.3,879,KA,,1,,0,0,0,0,C
 HTtexts,THE Zb 1,Thera,zb,.3,880,KA,vacat,4,,0,1,0,0,C
 HTtexts,THE Zb 1,Thera,zb,.4,881,OLE+U *610,KA,31,,0,0,0,0,C
@@ -923,7 +923,7 @@ misctexts,ARKH 3,Arkhanes,tablet,b.2,18,PI-PU3,GRA,1,,0,1,0,0,C
 misctexts,ARKH 3,Arkhanes,tablet,b.4,19,,,2,,0,1,0,0,C
 misctexts,ARKH 3,Arkhanes,tablet,b.4,20,OLE,,4,,0,0,0,0,C
 misctexts,ARKH 3,Arkhanes,tablet,b.5,21,VINa,,1,,0,1,0,0,C
-misctexts,ARKH 4,Arkhanes,tablet,a.2,22,TA•,RE,5,,0,1,0,0,C
+misctexts,ARKH 4,Arkhanes,tablet,a.2,22,TA,RE,5,,0,1,0,0,C
 misctexts,ARKH 4,Arkhanes,tablet,a.2-3,23,A-•-•-JU,,4,,0,1,0,0,C
 misctexts,ARKH 4,Arkhanes,tablet,a.3-4,24,DE-SU-•-*47-TE,,5,,0,1,0,0,C
 misctexts,ARKH 4,Arkhanes,tablet,b.2,25,-RE,,10,,0,1,0,0,C
@@ -936,7 +936,7 @@ misctexts,ARKH 5,Arkhanes,tablet,.2,31,,,7,,0,1,0,0,C
 misctexts,ARKH 5,Arkhanes,tablet,.2,32,A-DA-RO,GRA,40,,0,1,0,0,C
 misctexts,ARKH 5,Arkhanes,tablet,.3,33,VINb,,6,,0,0,0,0,C
 misctexts,ARKH 7,Arkhanes,tablet,.3,34,*308,,,D,0,0,0,0,C
-misctexts,KE Zb 3,Kea,zb,.1,35,JE •,GRA+F *582,70,,0,1,0,0,C
+misctexts,KE Zb 3,Kea,zb,.1,35,JE,GRA+F *582,70,,0,1,0,0,C
 misctexts,KE Zb 3,Kea,zb,.2,36,,,3,J,0,0,0,0,C
 misctexts,KH 2,Khania,tablet,.1,37,,,20,,0,1,0,0,C
 misctexts,KH 2,Khania,tablet,.2,38,*303+,,,E,0,1,0,0,C
@@ -953,16 +953,16 @@ misctexts,KH 6,Khania,tablet,.4,48,*303+,,,J,0,1,0,0,C
 misctexts,KH 6,Khania,tablet,.5,49,CAPm,,1,,0,1,0,0,C
 misctexts,KH 6,Khania,tablet,.5,50,*303+D *624,,,J,0,0,0,0,C
 misctexts,KH 6,Khania,tablet,.5,51,BOS,,1,,0,0,0,0,C
-misctexts,KH 6,Khania,tablet,.6,52,-RE •,*334,1,,0,1,0,0,C
+misctexts,KH 6,Khania,tablet,.6,52,-RE,*334,1,,0,1,0,0,C
 misctexts,KH 6,Khania,tablet,.6,53,*303+D *624,,,J,0,0,0,0,C
 misctexts,KH 6,Khania,tablet,.6-7,54,PI-SA,*303+D *624,,J,0,1,0,0,C
-misctexts,KH 6,Khania,tablet,.7,55,AU-RE-TE •,*306,1,,0,0,0,0,C
+misctexts,KH 6,Khania,tablet,.7,55,AU-RE-TE,*306,1,,0,0,0,0,C
 misctexts,KH 6,Khania,tablet,.8,56,,,8,,0,1,0,0,C
 misctexts,KH 6,Khania,tablet,.8,57,*303,,2,JB,0,0,0,0,C
 misctexts,KH 7,Khania,tablet,a.1,58,NE-•-KI,*334,4,,0,1,0,0,C
 misctexts,KH 7,Khania,tablet,a.1,59,*303+D *624,,1,,0,1,0,0,C
 misctexts,KH 7,Khania,tablet,a.2,60,I,*303+E *626,,K,0,1,0,0,C
-misctexts,KH 7,Khania,tablet,a.2-3,61,E-NA-SI •,VIR+*313b *571,10,,0,0,0,0,C
+misctexts,KH 7,Khania,tablet,a.2-3,61,E-NA-SI,VIR+*313b *571,10,,0,0,0,0,C
 misctexts,KH 7,Khania,tablet,a.3,62,*303+D *624,,,J,0,0,0,0,C
 misctexts,KH 7,Khania,tablet,a.4,63,QA-TI-KI,VIR+*313b *571,4,,0,0,0,0,C
 misctexts,KH 7,Khania,tablet,a.4,64,*303+D *624,,,B,0,0,0,0,C
@@ -984,7 +984,7 @@ misctexts,KH 8,Khania,tablet,.4,79,*312,,1,,0,0,0,0,C
 misctexts,KH 8,Khania,tablet,.4,80,QA++PU *510,,1,,1,1,0,0,C
 misctexts,KH 9,Khania,tablet,.2,81,,,,K,0,1,0,0,C
 misctexts,KH 9,Khania,tablet,.2,82,FIC,,,EB,0,0,0,0,C
-misctexts,KH 9,Khania,tablet,.3,83,I-SI •,*303+D *624,,J,0,1,0,0,C
+misctexts,KH 9,Khania,tablet,.3,83,I-SI,*303+D *624,,J,0,1,0,0,C
 misctexts,KH 9,Khania,tablet,.4,84,,,2,,0,1,0,0,C
 misctexts,KH 9,Khania,tablet,.4,85,*303,,,E,0,0,0,0,C
 misctexts,KH 9,Khania,tablet,.6,86,,,,X,0,1,0,0,C
@@ -1013,7 +1013,7 @@ misctexts,KH 12,Khania,tablet,.4,108,*401VAS+RU *651,,,W,0,1,0,0,C
 misctexts,KH 13,Khania,tablet,.1,109,,,2,J,0,1,0,0,C
 misctexts,KH 13,Khania,tablet,.3,110,*304 *303,,,B,0,1,0,0,C
 misctexts,KH 13,Khania,tablet,.5,111,,,3,,0,1,0,0,C
-misctexts,KH 14,Khania,tablet,.1,112,A-MA-JA •,*303,6,,0,1,0,0,C
+misctexts,KH 14,Khania,tablet,.1,112,A-MA-JA,*303,6,,0,1,0,0,C
 misctexts,KH 14,Khania,tablet,.2,113,*303,,,E,0,1,0,0,C
 misctexts,KH 14,Khania,tablet,.2,114,*336,,2,,0,0,0,0,C
 misctexts,KH 14,Khania,tablet,.2,115,*303,,,K,0,1,0,0,C
@@ -1034,12 +1034,12 @@ misctexts,KH 19,Khania,tablet,.1,129,*306 VIR+*307 *569,,13,,0,1,0,0,C
 misctexts,KH 19,Khania,tablet,.2,130,,,2,,0,1,0,0,C
 misctexts,KH 19,Khania,tablet,.2,131,OLE+TA *615,,,B,0,1,0,0,C
 misctexts,KH 20,Khania,tablet,.2,132,,,,B,0,1,0,0,C
-misctexts,KH 20,Khania,tablet,.4,133,DU-RE-ZA •,*303+E *626,,J,0,1,0,0,C
+misctexts,KH 20,Khania,tablet,.4,133,DU-RE-ZA,*303+E *626,,J,0,1,0,0,C
 misctexts,KH 20,Khania,tablet,.4,134,FIC,,,E,0,0,0,0,C
 misctexts,KH 21,Khania,tablet,.1,135,*303,,,W,0,1,0,0,C
 misctexts,KH 21,Khania,tablet,.2,136,,,,D,0,1,0,0,C
 misctexts,KH 21,Khania,tablet,.2,137,FIC,,2,,0,1,0,0,C
-misctexts,KH 22,Khania,tablet,.1,138,-ZA •,SU,7,,0,1,0,0,C
+misctexts,KH 22,Khania,tablet,.1,138,-ZA,SU,7,,0,1,0,0,C
 misctexts,KH 22,Khania,tablet,.2,139,SI,,4,,0,1,0,0,C
 misctexts,KH 24,Khania,tablet,.1,140,SU,,12,,0,1,0,0,C
 misctexts,KH 25,Khania,tablet,.1,141,VIR,,140,,0,1,0,0,C
@@ -1057,15 +1057,15 @@ misctexts,KH 32,Khania,tablet,.2,152,,,5,,0,1,0,0,C
 misctexts,KH 33,Khania,tablet,.2,153,,,1,,0,1,0,0,C
 misctexts,KH 34,Khania,tablet,.1,154,*303+E *626,,2,,0,1,0,0,C
 misctexts,KH 35,Khania,tablet,.2,155,,,1,,0,1,0,0,C
-misctexts,KH 36,Khania,tablet,.1,156,KA • MI+JA+RU *550,,4,,0,1,0,0,C
-misctexts,KH 37,Khania,tablet,.1,157,*304+• *625,,2,,0,1,0,0,C
+misctexts,KH 36,Khania,tablet,.1,156,KA MI+JA+RU *550,,4,,0,1,0,0,C
+misctexts,KH 37,Khania,tablet,.1,157,*304+ *625,,2,,0,1,0,0,C
 misctexts,KH 38,Khania,tablet,.2,158,*303+D *624,,,J,0,1,0,0,C
 misctexts,KH 41,Khania,tablet,.1,159,,,3,,0,1,0,0,C
 misctexts,KH 43,Khania,tablet,.1,160,MA+RU-RE *562,,2,,0,1,0,0,C
 misctexts,KH 47,Khania,tablet,.2,161,,,6,,0,1,0,0,C
 misctexts,KH 50,Khania,tablet,.1,162,-TA,,2,,0,1,0,0,C
 misctexts,KH 50,Khania,tablet,.2,163,,,2,-JE,0,1,0,0,C
-misctexts,KH 50,Khania,tablet,.2,164,QE-•,,1,,0,1,0,0,C
+misctexts,KH 50,Khania,tablet,.2,164,QE-,,1,,0,1,0,0,C
 misctexts,KH 51,Khania,tablet,.1,165,SI-I-SI,,3,,0,1,0,0,C
 misctexts,KH 51,Khania,tablet,.2,166,,,4,,0,1,0,0,C
 misctexts,IO Za 16a,Iouktas,za,.1,167,*303+E *626,,1,,0,1,0,0,C
@@ -1113,7 +1113,7 @@ misctexts,KH 86,Khania,tablet,.3,208,,,3,,0,1,0,0,C
 misctexts,KH 86,Khania,tablet,.3,209,*303+,,,JE,0,1,0,0,C
 misctexts,KH 87,Khania,tablet,.3,210,,,,J,0,1,0,0,C
 misctexts,KH 87,Khania,tablet,.3,211,BOSm,,1,,0,0,0,0,C
-misctexts,KH 88,Khania,tablet,.1-2,212,QA-NU-MA • QIf-*118 •,FIC,10,,0,0,0,0,C
+misctexts,KH 88,Khania,tablet,.1-2,212,QA-NU-MA QIf-*118,FIC,10,,0,0,0,0,C
 misctexts,KH 88,Khania,tablet,.2-3,213,PU-DE,,8,,0,0,0,0,C
 misctexts,KH 91,Khania,tablet,.1,214,GRA,,1,,0,0,0,0,C
 misctexts,KH 91,Khania,tablet,.2,215,*316,J L2,1,,0,1,0,0,C
@@ -1134,7 +1134,7 @@ misctexts,PK Zb 25),Palaikastro,zb,a.2,229,OVISf,,1,,0,1,0,0,C
 misctexts,PK Zb 25),Palaikastro,zb,a.3,230,*310,,9,,0,1,0,0,C
 misctexts,PK Zb 25),Palaikastro,zb,a.4,231,GRA,,5,,0,1,0,0,C
 misctexts,PK Zb 25),Palaikastro,zb,b.3,232,,,3,,0,1,0,0,C
-misctexts,KN 32,Knossos,tablet,.1,233,•,,,L,0,1,0,0,C
+misctexts,KN 32,Knossos,tablet,.1,233,,,,L,0,1,0,0,C
 misctexts,KN 54,Knossos,tablet,.2,234,VINc,,,K,0,1,0,0,C
 misctexts,KN Zb 40,Knossos,zb,a.1,235,MI* RI-DA-U,SE,,JE,0,1,0,0,C
 misctexts,MA 2,Malia,bar,a.1,236,DU-RA,,5,,0,1,0,0,C
@@ -1147,9 +1147,9 @@ misctexts,MA 4,Malia,tablet,a.1,242,*180+SA+L *601,,53,,0,0,0,0,C
 misctexts,MA 4,Malia,tablet,a.1,243,*180+SA+B *600,,30,,0,0,0,0,C
 misctexts,MA 4,Malia,tablet,b.1,244,A-...-JA,*180,137,,0,1,0,0,C
 misctexts,MA 4,Malia,tablet,b.1,245,,,160,,0,1,0,0,C
-misctexts,MA 6,Malia,tablet,a.1,246,*180+•,,941,,0,1,0,0,C
+misctexts,MA 6,Malia,tablet,a.1,246,*180+,,941,,0,1,0,0,C
 misctexts,MA 6,Malia,tablet,a.1,247,*180+B *602,,45,,0,0,0,0,C
-misctexts,KH 81.2,Khania,bar,b.1,248,DU-PI-TE-WA •,*405VAS+Ω *655; Ω= *713,1,,0,1,0,0,C
+misctexts,KH 81.2,Khania,bar,b.1,248,DU-PI-TE-WA,*405VAS+Ω *655; Ω= *713,1,,0,1,0,0,C
 misctexts,KH 81.2,Khania,bar,b.1,249,*412VAS+E *658,,3,,0,0,0,0,C
 misctexts,KH 81.2,Khania,bar,b.2,250,,,4,,0,1,0,0,C
 misctexts,KH 81.2,Khania,bar,b.2,251,*404VAS+A *654,,2,,0,0,0,0,C
@@ -1183,15 +1183,15 @@ misctexts,HT 108,Haghia Triada,tablet,.3,278,A-*325-ZA,,,E,0,0,0,0,C
 misctexts,HT 108,Haghia Triada,tablet,.3,279,A-RI-PA,,,E,0,0,0,0,C
 misctexts,HT 108,Haghia Triada,tablet,.3-4,280,QA-QA-DA,,,J,0,0,0,0,C
 misctexts,HT 108,Haghia Triada,tablet,.4,281,TO-ME,,1,B,0,0,0,0,C
-misctexts,PE 6,Petras,tablet,a.2,282,JA •,*316,1,,0,1,0,0,C
+misctexts,PE 6,Petras,tablet,a.2,282,JA,*316,1,,0,1,0,0,C
 misctexts,PE 6,Petras,tablet,a.2,283,*303,,,H,0,0,0,0,C
-misctexts,PE 6,Petras,tablet,b.1,284,•-NA,,1,,0,1,0,0,C
+misctexts,PE 6,Petras,tablet,b.1,284,-NA,,1,,0,1,0,0,C
 misctexts,PE 6,Petras,tablet,b.2,285,FIC,,2,FK,0,1,0,0,C
 misctexts,PH 2,Phaistos,tablet,.1,286,A-SE-TU-QIf,,1,,0,0,0,0,C
 misctexts,PH 2,Phaistos,tablet,.1-2,287,RA-O-DI-KI,,60,,0,0,0,0,C
 misctexts,PH 2,Phaistos,tablet,.3,288,PI-RU-E-JU,,60,,0,0,0,0,C
 misctexts,PH 2,Phaistos,tablet,.4,289,SE-SA-PA3,,60,,0,0,0,0,C
-misctexts,PH 3,Phaistos,tablet,a.1,290,MA+• *556,,1,,0,1,0,0,C
+misctexts,PH 3,Phaistos,tablet,a.1,290,MA+ *556,,1,,0,1,0,0,C
 misctexts,PH 3,Phaistos,tablet,a.2,291,MA+A *557,,1,,0,1,0,0,C
 misctexts,PH 3,Phaistos,tablet,a.2,292,MA+MA *563,,,DD,0,0,0,0,C
 misctexts,PH 3,Phaistos,tablet,a.3,293,MA+RU *558,,,DD,0,1,0,0,C
@@ -1221,7 +1221,7 @@ misctexts,PH 28,Phaistos,tablet,b.3,316,,,6,,0,1,0,0,C
 misctexts,PH 30,Phaistos,tablet,.1,317,-TI,,,E,0,1,0,0,C
 misctexts,PH 30,Phaistos,tablet,a.2,318,RU,CAPm+KU *513,1,,0,1,0,0,C
 misctexts,PH 30,Phaistos,tablet,a.2,319,MA-DI,OVISm,1,,0,0,0,0,C
-misctexts,PH 30,Phaistos,tablet,a.3,320,•+NE,,1,,0,1,0,0,C
+misctexts,PH 30,Phaistos,tablet,a.3,320,+NE,,1,,0,1,0,0,C
 misctexts,PH 30,Phaistos,tablet,a.3,321,KU-PA3-NU,SUS+SI+RE,1,,0,0,0,0,C
 misctexts,PH 30,Phaistos,tablet,a.3-4,322,PA-TA-DA,,1,,0,1,0,0,C
 misctexts,PH 30,Phaistos,tablet,a.4,323,KU-RO,CAPm+KU *513,1,,0,0,0,1,C
@@ -1245,7 +1245,7 @@ misctexts,HT Zb 160),Haghia Triada,zb,b.4,340,CAPm+KU,,1,,0,0,0,0,C
 misctexts,HT Zb 160),Haghia Triada,zb,b.5,341,A-MI-DA-O,OVISm,1,,0,1,0,0,C
 misctexts,HT Zb 160),Haghia Triada,zb,a.2,342,RU,CAPm+KU *513,1,,0,1,0,0,C
 misctexts,HT Zb 160),Haghia Triada,zb,a.2,343,MA-DI,OVISm,1,,0,0,0,0,C
-misctexts,HT Zb 160),Haghia Triada,zb,a.3,344,•+NE,,1,,0,1,0,0,C
+misctexts,HT Zb 160),Haghia Triada,zb,a.3,344,+NE,,1,,0,1,0,0,C
 misctexts,HT Zb 160),Haghia Triada,zb,a.3,345,KU-PA3-NU,SI+AU-RE,1,,0,0,0,0,C
 misctexts,HT Zb 160),Haghia Triada,zb,a.3-4,346,PA-TA-DA,,1,,0,1,0,0,C
 misctexts,HT Zb 160),Haghia Triada,zb,a.4,347,KU-RO,CAPm+KU *513,1,,0,0,0,1,C
@@ -1293,7 +1293,7 @@ misctexts,TY 3,Tylissos,tablet,a.1,388,OLE+U *610,,22,,0,0,0,0,C
 misctexts,TY 3,Tylissos,tablet,a.1-2,389,NE KI+,,5,,0,1,0,0,C
 misctexts,TY 3,Tylissos,tablet,a.2,390,OLE+OVISf *611,,3,J,0,0,0,0,C
 misctexts,TY 3,Tylissos,tablet,a.2,391,OLE+U,,7,J,0,0,0,0,C
-misctexts,TY 3,Tylissos,tablet,a.3,392,A-DU-••,OLE+KI *618,51,,0,1,0,0,C
+misctexts,TY 3,Tylissos,tablet,a.3,392,A-DU-,OLE+KI *618,51,,0,1,0,0,C
 misctexts,TY 3,Tylissos,tablet,a.3,393,OLE+KI+U *619,,2,D,0,0,0,0,C
 misctexts,TY 3,Tylissos,tablet,a.4,394,OLE+KI+ME *620,,1,,0,0,0,0,C
 misctexts,TY 3,Tylissos,tablet,a.4,395,OLE+OVISf *611,,4,J,0,0,0,0,C
@@ -1308,7 +1308,7 @@ misctexts,TY 3,Tylissos,tablet,b.2,403,PI-KU-ZU,OLE+KI *618,4,,0,0,0,0,C
 misctexts,TY 3,Tylissos,tablet,b.2,404,OLE+MI *622,,11,,0,1,0,0,C
 misctexts,TY 3,Tylissos,tablet,b.3,405,OLE+NE *612,,2,,0,1,0,0,C
 misctexts,TY 3,Tylissos,tablet,b.4,406,,,220,,0,1,0,0,C
-misctexts,TY Zb 4,Tylissos,zb,a.1-2,407,KI-RE-ZA •,FIC,42,J,0,0,0,0,C
+misctexts,TY Zb 4,Tylissos,zb,a.1-2,407,KI-RE-ZA,FIC,42,J,0,0,0,0,C
 misctexts,TY Zb 4,Tylissos,zb,a.2,408,ZA,,5,,0,0,0,0,C
 misctexts,TY Zb 4,Tylissos,zb,b.1-2,409,RO,GRA,47,,0,1,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.1,410,,,,E,0,1,0,0,C
@@ -1316,7 +1316,7 @@ misctexts,ZA 4,Zakros,tablet,a.2,411,PI-•-SE,,5,,0,1,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.2-3,412,JA-TO-JA,,3,,0,1,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.3,413,A-TI-RU,,4,,0,0,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.3-4,414,JA-PA,,1,,0,1,0,0,C
-misctexts,ZA 4,Zakros,tablet,a.4,415,•-TU-ME-SE,,18,,0,1,0,0,C
+misctexts,ZA 4,Zakros,tablet,a.4,415,-TU-ME-SE,,18,,0,1,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.5,416,QE-SI-ZU-E,,4,,0,0,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.5-6,417,Ib-NU-MA-RE,,13,,0,0,0,0,C
 misctexts,ZA 4,Zakros,tablet,a.6-7,418,SI-PI-KI,,5,,0,0,0,0,C
@@ -1343,7 +1343,7 @@ misctexts,PK 1.8,Palaikastro,za,b.2-3,438,*312-TA2,GRA+PA *574,40,,0,1,0,0,C
 misctexts,PK 1.8,Palaikastro,za,b.3,439,,,20,,0,1,0,0,C
 misctexts,ZA 7,Zakros,tablet,a.1,440,U-JU,,5,,0,0,0,0,C
 misctexts,ZA 7,Zakros,tablet,a.1-2,441,A-RA-TU,,4,,0,0,0,0,C
-misctexts,ZA 8,Zakros,tablet,.1,442,A-TA-RE •,FIC,,J,0,0,0,0,C
+misctexts,ZA 8,Zakros,tablet,.1,442,A-TA-RE,FIC,,J,0,0,0,0,C
 misctexts,ZA 8,Zakros,tablet,.2,443,KU-TU-KO-RE,,,DD,0,0,0,0,C
 misctexts,ZA 8,Zakros,tablet,.2-3,444,A-RI-NI-TA,,1,BB,0,1,0,0,C
 misctexts,ZA 8,Zakros,tablet,.3-4,445,TA-I-NU-MA-PA,,,J,0,0,0,0,C
@@ -1352,8 +1352,8 @@ misctexts,ZA 8,Zakros,tablet,.5,447,DA-I-PI-TA,,2,J,0,0,0,0,C
 misctexts,ZA 8,Zakros,tablet,.6,448,KA-I-RO,,4,BB,0,0,0,0,C
 misctexts,ZA 9,Zakros,tablet,.2,449,-RA,OVIS+SI *512,5,,0,1,0,0,C
 misctexts,ZA 9,Zakros,tablet,.3-4,450,RO-SI-RA,OVIS+SI *512,4,,0,1,0,0,C
-misctexts,ZA 9,Zakros,tablet,.4-5,451,A-TA-NA-•,OVIS+SI *512,2,,0,1,0,0,C
-misctexts,ZA 9,Zakros,tablet,.5,452,•-MA-JU,OVISf,2,,0,1,0,0,C
+misctexts,ZA 9,Zakros,tablet,.4-5,451,A-TA-NA-,OVIS+SI *512,2,,0,1,0,0,C
+misctexts,ZA 9,Zakros,tablet,.5,452,-MA-JU,OVISf,2,,0,1,0,0,C
 misctexts,ZA 9,Zakros,tablet,.6,453,WI-RA-RE-MI-TE,OVISf,1,,0,0,0,0,C
 misctexts,ZA 10,Zakros,tablet,a.1,454,TA-NA-TE,,2,,0,0,0,0,C
 misctexts,ZA 10,Zakros,tablet,a.1,455,PA+,,1,,1,1,0,0,C
@@ -1380,11 +1380,11 @@ misctexts,HT 52a.1,Haghia Triada,za,a.2-3,475,-RA-MA-SI,VINa,,J,0,1,0,0,C
 misctexts,HT 52a.1,Haghia Triada,za,a.3-4,476,E-KU-RU,,2,E,0,1,0,0,C
 misctexts,HT 52a.1,Haghia Triada,za,a.4,477,VINa,,,J,0,0,0,0,C
 misctexts,HT 52a.1,Haghia Triada,za,a.4,478,QE+GRA+PA QE+*574,,4,,0,0,0,0,C
-misctexts,HT 52a.1,Haghia Triada,za,a.5,479,KU-PA •,GRA+PA *574,1,,0,1,0,0,C
+misctexts,HT 52a.1,Haghia Triada,za,a.5,479,KU-PA,GRA+PA *574,1,,0,1,0,0,C
 misctexts,HT 52a.1,Haghia Triada,za,a.6,480,OLIV,,2,,0,1,0,0,C
-misctexts,HT 52a.1,Haghia Triada,za,b.1,481,SA-*301-RI •,GRA+PA *574,1,,0,1,0,0,C
+misctexts,HT 52a.1,Haghia Triada,za,b.1,481,SA-*301-RI,GRA+PA *574,1,,0,1,0,0,C
 misctexts,HT 52a.1,Haghia Triada,za,b.3,482,RA,,2,,0,1,0,0,C
-misctexts,HT 52a.1,Haghia Triada,za,b.3,483,KU-PA •,GRA+PA *574,3,,0,0,0,0,C
+misctexts,HT 52a.1,Haghia Triada,za,b.3,483,KU-PA,GRA+PA *574,3,,0,0,0,0,C
 misctexts,ZA 6,Zakros,za,a.1,484,PA+,,64,,1,1,0,0,C
 misctexts,ZA 6,Zakros,za,a.1,485,TI,,13,,0,1,0,0,C
 misctexts,ZA 6,Zakros,za,a.2,486,RU,,28,,0,0,0,0,C
@@ -1408,16 +1408,16 @@ misctexts,ZA 15,Zakros,tablet,a.5,503,SI-PI-KI,,2,J,0,0,0,0,C
 misctexts,ZA 15,Zakros,tablet,a.6,504,JA-SA-MU,,5,,0,0,0,0,C
 misctexts,ZA 15,Zakros,tablet,a.6-7,505,SA-MI-DA-E,,4,,0,0,0,0,C
 misctexts,ZA 15,Zakros,tablet,a.7,506,SO-KE-MA-SE,,5,,0,0,0,0,C
-misctexts,ZA 15,Zakros,tablet,b.1,507,KA-DI •,VINa,3,,0,0,0,0,C
-misctexts,ZA 15,Zakros,tablet,b.2,508,KU-RO •,VINa,78,,0,0,0,1,C
+misctexts,ZA 15,Zakros,tablet,b.1,507,KA-DI,VINa,3,,0,0,0,0,C
+misctexts,ZA 15,Zakros,tablet,b.2,508,KU-RO,VINa,78,,0,0,0,1,C
 misctexts,ZA 15,Zakros,tablet,b.3,509,VINa+RA *594,,17,,0,0,0,0,C
 misctexts,ZA 16,Zakros,tablet,.4,510,PA,,6,,0,1,0,0,C
 misctexts,ZA 16,Zakros,tablet,.4,511,SU,,4,,0,1,0,0,C
-misctexts,ZA 18,Zakros,tablet,a.1,512,KU-*321 •,GRA+PA *574,2,DD,0,0,0,0,C
+misctexts,ZA 18,Zakros,tablet,a.1,512,KU-*321,GRA+PA *574,2,DD,0,0,0,0,C
 misctexts,ZA 18,Zakros,tablet,a.2,513,GRA+,,2,DD,0,1,0,0,C
 misctexts,ZA 18,Zakros,tablet,a.2,514,OLE+KI *618,,,BB,0,0,0,0,C
 misctexts,ZA 18,Zakros,tablet,a.2,515,OLIV,,,E,0,0,0,0,C
-misctexts,ZA 20,Zakros,tablet,.2,516,•,,4,,0,1,0,0,C
+misctexts,ZA 20,Zakros,tablet,.2,516,,,4,,0,1,0,0,C
 misctexts,ZA 20,Zakros,tablet,.2,517,SI-TE-TU,,1,,0,0,0,0,C
 misctexts,ZA 20,Zakros,tablet,.3,518,SI-TU,,6,,0,0,0,0,C
 misctexts,ZA 20,Zakros,tablet,.3,519,TE-*123,,12,,0,0,0,0,C
@@ -1431,7 +1431,7 @@ misctexts,IO Za 16a,Iouktas,za,a.7,526,*118-MI,,2,,0,1,0,0,C
 misctexts,IO Za 16a,Iouktas,za,b.3,527,,,2,,0,1,0,0,C
 misctexts,KN Za 19,Knossos,za,.2,528,OVISm,,1,,0,1,0,0,C
 misctexts,KN Za 19,Knossos,za,.3,529,,,1,,0,1,0,0,C
-misctexts,KN Za 19,Knossos,za,.3,530,RA-•,OVISf,1,,0,1,0,0,C
+misctexts,KN Za 19,Knossos,za,.3,530,RA-,OVISf,1,,0,1,0,0,C
 misctexts,KN Za 19,Knossos,za,.4,531,DU-JU,,7,,0,1,0,0,C
 misctexts,KN Za 19,Knossos,za,.5,532,OVISf,,100,,0,1,0,0,C
 misctexts,ZA 26,Zakros,tablet,a.2,533,OVISf,,13,,0,1,0,0,C

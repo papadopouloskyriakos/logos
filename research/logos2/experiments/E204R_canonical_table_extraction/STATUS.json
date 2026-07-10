@@ -1,6 +1,16 @@
 {
  "experiment": "E204R",
- "status": "PREREGISTERED",
- "gate": "per prereg (adds full-record >=95%)",
- "exploratory": false
+ "status": "E204R_BLOCKED_DATA_QUALITY",
+ "gate": "FAILED on statement 0.9763<0.98 (33/1392 rows); all other criteria PASS incl. numeric fields at 1.000",
+ "amendments": [
+  "R1 (hang/table-recovery/designation grammar/empty-string trap)",
+  "R2 (divider bullets + entity map)"
+ ],
+ "residual_classes": [
+  "damaged-initial hyphen semantics",
+  "unterminated numeric entities"
+ ],
+ "seal": "UNOPENED; unread",
+ "e204_metrology": "DOES NOT RUN",
+ "completed": "2026-07-10"
 }
