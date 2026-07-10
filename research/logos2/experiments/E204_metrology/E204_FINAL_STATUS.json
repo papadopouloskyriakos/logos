@@ -1,0 +1,18 @@
+{
+ "validation": {
+  "missing_fields": [],
+  "nulls_complete_200": true,
+  "valid": true
+ },
+ "adjudication": {
+  "status": "UNDERDETERMINED_AFTER_ABLATION",
+  "p_plus1_recomputed": 1.0,
+  "cp95_upper_recomputed": 1.0,
+  "n_loo_stable_relations": 0,
+  "consistency_with_run_verdict": true
+ },
+ "output_sha256": "4913dccb412dcf7cca8bcca7c80d350ae2c7f451ae95fb33f7141405d05bf711",
+ "strict_arm_kept_separate": "METROLOGY_RESULTS.json (generic infeasibility)",
+ "wording_rules": "no exact values unless forced in ALL solutions; relations only; no phonetic values; seal closed",
+ "E204_TERMINAL_STATUS": "UNDERDETERMINED_AFTER_ABLATION"
+}

@@ -1,5 +1,6 @@
 {
  "experiment": "E204",
- "status": "METROLOGY_STACK_FROZEN",
- "prior": "E204_BLOCKED_DATA_QUALITY (preserved); unblocked via E204R2"
+ "status": "UNDERDETERMINED_AFTER_ABLATION",
+ "prior": "METROLOGY_STACK_FROZEN; strict arm = data-completeness INFEASIBLE (separate)",
+ "detail": "E204_FINAL_STATUS.json"
 }

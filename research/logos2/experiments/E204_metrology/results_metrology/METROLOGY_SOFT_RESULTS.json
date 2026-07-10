@@ -1,0 +1,41 @@
+{
+ "arm": "SOFT (preregistered)",
+ "strict_arm_reference": "METROLOGY_RESULTS.json (INFEASIBLE all bases + all nulls -> data-completeness property)",
+ "per_doc_satisfiable": {
+  "HT 100": false,
+  "HT 104": true,
+  "HT 123+124": false,
+  "HT 13": false,
+  "HT 27+48": false,
+  "HT 94": false,
+  "KH Wc 2058-2062": false,
+  "KN Za 19:": false,
+  "ZA 15": false
+ },
+ "n_doc_satisfiable": 1,
+ "soft_optimum": {
+  "n_satisfied": 1,
+  "n_docs": 9,
+  "satisfied_docs": [
+   "HT 104"
+  ],
+  "n_value_solutions_at_opt": 1000000
+ },
+ "relations_at_opt": [
+  "J>B",
+  "J>D",
+  "J>E",
+  "J>H"
+ ],
+ "loo_stable_relations": [],
+ "null_battery_soft": {
+  "n": 200,
+  "ge_observed_relations": 200,
+  "p_plus1": 1.0,
+  "null_opt_mean": 1.0,
+  "cp95_upper": 1.0
+ },
+ "verdict": "UNDERDETERMINED_AFTER_ABLATION",
+ "runtime_s": 6282.8,
+ "no_phonetic_value": true
+}
