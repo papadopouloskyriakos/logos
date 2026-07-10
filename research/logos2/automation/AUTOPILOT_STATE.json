@@ -1,6 +1,6 @@
 {
  "installed": null,
- "last_watchdog": "2026-07-10T01:30:02Z",
+ "last_watchdog": "2026-07-10T03:00:02Z",
  "last_claude_continuation": null,
  "last_commit": null,
  "last_push": null,
@@ -10,5 +10,8 @@
  "last_failure_reason": null,
  "mission_wave": 3,
  "mission_extended": "2026-07-10",
- "latest_handoff": "state/LATEST_HANDOFF.json (2026-07-10 wave-4)"
+ "latest_handoff": "state/LATEST_HANDOFF.json (2026-07-10 wave-4)",
+ "state": "CAMPAIGN_CLOSED",
+ "updated": "2026-07-10",
+ "note": "authoritative live state moved to automation/state/AUTOPILOT_STATE.json; campaign closed \u2014 watchdog exits on final/MACHINE_READABLE_SUMMARY.json campaign_closed=true"
 }
