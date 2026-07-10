@@ -1,5 +1,5 @@
 {
- "n_files": 232,
+ "n_files": 225,
  "files": [
   {
    "file": ".gitignore",
@@ -60,14 +60,6 @@
   {
    "file": "SEALS_REGISTER.md",
    "sha256": "5cd21554feaf1f1c6a235de5b21106b34f229a7ea3044b417fd0d63b7c48c3f0"
-  },
-  {
-   "file": "STATUS.md",
-   "sha256": "f6cf82cf4c9206565cf7b969e30399dc299ac4a2849d125821f052766c50904c"
-  },
-  {
-   "file": "ledger.jsonl",
-   "sha256": "169152b4c29254c9fae75a1c21b0206a07cfea773dd37eab2c682049c433f3dd"
   },
   {
    "file": "experiments/E212_independence_graph.json",
@@ -774,10 +766,6 @@
    "sha256": "ecdea95cfe1951a6923e2b056c63864abd89f0f9ec4817101cca414880b3e9ce"
   },
   {
-   "file": "automation/AUTOPILOT_STATE.json",
-   "sha256": "9047b37a67031974496cad335030d1094c124f0638a1a85e64a9e817301eedc0"
-  },
-  {
    "file": "automation/CAPABILITIES.json",
    "sha256": "aee6fb51e4a806eb1017dc51529db575177f27c122c644fc7b9b8d47e8edb0fd"
   },
@@ -816,22 +804,6 @@
   {
    "file": "automation/tests/run_tests.sh.w1_addendum",
    "sha256": "40c898074f69a04a6f31b1d6ba9234017b44755e384244a048a8d84887c772c6"
-  },
-  {
-   "file": "automation/state/AUTOPILOT_STATE.json",
-   "sha256": "c86d35f93b135959472d26a69b6ed8e1a033d433de8350ba4504ea8865a4ba15"
-  },
-  {
-   "file": "automation/state/LATEST_HANDOFF.json",
-   "sha256": "d7682d70cbed32954a97d462cd478388ecc7b8330ea5ed20927eff054cea7e22"
-  },
-  {
-   "file": "automation/state/session.json",
-   "sha256": "1293874e515267f498e33697bc959074bcea993b906cf5c37d8148dfee568799"
-  },
-  {
-   "file": "automation/state/watchdog.lock",
-   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
    "file": "final/ANCHOR_ACQUISITION_PRIORITIES.md",
@@ -891,7 +863,7 @@
   },
   {
    "file": "final/generate_package.py",
-   "sha256": "00ba2968084b7e928880da992d9821b35aea6dd9ce193967291c0100a9c17b83"
+   "sha256": "e2b0e1e72abb24ab30a6ba0955b6ae4ab3e65a357ece4a79f1a2d199336212b3"
   },
   {
    "file": "imports/E201_F1B/BOUNDARY.md",

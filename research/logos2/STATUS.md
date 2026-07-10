@@ -32,3 +32,19 @@ both defect repairs with as-run artifacts preserved; no result-driven adaptation
 
 **Standing:** CSA sweep runs until ~2026-07-13 (its at-scale cells enter only via `imports/`);
 paper/governance/corpus/72h campaign untouched; all seals unread; ledger.jsonl append-only.
+
+---
+
+## 2026-07-10 — CAMPAIGN CLOSED → POST-CLOSURE MAINTENANCE
+
+Closure commit `8d67213` (branch `research/logos2-anchor-identifiability`). Verdicts final:
+E204 `UNDERDETERMINED_AFTER_ABLATION` · E212 `NO_MULTI_CHANNEL_INDEPENDENT_CLAIM` · E213
+`SEALED_PROSPECTIVE` (2 predictions, sha256 5b50f21d…) · E214 battery PASS · package 232
+artifacts verified · review ZIP hash-verified · protected assets 33/33 · both seals closed
+and unread. Cron autopilot removed (`automation/CRON_REMOVAL_TRANSCRIPT.md`); watchdog
+scripts retained for audit. **No autonomous continuation is permitted without a registered
+reopening event** (see `final/METHOD_EXHAUSTION_UPDATE.md` §reopening). Sole pending item:
+the E201-F1b post-closure addendum via `imports/E201_F1B/` when the external CSA sweep
+completes (~2026-07-13) — classified only as INDEPENDENT_REPLICATION / SCALE_EXTENSION /
+NON_COMPARABLE / FAILED_IMPORT / INVALID; F1a remains the binding confirmatory result; E208
+remains DE-AUTHORIZED.

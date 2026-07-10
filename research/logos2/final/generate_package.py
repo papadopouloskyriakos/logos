@@ -75,8 +75,12 @@ def main():
     # ARTIFACT_MANIFEST.json + BUNDLE_MANIFEST.sha256 over research/logos2 (code+results, no .venv/db)
     arts = []
     for dp, dns, fns in os.walk(ROOT):
-        dns[:] = [d for d in dns if d not in (".venv", "__pycache__", "logs")]
+        dns[:] = [d for d in dns if d not in (".venv", "__pycache__", "logs", "state")]
         for fn in sorted(fns):
+            # live operational state is excluded — it legitimately changes post-packaging
+            if fn in ("ledger.jsonl", "STATUS.md", "AUTOPILOT_STATE.json",
+                      "CRON_REMOVAL_TRANSCRIPT.md"):
+                continue
             if fn.endswith((".sqlite", ".pyc")) or fn in (
                     "BUNDLE_MANIFEST.sha256", "ARTIFACT_MANIFEST.json", "LOGOS2_REVIEW_BUNDLE.zip",
                     "REVIEW_BUNDLE.zip.sha256"):

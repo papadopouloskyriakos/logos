@@ -11,7 +11,11 @@
  "mission_wave": 3,
  "mission_extended": "2026-07-10",
  "latest_handoff": "state/LATEST_HANDOFF.json (2026-07-10 wave-4)",
- "state": "CAMPAIGN_CLOSED",
+ "state": "POST_CLOSURE_MAINTENANCE",
  "updated": "2026-07-10",
- "note": "authoritative live state moved to automation/state/AUTOPILOT_STATE.json; campaign closed \u2014 watchdog exits on final/MACHINE_READABLE_SUMMARY.json campaign_closed=true"
+ "note": "authoritative live state moved to automation/state/AUTOPILOT_STATE.json; campaign closed \u2014 watchdog exits on final/MACHINE_READABLE_SUMMARY.json campaign_closed=true",
+ "campaign": "LOGOS-2 CLOSED at 8d67213",
+ "cron": "LOGOS2_AUTOPILOT block REMOVED (transcript: automation/CRON_REMOVAL_TRANSCRIPT.md); unrelated entries preserved; watchdog scripts kept for audit",
+ "reopening_rule": "POST_CLOSURE_MAINTENANCE \u2014 no autonomous continuation permitted without a registered reopening event",
+ "pending": "E201-F1b addendum only, via imports/E201_F1B when the external CSA sweep completes (~2026-07-13); daily conservative check, no 15-min polling"
 }

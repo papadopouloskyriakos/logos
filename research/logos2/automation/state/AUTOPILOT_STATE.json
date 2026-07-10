@@ -1,6 +1,6 @@
 {
- "updated": "2026-07-10 closure",
- "campaign": "LOGOS-2",
+ "updated": "2026-07-10",
+ "campaign": "LOGOS-2 CLOSED at 8d67213",
  "phase": "CLOSED",
  "e204_soft_worker": {
   "pid": 1923942,
@@ -15,5 +15,9 @@
   "WATCHDOG_HALTED.json",
   "final campaign-state marker present"
  ],
- "in_flight": null
+ "in_flight": null,
+ "state": "POST_CLOSURE_MAINTENANCE",
+ "cron": "LOGOS2_AUTOPILOT block REMOVED (transcript: automation/CRON_REMOVAL_TRANSCRIPT.md); unrelated entries preserved; watchdog scripts kept for audit",
+ "reopening_rule": "POST_CLOSURE_MAINTENANCE \u2014 no autonomous continuation permitted without a registered reopening event",
+ "pending": "E201-F1b addendum only, via imports/E201_F1B when the external CSA sweep completes (~2026-07-13); daily conservative check, no 15-min polling"
 }

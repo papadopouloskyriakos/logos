@@ -1,26 +1,12 @@
 {
- "written": "2026-07-10 (CLOSURE)",
+ "written": "2026-07-10 (post-closure maintenance)",
  "branch": "research/logos2-anchor-identifiability",
  "commit": "wave-5 head",
  "active_jobs": [
   {
-   "what": "E204 metrology SOFT arm",
-   "script": "research/logos2/experiments/E204_metrology/run_metrology_soft.py",
-   "pids": "1923860 1923942 1930494 1930501",
-   "output": "results_metrology/METROLOGY_SOFT_RESULTS.json",
-   "on_completion": "score under frozen vocabulary (L3_METROLOGICAL_CLASS_SUPPORTED|METROLOGICAL_RELATIONS_PARTIAL|UNDERDETERMINED_AFTER_ABLATION|NULL_NOT_DISTINCTIVE|E204_INVALID); strict-arm INFEASIBLE result stays separate; seal stays closed"
-  },
-  {
-   "what": "E206 Stage-2 scorer",
-   "script": "research/logos2/experiments/E206_onomastic_linkage/stage2/run_stage2.py",
-   "pids": "1930053 1930149 1930494 1930505",
-   "output": "experiments/E206_onomastic_linkage/stage2/STAGE2_RESULT.json",
-   "on_completion": "verdict from frozen vocabulary; conditional-map labelling mandatory"
-  },
-  {
-   "what": "external CSA sweep (operator job, do not touch)",
+   "what": "external CSA sweep (operator job on main, untouched)",
    "eta": "~2026-07-13",
-   "on_completion": "F1b import ONLY via imports/E201_F1B boundary"
+   "on_completion": "F1b addendum ONLY via imports/E201_F1B (receipt first, then inspect; classify INDEPENDENT_REPLICATION|SCALE_EXTENSION|NON_COMPARABLE|FAILED_IMPORT|INVALID; F1a stays binding; separate commit)"
   }
  ],
  "completed": [
@@ -58,5 +44,5 @@
  ],
  "continuation_instruction": "Resume per automation/WATCHDOG_PROMPT.md (wave-3 extension). Score any finished background job FIRST (results before interpretation), then continue next_dag_nodes in order. Never weaken a frozen gate; never open a seal; ledger+STATUS+commit+push at every milestone.",
  "closure_cascade": "EXECUTED in full; see ledger.jsonl CAMPAIGN_CLOSED record",
- "campaign_state": "CLOSED \u2014 final/MACHINE_READABLE_SUMMARY.json campaign_closed=true; watchdog exits clean"
+ "campaign_state": "CLOSED at 8d67213; cron removed; monitors stopped; POST_CLOSURE_MAINTENANCE \u2014 no autonomous continuation permitted without a registered reopening event"
 }
