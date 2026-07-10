@@ -1,0 +1,9 @@
+{
+ "experiment": "E213",
+ "sealed_file": "SEALED_PREDICTIONS.json",
+ "sealed_sha256": "5b50f21dd1e0c4e85e51659144048af9fd2a89210a7f91b62ce00ab04288da19",
+ "opened": false,
+ "verify_without_opening": "sha256sum SEALED_PREDICTIONS.json == sealed_sha256",
+ "n_predictions": 2,
+ "status": "SEALED_PROSPECTIVE"
+}

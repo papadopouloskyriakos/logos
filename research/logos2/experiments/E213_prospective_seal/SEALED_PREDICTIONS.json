@@ -1,0 +1,31 @@
+{
+ "excluded_by_rule": [
+  "E206 onomastic matches (verdict NO_MATCH_BEYOND_CANARIES \u2014 nothing to seal)",
+  "RAG retrievals/interpretations (NOT_A_CHANNEL)",
+  "any phonetic value",
+  "any language-family claim"
+ ],
+ "experiment": "E213",
+ "opening_condition": "New Linear A inscriptions published AFTER 2026-07-10 and ingested to silver with provenance meeting each prediction's minimum n. Scoring uses ONLY the frozen RAG index snapshot below for prior-art checks \u2014 post-cutoff scholarship may not inform scoring choices.",
+ "predictions": [
+  {
+   "basis": "E207 POSITIONAL_ONLY + prior-campaign graduated A-initial enrichment (E103R)",
+   "decision_rule": "one-sided exact binomial: n = word tokens, k = A-initial tokens, p0 = corpus all-positions A rate recomputed on the NEW data only; SUPPORTED iff p < 0.05; REFUTED iff observed rate < p0; else UNDERPOWERED.",
+   "id": "P1_A_INITIAL",
+   "layer": "L2",
+   "no_value_claim": true,
+   "prediction": "In newly published Linear A administrative inscriptions (post-cutoff, >=15 inscriptions, >=60 word tokens), the word-initial rate of sign A exceeds its all-positions rate."
+  },
+  {
+   "basis": "prior-campaign KU-RO-terminal graduated finding (K1-adaptive-validated)",
+   "decision_rule": "count both criteria per tablet; SUPPORTED iff exact binomial vs 0.25 structural-position chance gives p < 0.05 AND sum-agreement >= 60%; REFUTED iff terminal-position rate <= chance; else UNDERPOWERED.",
+   "id": "P2_LEDGER_TERMINAL_TOTAL",
+   "layer": "L2/L3-functional",
+   "no_value_claim": true,
+   "prediction": "In newly published multi-entry ledger-format tablets (>=5 tablets with >=3 numbered entries each), the KU-RO sign-group occurs in the terminal summary position in a majority, and where a number follows it, that number equals the column sum within scribal-error tolerance (<=1 unit) in >=60%."
+  }
+ ],
+ "rag_index_cutoff_sha256": "8a5bf0df74103860c9cda7ba4538bf95bce9e4ace45bd5bceed98fa57ee038ae  logos2_rag.sqlite",
+ "relation_to_prior_seal": "Distinct from the 72h FRACTION_ORDER_ANETAKI seal (which stays closed and is NOT superseded); no prediction here overlaps it.",
+ "sealed_date": "2026-07-10"
+}
