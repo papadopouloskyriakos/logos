@@ -1,0 +1,11 @@
+{
+ "installed": null,
+ "last_watchdog": "2026-07-10T00:38:32Z",
+ "last_claude_continuation": null,
+ "last_commit": null,
+ "last_push": null,
+ "last_ledger_append": null,
+ "active_experiment_pids": [],
+ "consecutive_failures": 0,
+ "last_failure_reason": null
+}

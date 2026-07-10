@@ -1,0 +1,47 @@
+{
+ "claude_version": "2.1.206 (Claude Code)",
+ "claude_path": "/home/claude-runner/.local/bin/claude",
+ "flags": {
+  "--bg/--background": true,
+  "-c/--continue": true,
+  "-r/--resume": true,
+  "-p/--print": true,
+  "--session-id": true,
+  "agents_json": true,
+  "agents_json_schema": [
+   "cwd",
+   "kind",
+   "name",
+   "pid",
+   "sessionId",
+   "startedAt",
+   "status"
+  ],
+  "status_values_observed": [
+   "busy"
+  ]
+ },
+ "permission_modes": [
+  "acceptEdits",
+  "auto",
+  "bypassPermissions",
+  "manual",
+  "dontAsk",
+  "plan"
+ ],
+ "permission_mode_chosen": "acceptEdits (never bypassPermissions; project policy governs Bash allowlist; blocked ops fail closed)",
+ "tools": {
+  "flock": "/usr/bin/flock",
+  "crontab": "/usr/bin/crontab",
+  "jq": "/usr/bin/jq",
+  "python3": "/usr/bin/python3",
+  "tmux": "/usr/bin/tmux"
+ },
+ "cron_daemon_running": true,
+ "auth_status": "CLI operational in this environment (interactive session live); no secrets inspected or recorded",
+ "worktree": "/home/claude-runner/gitlab/n8n/logos-logos2",
+ "branch": "research/logos2-anchor-identifiability",
+ "campaign_session_id": "a0192618-9879-4771-aff2-b2b25d33e9c4",
+ "campaign_session_cwd": "/home/claude-runner/gitlab/n8n/logos (main worktree; campaign context lives in this session's history)",
+ "probed": "2026-07-10"
+}
