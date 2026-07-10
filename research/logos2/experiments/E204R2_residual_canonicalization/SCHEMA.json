@@ -14,7 +14,8 @@
   "restored",
   "damaged",
   "is_kuro",
-  "parser"
+  "parser",
+  "anomaly"
  ],
  "fraction_alphabet": [
   "J",
