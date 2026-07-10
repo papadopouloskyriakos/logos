@@ -1,0 +1,26 @@
+source_file,doc_id,site,support,locus,seq,context_word,logogram,integer,fraction_seq,uncertain,restored,damaged,is_kuro,parser
+HTtexts,HT 10,Haghia Triada,tablet,10,0,,,4,,0,1,0,0,B
+HTtexts,HT 25,Haghia Triada,tablet,b.2,1,KU-RO,,16,,0,0,0,1,B
+HTtexts,HT 6b.2;,Haghia Triada,za,3,2,,"*402,",50,,0,1,0,0,B
+HTtexts,HT 34,Haghia Triada,tablet,30,3,,,7,,0,1,0,0,B
+HTtexts,HT 54,Haghia Triada,gorila,a.1,4,SI,,1,,0,1,0,0,B
+HTtexts,HT 65,Haghia Triada,tablet,.2,5,,,,B,0,0,0,0,B
+HTtexts,HT 113,Haghia Triada,tablet,.3,6,O-DI,,,J,1,0,0,0,B
+HTtexts,HT 116,Haghia Triada,tablet,b.1,7,,*304,15,,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,8,8,,,,E,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,1,9,,,,X,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,31,10,,,,J,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,8,11,,,,JE,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,4,12,,,,E,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,93,13,,,,J,0,0,0,0,B
+HTtexts,HT 123+124,Haghia Triada,tablet,a.7-9:,14,"OLIV,",,93,J,0,0,0,1,B
+HTtexts,HT 154N,Haghia Triada,tablet,1,15,TA-JA,*319 *319,,K,0,1,0,0,B
+HTtexts,HT 154N,Haghia Triada,tablet,1,16,,,,J,0,0,0,0,B
+HTtexts,HT 154N,Haghia Triada,tablet,2,17,,,,E,0,0,0,0,B
+HTtexts,HT 154N,Haghia Triada,tablet,3,18,,,,EF,0,0,0,0,B
+misctexts,ARKH 2,Arkhanes,tablet,.3-4:,0,QIf-*118,,,KH,0,1,0,0,B
+misctexts,KH 16,Khania,tablet,.3,1,,*303,,J,0,1,0,0,B
+misctexts,KH 80,Khania,tablet,.3,2,,,22,,0,1,0,0,B
+misctexts,KH 100,Khania,tablet,2034,3,Wc,,2001,,0,1,0,0,B
+misctexts,HT 123b.3,Haghia Triada,wc,475,4,Minoan,,322,,0,0,0,0,B
+misctexts,HT 123b.3,Haghia Triada,wc,10,5,,,,K,0,0,0,0,B

@@ -16,31 +16,6 @@ ENT = {"&amp;": "&", "&lt;": "<", "&gt;": ">", "&nbsp;": " ", "&#8226;": "•",
        "&bull;": "•", "&quot;": '"'}
 
 
-def strip_html(raw):
-    """Char-scanner tag stripper; <br>/<p>/<tr>/<td>/<div> become newlines."""
-    out, i, n = [], 0, len(raw)
-    while i < n:
-        c = raw[i]
-        if c == "<":
-            j = raw.find(">", i + 1)
-            if j == -1:
-                break
-            tag = raw[i + 1:j].split()[0].lower().strip("/") if raw[i + 1:j].split() else ""
-            if tag in ("br", "p", "tr", "td", "div", "li", "table"):
-                out.append("\n")
-            i = j + 1
-        elif c == "&":
-            j = raw.find(";", i + 1)
-            if 0 < j - i <= 8:
-                out.append(ENT.get(raw[i:j + 1], " "))
-                i = j + 1
-            else:
-                out.append(c); i += 1
-        else:
-            out.append(c); i += 1
-    return "".join(out)
-
-
 def is_int_tok(t):
     return t.isdigit() and 1 <= len(t) <= 4
 
@@ -84,92 +59,115 @@ def has_decimal_gloss(tokens):
     return False
 
 
+def iter_rows(raw):
+    """Yield (is_row, payload): table rows as lists of cell texts, and inter-row text."""
+    i, n = 0, len(raw)
+    buf_text = []
+    row = None
+    cell = None
+    while i < n:
+        if raw[i] == "<":
+            j = raw.find(">", i + 1)
+            if j == -1:
+                break
+            tag = raw[i + 1:j].split()[0].lower() if raw[i + 1:j].split() else ""
+            if tag == "tr":
+                if buf_text:
+                    yield (False, "".join(buf_text)); buf_text = []
+                row = []
+                cell = None
+            elif tag == "/tr":
+                if row is not None:
+                    if cell is not None:
+                        row.append("".join(cell))
+                    yield (True, row)
+                row, cell = None, None
+            elif tag == "td":
+                if row is not None:
+                    if cell is not None:
+                        row.append("".join(cell))
+                    cell = []
+            elif tag == "/td":
+                if row is not None and cell is not None:
+                    row.append("".join(cell)); cell = None
+            i = j + 1
+        elif raw[i] == "&":
+            j = raw.find(";", i + 1)
+            if 0 < j - i <= 8:
+                ch = ENT.get(raw[i:j + 1], " ")
+                (cell if cell is not None else buf_text).append(ch)
+                i = j + 1
+            else:
+                (cell if cell is not None else buf_text).append(raw[i]); i += 1
+        else:
+            (cell if cell is not None else buf_text).append(raw[i]); i += 1
+    if buf_text:
+        yield (False, "".join(buf_text))
+
+
 def parse_file(fname):
     src = os.path.basename(fname).split(".")[0]
-    text = strip_html(open(fname, encoding="utf-8", errors="replace").read())
-    lines = [ln for ln in text.split("\n")]
+    raw = open(fname, encoding="utf-8", errors="replace").read()
     out = []
     doc_id = site = support = None
-    i = 0
-    while i < len(lines):
-        toks = [t for t in lines[i].replace("•", " • ").split() if t]
-        # document detection: (SITE-PREFIX, integer) then a support word within 12 tokens
-        for k in range(len(toks) - 1):
-            p = toks[k].rstrip(",")
-            num = toks[k + 1].rstrip(",")
-            if p in SITES and num and num[0].isdigit():
-                window = [w.strip("(),:").lower() for w in toks[k + 2:k + 14]]
-                if any(w in SUPPORT_WORDS for w in window):
-                    doc_id = f"{p} {num}"
-                    site = SITES[p]
-                    support = next((w for w in window if w in SUPPORT_WORDS), "?")
-                    break
+    for is_row, payload in iter_rows(raw):
+        if not is_row:
+            toks = payload.split()
+            for k in range(len(toks) - 1):
+                p = toks[k].rstrip(",")
+                num = toks[k + 1].rstrip(",")
+                if p in SITES and num and num[0].isdigit():
+                    window = [w.strip("(),:").lower() for w in toks[k + 2:k + 14]]
+                    if any(w in SUPPORT_WORDS for w in window):
+                        doc_id = f"{p} {num.rstrip(',')}"
+                        site = SITES[p]
+                        support = next((w for w in window if w in SUPPORT_WORDS), "?")
+                        break
+            continue
         if doc_id is None:
-            i += 1
             continue
-        if has_decimal_gloss(toks) or lower_run(toks) >= 4:
-            i += 1
+        cells = [" ".join(c.split()) for c in payload]
+        cells = [c for c in cells]
+        if not cells:
             continue
-        if not toks or not is_locus_tok(toks[0]):
-            i += 1
+        first = cells[0].strip()
+        if not first or not is_locus_tok(first.split()[0] if first.split() else ""):
             continue
-        locus = toks[0]
-        body = toks[1:]
-        uncertain = 1 if any("?" in t for t in body) else 0
-        restored = 1 if any(("[" in t or "]" in t) for t in body) else 0
-        damaged = 1 if any("…" in t for t in body) else 0
-        # merge hyphen-separated sign groups (token-level FSM)
-        merged, pend = [], None
-        for t in body:
-            if t == "•":
-                if pend: merged.append(pend); pend = None
+        alltoks = [t for c in cells for t in c.split()]
+        if has_decimal_gloss(alltoks) or lower_run(alltoks) >= 4:
+            continue
+        locus = first.split()[0]
+        body_cells = cells[1:]
+        uncertain = 1 if any("?" in c for c in body_cells) else 0
+        restored = 1 if any(("[" in c or "]" in c) for c in body_cells) else 0
+        damaged = 1 if any("…" in c for c in body_cells) else 0
+        def cleaned(c):
+            return "".join(ch for ch in c if ch not in "[]{}?<>")
+        nz_int, nz_frac = "", ""
+        content_cells = []
+        for c in body_cells:
+            cc = cleaned(c).strip()
+            if not cc:
                 continue
-            if t == "-":
-                if pend: pend += "-"
-                continue
-            if pend and pend.endswith("-"):
-                pend += t
-            elif pend is None:
-                pend = t
+            toks = cc.replace("-", " - ").split()
+            if all(is_int_tok(t) for t in toks if t != "-"):
+                nz_int += "".join(t for t in toks if is_int_tok(t))
+            elif all(is_frac_tok(t) for t in toks if t != "-"):
+                nz_frac += "".join(t for t in toks if is_frac_tok(t))
             else:
-                merged.append(pend); pend = t
-        if pend:
-            merged.append(pend)
-        merged = [t.strip("-") for t in merged if t.strip("-")]
-        clean = ["".join(ch for ch in t if ch not in "[]{}?<>") for t in merged]
-        clean = [t for t in clean if t]
-        # continuation lines: only fraction tokens
-        j = i + 1
-        extra = []
-        while j < len(lines):
-            nt = [t for t in lines[j].split() if t]
-            if nt and all(is_frac_tok(t) for t in nt):
-                extra += nt; j += 1
-            else:
-                break
-        nz = []
-        k = len(clean)
-        while k > 0 and (is_int_tok(clean[k - 1]) or is_frac_tok(clean[k - 1])):
-            nz.insert(0, clean[k - 1]); k -= 1
-        nz += extra
-        if not nz:
-            i = j
+                content_cells.append(cc)
+        if not nz_int and not nz_frac:
             continue
-        integer = "".join(t for t in nz if is_int_tok(t))
-        frac_seq = "".join(t for t in nz if is_frac_tok(t))
-        pre = clean[:k]
-        logogram = " ".join(t for t in pre if "+" in t or t.startswith("*") or
-                            t.startswith("{"))
-        words = [t for t in pre if t not in set(logogram.split()) and t and
-                 (t[0].isupper() or t[0] == "*")]
-        context = words[-1] if words else ""
-        is_kuro = 1 if any("KU-RO" in t for t in pre) else 0
+        statement = content_cells[0] if content_cells else ""
+        logogram = " ".join(c for c in content_cells[1:] if c) if len(content_cells) > 1 else ""
+        context = statement.replace(" - ", "-").replace(" -", "-").replace("- ", "-")
+        context = context.split()[-1] if context.split() else ""
+        is_kuro = 1 if "KU-RO" in (statement.replace(" ", "")) or "KU-RO" in context else 0
         out.append(dict(source_file=src, doc_id=doc_id, site=site, support=support,
                         locus=locus, seq=len(out), context_word=context,
-                        logogram=logogram, integer=integer, fraction_seq=frac_seq,
+                        logogram=logogram, integer=nz_int, fraction_seq=nz_frac,
                         uncertain=uncertain, restored=restored, damaged=damaged,
                         is_kuro=is_kuro, parser="B"))
-        i = j
     return out
 
 
