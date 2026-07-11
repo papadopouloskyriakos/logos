@@ -118,6 +118,60 @@ MEM_FLOOR_MB = int(os.environ.get("SWEEP_MEM_FLOOR_MB", "10000"))  # don't launc
 MEM_CRIT_MB = int(os.environ.get("SWEEP_MEM_CRIT_MB", "4000"))     # shed newest cell below this
 
 
+def tree_rss_mb(root_pid):
+    """RSS of a cell worker + all descendants, MB (walks /proc; 0 if gone)."""
+    kids = {}
+    try:
+        for pd in os.listdir("/proc"):
+            if not pd.isdigit():
+                continue
+            try:
+                with open(f"/proc/{pd}/stat") as f:
+                    data = f.read()
+                # comm can contain spaces/parens: fields resume after the LAST ')'
+                rest = data[data.rindex(")") + 2:].split()
+                kids.setdefault(int(rest[1]), []).append(int(pd))   # rest[1] = ppid
+            except (OSError, ValueError):
+                continue
+    except OSError:
+        return 0
+    seen, stack, total_kb = set(), [root_pid], 0
+    while stack:
+        pid = stack.pop()
+        if pid in seen:
+            continue
+        seen.add(pid)
+        try:
+            with open(f"/proc/{pid}/status") as f:
+                for ln in f:
+                    if ln.startswith("VmRSS:"):
+                        total_kb += int(ln.split()[1])
+                        break
+        except OSError:
+            pass
+        stack.extend(kids.get(pid, []))
+    return total_kb // 1024
+
+
+def shed_tree(popen):
+    """TERM the cell's whole process GROUP (it has its own PGID); KILL stragglers.
+    Without this, terminating only the worker leaves 4 forked annealers as orphans
+    still holding the memory (observed 2026-07-11)."""
+    import signal
+    try:
+        os.killpg(popen.pid, signal.SIGTERM)
+    except (ProcessLookupError, PermissionError):
+        popen.terminate()
+    try:
+        popen.wait(timeout=30)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(popen.pid, signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            popen.kill()
+        popen.wait(timeout=10)
+
+
 def mem_available_mb():
     for ln in open("/proc/meminfo"):
         if ln.startswith("MemAvailable:"):
@@ -162,21 +216,19 @@ def scheduler(out_dir, concurrency, shard, host):
                 continue
             p = subprocess.Popen([sys.executable, os.path.abspath(__file__),
                                   "--cell", f"{c['benchmark']}:{c['size']}:{c['seed']}",
-                                  "--out-dir", out_dir, "--host", host])
+                                  "--out-dir", out_dir, "--host", host],
+                                 start_new_session=True)   # own PGID: shed kills the WHOLE tree
             procs[p] = (cid, time.time(), c)
             print(f"[sched] launch {cid} (~{est_cost(c)/3600:.1f}h) [{len(procs)} running, "
                   f"{len(q)} queued]", flush=True)
         time.sleep(5)
         avail = mem_available_mb()
         if procs and avail < MEM_CRIT_MB:
-            # protect the box: shed the YOUNGEST cell (least sunk work), requeue it
-            victim = max(procs, key=lambda p: procs[p][1])
+            # protect the box: shed the LARGEST-RSS cell tree (the actual hog), requeue it
+            victim = max(procs, key=lambda p: tree_rss_mb(p.pid))
             cid, t0, c = procs.pop(victim)
-            victim.terminate()
-            try:
-                victim.wait(timeout=30)
-            except subprocess.TimeoutExpired:
-                victim.kill()
+            rss = tree_rss_mb(victim.pid)
+            shed_tree(victim)
             claim = os.path.join(out_dir, "cells", cid + ".json.claim")
             try:
                 os.remove(claim)
@@ -184,7 +236,7 @@ def scheduler(out_dir, concurrency, shard, host):
                 pass
             q.append(c)                                     # retried once memory recovers
             print(f"[sched] mem-guard CRITICAL: MemAvailable {avail}MB < {MEM_CRIT_MB}MB — "
-                  f"shed {cid} (ran {(time.time()-t0)/60:.0f}m, requeued) "
+                  f"shed {cid} (tree RSS ~{rss}MB, ran {(time.time()-t0)/60:.0f}m, requeued) "
                   f"[{len(procs)} running, {len(q)} queued]", flush=True)
         for p in list(procs):
             if p.poll() is not None:
