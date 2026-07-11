@@ -255,7 +255,14 @@ def scheduler(out_dir, concurrency, shard, host):
         avail = mem_available_mb()
         psi = psi_mem_avg10()
         total_rss = sum(tree_rss_mb(p.pid) for p in procs) if procs else 0
-        if procs and (avail < MEM_CRIT_MB or psi > PSI_SHED or total_rss > RSS_BUDGET_MB):
+        # Shed only on REAL harm signals. A bare avail<crit with psi~0 is an external
+        # transient (Cronicle jobs at :40 hourly eat ~9GB for minutes) — shedding hours of
+        # big-cell work for those starves the big chain forever. Hard line at 6GB regardless.
+        shed_now = (avail < 6000
+                    or (avail < MEM_CRIT_MB and psi > 1.0)
+                    or psi > PSI_SHED
+                    or total_rss > RSS_BUDGET_MB)
+        if procs and shed_now:
             # protect the box: shed the LARGEST-RSS cell tree (the actual hog), requeue it
             victim = max(procs, key=lambda p: tree_rss_mb(p.pid))
             cid, t0, c = procs.pop(victim)
