@@ -9,7 +9,15 @@
 #
 # Path: cpuset is NOT delegated to uid 1000 and systemd system-slice creation is Access-denied,
 # so this uses the sanctioned FALLBACK: taskset (affinity inherited by all children) + nice 19 +
-# ionice -c3. Cell code and pinned params are untouched; affinity/nice/ionice are result-neutral
+# ionice -c3.
+#
+# MEMORY GUARD (added 2026-07-11 after the freeze root-cause): the scheduler now admits at most
+# $SWEEP_MAX_BIG (default 1) cell of size >= $SWEEP_BIG_SIZE (default 1000) concurrently, defers
+# all launches when MemAvailable < $SWEEP_MEM_FLOOR_MB (default 10000), and sheds+requeues the
+# youngest cell if MemAvailable < $SWEEP_MEM_CRIT_MB (default 4000). The CPU fence alone cannot
+# prevent memory-reclaim stalls: 3-4 concurrent sz2214 cells exhaust the 32 GB container (no
+# swap) and freeze the LXC — that is what happened on Jul 4 (pre-halt) and on every Jul 10-11
+# relaunch that started 3 big cells head-of-queue. Cell code and pinned params are untouched; affinity/nice/ionice are result-neutral
 # (integer edit distance + seeded RNG), so fenced cells stay byte-identical to the 92 completed.
 set -euo pipefail
 FENCE="17,18,20,21,37,38,39,42,44,47,49,51,53,54,55,57"   # the sweep's 16 cores (high half)

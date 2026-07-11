@@ -105,15 +105,57 @@ def run_one_cell(cell, out_dir, host):
             pass
 
 
+# ---- memory guard (scheduler-level; cell computation untouched) -------------------------
+# Root cause of the July freezes: >=3 concurrent sz2214 cells (each = 1 parent + 4 forked
+# workers with O(n^2) structures) exhaust the container's 32 GB (no swap), crush the page
+# cache, and stall the whole LXC on memory reclaim (PSI memory-full observed ~13%). The CPU
+# fence cannot prevent this. Admission below is ORDER/concurrency only — result-neutral by
+# the same argument as biggest-first + host concurrency (each cell still runs the PINNED
+# params in its own subprocess).
+BIG_SIZE = int(os.environ.get("SWEEP_BIG_SIZE", "1000"))        # cells this size+ are "big"
+MAX_BIG = int(os.environ.get("SWEEP_MAX_BIG", "1"))             # at most this many big cells at once
+MEM_FLOOR_MB = int(os.environ.get("SWEEP_MEM_FLOOR_MB", "10000"))  # don't launch below this
+MEM_CRIT_MB = int(os.environ.get("SWEEP_MEM_CRIT_MB", "4000"))     # shed newest cell below this
+
+
+def mem_available_mb():
+    for ln in open("/proc/meminfo"):
+        if ln.startswith("MemAvailable:"):
+            return int(ln.split()[1]) // 1024
+    return 1 << 20
+
+
 def scheduler(out_dir, concurrency, shard, host):
     pend = pending_cells(out_dir, shard)
     print(f"[sched] host={host} shard={shard[0]}/{shard[1]} pending={len(pend)} "
-          f"concurrency={concurrency} (biggest-first)", flush=True)
-    procs = {}                                              # popen -> cid
+          f"concurrency={concurrency} (biggest-first; mem-guard: big>={BIG_SIZE} max {MAX_BIG}, "
+          f"floor {MEM_FLOOR_MB}MB, crit {MEM_CRIT_MB}MB)", flush=True)
+    procs = {}                                              # popen -> (cid, t0, cell)
     q = list(pend)
+    warned_floor = False
     while q or procs:
-        while q and len(procs) < concurrency:
-            c = q.pop(0)
+        launched_this_pass = True
+        while q and len(procs) < concurrency and launched_this_pass:
+            avail = mem_available_mb()
+            if avail < MEM_FLOOR_MB:
+                if not warned_floor:
+                    print(f"[sched] mem-guard: MemAvailable {avail}MB < floor {MEM_FLOOR_MB}MB — "
+                          f"deferring launches", flush=True)
+                    warned_floor = True
+                break
+            warned_floor = False
+            n_big = sum(1 for (_, _, cc) in procs.values() if cc["size"] >= BIG_SIZE)
+            # pick the first admissible cell (big cells wait for a big slot; smaller pass by)
+            pick = None
+            for i, c in enumerate(q):
+                if c["size"] >= BIG_SIZE and n_big >= MAX_BIG:
+                    continue
+                pick = i
+                break
+            if pick is None:
+                launched_this_pass = False
+                break
+            c = q.pop(pick)
             cid = csa_sweep._cell_id(c)
             cpath = os.path.join(out_dir, "cells", cid + ".json")
             if os.path.isfile(cpath):
@@ -121,13 +163,32 @@ def scheduler(out_dir, concurrency, shard, host):
             p = subprocess.Popen([sys.executable, os.path.abspath(__file__),
                                   "--cell", f"{c['benchmark']}:{c['size']}:{c['seed']}",
                                   "--out-dir", out_dir, "--host", host])
-            procs[p] = (cid, time.time())
+            procs[p] = (cid, time.time(), c)
             print(f"[sched] launch {cid} (~{est_cost(c)/3600:.1f}h) [{len(procs)} running, "
                   f"{len(q)} queued]", flush=True)
         time.sleep(5)
+        avail = mem_available_mb()
+        if procs and avail < MEM_CRIT_MB:
+            # protect the box: shed the YOUNGEST cell (least sunk work), requeue it
+            victim = max(procs, key=lambda p: procs[p][1])
+            cid, t0, c = procs.pop(victim)
+            victim.terminate()
+            try:
+                victim.wait(timeout=30)
+            except subprocess.TimeoutExpired:
+                victim.kill()
+            claim = os.path.join(out_dir, "cells", cid + ".json.claim")
+            try:
+                os.remove(claim)
+            except OSError:
+                pass
+            q.append(c)                                     # retried once memory recovers
+            print(f"[sched] mem-guard CRITICAL: MemAvailable {avail}MB < {MEM_CRIT_MB}MB — "
+                  f"shed {cid} (ran {(time.time()-t0)/60:.0f}m, requeued) "
+                  f"[{len(procs)} running, {len(q)} queued]", flush=True)
         for p in list(procs):
             if p.poll() is not None:
-                cid, t0 = procs.pop(p)
+                cid, t0, _ = procs.pop(p)
                 print(f"[sched] finished {cid} rc={p.returncode} wall={ (time.time()-t0)/3600:.2f}h "
                       f"[{len(procs)} running, {len(q)} queued]", flush=True)
     print(f"[sched] host={host} shard complete.", flush=True)
