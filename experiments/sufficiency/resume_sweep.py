@@ -115,7 +115,10 @@ def run_one_cell(cell, out_dir, host):
 BIG_SIZE = int(os.environ.get("SWEEP_BIG_SIZE", "1000"))        # cells this size+ are "big"
 MAX_BIG = int(os.environ.get("SWEEP_MAX_BIG", "1"))             # at most this many big cells at once
 MEM_FLOOR_MB = int(os.environ.get("SWEEP_MEM_FLOOR_MB", "10000"))  # don't launch below this
-MEM_CRIT_MB = int(os.environ.get("SWEEP_MEM_CRIT_MB", "4000"))     # shed newest cell below this
+MEM_CRIT_MB = int(os.environ.get("SWEEP_MEM_CRIT_MB", "4000"))     # shed hog cell below this
+STAGGER_S = int(os.environ.get("SWEEP_STAGGER_S", "0"))            # min seconds between launches
+# (launch-burst smoothing: every freeze incident coincided with 3-4 cells ramping ~3.5GB
+#  simultaneously in the first ~30s; staggering makes that stacking impossible)
 
 
 def tree_rss_mb(root_pid):
@@ -187,9 +190,12 @@ def scheduler(out_dir, concurrency, shard, host):
     procs = {}                                              # popen -> (cid, t0, cell)
     q = list(pend)
     warned_floor = False
+    last_launch = 0.0
     while q or procs:
         launched_this_pass = True
         while q and len(procs) < concurrency and launched_this_pass:
+            if time.time() - last_launch < STAGGER_S:
+                break                                       # let the previous ramp finish first
             avail = mem_available_mb()
             if avail < MEM_FLOOR_MB:
                 if not warned_floor:
@@ -219,6 +225,7 @@ def scheduler(out_dir, concurrency, shard, host):
                                   "--out-dir", out_dir, "--host", host],
                                  start_new_session=True)   # own PGID: shed kills the WHOLE tree
             procs[p] = (cid, time.time(), c)
+            last_launch = time.time()
             print(f"[sched] launch {cid} (~{est_cost(c)/3600:.1f}h) [{len(procs)} running, "
                   f"{len(q)} queued]", flush=True)
         time.sleep(5)
