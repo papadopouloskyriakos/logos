@@ -114,8 +114,30 @@ def run_one_cell(cell, out_dir, host):
 # params in its own subprocess).
 BIG_SIZE = int(os.environ.get("SWEEP_BIG_SIZE", "1000"))        # cells this size+ are "big"
 MAX_BIG = int(os.environ.get("SWEEP_MAX_BIG", "1"))             # at most this many big cells at once
-MEM_FLOOR_MB = int(os.environ.get("SWEEP_MEM_FLOOR_MB", "10000"))  # don't launch below this
-MEM_CRIT_MB = int(os.environ.get("SWEEP_MEM_CRIT_MB", "4000"))     # shed hog cell below this
+MEM_FLOOR_MB = int(os.environ.get("SWEEP_MEM_FLOOR_MB", "14000"))  # don't launch below this
+MEM_CRIT_MB = int(os.environ.get("SWEEP_MEM_CRIT_MB", "10000"))    # thrash onset on this LXC (~8-10GB)
+RSS_BUDGET_MB = int(os.environ.get("SWEEP_RSS_BUDGET_MB", "12000"))  # total sweep-tree RSS ceiling
+PSI_SHED = float(os.environ.get("SWEEP_PSI_SHED", "10"))        # shed at memory PSI some avg10 > this
+RLIMIT_DATA_GB = int(os.environ.get("SWEEP_RLIMIT_DATA_GB", "2"))  # kernel cap per cell PROCESS
+
+
+def _cell_preexec():
+    """Kernel-enforced ceiling on every cell process (inherited by its forked workers):
+    a runaway allocation kills THAT CELL alone (malloc fails) — the box survives by
+    construction. 2 GB/proc = 2x the observed deep-run per-process share."""
+    import resource
+    cap = RLIMIT_DATA_GB * (1 << 30)
+    resource.setrlimit(resource.RLIMIT_DATA, (cap, cap))
+
+
+def psi_mem_avg10():
+    """memory PSI 'some avg10' — the metric that actually shows the LXC freeze starting."""
+    try:
+        with open("/proc/pressure/memory") as f:
+            ln = f.readline()
+        return float(ln.split("avg10=")[1].split()[0])
+    except (OSError, IndexError, ValueError):
+        return 0.0
 STAGGER_S = int(os.environ.get("SWEEP_STAGGER_S", "0"))            # min seconds between launches
 # (launch-burst smoothing: every freeze incident coincided with 3-4 cells ramping ~3.5GB
 #  simultaneously in the first ~30s; staggering makes that stacking impossible)
@@ -223,14 +245,17 @@ def scheduler(out_dir, concurrency, shard, host):
             p = subprocess.Popen([sys.executable, os.path.abspath(__file__),
                                   "--cell", f"{c['benchmark']}:{c['size']}:{c['seed']}",
                                   "--out-dir", out_dir, "--host", host],
-                                 start_new_session=True)   # own PGID: shed kills the WHOLE tree
+                                 start_new_session=True,   # own PGID: shed kills the WHOLE tree
+                                 preexec_fn=_cell_preexec)  # kernel RLIMIT: runaway dies alone
             procs[p] = (cid, time.time(), c)
             last_launch = time.time()
             print(f"[sched] launch {cid} (~{est_cost(c)/3600:.1f}h) [{len(procs)} running, "
                   f"{len(q)} queued]", flush=True)
         time.sleep(5)
         avail = mem_available_mb()
-        if procs and avail < MEM_CRIT_MB:
+        psi = psi_mem_avg10()
+        total_rss = sum(tree_rss_mb(p.pid) for p in procs) if procs else 0
+        if procs and (avail < MEM_CRIT_MB or psi > PSI_SHED or total_rss > RSS_BUDGET_MB):
             # protect the box: shed the LARGEST-RSS cell tree (the actual hog), requeue it
             victim = max(procs, key=lambda p: tree_rss_mb(p.pid))
             cid, t0, c = procs.pop(victim)
@@ -242,9 +267,11 @@ def scheduler(out_dir, concurrency, shard, host):
             except OSError:
                 pass
             q.append(c)                                     # retried once memory recovers
-            print(f"[sched] mem-guard CRITICAL: MemAvailable {avail}MB < {MEM_CRIT_MB}MB — "
+            print(f"[sched] mem-guard CRITICAL (avail={avail}MB crit<{MEM_CRIT_MB} | "
+                  f"psi={psi:.1f} shed>{PSI_SHED} | total_rss={total_rss}MB budget>{RSS_BUDGET_MB}) — "
                   f"shed {cid} (tree RSS ~{rss}MB, ran {(time.time()-t0)/60:.0f}m, requeued) "
                   f"[{len(procs)} running, {len(q)} queued]", flush=True)
+            time.sleep(30)                                  # let reclaim settle before anything else
         for p in list(procs):
             if p.poll() is not None:
                 cid, t0, _ = procs.pop(p)
