@@ -17,7 +17,19 @@ if pgrep -f "experiments/sufficiency/resume_sweep.py" >/dev/null; then
   exit 0
 fi
 
-# sweep ended -> trigger the addendum flow exactly once
+# scheduler gone: COMPLETE only if no cells are pending; a crash leaves pending cells
+PENDING=$(python3 - <<'PY'
+import sys; sys.path.insert(0, "experiments/sufficiency")
+import resume_sweep as rs
+print(len(rs.pending_cells("runtime/csa_sweep")))
+PY
+)
+if [ "${PENDING:-1}" -gt 0 ]; then
+  ev "sweep_not_running_incomplete" "scheduler gone with ${PENDING} cells pending — crashed/stopped, NOT complete; no trigger"
+  exit 0
+fi
+
+# sweep genuinely complete -> trigger the addendum flow exactly once
 touch "$DONE"
 ev "sweep_ended" "resuming session once for the F1b addendum"
 SID=$(jq -r '.session_id' "$PC/../automation/state/session.json")
