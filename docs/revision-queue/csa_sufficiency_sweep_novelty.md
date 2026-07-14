@@ -161,3 +161,97 @@ lever, anchors are"). No edits there beyond adding the corroborating cites (Luo 
   `scratchpad/plot_data.json` (published artifact "The syllabary wall").
 - Scripts: `workflows/scripts/csa-sweep-prior-art-*.js`,
   `workflows/scripts/csa-sweep-scoop-hunt-*.js`.
+
+---
+
+# PRE-REGISTRATION — instrument-ablation tests T1 / T2 / T3 (FROZEN BEFORE RUN)
+
+**Frozen:** 2026-07-14. **`plan_hash` = the git commit that adds this section** (this file's
+commit SHA); no test below may be run against a working tree that predates that commit, and
+results are recorded append-only under a `## RESULTS` heading that this section does not yet
+contain. **Scope/layer:** these are **L0 methodological / instrument-property** tests. They test
+the *novelty and load-bearingness of the gate*, NOT the decipherment verdict. **They cannot
+raise the earned claim layer, cannot change the frozen paper, and cannot turn the null
+decipherment result into a positive one** (Art. XII: a target is never graded by the rule that
+created it; Art. XVII: append-only). Articles triggered: I (committed falsifiable prediction,
+fail-closed), VII (search receipt — the two prior-art workflows), XII, XVII, XVIII (assumptions
+below). Compliance line to emit at close: each test resolves to exactly one of
+`SUPPORT / REFUTE / NARROW / NO_POWER` by the frozen rule, no free-text upgrade.
+
+**Shared assumptions (Art. XVIII):** (A1) the five known-answer analogs already in
+`runtime/csa_sweep/cells` are a fair stand-in for the instrument's behaviour; (A2) "recovery
+accuracy" = `found/total` word-mapping match vs the held-back true reading, as already logged;
+(A3) 4 seeds/condition, reusing the sweep's seed protocol `[0,1,2,3]`; (A4) all verdicts computed
+by a committed script, never by eye. **If an assumption fails, the affected test returns
+`NO_POWER`, not a soft pass.**
+
+## T1 — Component ablation (defends N1: the composition is load-bearing)
+
+- **Purpose:** show the paired instrument (positive control **AND** calibrated null gate)
+  rejects false graduations that each component **alone** admits.
+- **Conditions** (same benchmarks, same candidate readings):
+  - **A · positive-control-only:** trust a candidate's derivation-set score because the pipeline
+    demonstrably recovers a *known* analog (no per-claim null).
+  - **B · null-gate-only:** gate a candidate on the best-of-100 random-map null, with **no**
+    positive-control step establishing the pipeline has power at all.
+  - **C · paired (our instrument):** positive control **and** null gate **and** held-out.
+- **Inputs:** the syllabic benchmarks' observed best scores (near-chance "signals") as
+  candidate-false cases that should be **rejected**, plus ≥20 planted-true maps (real key) that
+  should be **accepted**.
+- **Committed prediction:** there exist cases (specifically the syllabic near-chance "signal")
+  that **A admits** (because the alphabet positive control says "pipeline works," so a 10–16%
+  syllabic score is taken as real) and that **C rejects** (the null shows 10–16% is inside the
+  random-map distribution). B alone is uninformative where the pipeline has no power.
+- **Decision rule:** **SUPPORT N1-composition** iff C's false-graduation rate is lower than
+  `max(A,B)` by ≥ a pre-set margin (C ≤ 1% while the worse single component ≥ 5%), **and** C still
+  accepts ≥ 90% of planted-true maps. **NARROW/DROP** the N1 protocol-novelty iff C gives **no**
+  reduction over the better single component. (Fail-closed: no reduction ⇒ we drop the claim.)
+
+## T2 — Null appropriateness + robustness (defends N4: the *application*, not the method)
+
+- **T2a — right null:** on ≥1 syllabic + 1 alphabet benchmark, compute two null distributions:
+  (i) our **random-mapping** null (permute the sign→value key, run the full pipeline, best-of-100)
+  and (ii) a **Kessler/LexStat-style wordlist-*pairing*** permutation null (permute target-word
+  pairings, key held). **Committed prediction:** the two are **not** equivalent (two-sample
+  KS rejects equality at α=0.01) and the random-mapping null is the stricter/appropriate reference
+  because it randomizes the object we actually claim (the key). **Decision rule:** **SUPPORT** the
+  N4 "distinct application" claim iff the nulls differ **and** the random-mapping FDR ≥ the
+  pairing FDR (ours is not laxer). **NARROW** N4 to "we reuse a standard permutation null" iff the
+  two are statistically indistinguishable.
+- **T2b — where it matters:** report the best-of-100 false-graduation rate **per syllabic
+  benchmark** (linearb-greek, cypriot-greek) with Clopper–Pearson 95% CI. **Committed
+  prediction / rule:** gate valid iff syllabic false-graduation ≤ 2% (upper CI ≤ ~3%); else the
+  gate is reported as mis-calibrated for the regime that matters (fail-closed).
+
+## T3 — Within-harness anchor flip (defends N3: anchor-dependence, the highest-value test)
+
+- **Purpose:** reproduce the SOTA anchored score **and** the anchor-free collapse **in one
+  controlled comparison inside our own pipeline**, isolating anchors from corpus size.
+- **Conditions** on Linear B → Greek and Cypriot → Greek, **corpus size held FIXED at full**
+  (so only anchoring varies, not N):
+  - **ANCHORED** (Tamburini-style): CSA fed the pre-grouped enumerated candidate cognate-pair
+    lexicon `K_lex` / known related target.
+  - **ANCHOR-FREE** (ours): no pre-grouping, subsampled-style matching.
+  - **PARTIAL** (optional, Luo-style): proper-noun anchor set only, to trace the gradient.
+- **Committed prediction:** ANCHORED ≥ 80% recovery; ANCHOR-FREE ≤ 20%; gap ≥ 50 points at
+  fixed N; the alphabet positive control unaffected across conditions.
+- **Decision rule:** **SUPPORT N3** iff (anchored − anchor-free) ≥ 50 points at fixed corpus size
+  on ≥1 syllabic benchmark, alphabet control unchanged. **REFUTE N3** iff anchor-free *also*
+  recovers well (collapse isn't anchor-driven). **NO_POWER / DEFER N3** iff we **cannot reproduce
+  ≥ ~80% in the ANCHORED condition** — then "their success is anchor-dependent" is unproven and
+  we must say so and NOT claim N3.
+- **Implementation dependency (honest risk):** T3 requires an ANCHORED input mode
+  (`K_lex` pre-grouping) in the harness. Confirm this exists / is a small extension **before**
+  freezing the run; if infeasible this cycle, T3 is recorded `DEFERRED-INFEASIBLE` (not skipped
+  silently).
+
+## Run plan
+
+- **Compute:** run on the rental (instance 44534071) in the window **after** the main sweep
+  completes and **before** destroy — T1/T2 are cheap; T3 is a few cells per condition. Fallback:
+  local, post-sweep.
+- **Order:** T1, T2a, T2b (cheap, no new harness) → T3 (after the anchored-mode check).
+- **Outputs:** append a `## RESULTS (post-run)` section with per-test verdict + the script +
+  artifact paths; **an amendment may not turn a REFUTE/NARROW into a SUPPORT** (Art. XVII).
+- **Nothing here gates or delays** `vastai destroy 44534071` beyond the small T-test window; if
+  the anchored mode isn't ready, destroy on schedule and defer T3 to a fresh run.
