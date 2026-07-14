@@ -303,5 +303,21 @@ Output to `runtime/csa_sweep/T0_convergence/` — **never** the sweep `cells/` d
 
 **Cost/ETA (honest):** linearb-full = 14.3 h/seed at 2000 steps → ~43 h at 6000 (less if
 early-stop fires); ≈ **$25–35**, pushing the rental total to ≈ **$90–105** and destroy to ~July 16.
-This extra spend is justified: a wrong headline costs far more than $35. **T3 remains downstream of
-T0** (same step confound). An amendment may not turn ARTIFACT into FLOOR (Art. XVII).
+This extra spend is justified: a wrong headline costs far more than $35. An amendment may not turn
+ARTIFACT into FLOOR (Art. XVII).
+
+**SCOPING OUTCOME 2026-07-14 (post-`run_one` read):**
+- **T3 DROPPED — ill-posed.** `run_tamburini.run_one` always builds `module.Problem(cog, …, N, M,
+  penf)` with the cognate `.cog` present and Tamburini's FIXED `N/M/penf` (his rule: N=1,M=2 if
+  |L_s|>|K_s| else N=2,M=1; linearb = N=2,M=1,penf=4.0). There is **no anchored-vs-anchor-free
+  toggle** — the 89%-vs-3% gap maps entirely onto STEPS, i.e. **T0**. "Anchor-dependence" (N3) was a
+  mischaracterization; **N3 is subsumed by T0** and T3 is removed from the slate.
+- **T0 upgraded to capture the TRAJECTORY** at zero extra compute: `run_one(checkpoint=1000)`
+  computes acc every 1000 steps (line 241), which `run_cell` discarded. Driver now calls `run_one`
+  directly → `runtime/csa_sweep/T0_convergence/traj_seed0.jsonl` (acc @1k,2k,…,6k) + heartbeat.
+  Relaunched (old endpoint-only run killed at ~22 min). Lets us watch acc climb/flatten and
+  early-kill once decisive.
+- **T1 + T2 run LOCALLY** (pure-Python gate machinery `gate_null_calibration.py`; measured 7 s /
+  ~1 MB) — they do **not** need the rental. So the instance is required only for **T0 (+ a possible
+  T0 escalation if AMBIGUOUS)** and the sz2214 sweep tail. Balance 2026-07-14: **$80.53 ≈ 4 days**
+  (owner added $45); destroy after T0 is resolved + merged (T1/T2 run local, no instance needed).
