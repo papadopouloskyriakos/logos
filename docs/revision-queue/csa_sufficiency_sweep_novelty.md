@@ -269,3 +269,39 @@ use the gate machinery only, T3 uses the already-completed small syllabic benchm
   paths; **an amendment may not turn a REFUTE/NARROW into a SUPPORT** (Art. XVII).
 - **Nothing here gates or delays** `vastai destroy 44534071` beyond the small T3 window; if the
   anchored mode isn't ready by sweep-end, destroy on schedule and defer T3 to a fresh run.
+
+---
+
+## T0 — CONVERGENCE CONTROL (prerequisite; gates N2/N3 and the published chart) — FROZEN 2026-07-14
+
+**Why this exists (honest note):** the whole sweep is pinned at **`steps=2000`** to byte-match the
+92 original cells. Ugaritic (alphabet) *converges* within 2000 steps (0.93, ≈ Tamburini's published
+0.955), but Tamburini reaches his Table-3 syllabary numbers (**Linear B 89.4%**) only by **~4000
+steps** (runs 100k). Linear B at 2000 steps = **2.4%**, and with only 2 chunks the plateau detector
+**cannot have fired** — so it is **not known to be converged**. The N2 ("size is not the lever"),
+N3 ("anchor-dependence collapse"), and the "syllabary wall" artifact all treated 2.4% as a real
+floor and compared it to a *converged* 89%. **That comparison is confounded by convergence (and by
+held-out-vs-in-sample metric).** T0 resolves it BEFORE N2/N3/T3 may be asserted.
+
+**The run (committed):** `linearb-greek` at **full size** (size = n_gold = 919), **seed 0**,
+**`steps=6000` cap**, chunk=1000, processes=4, device=cpu, **plateau early-stop** (eps=0.05,
+patience=3), on rental 44534071, concurrent with the sz2214 finishers. Baseline to beat: the
+2000-step full-919 cells = acc {0.065, 0.007, 0.008, 0.016}, mean **0.024**, seed0 = **0.065**.
+Output to `runtime/csa_sweep/T0_convergence/` — **never** the sweep `cells/` dir.
+
+**Committed decision rule (mechanical, fail-closed):**
+- **CONVERGENCE_ARTIFACT** → endpoint acc **≥ 0.20**. Consequence: the 2000-step syllabary "floor"
+  is substantially a step artifact. **N3 is REFUTED** (the 89%→3% gap is compute, not anchoring);
+  **N2 is narrowed** to "at a fixed 2000-step budget"; **the published chart must be corrected or
+  retracted** (its headline overreaches).
+- **REAL_FLOOR** → plateau early-stop **fires** (converged) **AND** acc **≤ 0.10**. Consequence: the
+  syllabary floor is real at convergence; N2/N3 stand *stronger* (now a converged result, not a
+  lower bound); the chart is vindicated (with wording tightened to "converged").
+- **AMBIGUOUS/ESCALATE** → 0.10 < acc < 0.20, OR runs the full 6000 steps without the plateau
+  firing (still improving). Consequence: escalate (higher steps and/or seed 1) before concluding;
+  do NOT resolve N2/N3 on an under-converged run.
+
+**Cost/ETA (honest):** linearb-full = 14.3 h/seed at 2000 steps → ~43 h at 6000 (less if
+early-stop fires); ≈ **$25–35**, pushing the rental total to ≈ **$90–105** and destroy to ~July 16.
+This extra spend is justified: a wrong headline costs far more than $35. **T3 remains downstream of
+T0** (same step confound). An amendment may not turn ARTIFACT into FLOOR (Art. XVII).
