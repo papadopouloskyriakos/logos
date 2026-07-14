@@ -247,11 +247,25 @@ by a committed script, never by eye. **If an assumption fails, the affected test
 
 ## Run plan
 
-- **Compute:** run on the rental (instance 44534071) in the window **after** the main sweep
-  completes and **before** destroy — T1/T2 are cheap; T3 is a few cells per condition. Fallback:
-  local, post-sweep.
-- **Order:** T1, T2a, T2b (cheap, no new harness) → T3 (after the anchored-mode check).
-- **Outputs:** append a `## RESULTS (post-run)` section with per-test verdict + the script +
-  artifact paths; **an amendment may not turn a REFUTE/NARROW into a SUPPORT** (Art. XVII).
-- **Nothing here gates or delays** `vastai destroy 44534071` beyond the small T-test window; if
-  the anchored mode isn't ready, destroy on schedule and defer T3 to a fresh run.
+**SCHEDULE REFINEMENT 2026-07-14 (append-only; predictions/rules above UNCHANGED — Art. XVII).**
+Verified: none of T1/T2/T3 depends on the CSA size-sweep completing (sz2214 irrelevant); T1/T2
+use the gate machinery only, T3 uses the already-completed small syllabic benchmarks
+(linearb-greek n_gold=919, cypriot-greek 693). Compute profile measured, not assumed:
+
+- **T1 + T2 — LIGHT, run LOCALLY, now.** They exercise `scripts/gate_null_calibration.py`
+  (imports `verdict` + `scripts.comparison.lexstat`; `nulls.py` has `random_lexeme_null` already)
+  — pure-Python null simulation, **no CSA annealer / no CUDA**. Measured: B=50 → 7.1 s, RAM Δ≈1 MB;
+  full B=500 ≈ 70 s. Zero LXC-freeze risk. **Outputs MUST go to NEW paths** (e.g.
+  `results/ablation_T1.json`, `results/null_compare_T2.json`) — **never overwrite the canonical
+  `results/gate_null_calibration.json`** (B=500/3/0.006; a probe clobbered + git-restored it once,
+  do not repeat).
+- **T3 — MODERATE, run on the RENTAL (44534071), concurrently with the sz2214 finishers** (3 cells
+  on 64 cores/180 GB = ample headroom; do NOT run the CSA matcher on the LXC). Independent of the
+  sweep result. Still gated on scoping the ANCHORED condition against the matcher's cognate-pair
+  config (`scripts/baselines/csa_sweep.py:run_cell`, the `cog`/`N`/`M`/`penf` inputs) — a code read,
+  not compute. If the anchored mode needs a small extension, do it, else `DEFERRED-INFEASIBLE`.
+- **Order:** T1 → T2a → T2b (local, today) ; T3 scoping in parallel → T3 on rental before destroy.
+- **Outputs:** append a `## RESULTS (post-run)` section with per-test verdict + script + artifact
+  paths; **an amendment may not turn a REFUTE/NARROW into a SUPPORT** (Art. XVII).
+- **Nothing here gates or delays** `vastai destroy 44534071` beyond the small T3 window; if the
+  anchored mode isn't ready by sweep-end, destroy on schedule and defer T3 to a fresh run.
