@@ -1,0 +1,53 @@
+{
+ "run": "E201_F1b",
+ "scored_under": "F1a-frozen decision rule (decision_rule.json), zero re-tuning",
+ "receipt_files": {
+  "PROVENANCE.json": "591335060889af344912455acc85acc9a7098073aece03ae64e8cd203713be7d",
+  "T0_convergence.json": "29258bb7305aaa631f9acdb532f3329f032a7a7bde238c1bc2fedd9cae6ba38b",
+  "cells.tgz": "44b21827801604b2c9eb51a2b0ba1af2029e7d9a118d5c3560e5d61f65d160f5",
+  "recovery_by_benchmark.json": "a1889126dbabf38888623b50dc931d16feeb7cfa2515a86bd7effbad24e08fef"
+ },
+ "n_cells_imported": 168,
+ "comparability_criteria": {
+  "recovery_engine_match": {
+   "f1a": "EM (frequency-init, Hungarian M-step; scripts/decipher LIN-14)",
+   "sweep": "CSA (Tamburini 2025 CSA_OptMatcher)",
+   "match": false
+  },
+  "converged": {
+   "sweep_steps": 2000,
+   "T0_verdict": "CONVERGENCE_ARTIFACT",
+   "converged": false,
+   "why": "steps=2000 under-converged; T0 shows LinearB still climbing at 6000 -> recovery is a LOWER BOUND"
+  },
+  "alphabetic_control_dataset_match": {
+   "sweep": "ugaritic-noiseless",
+   "f1a": "uga-heb.no_speNL.cog",
+   "match": false,
+   "why": "different Ugaritic dataset (noiseless vs uga-heb Hebrew target)"
+  }
+ },
+ "comparable_to_F1a": false,
+ "directional_consistency": {
+  "linearb-greek": {
+   "f1a_dataset": "linear_b-greek.cog",
+   "f1a_threshold": 0.5,
+   "sweep_max_recovery_any_size": 0.105951,
+   "f1a_full_recovery": 0.0,
+   "reaches_threshold_at_any_size": false
+  },
+  "cypriot-greek": {
+   "f1a_dataset": "csyl-greek.cog",
+   "f1a_threshold": 0.35,
+   "sweep_max_recovery_any_size": 0.318333,
+   "f1a_full_recovery": 0.004807692307692308,
+   "reaches_threshold_at_any_size": false
+  }
+ },
+ "any_syllabic_reaches_F1a_threshold_at_any_size": false,
+ "promotion_under_F1a_gate": "NOT_PROMOTED",
+ "VERDICT": "NON_COMPARABLE",
+ "binding_result_unchanged": "F1a stands as the binding confirmatory result (NOT_QUALIFIED_FOR_LINEAR_A). E208 stays de-authorized; E213 seal intact; no closed LOGOS-2 conclusion altered (Art. XVII).",
+ "interpretation": "The Exit-B CSA sweep uses a DIFFERENT recovery engine than F1a (CSA_OptMatcher vs frequency-init EM) and ran under-converged (steps=2000; T0 verdict CONVERGENCE_ARTIFACT -> syllabic recovery is a LOWER BOUND), and its alphabetic control is a different dataset (ugaritic-noiseless vs uga-heb). Its recovery numbers therefore CANNOT be placed on F1a's axis -> NON_COMPARABLE. It is nonetheless DIRECTIONALLY CONSISTENT with F1a: no shared syllabic benchmark (Linear B, Cypriot) reaches its F1a threshold at ANY swept size (LB max 0.106 < 0.5; CSYL max 0.318 < 0.35), so the sweep does not overturn F1a's NOT_QUALIFIED verdict. As a lower bound it cannot CONFIRM a converged floor either.",
+ "compliance": "Art. XVII append-only; Art. XII (target not graded by the rule that created it); a lower bound below threshold neither promotes nor converts the null into a positive."
+}

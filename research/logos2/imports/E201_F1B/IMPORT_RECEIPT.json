@@ -1,0 +1,24 @@
+{
+ "source": "/home/claude-runner/gitlab/n8n/logos/results/csa/exitB_sweep_20260716",
+ "n_files": 4,
+ "files": [
+  {
+   "file": "PROVENANCE.json",
+   "sha256": "591335060889af344912455acc85acc9a7098073aece03ae64e8cd203713be7d"
+  },
+  {
+   "file": "T0_convergence.json",
+   "sha256": "29258bb7305aaa631f9acdb532f3329f032a7a7bde238c1bc2fedd9cae6ba38b"
+  },
+  {
+   "file": "cells.tgz",
+   "sha256": "44b21827801604b2c9eb51a2b0ba1af2029e7d9a118d5c3560e5d61f65d160f5"
+  },
+  {
+   "file": "recovery_by_benchmark.json",
+   "sha256": "a1889126dbabf38888623b50dc931d16feeb7cfa2515a86bd7effbad24e08fef"
+  }
+ ],
+ "boundary": "imports/E201_F1B",
+ "scored_yet": true
+}
