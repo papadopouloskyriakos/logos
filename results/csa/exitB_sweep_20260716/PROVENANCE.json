@@ -1,0 +1,9 @@
+{
+ "sweep": "Exit-B CSA sufficiency sweep (robustness extension)",
+ "completed_utc": "2026-07-15T07:07Z",
+ "n_cells": 168,
+ "raw_output_path_on_main": "runtime/csa_sweep/cells",
+ "verified_backup_tarball": "runtime/csa_sweep_vast_backup_20260716/csa_backup_20260716.tgz",
+ "verified_backup_sha256": "b71fa4e990a6d931e86bc34e6e905355cc9929151238b04383f9cf9ac90a4444",
+ "compute": "vast.ai instance 44534071 (destroyed post-backup)"
+}

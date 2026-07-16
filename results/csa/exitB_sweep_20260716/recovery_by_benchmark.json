@@ -1,0 +1,49 @@
+{
+ "kind": "exitB_csa_sufficiency_sweep_recovery_summary",
+ "generated_from": "runtime/csa_sweep/cells (168 cells)",
+ "steps_budget": 2000,
+ "recovery_method": "CSA (Tamburini 2025 CSA_OptMatcher)",
+ "note": "recovery = found/total held-out cognate recovery; steps=2000 => LOWER BOUND (T0 convergence control verdict CONVERGENCE_ARTIFACT, LinearB still climbing at 6000 steps).",
+ "benchmarks": {
+  "cypriot-greek": {
+   "n_cells": 44,
+   "full_size": 693,
+   "full_recovery_mean": 0.161616,
+   "full_recovery_max": 0.240981,
+   "max_recovery_any_size": 0.318333,
+   "n_seeds_full": 4
+  },
+  "linearb-greek": {
+   "n_cells": 44,
+   "full_size": 919,
+   "full_recovery_mean": 0.023939,
+   "full_recovery_max": 0.065288,
+   "max_recovery_any_size": 0.105951,
+   "n_seeds_full": 4
+  },
+  "luvian-hittite": {
+   "n_cells": 12,
+   "full_size": 59,
+   "full_recovery_mean": 0.461864,
+   "full_recovery_max": 0.474576,
+   "max_recovery_any_size": 0.474576,
+   "n_seeds_full": 4
+  },
+  "phoenician-ugaritic": {
+   "n_cells": 24,
+   "full_size": 105,
+   "full_recovery_mean": 0.759524,
+   "full_recovery_max": 0.790476,
+   "max_recovery_any_size": 0.84,
+   "n_seeds_full": 4
+  },
+  "ugaritic-noiseless": {
+   "n_cells": 44,
+   "full_size": 2214,
+   "full_recovery_mean": 0.935185,
+   "full_recovery_max": 0.938573,
+   "max_recovery_any_size": 0.995,
+   "n_seeds_full": 4
+  }
+ }
+}
