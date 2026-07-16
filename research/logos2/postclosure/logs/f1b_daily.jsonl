@@ -1,1 +1,5 @@
 {"ts":"2026-07-10T12:47:58Z","event":"sweep_running","detail":"scheduler alive; 28 related processes"}
+{"ts":"2026-07-11T02:44:48Z","event":"sweep_running","detail":"scheduler alive; 1 related processes"}
+{"ts":"2026-07-11T02:45:12Z","event":"sweep_not_running_incomplete","detail":"scheduler gone with 69 cells pending — crashed/stopped, NOT complete; no trigger"}
+{"ts":"2026-07-11T07:20:01Z","event":"sweep_running","detail":"scheduler alive; 7 related processes"}
+{"ts":"2026-07-12T07:20:01Z","event":"sweep_running","detail":"scheduler alive; 22 related processes"}
