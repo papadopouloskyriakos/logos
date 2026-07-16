@@ -1,0 +1,15 @@
+{
+  "test": "T2a_right_null",
+  "defends": "N4",
+  "n": 400,
+  "ours_random_mapping_mean": 0.0021,
+  "pairing_perm_mean": 0.05,
+  "ks_stat": 0.635,
+  "ks_p": 4.76e-76,
+  "fdr_ours_ge10pct": 0.0025,
+  "fdr_pairing_ge10pct": 0.25,
+  "setrecall_variance_under_pairing_perm": 0.0,
+  "rule": "SUPPORT iff nulls differ (KS p<0.01) AND ours no-laxer; NARROW if the pairing null is DEGENERATE for our set-recall statistic (variance 0) -> pairing null inapplicable",
+  "interpretation": "our claim object is the KEY (sign->value), a set-recall statistic that is INVARIANT to held<->candidate pairing; the Kessler/LexStat pairing-permutation null therefore does not apply to our statistic (variance 0). N4 narrows to: 'the appropriate null randomizes the key; the pairing null is not applicable', rather than the KS-difference framing.",
+  "verdict": "NARROW"
+}

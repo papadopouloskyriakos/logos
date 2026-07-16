@@ -321,3 +321,66 @@ ARTIFACT into FLOOR (Art. XVII).
   ~1 MB) — they do **not** need the rental. So the instance is required only for **T0 (+ a possible
   T0 escalation if AMBIGUOUS)** and the sz2214 sweep tail. Balance 2026-07-14: **$80.53 ≈ 4 days**
   (owner added $45); destroy after T0 is resolved + merged (T1/T2 run local, no instance needed).
+
+---
+
+## RESULTS (post-run) — appended 2026-07-16 (Art. XVII append-only; a verdict here may not be
+amended into a stronger one)
+
+Compute: sweep 168/168 complete; T0 on rental 44534071 (destroyed post-backup, billing stopped
+$43.56); T1/T2 local via `scripts/sweep_ablation_t1_t2.py`. Canonical
+`results/gate_null_calibration.json` verified byte-unchanged before/after (sha `960bb717…`).
+
+### T0 — CONVERGENCE CONTROL → **CONVERGENCE_ARTIFACT**
+`runtime/csa_sweep/T0_convergence/linearb_full_seed0_steps6000.json`. Linear B, full corpus (919),
+seed 0, per-1000-step trajectory acc = **0.0457 / 0.1066 / 0.1763 / 0.2350 / 0.2655 / 0.3732**
+(found 42/98/162/216/244/343), energy 336.2→304.5 monotonically descending; `steps_run=6000`,
+`early_stopped=False` (hit the cap, **not** a plateau). Endpoint acc 0.373 ≥ 0.20 → the frozen rule
+fires **CONVERGENCE_ARTIFACT**. **Consequences (per the frozen rule):** **N3 subsumed/REFUTED** (the
+89%→3% gap is compute, not anchoring — already dropped when T3 was found ill-posed); **N2 narrowed**
+to "at a fixed 2,000-step budget, size does not move syllabaries — but every syllabary sweep cell is
+itself an under-converged lower bound"; **the published chart was CORRECTED** (v2, same URL
+`claude.ai/code/artifact/63c4f56b…`): retracts the "noise floor," adds the T0 convergence panel, and
+reframes on the anchor gap. **Honest caveat recorded:** at 6,000 steps Linear B is still climbing
+(+99 found in the last chunk) — the true anchor-free ceiling is **unknown and >37.3%**; the chart
+shows the curve as a censored lower bound, asserting no plateau. (A mid-run 5,000-step deceleration
+that suggested a ~28% plateau was refuted by the 6,000-step point; that speculation is retracted.)
+
+### T1 — component ablation (defends N1) → **NO_POWER**
+`results/ablation_T1.json`. B=500, N_eff=100. False-case (best-of-100 random flukes, mean obs ~5%,
+max 10%) graduation: A (positive-control-only, n_eff=1) = **0.006**; C (paired, n_eff=100) = **0.006**;
+identical. Planted-true accept rate = **0.0**. **Power probe:** a *perfect* map (accuracy 1.0) also
+fails, on exactly one clause — `beats_order_stat_bar` — because the abstract-skeleton null has
+~zero variance (σ₀<1e-12), so E[max order-stat] deflation is unsatisfiable. The accept-true arm
+therefore has **no power** to accept anything, so the SUPPORT rule ("C accepts ≥90% planted-true")
+cannot be evaluated → **NO_POWER** (assumption A1 fails: the abstract skeleton is not a fair stand-in
+for the gate's real per-benchmark null variance; a faithful T1 needs real candidate lexicons + non-
+degenerate null recalls plumbed into `verdict.grade`). **Incidental (reported, not scored):** A==C
+⇒ multiplicity deflation is **not** the discriminator for these weak flukes — they are rejected by
+the statistic-level L_fake / deflated-S_lex bars regardless of n_eff. This **refutes the specific N1
+premise** that "the null-gate leg is what catches them," while showing the gate's rejection here is
+robust/overdetermined. Net: **do not claim N1-composition on this evidence.**
+
+### T2a — right null (defends N4) → **NARROW**
+`results/null_compare_T2.json`. n=400. Our random-mapping null (randomize the KEY, set-recall):
+mean 0.0021, P(≥10%)=**0.0025**. Kessler/LexStat-style pairing-permutation null (paired recall):
+mean 0.05, P(≥10%)=**0.25** — i.e. the pairing null is **~100× laxer** at fabricating a ≥10%
+"signal." KS rejects equality (stat 0.635, p≈5e-76). **But** the set-recall statistic our gate
+actually uses has **zero variance under pairing permutation** (measured 0.0) — the pairing null is
+**degenerate/inapplicable** to it. So N4 **narrows** to the honest, defensible form: *"the appropriate
+null randomizes the key (the object we claim) and is strictly no-laxer than a pairing null; the
+Kessler/LexStat pairing-permutation null does not apply to a set-recall statistic."* Not a clean
+SUPPORT via the specified KS framing, because that framing presumes a paired statistic we don't use.
+
+### T2b — where it matters (defends N4) → **SUPPORT**
+`results/t2b_syllabic_fdr.json`. B=500, N_eff=100. Realized false-graduation rate in the syllabic-
+magnitude regime (best-of-100 flukes = the 5–16% "signals" the gate must reject) = **3/500 = 0.006**,
+Clopper–Pearson 95% upper = **0.01543**. ≤ 2% and upper ≤ ~3% → **SUPPORT** (reproduces the canonical
+calibration exactly; the deflation is by the N_eff order-statistic, benchmark-agnostic).
+
+**Net for the novelty write-up:** N2 → narrowed (fixed-budget only; cells are lower bounds).
+N3 → dropped/refuted (compute, not anchoring). N1 → **not claimed** (NO_POWER here; needs a real-data
+harness). N4 → **partially supported**: T2b SUPPORTS the gate's syllabic-regime false-graduation
+control (≤0.6%); T2a NARROWS the "distinct null" claim to key-randomization-is-appropriate-and-
+stricter (the pairing null is inapplicable). All L0 — none changes the frozen paper or the null
+decipherment verdict.

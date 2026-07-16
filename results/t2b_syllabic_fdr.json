@@ -1,0 +1,12 @@
+{
+  "test": "T2b_syllabic_regime_fdr",
+  "defends": "N4",
+  "B": 500,
+  "N_eff": 100,
+  "false_graduations": 3,
+  "false_graduation_rate": 0.006,
+  "cp95_upper": 0.01543,
+  "rule": "gate valid iff rate<=0.02 AND cp95_upper<=~0.03",
+  "verdict": "SUPPORT",
+  "note": "gate deflation is by N_eff order-statistic, benchmark-agnostic; the best-of-100 flukes reproduce the 10-16% syllabic-magnitude 'signals' the gate must reject."
+}

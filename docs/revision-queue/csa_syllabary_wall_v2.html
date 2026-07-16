@@ -1,0 +1,326 @@
+<title>The syllabary floor was a clock, not a wall — CSA decipherment sufficiency (corrected)</title>
+<style>
+  :root{
+    --paper:#eaedee; --panel:#f7f8f8; --ink:#161b1e; --muted:#5b656c;
+    --hair:#d2d8d9; --hair-soft:#e0e5e5;
+    --works:#127d68; --works-soft:#6aae8f; --fails:#bd442a; --fails-soft:#d68a6f;
+    --analog:#a9781f; --grid:#dbe0e0; --axis:#aeb6b7; --chance:#9aa3a4;
+    --figbg:#f2f4f4; --climb:#2f6db0; --climb-soft:#7ba6d1;
+    --serif:"Palatino Linotype","Book Antiqua",Palatino,"URW Palladio L",Georgia,serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0d1113; --panel:#161b1e; --ink:#e7eaea; --muted:#8a949a;
+      --hair:#252c30; --hair-soft:#1c2225;
+      --works:#37b699; --works-soft:#2f7d69; --fails:#e1694a; --fails-soft:#a24d38;
+      --analog:#d5a343; --grid:#20272b; --axis:#394247; --chance:#5c666b;
+      --figbg:#111618; --climb:#5697d8; --climb-soft:#3d658c;
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#eaedee; --panel:#f7f8f8; --ink:#161b1e; --muted:#5b656c;
+    --hair:#d2d8d9; --hair-soft:#e0e5e5;
+    --works:#127d68; --works-soft:#6aae8f; --fails:#bd442a; --fails-soft:#d68a6f;
+    --analog:#a9781f; --grid:#dbe0e0; --axis:#aeb6b7; --chance:#9aa3a4; --figbg:#f2f4f4;
+    --climb:#2f6db0; --climb-soft:#7ba6d1;
+  }
+  :root[data-theme="dark"]{
+    --paper:#0d1113; --panel:#161b1e; --ink:#e7eaea; --muted:#8a949a;
+    --hair:#252c30; --hair-soft:#1c2225;
+    --works:#37b699; --works-soft:#2f7d69; --fails:#e1694a; --fails-soft:#a24d38;
+    --analog:#d5a343; --grid:#20272b; --axis:#394247; --chance:#5c666b; --figbg:#111618;
+    --climb:#5697d8; --climb-soft:#3d658c;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1020px;margin:0 auto;padding:clamp(28px,5vw,72px) clamp(18px,4vw,40px) 80px;}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);display:flex;flex-wrap:wrap;gap:.5em .9em;align-items:center;}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--climb);display:inline-block}
+
+  .correction{margin:18px 0 0;border:1px solid var(--hair);border-left:3px solid var(--climb);
+    border-radius:4px;background:var(--panel);padding:12px 16px;font-size:13.5px;color:var(--muted);
+    font-family:var(--sans)}
+  .correction b{color:var(--ink);font-weight:600}
+
+  h1{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.015em;
+    text-wrap:balance;font-size:clamp(32px,6vw,56px);margin:.42em 0 .18em;}
+  h1 em{font-style:italic;color:var(--climb)}
+  h1 .strike{color:var(--muted);text-decoration:line-through;text-decoration-thickness:2px;
+    text-decoration-color:var(--fails-soft)}
+  .standfirst{max-width:64ch;font-size:clamp(16px,2.1vw,19px);color:var(--ink);opacity:.92;margin:0}
+  .standfirst .k{color:var(--muted)}
+  .standfirst strong{font-weight:600}
+
+  .figure{margin:clamp(26px,4vw,44px) 0 8px;background:var(--figbg);border:1px solid var(--hair);
+    border-radius:4px;padding:clamp(12px,2.4vw,22px) clamp(6px,2vw,20px) clamp(14px,2vw,18px);}
+  .figscroll{overflow-x:auto}
+  svg.chart{display:block;width:100%;min-width:600px;height:auto;font-family:var(--mono)}
+  .figcap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.02em;
+    padding:10px 8px 2px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .figlabel{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin:clamp(24px,4vw,40px) 2px -6px;display:flex;gap:.7em;align-items:baseline}
+  .figlabel b{color:var(--ink);font-weight:600}
+
+  svg .grid{stroke:var(--grid);stroke-width:1}
+  svg .axis{stroke:var(--axis);stroke-width:1.4}
+  svg .chance{stroke:var(--chance);stroke-width:1.3;stroke-dasharray:2 5}
+  svg text.tick{fill:var(--muted);font-size:12px}
+  svg text.atitle{fill:var(--muted);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+  svg .ln{fill:none;stroke-linejoin:round;stroke-linecap:round}
+  svg .l-works{stroke:var(--works);stroke-width:3.4}
+  svg .l-works-soft{stroke:var(--works-soft);stroke-width:2;stroke-dasharray:6 4}
+  svg .l-fails{stroke:var(--fails);stroke-width:3}
+  svg .l-fails-soft{stroke:var(--fails-soft);stroke-width:2;stroke-dasharray:6 4}
+  svg .l-climb{stroke:var(--climb);stroke-width:3.6}
+  svg .d-works{fill:var(--works)} svg .d-works-soft{fill:var(--works-soft)}
+  svg .d-fails{fill:var(--fails)} svg .d-fails-soft{fill:var(--fails-soft)}
+  svg .d-climb{fill:var(--climb)}
+  svg .seed{opacity:.26}
+  svg .anno{fill:var(--ink);font-family:var(--sans);font-size:13.5px}
+  svg .anno-sub{fill:var(--muted);font-family:var(--sans);font-size:12px}
+  svg .anno-lead{stroke:var(--ink);stroke-width:1;opacity:.5}
+  svg .gold{fill:var(--analog)} svg .gold-s{stroke:var(--analog);stroke-width:1.4}
+  svg .anchor-s{stroke:var(--analog);stroke-width:1.5;stroke-dasharray:7 4}
+  svg text.chlab{fill:var(--chance);font-size:11px;letter-spacing:.03em}
+  svg .band{fill:var(--fails);opacity:.07}
+
+  .fig-load{opacity:0;transform:translateY(8px);animation:rise .7s ease .05s forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.fig-load{animation:none;opacity:1;transform:none}}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:34px 0 8px}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+  .card{border:1px solid var(--hair);border-radius:4px;padding:20px 20px 18px;background:var(--panel);
+    border-top:3px solid var(--edge)}
+  .card.works{--edge:var(--works)} .card.climb{--edge:var(--climb)}
+  .card h3{font-family:var(--sans);font-size:12px;letter-spacing:.13em;text-transform:uppercase;
+    margin:0 0 4px;color:var(--edge)}
+  .card .big{font-family:var(--serif);font-size:24px;line-height:1.15;margin:2px 0 10px;color:var(--ink)}
+  .card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+  .card li{display:flex;gap:10px;font-size:14.5px;color:var(--ink)}
+  .card li b{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600;
+    color:var(--edge);white-space:nowrap}
+  .card li .sub{color:var(--muted)}
+
+  .split{margin-top:40px;border-top:1px solid var(--hair);padding-top:28px;
+    display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media (max-width:640px){.split{grid-template-columns:1fr;gap:22px}}
+  .split h4{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .split.means h4{color:var(--climb)} .split.nots h4{color:var(--fails)}
+  .split p{margin:0 0 12px;font-size:15px;max-width:52ch;color:var(--ink)}
+  .split p:last-child{margin-bottom:0}
+  .split strong{font-weight:600}
+  .pull{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+
+  footer{margin-top:44px;border-top:1px solid var(--hair);padding-top:18px;
+    font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.7;
+    display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between}
+  footer .tag{color:var(--ink);opacity:.75}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">
+    <span class="dot"></span>logos · CSA decipherment sufficiency · corrected 16 Jul 2026
+  </div>
+
+  <div class="correction">
+    <b>Correction (v2).</b> An earlier version of this chart read the syllabary numbers as a
+    structural “noise floor.” A convergence control (right-hand panel) shows they were
+    <b>under-converged</b> — the matcher was stopped mid-descent at a fixed 2,000-step budget.
+    Given more compute, Linear&nbsp;B climbs to <b>37%+ and is still rising.</b> The floor was the
+    clock, not the corpus. The durable lesson survives — and sharpens.
+  </div>
+
+  <h1>The syllabary floor was a <span class="strike">wall</span> <em>clock</em></h1>
+  <p class="standfirst">A controlled test on scripts we can already read. An unsupervised matcher
+    is handed <span class="k">N</span> words of a known cipher and scored on how much of the
+    <span class="k">true</span> reading it recovers — never shown the key. Small-alphabet scripts
+    converge fast and recover. Syllabaries — the family <strong>Linear&nbsp;A</strong> belongs to —
+    <strong>need far more annealing to converge</strong>, and even converged they don’t reach the
+    published SOTA. The lever that closes <em>that</em> gap is not text and not compute: it is an
+    <strong>anchor</strong> — a known related language.</p>
+
+  <div class="figlabel"><b>Panel A</b> · the sweep — recovery vs. corpus size, at a fixed 2,000-step budget</div>
+  <div class="figure fig-load">
+    <div class="figscroll">
+      <svg class="chart" id="chartA" viewBox="0 0 1000 560" role="img"
+        aria-label="Recovery accuracy versus corpus size for five known scripts at a fixed 2000-step compute budget. Alphabets rise to near 95 percent; syllabaries stay low — but this is a lower bound, see Panel B."></svg>
+    </div>
+    <div class="figcap">
+      <span>Recovery accuracy vs. corpus size · CSA matcher · 4 seeds/point · <b style="color:var(--fails)">steps = 2,000 (under-converged for syllabaries)</b></span>
+      <span>known-answer analogs · Linear A itself has no key</span>
+    </div>
+  </div>
+
+  <div class="figlabel"><b>Panel B</b> · the convergence control (T0) — recovery vs. annealing steps, Linear B, full corpus</div>
+  <div class="figure fig-load">
+    <div class="figscroll">
+      <svg class="chart" id="chartB" viewBox="0 0 1000 520" role="img"
+        aria-label="Recovery accuracy versus annealing steps for Linear B at full corpus. Accuracy climbs from 4.6 percent at 1000 steps to 37.3 percent at 6000 steps and is still rising. The sweep sampled at 2000 steps, low on this curve. Anchored state-of-the-art is 89 percent, reachable only with a cognate anchor."></svg>
+    </div>
+    <div class="figcap">
+      <span>Linear B → Greek · full corpus (919 words) · seed 0 · steps 1,000 → 6,000 · verdict <b style="color:var(--climb)">CONVERGENCE_ARTIFACT</b></span>
+      <span>still climbing at the 6,000-step cap — not converged</span>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card works">
+      <h3>Alphabets — converge &amp; recover</h3>
+      <div class="big">Solid, and unchanged.</div>
+      <ul>
+        <li><b>39% → 95%</b><span><b style="color:var(--ink)">Ugaritic</b> <span class="sub">abjad, ~30 signs — converges <em>within</em> 2,000 steps (matches the published 0.955) and is flat near 0.93–0.98 out to 2,214 words.</span></span></li>
+        <li><b>~70%</b><span><b style="color:var(--ink)">Phoenician</b> <span class="sub">abjad, ~22 signs — recovered from as few as 21 words.</span></span></li>
+      </ul>
+    </div>
+    <div class="card climb">
+      <h3>Syllabaries — under-converged, not floored</h3>
+      <div class="big">The numbers are lower bounds.</div>
+      <ul>
+        <li><b>2–5% → 37%+</b><span><b style="color:var(--ink)">Linear&nbsp;B → Greek</b> <span class="sub">the closest analog to Linear A. At 2,000 steps it reads ~2–5%; run to 6,000 it climbs to <em>37.3% and is still rising</em> (Panel&nbsp;B).</span></span></li>
+        <li><b>anchor gap</b><span><b style="color:var(--ink)">37% → 89%</b> <span class="sub">even converged, anchor-free CSA falls short of the published 89%. That last gap needs a pre-grouped cognate lexicon — an <em>anchor</em>.</span></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="split means">
+    <div>
+      <h4>What it means</h4>
+      <p>For a syllabary the binding constraint is <strong>not corpus size and not compute alone.</strong>
+        Compute lifts the score a long way (2,000→6,000 steps takes Linear&nbsp;B from ~3% to 37%+),
+        but the remaining distance to a real reading is closed by an <strong>anchor</strong> — a known
+        related language whose cognates pre-group the search. Linear&nbsp;B has Greek. <strong>Linear&nbsp;A
+        has no known relative</strong>, so neither more text nor more annealing manufactures the signal
+        that a cognate lexicon supplies.</p>
+      <p class="pull">The lever is the anchor, not the corpus and not the clock.</p>
+    </div>
+    <div class="nots">
+      <h4>What it does not mean</h4>
+      <p>Not that Linear A is undecipherable, and not that <em>no</em> method can read it. This is
+        <strong>one method</strong> (coupled simulated annealing) on <strong>analog scripts</strong>.</p>
+      <p>And <strong>not</strong> what the first version of this chart implied: there is no structural
+        “size wall” — the earlier 2–5% was a <strong>stopped clock</strong>, a censored lower bound.
+        The honest curve keeps climbing. The alphabet positive controls still hold: the tool
+        demonstrably converges and recovers an easy cipher, so the syllabary shortfall is a property
+        of the problem (anchors), not a broken detector.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Sweep 168/168 complete · convergence control T0 done (verdict CONVERGENCE_ARTIFACT,
+      0.373 @ 6,000 steps) · self-correction logged append-only, per the project constitution.</span>
+    <span class="tag">figures generated from cell artifacts · not hand-entered</span>
+  </footer>
+</div>
+
+<script>
+const DATA={"cypriot-greek":{"n_gold":693,"series":[{"size":69,"mean":0.0797,"pts":[0.1449,0.087,0.0725,0.0145]},{"size":100,"mean":0.0675,"pts":[0.09,0.03,0.03,0.12]},{"size":139,"mean":0.0971,"pts":[0.1079,0.0935,0.0432,0.1439]},{"size":200,"mean":0.0675,"pts":[0.05,0.02,0.09,0.11]},{"size":208,"mean":0.0457,"pts":[0.0433,0.0577,0.0433,0.0385]},{"size":346,"mean":0.0665,"pts":[0.0867,0.1012,0.0578,0.0202]},{"size":400,"mean":0.1044,"pts":[0.0175,0.02,0.215,0.165]},{"size":520,"mean":0.0717,"pts":[0.0846,0.0635,0.0731,0.0654]},{"size":600,"mean":0.1621,"pts":[0.0783,0.12,0.1317,0.3183]},{"size":650,"mean":0.0665,"pts":[0.1092,0.0785,0.0646,0.0138]},{"size":693,"mean":0.1616,"pts":[0.0967,0.1097,0.241,0.1991]}]},"ugaritic-noiseless":{"n_gold":2214,"series":[{"size":100,"mean":0.39,"pts":[0.25,0.85,0.23,0.23]},{"size":200,"mean":0.7837,"pts":[0.295,0.98,0.91,0.95]},{"size":221,"mean":0.8609,"pts":[0.8552,0.8778,0.8914,0.819]},{"size":400,"mean":0.9525,"pts":[0.995,0.98,0.9075,0.9275]},{"size":443,"mean":0.974,"pts":[0.9774,0.9594,0.9774,0.9819]},{"size":600,"mean":0.9825,"pts":[0.98,0.9833,0.9733,0.9933]},{"size":650,"mean":0.97,"pts":[0.9892,0.9692,0.9492,0.9723]},{"size":664,"mean":0.9631,"pts":[0.9473,0.9699,0.9669,0.9684]},{"size":1107,"mean":0.97,"pts":[0.9675,0.9603,0.9783,0.9738]},{"size":1660,"mean":0.9307,"pts":[0.9506,0.9343,0.9343,0.9036]},{"size":2214,"mean":0.9354,"pts":[0.9354]}]},"linearb-greek":{"n_gold":919,"series":[{"size":92,"mean":0.0109,"pts":[0.0,0.0,0.0109,0.0326]},{"size":100,"mean":0.0575,"pts":[0.01,0.04,0.1,0.08]},{"size":184,"mean":0.0149,"pts":[0.0,0.038,0.0109,0.0109]},{"size":200,"mean":0.02,"pts":[0.05,0.015,0.01,0.005]},{"size":276,"mean":0.0444,"pts":[0.0181,0.0326,0.0797,0.0471]},{"size":400,"mean":0.0263,"pts":[0.0175,0.0025,0.065,0.02]},{"size":460,"mean":0.0255,"pts":[0.0043,0.0152,0.0739,0.0087]},{"size":600,"mean":0.0208,"pts":[0.005,0.0433,0.0133,0.0217]},{"size":650,"mean":0.0485,"pts":[0.0092,0.06,0.0308,0.0938]},{"size":689,"mean":0.0421,"pts":[0.0087,0.0145,0.0392,0.106]},{"size":919,"mean":0.0239,"pts":[0.0653,0.0065,0.0163,0.0076]}]},"phoenician-ugaritic":{"n_gold":105,"series":[{"size":21,"mean":0.7143,"pts":[0.7143,0.7143,0.7143,0.7143]},{"size":32,"mean":0.6562,"pts":[0.8125,0.6875,0.3438,0.7812]},{"size":52,"mean":0.7356,"pts":[0.6923,0.75,0.7115,0.7885]},{"size":79,"mean":0.6804,"pts":[0.7215,0.5823,0.6835,0.7342]},{"size":100,"mean":0.7475,"pts":[0.73,0.84,0.67,0.75]},{"size":105,"mean":0.7595,"pts":[0.7714,0.7905,0.7619,0.7143]}]},"luvian-hittite":{"n_gold":59,"series":[{"size":30,"mean":0.275,"pts":[0.3667,0.2667,0.4333,0.0333]},{"size":44,"mean":0.4318,"pts":[0.4318,0.4545,0.4318,0.4091]},{"size":59,"mean":0.4619,"pts":[0.4746,0.4407,0.4576,0.4746]}]}};
+
+// T0 convergence control: Linear B, full corpus (919), seed 0, per-1000-step trajectory.
+const T0=[{s:1000,a:0.0457},{s:2000,a:0.1066},{s:3000,a:0.1763},{s:4000,a:0.2350},{s:5000,a:0.2655},{s:6000,a:0.3732}];
+
+const NS='http://www.w3.org/2000/svg';
+function el(n,a){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function txt(x,y,s,cls,extra){const t=el('text',Object.assign({x,y,class:cls},extra||{}));t.textContent=s;return t;}
+
+/* ---------------- Panel A : accuracy vs corpus size ---------------- */
+(function(){
+  const svg=document.getElementById('chartA');
+  const g=el('g',{});svg.appendChild(g);
+  const VB={w:1000,h:560}, M={l:82,r:150,t:44,b:76};
+  const X0=M.l,X1=VB.w-M.r,Y0=VB.h-M.b,Y1=M.t, XMAX=2250,YMAX=1;
+  const sx=v=>X0+(v/XMAX)*(X1-X0), sy=v=>Y0-(v/YMAX)*(Y0-Y1);
+  [0,0.25,0.5,0.75,1.0].forEach(v=>{
+    g.appendChild(el('line',{class:'grid',x1:X0,y1:sy(v),x2:X1,y2:sy(v)}));
+    g.appendChild(txt(X0-12,sy(v)+4,(v*100)+'%','tick',{'text-anchor':'end'}));
+  });
+  [0,500,1000,1500,2000].forEach(v=>{
+    g.appendChild(el('line',{class:'grid',x1:sx(v),y1:Y0,x2:sx(v),y2:Y1,opacity:0.5}));
+    g.appendChild(txt(sx(v),Y0+22,v.toLocaleString(),'tick',{'text-anchor':'middle'}));
+  });
+  g.appendChild(el('line',{class:'axis',x1:X0,y1:Y0,x2:X1,y2:Y0}));
+  g.appendChild(el('line',{class:'axis',x1:X0,y1:Y0,x2:X0,y2:Y1}));
+  g.appendChild(txt((X0+X1)/2,Y0+50,'CORPUS SIZE  ·  WORDS AVAILABLE TO THE MATCHER','atitle',{'text-anchor':'middle'}));
+  const yt=txt(24,(Y0+Y1)/2,'RECOVERY ACCURACY','atitle',{'text-anchor':'middle'});
+  yt.setAttribute('transform',`rotate(-90 24 ${(Y0+Y1)/2})`);g.appendChild(yt);
+  g.appendChild(el('line',{class:'chance',x1:X0,y1:sy(0.015),x2:X1,y2:sy(0.015)}));
+  g.appendChild(txt(X1-4,sy(0.015)-6,'chance floor ≈ 0.5–1.5%','chlab',{'text-anchor':'end'}));
+  // shaded "under-converged" band over the syllabary region
+  g.appendChild(el('rect',{class:'band',x:X0,y:sy(0.18),width:X1-X0,height:Y0-sy(0.18)}));
+  g.appendChild(txt(X0+12,sy(0.18)-7,'syllabaries — under-converged at 2,000 steps (lower bound, see Panel B)','anno-sub',{fill:'var(--fails)'}));
+  const BENCH=[
+    {k:'ugaritic-noiseless',cls:'works'},{k:'phoenician-ugaritic',cls:'works-soft'},
+    {k:'luvian-hittite',cls:'works-soft'},{k:'cypriot-greek',cls:'fails-soft'},{k:'linearb-greek',cls:'fails'}];
+  BENCH.forEach(b=>{
+    const s=DATA[b.k].series;
+    const pts=s.map(p=>`${sx(p.size).toFixed(1)},${sy(p.mean).toFixed(1)}`).join(' ');
+    g.appendChild(el('polyline',{class:'ln l-'+b.cls,points:pts}));
+    s.forEach(p=>p.pts.forEach(a=>g.appendChild(el('circle',{class:'seed d-'+b.cls,cx:sx(p.size),cy:sy(a),r:2.4}))));
+    s.forEach(p=>g.appendChild(el('circle',{class:'d-'+b.cls,cx:sx(p.size),cy:sy(p.mean),r:3.4})));
+  });
+  function tag(key,label,cls,dy){const s=DATA[key].series,last=s[s.length-1];
+    g.appendChild(txt(sx(last.size)+9,sy(last.mean)+dy,label,'anno',{'font-size':13,'font-weight':600,fill:`var(--${cls})`}));}
+  tag('ugaritic-noiseless','Ugaritic · abjad','works',-8);
+  tag('linearb-greek','Linear B → Greek','fails',6);
+  tag('cypriot-greek','Cypriot → Greek','fails-soft',19);
+  const ax=sx(400);
+  g.appendChild(el('line',{class:'anno-lead',x1:ax,y1:sy(0.9525),x2:ax,y2:sy(0.74)}));
+  g.appendChild(txt(ax+8,sy(0.73),'95% by 400 words','anno'));
+  g.appendChild(txt(ax+8,sy(0.73)+17,'→ alphabet converges & suffices','anno-sub'));
+})();
+
+/* ---------------- Panel B : accuracy vs annealing steps (T0) ---------------- */
+(function(){
+  const svg=document.getElementById('chartB');
+  const g=el('g',{});svg.appendChild(g);
+  const VB={w:1000,h:520}, M={l:82,r:172,t:52,b:76};
+  const X0=M.l,X1=VB.w-M.r,Y0=VB.h-M.b,Y1=M.t, XMAX=6400,YMAX=1;
+  const sx=v=>X0+(v/XMAX)*(X1-X0), sy=v=>Y0-(v/YMAX)*(Y0-Y1);
+  [0,0.25,0.5,0.75,1.0].forEach(v=>{
+    g.appendChild(el('line',{class:'grid',x1:X0,y1:sy(v),x2:X1,y2:sy(v)}));
+    g.appendChild(txt(X0-12,sy(v)+4,(v*100)+'%','tick',{'text-anchor':'end'}));
+  });
+  [0,1000,2000,3000,4000,5000,6000].forEach(v=>{
+    g.appendChild(el('line',{class:'grid',x1:sx(v),y1:Y0,x2:sx(v),y2:Y1,opacity:0.45}));
+    g.appendChild(txt(sx(v),Y0+22,v.toLocaleString(),'tick',{'text-anchor':'middle'}));
+  });
+  g.appendChild(el('line',{class:'axis',x1:X0,y1:Y0,x2:X1,y2:Y0}));
+  g.appendChild(el('line',{class:'axis',x1:X0,y1:Y0,x2:X0,y2:Y1}));
+  g.appendChild(txt((X0+X1)/2,Y0+50,'ANNEALING STEPS  ·  COMPUTE SPENT PER RUN','atitle',{'text-anchor':'middle'}));
+  const yt=txt(24,(Y0+Y1)/2,'RECOVERY ACCURACY','atitle',{'text-anchor':'middle'});
+  yt.setAttribute('transform',`rotate(-90 24 ${(Y0+Y1)/2})`);g.appendChild(yt);
+
+  // anchored SOTA line (Tamburini) — the target reachable only with a cognate anchor
+  g.appendChild(el('line',{class:'anchor-s',x1:X0,y1:sy(0.894),x2:X1,y2:sy(0.894)}));
+  g.appendChild(txt(X1+6,sy(0.894)+4,'89%','anno',{fill:'var(--analog)','font-weight':600,'font-size':12.5}));
+  g.appendChild(txt(X1+6,sy(0.894)+20,'anchored','anno-sub',{fill:'var(--analog)','font-size':11}));
+  g.appendChild(txt(X1+6,sy(0.894)+34,'SOTA','anno-sub',{fill:'var(--analog)','font-size':11}));
+
+  // where the sweep sampled (2000 steps)
+  g.appendChild(el('line',{class:'anno-lead',x1:sx(2000),y1:sy(0.1066),x2:sx(2000),y2:sy(0.52)}));
+  g.appendChild(txt(sx(2000)+6,sy(0.55),'the sweep sampled here','anno'));
+  g.appendChild(txt(sx(2000)+6,sy(0.55)+17,'→ Panel A’s “floor”','anno-sub'));
+
+  // the climbing curve
+  const pts=T0.map(p=>`${sx(p.s).toFixed(1)},${sy(p.a).toFixed(1)}`).join(' ');
+  g.appendChild(el('polyline',{class:'ln l-climb',points:pts}));
+  T0.forEach(p=>g.appendChild(el('circle',{class:'d-climb',cx:sx(p.s),cy:sy(p.a),r:4})));
+  // endpoint callout
+  const last=T0[T0.length-1];
+  g.appendChild(el('circle',{cx:sx(last.s),cy:sy(last.a),r:7,fill:'none',stroke:'var(--climb)','stroke-width':2}));
+  g.appendChild(txt(sx(last.s)-8,sy(last.a)-14,'37.3% — still climbing','anno',{'text-anchor':'end',fill:'var(--climb)','font-weight':600}));
+  g.appendChild(txt(sx(last.s)-8,sy(last.a)-14+17,'(6,000-step cap, not converged)','anno-sub',{'text-anchor':'end'}));
+  // "the anchor gap" bracket between the curve endpoint and the anchored SOTA
+  g.appendChild(el('line',{class:'gold-s',x1:sx(6000)+28,y1:sy(0.3732),x2:sx(6000)+28,y2:sy(0.894),opacity:0.8}));
+  g.appendChild(txt(sx(6000)+34,(sy(0.3732)+sy(0.894))/2,'the','anno-sub',{fill:'var(--analog)','font-size':11}));
+  g.appendChild(txt(sx(6000)+34,(sy(0.3732)+sy(0.894))/2+14,'anchor','anno-sub',{fill:'var(--analog)','font-size':11,'font-weight':600}));
+  g.appendChild(txt(sx(6000)+34,(sy(0.3732)+sy(0.894))/2+28,'gap','anno-sub',{fill:'var(--analog)','font-size':11,'font-weight':600}));
+})();
+</script>

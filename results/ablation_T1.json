@@ -1,0 +1,22 @@
+{
+  "test": "T1_component_ablation",
+  "defends": "N1",
+  "B": 500,
+  "N_eff": 100,
+  "n_planted_true": 40,
+  "false_case_obs_score_mean": 0.0506,
+  "false_case_obs_score_max": 0.1,
+  "A_positive_control_only_false_grad": 0.006,
+  "C_paired_instrument_false_grad": 0.006,
+  "B_null_gate_only_false_grad": 0.006,
+  "B_note": "mechanically == C on the false metric (both deflate at n_eff); B's true-side power deficiency is not a separable verdict.grade clause; reported, not fabricated.",
+  "C_planted_true_accept_rate": 0.0,
+  "accept_arm_has_power": false,
+  "perfect_map_failing_clauses": [
+    "beats_order_stat_bar"
+  ],
+  "power_note": "the accept-true arm is DEGENERATE in this abstract skeleton harness: even a perfect map (accuracy 1.0) fails the operative 'beats_order_stat_bar' clause because the skeleton null has ~zero variance (sigma0<1e-12), so E[max order stat] deflation cannot be beaten. A faithful, powered T1 needs real per-benchmark candidate lexicons + non-degenerate null recalls plumbed into the gate.",
+  "incidental_finding": "A==C false-grad (0.006): multiplicity deflation is NOT the discriminator for these weak best-of-100 flukes (mean obs ~5%); they are rejected by the statistic-level L_fake / deflated-S_lex bars regardless of n_eff. This REFUTES the specific N1 premise 'the null-gate leg is what catches them', but shows the gate's rejection is robust/overdetermined here.",
+  "rule": "SUPPORT iff C_false<=0.01 AND max(A,B)_false>=0.05 AND C_true>=0.90; NO_POWER if the accept-true arm cannot graduate even a perfect map",
+  "verdict": "NO_POWER"
+}
