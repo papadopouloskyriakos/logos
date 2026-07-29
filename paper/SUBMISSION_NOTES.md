@@ -83,6 +83,9 @@ The submission is now fully lodged; the next event is TACL's editorial process
 (track at the dashboard URL above). If reviewers request a revision, the freeze
 discipline restarts: rebuild → re-measure the p.10 boundary → re-freeze §(f) hashes.
 
+**→ 2026-07-29: the editorial decision arrived — DESK REJECT, decision "(d)"; the
+"next event" planning above is SUPERSEDED. See §(g).**
+
 ---
 
 ## (a) TACL "Comments to the Editor" — ONE ready-to-paste block (authors + preprints + keywords)
