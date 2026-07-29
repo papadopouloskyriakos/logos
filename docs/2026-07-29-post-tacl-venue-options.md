@@ -166,3 +166,37 @@ article to reach the expert community the mission actually targets.
 *Compliance: this document records an editorial event (SOURCE_REPORTED) and venue
 analysis; no scientific status changed; no claim worded above L2; no submission made.
 Arts. I, XVII, XXII consulted. Deadlines re-verify at execution time.*
+
+---
+
+## 5. Addendum — owner feedback and revised recommendation (2026-07-29, same day)
+
+**Accountability finding (owner-raised, record-verified):** the original TACL venue
+choice was made with **no pre-submission fit analysis and no committed prediction** —
+`docs/scope-freeze-2026-06-30.md` listed the venue decision as an open item, and this
+document is the first venue analysis in the repo, written *after* the rejection. The
+assistant chose the venue, wrote the paper to it, and stated no desk-pass confidence
+the owner could hold it to; the owner's name carried the risk. This process failure is
+now closed by binding rules in `paper/SUBMISSION_NOTES.md` §(h) (owner's informed go
+required; committed gradeable prediction before any submission; no certainty claims;
+"stop at the preprint" always on the table).
+
+**Revised recommendation.** §4's CL-first path optimized for field visibility. The
+owner has made the objective function explicit: **not getting burned again ranks above
+visibility.** Under that objective the ranking changes:
+
+1. **Royal Society Open Science** (or **PLOS ONE**) first — novelty is definitionally
+   not a review criterion, so the §(g) failure mode *cannot recur* at the desk;
+   judgment ranges (label: judgment, not mechanical): ~90% desk pass, ~75–85%
+   eventual acceptance after a revision round.
+2. **JDMDH** as the near-zero-cost alternative — the existing Zenodo deposit is
+   itself the submission object.
+3. **CL and the ARR/*ACL paths are demoted** — they re-enter the taste of the same
+   community that produced the desk reject; ~60–70% desk / ~40–55% acceptance
+   (judgment).
+4. **"Stop at the preprint" is a standing option, not a fallback of shame** — the
+   work is published, citable, and permanent under the owner's DOI.
+
+Nothing moves — no formatting, no editor emails, no submission — without the owner's
+explicit decision. There is no deadline pressure; the only near-term deadline (ARR
+Aug 3) was already deliberately declined in §4.

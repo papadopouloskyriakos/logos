@@ -104,6 +104,13 @@ What v2.0 adds beyond the invariants (use these in every stage):
 - Receivers/scanners emit canonical signal rows; the verdict pipeline consumes them.
 - Where to add content (so this file doesn't regrow — the agora lesson):
   dated claim analysis → `docs/`; a runbook → `docs/runbooks/`; a stable invariant → here.
+- **Submission discipline (binding, adopted 2026-07-29 after the TACL desk reject):**
+  no journal/conference submission is prepared or sent without the owner's explicit,
+  informed go; every submission is preceded by a committed, gradeable prediction row in
+  `paper/SUBMISSION_NOTES.md` §(h) (venue, P(desk pass), P(accept), rationale — graded
+  after the outcome; invariant #1 applied to publishing); never claim certainty about
+  peer review; under the owner's stated objective, soundness-only venues rank above
+  taste-risk venues; "stop at the preprint" is always presented as an option.
 - **When stuck, grep the siblings FIRST:** `../finops-agora` (the predict/verdict/score
   pipeline, agora_stats, the JEPA harness) and `../claude-gateway` (agent control).
 
@@ -159,6 +166,8 @@ The harness is built, exercised, calibrated, written up, and out the door:
   2027-07-29; full record + disposition in SUBMISSION_NOTES §(g)). The §(f) hashes stay
   the immutable record of the Zenodo v1.0 preprint; a new-venue version = new build →
   re-measure that venue's limits → freeze new hashes. Venue options:
-  `docs/2026-07-29-post-tacl-venue-options.md` (resubmission is an owner decision). The
+  `docs/2026-07-29-post-tacl-venue-options.md` (§5 addendum: soundness-only venues
+  first under the owner's objective; resubmission is an owner decision governed by the
+  binding rules in SUBMISSION_NOTES §(h) — committed prediction + owner's go). The
   markdown preprint (`docs/preprint/…-condensed-v6.md`) is the historical record; the
   LaTeX is authoritative.

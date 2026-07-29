@@ -361,5 +361,47 @@ scientific record is untouched.
   hash set in a new subsection here. Claims/results/numbers may never change;
   framing, format, and added exposition may.
 - **Venue re-targeting is an owner decision** — candidate analysis in
-  `docs/2026-07-29-post-tacl-venue-options.md`. Nothing has been submitted
+  `docs/2026-07-29-post-tacl-venue-options.md` (see its §5 addendum for the
+  owner-objective revised recommendation). Nothing has been submitted
   anywhere; no reply has been sent to the editors.
+- **Any future submission is governed by §(h) below.**
+
+---
+
+## (h) Submission discipline — binding process rules (adopted 2026-07-29)
+
+Adopted the day of the §(g) desk reject, after the owner's accountability review
+exposed the gap it revealed: **the TACL venue was chosen with no recorded fit
+analysis and no committed prediction** — the first venue analysis in the repo
+(`docs/2026-07-29-post-tacl-venue-options.md`) postdates the rejection, while
+`docs/scope-freeze-2026-06-30.md` had listed the venue decision as an open item
+that was then resolved silently. The repo's invariant #1 (no claim without a
+committed prediction) therefore now applies to publishing itself:
+
+1. **No submission is prepared, formatted, or sent without the owner's explicit,
+   informed go.** The analysis and the odds are presented first; the owner decides.
+   (The owner's name carries the public risk; the assistant's does not.)
+2. **Committed prediction before any submission** — append a row here,
+   timestamped BEFORE the submission goes out, and grade it after the outcome:
+
+   | Date | Venue | P(desk pass) | P(accept) | Falsifiable rationale | Outcome (graded) |
+   |------|-------|--------------|-----------|----------------------|------------------|
+   | —    | —     | —            | —         | —                    | —                |
+
+   (Retro-grading the un-predicted TACL submission for the record: no prediction
+   was committed; the implicit confidence was unstated and, by outcome, uncalibrated.
+   Outcome: desk reject, decision "(d)", §(g).)
+3. **No certainty claims about peer review** — calibrated ranges only, explicitly
+   labeled as judgment. A "100%" claim is the overclaiming this project exists to
+   reject.
+4. **Venue ranking follows the owner's stated objective** (2026-07-29:
+   not-getting-burned ranks above field visibility) — soundness-only venues
+   (RSOS, PLOS ONE, JDMDH) above taste-risk venues (CL, ARR/*ACL) unless the
+   owner directs otherwise.
+5. **"Stop at the preprint" is a legitimate option presented at every decision
+   point.** The work is published and citable (Zenodo DOI 10.5281/zenodo.21119213);
+   a journal acceptance adds a peer-review credential, not existence. Never
+   pressure toward another submission — least of all to redeem a past failure.
+
+Cheap-before-expensive: where a venue permits a pre-submission scope inquiry, an
+editor email precedes any formatting work.
