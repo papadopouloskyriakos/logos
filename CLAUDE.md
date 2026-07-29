@@ -109,8 +109,11 @@ What v2.0 adds beyond the invariants (use these in every stage):
 
 ## Current status
 
-**NOW (2026-07-07) — CONSTITUTION v2.0 ratified (`governance/`); paper stays SUBMITTED +
-byte-frozen through review; post-submission research continues on child branches under v2.0.**
+**NOW (2026-07-29) — TACL #11385 DESK-REJECTED (decision "(d)": venue-scope/novelty, no
+technical challenge; TACL barred until 2027-07-29 — record in SUBMISSION_NOTES §(g)). The
+Zenodo preprint stands (DOI 10.5281/zenodo.21119213). Venue re-targeting = owner decision
+(`docs/2026-07-29-post-tacl-venue-options.md`); post-submission research continues on child
+branches under v2.x.**
 Governance: v2.0 adopted 2026-07-07 (AMENDMENT-001, non-retroactive — no prior null becomes a
 success). Post-submission structural work: the no-human source-label route CLOSED as `NO_POWER`;
 the **Observable Administrative Channel Recovery** programme is `RUNNING`
@@ -150,9 +153,12 @@ The harness is built, exercised, calibrated, written up, and out the door:
   manuscript **#11385** submitted (authorDashboard/submission/11385). **arXiv was NOT
   used** — the old "Variant A-only" declaration is OBSOLETE; the corrected
   Comments-to-Editor block lives in SUBMISSION_NOTES §(0).
-- **Portal metadata DONE (2026-07-03)** — Contributors + Comments-to-Editors completed;
-  the submission is fully lodged. **Next: wait for TACL's editorial decision** (track at
-  the dashboard). A reviewer-requested revision restarts the freeze discipline (rebuild →
-  re-measure p.10 → re-freeze §(f) hashes). The markdown preprint
-  (`docs/preprint/…-condensed-v6.md`) is the historical record, kept in sync; the LaTeX
-  is authoritative.
+- **Portal metadata DONE (2026-07-03)**; **TACL decision received 2026-07-29: DESK
+  REJECT** (decision "(d)" — "minimal methodological novelty" + "system-oriented
+  framing", i.e. out-of-scope for TACL; no result challenged; no TACL resubmission until
+  2027-07-29; full record + disposition in SUBMISSION_NOTES §(g)). The §(f) hashes stay
+  the immutable record of the Zenodo v1.0 preprint; a new-venue version = new build →
+  re-measure that venue's limits → freeze new hashes. Venue options:
+  `docs/2026-07-29-post-tacl-venue-options.md` (resubmission is an owner decision). The
+  markdown preprint (`docs/preprint/…-condensed-v6.md`) is the historical record; the
+  LaTeX is authoritative.

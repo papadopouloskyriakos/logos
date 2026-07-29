@@ -311,3 +311,52 @@ Re-verify with `sha256sum` before each upload.
 | `paper/build/logos-arxiv.pdf` | `a2ab89fa313e5b308a020853f8962594dfc1c1445bf87c064f7e7305881ea145` |
 | `paper/build/logos-tacl-anon.pdf` | `4e4973ecfd96c72d3fa051e412ea2a23d5233a2df75c09721282fabcdf4b23bc` |
 | `paper/arxiv-package.tar.gz` | `ae2ee2c111fb0daee6e9c13941ec875036a0cbcd214b541b3935a9996c21faf2` |
+
+---
+
+## (g) EDITORIAL DECISION — 2026-07-29: DESK REJECT (decision "(d)")
+
+**TACL #11385 was desk-rejected without external review on 2026-07-29** (email
+"[TACL] Editor Decision for Submission 11385: (d)", sent 17:01:02 UTC, Message-Id
+`<uPPi14Ekvj9z8nom6gVX33uU5z6fBb3Uf0uyqgyfD8@transacl.org>`, from the TACL
+editors-in-chief via the PKP-hosted OJS; DKIM/SPF/DMARC all pass at the receiving
+mail server — treated as authentic).
+
+**Decision:** "the paper will not be accepted, with no possibility of resubmission
+to TACL for a period of 1 year" → **TACL is barred until 2027-07-29.**
+
+**Stated reasons (initial editorial review; no external reviews were produced):**
+
+1. **"Minimal Methodological Novelty"** — "TACL prioritizes submissions that offer
+   substantial algorithmic, theoretical, or modeling advancements to the core
+   computational linguistics community. In its current form, the paper largely
+   applies existing statistical methods to a linguistic problem. The primary
+   contribution appears to be the organizational framework itself, which does not
+   constitute enough technical novelty for this venue."
+2. **"System-Oriented Framing"** — "The manuscript reads more like an applied
+   systems or software framework paper rather than a core computational
+   linguistics research paper. Because the paper lacks deep methodological
+   innovation in NLP algorithms or language modeling, it falls outside the primary
+   scope of what our reviewing pool is looking to evaluate."
+
+(The email's embedded decision letter is a template — it retains an "[Insert Paper
+ID]" placeholder and a "their feedback" phrasing with no reviews attached; the two
+bullets above are its complete substantive content.)
+
+**Reading of the decision:** a venue-scope judgment ("not core CL methodology"),
+not a technical refutation — no result, number, or verdict was challenged. The
+scientific record is untouched.
+
+**Disposition (append-only; nothing above this section changes):**
+
+- The **Zenodo preprint stands** — DOI 10.5281/zenodo.21119213 (v1.0, CC-BY-4.0)
+  remains the published, citable record of the work.
+- The **byte-freeze's purpose (TACL review) has ended.** The §(f) sha256s remain
+  the immutable record of what was submitted to TACL and published as Zenodo v1.0
+  — they are never re-pointed. Any submission to a NEW venue is a NEW build:
+  rebuild → re-measure against THAT venue's length/format limits → freeze a new
+  hash set in a new subsection here. Claims/results/numbers may never change;
+  framing, format, and added exposition may.
+- **Venue re-targeting is an owner decision** — candidate analysis in
+  `docs/2026-07-29-post-tacl-venue-options.md`. Nothing has been submitted
+  anywhere; no reply has been sent to the editors.
