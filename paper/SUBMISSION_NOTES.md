@@ -366,6 +366,37 @@ scientific record is untouched.
   anywhere; no reply has been sent to the editors.
 - **Any future submission is governed by §(h) below.**
 
+**→ Update (2026-07-29, later the same day): a reply WAS sent** by the author to
+`editors-in-chief@transacl.org` (Subject: "Re: [TACL] Editor Decision for
+Submission 11385: (d)") — a courteous acknowledgment closing the loop: thanks
+for the prompt assessment, accepts the venue-fit judgment in the editors' own
+framing ("outside what TACL's reviewing pool is set up to assess"), concedes
+scope not quality, no appeal, no commitments. Sent text (as drafted):
+
+> Dear Editors-in-Chief,
+>
+> Thank you for the prompt editorial assessment of submission 11385,
+> "Falsification-First Decipherment: A Decontaminated Inference Framework for
+> Testing Undeciphered-Script Claims, with Linear A as a Worked Null," and for
+> stating the reasons clearly.
+>
+> I take the point: the paper's primary contribution is an evaluation framework
+> rather than a new algorithm or model, and I understand that this places it
+> outside what TACL's reviewing pool is set up to assess. The feedback is
+> useful — it tells me the work should be presented, and reviewed, as
+> evaluation methodology, and it will guide the choice of a more suitable
+> venue.
+>
+> Thank you for the editorial team's time and for the speed of the decision.
+>
+> Best regards,
+> Kyriakos Papadopoulos
+> Independent Researcher
+> kyriakos@papadopoulos.tech
+
+**The TACL #11385 correspondence is now CLOSED.** No further action at TACL
+before 2027-07-29; anything else follows §(h).
+
 ---
 
 ## (h) Submission discipline — binding process rules (adopted 2026-07-29)
