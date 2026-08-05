@@ -62,12 +62,49 @@ independence predicts.
   justify not doing so (the annex makes both available mechanically).
 - A future silver v2 with native damage fields remains an explicit owner decision.
 
-## Phase 1b — sensitivity checks (appended when run)
+## Phase 1b — sensitivity checks (script-generated: `python3 scripts/d1_sensitivity.py --write-doc`)
 
-Scope: (1) type-count/effective_n denominators with/without phantoms; (2) metrology null
-re-run with damage-filtered numerals; (3) segmentation gap robustness with phantom-only
-words flagged. Discipline: results are annexes; if anything *improves*, that is a new
-preregistered run deflated for the D1-prompted look — verdicts never flip via annex.
+Stage D1-SENS-01 (annex to D1-ANNEX-01; no claim; L0/L1). Machine-readable result: `results/d1_sensitivity.json` (seed 0, annex `damage-annex-v1`, bronze `66b94203bd343ed9`). Verdict flips: NONE.
+
+### (1) Denominators — with vs without phantom types
+
+| quantity | published (with phantoms) | phantom-excluded | delta |
+|---|---|---|---|
+| distinct word types | 1165 | 806 | -359 |
+| word tokens | 3147 | 2752 | -395 |
+| docs with ≥1 word token | 1341 | 1256 | -85 |
+| sites | 52 | 47 | -5 |
+| effective_n (Art. VIII, dims doc+site) | 52 | 47 | -5 |
+
+Under phantom exclusion the type denominator is 1165→806 (-359) and tokens 3147→2752 (-395), while the Art. VIII effective_n (dims doc+site) moves 52→47 — future type-count-sensitive stages must cite the phantom-excluded denominator (no published figure consumed type counts; all tokens are one L_LA_CORPUS lineage under Art. XI).
+
+### (2) Metrology null — as published vs damage-filtered
+
+Mapping: annex token order = silver stream word order; metrology label tokens asserted list-equal to annex `types` per tablet; unit excluded iff its KU-RO total line or any accumulated item line carries a damage-flagged word token; damage-stripped mirror asserted equal to metrology.parse_tablet output for every tablet. Caveat: the annex records WORD-attached damage only — numeral damage and lines without word labels cannot be flagged through it. Excluded: 16/35 balance units (2 fraction-bearing). As-published reproduction matches `runtime/metrology-real.json`: True.
+
+| quantity | published | damage-filtered | delta |
+|---|---|---|---|
+| balance units | 35 | 19 | -16 |
+| held-out fraction balance | 0.0 | 0.0 | 0.0 |
+| null mean | 0.112857 | 0.146 | 0.033143 |
+| p-value | 1.0 | 1.0 | 0.0 |
+| separated | False | False | — |
+
+The published metrology NULL under damage filtering: 16/35 balance units excluded (2 fraction-bearing), held-out fraction balance 0.0 vs null mean 0.146 (p=1.0) — word-token damage does not explain the null and no verdict moves.
+
+### (3) Segmentation boundary-recovery gap — with vs without phantom-only words
+
+Phantom-only word tokens dropped: 395 (annex count 395, agree: True); 85 inscriptions emptied. As-published reproduction matches `runtime/morphology-real.json`: True.
+
+| quantity | published | phantom-filtered | delta |
+|---|---|---|---|
+| dp_unigram micro-F1 | 0.4361 | 0.4711 | 0.035 |
+| random-baseline micro-F1 | 0.3888 | 0.405 | 0.0162 |
+| gap (dp − random) | 0.0473 | 0.0661 | 0.0188 |
+
+The boundary-recovery gap without phantom-only words: 0.4361 vs 0.3888 (gap +0.0473) as published → 0.4711 vs 0.405 (gap +0.0661) after dropping 395 phantom tokens — the published positive is not damage-driven and no verdict moves; the larger filtered gap is an IMPROVEMENT and per the discipline rule is NOT a claim — using it would require a new preregistered run deflated for the D1-prompted look (micro-F1 levels are not comparable across corpora: the boundary base rate shifts 0.4058→0.4231; the GAP is the comparand).
+
+Discipline: results are annexes; if anything *improves*, that is a new preregistered run deflated for the D1-prompted look — verdicts never flip via annex.
 
 ## Close block (Art. XXII)
 

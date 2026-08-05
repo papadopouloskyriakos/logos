@@ -1,0 +1,139 @@
+{
+ "annex_bronze_sha256": "66b94203bd343ed9f2e7e124e55737686e56f246b26b7d6f279d92a6fb14abda",
+ "annex_version": "damage-annex-v1",
+ "blocks": {
+  "denominators": {
+   "cross_check_published_morphology": {
+    "matches_published": true,
+    "runtime_n_word_tokens": 3147,
+    "runtime_n_word_types": 1165
+   },
+   "delta": {
+    "distinct_types": -359,
+    "docs": -85,
+    "effective_n_doc_site": -5,
+    "sites": -5,
+    "word_tokens": -395
+   },
+   "interpretation": "Under phantom exclusion the type denominator is 1165→806 (-359) and tokens 3147→2752 (-395), while the Art. VIII effective_n (dims doc+site) moves 52→47 — future type-count-sensitive stages must cite the phantom-excluded denominator (no published figure consumed type counts; all tokens are one L_LA_CORPUS lineage under Art. XI).",
+   "name": "denominators",
+   "phantom_type_tokens": 395,
+   "phantom_types": 359,
+   "published_source": "corpus/silver/damage_annex.json summary + runtime/morphology-real.json cross-check",
+   "published_value": {
+    "distinct_types": 1165,
+    "docs": 1341,
+    "effective_n_doc_site": 52,
+    "sites": 52,
+    "word_tokens": 3147
+   },
+   "sensitivity_value": {
+    "distinct_types": 806,
+    "docs": 1256,
+    "effective_n_doc_site": 47,
+    "sites": 47,
+    "word_tokens": 2752
+   },
+   "verdict_flip": false
+  },
+  "metrology": {
+   "delta": {
+    "heldout_fraction_balance_rate": 0.0,
+    "n_units": -16,
+    "null_mean": 0.033143,
+    "p_value": 0.0
+   },
+   "interpretation": "The published metrology NULL under damage filtering: 16/35 balance units excluded (2 fraction-bearing), held-out fraction balance 0.0 vs null mean 0.146 (p=1.0) — word-token damage does not explain the null and no verdict moves.",
+   "mapping": "annex token order = silver stream word order; metrology label tokens asserted list-equal to annex `types` per tablet; unit excluded iff its KU-RO total line or any accumulated item line carries a damage-flagged word token; damage-stripped mirror asserted equal to metrology.parse_tablet output for every tablet",
+   "mapping_caveat": "the annex records WORD-attached damage only — numeral damage and lines without word labels cannot be flagged through it",
+   "n_tablets": 32,
+   "n_units_excluded": 16,
+   "n_units_excluded_fraction_bearing": 2,
+   "name": "metrology",
+   "published_source": "runtime/metrology-real.json",
+   "published_value": {
+    "heldout_fraction_balance_rate": 0.0,
+    "n_documents": 32,
+    "n_units": 35,
+    "null_mean": 0.112857,
+    "p_value": 1.0,
+    "separated": false
+   },
+   "reproduction": {
+    "heldout_fraction_balance_rate": 0.0,
+    "heldout_overall_balance_rate": 0.2,
+    "matches_published": true,
+    "n_documents": 32,
+    "n_fraction_bearing": 7,
+    "n_integer_only": 28,
+    "n_integer_only_balanced": 7,
+    "n_test_fraction_bearing": 7,
+    "n_units": 35,
+    "null_max": 0.142857,
+    "null_mean": 0.112857,
+    "p_value": 1.0,
+    "powered": true,
+    "separated": false
+   },
+   "sensitivity_value": {
+    "heldout_fraction_balance_rate": 0.0,
+    "heldout_overall_balance_rate": 0.315789,
+    "n_documents": 17,
+    "n_fraction_bearing": 5,
+    "n_integer_only": 14,
+    "n_integer_only_balanced": 6,
+    "n_test_fraction_bearing": 5,
+    "n_units": 19,
+    "null_max": 0.2,
+    "null_mean": 0.146,
+    "p_value": 1.0,
+    "powered": true,
+    "separated": false
+   },
+   "verdict_flip": false
+  },
+  "segmentation": {
+   "annex_phantom_tokens": 395,
+   "delta": {
+    "dp_unigram_micro_f1": 0.035,
+    "gap": 0.0188,
+    "random_micro_f1": 0.0162
+   },
+   "dropped_tokens_agree_with_annex": true,
+   "interpretation": "The boundary-recovery gap without phantom-only words: 0.4361 vs 0.3888 (gap +0.0473) as published → 0.4711 vs 0.405 (gap +0.0661) after dropping 395 phantom tokens — the published positive is not damage-driven and no verdict moves; the larger filtered gap is an IMPROVEMENT and per the discipline rule is NOT a claim — using it would require a new preregistered run deflated for the D1-prompted look (micro-F1 levels are not comparable across corpora: the boundary base rate shifts 0.4058→0.4231; the GAP is the comparand).",
+   "name": "segmentation",
+   "phantom_types": 359,
+   "published_source": "runtime/morphology-real.json",
+   "published_value": {
+    "dp_unigram_micro_f1": 0.4361,
+    "gap": 0.0473,
+    "random_micro_f1": 0.3888
+   },
+   "reproduction": {
+    "boundary_base_rate": 0.4058,
+    "dp_unigram_micro_f1": 0.4361,
+    "gap": 0.0473,
+    "matches_published": true,
+    "n_sites": 52,
+    "random_micro_f1": 0.3888
+   },
+   "sensitivity_value": {
+    "boundary_base_rate": 0.4231,
+    "dp_unigram_micro_f1": 0.4711,
+    "gap": 0.0661,
+    "n_inscriptions": 1256,
+    "n_inscriptions_dropped": 85,
+    "n_sites": 47,
+    "n_words_dropped": 395,
+    "random_micro_f1": 0.405
+   },
+   "verdict_flip": false
+  }
+ },
+ "discipline": "Discipline: results are annexes; if anything *improves*, that is a new preregistered run deflated for the D1-prompted look — verdicts never flip via annex.",
+ "generated_by": "scripts/d1_sensitivity.py",
+ "seed": 0,
+ "stage": "D1-SENS-01",
+ "verdict_flips": [],
+ "version": "d1-sensitivity-v1"
+}
