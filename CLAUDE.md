@@ -137,6 +137,14 @@ The harness is built, exercised, calibrated, written up, and out the door:
   (zero such tokens in syllabogram inventories or the paper); no silver rebuild without
   an explicit decision; any commodity-level analysis must run under both readings. See
   `docs/2026-08-05-ab21-ab22-external-audit.md` + `scripts/audit_ab21_ab22.py`.
+  **Second known defect (2026-08-05, Tsirkas D1 CONFIRMED on our bronze/silver):** the
+  lineage strips word-attached damage notation (marker `U+1076B`) from the
+  `transliteratedWords` layer that `corpus_io.py` ingests; silver carries no damage
+  fields — 911/3,147 word tokens (28.9%) damage-touching, **359/1,165 distinct types
+  (30.8%) phantom** (attested only damaged). Frozen-paper exposure plausibly low
+  (nulls; within-corpus gaps), but re-check any type-count-sensitive figure under
+  phantom exclusion before reuse; no silver rebuild without an explicit decision. See
+  `docs/2026-08-05-tsirkas-full-repo-audit.md` §2.
 - **Probes executed** (all pre-registered, graded from artifacts): morphology NO-POWER
   null + segmentation positive (micro-F1 0.436 vs 0.389, site-clustered gap CI excludes 0);
   metrology null (p = 1.0, J = ½ credited to Bennett); phonology data-limited null;
