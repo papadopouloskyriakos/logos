@@ -184,3 +184,18 @@ The harness is built, exercised, calibrated, written up, and out the door:
   binding rules in SUBMISSION_NOTES §(h) — committed prediction + owner's go). The
   markdown preprint (`docs/preprint/…-condensed-v6.md`) is the historical record; the
   LaTeX is authoritative.
+- **Tsirkas-derived standing instruments DEPLOYED (2026-08-05, commits 70220c1..cf07181;
+  plan record `docs/2026-08-05-tsirkas-full-repo-audit.md` §5):** (1) D1 damage annex
+  (`scripts/audit_damage_markers.py` → `corpus/silver/damage_annex.json`; 359/1,165 types
+  = 30.8% phantom; silver byte-identity test-pinned; sensitivity: no verdict moves,
+  segmentation gap +0.066 filtered = NOT a claim); (2) divergence register
+  (`corpus/divergences.json` + `scripts/divergence_register.py` + Younger parser; D4
+  re-derived; HT38 = alt-label not dropped; +KHWc2102/PHWc44 MISSING_IN_SILVER);
+  (3) reopening thresholds (`docs/reopening-thresholds.md` GENERATED; morphology/
+  phonology/vowel-harmony SIZE_NOT_BINDING — LA nulls structural; nearest tripwire =
+  alternation grid at +288 docs ≈ 10.5 KN-Zg-57s; crossing ⇒ NEW prereg, never a claim);
+  (4) KU-RO/KI-RO harness (`scripts/comparison/kuro_null.py`: 9/35 exact, p=0.0005,
+  summation-FUNCTION L2/L3; KI-RO 0/7 = chance, uninformative); (5) name-parallel probe
+  (bar v2 after round-1 RED; prereg-gated NAME-PARALLEL-01 = **DATA-LIMITED**, M_obs
+  12/501 vs floor-bar 148; banded excess is toponym-borne — S2=0 — and not
+  Knossos-specific — N2 p=1.0; REFUTE_LOTO_FRAGILE re-confirmed via independent channel).

@@ -103,3 +103,13 @@ these readings, cite Tsirkas D4 as the source of the finding.
 Correspondence: the confirmation (and the PH 31a/31b-present-in-SigLA detail his register
 lacks) was acknowledged publicly by the owner on LinkedIn, 2026-08-05; further exchange
 runs via GitHub.
+
+## 7. Refinement (append-only, 2026-08-05, Phase-2 divergence-register build)
+
+The §1 wording "HT38's AB21 dropped from silver" is mechanically imprecise: silver carries
+the token as the Latin label `CAP` (family *22) — an alt-label divergence (silver `CAP` vs
+SigLA `AB21` vs Younger `OVIS 3`), i.e. INVERTED, not dropped. The mechanical comparator
+(`scripts/divergence_register.py`, `corpus/divergences.json`) also surfaced two docs beyond
+the original seed list — **KHWc2102** and **PHWc44** (silver carries only the word `QI`;
+SigLA reads AB21; Younger reads OVIS by eye) — recorded as MISSING_IN_SILVER. Verdict
+classes and all published dispositions unchanged; option-2 (register) is now IMPLEMENTED.
