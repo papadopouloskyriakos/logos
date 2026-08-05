@@ -1,0 +1,475 @@
+{
+ "_meta": {
+  "generated_by": "scripts/divergence_register.py divergence-register-v1",
+  "policy": "defect-level excerpts only (fair dealing); agreeing documents are counted, never excerpted; append-only record (Art. XVII): silver is NEVER rebuilt from this file — any analysis touching a registered divergence runs under both readings",
+  "refs": [
+   "docs/2026-08-05-ab21-ab22-external-audit.md",
+   "docs/2026-08-05-tsirkas-full-repo-audit.md"
+  ],
+  "regenerate": "python3 scripts/divergence_register.py",
+  "version": "divergence-register-v1",
+  "witness_sha256": {
+   "damage_annex": "d040c3840d940f8a5b0d2ac755558057d2699359537a790460ba90b581884cdd",
+   "sigla_documents": "218ae55b5dfcb290a1940b6abacdeb85b38f47ff1c7e60d845fe81084bee002e",
+   "silver_inscriptions": "4717a7e39157fad6b4a4d24e0d925f1c8a0cd33d6e7111b6822222aa24f1244a",
+   "younger_txt": {
+    "HTtexts.txt": "bda2ff3e8b767fd728c676e887a4c279504a0cca7c3b067f7318f638e002b524",
+    "misctexts.txt": "ae8bc4125ba0892d2530ab18a5545a45b45398661213d2be22d7f403112725ad",
+    "religioustexts.txt": "6979166279418432b5e50f73572e7c2771151da4b9a2d529cddcc414cf3f2339"
+   }
+  }
+ },
+ "entries": [
+  {
+   "claim": "the lineara.xyz tabulation behind silver swaps the livestock logograms AB21 (*21, OVIS) and AB22 (*22, CAP) in a specific document set; SigLA and Younger agree against it",
+   "docs": {
+    "HT132": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [
+       "*22F"
+      ],
+      "younger": [
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "HT136a": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [
+       "*22F"
+      ],
+      "younger": [
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "HT20": {
+     "readings": {
+      "sigla": [
+       "AB22"
+      ],
+      "silver": [
+       "*21M"
+      ],
+      "younger": [
+       "CAPm"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "HT64": {
+     "readings": {
+      "sigla": [
+       "AB22"
+      ],
+      "silver": [
+       "*21M"
+      ],
+      "younger": [
+       "CAPm"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "KH6": {
+     "readings": {
+      "sigla": [
+       "AB22"
+      ],
+      "silver": [
+       "*21M"
+      ],
+      "younger": [
+       "CAPm"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "KN28a": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [
+       "*22F"
+      ],
+      "younger": [
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "KNWc29": {
+     "readings": {
+      "sigla": [
+       "AB22"
+      ],
+      "silver": [
+       "*21M"
+      ],
+      "younger": null
+     },
+     "verdict": "INVERTED"
+    },
+    "PH(?)31a": {
+     "divergent_positions": [
+      1
+     ],
+     "readings": {
+      "sigla": [
+       "AB21",
+       "AB21",
+       "AB21",
+       "AB21"
+      ],
+      "silver": [
+       "*21M",
+       "*22F",
+       "*21M",
+       "*21F"
+      ],
+      "younger": [
+       "OVISm",
+       "OVISf",
+       "OVISm",
+       "OVISf",
+       "OVISf",
+       "OVISm"
+      ]
+     },
+     "verdict": "MIXED"
+    },
+    "PH(?)31b": {
+     "divergent_positions": [
+      7
+     ],
+     "readings": {
+      "sigla": [
+       "AB22",
+       "AB21",
+       "AB22",
+       "AB22",
+       "AB22",
+       "AB21",
+       "AB21",
+       "AB21"
+      ],
+      "silver": [
+       "*22F",
+       "*21F",
+       "*22M",
+       "*22M",
+       "*22F",
+       "*21M",
+       "*21M",
+       "*22M"
+      ],
+      "younger": [
+       "CAPf",
+       "OVISf",
+       "CAPm",
+       "CAPm",
+       "CAPf",
+       "OVISm",
+       "OVISm",
+       "OVISm",
+       "OVISm",
+       "CAPf",
+       "CAPm",
+       "OVISm",
+       "OVISm"
+      ]
+     },
+     "verdict": "MIXED"
+    },
+    "ZA22": {
+     "readings": {
+      "sigla": [
+       "AB21",
+       "AB21",
+       "AB21",
+       "AB21"
+      ],
+      "silver": [
+       "*22F",
+       "*22M",
+       "*22F",
+       "*22F"
+      ],
+      "younger": [
+       "OVISf",
+       "OVISm",
+       "OVISf",
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "ZA26a": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [
+       "*22F"
+      ],
+      "younger": [
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "ZA26b": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [
+       "*22F"
+      ],
+      "younger": [
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "ZA9": {
+     "readings": {
+      "sigla": [
+       "AB21",
+       "AB21"
+      ],
+      "silver": [
+       "*22F",
+       "*22F"
+      ],
+      "younger": [
+       "OVISf",
+       "OVISf"
+      ]
+     },
+     "verdict": "INVERTED"
+    }
+   },
+   "evidence": {
+    "agreeing_docs_not_excerpted": 21,
+    "docs_with_family_tokens": 35,
+    "family_tokens": 49,
+    "inverted_docs": 11,
+    "method": "positional family-level alignment of silver *21/*22-family tokens vs SigLA AB21/AB22, verdict ladder as in scripts/audit_ab21_ab22.py; Younger fold is doc-level",
+    "per_document_verdicts": {
+     "AGREE": 21,
+     "INVERTED": 11,
+     "MIXED": 2,
+     "NOT_IN_SIGLA": 1
+    },
+    "tokens_in_inverted_docs": 15
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "id": "D4",
+   "kind": "sign_family_inversion",
+   "refs": [
+    "docs/2026-08-05-ab21-ab22-external-audit.md",
+    "Tsirkas 2026 D4, github.com/ChristosTsirkas/corpus-validation-for-undeciphered-scripts-linear-a"
+   ],
+   "sensitive_analyses": [
+    "any analysis attaching commodity semantics (sheep vs goat) to the listed docs — e.g. research/observable-admin-channel-recovery commodity-logogram work; must run under both readings",
+    "site- or document-level livestock counts"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "livestock-token divergences invisible to the *21/*22 label scan: silver reads the Latin label CAP on HT38 where SigLA reads AB21 and Younger reads OVIS; KH Wc 2102 and PH Wc 44 carry no livestock token in silver where SigLA reads AB21",
+   "docs": {
+    "HT38": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [
+       "CAP"
+      ],
+      "younger": [
+       "OVIS"
+      ]
+     },
+     "verdict": "INVERTED"
+    },
+    "KHWc2102": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [],
+      "younger": null
+     },
+     "verdict": "MISSING_IN_SILVER"
+    },
+    "PHWc44": {
+     "readings": {
+      "sigla": [
+       "AB21"
+      ],
+      "silver": [],
+      "younger": null
+     },
+     "verdict": "MISSING_IN_SILVER"
+    }
+   },
+   "evidence": {
+    "alt_label_docs_not_in_sigla": [
+     "HTWc3014",
+     "KHWc2063",
+     "THEtab.4"
+    ],
+    "method": "scan of silver docs WITHOUT *21/*22-family labels for foldable Latin livestock labels or a bridged SigLA doc reading AB21/AB22 (see scan_livestock_alt_or_missing)",
+    "per_document_verdicts": {
+     "INVERTED": 1,
+     "MISSING_IN_SILVER": 2,
+     "NOT_IN_SIGLA": 3
+    },
+    "refinement": "docs/2026-08-05-ab21-ab22-external-audit.md described HT38 as a dropped token; mechanically the token is PRESENT in silver under the Latin label CAP (family *22) — still divergent, consistent with Tsirkas's report that the lineara.xyz lineage reads *22 there"
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "id": "HT38",
+   "kind": "livestock_token_alt_label_or_missing",
+   "refs": [
+    "docs/2026-08-05-ab21-ab22-external-audit.md",
+    "Tsirkas 2026 D4, github.com/ChristosTsirkas/corpus-validation-for-undeciphered-scripts-linear-a"
+   ],
+   "sensitive_analyses": [
+    "same commodity-semantics exposure as D4 on the listed docs",
+    "token/type counts that assume livestock logograms are label-uniform (* -forms only) in silver"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "the lineara.xyz lineage strips word-attached damage notation (marker U+1076B) from the transliteratedWords layer silver ingests; phantom types (attested only damaged) are indistinguishable from complete types in silver",
+   "docs": {
+    "scope": "corpus-wide",
+    "silver_docs": 1341
+   },
+   "evidence": {
+    "annex_version": "damage-annex-v1",
+    "bronze_sha256": "66b94203bd343ed9f2e7e124e55737686e56f246b26b7d6f279d92a6fb14abda",
+    "summary": {
+     "by_combo": {
+      "I": 20,
+      "L": 360,
+      "LI": 4,
+      "LT": 183,
+      "LTI": 1,
+      "T": 340,
+      "TI": 3
+     },
+     "by_flag": {
+      "I": 28,
+      "L": 548,
+      "T": 527
+     },
+     "damage_touching_pct": 28.9,
+     "damage_touching_tokens": 911,
+     "distinct_types": 1165,
+     "docs": 1341,
+     "ever_damaged_types": 492,
+     "phantom_pct": 30.8,
+     "phantom_types": 359,
+     "types_excluding_phantoms": 806,
+     "word_tokens": 3147
+    }
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "id": "D1",
+   "kind": "word_attached_damage_stripped",
+   "readings_note": {
+    "bronze_words_layer": "U+1076B word-attached damage markers present",
+    "silver": "no damage field in either silver file; sidecar annex corpus/silver/damage_annex.json carries per-token codes"
+   },
+   "refs": [
+    "docs/2026-08-05-tsirkas-full-repo-audit.md §2",
+    "scripts/audit_damage_markers.py",
+    "Tsirkas 2026 D1, github.com/ChristosTsirkas/corpus-validation-for-undeciphered-scripts-linear-a"
+   ],
+   "sensitive_analyses": [
+    "distinct word-type counts (denominator shrinks under phantom exclusion — see evidence.summary)",
+    "effective_n / information-budget panel inputs",
+    "any type-count-sensitive figure (packed-word counts, unicity panels)"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "ASCII break notation leaked into silver sign labels: a leading ']' or trailing '[' makes each such label a spurious distinct sign type",
+   "docs": {
+    "RO+RO[": {
+     "implied_clean_label": "RO+RO",
+     "occurrences": [
+      [
+       "KH18",
+       8
+      ]
+     ]
+    },
+    "TE+RO[": {
+     "implied_clean_label": "TE+RO",
+     "occurrences": [
+      [
+       "HT104",
+       2
+      ]
+     ]
+    },
+    "WI+ZE[": {
+     "implied_clean_label": "WI+ZE",
+     "occurrences": [
+      [
+       "KH43",
+       2
+      ]
+     ]
+    },
+    "]MI+JA": {
+     "implied_clean_label": "MI+JA",
+     "occurrences": [
+      [
+       "PH3b",
+       0
+      ]
+     ]
+    },
+    "]TU+RO": {
+     "implied_clean_label": "TU+RO",
+     "occurrences": [
+      [
+       "HT47a",
+       1
+      ]
+     ]
+    }
+   },
+   "evidence": {
+    "method": "mechanical scan: sign label starts with ']' or ends with '['",
+    "n_labels": 5,
+    "n_occurrences": 5
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "id": "BR1",
+   "kind": "break_notation_in_sign_labels",
+   "refs": [
+    "docs/2026-08-05-tsirkas-full-repo-audit.md §2 (leaked ASCII brackets)"
+   ],
+   "sensitive_analyses": [
+    "sign-label inventories / distinct-sign counts",
+    "sequence analyses treating a broken label as a distinct sign"
+   ],
+   "status": "CONFIRMED"
+  }
+ ]
+}
