@@ -131,7 +131,12 @@ The harness is built, exercised, calibrated, written up, and out the door:
 
 - **Corpus ingested** (silver: 1,341 inscriptions / 52 sites; DĀMOS Linear B 13,562
   wordforms via `scripts/cross_script/data.py`). Licensed raw data gitignored, never
-  redistributed.
+  redistributed. **Known data defect (2026-08-05, external claim Tsirkas D4 CONFIRMED
+  from in-repo witnesses):** the lineara.xyz lineage inverts AB21/AB22 (OVIS/CAP) in 11
+  silver docs (15 LOGO tokens; +HT38's AB21 dropped) — published results untouched
+  (zero such tokens in syllabogram inventories or the paper); no silver rebuild without
+  an explicit decision; any commodity-level analysis must run under both readings. See
+  `docs/2026-08-05-ab21-ab22-external-audit.md` + `scripts/audit_ab21_ab22.py`.
 - **Probes executed** (all pre-registered, graded from artifacts): morphology NO-POWER
   null + segmentation positive (micro-F1 0.436 vs 0.389, site-clustered gap CI excludes 0);
   metrology null (p = 1.0, J = ½ credited to Bennett); phonology data-limited null;

@@ -99,3 +99,7 @@ The defect was first published by Tsirkas (2026), D4. logos's contribution here 
 the independent two-witness confirmation from separately-acquired artifacts (our own
 SigLA decode and Younger snapshot). If any future logos work corrects or conditions on
 these readings, cite Tsirkas D4 as the source of the finding.
+
+Correspondence: the confirmation (and the PH 31a/31b-present-in-SigLA detail his register
+lacks) was acknowledged publicly by the owner on LinkedIn, 2026-08-05; further exchange
+runs via GitHub.
