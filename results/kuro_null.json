@@ -1,0 +1,1541 @@
+{
+ "ablation_no_commodity_sectioning": {
+  "delta_observed_vs_primary": -1,
+  "delta_units_vs_primary": 0,
+  "n_units": 37,
+  "n_units_scored": 35,
+  "note": "commodity recognition disabled (commodities=set()); expected near-inert — most units carry no commodity tag under the primary parse",
+  "null": {
+   "design": "closing numbers deranged across balance units — multiset preserved, self-pair excluded",
+   "max": 2,
+   "mean": 0.1515,
+   "n_trials": 2000,
+   "p_empirical_primary": 0.0005,
+   "sd": 0.3762,
+   "z_caveat": "z Gaussianizes a near-Poisson null; the empirical p is the statistic",
+   "z_secondary": 20.86
+  },
+  "observed_integer_exact": 8
+ },
+ "articles": [
+  "Art. IV",
+  "Art. V (L2/L3)",
+  "Art. VII",
+  "Art. XI (Tsirkas credit)",
+  "Art. XXII"
+ ],
+ "caveats": [
+  "L2/L3 ONLY: a separated null supports KU-RO as a summation-FUNCTION sign — it is not a reading, not a translation, and licenses nothing above the functional layer.",
+  "Integer arithmetic is the primary criterion; fraction-bearing units whose fractional mass closes into the closing integer can mismatch here by design — they are counted and reported in the fraction secondary panel.",
+  "The section model is metrology.parse_tablet's; mismatches include section-model artifacts (e.g. KI-RO-headed sub-lists lumped into a KU-RO span). The null uses the SAME section model, so the comparison is internally consistent.",
+  "The damage annex covers word tokens only; damaged numerals are visible only as doc-level illegible-number marks (U+1076B).",
+  "Cross-lineage sanity vs Tsirkas is direction/magnitude-class only — different corpus model, different section counts; equality is not tested."
+ ],
+ "claim_layer": "L2/L3 — KU-RO/KI-RO tested as summation-FUNCTION signs (arithmetic role only); no phonetic, lexical or translation claim; 'total_int' below is metrology.py's internal field name, not a reading",
+ "cross_lineage_sanity": {
+  "comparison_contract": "direction + magnitude-class agreement only — section models and corpus scopes differ; equality is neither expected nor tested",
+  "direction_agrees": true,
+  "kiro_raw": [
+   0,
+   7
+  ],
+  "kuro_exact": [
+   10,
+   26
+  ],
+  "kuro_null_mean": 0.52,
+  "kuro_null_sd": 0.71,
+  "kuro_z": 13.4,
+  "ours_kiro": [
+   0,
+   7
+  ],
+  "ours_kiro_p_empirical": 1.0,
+  "ours_kuro": [
+   9,
+   35
+  ],
+  "ours_kuro_null_mean": 0.1225,
+  "ours_kuro_p_empirical": 0.0005,
+  "ours_kuro_z_secondary": 25.9,
+  "source": "Tsirkas 2026, corpus-validation-for-undeciphered-scripts-linear-a; logos record: docs/2026-08-05-tsirkas-full-repo-audit.md"
+ },
+ "harness": "kuro_null — arithmetic-anchor (summation-function) permutation harness",
+ "kiro": {
+  "damage_breakdown": {
+   "annex_scope_caveat": "annex covers WORD tokens only; damaged numerals appear only as doc-level illegible-number marks",
+   "available": true,
+   "docs_aligned": 12,
+   "docs_not_aligned": [],
+   "matched": {
+    "n": 0,
+    "with_damaged_word_token": 0
+   },
+   "mismatched": {
+    "in_docs_with_illegible_number_marks": 3,
+    "n": 7,
+    "with_damaged_word_token": 2
+   },
+   "n_scored_units_with_damage_data": 7
+  },
+  "design": "closing-line design; identical to the KU-RO leg with the two labels exchanged",
+  "fraction_secondary": {
+   "exact_with_editorial_fractions": 0,
+   "n_editorial_computable": 7,
+   "n_fraction_bearing_units": 8,
+   "note": "COMPARISON-ONLY (metrology discipline): editorial vulgar-fraction glosses via metrology.editorial_value; never enters the permutation statistic"
+  },
+  "n_commodity_tagged_units": 1,
+  "n_docs": 12,
+  "n_units": 16,
+  "n_units_excluded_no_closing_numeral": 9,
+  "n_units_no_items": 2,
+  "n_units_scored": 7,
+  "null": {
+   "design": "closing numbers deranged across balance units — multiset preserved, self-pair excluded",
+   "max": 0,
+   "mean": 0.0,
+   "n_trials": 2000,
+   "p_empirical_primary": 1.0,
+   "sd": 0.0,
+   "z_caveat": "z Gaussianizes a near-Poisson null; the empirical p is the statistic",
+   "z_secondary": null
+  },
+  "observed_integer_exact": 0,
+  "observed_rate": 0.0,
+  "per_unit": [
+   {
+    "closing_has_numeral": true,
+    "closing_int": 197,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT1",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     1
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 400,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT15",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 1254,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 8,
+    "commodity": "CYP",
+    "damage_codes": [],
+    "doc": "HT30",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 21,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     3,
+     9,
+     10
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 37,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT34",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 617,
+    "n_damaged_word_tokens": 1,
+    "n_items": 8,
+    "word_ords": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT37",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 7,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT55a",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 1,
+    "n_items": 0,
+    "word_ords": [
+     0
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT88",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 33,
+    "n_damaged_word_tokens": 0,
+    "n_items": 3,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [
+     "T"
+    ],
+    "doc": "HT93b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 165,
+    "n_damaged_word_tokens": 1,
+    "n_items": 1,
+    "word_ords": [
+     0
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT94b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     0
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT117a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 1,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 39,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 39,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 20,
+    "n_damaged_word_tokens": 1,
+    "n_items": 2,
+    "word_ords": [
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 19,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 6,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     15
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 5,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT123+124b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 27,
+    "n_damaged_word_tokens": 1,
+    "n_items": 7,
+    "word_ords": [
+     1,
+     2,
+     5,
+     6,
+     8
+    ]
+   }
+  ],
+  "role": "KI-RO"
+ },
+ "kuro": {
+  "damage_breakdown": {
+   "annex_scope_caveat": "annex covers WORD tokens only; damaged numerals appear only as doc-level illegible-number marks",
+   "available": true,
+   "docs_aligned": 34,
+   "docs_not_aligned": [],
+   "matched": {
+    "n": 9,
+    "with_damaged_word_token": 2
+   },
+   "mismatched": {
+    "in_docs_with_illegible_number_marks": 9,
+    "n": 26,
+    "with_damaged_word_token": 13
+   },
+   "n_scored_units_with_damage_data": 35
+  },
+  "design": "metrology.parse_tablet balance units",
+  "fraction_secondary": {
+   "exact_with_editorial_fractions": 1,
+   "n_editorial_computable": 7,
+   "n_fraction_bearing_units": 7,
+   "note": "COMPARISON-ONLY (metrology discipline): editorial vulgar-fraction glosses via metrology.editorial_value; never enters the permutation statistic"
+  },
+  "n_commodity_tagged_units": 4,
+  "n_docs": 34,
+  "n_units": 37,
+  "n_units_excluded_no_closing_numeral": 2,
+  "n_units_no_items": 5,
+  "n_units_scored": 35,
+  "null": {
+   "design": "closing numbers deranged across balance units — multiset preserved, self-pair excluded",
+   "max": 2,
+   "mean": 0.1225,
+   "n_trials": 2000,
+   "p_empirical_primary": 0.0005,
+   "sd": 0.3428,
+   "z_caveat": "z Gaussianizes a near-Poisson null; the empirical p is the statistic",
+   "z_secondary": 25.9
+  },
+  "observed_integer_exact": 9,
+  "observed_rate": 0.2571,
+  "per_unit": [
+   {
+    "closing_has_numeral": true,
+    "closing_int": 31,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT9a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 29,
+    "n_damaged_word_tokens": 0,
+    "n_items": 7,
+    "word_ords": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 24,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT9b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 24,
+    "n_damaged_word_tokens": 0,
+    "n_items": 7,
+    "word_ords": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 10,
+    "commodity": null,
+    "damage_codes": [
+     "T"
+    ],
+    "doc": "HT11a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 6,
+    "n_damaged_word_tokens": 1,
+    "n_items": 3,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 180,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT11b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 180,
+    "n_damaged_word_tokens": 0,
+    "n_items": 5,
+    "word_ords": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 130,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT13",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": true,
+    "item_sum_int": 130,
+    "n_damaged_word_tokens": 0,
+    "n_items": 6,
+    "word_ords": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 16,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT25b",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     0
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 52,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT25b",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 52,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 335,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "L",
+     "L"
+    ],
+    "doc": "HT27a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 322,
+    "n_damaged_word_tokens": 3,
+    "n_items": 8,
+    "word_ords": [
+     1,
+     2,
+     3,
+     4,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 100,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "L",
+     "L"
+    ],
+    "doc": "HT39",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 28,
+    "n_damaged_word_tokens": 3,
+    "n_items": 3,
+    "word_ords": [
+     0,
+     1,
+     3,
+     5,
+     6
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [
+     "T",
+     "T"
+    ],
+    "doc": "HT40",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 341,
+    "n_damaged_word_tokens": 2,
+    "n_items": 2,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 43,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "L"
+    ],
+    "doc": "HT46a",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 1,
+    "n_damaged_word_tokens": 2,
+    "n_items": 1,
+    "word_ords": [
+     0,
+     1
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 402,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT67",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 1,
+    "n_items": 0,
+    "word_ords": [
+     0
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 20,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT74",
+    "doc_illegible_number_marks": 3,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 1,
+    "n_items": 0,
+    "word_ords": [
+     0
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 66,
+    "commodity": null,
+    "damage_codes": [
+     "T"
+    ],
+    "doc": "HT85a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 66,
+    "n_damaged_word_tokens": 1,
+    "n_items": 7,
+    "word_ords": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 6,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT88",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 39,
+    "n_damaged_word_tokens": 0,
+    "n_items": 9,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 87,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT89",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 87,
+    "n_damaged_word_tokens": 0,
+    "n_items": 5,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 110,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT94a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 111,
+    "n_damaged_word_tokens": 0,
+    "n_items": 5,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 5,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT94b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 5,
+    "n_damaged_word_tokens": 0,
+    "n_items": 5,
+    "word_ords": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 97,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT100",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 93,
+    "n_damaged_word_tokens": 1,
+    "n_items": 5,
+    "word_ords": [
+     0,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 1060,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT102",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 1070,
+    "n_damaged_word_tokens": 1,
+    "n_items": 7,
+    "word_ords": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 95,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT104",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": true,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 94,
+    "n_damaged_word_tokens": 0,
+    "n_items": 3,
+    "word_ords": [
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 129,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "L"
+    ],
+    "doc": "HT109",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 8,
+    "n_damaged_word_tokens": 2,
+    "n_items": 2,
+    "word_ords": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 100,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT110a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 21,
+    "n_damaged_word_tokens": 0,
+    "n_items": 2,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 100,
+    "commodity": "GRA",
+    "damage_codes": [],
+    "doc": "HT116b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     0,
+     1
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 10,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT117a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 10,
+    "n_damaged_word_tokens": 0,
+    "n_items": 10,
+    "word_ords": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 30,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT118",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 50,
+    "n_damaged_word_tokens": 0,
+    "n_items": 7,
+    "word_ords": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 160,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT119",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 158,
+    "n_damaged_word_tokens": 0,
+    "n_items": 9,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 31,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "L",
+     "L"
+    ],
+    "doc": "HT122a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 22,
+    "n_damaged_word_tokens": 3,
+    "n_items": 16,
+    "word_ords": [
+     0,
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 65,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "L"
+    ],
+    "doc": "HT122b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 15,
+    "n_damaged_word_tokens": 2,
+    "n_items": 5,
+    "word_ords": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 93,
+    "commodity": "OLIV",
+    "damage_codes": [],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 117,
+    "n_damaged_word_tokens": 0,
+    "n_items": 8,
+    "word_ords": [
+     0,
+     1,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     12,
+     13
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 25,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT123+124a",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 0,
+    "n_damaged_word_tokens": 0,
+    "n_items": 0,
+    "word_ords": [
+     14
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 20,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT123+124b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": false,
+    "fraction_bearing": true,
+    "integer_exact": false,
+    "item_sum_int": 27,
+    "n_damaged_word_tokens": 1,
+    "n_items": 7,
+    "word_ords": [
+     1,
+     2,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 156,
+    "commodity": null,
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "HT127b",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 13,
+    "n_damaged_word_tokens": 1,
+    "n_items": 1,
+    "word_ords": [
+     0,
+     1
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 291,
+    "commodity": null,
+    "damage_codes": [],
+    "doc": "HT127b",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 136,
+    "n_damaged_word_tokens": 0,
+    "n_items": 5,
+    "word_ords": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   {
+    "closing_has_numeral": false,
+    "closing_int": 0,
+    "commodity": null,
+    "damage_codes": [
+     "L",
+     "LT"
+    ],
+    "doc": "HT130",
+    "doc_illegible_number_marks": 2,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 3,
+    "n_damaged_word_tokens": 2,
+    "n_items": 1,
+    "word_ords": [
+     0,
+     4
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 1,
+    "commodity": "CAPm",
+    "damage_codes": [
+     "L"
+    ],
+    "doc": "PH(?)31a",
+    "doc_illegible_number_marks": 1,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": true,
+    "item_sum_int": 1,
+    "n_damaged_word_tokens": 1,
+    "n_items": 1,
+    "word_ords": [
+     1,
+     2,
+     10,
+     11
+    ]
+   },
+   {
+    "closing_has_numeral": true,
+    "closing_int": 78,
+    "commodity": "VIN",
+    "damage_codes": [],
+    "doc": "ZA15b",
+    "doc_illegible_number_marks": 0,
+    "exact_with_editorial_fractions": null,
+    "fraction_bearing": false,
+    "integer_exact": false,
+    "item_sum_int": 3,
+    "n_damaged_word_tokens": 0,
+    "n_items": 1,
+    "word_ords": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "role": "KU-RO"
+ },
+ "light_path": {
+  "n_docs": 34,
+  "n_light_exact": 5,
+  "note": "corpus_io_structured.line_items doc-level cross-check (crude: last closing numeral per doc, no commodity columns); comparison only",
+  "per_doc": [
+   {
+    "doc": "HT9a",
+    "light_closing_int": 31,
+    "light_exact": false,
+    "light_item_sum": 24
+   },
+   {
+    "doc": "HT9b",
+    "light_closing_int": 24,
+    "light_exact": true,
+    "light_item_sum": 24
+   },
+   {
+    "doc": "HT11a",
+    "light_closing_int": 10,
+    "light_exact": false,
+    "light_item_sum": 22
+   },
+   {
+    "doc": "HT11b",
+    "light_closing_int": 180,
+    "light_exact": true,
+    "light_item_sum": 180
+   },
+   {
+    "doc": "HT13",
+    "light_closing_int": 130,
+    "light_exact": true,
+    "light_item_sum": 130
+   },
+   {
+    "doc": "HT25b",
+    "light_closing_int": 52,
+    "light_exact": true,
+    "light_item_sum": 52
+   },
+   {
+    "doc": "HT27a",
+    "light_closing_int": 335,
+    "light_exact": false,
+    "light_item_sum": 247
+   },
+   {
+    "doc": "HT39",
+    "light_closing_int": null,
+    "light_exact": false,
+    "light_item_sum": 130
+   },
+   {
+    "doc": "HT40",
+    "light_closing_int": null,
+    "light_exact": false,
+    "light_item_sum": 341
+   },
+   {
+    "doc": "HT46a",
+    "light_closing_int": 43,
+    "light_exact": false,
+    "light_item_sum": 1
+   },
+   {
+    "doc": "HT67",
+    "light_closing_int": 402,
+    "light_exact": false,
+    "light_item_sum": 400
+   },
+   {
+    "doc": "HT74",
+    "light_closing_int": 20,
+    "light_exact": false,
+    "light_item_sum": 0
+   },
+   {
+    "doc": "HT85a",
+    "light_closing_int": 66,
+    "light_exact": true,
+    "light_item_sum": 66
+   },
+   {
+    "doc": "HT88",
+    "light_closing_int": 6,
+    "light_exact": false,
+    "light_item_sum": 39
+   },
+   {
+    "doc": "HT89",
+    "light_closing_int": 87,
+    "light_exact": false,
+    "light_item_sum": 74
+   },
+   {
+    "doc": "HT94a",
+    "light_closing_int": 110,
+    "light_exact": false,
+    "light_item_sum": 113
+   },
+   {
+    "doc": "HT94b",
+    "light_closing_int": 5,
+    "light_exact": false,
+    "light_item_sum": 6
+   },
+   {
+    "doc": "HT100",
+    "light_closing_int": 97,
+    "light_exact": false,
+    "light_item_sum": 102
+   },
+   {
+    "doc": "HT102",
+    "light_closing_int": 1060,
+    "light_exact": false,
+    "light_item_sum": 1070
+   },
+   {
+    "doc": "HT104",
+    "light_closing_int": 95,
+    "light_exact": false,
+    "light_item_sum": 94
+   },
+   {
+    "doc": "HT109",
+    "light_closing_int": 129,
+    "light_exact": false,
+    "light_item_sum": 131
+   },
+   {
+    "doc": "HT110a",
+    "light_closing_int": 100,
+    "light_exact": false,
+    "light_item_sum": 36
+   },
+   {
+    "doc": "HT116b",
+    "light_closing_int": null,
+    "light_exact": false,
+    "light_item_sum": 117
+   },
+   {
+    "doc": "HT117a",
+    "light_closing_int": 10,
+    "light_exact": false,
+    "light_item_sum": 15
+   },
+   {
+    "doc": "HT118",
+    "light_closing_int": 30,
+    "light_exact": false,
+    "light_item_sum": 65
+   },
+   {
+    "doc": "HT119",
+    "light_closing_int": 160,
+    "light_exact": false,
+    "light_item_sum": 124
+   },
+   {
+    "doc": "HT122a",
+    "light_closing_int": 31,
+    "light_exact": false,
+    "light_item_sum": 21
+   },
+   {
+    "doc": "HT122b",
+    "light_closing_int": 65,
+    "light_exact": false,
+    "light_item_sum": 112
+   },
+   {
+    "doc": "HT123+124a",
+    "light_closing_int": 25,
+    "light_exact": false,
+    "light_item_sum": 186
+   },
+   {
+    "doc": "HT123+124b",
+    "light_closing_int": 20,
+    "light_exact": false,
+    "light_item_sum": 4
+   },
+   {
+    "doc": "HT127b",
+    "light_closing_int": 291,
+    "light_exact": false,
+    "light_item_sum": 138
+   },
+   {
+    "doc": "HT130",
+    "light_closing_int": null,
+    "light_exact": false,
+    "light_item_sum": 20
+   },
+   {
+    "doc": "PH(?)31a",
+    "light_closing_int": null,
+    "light_exact": false,
+    "light_item_sum": 14
+   },
+   {
+    "doc": "ZA15b",
+    "light_closing_int": null,
+    "light_exact": false,
+    "light_item_sum": 98
+   }
+  ]
+ },
+ "n_trials": 2000,
+ "scope": {
+  "horizon": "",
+  "n_kiro_docs": 12,
+  "n_kuro_docs": 34,
+  "path": "corpus/silver/inscriptions_structured.json",
+  "site_prefix": ""
+ },
+ "seed": 20260805
+}
