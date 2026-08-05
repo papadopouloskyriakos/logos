@@ -194,3 +194,21 @@ fetch (pin the commit).
 (append-only; this doc supersedes nothing), Art. XXII (stage header above). No
 verdict-path code touched; no silver rebuilt; counts in §2 are script-derived by the
 verification agent's procedure (to be frozen into `scripts/audit_damage_markers.py`).
+
+## 7. Postscript (append-only, 2026-08-05, same day): §5 adoption EXECUTED
+
+The owner approved and the 5 decipherment-relevant mechanisms were built, deployed, and
+e2e-tested the same day (commits `70220c1..6f01a91`; status block in CLAUDE.md; plan file
+archived in the session record). Outcomes: D1 annex live (silver byte-identity now
+test-pinned; §2's numbers reproduced exactly; sensitivity: no verdict moves); divergence
+register live (D4 re-derived; §1's "HT38 dropped" wording refined — see the AB21/22 doc §7;
++2 new MISSING_IN_SILVER docs); reopening-thresholds table GENERATED (morphology
+SIZE_NOT_BINDING — the §4 wording discipline held); KU-RO harness (9/35, p=0.0005,
+direction agrees with Tsirkas; his KI-RO 0/7 shown uninformative under a proper null); and
+the name-parallel probe — round-1 calibration RED, bar hardened with an out-of-sample
+L_fake floor, prereg NAME-PARALLEL-01 frozen, single gated run = **DATA-LIMITED** (M_obs
+12/501 vs bar 148.42), with the banded-level excess shown toponym-borne (S2 = 0) and not
+Knossos-specific (N2 p = 1.0). §4's caution about the name-parallel channel's Art. XII
+exposure is thereby CONFIRMED mechanically: under texture-matched and pseudo-site controls
+the channel's excess is the known toponym anchors restated. This contextualizes (does not
+refute) Tsirkas's 4.74:1 — a finding owed to him via the parked GitHub channel (§6).

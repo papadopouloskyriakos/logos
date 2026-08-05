@@ -53,3 +53,10 @@ the four pre-2016 del Freo rapports (print-only; the human gap list) whose acqui
 close the 1985–2015 enumeration coverage holes, and PYR Zb 5's pending removal (reattributed
 to Cretan Hieroglyphic per Ferrara et al. 2016, endorsed by the rapport — flagged for the next
 corpus rebuild, NOT applied to the frozen corpus).
+
+**Reopening-thresholds hook (2026-08-05):** on any trigger firing, also consult the
+GENERATED `docs/reopening-thresholds.md` — compare the new-corpus delta against each
+route's `reopen at` column (nearest tripwire: alternation grid at +288 docs ≈ 10.5
+KN-Zg-57-equivalents). A crossing mandates a NEW preregistration, never an automatic
+claim; new-edition readings enter through `corpus/divergences.json`
+(`scripts/divergence_register.py`), not ad-hoc adoption.
