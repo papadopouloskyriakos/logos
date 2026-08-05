@@ -24,6 +24,14 @@ Three generators, matching the design spec §B.1 and the Nair within-inscription
       multiset and length but destroys sequence/phonotactic structure — the tightest same-forms
       control (the only thing changed is order).
 
+Plus one promoted generator (2026-08-05, name-parallel probe build):
+
+  (d) banded_map_permutation      — the SIGN-MAP-level counterpart of (a): permute the
+      value->reading assignment of an explicit sign map within frequency bands (Packard 1974
+      applied to the map itself). Promoted verbatim from the di-Mino-301 audit's PC2 positive
+      control (branch research/di-mino-301-exact-audit,
+      experiments/di_mino_301_audit/scripts/PC_positive_controls.py::_banded_map_permutation).
+
 Citations: Packard 1974 (frequency-banded permutation); Nair 2026 (arXiv:2604.17828, within-
 inscription fixed-seed permutation); logos design §B.1.
 """
@@ -97,6 +105,36 @@ def packard_banded_permutation(forms: Sequence[str],
             mapping[src] = dst
     # any character unseen in forms maps to itself
     return ["".join(mapping.get(ch, ch) for ch in w) for w in forms]
+
+
+# --------------------------------------------------------------------------- #
+# (d) Banded permutation of an explicit sign map (Packard 1974 at the map level)
+# --------------------------------------------------------------------------- #
+def banded_map_permutation(values: Sequence[str], value_map: Dict[str, str],
+                           freq: Counter, seed: int, n_bands: int = 4) -> Dict[str, str]:
+    """Frequency-banded permutation of the VALUE->reading assignment (Packard 1974 applied to the
+    sign map): a sign keeps a reading of comparable-frequency, but the specific sign<->reading pair
+    is destroyed. This is the decipherment null for a sign map.
+
+    PROMOTED VERBATIM (algorithm unchanged) from branch research/di-mino-301-exact-audit,
+    experiments/di_mino_301_audit/scripts/PC_positive_controls.py::_banded_map_permutation — the
+    map-level null of the PC2 opaque-Linear-B positive control, where permuted Ventris maps had to
+    (and did) fail to recover Greek. :func:`packard_banded_permutation` above permutes FORMS through
+    a within-band relabelling; this one permutes the MAP itself, so a caller holding an explicit
+    ``value -> reading`` assignment (e.g. the AB->LB convention of the name-parallel probe) can draw
+    a null map with the same band structure and rewrite through it.
+    """
+    rng = np.random.default_rng(seed)
+    ordered = sorted(values, key=lambda v: (-freq.get(v, 0), v))
+    per = max(1, int(np.ceil(len(ordered) / n_bands)))
+    perm_map = {}
+    for b in range(0, len(ordered), per):
+        band = ordered[b:b + per]
+        readings = [value_map[v] for v in band]
+        idx = np.arange(len(readings)); rng.shuffle(idx)
+        for v, j in zip(band, idx):
+            perm_map[v] = readings[int(j)]
+    return perm_map
 
 
 # --------------------------------------------------------------------------- #
