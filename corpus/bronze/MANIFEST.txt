@@ -1,0 +1,6 @@
+# logos bronze provenance (fetch_ugaritic.py)
+048eb1eab6921f65	2215	ugaritic/uga-heb.gold.cog	https://raw.githubusercontent.com/ftamburin/CSA_OptMatcher/main/data/uga-heb.no_speNL.cog
+b4ef9c91a245cb1f	43952	ugaritic/uga-heb.full.cog	https://raw.githubusercontent.com/j-luo93/NeuroDecipher/master/data/uga-heb.no_spe.cog
+0f73045a2d9e44ba	4442	ugaritic/uga-heb.noisy.cog	https://raw.githubusercontent.com/ftamburin/CSA_OptMatcher/main/data/uga-heb.no_speNoisy.cog
+270ff077e1300baf	920	linearb/linear_b-greek.cog	https://raw.githubusercontent.com/ftamburin/CSA_OptMatcher/main/data/linear_b-greek.cog
+66b94203bd343ed9	1523136	lineara/inscriptions.json	https://github.com/mwenge/lineara.xyz (items_analysis/inscriptions.json, fetched 2026-06-30, rescued from /tmp 2026-08-05)

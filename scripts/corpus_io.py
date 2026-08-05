@@ -21,8 +21,13 @@ import os
 import re
 import sys
 
-BRONZE = os.environ.get("LOGOS_BRONZE", "/tmp/lineara/items_analysis/inscriptions.json")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Bronze resolution: env override > in-repo rescue (corpus/bronze/lineara/, gitignored,
+# sha256-pinned in corpus/bronze/MANIFEST.txt) > legacy /tmp clone location.
+_BRONZE_REPO = os.path.join(ROOT, "corpus", "bronze", "lineara", "inscriptions.json")
+_BRONZE_TMP = "/tmp/lineara/items_analysis/inscriptions.json"
+BRONZE = os.environ.get("LOGOS_BRONZE") or (
+    _BRONZE_REPO if os.path.exists(_BRONZE_REPO) else _BRONZE_TMP)
 SILVER = os.path.join(ROOT, "corpus", "silver", "inscriptions.json")
 
 
