@@ -527,11 +527,37 @@ def _py(obj):
     return obj
 
 
+def lfake_floor_distribution(pool: Sequence[WordType], names: Sequence[WordType],
+                             grid: Sequence[Criterion], B: int, seed: int, n_eff: int,
+                             log: Optional[CriterionLog] = None) -> Dict[str, object]:
+    """OUT-OF-SAMPLE empirical L_fake floor (bar design v2; calibration-driven hardening).
+
+    Calibration round 1 (bar v1, preserved in git history of results/name_parallel_calibration.json)
+    showed the banded-map bars alone cannot separate LA-like initial-sign texture from genuine name
+    parallels: lfake-flavour fabricated corpora fired 41.6% (banded flavour 0.4%). This applies the
+    house morphology-gate pattern — max(permutation floor, L_fake floor) — at the match-count level:
+    ``B`` lfake corpora (markov-calibrated to the real pool's sign texture) are generated on a
+    DEDICATED seed range disjoint from every trial seed, each scored with its best-of-grid match
+    count against the real name list under TRUE values; the floor is the corrected-margin operative
+    bar of that distribution at instrumented ``n_eff`` (never below raw p95). Conservative against
+    texture-borne true signal by construction: a confirmatory count must exceed even texture-matched
+    fakes. The floor is computed BEFORE and independently of the graded trials (out-of-sample)."""
+    counts = []
+    for i in range(B):
+        fake = lfake_la_like_corpus(pool, seed=seed + i)
+        counts.append(max(match_count(fake, names, c, log=log) for c in grid))
+    bars = bars_from_nulls(counts, n_eff=n_eff)
+    return {"B": B, "seed_base": seed, "best_counts": counts, "bars": bars,
+            "floor": bars["operative_bar"]}
+
+
 def _false_fire_trial(fake_pool: Sequence[WordType], names: Sequence[WordType],
                       grid: Sequence[Criterion], n_eff: int, B_null: int, seed: int,
-                      log: Optional[CriterionLog] = None) -> Dict[str, object]:
+                      log: Optional[CriterionLog] = None,
+                      extra_floor: float = float("-inf")) -> Dict[str, object]:
     """One cherry-pick trial (gate_null_calibration pattern): evaluate EVERY grid variant on the
-    fabricated corpus, keep the best, grade it against its own N1 null at instrumented n_eff."""
+    fabricated corpus, keep the best, grade it against its own N1 null at instrumented n_eff —
+    AND against ``extra_floor`` (the out-of-sample lfake floor; bar design v2)."""
     best_crit, best_m = None, -1
     for crit in grid:
         m = match_count(fake_pool, names, crit, log=log)
@@ -539,16 +565,19 @@ def _false_fire_trial(fake_pool: Sequence[WordType], names: Sequence[WordType],
             best_crit, best_m = crit, m
     nulls_best = n1_banded_null(fake_pool, names, best_crit, B=B_null, seed=seed)
     bars = bars_from_nulls(nulls_best, n_eff=n_eff)
+    augmented = float(max(bars["operative_bar"], extra_floor))
     return {"best_variant": best_crit.name, "best_count": int(best_m),
             "mu0": bars["mu0"], "sigma0": bars["sigma0"],
             "operative_bar": bars["operative_bar"],
             "expected_max_order_stat": bars["expected_max_order_stat"],
             "corrected_margin_bar": bars["corrected_margin_bar"],
-            "fired": bool(best_m > bars["operative_bar"])}
+            "extra_floor": float(extra_floor) if np.isfinite(extra_floor) else None,
+            "augmented_bar": augmented,
+            "fired": bool(best_m > augmented)}
 
 
 def run_calibration(seed: int = 0, B_pc_null: int = 500, B_trials: int = 500,
-                    B_null_trial: int = 100, fast: bool = False,
+                    B_null_trial: int = 100, B_floor: int = 200, fast: bool = False,
                     out_path: str = CALIBRATION_JSON) -> Dict[str, object]:
     """The Phase-5a calibration run -> results/name_parallel_calibration.json.
 
@@ -565,7 +594,7 @@ def run_calibration(seed: int = 0, B_pc_null: int = 500, B_trials: int = 500,
     never impersonate the published calibration.
     """
     if fast:
-        B_pc_null, B_trials, B_null_trial = 100, 40, 50
+        B_pc_null, B_trials, B_null_trial, B_floor = 100, 40, 50, 20
     log = CriterionLog()
     grid = criterion_grid()
     for crit in grid:                    # the whole grid is evaluated in this session
@@ -617,6 +646,10 @@ def run_calibration(seed: int = 0, B_pc_null: int = 500, B_trials: int = 500,
         },
     }
 
+    # ---- (b0) out-of-sample lfake floor (bar design v2) --------------------------- #
+    floor = lfake_floor_distribution(la["pool"], kn_names, grid, B=B_floor,
+                                     seed=seed + 700_000, n_eff=log.n_eff, log=log)
+
     # ---- (b) false-fire over fabricated LA-like corpora --------------------------- #
     flavour_stats = {"banded": {"fires": 0, "trials": 0},
                      "lfake": {"fires": 0, "trials": 0}}
@@ -635,7 +668,8 @@ def run_calibration(seed: int = 0, B_pc_null: int = 500, B_trials: int = 500,
         else:
             fake = lfake_la_like_corpus(la["pool"], seed=tseed)
         trial = _false_fire_trial(fake, kn_names, grid, n_eff=log.n_eff,
-                                  B_null=B_null_trial, seed=tseed + 500_000, log=log)
+                                  B_null=B_null_trial, seed=tseed + 500_000, log=log,
+                                  extra_floor=floor["floor"])
         flavour_stats[flavour]["trials"] += 1
         flavour_stats[flavour]["fires"] += int(trial["fired"])
         best_variant_hist[trial["best_variant"]] += 1
@@ -666,10 +700,20 @@ def run_calibration(seed: int = 0, B_pc_null: int = 500, B_trials: int = 500,
     rate = fires / B_trials if B_trials else 0.0
     cp_upper = _cp95_upper(fires, B_trials) if B_trials else 1.0
     false_fire = {
-        "design": ("cherry-pick best of the 12-variant grid on fabricated LA-like corpora "
+        "design": ("BAR v2: cherry-pick best of the 12-variant grid on fabricated LA-like corpora "
                    "(alternating banded-permuted-pool / lfake-markov flavours) vs the real KN "
-                   "name list; each best graded against its own banded-map null at instrumented "
-                   "n_eff (gate_null_calibration pattern)"),
+                   "name list; each best graded against max(its own banded-map bars at "
+                   "instrumented n_eff, the OUT-OF-SAMPLE lfake floor) — bar hardened after the "
+                   "round-1 RED (lfake flavour 41.6%; git history of this file). The LA "
+                   "true-value statistic was never computed in any round."),
+        "bar_design": "v2 (augmented: + out-of-sample lfake floor)",
+        "design_iterations": 2,
+        "lfake_floor": {"B": floor["B"], "seed_base": floor["seed_base"],
+                        "floor": floor["floor"], "bars": floor["bars"],
+                        "best_counts_min_median_max": [
+                            int(np.min(floor["best_counts"])),
+                            float(np.median(floor["best_counts"])),
+                            int(np.max(floor["best_counts"]))]},
         "B_trials": B_trials,
         "B_null_per_trial": B_null_trial,
         "n_eff_instrumented": log.n_eff,

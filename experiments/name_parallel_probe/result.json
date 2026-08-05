@@ -1,0 +1,93 @@
+{
+ "task_id": "NAME-PARALLEL-01",
+ "verdict": "DATA-LIMITED",
+ "numbers": {
+  "m_obs": 12,
+  "n_la_pool_decodable_types": 501,
+  "n_kn_names": 155,
+  "null_map_mu0": 2.687,
+  "null_map_sigma0": 2.0506672660956573,
+  "expected_max_order_stat": 6.100974217543479,
+  "corrected_margin_bar": 10.15502414040596,
+  "lfake_floor": 148.41540781030963,
+  "augmented_bar": 148.41540781030963,
+  "empirical_p_vs_banded": 0.002997002997002997,
+  "n_eff": 12,
+  "bar_design": "v2 (banded E[max] + corrected margin + out-of-sample lfake floor)",
+  "power": {
+   "k_min_detectable": 146,
+   "plausible_onomastic_band": 25,
+   "data_limited": true
+  },
+  "n2_doc_permutation": {
+   "B": 500,
+   "mean": 19.968,
+   "p95": 22.0,
+   "empirical_p": 1.0
+  },
+  "strata": {
+   "s1_salgarella_darkblue": {
+    "pool_types": 127,
+    "m": 9,
+    "mu0": 0.82,
+    "operative_bar_banded": 5.430773382702395,
+    "empirical_p_vs_banded": 0.004975124378109453
+   },
+   "s2_toponym_excluded": {
+    "pool_types": 11,
+    "m": 0,
+    "mu0": 0.0,
+    "operative_bar_banded": 0.0,
+    "empirical_p_vs_banded": 1.0
+   }
+  },
+  "matched_la_types": [
+   "A-KA-TA",
+   "A-KI-RO",
+   "A-TA-NA",
+   "A-TA-NA-JE",
+   "A-TA-NA-TE",
+   "DA-MI-NU",
+   "KU-RU-MA",
+   "PA-I-TO",
+   "SE-TO-I-JA",
+   "SI-MI-TA",
+   "SU-KI-RI-TA",
+   "SU-KI-RI-TE-I-JA"
+  ],
+  "attestations_of_matched": 13,
+  "effective_n": {
+   "raw_n": 13,
+   "marginal_min_upper_bound": 7,
+   "effective_n": 7,
+   "note": "effective_n = JOINT connected-components over all required dims + Art. XI source lineage (the conservative count; by_dim are per-dimension marginal UPPER bounds). Graduation keys off effective_n, never raw_n or the marginal min."
+  },
+  "info_budget_panel": {
+   "raw_corpus_size": "UNKNOWN",
+   "effective_independent_evidence": 7,
+   "sign_inventory_uncertainty": "UNKNOWN",
+   "segmentation_uncertainty": "UNKNOWN",
+   "parameter_count": 0,
+   "search_space_size": 12,
+   "source_dependency_structure": "single lineage L_LB_DECIPHERMENT (1 effective vote: SRC-NAMESCOG collapses with SRC-DAMOS, Art. XI)",
+   "missing_feature_burden": "UNKNOWN",
+   "damage_rate": "UNKNOWN",
+   "class_balance": "UNKNOWN",
+   "domain_shift": "UNKNOWN",
+   "minimum_detectable_effect": 146,
+   "estimated_power": 0.0
+  },
+  "seed": 0,
+  "B_map": 1000,
+  "B_doc": 500,
+  "calibration_sha256": "355f1b9bd923118b84eb5129d14dbc5ddb3ec3651f373dc691831e460a232dda"
+ },
+ "key_findings": [
+  "M_obs=12 below the augmented bar 148.4 AND k_min=146 planted matches needed exceeds the plausible onomastic band (25) \u2014 the corpus could not have shown a plausible effect at this bar"
+ ],
+ "successor_hypotheses": [
+  "re-run mechanically on corpus growth per docs/reopening-thresholds.md triggers",
+  "a new-site toponym candidate (anchor route) would justify a NEW prereg with a site-restricted variant",
+  "if DATA-LIMITED: the bar is dominated by the lfake floor \u2014 only a corpus with materially different sign texture (new finds) can lower it honestly"
+ ]
+}
