@@ -57,8 +57,8 @@ Operating rules: [CLAUDE.md](CLAUDE.md). Architecture & rationale: [DESIGN.md](D
 
 The discipline harness is built, exercised, and calibrated; the preprint is **published on
 Zenodo** ([DOI 10.5281/zenodo.21119213](https://doi.org/10.5281/zenodo.21119213), 2026-07-02)
-and **under review at TACL** (submitted 2026-07-02) — LaTeX single source under `paper/tacl/`,
-built PDFs under `paper/build/`, submission record in `paper/SUBMISSION_NOTES.md`.
+— LaTeX single source under `paper/tacl/`, built PDFs under `paper/build/`, submission
+record in `paper/SUBMISSION_NOTES.md`.
 Headline calibrations: the graduation gate's realized false-graduation rate under a
 best-of-100 cherry-picked null is **0.6% (3/500; Clopper–Pearson 95% upper ≈ 1.54%)**, and
 the identical morphology test that returns no-power on Linear A **recovers Mycenaean
@@ -97,7 +97,7 @@ their authors.
 
 ## Citation
 
-To cite the **paper** (Zenodo preprint; under review at TACL):
+To cite the **paper** (Zenodo preprint):
 
 > Papadopoulos, K. (2026). *Falsification-First Decipherment: A Decontaminated Inference
 > Framework for Testing Undeciphered-Script Claims, with Linear A as a Worked Null* (1.0).
