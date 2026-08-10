@@ -42,6 +42,10 @@ series appears under "Arkalochori", LACH Za 1 under "Larani"). None of this is a
 of anyone — it is exactly the kind of drift a structured index makes visible, and I have
 documented it on my side.
 
+May I also, belatedly, congratulate you and Dr. Zurbach on the appearance of the
+Supplément — several of the digital-corpus readings flagged in my README are of course
+settled there.
+
 If you spot errors in the index — I am sure there are some — I would be very glad to hear
 of them and will correct and re-send.
 
