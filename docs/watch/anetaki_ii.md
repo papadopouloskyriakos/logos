@@ -60,3 +60,29 @@ route's `reopen at` column (nearest tripwire: alternation grid at +288 docs ≈ 
 KN-Zg-57-equivalents). A crossing mandates a NEW preregistration, never an automatic
 claim; new-edition readings enter through `corpus/divergences.json`
 (`scripts/divergence_register.py`), not ad-hoc adoption.
+
+## Addendum (2026-08-10): pre-2016 rapports acquired; RILA-S1 exists; watch-list deltas
+
+The "four pre-2016 del Freo rapports" line above is RESOLVED — all four received privately
+from the author 2026-08-10 (round-2 sweep: `experiments/crossscript_gate/phase3/sweep/
+round2_pre2016_rapports/ROUND2_DELTA.md`; verdict UNMOVED, 0 anchor legs; the 1996-2000
+rapport was published in *Pasiphae* III (2009) 187-197). Watch-relevant deltas:
+
+- **RILA-S1 IS PUBLISHED**: Del Freo & Zurbach, *Recueil des inscriptions en linéaire A.
+  Supplément 1*, Études Crétoises 21.6, EFA/Peeters 2024 (ISBN 9782869586420, not OA) —
+  +107 documents / +427 signs (corpus 1,534 docs / 7,574 signs, cutoff end-2023), with a
+  dubious-texts section. It is the candidate primary edition for MANY of this watch's
+  pending items and for the announced Supplement readings (KN Zb 27 numeral 107, PE Zb 7
+  AB 57-54-39). **+107 docs does NOT cross the +288 alternation-grid tripwire on its own.**
+  Acquisition = owner decision; on acquisition: round-3 diff + divergence-register pass
+  (new witness), THEN the reopening-thresholds comparison per the 2026-08-05 hook.
+- KN Zg 57/58 (Anetaki) editio princeps: STILL PENDING as of Rapport 2016-2021 — the
+  anchors-route trigger (`new_site_toponym_candidates`) remains the live tripwire.
+- New pending-edition stragglers from the pre-2016 windows (round-2 class c, see
+  `round2_pre2016_rapports/missing_round2.csv`): KAST Wy 1 (Rethemiotakis, announced
+  2001-2005, reading printed in rapport), ZA Zb 39 (announced 1996-2000 as Zb 35),
+  ARKH Zb 10, ARM Zg 1, PSE Zb 2, Mochlos Block C fragments — same quarterly glance.
+- THE 7-12: definitive Boulotis edition still pending; identity of silver's ad-hoc IDs
+  partially resolved (THEtab.4 = THE 7, THEfr.1 = THE 10 CONFIRMED; fr.2/3 and tab.5
+  witness-conflicted — register entry R2THE); **THE 8 missing in silver, present in
+  SigLA**.

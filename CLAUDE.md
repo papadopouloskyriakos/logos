@@ -145,6 +145,16 @@ The harness is built, exercised, calibrated, written up, and out the door:
   (nulls; within-corpus gaps), but re-check any type-count-sensitive figure under
   phantom exclusion before reuse; no silver rebuild without an explicit decision. See
   `docs/2026-08-05-tsirkas-full-repo-audit.md` §2.
+  **Third known defect family (2026-08-10, rapport-witnessed, register v2):** 24
+  quote-verified divergences in `corpus/divergences.json` (R2READ/R2DOUBT/R2SITE/
+  R2THE/R2REST) — superseded readings retained (KN Zb ⟨27⟩ numeral 17 vs autopsy 107;
+  KH Wc 2124 AB 54 vs 61-variant; THE Zb 15 lamp), doubted items included with
+  committed readings, **whole Arkhanes series site-labelled "Arkhalkhori"** (+ LACH
+  Za 1 at "Larani"), restored formulas unmarked (D1-family). Sensitivity R2-SENS-01:
+  NO published verdict moves; corrected distinct-site count = 55 where the frozen
+  paper prints "52 sites" (erratum-note candidate, owner decision). Site- or
+  token-sensitive reuse must run under both readings (register policy). See
+  `experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md`.
 - **Probes executed** (all pre-registered, graded from artifacts): morphology NO-POWER
   null + segmentation positive (micro-F1 0.436 vs 0.389, site-clustered gap CI excludes 0);
   metrology null (p = 1.0, J = ½ credited to Bennett); phonology data-limited null;
