@@ -56,13 +56,16 @@ kindly provided in August 2026.
 
 ## Observations that may be of interest (from the mechanical cross-reference)
 
-1. **Thera:** the digital corpus carries the six Delta 18a tablet fragments under ad-hoc
-   IDs; the cross-reference identifies `THEtab.4` = THE 7 (its numerals 7 and 46 match the
-   Boulotis 2008 face-a readings exactly), `THEfr.1` = THE 10 (isolated AB 67),
-   `THEfr.2/3` = THE 11/12 (A 302), and leaves **THE 8 (the TELA+SE >= 200 fragment) as
-   the one genuinely absent piece**. Its Zb-numbering is mixed: it follows the rapport for
-   THE Zb 13 but the editors (Zb 15) for the Akrotiri lamp — and its lamp reading differs
-   from the editio princeps (RE-SA 2 vs AB 09-A 332 2).
+1. **Thera:** the lineara.xyz-derived dataset carries the six Delta 18a tablet fragments
+   under ad-hoc IDs; the cross-reference identifies `THEtab.4` = THE 7 (its numerals 7
+   and 46 match the Boulotis 2008 face-a readings exactly) and `THEfr.1` = THE 10
+   (isolated AB 67 — silver, SigLA and the rapport agree). The remaining pairings are
+   witness-conflicted and left open (`THEfr.2/3` read A 302 as Boulotis suggests for
+   THE 11/12, but SigLA reads A614 and AB22 there; `THEtab.5` vs THE 9 rests on
+   elimination only). **THE 8 (the TELA+SE >= 200 fragment) is absent from that dataset**
+   (SigLA does carry THE 7-12, including THE 8). The dataset's Zb-numbering is mixed: it
+   follows the rapport for THE Zb 13 but the editors (Zb 15) for the Akrotiri lamp — and
+   its lamp reading differs from the editio princeps (RE-SA 2 vs AB 09-A 332 2).
 2. **Khania:** the digital corpus follows the rapport's numbering throughout (KH Zb 98,
    KH 99, KH 100 — not the ed.pr.'s KH Zb 1, 98, 99).
 3. **Readings that later moved:** the digital corpus is impressively current in most

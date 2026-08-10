@@ -9,9 +9,7 @@
 Notes for the owner (not part of the email):
 - The draft keeps to what he asked for (the indexing results) + the courtesy of a few
   findings. Details live in the attached README so the email stays short.
-- The bracketed paragraph about the two remaining rapports (1986–1990, 1991–1995) is
-  OPTIONAL — keep or cut at your discretion. He has already been generous; the ask is
-  framed as a completion note, not a demand.
+- Per owner instruction 2026-08-10: no ask about the 1986–1990/1991–1995 instalments.
 - Nothing in the draft claims decipherment progress, promises publication, or commits you
   to anything. The index is offered CC BY so he can reuse it freely, including in his own
   future rapports.
@@ -37,18 +35,12 @@ observations surfaced that may interest you (details and the full list in the RE
 the lineara.xyz-derived dataset follows your Khania numbering (KH Zb 98, 99, 100) but the
 editors' numbering for the Akrotiri lamp (Zb 15), and mixes ad-hoc labels for the Delta 18a
 tablets — of which one can be identified mechanically with THE 7 (its numerals 7 and 46
-match Boulotis's readings), while the TELA+SE fragment THE 8 turns out to be the only one
-genuinely absent. That dataset also retains a few readings your series has since superseded
+match Boulotis's readings) and another with THE 10, while the TELA+SE fragment THE 8 is
+absent from that dataset (SigLA does carry it). That dataset also retains a few readings your series has since superseded
 (the numeral on KN Zb 27; AB 54 on KH Wc 2124) and misassigns two site labels (the Arkhanes
 series appears under "Arkalochori", LACH Za 1 under "Larani"). None of this is a criticism
 of anyone — it is exactly the kind of drift a structured index makes visible, and I have
 documented it on my side.
-
-[OPTIONAL — keep or cut: With the four volumes you sent, the series is now indexed
-continuously from 1996 to 2021. Should the two earliest instalments ever be conveniently at
-hand — Mykenaïka 1992 for 1986–1990 and Floreant Studia Mycenaea 1999 for 1991–1995 — I
-would gladly extend the index back to GORILA and send you the complete set; but please do
-not go to any trouble over it.]
 
 If you spot errors in the index — I am sure there are some — I would be very glad to hear
 of them and will correct and re-send.

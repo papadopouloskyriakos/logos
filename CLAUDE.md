@@ -208,4 +208,11 @@ The harness is built, exercised, calibrated, written up, and out the door:
   Zominthos table; two round-1 errata recorded); see `experiments/crossscript_gate/
   phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md`. Deliverable index (125 rows) +
   reply draft (`docs/delfreo-reply-DRAFT-2026-08-10.md`) **await the owner's send** —
-  never auto-send. Divergence-register absorption of Δ1–Δ13 = open follow-up.
+  never auto-send. Same-day postscript: Δ1–Δ13 ABSORBED into the register
+  (`corpus/divergences.json` v2 — 5 generated entries / 24 quote-verified cases, tests
+  42/42; one downgrade: THEfr.2/3=THE 11/12 witness-conflicted) and stress-tested
+  (R2-SENS-01: site-relabel gap +0.0473→+0.0552, doc-exclusion →+0.0415, metrology ∅ —
+  NO verdict moves; paper's "52 sites" → 55 corrected = ERRATUM-NOTE candidate, owner
+  decision). **RILA-S1 EXISTS**: Del Freo & Zurbach, GORILA Supplément 1 (Études
+  Crétoises 21.6, 2024; +107 docs/+427 signs → 1,534/7,574; NOT OA) — below the +288
+  tripwire alone; watch absorption + acquisition = owner decision.

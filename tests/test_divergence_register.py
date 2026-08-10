@@ -323,7 +323,10 @@ class TestRegister:
 
     def test_every_entry_generated_by(self, built):
         register, _ = built
-        assert [e["id"] for e in register["entries"]] == ["D4", "HT38", "D1", "BR1"]
+        # re-pinned 2026-08-10 for the v2 round-2 rapport-witness extension
+        assert [e["id"] for e in register["entries"]] == [
+            "D4", "HT38", "D1", "BR1", "R2READ", "R2DOUBT", "R2SITE", "R2THE",
+            "R2REST"]
         for e in register["entries"]:
             assert e["generated_by"] == dr.GENERATED_BY
             assert e["status"] == "CONFIRMED"

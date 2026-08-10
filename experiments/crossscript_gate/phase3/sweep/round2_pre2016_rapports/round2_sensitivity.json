@@ -1,0 +1,77 @@
+{
+  "stage": "R2-SENS-01",
+  "seed": 0,
+  "dp_iters": 6,
+  "blocks": [
+    {
+      "name": "site_relabel",
+      "n_docs_relabeled": 13,
+      "published_value": {
+        "dp_unigram_micro_f1": 0.4361,
+        "random_micro_f1": 0.3888,
+        "gap": 0.0473
+      },
+      "published_source": "runtime/morphology-real.json",
+      "reproduction_matches_published": true,
+      "sensitivity_value": {
+        "dp_unigram_micro_f1": 0.4361,
+        "random_micro_f1": 0.3809,
+        "gap": 0.0552,
+        "boundary_base_rate": 0.4058,
+        "n_sites": 55
+      },
+      "delta": {
+        "dp_unigram_micro_f1": 0.0,
+        "random_micro_f1": -0.0079,
+        "gap": 0.0079
+      },
+      "verdict_flip": false,
+      "interpretation": "gap +0.0473 as published -> +0.0552 (site_relabel); no verdict moves; the larger gap is an IMPROVEMENT and is NOT a claim (discipline rule)"
+    },
+    {
+      "name": "doc_exclusion",
+      "n_docs_excluded": 14,
+      "published_value": {
+        "dp_unigram_micro_f1": 0.4361,
+        "random_micro_f1": 0.3888,
+        "gap": 0.0473
+      },
+      "published_source": "runtime/morphology-real.json",
+      "reproduction_matches_published": true,
+      "sensitivity_value": {
+        "dp_unigram_micro_f1": 0.4352,
+        "random_micro_f1": 0.3937,
+        "gap": 0.0415,
+        "boundary_base_rate": 0.4071,
+        "n_sites": 51
+      },
+      "delta": {
+        "dp_unigram_micro_f1": -0.0009,
+        "random_micro_f1": 0.0049,
+        "gap": -0.0058
+      },
+      "verdict_flip": false,
+      "interpretation": "gap +0.0473 as published -> +0.0415 (doc_exclusion); no verdict moves"
+    }
+  ],
+  "input_intersection": {
+    "affected_docs": [
+      "KNZb<27>",
+      "KHWc2124",
+      "THEZb15",
+      "HTWc3024",
+      "PKZb26",
+      "SKOZc1",
+      "KNZe56",
+      "LACHZa1",
+      "DRAZg1",
+      "INZb1",
+      "MIZb3",
+      "PKZb23",
+      "PEZb8",
+      "HTZf(HM767)"
+    ],
+    "metrology_n_tablets": 32,
+    "metrology_intersection": []
+  }
+}

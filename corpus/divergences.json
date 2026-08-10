@@ -1,17 +1,26 @@
 {
  "_meta": {
-  "generated_by": "scripts/divergence_register.py divergence-register-v1",
+  "generated_by": "scripts/divergence_register.py divergence-register-v2",
   "policy": "defect-level excerpts only (fair dealing); agreeing documents are counted, never excerpted; append-only record (Art. XVII): silver is NEVER rebuilt from this file — any analysis touching a registered divergence runs under both readings",
   "refs": [
    "docs/2026-08-05-ab21-ab22-external-audit.md",
-   "docs/2026-08-05-tsirkas-full-repo-audit.md"
+   "docs/2026-08-05-tsirkas-full-repo-audit.md",
+   "experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md"
   ],
   "regenerate": "python3 scripts/divergence_register.py",
-  "version": "divergence-register-v1",
+  "version": "divergence-register-v2",
   "witness_sha256": {
    "damage_annex": "d040c3840d940f8a5b0d2ac755558057d2699359537a790460ba90b581884cdd",
+   "rapport_txt": {
+    "1996-2000": "30afd5c71fde5ab5e5a98bb6d320fc3f33b310ce50327796b23756fddd4bb2d3",
+    "2001-2005": "910be0f4aec57e597e0419f79be4a0cbbb83ebf7da7c0983e7113b42071bc9fb",
+    "2006-2010": "bf19308a02ae453f4c0d2272193186e9ad99d251e696bf2a81e220c967615a97",
+    "2011-2015": "eea9b042a19eb5702e57576d57222aaf5603e8439edd0773eb32311fff77172c",
+    "2016-2021": "7be9aecbee39cb1b87e1e4ff2329e948b54d623c201f02dfb1bd8829c86ddc20"
+   },
    "sigla_documents": "218ae55b5dfcb290a1940b6abacdeb85b38f47ff1c7e60d845fe81084bee002e",
    "silver_inscriptions": "4717a7e39157fad6b4a4d24e0d925f1c8a0cd33d6e7111b6822222aa24f1244a",
+   "silver_structured": "aaee1aeb5b186fa0e4d9d0adc71026e6786d47328b9ecee5236380756462b500",
    "younger_txt": {
     "HTtexts.txt": "bda2ff3e8b767fd728c676e887a4c279504a0cca7c3b067f7318f638e002b524",
     "misctexts.txt": "ae8bc4125ba0892d2530ab18a5545a45b45398661213d2be22d7f403112725ad",
@@ -273,7 +282,7 @@
     },
     "tokens_in_inverted_docs": 15
    },
-   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
    "id": "D4",
    "kind": "sign_family_inversion",
    "refs": [
@@ -338,7 +347,7 @@
     },
     "refinement": "docs/2026-08-05-ab21-ab22-external-audit.md described HT38 as a dropped token; mechanically the token is PRESENT in silver under the Latin label CAP (family *22) — still divergent, consistent with Tsirkas's report that the lineara.xyz lineage reads *22 there"
    },
-   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
    "id": "HT38",
    "kind": "livestock_token_alt_label_or_missing",
    "refs": [
@@ -386,7 +395,7 @@
      "word_tokens": 3147
     }
    },
-   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
    "id": "D1",
    "kind": "word_attached_damage_stripped",
    "readings_note": {
@@ -459,7 +468,7 @@
     "n_labels": 5,
     "n_occurrences": 5
    },
-   "generated_by": "scripts/divergence_register.py divergence-register-v1",
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
    "id": "BR1",
    "kind": "break_notation_in_sign_labels",
    "refs": [
@@ -468,6 +477,737 @@
    "sensitive_analyses": [
     "sign-label inventories / distinct-sign counts",
     "sequence analyses treating a broken label as a distinct sign"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "token-level reading divergences between silver and the rapport series 1996-2021 (each rapport-side reading verified as a verbatim quote against the held rapport text at build time)",
+   "docs": {
+    "HTWc3024": {
+     "rapport_quotes": [
+      {
+       "page": "p. 202 fn. 13",
+       "quote": "pour HT Wc 3024 (.1 AB 06-60-69",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      },
+      {
+       "page": "p. 202 fn. 13",
+       "quote": "2 AB 21f 6",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "rapport (after Hallager, Godart & Olivier 1989): .1 AB 06-60-69-13(dotted) .2 AB 21f 6 — silver reads the first sign as A (08) not NA (06), renders the livestock logogram as *22F where the rapport prints 21f (an AB21/22-family instance NOT caught by the D4 scan: no *21/*22 label and no SigLA bridge), and drops the numeral 6",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Haghia Triada",
+      "words": [
+       [
+        "A",
+        "RA",
+        "TU",
+        "ME"
+       ],
+       [
+        "*22F"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "KHWc2124": {
+     "rapport_quotes": [
+      {
+       "page": "p. 8",
+       "quote": "on lit le logogramme AB 54",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      },
+      {
+       "page": "p. 101",
+       "quote": "une variante de AB 61 dépourvue du",
+       "verified_in_held_text": true,
+       "window": "2016-2021"
+      }
+     ],
+     "rapport_side": "recto sign first reported as AB 54 (TELA) in Rapport 2006-2010; the 2018 ed.pr. + Rapport 2016-2021 correct it to a variant of AB 61 without the inner curved stroke; silver retains the superseded AB 54 (as syllabic WA)",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Khania",
+      "words": [
+       [
+        "WA"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "KNZb<27>": {
+     "rapport_quotes": [
+      {
+       "page": "p. 17",
+       "quote": "sur le bord du pithos n'est pas 117",
+       "verified_in_held_text": true,
+       "window": "2011-2015"
+      }
+     ],
+     "rapport_side": "AB 07-06-10 , AB 131 107 — numeral read 17 (dotted) by GORILA IV from Brice's photo, corrected to 117 by Olivier (Rapport 1986-1990, 446) after MacDonald rediscovered the pithos, fixed as 107 by Del Freo & Zurbach autopsy 2012-06-22; silver retains GORILA's 17 AND the <lost> angle brackets although the pithos was rediscovered",
+     "silver_reading": {
+      "numerals": [
+       17
+      ],
+      "site": "Knossos",
+      "words": [
+       [
+        "DI",
+        "NA",
+        "U"
+       ],
+       [
+        "VIN"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "PKZb26": {
+     "rapport_quotes": [
+      {
+       "page": "p. 205",
+       "quote": "la séquence incomplète ]AB 05-56-08",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "]AB 05-56-08 (hapax) per Schoep's preliminary manuscript apud the rapport; silver's third sign is DI (07), not A (08)",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Palaikastro",
+      "words": [
+       [
+        "TO",
+        "PA3",
+        "DI"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "SKOZc1": {
+     "rapport_quotes": [
+      {
+       "page": "pp. 206-207",
+       "quote": "]AB 1°6°-6°7°-7°9°[",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "smaller fragment read ]AB 16-67-79[ (all dotted) by the editors apud the rapport; silver's third sign is TI (37), not ZU (79) — both sources heavily dotted",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Skoteino Cave",
+      "words": [
+       [
+        "NA",
+        "TU",
+        "*301",
+        "NE"
+       ],
+       [
+        "QA",
+        "KI",
+        "TI"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "THEZb15": {
+     "rapport_quotes": [
+      {
+       "page": "pp. 12-13",
+       "quote": "La lecture proposée est AB 09-A",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      },
+      {
+       "page": "p. 106",
+       "quote": "par les éditeurs comme Zb 15",
+       "verified_in_held_text": true,
+       "window": "2016-2021"
+      }
+     ],
+     "rapport_side": "ed.pr. (Tzachili & Karnava 2016, as Zb 15) and the rapport series read AB 09-A 332(dotted) 2 (alt AB 73); silver reads RE-SA 2 (= AB 27-31 2) — divergent identification of the same lamp graffito (object identity fixed by the trailing numeral 2 + support); Del Freo numbers it Zb 14 (additions layer holds it under that number — duplicate noted there)",
+     "silver_reading": {
+      "numerals": [
+       2
+      ],
+      "site": "Thera",
+      "words": [
+       [
+        "RE",
+        "SA"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    }
+   },
+   "evidence": {
+    "method": "declared rapport quotes verified verbatim (whitespace-normalized) against the held rapport texts; silver readings derived live from corpus/silver/inscriptions_structured.json; SigLA/Younger sides derived live where available",
+    "n_cases": 6
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
+   "id": "R2READ",
+   "kind": "rapport_reading_divergences",
+   "refs": [
+    "experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md",
+    "corpus/bronze/delfreo_rapports_pre2016/PROVENANCE.md"
+   ],
+   "sensitive_analyses": [
+    "any reuse keyed on the affected tokens, sites or document identities — run under both readings (register policy)",
+    "site-clustered statistics (R2SITE); type/token counts touching the listed docs"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "items present in silver with committed readings where the rapport series suspends judgement, objects, or leaves the script undecided",
+   "docs": {
+    "DRAZg1": {
+     "rapport_quotes": [
+      {
+       "page": "p. 211",
+       "quote": "l'identification du premier signe avec AB 01 semble plutôt discutable",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "Fol & Schmitt's reading AB 01-51-A301-[.]-[.]; Del Freo: photos do not permit assessment and the first sign is doubtful; silver commits DA-DU-*301",
+     "silver_reading": {
+      "numerals": [],
+      "site": "",
+      "words": [
+       [
+        "DA",
+        "DU",
+        "*301"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "HTZf(HM767)": {
+     "rapport_quotes": [
+      {
+       "page": "p. 17",
+       "quote": "sans spécifier s'il s'agit de linéaire A ou de linéaire B",
+       "verified_in_held_text": true,
+       "window": "2011-2015"
+      }
+     ],
+     "rapport_side": "Kanta & Perna deliberately call the gold-disc inscription only 'linear' (AB 37-80 attested in both scripts); silver classifies it as LA",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Haghia Triada",
+      "words": [
+       [
+        "TI",
+        "MA"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "INZb1": {
+     "rapport_quotes": [
+      {
+       "page": "pp. 16-17",
+       "quote": "la lecture AB 55-02 demeure pour le moins",
+       "verified_in_held_text": true,
+       "window": "2011-2015"
+      }
+     ],
+     "rapport_side": "Del Freo: both the reading AB 55-02 and the classification as an inscription remain at best uncertain; silver commits NU-RO",
+     "silver_reading": {
+      "numerals": [],
+      "site": "",
+      "words": [
+       [
+        "NU",
+        "RO"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "KNZe56": {
+     "rapport_quotes": [
+      {
+       "page": "p. 190",
+       "quote": "dont aucun n'est vraiment lisible",
+       "verified_in_held_text": true,
+       "window": "1996-2000"
+      }
+     ],
+     "rapport_side": "Olivier: remains of three signs, none really legible; plough/machine marks not excluded; silver commits O-DA",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Knossos",
+      "words": [
+       [
+        "O",
+        "DA"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "LACHZa1": {
+     "rapport_quotes": [
+      {
+       "page": "p. 193",
+       "quote": "généreusement attribuée à cette inscription est vraiment prématurée",
+       "verified_in_held_text": true,
+       "window": "1996-2000"
+      }
+     ],
+     "rapport_side": "Olivier: the designation LACH Za 1 is premature — the two readable signs fit LA, LB, Cypro-Minoan or the Cypriot syllabary equally; silver includes it with a full six-sign reading (see also R2SITE for its site label)",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Larani",
+      "words": [
+       [
+        "MI"
+       ],
+       [
+        "RI",
+        "DA",
+        "U"
+       ],
+       [
+        "SE",
+        "JE"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "MIZb3": {
+     "rapport_quotes": [
+      {
+       "page": "p. 212 fn. 62",
+       "quote": "Le classement MI Zb 3",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "Del Freo adopts Sherratt's caution (signs not certainly literate) and calls the MI Zb 3 classification questionable; silver includes it as RE-TI",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Milos",
+      "words": [
+       [
+        "RE",
+        "TI"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "PEZb8": {
+     "rapport_quotes": [
+      {
+       "page": "p. 14",
+       "quote": "ne sera pas inclus parmi les nouvelles inscriptions",
+       "verified_in_held_text": true,
+       "window": "2011-2015"
+      }
+     ],
+     "rapport_side": "isolated AB 08 of unsure logographic value; the GORILA Supplement's inclusion criteria exclude it; silver includes it",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Petras",
+      "words": [
+       [
+        "A"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "PKZb23": {
+     "rapport_quotes": [
+      {
+       "page": "p. 191",
+       "quote": "esquisse grossière",
+       "verified_in_held_text": true,
+       "window": "1996-2000"
+      },
+      {
+       "page": "p. 191",
+       "quote": "qu'un signe AB 87",
+       "verified_in_held_text": true,
+       "window": "1996-2000"
+      }
+     ],
+     "rapport_side": "Olivier: rather a rough chariot sketch than the sign AB 87; silver commits KA (77) — a sign neither source offers",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Palaikastro",
+      "words": [
+       [
+        "KA"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    }
+   },
+   "evidence": {
+    "method": "declared rapport quotes verified verbatim (whitespace-normalized) against the held rapport texts; silver readings derived live from corpus/silver/inscriptions_structured.json; SigLA/Younger sides derived live where available",
+    "n_cases": 8
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
+   "id": "R2DOUBT",
+   "kind": "doubted_items_included",
+   "refs": [
+    "experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md",
+    "corpus/bronze/delfreo_rapports_pre2016/PROVENANCE.md"
+   ],
+   "sensitive_analyses": [
+    "any reuse keyed on the affected tokens, sites or document identities — run under both readings (register policy)",
+    "site-clustered statistics (R2SITE); type/token counts touching the listed docs"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "silver site labels contradicted by the witnesses",
+   "docs": {
+    "ARKH-series": {
+     "rapport_quotes": [
+      {
+       "page": "p. 203",
+       "quote": "2.2.1.1. Arkhanès",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "the rapport series (and SigLA's site grouping) place the ARKH items at Arkhanes; silver labels the entire series (ARKH 1a-6, Zc 8, Zf 9 — and also ARG Zg 1) 'Arkhalkhori' (= Arkalochori), merging two sites; representative doc excerpted here, full list in ROUND2_DELTA Δ10",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Arkhalkhori",
+      "words": [
+       [
+        "JA",
+        "KI",
+        "SI",
+        "KI",
+        "NU"
+       ],
+       [
+        "MI",
+        "DA",
+        "MA",
+        "RA₂"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "LACHZa1-site": {
+     "rapport_quotes": [
+      {
+       "page": "p. 193",
+       "quote": "généreusement attribuée à cette inscription est vraiment prématurée",
+       "verified_in_held_text": true,
+       "window": "1996-2000"
+      }
+     ],
+     "rapport_side": "Tel Lachish (Canaan) — silver's site label 'Larani' (a Cretan site) is a defect; origin witnessed: Younger's LACH Za 1 row carries LARANI as a comparandum token, which the lineara.xyz lineage evidently promoted to a site label",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Larani",
+      "words": [
+       [
+        "MI"
+       ],
+       [
+        "RI",
+        "DA",
+        "U"
+       ],
+       [
+        "SE",
+        "JE"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    }
+   },
+   "evidence": {
+    "method": "declared rapport quotes verified verbatim (whitespace-normalized) against the held rapport texts; silver readings derived live from corpus/silver/inscriptions_structured.json; SigLA/Younger sides derived live where available",
+    "n_cases": 2
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
+   "id": "R2SITE",
+   "kind": "site_label_defects",
+   "refs": [
+    "experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md",
+    "corpus/bronze/delfreo_rapports_pre2016/PROVENANCE.md"
+   ],
+   "sensitive_analyses": [
+    "any reuse keyed on the affected tokens, sites or document identities — run under both readings (register policy)",
+    "site-clustered statistics (R2SITE); type/token counts touching the listed docs"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "identity of silver's ad-hoc Thera IDs (THEfr.1-3, THEtab.4-5) against the rapport series' THE 7-12 and SigLA",
+   "docs": {
+    "THE8-missing": {
+     "rapport_quotes": [
+      {
+       "page": "p. 12",
+       "quote": "suivi par le chiffre 200[",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      }
+     ],
+     "rapport_side": "Boulotis's THE 8 (ligature AB 54+09 — the proposed A 534bis — + numeral 200[) has NO silver counterpart under any ad-hoc ID; SigLA carries THE 8 (with A534). MISSING_IN_SILVER",
+     "silver_reading": null,
+     "verdict": "MISSING_IN_SILVER"
+    },
+    "THEfr.1=THE10": {
+     "rapport_quotes": [
+      {
+       "page": "p. 12",
+       "quote": "le signe isolé AB 67 est attesté",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      }
+     ],
+     "rapport_side": "Boulotis's THE 10 = isolated AB 67; silver THEfr.1 = KI (67); SigLA THE 10 = AB67. IDENTITY: three witnesses agree",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Thera",
+      "words": [
+       [
+        "KI"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "THEfr.2/3-vs-THE11/12": {
+     "rapport_quotes": [
+      {
+       "page": "p. 12",
+       "quote": "des traces peut-être compatibles avec le logogramme A 302",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      }
+     ],
+     "rapport_side": "Boulotis: THE 11/12 carry traces maybe compatible with A 302 (silver THEfr.2/3 = OLE = A 302 fits) but SigLA reads THE 11 = A614 and THE 12 = AB22. IDENTITY: witness-conflicted, left open",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Thera",
+      "words": [
+       [
+        "OLE"
+       ]
+      ]
+     },
+     "verdict": "UNDERDETERMINED_WITNESS_CONFLICT"
+    },
+    "THEtab.4=THE7": {
+     "rapport_quotes": [
+      {
+       "page": "p. 12",
+       "quote": "le logogramme AB 21f suivi par le chiffre 46",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      }
+     ],
+     "rapport_side": "Boulotis's THE 7 face a: sign traces + numeral 7, then AB 21f + numeral 46 — silver THEtab.4's numeral pair [7, 46] matches exactly (its two livestock tokens render as CAP where the rapport prints 21f = OVISf: the D4 register entry already lists THEtab.4); SigLA has no THE 7. IDENTITY: near-certain",
+     "silver_reading": {
+      "numerals": [
+       7,
+       46
+      ],
+      "site": "Thera",
+      "words": [
+       [
+        "CAP"
+       ],
+       [
+        "CAP"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "THEtab.5-vs-THE9": {
+     "rapport_quotes": [
+      {
+       "page": "p. 12",
+       "quote": "ne contenant pas de logogrammes",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      }
+     ],
+     "rapport_side": "Boulotis's THE 9 is the fragment without logograms (not discussed further); silver THEtab.5 is syllabic TE-ME-DA-I; SigLA's THE 9 reads AB04-23-31-09 — first sign agrees, the rest conflicts. IDENTITY: by elimination only, witness-conflicted",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Thera",
+      "words": [
+       [
+        "TE",
+        "ME",
+        "DA",
+        "I"
+       ]
+      ]
+     },
+     "verdict": "UNDERDETERMINED_WITNESS_CONFLICT"
+    }
+   },
+   "evidence": {
+    "method": "declared rapport quotes verified verbatim (whitespace-normalized) against the held rapport texts; silver readings derived live from corpus/silver/inscriptions_structured.json; SigLA/Younger sides derived live where available",
+    "n_cases": 5
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
+   "id": "R2THE",
+   "kind": "thera_adhoc_identity",
+   "refs": [
+    "experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md",
+    "corpus/bronze/delfreo_rapports_pre2016/PROVENANCE.md"
+   ],
+   "sensitive_analyses": [
+    "any reuse keyed on the affected tokens, sites or document identities — run under both readings (register policy)",
+    "site-clustered statistics (R2SITE); type/token counts touching the listed docs"
+   ],
+   "status": "CONFIRMED"
+  },
+  {
+   "claim": "restored formula text carried in silver without break/restoration marking (D1-family: the lineage strips damage and break notation)",
+   "docs": {
+    "IOZa16": {
+     "rapport_quotes": [
+      {
+       "page": "p. 203",
+       "quote": "ce dernier incomplet",
+       "verified_in_held_text": true,
+       "window": "2001-2005"
+      }
+     ],
+     "rapport_side": "ed.pr. apud rapport prints AB 10-06-26-77[ (breaks off); silver carries the full restored formula U-NA-RU-KA-NA-SI with no break marking",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Iouktas",
+      "words": [
+       [
+        "AROM"
+       ],
+       [
+        "JA",
+        "SA",
+        "SA",
+        "RA"
+       ],
+       [
+        "ME"
+       ],
+       [
+        "U",
+        "NA",
+        "RU",
+        "KA",
+        "NA",
+        "SI"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "PKZa27": {
+     "rapport_quotes": [
+      {
+       "page": "p. 13",
+       "quote": "U-NA-KA-NA-SI soit attestée",
+       "verified_in_held_text": true,
+       "window": "2011-2015"
+      }
+     ],
+     "rapport_side": "rapport prints 10(dotted)-06-77-.[ with the last sign uncertain or a divider; silver carries the full formula U-NA-KA-NA-SI unmarked",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Palaikastro",
+      "words": [
+       [
+        "JA",
+        "SA",
+        "SA",
+        "RA",
+        "ME"
+       ],
+       [
+        "U",
+        "NA",
+        "KA",
+        "NA",
+        "SI"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    },
+    "SYZa8": {
+     "rapport_quotes": [
+      {
+       "page": "p. 10",
+       "quote": "]AB 28-A 301-AB 54-AB 57",
+       "verified_in_held_text": true,
+       "window": "2006-2010"
+      }
+     ],
+     "rapport_side": "ed.pr. apud rapport prints ]AB 28-A301-54-57 (broken before 28); silver carries the full six-sign formula opening unmarked",
+     "silver_reading": {
+      "numerals": [],
+      "site": "Syme",
+      "words": [
+       [
+        "A",
+        "TA",
+        "I",
+        "*301",
+        "WA",
+        "JA"
+       ],
+       [
+        "JA",
+        "JA"
+       ]
+      ]
+     },
+     "verdict": "CONFIRMED"
+    }
+   },
+   "evidence": {
+    "method": "declared rapport quotes verified verbatim (whitespace-normalized) against the held rapport texts; silver readings derived live from corpus/silver/inscriptions_structured.json; SigLA/Younger sides derived live where available",
+    "n_cases": 3
+   },
+   "generated_by": "scripts/divergence_register.py divergence-register-v2",
+   "id": "R2REST",
+   "kind": "restoration_unmarked",
+   "refs": [
+    "experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md",
+    "corpus/bronze/delfreo_rapports_pre2016/PROVENANCE.md"
+   ],
+   "sensitive_analyses": [
+    "any reuse keyed on the affected tokens, sites or document identities — run under both readings (register policy)",
+    "site-clustered statistics (R2SITE); type/token counts touching the listed docs"
    ],
    "status": "CONFIRMED"
   }

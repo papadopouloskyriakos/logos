@@ -161,3 +161,60 @@ all counts in this document are script-generated (`round2_scan.py` diff/verify/s
 the four rapport PDFs are gitignored and never redistributed; readings quoted are facts
 with page-cited attribution (fair dealing). Claim ceiling: L1 (sign-identity bookkeeping);
 nothing here is worded above it.
+
+---
+
+## Postscript (2026-08-10, same day) — Δ1–Δ13 absorbed + stress-tested BEFORE the reply goes out (owner directive)
+
+**Stage R2-SENS-01.** The Δ-table above is no longer a candidate list: it is absorbed into
+the standing register and survived verification.
+
+1. **Register absorption (`corpus/divergences.json` v2).** `scripts/divergence_register.py`
+   extended with five generated entries — R2READ (6 reading divergences), R2DOUBT (8
+   doubted-inclusions), R2SITE (2 site defects), R2THE (5 identity cases), R2REST (3
+   restoration-unmarked, D1-family) — 24 cases total. Every rapport-side quote is verified
+   VERBATIM (whitespace/apostrophe-normalized) against the held rapport texts at build
+   time, and every silver/SigLA/Younger assertion is derived live; the build FAILS on any
+   mismatch. All 24 cases pass; legacy D4/HT38/D1/BR1 derivations unchanged (same counts);
+   test suite re-pinned for the intentional extension: **42/42 pass**, `--check` clean.
+   One DOWNGRADE vs the Δ table: the THEfr.2/3 = THE 11/12 pairing is
+   UNDERDETERMINED_WITNESS_CONFLICT (SigLA reads A614/AB22 where Boulotis suggests A 302)
+   — deliverable README and reply draft hedged accordingly; THEtab.4 = THE 7 and
+   THEfr.1 = THE 10 stand CONFIRMED (the latter on three agreeing witnesses).
+2. **Sensitivity (`round2_sensitivity.py` → `round2_sensitivity.json`, seed 0; D1
+   discipline: no verdict may flip via annex, improvements are not claims).**
+   - *Site-relabel leg* (R2SITE corrections, 13 docs; distinct sites 52 → 55): published
+     boundary-recovery gap **+0.0473 → +0.0552** — no flip; the larger gap under corrected
+     LOSO clustering is an IMPROVEMENT and is NOT a claim; it does confirm the published
+     run's merged-sites clustering was the conservative direction.
+   - *Doc-exclusion leg* (all 14 R2READ/R2DOUBT docs dropped = 19 word tokens, 0.60%):
+     gap **+0.0473 → +0.0415** — no flip.
+   - *Input intersections*: the published metrology null consumes none of the 14 affected
+     docs (mechanical string-walk over `runtime/metrology-real.json`, 32 tablets,
+     intersection ∅); the KU-RO harness consumes HT ledger tablets only — no affected id
+     is one (HT Wc 3024 is a roundel; HT Zf(HM 767) a figurine disc).
+   - **Paper exposure**: `paper/tacl/body.tex` prints “52 sites” twice; under the R2SITE
+     corrections the distinct-site count is **55** (Arkhanes and Argos un-merged from
+     Arkalochori; the Lachish bowl leaves “Larani”, which survives via the genuine Larani
+     item LA Zb 1(bis)). Descriptive figure only — no verdict touched. **ERRATUM-NOTE
+     CANDIDATE** against the frozen Zenodo record (Art. XVII: erratum, never a silent
+     rebuild) — owner decision.
+3. **Series intelligence found during verification:** the **GORILA Supplement is
+   published** — Del Freo & Zurbach, *Recueil des inscriptions en linéaire A.
+   Supplément 1* (RILA-S1), Études Crétoises 21.6, EFA/Peeters 2024 (ISBN
+   9782869586420; not OA): **+107 documents / +427 signs → corpus 1,534 docs / 7,574
+   signs**, cutoff = published before end-2023, with a dubious-texts section and sign
+   index. Consequences: (a) candidate primary authority superseding piecemeal rapport
+   enumeration through 2023 — it would adjudicate most R2READ cases (the 107 numeral on
+   KN Zb 27 and the PE Zb 7 revision are announced for it by Rapport 2011-2015); (b)
+   +107 new docs sits BELOW the +288-doc alternation-grid tripwire of
+   `docs/reopening-thresholds.md` — no tripwire crossing on its own; formal absorption
+   into the watch + any acquisition = **owner decision**. Also: *Floreant* (Rapport
+   1991-1995) is purchasable as an ÖAW eBook (austriaca.at/2787-1); *Mykenaïka* (Rapport
+   1986-1990) on Persée remains unverified. Per owner directive, NO ask about these went
+   into the reply draft.
+
+Compliance: annex-only — no published figure changed, no verdict re-graded, frozen paper
+untouched; all numbers in this postscript are script-generated
+(`divergence_register.py`, `round2_sensitivity.py`); silver byte-identity unchanged
+(register `--check` re-verifies witness SHA-256s).
