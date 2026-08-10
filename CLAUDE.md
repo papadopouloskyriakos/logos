@@ -199,3 +199,13 @@ The harness is built, exercised, calibrated, written up, and out the door:
   (bar v2 after round-1 RED; prereg-gated NAME-PARALLEL-01 = **DATA-LIMITED**, M_obs
   12/501 vs floor-bar 148; banded excess is toponym-borne — S2=0 — and not
   Knossos-specific — N2 p=1.0; REFUTE_LOTO_FRAGILE re-confirmed via independent channel).
+- **Del Freo rapports acquired; LA rapport index 1996–2021 ready (2026-08-10):** Del Freo
+  privately sent the four pre-2016 rapports (resolving round-1's open citations:
+  1996–2000 = *Pasiphae* III (2009) 187–197; 1986–1990 = *Mykenaïka* 443–456). Round-2
+  completeness sweep = **UNMOVED** (3 additions ingested — PSE Zb 1, SA We 3/4 — census
+  scan 0 anchor legs; 12 divergence-flagged silver items incl. NEW systematic
+  Arkhanes→"Arkhalkhori" site-label defect; THEtab.4 = THE 7 identified; ZO1 ≠ the 2013
+  Zominthos table; two round-1 errata recorded); see `experiments/crossscript_gate/
+  phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md`. Deliverable index (125 rows) +
+  reply draft (`docs/delfreo-reply-DRAFT-2026-08-10.md`) **await the owner's send** —
+  never auto-send. Divergence-register absorption of Δ1–Δ13 = open follow-up.

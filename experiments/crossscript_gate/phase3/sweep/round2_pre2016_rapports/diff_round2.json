@@ -1,0 +1,224 @@
+{
+  "fragment_rows": 96,
+  "rows_per_fragment": {
+    "delfreo-rapport-1996-2000": 23,
+    "delfreo-rapport-2001-2005": 36,
+    "delfreo-rapport-2006-2010": 18,
+    "delfreo-rapport-2011-2015": 19
+  },
+  "present_in_inventory": 70,
+  "present_with_divergence_flag": [
+    {
+      "designation": "KN Ze 56 (?)",
+      "flags": [
+        "DOUBT FLAG",
+        "divergence-register candidate"
+      ],
+      "channel": "delfreo-rapport-1996-2000"
+    },
+    {
+      "designation": "PK Zb 23",
+      "flags": [
+        "DOUBT FLAG"
+      ],
+      "channel": "delfreo-rapport-1996-2000"
+    },
+    {
+      "designation": "SY Za 6",
+      "flags": [
+        "SUPERSEDED READING"
+      ],
+      "channel": "delfreo-rapport-1996-2000"
+    },
+    {
+      "designation": "LACH Za 1 (?)",
+      "flags": [
+        "DOUBT FLAG",
+        "divergence-register candidate"
+      ],
+      "channel": "delfreo-rapport-1996-2000"
+    },
+    {
+      "designation": "PE 6",
+      "flags": [
+        "ERRATUM"
+      ],
+      "channel": "delfreo-rapport-2001-2005"
+    },
+    {
+      "designation": "DRA Zg 1 (?)",
+      "flags": [
+        "DOUBT FLAG",
+        "divergence-register candidate"
+      ],
+      "channel": "delfreo-rapport-2001-2005"
+    },
+    {
+      "designation": "(Phylakopi handle = MI Zb 3 (?))",
+      "flags": [
+        "DOUBT FLAG",
+        "divergence-register candidate"
+      ],
+      "channel": "delfreo-rapport-2001-2005"
+    },
+    {
+      "designation": "THE Zb 14",
+      "flags": [
+        "divergence-register candidate"
+      ],
+      "channel": "delfreo-rapport-2006-2010"
+    },
+    {
+      "designation": "KN Zb 27",
+      "flags": [
+        "DIVERGENCE FLAG"
+      ],
+      "channel": "delfreo-rapport-2006-2010"
+    },
+    {
+      "designation": "PE Zb 8",
+      "flags": [
+        "DIVERGENCE FLAG"
+      ],
+      "channel": "delfreo-rapport-2011-2015"
+    },
+    {
+      "designation": "IN Zb 1",
+      "flags": [
+        "DOUBT FLAG",
+        "divergence-register candidate"
+      ],
+      "channel": "delfreo-rapport-2011-2015"
+    },
+    {
+      "designation": "KN Zb 27",
+      "flags": [
+        "DIVERGENCE FLAG"
+      ],
+      "channel": "delfreo-rapport-2011-2015"
+    }
+  ],
+  "n_flagged_present": 12,
+  "missing_total": 26,
+  "missing_by_class": {
+    "c_pending_edition": 7,
+    "b_acquisition_gap": 4,
+    "a_ingestible": 3,
+    "d_correctly_absent": 12
+  },
+  "missing_designations_by_class": {
+    "a_ingestible": [
+      "PSE Zb 1",
+      "SA We 3",
+      "SA We 4"
+    ],
+    "b_acquisition_gap": [
+      "PK Wy 22",
+      "THE 7, THE 8 (and THE Z 9?)",
+      "THE 7-12",
+      "GO Wc 3"
+    ],
+    "c_pending_edition": [
+      "ARKH Zb 10",
+      "ARM Zg 1",
+      "PSE Zb 2",
+      "ZA Zb 35 (-> ZA Zb 39)",
+      "KAST Wy 1",
+      "ZA Zb 39",
+      "(Mochlos Block C fragments)"
+    ],
+    "d_correctly_absent": [
+      "(COPILA catalogue)",
+      "PH Wb 53",
+      "{SA Wc 1} / {SA Wc 2}",
+      "(THE numbering)",
+      "(Troy spindle-whorls)",
+      "(Rolletmuseum alabastron)",
+      "(Ithaca Pelikata sherds + Haghios Athanasios tablet)",
+      "PER Zg 1",
+      "(Miletus new fragments)",
+      "(Florence nodules republished)",
+      "PH Wb 53",
+      "(Zominthos libation table)"
+    ]
+  },
+  "aliases_declared": {
+    "KH 97": [
+      "KH97a",
+      "KH97b"
+    ],
+    "PE 6": [
+      "PEZg6"
+    ],
+    "PO Zf 2": [
+      "PORZf2"
+    ],
+    "SY Za 8-12": [
+      "SYZa8",
+      "SYZa9",
+      "SYZa10",
+      "SYZa11",
+      "SYZa12"
+    ],
+    "SY Za 1-12 + SY Zb 7": [
+      "SYZa1",
+      "SYZa2",
+      "SYZa3",
+      "SYZa4",
+      "SYZa5",
+      "SYZa6",
+      "SYZa8",
+      "SYZa9",
+      "SYZa10",
+      "SYZa11",
+      "SYZa12",
+      "SYZb7"
+    ],
+    "MIL Zb 2-7": [
+      "MILZb2",
+      "MILZb3",
+      "MILZb4"
+    ],
+    "MIL Zb 2-4 (edition)": [
+      "MILZb2",
+      "MILZb3",
+      "MILZb4"
+    ],
+    "GO 2": [
+      "GO2r",
+      "GO2v"
+    ],
+    "THE Zb 14": [
+      "THEZb15"
+    ],
+    "(KH 97, Zb 98, 99, 100, Wc 2123 published)": [
+      "KH97a",
+      "KH97b",
+      "KHZb98",
+      "KH99",
+      "KH100",
+      "KHWc2123"
+    ],
+    "(Phylakopi handle = MI Zb 3 (?))": [
+      "MIZb3"
+    ],
+    "HT Zf (HM 767) (gold disc on bull figurine)": [
+      "HTZf(HM767)"
+    ],
+    "THE 7, THE 8 (and THE Z 9?)": [],
+    "THE 7-12": [],
+    "(Zominthos libation table)": [],
+    "ZA Zb 35 (-> ZA Zb 39)": [],
+    "{SA Wc 1} / {SA Wc 2}": [],
+    "(COPILA catalogue)": [],
+    "(THE numbering)": [],
+    "(Troy spindle-whorls)": [],
+    "(Rolletmuseum alabastron)": [],
+    "(Ithaca Pelikata sherds + Haghios Athanasios tablet)": [],
+    "(Miletus new fragments)": [],
+    "(Florence nodules republished)": [],
+    "(Mochlos Block C fragments)": []
+  },
+  "partial_alias_hits": [],
+  "note": "round-2 diff of the four pre-2016 rapport fragments vs the frozen 1,341-item inventory; classifier deltas documented in this script's docstring"
+}

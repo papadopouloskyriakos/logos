@@ -1,0 +1,9 @@
+{
+  "id": "SA We 4",
+  "site": "Samothrace (Mikro Vouni)",
+  "words": [],
+  "certainty": "Words EMPTY (single-ligature item, per the KN Zb 36a-d precedent): Olivier (autopsy) reads one ligature AB 0̣8̣+04 (A dotted + TE), which he proposes to insert in the LA sign table as A 506bis; the dot at lower left is a stylus perforation from applying a control mark, NOT a numeral. Matsas's alternatives (ligature A 609, or new ligature AB 08 + A 303 followed by numeral 1 or 10) are superseded by the autopsy but recorded. Both component signs also exist in Cretan Hieroglyphic, so the LA attribution is NOT fully certain; it is reinforced by the exclusively-LA klasmatogram A 708 on the twin nodulus SA We 3.",
+  "source": "Del Freo, Rapport 2001-2005, Colloquium Romanum (Pasiphae I), 2008, pp. 208-209 (received from M. Del Freo 2026-08-10, corpus/bronze/delfreo_rapports_pre2016/, sha 7ebba45a...); primary: Matsas, D. 2004, CMS V Suppl. 3, no. 343 (published there as SA We 2)",
+  "page": "pp. 208-209",
+  "notes": "Nodulus found 1999, same findspot and layer as {SA Wc 1}/{SA Wc 2}/SA We 3, MM II-III; seal impression on one side (possibly hieroglyphic, cf. rapport CH section 1.2.2.1), stylus-engraved inscription on another. DESIGNATION COLLISION: Matsas publishes it as We 2; Olivier/Del Freo number it We 4. Absent from the silver corpus. Round-1's SA We 4 checklist row (built from the Rapport 2016-2021 footnote recap) is superseded by this fuller record."
+}

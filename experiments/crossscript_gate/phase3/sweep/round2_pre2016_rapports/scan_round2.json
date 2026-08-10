@@ -1,0 +1,15 @@
+{
+  "n_round2_addition_items": 3,
+  "round2_addition_ids": [
+    "PSE Zb 1",
+    "SA We 3",
+    "SA We 4"
+  ],
+  "new_legs": [],
+  "n_new_legs": 0,
+  "covered_sign_attestation_delta": {
+    "*188": 1,
+    "WA": 1,
+    "I": 1
+  }
+}

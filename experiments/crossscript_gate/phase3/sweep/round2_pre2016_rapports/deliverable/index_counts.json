@@ -1,0 +1,13 @@
+{
+  "total_rows": 125,
+  "in_corpus": 89,
+  "rows_1996-2000": 23,
+  "absent_pending": 12,
+  "absent_gap": 5,
+  "additions_layer": 6,
+  "rows_2001-2005": 36,
+  "correctly_absent": 13,
+  "rows_2006-2010": 18,
+  "rows_2011-2015": 19,
+  "rows_2016-2021": 29
+}

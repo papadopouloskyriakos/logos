@@ -46,3 +46,19 @@ Frozen corpus SHA-256 before == after (aaee1aeb…, 4717a7e3…, 8a2a8928…, 24
 IDENTICAL, printed in the run log); additions live only under `corpus/derived/
 post_gorila_additions/`; no recovery model run; no held-out label read; N=2 untouched; no sign
 read from any image; no gray mirror used; nothing under `paper/` touched.
+
+---
+
+## Round 2 (2026-08-10) — the four print-locked rapports arrived; verdict still UNMOVED
+
+The "human gap list" above is RESOLVED for 1996–2015: **M. Del Freo privately sent the four
+predecessor rapports** (1996–2000 Olivier = *Pasiphae* III (2009) 187–197 — the round-1
+"publication status unclear" flag closes; 2001–2005; 2006–2010; 2011–2015) in reply to the
+owner's index-offer email. Full round-2 record: **`round2_pre2016_rapports/ROUND2_DELTA.md`**
+(96 fragment rows; 70 already in the frozen corpus; 3 ingestible items ingested — PSE Zb 1,
+SA We 3, SA We 4 — census scan **0 anchor legs**; 12 divergence-flagged silver items incl. a
+NEW systematic Arkhanes→"Arkhalkhori" site-label defect; THEtab.4 = THE 7 identified; ZO1 ≠
+the 2013 Zominthos table; two round-1 ERRATA recorded: PE 6 was present as PEZg6, and the
+THE Zb 14 addition duplicates silver THEZb15). Frozen corpus re-verified byte-identical
+(same four SHA-256 pins). Remaining enumeration gaps: Rapports 1986–1990 (*Mykenaïka*
+443–456 — citation now exact) and 1991–1995 only.

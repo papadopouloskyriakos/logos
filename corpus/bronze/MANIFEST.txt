@@ -4,3 +4,7 @@ b4ef9c91a245cb1f	43952	ugaritic/uga-heb.full.cog	https://raw.githubusercontent.c
 0f73045a2d9e44ba	4442	ugaritic/uga-heb.noisy.cog	https://raw.githubusercontent.com/ftamburin/CSA_OptMatcher/main/data/uga-heb.no_speNoisy.cog
 270ff077e1300baf	920	linearb/linear_b-greek.cog	https://raw.githubusercontent.com/ftamburin/CSA_OptMatcher/main/data/linear_b-greek.cog
 66b94203bd343ed9	1523136	lineara/inscriptions.json	https://github.com/mwenge/lineara.xyz (items_analysis/inscriptions.json, fetched 2026-06-30, rescued from /tmp 2026-08-05)
+702973c68520b562	253485	delfreo_rapports_pre2016/olivier_rapport_1996-2000.pdf	private email M. Del Freo -> owner 2026-08-10 (author PDFs; do not redistribute)
+7ebba45a1caf1478	429646	delfreo_rapports_pre2016/delfreo_rapport_2001-2005.pdf	private email M. Del Freo -> owner 2026-08-10 (author PDFs; do not redistribute)
+e7167504f8720776	540912	delfreo_rapports_pre2016/delfreo_rapport_2006-2010.pdf	private email M. Del Freo -> owner 2026-08-10 (author PDFs; do not redistribute)
+60c3eb2505c75221	947620	delfreo_rapports_pre2016/delfreo_rapport_2011-2015.pdf	private email M. Del Freo -> owner 2026-08-10 (author PDFs; do not redistribute)

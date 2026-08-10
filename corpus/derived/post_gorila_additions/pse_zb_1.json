@@ -1,0 +1,9 @@
+{
+  "id": "PSE Zb 1",
+  "site": "Pseira",
+  "words": [["*188", "WA", "I"]],
+  "certainty": "Printed reading: \"]AB 1̣8̣8̣-5̣4̣-2̣8̣[\" — ALL THREE signs carry under-dots (uncertain), and the text breaks off on both sides. The first sign as printed reads '188', which is not a standard AB-series numeral; it is transcribed here as *188 exactly as the rapport prints it, with the caveat that the identification is heavily uncertain (pdftotext renders the dotted digits as '1. 8.8.').",
+  "source": "Olivier, Rapport 1996-2000, Pasiphae III (2009), p. 191 (received from M. Del Freo 2026-08-10, corpus/bronze/delfreo_rapports_pre2016/, sha 702973c6...); primary: Floyd, C. R. 1995, Fragments from Two Pithoi with Linear A Inscriptions from Pseira, Kadmos 34, 39-48",
+  "page": "p. 191",
+  "notes": "Pithos fragment engraved before firing, LM IB, from Pseira. One of two inscribed pithos fragments published by Floyd 1995 (the second, PSE Zb 2, bears a single fragmentary sign and prints no usable reading — not ingested). Absent from the silver corpus (silver holds no Pseira Zb items; PS Za 2 is Psychro). Not mentioned again in Rapports 2001-2021."
+}

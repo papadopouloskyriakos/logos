@@ -29,3 +29,6 @@ reports/
 *.swp
 .idea/
 .vscode/
+
+# round-2 silver verification dump = bulk licensed corpus content (lineara.xyz lineage) — keep local
+experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/silver_verify_dump.json

@@ -159,3 +159,21 @@ done; Salgarella 2025 body: pending operator). "Confirm URL" = open-access likel
 - **Davis 2013** "Syntax in Linear A," *Kadmos* 52 + **Davis 2014** *Minoan Stone Vessels*, Aegaeum 36 — the primary i-`*301`="give"/V-S-O source (quote the `ta-na-i-*301-u-ti-nu` parallel with page numbers).
 - **Duhoux** libation-formula analyses — primary source for the formula segmentation / verb slot.
 - **Steele 2024** *Exploring Writing Systems and Practices in the LBA Aegean* (Oxbow/CREWS) — only if a sign/formula-level structural claim is wanted (the review notes the book has no index).
+
+## 2026-08-10 — the four pre-2016 rapports (private share by the author)
+
+- **Olivier, Rapport 1996-2000** (*Pasiphae* III (2009) 187-197) + **Del Freo, Rapport
+  2001-2005** (*Colloquium Romanum*, Pasiphae I, 2008, 199-222) + **Del Freo, Rapport
+  2006-2010** (*Études mycéniennes 2010*, Bibl. di Pasiphae 10, 2012, 3-21) + **Del Freo,
+  Rapport 2011-2015** (*Aegean Scripts*, Incunabula Graeca 105, 2017, vol. 1, 3-29) —
+  ✅ **ACQUIRED 2026-08-10**, sent privately by **Maurizio Del Freo** (email to owner, in
+  reply to the 2026-07-03 machine-readable-index offer; he asks for the indexing results in
+  return — deliverable + reply draft prepared same day). Author PDFs →
+  `corpus/bronze/delfreo_rapports_pre2016/` (gitignored, **never redistributed**;
+  PROVENANCE.md + SHA256SUMS alongside; sha prefixes 702973c6/7ebba45a/e7167504/60c3eb25).
+  This resolves the round-1 gap rows for 1996-2015 and the "1996-2000 publication status
+  unclear" flag (published: Pasiphae III 2009). Feeds
+  `experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/` (fragments,
+  ROUND2_DELTA.md) and the combined 1996-2021 LA rapport index deliverable. Still not
+  acquired: Rapport 1986-1990 (*Mykenaïka*, BCH Suppl. 25, 1992, 443-456 — Persée
+  candidate) and Rapport 1991-1995 (*Floreant*, 1999, 419-436).
