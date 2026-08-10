@@ -207,8 +207,8 @@ The harness is built, exercised, calibrated, written up, and out the door:
   Arkhanes→"Arkhalkhori" site-label defect; THEtab.4 = THE 7 identified; ZO1 ≠ the 2013
   Zominthos table; two round-1 errata recorded); see `experiments/crossscript_gate/
   phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md`. Deliverable index (125 rows) +
-  reply draft (`docs/delfreo-reply-DRAFT-2026-08-10.md`) **await the owner's send** —
-  never auto-send. Same-day postscript: Δ1–Δ13 ABSORBED into the register
+  reply (`docs/delfreo-reply-DRAFT-2026-08-10.md`) **SENT by the owner 2026-08-10**
+  with the index zip; correction loop promised if he reports errors. Same-day postscript: Δ1–Δ13 ABSORBED into the register
   (`corpus/divergences.json` v2 — 5 generated entries / 24 quote-verified cases, tests
   42/42; one downgrade: THEfr.2/3=THE 11/12 witness-conflicted) and stress-tested
   (R2-SENS-01: site-relabel gap +0.0473→+0.0552, doc-exclusion →+0.0415, metrology ∅ —

@@ -1,4 +1,5 @@
-# DRAFT reply to M. Del Freo — 2026-08-10 (owner sends; never auto-send)
+# Reply to M. Del Freo — 2026-08-10 — **SENT by the owner 2026-08-10** (with the index
+# zip attached, sha256 e57fdc5c…d948bda). This file is now the record of the sent text.
 
 **To:** MAURIZIO DEL FREO <maurizio.delfreo@cnr.it>
 **Subject:** R: A machine-readable index of your LA rapports — and a request for the earlier ones
