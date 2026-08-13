@@ -155,6 +155,16 @@ The harness is built, exercised, calibrated, written up, and out the door:
   paper prints "52 sites" (erratum-note candidate, owner decision). Site- or
   token-sensitive reuse must run under both readings (register policy). See
   `experiments/crossscript_gate/phase3/sweep/round2_pre2016_rapports/ROUND2_DELTA.md`.
+  **Fourth + fifth defects (2026-08-13, found auditing an external preprint against our
+  corpus; both CONFIRMED vs Younger, script `scripts/audit_face_splits.py`):** (D5)
+  **face-split word tokens** — a sign-group running across two faces of a stone vessel is
+  emitted as TWO tokens (IOZa12 `JA-SA`+`SA-RA-ME`, IOZa16 `JA-SA-SA-RA`+`ME`, KNZa10
+  `JA-SA-SA-RA-MA`+`NA`, PKZa16 `PU₂`+`RE-JA`; 8 spurious types) — **all four are
+  libation-formula docs**, so word-type-identity claims over that subcorpus must run under
+  both readings; (D6) glyph **A319 (U+1066B) is labelled `*904`** in 3/3 docs and
+  `signs_ontology.json` classes it `fraction` with no `*319` entry — treat `*904` as A319
+  until the register decides. No verdict moves; no silver rebuild without an explicit
+  decision. See `docs/2026-08-13-lineara-lineage-face-split-and-a319-defects.md`.
 - **Probes executed** (all pre-registered, graded from artifacts): morphology NO-POWER
   null + segmentation positive (micro-F1 0.436 vs 0.389, site-clustered gap CI excludes 0);
   metrology null (p = 1.0, J = ½ credited to Bennett); phonology data-limited null;
