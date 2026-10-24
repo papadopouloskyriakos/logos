@@ -86,3 +86,21 @@ rapport was published in *Pasiphae* III (2009) 187-197). Watch-relevant deltas:
   partially resolved (THEtab.4 = THE 7, THEfr.1 = THE 10 CONFIRMED; fr.2/3 and tab.5
   witness-conflicted — register entry R2THE); **THE 8 missing in silver, present in
   SigLA**.
+
+## Addendum (2026-10-24): a public third-party corpus folds RILA-S1 in — witness only, never ingested
+
+`github.com/plasma-ai/kaphtor` (T. di Mino / Plasma AI; public 2026-10-22, still changing — no tag/DOI/hash
+pins its readings) ships `data/linear-a/corpus.json`: 1,719 records / 1,603 documents merged from GORILA +
+**RILA-S1** + SigLA + lineara.xyz, with per-record `rila_s1` status fields and a hand-curated census of the
+RILA-S1 accepted / doubtful / uncounted texts. Its own NOTICE keeps the underlying texts under their sources'
+terms (SigLA CC BY-NC-SA 4.0; lineara.xyz unlicensed; RILA-S1 = EFA 2024, not OA).
+
+Watch consequences:
+- **Not an acquisition route.** Ingesting it into silver would pre-empt the open RILA-S1 acquisition decision
+  above and import NC-SA / unlicensed / EFA-term text into a CC-BY repo. Silver stays GORILA-lineage until
+  the owner decides.
+- **Admissible only as a cited, independent witness** for `corpus/divergences.json` (e.g. its readings of the
+  D1/D5 face-split and damage items), and only through the register, by citation — no bulk import. Any
+  such use is a new register pass = owner decision.
+- Its sign values / lexicon are a *proposed Semitic reading* (not a corpus correction) and have no standing in
+  the anchors route; they are out of scope for this watch.

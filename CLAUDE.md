@@ -235,4 +235,8 @@ The harness is built, exercised, calibrated, written up, and out the door:
   NO verdict moves; paper's "52 sites" → 55 corrected = ERRATUM-NOTE candidate, owner
   decision). **RILA-S1 EXISTS**: Del Freo & Zurbach, GORILA Supplément 1 (Études
   Crétoises 21.6, 2024; +107 docs/+427 signs → 1,534/7,574; NOT OA) — below the +288
-  tripwire alone; watch absorption + acquisition = owner decision.
+  tripwire alone; watch absorption + acquisition = owner decision. **Do not ingest
+  third-party merged corpora that fold RILA-S1 in** (e.g. `github.com/plasma-ai/kaphtor`,
+  public 2026-10-22: GORILA + RILA-S1 + SigLA + lineara) — at most a *cited witness* for
+  the divergence register; importing would pre-empt the acquisition decision and carries
+  EFA/NC-SA/unlicensed terms. See the 2026-10-24 addendum in `docs/watch/anetaki_ii.md`.
